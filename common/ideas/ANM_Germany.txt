@@ -22,7 +22,6 @@ ideas = {
 				command_power_gain = -0.10
 			}
 		}
-
 		GER_millenium_rise = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_millenium_rise"}
 			allowed = {
@@ -42,7 +41,6 @@ ideas = {
 				
 			}
 		}
-		
 		GER_europapakt_member = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_europapakt_member"}
 			allowed = {
@@ -58,7 +56,6 @@ ideas = {
 			modifier = {
 			}
 		}
-		
 		GER_the_ailing_order = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_ailing_order"}
 			allowed = {
@@ -76,7 +73,6 @@ ideas = {
 			political_power_factor = -0.30
 			}
 		}
-		
 		GER_space_spirit = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_space_spirit"}
 			allowed = {
@@ -114,10 +110,8 @@ ideas = {
 				consumer_goods_factor = -0.30
 				production_speed_buildings_factor = 0.15
 				global_building_slots_factor = 0.15
-				
 			}
 		}
-		
 		GER_high_tech_military = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_high_tech_military"}
 			allowed = {
@@ -136,9 +130,41 @@ ideas = {
 				experience_gain_army = 0.01
 				experience_gain_navy = 0.01
 				experience_gain_air = 0.01
-				
 			}
 		}
-		
+		GER_euromark_preperations = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_euromark_preperations"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_euromark_preperations
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.20
+				consumer_goods_factor = 0.20	
+			}
+		}
+		GER_out_of_the_world_discoveries = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_out_of_the_world_discoveries"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_out_of_the_world_discoveries
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.35
+				stability_weekly = -0.01
+			}
+		}
 	}
 }
