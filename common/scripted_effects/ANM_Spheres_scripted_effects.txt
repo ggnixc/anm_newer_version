@@ -1,0 +1,327 @@
+### Economic Spheres
+TNO_Spheres_init = {
+	### GERMAN SPHERE
+	GER = { set_country_flag = HAS_ECON_SPHERE }
+	for_each_scope_loop = {
+		array = GER.faction_members
+		set_variable = { ECON_SPHERE_LEADER = GER }
+	}
+	for_each_scope_loop = {
+		array = GER.subjects
+		set_variable = { ECON_SPHERE_LEADER = GER }
+	}
+
+	every_country = {
+		limit = {
+			OR = {
+				tag = GER
+				tag = BRG
+				tag = ROM
+				tag = FRA
+				tag = POL
+				tag = SLO
+				tag = UKR
+				tag = OST
+				tag = SWE
+				tag = FIN
+				tag = DEN
+				tag = HOL
+				tag = NOR
+				tag = IRE
+				tag = BLR
+				tag = HUN
+				tag = MRZ
+				tag = NDO
+				tag = SER
+				tag = MOS
+				tag = CAU
+				tag = VLG
+				tag = ENG
+				tag = PER
+				tag = DOM
+				tag = VEN
+				tag = FLR
+				tag = WLN
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = GER }
+	}
+
+	### AMERICAN SPHERE
+	USA = { set_country_flag = HAS_ECON_SPHERE }
+	for_each_scope_loop = {
+		array = USA.faction_members
+		set_variable = { ECON_SPHERE_LEADER = USA }
+	}
+	for_each_scope_loop = {
+		array = USA.subjects
+		set_variable = { ECON_SPHERE_LEADER = USA }
+	}
+
+	every_country = {
+		limit = {
+			OR = {
+				tag = USA
+				tag = FEN
+				tag = LIB
+				tag = SAF
+				tag = MDI
+				tag = COS
+				tag = GLP
+				tag = GUA
+				tag = ELS
+				tag = PRU
+				tag = CHL
+				tag = URG
+				tag = CUB
+				tag = CAN
+				tag = AST
+				tag = ICE
+				tag = NZL
+				tag = WIN
+				tag = GUY
+				tag = BLZ
+				tag = GRN
+				tag = SAF
+				tag = URG
+				tag = PHI
+				tag = HAI
+				tag = SUR
+				tag = FEN
+				tag = FML
+				tag = LIB
+				tag = MEX
+				tag = COL
+				tag = RAJ
+				tag = CUR
+				tag = NIC
+				tag = LTH
+				tag = SWZ
+				tag = ZIM
+				tag = SHL
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = USA }
+	}
+	
+	### JAPANESE SPHERE
+	JAP = { set_country_flag = HAS_ECON_SPHERE }
+	for_each_scope_loop = {
+		array = JAP.faction_members
+		set_variable = { ECON_SPHERE_LEADER = JAP }
+	}
+	for_each_scope_loop = {
+		array = JAP.subjects
+		set_variable = { ECON_SPHERE_LEADER = JAP }
+	}
+
+	every_country = {
+		limit = {
+			OR = {
+				tag = JAP
+				tag = BUR
+				tag = KOR
+				tag = SYO
+				tag = INS
+				tag = SRK
+				tag = SIA
+				tag = BMB
+				tag = MAN
+				tag = BEN
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = JAP }
+	}
+	
+	### ITALIAN SPHERE
+	ITA = { set_country_flag = HAS_ECON_SPHERE }
+	for_each_scope_loop = {
+		array = ITA.subjects
+		set_variable = { ECON_SPHERE_LEADER = ITA }
+	}
+	
+	every_country = {
+		limit = {
+			OR = {
+				tag = MOC
+				tag = SNM
+				tag = VAC
+				tag = ITA
+				tag = SAU
+				tag = CRO
+				tag = OMA
+				tag = CRO
+				tag = SNM
+				tag = ALB
+				tag = MNT
+				tag = TUN
+				tag = BUL
+				tag = GRE
+				tag = JOR
+				tag = JER
+				tag = PAL
+				tag = ISR
+				tag = LEB
+				tag = UAE
+				tag = YEM
+				tag = IRQ
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = ITA }
+	}
+
+	### BRAZILIAN SPHERE
+	BRA = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = BRA
+				tag = PAR
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = BRA }
+	}
+
+	### Argie sphere
+	ARG = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = ARG
+				tag = STC
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = ARG }
+	}
+
+	### Soviet sphere
+	SOV = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = SOV
+				tag = FER
+				tag = VIN
+				tag = LAO
+				tag = CAM
+				tag = CAO
+				tag = BKF
+				tag = GBE
+				tag = EWE
+				tag = IVO
+				tag = ETH
+				tag = ECU
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+	### Chinese Sphere
+	CHI = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = CHI
+				tag = TIB
+				tag = MON
+				tag = GNG
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = CHI }
+	}
+
+	### Andean
+	ADN = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = ADN
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = ADN }
+	}
+
+	### Iberia
+	IBR = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = IBR
+				tag = HON
+				tag = PAN
+				tag = PAD
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = IBR }
+	}
+}
+
+econ_recompile_all_spheres = {
+	hidden_effect = {
+		ZZZ = {
+			every_country = {
+				limit = {
+					has_country_flag = HAS_ECON_SPHERE
+				}
+				clear_array = econ_sphere_members
+				every_country = {
+					limit = {
+						check_variable = { ECON_SPHERE_LEADER = PREV }
+					}
+					add_to_array = { PREV.econ_sphere_members = THIS }
+				}
+	
+				set_variable = { total_econ_sphere_GDP = 0 }
+	
+				for_each_scope_loop = {
+					array = econ_sphere_members
+					add_to_variable = { PREV.total_econ_sphere_GDP = THIS.GDP }	
+				}
+	
+				set_variable = { econ_sphere_world_percent = total_econ_sphere_GDP }
+				divide_variable = { econ_sphere_world_percent = ZZZ.total_world_gdp }
+				multiply_variable = { econ_sphere_world_percent = 100 }
+	
+				get_sorted_scored_countries = {
+					scorer = sphere_member_scorer
+					array = econ_sphere_members
+				}
+				
+				add_to_variable = { TNO_economy_GUI_dirty = 1 }
+			}
+		}
+		every_country = {
+			force_update_map_mode = {
+				mapmode = tno_econ_sphere_map_mode
+			}
+		}
+	}
+}
+
+# Scripted effect for Economic Sphere map mode
+econ_sphere_mapmode_get_sphere_members = {
+	if = {
+		limit = {
+			check_variable = { 
+				var = temp_sphere_idx
+				value = FROM.econ_sphere_members^num
+				#compare = less_than_or_equals
+				compare = less_than
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { FROM.econ_sphere_members^temp_sphere_idx = FROM }
+			}
+			
+			# Nothing happens and the loop is continued. This is so that sphere leader isn't displayed in list.
+			add_to_temp_variable = { temp_sphere_idx = 1 }
+			econ_sphere_mapmode_get_sphere_members = yes
+
+			else = {
+				custom_effect_tooltip = econ_sphere_map_mode_mapicon_tooltip_entry
+				add_to_temp_variable = { temp_sphere_idx = 1 }
+				econ_sphere_mapmode_get_sphere_members = yes
+			}
+		}
+	}
+}

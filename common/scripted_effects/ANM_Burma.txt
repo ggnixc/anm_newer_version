@@ -1,0 +1,145 @@
+ANM_startburmesecivilwar = {
+		BUR = {
+			 	every_owned_state = {
+				 	set_demilitarized_zone = no
+				}
+				leave_faction = yes
+				add_equipment_to_stockpile = {
+			    type = infantry_equipment_0
+			    amount = 1000
+			    producer = GER
+				}
+				add_ideas = {
+				BUR_burmese_civilwar
+				}
+		}
+		RAM = {
+			transfer_state = 1310
+			load_oob = "RAM_2000"
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment_0
+			    amount = 1000
+			    producer = GER
+		    }
+			add_ideas = {
+				BUR_burmese_civilwar
+				Federal_Union_Army
+				}
+		}
+		KAR	= {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment_0
+			    amount = 1000
+			    producer = GER
+		    }
+			transfer_state = 1309
+			load_oob = "KAR_2000"
+			add_ideas = {
+				BUR_burmese_civilwar
+				Federal_Union_Army
+				}
+		}
+		CHN	= {
+			transfer_state = 1308
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment_0
+			    amount = 1000
+			    producer = GER
+		    }
+			load_oob = "CHN_2000"
+			add_ideas = {
+				BUR_burmese_civilwar
+				Federal_Union_Army
+				}
+		}
+		ARA	= {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment_0
+			    amount = 1000
+			    producer = GER
+		    }
+			transfer_state = 1307
+			load_oob = "ARA_2000"
+			add_ideas = {
+				BUR_burmese_civilwar
+				Federal_Union_Army
+				}
+		}
+		KAC = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment_0
+			    amount = 1000
+			    producer = GER
+		    }
+			transfer_state = 762
+			load_oob = "KAC_2000"
+			add_ideas = {
+				BUR_burmese_civilwar
+				Federal_Union_Army
+				}
+		}
+
+
+		SHA = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment_0
+			    amount = 1000
+			    producer = GER
+			}
+			add_ideas = {
+				Federal_Union_Army
+		    }
+		transfer_state = 640
+		transfer_state = 1319
+		add_ideas = {
+				BUR_burmese_civilwar
+		}
+		load_oob = "SHA_2000"
+		create_faction = Federal_Union_Army
+		add_to_faction = SHA
+		add_to_faction = KAR
+		add_to_faction = RAM
+		add_to_faction = CHN
+		add_to_faction = KAC
+		add_to_faction = ARA
+		declare_war_on = {
+		target = BUR
+		type = annex_everything
+						}
+		}
+		KAR = {
+			add_to_war = { 
+    targeted_alliance = SHA 
+    enemy = BUR 
+    hostility_reason = asked_to_join
+				}
+		}
+		RAM = {
+			add_to_war = { 
+    targeted_alliance = SHA 
+    enemy = BUR 
+    hostility_reason = asked_to_join
+				}
+		}
+		CHN = {
+			add_to_war = { 
+    targeted_alliance = SHA 
+    enemy = BUR 
+    hostility_reason = asked_to_join
+				}
+		}
+		ARA = {
+			add_to_war = { 
+    targeted_alliance = SHA 
+    enemy = BUR 
+    hostility_reason = asked_to_join
+				}
+		}
+		KAC = {
+			add_to_war = { 
+    targeted_alliance = SHA 
+    enemy = BUR 
+    hostility_reason = asked_to_join
+				}
+		}
+}

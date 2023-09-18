@@ -1,0 +1,210 @@
+﻿capital = 897
+
+set_oob = "NOR_1962"
+
+set_research_slots = 3
+set_convoys = 100
+
+set_stability = 0.4
+set_war_support = 0.15
+
+add_ideas = {
+	###FACTION###
+	Pakt_Marionettenstaat
+	###SPIRITS###
+	###MINISTERS###
+    ##POLITICAL LAWS##
+	tno_political_parties_one_party_state
+	tno_religious_rights_secularism
+	tno_trade_unions_illegal
+    tno_immigration_quota_immigration
+	tno_slavery_allowed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_registered_voting
+	tno_refugees_skilled
+	##MILITARY LAWS###
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_kill_em_all
+	tno_military_spending_large_spending 
+	tno_training_basic_training
+	tno_racial_integration_none
+	tno_draft_exemptions_none
+	##SOCIAL LAWS##
+	tno_safety_minimal_regulations
+	tno_health_care_private_health_care
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_penal_slavery
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_oppression
+	tno_security_security_service
+	##ECONOMIC LAWS##
+	tno_trade_laws_export_focus
+	tno_economic_focus_early_mobilization
+	tno_tax_rate_high_taxes
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_14_hour_work_day
+	tno_child_labor_restricted
+	tno_pensions_low_pensions
+	tno_unemployment_no_subsidies
+	##SOCIETAL DEVELOPMENT##
+	tno_nuclear_stockpile_none
+	tno_poverty_rate_25
+	tno_army_professionalism_professional
+	tno_industrial_expertise_experienced
+	tno_industrial_equipment_modern
+	tno_agriculture_mass_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+set_politics = {	
+	ruling_party = national_socialism
+	last_election = "1933.10.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    socialist = 3
+    progressivism = 4
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 3
+    paternalism = 20
+    despotism = 10
+    fascism = 20
+    national_socialism = 40
+    ultranationalism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Jack Erik Kjuus"
+	desc = "POLITICS_JACK_ERIK_KJUUS_DESC"
+	picture = "Portrait_NOR_Jack_Erik_Kjuus.dds"
+	expire = "2100.5.6"
+	ideology = national_socialism_reformed_national_socialism_subtype
+}
+create_country_leader = {
+	name = "Arne Tumyr"
+	desc = "POLITICS_ARNE_TUMYR_DESC"
+	picture = "Portrait_NOR_Arne_Tumyr.dds"
+	expire = "2016.6.29"
+	ideology = fascism_subtype
+}
+create_country_leader = {
+	name = "Carl Hagan"
+	desc = "POLITICS_CARL_HAGAN_DESC"
+	picture = "Portrait_NOR_Carl_Hagan.dds"
+	expire = "2016.6.29"
+	ideology = paternalism_subtype
+}
+create_country_leader = {
+	name = "Harald Sunde"
+	desc = "POLITICS_HARALD_SUNDE_DESC"
+	picture = "Portrait_NOR_Harald_Sunde.dds"
+	expire = "2016.6.29"
+	ideology = despotism_subtype
+}
+create_country_leader = {
+	name = "Jens Stoltenburg"
+	desc = "POLITICS_JENS_STOLTENBURG_DESC"
+	picture = "Portrait_NOR_Jens_Stoltenburg.dds"
+	expire = "2016.6.29"
+	ideology = progressivism_subtype
+}
+create_country_leader = {
+	name = "Jo Benkow"
+	desc = "POLITICS_JO_BENKOW_DESC"
+	picture = "Portrait_NOR_Jo_Benkow.dds"
+	expire = "2016.6.29"
+	ideology = conservatism_subtype
+}
+create_country_leader = {
+	name = "Torstein Dahle"
+	desc = "POLITICS_TORSTEIN_DAHLE_DESC"
+	picture = "Portrait_NOR_Torstein_Dahle.dds"
+	expire = "2016.6.29"
+	ideology = socialist_subtype
+}
+
+
+
+### Unit Leaders ###
+
+# create_corps_commander = {
+# 	name = "Jürgen Bennecke"
+# 	picture = "Portrait_Norway_Jurgen_Bennecke.dds"
+# 	traits = { career_officer organizer infantry_officer }
+# 	skill = 4
+# 	attack_skill = 2
+# 	defense_skill = 3
+# 	planning_skill = 4
+# 	logistics_skill = 3
+# 	# id = 
+# }
+
+create_navy_leader = {
+	name = "Hans-Georg Hess"
+	picture = "Portrait_Norway_Hans_Georg_Hess.dds"
+	traits = { seawolf mine_sweeper }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 2
+	id = 792
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	##set_naval_oob = NOR_mtg_navy_1962
+	create_equipment_variant = {
+		name = "Type XXVI-Class"
+		type = ship_hull_submarine_2
+		name_group = GER_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_engine_slot = sub_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			rear_1_custom_slot = ship_torpedo_sub_2
+    	}
+	}
+	create_equipment_variant = {
+		name = "Rostock-Class"
+		type = ship_hull_more_light_2
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_radar_slot = ship_sonar_2
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_2
+    	}
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	##set_naval_oob = NOR_navy_1962
+	create_equipment_variant = {
+		name = "Rostock-Class"
+		type = frigate_2
+		name_group = GER_DD_HISTORICAL
+	}
+	create_equipment_variant = {
+		name = "Type XXVI-Class"
+		type = submarine_2
+		name_group = GER_SS_HISTORICAL
+	}
+}

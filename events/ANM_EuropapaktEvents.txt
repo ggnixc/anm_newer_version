@@ -1,0 +1,277 @@
+﻿add_namespace = GER_anm_europapaktevents
+#### INTRO EVENTS ###
+## THE BIG CALCULATION 
+country_event = {
+	id = GER_anm_europapaktevents.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_anm_europapaktevents.1" }
+	title = GER_anm_europapaktevents.1.t
+	desc = GER_anm_europapaktevents.1.desc
+	picture = GFX_anm_volkshallebombing
+	hidden = yes
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_anm_europapaktevents.1.a
+		ai_chance = { factor = 1 }
+
+
+		hidden_effect = {
+				set_variable = { global.europapaktunitymonthlyboost = 1 }
+				
+				every_country = {
+				if = {
+				limit = { check_variable = { THIS.europapakteprelations > 50 } } 
+				set_variable = { THIS.europapakteprelations = 50 }
+				}
+				if = {
+				limit = { is_in_faction_with = GER } 
+				
+				
+				
+				add_to_variable = { global.europapaktunitymonthlyboost = THIS.europapakteprelations }
+						}
+				
+				}
+				divide_variable = { global.europapaktunitymonthlyboost = 300  } 
+				add_to_variable = { global.europapaktunitymonthlyboost = 1 }
+				if = {
+					limit = { 
+						55 = { 
+						has_state_flag = anm_megastructure_built 
+						}
+					}
+				add_to_variable = { global.europapaktunitymonthlyboost = 1 }
+				}
+				add_to_variable = { global.europapaktunitymonthlyboost = global.europapaktunitymodifierep }
+				add_to_variable = { global.europapaktunity = global.europapaktunitymonthlyboost }
+				
+				every_country = {
+					if = {
+				limit = { 
+					is_in_faction_with = GER 
+				}
+				every_owned_state = {
+				
+				
+				
+				set_variable = {  THIS.europapaktstatecontribution =  THIS.europapaktdev }
+				multiply_variable = { THIS.europapaktstatecontribution = THIS.populationeppakt }
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 1 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 2 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 3 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 4 }}
+				multiply_variable = { THIS.europapaktstatecontribution = 1.1 }
+				add_to_variable = { GER.political_power = 4 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 5 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 6 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 7 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 8 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 9 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 10 }  }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 11 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.1 }
+				add_to_variable = { GER.political_power = 4 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanyone = 12 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { THIS.europapaktcompanyone = 13 }
+				}
+				
+				
+				
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 1 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 2 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 3 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 4 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.1 }
+				add_to_variable = { GER.political_power = 4 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 5 } } 
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 6 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 7 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 8 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 9 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 10 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 11 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.1 }
+				add_to_variable = { GER.political_power = 4 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanytwo = 12 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { THIS.europapaktcompanytwo = 13 }
+				}
+				
+				
+				
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 1 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { check_variable = {  THIS.europapaktcompanythree = 2 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 3 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 4 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.1 }
+				add_to_variable = { GER.political_power = 4 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 5 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 6 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 7 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 8 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 9 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 10 } }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 11 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.1 }
+				add_to_variable = { GER.political_power = 4 }
+				add_to_variable = { global.europapaktunity = 0.3 }
+				}
+				if = {
+				limit = { check_variable = { THIS.europapaktcompanythree = 12 } }
+				multiply_variable = { THIS.europapaktstatecontribution = 1.2 }
+				add_to_variable = { GER.political_power = 4 }
+				}
+				if = {
+				limit = { THIS.europapaktcompanythree = 13 }
+				}
+
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				add_to_variable = { global.europapaktgdppreparation = THIS.europapaktstatecontribution }
+					}
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				}
+				set_variable = { global.europapaktgdp = 0 }
+				every_country = {
+				 if = {
+				 limit = { 
+					OR = {
+			is_in_faction_with = GER 
+			tag = GER
+						}
+					}
+				 add_to_variable = { global.europapaktgdp = GDP }
+				 }
+				}
+				#set_variable = { global.europapaktgdp = global.europapaktgdppreparation }
+				#multiply_variable = { global.europapaktgdp = 15 }
+				
+				set_variable = { global.europapaktbudgetmonthlylol = global.europapaktgdppreparation }
+				divide_variable = { global.europapaktbudgetmonthlylol = 5  } 
+				
+				add_to_variable = { global.europapaktbudget = global.europapaktbudgetmonthlylol }
+				set_variable = { global.europapaktgdppreparation = 0 }
+				
+			}
+		}
+}
+
+

@@ -1,0 +1,388 @@
+﻿capital = 613 #Nanjing
+set_major = yes
+
+oob = "CHI_1962"
+
+set_country_flag = CHI_Modernization
+
+set_variable = { ANMKDN_showednation_agenda_one = 7 }
+set_variable = { ANMKDN_showednation_agenda_two = 9 }
+set_variable = { ANMKDN_showednation_agenda_three = 16  }
+
+set_war_support = 1.00
+set_stability = 1.00
+
+set_research_slots = 3
+set_convoys = 40
+
+add_manpower = 50000
+
+set_technology = {
+
+}
+
+set_variable = { CHI_research_var = 0 }
+set_variable = { CHI_edu_debuff_pol = -0.35 }
+set_variable = { CHI_edu_debuff_stab = -0.20 }
+set_variable = { CHI_edu_debuff_warsup = -0.20 }
+set_variable = { CHI_edu_debuff_effcap = -0.30 }
+set_variable = { CHI_edu_debuff_exc = -0.40 }
+set_variable = { CHI_edu_debuff_const = -0.40 }
+set_variable = { CHI_edu_debuff_research = -0.15 }
+
+set_politics = {
+	ruling_party = paternalism
+	last_election = "1960.11.11"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 2
+    socialist = 9
+    progressivism = 2
+    liberalism = 13
+    conservatism = 16
+    liberal_conservatism = 0
+    fascism = 0
+    despotism = 0
+    paternalism = 58
+    national_socialism = 0
+    ultranationalism = 0
+    esoteric_nazism = 0
+}
+
+#actually Kong Qingdong
+create_country_leader = {
+	name = "The Helmsman"
+	picture = "Portrait_CHI_Hu_Jintao_1.dds"
+	desc = "POLITICS_HU_JINTAO_DESC"
+	expire = "2090.1.1"
+	ideology = communist_1_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Social Democrat"
+	picture = "Portrait_Lee_Yuan_tsu.tga"
+	desc = "POLITICS_LEEYUANTSU_DESC"
+	expire = "2090.1.1"
+	ideology = social_democracy_left_wing_populism_subtype 
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Lang Xianping"
+	picture = "Portrait_CHI_Lang_Xianping.tga"
+	desc = "POLITICS_LEEYUANTSU_DESC"
+	expire = "2090.1.1"
+	ideology = liberalism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Hu Jintao"
+	picture = "Portrait_CHI_Hu_Jintao.dds"
+	desc = "POLITICS_LEEYUANTSU_DESC"
+	expire = "2090.1.1"
+	ideology = progressivism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Hu Jintao"
+	desc = "POLITICS_HUJINTAO_DESC"
+	picture = "Portrait_CHI_Hu_Jintao.dds"
+	expire = "2090.1.1"
+	ideology = paternalism_xunzheng_subtype 
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mei Aiwen"
+	picture = "Portrait_CHI_Mei_Aiwen.dds"
+	desc = "POLITICS_LEEYUANTSU_DESC"
+	expire = "2090.1.1"
+	ideology = despotism_civilian_dictatorship_subtype 
+	traits = {
+		#
+	}
+}
+
+#maybe Wei Jingsheng
+create_country_leader = {
+	name = "Pan-Asianist"
+	picture = "Portrait_Lee_Yuan_tsu.tga"
+	desc = "POLITICS_LEEYUANTSU_DESC"
+	expire = "2090.1.1"
+	ideology = fascism_revolutionary_nationalism_subtype  
+	traits = {
+		#
+	}
+}
+
+if = {
+ 	limit = {
+ 		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+ 	}
+ 	set_autonomy = {
+ 		target = TIB
+ 		autonomous_state = autonomy_China_Autonomous
+ 	}
+ 	set_autonomy = {
+ 		target = MON
+ 		autonomous_state = autonomy_China_Autonomous
+ 	}
+	set_autonomy = {
+ 		target = GNG
+ 		autonomous_state = autonomy_China_Autonomous
+ 	}
+}
+
+add_ideas = {
+
+	CHI_Ecomomic_takeoff
+	CHI_The_Great_Wall_Never_Falls
+	CHI_Unhealed_Wounds
+	CHI_United_Front
+	
+	#Country
+	CHI_minister_Wen_Jiabao_hog
+    CHI_minister_Dai_Xianglong_eco
+    CHI_minister_Li_Zhaoxing_for
+    CHI_minister_Luo_Gan_sec
+	
+	#Political
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_secularism
+	tno_trade_unions_state_controlled
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_elite_voting
+	tno_refugees_vetted_entry
+
+	#Military
+	tno_conscription_volunteer_only
+	tno_women_total_equality
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_combat_schooling
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_educational_deferment
+
+	#Economic
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	#Social
+	tno_safety_acceptable_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_some_regulations
+	tno_education_public_higher_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_gender_equality
+	tno_minorities_affirmative_action
+	tno_drugs_weedbanned 
+	tno_security_wire_tapping
+
+	#Societal Development
+	tno_poverty_rate_25
+	tno_army_professionalism_professional
+	tno_industrial_expertise_innovative 
+	tno_industrial_equipment_modern
+	tno_agriculture_modern
+	tno_research_facilities_modern
+	tno_academic_base_secondary_schooling 
+	tno_nuclear_stockpile_few
+	
+	#Economy - Construction Spending
+	construction_level_5
+}
+
+
+#Field Marshals
+
+#create_field_marshal = {
+#	name = "Liu Anqi"
+#	portrait_path = "gfx/leaders/CHI/Portrait_China_Liu_Anqi.dds"
+#	traits = {
+#		defensive_doctrine thorough_planner organisational_leader
+#	}
+#	id = 2401
+#	skill = 5
+#}
+
+create_field_marshal = {
+	name = "Bao Wenyue"
+	desc = "FIELD_MARSHAL_BAO_WENYUE"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Bao_Wenyue.dds"
+	traits = {
+		old_guard media_personality
+	}
+	id = 2401
+	skill = 1
+
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Ye Peng"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Ye_Peng.dds"
+	traits = {
+		old_guard career_officer
+	}
+	id = 2402
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+#Generals
+
+create_corps_commander = {
+	name = "Peng Mengji"
+	desc = "GENERAL_PENG_MENGJI"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Peng_Mengji.dds"
+	traits = {
+		commando
+	}
+	id = 2410
+	skill = 4
+
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Zhang Wannian"
+	portrait_path = "gfx/leaders/CHI/Portrait_Zhang_Wannian.tga"
+	traits = { 
+		old_guard jungle_rat 
+	}
+	id = 2411
+	skill = 3
+
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Chen Daqing"
+	desc = "GENERAL_CHEN_DAQING"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Chen_Daqing.dds"
+	traits = {
+		organizer
+	}
+	id = 2412
+	skill = 4
+
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Sun Dianying"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Sun_Dianying.dds"
+	traits = {
+		old_guard desert_fox
+	}
+	id = 2413
+	skill = 2
+
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Luo Benli"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Luo_Benli.dds"
+	traits = {
+		media_personality
+	}
+	id = 2414
+	skill = 1
+
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Pang Bingxun"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Pang_Bingxun.dds"
+	traits = {
+		trickster old_guard infantry_officer
+	}
+	id = 2415
+	skill = 2
+
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Chi Haotian"
+	portrait_path = "gfx/leaders/CHI/Portrait_China_Chi_Haotian.dds"
+	traits = {
+		harsh_leader infantry_officer
+	}
+	id = 2416
+	skill = 1
+
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_navy_leader = {
+    	name = "Liu Huaqing"
+   	picture = "Portrait_China_Liu_Huaqing.dds"
+    	traits = { aviation_enthusiast media_personality superior_tactician blockade_runner seawolf }
+    	skill = 3
+    	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
+	id = 2450
+}
+

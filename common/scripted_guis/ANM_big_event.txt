@@ -1,0 +1,31 @@
+scripted_gui = {
+
+	ANM_SG_big_event_germany_burgundian_war = {
+		context_type = player_context
+		window_name = "ANM_SG_big_event_germany_burgundian_war"
+
+		visible = {
+			NOT = { has_global_flag = TNO_my_world_is_on_fire_how_about_yours }
+			has_country_flag = big_event_secondburgundianwar
+		}
+	}
+
+	ANM_SG_big_event_frame_germany_burgundian_war = {
+		context_type = player_context
+		window_name = "ANM_SG_big_event_frame_germany_burgundian_war"
+
+		visible = {
+			NOT = { has_global_flag = TNO_my_world_is_on_fire_how_about_yours }
+			has_country_flag = big_event_secondburgundianwar
+		}
+
+		effects = {
+			Option_click = {
+				clr_country_flag = big_event_secondburgundianwar
+			}
+		}
+	}
+
+	##USE SUPER_EVENT_MAKER_GUI IN USEFUL PYTHON PROGRAMS TO MAKE NEW SUPER EVENTS##
+
+}

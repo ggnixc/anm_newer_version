@@ -1,0 +1,218 @@
+KdN_council_send_to_mandate_germany = {
+	enable = {
+		has_idea = KdNcouncilmember
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = KTW
+		value = 1000
+	}
+}
+
+
+GER_civilwar_GER_sendtroops_ALP = {
+	enable = {
+		tag = GER
+		ALP = { has_war = yes }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ALP
+		value = 1000
+	}
+}
+GER_civilwar_GER_sendtroops_HSS = {
+	enable = {
+		tag = GER
+		HSS = { has_war = yes }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HSS
+		value = 1000
+	}
+}
+GER_civilwar_GER_sendtroops_LIE = {
+	enable = {
+		tag = GER
+		LIE = { has_war = yes }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = LIE
+		value = 1000
+	}
+}
+GER_civilwar_GER_sendtroops_OBY = {
+	enable = {
+		tag = GER
+		OBY = { has_war = yes }
+		NOT = { has_country_flag = GER_support_franken }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = OBY
+		value = 1000
+	}
+}
+GER_civilwar_GER_sendtroops_FRK = {
+	enable = {
+		tag = GER
+		FRK = { has_war = yes }
+		has_country_flag = GER_support_franken
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FRK
+		value = 1000
+	}
+}
+GER_civilwar_STY_sendtroops_BRN = {
+	enable = {
+		tag = STY
+		BRN = { has_war = yes }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BRN
+		value = 1000
+	}
+}
+GER_civilwar_BRN_sendtroops_STY = {
+	enable = {
+		tag = BRN
+		STY = { has_war = yes }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = STY
+		value = 1000
+	}
+}
+GER_civilwar_NSF_sendtroops_NBY = {
+	enable = {
+		tag = NSF
+		NBY = { has_war = yes }
+		GER = {
+		has_country_flag = GER_support_franken
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = NBY 
+		value = 1000
+	}
+}
+GER_civilwar_NSF_sendtroops_FRK = {
+	enable = {
+		tag = NSF
+		FRK = { has_war = yes }
+		GER = {
+		NOT = { has_country_flag = GER_support_franken }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FRK 
+		value = 1000
+	}
+}
+
+
+
+
+
+GER_SEND_TO_SRILANKA = {
+	enable = {
+		original_tag = GER
+		CYL = {	has_war_with = TIG }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CYL
+		value = 1000
+	}
+}				
+RAJ_SEND_TO_SRILANKA = {
+	enable = {
+		original_tag = RAJ
+		CYL = {	has_war_with = TIG }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = TIG
+		value = 1000
+	}
+}
+FRA_SEND_TO_BURGUNDY = {
+	enable = {
+		original_tag = FRA
+		BIS = {	has_war_with = BRG }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BRG
+		value = 1000
+	}
+}
+GER_SEND_TO_BURGUNDY = {
+	enable = {
+		original_tag = GER
+		BIS = {	has_war_with = BRG }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BRG
+		value = 1000
+	}
+}
+GER_SEND_TO_SHAN = {
+	enable = {
+		original_tag = GER
+		BUR = {	has_war_with = SHA }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SHA
+		value = 1000
+	}
+}
+ITA_SEND_TO_TUNISIA = {
+	enable = {
+		original_tag = ITA
+		TUN = {	has_war_with = TFF }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = TUN
+		value = 1000
+	}
+}
+SOVIETS_SEND_TO_TUNISIA = {
+	enable = {
+		original_tag = WRS
+		TUN = {	has_war_with = TFF }
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = TFF
+		value = 1000
+	}
+}

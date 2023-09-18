@@ -1,0 +1,113 @@
+ideas = {
+	country = {
+		TIB_anueasypeacea = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_TIB_anueasypeacea
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+		TIB_trouble_with_autonomy  = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_TIB_steadymarchofprogress
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+		TIB_steadymarchofprogress = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_TIB_trouble_with_autonomy
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+	}
+	head_of_government = {
+		
+		TIB_minister_Sonam_Topgyal_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TIB_minister_Sonam_Topgyal_hog"}
+			allowed = { original_tag = CHI }
+			picture = "TIB_minister_Sonam_Topgyal"
+			available = {
+				tag = TIB
+			}
+			traits = {
+				head_of_government
+				hog_devoted_follower 
+				social_conservative
+				TIB_minister_Sonam_Topgyal_hog_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+									}
+						}
+						
+	security_minister = {
+		TIB_minister_Meng_Hongwei_sec = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TIB_minister_Meng_Hongwei_sec"}
+			allowed = { original_tag = TIB }
+			picture = "TIB_minister_Meng_Hongwei"
+			available = {
+					tag = TIB
+			}
+			traits = {
+				security_minister
+				sec_crooked_kleptocrat  
+				authoritarian_democrat
+				TIB_minister_Meng_Hongwei_sec_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+									}
+						}
+						
+	foreign_minister = {
+		TIB_minister_Tenzin_Tethong_for = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TIB_minister_Tenzin_Tethong_for"}
+			allowed = { original_tag = TIB }
+			picture = "TIB_minister_Tenzin_Tethong"
+			available = {
+					tag = TIB
+			}
+			traits = {
+				foreign_minister
+				for_seasoned_ambassador  
+				social_liberal 
+				TIB_minister_Tenzin_Tethong_for_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+											}
+						}
+						
+	economy_minister = {
+		TIB_minister_Yang_Chuantang_eco = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TIB_minister_Yang_Chuantang_eco"}
+			allowed = { original_tag = CHI }
+			picture = "TIB_minister_Yang_Chuantang"
+			available = {
+					tag = TIB
+			}
+			traits = {
+				economy_minister
+				eco_friend_of_the_tibetan_people
+				social_liberal
+				TIB_minister_Yang_Chuantang_eco_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+											}
+						}
+						}

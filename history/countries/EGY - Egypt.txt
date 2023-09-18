@@ -1,0 +1,95 @@
+﻿capital = 446
+
+set_oob = "EGY_1962"
+
+add_ideas = {
+
+	##laws##
+	#political#
+	tno_political_parties_one_party_state
+	tno_religious_rights_pluralism
+	tno_trade_unions_illegal
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	tno_refugees_open
+
+	#military#
+	tno_conscription_one_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_educational_deferment
+
+	#economic#
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_exploitative_taxation
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_low_pensions
+	tno_unemployment_no_subsidies
+
+	#social#
+	tno_safety_limited_regulations
+	tno_health_care_public_health_care
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_security_service
+
+	#ministers#
+}
+
+set_politics = {
+	ruling_party = socialist
+	last_election = "1958.1.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 10
+	ultranationalism = 0
+	socialist = 42
+	progressivism = 5
+	liberalism = 8
+	liberal_conservatism = 10
+	conservatism = 0
+	paternalism = 0
+	despotism = 5
+	fascism = 5
+	national_socialism = 15
+	esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Husni Mubarak"
+	desc = "POLITICS_HAMDEEN_SABAHI_DESC"
+	picture = "Portrait_EGY_Hamdeen_Sabahi.dds"
+	expire = "2999.12.25"
+	ideology = paternalism_left_wing_corporatism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Khaled Mohieddin"
+	desc = ""
+	picture = "Portrait_EGY_Khaled_Mohieddin.dds"
+	expire = "2999.12.25"
+	ideology = socialist_nasserism_subtype
+	traits = {
+	}
+}
+
+# Starting tech

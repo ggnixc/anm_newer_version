@@ -1,0 +1,44 @@
+﻿capital = 1057
+
+set_oob = "KTG_2000"
+add_ideas = {
+	congo_war_generic
+}
+set_politics = {	
+	ruling_party = communist
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 60
+    socialist = 20
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 10
+    despotism = 10
+    fascism = 0
+    ultranationalism = 0
+	national_socialism = 0
+    esoteric_nazism = 0
+}
+
+
+create_country_leader = {
+	name = "Antoine Gizenga"
+	desc = "POLITICS_ANTOINE_GIZENGA_DESC"
+	picture = "Portrait_Antoine_Gizenga.dds"
+	expire = "2999.1.23"
+	ideology = communist_subtype
+	traits = {
+		
+	}
+}
+
+declare_war_on = {
+	target = CFS
+	type = annex_everything
+}

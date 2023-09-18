@@ -1,0 +1,114 @@
+﻿capital = 279
+
+set_oob = "CHL_1962"
+
+set_politics = {	
+	ruling_party = liberalism
+	last_election = "1992.11.21"
+	election_frequency = 72
+	elections_allowed = yes
+
+}
+
+set_popularities = {
+    communist = 8
+    ultranationalism = 0
+    socialist = 18		
+    progressivism = 15
+    liberalism = 17
+    liberal_conservatism = 17
+    conservatism = 9
+    paternalism = 9
+	national_socialism = 0
+    despotism = 7
+    fascism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Ricardo Lagos"
+	desc = "POLITICS_RICARDO_LAGOS_DESC"
+	picture = "Portrait_Chile_Ricardo_Lagos.dds"
+	expire = "2999.1.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Patricio Aylwin"
+	desc = "POLITICS_PATRICIO_AYLWIN_DESC"
+	picture = "CHL_Patricio_Aylwin.dds"
+	expire = "2999.1.1"
+	ideology = liberalism_christian_liberalism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "José Antonio Kast"
+	desc = "POLITICS_JOSE_KAST_DESC"
+	picture = "Portrait_CHL_Jose_Kast.dds"
+	expire = "2999.1.1"
+	ideology = paternalism_pinochetism_subtype
+	traits = {
+		#
+	}
+}
+
+add_ideas = {
+	#Sprits
+	CHL_Legacy_of_Pinochet
+	CHL_Socialist_Fighting
+	CHL_Military_Factionalism
+
+    #Ministers
+    CHL_Enrique_Krauss_hog
+	CHL_Jose_Insulza_for
+	CHL_Eduardo_Ureta_eco
+	CHL_Soledad_Alvear_sec
+	
+	#TNO Systems
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	tno_refugees_open
+		#MILITARY
+	tno_conscription_volunteer_only
+	tno_women_military_assistance
+	tno_military_supervision_military_policing
+	tno_military_spending_large_spending
+	tno_training_combat_schooling
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_educational_deferment
+		#SOCIAL
+	tno_safety_acceptable_regulations
+	tno_health_care_private_health_care
+	tno_pollution_few_regulations
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_police
+		#ECONOMIC
+	tno_trade_laws_free_trade
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_tax_havens
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+		#SOCIETAL DEVELOPMENT
+	tno_nuclear_stockpile_none
+}

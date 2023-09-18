@@ -1,0 +1,31 @@
+ideas = {
+	country = {
+		MAN_Problem_Of_NAJUA = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_MAN_Problem_Of_NAJUA
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				communist_drift = 0.10
+				political_power_gain = -0.10
+			}
+		}
+		MAN_Chained_To_Japan  = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_MAN_Chained_To_Japan
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.10
+				surrender_limit = -0.15
+				cic_to_overlord_factor = 0.2
+			}
+		}				
+	
+	}
+}

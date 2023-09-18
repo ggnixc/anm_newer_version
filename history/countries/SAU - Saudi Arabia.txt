@@ -1,0 +1,92 @@
+﻿capital = 919
+
+set_oob = "SAU_1962"
+
+set_convoys = 200
+add_manpower = 5631
+
+create_faction = Gulf_Cooperation_Council
+add_to_faction = YEM
+add_to_faction = OMA
+add_to_faction = UAE
+
+add_ideas = {
+	GCC_Faction
+	
+	SAU_minister_Abdullah_AbdulMuhsin_hog
+	SAU_minister_Sultan_bin_AbdulAziz_sec
+	SAU_minister_Usama_Faqih_eco
+	SAU_minister_Saud_Faisal_for
+	##POLITICAL LAWS##
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	##MILITARY LAWS###
+	tno_conscription_volunteer_only
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_minimal_training
+	tno_racial_integration_segregated_regiments
+	##SOCIAL LAWS##
+	tno_safety_no_regulations
+	tno_health_care_private_health_care
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_totalitarian
+	##ECONOMIC LAWS##
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	## ideas
+	SAU_guardians_of_mecca
+	SAU_salafist_nejdian_population
+	SAU_Black_Gold
+	SAU_Immigrant_Workers
+	SAU_shia_population_angry
+	ARABIA_GCC
+}
+
+country_event = { id = sau.1 days = 100 }
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1933.2.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    progressivism = 10
+    liberalism = 0
+    liberal_conservatism = 5
+    conservatism = 5
+    paternalism = 10
+    despotism = 40
+    fascism = 20
+    ultranationalism = 10
+}
+
+recruit_character = SAU_Fahd_Bin_Abdulaziz
+recruit_character = SAU_Osama
+recruit_character = SAU_Talal_Al_Saud
+recruit_character = SAU_Salman_bin_Abdulaziz
+recruit_character = SAU_Faisal_bin_Fahd
+recruit_character = SAU_Madawi_Rasheed
+recruit_character = SAU_AbdulRahman_Munif
+recruit_character = SAU_Nasser_Al_Saeed
+recruit_character = SAU_Al_Aysh
+

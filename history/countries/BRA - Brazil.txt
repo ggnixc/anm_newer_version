@@ -1,0 +1,50 @@
+﻿capital = 1489
+
+set_oob = "BRA_1962"
+
+load_focus_tree = BRA_Start_Lula
+
+add_ideas = {
+	#NATIONAL SPIRITS#
+	BRA_Beacon_Democracy
+	BRA_Stains_Corruption
+	BRA_Rising_Star
+	BRA_Populism_Debate
+	
+	#MINISTERS
+	BRA_Leonel_Brizola_hog
+	BRA_Maria_Tavares_eco
+	BRA_Celso_Amorim_for
+	BRA_Dias_Toffoli_sec
+}	
+
+set_politics = {	
+	ruling_party = socialist
+	last_election = "1995.10.3"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 5
+    ultranationalism = 0
+    socialist = 35
+    progressivism = 10
+    liberalism = 15
+    liberal_conservatism = 10
+    conservatism = 10
+    paternalism = 5
+    despotism = 0
+    fascism = 10
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Luiz Inácio Lula da Silva"
+	desc = "POLITICS_LULA_SILVA_DESC"
+	picture = "Portrait_BRA_Lula_Silva.dds"
+	expire = "2999.1.1"
+	ideology = socialist_lulism_subtype
+	traits = {
+	}
+}

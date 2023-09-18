@@ -1,0 +1,186 @@
+scripted_gui = {	
+
+##################################################################################################################################
+##################################          GERMAN COLAPSE                           #############################################
+##################################################################################################################################	
+	ANM_SG_big_event_thirdwestrussianwar_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME NAME AS #IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_thirdwestrussianwar_custom_window"
+
+		visible = {
+			has_country_flag = big_event_custom_thirdwestrussianwar ### this country flag triggers the #superevent
+		}
+	}
+
+	ANM_SG_big_event_frame_thirdwestrussianwar_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME #NAME AS IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_frame_thirdwestrussianwar_custom"
+
+		visible = {
+			has_country_flag = big_event_custom_thirdwestrussianwar
+		}
+
+		effects = {
+			Option_click = {
+				clr_country_flag = big_event_custom_thirdwestrussianwar ### this disables the country flag #that fires the superevent (so the superevent actually goes away)
+			}
+		}
+	} #set_country_flag big_event_thirdwestrussianwar ## quick command for testing
+
+
+
+	ANM_SG_big_event_german_collapse_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME NAME AS #IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_german_collapse_custom_window"
+
+		visible = {
+			has_country_flag = big_event_custom_german_collapse ### this country flag triggers the #superevent
+		}
+	}
+
+	ANM_SG_big_event_frame_german_collapse_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME #NAME AS IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_frame_german_collapse_custom"
+
+		visible = {
+			has_country_flag = big_event_custom_german_collapse
+		}
+
+		effects = {
+			Option_click = {
+				clr_country_flag = big_event_custom_german_collapse ### this disables the country flag #that fires the superevent (so the superevent actually goes away)
+			}
+		}
+	} #set_country_flag big_event_custom_german_collapse ## quick command for testing
+	
+##################################################################################################################################
+##################################          PIEDNOIR CONQUEST OF FRANCE              #############################################
+##################################################################################################################################	
+	
+	ANM_SG_big_event_piednoir_conquest_france_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME NAME AS #IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_piednoir_conquest_france_custom_window"
+
+		visible = {
+			has_country_flag = big_event_custom_piednoir_conquest_france ### this country flag triggers the #superevent
+		}
+	}
+
+	ANM_SG_big_event_frame_piednoir_conquest_france_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME #NAME AS IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_frame_piednoir_conquest_france_custom"
+
+		visible = {
+			has_country_flag = big_event_custom_piednoir_conquest_france
+		}
+
+		effects = {
+			Option_click = {
+				clr_country_flag = big_event_custom_piednoir_conquest_france ### this disables the country flag #that fires the superevent (so the superevent actually goes away)
+			}
+		}
+	}	#set_country_flag big_event_custom_piednoir_conquest_france ## quick command for testing
+
+##################################################################################################################################
+#######################################          TOTSOC COUP D'ETAT USSR             #############################################
+##################################################################################################################################	
+
+	ANM_SG_big_event_totsoc_coup_ussr_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME NAME AS #IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_totsoc_coup_ussr_custom_window"
+
+		visible = {
+			has_country_flag = big_event_custom_totsoc_coup_ussr ### this country flag triggers the #superevent
+		}
+	}
+
+	ANM_SG_big_event_frame_totsoc_coup_ussr_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME #NAME AS IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_frame_totsoc_coup_ussr_custom"
+
+		visible = {
+			has_country_flag = big_event_custom_totsoc_coup_ussr
+		}
+
+		effects = {
+			Option_click = {
+				clr_country_flag = big_event_custom_totsoc_coup_ussr ### this disables the country flag #that fires the superevent (so the superevent actually goes away)
+			}
+		}
+	} #set_country_flag big_event_custom_totsoc_coup_ussr ## quick command for testing
+
+	ANM_SG_big_event_german_democratisation_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME NAME AS #IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_german_democratisation_custom_window"
+
+		visible = {
+			has_country_flag = big_event_anm_wholesomegermany_dem ### this country flag triggers the #superevent
+		}
+	}
+
+	ANM_SG_big_event_frame_german_democratisation_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME #NAME AS IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_frame_german_democratisation_custom"
+
+		visible = {
+			has_country_flag = big_event_anm_wholesomegermany_dem
+		}
+
+		effects = {
+			Option_click = {
+				clr_country_flag = big_event_anm_wholesomegermany_dem ### this disables the country flag #that fires the superevent (so the superevent actually goes away)
+			}
+		}
+	} #set_country_flag big_event_anm_wholesomegermany_dem ## quick command for testing
+	
+	
+	
+	ANM_SG_big_event_nuclear_armageddon_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME NAME AS #IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_nuclear_armageddon_custom_window"
+
+		visible = {
+			has_country_flag = big_event_anm_nuclear_armageddon ### this country flag triggers the #superevent
+		}
+	}
+
+	ANM_SG_big_event_frame_nuclear_armageddon_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME #NAME AS IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_frame_nuclear_armageddon_custom"
+
+		visible = {
+			has_country_flag = big_event_anm_nuclear_armageddon
+		}
+
+		effects = {
+			Option_click = {
+				clr_country_flag = big_event_anm_nuclear_armageddon ### this disables the country flag #that fires the superevent (so the superevent actually goes away)
+			}
+		}
+	} #set_country_flag big_event_anm_nuclear_armageddon ## quick command for testing
+
+	ANM_SG_big_event_pacific_financial_crisis_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME NAME AS #IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_pacific_financial_crisis_custom_window"
+
+		visible = {
+			has_country_flag = big_event_anm_pacific_financial_crisis ### this country flag triggers the #superevent
+		}
+	}
+
+	ANM_SG_big_event_frame_pacific_financial_crisis_custom = { ### VERY IMPORTANT MAKE SURE THIS USES THE SAME #NAME AS IN THE ANM_SG_BigEvent_custom.gui FILE OR YOU'RE GONNA GET A CRASH
+		context_type = player_context
+		window_name = "ANM_SG_big_event_frame_pacific_financial_crisis_custom"
+
+		visible = {
+			has_country_flag = big_event_anm_pacific_financial_crisis
+		}
+
+		effects = {
+			Option_click = {
+				clr_country_flag = big_event_anm_pacific_financial_crisis ### this disables the country flag #that fires the superevent (so the superevent actually goes away)
+			}
+		}
+	} #set_country_flag big_event_anm_wholesomegermany_dem ## quick command for testing
+	
+}

@@ -1,0 +1,230 @@
+technologies = {
+	# INDUSTRY TREE
+	
+	building_construction_1 = {
+
+		# EFFECTS HERE
+		production_speed_buildings_factor = 0.05
+
+		path = {
+			leads_to_tech = anm_construction_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = anm_megastructures_1
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 1.5
+		start_year = 1950
+		
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 2 }
+		}
+
+		ai_will_do = {
+			factor = 50
+
+			modifier = {
+				factor = 0
+				date < "1950.1.1"
+			}
+		}
+
+		categories = {
+			industry
+			construction_tech
+		}
+	}
+	
+	anm_construction_1 = {
+
+		# EFFECTS HERE
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor = 0.1
+		
+		path = {
+			leads_to_tech = anm_construction_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1960
+		
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 4 }
+		}
+
+		ai_will_do = {
+			factor = 50
+
+			modifier = {
+				factor = 0
+				date < "1990.1.1"
+			}
+		}
+
+		categories = {
+			construction_tech
+		}
+	}
+	
+	anm_construction_2 = {
+
+		# EFFECTS HERE
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor = 0.1
+		
+		path = {
+			leads_to_tech = anm_construction_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2000
+		
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 10 }
+		}
+
+		ai_will_do = {
+			factor = 50
+
+			modifier = {
+				factor = 0
+				date < "2000.1.1"
+			}
+		}
+
+		categories = {
+			construction_tech
+		}
+	}
+	
+	anm_construction_3 = {
+
+		# EFFECTS HERE
+		production_speed_buildings_factor = 0.05
+		global_building_slots_factor = 0.1
+		
+		path = {
+			leads_to_tech = anm_construction_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2003
+		
+		folder = {
+			name = industry_folder
+			position = { x = 15 y = 12 }
+		}
+
+		ai_will_do = {
+			factor = 50
+
+			modifier = {
+				factor = 0
+				date < "2003.1.1"
+			}
+		}
+
+		categories = {
+			construction_tech
+		}
+	}
+	
+	
+	anm_megastructures_1 = {
+
+		# EFFECTS HERE
+		production_speed_buildings_factor = 0.05
+		
+		path = {
+			leads_to_tech = anm_megastructures_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1960
+		
+		folder = {
+			name = industry_folder
+			position = { x = 13 y = 4 }
+		}
+
+		ai_will_do = {
+			factor = 50
+
+			modifier = {
+				factor = 0
+				date < "1960.1.1"
+			}
+		}
+
+		categories = {
+			construction_tech
+		}
+	}
+	anm_megastructures_2 = {
+
+		# EFFECTS HERE
+		production_speed_buildings_factor = 0.05
+		
+		path = {
+			leads_to_tech = anm_megastructures_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2000
+		
+		folder = {
+			name = industry_folder
+			position = { x = 13 y = 10 }
+		}
+
+		ai_will_do = {
+			factor = 50
+
+			modifier = {
+				factor = 0
+				date < "2000.1.1"
+			}
+		}
+
+		categories = {
+			construction_tech
+		}
+	}
+	anm_megastructures_3 = {
+
+		# EFFECTS HERE
+		production_speed_buildings_factor = 0.05
+		
+
+		research_cost = 1.5
+		start_year = 2006
+		
+		folder = {
+			name = industry_folder
+			position = { x = 13 y = 14 }
+		}
+
+		ai_will_do = {
+			factor = 50
+
+			modifier = {
+				factor = 0
+				date < "2000.1.1"
+			}
+		}
+
+		categories = {
+			construction_tech
+		}
+	}

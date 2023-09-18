@@ -1,0 +1,26 @@
+characters = {
+	# Generic Officers for debugging
+	Generic_Army_Chief = {
+		name = Generic_Army_Chief
+		portraits = {
+			army = {
+				small = "GFX_idea_Generic_Position_Vacant"
+			}
+			army = {
+				large = "gfx/leaders/Generics/leader_marshal_unknown.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			
+			idea_token = Generic_Army_Chief
+			
+			allowed = { always = yes }
+			available = { always = yes }
+			ledger = civilian
+			cost = -1
+			removal_cost = -1
+			ai_will_do = { factor = 0 }
+		}
+	}
+}

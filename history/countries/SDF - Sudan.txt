@@ -1,0 +1,109 @@
+﻿capital = 1122
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1933.12.20"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+
+add_ideas = {
+	SDF_legacy_of_1999_election
+	SDF_insurgency_everywhere
+	OST_Rashid_Hassan_eco
+	OST_Mohammad_Hamdal_sec
+	OST_Zubair_Mohamed_Salih_hog
+	OST_Yassin_Ibrahim_Yassin_for
+	#political
+	tno_political_parties_one_party_state
+	tno_religious_rights_secularism
+	tno_trade_unions_illegal
+	tno_immigration_closed_borders
+	tno_slavery_allowed
+	tno_public_meetings_outlawed
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	tno_refugees_banned
+	#MILITARY
+	tno_conscription_all_adults_serve
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_military_spending_militarycentric_budget
+	tno_training_basic_training
+	tno_racial_integration_enforced_integration
+	tno_draft_exemptions_none
+	#SOCIAL
+	tno_safety_acceptable_regulations
+	tno_health_care_public_health_care
+	tno_pollution_some_regulations
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_police
+	#ECONOMIC
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_trinket_subsidies
+}
+
+set_popularities = {
+    communist = 7
+    ultranationalism = 0
+    national_socialism = 27
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 13
+    despotism = 53
+    fascism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Muhammad Othman al-Hussein"
+	desc = "POLITICS_OSMAN_AL_HUSSEIN_DESC"
+	picture = "Portrait_Sudan_Osman_al_Hussein.dds"
+	expire = "2999.4.24"
+	ideology = despotism_military_junta_subtype
+	traits = {
+		
+	}
+}
+create_field_marshal = {
+	name = "Mohammad Hamdal"
+	desc = ""
+	picture = ""
+	traits = { }
+
+	skill = 1
+	id = 1000000
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Zoabir Mohamed Salih"
+	desc = ""
+	picture = ""
+	traits = { }
+
+	skill = 1
+	id = 1000001
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}

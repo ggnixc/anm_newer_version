@@ -1,0 +1,111 @@
+﻿capital = 524 #Taiwan
+
+
+
+set_war_support = 1.00
+set_stability = 1.00
+
+set_research_slots = 3
+set_convoys = 40
+
+add_manpower = 50000
+
+set_technology = {
+
+}
+
+create_country_leader = {
+	name = "Chiang Pin-kun"
+	picture = "Portrait_Chiang_Pin-kun.dds"
+	desc = "POLITICS_LEEYUANTSU_DESC"
+	expire = "2090.1.1"
+	ideology = conservatism_subtype 
+	traits = {
+		#
+	}
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1960.11.11"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 2
+    socialist = 0
+    progressivism = 5
+    liberalism = 3
+    conservatism = 55
+    liberal_conservatism = 0
+    fascism = 10
+    despotism = 0
+    paternalism = 25
+    national_socialism = 0
+    ultranationalism = 0
+    esoteric_nazism = 0
+}
+
+add_ideas = {
+	Republic_of_China_Autonomous_Region
+	#Country
+	
+	#Political
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_secularism
+	tno_trade_unions_state_controlled
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_elite_voting
+	tno_refugees_vetted_entry
+
+	#Military
+	tno_conscription_volunteer_only
+	tno_women_total_equality
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_combat_schooling
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_educational_deferment
+
+	#Economic
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	#Social
+	tno_safety_acceptable_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_some_regulations
+	tno_education_public_higher_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_gender_equality
+	tno_minorities_affirmative_action
+	tno_drugs_weedbanned 
+	tno_security_wire_tapping
+
+	#Societal Development
+	tno_poverty_rate_25
+	tno_army_professionalism_professional
+	tno_industrial_expertise_innovative 
+	tno_industrial_equipment_modern
+	tno_agriculture_modern
+	tno_research_facilities_modern
+	tno_academic_base_secondary_schooling 
+	tno_nuclear_stockpile_few
+	
+	#Economy - Construction Spending
+	construction_level_5
+}
+
+

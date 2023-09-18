@@ -1,0 +1,273 @@
+﻿capital = 795 #Jakarta
+load_focus_tree = ZZZ_national_focus
+set_oob = "INS_1962"
+
+set_country_flag = INS_starting_tree_flag
+set_country_flag = INS_Not_in_Crisis
+
+set_stability = 0.9
+set_war_support = 0.6
+
+set_research_slots = 2
+
+add_manpower = 70000
+
+set_politics = {
+	ruling_party = paternalism
+	last_election = "1992.6.11"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 0
+    socialist = 2
+    progressivism = 16
+    liberalism = 8
+    liberal_conservatism = 8
+    conservatism = 6
+    paternalism = 50
+    despotism = 6
+    fascism = 4
+    national_socialism = 0
+    ultranationalism = 0
+    esoteric_nazism = 0
+}
+
+add_ideas = {
+	INS_minister_Ali_Saidkin_hog
+	INS_minister_Ali_Alatas_for
+	INS_minister_Try_Sutrisno_sec
+	INS_minister_Kwik_Gian_Gie_eco
+
+	Sphere_Coequal
+
+	INS_Guided_Democracy
+
+	#SOCIETAL DEVELOPMENT
+	tno_nuclear_stockpile_none
+	tno_poverty_rate_50
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_factory_complexes
+	tno_agriculture_mass_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_primary_schooling
+
+	construction_level_5
+	
+	#Political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_open_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	tno_refugees_vetted_entry
+	
+	#Military#
+	tno_conscription_volunteer_only
+	tno_women_noncombat_only
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_basic_training
+	tno_racial_integration_enforced_integration
+	tno_draft_exemptions_civil_service_deferment
+	
+	#Economic#
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_low_subsidies
+	
+	#Social#
+	tno_safety_acceptable_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_few_regulations
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_drugs_weedbanned
+	tno_security_police
+
+	
+	#Ministers
+	INS_Djuanda_Kartawidjaja_hog
+	INS_Subandrio_for
+	INS_General_Abdul_Haris_Nasution_sec
+	INS_Suwiryo_eco
+}
+
+create_country_leader = {
+	name = "Lukman Njoto"
+	expire = "2090.1.1"
+	desc = "POLITICS_SUKARNO_DESC"
+	picture = "Portrait_Indonesia_Sukarno.dds"
+	ideology = communist_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Agus Jabo Priyono"
+	expire = "2090.1.1"
+	desc = "POLITICS_SUKARNO_DESC"
+	picture = "Portrait_Indonesia_Sukarno.dds"
+	ideology = socialist_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Muchtar Pakpahan"
+	expire = "2090.1.1"
+	desc = "POLITICS_SUKARNO_DESC"
+	picture = "Portrait_Indonesia_Sukarno.dds"
+	ideology = progressivism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Siswono Yudo Husodo"
+	expire = "2090.1.1"
+	desc = "POLITICS_SUKARNO_DESC"
+	picture = "Portrait_Indonesia_Sukarno.dds"
+	ideology = liberalism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Alwi Shihab"
+	expire = "1989.1.1"
+	desc = "POLITICS_SUKARNO_DESC"
+	picture = "Portrait_INS_Alwi_Shihab.dds"
+	ideology = conservatism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Supeni Pudjobuntoro"
+	expire = "2090.1.1"
+	desc = ""
+	picture = "Portrait_INS_Supeni_Pudjobuntoro.dds"
+	ideology = paternalism_controlled_democracy_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Amien Rais"
+	expire = "2090.1.1"
+	desc = "POLITICS_SUKARNO_DESC"
+	picture = "Portrait_Indonesia_Sukarno.dds"
+	ideology = despotism_subtype
+	traits = {
+	}
+}
+	
+create_country_leader = {
+	name = "Yapto Soerjosoemarno"
+	expire = "2090.1.1"
+	desc = "POLITICS_SUKARNO_DESC"
+	picture = "Portrait_Indonesia_Sukarno.dds"
+	ideology = fascism_subtype
+	traits = {
+	}
+}	
+	
+create_field_marshal = {
+	name = "Suharto"
+	desc = "FIELD_MARSHAL_SUHARTO"
+	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_GeneralSuharto.dds"
+	traits = {
+		offensive_doctrine 
+		thorough_planner
+		organizer
+	}
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Abdul Haris Nasution"
+	desc = "FIELD_MARSHAL_ABDUL_HARIS_NASUTION"
+	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_General_Abdul_Haris_Nasution.dds"
+	traits = {
+		defensive_doctrine 
+		inspirational_leader
+	}
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "L.B Moerdani"
+	desc = "GENERAL_LB_MOERDANI"
+	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_General_LB_Moerdani.dds"
+	traits = { old_guard jungle_rat }
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ignatius Rijadi"
+	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_General_Ignatius_Slamet_Rijadi.dds"
+	traits = {
+		trait_engineer
+		scavenger
+	}
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Alex Kawilarang"
+	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_Alex_Kawilarang.dds"
+	traits = {
+		infantry_leader
+	}
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_navy_leader = {
+ 	name = "Yos Sudarso"
+ 	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_Admiral_Yos_Sudarso.dds"
+ 	traits = { blockade_runner }
+ 	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 5
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+ 	name = "Sudomo"
+ 	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_Admiral_Sudomo.dds"
+ 	traits = { old_guard }
+ 	attack_skill = 3
+	defense_skill = 5
+	maneuvering_skill = 2
+	coordination_skill = 3
+}

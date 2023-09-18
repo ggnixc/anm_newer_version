@@ -1,0 +1,87 @@
+﻿capital = 691
+set_oob = "WIN_1962"
+
+set_research_slots = 2
+set_convoys = 120
+
+set_politics = {	
+	ruling_party = liberalism
+	last_election = "1961.5.16"
+	election_frequency = 48
+	elections_allowed = yes
+
+}
+
+set_popularities = {
+    communist = 3
+    socialist = 6
+    progressivism = 35
+    liberalism = 42
+    liberal_conservatism = 0
+    conservatism = 8
+    paternalism = 6
+    despotism = 0
+    fascism = 0
+    national_socialism = 0
+    ultranationalism = 0
+    esoteric_nazism = 0
+}
+
+set_stability = 0.25
+set_war_support = 0.2
+
+add_ideas = {
+	#faction status
+	OFN_Dependent_Member
+	tno_safety_limited_regulations
+	tno_health_care_private_health_care
+	tno_pollution_some_regulations
+	tno_education_public_education
+	tno_penal_system_rehabilitation
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_gender_equality
+	tno_minorities_equal_rights
+	tno_security_police
+
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_registered_voting
+	tno_refugees_skilled
+
+	tno_trade_laws_free_trade
+	tno_economic_focus_demilitarized_economy
+	tno_tax_rate_low_taxation
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_restricted
+	tno_pensions_trinket_pensions
+	tno_unemployment_no_subsidies
+
+	tno_conscription_volunteer_only
+	tno_women_noncombat_only
+	tno_military_supervision_military_policing
+	tno_military_spending_low_spending
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_civil_service_deferment
+
+	#WIN_jamaican_nationalism
+	#WIN_splitting_apart
+	#WIN_history_occupation
+}
+
+create_country_leader = {
+	name = "P.J. Patterson"
+	desc = "POLITICS_PJ_PATTERSON_DESC"
+	picture = "Portrait_WIN_PJ_Patterson.dds"
+	expire = "2030.10.28"
+	ideology = liberalism_subtype
+	traits = {
+	}
+}

@@ -1,0 +1,79 @@
+﻿add_namespace = BRG_anm_starterevents
+#### INTRO EVENTS ###
+## THE SECOND BURGUNDIAN WAR
+country_event = {
+	id = BRG_anm_starterevents.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_anm_starterevents.1" }
+	title = BRG_anm_starterevents.1.t
+	desc = BRG_anm_starterevents.1.desc
+	picture = GFX_anm_burgundianwar5
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = BRG_anm_starterevents.1.a
+		ai_chance = { factor = 1 }
+		country_event = {
+    id = BRG_anm_starterevents.2
+    days = 10
+		}
+		
+		GER = {
+		end_puppet = BRG
+		country_event = {
+				id = GER_anm_starterevents.67
+			}
+		}
+		BRG = {
+	leave_faction = yes
+	add_ideas = {
+				BRG_firstburgundianoffensive
+	}
+		}
+	}
+}
+
+country_event = {
+	id = BRG_anm_starterevents.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event BRG_anm_starterevents.2" }
+	title = BRG_anm_starterevents.2.t
+	desc = BRG_anm_starterevents.2.desc
+	picture = GFX_anm_burgundianwar2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = BRG_anm_starterevents.2.a
+		ai_chance = { factor = 1 }
+		BIS = {
+		add_ideas = {
+				BRG_firstburgundianoffensive
+		}
+		transfer_state = 1397
+		add_state_core = 1397
+		transfer_state = 1398
+		add_state_core = 1398
+		transfer_state = 1396
+		add_state_core = 1396
+		transfer_state = 1395
+		add_state_core = 1395
+		transfer_state = 17
+		add_state_core = 17
+		load_oob = "BIS_1962"
+		declare_war_on = {
+	target = BRG
+	type = annex_everything
+}
+		}
+		GER = {
+		set_country_flag = sentroops_into_secondburgundianwar
+			add_idea = advisor_level_1
+	country_event = {
+				id = GER_anm_starterevents.68
+			}
+		}
+		every_country = { news_event = { id = WORLD.18135 days = 1 } }
+	}
+}

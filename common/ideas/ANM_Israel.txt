@@ -1,0 +1,47 @@
+###JESHURUN IDEAS###
+ideas = {
+	foreign_minister = {
+		ISR_michael_b_oren_for = {
+			allowed = { original_tag = ISR }
+			picture = ISR_michael_b_oren
+			available = {
+				tag = ISR
+			}
+			traits = {
+				foreign_minister
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}	
+	}
+	country = {
+		ISR_homeland_for_the_jewish_people = {
+			allowed = { always = no }
+			picture = GFX_idea_ISR_homeland_for_the_jewish_people
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = +0.05
+			}
+		}
+		ISR_developed_economy = {
+			allowed = { always = no }
+			picture = GFX_idea_ISR_developed_economy
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		ISR_a_pluralistic_nation = {
+			allowed = { always = no }
+			picture = GFX_idea_ISR_a_pluralistic_nation
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.05
+				recruitable_population_factor = -0.05
+			}
+		}
+	}
+}

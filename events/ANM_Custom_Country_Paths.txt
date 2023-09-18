@@ -1,0 +1,147 @@
+﻿add_namespace = ANM_countrypaths
+## German Path
+
+country_event = {
+	id = ANM_countrypaths.1
+	
+		title = ANM_countrypaths.1.t
+		desc = ANM_countrypaths.1.desc
+		picture = GFX_anm_CHI_ROC_1
+
+
+		is_triggered_only = no
+		fire_only_once = yes
+
+		trigger = {
+			tag = GER
+			date > 2001.1.1
+			has_start_date < 2005.01.02
+			is_ai = yes
+		}
+
+		option = { #Speer jr
+		name = ANM_countrypaths.1.a
+			ai_chance = {
+				base = 10
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_MUSSGNUG }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DECKERT }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_COLLAPSE }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DRVA }
+				}
+			}
+			set_variable = { GER_ANM_lower_party_leaning = -20000 }
+			set_variable = { GER_ANM_party_leadership_leaning = -20000 }
+			set_variable = { GER_ANM_middle_party_leaning = -20000 }
+			set_variable = { GER_ANM_upper_party_leaning = -20000 }
+		}
+		option = { #sussgnug
+		name = ANM_countrypaths.1.b
+			ai_chance = {
+				base = 90
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DEMOCRACY }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DECKERT }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_COLLAPSE }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DRVA }
+				}
+			}
+			set_variable = { GER_ANM_lower_party_leaning = 0 }
+			set_variable = { GER_ANM_party_leadership_leaning = 0 }
+			set_variable = { GER_ANM_middle_party_leaning = 0 }
+			set_variable = { GER_ANM_upper_party_leaning = 0 }
+		}
+		option = { #deckert
+		name = ANM_countrypaths.1.c
+			ai_chance = {
+				base = 12
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_MUSSGNUG }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DEMOCRACY }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_COLLAPSE }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DRVA }
+				}
+			}
+			set_variable = { GER_ANM_lower_party_leaning = 20000 }
+			set_variable = { GER_ANM_party_leadership_leaning = 20000 }
+			set_variable = { GER_ANM_middle_party_leaning = 20000 }
+			set_variable = { GER_ANM_upper_party_leaning = 20000 }
+		}
+		option = { #collapse
+		name = ANM_countrypaths.1.d
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_MUSSGNUG }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DECKERT }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DEMOCRACY }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DRVA }
+				}
+			}
+			set_variable = { GER_ANM_social_stability = -100 }
+		}
+		option = { #dvra
+		name = ANM_countrypaths.1.e
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_MUSSGNUG }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DECKERT }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_COLLAPSE }
+				}
+				modifier = {
+					factor = 0
+					has_game_rule = { rule = GER_GERMANYMAINIDEOLOGY option = GER_GERMANYMAINIDEOLOGY_DEMOCRACY }
+				}
+			}
+			set_variable = { GER_ANM_social_stability = -100 }
+			set_variable = { GER_ANM_protesttension = 100 } 
+		}
+}

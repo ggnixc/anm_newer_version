@@ -1,0 +1,46 @@
+﻿capital = 1169
+
+set_oob = "KSI_2000"
+add_ideas = {
+	congo_war_generic
+}
+set_politics = {	
+	ruling_party = fascism
+	last_election = "1933.5.17"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 5
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 5
+    paternalism = 15
+    despotism = 15
+    fascism = 50
+    esoteric_nazism = 10
+}
+
+create_country_leader = {
+	name = "Kongulu Mobutu"
+	desc = "POLITICS_KONGULU_MOBUTU_DESC"
+	picture = "Portrait_Kongulu_Mobutu.dds"
+	expire = "2999.1.23"
+	ideology = fascism_subtype
+	traits = {
+		
+	}
+}
+
+declare_war_on = {
+	target = KTG
+	type = annex_everything
+}
+declare_war_on = {
+	target = CFS
+	type = annex_everything
+}

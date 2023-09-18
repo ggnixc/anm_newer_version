@@ -1,0 +1,169 @@
+﻿capital = 460
+
+load_focus_tree = generic_focus
+set_oob = "ILG_Native_Volunteers"
+
+set_research_slots = 2
+set_convoys = 50
+set_stability = 0.6
+set_war_support = 0.3
+
+add_ideas = {
+	ILG_Wild_Frontier
+	ILG_Unofficial_Italian_Settlement
+	ILG_Saharan_Bandits_Prevalent
+	ILG_Giuseppe_Castellano_dep
+	ILG_Giuseppe_Castellano_for
+	ILG_Giuseppe_Castellano_eco
+	ILG_Giuseppe_Castellano_sec
+	IEA_idea_colonial_government
+}
+
+set_variable = {
+	var = ILG_bandit_status
+	value = 4
+}
+
+# Starting tech
+# Starting tech
+set_politics = {
+	ruling_party = fascism
+	last_election = "1934.3.26"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 0
+	ultranationalism = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+	liberal_conservatism = 0
+	conservatism = 0
+	paternalism = 10
+	despotism = 10
+	fascism = 70
+	national_socialism = 10
+	esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Giuseppe Castellano"
+	desc = "POLITICS_GIUSEPPE_CASTELLANO_DESC"
+	picture = "Giuseppe_Castellano_2_DDS.dds"
+	expire = "1993.1.1"
+	ideology = fascism_subtype
+	traits = {
+	}
+}
+
+create_field_marshal = {
+	name = "Giuseppe Castellano"
+	desc = "POLITICS_GIUSEPPE_CASTELLANO_DESC"
+	picture = "Portrait_ILG_Giuseppe_Castellano.dds"
+	#expire = "1993.1.1"
+	traits = {
+		desert_fox
+		organisational_leader
+	}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Fernando Tanucci Nannini"
+	desc = "POLITICS_FERNANDO_TANUCCI_NANNINI_DESC"
+	picture = "Portrait_ILG_Fernando_Tanucci_Nannini.dds"
+	#expire = "1993.1.1"
+	traits = {
+		old_guard
+		war_hero
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Salvatore Castagna"
+	desc = "POLITICS_SALVATORE_CASTAGNA_DESC"
+	picture = "Portrait_ILG_Salvatore_Castagna.dds"
+	#expire = "1993.1.1"
+	traits = {
+		career_officer
+		brilliant_strategist
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Pierre Guillaume"
+	desc = "POLITICS_PIERRE_GUILLAUME_DESC"
+	picture = "Portrait_ILG_Pierre_Guillaume.dds"
+	#expire = "1993.1.1"
+	traits = {
+		trait_reckless
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+add_ideas = {
+	#standard#
+	TRI_Member_Client
+
+	#political#
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_elite_voting
+	tno_refugees_open
+
+	#military#
+	tno_conscription_one_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_basic_training
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_educational_deferment
+
+	#economic#
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_low_pensions
+	tno_unemployment_no_subsidies
+
+	#social#
+	tno_safety_limited_regulations
+	tno_health_care_public_health_care
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_security_service
+}

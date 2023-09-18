@@ -1,0 +1,52 @@
+﻿capital = 312
+
+set_oob = "HON_1962"
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1961.1.20"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+add_ideas = {
+	#Nat. Spirits
+	HON_Terrorism
+	HON_Cycle
+	HON_Anti_Americanism
+	#STARTING
+	#MINISTERS
+	HON_Salvador_Narsralla_hog
+	HON_Ramon_Sabillon_for
+	HON_Rixi_Moncada_eco
+	HON_Jose_Manuel_Zelaya_Rosales_sec
+	}
+	
+HON = { add_opinion_modifier = { target = JAP modifier = TNO_japanese_influenced } }
+GUA = { add_opinion_modifier = { target = JAP modifier = TNO_japanese_influenced } }
+NIC = { add_opinion_modifier = { target = JAP modifier = TNO_japanese_influenced } }
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    progressivism = 30
+    liberalism = 20
+    liberal_conservatism = 20
+    conservatism = 0
+    paternalism = 0
+    despotism = 30
+    fascism = 0
+    esoteric_nazism = 0
+}
+create_country_leader = {
+	
+	name = "Romeo Vasquez Velaquez"
+	desc = "POLITICS_Romeo_Velasquez_DESC"
+	picture = "Portrait_HON_Ramon_Morales.dds"
+	expire = "2090.1.1"
+	ideology = despotism_interim_government_subtype
+	traits = {
+		
+	}
+}

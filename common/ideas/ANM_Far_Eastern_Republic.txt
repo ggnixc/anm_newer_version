@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		FER_Neutral_Zone = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = FER_Neutral_Zone
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = -1
+				ai_join_ally_desire_factor = -1000
+				custom_modifier_tooltip = FER_No_Units
+			}
+		}
+
+		FER_Cultural_Melting_Pot = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = FER_Cultural_Melting_Pot
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				consumer_goods_factor = -0.05
+				civilian_intel_to_others = 10
+				stability_factor = -0.1
+			}
+		}
+	}	
+}

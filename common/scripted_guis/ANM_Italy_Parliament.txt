@@ -1,0 +1,548 @@
+scripted_gui = {
+
+	TNO_ita_influence_window_open = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TNO_ita_influence_window_open"
+
+		visible = {
+			tag = ITA
+			NOT = {
+				has_country_flag = ITA_PNF_has_died
+				ITA = {
+					is_puppet = yes
+				}
+			}
+		}
+
+		effects = {
+			ita_influence_menu_open_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influence_window_open_flag }
+					}
+					set_country_flag = ITA_influence_window_open_flag
+				}
+				else_if = {
+					limit = {
+						has_country_flag = ITA_influence_window_open_flag
+					}
+					clr_country_flag = ITA_influence_window_open_flag
+				}
+				clr_country_flag = gui_alert_visible
+			}
+		}
+
+        triggers = {
+            gui_alert_visible = {
+                has_country_flag = gui_alert_visible
+            }
+        }
+	}
+
+	
+	TNO_ita_influence_window_democratic_open = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TNO_ita_influence_window_democratic_open"
+
+		visible = {
+			tag = ITA
+			NOT = {
+				ITA = {
+					is_puppet = yes
+				}
+			   ITA = {
+				has_country_flag = ITA_PNF_has_died
+			   }
+			}
+		}
+
+		effects = {
+			ita_influence_menu_open_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influence_window_open_flag }
+					}
+					set_country_flag = ITA_influence_window_open_flag
+				}
+				else_if = {
+					limit = {
+						has_country_flag = ITA_influence_window_open_flag
+					}
+					clr_country_flag = ITA_influence_window_open_flag
+				}
+				clr_country_flag = gui_alert_visible
+			}
+		}
+
+        triggers = {
+            gui_alert_visible = {
+                has_country_flag = gui_alert_visible
+            }
+        }
+	}
+
+	TNO_ita_influence_window_main_open = {
+		context_type = player_context
+		window_name = "TNO_ita_influence_window_main"
+
+		visible = {
+			has_country_flag = ITA_influence_window_open_flag
+			NOT = {
+				ITA = {
+					is_puppet = yes
+				}
+			}
+		}
+
+		triggers = {
+
+		}
+		
+		dynamic_lists = {
+			ita_parliament_main_grid = {
+				array = ita_parliament_main_array
+				index = ita_parliament_main_index
+				change_scope = no
+				entry_container = ita_parliament_main_entry
+			}
+			ita_parliament_semicircle_main_grid = {
+				array = ita_parliament_main_array
+				index = ita_parliament_main_index
+				change_scope = no
+				entry_container = ita_parliament_semicircle_main_entry
+			}
+			ita_parliament_member_grid = {
+				array = ita_parliament_member_array
+				index = ita_parliament_member_index
+				change_scope = no
+				entry_container = ita_parliament_member_entry
+			}
+		}
+		
+		effects = {
+			ITA_Diplo_GUI_Close_Button_click = {
+				clr_country_flag = ita_influence_window_open_flag
+			}
+			ita_parliament_modify_button_control_click = {
+				set_temp_variable = { temp_member = v }
+				set_temp_variable = { temp_seats = 5 }
+				modify_ita_parliament_seat = yes
+			}
+			ita_parliament_modify_button_shift_click = {
+				set_temp_variable = { temp_member = v }
+				set_temp_variable = { temp_seats = -5 }
+				modify_ita_parliament_seat = yes
+			}
+		}
+		
+		
+		
+		
+		properties = {
+			ita_parliament_main_icon = {
+				frame = v
+			}
+			ita_parliament_semicircle_main_icon = {
+				frame = v
+				x = ita_parliament_x_array^ita_parliament_main_index
+				y = ita_parliament_y_array^ita_parliament_main_index
+			}
+			ita_parliament_member_icon = {
+				frame = v
+			}
+			ita_parliament_party_support_bar_icon = {
+			image = "[GetANMitaly_partysupport]"
+			}
+			ita_parliament_patricians_bar_icon = {
+			image = "[GetANMitaly_partiarchsupport]"
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	TNO_ita_influence_windowbuttons_open = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TNO_ita_influence_windowbuttons_open"
+
+		visible = {
+			has_country_flag = ITA_influence_window_open_flag
+		}
+
+		triggers = {
+			CRO_blank_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = CRO_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					NOT = {
+						has_country_flag = ITA_influencing_croatia
+					}
+				}
+				CRO = {
+					is_subject_of = ITA
+				}
+			}
+
+			CRO_full_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = CRO_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					has_country_flag = ITA_influencing_croatia
+				}
+				CRO = {
+					is_subject_of = ITA
+				}
+			}
+
+			GRE_blank_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = GRE_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					NOT = {
+						has_country_flag = ITA_influencing_greece
+					}
+				}
+				GRE = {
+					is_subject_of = ITA
+				}
+			}
+
+			GRE_full_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = GRE_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					has_country_flag = ITA_influencing_greece
+				}
+				GRE = {
+					is_subject_of = ITA
+				}
+			}
+
+			BUL_blank_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = BUL_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					NOT = {
+						has_country_flag = ITA_influencing_greece
+					}
+				}
+				BUL = {
+					is_subject_of = ITA
+				}
+			}
+
+			BUL_full_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = BUL_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					has_country_flag = ITA_influencing_greece
+				}
+				BUL = {
+					is_subject_of = ITA
+				}
+			}
+
+			ROM_blank_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = ROM_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					NOT = {
+						has_country_flag = ITA_influencing_greece
+					}
+				}
+				ROM = {
+					is_subject_of = ITA
+				}
+			}
+
+			ROM_full_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = ROM_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					has_country_flag = ITA_influencing_greece
+				}
+				ROM = {
+					is_subject_of = ITA
+				}
+			}
+
+			SER_blank_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = SER_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					NOT = {
+						has_country_flag = ITA_influencing_serbia
+					}
+				}
+				SER = {
+					is_subject_of = ITA
+				}
+			}
+
+			SER_full_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = SER_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					has_country_flag = ITA_influencing_serbia
+				}
+				SER = {
+					is_subject_of = ITA
+				}
+			}
+
+			HUN_blank_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = HUN_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					NOT = {
+						has_country_flag = ITA_influencing_hungary
+					}
+				}
+				HUN = {
+					is_subject_of = ITA
+				}
+			}
+
+			HUN_full_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = HUN_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					has_country_flag = ITA_influencing_hungary
+				}
+				HUN = {
+					is_subject_of = ITA
+				}
+			}
+
+			FRA_blank_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = FRA_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					NOT = {
+						has_country_flag = ITA_influencing_france
+					}
+				}
+				FRA = {
+					is_subject_of = ITA
+				}
+			}
+
+			FRA_full_sphere_button_visible = {
+				ITA = {
+					NOT = {
+						check_variable = {
+							var = FRA_ITA_Influence
+							value = 400
+							compare = greater_than_or_equals
+						}
+					}
+					has_country_flag = ITA_influencing_france
+				}
+				FRA = {
+					is_subject_of = ITA
+				}
+			}
+		}
+
+		effects = {
+			CRO_blank_sphere_button_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influencing_croatia
+							has_country_flag = ITA_influencing_nation
+						}
+					}
+					set_country_flag = ITA_influencing_croatia
+					set_country_flag = ITA_influencing_nation
+				}
+			}
+			CRO_full_sphere_button_click = {
+				clr_country_flag = ITA_influencing_croatia
+				clr_country_flag = ITA_influencing_nation
+			}
+
+			GRE_blank_sphere_button_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influencing_greece
+							has_country_flag = ITA_influencing_nation
+						}
+					}
+					set_country_flag = ITA_influencing_greece
+					set_country_flag = ITA_influencing_nation
+				}
+			}
+			GRE_full_sphere_button_click = {
+				clr_country_flag = ITA_influencing_greece
+				clr_country_flag = ITA_influencing_nation
+			}
+
+			BUL_blank_sphere_button_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influencing_bulgaria
+							has_country_flag = ITA_influencing_nation
+						}
+					}
+					set_country_flag = ITA_influencing_bulgaria
+					set_country_flag = ITA_influencing_nation
+				}
+			}
+			BUL_full_sphere_button_click = {
+				clr_country_flag = ITA_influencing_bulgaria
+				clr_country_flag = ITA_influencing_nation
+			}
+
+			ROM_blank_sphere_button_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influencing_romania
+							has_country_flag = ITA_influencing_nation
+						}
+					}
+					set_country_flag = ITA_influencing_romania
+					set_country_flag = ITA_influencing_nation
+				}
+			}
+			ROM_full_sphere_button_click = {
+				clr_country_flag = ITA_influencing_romania
+				clr_country_flag = ITA_influencing_nation
+			}
+
+			SER_blank_sphere_button_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influencing_serbia
+							has_country_flag = ITA_influencing_nation
+						}
+					}
+					set_country_flag = ITA_influencing_serbia
+					set_country_flag = ITA_influencing_nation
+				}
+			}
+			SER_full_sphere_button_click = {
+				clr_country_flag = ITA_influencing_serbia
+				clr_country_flag = ITA_influencing_nation
+			}
+
+			HUN_blank_sphere_button_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influencing_hungary
+							has_country_flag = ITA_influencing_nation
+						}
+					}
+					set_country_flag = ITA_influencing_hungary
+					set_country_flag = ITA_influencing_nation
+				}
+			}
+			HUN_full_sphere_button_click = {
+				clr_country_flag = ITA_influencing_hungary
+				clr_country_flag = ITA_influencing_nation
+			}
+
+			FRA_blank_sphere_button_click = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = ITA_influencing_france
+							has_country_flag = ITA_influencing_nation
+						}
+					}
+					set_country_flag = ITA_influencing_france
+					set_country_flag = ITA_influencing_nation
+				}
+			}
+			FRA_full_sphere_button_click = {
+				clr_country_flag = ITA_influencing_france
+				clr_country_flag = ITA_influencing_nation
+			}
+		}
+	}
+}

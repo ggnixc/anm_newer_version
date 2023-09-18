@@ -1,0 +1,39 @@
+﻿capital = 448
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1958.1.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 30
+    despotism = 70
+    fascism = 0
+    national_socialism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Faycal Bey"
+	desc = "POLITICS_FACYAL_BEY_DESC"
+	picture = "Portrait_Tunisia_Faycal_Bey.dds"
+	expire = "2999.4.24"
+	ideology = despotism_absolute_monarchy_subtype
+	traits = {
+		
+	}
+}
+country_event = { id = italy_anm.3  days = 1730 }
+
+add_ideas = {
+    TRI_Member_Client
+}

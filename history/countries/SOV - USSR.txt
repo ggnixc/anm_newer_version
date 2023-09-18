@@ -1,0 +1,350 @@
+﻿capital = 1442
+
+set_research_slots = 4
+
+set_oob = "WRS_2000"
+set_naval_oob = "WRS_navy_2000"
+set_air_oob = "WRS_2000_air"
+
+set_war_support = 0.80
+set_stability = 0.90
+
+add_offsite_building = { type = arms_factory level = 2 }
+add_offsite_building = { type = industrial_complex level = 1 }
+
+create_faction = Communist_International
+add_to_faction = FER
+
+set_politics = {
+	ruling_party = communist
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 41
+	communist_1 = 35
+	communist_2 = 14
+	communist_3 = 10
+	ultranationalism = 0
+	national_socialism = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+	liberal_conservatism = 0
+	conservatism = 0
+	paternalism = 0
+	despotism = 0
+	fascism = 0
+	esoteric_nazism = 0
+}
+
+load_focus_tree = SOV_start
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_intelligence_agency = {
+		name = "Ministerstvo Gosudarstvennoy Bezopasnosti" 
+		icon = "GFX_intelligence_agency_logo_sov" 
+	}
+}
+
+if = {
+	limit = { has_dlc = "Together for Victory" }
+	set_autonomy = { target = FER autonomy_state = autonomy_soviet_republic }
+
+	else = {
+		puppet = FER
+	}
+}
+
+add_ideas = {
+	###FACTION###
+	COM_Member
+	
+	###MINISTERS###
+ 	SOV_minister_Gennady_Yanayev_hog
+ 	SOV_minister_Vladimir_Kryuchkov_sec
+ 	SOV_minister_Aleksandr_Bessmertnykh_for
+ 	SOV_minister_Anatoly_Lukyanov_eco
+	
+	###IDEAS###
+	SOV_Suslov_Vision
+	SOV_Supremacy_MGB
+	SOV_Legacy_of_Zhukov
+	SOV_The_Scars_of_Moscowien
+	SOV_Job_Half_Done
+	
+	##POLITICAL LAWS##
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_atheism
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	tno_refugees_open
+
+	##MILITARY LAWS###
+	tno_conscription_two_year_draft
+	tno_women_combat_roles
+	tno_military_supervision_military_policing
+	tno_military_spending_large_spending
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_none
+
+	##SOCIAL LAWS##
+	tno_safety_minimal_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_few_regulations
+	tno_education_subsidised_higher_education
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_wire_tapping
+
+	##ECONOMIC LAWS##
+	tno_trade_laws_limited_exports
+	tno_economic_focus_partial_mobilization
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_trinket_subsidies
+
+	##SOCIETAL DEVELOPMENT##
+	tno_nuclear_stockpile_massive
+	tno_poverty_rate_15
+	tno_army_professionalism_professional
+	tno_industrial_expertise_experienced
+	tno_industrial_equipment_modern
+	tno_agriculture_mass_mechanized
+	tno_research_facilities_modern
+	tno_academic_base_secondary_schooling
+	tno_birthrate_many
+}
+
+### Country Leader ###
+create_country_leader = {
+	name = "Grigory Romanov"
+	picture = "Portrait_SOV_Grigory_Romanov.dds"
+	expire = "2090.1.1"
+	desc = "POLITICS_GRIGORY_ROMANOV_DESC"
+	ideology = communist_marxism_leninism_subtype
+	traits = {
+		hog_political_protege
+	}
+}
+
+create_country_leader = {
+	name = "Anatoly Lukyanov"
+	picture = "Portrait_SOV_Anatoly_Lukyanov.dds"
+	expire = "2090.1.1"
+	desc = "POLITICS_ANATOLY_LUKYANOV_DESC"
+	ideology = communist_1_yagodschina_subtype
+	traits = {
+		eco_reformer
+	}
+}
+
+create_country_leader = {
+	name = "Vladimir Kryuchkov"
+	picture = "Portrait_SOV_Vladimir_Kryuchkov.dds"
+	expire = "2090.1.1"
+	desc = "POLITICS_VLADMIR_KRYUCHKOV_DESC"
+	ideology = communist_2_marxism_leninism_subtype
+	traits = {
+		sec_secret_police_chief
+	}
+}
+
+create_country_leader = {
+	name = "No Specific Leader"
+	picture = "Portrait_SOV_Provisional_Council.dds"
+	expire = "2090.1.1"
+	desc = ""
+	ideology = communist_3_bolshevism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Viktor Samsonov"
+	picture = "Portrait_SOV_Viktor_Samsonov.dds"
+	expire = "2090.1.1"
+	desc = "POLITICS_VIKTOR_SAMSONOV_DESC"
+	ideology = despotism_interim_government_subtype
+	traits = {
+	}
+}
+
+set_technology = {
+
+	##LIGHT AIR##
+
+	##HEAVY AIR##
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	tac_air_1950 = 1
+	tac_air_1960 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	heavy_air_1950 = 1
+	heavy_air_1960 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+	transport_air_1960 = 1
+	
+	ww2_frigate = 1
+	ww2_destroyer = 1
+	ww2_cruiser = 1
+	ww2_battleship = 1
+	ww2_submarine = 1
+	ww2_carrier = 1
+	
+	transport = 1
+	
+	basic_infantry_equipment = 1
+	
+	support_weapons = 1
+	support_weapons1 = 1
+	support_weapons2 = 1
+	support_weapons3 = 1
+	support_weapons4 = 1
+	
+	infantry_at = 1
+	infantry_at2 = 1
+	infantry_at3 = 1
+	
+	
+	infantry_aa = 1
+	infantry_aa5 = 1
+	
+	#antiair1 = 1
+	#antiair2 = 1
+	
+	tech_support = 1
+	
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_3 = 1
+	
+	infantry_weapons_improvements_1 = 1
+	infantry_weapons_improvements_2 = 1
+	infantry_weapons_improvements_3 = 1
+	infantry_weapons_improvements_4 = 1
+	infantry_weapons_improvements_5 = 1
+	night_vision_1 = 1
+	
+	motorized_infantry = 1
+	
+	tech_special_forces = 1
+	
+	basic_train = 1
+	tech_mountaineers = 1
+	marines = 1
+	paratroopers = 1
+	elite_forces = 1
+	helicopter_brigades = 1
+	
+	support_equipment = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+	
+	scout_helicopter_company = 1
+	tech_transport_helicopter_company = 1
+	tech_attack_helicopter_company = 1
+	tech_scout_helicopter_company = 1
+	
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+	advanced_light_tank = 1
+	IFV_1950 = 1
+	MBT_1950 = 1
+	
+	artillery4 = 1
+	artillery_1950 = 1
+	SPART_1950 = 1
+	light_SPART_1950 = 1
+	
+	antiair5 = 1
+	antiair_1950 = 1
+	SPAA_1950 = 1
+	light_SPAA_1950 = 1 
+	
+	early_fighter = 1
+	fighter_1945 = 1
+	fighter_1950 = 1
+	CAS_1945 = 1
+	CAS_1950 = 1
+	cv_1950_fighter = 1
+	cv_1950_CAS = 1
+	drone_anm_1990 = 1
+	
+	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
+	radio = 1
+	radio_detection = 1
+	computing_machine = 1
+	internettech_2 = 1
+	internettech_1 = 1
+	internettech_3 = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	improved_decryption = 1
+	decimetric_radar = 1
+	improved_computing_machine = 1
+	improved_encryption = 1
+	
+	
+	ww2_line_production = 1
+	batch_production_1 = 1
+	batch_production_2 = 1
+	early_industrial_robots = 1
+	mass_production_1 = 1
+	mass_production_2 = 1
+	mass_production_3 = 1
+	mass_production_4 = 1
+	media_tree_1 = 1
+	media_tree_2 = 1
+	media_tree_3 = 1
+	media_tree_4 = 1
+	consumer_goods_tree_1 = 1
+	resource_extraction_methods = 1
+	building_construction_1 = 1
+	anm_construction_1 = 1
+	anm_megastructures_1 = 1
+	consumer_goods_reduction_1 = 1
+	consumer_goods_reduction_2 = 1
+	production_unit_gain_1 = 1
+	production_unit_gain_2 = 1
+	production_unit_gain_3 = 1
+	
+	helicopter_engines = 1
+	very_early_helicopter = 1
+	early_helicopter = 1
+	transport_helicopter_1960 = 1
+	asw_helicopter_1960 = 1
+	scout_helicopter_1960 = 1
+	attack_helicopter_1960 = 1
+	
+	stealth_research = 1
+	heavy_stealth_research = 1
+	
+	##WMDs##
+	ICBM = 1
+	MRBM = 1
+	SRBM = 1
+}

@@ -1,0 +1,151 @@
+﻿add_namespace = USA_anm_events
+add_namespace = USA_election_events
+#### INTRO EVENTS ###
+## ANGELS AND DEMONS
+country_event = {
+	id = USA_anm_events.1
+	title = USA_anm_events.1.t
+	desc = USA_anm_events.1.desc
+	picture = GFX_anm_events
+	trigger = {
+		tag = USA
+		date > 2000.5.1
+	}
+
+	fire_only_once = yes
+
+	option = { #
+		name = USA_anm_events.1.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = USA_anm_events.2
+	title = USA_anm_events.2.t
+	desc = USA_anm_events.2.desc
+	picture = GFX_anm_internet8
+
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = USA_anm_events.2.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = USA_anm_events.3
+	title = USA_anm_events.3.t
+	desc = USA_anm_events.3.desc
+	picture = GFX_anm_internet8
+
+	
+	trigger = {
+		tag = USA
+		date > 2000.3.1
+	}
+
+	fire_only_once = yes
+
+	option = { #
+		name = USA_anm_events.3.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = USA_anm_events.4
+	title = USA_anm_events.4.t
+	desc = USA_anm_events.4.desc
+	picture = GFX_anm_internet9
+	trigger = {
+		tag = USA
+		date > 2000.2.1
+	}
+
+	fire_only_once = yes
+
+	option = { #
+		name = USA_anm_events.4.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = USA_election_events.1
+	title = USA_election_events.1.t
+	desc = USA_election_events.1.desc
+	picture = GFX_anm_internet9
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = USA_election_events.1.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Joe Biden"
+			desc = "POLITICS_JOE_BIDEN_DESC"
+			picture = "Portrait_USA_Joe_Biden.dds"
+			expire = "2989.1.1"
+			ideology = liberalism_dynastic_liberalism_biden_subtype
+			traits = {
+				
+			}
+		}
+		set_politics = {
+			ruling_party = liberalism
+			last_election = "1933.4.26"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		remove_ideas = { 
+			USA_Joe_Biden_hog
+			USA_Wesley_Clark_sec
+			USA_Robert_F_Kennedy_for
+			USA_Micheal_Dukkais_eco
+		}
+		add_ideas = {
+			USA_Wesley_Clark_Biden_sec
+			USA_Andrew_Cuomo_eco
+			USA_Susan_Rice_for
+			USA_Dick_Gephardt_hog
+		} 
+	}
+	
+	option = { 
+		name = USA_election_events.1.b
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Tom Harkin"
+			desc = "POLITICS_TOM_HARKIN_DESC"
+			picture = "Portrait_USA_Tom_Harkin.dds"
+			expire = "2989.1.1"
+			ideology = progressivism_western_progressivism_harkin_subtype
+			traits = {
+				
+			}
+		}
+		set_politics = {
+			ruling_party = progressivism
+			last_election = "1933.4.26"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		remove_ideas = { 
+			USA_Joe_Biden_hog
+			USA_Wesley_Clark_sec
+			USA_Robert_F_Kennedy_for
+			USA_Micheal_Dukkais_eco
+		}
+		add_ideas = {
+			USA_Dianne_Feinstein_hog
+			USA_Susan_Rice_Harkin_for
+			USA_Robert_Reich_eco
+			USA_Anthony_Zinni_sec
+		} 
+	}
+}

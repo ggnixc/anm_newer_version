@@ -1,0 +1,201 @@
+scripted_gui = {
+	
+	norway_gui_button_GUI = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "norway_gui_button_GUI"
+		
+		visible = {
+			tag = NOR
+		}
+		
+		triggers = {
+			norway_window_open_arrows_visible = {
+				has_country_flag = norway_gui_alert_visible
+			}
+		}
+		effects = {
+			norway_window_open_click = {
+				if = {
+					limit = { NOT = { has_country_flag = norway_gui_visible } }
+					set_country_flag = norway_gui_visible
+					reload_nor_parliament_gui = yes
+				}
+				else_if = {
+					limit = { has_country_flag = norway_gui_visible }
+					clr_country_flag = norway_gui_visible
+				}
+				clr_country_flag = norway_gui_alert_visible
+			}
+		}
+		
+	}
+	
+	
+	nor_parliament_gui_container = {
+		context_type = player_context
+		window_name = "nor_parliament_gui_container"
+
+		visible = {
+			has_country_flag = norway_gui_visible
+		}
+
+		triggers = {
+
+		}
+		
+		dynamic_lists = {
+			nor_parliament_main_grid = {
+				array = nor_parliament_main_array
+				index = nor_parliament_main_index
+				change_scope = no
+				entry_container = nor_parliament_main_entry
+			}
+			nor_parliament_semicircle_main_grid = {
+				array = nor_parliament_main_array
+				index = nor_parliament_main_index
+				change_scope = no
+				entry_container = nor_parliament_semicircle_main_entry
+			}
+			nor_parliament_member_grid = {
+				array = nor_parliament_member_array
+				index = nor_parliament_member_index
+				change_scope = no
+				entry_container = nor_parliament_member_entry
+			}
+		}
+		
+		effects = {
+			norway_gui_party_1_click = {
+				set_variable = { selectedparty = 1 }
+			}
+			norway_gui_party_2_click = {
+				set_variable = { selectedparty = 2 }
+			}
+			norway_gui_party_3_click = {
+				set_variable = { selectedparty = 3 }
+			}
+			norway_gui_party_4_click = {
+				set_variable = { selectedparty = 4 }
+			}
+			norway_gui_party_5_click = {
+				set_variable = { selectedparty = 5 }
+			}
+			norway_gui_party_6_click = {
+				set_variable = { selectedparty = 6 }
+			}
+			norway_gui_party_7_click = {
+				set_variable = { selectedparty = 7 }
+			}
+			norway_gui_party_8_click = {
+				set_variable = { selectedparty = 8 }
+			}
+			
+			
+			nor_parliament_radicalize_bill_click = {
+				if = {
+					limit = {
+						check_variable = { current_norwayvote > 0 }
+						check_variable = { bill_radicalism < 15 }
+						has_political_power > 45
+					}
+				reload_nor_parliament_gui = yes
+				add_political_power = -45
+				add_to_variable = { bill_radicalism = 1 }
+				}
+			}
+			nor_parliament_unradicalize_bill_click = {
+				if = {
+				limit = {
+							check_variable = { current_norwayvote > 0 }
+							check_variable = { bill_radicalism > 0 }
+							has_political_power > 45
+						}
+					reload_nor_parliament_gui = yes
+					add_political_power = -45
+					add_to_variable = { bill_radicalism = -1 }
+				}
+			}
+			
+			nor_parliament_swaymps_bill_click = {
+				if = {
+				limit = {
+							check_variable = { current_norwayvote > 0 }
+							check_variable = { nor_parliament_partysupport^selectedparty > 1 }
+							check_variable = { nor_parliament_yesvoters^selectedparty < 8 }
+							has_political_power > 30
+						}
+				reload_nor_parliament_gui = yes
+				add_political_power = -30
+				
+				add_to_variable = { nor_parliament_yesvoters^selectedparty = 3 }
+				add_to_variable = { nor_parliament_partysupport^selectedparty = -1 }
+				}
+			}
+			nor_parliament_strongarmmps_bill_click = {
+				if = {
+					limit = {
+								check_variable = { current_norwayvote > 0 }
+								check_variable = { nor_parliament_partysupport^selectedparty > 4 }
+								check_variable = { nor_parliament_yesvoters^selectedparty < 5 }
+								has_political_power > 30
+							}
+				reload_nor_parliament_gui = yes
+				add_political_power = -30
+				
+				add_to_variable = { nor_parliament_yesvoters^selectedparty = 6 }
+				add_to_variable = { nor_parliament_partysupport^selectedparty = -4 }
+				}
+			}
+			nor_parliament_dinewithleader_bill_click = {
+				if = {
+					limit = {
+								check_variable = { current_norwayvote > 0 }
+								check_variable = { nor_parliament_partysupport^selectedparty < 200 }
+								has_political_power > 30
+							}
+				reload_nor_parliament_gui = yes
+				add_political_power = -30
+				
+				
+				add_to_variable = { nor_parliament_partysupport^selectedparty = 2 }
+				}
+			}
+			norway_gui_closebutton_click = {
+				clr_country_flag = norway_gui_visible
+			}
+
+			
+		}
+		
+		
+		
+		
+		properties = {
+			nor_parliament_main_icon = {
+				frame = v
+			}
+			nor_parliament_semicircle_main_icon = {
+				frame = v
+				x = nor_parliament_x_array^nor_parliament_main_index
+				y = nor_parliament_y_array^nor_parliament_main_index
+			}
+			nor_parliament_member_icon = {
+				frame = v
+			}
+			nor_parliament_party_support_icon = {
+				frame = nor_parliament_partysupport^selectedparty
+			}
+			nor_parliament_party_no_icon = {
+				frame = nor_parliament_novoters_displayed^selectedparty
+			}
+			nor_parliament_party_yes_icon = {
+				frame = nor_parliament_yesvoters_displayed^selectedparty
+			}
+			norway_party_leader_portrait = {
+				image = "[getNORpartyleader]"
+			}
+			
+		}
+	}
+}

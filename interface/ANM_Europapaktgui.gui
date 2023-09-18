@@ -1,0 +1,2068 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "ANM_Europapaktgui_Main"
+		size = { width = 1133 height = 838 }
+		position = { x=-300 y=80 }
+		show_position = { x=555 y=80 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_1b_no_border"
+		}
+
+		iconType = {
+			name ="europapaktgui_background"
+			spriteType = "GFX_europapaktgui_background"
+			position = { x = 0 y = 0 }
+		}
+		iconType = {
+			name ="europapaktgui_mapframe"
+			spriteType = "GFX_europapaktgui_mapframe"
+			position = { x = 0 y = 0 }
+		}
+		iconType = {
+			name ="europapaktgui_mapborderds"
+			spriteType = "GFX_europapaktgui_mapborderds"
+			position = { x = 0 y = 0 }
+		}
+	iconType = {
+			name = "pakt_economic_reform"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 31 y = 629 }
+		}
+	instantTextBoxType = {
+			name = "epeconomyreform"
+			position = { x = 31 y = 629 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epguipakteconomicreform
+			maxWidth = 580
+			maxHeight = 24
+		}
+	iconType = {
+			name = "pakt_political_reform"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 270 y = 629 }
+		}
+	instantTextBoxType = {
+			name = "eppoliticsreform"
+			position = { x = 270 y = 629 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epguipaktreformpolitics
+			maxWidth = 580
+			maxHeight = 24
+		}
+	iconType = {
+			name = "pakt_law_reform"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 508 y = 629 }
+		}
+		instantTextBoxType = {
+			name = "eplawreform"
+			position = { x = 508 y = 629 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epguipaktreformlaw
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_standardisedeconomy"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			position = { x = 31 y = 662 }
+			pdx_tooltip = ANM_tt_pakt_reform_standardisedeconomy
+			}
+		iconType = {	
+			name = "pakt_reform_standardisedeconomy_picked"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 31 y = 662 }
+			}
+		instantTextBoxType = {
+			name = "epstandardizedeconomy"
+			position = { x = 31 y = 662 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epstandardeconomy
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_europeanscience"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			position = { x = 270 y = 662 }
+			pdx_tooltip = ANM_tt_pakt_reform_europeanscience
+			}
+		iconType = {	
+			name = "pakt_reform_europeanscience_picked"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 270 y = 662 }
+			}
+		instantTextBoxType = {
+			name = "epeuropeanscience"
+			position = { x = 270 y = 662 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epscienceeurope
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_erhaltungsgesetz"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			position = { x = 508 y = 662 }
+			pdx_tooltip = ANM_tt_pakt_reform_erhaltungsgesetz
+			}
+		iconType = {	
+			name = "pakt_reform_erhaltungsgesetz_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 508 y = 662 }
+			}
+		instantTextBoxType = {
+			name = "eperhaltungsgesetz"
+			position = { x = 508 y = 662 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epgesetzerhaltung
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_toleranzgesetz"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			position = { x = 508 y = 678 }
+			pdx_tooltip = ANM_tt_pakt_reform_toleranzgesetz
+			}
+		iconType = {	
+			name = "pakt_reform_toleranzgesetz_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 508 y = 678 }
+			}
+		instantTextBoxType = {
+			name = "epgesetztoleranz"
+			position = { x = 508 y = 678 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = eptoleranzgesetz
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_europamark"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			position = { x = 31 y = 695 }
+			}
+		iconType = {	
+			name = "pakt_reform_europamark_picked"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 31 y = 695 }
+			}
+		instantTextBoxType = {
+			name = "epeuromark"
+			position = { x = 31 y = 695 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epeuropamarklol
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_fundingrepresentation"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			position = { x = 270 y = 695 }
+			pdx_tooltip = ANM_tt_pakt_reform_fundingrepresentation
+			}
+		iconType = {	
+			name = "pakt_reform_fundingrepresentation_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 270 y = 695 }
+			}
+		instantTextBoxType = {
+			name = "epfundingrepresentationn"
+			position = { x = 270 y = 695 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epfundingrepresenation
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_proportionalrepresentation"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			position = { x = 270 y = 711 }
+			pdx_tooltip = ANM_tt_pakt_reform_proportionalrepresentation
+			}
+		iconType = {	
+			name = "pakt_reform_proportionalrepresentation_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 270 y = 711 }
+			}
+		instantTextBoxType = {
+			name = "epporportionalprepresentation"
+			position = { x = 270 y = 711 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epproportionalrperesentation
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_sozialgesetz"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			position = { x = 508 y = 695 }
+			pdx_tooltip = ANM_tt_pakt_reform_sozialgesetz
+			}
+		iconType = {	
+			name = "pakt_reform_sozialgesetz_picked"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 508 y = 695 }
+			}
+		instantTextBoxType = {
+			name = "epsozialgesetz"
+			position = { x = 508 y = 695 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = epsoziaalgesetz
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_standardtaxation"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			position = { x = 31 y = 728 }
+			pdx_tooltip = ANM_tt_pakt_reform_standardtaxation
+			}
+		iconType = {	
+			name = "pakt_reform_standardtaxation_picked"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 31 y = 728 }
+			}
+		instantTextBoxType = {
+			name = "epstandardtaxationd"
+				position = { x = 31 y = 728 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = taxationstandardep
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_schutzmachtdeutschland"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			position = { x = 270 y = 728 }
+			pdx_tooltip = ANM_tt_pakt_reform_schutzmachtdeutschland 
+			}
+		iconType = {	
+			name = "pakt_reform_schutzmachtdeutschland_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 270 y = 728 }
+			}
+		instantTextBoxType = {
+			name = "epdeutschlandschutzmacht"
+			position = { x = 270 y = 728 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = schutzmachteduetschalandep
+			maxWidth = 580
+			maxHeight = 24
+		}
+		iconType = {	
+			name = "pakt_reform_europaheer"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			position = { x = 270 y = 744 }
+			pdx_tooltip = ANM_tt_pakt_reform_europaheer
+			}
+		iconType = {	
+			name = "pakt_reform_europaheer_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 270 y = 744 }
+			}
+		instantTextBoxType = {
+			name = "eppakteuropaheer"
+			position = { x = 270 y = 744 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = europaheerep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_weltnetzgesetz"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			position = { x = 508 y = 728 }
+			pdx_tooltip = ANM_tt_pakt_reform_weltnetzgesetz
+			}
+			iconType = {	
+			name = "pakt_reform_weltnetzgesetz_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 508 y = 728 }
+			}
+			instantTextBoxType = {
+			name = "epreformweltentz"
+			position = { x = 508 y = 728 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = weltnetzgesetzep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_informationsfreiheitsgesetz"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			pdx_tooltip = ANM_tt_pakt_reform_informationsfreiheitsgesetz
+			position = { x = 508 y = 744 }
+			}
+			iconType = {	
+			name = "pakt_reform_informationsfreiheitsgesetz_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 508 y = 744 }
+			}
+			instantTextBoxType = {
+			name = "epnofunnyarticle"
+			position = { x = 508 y = 744 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = nofunnyarticleep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_germancompanyprimacy"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			pdx_tooltip = ANM_tt_pakt_reform_germancompanyprimacy
+			position = { x = 31 y = 761 }
+			}
+			iconType = {	
+			name = "pakt_reform_germancompanyprimacy_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 31 y = 761 }
+			}
+			instantTextBoxType = {
+			name = "epgermancompanyprimacy"
+			position = { x = 31 y = 761 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = companygermanybigep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_fairmarket"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			pdx_tooltip = ANM_tt_pakt_reform_fairmarket
+			position = { x = 31 y = 777 }
+			}
+			iconType = {	
+			name = "pakt_reform_fairmarket_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 31 y = 777 }
+			}
+			instantTextBoxType = {
+			name = "epfreemarkjets"
+			position = { x = 31 y = 777 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = freemarketep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_pakthauptstadtgermania"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			pdx_tooltip = ANM_tt_pakt_reform_pakthauptstadtgermania
+			position = { x = 270 y = 761 }
+			}
+			iconType = {	
+			name = "pakt_reform_pakthauptstadtgermania_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 270 y = 761 }
+			}
+			instantTextBoxType = {
+			name = "epreichshauptstadtgermania"
+			position = { x = 270 y = 761 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = reichshauptstandtgermaniaep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_changingpaktsitz"
+			spriteType = "GFX_paktgui_buttonnoclicksmall"
+			pdx_tooltip = ANM_tt_pakt_reform_changingpaktsitz
+			position = { x = 270 y = 777 }
+			}
+			iconType = {	
+			name = "pakt_reform_changingpaktsitz_picked"
+			spriteType = "GFX_paktgui_buttonwasclicksmall"
+			position = { x = 270 y = 777 }
+			}
+				instantTextBoxType = {
+			name = "epchangungpaktsiutz"
+			position = { x = 270 y = 777 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = changingpaktsitzep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_einwanderungsrichtlinie"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			pdx_tooltip = ANM_tt_pakt_reform_einwanderungsrichtlinie
+			position = { x = 508 y = 761 }
+			}
+			iconType = {	
+			name = "pakt_reform_einwanderungsrichtlinie_picked"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			position = { x = 508 y = 761 }
+			}
+				instantTextBoxType = {
+			name = "epeinwanderungsrichtlinie"
+			position = { x = 508 y = 761 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = reinwanderungsreichtlinieep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_commoneconomy"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			pdx_tooltip = ANM_tt_pakt_reform_commoneconomy
+			position = { x = 31 y = 794 }
+			}
+			iconType = {	
+			name = "pakt_reform_commoneconomy_picked"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 31 y = 794 }
+			}
+				instantTextBoxType = {
+			name = "eppaktcommoneconomy"
+			position = { x = 31 y = 794 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = comoneconomyep
+			maxWidth = 580
+			maxHeight = 24
+		}
+			iconType = {	
+			name = "pakt_reform_commonforeignpolicy"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			pdx_tooltip = ANM_tt_pakt_reform_commonforeignpolicy
+			position = { x = 270 y = 794 }
+			}
+			iconType = {	
+			name = "pakt_reform_commonforeignpolicy_picked"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 270 y = 794 }
+			}
+				instantTextBoxType = {
+			name = "epcomonforeignpolitics"
+			position = { x = 270 y = 794 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = camonforeignpoliticsep
+			maxWidth = 580
+			maxHeight = 24
+		}
+				iconType ={	
+			name = "pakt_reform_commonlaw"
+			spriteType = "GFX_paktgui_buttonnoclick"
+			pdx_tooltip = ANM_tt_pakt_reform_commonlaw
+			position = { x = 508 y = 794 }
+			}
+			iconType ={	
+			name = "pakt_reform_commonlaw_picked"
+			spriteType = "GFX_paktgui_buttonwasclick"
+			position = { x = 508 y = 794 }
+			}
+					instantTextBoxType = {
+			name = "epcommonlawsdf"
+			position = { x = 508 y = 794 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = comonlawsepsdf
+			maxWidth = 580
+			maxHeight = 24
+		}
+			buttonType = {
+				name = "ireland_button"
+				quadTextureSprite = "GFX_ireland_gray"
+				position = { x = 29 y = 204 }
+			}
+					iconType ={
+			name ="ireland_green"
+			spriteType = "GFX_ireland_green"
+			position = { x = 29 y = 204 }
+			}
+			buttonType = {
+				name = "northengland_button"
+				quadTextureSprite = "GFX_northengland_gray"
+				position = { x = 134 y = 197 }
+			}
+				iconType ={
+			name ="northengland_green"
+			spriteType = "GFX_northengland_green"
+			position = { x = 134 y = 197 }
+			}
+			buttonType = {
+				name = "middleengland_button"
+				quadTextureSprite = "GFX_middleengland_gray"
+				position = { x = 139 y = 240 }
+			}
+					iconType ={
+			name ="middleengland_green"
+			spriteType = "GFX_middleengland_green"
+			position = { x = 139 y = 240 }
+			}
+			buttonType = {
+				name = "scotland_button"
+				quadTextureSprite = "GFX_scotland_gray"
+				position = { x = 96 y = 130 }
+			}
+				iconType ={
+			name ="scotland_green"
+			spriteType = "GFX_scotland_green"
+			position = { x = 96 y = 130 }
+			}
+					iconType ={
+			name ="scotland_blue"
+			spriteType = "GFX_scotland_blue"
+			position = { x = 96 y = 130 }
+			}
+			buttonType = {
+				name = "southengland_button"
+				quadTextureSprite = "GFX_southengland_gray"
+				position = { x = 106 y = 274 }
+			}
+				iconType ={
+			name ="southengland_green"
+			spriteType = "GFX_southengland_green"
+			position = { x = 106 y = 274 }
+			}
+			buttonType = {
+				name = "wales_button"
+				quadTextureSprite = "GFX_wales_gray"
+				position = { x = 109 y = 247 }
+			}
+				iconType ={
+			name ="wales_green"
+			spriteType = "GFX_wales_green"
+			position = { x = 109 y = 247 }
+			}
+				iconType ={
+			name ="wales_blue"
+			spriteType = "GFX_wales_blue"
+			position = { x = 109 y = 247 }
+			}
+			buttonType = {
+				name = "albania_button"
+				quadTextureSprite = "GFX_albania_gray"
+				position = { x = 480 y = 458 }
+			}
+					iconType ={
+			name ="albania_green"
+			spriteType = "GFX_albania_green"
+			position = { x = 480 y = 458 }
+			}
+					iconType ={
+			name ="albania_blue"
+			spriteType = "GFX_albania_blue"
+			position = { x = 480 y = 458 }
+			}
+					iconType ={
+			name ="albania_yellow"
+			spriteType = "GFX_albania_yellow"
+			position = { x = 480 y = 458 }
+			}
+					iconType ={
+			name ="albania_orange"
+			spriteType = "GFX_albania_orange"
+			position = { x = 480 y = 458 }
+			}
+			buttonType = {
+				name = "anatolia_button"
+				quadTextureSprite = "GFX_anatolia_gray"
+				position = { x = 587 y = 477 }
+			}
+					iconType ={
+			name ="anatolia_green"
+			spriteType = "GFX_anatolia_green"
+			position = { x = 587 y = 477 }
+			}
+					iconType ={
+			name ="anatolia_blue"
+			spriteType = "GFX_anatolia_blue"
+			position = { x = 587 y = 477 }
+			}
+					iconType ={
+			name ="anatolia_yellow"
+			spriteType = "GFX_anatolia_yellow"
+			position = { x = 587 y = 477 }
+			}
+					iconType ={
+			name ="anatolia_orange"
+			spriteType = "GFX_anatolia_orange"
+			position = { x = 587 y = 477 }
+			}
+			buttonType = {
+				name = "austria_button"
+				quadTextureSprite = "GFX_austria_gray"
+				position = { x = 333 y = 334 }
+			}
+					iconType ={
+			name ="austria_green"
+			spriteType = "GFX_austria_green"
+			position = { x = 333 y = 334 }
+			}
+			buttonType = {
+				name = "baltikum_button"
+				quadTextureSprite = "GFX_baltikum_gray"
+				position = { x = 512 y = 111 }
+			}
+				iconType ={
+			name ="baltikum_green"
+			spriteType = "GFX_baltikum_green"
+			position = { x = 512 y = 111 }
+			}
+				iconType ={
+			name ="baltikum_blue"
+			spriteType = "GFX_baltikum_blue"
+			position = { x = 512 y = 111 }
+			}
+				iconType ={
+			name ="baltikum_yellow"
+			spriteType = "GFX_baltikum_yellow"
+			position = { x = 512 y = 111 }
+			}
+			buttonType = {
+				name = "belarus_button"
+				quadTextureSprite = "GFX_belarus_gray"
+				position = { x = 550 y = 190 }
+			}
+			iconType ={
+			name ="belarus_red"
+			spriteType = "GFX_belarus_red"
+			position = { x = 550 y = 190 }
+			}
+				iconType ={
+			name ="belarus_orange"
+			spriteType = "GFX_belarus_orange"
+			position = { x = 550 y = 190 }
+			}
+				iconType ={
+			name ="belarus_yellow"
+			spriteType = "GFX_belarus_yellow"
+			position = { x = 550 y = 190 }
+			}
+				iconType ={
+			name ="belarus_blue"
+			spriteType = "GFX_belarus_blue"
+			position = { x = 550 y = 190 }
+			}
+				iconType ={
+			name ="belarus_green"
+			spriteType = "GFX_belarus_green"
+			position = { x = 550 y = 190 }
+			}
+			buttonType = {
+				name = "bohemia_button"
+				quadTextureSprite = "GFX_bohemia_gray"
+				position = { x = 389 y = 305 }
+			}
+						iconType ={
+			name ="bohemia_blue"
+			spriteType = "GFX_bohemia_blue"
+			position = { x = 389 y = 305 }
+			}
+							iconType ={
+			name ="bohemia_green"
+			spriteType = "GFX_bohemia_green"
+			position = { x = 389 y = 305 }
+			}
+			buttonType = {
+				name = "bonsia_button"
+				quadTextureSprite = "GFX_bosnia_gray"
+				position = { x = 424 y = 415 }
+			}
+					iconType ={
+			name ="bosnia_orange"
+			spriteType = "GFX_bosnia_orange"
+			position = { x = 424 y = 415 }
+			}
+				iconType ={
+			name ="bosnia_yellow"
+			spriteType = "GFX_bosnia_yellow"
+			position = { x = 424 y = 415 }
+			}
+					iconType ={
+			name ="bosnia_blue"
+			spriteType = "GFX_bosnia_blue"
+			position = { x = 424 y = 415 }
+			}
+						iconType ={
+			name ="bosnia_green"
+			spriteType = "GFX_bosnia_green"
+			position = { x = 424 y = 415 }
+			}
+			buttonType = {
+				name = "bosporus_button"
+				quadTextureSprite = "GFX_bosporus_gray"
+				position = { x = 552 y = 475 }
+			}
+				iconType ={
+			name ="bosporus_orange"
+			spriteType = "GFX_bosporus_orange"
+			position = { x = 552 y = 475 }
+			}
+					iconType ={
+			name ="bosporus_yellow"
+			spriteType = "GFX_bosporus_yellow"
+			position = { x = 552 y = 475 }
+			}
+					iconType ={
+			name ="bosporus_blue"
+			spriteType = "GFX_bosporus_blue"
+			position = { x = 552 y = 475 }
+			}
+					iconType ={
+			name ="bosporus_green"
+			spriteType = "GFX_bosporus_green"
+			position = { x = 552 y = 475 }
+			}
+			buttonType = {
+				name = "bulgaria_button"
+				quadTextureSprite = "GFX_bulgaria_gray"
+				position = { x = 513 y = 436 }
+			}
+				iconType ={
+			name ="bulgaria_orange"
+			spriteType = "GFX_bulgaria_orange"
+			position = { x = 513 y = 436 }
+			}
+				iconType ={
+			name ="bulgaria_yellow"
+			spriteType = "GFX_bulgaria_yellow"
+			position = { x = 513 y = 436 }
+			}
+				iconType ={
+			name ="bulgaria_blue"
+			spriteType = "GFX_bulgaria_blue"
+			position = { x = 513 y = 436 }
+			}
+				iconType ={
+			name ="bulgaria_green"
+			spriteType = "GFX_bulgaria_green"
+			position = { x = 513 y = 436 }
+			}
+			buttonType = {
+				name = "burgundy_button"
+				quadTextureSprite = "GFX_burgundy_gray"
+				position = { x = 187 y = 298 }
+			}
+				iconType ={
+			name ="burgundy_red"
+			spriteType = "GFX_burgundy_red"
+			position = { x = 187 y = 298 }
+			}
+					iconType ={
+			name ="burgundy_orange"
+			spriteType = "GFX_burgundy_orange"
+			position = { x = 187 y = 298 }
+			}
+					iconType ={
+			name ="burgundy_yellow"
+			spriteType = "GFX_burgundy_yellow"
+			position = { x = 187 y = 298 }
+			}
+					iconType ={
+			name ="burgundy_blue"
+			spriteType = "GFX_burgundy_red"
+			position = { x = 187 y = 298 }
+			}
+					iconType ={
+			name ="burgundy_green"
+			spriteType = "GFX_burgundy_green"
+			position = { x = 187 y = 298 }
+			}
+			buttonType = {
+				name = "central_italy_button"
+				quadTextureSprite = "GFX_central_italy_gray"
+				position = { x = 308 y = 429 }
+			}
+				iconType ={
+			name ="central_italy_green"
+			spriteType = "GFX_central_italy_green"
+			position = { x = 308 y = 429 }
+			}
+				iconType ={
+			name ="central_italy_blue"
+			spriteType = "GFX_central_italy_blue"
+			position = { x = 308 y = 429 }
+			}
+				iconType ={
+			name ="central_italy_yellow"
+			spriteType = "GFX_central_italy_yellow"
+			position = { x = 308 y = 429 }
+			}
+				iconType ={
+			name ="central_italy_orange"
+			spriteType = "GFX_central_italy_orange"
+			position = { x = 308 y = 429 }
+			}
+			buttonType = {
+				name = "centralgermany_button"
+				quadTextureSprite = "GFX_centralgermany_gray"
+				position = { x = 316 y = 203 }
+			}
+			iconType ={
+			name ="centralgermany_green"
+			spriteType = "GFX_centralgermany_green"
+			position = { x = 316 y = 203 }
+			}
+			iconType ={
+			name ="centralgermany_blue"
+			spriteType = "GFX_centralgermany_blue"
+			position = { x = 316 y = 203 }
+			}
+			buttonType = {
+				name = "centralspain_button"
+				quadTextureSprite = "GFX_centralspain_gray"
+				position = { x = 69 y = 489 }
+			}
+			iconType ={
+			name ="centralspain_green"
+			spriteType = "GFX_centralspain_green"
+			position = { x = 69 y = 489 }
+			}
+			iconType ={
+			name ="centralspain_blue"
+			spriteType = "GFX_centralspain_blue"
+			position = { x = 69 y = 489 }
+			}
+			buttonType = {
+				name = "crimea_button"
+				quadTextureSprite = "GFX_crimea_gray"
+				position = { x = 693 y = 399 }
+			}
+				iconType ={
+			name ="crimea_green"
+			spriteType = "GFX_crimea_green"
+			position = { x = 693 y = 399 }
+			}
+				iconType ={
+			name ="crimea_yellow"
+			spriteType = "GFX_crimea_yellow"
+			position = { x = 693 y = 399 }
+			}
+				iconType ={
+			name ="crimea_blue"
+			spriteType = "GFX_crimea_blue"
+			position = { x = 693 y = 399 }
+			}
+			buttonType = {
+				name = "croatia_button"
+				quadTextureSprite = "GFX_croatia_gray"
+				position = { x = 417 y = 396 }
+			}
+				iconType ={
+			name ="croatia_green"
+			spriteType = "GFX_croatia_green"
+			position = { x = 417 y = 396 }
+			}
+				iconType ={
+			name ="croatia_blue"
+			spriteType = "GFX_croatia_blue"
+			position = { x = 417 y = 396 }
+			}
+				iconType ={
+			name ="croatia_yellow"
+			spriteType = "GFX_croatia_yellow"
+			position = { x = 417 y = 396 }
+			}
+				iconType ={
+			name ="croatia_orange"
+			spriteType = "GFX_croatia_orange"
+			position = { x = 417 y = 396 }
+			}
+			buttonType = {
+				name = "denmark_button"
+				quadTextureSprite = "GFX_denmark_gray"
+				position = { x = 312 y = 157 }
+			}
+				iconType ={
+			name ="denmark_green"
+			spriteType = "GFX_denmark_green"
+			position = { x = 312 y = 157 }
+			}
+			buttonType = {
+				name = "eastgermany_button"
+				quadTextureSprite = "GFX_eastgermany_gray"
+				position = { x = 421 y = 197 }
+			}
+				iconType ={
+			name ="eastgermany_blue"
+			spriteType = "GFX_eastgermany_blue"
+			position = { x = 421 y = 197 }
+			}
+				iconType ={
+			name ="eastgermany_green"
+			spriteType = "GFX_eastgermany_green"
+			position = { x = 421 y = 197 }
+			}
+			
+			buttonType = {
+				name = "finland_button"
+				quadTextureSprite = "GFX_finland_gray"
+				position = { x = 519 y = 62 }
+			}
+				iconType ={
+			name ="finland_red"
+			spriteType = "GFX_finland_red"
+			position = { x = 519 y = 62 }
+			}
+				iconType ={
+			name ="finland_orange"
+			spriteType = "GFX_finland_orange"
+			position = { x = 519 y = 62 }
+			}
+				iconType ={
+			name ="finland_yellow"
+			spriteType = "GFX_finland_yellow"
+			position = { x = 519 y = 62 }
+			}
+					iconType ={
+			name ="finland_blue"
+			spriteType = "GFX_finland_blue"
+			position = { x = 519 y = 62 }
+			}
+					iconType ={
+			name ="finland_green"
+			spriteType = "GFX_finland_green"
+			position = { x = 519 y = 62 }
+			}
+			buttonType = {
+				name = "flanders_button"
+				quadTextureSprite = "GFX_flanders_gray"
+				position = { x = 224 y = 292 }
+			}
+					iconType ={
+			name ="flanders_red"
+			spriteType = "GFX_flanders_red"
+			position = { x = 224 y = 292 }
+			}
+					iconType ={
+			name ="flanders_orange"
+			spriteType = "GFX_flanders_orange"
+			position = { x = 224 y = 292 }
+			}
+					iconType ={
+			name ="flanders_yellow"
+			spriteType = "GFX_flanders_yellow"
+			position = { x = 224 y = 292 }
+			}
+					iconType ={
+			name ="flanders_blue"
+			spriteType = "GFX_flanders_blue"
+			position = { x = 224 y = 292 }
+			}
+					iconType ={
+			name ="flanders_green"
+			spriteType = "GFX_flanders_green"
+			position = { x = 224 y = 292 }
+			}
+			buttonType = {
+				name = "germania_button"
+				quadTextureSprite = "GFX_germania_grey"
+				position = { x = 360 y = 250 }
+			}
+				iconType ={
+			name ="germania_green"
+			spriteType = "GFX_germania_green"
+			position = { x = 360 y = 250 }
+			}
+			buttonType = {
+				name = "gotenland_button"
+				quadTextureSprite = "GFX_gotenland_gray"
+				position = { x = 686 y = 362 }
+			}
+			iconType ={
+			name ="gotenland_yellow"
+			spriteType = "GFX_gotenland_yellow"
+			position = { x = 686 y = 362 }
+			}
+				iconType ={
+			name ="gotenland_blue"
+			spriteType = "GFX_gotenland_blue"
+			position = { x = 686 y = 362 }
+			}
+				iconType ={
+			name ="gotenland_green"
+			spriteType = "GFX_gotenland_green"
+			position = { x = 686 y = 362 }
+			}
+			buttonType = {
+				name = "greece_button"
+				quadTextureSprite = "GFX_greece_gray"
+				position = { x = 498 y = 488 }
+			}
+					iconType ={
+			name ="greece_orange"
+			spriteType = "GFX_greece_orange"
+			position = { x = 498 y = 488 }
+			}
+				iconType ={
+			name ="greece_yellow"
+			spriteType = "GFX_greece_yellow"
+			position = { x = 498 y = 488 }
+			}
+				iconType ={
+			name ="greece_blue"
+			spriteType = "GFX_greece_blue"
+			position = { x = 498 y = 488 }
+			}
+				iconType ={
+			name ="greece_green"
+			spriteType = "GFX_greece_green"
+			position = { x = 498 y = 488 }
+			}
+			buttonType = {
+				name = "hungary_button"
+				quadTextureSprite = "GFX_hungary_gray"
+				position = { x = 436 y = 340 }
+			}
+					iconType ={
+			name ="hungary_yellow"
+			spriteType = "GFX_hungary_yellow"
+			position = { x = 436 y = 340 }
+			}
+					iconType ={
+			name ="hungary_blue"
+			spriteType = "GFX_hungary_blue"
+			position = { x = 436 y = 340 }
+			}
+					iconType ={
+			name ="hungary_green"
+			spriteType = "GFX_hungary_green"
+			position = { x = 436 y = 340 }
+			}
+			buttonType = {
+				name = "moldawia_button"
+				quadTextureSprite = "GFX_moldawia_gray"
+				position = { x = 576 y = 330 }
+			}
+				iconType ={
+			name ="moldawia_orange"
+			spriteType = "GFX_moldawia_orange"
+			position = { x = 576 y = 330 }
+			}
+					iconType ={
+			name ="moldawia_yellow"
+			spriteType = "GFX_moldavia_yellow"
+			position = { x = 576 y = 330 }
+			}
+					iconType ={
+			name ="moldawia_blue"
+			spriteType = "GFX_moldawia_blue"
+			position = { x = 576 y = 330 }
+			}
+					iconType ={
+			name ="moldawia_green"
+			spriteType = "GFX_moldawia_green"
+			position = { x = 576 y = 330 }
+			}
+			buttonType = {
+				name = "montenegro_button"
+				quadTextureSprite = "GFX_montenegro_gray"
+				position = { x = 473 y = 447 }
+			}
+			iconType ={
+			name ="montenegro_orange"
+			spriteType = "GFX_montenegro_orange"
+			position = { x = 473 y = 447 }
+			}
+				iconType ={
+			name ="montenegro_yellow"
+			spriteType = "GFX_montenegro_yellow"
+			position = { x = 473 y = 447 }
+			}
+				iconType ={
+			name ="montenegro_green"
+			spriteType = "GFX_montenegro_green"
+			position = { x = 473 y = 447 }
+			}
+				iconType ={
+			name ="montenegro_blue"
+			spriteType = "GFX_montenegro_blue"
+			position = { x = 473 y = 447 }
+			}
+			buttonType = {
+				name = "netherlands_button"
+				quadTextureSprite = "GFX_netherlands_gray"
+				position = { x = 236 y = 249 }
+			}
+				iconType ={
+			name ="netherlands_green"
+			spriteType = "GFX_netherlands_green"
+			position = { x = 236 y = 249 }
+			}
+			buttonType = {
+				name = "northitaly_button"
+				quadTextureSprite = "GFX_northitaly_gray"
+				position = { x = 277 y = 380 }
+			}
+			iconType ={
+			name ="northitaly_orange"
+			spriteType = "GFX_northitaly_orange"
+			position = { x = 277 y = 380 }
+			}
+				iconType ={
+			name ="northitaly_yellow"
+			spriteType = "GFX_northitaly_yellow"
+			position = { x = 277 y = 380 }
+			}
+				iconType ={
+			name ="northitaly_green"
+			spriteType = "GFX_northitaly_green"
+			position = { x = 277 y = 380 }
+			}
+				iconType ={
+			name ="northitaly_blue"
+			spriteType = "GFX_northitaly_blue"
+			position = { x = 277 y = 380 }
+			}
+			buttonType = {
+				name = "northspain_button"
+				quadTextureSprite = "GFX_northspain_gray"
+				position = { x = 41 y = 443 }
+			}
+			iconType ={
+			name ="northspain_green"
+			spriteType = "GFX_northspain_green"
+			position = { x = 41 y = 443 }
+			}
+				iconType ={
+			name ="northspain_blue"
+			spriteType = "GFX_northspain_blue"
+			position = { x = 41 y = 443 }
+			}
+			buttonType = {
+				name = "norway_button"
+				quadTextureSprite = "GFX_norway_gray"
+				position = { x = 263 y = 62 }
+			}
+			iconType ={
+			name ="norway_green"
+			spriteType = "GFX_norway_green"
+			position = { x = 263 y = 62 }
+			}
+			buttonType = {
+				name = "occitania_button"
+				quadTextureSprite = "GFX_occitania_grey"
+				position = { x = 160 y = 394 }
+			}
+			iconType ={
+			name ="occitania_blue"
+			spriteType = "GFX_occitania_blue"
+			position = { x = 160 y = 394 }
+			}
+				iconType ={
+			name ="occitania_green"
+			spriteType = "GFX_occitania_green"
+			position = { x = 160 y = 394 }
+			}
+			buttonType = {
+				name = "eastukraine_button"
+				quadTextureSprite = "GFX_ostukraine_gray"
+				position = { x = 650 y = 269 }
+			}
+			iconType ={
+			name ="eastukraine_red"
+			spriteType = "GFX_ostukraine_red"
+			position = { x = 650 y = 269 }
+			}
+			iconType ={
+			name ="eastukraine_orange"
+			spriteType = "GFX_ostukraine_orange"
+			position = { x = 650 y = 269 }
+			}
+			iconType ={
+			name ="eastukraine_yellow"
+			spriteType = "GFX_ostukraine_yellow"
+			position = { x = 650 y = 269 }
+			}
+			iconType ={
+			name ="eastukraine_blue"
+			spriteType = "GFX_ostukraine_blue"
+			position = { x = 650 y = 269 }
+			}
+			iconType ={
+			name ="eastukraine_green"
+			spriteType = "GFX_ostukraine_green"
+			position = { x = 650 y = 269 }
+			}
+			buttonType = {
+				name = "poland_button"
+				quadTextureSprite = "GFX_poland_gray"
+				position = { x = 483 y = 260 }
+			}
+			iconType ={
+			name ="poland_green"
+			spriteType = "GFX_poland_green"
+			position = { x = 483 y = 260 }
+			}
+			iconType ={
+			name ="poland_blue"
+			spriteType = "GFX_poland_blue"
+			position = { x = 483 y = 260 }
+			}
+			iconType ={
+			name ="poland_yellow"
+			spriteType = "GFX_poland_yellow"
+			position = { x = 483 y = 260 }
+			}
+			iconType ={
+			name ="poland_orange"
+			spriteType = "GFX_poland_orange"
+			position = { x = 483 y = 260 }
+			}
+			buttonType = {
+				name = "portgual_button"
+				quadTextureSprite = "GFX_portugal_gray"
+				position = { x = 38 y = 475 }
+			}
+			iconType ={
+			name ="portugal_green"
+			spriteType = "GFX_portugal_green"
+			position = { x = 38 y = 475 }
+			}
+				iconType ={
+			name ="portugal_blue"
+			spriteType = "GFX_portugal_blue"
+			position = { x = 38 y = 475 }
+			}
+			buttonType = {
+				name = "serbia_button"
+				quadTextureSprite = "GFX_serbia_gray"
+				position = { x = 483 y = 423 }
+			}
+				iconType ={
+			name ="serbia_green"
+			spriteType = "GFX_serbia_green"
+			position = { x = 483 y = 423 }
+			}
+			iconType ={
+			name ="serbia_blue"
+			spriteType = "GFX_serbia_blue"
+			position = { x = 483 y = 423 }
+			}
+			iconType ={
+			name ="serbia_yellow"
+			spriteType = "GFX_serbia_yellow"
+			position = { x = 483 y = 423 }
+			}
+			iconType ={
+			name ="serbia_orange"
+			spriteType = "GFX_serbia_orange"
+			position = { x = 483 y = 423 }
+			}
+			buttonType = {
+				name = "slovakia_button"
+				quadTextureSprite = "GFX_slovakia_gray"
+				position = { x = 447 y = 331 }
+			}
+				iconType ={
+			name ="slovakia_green"
+			spriteType = "GFX_slovakia_green"
+			position = { x = 447 y = 331 }
+			}
+				iconType ={
+			name ="slovakia_blue"
+			spriteType = "GFX_slovakia_blue"
+			position = { x = 447 y = 331 }
+			}
+				iconType ={
+			name ="slovakia_yellow"
+			spriteType = "GFX_slovakia_yellow"
+			position = { x = 447 y = 331 }
+			}
+			buttonType = {
+				name = "southgermany_button"
+				quadTextureSprite = "GFX_sotuhgermany_gray"
+				position = { x = 296 y = 303 }
+			}
+			iconType ={
+			name ="southgermany_green"
+			spriteType = "GFX_sotuhgermany_green"
+			position = { x = 296 y = 303 }
+			}
+			buttonType = {
+				name = "southitaly_button"
+				quadTextureSprite = "GFX_south_italy_gray"
+				position = { x = 367 y = 455 }
+			}
+			iconType ={
+			name ="southitaly_orange"
+			spriteType = "GFX_south_italy_orange"
+			position = { x = 367 y = 455 }
+			}
+			iconType ={
+			name ="southitaly_yellow"
+			spriteType = "GFX_south_italy_yellow"
+			position = { x = 367 y = 455 }
+			}
+			iconType ={
+			name ="southitaly_blue"
+			spriteType = "GFX_south_italy_blue"
+			position = { x = 367 y = 455 }
+			}
+			iconType ={
+			name ="southitaly_green"
+			spriteType = "GFX_south_italy_green"
+			position = { x = 367 y = 455 }
+			}
+			buttonType = {
+				name = "southspain_button"
+				quadTextureSprite = "GFX_southspain_gray"
+				position = { x = 68 y = 524 }
+			}
+				iconType ={
+			name ="southspain_orange"
+			spriteType = "GFX_southspain_orange"
+			position = { x = 68 y = 524 }
+			}
+			iconType ={
+			name ="southspain_yellow"
+			spriteType = "GFX_southspain_yellow"
+			position = { x = 68 y = 524 }
+			}
+			iconType ={
+			name ="southspain_blue"
+			spriteType = "GFX_southspain_blue"
+			position = { x = 68 y = 524 }
+			}
+			iconType ={
+			name ="southspain_green"
+			spriteType = "GFX_southspain_green"
+			position = { x = 68 y = 524 }
+			}
+			buttonType = {
+				name = "sweden_button"
+				quadTextureSprite = "GFX_sweden_gray"
+				position = { x = 359 y = 62 }
+			}
+				iconType ={
+			name ="sweden_green"
+			spriteType = "GFX_sweden_green"
+			position = { x = 359 y = 62 }
+			}
+			buttonType = {
+				name = "switzerland_button"
+				quadTextureSprite = "GFX_switzerland_gray"
+				position = { x = 282 y = 369 }
+			}
+				iconType ={
+			name ="switzerland_green"
+			spriteType = "GFX_switzerland_green"
+			position = { x = 282 y = 369 }
+			}
+			buttonType = {
+				name = "transsylvania_button"
+				quadTextureSprite = "GFX_transsylvania_gray"
+				position = { x = 498 y = 359 }
+			}
+			iconType ={
+			name ="transsylvania_orange"
+			spriteType = "GFX_transsylvania_orange"
+			position = { x = 498 y = 359 }
+			}
+			iconType ={
+			name ="transsylvania_yellow"
+			spriteType = "GFX_transsylvania_yellow"
+			position = { x = 498 y = 359 }
+			}
+			iconType ={
+			name ="transsylvania_blue"
+			spriteType = "GFX_transsylvania_blue"
+			position = { x = 498 y = 359 }
+			}
+			iconType ={
+			name ="transsylvania_green"
+			spriteType = "GFX_transsylvania_green"
+			position = { x = 498 y = 359 }
+			}
+			buttonType = {
+				name = "wallachia_button"
+				quadTextureSprite = "GFX_wallachia_gray"
+				position = { x = 538 y = 408 }
+			}
+			iconType ={
+			name ="wallachia_orange"
+			spriteType = "GFX_wallachia_orange"
+			position = { x = 538 y = 408 }
+			}	
+			iconType ={
+			name ="wallachia_yellow"
+			spriteType = "GFX_wallachia_yellow"
+			position = { x = 538 y = 408 }
+			}
+			iconType ={
+			name ="wallachia_blue"
+			spriteType = "GFX_wallachia_blue"
+			position = { x = 538 y = 408 }
+			}
+			iconType ={
+			name ="wallachia_green"
+			spriteType = "GFX_wallachia_green"
+			position = { x = 538 y = 408 }
+			}			
+			buttonType = {
+				name = "wallonia_button"
+				quadTextureSprite = "GFX_wallonia_gray"
+				position = { x = 242 y = 301 }
+			}	
+				iconType ={
+			name ="wallonia_red"
+			spriteType = "GFX_wallonia_red"
+			position = { x = 242 y = 301 }
+			}
+				iconType ={
+			name ="wallonia_yellow"
+			spriteType = "GFX_wallonia_yellow"
+			position = { x = 242 y = 301 }
+			}
+				iconType ={
+			name ="wallonia_orange"
+			spriteType = "GFX_wallonia_orange"
+			position = { x = 242 y = 301 }
+			}
+				iconType ={
+			name ="wallonia_green"
+			spriteType = "GFX_wallonia_green"
+			position = { x = 242 y = 301 }
+			}
+				iconType ={
+			name ="wallonia_blue"
+			spriteType = "GFX_wallonia_blue"
+			position = { x = 242 y = 301 }
+			}
+			buttonType = {
+				name = "westernfrance_button"
+				quadTextureSprite = "GFX_westernfrance_grey"
+				position = { x = 111 y = 326 }
+			}	
+				iconType ={
+			name ="westfrance_orange"
+			spriteType = "GFX_westernfrance_orange"
+			position = { x = 111 y = 326 }
+			}
+				iconType ={
+			name ="westfrance_yellow"
+			spriteType = "GFX_westernfrance_yellow"
+			position = { x = 111 y = 326 }
+			}
+				iconType ={
+			name ="westfrance_blue"
+			spriteType = "GFX_westernfrance_blue"
+			position = { x = 111 y = 326 }
+			}
+				iconType ={
+			name ="westfrance_green"
+			spriteType = "GFX_westernfrance_green"
+			position = { x = 111 y = 326 }
+			}
+			buttonType = {
+				name = "westgermany_button"
+				quadTextureSprite = "GFX_westgermany_gray"
+				position = { x = 273 y = 243 }
+			}	
+				iconType ={
+			name ="westgermany_green"
+			spriteType = "GFX_westgermany_green"
+			position = { x = 273 y = 243 }
+			}
+			
+			buttonType = {
+				name = "westspain_button"
+				quadTextureSprite = "GFX_westspain_gray"
+				position = { x = 155 y = 460 }
+			}	
+			iconType ={
+			name ="westspain_green"
+			spriteType = "GFX_westspain_green"
+			position = { x = 155 y = 460 }
+			}
+			iconType ={
+			name ="westspain_blue"
+			spriteType = "GFX_westspain_blue"
+			position = { x = 155 y = 460 }
+			}
+			buttonType = {
+				name = "westukraine_button"
+				quadTextureSprite = "GFX_westukraine_gray"
+				position = { x = 556 y = 277 }
+			}
+			iconType ={
+			name ="westukraine_green"
+			spriteType = "GFX_westukraine_green"
+			position = { x = 556 y = 277 }
+			}
+			iconType ={
+			name ="westukraine_blue"
+			spriteType = "GFX_westukraine_blue"
+			position = { x = 556 y = 277 }
+			}
+			iconType ={
+			name ="westukraine_yellow"
+			spriteType = "GFX_westukraine_yellow"
+			position = { x = 556 y = 277 }
+			}
+			iconType ={
+			name ="westukraine_orange"
+			spriteType = "GFX_westukraine_orange"
+			position = { x = 556 y = 277 }
+			}
+		
+		instantTextBoxType = {
+			name = "Europapaktstateview"
+			position = { x = 792 y = 333 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = Anmeuropapaktmap_selectedstate
+			maxWidth = 580
+			maxHeight = 24
+		}
+		
+		instantTextBoxType = {
+			name = "europapaktgeneralinfostuff"
+			position = { x = 790 y = 115 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = europapaktinformationlol
+			maxWidth = 580
+			maxHeight = 24
+		}
+		buttonType = {
+				name = "paktgui_increasebudget_anm"
+				quadTextureSprite = "GFX_paktgui_buttonforbudget"
+				position = { x = 795 y = 207 }
+				pdx_tooltip = ANM_paktgui_increasebudget_tt
+			}
+		buttonType = {
+				name = "paktgui_expandpaktinstitutions_anm"
+				quadTextureSprite = "GFX_paktgui_buttonforbudget"
+				position = { x = 795 y = 232 }
+				pdx_tooltip = ANM_paktgui_expandpaktinstitutions_tt  
+			}
+		buttonType = {
+				name = "paktgui_usepaktpoliticalbenefits_anm"
+				quadTextureSprite = "GFX_paktgui_buttonforbudget"
+				position = { x = 795 y = 257 }
+				pdx_tooltip = ANM_paktgui_usepaktpoliticalbenefits_tt
+			}
+		buttonType = {
+				name = "paktgui_redirectpaktincome_anm"
+				quadTextureSprite = "GFX_paktgui_buttonforbudget"
+				position = { x = 795 y = 282 }
+				pdx_tooltip = ANM_paktgui_redirectpaktincome_tt
+			}
+		instantTextBoxType = {
+			name = "paktgui_increasebudget_ep"
+			position = { x = 799 y = 211 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = paktgui_increasebudget
+			maxWidth = 580
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name = "paktgui_expandpaktinstitutions_ep"
+			position = { x = 799 y = 236 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = paktgui_expandpaktinstitutions
+			maxWidth = 580
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name = "paktgui_usepaktpoliticalbenefits_ep"
+			position = { x = 799 y = 261 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = paktgui_usepaktpoliticalbenefits
+			maxWidth = 580
+			maxHeight = 24
+		}
+		instantTextBoxType = {
+			name = "paktgui_redirectpaktincome_ep"
+			position = { x = 799 y = 286 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = paktgui_redirectpaktincome
+			maxWidth = 580
+			maxHeight = 24
+		}
+		
+			iconType ={
+			name ="epgui_chemistry_one"
+			spriteType = "GFX_epgui_chemistry"
+			position = { x = 793 y = 438 }
+			}
+			iconType ={
+			name ="epgui_finance_one"
+			spriteType = "GFX_epgui_financialindustry"
+			position = { x = 793 y = 438 }
+			}
+			iconType ={
+			name ="epgui_electronics_one"
+			spriteType = "GFX_epgui_electronicsindustry"
+			position = { x = 793 y = 438 }
+			}
+			iconType ={
+			name ="epgui_heavyindustry_one"
+			spriteType = "GFX_epgui_heavyindustry"
+			position = { x = 793 y = 438 }
+			}
+			iconType ={
+			name ="epgui_petroleum_one"
+			spriteType = "GFX_epgui_oilindustry"
+			position = { x = 793 y = 438 }
+			}
+			iconType ={
+			name ="epgui_automobile_one"
+			spriteType = "GFX_epgui_automotiveindustry"
+			position = { x = 793 y = 438 }
+			}
+			
+			
+			
+			iconType ={
+			name ="epgui_chemistry_two"
+			spriteType = "GFX_epgui_chemistry"
+			position = { x = 842 y = 438 }
+			}
+			iconType ={
+			name ="epgui_finance_two"
+			spriteType = "GFX_epgui_financialindustry"
+			position = { x = 842 y = 438 }
+			}
+			iconType ={
+			name ="epgui_electronics_two"
+			spriteType = "GFX_epgui_electronicsindustry"
+			position = { x = 842 y = 438 }
+			}
+			iconType ={
+			name ="epgui_heavyindustry_two"
+			spriteType = "GFX_epgui_heavyindustry"
+			position = { x = 842 y = 438 }
+			}
+			iconType ={
+			name ="epgui_petroleum_two"
+			spriteType = "GFX_epgui_oilindustry"
+			position = { x = 842 y = 438 }
+			}
+			iconType ={
+			name ="epgui_automobile_two"
+			spriteType = "GFX_epgui_automotiveindustry"
+			position = { x = 842 y = 438 }
+			}
+			iconType ={
+			name ="epgui_thestatesbigbigbframe"
+			spriteType = "GFX_europapaktgui_thestatesframee"
+			position = { x = 12 y = 59 }
+			}
+			
+			
+		buttonType = {
+				name = "paktgui_buttonforinvestmentclickee"
+				quadTextureSprite = "GFX_paktgui_buttonforinvestmentclickee"
+				position = { x = 889 y = 438 }
+			}
+		instantTextBoxType = {
+			name = "paktgui_buttonforinvestmentclickeethetext"
+			position = { x = 894 y = 440 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = paktgui_buttonforinvestmentclickeetext
+			maxWidth = 580
+			maxHeight = 24
+		}
+		
+		instantTextBoxType = {
+			name = "paktgui_countryinteractionstextep"
+			position = { x = 793 y = 514 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = paktgui_countryinteractiosdfnstextep
+			maxWidth = 580
+			maxHeight = 24
+		}
+		buttonType = {
+				name = "paktgui_buttonfortradingwithcountry"
+				quadTextureSprite = "GFX_paktgui_buttonforinvestmentclickee"
+				position = { x = 788 y = 627 }
+			}
+		buttonType = {
+				name = "paktgui_buttonforrelationswithcountry"
+				quadTextureSprite = "GFX_paktgui_buttonforinvestmentclickee"
+				position = { x = 788 y = 671 }
+			}
+			
+		instantTextBoxType = {
+			name = "paktgui_buttonforretradestextep"
+			position = { x = 792 y = 630 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = paktgui_buttonforrelationswitradexteptextthe
+			maxWidth = 580
+			maxHeight = 24
+		}
+		
+		instantTextBoxType = {
+			name = "paktgui_buttonforrelationswithcountrytextep"
+			position = { x = 792 y = 675 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = paktgui_buttonforrelatrelationsteptextthe
+			maxWidth = 580
+			maxHeight = 24
+		}
+		
+		buttonType = {
+				name = "paktgui_company_empty_one"
+				quadTextureSprite = "GFX_epgui_company_empty"
+				position = { x = 793 y = 390 }
+			}
+			
+			
+			iconType ={
+			name ="epgui_companyone_allianz"
+			spriteType = "GFX_epgui_company_allianz"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_axa"
+			spriteType = "GFX_epgui_company_axa"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_basf"
+			spriteType = "GFX_epgui_company_basf"
+			position = { x = 793 y = 390 }
+			}	
+			iconType ={
+			name ="epgui_companyone_bayer"
+			spriteType = "GFX_epgui_company_bayer"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_bosch"
+			spriteType = "GFX_epgui_company_bosch"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_peugeot"
+			spriteType = "GFX_epgui_company_peugeot"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_rompetrol"
+			spriteType = "GFX_epgui_company_rompetrol"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_salzgitter"
+			spriteType = "GFX_epgui_company_salzgitter"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_siemens"
+			spriteType = "GFX_epgui_company_siemens"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_thyssenkrupp"
+			spriteType = "GFX_epgui_company_thyssenkrupp"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_vitol"
+			spriteType = "GFX_epgui_company_vitol"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_volkswagen"
+			spriteType = "GFX_epgui_company_volkswagen"
+			position = { x = 793 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companyone_airbus"
+			spriteType = "GFX_epgui_company_airbus"
+			position = { x = 793 y = 390 }
+			}
+		buttonType = {
+				name = "paktgui_company_empty_two"
+				quadTextureSprite = "GFX_epgui_company_empty"
+				position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_allianz"
+			spriteType = "GFX_epgui_company_allianz"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_axa"
+			spriteType = "GFX_epgui_company_axa"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_basf"
+			spriteType = "GFX_epgui_company_basf"
+			position = { x = 869 y = 390 }
+			}	
+			iconType ={
+			name ="epgui_companytwo_bayer"
+			spriteType = "GFX_epgui_company_bayer"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_bosch"
+			spriteType = "GFX_epgui_company_bosch"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_peugeot"
+			spriteType = "GFX_epgui_company_peugeot"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_rompetrol"
+			spriteType = "GFX_epgui_company_rompetrol"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_salzgitter"
+			spriteType = "GFX_epgui_company_salzgitter"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_siemens"
+			spriteType = "GFX_epgui_company_siemens"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_thyssenkrupp"
+			spriteType = "GFX_epgui_company_thyssenkrupp"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_vitol"
+			spriteType = "GFX_epgui_company_vitol"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_volkswagen"
+			spriteType = "GFX_epgui_company_volkswagen"
+			position = { x = 869 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companytwo_airbus"
+			spriteType = "GFX_epgui_company_airbus"
+			position = { x = 869 y = 390 }
+			}
+		buttonType = {
+				name = "paktgui_company_empty_three"
+				quadTextureSprite = "GFX_epgui_company_empty"
+				position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_allianz"
+			spriteType = "GFX_epgui_company_allianz"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_axa"
+			spriteType = "GFX_epgui_company_axa"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_basf"
+			spriteType = "GFX_epgui_company_basf"
+			position = { x = 946 y = 390 }
+			}	
+			iconType ={
+			name ="epgui_companythree_bayer"
+			spriteType = "GFX_epgui_company_bayer"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_bosch"
+			spriteType = "GFX_epgui_company_bosch"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_peugeot"
+			spriteType = "GFX_epgui_company_peugeot"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_rompetrol"
+			spriteType = "GFX_epgui_company_rompetrol"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_salzgitter"
+			spriteType = "GFX_epgui_company_salzgitter"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_siemens"
+			spriteType = "GFX_epgui_company_siemens"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_thyssenkrupp"
+			spriteType = "GFX_epgui_company_thyssenkrupp"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_vitol"
+			spriteType = "GFX_epgui_company_vitol"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_volkswagen"
+			spriteType = "GFX_epgui_company_volkswagen"
+			position = { x = 946 y = 390 }
+			}
+			iconType ={
+			name ="epgui_companythree_airbus"
+			spriteType = "GFX_epgui_company_airbus"
+			position = { x = 946 y = 390 }
+			}
+		
+		}
+		
+		
+		
+		containerWindowType = {
+		name = "Anm_epgui_windowcompanies"
+		size = { width = 475 height = 219 }
+		position = { x = 638 y = 177 }
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_epgui_companywindow"
+		}
+		
+			buttonType = {
+				name = "closebuttonepguicompanywindow"
+				quadTextureSprite = "GFX_epgui_closecompanywindow"
+				position = { x = 440 y = 2 }
+			}
+		
+			buttonType = {
+				name = "paktgui_companywindow_allianz"
+				quadTextureSprite = "GFX_epgui_company_allianz"
+				pdx_tooltip = ANM_paktgui_companywindow_allianz_tt  
+				position = { x = 37 y = 49 }
+			}
+			
+			buttonType = {
+				name = "paktgui_companywindow_axa"
+				quadTextureSprite = "GFX_epgui_company_axa"
+				pdx_tooltip = ANM_paktgui_companywindow_axa_tt  
+				position = { x = 37 y = 100 } 
+			}
+			
+			buttonType = {
+				name = "paktgui_companywindow_basf"
+				quadTextureSprite = "GFX_epgui_company_basf"
+				pdx_tooltip = ANM_paktgui_companywindow_basf_tt  
+				position = { x = 37 y = 151 }
+			}
+			
+			
+			buttonType = {
+				name = "paktgui_companywindow_bayer"
+				quadTextureSprite = "GFX_epgui_company_bayer"
+				pdx_tooltip = ANM_paktgui_companywindow_bayer_tt  
+				position = { x = 121 y = 49 }
+			}
+			
+			buttonType = {
+				name = "paktgui_companywindow_bosch"
+				quadTextureSprite = "GFX_epgui_company_bosch"
+				pdx_tooltip = ANM_paktgui_companywindow_bosch_tt  
+				position = { x = 121 y = 100 } 
+			}
+			
+			buttonType = {
+				name = "paktgui_companywindow_peugeot"
+				quadTextureSprite = "GFX_epgui_company_peugeot"
+				pdx_tooltip = ANM_paktgui_companywindow_peugeot_tt  
+				position = { x = 121 y = 151 }
+			}
+			
+			
+			buttonType = {
+				name = "paktgui_companywindow_rompetrol"
+				quadTextureSprite = "GFX_epgui_company_rompetrol"
+				pdx_tooltip = ANM_paktgui_companywindow_rompetrol_tt  
+				position = { x = 204 y = 49 }
+			}
+			
+			buttonType = {
+				name = "paktgui_companywindow_salzgitter"
+				quadTextureSprite = "GFX_epgui_company_salzgitter"
+				pdx_tooltip = ANM_paktgui_companywindow_salzgitter_tt  
+				position = { x = 204 y = 100 } 
+			}
+			
+			buttonType = {
+				name = "paktgui_companywindow_siemens"
+				quadTextureSprite = "GFX_epgui_company_siemens"
+				pdx_tooltip = ANM_paktgui_companywindow_siemens_tt  
+				position = { x = 204 y = 151 }
+			}
+			
+			
+			buttonType = {
+				name = "paktgui_companywindow_thyssenkrupp"
+				quadTextureSprite = "GFX_epgui_company_thyssenkrupp"
+				pdx_tooltip = ANM_paktgui_companywindow_thyssenkrupp_tt  
+				position = { x = 287 y = 49 }
+			}
+			
+			buttonType = {
+				name = "paktgui_companywindow_vitol"
+				quadTextureSprite = "GFX_epgui_company_vitol"
+				pdx_tooltip = ANM_paktgui_companywindow_vitol_tt  
+				position = { x = 287 y = 100 } 
+			}
+			
+			buttonType = {
+				name = "paktgui_companywindow_volkswagen"
+				quadTextureSprite = "GFX_epgui_company_volkswagen"
+				pdx_tooltip = ANM_paktgui_companywindow_volkswagen_tt  
+				position = { x = 287 y = 151 }
+			}
+			
+			
+			buttonType = {
+				name = "paktgui_companywindow_airbus"
+				quadTextureSprite = "GFX_epgui_company_airbus"
+				pdx_tooltip = ANM_paktgui_companywindow_airbus_tt  
+				position = { x = 370 y = 49 }
+			}
+
+		
+		}
+}

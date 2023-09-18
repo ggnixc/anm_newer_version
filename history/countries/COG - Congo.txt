@@ -1,0 +1,183 @@
+﻿capital = 295
+
+set_oob = "COG_1962"
+
+set_country_flag = cog_corp_empire
+set_country_flag = gui_alert_visible
+
+add_ideas = {
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_illegal
+	tno_immigration_closed_borders
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_registered_voting
+	tno_refugees_banned
+	#MILITARY
+	tno_conscription_two_year_draft
+	tno_women_military_assistance
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_combat_schooling
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_educational_deferment
+	#SOCIAL
+	tno_safety_acceptable_regulations
+	tno_health_care_private_health_care
+	tno_pollution_few_regulations
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_police
+	#ECONOMIC
+	tno_trade_laws_free_trade
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_tax_havens
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_trinket_subsidies
+}
+
+set_research_slots = 3
+set_convoys = 200
+add_stability = 0.3
+add_war_support = 0.3
+
+set_politics = {
+	ruling_party = progressivism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    progressivism = 30
+    liberalism = 10
+    liberal_conservatism = 0
+    conservatism = 10
+    paternalism = 0
+    despotism = 30
+    fascism = 20
+    national_socialism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Ange-Felix Pattase"
+	desc = ""
+	picture = "Portrait_Beafrika_Ange_Felix_Pattase.dds"
+	expire = "2999.4.17"
+	ideology = progressivism_subtype
+	traits = {
+		#
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	##set_naval_oob = COG_mtg_navy_1962
+    create_equipment_variant = {
+        name = "M-Class"
+        type = ship_hull_cruiser_1
+        name_group = GER_CA_HISTORICAL
+        parent_version = 0
+        modules = {
+            fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_secondaries_slot = ship_secondaries_2
+			rear_1_custom_slot = ship_medium_battery_1
+			mid_1_custom_slot = ship_medium_battery_1
+			front_1_custom_slot = ship_anti_air_2
+        }
+    }
+	create_equipment_variant = {
+		name = "Zerstörer 1944"
+		type = ship_hull_light_1
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_anti_air_2
+    	}
+	}
+	create_equipment_variant = {
+		name = "Straßburg-class"
+		type = ship_hull_more_light_2
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+    	}
+	}
+	create_equipment_variant = {
+		name = "Pelikan-class"
+		type = ship_hull_very_light_2
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = ship_sonar_1
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_depth_charge_1
+			rear_1_custom_slot = ship_anti_air_2
+    	}
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	##set_naval_oob = COG_navy_1962
+	create_equipment_variant = {
+		name = "Zerstörer 1944"
+		type = destroyer_1
+		name_group = GER_DD_HISTORICAL
+	}
+	create_equipment_variant = {
+		name = "M-Class"
+		type = heavy_cruiser_1
+		name_group = GER_CA_HISTORICAL
+	}
+	create_equipment_variant = {
+		name = "Straßburg-class"
+		type = frigate_1
+		name_group = GER_DD_HISTORICAL
+	}
+	create_equipment_variant = {
+		name = "T Class"
+		type = submarine_1
+		parent_version = 0
+	}
+}

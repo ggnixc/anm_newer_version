@@ -1,0 +1,337 @@
+defined_text = {
+	name = getGERnsdappartystructure
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leaning < 20000 }
+			check_variable = { GER_ANM_party_leaning > -20000}
+		}
+		localization_key = GER_nsdap_conservative_leaning_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leaning < -20000 }
+		}
+		localization_key = GER_nsdap_reformist_leaning_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leaning > 20000 }
+		}
+		localization_key = GER_nsdap_reactionary_leaning_anm
+	}
+}
+defined_text = {
+	name = getGERfrontinfluence
+	text = {
+		trigger = {
+			has_country_flag = reichsstability_tier_2
+			
+		}
+		localization_key = GER_front_inf_top
+	}
+	text = {
+		trigger = {
+			has_country_flag = reichsstability_tier_3
+			
+		}
+		localization_key = GER_front_inf_middle
+	}
+	text = {
+		trigger = {
+			has_country_flag = reichsstability_tier_4
+			
+		}
+		localization_key = GER_front_inf_bottom
+	}
+	text = {
+		localization_key = GER_front_inf
+	}
+}
+defined_text = {
+	name = getGERspeerinfluence
+	text = {
+		trigger = {
+			has_country_flag = reichsstability_tier_2
+			
+		}
+		localization_key = GER_speer_inf_top
+	}
+	text = {
+		trigger = {
+			has_country_flag = reichsstability_tier_3
+			
+		}
+		localization_key = GER_speer_inf_middle
+	}
+	text = {
+		trigger = {
+			has_country_flag = reichsstability_tier_4
+			
+		}
+		localization_key = GER_speer_inf_bottom
+	}
+	text = {
+		localization_key = GER_speer_inf
+	}
+}
+defined_text = {
+	name = getGERreichsstabilitatcooldown1
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = GER_reichsstabilitat_interaction_1
+				has_country_flag = reichsstability_tier_2
+			}
+		}
+		localization_key = GER_reichsstabilitat_interaction_on_cooldown
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = GER_reichsstabilitat_interaction_2
+				has_country_flag = reichsstability_tier_3
+			}
+		}
+		localization_key = GER_reichsstabilitat_interaction_on_cooldown
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = GER_reichsstabilitat_interaction_3
+				has_country_flag = reichsstability_tier_4
+			}
+		}
+		localization_key = GER_reichsstabilitat_interaction_on_cooldown
+	}
+	text = {
+		trigger = {
+			has_country_flag = reichsstability_tier_1
+		}
+		localization_key = GER_reichsstabilitat_interaction_peak
+	}
+	text = {
+		trigger = {
+			has_political_power < 50
+		}
+		localization_key = GER_reichsstabilitat_interaction_notenoughpp
+	}
+	
+	text = {
+		localization_key = reichsstability_party_button_1
+	}
+}
+defined_text = {
+	name = getGERreichsstabilitatcooldown2
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = GER_reichsstabilitat_interaction_1
+				has_country_flag = reichsstability_tier_2
+			}
+		}
+		localization_key = GER_reichsstabilitat_interaction_on_cooldown
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = GER_reichsstabilitat_interaction_2
+				has_country_flag = reichsstability_tier_3
+			}
+		}
+		localization_key = GER_reichsstabilitat_interaction_on_cooldown
+	}
+	text = {
+		trigger = {
+			AND = {
+				has_country_flag = GER_reichsstabilitat_interaction_3
+				has_country_flag = reichsstability_tier_4
+			}
+		}
+		localization_key = GER_reichsstabilitat_interaction_on_cooldown
+	}
+	text = {
+		trigger = {
+			has_country_flag = reichsstability_tier_1
+		}
+		localization_key = GER_reichsstabilitat_interaction_peak
+	}
+	text = {
+		localization_key = reichsstability_party_button_2
+	}
+}
+defined_text = {
+	name = getGERnsdaplowerpartyleaning
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_lower_party_leaning < 100 }
+			check_variable = { GER_ANM_lower_party_leaning > -100}
+		}
+		localization_key = GER_nsdap_lowerconservative_leaning_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_lower_party_leaning < -100 }
+		}
+		localization_key = GER_nsdap_lowerreformist_leaning_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_lower_party_leaning > 100 }
+		}
+		localization_key = GER_nsdap_lowerreactionary_leaning_anm
+	}
+}
+defined_text = {
+	name = getGERnsdaplowerpartyinfluence
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_lower_party_influence < 100 }
+			check_variable = { GER_ANM_lower_party_influence > -100}
+		}
+		localization_key = GER_nsdap_conservative_lowerinfluence_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_lower_party_influence < -100 }
+		}
+		localization_key = GER_nsdap_reformist_lowerinfluence_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_lower_party_influence > 100 }
+		}
+		localization_key = GER_nsdap_reactionary_lowerinfluence_anm
+	}
+}
+defined_text = {
+	name = getGERnsdapinnerpartyleaning
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_middle_party_leaning < 100 }
+			check_variable = { GER_ANM_middle_party_leaning > -100}
+		}
+		localization_key = GER_nsdap_innerconservative_leaning_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_middle_party_leaning < -100 }
+		}
+		localization_key = GER_nsdap_innerreformist_leaning_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_middle_party_leaning > 100 }
+		}
+		localization_key = GER_nsdap_innerreactionary_leaning_anm
+	}
+}
+defined_text = {
+	name = getGERnsdapinnerpartyinfluence
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_middle_party_influence < 100 }
+			check_variable = { GER_ANM_middle_party_influence > -100}
+		}
+		localization_key = GER_nsdap_innerconservative_influence_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_middle_party_influence < -100 }
+		}
+		localization_key = GER_nsdap_innerreformist_influence_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_middle_party_influence > 100 }
+		}
+		localization_key = GER_nsdap_innerreactionary_influence_anm
+	}
+}
+defined_text = {
+	name = getGERnsdapcorepartyleaning
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_upper_party_leaning < 100 }
+			check_variable = { GER_ANM_upper_party_leaning > -100}
+		}
+		localization_key = GER_nsdap_coreconservative_leaning_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_upper_party_leaning < -100 }
+		}
+		localization_key = GER_nsdap_corereformist_leaning_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_upper_party_leaning > 100 }
+		}
+		localization_key = GER_nsdap_corereactionary_leaning_anm
+	}
+}
+defined_text = {
+	name = getGERnsdapcorepartyinfluence
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_upper_party_influence < 100 }
+			check_variable = { GER_ANM_upper_party_influence > -100}
+		}
+		localization_key = GER_nsdap_coreconservative_influence_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_upper_party_influence < -100 }
+		}
+		localization_key = GER_nsdap_corereformist_influence_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_upper_party_influence > 100 }
+		}
+		localization_key = GER_nsdap_corereactionary_influence_anm
+	}
+}
+defined_text = {
+	name = getGERnsdappartyleadershipleaning
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_leaning < 100 }
+			check_variable = { GER_ANM_party_leadership_leaning > -100}
+		}
+		localization_key = GER_nsdap_leaderconservative_leaning_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_leaning < -100 }
+		}
+		localization_key = GER_nsdap_leaderreformist_leaning_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_leaning > 100 }
+		}
+		localization_key = GER_nsdap_leaderreactionary_leaning_anm
+	}
+}
+defined_text = {
+	name = getGERnsdappartyleadershipinfluence
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_influnce < 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > -100}
+		}
+		localization_key = GER_nsdap_leaderconservative_influence_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_influnce < -100 }
+		}
+		localization_key = GER_nsdap_leaderreformist_influence_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_influnce > 100 }
+		}
+		localization_key = GER_nsdap_leaderreactionary_influence_anm
+	}
+}

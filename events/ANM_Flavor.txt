@@ -1,0 +1,128 @@
+﻿add_namespace = flavoranm #the actual event
+add_namespace =  flavoranmtrigger #these events trigger the above for every country
+## me at the zoo
+country_event = {
+	id = flavoranm.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event flavoranm" }
+	title = flavoranm.1.t
+	desc = flavoranm.1.desc
+	picture = GFX_anm_me_at_the_zoo
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #
+		name = flavoranm.1.a
+		
+	}
+}
+
+country_event = {
+	id = flavoranm.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event flavoranm" }
+	title = flavoranm.3.t
+	desc = flavoranm.3.desc
+	picture = GFX_numa_numa
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #
+		name = flavoranm.3.a
+		
+	}
+}
+country_event = {
+	id = flavoranm.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event flavoranm" }
+	title = flavoranm.4.t
+	desc = flavoranm.4.desc
+	picture = GFX_anm_thematrixreloaded
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #
+		name = flavoranm.4.a
+		
+	}
+}
+
+country_event = {
+	id = flavoranmtrigger.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event flavoranmtrigger" }
+	title = flavoranmtrigger.1.t
+	desc = flavoranmtrigger.1.desc
+	picture = GFX_anm_me_at_the_zoo
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = flavoranmtrigger.1.a
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = { id = flavoranm.1 }
+		}
+	}
+}
+
+country_event = {
+	id = flavoranmtrigger.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event flavoranmtrigger" }
+	title = flavoranmtrigger.2.t
+	desc = flavoranmtrigger.2.desc
+	picture = GFX_anm_me_at_the_zoo
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = flavoranmtrigger.2.a
+		every_country = { news_event = { id = WORLD.18150 days = 1 } }  
+	}
+}
+
+#Dragostea din tei - Numa Numa
+country_event = {
+	id = flavoranmtrigger.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event flavoranmtrigger" }
+	title = flavoranmtrigger.3.t
+	desc = flavoranmtrigger.3.desc
+	picture = GFX_anm_me_at_the_zoo
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = flavoranmtrigger.3.a
+		every_country = {
+			limit = {
+				is_ai = no
+				is_european_nation = yes
+			}
+			country_event = { id = flavoranm.3 }
+		}
+	}
+}
+country_event = {
+	id = flavoranmtrigger.4
+	title = flavoranmtrigger.4.t
+	desc = flavoranmtrigger.4.desc
+	picture = GFX_anm_thematrixreloaded
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = flavoranmtrigger.4.a
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = { id = flavoranm.4 }
+		}
+	}
+}

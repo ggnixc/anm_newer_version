@@ -1,0 +1,54 @@
+ideas = {
+ 
+	country = {
+		POL_the_quiet_place = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea POL_the_quiet_place"}
+			allowed = {
+				always = no
+			}
+
+			picture = POL_the_quiet_place
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.20
+				stability_weekly = -0.02
+				political_power_gain = -0.20
+			}
+		}
+		
+		POL_declining_population = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea POL_declining_population"}
+			allowed = {
+				always = no
+			}
+		   
+			removal_cost = -1
+		   
+			picture = POL_declining_population
+ 
+			modifier = {
+				monthly_population = -2.00
+				recruitable_population = -0.50
+				recruitable_population_factor = -0.05
+			}
+		}
+
+		POL_anniversary_poland_occupation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea POL_anniversary_poland_occupation"}
+			allowed = {
+				always = no
+			}
+		   
+			removal_cost = -1
+		   
+			picture = POL_anniversary_poland_occupation
+ 
+			modifier = {
+				
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,175 @@
+﻿capital = 786
+
+set_oob = "FRA_1962"
+
+set_research_slots = 2
+set_convoys = 200
+#add_stability = 
+add_war_support = -0.3
+add_manpower = 32000
+country_lock_all_division_template = yes
+
+add_ideas = {
+	#NATIONAL SPIRITS
+	BRG_reconstruction_of_burgundy
+	#FACTION
+	Pakt_Bundnispartner
+	#Ministers
+	FRA_minister_Bruno_Megret_hog
+	FRA_minister_Francois_Duprat_sec
+	FRA_minister_Gerard_Nicoud_for
+	FRA_minister_Francois_Asselineau_eco
+	#TNO LAWS
+	tno_military_spending_low_spending
+	tno_training_basic_training
+	tno_conscription_disarmed_nation
+	tno_women_noncombat_only
+	tno_military_supervision_military_policing
+	tno_racial_integration_segregated_regiments
+	tno_draft_exemptions_educational_deferment
+	tno_political_parties_controlled_opposition
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_registered_voting
+	tno_refugees_skilled
+	tno_trade_laws_limited_exports
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+	tno_safety_minimal_regulations
+	tno_health_care_private_health_care
+	tno_pollution_few_regulations
+	tno_education_subsidised_higher_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_oppression
+	tno_security_preemptive_security 
+	
+	tno_poverty_rate_25
+}
+
+set_politics = {	
+	ruling_party = fascism
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 5
+    ultranationalism = 0
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 10
+    despotism = 19
+    fascism = 43
+    national_socialism = 21
+    esoteric_nazism = 2
+}
+
+create_country_leader = {
+	name = "Dominique de Villepin"
+	desc = "POLITICS_DOMINIQUE_DE_VILLEPIN_DESC"
+	picture = "gfx/leaders/FRA/Portrait_Dominique_de_Villepin.dds"
+	expire = "2965.1.1"
+	ideology = paternalism_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Jean-Jacques Susin"
+	desc = "POLITICS_JEAN-JACQUES_SUSIN_DESC"
+	picture = "Portrait_FRA_Jean-Jacques_Susin.dds"
+	expire = "2965.1.1"
+	ideology = fascism_subtype
+	traits = {
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	##set_naval_oob = FRA_mtg_navy_1962
+	
+	create_equipment_variant = {
+		name = "Dunkerque-Class"
+		type = ship_hull_heavy_1
+		name_group = GER_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_anti_air_1
+			front_1_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_heavy_battery_1
+    	}
+	}
+
+	create_equipment_variant = {
+		name = "La Fantasque-Class"
+		type = ship_hull_light_1
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+			fixed_ship_radar_slot = ship_radar_1
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = ship_anti_air_2
+    	}
+	}
+
+	create_equipment_variant = {
+		name = "Minerve-Class"
+		type = ship_hull_submarine_1
+		name_group = GER_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_engine_slot = sub_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+    	}
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	##set_naval_oob = FRA_navy_1962
+	create_equipment_variant = {
+		name = "Dunkerque-Class"
+		type = battleship_1
+		name_group = GER_BB_HISTORICAL
+	}
+	create_equipment_variant = {
+		name = "La Fantasque-Class"
+		type = destroyer_1
+		name_group = GER_DD_HISTORICAL
+	}
+	create_equipment_variant = {
+		name = "Minerve-Class"
+		type = submarine_1
+		name_group = GER_SS_HISTORICAL
+	}
+}

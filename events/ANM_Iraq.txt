@@ -1,0 +1,560 @@
+﻿
+
+add_namespace = irq
+add_namespace = irq.flavour
+
+news_event = {
+	id = irq.flavour.1
+ 	title = "Al Saher sing Eghsely Belbarad"
+ 	desc = irq.flavour.1.d
+ 	picture = GFX_anm_kadhem_Saher
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = IRQ
+		AND = {
+			date > 1996.1.11
+		}
+	}
+
+
+ 	option = {
+ 		name = "My heart Poured Witness"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.05
+	}
+}
+country_event = {
+	id = irq.flavour.2
+ 	title = "Al Bazzaz goes to Ankara"
+ 	desc = irq.flavour.2.d
+ 	picture = GFX_anm_bazzaz_turkes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = IRQ
+		AND = {
+			date > 1996.1.17
+		}
+	}
+
+
+ 	option = {
+ 		name = "ok"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.05
+		hidden_effect = {			
+			country_event = { id = irq.flavour.3 days = 1 }
+		}
+	}
+}
+news_event = {
+	id = irq.flavour.3
+ 	title = "Al Bazzaz meets Turkes"
+ 	desc = irq.flavour.3.d
+ 	picture = GFX_anm_bazzaz_turkes_news
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = IRQ
+		AND = {
+			date > 1996.1.17
+		}
+	}
+
+
+ 	option = {
+ 		name = "ok"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.05
+	}
+}
+news_event = {
+	id = irq.flavour.10
+ 	title = "Zaman Al Iskafi Stares on TV"
+ 	desc = irq.flavour.1.d
+ 	picture = GFX_anm_kadhem_Saher
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = IRQ
+		AND = {
+			date > 1998.12.19
+		}
+	}
+
+
+ 	option = {
+ 		name = "Wow AbdulHussien AbdulReza"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.05
+	}
+}
+news_event = {
+	id = irq.1
+ 	title = "Al Bazzaz is Dead"
+ 	desc = irq.1.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "God Rest his Soul"
+		ai_chance = { factor = 100 }
+		retire_character = 	IRQ_Abd_al_Rahman_al_Bazzaz
+		create_country_leader = {
+			name = "Arab Parliament"
+			desc = "POLITICS_ARAB_PARLIAMENT_DESC"
+			picture = "gfx/leaders/IRQ/Portrait_IRQ_Parliament.dds"
+			expire = "2999.1.1"
+			ideology = socialist_reformist_socialism_subtype
+			traits = {
+				#
+			}
+		}
+		hidden_effect = {			
+			country_event = { id = irq.2 days = 5 }
+		}
+	}
+}
+news_event = {
+	id = irq.2
+ 	title = "Al Bazzaz Funeral"
+ 	desc = irq.2.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "the Nation Mourns"
+		ai_chance = { factor = 100 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.3 days = 12 }
+		}
+	}
+}
+country_event = {
+	id = irq.3
+ 	title = "the Ba'ath Party coup"
+ 	desc = irq.3.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "the Ba'athists fail and escape"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.1
+		hidden_effect = {			
+			country_event = { id = irq.4 days = 159 }
+		}
+	}
+}
+country_event = {
+	id = irq.4
+ 	title = "the Ba'ath Occupy Amman"
+ 	desc = irq.4.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Fuck"
+		ai_chance = { factor = 100 }
+		swap_ideas = {
+            remove_idea = IRQ_Baath_Threat
+            add_idea = IRQ_Baath_Threat_real
+        }
+		hidden_effect = {			
+			country_event = { id = irq.5 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = irq.5
+ 	title = "the Ba'ath allowed through Syria"
+ 	desc = irq.5.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Stop them at the Border"
+		ai_chance = { factor = 0 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.6 days = 5 }
+		}
+	}
+	option = {
+ 		name = "Station troops at Ramadi"
+		ai_chance = { factor = 100 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.7 days = 5 }
+		}
+	}
+}
+news_event = {
+	id = irq.6
+ 	title = "the Ba'athists are defeated"
+ 	desc = irq.6.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Thank Allah"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.2
+		add_popularity = {
+        ideology = fascism
+        popularity = -0.5
+        }
+		add_popularity = {
+        ideology = national_socialism
+        popularity = -0.5
+        }
+		add_popularity = {
+        ideology = socialist
+        popularity = 0.3
+        }
+		remove_ideas = {
+			IRQ_Baath_Threat_real
+		}
+	}
+}
+country_event = {
+	id = irq.7
+ 	title = "the Ba'athist cross Saladin instead"
+ 	desc = irq.7.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Send troops to occupy south Saladin"
+		ai_chance = { factor = 100 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.8 days = 5 }
+		}
+	}
+	option = {
+ 		name = "Retreat troops to Baghdad"
+		ai_chance = { factor = 0 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.6 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = irq.8
+ 	title = "the Ba'athist enter Al Azamiyah"
+ 	desc = irq.8.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "This is shit"
+		ai_chance = { factor = 100 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.9 days = 2 }
+			country_event = { id = irq.11 days = 2 }
+		}
+	}
+}
+country_event = {
+	id = irq.9
+ 	title = "the Ba'athist enter Al Azamiyah"
+ 	desc = irq.9.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Send Troops to Alawi"
+		ai_chance = { factor = 0 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.10 days = 2 }
+		}
+	}
+	option = {
+ 		name = "Fortify Kadhimyah"
+		ai_chance = { factor = 100 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.6 days = 2 }
+		}
+	}
+}
+country_event = {
+	id = irq.10
+ 	title = "the Ba'athist on the steps of Al Karada"
+ 	desc = irq.10.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Surrender"
+		ai_chance = { factor = 0 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.12 days = 2 }
+		}
+	}
+	option = {
+ 		name = "one last push from Alawi"
+		ai_chance = { factor = 100 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.6 days = 2 }
+		}
+	}
+	option = {
+ 		name = "ask Al Sadr for a Fatwa"
+		ai_chance = { factor = 100 }
+		stability_factor = -0.05
+		hidden_effect = {			
+			country_event = { id = irq.13 days = 2 }
+		}
+	}
+}
+news_event = {
+	id = irq.11
+ 	title = "The Royal Family evacuate to Kuwait"
+ 	desc = irq.11.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "it's Official"
+		ai_chance = { factor = 100 }
+		stability_factor = -0.05
+	}
+}
+news_event = {
+	id = irq.12
+ 	title = "the Ba'athists Takeover"
+ 	desc = irq.12.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Shua'alat Al Ba'ath Sabahi"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.1
+		remove_ideas = {
+			IRQ_Baath_Threat_real
+			IRQ_Controled_Democracy
+		}
+		set_politics = {
+	        ruling_party = fascism
+            elections_allowed = no
+            last_election = "1935.12.17"
+            election_frequency = 48
+        }
+		add_popularity = {
+        ideology = fascism
+        popularity = 0.5
+        }
+		hidden_effect = {			
+			country_event = { id = irq.16 days = 2 }
+		}
+	}
+}
+news_event = {
+	id = irq.13
+ 	title = "Al Faisaliah Sadrists Override Baathists"
+ 	desc = irq.12.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Thank you Mr Sadr"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.1
+		remove_ideas = {
+			IRQ_Baath_Threat_real
+			IRQ_Controled_Democracy
+		}
+		hidden_effect = {			
+			country_event = { id = irq.14 days = 2 }
+		}
+	}
+}
+news_event = {
+	id = irq.14
+ 	title = "the Ba'athists are defeated"
+ 	desc = irq.14.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Thank Allah"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.1
+		remove_ideas = {
+			IRQ_Baath_Threat_real
+		}
+		add_popularity = {
+        ideology = fascism
+        popularity = -0.5
+        }
+		add_popularity = {
+        ideology = national_socialism
+        popularity = -0.5
+        }
+		add_popularity = {
+        ideology = socialist
+        popularity = 0.3
+        }
+		add_popularity = {
+        ideology = conservatism
+        popularity = 0.1
+        }
+		hidden_effect = {			
+			country_event = { id = irq.15 days = 2 }
+		}
+	}
+}
+country_event = {
+	id = irq.15
+ 	title = "Islamists demand Parliament Seats"
+ 	desc = irq.15.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Ok"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.1
+	}
+	option = {
+ 		name = "Hell no"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.1
+		add_ideas = {
+			IRQ_Islamist_Anger
+		}
+		hidden_effect = {			
+			country_event = { id = irq.17 days = 2 }
+		}
+	}
+}
+country_event = {
+	id = irq.16
+ 	title = "Question of The Monarchy"
+ 	desc = irq.16.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Keep it"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.2
+	}
+	option = {
+ 		name = "Abolish it"
+		ai_chance = { factor = 0 }
+		stability_factor = -0.2
+		set_country_flag = IRQ_Arabia_Republic
+		set_cosmetic_tag = IRQ_Arabia_Republic
+		remove_ideas = {
+			IRQ_Idea_Faisal_II
+			IRQ_Idea_Hussien_II
+		}
+	}
+	option = {
+ 		name = "Keep only King Hussien"
+		ai_chance = { factor = 0 }
+		stability_factor = 0.05
+		remove_ideas = {
+			IRQ_Idea_Faisal_II
+		}
+	}
+}

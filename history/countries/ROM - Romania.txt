@@ -1,0 +1,167 @@
+﻿capital = 1281
+
+set_oob = "ROM_1962"
+
+add_ideas = {
+	## Spirits
+	Pakt_Bundnispartner
+	ROM_michael_the_first
+	ROM_ethnic_tensions
+	ROM_dealing_with_the_devil
+	## Ministers
+
+	## Laws
+	###Political###
+	tno_conscription_volunteer_only
+	tno_women_noncombat_only
+	tno_military_supervision_watchdog_groups
+	tno_military_spending_medium_spending
+	tno_training_combat_schooling
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_educational_deferment
+	tno_trade_laws_export_focus
+	tno_economic_focus_early_mobilization
+	tno_tax_rate_high_taxes
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_generous_subsidies
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_support_disenfranchised
+	tno_refugees_vetted_entry
+	tno_safety_excellent_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_few_regulations
+	tno_education_free_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_police
+	construction_level_4
+	
+	tno_poverty_rate_15
+}
+
+puppet = TRA
+
+set_politics = {	
+	ruling_party = conservatism
+	last_election = "1933.12.20"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 0
+    socialist = 5
+    progressivism = 6
+    liberalism = 22
+    liberal_conservatism = 0
+    conservatism = 11
+    paternalism = 11
+    despotism = 12
+	fascism = 28
+	national_socialism = 5
+    ultranationalism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Ștefan Foriș"
+	desc = "POLITICS_STEFAN_FORIS_DESC"
+	picture = "Portrait_Romania_Stefan_Foris.dds"
+	expire = "1989.1.1"
+	ideology = communist_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Ștefan Voitec"
+	desc = "POLITICS_STEFAN_VOITEC_DESC"
+	picture = "Portrait_Romania_Stefan_Voitec.dds"
+	expire = "1989.1.1"
+	ideology = socialist_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Gheorghe Vlădescu-Răcoasa"
+	desc = "POLITICS_GHEORGHE_VLADESCU_RACOASA_DESC"
+	picture = "Portrait_Romania_Gheorghe_Vladescu_Racoasa.dds"
+	expire = "1989.1.1"
+	ideology = progressivism_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Vintilă V. Brătianu"
+	desc = "POLITICS_VINTILA_BRATIANU_DESC"
+	picture = "Portrait_Romania_Vintila_V_Bratianu.dds"
+	expire = "1989.1.1"
+	ideology = liberalism_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Radu Campeanu"
+	#desc = "POLITICS_EMIL_CONSTANTINESCU_DESC"
+	picture = "Portrait_ROM_Radu_Campeanu.dds"
+	expire = "2089.1.1"
+	ideology = conservatism_agrarianism_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Viorel Tilea"
+	desc = "POLITICS_VIOREL_TILEA_DESC"
+	picture = "Portrait_Romania_Viorel_Tilea.dds"
+	expire = "1989.1.1"
+	ideology = paternalism_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Mihai I"
+	desc = "POLITICS_MICHAEL_I_DESC"
+	picture = "Portrait_Romania_Michael_I.dds"
+	expire = "1989.1.1"
+	ideology = despotism_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Mihai Stelescu"
+	desc = "POLITICS_MIHAI_STELESCU_DESC"
+	picture = "Portrait_Romania_Mihai_Stelescu.dds"
+	expire = "1989.1.1"
+	ideology = fascism_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Nichifor Crainic"
+	desc = "POLITICS_NICHIFOR_CRAINIC_DESC"
+	picture = "Portrait_Romania_Nichifor_Crainic.dds"
+	expire = "1989.1.1"
+	ideology = national_socialism_subtype
+	traits = { }
+}
+
+create_country_leader = {
+	name = "Horia Sima"
+	desc = "POLITICS_HORIA_SIMA_DESC"
+	picture = "Portrait_Romania_Horia_Sima.dds"
+	expire = "1989.1.1"
+	ideology = ultranationalism_subtype
+	traits = { }
+}
+country_event = { id = flavoranmtrigger.3 days = 1570 } #numa numa

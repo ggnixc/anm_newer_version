@@ -1,0 +1,43 @@
+﻿capital = 1379
+
+add_ideas = {
+	### Starting Spirits ###
+
+	### Ministers ###
+	VAC_minister_Jean_Louis_Tauran_hog
+	VAC_minister_Alois_Estermann_sec
+	VAC_minister_Jean_Louis_Tauran_for
+	VAC_minister_Oscar_Andres_Maradiaga_eco
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 0
+    despotism = 100
+    fascism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Lawrence"
+	desc = "POLITICS_Lawrence_DESC"
+	picture = "Pope_Lawrence.dds"
+	expire = "2100.6.3"
+	ideology = despotism_papacy_subtype
+	traits = {
+		the_pope
+	}
+}

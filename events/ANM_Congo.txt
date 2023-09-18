@@ -1,0 +1,165 @@
+﻿add_namespace = congo_war_event
+add_namespace = congo_debt_event
+## THE CONGO WAR
+country_event = {
+	id = congo_war_event.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_war_event.1" }
+	title = congo_war_event.1.t
+	desc = congo_war_event.1.desc
+	picture = GFX_anm_congo1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_war_event.1.a
+		ai_chance = { factor = 1 }
+		add_stability = -0.05
+		add_political_power = 15
+	}
+}
+country_event = {
+	id = congo_war_event.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_war_event.2" }
+	title = congo_war_event.2.t
+	desc = congo_war_event.2.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_war_event.2.a
+		ai_chance = { factor = 1 }
+	}	
+}
+country_event = {
+	id = congo_war_event.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_war_event.3" }
+	title = congo_war_event.3.t
+	desc = congo_war_event.3.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_war_event.3.a
+		ai_chance = { factor = 1 }
+	}
+	option = { 
+		name = congo_war_event.3.b
+		ai_chance = { factor = 1 }
+	}
+	option = { 
+		name = congo_war_event.3.c
+		ai_chance = { factor = 1 }
+	}	
+}
+country_event = {
+	id = congo_war_event.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_war_event.4" }
+	title = congo_war_event.4.t
+	desc = congo_war_event.4.desc
+	picture = GFX_anm_congo4
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_war_event.4.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = congo_debt_event.1
+		}
+	}
+	option = { 
+		name = congo_war_event.4.b
+		ai_chance = { factor = 1 }
+		add_timed_idea = {
+			idea = CFS_congo_war_cut_funding
+			days = 500
+		}
+	}
+}
+country_event = {
+	id = congo_war_event.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_war_event.5" }
+	title = congo_war_event.5.t
+	desc = congo_war_event.5.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_war_event.5.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = congo_debt_event.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_debt_event.1" }
+	title = congo_debt_event.1.t
+	desc = congo_debt_event.1.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_debt_event.1.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = congo_debt_event.2
+			days = 500
+			set_var = { national_debt 9 }
+		}
+	}
+	option = { 
+		name = congo_debt_event.1.b
+		ai_chance = { factor = 2 }
+		country_event = {
+			id = congo_debt_event.3
+			days = 500
+		}
+	}	
+}
+country_event = {
+	id = congo_war_event.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_war_event.6" }
+	title = congo_war_event.6.t
+	desc = congo_war_event.6.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_war_event.6.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	id = congo_debt_event.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_debt_event.2" }
+	title = congo_debt_event.2.t
+	desc = congo_debt_event.2.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_debt_event.2.a
+		ai_chance = { factor = 1 }
+	}	
+}
+country_event = {
+	id = congo_debt_event.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event congo_debt_event.3" }
+	title = congo_debt_event.3.t
+	desc = congo_debt_event.3.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = congo_debt_event.3.a
+		ai_chance = { factor = 1 }
+	}	
+}

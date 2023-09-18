@@ -1,0 +1,896 @@
+GetANMkdnStatus_icon = {
+	name = GetANMkdnStatus_icon
+	text = {
+		trigger = { has_idea = KdNmandate }
+		localization_key = thedisplaykeyKdNmandate
+	}
+	text = {
+		trigger = { has_idea = KdNobserver }
+		localization_key = thedisplaykeyKdNobserver
+	}
+	text = {
+		trigger = { has_idea = KdNmember }
+		localization_key = thedisplaykeyKdNnormalmember
+	}
+	text = {
+		trigger = { has_idea = KdNcouncilmember }
+		localization_key = thedisplaykeyKdNcouncilmember
+	}
+}
+### Image Locations
+GetFactionStatus_icon = {
+	name = GetFactionStatus_icon
+
+	### Communist International Soviet
+	text = {
+		trigger = { has_idea = COM_Member}
+		localization_key = COM_Member_displaykey
+	}
+	text = {
+		trigger = { has_idea = COM_Satellite}
+		localization_key = COM_Satellite_displaykey
+	}
+	text = {
+		trigger = { has_idea = COM_Observer}
+		localization_key = COM_Observer_displaykey
+	}
+
+
+	### Arabia
+	text = {
+		trigger = { has_idea = GCC_Faction }
+		localization_key = GCC_Faction_displaykey
+	}
+	
+	### Burma
+	text = {
+		trigger = { has_idea = Federal_Union_Army }
+		localization_key = Federal_Union_Army_displaykey
+	}
+
+	### West Africa
+	text = {
+		trigger = { has_idea = PALF_Faction }
+		localization_key = PALF_Faction_displaykey
+	}
+	text = {
+		trigger = { has_idea = PALF_Satellite }
+		localization_key = PALF_Satellite_displaykey
+	}
+	text = {
+		trigger = { has_idea = PALF_Faction_peace }
+		localization_key = PALF_Faction_displaykey
+	}
+	text = {
+		trigger = { has_idea = PALF_Satellite_peace }
+		localization_key = PALF_Satellite_displaykey
+	}
+	
+	### Republic of China ###
+	text = {
+		trigger = { has_idea = Republic_of_China_Leader }
+		localization_key = Republic_of_China_Autonomous_Region_displaykey
+	}
+	text = {
+		trigger = { has_idea = Republic_of_China_Autonomous_Region }
+		localization_key = Republic_of_China_Autonomous_Region_displaykey
+	}
+
+	### Levantine Union ###
+	#Levantine Union Member
+	text = {
+		trigger = { has_idea = Levantine_Union_Member }
+		localization_key = Levantine_Union_Member_displaykey
+	}
+
+	### Pakt ###
+	#Master of Europe
+	text = {
+		trigger = { has_idea = Pakt_Leader }
+		localization_key = Pakt_Leader_displaykey
+	}
+	#Militärverwaltung
+	text = {
+		trigger = { has_idea = Pakt_Military_Authority }
+		localization_key = Pakt_Military_Authority_displaykey
+	}
+	#Protectorate
+	text = {
+		trigger = { has_idea = Pakt_Protektorat }
+		localization_key = Pakt_Protektorat_displaykey
+	}
+	#Integrated Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Integrated_Reichskommissariat }
+		localization_key = Pakt_Integrated_Reichskommissariat_displaykey
+	}
+	#Autonomous Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Autonomous_Reichskommissariat }
+		localization_key = Pakt_Autonomous_Reichskommissariat_displaykey
+	}
+	#Reichsland
+	text = {
+		trigger = { has_idea = Pakt_Reichsland }
+		localization_key = Pakt_Reichsland_displaykey
+	}
+	#Republik
+	text = {
+		trigger = { has_idea = Pakt_Paktrepublik }
+		localization_key = Pakt_Paktrepublik_displaykey
+	}
+	#Puppet State
+	text = {
+		trigger = { has_idea = Pakt_Marionettenstaat }
+		localization_key = Pakt_Marionettenstaat_displaykey
+	}
+	#Collaborating Member
+	text = {
+		trigger = { has_idea = Pakt_Mitstreiter }
+		localization_key = Pakt_Mitstreiter_displaykey
+	}
+	#Sovereign Member
+	text = {
+		trigger = { has_idea = Pakt_Bundnispartner }
+		localization_key = Pakt_Bundnispartner_displaykey
+	}
+	#Ordensstaat
+	text = {
+		trigger = { has_idea = Pakt_Ordensstaat }
+		localization_key = Pakt_Ordensstaat_displaykey
+	}
+	#Observer
+	text = {
+		trigger = { has_idea = Pakt_Observer }
+		localization_key = Pakt_Observer_displaykey
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Heydrich_Pact }
+		localization_key = Anti_Heydrich_Pact_displaykey
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Himmler }
+		localization_key = Anti_Himmler_displaykey
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Heydrich }
+		localization_key = Anti_Heydrich_displaykey
+	}
+
+	### Sphere ###
+	#Leader
+	text = {
+		trigger = { has_idea = Sphere_Leader }
+		localization_key = Sphere_Leader_displaykey
+	}
+	#Core Member - Manchukuo
+	text = {
+		trigger = { 
+			has_idea = Sphere_Core_Member
+			original_tag = MAN
+		}
+		localization_key = Sphere_Core_Member_MAN_displaykey
+	}
+	#Special Economic Zone
+	text = {
+		trigger = { has_idea = Sphere_Special_Econ_Zone }
+		localization_key = Sphere_Special_Econ_Zone_displaykey
+	}
+	#Imperial Protectorate
+	text = {
+		trigger = { has_idea = Sphere_Imp_Protectorate }
+		localization_key = Sphere_Imp_Protectorate_displaykey
+	}
+	#Fully Dependent
+	text = {
+		trigger = { has_idea = Sphere_Fully_Dependent }
+		localization_key = Sphere_Fully_Dependent_displaykey
+	}
+	#Economically Dependent
+	text = {
+		trigger = { has_idea = Sphere_Economic_Dependent }
+		localization_key = Sphere_Economic_Dependent_displaykey
+	}
+	#CoEqual Member
+	text = {
+		trigger = { has_idea = Sphere_Coequal }
+		localization_key = Sphere_Coequal_displaykey
+	}
+
+	### OFN ###
+	text = {
+		trigger = { has_idea = OFN_Leader_of_The_Free_World }
+		localization_key = OFN_Leader_of_The_Free_World_displaykey
+	}
+	text = {
+		trigger = { has_idea = OFN_Independent_Member }
+		localization_key = OFN_Independent_Member_displaykey
+	}
+	text = {
+		trigger = { has_idea = OFN_Dependent_Member }
+		localization_key = OFN_Dependent_Member_displaykey
+	}
+	text = {
+		trigger = { has_idea = OFN_Military_Government }
+		localization_key = OFN_Military_Government_displaykey
+	}
+	text = {
+		trigger = { has_idea = OFN_Mandate }
+		localization_key = OFN_Mandate_displaykey
+	}
+
+	text = {
+		trigger = { has_idea = CDP_full_member }
+		localization_key = ITA_Member_displaykey
+	}
+	
+	### TRIUM ###
+	text = {
+		trigger = { has_idea = TRI_Founder_IT }
+		localization_key = TRI_Founder_IT_displaykey
+	}
+	text = {
+		trigger = { has_idea = TRI_Founder_IB }
+		localization_key = TRI_Founder_IB_displaykey
+	}
+	text = {
+		trigger = { has_idea = TRI_Founder_TR }
+		localization_key = TRI_Founder_TR_displaykey
+	}
+	text = {
+		trigger = { has_idea = TRI_Member }
+		localization_key = TRI_Member_displaykey
+	}
+	text = {
+		trigger = { has_idea = TRI_Member_Client }
+		localization_key = TRI_Member_Client_displaykey
+	}
+
+	#
+	text = {
+		localization_key = NoFaction
+	}
+	
+	#CONCORDATE
+	text = {
+		trigger = { has_idea = CON_Founder }
+		localization_key = CON_Founder_displaykey
+	}
+	text = {
+		trigger = { has_idea = CON_Satellite }
+		localization_key = CON_Satellite_displaykey
+	}
+}
+
+##TOOLTIP
+#Tooltip Template
+GetFactionStatus_tooltip = {
+	name = GetFactionStatus_tooltip
+	text = { localization_key = FactionStatus_tooltip }
+}
+
+#Name
+GetFactionStatus_name = {
+	name = GetFactionStatus_name
+
+	### Levantine Union ###
+	#Levantine Union Member
+	text = {
+		trigger = { has_idea = Levantine_Union_Member }
+		localization_key = Levantine_Union_Member
+	}
+	
+	### Republic of China ###
+	text = {
+		trigger = { has_idea = Republic_of_China_Leader }
+		localization_key = Republic_of_China_Leader
+	}
+	text = {
+		trigger = { has_idea = Republic_of_China_Autonomous_Region }
+		localization_key = Republic_of_China_Autonomous_Region
+	}
+
+	### Pakt ###
+	#Master of Europe
+	text = {
+		trigger = { has_idea = Pakt_Leader }
+		localization_key = Pakt_Leader
+	}
+	#Militärverwaltung
+	text = {
+		trigger = { has_idea = Pakt_Military_Authority }
+		localization_key = Pakt_Military_Authority
+	}
+	#Protectorate
+	text = {
+		trigger = { has_idea = Pakt_Protektorat }
+		localization_key = Pakt_Protektorat
+	}
+	#Integrated Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Integrated_Reichskommissariat }
+		localization_key = Pakt_Integrated_Reichskommissariat
+	}
+	#Autonomous Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Autonomous_Reichskommissariat }
+		localization_key = Pakt_Autonomous_Reichskommissariat
+	}
+	#Reichsland
+	text = {
+		trigger = { has_idea = Pakt_Reichsland }
+		localization_key = Pakt_Reichsland
+	}
+	text = {
+		trigger = { has_idea = Pakt_Paktrepublik }
+		localization_key = Pakt_Paktrepublik
+	}
+	#Puppet State
+	text = {
+		trigger = { has_idea = Pakt_Marionettenstaat }
+		localization_key = Pakt_Marionettenstaat
+	}
+	#Collaborating Member
+	text = {
+		trigger = { has_idea = Pakt_Mitstreiter }
+		localization_key = Pakt_Mitstreiter
+	}
+	#Sovereign Member
+	text = {
+		trigger = { has_idea = Pakt_Bundnispartner }
+		localization_key = Pakt_Bundnispartner
+	}
+	#Ordensstaat
+	text = {
+		trigger = { has_idea = Pakt_Ordensstaat }
+		localization_key = Pakt_Ordensstaat
+	}
+	#Observer
+	text = {
+		trigger = { has_idea = Pakt_Observer }
+		localization_key = Pakt_Observer
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Heydrich_Pact }
+		localization_key = Anti_Heydrich_Pact
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Himmler }
+		localization_key = Anti_Himmler
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Heydrich }
+		localization_key = Anti_Heydrich
+	}
+
+	### Sphere ###
+	#Leader
+	text = {
+		trigger = { has_idea = Sphere_Leader }
+		localization_key = Sphere_Leader
+	}
+	#Core Member - MAN
+	text = {
+		trigger = { has_idea = Sphere_Core_Member }
+		localization_key = Sphere_Core_Member
+	}
+	#Special Economic Zone
+	text = {
+		trigger = { has_idea = Sphere_Special_Econ_Zone }
+		localization_key = Sphere_Special_Econ_Zone
+	}
+	#Imperial Protectorate
+	text = {
+		trigger = { has_idea = Sphere_Imp_Protectorate }
+		localization_key = Sphere_Imp_Protectorate
+	}
+	#Fully Dependent
+	text = {
+		trigger = { has_idea = Sphere_Fully_Dependent }
+		localization_key = Sphere_Fully_Dependent
+	}
+	#Economically Dependent
+	text = {
+		trigger = { has_idea = Sphere_Economic_Dependent }
+		localization_key = Sphere_Economic_Dependent
+	}
+	#CoEqual Member
+	text = {
+		trigger = { has_idea = Sphere_Coequal }
+		localization_key = Sphere_Coequal
+	}
+	text = {
+		trigger = { has_idea = OFN_Leader_of_The_Free_World }
+		localization_key = OFN_Leader_of_The_Free_World
+	}
+	text = {
+		trigger = { has_idea = OFN_Independent_Member }
+		localization_key = OFN_Independent_Member
+	}
+	text = {
+		trigger = { has_idea = OFN_Dependent_Member }
+		localization_key = OFN_Dependent_Member
+	}
+	text = {
+		trigger = { has_idea = OFN_Military_Government }
+		localization_key = OFN_Military_Government
+	}
+	text = {
+		trigger = { has_idea = OFN_Mandate }
+		localization_key = OFN_Mandate
+	}
+	
+	text = {
+		trigger = { has_idea = CDP_full_member }
+		localization_key = ITA_Member
+	}
+	
+	text = {
+		trigger = { has_idea = TRI_Founder_IT }
+		localization_key = TRI_Founder_IT
+	}
+	text = {
+		trigger = { has_idea = TRI_Founder_IB }
+		localization_key = TRI_Founder_IB
+	}
+	text = {
+		trigger = { has_idea = TRI_Founder_TR }
+		localization_key = TRI_Founder_TR
+	}
+	text = {
+		trigger = { has_idea = TRI_Member }
+		localization_key = TRI_Member
+	}
+	text = {
+		trigger = { has_idea = TRI_Member_Client }
+		localization_key = TRI_Member_Client
+	}
+	
+	#CONCORDATE
+	text = {
+		trigger = { has_idea = CON_Founder }
+		localization_key = CON_Founder
+	}
+	text = {
+		trigger = { has_idea = CON_Satellite }
+		localization_key = CON_Satellite
+	}
+
+	### West Africa
+	text = {
+		trigger = { has_idea = PALF_Faction }
+		localization_key = PALF_Faction
+	}
+	text = {
+		trigger = { has_idea = PALF_Satellite }
+		localization_key = PALF_Satellite
+	}
+	text = {
+		trigger = { has_idea = PALF_Faction_peace }
+		localization_key = PALF_Faction
+	}
+	text = {
+		trigger = { has_idea = PALF_Satellite_peace }
+		localization_key = PALF_Satellite
+	}
+
+	### Arabia
+	text = {
+		trigger = { has_idea = GCC_Faction }
+		localization_key = GCC_Faction
+	}
+	
+	### Burma
+	text = {
+		trigger = { has_idea = Federal_Union_Army }
+		localization_key = Federal_Union_Army
+	}
+
+	### Communist International Soviet
+	text = {
+		trigger = { has_idea = COM_Member}
+		localization_key = COM_Member
+	}
+	text = {
+		trigger = { has_idea = COM_Satellite}
+		localization_key = COM_Satellite
+	}
+	text = {
+		trigger = { has_idea = COM_Observer}
+		localization_key = COM_Observer
+	}
+}
+
+#Name
+GetFactionStatus_effect = {
+	name = GetFactionStatus_effect
+
+	### Levantine Union ###
+	#Levantine Union Member
+	text = {
+		trigger = { has_idea = Levantine_Union_Member }
+		localization_key = Levantine_Union_Member_effect
+	}
+	### Republic of China ###
+	text = {
+		trigger = { has_idea = Republic_of_China_Leader }
+		localization_key = Republic_of_China_Leader_effect
+	}
+	text = {
+		trigger = { has_idea = Republic_of_China_Autonomous_Region }
+		localization_key = Republic_of_China_Autonomous_Region_effect
+	}
+	
+	### Pakt ###
+	#Master of Europe
+	text = {
+		trigger = { has_idea = Pakt_Leader }
+		localization_key = Pakt_Leader_effect
+	}
+	#Militärverwaltung
+	text = {
+		trigger = { has_idea = Pakt_Military_Authority }
+		localization_key = Pakt_Military_Authority_effect
+	}
+	#Protectorate
+	text = {
+		trigger = { has_idea = Pakt_Protektorat }
+		localization_key = Pakt_Protektorat_effect
+	}
+	#Integrated Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Integrated_Reichskommissariat }
+		localization_key = Pakt_Integrated_Reichskommissariat_effect
+	}
+	#Autonomous Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Autonomous_Reichskommissariat }
+		localization_key = Pakt_Autonomous_Reichskommissariat_effect
+	}
+	#Autonomous Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Reichsland }
+		localization_key = Pakt_Reichsland_effect
+	}
+	text = {
+		trigger = { has_idea = Pakt_Paktrepublik }
+		localization_key = Pakt_Paktrepublik_effect
+	}
+	#Puppet State
+	text = {
+		trigger = { has_idea = Pakt_Marionettenstaat }
+		localization_key = Pakt_Marionettenstaat_effect
+	}
+	#Collaborating Member
+	text = {
+		trigger = { has_idea = Pakt_Mitstreiter }
+		localization_key = Pakt_Mitstreiter_effect
+	}
+	#Sovereign Member
+	text = {
+		trigger = { has_idea = Pakt_Bundnispartner }
+		localization_key = Pakt_Bundnispartner_effect
+	}
+	#Ordensstaat
+	text = {
+		trigger = { has_idea = Pakt_Ordensstaat }
+		localization_key = Pakt_Ordensstaat_effect
+	}
+	#Observer
+	text = {
+		trigger = { has_idea = Pakt_Observer }
+		localization_key = Pakt_Observer_effect
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Heydrich_Pact }
+		localization_key = Anti_Heydrich_Pact_effect
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Himmler }
+		localization_key = Anti_Himmler_effect
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Heydrich }
+		localization_key = Anti_Heydrich_effect
+	}
+
+	### Sphere ###
+	#Leader
+	text = {
+		trigger = { has_idea = Sphere_Leader }
+		localization_key = Sphere_Leader_effect
+	}
+	#Special Economic Zone
+	text = {
+		trigger = { has_idea = Sphere_Special_Econ_Zone }
+		localization_key = Sphere_Special_Econ_Zone_effect
+	}
+	#Imperial Protectorate
+	text = {
+		trigger = { has_idea = Sphere_Imp_Protectorate }
+		localization_key = Sphere_Imp_Protectorate_effect
+	}
+	#Fully Dependent
+	text = {
+		trigger = { has_idea = Sphere_Fully_Dependent }
+		localization_key = Sphere_Fully_Dependent_effect
+	}
+	#Economically Dependent
+	text = {
+		trigger = { has_idea = Sphere_Economic_Dependent }
+		localization_key = Sphere_Economic_Dependent_effect
+	}
+	#CoEqual Member
+	text = {
+		trigger = { has_idea = Sphere_Coequal }
+		localization_key = Sphere_Coequal_effect
+	}
+
+	### OFN ###
+	text = {
+		trigger = { has_idea = OFN_Leader_of_The_Free_World }
+		localization_key = OFN_Leader_of_The_Free_World_effect
+	}
+	text = {
+		trigger = { has_idea = OFN_Independent_Member }
+		localization_key = OFN_Independent_Member_effect
+	}
+	text = {
+		trigger = { has_idea = OFN_Dependent_Member }
+		localization_key = OFN_Dependent_Member_effect
+	}
+	text = {
+		trigger = { has_idea = OFN_Military_Government }
+		localization_key = OFN_Military_Government_effect
+	}
+	text = {
+		trigger = { has_idea = OFN_Mandate }
+		localization_key = OFN_Mandate_effect
+	}
+	#CONCORDATE
+	text = {
+		trigger = { has_idea = CON_Founder }
+		localization_key = CON_Founder_effect
+	}
+	text = {
+		trigger = { has_idea = CON_Satellite }
+		localization_key = CON_Satellite_effect
+	}
+}
+
+GetFactionStatus_desc = {
+	name = GetFactionStatus_desc
+
+	### Levantine Union ###
+	#Levantine Union Member
+	text = {
+		trigger = { has_idea = Levantine_Union_Member }
+		localization_key = Levantine_Union_Member_desc
+	}
+	### Republic of China ###
+	text = {
+		trigger = { has_idea = Republic_of_China_Leader }
+		localization_key = Republic_of_China_Leader_desc
+	}
+	text = {
+		trigger = { has_idea = Republic_of_China_Autonomous_Region }
+		localization_key = Republic_of_China_Autonomous_Region_desc
+	}
+
+	### Pakt ###
+	#Master of Europe
+	text = {
+		trigger = { has_idea = Pakt_Leader }
+		localization_key = Pakt_Leader_desc
+	}
+	#Militärverwaltung
+	text = {
+		trigger = { has_idea = Pakt_Military_Authority }
+		localization_key = Pakt_Military_Authority_desc
+	}
+	#Protectorate
+	text = {
+		trigger = { has_idea = Pakt_Protektorat }
+		localization_key = Pakt_Protektorat_desc
+	}
+	#Integrated Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Integrated_Reichskommissariat }
+		localization_key = Pakt_Integrated_Reichskommissariat_desc
+	}
+	#Autonomous Reichskommissariat
+	text = {
+		trigger = { has_idea = Pakt_Autonomous_Reichskommissariat }
+		localization_key = Pakt_Autonomous_Reichskommissariat_desc
+	}
+	#Reichsland
+	text = {
+		trigger = { has_idea = Pakt_Reichsland }
+		localization_key = Pakt_Reichsland_desc
+	}
+	#paktrepublik
+	text = {
+		trigger = { has_idea = Pakt_Paktrepublik }
+		localization_key = Pakt_Paktrepublik_desc
+	}
+	#Puppet State
+	text = {
+		trigger = { has_idea = Pakt_Marionettenstaat }
+		localization_key = Pakt_Marionettenstaat_desc
+	}
+	#Collaborating Member
+	text = {
+		trigger = { has_idea = Pakt_Mitstreiter }
+		localization_key = Pakt_Mitstreiter_desc
+	}
+	#Sovereign Member
+	text = {
+		trigger = { has_idea = Pakt_Bundnispartner }
+		localization_key = Pakt_Bundnispartner_desc
+	}
+	#Ordensstaat
+	text = {
+		trigger = { has_idea = Pakt_Ordensstaat }
+		localization_key = Pakt_Ordensstaat_desc
+	}
+	#Observer
+	text = {
+		trigger = { has_idea = Pakt_Observer }
+		localization_key = Pakt_Observer_desc
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Heydrich_Pact }
+		localization_key = Anti_Heydrich_Pact_desc
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Himmler }
+		localization_key = Anti_Himmler_desc
+	}
+
+	text = {
+		trigger = { has_idea = Anti_Heydrich }
+		localization_key = Anti_Heydrich_desc
+	}
+
+	### Sphere ###
+	#Leader
+	text = {
+		trigger = { has_idea = Sphere_Leader }
+		localization_key = Sphere_Leader_desc
+	}
+	#Core Member
+	text = {
+		trigger = { has_idea = Sphere_Core_Member }
+		localization_key = Sphere_Core_Member_desc
+	}
+	#Special Economic Zone
+	text = {
+		trigger = { has_idea = Sphere_Special_Econ_Zone }
+		localization_key = Sphere_Special_Econ_Zone_desc
+	}
+	#Imperial Protectorate
+	text = {
+		trigger = { has_idea = Sphere_Imp_Protectorate }
+		localization_key = Sphere_Imp_Protectorate_desc
+	}
+	#Fully Dependent
+	text = {
+		trigger = { has_idea = Sphere_Fully_Dependent }
+		localization_key = Sphere_Fully_Dependent_desc
+	}
+	#Economically Dependent
+	text = {
+		trigger = { has_idea = Sphere_Economic_Dependent }
+		localization_key = Sphere_Economic_Dependent_desc
+	}
+	#CoEqual Member
+	text = {
+		trigger = { has_idea = Sphere_Coequal }
+		localization_key = Sphere_Coequal_desc
+	}
+	### OFN ###
+	text = {
+		trigger = { has_idea = OFN_Leader_of_The_Free_World }
+		localization_key = OFN_Leader_of_The_Free_World_desc
+	}
+	text = {
+		trigger = { has_idea = OFN_Independent_Member }
+		localization_key = OFN_Independent_Member_desc
+	}
+	text = {
+		trigger = { has_idea = OFN_Dependent_Member }
+		localization_key = OFN_Dependent_Member_desc
+	}
+	text = {
+		trigger = { has_idea = OFN_Military_Government }
+		localization_key = OFN_Military_Government_desc
+	}
+	text = {
+		trigger = { has_idea = OFN_Mandate }
+		localization_key = OFN_Mandate_desc
+	}
+	#CONCORDATE
+	text = {
+		trigger = { has_idea = CON_Founder }
+		localization_key = CON_Founder_desc
+	}
+	text = {
+		trigger = { has_idea = CON_Satellite }
+		localization_key = CON_Satellite_desc
+	}
+	
+	#concordate new
+	text = {
+		trigger = { has_idea = TRI_Founder_IT }
+		localization_key = TRI_Founder_IT_desc
+	}
+	text = {
+		trigger = { has_idea = TRI_Founder_IB }
+		localization_key = TRI_Founder_IB_desc
+	}
+	text = {
+		trigger = { has_idea = TRI_Founder_TR }
+		localization_key = TRI_Founder_TR_desc
+	}
+	text = {
+		trigger = { has_idea = TRI_Member }
+		localization_key = TRI_Member_desc
+	}
+	text = {
+		trigger = { has_idea = TRI_Member_Client }
+		localization_key = TRI_Member_Client_desc
+	}
+	### West Africa
+	text = {
+		trigger = { has_idea = PALF_Faction }
+		localization_key = PALF_Faction_desc
+	}
+	text = {
+		trigger = { has_idea = PALF_Satellite }
+		localization_key = PALF_Satellite_desc
+	}
+	text = {
+		trigger = { has_idea = PALF_Faction_peace }
+		localization_key = PALF_Faction_desc
+	}
+	text = {
+		trigger = { has_idea = PALF_Satellite_peace }
+		localization_key = PALF_Satellite_desc
+	}
+
+	### Arabia
+	text = {
+		trigger = { has_idea = GCC_Faction }
+		localization_key = GCC_Faction_desc
+	}
+	### Burma
+	text = {
+		trigger = { has_idea = Federal_Union_Army }
+		localization_key = Federal_Union_Army_desc
+	}
+
+	### Communist International Soviet
+	text = {
+		trigger = { has_idea = COM_Member}
+		localization_key = COM_Member_desc
+	}
+	text = {
+		trigger = { has_idea = COM_Satellite}
+		localization_key = COM_Satellite_desc
+	}
+	text = {
+		trigger = { has_idea = COM_Observer}
+		localization_key = COM_Observer_desc
+	}
+}

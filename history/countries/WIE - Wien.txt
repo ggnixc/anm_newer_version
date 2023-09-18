@@ -1,0 +1,88 @@
+﻿capital = 1295
+
+add_ideas = {
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	tno_refugees_skilled
+	# Military
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_military_spending_total_war_economy  
+	tno_training_basic_training
+	tno_racial_integration_none
+	tno_draft_exemptions_none
+	# Social
+	tno_safety_acceptable_regulations
+	tno_health_care_public_health_care
+	tno_pollution_some_regulations
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_security_service
+	tno_drugs_weedbanned
+	# Economic
+	tno_trade_laws_limited_exports
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_low_pensions
+	tno_unemployment_trinket_subsidies
+	##SOCIETAL DEVELOPMENT##
+	tno_army_professionalism_reluctant_conscripts
+	tno_nuclear_stockpile_none
+	tno_poverty_rate_50
+	tno_industrial_expertise_experienced
+	tno_industrial_equipment_modern
+	tno_agriculture_mass_mechanized
+	tno_research_facilities_modern
+	tno_academic_base_secondary_schooling
+	##MINISTERS##
+	
+}
+
+set_research_slots = 2
+
+set_politics = {	
+	ruling_party = despotism
+	last_election = "1962.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    progressivism = 10
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 20
+    paternalism = 20
+    despotism = 40
+    fascism = 5
+	national_socialism = 5
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Alfons Adams"
+	desc = "POLITICS_ALFONSADAMS_DESC"
+	picture = "gfx/leaders/germananarchy/Portrait_anmgerwarlordera_alfonsadams.dds"
+	expire = "2999.1.1"
+	ideology = despotism_subtype
+	traits = {
+		
+	}
+}

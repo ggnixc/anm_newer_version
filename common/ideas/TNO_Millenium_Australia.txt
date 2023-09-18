@@ -1,0 +1,21 @@
+ideas = {
+
+	country = {
+		AST_The_American_Company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AST_The_American_Company"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_AST_The_American_Company
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}		
+	}
+}

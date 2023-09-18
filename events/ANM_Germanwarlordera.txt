@@ -1,0 +1,802 @@
+﻿add_namespace = GER_anm_warlordera
+#Pommerania-Brandenburg unification 
+country_event = {
+	id = GER_anm_warlordera.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.1" }
+	title = GER_anm_warlordera.1.t
+	desc = GER_anm_warlordera.1.desc
+	picture = GFX_anm_burgundianwar
+
+	fire_only_once = yes
+	
+	#trigger = {
+	#		OR = {
+	#	 AND = {
+	#	 tag = POM
+	#	NOT = { BRN = { owns_state = 64 } }
+	#	BRN = { is_ai = yes }
+	#	BRN = { exists = yes }
+	#	BRN = { has_war_with = GER } 
+	#			}
+	#	 AND = {
+	#	 tag = BRN
+	#		owns_state = 64
+	#		POM = { is_ai = yes }
+	#		POM = { exists = yes }
+	#	 }
+	#			}
+ 	#}
+	
+	is_triggered_only = yes
+	
+	#mean_time_to_happen = {
+	#	days = 10
+	#}
+		
+	option = { #
+		name = GER_anm_warlordera.1.a
+		ai_chance = { factor = 1 }
+		if = {
+		limit = { tag = POM }
+		annex_country = { target = BRN transfer_troops = no }
+		declare_war_on = { type = annex_everything target = GER }
+		}
+		if = {
+		limit = { tag = BRN }
+		annex_country = { target = POM transfer_troops = no }
+		}
+	}
+
+}
+
+country_event = {
+	id = GER_anm_warlordera.2
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.2" 
+	RHE = {
+	declare_war_on = { type = annex_everything target = STB }
+		}
+	}
+	title = GER_anm_warlordera.2.t
+	desc = GER_anm_warlordera.2.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #oh no
+		name = GER_anm_warlordera.2.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.3
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.3" 
+	HSS = {
+	declare_war_on = { type = annex_everything target = MUE }
+	declare_war_on = { type = annex_everything target = WPH }
+		}
+	WPH = {
+	declare_war_on = { type = annex_everything target = MUE }
+		}
+	}
+	title = GER_anm_warlordera.3.t
+	desc = GER_anm_warlordera.3.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #oh no
+		name = GER_anm_warlordera.3.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+#the slovene-styrian alliance
+country_event = {
+	id = GER_anm_warlordera.4
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.4"
+	SLR = {
+	transfer_state = 770
+	country_event = { id = GER_anm_warlordera.16 hours = 1 }
+			add_ideas = {
+			GER_anm_germancivilwar
+			}
+	load_oob = "SLR_warlordstart"	
+	}
+	ALP = {
+	declare_war_on = { type = annex_everything target = SLR }
+		}
+	}
+	title = GER_anm_warlordera.4.t
+	desc = GER_anm_warlordera.4.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = { #alliance yay
+		name = GER_anm_warlordera.4.a
+		ai_chance = { factor = 1 }
+		STY = {
+	declare_war_on = { type = annex_everything target = ALP }
+	puppet = SLR
+		}
+		SLR = {
+				set_politics = { ruling_party = socialist }
+				set_popularities = {
+					    communist = 9
+						ultranational_socialism = 0
+						socialist = 21
+						social_democrat = 19
+						social_liberal = 14
+						market_liberal = 0
+						social_conservative = 15
+						authoritarian_democrat = 2
+						despotism = 0
+						fascism = 20
+						burgundian_system = 0
+				}
+			}
+	}
+	option = { #the wholesomes dont alyl each other
+		name = GER_anm_warlordera.4.b
+		ai_chance = { factor = 2 }
+	}
+	option = { #play as slovenia
+		name = GER_anm_warlordera.4.c
+		ai_chance = { factor = 2 }
+		SLR = { change_tag_from = STY }
+	}
+}
+
+#the danube war
+country_event = {
+	id = GER_anm_warlordera.5
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.5" 
+	OOE = {
+	declare_war_on = { type = annex_everything target = WIE }
+	declare_war_on = { type = annex_everything target = STY }
+	declare_war_on = { type = annex_everything target = ALP }
+	declare_war_on = { type = annex_everything target = SLR }
+		}
+	WIE = {
+	declare_war_on = { type = annex_everything target = STY }
+	declare_war_on = { type = annex_everything target = ALP }
+	declare_war_on = { type = annex_everything target = SLR }
+		}
+	ALP = {
+	declare_war_on = { type = annex_everything target = STY }
+		}
+	SLR = {
+	declare_war_on = { type = annex_everything target = WIE }
+	declare_war_on = { type = annex_everything target = ALP }
+	declare_war_on = { type = annex_everything target = OOE }
+		}
+	}
+	title = GER_anm_warlordera.5.t
+	desc = GER_anm_warlordera.5.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #oh no
+		name = GER_anm_warlordera.5.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.6
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.6" 
+	HBR = {
+	declare_war_on = { type = annex_everything target = MEC }
+	declare_war_on = { type = annex_everything target = HNO }
+		}
+	HNO = {
+	declare_war_on = { type = annex_everything target = MEC }
+		}
+	}
+	title = GER_anm_warlordera.6.t
+	desc = GER_anm_warlordera.6.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #oh no
+		name = GER_anm_warlordera.6.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.7
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.7" 
+	BHM = {
+	declare_war_on = { type = annex_everything target = SDT }
+		}
+	MRV = {
+	declare_war_on = { type = annex_everything target = BHM }
+	declare_war_on = { type = annex_everything target = SDT }
+		}
+	}
+	title = GER_anm_warlordera.7.t
+	desc = GER_anm_warlordera.7.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #oh no
+		name = GER_anm_warlordera.7.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.8
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.8" 
+		}
+	title = GER_anm_warlordera.8.t
+	desc = GER_anm_warlordera.8.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #yay
+		name = GER_anm_warlordera.8.a
+		ai_chance = { factor = 1 }
+		BHM = {
+		annex_country = { target = SDT transfer_troops = no }
+		}
+	}
+	option = { #no
+		name = GER_anm_warlordera.8.b
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.9
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.9" 
+	OBY = {
+	declare_war_on = { type = annex_everything target = NBY }
+	declare_war_on = { type = annex_everything target = FRK }
+		}
+	FRK = {
+	declare_war_on = { type = annex_everything target = NBY }
+	}	
+		}
+	title = GER_anm_warlordera.9.t
+	desc = GER_anm_warlordera.9.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #yay
+		name = GER_anm_warlordera.9.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.10
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.10" 
+	WUE = {
+	declare_war_on = { type = annex_everything target = BDE }
+			}
+		}
+	title = GER_anm_warlordera.10.t
+	desc = GER_anm_warlordera.10.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #yay
+		name = GER_anm_warlordera.10.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.11
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.11" 
+	SSC = {
+	declare_war_on = { type = annex_everything target = THR }
+			}
+		}
+	title = GER_anm_warlordera.11.t
+	desc = GER_anm_warlordera.11.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #yay
+		name = GER_anm_warlordera.11.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.12
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.12" 
+	BRN = {
+	declare_war_on = { type = annex_everything target = GER }
+		}	
+		}
+	title = GER_anm_warlordera.12.t
+	desc = GER_anm_warlordera.12.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #yay
+		name = GER_anm_warlordera.12.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.13
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.13" 
+	BRN = {
+	declare_war_on = { type = annex_everything target = OFT }
+			}	
+	GER = {
+	declare_war_on = { type = annex_everything target = OFT }
+			}
+	POM = {
+	declare_war_on = { type = annex_everything target = OFT }
+			}
+		}
+	title = GER_anm_warlordera.13.t
+	desc = GER_anm_warlordera.13.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #yay
+		name = GER_anm_warlordera.13.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.14
+	immediate = { 
+	log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.14" 
+	LIE = {
+	declare_war_on = { type = annex_everything target = WER }
+			}	
+	OPP = {
+	declare_war_on = { type = annex_everything target = KTW }
+			}
+		}
+	title = GER_anm_warlordera.14.t
+	desc = GER_anm_warlordera.14.desc
+	picture = GFX_anm_burgundianwar
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #yay
+		name = GER_anm_warlordera.14.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = GER_anm_warlordera.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_anm_warlordera.15" 
+	
+	}
+	title = GER_anm_warlordera.15.t
+	desc = GER_anm_warlordera.15.desc
+	picture = GFX_anm_burgundianwar
+
+	fire_only_once = yes
+	
+	trigger = {
+	OR = {
+		 AND = {
+		 tag = WER
+		NOT = { LIE = { exists = yes } }
+		 }
+		  AND = {
+		 tag = LIE
+		NOT = { WER = { exists = yes } }
+		 }
+			}
+ 	}
+	
+	option = { #
+		name = GER_anm_warlordera.15.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+
+country_event = {
+	id = GER_anm_warlordera.16
+	title = GER_anm_warlordera.16.t
+	desc = GER_anm_warlordera.16.desc
+	picture = GFX_anm_burgundianwar4
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.16.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+
+country_event = {
+	id = GER_anm_warlordera.17
+	title = GER_anm_warlordera.17.t
+	desc = GER_anm_warlordera.17.desc
+	picture = GFX_anm_germanflag #GFX_anm_luftwaffe
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.17.a
+		ai_chance = { factor = 1 }
+		create_faction = GER_democratic_front
+		if = {
+		limit = { 
+		tag = STY 
+			BRN = { 
+			has_war = no
+			}
+		}
+		BRN = { country_event = { id = GER_anm_warlordera.18 hours = 1 } }
+		}
+		if = {
+		limit = { 
+		tag = BRN 
+			STY = {
+			has_war = no
+			is_in_faction = no
+			}
+		}
+		STY = { country_event = { id = GER_anm_warlordera.18 hours = 1 } }
+		}
+		
+		if = {
+		limit = { 
+			HBR = {
+			has_war = no
+			is_in_faction = no
+				}
+			}
+			HBR = { country_event = { id = GER_anm_warlordera.18 hours = 1 } }
+		}
+		if = {
+		limit = { 
+			SDT = {
+			has_war = no
+			is_in_faction = no
+					}
+			}
+			SDT = { country_event = { id = GER_anm_warlordera.18 hours = 1 } }
+		}
+	}
+
+}
+
+country_event = {
+	id = GER_anm_warlordera.18
+	title = GER_anm_warlordera.18.t
+	desc = GER_anm_warlordera.18.desc
+	picture = GFX_anm_germanflag #GFX_anm_luftwaffe
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.18.a
+		ai_chance = { factor = 1 }
+		
+		if = {
+		limit = { 
+			BRN = {
+			is_faction_leader = yes
+					}
+			}
+			BRN = { add_to_faction = ROOT }
+			
+		}
+		if = {
+		limit = { 
+			STY = {
+			is_faction_leader = yes
+					}
+			}
+			STY = { add_to_faction = ROOT }
+		}
+		
+	}
+
+
+}
+
+#almost duplicate of 16
+country_event = {
+	id = GER_anm_warlordera.19
+	title = GER_anm_warlordera.19.t
+	desc = GER_anm_warlordera.19.desc
+	picture = GFX_anm_burgundianwar4
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.19.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+#info war will begin in austria
+country_event = {
+	id = GER_anm_warlordera.20
+	title = GER_anm_warlordera.20.t
+	desc = GER_anm_warlordera.20.desc
+	picture = GFX_anm_warinaustria
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.20.a
+		ai_chance = { factor = 1 }
+		
+	}
+
+}
+#info war will begin in czechia
+country_event = {
+	id = GER_anm_warlordera.21
+	title = GER_anm_warlordera.21.t
+	desc = GER_anm_warlordera.21.desc
+	picture = GFX_anm_warinczechia
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.21.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+#join faction yes or no?
+country_event = {
+	id = GER_anm_warlordera.22
+	title = GER_anm_warlordera.22.t
+	desc = GER_anm_warlordera.22.desc
+	picture = GFX_anm_winterwar
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.22.a
+		ai_chance = { factor = 1 }
+		FROM = {
+		add_to_faction = PREV.PREV 
+		}
+	}
+	option = { #nah
+		name = GER_anm_warlordera.22.b
+		trigger = {
+			is_ai = no
+		}
+		ai_chance = { factor = 1 }
+	}
+
+}
+#they will declare war on us
+country_event = {
+	id = GER_anm_warlordera.23
+	title = GER_anm_warlordera.23.t
+	desc = GER_anm_warlordera.23.desc
+	picture = GFX_anm_waronterror1
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.23.a
+		ai_chance = { factor = 1 }
+	}
+
+}
+#allow milacess yes or no?
+country_event = {
+	id = GER_anm_warlordera.24
+	title = GER_anm_warlordera.24.t
+	desc = GER_anm_warlordera.24.desc
+	picture = GFX_anm_winterwar
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.24.a
+		ai_chance = { factor = 1 }
+		give_military_access = FROM
+	}
+	option = { #nah
+		name = GER_anm_warlordera.24.b
+		trigger = {
+			is_ai = no
+		}
+		ai_chance = { factor = 1 }
+	}
+
+}
+#alliance strength calculator
+country_event = {
+	id = GER_anm_warlordera.25
+	title = GER_anm_warlordera.25.t
+	desc = GER_anm_warlordera.25.desc
+	picture = GFX_anm_winterwar
+
+	fire_only_once = no
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = { #
+		name = GER_anm_warlordera.25.a
+		ai_chance = { factor = 1 }
+		
+		set_variable = { debugthingother = faction_members }
+		set_temp_variable = { extraother = 0 }
+		for_loop_effect = {
+			start = 0
+			end = debugthingother
+			
+						
+			set_variable = { realrealreal = faction_members^extraother }
+			var:realrealreal = {
+				set_variable = { PREV.realrealreal = alliance_strength_ratio }
+			}
+			add_to_array = {
+			array = gcw_faction_distribution_fasc
+			value = realrealreal   
+			index = extraother
+			}
+			add_to_array = {
+			array = gcw_faction_distribution_name
+			value = faction_members^extraother   
+			index = extraother
+			}
+			
+			add_to_temp_variable = { extraother = 1 }
+			
+		}
+		find_highest_in_array = { 
+		array = gcw_faction_distribution_fasc
+		}
+		set_variable = { debugthinghah = gcw_faction_distribution_name^i }
+		clear_array = gcw_faction_distribution_fasc 
+		clear_array = gcw_faction_distribution_name 
+		#gcw_faction_distribution_fasc^1
+		
+		all_allied_country = {
+				set_major = no
+				set_faction_leader = no
+		}
+		var:debugthinghah = {
+			set_major = yes
+			set_faction_leader = yes
+		}
+	}
+
+}
+#align space germany unwholesome or wholesome?
+country_event = {
+	id = GER_anm_warlordera.26
+	title = GER_anm_warlordera.26.t
+	desc = GER_anm_warlordera.26.desc
+	picture = GFX_anm_winterwar
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = { #
+		name = GER_anm_warlordera.26.a
+		ai_chance = { factor = 1 }
+		GER = {
+		country_event = { id = GER_anm_warlordera.27 hours = 1 }
+		}
+	}
+	option = { #holsum
+		name = GER_anm_warlordera.26.b
+		ai_chance = { factor = 1 }
+		
+		set_country_flag = refused_to_support_germania_gov
+		GER = {
+		set_country_flag = GER_support_franken
+		}
+		
+		
+	set_politics = {	
+	ruling_party = authoritarian_democrat
+	last_election = "1962.1.1"
+	election_frequency = 48
+	elections_allowed = no
+	}
+
+	set_popularities = {
+    communist = 0
+    ultranational_socialism = 0
+    socialist = 0
+    social_democrat = 0
+    social_liberal = 0
+    market_liberal = 0
+    social_conservative = 0
+    authoritarian_democrat = 60
+    despotism = 20
+    fascism = 20
+	national_socialism = 0
+    burgundian_system = 0
+		}
+	}
+
+}
+#which bavarian faction to support
+country_event = {
+	id = GER_anm_warlordera.27
+	title = GER_anm_warlordera.27.t
+	desc = GER_anm_warlordera.27.desc
+	picture = GFX_anm_demonstrations7
+
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_anm_warlordera.27.a
+		ai_chance = { factor = 1 }
+		GER = {
+		set_country_flag = GER_support_franken
+		}
+
+	}
+	option = { #support the space people
+		name = GER_anm_warlordera.27.b
+		ai_chance = { factor = 1 }
+
+	}
+
+}

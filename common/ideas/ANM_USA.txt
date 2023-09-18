@@ -1,0 +1,61 @@
+###AMERICA IDEAS###
+ideas = {
+	country = {
+		USA_bearer_of_liberty = {
+			allowed = { always = no }
+			picture = GFX_idea_USA_bearer_of_liberty
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = 0.1
+			}
+		}
+		USA_OFN_unity_high = {
+			allowed = { always = no }
+			picture = GFX_idea_USA_OFN_unity_high
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.07
+				war_support_factor = 0.105
+				trade_opinion_factor = 0.21
+				consumer_goods_use_modifier = -0.07
+			}
+		}
+		USA_economy_booming = {
+			allowed = { always = no }
+			picture = GFX_idea_USA_economy_booming
+			removal_cost = -1
+
+			modifier = {
+				gdp_growth_modifier = 0.1
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.08
+				stability_factor = 0.15
+			}
+		}
+		USA_legacy_URI = {
+			allowed = { always = no }
+			picture = GFX_idea_USA_legacy_URI
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				gdp_growth_modifier = 0.02
+				civilian_expenditures_factor = 0.25
+				poverty_monthly_rate = 0.1
+			}
+		}
+		USA_shining_city = {
+			allowed = { always = no }
+			picture = GFX_idea_USA_shining_city
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.10
+			}
+		}
+	}
+}

@@ -1,0 +1,115 @@
+GER_speer_influence_top = {
+	add_to_variable = { global.GER_Speer_Inf_Top = 4 }
+}
+GER_front_influence_top = {
+	add_to_variable = { global.GER_Front_Inf_Top = 4 }
+}
+GER_speer_influence_middle = {
+	add_to_variable = { global.GER_Speer_Inf_Middle = 4 }
+}
+GER_front_influence_middle = {
+	add_to_variable = { global.GER_Front_Inf_Middle = 4 }
+}
+GER_speer_influence_bottom = {
+	add_to_variable = { global.GER_Speer_Inf_Bottom = 4 }
+}
+GER_front_influence_bottom = {
+	add_to_variable = { global.GER_Front_Inf_Bottom = 4 }
+}
+
+GER_power_struggle_pulse_top = { 
+
+	set_temp_variable = { GER_struggle_temp = global.GER_Front_Inf_Top }
+	add_to_temp_variable = { GER_struggle_temp = global.GER_Speer_Inf_Top }
+	
+	set_temp_variable = { GER_struggle_100 = 100 }
+	divide_temp_variable = { GER_struggle_100 = GER_struggle_temp }
+	multiply_temp_variable = { GER_struggle_100 = global.GER_Front_Inf_Top }
+	set_variable = { GER_Speer_percentage = GER_struggle_100 }
+	round_temp_variable = GER_struggle_100
+	clamp_temp_variable = {
+		var = GER_struggle_100
+		min = 0
+		max = 100
+	}
+
+	set_variable = { GER_progbar_frame = GER_struggle_100 }
+	
+	add_to_variable = { GER_struggle_dirty_var = 0.01 }
+}
+
+GER_power_struggle_pulse_middle = { 
+
+	set_temp_variable = { GER_struggle_temp = global.GER_Front_Inf_Middle }
+	add_to_temp_variable = { GER_struggle_temp = global.GER_Speer_Inf_Middle }
+	
+	set_temp_variable = { GER_struggle_100 = 100 }
+	divide_temp_variable = { GER_struggle_100 = GER_struggle_temp }
+	multiply_temp_variable = { GER_struggle_100 = global.GER_Front_Inf_Middle }
+	set_variable = { GER_Speer_percentage = GER_struggle_100 }
+	round_temp_variable = GER_struggle_100
+	clamp_temp_variable = {
+		var = GER_struggle_100
+		min = 0
+		max = 100
+	}
+
+	set_variable = { GER_progbar_frame = GER_struggle_100 }
+	
+	add_to_variable = { GER_struggle_dirty_var = 0.01 }
+}
+GER_power_struggle_pulse_bottom = { 
+
+	set_temp_variable = { GER_struggle_temp = global.GER_Front_Inf_Bottom }
+	add_to_temp_variable = { GER_struggle_temp = global.GER_Speer_Inf_Bottom }
+	
+	set_temp_variable = { GER_struggle_100 = 100 }
+	divide_temp_variable = { GER_struggle_100 = GER_struggle_temp }
+	multiply_temp_variable = { GER_struggle_100 = global.GER_Front_Inf_Bottom }
+	set_variable = { GER_Speer_percentage = GER_struggle_100 }
+	round_temp_variable = GER_struggle_100
+	clamp_temp_variable = {
+		var = GER_struggle_100
+		min = 0
+		max = 100
+	}
+
+	set_variable = { GER_progbar_frame = GER_struggle_100 }
+	
+	add_to_variable = { GER_struggle_dirty_var = 0.01 }
+}
+GER_power_struggle_pulse_peak = { 
+
+	set_temp_variable = { GER_struggle_temp = global.GER_Front_Inf_Bottom }
+	add_to_temp_variable = { GER_struggle_temp = global.GER_Speer_Inf_Bottom }
+	add_to_temp_variable = { GER_struggle_temp = global.GER_Speer_Inf_Middle }
+	add_to_temp_variable = { GER_struggle_temp = global.GER_Speer_Inf_Top }
+	add_to_temp_variable = { GER_struggle_temp = global.GER_Front_Inf_Middle }
+	add_to_temp_variable = { GER_struggle_temp = global.GER_Front_Inf_Top }
+	
+	set_temp_variable = { GER_struggle_temp_2 = global.GER_Front_Inf_Bottom }
+	add_to_temp_variable = { GER_struggle_temp_2 = global.GER_Front_Inf_Middle }
+	add_to_temp_variable = { GER_struggle_temp_2 = global.GER_Front_Inf_Top}
+	
+	set_temp_variable = { GER_struggle_temp_3 = global.GER_Speer_Inf_Bottom }
+	add_to_temp_variable = { GER_struggle_temp_3 = global.GER_Speer_Inf_Middle }
+	add_to_temp_variable = { GER_struggle_temp_3 = global.GER_Speer_Inf_Top }
+	
+	set_temp_variable = { GER_struggle_100 = 100 }
+	divide_temp_variable = { GER_struggle_100 = GER_struggle_temp }
+	multiply_temp_variable = { GER_struggle_100 = GER_struggle_temp_2 }
+	set_variable = { GER_Speer_percentage = GER_struggle_100 }
+	round_temp_variable = GER_struggle_100
+	clamp_temp_variable = {
+		var = GER_struggle_100
+		min = 0
+		max = 100
+	}
+
+	set_variable = { GER_progbar_frame = GER_struggle_100 }
+	
+	set_variable = { global.GER_Speer_Inf_Total = GER_struggle_temp_3}
+	set_variable = { global.GER_Front_Inf_Total = GER_struggle_temp_2}
+	
+	add_to_variable = { GER_struggle_dirty_var = 0.01 }
+}

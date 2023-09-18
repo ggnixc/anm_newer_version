@@ -1,0 +1,121 @@
+﻿division_template = {
+	name = "People's Protection Unit"
+	division_names_group = COG_infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		signal_company = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "People's Army"
+	division_names_group = COG_infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Spirit of Bukharin"
+	division_names_group = COG_panzer
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		signal_company = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+units = {
+    division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "13378"
+		division_template = "Spirit of Bukharin"
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.95
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "13857"
+		division_template = "People's Army"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "13911"
+		division_template = "People's Army"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "13884"
+		division_template = "People's Army"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "14416"
+		division_template = "People's Army"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "13373"
+		division_template = "People's Protection Unit"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "1817"
+		division_template = "People's Protection Unit"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.75
+	}
+}

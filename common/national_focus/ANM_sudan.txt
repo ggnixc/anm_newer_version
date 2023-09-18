@@ -1,0 +1,36 @@
+### Starting tree ###
+shared_focus = {
+	id = SDF_anm_startstartstart
+	icon = GFX_SDF_anm_startstartstart
+	cost = 1.45
+	available_if_capitulated = no
+	ai_will_do = { factor = 1 }
+	x = 7
+	y = 0
+	available = {
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus KTW_anm_thekdnmmandate"
+	
+	}
+}
+
+shared_focus = {
+	id = SDF_domesticsituation
+	icon = GFX_SDF_domesticsituation
+	cost = 3.00
+	
+	available_if_capitulated = no
+	ai_will_do = { factor = 1 }
+	
+	relative_position_id = SDF_anm_startstartstart
+	
+	x = 0
+	y = 1
+	
+	prerequisite = {
+		focus = SDF_anm_startstartstart
+	}
+	completion_reward = {
+	}
+}

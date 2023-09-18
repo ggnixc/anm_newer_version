@@ -1,0 +1,86 @@
+add_namespace = PRU.general
+add_namespace = PRU.civilwar
+
+country_event = {
+	      id = PRU.general.1
+	      immediate = { log = "[GetDateText]: [Root.GetName]: event PRU.general.1" }
+	      title = PRU.general.1.t
+	      desc = PRU.general.1.desc
+	      picture = GFX_anm_PRU_Fujimori_Dead
+
+	      is_triggered_only = yes
+       	  fire_only_once = yes
+ 
+	      option = {
+		           name = PRU.civilwar.1.a
+			kill_country_leader = yes
+			promote_character = PRU_Cesar_Saucedo_Sanchez
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD.18178 hours = 1 }
+			}
+		}
+	}
+## Peruvian Civil War
+country_event = {
+	      id = PRU.civilwar.1
+	      immediate = { log = "[GetDateText]: [Root.GetName]: event PRU.civilwar.1" }
+	      title = PRU.civilwar.1.t
+	      desc = PRU.civilwar.1.desc
+	      picture = GFX_anm_PRU.civilwar.1
+
+	      is_triggered_only = yes
+      	fire_only_once = yes
+ 
+	      option = {
+		           name = PRU.civilwar.1.a
+			hidden_effect = {
+				MRA = {
+					transfer_state = 490
+					transfer_state = 491
+					transfer_state = 494
+					transfer_state = 1679
+					transfer_state = 1680
+					transfer_state = 1681
+					transfer_state = 1682
+					transfer_state = 1684
+					transfer_state = 1686
+					transfer_state = 1687
+					transfer_state = 1688
+					transfer_state = 1692
+					transfer_state = 1693
+					transfer_state = 1694
+					add_state_core = 490
+					add_state_core = 491
+					add_state_core = 494
+					add_state_core = 1679
+					add_state_core = 1680
+					add_state_core = 1681
+					add_state_core = 1682
+					add_state_core = 1683
+					add_state_core = 1685
+					add_state_core = 303
+					add_state_core = 1689
+					add_state_core = 1695
+					add_state_core = 492
+					add_state_core = 1697
+					add_state_core = 1698
+					add_state_core = 1696
+					add_state_core = 1691
+					add_state_core = 1690
+					add_state_core = 1684
+					add_state_core = 1686
+					add_state_core = 1687
+					add_state_core = 1688
+					add_state_core = 1692
+					add_state_core = 1693
+					add_state_core = 1694
+				
+				declare_war_on = {
+		   		type = annex_everything
+		   		target = PRU }
+				}
+			}
+		}
+	}
+}

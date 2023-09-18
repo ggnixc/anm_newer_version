@@ -1,0 +1,70 @@
+﻿capital = 1061
+set_cosmetic_tag = ZIM_milocc
+
+set_oob = "BFR_1962"
+
+SAF = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_autonomy = {
+			target = ZIM
+			autonomy_state = autonomy_integrated_puppet
+		}
+		else = {
+			puppet = ZIM
+		}
+	}
+}
+
+set_politics = {	
+	ruling_party = paternalism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 20
+    ultranationalism = 0
+	national_socialism = 0
+    socialist = 50
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 30
+    despotism = 0
+    fascism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Robert Mugabe"
+	desc = ""
+	picture = "Portrait_ZIM_Robert_Mugabe.dds"
+	expire = "2099.1.23"
+	ideology = socialist_african_socialism_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "George Meiring"
+	desc = ""
+	picture = "Portrait_ZIM_George_Meiring.dds"
+	expire = "2099.1.23"
+	ideology = paternalism_military_mandate_subtype
+	traits = {
+		
+	}
+}
+
+add_ideas = {
+	OFN_dependent_member
+}

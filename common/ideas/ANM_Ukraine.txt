@@ -1,0 +1,35 @@
+ideas = {
+	country = {
+		UKR_positive_orthodox_christianity = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_positive_orthodox_christianity" }
+			picture = UKR_positive_orthodox_christianity
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.06
+				political_power_gain = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		UKR_made_in_ukraine = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea UKR_made_in_ukraine" }
+			picture = UKR_made_in_ukraine
+
+			allowed = { always = no }
+			removal_cost = -1
+
+			modifier = {
+				line_change_production_efficiency_factor = 0.10
+				license_production_speed = 0.10
+				production_factory_start_efficiency_factor = 0.25
+			}
+		}
+		
+		
+	}
+}
+
+
+

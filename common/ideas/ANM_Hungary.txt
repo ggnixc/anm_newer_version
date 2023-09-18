@@ -1,0 +1,68 @@
+ideas = {
+
+	country = {
+		HUN_revizio = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_revizio"}
+			picture = HUN_revizio
+			allowed = {
+				original_tag = "HUN"
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+			    recruitable_population = 0.03
+				war_support_factor = 0.05
+			}
+		}
+		HUN_1000_year_kingdom = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_1000_year_kingdom"}
+			picture = HUN_1000_year_kingdom
+			allowed = {
+				original_tag = "HUN"
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+			    political_power_factor = 0.05
+				stability_factor = 0.15
+			}
+		}
+		HUN_the_transylvanian_fights = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_the_transylvanian_fights"}
+			picture = HUN_the_transylvanian_fights
+			allowed = {
+				original_tag = "HUN"
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				recruitable_population_factor = -0.03
+				war_support_factor = -0.05
+				political_power_factor = -0.02
+			}
+		}
+		HUN_jozsef_arpad = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_jozsef_arpad"}
+			picture = HUN_jozsef_arpad
+			allowed = {
+				original_tag = "HUN"
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				
+			}
+		}
+		
+	}
+}
+

@@ -1,0 +1,133 @@
+ideas = {
+	country = {
+		CHI_Ecomomic_takeoff = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_Ecomomic_takeoff
+			removal_cost = -1
+
+			modifier = {
+			}
+		}
+		CHI_Minliu_Decisive  = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_Minliu_Decisive
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+		CHI_No435 = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_No435
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+		CHI_The_Great_Wall_Never_Falls = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_The_Great_Wall_Never_Falls
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+		CHI_Unhealed_Wounds = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_Unhealed_Wounds
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+		CHI_United_Front = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_United_Front
+			removal_cost = -1
+
+			modifier = {
+
+			}
+		}
+	}
+	head_of_government = {
+		
+		CHI_Wen_Jia-bao_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHI_Wen_Jia-bao_hog"}
+			allowed = { original_tag = CHI }
+			picture = "CHI_Wen_Jia-bao_hog"
+			available = {
+				tag = CHI
+			}
+			traits = {
+				CHI_Wen_Jia-bao_hog_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+									}
+						}
+						
+	security_minister = {
+		CHI_Chi_Hao-Tien_sec = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHI_Chi_Hao-Tien_sec"}
+			allowed = { original_tag = CHI }
+			picture = "CHI_Chi_Hao-Tien_sec"
+			available = {
+					tag = CHI
+			}
+			traits = {
+				CHI_Chi_Hao-Tien_sec
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+									}
+						}
+						
+	foreign_minister = {
+		CHI_Li_Zhao-Xing_for = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHI_Li_Zhao-Xing_for"}
+			allowed = { original_tag = CHI }
+			picture = "CHI_Li_Zhao-Xing_for"
+			available = {
+					tag = CHI
+			}
+			traits = {
+				CHI_Li_Zhao-Xing_for_desc 
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+											}
+						}
+						
+	economy_minister = {
+		CHI_Li_Yuan-Chao_eco = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHI_Li_Yuan-Chao_eco"}
+			allowed = { original_tag = CHI }
+			picture = "CHI_Li_Yuan-Chao_eco"
+			available = {
+					tag = CHI
+			}
+			traits = {
+				CHI_Li_Yuan-Chao_eco_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		    }
+	}
+}

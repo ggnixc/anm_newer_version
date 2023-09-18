@@ -1,0 +1,30 @@
+ideas = {
+	country = {
+	TIG_tamileelamuprising = {
+			allowed = { always = no }
+			picture = tamileelamuprising_anm
+			removal_cost = -1
+			
+	
+			modifier = {
+				army_core_defence_factor = 0.50
+				ai_focus_aggressive_factor = 0.5 
+			}
+		}
+	TIG_tamileelamuprisinginitialoffensive = {
+			allowed = { always = no }
+			picture = tamileelamuprising_anm
+			removal_cost = -1
+			
+			cancel = {
+		date > 2000.1.30
+			}
+	
+			modifier = {
+				army_core_attack_factor = 1.50
+				army_core_defence_factor = 1.50
+				ai_focus_aggressive_factor = 3.0
+			}
+		}
+	}
+}

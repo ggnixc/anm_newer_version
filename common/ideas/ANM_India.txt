@@ -1,0 +1,132 @@
+ideas = {
+	
+	head_of_government = { 
+		RAJ_minister_APJ_Abdul_Kalam_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RAJ_minister_APJ_Abdul_Kalam_hog"}
+			allowed = { original_tag = RAJ }
+			picture = "RAJ_minister_APJ_Abdul_Kalam"
+			available = {
+				tag = RAJ
+			}
+			traits = {
+				RAJ_minister_APJ_Abdul_Kalam_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+	}
+	
+	security_minister = { 
+		RAJ_minister_Mulayam_Singh_Yadav_sec = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RAJ_minister_Mulayam_Singh_Yadav_sec"}
+			allowed = { original_tag = RAJ }
+			picture = "RAJ_minister_Mulayam_Singh_Yadav"
+			available = {
+					tag = RAJ
+			}
+			traits = {
+				RAJ_minister_Mulayam_Singh_Yadav_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+	} 
+	
+	foreign_minister = { 
+		RAJ_minister_Pranab_Mukherjee_for = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RAJ_minister_Pranab_Mukherjee_for"}
+			allowed = { original_tag = RAJ }
+			picture = "RAJ_minister_Pranab_Mukherjee"
+			available = {
+					tag = RAJ
+			}
+			traits = {
+				RAJ_minister_Pranab_Mukherjee_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+	}
+
+	economy_minister = { 
+		RAJ_minister_Yashwant_Sinha_eco = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RAJ_minister_Yashwant_Sinha_eco"}
+			allowed = { original_tag = RAJ }
+			picture = "RAJ_minister_Yashwant_Sinha"
+			available = {
+					tag = RAJ
+			}
+			traits = {
+				RAJ_minister_Yashwant_Sinha_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+	}
+
+
+    country = {
+        Jai_Hind = {
+		    allowed = { always = yes }
+			picture = 
+			removal_cost = -1
+
+			modifier = {
+			army_core_attack_factor	= 0.15
+			army_core_defence_factor = 0.15
+			}
+		}
+		Our_american_Friends = {
+		    allowed = { always = yes }
+			picture = 
+			removal_cost = -1
+
+			modifier = {
+			political_power_gain = 0.50
+			production_speed_buildings_factor = 0.10
+			}
+		}
+		Infrastructure_Reform_plan = {
+		    allowed = { always = yes }
+			picture = 
+			removal_cost = -1
+
+			modifier = {
+			production_speed_rail_way_factor = 0.15
+			production_speed_infrastructure_factor = 0.15
+			production_speed_supply_node_factor = 0.10
+			}
+		}
+		Poverty_reduction_plan = {
+		    allowed = { always = yes }
+			picture = 
+			removal_cost = -1
+
+			modifier = {
+			weekly_manpower = 1000
+			}
+		}
+		The_Double_Front_COLD_WAR  = {
+		    allowed = { always = yes }
+			picture = 
+			removal_cost = -1
+
+			modifier = {
+			war_support_weekly = 0.15
+			weekly_manpower = 1000
+			}
+		}
+		Cast_Crisis = {
+		
+		    allowed = { always = yes }
+			picture = 
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = -0.10
+			war_support_weekly = 0.15
+			}
+		}
+    }
+
+}

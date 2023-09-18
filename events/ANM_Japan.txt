@@ -1,0 +1,49 @@
+﻿add_namespace = JAP.general
+add_namespace = JAP.new
+
+## Japan
+
+country_event = {
+      	id = JAP.general.1
+      	immediate = { log = "[GetDateText]: [Root.GetName]: event JAP.general.1" }
+	      title = JAP.general.1.t
+	      desc = JAP.general.1.desc
+	      picture = GFX_anm_JAP_POV
+
+	      is_triggered_only = no
+	      fire_only_once = yes
+ 
+	      option = { #
+		            name = JAP.general.1.a
+	      }
+}
+
+country_event = {
+      	id = JAP.general.2
+      	immediate = { log = "[GetDateText]: [Root.GetName]: event JAP.general.2" }
+	      title = JAP.general.2.t
+	      desc = JAP.general.2.desc
+	      picture = GFX_anm_JAP_Paradox_POV
+
+	      is_triggered_only = no
+	      fire_only_once = yes
+ 
+	      option = { #
+		            name = JAP.general.2.a
+	      }
+}
+
+country_event = {
+      	id = JAP.general.3
+      	immediate = { log = "[GetDateText]: [Root.GetName]: event JAP.general.3" }
+	      title = JAP.general.3.t
+	      desc = JAP.general.3.desc
+	      picture = GFX_anm_JAP_Debate_POV
+
+	      is_triggered_only = no
+	      fire_only_once = yes
+ 
+	      option = { #
+		            name = JAP.general.3.a
+	      }
+}

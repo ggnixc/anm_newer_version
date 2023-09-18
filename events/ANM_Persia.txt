@@ -1,0 +1,246 @@
+﻿add_namespace = PER.general
+add_namespace = PER.civilwar
+## Persia
+country_event = {
+	      id = PER.civilwar.1
+	      immediate = { log = "[GetDateText]: [Root.GetName]: event PER.civilwar.1" }
+	      title = PER.civilwar.1.t
+	      desc = PER_civilwar.1.desc
+	      picture = GFX_anm_PER_civilwar
+
+	      is_triggered_only = yes
+      	fire_only_once = yes
+ 
+	      option = {
+		           name = PER.civilwar.1.a
+            IRI = {
+                transfer_state = 412
+				transfer_state = 976
+                transfer_state = 978
+                transfer_state = 411
+                transfer_state = 421
+				add_state_core = 1526
+		        add_state_core = 412
+                add_state_core = 971
+                add_state_core = 978
+                add_state_core = 411
+                add_state_core = 421
+                add_state_core = 976
+                add_state_core = 413
+		        add_state_core = 416
+		        add_state_core = 975
+		        add_state_core = 1363
+		        add_state_core = 410
+		        add_state_core = 1360
+		        add_state_core = 972
+		        add_state_core = 414
+		        add_state_core = 979
+		        add_state_core = 419
+		        add_state_core = 973
+		        add_state_core = 974
+		        add_state_core = 417
+		   add_state_core = 977
+		   add_state_core = 418
+		   add_state_core = 266
+		   add_state_core = 1361
+		   add_state_core = 1362
+		   add_state_core = 420
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRA }
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRN }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = AZR }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = PER }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = IKR }
+			declare_war_on = {
+		   		type = annex_everything
+		   		target = KHU }
+			}
+
+		   
+	       IRA = {
+	       
+		   transfer_state = 416
+		   transfer_state = 975
+		   transfer_state = 1363
+		   add_state_core = 1526
+		   add_state_core = 412
+                   add_state_core = 971
+                   add_state_core = 978
+                   add_state_core = 411
+                   add_state_core = 421
+                   add_state_core = 976
+                   add_state_core = 413
+		   add_state_core = 416
+		   add_state_core = 975
+		   add_state_core = 1363
+		   add_state_core = 410
+		   add_state_core = 1360
+		   add_state_core = 972
+		   add_state_core = 414
+		   add_state_core = 979
+		   add_state_core = 419
+		   add_state_core = 973
+		   add_state_core = 974
+		   add_state_core = 417
+		   add_state_core = 977
+		   add_state_core = 418
+		   add_state_core = 266
+		   add_state_core = 1361
+		   add_state_core = 1362
+		   add_state_core = 420
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRI }
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRN }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = AZR }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = PER }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = IKR }
+			declare_war_on = {
+		   		type = annex_everything
+		   		target = KHU }
+		   }
+		   
+	       IRN = {
+		   
+	       transfer_state = 410
+		   transfer_state = 414
+		   transfer_state = 1360
+		   transfer_state = 972
+		   transfer_state = 979
+		   transfer_state = 1526
+		   add_state_core = 412
+
+                   add_state_core = 971
+                   add_state_core = 978
+                   add_state_core = 411
+                   add_state_core = 421
+                   add_state_core = 976
+                   add_state_core = 413
+			add_state_core = 1526
+		   add_state_core = 416
+		   add_state_core = 975
+		   add_state_core = 1363
+		   add_state_core = 410
+		   add_state_core = 1360
+		   add_state_core = 972
+		   add_state_core = 414
+		   add_state_core = 979
+		   add_state_core = 419
+		   add_state_core = 973
+		   add_state_core = 974
+		   add_state_core = 417
+		   add_state_core = 977
+		   add_state_core = 418
+		   add_state_core = 266
+		   add_state_core = 1361
+		   add_state_core = 1362
+		   add_state_core = 420
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRA }
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRI }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = AZR }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = PER }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = IKR }
+			declare_war_on = {
+		   		type = annex_everything
+		   		target = KHU }
+		   }
+		   
+	       AZR = {
+	           transfer_state = 419
+		   transfer_state = 973
+		   add_state_core = 419
+		   add_state_core = 973
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRA }
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRN }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = IRI }
+		   }
+		   KHU = {
+	           transfer_state = 413
+			   add_state_core = 413
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRA }
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRN }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = PER }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = IRI }
+	        }
+	       PER = {
+	       	   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRA }
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRI }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = AZR }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = IRN }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = IKR }
+		   }
+				
+	       IKR = {
+		   
+		   transfer_state = 971
+	       transfer_state = 974
+		   add_state_core = 971
+		   add_state_core = 974
+		   
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRA }
+		   declare_war_on = {
+		   		type = annex_everything
+		   		target = IRN }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = PER }
+		   declare_war_on = {
+		   		type = annex_everything
+				target = IRI }
+	        }
+		}
+	}
+}

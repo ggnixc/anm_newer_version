@@ -1,0 +1,49 @@
+#################
+### Siamese Ideas
+#################
+
+ideas = {
+	###############
+	# Country Ideas
+	###############
+	country = {
+
+		SIA_lion_of_asia = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_SIA_lion_of_asia
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				min_export = 0.05 
+			}
+		}
+
+		SIA_Memory_of_9_May_King_Coup = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_SIA_Memory_of_9_May_King_Coup
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.5
+				master_ideology_drift = 0.05
+			}
+		}
+		SIA_Rising_Theory = {
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_SIA_Rising_Theory
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				social_conservative_drift = -0.05
+			}
+		}
+	}
+}

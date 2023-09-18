@@ -1,0 +1,61 @@
+﻿capital = 1511
+load_focus_tree = ZZZ_national_focus
+
+set_oob = "ARG_1962"
+
+set_politics = {	
+	ruling_party = fascism
+	last_election = "1998.1.20"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 13
+    progressivism = 16
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 18
+    despotism = 17
+    fascism = 36
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Manuel de Anchorena"
+	desc = "POLITICS_MANUEL_ANCHORENA_DESC"
+	picture = "Portrait_ARG_Manuel_Anchorena.dds"
+	expire = "1965.1.1"
+	ideology = fascism_fascist_populism_subtype
+	traits = {
+	
+	}
+}
+
+create_country_leader = {
+	name = "Fernando de la Rua"
+	picture = "Portrait_ARG_Fernando_Rua.dds"
+	expire = "2965.1.1"
+	ideology = liberalism_subtype
+	traits = {
+		
+	}
+}
+
+add_ideas = {
+	#Sprits
+	ARG_Shadow_Peron
+	ARG_Grande_Dictadura
+	ARG_Years_Hunger
+	ARG_Bureaucratic_Nightmare
+	#ARG_not_peron
+    #Ministers
+	ARG_Carlos_Menem_hog
+	ARG_Alberto_Ottalagano_for
+	ARG_Carlos_Disandro_eco
+	ARG_Julio_Yessi_sec
+} 

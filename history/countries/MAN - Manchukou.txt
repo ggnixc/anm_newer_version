@@ -1,0 +1,56 @@
+﻿capital = 328
+
+set_oob = "MAN_1962"
+
+set_stability = 0.62
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1962.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 34
+    ultranationalism = 4
+    socialist = 0
+    progressivism = 1
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 6
+    despotism = 49
+    fascism = 6
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Ruan Zhenduo"
+	desc = "POLITICS_RUAN_ZHENDUO_DESC"
+	picture = "gfx/leaders/MAN/Portrait_Manchuria_Ruan_Zhenduo.dds"
+	expire = "1990.1.1"
+	ideology = fascism_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Sejima Ryūzō"
+	desc = "POLITICS_SEJIMA_RYUZO_DESC"
+	picture = "Portrait_MAN_Sejima_Ryuzo.dds"
+	expire = "2090.1.1"
+	ideology = despotism_military_junta_subtype
+	traits = {
+		#
+	}
+}
+
+add_ideas = {
+	#Country#
+	Sphere_Core_Member
+
+	MAN_Problem_Of_NAJUA
+	MAN_Chained_To_Japan
+}

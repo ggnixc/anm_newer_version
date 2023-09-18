@@ -1,0 +1,22 @@
+add_namespace = FIN.civilwar
+
+country_event = {
+	      id = FIN.civilwar.1
+	      immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.civilwar.1" }
+	      title = FIN.civilwar.1.t
+	      desc = FIN.civilwar.1.desc
+	      picture = GFX_anm_FIN_civil_war
+
+	      is_triggered_only = yes
+       	  fire_only_once = yes
+ 
+	      option = {
+		           name = FIN.civilwar.1.a
+			ANM_finnishcivilwar = yes
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD.18179 hours = 1 }
+			}
+		}
+	}
+}

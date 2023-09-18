@@ -1,0 +1,44 @@
+###AFGHANISTAN IDEAS###
+ideas = {
+	country = {
+		BOL_improvingeconomy = {
+			allowed = { always = no }
+			picture = GFX_idea_BOL_improvingeconomy
+			removal_cost = -1
+
+			modifier = {
+			production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		BOL_ethnicinequality = {
+			allowed = { always = no }
+			picture = GFX_idea_BOL_ethnicinequality
+			removal_cost = -1
+
+			modifier = {
+			political_power_factor = -0.25
+			}
+		}
+		BOL_littoralconflict = {
+			allowed = { always = no }
+			picture = GFX_idea_BOL_littoralconflict
+			removal_cost = -1
+
+			modifier = {
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			war_support_factor = 0.2
+			stability_factor = -0.05
+			}
+		}
+		BOL_waitforittodemocracy  = {
+			allowed = { always = no }
+			picture = GFX_idea_BOL_waitforittodemocracy
+			removal_cost = -1
+
+			modifier = {
+			stability_factor = -0.1
+			}
+		}
+	}
+}

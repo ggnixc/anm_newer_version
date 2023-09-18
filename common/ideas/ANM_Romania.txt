@@ -1,0 +1,70 @@
+ideas = {
+	
+	country = {
+		ROM_ethnic_tensions = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_ethnic_tensions" }
+			allowed = { always = no }
+		
+			picture = ROM_ethnic_tensions 
+			removal_cost = -1 
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.02
+			}
+		}
+		ROM_avatar_of_democracy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_avatar_of_democracy" }
+			allowed = { always = no }
+		
+			picture = ROM_avatar_of_democracy 
+			removal_cost = -1 
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.01
+				war_support_factor = -0.05
+			}
+		}
+		ROM_michael_the_first = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_michael_the_first" }
+			allowed = { always = no }
+		
+			picture = ROM_michael_the_first 
+			removal_cost = -1 
+
+			modifier = {
+				stability_factor = 0.03
+				political_power_factor = 0.10
+			}
+		}
+		ROM_dealing_with_the_devil = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_dealing_with_the_devil" }
+			allowed = { always = no }
+		
+			picture = ROM_dealing_with_the_devil 
+			removal_cost = -1 
+
+			modifier = {
+				max_fuel_factor = -0.30 
+				fuel_gain_factor = -0.50
+			}
+		}
+		ROM_major_trade_partner_reich = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_major_trade_partner_reich" }
+			allowed = { always = no }
+		
+			picture = ROM_major_trade_partner_reich 
+			removal_cost = -1 
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.20
+				industrial_capacity_factory = 0.20
+			}
+		}
+		
+	}
+}	
+
+		

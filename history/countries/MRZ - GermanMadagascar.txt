@@ -1,0 +1,89 @@
+﻿capital = 945
+load_focus_tree = ZZZ_national_focus
+
+add_ideas = {
+	Pakt_Integrated_Reichskommissariat
+	MRZ_lighter_shade_of_black
+
+	#political
+	tno_political_parties_one_party_state
+	tno_religious_rights_secularism
+	tno_trade_unions_illegal
+	tno_immigration_closed_borders
+	tno_slavery_outlawed
+	tno_public_meetings_outlawed
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	tno_refugees_open
+	#MILITARY
+	tno_conscription_one_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_military_spending_large_spending
+	tno_training_basic_training
+	tno_racial_integration_none
+	tno_draft_exemptions_none
+	#SOCIAL
+	tno_safety_minimal_regulations
+	tno_health_care_private_health_care
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_police
+	#ECONOMIC
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_low_taxation
+	tno_income_taxation_elite_tax_exemptions
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_trinket_subsidies
+	#ministers
+}
+
+set_politics = {	
+			ruling_party = despotism
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+}
+set_popularities = {
+			despotism = 36
+			national_socialism = 25
+			paternalism = 2
+			fascism = 12
+			communist = 3
+			progressivism = 6
+			socialist = 4
+			conservatism = 3
+			liberalism = 7
+			ecopolitical = 2
+}
+
+create_country_leader = {
+			name = "Klaus Kleinfeld"
+			desc = ""
+			picture = "Portrait_MRZ_Klaus_Kleinfeld.dds"
+			expire = "2090.3.4"
+			ideology = despotism_colonial_government_subtype
+			traits = {	
+						
+			}
+}
+create_country_leader = {
+			name = "Reinhard Siekaczek"
+			desc = "POLITICS_HORST_VON_SCHROETER_DESC"
+			picture = "Portrait_Mauritius_Horst_von_Schroeter.dds"
+			expire = "2090.3.4"
+			ideology = paternalism_subtype
+			traits = {	
+						
+			}
+}
+
+

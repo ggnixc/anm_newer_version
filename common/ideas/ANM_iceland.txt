@@ -1,0 +1,116 @@
+ideas = {
+	head_of_government = { 
+		ICE_Sigurdur_Ingi_Johannsson_hog = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ICE_Sigurdur_Ingi_Johannsson_hog"}
+			allowed = { original_tag = ICE }
+			picture = "ICE_Sigurdur_Ingi_Johannsson_hog"
+			available = {
+				tag = ICE
+			}
+			traits = {
+				head_of_government
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+	}
+	
+	security_minister = { 
+		ICE_James_Irvin_Gadsen_sec = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ICE_James_Irvin_Gadsen_sec"}
+			allowed = { original_tag = ICE }
+			picture = "ICE_James_Irvin_Gadsen_sec"
+			available = {
+				tag = ICE
+			}
+			traits = {
+				ICE_James_Irvin_Gadsen_sec_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+	} 
+	
+	foreign_minister = { 
+		ICE_Valgerour_Sverrisdottir_for = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ICE_Valgerour_Sverrisdottir_for"}
+			allowed = { original_tag = ICE }
+			picture = "ICE_Valgerour_Sverrisdottir_for"
+			available = {
+				tag = ICE
+			}
+			traits = {
+				foreign_minister
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+	}
+
+	economy_minister = { 
+		ICE_Halldor_Asgrimsson_eco = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ICE_Halldor_Asgrimsson_eco"}
+			allowed = { original_tag = ICE }
+			picture = "ICE_Halldor_Asgrimsson_eco"
+			available = {
+				tag = ICE
+			}
+			traits = {
+				economy_minister
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+	}
+	
+	
+	
+	
+	
+    country = {
+	     
+        ICE_spirit_almost_there = {
+		    allowed = { always = yes }
+			allowed = { tag = ICE }
+			picture = ICE_spirit_almost_there
+			removal_cost = -1
+
+			modifier = {
+			political_power_gain = 0.45
+			drift_defence_factor = 0.20
+			}
+		}
+		
+		 
+        ICE_spirit_high_commissioner = {
+		    allowed = { always = yes }
+			allowed = { tag = ICE }
+			picture = ICE_spirit_high_commissioner
+			removal_cost = -1
+
+			modifier = {
+			political_power_gain = -0.05
+			
+			}
+		}
+		
+		
+        ICE_spirit_fish = {
+		    allowed = { always = yes }
+			allowed = { tag = ICE }
+
+			picture = ICE_spirit_fish
+			removal_cost = -1
+
+			modifier = {
+			political_power_gain = -0.10
+			}
+		}
+			
+	}
+}
+
+
+
+	
+	

@@ -1,0 +1,101 @@
+﻿capital = 413
+
+set_oob = "KHU_1962"
+
+set_stability = 0.8
+set_war_support = 0.1
+
+set_variable = { ANMKDN_showednation_agenda_one = 20 }
+
+
+# Starting tec
+
+
+set_politics = {	
+	ruling_party = socialist
+	last_election = "1995.2.16"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 20
+    socialist = 50
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 0
+    despotism = 30
+    fascism = 0
+    national_socialism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = KHU_Faisal_Abdulkarim_Tarafi
+	desc = "POLITICS_FAISAL_TARAFI_DESC"
+	picture = "gfx/leaders/KHU/Portrait_KHU_Faisal_Abdulkarim_Tarafi.dds"
+	expire = "2999.1.1"
+	ideology = socialist_baathism_subtype
+	traits = {
+	}
+}
+create_country_leader = {
+	name = KHU_Habib_Farajallah_Kaab
+	desc = "POLITICS_HABIB_KAAB_DESC"
+	picture = "gfx/leaders/KHU/Portrait_KHU_Habib_Farajallah_Kaab.dds"
+	expire = "2999.1.1"
+	ideology = ultranationalism_reactionary_nationalism_subtype
+	traits = {
+	}
+}
+
+add_ideas = {
+	
+	##Ministers 
+
+	#political#
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_censored_press
+	tno_vote_franchise_registered_voting
+	tno_refugees_skilled
+	
+	#military#
+	tno_conscription_one_year_draft
+	tno_women_noncombat_only
+	tno_military_supervision_no_supervision
+	tno_military_spending_medium_spending
+	tno_training_combat_schooling
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_educational_deferment
+	
+	#economic#
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_good_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_low_subsidies
+	
+	#social#
+	tno_safety_acceptable_regulations
+	tno_health_care_free_universal_care
+	tno_pollution_few_regulations
+	tno_education_free_education
+	tno_penal_system_penal_labor
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_wire_tapping
+	construction_level_7
+}

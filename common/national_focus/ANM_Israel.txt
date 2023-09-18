@@ -1,0 +1,332 @@
+###INITIAL TREE###
+focus_tree = {
+	id = ISR_focus_israel_starter
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ISR
+		}
+	}
+	default = no
+
+	focus = {
+		id = ISR_a_narrow_victory
+		icon = GFX_ISR_a_narrow_victory
+		cost = 1
+		x = 5
+		y = 0
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_assemble_the_coalition
+		icon = GFX_ISR_assemble_the_coalition
+		cost = 4
+		x = 5
+		y = 1
+		prerequisite = {
+			focus = ISR_a_narrow_victory
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_its_our_time
+		icon = GFX_ISR_its_our_time
+		cost = 3
+		x = 5
+		y = 2
+		prerequisite = {
+			focus = ISR_assemble_the_coalition
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_the_budget
+		icon = GFX_ISR_the_budget
+		cost = 2
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = ISR_its_our_time
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_foreign_policy
+		icon = GFX_ISR_foreign_policy
+		cost = 2
+		x = 8
+		y = 3
+		prerequisite = {
+			focus = ISR_its_our_time
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_reivew_of_the_armed_process
+		icon = GFX_ISR_reivew_of_the_armed_process
+		cost = 2
+		x = 18
+		y = 1
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_an_important_discovery
+		icon = GFX_ISR_an_important_discovery
+		cost = 2
+		x = 18
+		y = 2
+		prerequisite = {
+			focus = ISR_reivew_of_the_armed_process
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_yad_el_hai_project
+		icon = GFX_ISR_yad_el_hai_project
+		cost = 2
+		x = 18
+		y = 3
+		prerequisite = {
+			focus = ISR_an_important_discovery
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_this_path_we_tread
+		icon = GFX_ISR_this_path_we_tread
+		cost = 2
+		x = 18
+		y = 4
+		prerequisite = {
+			focus = ISR_yad_el_hai_project
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_war_on_the_benches
+		icon = GFX_ISR_war_on_the_benches
+		cost = 1
+		x = 13
+		y = 5
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_the_fight_for_our_present
+		icon = GFX_ISR_the_fight_for_our_present
+		cost = 4
+		x = 13
+		y = 6
+		prerequisite = {
+			focus = ISR_war_on_the_benches
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_the_fight_for_our_future
+		icon = GFX_ISR_the_fight_for_our_future
+		cost = 4
+		x = 13
+		y = 7
+		prerequisite = {
+			focus = ISR_the_fight_for_our_present
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_an_issue
+		icon = GFX_ISR_an_issue
+		cost = 4
+		x = 13
+		y = 8
+		prerequisite = {
+			focus = ISR_the_fight_for_our_future
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_a_fight_we_won
+		icon = GFX_ISR_a_fight_we_won
+		cost = 1
+		x = 11
+		y = 9
+		prerequisite = {
+			focus = ISR_an_issue
+		}
+		mutually_exclusive = {
+			focus = ISR_beaten_back
+		}	
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_beaten_back
+		icon = GFX_ISR_beaten_back
+		cost = 1
+		x = 15
+		y = 9
+		prerequisite = {
+			focus = ISR_an_issue
+		}
+		mutually_exclusive = {
+			focus = ISR_a_fight_we_won
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_prepare_the_delegation_to_america
+		icon = GFX_ISR_prepare_the_delegation_to_america
+		cost = 3
+		x = 5
+		y = 4
+		prerequisite = {
+			focus = ISR_the_budget
+		}
+		prerequisite = {
+			focus = ISR_foreign_policy
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_talk_to_olmert
+		icon = GFX_ISR_talk_to_olmert
+		cost = 1
+		x = 5
+		y = 5
+		prerequisite = {
+			focus = ISR_prepare_the_delegation_to_america
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_there_is_a_problem_here
+		icon = GFX_ISR_there_is_a_problem_here
+		cost = 1
+		x = 3
+		y = 7
+		prerequisite = {
+			focus = ISR_talk_to_olmert
+		}
+		mutually_exclusive = {
+			focus = ISR_a_deal
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_a_deal
+		icon = GFX_ISR_a_deal
+		cost = 1
+		x = 7
+		y = 7
+		prerequisite = {
+			focus = ISR_talk_to_olmert
+		}
+		mutually_exclusive = {
+			focus = ISR_there_is_a_problem_here
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_a_calm_conversation_in_the_knesset
+		icon = GFX_ISR_a_calm_conversation_in_the_knesset
+		cost = 2
+		x = 5
+		y = 8
+		prerequisite = {
+			focus = ISR_a_deal
+			focus = ISR_there_is_a_problem_here
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_prepare_the_next_budget
+		icon = GFX_ISR_prepare_the_next_budget
+		cost = 5
+		x = 5
+		y = 9
+		prerequisite = {
+			focus = ISR_a_calm_conversation_in_the_knesset
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_a_talk_with_the_mossad
+		icon = GFX_ISR_a_talk_with_the_mossad
+		cost = 1
+		x = 13
+		y = 0
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_review_the_operational_plan
+		icon = GFX_ISR_review_the_operational_plan
+		cost = 1
+		x = 11
+		y = 1
+		prerequisite = {
+			focus = ISR_a_talk_with_the_mossad
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_review_our_equipment
+		icon = GFX_ISR_review_our_equipment
+		cost = 1
+		x = 15
+		y = 1
+		prerequisite = {
+			focus = ISR_a_talk_with_the_mossad
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_brief_the_opposition
+		icon = GFX_ISR_brief_the_opposition
+		cost = 1
+		x = 13
+		y = 2
+		prerequisite = {
+			focus = ISR_review_our_equipment
+		}
+		prerequisite = {
+			focus = ISR_review_the_operational_plan
+		}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = ISR_going_dark
+		icon = GFX_ISR_going_dark.dds
+		cost = 1
+		x = 13
+		y = 3
+		prerequisite = {
+			focus = ISR_brief_the_opposition
+		}
+		completion_reward = {
+		}
+	}
+}

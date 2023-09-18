@@ -1,0 +1,655 @@
+﻿add_namespace = CHI.general
+add_namespace = CHI.flavour
+## China
+
+	country_event = {
+	id = CHI.general.2
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.2" }
+		title = CHI.general.2.t
+		desc = CHI.general.2.desc
+		picture = GFX_anm_CHI_ROC_1
+
+
+		is_triggered_only = no
+		fire_only_once = yes
+
+		trigger = {
+			tag = CHI
+			date > 2000.1.10
+			has_start_date < 2005.01.02
+		}
+
+		option = { #
+			name = CHI.general.2.a
+		}
+	}
+	country_event = {
+		id = CHI.general.4
+			immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.4" }
+			title = CHI.general.4.t
+			desc = CHI.general.4.desc
+			picture = GFX_anm_CHI_empty_city_1
+	
+	
+			is_triggered_only = no
+			fire_only_once = yes
+	
+			trigger = {
+				tag = CHI
+				date > 2000.1.20
+				has_start_date < 2005.01.02
+			}
+	
+			option = { #
+				name = CHI.general.4.a
+			}
+		}
+	country_event = { #Not in game yet
+		id = CHI.general.10
+			immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.10" }
+			title = CHI.general.10.t
+			desc = CHI.general.10.desc
+			picture = GFX_anm_CHI_Hu_1
+
+
+			is_triggered_only = yes
+			fire_only_once = yes
+	
+			option = { #
+				name = CHI.general.10.a
+			}
+		}
+	country_event = {
+	id = CHI.general.20
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.20" }
+		title = CHI.general.20.t
+		desc = CHI.general.20.desc
+		picture = GFX_anm_CHI_Restaurant_1
+
+
+		is_triggered_only = no
+		fire_only_once = yes
+
+		trigger = {
+			tag = CHI
+			date > 2000.3.25
+			has_start_date < 2005.01.02
+		}
+
+		option = { #
+			name = CHI.general.20.a
+		}
+	}
+	country_event = {
+		id = CHI.general.21
+			immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.21" }
+			title = CHI.general.21.t
+			desc = CHI.general.21.desc
+			picture = GFX_anm_CHI_As_Always
+	
+	
+			is_triggered_only = yes
+			fire_only_once = yes
+
+			option = { #
+				name = CHI.general.21.a
+			}
+		}
+
+	country_event = { #not in game yet
+		id = CHI.general.40
+			immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.40" }
+			title = CHI.general.40.t
+			desc = CHI.general.40.desc
+			picture = "GFX_anm_CHI_qian_xuesen"
+	
+	
+			is_triggered_only = yes
+			fire_only_once = yes
+
+			option = { #
+				name = CHI.general.40.a
+			}
+		}
+
+	country_event = { #not in game yet
+		id = CHI.general.200
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.200" }
+		title = CHI.general.200.t
+		desc = CHI.general.200.desc
+		picture = "GFX_anm_CHI_chinese_farm"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.200.a
+		}
+	}
+	country_event = { #not in game yet
+		id = CHI.general.210
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.210" }
+		title = CHI.general.210.t
+		desc = CHI.general.210.desc
+		picture = "GFX_anm_CHI_chinese_keyboard"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.210.a
+		}
+		option = { #
+			name = CHI.general.210.b
+		}
+		option = { #
+			name = CHI.general.210.c
+		}
+		option = { #
+			name = CHI.general.210.d
+		}
+	}
+
+	country_event = { #not in game yet
+		id = CHI.general.1101
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.1101" }
+		title = CHI.general.1101.t
+		desc = CHI.general.1101.desc
+		picture = "GFX_anm_CHI_park_in_middle_school"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.1101.a
+		}
+	}
+	country_event = { #not in game yet
+		id = CHI.general.1102
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.1102" }
+		title = CHI.general.1102.t
+		desc = CHI.general.1102.desc
+		picture = "GFX_anm_CHI_park_in_middle_school"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.1102.a
+		}
+	}
+	country_event = { #not in game yet
+		id = CHI.general.1103
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.1103" }
+		title = CHI.general.1103.t
+		desc = CHI.general.1103.desc
+		picture = "GFX_anm_CHI_park_in_middle_school"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.1103.a
+		}
+	}
+	country_event = { #not in game yet
+		id = CHI.general.1104
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.1104" }
+		title = CHI.general.1104.t
+		desc = CHI.general.1104.desc
+		picture = "GFX_anm_CHI_park_in_middle_school"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.1104.a
+		}
+	}
+	country_event = { #not in game yet
+		id = CHI.general.1105
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.1105" }
+		title = CHI.general.1105.t
+		desc = CHI.general.1105.desc
+		picture = "GFX_anm_CHI_park_in_middle_school"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.1105.a
+			hidden_effect = {
+				country_event = {
+					id = CHI.general.1106
+				}
+			}
+		}
+	}
+	country_event = { #not in game yet
+		id = CHI.general.1106
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.1106" }
+		title = CHI.general.1106.t
+		desc = CHI.general.1106.desc
+		picture = "GFX_anm_CHI_park_in_middle_school"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.1106.a
+		}
+	}
+	country_event = { #not in game yet
+		id = CHI.general.1107
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.1107" }
+		title = CHI.general.1107.t
+		desc = CHI.general.1107.desc
+		picture = "GFX_anm_CHI_court_1"
+	
+	
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.general.1107.a
+		}
+	}
+	#Silent Line flavour.20-24
+	country_event = {
+	id = CHI.flavour.20
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.20" }
+		title = CHI.flavour.20.t
+		desc = CHI.flavour.20.desc
+		picture = GFX_anm_CHI_Silent_Line
+
+
+		is_triggered_only = no
+		fire_only_once = yes
+
+		trigger = {
+			tag = CHI
+			date > 2000.3.1
+			has_start_date < 2005.01.02
+		}
+
+		option = { #
+			name = CHI.flavour.20.a
+			hidden_effect = {
+				country_event = {
+   		 			id = CHI.flavour.21
+   		 			days = 70
+				}
+			}
+		}
+	}
+
+	country_event = {
+		id = CHI.flavour.21
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.21" }
+		title = CHI.flavour.21.t
+		desc = CHI.flavour.21.desc
+		picture = GFX_anm_CHI_Silent_Line
+
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.flavour.21.a
+			hidden_effect = {
+				country_event = {
+    				id = CHI.flavour.22
+    				days = 70
+				}
+			}
+		}
+	}
+
+	country_event = {
+		id = CHI.flavour.22
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.22" }
+		title = CHI.flavour.22.t
+		desc = CHI.flavour.22.desc
+		picture = GFX_anm_CHI_Silent_Line
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.flavour.22.a
+			hidden_effect = {
+				country_event = {
+   	 			id = CHI.flavour.23
+   	 			days = 70
+				}
+			}
+		}
+	}
+	
+	country_event = {
+		id = CHI.flavour.23
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.23" }
+		title = CHI.flavour.23.t
+		desc = CHI.flavour.23.desc
+		picture = GFX_anm_CHI_Silent_Line
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.flavour.23.a
+			hidden_effect = {
+				country_event = {
+  	  			id = CHI.flavour.24
+  	  			days = 70
+				}
+			}
+		}
+	}
+
+	country_event = {
+		id = CHI.flavour.24
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.25" }
+		title = CHI.flavour.24.t
+		desc = CHI.flavour.24.desc
+		picture = GFX_anm_CHI_Silent_Line
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.flavour.24.a
+			hidden_effect = {
+				country_event = {
+  	  			id = CHI.flavour.25
+  	  			days = 70
+				}
+			}
+		}
+	}
+
+	#CSL Football flavour.51
+
+	country_event = {
+		id = CHI.flavour.51
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.51" }
+		title = CHI.flavour.51.t
+		desc = CHI.flavour.51.desc
+		picture = GFX_anm_CHI_Silent_Line
+
+
+		is_triggered_only = no
+		fire_only_once = yes
+
+		trigger = {
+			tag = CHI
+			date > 2001.6.20
+			has_start_date < 2005.01.02
+		}
+
+		option = { #
+			name = CHI.flavour.51.a
+		}
+	}
+	#Zhang Baolin flavour.61-66
+
+	country_event = {
+		id = CHI.flavour.61
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.61" }
+		title = CHI.flavour.61.t
+		desc = CHI.flavour.61.desc
+		picture = GFX_anm_CHI_Zhang_Baolin
+
+
+		is_triggered_only = no
+		fire_only_once = yes
+
+		trigger = {
+			tag = CHI
+			date > 2000.3.15
+			has_start_date < 2005.01.02
+		}
+
+		option = { #
+			name = CHI.flavour.61.a
+			hidden_effect = {
+				country_event = {
+   	 			id = CHI.flavour.62
+   	 			days = 120
+				}
+			}
+		}
+	}
+
+	country_event = {
+		id = CHI.flavour.62
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.62" }
+		title = CHI.flavour.62.t
+		desc = CHI.flavour.62.desc
+		picture = GFX_anm_CHI_Zhang_Ziqiang
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.flavour.62.a
+			hidden_effect = {
+				country_event = {
+  	  			id = CHI.flavour.63
+  	  			days = 120
+				}
+			}
+		}
+	}
+
+	country_event = {
+	id = CHI.flavour.63
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.63" }
+		title = CHI.flavour.63.t
+		desc = CHI.flavour.63.desc
+		picture = GFX_anm_CHI_Huang_Shaocen
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.flavour.63.a
+			hidden_effect = {
+				country_event = {
+  	  			id = CHI.flavour.64
+  	  			days = 120
+				}
+			}
+		}
+	}
+
+	country_event = {
+	id = CHI.flavour.64
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.64" }
+		title = CHI.flavour.64.t
+		desc = CHI.flavour.64.desc
+		picture = GFX_anm_CHI_mansfight
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.flavour.64.a
+			add_manpower = -55
+			hidden_effect = {
+				country_event = {
+  	  			id = CHI.flavour.65
+  	  			days = 120
+				}
+			}
+		}
+	}
+	
+	country_event = {
+	id = CHI.flavour.65
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.65" }
+		title = CHI.flavour.65.t
+		desc = CHI.flavour.65.desc
+		picture = GFX_anm_CHI_Li_Youcan
+
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = { #
+			name = CHI.flavour.65.a
+			add_manpower = -1
+		}
+	}
+
+	country_event = { #Not in game yet
+		id = CHI.flavour.70
+			immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.70" }
+			title = CHI.flavour.70.t
+			desc = CHI.flavour.70.desc
+			picture = GFX_anm_CHI_shanghai_thae
+	
+			is_triggered_only = yes
+			fire_only_once = yes
+	
+			option = { #
+				name = CHI.flavour.70.a
+			}
+		}
+
+	country_event = {
+		id = CHI.flavour.140
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.140" }
+		title = CHI.flavour.140.t
+		desc = CHI.flavour.140.desc
+		picture = GFX_anm_CHI_half_of_the_life
+
+
+		is_triggered_only = no
+		fire_only_once = yes
+
+		trigger = {
+			tag = CHI
+			has_start_date < 2005.01.02
+			date > 2001.6.15
+		}
+
+		option = { #
+			name = CHI.flavour.140.a
+		}
+	}
+
+	country_event = {
+		id = CHI.flavour.150
+		immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.540" }
+		title = CHI.flavour.150.t
+		desc = CHI.flavour.150.desc
+		picture = GFX_anm_CHI_Yes_Translator
+
+
+		is_triggered_only = no
+		fire_only_once = yes
+
+		trigger = {
+			tag = CHI
+			date > 2002.6.30
+			has_start_date < 2005.01.02
+		}
+
+		option = { #
+			name = CHI.flavour.150.a
+		}
+		option = { #
+			name = CHI.flavour.150.b
+		}
+	}
+
+	country_event = {
+		id = CHI.flavour.155
+			immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.flavour.155" }
+			title = CHI.flavour.155.t
+			desc = CHI.flavour.155.desc
+			picture = GFX_anm_CHI_cyberfight1
+	
+	
+			is_triggered_only = no
+			fire_only_once = yes
+	
+			trigger = {
+				tag = CHI
+				date > 2000.8.15
+				has_start_date < 2005.01.02
+			}
+	
+			option = { #
+				name = CHI.flavour.155.a
+			}
+			option = { #
+				name = CHI.flavour.155.b
+			}
+	}
+   
+
+    country_event = {
+	id = CHI.general.1599
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.1599" }
+	title = CHI.general.1599.t
+	desc = CHI.general.1599.desc
+
+	picture = GFX_anm_CHI_new_years_eve_in_the_north
+	fire_only_once = yes
+	mean_time_to_happen = { days = 5 }
+	timeout_days = 10
+	option = {
+		name = CHI.general.1599.a
+		trigger = {
+		
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+		
+		 country_event = {
+         id = CHI.general.4321
+         days = 1
+         }
+			
+		}
+	}
+}	
+   
+    country_event = {
+	id = CHI.general.4321
+	immediate = { log = "[GetDateText]: [Root.GetName]: event CHI.general.4321" }
+	title = CHI.general.4321.t
+	desc = CHI.general.4321.desc
+
+	picture = GFX_anm_CHI_new_years_eve_in_the_north
+	fire_only_once = yes
+	mean_time_to_happen = { days = 5 }
+	timeout_days = 10
+	option = {
+		name = CHI.general.4321.a
+		trigger = {
+	
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+		
+		 country_event = {
+         id = CHI.general.9632
+         days = 1
+         }
+			
+		}
+	}
+}	
+  

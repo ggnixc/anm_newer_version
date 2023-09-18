@@ -1,0 +1,351 @@
+﻿capital = 284
+
+oob = "NZL_1962"
+
+set_technology = {
+	
+}
+
+set_research_slots = 3
+set_convoys = 300
+set_stability = 0.5
+
+set_politics = {	
+	ruling_party = progressivism
+	last_election = "1960.11.26"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+set_popularities = {
+    socialist = 8
+    progressivism = 24
+    liberalism = 19
+    conservatism = 39
+    paternalism = 8
+    despotism = 2
+    fascism = 0
+}
+
+set_stability = 0.6
+set_war_support = 0.6
+
+add_ideas = {	
+	#Faction Status
+	OFN_Independent_Member
+    #ministers
+	NZL_Michael_Cullen_hog
+    NZL_Dover_Samuels_for
+    NZL_Paul_Swain_eco
+    NZL_Geoff_Braybrooke_sec
+	#laws
+	
+	tno_academic_base_secondary_schooling
+	tno_research_facilities_modern
+	tno_agriculture_modern
+	tno_industrial_equipment_modern
+	tno_industrial_expertise_experienced
+	tno_army_professionalism_professional
+	tno_nuclear_stockpile_none
+	tno_poverty_rate_15
+	
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_encouraged_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_support_disenfranchised
+	tno_refugees_open
+	
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_low_subsidies
+	
+	tno_conscription_volunteer_only
+	tno_women_combat_roles
+	tno_military_supervision_rules_of_engagement
+	tno_military_spending_medium_spending
+	tno_training_combat_schooling
+	tno_racial_integration_enforced_integration
+	tno_draft_exemptions_religious_deferment
+	
+	tno_safety_acceptable_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_good_regulations
+	tno_education_subsidised_higher_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_gender_equality
+	tno_minorities_affirmative_action
+	tno_drugs_weedbanned
+	tno_security_police
+}
+
+create_country_leader = {
+	name = "Jim Anderton"
+	picture = "Portrait_NZL_Arnold_Nordmeyer.dds"
+	expire = "2090.1.1"
+	ideology = socialist_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Michael Cullen"
+	picture = "Portrait_NZL_Michael_Cullen.dds"
+	expire = "2090.1.1"
+	ideology = progressivism_social_democracy_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Roger Douglas"
+	picture = "Portrait_NZL_Vernon_Cracknell.dds"
+	expire = "2090.1.1"
+	ideology = liberalism_subtype
+	traits = {
+	}
+}
+
+
+create_country_leader = {
+	name = "Jenny Shipley"
+	picture = "Portrait_NZL_Keith_Holyoake.dds"
+	expire = "2090.1.1"
+	ideology = conservatism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Winston Peters"
+	picture = "Portrait_NZL_Vernon_Cracknell.dds"
+	expire = "2090.4.20"
+	ideology = paternalism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Graham Capill"
+	picture = "Portrait_NZL_Vernon_Cracknell.dds"
+	expire = "2090.4.20"
+	ideology = despotism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Colin King-Ansell"
+	picture = "Portrait_NZL_Vernon_Cracknell.dds"
+	expire = "2090.4.20"
+	ideology = national_socialism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Bevan Skelton"
+	picture = "Portrait_NZL_Vernon_Cracknell.dds"
+	expire = "2090.4.20"
+	ideology = ultranational_socialist_subtype
+	traits = {
+	}
+}
+
+create_corps_commander = {
+	name = "Brian Poananga"
+	desc = "POLITICS_BRIAN_POANANGA_DESC"
+	picture = "Portrait_NZL_Brian_Poananga.dds"
+	#expire = "1995.9.5"
+	traits = {
+		media_personality
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "E.J. Torrance"
+	desc = "POLITICS_E_J_TORRANCE_DESC"
+	picture = "Portrait_NZL_E_J_Torrance.dds"
+	#expire = "2002.3.17"
+	traits = {
+		infantry_leader
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Richard Bolt"
+	desc = "POLITICS_RICHARD_BOLT_DESC"
+	picture = "Portrait_NZL_Richard_Bolt.dds"
+	#expire = "2002.3.17"
+	traits = {
+		career_officer
+		armor_officer
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Keith Lindsay Stewart"
+	desc = "POLITICS_KEITH_LINDSAY_STEWART_DESC"
+	picture = "Portrait_NZL_Keith_Lindsay_Stewart.dds"
+	#expire = "1972.11.13"
+	traits = {
+		thorough_planner
+		armor_officer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Richard Webb"
+	desc = "POLITICS_RICHARD_WEBB_DESC"
+	picture = "Portrait_NZL_Richard_Webb.dds"
+	#expire = "1990.1.24"
+	traits = {
+		career_officer
+		thorough_planner
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "A.H. Andrews"
+	desc = "POLITICS_A_H_ANDREWS_DESC"
+	picture = "Portrait_NZL_A_H_Andrews.dds"
+	#expire = "1988.10.5"
+	traits = {
+		career_officer
+		war_hero
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "T.J. King"
+	desc = "POLITICS_RICHARD_WEBB_DESC"
+	picture = "Portrait_NZL_T_J_King.dds"
+	#expire = "2002.9.14"
+	traits = {
+		war_hero
+		desert_fox
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Terry Neil Culley"
+	desc = "POLITICS_TERRY_NEIL_CULLEY_DESC"
+	picture = "Portrait_NZL_Terry_Neil_Culley.dds"
+	#expire = "1996.6.24"
+	traits = {
+		career_officer
+		commando
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_navy_leader = {
+	name = "Edward Thorne"
+	desc = "POLITICS_EDWARD_THORNE_DESC"
+	picture = "Portrait_NZL_Edward_Thorne.dds"
+	#expire = "2013.10.23"
+	traits = {
+		gunnery_expert
+		destroyer_leader
+	}
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "John McKenzie"
+	desc = "POLITICS_JOHN_MCKENZIE_DESC"
+	picture = "Portrait_NZL_John_McKenzie.dds"
+	#expire = "2000.2.9"
+	traits = {
+		navy_career_officer
+		gentlemanly
+	}
+	skill = 2
+}
+
+create_navy_leader = {
+	name = "John Ross"
+	desc = "POLITICS_JOHN_ROSS_DESC"
+	picture = "Portrait_NZL_John_Ross.dds"
+	#expire = "2000.2.9"
+	traits = {
+		navy_career_officer
+		gentlemanly
+	}
+	skill = 2
+}
+
+create_navy_leader = {
+	name = "Lawrence George"
+	desc = "POLITICS_LAWRENCE_GEORGE_DESC"
+	picture = "Portrait_NZL_Lawrence_George.dds"
+	#expire = "2000.2.9"
+	traits = {
+		cruiser_captain
+		old_guard_navy
+	}
+	skill = 3
+}
+
+create_navy_leader = {
+	name = "Michael Villiers"
+	desc = "POLITICS_MICHAEL_VILLIERS_DESC"
+	picture = "Portrait_NZL_Michael_Villiers.dds"
+	#expire = "2000.2.9"
+	traits = {
+		bold
+		old_guard_navy
+	}
+	skill = 3
+}

@@ -1,0 +1,373 @@
+#################
+###afghan Ideas##
+#################
+
+ideas = {
+	###############
+	#Country Ideas#
+	###############
+	country = {
+		AFG_Zahir_Shah = {
+
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = AFG_Zahir_Shah
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.01
+			}
+			
+		}
+
+		AFG_defeat_in_the_great_asian_war = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.6
+				training_time_army_factor = 0.20
+				conscription_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+		AFG_afghan_civil_war = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.10 
+				army_core_attack_factor = 0.10
+				ai_focus_aggressive_factor = 0.10
+				stability_factor = -0.5
+				research_speed_factor = -0.01
+				heat_attrition_factor = -0.05
+				acclimatization_hot_climate_gain_factor = 0.15
+				dig_in_speed_factor = 1	
+			}
+		}
+		AFG_soviet_support = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.7
+				land_reinforce_rate = 0.01
+				weekly_manpower = +100
+				lend_lease_tension = 0.2
+				experience_gain_army = 0.01
+				experience_gain_army_factor = 0.05
+			}
+
+			targeted_modifier = {
+					tag = SOV
+					political_power_gain = 0.7
+					trade_cost_for_target_factor = 0.10
+					extra_trade_to_target_factor = 0.10
+			}
+		}
+		AFG_soviet_support_medium = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.7
+				land_reinforce_rate = 0.05
+				weekly_manpower = +200
+				lend_lease_tension = 0.15
+				experience_gain_army = 0.02
+				experience_gain_army_factor = 0.06
+			}
+
+			targeted_modifier = {
+					tag = SOV
+					political_power_gain = 0.7
+					trade_cost_for_target_factor = 0.50
+					extra_trade_to_target_factor = 0.50
+			}
+		}
+		AFG_soviet_support_high = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.7
+				land_reinforce_rate = 0.10
+				weekly_manpower = +500
+				lend_lease_tension = 0.1
+				experience_gain_army = 0.04
+				experience_gain_army_factor = 0.08
+			}
+
+			targeted_modifier = {
+					tag = SOV
+					political_power_gain = 0.7
+					trade_cost_for_target_factor = 0.70
+					extra_trade_to_target_factor = 0.70
+			}
+		}
+		AFG_us_support = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		AFG_us_support_low = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.2
+			}
+		}
+		AFG_us_support_medium = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.3
+			}
+		}
+		AFG_us_support_high = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.4
+			}
+		}
+		AFG_saudi_support = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.2
+				experience_gain_army = 0.01
+				experience_gain_army_factor = 0.05
+			}
+
+			targeted_modifier = {
+					tag = SAU
+					political_power_gain = 0.2
+					trade_cost_for_target_factor = 0.40
+					extra_trade_to_target_factor = 0.40
+			}
+		}
+		AFG_saudi_support_low = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.5
+				experience_gain_army = 0.02
+				experience_gain_army_factor = 0.06
+			}
+
+			targeted_modifier = {
+					tag = SAU
+					political_power_gain = 0.5
+					trade_cost_for_target_factor = 0.50
+					extra_trade_to_target_factor = 0.50
+			}
+		}
+		AFG_saudi_support_high = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.7
+				experience_gain_army = 0.04
+				experience_gain_army_factor = 0.08
+			}
+
+			targeted_modifier = {
+					tag = SAU
+					political_power_gain = 0.7
+					trade_cost_for_target_factor = 0.70
+					extra_trade_to_target_factor = 0.70
+			}
+		}
+		AFG_secret_aid_baluch = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.05
+				land_reinforce_rate = 0.01
+				weekly_manpower = +300
+			}
+		}
+		AFG_secret_aid_baluch_2 = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.10
+				land_reinforce_rate = 0.02
+				weekly_manpower = +400
+			}
+		}
+		AFG_secret_aid_baluch_4 = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.15
+				land_reinforce_rate = 0.05
+				weekly_manpower = +550
+			}
+		}
+		AFG_secret_aid_baluch_6 = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.20
+				land_reinforce_rate = 0.10
+				weekly_manpower = +800
+			}
+		}
+		AFG_uae_influence = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.20
+			}
+			targeted_modifier = {
+					tag = UAE
+					political_power_gain = 0.1
+					trade_cost_for_target_factor = -0.70
+					extra_trade_to_target_factor = 0.70
+			}
+		}
+		AFG_uae_influence_low = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.08
+				war_support_factor = 0.15
+			}
+			targeted_modifier = {
+					tag = UAE
+					political_power_gain = 0.2
+					trade_cost_for_target_factor = -0.50
+					extra_trade_to_target_factor = 0.50
+			}
+		}
+		AFG_uae_influence_medium = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.10
+			}
+			targeted_modifier = {
+					tag = UAE
+					political_power_gain = 03
+					trade_cost_for_target_factor = -0.10
+					extra_trade_to_target_factor = 0.10
+			}
+		}
+		AFG_corrupt_generals = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.7
+			}
+			
+		}
+		AFG_corrupt_generals_low = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.08
+				political_power_gain = -0.5
+			}
+		}
+		AFG_corrupt_generals_medium = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_AFG_defeat_in_the_great_asian_war
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.2
+			}
+		}
+	}
+}

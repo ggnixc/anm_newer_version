@@ -1,0 +1,194 @@
+guiTypes = {
+	containerWindowType = {
+        name = "parliament_gui_container"
+        position = { x = 0 y = 0 }
+		size = { width = 400 height = 600 }
+		
+		instantTextBoxType = {
+			name = "semicircle_parliament_gui_title"
+			position = { x = 35 y = 240 }
+			font = "aldrich_22_outline"
+			text = "semicircle_parliament_gui_title"
+			maxWidth = 400
+			maxHeight = 24
+			format = center
+		}
+		
+			buttonType = {
+				name = "reichstagggumussgnuginfobutton"
+				quadTextureSprite = "GFX_Infobuttonanm"
+				position = { x = 0 y = 10 }
+			}
+
+		containerWindowType = {
+			name = "parliament_semicircle_main_container"
+			position = { x = 0 y = 100 }
+			size = { width = 490 height = 225 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_thin_border2"
+			}
+
+			gridboxtype = {
+				name = "parliament_semicircle_main_grid"
+				position = { x = 35 y = 25 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 100%% height = 0 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		gridboxtype = {
+			name = "parliament_member_grid"
+			position = { x = -150 y = 425 }
+			size = { width = 100%% height = 100%% }
+			slotsize = { width = 200 height = 18 }
+			max_slots_vertical = 8
+			add_horizontal = no
+		}
+    }
+
+	containerWindowType = {
+        name = "parliament_semicircle_main_entry"
+        position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "parliament_semicircle_main_icon"
+			spriteType = "GFX_parliament_party_icon"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "parliament_main_icon_tt"
+		}
+    }
+			
+	containerWindowType = {
+        name = "parliament_member_entry"
+        position = { x = 0 y = 0 }
+		size = { width = 200 height = 18 }
+
+		iconType = {
+			name = "parliament_member_icon"
+			spriteType = "GFX_parliament_party_icon"
+			position = { x = -20 y = 0 }
+		}
+		instantTextboxType = {
+			name = "parliament_member_text"
+			position = { x = 0 y = 0 }
+			font = "aldrich_14_outline"
+			maxWidth = 200
+			maxHeight = 16
+			format = left
+			text = "parliament_member_text"
+		}
+    }
+	containerWindowType = {
+		name = "reichstaginfowindowinfo"
+		size = { width = 1123 height = 882 }
+		position = { x = 638 y = 177 }
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_reichstaginfobg"
+		}
+		
+		buttonType = {
+				name = "reichstagggumussgnuginfobuttonuninfo"
+				quadTextureSprite = "GFX_anmclosebuttonswag"
+				position = { x = 0 y = 0 }
+			}
+		iconType = {
+			name = "reichstagguifreyportrait"
+			spriteType = "GFX_reichstaggui_frey"
+			position = { x = 25 y = 70 }
+		}
+		instantTextboxType = {
+			name = "reichstagguifreydescription"
+			position = { x = 25 y = 290 }
+			font = "aldrich_14_outline"
+			maxWidth = 175
+			maxHeight = 16
+			format = left
+			text = "reichstagguifreydescription"
+		}
+		iconType = {
+			name = "reichstagguihaiderportrait"
+			spriteType = "GFX_reichstaggui_haider"
+			 position = { x = 203 y = 70 }
+		}
+		instantTextboxType = {
+			name = "reichstagguihaiderdescription"
+			position = { x = 203 y = 290 } 
+			font = "aldrich_14_outline"
+			maxWidth = 175
+			maxHeight = 16
+			format = left
+			text = "reichstagguihaiderdescription"
+		}
+		iconType = {
+			name = "reichstagguigrundportrait"
+			spriteType = "GFX_reichstaggui_grund"
+			position = { x = 381 y = 70 }
+		}
+		instantTextboxType = {
+			name = "reichstagguigrunddescription"
+			position = { x = 381 y = 290 }
+			font = "aldrich_14_outline"
+			maxWidth = 175
+			maxHeight = 16
+			format = left
+			text = "reichstagguigrunddescription"
+		}
+		iconType = {
+			name = "reichstagguikaindlportrait"
+			spriteType = "GFX_reichstaggui_kaindl"
+			position = { x = 559 y = 70 }
+		}
+		instantTextboxType = {
+			name = "reichstagguikaindldescription"
+			position = { x = 559 y = 290 }
+			font = "aldrich_14_outline"
+			maxWidth = 175
+			maxHeight = 16
+			format = left
+			text = "reichstagguikaindldescription"
+		}
+		iconType = {
+			name = "reichstagguimerchterheimerportrait"
+			spriteType = "GFX_reichstaggui_mechterheimer"
+			position = { x = 737 y = 70 }
+		}
+		instantTextboxType = {
+			name = "reichstagguimerchterheimerdescription"
+			position = { x = 737 y = 290 }
+			font = "aldrich_14_outline"
+			maxWidth = 175
+			maxHeight = 16
+			format = left
+			text = "reichstagguimerchteheimerdescription"
+		}
+		iconType = {
+			name = "reichstagguischoenhuberportrait"
+			spriteType = "GFX_reichstaggui_schoenhuber"
+			position = { x = 915 y = 70 }
+		}
+		instantTextboxType = {
+			name = "reichstagguischoenhuberdescription"
+			position = { x = 915 y = 290 }
+			font = "aldrich_14_outline"
+			maxWidth = 175
+			maxHeight = 16
+			format = left
+			text = "reichstagguischoenhuberdescription"
+		}
+	}
+}
+
+
+
+
+
+
+
+

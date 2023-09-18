@@ -1,0 +1,48 @@
+ideas = {
+	country = {
+		BRA_Beacon_Democracy = {
+			allowed = { always = no }
+			picture = BRA_Beacon_Democracy
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.05
+				stability_weekly = 0.001
+				stability_factor = 0.15
+			}
+		}
+		BRA_Rising_Star = {
+			allowed = { always = no }
+			picture = BRA_Rising_Star
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.07
+				political_power_gain = 0.5
+				war_support_factor = 0.15
+				custom_modifier_tooltip = BRA_Geopol_Status_Regional_tt
+			}
+		}
+		BRA_Stains_Corruption = {
+			allowed = { always = no }
+			picture = BRA_Stains_Corruption
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				custom_modifier_tooltip = BRA_Corruption_Status_tt
+			}
+		}
+		BRA_Populism_Debate = {
+			allowed = { always = no }
+			picture = BRA_Populism_Debate
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				drift_defence_factor = -0.07
+			}
+		}
+	}
+}

@@ -1,0 +1,963 @@
+first_every_month_script = {
+	#calculates the industry, etc production of a nation
+	every_country = {
+		set_variable = { eeeeeeeeee = 1 }
+		
+		set_variable = { anm_industry_agriculture = 0 }
+		#agriculture is also added to the pie chart, dont ask why
+		set_variable = { anm_industry_textiles = 0 }
+		set_variable = { anm_industry_chemistry = 0 }
+		set_variable = { anm_industry_medicine = 0 }
+		set_variable = { anm_industry_metal = 0 }
+		set_variable = { anm_industry_automotive = 0 }
+		set_variable = { anm_industry_arms = 0 }
+		set_variable = { anm_industry_consumer_electronics = 0 }
+		set_variable = { anm_industry_semiconductors = 0 }
+		set_variable = { anm_industry_industrial_equipment = 0 }
+		set_variable = { anm_industry_hardware = 0 }
+		set_variable = { anm_industry_software = 0 }
+		
+		set_variable = { anm_ore_resource = 0 }
+		set_variable = { anm_hydrocarbons_resource = 0 }
+		set_variable = { anm_coal = 0 }
+		
+		set_variable = { anm_energy_nuclear = 0 }
+		set_variable = { anm_energy_fossile = 0 }
+		set_variable = { anm_energy_renewable = 0 }
+				
+		set_variable= { anm_services_tourism = 0 }
+		set_variable = { anm_services_finance = 0 }
+		set_variable = { anm_services_media = 0 }
+		
+			every_owned_state = {
+				add_to_variable = { PREV.anm_ore_resource = anm_ore_resource }
+				add_to_variable = { PREV.anm_hydrocarbons_resource = anm_hydrocarbons_resource }
+				add_to_variable = { PREV.anm_coal = anm_coal }
+				add_to_variable = { PREV.anm_energy_nuclear = anm_energy_nuclear }
+				add_to_variable = { PREV.anm_energy_fossile = anm_energy_fossile }
+				add_to_variable = { PREV.anm_energy_renewable = anm_energy_renewable }
+				
+				add_to_variable = { PREV.anm_services_tourism = anm_services_tourism }
+				add_to_variable = { PREV.anm_services_finance = anm_services_finance }
+				add_to_variable = { PREV.anm_services_media = anm_services_media }
+			
+			
+			
+				add_to_variable = { PREV.anm_industry_agriculture = anm_agriculture }
+				#agriculture is also added to the pie chart, dont ask why
+				add_to_variable = { PREV.anm_industry_textiles = anm_industry_textiles }
+				add_to_variable = { PREV.anm_industry_chemistry = anm_industry_chemistry }
+				add_to_variable = { PREV.anm_industry_medicine = anm_industry_medicine }
+				add_to_variable = { PREV.anm_industry_metal = anm_industry_metal }
+				add_to_variable = { PREV.anm_industry_automotive = anm_industry_automotive }
+				add_to_variable = { PREV.anm_industry_arms = anm_industry_arms }
+				add_to_variable = { PREV.anm_industry_consumer_electronics = anm_industry_consumer_electronics }
+				add_to_variable = { PREV.anm_industry_semiconductors = anm_industry_semiconductors }
+				add_to_variable = { PREV.anm_industry_industrial_equipment = anm_industry_industrial_equipment }
+				add_to_variable = { PREV.anm_industry_hardware = anm_industry_hardware }
+				add_to_variable = { PREV.anm_industry_software = anm_industry_software }
+				
+				
+				
+				
+				
+			}
+		#Oil Demand
+		set_variable = { anm_oil_consumption = anm_energy_fossile } 
+		subtract_from_variable = { anm_oil_consumption = anm_coal }
+		if = {
+			limit = {
+				check_variable = { 0 > anm_oil_consumption }
+			}
+			set_variable = { anm_oil_consumption = 0 } 
+		}
+		
+		#Oil, added together
+		set_variable = { anm_oil_production = anm_hydrocarbons_resource }
+		
+		set_variable = { anm_oil_surplus = anm_oil_production }
+		subtract_from_variable = { anm_oil_surplus = anm_oil_consumption }
+		set_variable = { anm_oil_total = anm_oil_surplus }
+		
+		add_to_variable = { anm_oil_total = anm_oil_imports }
+		subtract_from_variable = { anm_oil_total = anm_oil_exports }
+		
+		#Oil deficit decreasing energy prodcution
+		set_variable = { anm_energy_fossile_fullfilled = anm_energy_fossile }
+		set_variable = { anm_oil_efficiency_percentage = 100 }
+		if = {
+			limit = {
+				check_variable = { 0 > anm_oil_total }
+			}
+			set_variable = { anm_oil_efficiency_percentage = anm_oil_production }
+			add_to_variable = { anm_oil_efficiency_percentage = anm_oil_imports }
+			divide_variable = { anm_oil_efficiency_percentage = anm_oil_consumption }
+			multiply_variable = { anm_oil_efficiency_percentage = 100 }
+			round_variable = anm_oil_efficiency_percentage
+			
+			
+			divide_variable = { anm_energy_fossile_fullfilled = 100 }
+			multiply_variable = { anm_energy_fossile_fullfilled = anm_oil_efficiency_percentage }
+			round_variable = anm_energy_fossile_fullfilled
+		}
+		
+		#Energy Demand
+		set_variable = { anm_energy_consumption = 0 }
+		
+		add_to_variable = { anm_energy_consumption = anm_industry_textiles }
+		add_to_variable = { anm_energy_consumption = anm_industry_chemistry }
+		add_to_variable = { anm_energy_consumption = anm_industry_medicine }
+		add_to_variable = { anm_energy_consumption = anm_industry_metal }
+		add_to_variable = { anm_energy_consumption = anm_industry_automotive }
+		add_to_variable = { anm_energy_consumption = anm_industry_arms }
+		add_to_variable = { anm_energy_consumption = anm_industry_consumer_electronics }
+		add_to_variable = { anm_energy_consumption = anm_industry_semiconductors }
+		add_to_variable = { anm_energy_consumption = anm_industry_industrial_equipment }
+		add_to_variable = { anm_energy_consumption = anm_industry_hardware }
+		add_to_variable = { anm_energy_consumption = anm_industry_software }
+				
+		add_to_variable = { anm_energy_consumption = anm_services_tourism }
+		add_to_variable = { anm_energy_consumption = anm_services_finance }
+		add_to_variable = { anm_energy_consumption = anm_services_media }
+		
+		
+		
+		
+		#Energy, added together
+		set_variable = { anm_energy_production = anm_energy_fossile_fullfilled }
+		add_to_variable = { anm_energy_production = anm_energy_nuclear }
+		add_to_variable = { anm_energy_production = anm_energy_renewable }
+		
+		set_variable = { anm_energy_surplus = anm_energy_production }
+		subtract_from_variable = { anm_energy_surplus = anm_energy_consumption }
+		set_variable = { anm_energy_total = anm_energy_surplus }
+		
+		add_to_variable = { anm_energy_total = anm_energy_imports }
+		subtract_from_variable = { anm_energy_total = anm_energy_exports }
+		
+		
+		
+		
+		
+		
+		
+		#Energy deficit decreasing industry prodcution
+		#set_variable = { anm_energy_fossile_fullfilled = anm_energy_fossile }
+		
+		
+		
+		set_variable = { anm_industry_efficiency_percentage = 100 }
+		if = {
+			limit = {
+				check_variable = { 0 > anm_energy_total }
+			}
+			set_variable = { anm_industry_efficiency_percentage = anm_energy_production }
+			add_to_variable = { anm_industry_efficiency_percentage = anm_energy_imports }
+			divide_variable = { anm_industry_efficiency_percentage = anm_energy_consumption }
+			multiply_variable = { anm_industry_efficiency_percentage = 100 }
+			round_variable = anm_industry_efficiency_percentage
+			
+
+
+		}
+		#Country Production scaled by energy efficiency
+		set_variable = { anm_industry_textiles_production = anm_industry_textiles }
+		set_variable = { anm_industry_chemistry_production = anm_industry_chemistry }
+		set_variable = { anm_industry_medicine_production = anm_industry_medicine }
+		set_variable = { anm_industry_metal_production = anm_industry_metal }
+		set_variable = { anm_industry_automotive_production = anm_industry_automotive }
+		set_variable = { anm_industry_arms_production = anm_industry_arms }
+		set_variable = { anm_industry_consumer_electronics_production = anm_industry_consumer_electronics }
+		set_variable = { anm_industry_semiconductors_production = anm_industry_semiconductors }
+		set_variable = { anm_industry_industrial_equipment_production = anm_industry_industrial_equipment }
+		set_variable = { anm_industry_hardware_production = anm_industry_hardware }
+		set_variable = { anm_industry_software_production = anm_industry_software }	
+		set_variable = { anm_services_tourism_production = anm_services_tourism }
+		set_variable = { anm_services_finance_production = anm_services_finance }
+		set_variable = { anm_services_media_production = anm_services_media }
+		
+		set_temp_variable = { anm_industry_efficiency_percentage_divided = anm_industry_efficiency_percentage }
+		divide_temp_variable = { anm_industry_efficiency_percentage_divided = 100 }
+			
+		multiply_variable = { anm_industry_textiles = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_chemistry = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_medicine = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_metal = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_automotive = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_arms = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_consumer_electronics = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_semiconductors = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_industrial_equipment = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_hardware = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_industry_software = anm_industry_efficiency_percentage_divided }
+		multiply_variable= { anm_services_tourism = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_services_finance = anm_industry_efficiency_percentage_divided }
+		multiply_variable = { anm_services_media = anm_industry_efficiency_percentage_divided }
+		
+		round_variable = anm_industry_textiles
+		round_variable = anm_industry_chemistry
+		round_variable = anm_industry_medicine
+		round_variable = anm_industry_metal
+		round_variable = anm_industry_automotive
+		round_variable = anm_industry_arms
+		round_variable = anm_industry_consumer_electronics
+		round_variable = anm_industry_semiconductors
+		round_variable = anm_industry_industrial_equipment
+		round_variable = anm_industry_hardware
+		round_variable = anm_industry_software
+		round_variable = anm_services_tourism
+		round_variable = anm_services_finance
+		round_variable = anm_services_media
+		
+		
+		
+		
+		
+		#Country Demand and HDI
+		#set_variable = { anm_hdi = 0 }
+		#every_owned_state = {
+		#		
+		#		set_temp_variable = { anm_hdi_temp = anm_hdi }
+		#		multiply_temp_variable = { anm_hdi_temp = state_population_k }
+		#		divide_temp_variable = { anm_hdi_temp = 1000 }
+		#		add_to_variable = { PREV.anm_hdi = anm_hdi_temp }
+		#		
+		#}
+		#divide_variable = { anm_hdi = max_manpower_k }
+		#multiply_variable = { anm_hdi = 2 }
+		set_variable = { anm_hdi = 0.6 }
+		
+		
+		for_each_loop = {
+			array = construction_next_month_array
+			value = v
+			index = i
+			break = break
+			if = {
+				limit = { check_variable = { i = 3 } }
+				every_owned_state = {
+				add_to_variable = { anm_services_finance = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 4 } }
+				every_owned_state = {
+				add_to_variable = { anm_services_tourism = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 5 } }
+				every_owned_state = {
+				add_to_variable = { anm_services_media = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 6 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_textiles = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 7 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_chemistry = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 8 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_medicine = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 9 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_metal = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 10 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_automotive = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 11 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_arms = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 12 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_industrial_equipment = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 13 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_consumer_electronics = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 14 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_semiconductors = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 15 } }
+				every_owned_state = {
+				add_to_variable = { anm_industry_hardware = v }
+				}
+			}
+			if = {
+				limit = { check_variable = { i = 16 }  }
+				every_owned_state = {
+				add_to_variable = { anm_industry_software = v }
+				}
+			}
+		}
+		
+		
+		
+		clear_array = construction_next_month_array
+		add_to_array = { construction_next_month_array = 1 }
+		resize_array = { construction_next_month_array = 16 }
+		
+		
+		#Strata and demand
+		set_variable = { strata_extreme_poor = 1 }
+		set_variable = { strata_lower = 1 }
+		set_variable = { strata_lower_middle_class = 1 }
+		set_variable = { strata_middle_class = 1 }
+		set_variable = { strata_upper_middle_class = 1 }
+		set_variable = { strata_upper_class = 1 }
+		#this required a lot of math
+		
+		#upper class
+		set_variable = { strata_upper_class = anm_hdi }
+		divide_variable = { strata_upper_class = 50 }
+		
+		#upper middle class
+		set_variable = { strata_upper_middle_class = anm_hdi }
+		multiply_variable = { strata_upper_middle_class = anm_hdi }
+		divide_variable = { strata_upper_middle_class = 9 }
+		
+		#middle class
+		set_variable = { strata_middle_class = anm_hdi }
+		multiply_variable = { strata_middle_class = anm_hdi }
+		divide_variable = { strata_middle_class = 7 }
+		
+		#lower middle class
+		set_variable = { strata_lower_middle_class = anm_hdi }
+		multiply_variable = { strata_lower_middle_class = anm_hdi }
+		divide_variable = { strata_lower_middle_class = 3.5 }
+		
+		#working class
+		set_variable = { strata_lower = anm_hdi }
+		multiply_variable = { strata_lower = anm_hdi }
+		multiply_variable = { strata_lower = 2.5 }
+		
+		set_temp_variable = { anm_calculationhelp = anm_hdi }
+		multiply_temp_variable = { anm_calculationhelp = anm_hdi }
+		multiply_temp_variable = { anm_calculationhelp = anm_hdi }
+		multiply_temp_variable = { anm_calculationhelp = 2.1 }
+		
+		subtract_from_variable = { strata_lower = anm_calculationhelp }
+		
+		#lowest class
+		set_variable = { strata_extreme_poor = 1 }
+		subtract_from_variable = { strata_extreme_poor = strata_lower }
+		subtract_from_variable = { strata_extreme_poor = strata_lower_middle_class }
+		subtract_from_variable = { strata_extreme_poor = strata_middle_class }
+		subtract_from_variable = { strata_extreme_poor = strata_upper_middle_class }
+		subtract_from_variable = { strata_extreme_poor = strata_upper_class }
+		
+		
+		
+		set_variable = { anm_strata_consumption = 300 }
+		divide_variable = { anm_strata_consumption = anm_taxrate }
+		multiply_variable = { anm_strata_consumption = anm_extraconsumers }
+		
+		set_temp_variable = { strata_strata_upper_class_consumptionmodifier = strata_upper_class }
+		multiply_temp_variable = { strata_strata_upper_class_consumptionmodifier = max_manpower_k }
+		divide_temp_variable = { strata_strata_upper_class_consumptionmodifier = anm_strata_consumption }
+		round_temp_variable = strata_strata_upper_class_consumptionmodifier
+		multiply_temp_variable = { strata_strata_upper_class_consumptionmodifier = 10 }
+		
+		set_temp_variable = { strata_strata_upper_middle_class_consumptionmodifier = strata_upper_middle_class }
+		multiply_temp_variable = { strata_strata_upper_middle_class_consumptionmodifier = max_manpower_k }
+		divide_temp_variable = { strata_strata_upper_middle_class_consumptionmodifier = anm_strata_consumption }
+		round_temp_variable = strata_strata_upper_middle_class_consumptionmodifier
+		multiply_temp_variable = { strata_strata_upper_middle_class_consumptionmodifier = 3 }
+		
+		set_temp_variable = { strata_strata_middle_class_consumptionmodifier = strata_middle_class  }
+		multiply_temp_variable = { strata_strata_middle_class_consumptionmodifier = max_manpower_k }
+		divide_temp_variable = { strata_strata_middle_class_consumptionmodifier = anm_strata_consumption }
+		round_temp_variable = strata_strata_middle_class_consumptionmodifier
+		multiply_temp_variable = { strata_strata_middle_class_consumptionmodifier = 2 }
+		
+		set_temp_variable = { strata_strata_lower_middle_class_consumptionmodifier = strata_lower_middle_class }
+		multiply_temp_variable = { strata_strata_lower_middle_class_consumptionmodifier = max_manpower_k }
+		divide_temp_variable = { strata_strata_lower_middle_class_consumptionmodifier = anm_strata_consumption }
+		round_temp_variable = strata_strata_lower_middle_class_consumptionmodifier
+		
+		set_temp_variable = { strata_strata_lower_consumptionmodifier = strata_lower }
+		multiply_temp_variable = { strata_strata_lower_consumptionmodifier = max_manpower_k }
+		divide_temp_variable = { strata_strata_lower_consumptionmodifier = anm_strata_consumption }
+		round_temp_variable = strata_strata_lower_consumptionmodifier
+		
+		set_temp_variable = { strata_extreme_poor_consumptionmodifier = strata_extreme_poor }
+		multiply_temp_variable = { strata_extreme_poor_consumptionmodifier = max_manpower_k }
+		divide_temp_variable = { strata_extreme_poor_consumptionmodifier = anm_strata_consumption }
+		round_temp_variable = strata_extreme_poor_consumptionmodifier
+		
+		
+		
+		#now, to the actual consumption
+		set_variable = { anm_industry_textiles_consumption = 0 }
+		add_to_variable = { anm_industry_textiles_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_industry_textiles_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_textiles_consumption = strata_strata_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_textiles_consumption = strata_strata_lower_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_textiles_consumption = strata_strata_lower_consumptionmodifier }
+		add_to_variable = { anm_industry_textiles_consumption = strata_extreme_poor_consumptionmodifier }
+		divide_variable = { anm_industry_textiles_consumption = 4 }
+		round_variable = anm_industry_textiles_consumption
+		
+		set_variable = { anm_industry_chemistry_consumption = 0 }
+		add_to_variable = { anm_industry_chemistry_consumption = anm_industry_agriculture }
+		add_to_variable = { anm_industry_chemistry_consumption = anm_industry_medicine }
+		divide_variable = { anm_industry_chemistry_consumption = 4 }
+		round_variable = anm_industry_chemistry_consumption
+		
+		set_variable = { anm_industry_medicine_consumption = 0 }
+		add_to_variable = { anm_industry_medicine_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_industry_medicine_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_medicine_consumption = strata_strata_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_medicine_consumption = strata_strata_lower_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_medicine_consumption = strata_strata_lower_consumptionmodifier }
+		
+		set_variable = { anm_industry_metal_consumption = 0 }
+		add_to_variable = { anm_industry_metal_consumption = anm_industry_arms }
+		add_to_variable = { anm_industry_metal_consumption = anm_industry_industrial_equipment }
+		add_to_variable = { anm_industry_metal_consumption = anm_industry_automotive }
+		
+		set_variable = { anm_industry_automotive_consumption = 0 }
+		add_to_variable = { anm_industry_automotive_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_industry_automotive_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_automotive_consumption = strata_strata_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_automotive_consumption = strata_strata_lower_middle_class_consumptionmodifier }
+		
+		set_variable = { anm_industry_arms_consumption = 0 }
+		add_to_variable = { anm_industry_arms_consumption = THIS.num_of_military_factories }
+		multiply_variable = { anm_industry_arms_consumption = 10 }
+		
+		set_variable = { anm_industry_consumer_electronics_consumption = 0 }
+		add_to_variable = { anm_industry_consumer_electronics_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_industry_consumer_electronics_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_consumer_electronics_consumption = strata_strata_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_consumer_electronics_consumption = strata_strata_lower_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_consumer_electronics_consumption = strata_strata_lower_consumptionmodifier }
+		
+		set_variable = { anm_industry_industrial_equipment_consumption = 0 }
+		add_to_variable = { anm_industry_industrial_equipment_consumption = anm_industry_semiconductors }
+		add_to_variable = { anm_industry_industrial_equipment_consumption = anm_industry_consumer_electronics }
+		add_to_variable = { anm_industry_industrial_equipment_consumption = anm_industry_automotive }
+		add_to_variable = { anm_industry_industrial_equipment_consumption = anm_industry_arms }
+		
+		set_variable = { anm_industry_semiconductors_consumption = 0 }
+		add_to_variable = { anm_industry_semiconductors_consumption = anm_industry_software }
+		add_to_variable = { anm_industry_semiconductors_consumption = anm_industry_consumer_electronics }
+		add_to_variable = { anm_industry_semiconductors_consumption = anm_industry_hardware }
+		
+		set_variable = { anm_industry_hardware_consumption = 0 }
+		add_to_variable = { anm_industry_hardware_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_industry_hardware_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_hardware_consumption = strata_strata_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_hardware_consumption = strata_strata_lower_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_hardware_consumption = anm_industry_software }
+		set_variable = { anm_industry_software_consumption = 0 }
+		add_to_variable = { anm_industry_software_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_industry_software_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_software_consumption = strata_strata_middle_class_consumptionmodifier }
+		add_to_variable = { anm_industry_software_consumption = strata_strata_lower_middle_class_consumptionmodifier }
+		
+		set_variable = { anm_services_tourism_consumption = 0 }
+		add_to_variable = { anm_services_tourism_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_services_tourism_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		add_to_variable = { anm_services_tourism_consumption = strata_strata_middle_class_consumptionmodifier }
+		set_variable = { anm_services_finance_consumption = 0 }
+		add_to_variable = { anm_services_finance_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_services_finance_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		set_variable = { anm_services_media_consumption = 0 }
+		add_to_variable = { anm_services_media_consumption = strata_strata_upper_class_consumptionmodifier }
+		add_to_variable = { anm_services_media_consumption = strata_strata_upper_middle_class_consumptionmodifier }
+		add_to_variable = { anm_services_media_consumption = strata_strata_middle_class_consumptionmodifier }
+		add_to_variable = { anm_services_media_consumption = strata_strata_lower_middle_class_consumptionmodifier }
+		add_to_variable = { anm_services_media_consumption = strata_strata_lower_consumptionmodifier }
+		
+		set_variable = { anm_ore_resource_consumption = 0 }
+		add_to_variable = { anm_ore_resource_consumption = anm_industry_metal }
+		multiply_variable = { anm_industry_metal = 3 }
+		
+		set_variable = { anm_industry_agriculture_consumption = max_manpower_k }
+		divide_variable = { anm_industry_agriculture_consumption = 150 }
+	
+		round_variable = anm_industry_textiles_consumption
+		round_variable = anm_industry_chemistry_consumption
+		round_variable = anm_industry_medicine_consumption
+		round_variable = anm_industry_metal_consumption
+		round_variable = anm_industry_automotive_consumption
+		round_variable = anm_industry_arms_consumption
+		round_variable = anm_industry_consumer_electronics_consumption
+		round_variable = anm_industry_semiconductors_consumption
+		round_variable = anm_industry_industrial_equipment_consumption
+		round_variable = anm_industry_hardware_consumption
+		round_variable = anm_industry_software_consumption
+		round_variable = anm_services_tourism_consumption
+		round_variable = anm_services_finance_consumption
+		round_variable = anm_services_media_consumption
+		round_variable = anm_ore_resource_consumption
+		round_variable = anm_industry_agriculture_consumption
+		
+		#calculates sphere and global consumption
+		set_temp_variable = { checkwhichcountry = THIS.id }
+		if = {
+		limit = { check_variable = { ECON_SPHERE_LEADER = checkwhichcountry }  }
+				set_variable = { anm_sphere_textiles_production = 0 }
+				set_variable = { anm_sphere_chemistry_production = 0 }
+				set_variable = { anm_sphere_medicine_production = 0 }
+				set_variable = { anm_sphere_metal_production = 0 }
+				set_variable = { anm_sphere_automotive_production = 0 }
+				set_variable = { anm_sphere_arms_production = 0 }
+				set_variable = { anm_sphere_consumer_electronics_production = 0 }
+				set_variable = { anm_sphere_semiconductors_production = 0 }
+				set_variable = { anm_sphere_industrial_equipment_production = 0 }
+				set_variable = { anm_sphere_hardware_production = 0 }
+				set_variable = { anm_sphere_software_production = 0 }	
+				set_variable = { anm_sphere_tourism_production = 0 }
+				set_variable = { anm_sphere_finance_production = 0 }
+				set_variable = { anm_sphere_media_production = 0 }
+				set_variable = { anm_sphere_resource_production = 0 }
+				set_variable = { anm_sphere_agriculture_production = 0 }
+				
+				set_variable = { anm_sphere_textiles_consumption = 0 }
+				set_variable = { anm_sphere_chemistry_consumption = 0 }
+				set_variable = { anm_sphere_medicine_consumption = 0 }
+				set_variable = { anm_sphere_metal_consumption = 0 }
+				set_variable = { anm_sphere_automotive_consumption = 0 }
+				set_variable = { anm_sphere_arms_consumption = 0 }
+				set_variable = { anm_sphere_consumer_electronics_consumption = 0 }
+				set_variable = { anm_sphere_semiconductors_consumption = 0 }
+				set_variable = { anm_sphere_industrial_equipment_consumption = 0 }
+				set_variable = { anm_sphere_hardware_consumption = 0 }
+				set_variable = { anm_sphere_software_consumption = 0 }	
+				set_variable = { anm_sphere_tourism_consumption = 0 }
+				set_variable = { anm_sphere_finance_consumption = 0 }
+				set_variable = { anm_sphere_media_consumption = 0 }
+				set_variable = { anm_sphere_resource_consumption = 0 }
+				set_variable = { anm_sphere_agriculture_consumption = 0 }
+		}
+		if = {
+		limit = { check_variable = { checkwhichcountry = ZZZ }  }
+			set_variable = { anm_global_textiles_production = 0 }
+			set_variable = { anm_global_chemistry_production = 0 }
+			set_variable = { anm_global_medicine_production = 0 }
+			set_variable = { anm_global_metal_production = 0 }
+			set_variable = { anm_global_automotive_production = 0 }
+			set_variable = { anm_global_arms_production = 0 }
+			set_variable = { anm_global_consumer_electronics_production = 0 }
+			set_variable = { anm_global_semiconductors_production = 0 }
+			set_variable = { anm_global_industrial_equipment_production = 0 }
+			set_variable = { anm_global_hardware_production = 0 }
+			set_variable = { anm_global_software_production = 0 }	
+			set_variable = { anm_global_tourism_production = 0 }
+			set_variable = { anm_global_finance_production = 0 }
+			set_variable = { anm_global_media_production = 0 }
+			set_variable = { anm_global_resource_production = 0 }
+			set_variable = { anm_global_agriculture_production = 0 }
+			
+			set_variable = { anm_global_textiles_consumption = 0 }
+			set_variable = { anm_global_chemistry_consumption = 0 }
+			set_variable = { anm_global_medicine_consumption = 0 }
+			set_variable = { anm_global_metal_consumption = 0 }
+			set_variable = { anm_global_automotive_consumption = 0 }
+			set_variable = { anm_global_arms_consumption = 0 }
+			set_variable = { anm_global_consumer_electronics_consumption = 0 }
+			set_variable = { anm_global_semiconductors_consumption = 0 }
+			set_variable = { anm_global_industrial_equipment_consumption = 0 }
+			set_variable = { anm_global_hardware_consumption = 0 }
+			set_variable = { anm_global_software_consumption = 0 }	
+			set_variable = { anm_global_tourism_consumption = 0 }
+			set_variable = { anm_global_finance_consumption = 0 }
+			set_variable = { anm_global_media_consumption = 0 }
+			set_variable = { anm_global_resource_consumption = 0 }
+			set_variable = { anm_global_agriculture_consumption = 0 }
+		}
+		
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_textiles_production = anm_industry_textiles_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_chemistry_production = anm_industry_chemistry_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_medicine_production = anm_industry_medicine_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_metal_production = anm_industry_metal_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_automotive_production = anm_industry_automotive_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_arms_production = anm_industry_arms_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_consumer_electronics_production = anm_industry_consumer_electronics_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_semiconductors_production = anm_industry_semiconductors_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_industrial_equipment_production = anm_industry_industrial_equipment_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_hardware_production = anm_industry_hardware_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_software_production = anm_industry_software_production }	
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_tourism_production = anm_services_tourism_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_finance_production = anm_services_finance_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_media_production = anm_services_media_production }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_resource_production = anm_ore_resource }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_agriculture_production = anm_industry_agriculture }
+		
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_energy_surplus = anm_energy_surplus }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_oil_surplus = anm_oil_surplus }
+		
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_textiles_consumption = anm_industry_textiles_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_chemistry_consumption = anm_industry_chemistry_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_medicine_consumption = anm_industry_medicine_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_metal_consumption = anm_industry_metal_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_automotive_consumption = anm_industry_automotive_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_arms_consumption = anm_industry_arms_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_consumer_electronics_consumption = anm_industry_consumer_electronics_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_semiconductors_consumption = anm_industry_semiconductors_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_industrial_equipment_consumption = anm_industry_industrial_equipment_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_hardware_consumption = anm_industry_hardware_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_software_consumption = anm_industry_software_consumption }	
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_tourism_consumption = anm_services_tourism_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_finance_consumption = anm_services_finance_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_media_consumption = anm_services_media_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_resource_consumption = anm_ore_resource_consumption }
+		add_to_variable = { ECON_SPHERE_LEADER:anm_sphere_agriculture_consumption = anm_industry_agriculture_consumption }
+		
+		add_to_variable = { ZZZ.anm_global_textiles_production = anm_industry_textiles_production }
+		add_to_variable = { ZZZ.anm_global_chemistry_production = anm_industry_chemistry_production }
+		add_to_variable = { ZZZ.anm_global_medicine_production = anm_industry_medicine_production }
+		add_to_variable = { ZZZ.anm_global_metal_production = anm_industry_metal_production }
+		add_to_variable = { ZZZ.anm_global_automotive_production = anm_industry_automotive_production }
+		add_to_variable = { ZZZ.anm_global_arms_production = anm_industry_arms_production }
+		add_to_variable = { ZZZ.anm_global_consumer_electronics_production = anm_industry_consumer_electronics_production }
+		add_to_variable = { ZZZ.anm_global_semiconductors_production = anm_industry_semiconductors_production }
+		add_to_variable = { ZZZ.anm_global_industrial_equipment_production = anm_industry_industrial_equipment_production }
+		add_to_variable = { ZZZ.anm_global_hardware_production = anm_industry_hardware_production }
+		add_to_variable = { ZZZ.anm_global_software_production = anm_industry_software_production }	
+		add_to_variable = { ZZZ.anm_global_tourism_production = anm_services_tourism_production }
+		add_to_variable = { ZZZ.anm_global_finance_production = anm_services_finance_production }
+		add_to_variable = { ZZZ.anm_global_media_production = anm_services_media_production }
+		add_to_variable = { ZZZ.anm_global_agriculture_production = anm_industry_agriculture }
+		add_to_variable = { ZZZ.anm_global_resource_production = anm_ore_resource }
+		
+		add_to_variable = { ZZZ.anm_energy_surplus = anm_sphere_energy_surplus }
+		add_to_variable = { ZZZ.anm_oil_surplus = anm_sphere_oil_surplus }
+		
+		add_to_variable = { ZZZ.anm_global_textiles_consumption = anm_industry_textiles_consumption }
+		add_to_variable = { ZZZ.anm_global_chemistry_consumption = anm_industry_chemistry_consumption }
+		add_to_variable = { ZZZ.anm_global_medicine_consumption = anm_industry_medicine_consumption }
+		add_to_variable = { ZZZ.anm_global_metal_consumption = anm_industry_metal_consumption }
+		add_to_variable = { ZZZ.anm_global_automotive_consumption = anm_industry_automotive_consumption }
+		add_to_variable = { ZZZ.anm_global_arms_consumption = anm_industry_arms_consumption }
+		add_to_variable = { ZZZ.anm_global_consumer_electronics_consumption = anm_industry_consumer_electronics_consumption }
+		add_to_variable = { ZZZ.anm_global_semiconductors_consumption = anm_industry_semiconductors_consumption }
+		add_to_variable = { ZZZ.anm_global_industrial_equipment_consumption = anm_industry_industrial_equipment_consumption }
+		add_to_variable = { ZZZ.anm_global_hardware_consumption = anm_industry_hardware_consumption }
+		add_to_variable = { ZZZ.anm_global_software_consumption = anm_industry_software_consumption }	
+		add_to_variable = { ZZZ.anm_global_tourism_consumption = anm_services_tourism_consumption }
+		add_to_variable = { ZZZ.anm_global_finance_consumption = anm_services_finance_consumption }
+		add_to_variable = { ZZZ.anm_global_media_consumption = anm_services_media_consumption }
+		add_to_variable = { ZZZ.anm_global_agriculture_consumption = anm_industry_agriculture_consumption }
+		add_to_variable = { ZZZ.anm_global_resource_consumption = anm_ore_resource_consumption }
+		 
+		set_temp_variable = { checkwhichcountry = THIS.id }
+		if = {
+		limit = { check_variable = { ECON_SPHERE_LEADER = checkwhichcountry }  }
+		
+			set_variable = { total_anm_sphere_textiles_consumption = anm_sphere_textiles_consumption }
+			set_variable = { total_anm_sphere_chemistry_consumption = anm_sphere_chemistry_consumption }
+			set_variable = { total_anm_sphere_medicine_consumption = anm_sphere_medicine_consumption  }
+			set_variable = { total_anm_sphere_metal_consumption = anm_sphere_metal_consumption }
+			set_variable = { total_anm_sphere_automotive_consumption = anm_sphere_automotive_consumption }
+			set_variable = { total_anm_sphere_arms_consumption = anm_sphere_arms_consumption }
+			set_variable = { total_anm_sphere_consumer_electronics_consumption = anm_sphere_consumer_electronics_consumption }
+			set_variable = { total_anm_sphere_semiconductors_consumption = anm_sphere_semiconductors_consumption }
+			set_variable = { total_anm_sphere_industrial_equipment_consumption = anm_sphere_industrial_equipment_consumption }
+			set_variable = { total_anm_sphere_hardware_consumption = anm_sphere_hardware_consumption }
+			set_variable = { total_anm_sphere_software_consumption = anm_sphere_software_consumption }	
+			set_variable = { total_anm_sphere_tourism_consumption = anm_sphere_tourism_consumption }
+			set_variable = { total_anm_sphere_finance_consumption = anm_sphere_finance_consumption }
+			set_variable = { total_anm_sphere_media_consumption = anm_sphere_media_consumption }
+			set_variable = { total_anm_sphere_agriculture_consumption = anm_sphere_agriculture_consumption }
+			set_variable = { total_anm_sphere_resource_consumption = anm_sphere_resource_consumption }
+			
+			divide_variable = { total_anm_sphere_textiles_consumption = anm_sphere_textiles_production }
+			divide_variable = { total_anm_sphere_chemistry_consumption = anm_sphere_chemistry_production }
+			divide_variable = { total_anm_sphere_medicine_consumption = anm_sphere_medicine_production  }
+			divide_variable = { total_anm_sphere_metal_consumption = anm_sphere_metal_production }
+			divide_variable = { total_anm_sphere_automotive_consumption = anm_sphere_automotive_production }
+			divide_variable = { total_anm_sphere_arms_consumption = anm_sphere_arms_production }
+			divide_variable = { total_anm_sphere_consumer_electronics_consumption = anm_sphere_consumer_electronics_production }
+			divide_variable = { total_anm_sphere_semiconductors_consumption = anm_sphere_semiconductors_production }
+			divide_variable = { total_anm_sphere_industrial_equipment_consumption = anm_sphere_industrial_equipment_production }
+			divide_variable = { total_anm_sphere_hardware_consumption = anm_sphere_hardware_production }
+			divide_variable = { total_anm_sphere_software_consumption = anm_sphere_software_production }	
+			divide_variable = { total_anm_sphere_tourism_consumption = anm_sphere_tourism_production }
+			divide_variable = { total_anm_sphere_finance_consumption = anm_sphere_finance_production }
+			divide_variable = { total_anm_sphere_media_consumption = anm_sphere_media_production }
+			divide_variable = { total_anm_sphere_agriculture_consumption = anm_sphere_agriculture_production }
+			divide_variable = { total_anm_sphere_resource_consumption = anm_sphere_resource_production }
+			
+			subtract_from_variable = { total_anm_sphere_textiles_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_chemistry_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_medicine_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_metal_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_automotive_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_arms_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_consumer_electronics_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_semiconductors_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_industrial_equipment_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_hardware_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_software_consumption = 1 }	
+			subtract_from_variable = { total_anm_sphere_tourism_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_finance_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_media_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_agriculture_consumption = 1 }
+			subtract_from_variable = { total_anm_sphere_resource_consumption = 1 }
+		}
+		if = {
+		limit = { check_variable = { checkwhichcountry = ZZZ }  }
+			add_to_variable = { helpmecount = 1 }
+			
+			set_variable = { total_anm_global_textiles_consumption = ZZZ.anm_global_textiles_consumption }
+			set_variable = { total_anm_global_chemistry_consumption = ZZZ.anm_global_chemistry_consumption }
+			set_variable = { total_anm_global_medicine_consumption =  ZZZ.anm_global_medicine_consumption }
+			set_variable = { total_anm_global_metal_consumption = ZZZ.anm_global_metal_consumption }
+			set_variable = { total_anm_global_automotive_consumption = ZZZ.anm_global_automotive_consumption }
+			set_variable = { total_anm_global_arms_consumption = ZZZ.anm_global_arms_consumption }
+			set_variable = { total_anm_global_consumer_electronics_consumption = ZZZ.anm_global_consumer_electronics_consumption }
+			set_variable = { total_anm_global_semiconductors_consumption = ZZZ.anm_global_semiconductors_consumption }
+			set_variable = { total_anm_global_industrial_equipment_consumption = ZZZ.anm_global_industrial_equipment_consumption }
+			set_variable = { total_anm_global_hardware_consumption = ZZZ.anm_global_hardware_consumption }
+			set_variable = { total_anm_global_software_consumption = ZZZ.anm_global_software_consumption }	
+			set_variable = { total_anm_global_tourism_consumption = ZZZ.anm_global_tourism_consumption }
+			set_variable = { total_anm_global_finance_consumption = ZZZ.anm_global_finance_consumption }
+			set_variable = { total_anm_global_media_consumption = ZZZ.anm_global_media_consumption }
+			set_variable = { total_anm_global_agriculture_consumption = ZZZ.anm_global_agriculture_consumption }
+			set_variable = { total_anm_global_resource_consumption = ZZZ.anm_global_resource_consumption }
+			
+			divide_variable = { total_anm_global_textiles_consumption = ZZZ.anm_global_textiles_production }
+			divide_variable = { total_anm_global_chemistry_consumption = ZZZ.anm_global_chemistry_production }
+			divide_variable = { total_anm_global_medicine_consumption = ZZZ.anm_global_medicine_production }
+			divide_variable = { total_anm_global_metal_consumption = ZZZ.anm_global_metal_production }
+			divide_variable = { total_anm_global_automotive_consumption = ZZZ.anm_global_automotive_production }
+			divide_variable = { total_anm_global_arms_consumption = ZZZ.anm_global_arms_production }
+			divide_variable = { total_anm_global_consumer_electronics_consumption = ZZZ.anm_global_consumer_electronics_production }
+			divide_variable = { total_anm_global_semiconductors_consumption = ZZZ.anm_global_semiconductors_production }
+			divide_variable = { total_anm_global_industrial_equipment_consumption = ZZZ.anm_global_industrial_equipment_production }
+			divide_variable = { total_anm_global_hardware_consumption = ZZZ.anm_global_hardware_production }
+			divide_variable = { total_anm_global_software_consumption = ZZZ.anm_global_software_production }	
+			divide_variable = { total_anm_global_tourism_consumption = ZZZ.anm_global_tourism_production }
+			divide_variable = { total_anm_global_finance_consumption = ZZZ.anm_global_finance_production }
+			divide_variable = { total_anm_global_media_consumption = ZZZ.anm_global_media_production }
+			divide_variable = { total_anm_global_agriculture_consumption = ZZZ.anm_global_agriculture_production }
+			divide_variable = { total_anm_global_resource_consumption = ZZZ.anm_global_resource_production }
+			
+			subtract_from_variable = { total_anm_global_textiles_consumption = 1 }
+			subtract_from_variable = { total_anm_global_chemistry_consumption = 1 }
+			subtract_from_variable = { total_anm_global_medicine_consumption = 1 }
+			subtract_from_variable = { total_anm_global_metal_consumption = 1 }
+			subtract_from_variable = { total_anm_global_automotive_consumption = 1 }
+			subtract_from_variable = { total_anm_global_arms_consumption = 1 }
+			subtract_from_variable = { total_anm_global_consumer_electronics_consumption = 1 }
+			subtract_from_variable = { total_anm_global_semiconductors_consumption = 1 }
+			subtract_from_variable = { total_anm_global_industrial_equipment_consumption = 1 }
+			subtract_from_variable = { total_anm_global_hardware_consumption = 1 }
+			subtract_from_variable = { total_anm_global_software_consumption = 1 }	
+			subtract_from_variable = { total_anm_global_tourism_consumption = 1 }
+			subtract_from_variable = { total_anm_global_finance_consumption = 1 }
+			subtract_from_variable = { total_anm_global_media_consumption = 1 }
+			subtract_from_variable = { total_anm_global_agriculture_consumption = 1 }
+			subtract_from_variable = { total_anm_global_resource_consumption = 1 }
+			
+		}
+		
+		set_variable = { anm_industry_construction = 5 }
+		
+		
+		#consumption plus efficiency to GDP
+		
+		set_variable = { total_anm_national_textiles_efficiency = total_anm_sphere_textiles_consumption }
+		set_variable = { total_anm_national_chemistry_efficiency = total_anm_sphere_chemistry_consumption }
+		set_variable = { total_anm_national_medicine_efficiency = total_anm_sphere_medicine_consumption }
+		set_variable = { total_anm_national_metal_efficiency = total_anm_sphere_metal_consumption }
+		set_variable = { total_anm_national_automotive_efficiency = total_anm_sphere_automotive_consumption }
+		set_variable = { total_anm_national_arms_efficiency = total_anm_sphere_arms_consumption }
+		set_variable = { total_anm_national_consumer_electronics_efficiency = total_anm_sphere_consumer_electronics_consumption }
+		set_variable = { total_anm_national_semiconductors_efficiency = total_anm_sphere_semiconductors_consumption }
+		set_variable = { total_anm_national_industrial_equipment_efficiency = total_anm_sphere_industrial_equipment_consumption }
+		set_variable = { total_anm_national_hardware_efficiency = total_anm_sphere_hardware_consumption }
+		set_variable = { total_anm_national_software_efficiency = total_anm_sphere_software_consumption }	
+		set_variable = { total_anm_national_tourism_efficiency = total_anm_sphere_tourism_consumption }
+		set_variable = { total_anm_national_finance_efficiency = total_anm_sphere_finance_consumption }
+		set_variable = { total_anm_national_media_efficiency = total_anm_sphere_media_consumption }
+		set_variable = { total_anm_national_resource_efficiency =  total_anm_sphere_resource_consumption }
+		set_variable = { total_anm_national_agriculture_efficiency = total_anm_sphere_agriculture_consumption }
+		
+		add_to_variable = { total_anm_national_textiles_efficiency = ZZZ.total_anm_global_textiles_consumption }
+		add_to_variable = { total_anm_national_chemistry_efficiency = ZZZ.total_anm_global_chemistry_consumption }
+		add_to_variable = { total_anm_national_medicine_efficiency = ZZZ.total_anm_global_medicine_consumption }
+		add_to_variable = { total_anm_national_metal_efficiency = ZZZ.total_anm_global_metal_consumption }
+		add_to_variable = { total_anm_national_automotive_efficiency = ZZZ.total_anm_global_automotive_consumption }
+		add_to_variable = { total_anm_national_arms_efficiency = ZZZ.total_anm_global_arms_consumption }
+		add_to_variable = { total_anm_national_consumer_electronics_efficiency = ZZZ.total_anm_global_consumer_electronics_consumption }
+		add_to_variable = { total_anm_national_semiconductors_efficiency = ZZZ.total_anm_global_semiconductors_consumption }
+		add_to_variable = { total_anm_national_industrial_equipment_efficiency = ZZZ.total_anm_global_industrial_equipment_consumption }
+		add_to_variable = { total_anm_national_hardware_efficiency = ZZZ.total_anm_global_hardware_consumption }
+		add_to_variable = { total_anm_national_software_efficiency = ZZZ.total_anm_global_software_consumption }	
+		add_to_variable = { total_anm_national_tourism_efficiency = ZZZ.total_anm_global_tourism_consumption }
+		add_to_variable = { total_anm_national_finance_efficiency = ZZZ.total_anm_global_finance_consumption }
+		add_to_variable = { total_anm_national_media_efficiency = ZZZ.total_anm_global_media_consumption }
+		add_to_variable = { total_anm_national_resource_efficiency =  total_anm_global_resource_consumption }
+		add_to_variable = { total_anm_national_agriculture_efficiency = ZZZ.total_anm_global_agriculture_consumption }
+		
+		add_to_variable = { total_anm_national_textiles_efficiency = 2 }
+		add_to_variable = { total_anm_national_chemistry_efficiency = 2 }
+		add_to_variable = { total_anm_national_medicine_efficiency = 2 }
+		add_to_variable = { total_anm_national_metal_efficiency = 2 }
+		add_to_variable = { total_anm_national_automotive_efficiency = 2 }
+		add_to_variable = { total_anm_national_arms_efficiency = 2 }
+		add_to_variable = { total_anm_national_consumer_electronics_efficiency = 2 }
+		add_to_variable = { total_anm_national_semiconductors_efficiency = 2 }
+		add_to_variable = { total_anm_national_industrial_equipment_efficiency = 2 }
+		add_to_variable = { total_anm_national_hardware_efficiency = 2 }
+		add_to_variable = { total_anm_national_software_efficiency = 2 }	
+		add_to_variable = { total_anm_national_tourism_efficiency = 2 }
+		add_to_variable = { total_anm_national_finance_efficiency = 2 }
+		add_to_variable = { total_anm_national_media_efficiency = 2 }
+		add_to_variable = { total_anm_national_resource_efficiency =  2 }
+		add_to_variable = { total_anm_national_agriculture_efficiency = 2 }
+		
+		divide_variable = { total_anm_national_textiles_efficiency = 2 }
+		divide_variable = { total_anm_national_chemistry_efficiency = 2 }
+		divide_variable = { total_anm_national_medicine_efficiency =  2 }
+		divide_variable = { total_anm_national_metal_efficiency = 2 }
+		divide_variable = { total_anm_national_automotive_efficiency = 2 }
+		divide_variable = { total_anm_national_arms_efficiency = 2 }
+		divide_variable = { total_anm_national_consumer_electronics_efficiency = 2 }
+		divide_variable = { total_anm_national_semiconductors_efficiency = 2 }
+		divide_variable = { total_anm_national_industrial_equipment_efficiency = 2 }
+		divide_variable = { total_anm_national_hardware_efficiency = 2 }
+		divide_variable = { total_anm_national_software_efficiency = 2 }	
+		divide_variable = { total_anm_national_tourism_efficiency = 2 }
+		divide_variable = { total_anm_national_finance_efficiency = 2 }
+		divide_variable = { total_anm_national_media_efficiency = 2 }
+		divide_variable = { total_anm_national_agriculture_efficiency = 2 }
+		divide_variable = { total_anm_national_resource_efficiency = 2 }
+		
+		multiply_variable = { total_anm_national_textiles_efficiency = anm_industry_textiles_consumption }
+		multiply_variable = { total_anm_national_chemistry_efficiency = anm_industry_chemistry_consumption }
+		multiply_variable = { total_anm_national_medicine_efficiency =  anm_industry_medicine_consumption }
+		multiply_variable = { total_anm_national_metal_efficiency = anm_industry_metal_consumption }
+		multiply_variable = { total_anm_national_automotive_efficiency = anm_industry_automotive_consumption }
+		multiply_variable = { total_anm_national_arms_efficiency = anm_industry_arms_consumption }
+		multiply_variable = { total_anm_national_consumer_electronics_efficiency = anm_industry_consumer_electronics_consumption }
+		multiply_variable = { total_anm_national_semiconductors_efficiency = anm_industry_semiconductors_consumption }
+		multiply_variable = { total_anm_national_industrial_equipment_efficiency = anm_industry_industrial_equipment_consumption }
+		multiply_variable = { total_anm_national_hardware_efficiency = anm_industry_hardware_consumption }
+		multiply_variable = { total_anm_national_software_efficiency = anm_industry_software_consumption }	
+		multiply_variable = { total_anm_national_tourism_efficiency = anm_services_tourism_consumption }
+		multiply_variable = { total_anm_national_finance_efficiency = anm_services_finance_consumption }
+		multiply_variable = { total_anm_national_media_efficiency = anm_services_media_consumption }
+		multiply_variable = { total_anm_national_agriculture_efficiency = anm_industry_agriculture_consumption }
+		multiply_variable = { total_anm_national_resource_efficiency = anm_ore_resource_consumption }
+		
+		divide_variable = { total_anm_national_textiles_efficiency = anm_industry_textiles_production }
+		divide_variable = { total_anm_national_chemistry_efficiency = anm_industry_chemistry_production }
+		divide_variable = { total_anm_national_medicine_efficiency =  anm_industry_medicine_production }
+		divide_variable = { total_anm_national_metal_efficiency = anm_industry_metal_production }
+		divide_variable = { total_anm_national_automotive_efficiency = anm_industry_automotive_production }
+		divide_variable = { total_anm_national_arms_efficiency = anm_industry_arms_production }
+		divide_variable = { total_anm_national_consumer_electronics_efficiency = anm_industry_consumer_electronics_production }
+		divide_variable = { total_anm_national_semiconductors_efficiency = anm_industry_semiconductors_production }
+		divide_variable = { total_anm_national_industrial_equipment_efficiency = anm_industry_industrial_equipment_production }
+		divide_variable = { total_anm_national_hardware_efficiency = anm_industry_hardware_production }
+		divide_variable = { total_anm_national_software_efficiency = anm_industry_software_production }	
+		divide_variable = { total_anm_national_tourism_efficiency = anm_services_tourism_production }
+		divide_variable = { total_anm_national_finance_efficiency = anm_services_finance_production }
+		divide_variable = { total_anm_national_media_efficiency = anm_services_media_production }
+		divide_variable = { total_anm_national_agriculture_efficiency = anm_industry_agriculture_production }
+		divide_variable = { total_anm_national_resource_efficiency = anm_ore_resource_production }
+		
+		
+		set_variable = { total_anm_national_textiles_addtogdp = anm_industry_textiles_production }
+		set_variable = { total_anm_national_chemistry_addtogdp = anm_industry_chemistry_production }
+		set_variable = { total_anm_national_medicine_addtogdp =  anm_industry_medicine_production }
+		set_variable = { total_anm_national_metal_addtogdp = anm_industry_metal_production }
+		set_variable = { total_anm_national_automotive_addtogdp = anm_industry_automotive_production }
+		set_variable = { total_anm_national_arms_addtogdp = anm_industry_arms_production }
+		set_variable = { total_anm_national_consumer_electronics_addtogdp = anm_industry_consumer_electronics_production }
+		set_variable = { total_anm_national_semiconductors_addtogdp = anm_industry_semiconductors_production }
+		set_variable = { total_anm_national_industrial_equipment_addtogdp = anm_industry_industrial_equipment_production }
+		set_variable = { total_anm_national_hardware_addtogdp = anm_industry_hardware_production }
+		set_variable = { total_anm_national_software_addtogdp = anm_industry_software_production }	
+		set_variable = { total_anm_national_tourism_addtogdp = anm_services_tourism_production }
+		set_variable = { total_anm_national_finance_addtogdp = anm_services_finance_production }
+		set_variable = { total_anm_national_media_addtogdp = anm_services_media_production }
+		set_variable = { total_anm_national_agriculture_addtogdp = anm_industry_agriculture }
+		set_variable = { total_anm_national_resource_addtogdp = anm_ore_resource }
+		
+		multiply_variable = { total_anm_national_textiles_addtogdp = total_anm_national_textiles_efficiency }
+		multiply_variable = { total_anm_national_chemistry_addtogdp = total_anm_national_chemistry_efficiency }
+		multiply_variable = { total_anm_national_medicine_addtogdp = total_anm_national_medicine_efficiency }
+		multiply_variable = { total_anm_national_metal_addtogdp = total_anm_national_metal_efficiency }
+		multiply_variable = { total_anm_national_automotive_addtogdp = total_anm_national_automotive_efficiency }
+		multiply_variable = { total_anm_national_arms_addtogdp = total_anm_national_arms_efficiency }
+		multiply_variable = { total_anm_national_consumer_electronics_addtogdp = total_anm_national_consumer_electronics_efficiency }
+		multiply_variable = { total_anm_national_semiconductors_addtogdp = total_anm_national_semiconductors_efficiency }
+		multiply_variable = { total_anm_national_industrial_equipment_addtogdp = total_anm_national_industrial_equipment_efficiency }
+		multiply_variable = { total_anm_national_hardware_addtogdp = total_anm_national_hardware_efficiency }
+		multiply_variable = { total_anm_national_software_addtogdp = total_anm_national_software_efficiency }	
+		multiply_variable = { total_anm_national_tourism_addtogdp = total_anm_national_tourism_efficiency }
+		multiply_variable = { total_anm_national_finance_addtogdp = total_anm_national_finance_efficiency }
+		multiply_variable = { total_anm_national_media_addtogdp = total_anm_national_media_efficiency }
+		multiply_variable = { total_anm_national_resource_addtogdp =  total_anm_national_resource_efficiency }
+		multiply_variable = { total_anm_national_agriculture_addtogdp = total_anm_national_agriculture_efficiency }
+		
+		add_to_variable = { total_anm_national_textiles_efficiency = -1 }
+		add_to_variable = { total_anm_national_chemistry_efficiency = -1 }
+		add_to_variable = { total_anm_national_medicine_efficiency = -1 }
+		add_to_variable = { total_anm_national_metal_efficiency = -1 }
+		add_to_variable = { total_anm_national_automotive_efficiency = -1 }
+		add_to_variable = { total_anm_national_arms_efficiency = -1 }
+		add_to_variable = { total_anm_national_consumer_electronics_efficiency = -1 }
+		add_to_variable = { total_anm_national_semiconductors_efficiency = -1 }
+		add_to_variable = { total_anm_national_industrial_equipment_efficiency = -1 }
+		add_to_variable = { total_anm_national_hardware_efficiency = -1 }
+		add_to_variable = { total_anm_national_software_efficiency = -1 }	
+		add_to_variable = { total_anm_national_tourism_efficiency = -1 }
+		add_to_variable = { total_anm_national_finance_efficiency = -1 }
+		add_to_variable = { total_anm_national_media_efficiency = -1 }
+		add_to_variable = { total_anm_national_resource_efficiency =  -1 }
+		add_to_variable = { total_anm_national_agriculture_efficiency = -1 }
+		#this appears to make numbers be red if below 1 in the GUI
+		
+		
+		
+		set_variable = { anm_industry_construction_max = 5 }
+		set_variable = { anm_industry_construction_fromgdp = 5 }
+		set_variable = { anm_industry_construction_used = 0 }
+		set_variable = { anm_industry_construction_left = anm_industry_construction_max }
+		
+		#remove, only for debug
+		
+		#don't remove this tho
+		#set_variable = { anm_industry_construction_used = 0 }
+		#Reload Piechart
+		#manufacture_reload_piechart = yes
+	}
+	
+	
+	
+}

@@ -1,0 +1,94 @@
+#needs air and industry techs
+
+capital = 3
+
+set_oob = "SWI_1962"
+
+add_ideas = {
+	## Spirts
+
+	## Laws
+	# Political
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	tno_refugees_vetted_entry
+	# Military
+	tno_conscription_one_year_draft
+	tno_women_military_assistance
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_combat_schooling
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_educational_deferment
+	# Social
+	tno_safety_acceptable_regulations
+	tno_health_care_private_health_care
+	tno_pollution_few_regulations
+	tno_education_public_higher_education
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_traditional_roles
+	tno_minorities_equal_rights
+	tno_security_police
+	# Economic
+	tno_trade_laws_free_trade
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_low_taxation
+	tno_income_taxation_tax_havens
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_restricted
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	## Societal Development
+	tno_nuclear_stockpile_none
+	tno_poverty_rate_15
+	tno_army_professionalism_professional
+	tno_industrial_expertise_experienced
+	tno_industrial_equipment_modern
+	tno_agriculture_mass_mechanized
+	tno_research_facilities_modern
+	tno_academic_base_primary_schooling
+
+	#Construction Level
+	construction_level_0
+}
+
+set_politics = {	
+	ruling_party = conservatism
+	last_election = "1959.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    communist = 0
+    ultranationalism = 0
+    socialist = 0
+    progressivism = 5
+    liberalism = 8
+    liberal_conservatism = 0
+    conservatism = 77
+    paternalism = 10
+    despotism = 0
+    fascism = 0
+    national_socialism = 0
+    esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Swiss Federal Council"
+	#desc =
+	picture = "Portrait_SWI_Federal_Council.dds"
+	expire = "2999.12.12"
+	ideology = conservatism_agrarianism_subtype
+	traits = {
+	}
+}

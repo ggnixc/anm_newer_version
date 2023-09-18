@@ -1,0 +1,159 @@
+division_template = {
+	name = "Gyalogos Hadosztály"			
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  
+	}
+}
+
+division_template = {
+	name = "Lovas Hadosztály"		
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }  
+	}
+}
+
+division_template = {
+	name = "Motorizált Hadosztály" 				
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		motorized = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Polgári Hadosztály" 				
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 0 y = 3 }
+		light_infantry = { x = 0 y = 4 }
+	}
+}
+
+units = {
+	division= {	
+		name = "1. Gyalogos Divízió"
+		location = 9660
+		division_template = "Gyalogos Hadosztály"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "2. Gyalogos Divízió"
+		location = 9660
+		division_template = "Gyalogos Hadosztály"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		name = "3. Gyalogos Divízió"
+		location = 9660
+		division_template = "Gyalogos Hadosztály"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	### Civilian units
+	division= {	
+		name = "1. Polgári Divízió"
+		location = 3713
+		division_template = "Polgári Hadosztály"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "2. Polgári Divízió"
+		location = 3713
+		division_template = "Polgári Hadosztály"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "3. Polgári Divízió"
+		location = 3713
+		division_template = "Polgári Hadosztály"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "4. Polgári Divízió"
+		location = 3713
+		division_template = "Polgári Hadosztály"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "5. Polgári Divízió"
+		location = 3713
+		division_template = "Polgári Hadosztály"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "6. Polgári Divízió"
+		location = 3713
+		division_template = "Polgári Hadosztály"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "7. Polgári Divízió"
+		location = 3713
+		division_template = "Polgári Hadosztály"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "8. Polgári Divízió"
+		location = 3713
+		division_template = "Polgári Hadosztály"
+		start_experience_factor = 0
+		start_equipment_factor = 0.9
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "HUN"
+		}
+		requested_factories = 3
+		progress = 0.68
+		efficiency = 95
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "HUN"
+		}
+		requested_factories = 1
+		progress = 0.60
+		efficiency = 100
+	}
+}

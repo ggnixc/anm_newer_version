@@ -1,0 +1,61 @@
+scripted_gui = {
+	
+	ANM_waronterror_GUI = {
+		context_type = decision_category
+		window_name = "ANM_waronterror_GUI"
+		
+		visible = {
+		always = yes
+		}
+		
+		triggers = {
+
+		}
+
+		
+		effects = {
+			waronterrorgui_mapstate_transylvania_click = {
+				set_variable = { GER_ANM_antiterror_currentstate = 1 }
+			}
+			waronterrorgui_mapstate_burma_click = {
+				set_variable = { GER_ANM_antiterror_currentstate = 2 }
+			}
+			waronterrorgui_mapstate_iran_click = {
+				set_variable = { GER_ANM_antiterror_currentstate = 3 }
+			}
+			waronterrorgui_mapstate_afghanistan_click = {
+				set_variable = { GER_ANM_antiterror_currentstate = 4 }
+			}
+			waronterrorgui_mapstate_colombia_click = {
+				set_variable = { GER_ANM_antiterror_currentstate = 5 }
+			}
+			waronterrorgui_mapstate_nigeria_click = {
+				set_variable = { GER_ANM_antiterror_currentstate = 7 }
+			}
+			waronterrorgui_mapstate_piednoir_click = {
+				set_variable = { GER_ANM_antiterror_currentstate = 11 }
+			}
+			
+			forwardbutton_click = {
+				add_to_variable = { GER_ANM_antiterror_currentterrorgroup = 1 }
+				if = {
+					limit = { check_variable = { GER_ANM_antiterror_currentterrorgroup = 6 } }
+					set_variable = { GER_ANM_antiterror_currentterrorgroup = 1 }
+				}
+			}
+			rewardbutton_click = {
+				add_to_variable = { GER_ANM_antiterror_currentterrorgroup = -1 }
+				if = {
+					limit = { check_variable = { GER_ANM_antiterror_currentterrorgroup = 0 } }
+					set_variable = { GER_ANM_antiterror_currentterrorgroup = 5 }
+				}
+			}
+			
+		}
+		properties = {
+			waronterrorgui_terrorgroupicon = {
+				image = "[getGER_terrorguiselectedstateicon]"
+			}
+		}
+	}
+}

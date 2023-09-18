@@ -1,0 +1,143 @@
+ideas = {
+
+	country = {
+		GER_anm_germancivilwar = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_anm_germancivilwar
+
+			removal_cost = -1
+			
+			modifier = {
+				ai_focus_defense_factor = 0.9
+				ai_focus_aggressive_factor = -0.3
+				army_core_defence_factor = 0.1
+				army_org_Factor = -0.1
+				army_defence_factor = 0.1
+				army_speed_factor = -0.1
+				no_supply_grace = 700
+				surrender_limit = 0.8
+				ai_join_ally_desire_factor = 1000
+				ai_call_ally_desire_factor = 1000
+				political_power_gain = 0.5
+				
+				training_time_army_factor = -0.75
+				conscription_factor = 0.5
+				weekly_manpower = 1000 
+			}
+		}
+		GER_anm_austriancivilwar = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_anm_germancivilwar
+
+			removal_cost = -1
+			
+			modifier = {
+				ai_focus_defense_factor = -2.0
+				ai_focus_aggressive_factor = 2.0
+			}
+		}
+		
+		GER_the_puppet_fuehrer = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_puppet_fuehrer"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_the_puppet_fuehrer
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.025
+				political_power_gain = -0.50
+				command_power_gain = -0.10
+			}
+		}
+
+		GER_millenium_rise = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_millenium_rise"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_millenium_rise
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+				production_speed_buildings_factor = 0.10
+				global_building_slots_factor = 0.10
+				
+			}
+		}
+		
+		GER_europapakt_member = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_europapakt_member"}
+			allowed = {
+					always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_europapakt_member
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		
+		GER_the_ailing_order = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_ailing_order"}
+			allowed = {
+						always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_the_ailing_order
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.10
+			political_power_factor = -0.30
+			}
+		}
+		
+		GER_space_spirit = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_space_spirit"}
+			allowed = {
+						always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_space_spirit
+
+			removal_cost = -1
+			
+			modifier = {
+			research_speed_factor = 0.05
+			local_resources_factor = -0.07
+			political_power_cost = 0.10
+			}
+		}
+		
+	}
+}

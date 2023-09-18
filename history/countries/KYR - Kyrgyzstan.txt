@@ -1,0 +1,120 @@
+﻿ capital = 586
+
+set_oob = "KYR_1962"
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	#Standard#
+	KYR_Stabilization_Regime
+
+	#Ministers#
+	KYR_Ivan_Grishin_hog
+	KYR_Zurakan_Imankalykova_for
+	KYR_Sultan_Ibraimov_eco
+	KYR_Kaliynur_Usenbekov_sec
+
+	#Political#
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	tno_refugees_skilled
+
+	#Military#
+	tno_conscription_two_year_draft
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_military_spending_medium_spending
+	tno_training_basic_training
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_none
+
+	#Economic#
+	tno_trade_laws_export_focus
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_low_pensions
+	tno_unemployment_no_subsidies
+
+	#Social#
+	tno_safety_limited_regulations
+	tno_health_care_public_health_care
+	tno_pollution_no_controls
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
+	tno_gender_rights_traditional_roles
+	tno_minorities_segregation
+	tno_security_security_service
+}
+
+set_popularities = {
+	communist = 33
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+	liberal_conservatism = 0
+	despotism = 67
+	conservatism = 0
+	paternalism = 0
+	fascism = 0
+	national_socialism = 0
+	ultranationalism = 0
+	esoteric_nazism = 0
+}
+
+### Country Leaders ###
+create_country_leader = {
+	name = "Ivan Grishin"
+	desc = "POLITICS_IVAN_GRISHIN_DESC"
+	picture = "Portrait_Kyrgyzstan_Ivan_Grishin.dds"
+	expire = "1999.1.1"
+	ideology = despotism_subtype
+}
+
+create_country_leader = {
+	name = "Sultan Ibraimov"
+	#desc = ""
+	picture = "Portrait_Kyrgyzstan_Sultan_Ibraimov.dds"
+	expire = "1999.1.1"
+	ideology = communist_subtype
+}
+
+### Generals ###
+create_corps_commander = {
+	name = "Kaliynur Usenbekov"
+	picture = "Portrait_Kyrgyzstan_Kaliynur_Usenbekov.dds"
+	traits = { politically_connected organizer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+	id = 15101
+}
+
+create_corps_commander = {
+	name = "Andrei Grebnev"
+	picture = "Portrait_Kyrgyzstan_Andrei_Grebnev.dds"
+	traits = { career_officer trickster }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 15102
+}

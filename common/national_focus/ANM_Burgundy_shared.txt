@@ -1,0 +1,514 @@
+###LIBDEM wholesomechungus burgundyredemotion AHHHH###
+
+shared_focus = {
+	id = BRG_a_new_millennium
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 5
+	y = 0
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+}
+
+shared_focus = {
+	id = BRG_chasing_the_black_sun
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 5
+	y = 1
+	available_if_capitulated = no
+	prerequisite = {
+		focus = BRG_a_new_millennium
+	}
+	completion_reward = {
+	
+	}
+}
+
+shared_focus = {
+	id = BRG_filling_our_ranks
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 4
+	y = 2
+	available_if_capitulated = no
+	prerequisite = {
+		focus = BRG_chasing_the_black_sun
+	}
+	completion_reward = {
+	
+	}
+}
+
+shared_focus = {
+	id = BRG_a_call_to_the_wermacht
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 4
+	y = 3
+	available_if_capitulated = no
+	prerequisite = {
+		focus = BRG_filling_our_ranks
+	}
+	completion_reward = {
+	
+	}
+}
+shared_focus = {
+	id = BRG_further_specifications
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 4
+	y = 4
+	available_if_capitulated = no
+	prerequisite = {
+		focus = BRG_a_call_to_the_wermacht
+	}
+	completion_reward = {
+	
+	}
+}
+
+shared_focus = {
+	id = BRG_review_our_equipment
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 6
+	y = 2
+	available_if_capitulated = no
+	prerequisite = {
+		focus = BRG_chasing_the_black_sun
+	}
+	completion_reward = {
+	
+	}
+}
+
+shared_focus = {
+	id = BRG_test_our_men
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 6
+	y = 3
+	available_if_capitulated = no
+	prerequisite = {
+		focus = BRG_review_our_equipment
+	}
+	completion_reward = {
+	
+	}
+}
+
+shared_focus = {
+	id = BRG_and_our_machines
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 6
+	y = 4
+	available_if_capitulated = no
+	prerequisite = {
+		focus = BRG_test_our_men
+	}
+	completion_reward = {
+	
+	}
+}
+
+shared_focus = {
+	id = BRG_await_a_response
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 5
+	y = 5
+	available_if_capitulated = no
+	prerequisite = {
+		focus = BRG_further_specifications
+	}
+	prerequisite = {
+		focus = BRG_and_our_machines
+	}
+	completion_reward = {
+	
+	}
+}
+
+shared_focus = {
+	id = BRG_report_on_infastructure
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 1
+	y = 1
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_a_new_millennium
+	}
+}
+shared_focus = {
+	id = BRG_drafting_a_road_plan
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 2
+	y = 2
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_report_on_infastructure
+	}
+}
+shared_focus = {
+	id = BRG_engineer_corps
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 2
+	y = 3
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_drafting_a_road_plan
+	}
+}
+shared_focus = {
+	id = BRG_new_highways
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 2
+	y = 4
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_drafting_a_road_plan
+	}
+}
+shared_focus = {
+	id = BRG_the_public_transportation_issue
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 0
+	y = 2
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_report_on_infastructure
+	}
+}
+shared_focus = {
+	id = BRG_overtures_to_the_autobahn
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 0
+	y = 3
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_the_public_transportation_issue
+	}
+}
+shared_focus = {
+	id = BRG_new_bus_routes
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 0
+	y = 4
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_overtures_to_the_autobahn
+	}
+}
+shared_focus = {
+	id = BRG_reconnecting_burgundy
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 1
+	y = 5
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_new_bus_routes
+	}
+	prerequisite = {
+		focus = BRG_new_highways
+	}
+}
+shared_focus = {
+	id = BRG_a_report_on_industry
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 11
+	y = 1
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_a_new_millennium
+	}
+}
+shared_focus = {
+	id = BRG_the_troubled_grid
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 8
+	y = 2
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_a_report_on_industry
+	}
+}
+shared_focus = {
+	id = BRG_revitalize
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 8
+	y = 3
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_the_troubled_grid
+	}
+}
+shared_focus = {
+	id = BRG_expand
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 8
+	y = 4
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_revitalize
+	}
+}
+shared_focus = {
+	id = BRG_and_renew
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 8
+	y = 5
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_expand
+	}
+}
+shared_focus = {
+	id = BRG_rodomo_burgundys_scar
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 11
+	y = 2
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_a_report_on_industry
+	}
+}
+shared_focus = {
+	id = BRG_blow_up_rodomo
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 10
+	y = 3
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_rodomo_burgundys_scar
+	}
+	mutually_exclusive = {
+		focus = BRG_salvage_romdomo
+	}
+}
+shared_focus = {
+	id = BRG_salvage_romdomo
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 12
+	y = 3
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_rodomo_burgundys_scar
+	}
+	mutually_exclusive = {
+		focus = BRG_blow_up_rodomo
+	}
+}
+shared_focus = {
+	id = BRG_a_more_quiet_demolition
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 12
+	y = 4
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_salvage_romdomo
+	}
+}
+shared_focus = {
+	id = BRG_and_a_new_start
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 12
+	y = 5
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_a_more_quiet_demolition
+	}
+}
+shared_focus = {
+	id = BRG_a_new_start
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 10
+	y = 4
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_blow_up_rodomo
+	}
+}
+shared_focus = {
+	id = BRG_call_in_the_architects
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 10
+	y = 5
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_a_new_start
+	}
+}
+shared_focus = {
+	id = BRG_the_toxic_water_supply
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 14
+	y = 2
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_a_report_on_industry
+	}
+}
+shared_focus = {
+	id = BRG_out_with_the_old_pipes
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 14
+	y = 3
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_the_toxic_water_supply
+	}
+}
+shared_focus = {
+	id = BRG_in_with_the_new_pipes
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 14
+	y = 4
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_out_with_the_old_pipes
+	}
+}
+shared_focus = {
+	id = BRG_clean_water
+	#icon = CFS_presidential_adress_1#
+	ai_will_do = {	factor = 1	}
+	cost = 2
+	x = 14
+	y = 5
+	available_if_capitulated = no
+	completion_reward = {
+
+	}
+	prerequisite = {
+		focus = BRG_in_with_the_new_pipes
+	}
+}

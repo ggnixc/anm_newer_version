@@ -1,0 +1,212 @@
+default = no
+
+shared_focus = {
+	id = PNR_Entering_the_New_Millenium
+	icon = GFX_focus_PNR_Entering_the_New_Millenium
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 2
+	y = 0
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Jobs_For_Every_Frenchman
+	icon = GFX_focus_PNR_Jobs_For_Every_Frenchman
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = PNR_Entering_the_New_Millenium
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Economic_Prosperity
+	icon = GFX_focus_PNR_Economic_Prosperity
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 2
+	y = 1
+	prerequisite = {
+		focus = PNR_Entering_the_New_Millenium
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Reports_From_Haute_Volta
+	icon = GFX_focus_PNR_Reports_From_Haute_Volta
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 4
+	y = 1
+	prerequisite = {
+		focus = PNR_Entering_the_New_Millenium
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Everybody_Loves_De_Viliers
+	icon = GFX_focus_PNR_Everybody_Loves_De_Viliers
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 2
+	y = 2
+	prerequisite = {
+		focus = PNR_Reports_From_Haute_Volta
+	}
+	prerequisite = {
+		focus = PNR_Economic_Prosperity
+	}
+	prerequisite = {
+		focus = GFX_focus_PNR_Jobs_For_Every_Frenchman
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Hunt_For_Trade_Partners
+	icon = GFX_focus_PNR_Hunt_For_Trade_Partners
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 0
+	y = 3
+	prerequisite = {
+		focus = PNR_Everybody_Loves_De_Viliers
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_What_Kind_of_Trade_Partners
+	icon = GFX_focus_PNR_What_Kind_of_Trade_Partners
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 0
+	y = 4
+	prerequisite = {
+		focus = PNR_Hunt_For_Trade_Partners
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_All_Kinds
+	icon = GFX_focus_PNR_All_Kinds
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 0
+	y = 5
+	prerequisite = {
+		focus = PNR_What_Kind_of_Trade_Partners
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_A_Good_Deal_Struck
+	icon = GFX_focus_PNR_A_Good_Deal_Struck
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 1
+	y = 6
+	prerequisite = {
+		focus = PNR_All_Kinds
+	}
+	prerequisite = {
+		focus = PNR_Subsidize_What_Already_Exists
+	}
+
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Reelection_Secured
+	icon = GFX_focus_PNR_Reelection_Secured
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 3
+	y = 6
+	prerequisite = {
+		focus = PNR_All_Kinds
+	}
+	prerequisite = {
+		focus = PNR_Subsidize_What_Already_Exists
+	}
+
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Northern_Economic_Growth_Report
+	icon = GFX_focus_PNR_Northern_Economic_Growth_Report
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 4
+	y = 3
+	prerequisite = {
+		focus = PNR_Everybody_Loves_De_Viliers
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Encourage_Small_Businesses
+	icon = GFX_focus_PNR_Encourage_Small_Businesses
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 4
+	y = 4
+	prerequisite = {
+		focus = PNR_Northern_Economic_Growth_Report
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Subsidize_What_Already_Exists
+	icon = GFX_focus_PNR_Subsidize_What_Already_Exists
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 4
+	y = 5
+	prerequisite = {
+		focus = PNR_Encourage_Small_Businesses
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = PNR_Tenures_End_Is_Near
+	icon = GFX_focus_PNR_Tenures_End_Is_Near
+	ai_will_do = {	factor = 1	}
+	cost = 5
+	x = 2
+	y = 7
+	prerequisite = {
+		focus = PNR_A_Good_Deal_Struck
+	}
+	prerequisite = {
+		focus = PNR_Reelection_Secured
+	}
+	available_if_capitulated = no
+	completion_reward = {
+	}
+}

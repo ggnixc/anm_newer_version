@@ -1,0 +1,53 @@
+ideas = {
+	
+	country = {
+		
+		MOS_anti_soviet_fanatiscism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MOS_anti_soviet_fanatiscism" }
+			removal_cost = -1
+			picture = MOS_anti_soviet_fanatiscism
+			
+			allowed = {
+				always = no
+			}
+ 
+			modifier = {
+				war_support_factor = 0.40
+				autonomy_gain_warscore_factor = 0.20
+				stability_weekly = -0.01
+			}
+		}
+		
+		MOS_refugee_conscripts = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MOS_refugee_conscripts" }
+			removal_cost = -1
+			picture = MOS_refugee_conscripts
+			
+			allowed = {
+				always = no
+			}
+            
+			modifier = {
+				weekly_manpower = 280
+				local_manpower = 0.20
+				resistance_damage_to_garrison = -0.20
+			}
+		}
+		
+		MOS_the_contradiction = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MOS_the_contradiction" }
+			removal_cost = -1
+			picture = MOS_the_contradiction
+			
+			allowed = {
+				always = no
+			}
+          
+			modifier = {
+				
+			}
+		}
+		
+		
+	}
+}
