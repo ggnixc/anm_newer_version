@@ -12,8 +12,10 @@ focus_tree = {
 		x = 8
 		y = 1
 		completion_reward = {
+			hidden_effect = {
+				country_event = GER_focus_event.1
+			}
 			add_political_power = 100
-			country_event = GER_focus_event.1
 		}
 	}
 	
@@ -28,9 +30,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_the_eagles_reign
 		completion_reward = {
-			add_stability = -0.10
-			tno_security_improve
-			country_event = GER_focus_event.2 
+			hidden_effect = {
+				country_event = GER_focus_event.2
+				swap_ideas = {
+					remove_idea = tno_security_preemptive_security
+					add_idea = tno_security_totalitarian
+				}
+			}
+			add_ideas = GER_the_weltnetz
 		}
 	}
 	
@@ -45,7 +52,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_into_the_digital_age
 		completion_reward = {
-			country_event = GER_focus_event.13
+			hidden_effect = {
+				country_event = GER_focus_event.13
+			}
+			add_research_slot = 1
 		}
 	}
 	
@@ -60,8 +70,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_into_the_digital_age
 		completion_reward = {
-			add_idea = { GER_high_tech_military } 
-			country_event = GER_focus_event.3 
+			hidden_effect = {
+				country_event = GER_focus_event.3
+			}
+			add_ideas = { GER_high_tech_military } 
+			add_manpower = 100000
 		}
 	}
 	
@@ -79,7 +92,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_army_of_the_future
 		completion_reward = {
-			country_event = GER_focus_event.4
+			hidden_effect = {
+				country_event = GER_focus_event.4
+			}
+			swap_ideas = {
+				remove_idea = tno_safety_acceptable_regulations
+				add_idea = tno_safety_excellent_regulations
+			}
 		}
 	}
 	
@@ -95,8 +114,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_the_eagles_reign
 		completion_reward = {
-			country_event = GER_focus_event.5 
-			country_event = { id = GER_focus_event.6 days = 14 }
+			hidden_effect = {
+				country_event = GER_focus_event.5
+				country_event = { id = GER_focus_event.6 days = 14 }
+			}
+			tno_improve_admin_efficiency = yes
+			add_timed_idea = {
+				idea = GER_fulfilled_people
+				days = 60
+			}
 		}
 	}
 	
@@ -111,7 +137,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_the_eagles_reign
 		completion_reward = {
-			country_event = GER_focus_event.7
+			hidden_effect = {
+				country_event = GER_focus_event.7
+			}
+			add_popularity = {
+				ideology = national_socialism
+				popularity = 0.05
+			}
+			add_political_power = 50
 		}
 	}
 	
@@ -144,7 +177,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_meet_with_security_council
 		completion_reward = {
-			country_event = GER_focus_event.15
+			hidden_effect = {
+				country_event = GER_focus_event.15
+			}
+			add_war_support = 0.15
+			add_stability = 0.15
+			add_command_power = 15
 		}
 	}
 	
@@ -162,7 +200,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_endless_stability
 		completion_reward = {
-			country_event = GER_focus_event.11
+			hidden_effect = {
+				country_event = GER_focus_event.11
+			}
+			custom_effect_tooltip = GER_harvest_from_afar_tt
 		}
 	}
 	
@@ -181,7 +222,9 @@ focus_tree = {
 				idea = GER_euromark_preperations
 				days = 180
 			}
-			country_event = GER_focus_event.16
+			hidden_effect = {
+				country_event = GER_focus_event.16
+			}
 		}
 	}
 	
@@ -196,7 +239,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_introduce_the_euromark
 		completion_reward = {
-			country_event = GER_focus_event.17
+			hidden_effect = {
+				country_event = GER_focus_event.17
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
 		}
 	}
 	
@@ -211,8 +257,18 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_introduce_the_euromark
 		completion_reward = {
-			country_event = GER_focus_event.8
-			country_event = { id = GER_focus_event.9 days = 14 }
+			hidden_effect = {
+				country_event = GER_focus_event.8
+				country_event = { id = GER_focus_event.9 days = 14 }
+			}
+			add_opinion_modifier = {
+				target = SWE
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = DEN
+				modifier = offered_support
+			}
 		}
 	}
 	
@@ -234,7 +290,9 @@ focus_tree = {
 				remove_idea = GER_millenium_rise
 				add_idea = GER_millenium_boom
 			}
-			country_event = GER_focus_event.10
+			hidden_effect = {
+				country_event = GER_focus_event.10
+			}
 		}
 	}
 	
@@ -252,7 +310,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_a_new_wirtschaftswunder
 		completion_reward = {
-			country_event = GER_focus_event.18
+			hidden_effect = {
+				country_event = GER_focus_event.18
+			}
+			add_timed_idea = {
+				idea = GER_out_of_the_world_discoveries
+				days = 364
+			}
 		}
 	}
 	
@@ -270,11 +334,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_breaching_the_unknown
 		completion_reward = {
-			add_timed_idea = {
-				idea = GER_out_of_the_world_discoveries
-				days = 364
+			hidden_effect = { 
+				country_event = GER_focus_event.12
+			} 
+			every_subject_country = { 
+				add_autonomy_score = {
+					value = -10
+				}
 			}
-			country_event = GER_focus_event.12
 		}
 	}
 	
@@ -289,8 +356,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_a_thousand_years_more
 		completion_reward = {
-			country_event = GER_focus_event.19
-			country_event = { id = GER_focus_event.20 days = 14 }
+			hidden_effect = {
+				country_event = GER_focus_event.19
+				country_event = { id = GER_focus_event.20 days = 14 }
+			}
+			custom_effect_tooltip = GER_launch_the_euromark_tt
 		}
 	}
 }
