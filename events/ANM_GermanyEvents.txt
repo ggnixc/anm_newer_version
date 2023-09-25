@@ -213,6 +213,15 @@ country_event = { #Event for ‘Reign of the Eagle’
 
 	option = { 
 		name = GER_focus_event.1.a
+		hidden_effect = { 
+			POL = { 
+				add_timed_idea = {
+					idea = POL_anniversary_poland_occupation
+					days = 230
+				}
+			}
+			country_event = { id = GER_misc_main_event.2 days = 230 }
+		}
 	}
 }
 country_event = { #Event for ‘Into the Digital Age’
@@ -546,6 +555,21 @@ country_event = { #German-Irish relationship: Status Quo
 
 	option = { 
 		name = GER_misc_main_event.1.a
+	}
+}
+country_event = { #Annexation RL Polen
+	id = GER_misc_main_event.2
+	title = GER_misc_main_event.2.t
+	desc = GER_misc_main_event.2.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.2.a
+		annex_country = { target = POL transfer_troops = yes }
 	}
 }
 

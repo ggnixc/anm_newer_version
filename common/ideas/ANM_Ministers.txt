@@ -583,7 +583,7 @@ ideas = {
 			cancel_if_invalid = no
 			ledger = civilian
 		}
-		 AST_Bill_Hayden_hog = {
+		AST_Bill_Hayden_hog = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AST_Bill_Hayden_hog"}
 			allowed = { original_tag = AST }
 			picture = "AST_Bill_Hayden_hog"
@@ -592,6 +592,20 @@ ideas = {
 			}
 			traits = {
 				AST_Bill_Hayden_hog_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		POL_minister_Jerzy_Treder_hog = { 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea POL_minister_Jerzy_Treder_hog"}
+			allowed = { original_tag = POL }
+			picture = "POL_minister_Jerzy_Treder_hog"
+			available = {
+				tag = POL
+			}
+			traits = {
+				head_of_government
+				POL_minister_Jerzy_Treder_hog_desc
 			}
 			cancel_if_invalid = no
 			ledger = civilian
@@ -1162,6 +1176,20 @@ ideas = {
 			traits = {
 				security_minister
 				VLG_minister_Peter_Neustadter_sec_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		POL_minister_Henryk_Glucklich_sec = {   
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea POL_minister_Henryk_Glucklich_sec"}
+			allowed = { original_tag = POL }
+			picture = "POL_minister_Henryk_Glucklich_sec"
+			available = {
+				tag = POL
+			}
+			traits = {
+				security_minister
+				POL_minister_Henryk_Glucklich_sec_desc
 			}
 			cancel_if_invalid = no
 			ledger = civilian
@@ -1737,6 +1765,20 @@ ideas = {
 			cancel_if_invalid = no
 			ledger = civilian
 		}
+		POL_minister_Edward_Flak_for = {  
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea POL_minister_Edward_Flak_for"}
+			allowed = { original_tag = POL }
+			picture = "POL_minister_Edward_Flak_for"
+			available = {
+				tag = POL
+			}
+			traits = {
+				foreign_minister
+				POL_minister_Edward_Flak_for_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
 	}
 
 	economy_minister = {
@@ -2289,6 +2331,20 @@ ideas = {
 			traits = {
 				economy_minister
 				VLG_minister_Philip_Anschutz_eco_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		POL_minister_Siegfried_Emil_Spindler_eco = {  
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea POL_minister_Siegfried_Emil_Spindler_eco"}
+			allowed = { original_tag = POL }
+			picture = "POL_minister_Siegfried_Emil_Spindler_eco"
+			available = {
+				tag = POL
+			}
+			traits = {
+				economy_minister
+				POL_minister_Siegfried_Emil_Spindler_eco_desc
 			}
 			cancel_if_invalid = no
 			ledger = civilian
