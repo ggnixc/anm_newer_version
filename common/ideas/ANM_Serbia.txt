@@ -1,0 +1,55 @@
+ideas = {
+
+	country = {
+
+		SER_German_Controlled_Economy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_German_Controlled_Economy"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = WAL_german_controlled_economy
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.25   
+			}
+		}
+		SER_German_Garrison = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_German_Garrison"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = MAD_german_garrisons_4
+			modifier = {
+				conscription_factor = -0.05 
+				army_org_factor = -0.10 
+				offence = -0.25 
+				defence = -0.25
+			}
+		}
+		SER_Chetnik_Kingdom = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SER_Chetnik_Kingdom"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SER_Chetnik_Kingdom
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.10
+			}
+		}
+
+	}
+}		
