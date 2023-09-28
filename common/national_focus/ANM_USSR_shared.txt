@@ -2,7 +2,7 @@
 shared_focus = {
 	id = SOV_union_resurgent
 	icon = GFX_SOV_union_resurgent
-	cost = 5.00
+	cost = 4.00
 	x = 10
 	y = 0
 	ai_will_do = { 
@@ -15,7 +15,7 @@ shared_focus = {
 	id = SOV_secretary_romanov
 	icon = GFX_SOV_secretary_romanov
 	relative_position_id = SOV_union_resurgent
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_union_resurgent
 	}
@@ -31,7 +31,7 @@ shared_focus = {
 	id = SOV_29th_kpss_congress
 	icon = GFX_SOV_29th_kpss_congress
 	relative_position_id = SOV_secretary_romanov
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_secretary_romanov
 	}
@@ -47,7 +47,7 @@ shared_focus = {
 	id = SOV_uphold_marxism_leninism
 	icon = GFX_SOV_uphold_marxism_leninism
 	relative_position_id = SOV_29th_kpss_congress
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_29th_kpss_congress
 	}
@@ -63,7 +63,7 @@ shared_focus = {
 	id = SOV_party_unity
 	icon = GFX_SOV_party_unity
 	relative_position_id = SOV_29th_kpss_congress
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_29th_kpss_congress
 	}
@@ -79,7 +79,7 @@ shared_focus = {
 	id = SOV_eight_five_year_plan
 	icon = GFX_SOV_eight_five_year_plan
 	relative_position_id = SOV_uphold_marxism_leninism
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_uphold_marxism_leninism
 	}
@@ -98,7 +98,7 @@ shared_focus = {
 	id = SOV_new_economic_policy
 	icon = GFX_SOV_new_economic_policy
 	relative_position_id = SOV_eight_five_year_plan
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_eight_five_year_plan
 	}
@@ -120,7 +120,7 @@ shared_focus = {
 	id = SOV_limited_free_enterprise
 	icon = GFX_SOV_limited_free_enterprise
 	relative_position_id = SOV_new_economic_policy
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_eight_five_year_plan
 	}
@@ -142,7 +142,7 @@ shared_focus = {
 	id = SOV_top_down_approach
 	icon = GFX_SOV_top_down_approach
 	relative_position_id = SOV_new_economic_policy
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_eight_five_year_plan
 	}
@@ -161,46 +161,19 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = SOV_tighten_comecon_integration
-	icon = GFX_SOV_tighten_comecon_integration
-	relative_position_id = SOV_new_economic_policy
-	cost = 5.00
-	prerequisite = {
-		focus = SOV_top_down_approach
-		focus = SOV_limited_free_enterprise
-		focus = SOV_new_economic_policy
-	}
-	mutually_exclusive = {
-		focus = SOV_pizza_hut_moskva
-	}
-	mutually_exclusive = {
-		focus = SOV_increase_self_reliance
-	}
-	x = 0
-	y = 1
-	ai_will_do = { 
-		factor = 1 
-	}
-	completion_reward = {
-	}
-}
-shared_focus = {
 	id = SOV_pizza_hut_moskva
 	icon = GFX_SOV_pizza_hut_moskva
 	relative_position_id = SOV_limited_free_enterprise
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_top_down_approach
 		focus = SOV_limited_free_enterprise
 		focus = SOV_new_economic_policy
 	}
 	mutually_exclusive = {
-		focus = SOV_tighten_comecon_integration
-	}
-	mutually_exclusive = {
 		focus = SOV_increase_self_reliance
 	}
-	x = 0
+	x = 1
 	y = 1
 	ai_will_do = { 
 		factor = 1 
@@ -212,7 +185,7 @@ shared_focus = {
 	id = SOV_increase_self_reliance
 	icon = GFX_SOV_increase_self_reliance
 	relative_position_id = SOV_top_down_approach
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_top_down_approach
 		focus = SOV_limited_free_enterprise
@@ -221,10 +194,7 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = SOV_pizza_hut_moskva
 	}
-	mutually_exclusive = {
-		focus = SOV_tighten_comecon_integration
-	}
-	x = 0
+	x = -1
 	y = 1
 	ai_will_do = { 
 		factor = 1 
@@ -232,13 +202,29 @@ shared_focus = {
 	completion_reward = {
 	}
 }
-
+shared_focus = {
+	id = SOV_tighten_comecon_integration
+	icon = GFX_SOV_tighten_comecon_integration
+	relative_position_id = SOV_new_economic_policy
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_increase_self_reliance
+		focus = SOV_pizza_hut_moskva
+	}
+	x = 0
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
 
 shared_focus = {
 	id = SOV_integrate_muscovy
 	icon = GFX_SOV_integrate_muscovy
 	relative_position_id =  SOV_secretary_romanov
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus =  SOV_secretary_romanov
 	}
@@ -251,96 +237,12 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = SOV_complete_relocating_germans
-	icon = GFX_SOV_complete_relocating_germans
-	relative_position_id =  SOV_integrate_muscovy
-	cost = 5.00
-	prerequisite = {
-		focus =  SOV_integrate_muscovy
-	}
-	mutually_exclusive = {
-		focus = SOV_amnesty_for_expertise
-	}
-	mutually_exclusive = {
-		focus = SOV_let_the_mgb_finish
-	}
-	x = 0
-	y = 1
-	ai_will_do = { 
-		factor = 1 
-	}
-	completion_reward = {
-	}
-}
-shared_focus = {
-	id = SOV_amnesty_for_expertise
-	icon = GFX_SOV_amnesty_for_expertise
-	relative_position_id =  SOV_complete_relocating_germans
-	cost = 5.00
-	prerequisite = {
-		focus =  SOV_integrate_muscovy
-	}
-	mutually_exclusive = {
-		focus = SOV_complete_relocating_germans
-	}
-	mutually_exclusive = {
-		focus = SOV_let_the_mgb_finish
-	}
-	x = -2
-	y = 0
-	ai_will_do = { 
-		factor = 1 
-	}
-	completion_reward = {
-	}
-}
-shared_focus = {
-	id = SOV_let_the_mgb_finish
-	icon = GFX_SOV_let_the_mgb_finish
-	relative_position_id =  SOV_complete_relocating_germans
-	cost = 5.00
-	prerequisite = {
-		focus =  SOV_integrate_muscovy
-	}
-	mutually_exclusive = {
-		focus = SOV_complete_relocating_germans
-	}
-	mutually_exclusive = {
-		focus = SOV_amnesty_for_expertise
-	}
-	x = 2
-	y = 0
-	ai_will_do = { 
-		factor = 1 
-	}
-	completion_reward = {
-	}
-}
-shared_focus = {
-	id = SOV_no_to_drugs
-	icon = GFX_SOV_no_to_drugs
-	relative_position_id =  SOV_complete_relocating_germans
-	cost = 5.00
-	prerequisite = {
-		focus =  SOV_complete_relocating_germans
-		focus =  SOV_amnesty_for_expertise
-		focus =  SOV_let_the_mgb_finish
-	}
-	x = 0
-	y = 1
-	ai_will_do = { 
-		factor = 1 
-	}
-	completion_reward = {
-	}
-}
-shared_focus = {
 	id = SOV_refit_railway_gauges
 	icon = GFX_SOV_refit_railway_gauges
-	relative_position_id = SOV_no_to_drugs
-	cost = 5.00
+	relative_position_id = SOV_integrate_muscovy
+	cost = 4.00
 	prerequisite = {
-		focus =  SOV_no_to_drugs
+		focus =  SOV_integrate_muscovy
 	}
 	x = -1
 	y = 1
@@ -353,10 +255,10 @@ shared_focus = {
 shared_focus = {
 	id = SOV_resettlement_programs
 	icon = GFX_SOV_resettlement_programs
-	relative_position_id =  SOV_no_to_drugs
-	cost = 5.00
+	relative_position_id =  SOV_integrate_muscovy
+	cost = 4.00
 	prerequisite = {
-		focus =  SOV_no_to_drugs
+		focus =  SOV_integrate_muscovy
 	}
 	x = 1
 	y = 1
@@ -367,21 +269,15 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = SOV_repurpose_abandoned_infra
-	icon = GFX_SOV_repurpose_abandoned_infra
-	relative_position_id =  SOV_no_to_drugs
-	cost = 5.00
+	id = SOV_let_the_mgb_finish
+	icon = GFX_SOV_let_the_mgb_finish
+	relative_position_id =  SOV_integrate_muscovy
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_refit_railway_gauges
 	}
 	prerequisite = {
 		focus = SOV_resettlement_programs
-	}
-	mutually_exclusive = {
-		focus = SOV_restore_historical_buildings
-	}
-	mutually_exclusive = {
-		focus = SOV_construct_khruschevka
 	}
 	x = 0
 	y = 2
@@ -392,21 +288,34 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = SOV_restore_historical_buildings
-	icon = GFX_SOV_restore_historical_buildings
-	relative_position_id =  SOV_repurpose_abandoned_infra
-	cost = 5.00
+	id = SOV_construct_khruschevka
+	icon = GFX_SOV_construct_khruschevka
+	relative_position_id = SOV_let_the_mgb_finish
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_refit_railway_gauges
 	}
 	prerequisite = {
 		focus = SOV_resettlement_programs
 	}
-	mutually_exclusive = {
-		focus = SOV_repurpose_abandoned_infra
+	x = 2
+	y = 0
+	ai_will_do = { 
+		factor = 1 
 	}
-	mutually_exclusive = {
-		focus = SOV_construct_khruschevka
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_no_to_drugs
+	icon = GFX_SOV_no_to_drugs
+	relative_position_id = SOV_let_the_mgb_finish
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_refit_railway_gauges
+	}
+	prerequisite = {
+		focus = SOV_resettlement_programs
 	}
 	x = -2
 	y = 0
@@ -417,24 +326,94 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = SOV_construct_khruschevka
-	icon = GFX_SOV_construct_khruschevka
-	relative_position_id = SOV_repurpose_abandoned_infra
-	cost = 5.00
+	id = SOV_complete_relocating_germans
+	icon = GFX_SOV_complete_relocating_germans
+	relative_position_id =  SOV_let_the_mgb_finish
+	cost = 4.00
 	prerequisite = {
-		focus = SOV_refit_railway_gauges
-	}
-	prerequisite = {
-		focus = SOV_resettlement_programs
+		focus = SOV_let_the_mgb_finish
 	}
 	mutually_exclusive = {
+		focus = SOV_amnesty_for_expertise
+	}
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_amnesty_for_expertise
+	icon = GFX_SOV_amnesty_for_expertise
+	relative_position_id =  SOV_let_the_mgb_finish
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_let_the_mgb_finish
+	}
+	mutually_exclusive = {
+		focus = SOV_complete_relocating_germans
+	}
+	x = -1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_repurpose_abandoned_infra
+	icon = GFX_SOV_repurpose_abandoned_infra
+	relative_position_id = SOV_amnesty_for_expertise
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_amnesty_for_expertise
+	}
+	prerequisite = {
+		focus = SOV_complete_relocating_germans
+	}
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_restore_historical_buildings
+	icon = GFX_SOV_restore_historical_buildings
+	relative_position_id =  SOV_repurpose_abandoned_infra
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_repurpose_abandoned_infra
+	}
+	mutually_exclusive = {
+		focus = SOV_palace_of_the_soviets
+	}
+	x = -1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_palace_of_the_soviets
+	icon = GFX_SOV_palace_of_the_soviets
+	relative_position_id =  SOV_repurpose_abandoned_infra
+	cost = 4.00
+	prerequisite = {
 		focus = SOV_repurpose_abandoned_infra
 	}
 	mutually_exclusive = {
 		focus = SOV_restore_historical_buildings
 	}
-	x = 2
-	y = 0
+	x = 1
+	y = 1
 	ai_will_do = { 
 		factor = 1 
 	}
@@ -447,7 +426,7 @@ shared_focus = {
 	id = SOV_review_ssrs
 	icon = GFX_SOV_review_ssrs
 	relative_position_id =  SOV_secretary_romanov
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus =  SOV_secretary_romanov
 	}
@@ -460,65 +439,15 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = SOV_karelo_finnish_assr
-	icon = GFX_SOV_karelo_finnish_assr
-	relative_position_id =  SOV_review_ssrs
-	cost = 5.00
+	id = SOV_tabs_on_fer
+	icon = GFX_SOV_tabs_on_fer
+	relative_position_id = SOV_review_ssrs
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_review_ssrs
 	}
-	mutually_exclusive = {
-		focus = SOV_integrate_into_rsfsr
-	}
-	mutually_exclusive = {
-		focus = SOV_keep_karelo_finnish_ssr
-	}
-	x = 0
+	x = -1
 	y = 1
-	ai_will_do = { 
-		factor = 1 
-	}
-	completion_reward = {
-	}
-}
-shared_focus = {
-	id = SOV_keep_karelo_finnish_ssr
-	icon = GFX_SOV_keep_karelo_finnish_ssr
-	relative_position_id =  SOV_karelo_finnish_assr
-	cost = 5.00
-	prerequisite = {
-		focus =  SOV_review_ssrs
-	}
-	mutually_exclusive = {
-		focus = SOV_integrate_into_rsfsr
-	}
-	mutually_exclusive = {
-		focus = SOV_karelo_finnish_assr
-	}
-	x = -2
-	y = 0
-	ai_will_do = { 
-		factor = 1 
-	}
-	completion_reward = {
-	}
-}
-shared_focus = {
-	id = SOV_integrate_into_rsfsr
-	icon = GFX_SOV_integrate_into_rsfsr
-	relative_position_id =  SOV_karelo_finnish_assr
-	cost = 5.00
-	prerequisite = {
-		focus =  SOV_review_ssrs
-	}
-	mutually_exclusive = {
-		focus = SOV_keep_karelo_finnish_ssr
-	}
-	mutually_exclusive = {
-		focus = SOV_karelo_finnish_assr
-	}
-	x = 2
-	y = 0
 	ai_will_do = { 
 		factor = 1 
 	}
@@ -528,14 +457,12 @@ shared_focus = {
 shared_focus = {
 	id = SOV_kazakh_brothers
 	icon = GFX_SOV_kazakh_brothers
-	relative_position_id =  SOV_keep_karelo_finnish_ssr
-	cost = 5.00
+	relative_position_id = SOV_review_ssrs
+	cost = 4.00
 	prerequisite = {
-		focus =  SOV_karelo_finnish_assr
-		focus =  SOV_keep_karelo_finnish_ssr
-		focus =  SOV_integrate_into_rsfsr
+		focus = SOV_review_ssrs
 	}
-	x = 0
+	x = 1
 	y = 1
 	ai_will_do = { 
 		factor = 1 
@@ -546,14 +473,12 @@ shared_focus = {
 shared_focus = {
 	id = SOV_turkic_ssrs
 	icon = GFX_SOV_turkic_ssrs
-	relative_position_id =  SOV_karelo_finnish_assr
-	cost = 5.00
+	relative_position_id = SOV_kazakh_brothers
+	cost = 4.00
 	prerequisite = {
-		focus =  SOV_karelo_finnish_assr
-		focus =  SOV_keep_karelo_finnish_ssr
-		focus =  SOV_integrate_into_rsfsr
+		focus = SOV_kazakh_brothers
 	}
-	x = 0
+	x = 1
 	y = 1
 	ai_will_do = { 
 		factor = 1 
@@ -564,14 +489,12 @@ shared_focus = {
 shared_focus = {
 	id = SOV_polish_assr
 	icon = GFX_SOV_polish_assr
-	relative_position_id = SOV_integrate_into_rsfsr
-	cost = 5.00
+	relative_position_id = SOV_tabs_on_fer
+	cost = 4.00
 	prerequisite = {
-		focus =  SOV_karelo_finnish_assr
-		focus =  SOV_keep_karelo_finnish_ssr
-		focus =  SOV_integrate_into_rsfsr
+		focus = SOV_tabs_on_fer
 	}
-	x = 0
+	x = -1
 	y = 1
 	ai_will_do = { 
 		factor = 1 
@@ -580,20 +503,72 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = SOV_tabs_on_fer
-	icon = GFX_SOV_tabs_on_fer
-	relative_position_id =  SOV_turkic_ssrs
-	cost = 5.00
+	id = SOV_status_of_karelia_ssr
+	icon = GFX_SOV_status_of_karelia_ssr
+	relative_position_id = SOV_tabs_on_fer
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_tabs_on_fer
+	}
 	prerequisite = {
 		focus = SOV_kazakh_brothers
 	}
-	prerequisite = {
-		focus = SOV_turkic_ssrs
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
 	}
-	prerequisite = {
-		focus = SOV_polish_assr
+	completion_reward = {
 	}
-	x = 0
+}
+shared_focus = {
+	id = SOV_keep_karelo_finnish_ssr
+	icon = GFX_SOV_keep_karelo_finnish_ssr
+	relative_position_id =  SOV_status_of_karelia_ssr
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_status_of_karelia_ssr
+	}
+	mutually_exclusive = {
+		focus = SOV_integrate_into_rsfsr
+	}
+	x = -1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_integrate_into_rsfsr
+	icon = GFX_SOV_integrate_into_rsfsr
+	relative_position_id =  SOV_status_of_karelia_ssr
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_status_of_karelia_ssr
+	}
+	mutually_exclusive = {
+		focus = SOV_keep_karelo_finnish_ssr
+	}
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_violate_treaty_riga
+	icon = GFX_SOV_violate_treaty_riga
+	relative_position_id = SOV_keep_karelo_finnish_ssr
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_keep_karelo_finnish_ssr
+		focus = SOV_integrate_into_rsfsr
+	}
+	x = 1
 	y = 1
 	ai_will_do = { 
 		factor = 1 
@@ -604,55 +579,34 @@ shared_focus = {
 shared_focus = {
 	id = SOV_establish_exile_ssrs
 	icon = GFX_SOV_establish_exile_ssrs
-	relative_position_id =  SOV_review_ssrs
-	cost = 5.00
+	relative_position_id = SOV_violate_treaty_riga
+	cost = 4.00
 	prerequisite = {
-		focus =  SOV_tabs_on_fer
+		focus = SOV_violate_treaty_riga
 	}
-	x = 1
-	y = 4
+	x = 0
+	y = 1
 	ai_will_do = { 
 		factor = 1 
 	}
 	completion_reward = {
 	}
 }
-shared_focus = {
-	id = SOV_violate_treaty_riga
-	icon = GFX_SOV_violate_treaty_riga
-	relative_position_id =  SOV_review_ssrs
-	cost = 5.00
-	prerequisite = {
-		focus =  SOV_tabs_on_fer
-	}
-	x = -1
-	y = 4
-	ai_will_do = { 
-		factor = 1 
-	}
-	completion_reward = {
-	}
-}
-
 
 shared_focus = {
 	id = SOV_diamond_jubilee
 	icon = GFX_SOV_diamond_jubilee
 	relative_position_id = SOV_tighten_comecon_integration
-	cost = 5.00
+	cost = 4.00
 	prerequisite = {
 		focus = SOV_tighten_comecon_integration
-		focus = SOV_increase_self_reliance
-		focus = SOV_pizza_hut_moskva
 	}
 	prerequisite = {
-		focus = SOV_repurpose_abandoned_infra
 		focus = SOV_restore_historical_buildings
-		focus = SOV_construct_khruschevka
+		focus = SOV_palace_of_the_soviets
 	}
 	prerequisite = {
 		focus = SOV_establish_exile_ssrs
-		focus = SOV_violate_treaty_riga
 	}
 	x = 0
 	y = 2
