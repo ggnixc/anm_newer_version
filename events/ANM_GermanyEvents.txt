@@ -572,6 +572,67 @@ country_event = { #Annexation RL Polen
 		annex_country = { target = POL transfer_troops = yes }
 	}
 }
+country_event = { #Load Phase 2
+	id = GER_misc_main_event.3
+	title = GER_misc_main_event.3.t
+	desc = GER_misc_main_event.3.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.3.a
+		load_focus_tree = GER_focus_phase_2
+		complete_national_focus = GER_the_euromark_triumphs
+	}
+}
+country_event = { #Load Iranian Civil War
+	id = GER_misc_main_event.4
+	title = GER_misc_main_event.4.t
+	desc = GER_misc_main_event.4.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.4.a
+		load_focus_tree = { tree = GER_focus_phase_2_icw keep_completed = yes }
+	}
+}
+country_event = { #Load Finnish Civil War
+	id = GER_misc_main_event.5
+	title = GER_misc_main_event.5.t
+	desc = GER_misc_main_event.5.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.5.a
+		load_focus_tree = { tree = GER_focus_phase_2_icw_fcw keep_completed = yes }
+	}
+}
+country_event = { #Load Phase 2 Final Showdown
+	id = GER_misc_main_event.6
+	title = GER_misc_main_event.6.t
+	desc = GER_misc_main_event.6.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.6.a
+		load_focus_tree = { tree = GER_focus_phase_2_final keep_completed = yes }
+	}
+}
 
 
 

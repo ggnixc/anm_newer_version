@@ -8,18 +8,22 @@ set_politics = {
 }
 
 set_popularities = {
-	communist = 2
+	communist = 0
 	ultranationalism = 0
-	socialist = 2
-	progressivism = 1
-	liberalism = 3
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
 	liberal_conservatism = 0
-	conservatism = 2
-	paternalism = 24
+	conservatism = 0
+	paternalism = 0
 	despotism = 0
-	fascism = 20
-	national_socialism = 45
-	esoteric_nazism = 1
+	fascism = 0
+	national_socialism = 37
+	national_socialism_1 = 45
+	national_socialism_2 = 2
+	national_socialism_3 = 5
+	national_socialism_4 = 11
+	esoteric_nazism = 0
 }
 
 if = {
@@ -203,20 +207,23 @@ set_naval_oob = "GER_navy_2000"
 set_air_oob = "GER_2000_air"
 
 add_ideas = {
-	#Faction Status
+	## Faction Status ##
 	Pakt_Leader
-	## Spirits
+
+	## Spirits ##
 	GER_millenium_rise
 	GER_the_puppet_fuehrer
 	GER_the_ailing_order
 	GER_space_spirit
-	## Ministers
+
+	## Ministers ##
 	GER_minister_martin_mussgnug_hog
 	GER_minister_guenther_deckert_sec
 	GER_minister_joseph_fisher_for 
 	GER_minister_gerhardfrey_eco	
-	## Laws
-	# Political
+
+	### Laws ###
+	## Political ##
 	tno_political_parties_one_party_state
 	tno_religious_rights_laicism
 	tno_trade_unions_state_controlled
@@ -226,7 +233,8 @@ add_ideas = {
 	tno_press_rights_state_press_only
 	tno_vote_franchise_no_voting
 	tno_refugees_skilled
-	# Military
+
+	## Military ##
 	tno_conscription_volunteer_only
 	tno_women_banned
 	tno_military_supervision_military_policing
@@ -234,7 +242,8 @@ add_ideas = {
 	tno_training_combat_schooling
 	tno_racial_integration_none
 	tno_draft_exemptions_none
-	# Social
+
+	## Social ##
 	tno_safety_acceptable_regulations
 	tno_health_care_universal_health_care
 	tno_pollution_good_regulations
@@ -245,7 +254,8 @@ add_ideas = {
 	tno_minorities_oppression
 	tno_security_preemptive_security
 	tno_drugs_weedbanned
-	# Economic
+
+	## Economic ##
 	tno_trade_laws_export_focus
 	tno_economic_focus_civilian_economy
 	tno_tax_rate_low_taxation
@@ -256,7 +266,7 @@ add_ideas = {
 	tno_pensions_good_pensions
 	tno_unemployment_generous_subsidies
 
-	## Societal Development
+	## Societal Development ##
 	tno_nuclear_stockpile_massive
 	tno_poverty_rate_5
 	tno_army_professionalism_political_interference
@@ -267,10 +277,10 @@ add_ideas = {
 	tno_academic_base_secondary_schooling
 	tno_immigration_one
 	tno_birthrate_many
-	#Construction Level
+
+	## Construction Level ?!? ##
 	construction_level_5
 }
-
 
 set_research_slots = 4
 set_convoys = 200
@@ -345,30 +355,12 @@ set_variable = { GER_ANM_party_leadership_leaning = 25 }
 set_variable = { GER_ANM_party_leadership_influnce = 150 }
 
 
-
-
 set_country_flag = GER_nsdapgui_activatedanm
 
 country_event = {
     id = GER_anm_starterevents.1
     days = 103
 }
-
-country_event = {
-    id = GER_anm_starterevents.126
-    days = 81
-}
-
-country_event = {
-    id = GER_anm_starterevents.127
-    days = 29
-}
-country_event = {
-    id = GER_anm_starterevents.98
-    days = 51
-					}
-
-
 
 ### DIPLOMACY ###
 create_faction = Europakt
@@ -399,7 +391,6 @@ add_to_faction = WLN
 
 add_opinion_modifier = {target = ISR modifier = jewish_nation_anm }
 
-TNO_worsen_birthrate_med = yes
 if = {
 	limit = { has_dlc = "Together for Victory" }
 	set_autonomy = { target = POL autonomy_state = autonomy_reichsprotektorat }
@@ -428,7 +419,7 @@ if = {
 }
 
 
-### Leaders
+### Leaders ###
 create_country_leader = {
 	name = "Albert Friedrich Speer"
 	desc = "POLITICS_ALBERT_SPEER_JR_GERMANY_DESC"
@@ -439,65 +430,46 @@ create_country_leader = {
 	}
 }
 create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
+	name = "Martin Mußgnug"
+	desc = "POLITICS_MARTIN_MUSSGNUG_DESC"
+	picture = "Portrait_GER_Martin_Mussgnug.dds"
 	expire = "2099.1.1"
-	ideology = esoteric_nazism_subtype
+	ideology = national_socialism_1_idiosyncratic_nazism_subtype
 	traits = { 
 
 	}
 }
 create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
+	name = "Reichsforschungsinstitut Ahnenerbe"
+	desc = "POLITICS_AHNENERBE_DESC"
+	picture = "Portrait_GER_Ahnenerbe.dds"
 	expire = "2099.1.1"
-	ideology = liberalism_subtype
+	ideology = national_socialism_2_subtype
 	traits = { 
 
 	}
 }
 create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
+	name = "Deutsche Arbeitsfront"
+	desc = "POLITICS_DEUTSCHE_ARBEITSFRONT_DESC"
+	picture = "Portrait_GER_Deutsche_Arbeitsfront.dds"
 	expire = "2099.1.1"
-	ideology = progressivism_subtype
+	ideology = national_socialism_3_subtype
 	traits = { 
 
 	}
 }
 create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
+	name = "Kein Anführer"
+	desc = "POLITICS_KEIN_ANFUHRER_DESC"
+	picture = "Portrait_GER_Kein_Anfuhrer.dds"
 	expire = "2099.1.1"
-	ideology = conservatism_subtype
+	ideology = national_socialism_4_subtype
 	traits = { 
 
 	}
 }
-create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-	expire = "2099.1.1"
-	ideology = socialist_subtype
-	traits = { 
 
-	}
-}
-create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-	expire = "2099.1.1"
-	ideology = communist_subtype
-	traits = { 
-
-	}
-}
 #See TNO_Germany_scripted_effects.txt ~<3 xoxo calph  
 
 create_field_marshal = {
