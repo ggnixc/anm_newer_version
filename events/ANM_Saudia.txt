@@ -1,0 +1,657 @@
+﻿
+
+add_namespace = sau
+
+news_event = {
+	id = sau.1
+ 	title = "King Fahd Assasination"
+ 	desc = sau.1.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAU
+		AND = {
+			date > 1996.3.13
+		}
+	}
+
+
+ 	option = {
+ 		name = "God Rest his Soul"
+		ai_chance = { factor = 100 }
+		retire_character = SAU_Fahd_Bin_Abdulaziz
+		create_country_leader = {
+	          name = SAU_Allegiance_Council
+	          desc = "POLITICS_ALLEGINCE_COUNCIL_DESC"
+              picture = "gfx/leaders/SAU/Portrait_SAU_Allegiance_Council.dds"
+	          expire = "2999.1.1"
+	          ideology = despotism_absolute_monarchy_subtype
+              traits = {
+	          }
+        }
+		hidden_effect = {			
+			country_event = { id = sau.2 days = 3 }
+		}
+	}
+}
+country_event = {
+	id = sau.2
+ 	title = "Royal Selection"
+ 	desc = sau.2.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "Salman Bin Abdulaziz"
+		ai_chance = { factor = 60 }
+		stability_factor = 0.1
+        set_politics = {
+	       ruling_party = paternalism
+           elections_allowed = no
+           last_election = "1932.9.23"
+           election_frequency = 1000
+        }
+        add_popularity = {
+           ideology = despotism
+           popularity = -0.4
+        }
+        add_popularity = {
+           ideology = paternalism
+           popularity = 0.5
+        }
+	}
+    option = {
+ 		name = "Talal Bin Abdulaziz"
+		ai_chance = { factor = 10 }
+		stability_factor = -0.2
+        set_politics = {
+	       ruling_party = liberal_conservatism
+           elections_allowed = no
+           last_election = "1995.9.23"
+           election_frequency = 60
+        }
+        add_popularity = {
+           ideology = liberal_conservatism
+           popularity = 0.3
+        }
+        add_popularity = {
+           ideology = despotism
+           popularity = -0.3
+        }
+        hidden_effect = {			
+			country_event = { id = sau.3 days = 4 }
+		}
+	}
+    option = {
+ 		name = "Faisal Bin Fahd"
+		ai_chance = { factor = 30 }
+		stability_factor = 0.1
+        set_politics = {
+	       ruling_party = conservatism
+           elections_allowed = no
+           last_election = "1932.9.23"
+           election_frequency = 1000
+        }
+        add_popularity = {
+           ideology = conservatism
+           popularity = 0.5
+        }
+        add_popularity = {
+           ideology = despotism
+           popularity = -0.4
+        }
+	}
+}
+country_event = {
+	id = sau.3
+ 	title = "Women Driving?"
+ 	desc = sau.3.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "Wait, they can't already?"
+        stability_factor = -0.05
+		swap_ideas = {
+        remove_idea = tno_gender_rights_traditional_roles
+        add_idea = tno_gender_rights_women_in_the_workplace
+        }
+        hidden_effect = {			
+			country_event = { id = sau.4 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.4
+ 	title = "Abolish Capital Punishment?"
+ 	desc = sau.4.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "We don't live in Ottoman times"
+        stability_factor = -0.02
+		swap_ideas = {
+        remove_idea = tno_penal_system_capital_punishment
+        add_idea = tno_penal_system_incarceration
+        }
+        hidden_effect = {			
+			country_event = { id = sau.5 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.5
+ 	title = "Shia Citizens Rights?"
+ 	desc = sau.5.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "What a Backwards country we're"
+        stability_factor = -0.03
+		swap_ideas = {
+        remove_idea = tno_minorities_segregation
+        add_idea = tno_minorities_equal_rights
+        }
+        remove_ideas = {
+            SAU_shia_population_angry
+        }
+        hidden_effect = {			
+			country_event = { id = sau.6 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.6
+ 	title = "Loosen Surveillance?"
+ 	desc = sau.6.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "Why are our borders not patroled?"
+        stability_factor = -0.02
+		swap_ideas = {
+        remove_idea = tno_security_totalitarian
+        add_idea = tno_security_security_service
+        }
+        hidden_effect = {			
+			country_event = { id = sau.7 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.7
+ 	title = "Women in Military?"
+ 	desc = sau.7.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "Not really just as help"
+        stability_factor = -0.05
+		swap_ideas = {
+        remove_idea = tno_women_banned
+        add_idea = tno_women_noncombat_only
+        }
+        hidden_effect = {			
+			country_event = { id = sau.8 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.8
+ 	title = "Religous Equality?"
+ 	desc = sau.8.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "yeah why not"
+        stability_factor = -0.05
+		swap_ideas = {
+        remove_idea = tno_religious_rights_state_religion
+        add_idea = tno_religious_rights_pluralism
+        }
+        hidden_effect = {			
+			country_event = { id = sau.9 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.9
+ 	title = "Trade Unions?"
+ 	desc = sau.9.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "Only under us"
+        stability_factor = -0.02
+		swap_ideas = {
+        remove_idea = tno_trade_unions_illegal
+        add_idea = tno_trade_unions_state_controlled
+        }
+        hidden_effect = {			
+			country_event = { id = sau.10 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.10
+ 	title = "Liberal and Socialist Political Parties?"
+ 	desc = sau.10.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "Just Keep them in check"
+        stability_factor = -0.05
+		swap_ideas = {
+        remove_idea = tno_political_parties_one_party_state
+        add_idea = tno_political_parties_controlled_opposition
+        }
+        hidden_effect = {			
+			country_event = { id = sau.11 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.11
+ 	title = "Immigrant Workers Wages?"
+ 	desc = sau.11.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "Raise them a little"
+        stability_factor = -0.05
+		swap_ideas = {
+        remove_idea = tno_minimum_wage_low_minimum_wage
+        add_idea = tno_minimum_wage_acceptable_minimum
+        }
+        remove_ideas = {
+            SAU_Immigrant_Workers
+        }
+        hidden_effect = {			
+			country_event = { id = sau.12 days = 2 }
+		}
+	}
+}
+news_event = {
+	id = sau.12
+ 	title = "Salafists riots against Talal Reforms"
+ 	desc = sau.1.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Oh no"
+		ai_chance = { factor = 100 }
+        stability_factor = -0.1
+		hidden_effect = {			
+			country_event = { id = sau.13 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.13
+ 	title = "Salafists offer peace if Talal abdicate"
+ 	desc = sau.1.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Oh ok"
+		ai_chance = { factor = 0 }
+        stability_factor = 0.3 
+		hidden_effect = {			
+			country_event = { id = sau.14 days = 5 }
+		}
+	}
+    option = {
+ 		name = "Hell no you regressives"
+		ai_chance = { factor = 100 }
+        stability_factor = -0.04 
+		hidden_effect = {			
+			country_event = { id = sau.15 days = 5 }
+		}
+	}
+}
+news_event = {
+	id = sau.14
+ 	title = "Talal Abdication"
+ 	desc = sau.14.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+ 	option = {
+ 		name = "Salman Takesover"
+		ai_chance = { factor = 100 }
+		stability_factor = 0.1
+        set_politics = {
+	       ruling_party = paternalism
+           elections_allowed = no
+           last_election = "1932.9.23"
+           election_frequency = 1000
+        }
+        add_popularity = {
+           ideology = paternalism
+           popularity = 0.3
+        }
+		add_ideas = {
+			SAU_minister_Osama_hog
+		}
+	}
+    option = {
+ 		name = "Faisal Takesover"
+		ai_chance = { factor = 0 }
+		stability_factor = 0.1
+        set_politics = {
+	       ruling_party = conservatism
+           elections_allowed = no
+           last_election = "1932.9.23"
+           election_frequency = 1000
+        }
+        add_popularity = {
+           ideology = conservatism
+           popularity = 0.3
+        }
+		add_ideas = {
+			SAU_minister_Osama_hog
+		}
+	}
+}
+country_event = {
+	id = sau.15
+ 	title = "Salafists occupy Mecca"
+ 	desc = sau.15.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "We Must respect Mecca"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.1 
+		hidden_effect = {			
+			country_event = { id = sau.17 days = 5 }
+		}
+	}
+    option = {
+ 		name = "You think you can hide there"
+		ai_chance = { factor = 0 }
+        stability_factor = -0.1 
+		hidden_effect = {			
+			country_event = { id = sau.16 days = 5 }
+		}
+	}
+}
+news_event = {
+	id = sau.16
+ 	title = "Salafists are defeated"
+ 	desc = sau.16.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "LOL gg"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.3
+	}
+}
+country_event = {
+	id = sau.17
+ 	title = "Salafists Takeover Hejaz"
+ 	desc = sau.17.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Fortify Ridyeh"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.1 
+		hidden_effect = {			
+			country_event = { id = sau.18 days = 5 }
+		}
+	}
+    option = {
+ 		name = "Send troops to Hail"
+		ai_chance = { factor = 0 }
+        stability_factor = -0.1 
+		hidden_effect = {			
+			country_event = { id = sau.16 days = 5 }
+		}
+	}
+}
+country_event = {
+	id = sau.18
+ 	title = "Salafists Invade Hail"
+ 	desc = sau.18.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Send troops to Fight them"
+		ai_chance = { factor = 10 }
+        stability_factor = 0.1 
+		hidden_effect = {			
+			country_event = { id = sau.19 days = 5 }
+		}
+	}
+    option = {
+ 		name = "Stay in Ridyeh"
+		ai_chance = { factor = 70 }
+        stability_factor = -0.1 
+		hidden_effect = {			
+			country_event = { id = sau.16 days = 5 }
+		}
+	}
+    option = {
+ 		name = "The Airforce Coup"
+		ai_chance = { factor = 20 }
+        stability_factor = 0.5
+        set_politics = {
+	       ruling_party = ultranationalism
+           elections_allowed = no
+           last_election = "1932.9.23"
+           election_frequency = 1000
+        }
+        add_popularity = {
+           ideology = ultranationalism
+           popularity = 0.6
+        }
+	}
+}
+news_event = {
+	id = sau.19
+ 	title = "Salafists enter Ridyeh from Al Taif"
+ 	desc = sau.19.d
+ 	picture = GFX_anm_baghdad_ishtar_hotel
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "Allahu Akbar"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.1 
+		set_politics = {
+	       ruling_party = despotism
+           elections_allowed = no
+           last_election = "1932.9.23"
+           election_frequency = 1000
+        }
+		retire_character = SAU_Allegiance_Council
+		retire_character = SAU_Fahd_Bin_Abdulaziz
+		create_country_leader = {
+	          name = SAU_Bin_Laden
+	          desc = "POLITICS_OSAMA_DESC"
+              picture = "gfx/leaders/SAU/Portrait_SAU_Bin_Laden.dds"
+	          expire = "2999.1.1"
+	          ideology = despotism_theocracy_subtype
+              traits = {
+	          }
+        }
+        add_popularity = {
+           ideology = despotism
+           popularity = 0.6
+        }
+		set_party_name = {
+           ideology = despotism
+           long_name = "Maktab Khadamāt al-Mujāhidīn al-'Arab"
+           name = "Maktab Khadamat"
+        }
+        set_cosmetic_tag = SAU_Osama_Revolution
+        hidden_effect = {			
+			country_event = { id = sau.20 days = 5 }
+		}
+		add_opinion_modifier = {
+           target = YEM
+           modifier = faction_traitor
+        }
+		add_opinion_modifier = {
+           target = OMA
+           modifier = faction_traitor
+        }
+		add_opinion_modifier = {
+           target = UAE
+           modifier = faction_traitor
+        }
+		remove_ideas = {
+			SAU_minister_Abdullah_AbdulMuhsin_hog
+	        SAU_minister_Sultan_bin_AbdulAziz_sec
+	        SAU_minister_Usama_Faqih_eco
+	        SAU_minister_Saud_Faisal_for
+			SAU_guardians_of_mecca
+			SAU_salafist_nejdian_population
+			SAU_Black_Gold
+			SAU_Immigrant_Workers
+			SAU_shia_population_angry
+			ARABIA_GCC
+		}
+		add_ideas = {
+			SAU_minister_Zawahriri_hog
+			SAU_minister_Abu_Rashta_for
+			SAU_minister_Abu_Bakr_Baghdadi_sec
+			SAU_Islamic_Revolution
+			SAU_Saudi_Resistance
+			SAU_Kafir_Problem
+		}
+		set_popularities = {
+			communist = 0
+			ultranationalism = 0
+			socialist = 0
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 0
+			despotism = 66
+			fascism = 0
+			national_socialism = 5
+			ultranationalism = 15
+		}
+	
+        leave_faction = yes
+	}
+}
+country_event = {
+	id = sau.20
+ 	title = "Al Saud Status"
+ 	desc = sau.20.d
+ 	picture = GFX_anm_baghdad_rasafi_square
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	
+
+
+ 	option = {
+ 		name = "One bad apple isn't important"
+		ai_chance = { factor = 100 }
+        stability_factor = 0.1 
+		add_ideas = {
+
+        }
+	}
+    option = {
+ 		name = "Kick them out"
+		ai_chance = { factor = 100 }
+        stability_factor = -0.1 
+		add_ideas = {
+           SAU_Monarchy_Abolished
+        }
+	}
+
+}
