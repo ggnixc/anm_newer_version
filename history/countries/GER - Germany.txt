@@ -16,13 +16,13 @@ set_popularities = {
 	liberal_conservatism = 0
 	conservatism = 0
 	paternalism = 0
-	despotism = 0
+	despotism = 7
 	fascism = 0
 	national_socialism = 37
 	national_socialism_1 = 45
-	national_socialism_2 = 2
-	national_socialism_3 = 5
-	national_socialism_4 = 11
+	national_socialism_2 = 11
+	national_socialism_3 = 0
+	national_socialism_4 = 0
 	esoteric_nazism = 0
 }
 
@@ -440,9 +440,9 @@ create_country_leader = {
 	}
 }
 create_country_leader = {
-	name = "Reichsforschungsinstitut Ahnenerbe"
-	desc = "POLITICS_AHNENERBE_DESC"
-	picture = "Portrait_GER_Ahnenerbe.dds"
+	name = "Kein Anführer"
+	desc = "POLITICS_KEIN_ANFUHRER_DESC"
+	picture = "Portrait_GER_Kein_Anfuhrer.dds"
 	expire = "2099.1.1"
 	ideology = national_socialism_2_subtype
 	traits = { 
@@ -450,21 +450,11 @@ create_country_leader = {
 	}
 }
 create_country_leader = {
-	name = "Deutsche Arbeitsfront"
-	desc = "POLITICS_DEUTSCHE_ARBEITSFRONT_DESC"
-	picture = "Portrait_GER_Deutsche_Arbeitsfront.dds"
+	name = "Adolf von Thadden"
+	desc = "POLITICS_ADOLF_VON_THADDEN_DESC"
+	picture = "Portrait_GER_Adolf_von_Thadden.dds"
 	expire = "2099.1.1"
-	ideology = national_socialism_3_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "Kein Anführer"
-	desc = "POLITICS_KEIN_ANFUHRER_DESC"
-	picture = "Portrait_GER_Kein_Anfuhrer.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_4_subtype
+	ideology = despotism_subtype
 	traits = { 
 
 	}
