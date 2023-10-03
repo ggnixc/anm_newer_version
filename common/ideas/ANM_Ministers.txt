@@ -610,6 +610,34 @@ ideas = {
 			cancel_if_invalid = no
 			ledger = civilian
 		}
+		MOS_minister_Militaramt_hog = {   
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MOS_minister_Militaramt_hog"}
+			allowed = { original_tag = MOS }
+			picture = "MOS_minister_Militaramt"
+			available = {
+				tag = MOS
+			}
+			traits = {
+				head_of_government
+				MOS_minister_Militaramt_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		ROM_minister_Emil_Constantinescu_hog = {    
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ROM_minister_Emil_Constantinescu_hog"}
+			allowed = { original_tag = ROM }
+			picture = "ROM_minister_Emil_Constantinescu_hog"
+			available = {
+				tag = ROM
+			}
+			traits = {
+				head_of_government
+				ROM_minister_Emil_Constantinescu_hog_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
 	}
 
 	security_minister = {
@@ -1190,6 +1218,34 @@ ideas = {
 			traits = {
 				security_minister
 				POL_minister_Henryk_Glucklich_sec_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		MOS_minister_Militaramt_sec = {   
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MOS_minister_Militaramt_sec"}
+			allowed = { original_tag = MOS }
+			picture = "MOS_minister_Militaramt"
+			available = {
+				tag = MOS
+			}
+			traits = {
+				security_minister
+				MOS_minister_Militaramt_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		ROM_minister_Iulian_Vlad_sec = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ROM_minister_Iulian_Vlad_sec"}
+			allowed = { original_tag = ROM }
+			picture = "ROM_minister_Iulian_Vlad_sec"
+			available = {
+				tag = ROM 
+			}
+			traits = {
+				security_minister
+				ROM_minister_Iulian_Vlad_sec_desc
 			}
 			cancel_if_invalid = no
 			ledger = civilian
@@ -1779,6 +1835,34 @@ ideas = {
 			cancel_if_invalid = no
 			ledger = civilian
 		}
+		MOS_minister_Militaramt_for = {   
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MOS_minister_Militaramt_for"}
+			allowed = { original_tag = MOS }
+			picture = "MOS_minister_Militaramt"
+			available = {
+				tag = MOS
+			}
+			traits = {
+				foreign_minister
+				MOS_minister_Militaramt_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		ROM_minister_Corneliu_Coposu_for = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ROM_minister_Corneliu_Coposu_for"}
+			allowed = { original_tag = ROM }
+			picture = "ROM_minister_Corneliu_Coposu_for"
+			available = {
+				tag = ROM
+			}
+			traits = {
+				foreign_minister
+				ROM_minister_Corneliu_Coposu_for_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
 	}
 
 	economy_minister = {
@@ -2345,6 +2429,34 @@ ideas = {
 			traits = {
 				economy_minister
 				POL_minister_Siegfried_Emil_Spindler_eco_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		MOS_minister_Militaramt_eco = {   
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MOS_minister_Militaramt_eco"}
+			allowed = { original_tag = MOS }
+			picture = "MOS_minister_Militaramt"
+			available = {
+				tag = MOS
+			}
+			traits = {
+				economy_minister
+				MOS_minister_Militaramt_desc
+			}
+			cancel_if_invalid = no
+			ledger = civilian
+		}
+		ROM_minister_Ion_Diaconescu_eco = { 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ROM_minister_Ion_Diaconescu_eco"}
+			allowed = { original_tag = ROM }
+			picture = "ROM_minister_Ion_Diaconescu_eco"
+			available = {
+				tag = ROM
+			}
+			traits = {
+				economy_minister
+				ROM_minister_Ion_Diaconescu_eco_desc
 			}
 			cancel_if_invalid = no
 			ledger = civilian
