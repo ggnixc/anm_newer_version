@@ -213,7 +213,12 @@ country_event = { #Event for ‘Reign of the Eagle’
 
 	option = { 
 		name = GER_focus_event.1.a
+		custom_effect_tooltip = GER_change_popularity_national_socialism_1_1
 		hidden_effect = { 
+			add_popularity = {
+    		ideology = national_socialism_1
+    		popularity = 0.01
+			}
 			POL = { 
 				add_timed_idea = {
 					idea = POL_anniversary_poland_occupation
@@ -300,6 +305,13 @@ country_event = { #Event for ‘A Harmonious Party’
 
 	option = { 
 		name = GER_focus_event.7.a
+		custom_effect_tooltip = GER_change_popularity_national_socialism_1_1
+		hidden_effect = { 
+			add_popularity = {
+    			ideology = national_socialism_1
+    			popularity = 0.01
+			}
+		}
 	}
 }
 country_event = { #Event for ‘The Pakt’s Finest’ 1/2
