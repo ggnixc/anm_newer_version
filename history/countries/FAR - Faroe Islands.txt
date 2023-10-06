@@ -15,11 +15,11 @@ set_politics = {
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 48
-    progressivism = 0
-    liberalism = 9
-    liberal_conservatism = 11
-    conservatism = 32
+    socialist = 16
+    progressivism = 27
+    liberalism = 4
+    liberal_conservatism = 31
+    conservatism = 22
     paternalism = 0
     despotism = 0
     fascism = 0
@@ -28,14 +28,19 @@ set_popularities = {
 
 add_ideas = {
 	OFN_Dependent_Member
+	#spirits#
+	FAR_Economic_Disaster
+	FAR_Dam_Legacy
+	FAR_Can_We_Be_Independent
 }
 
 create_country_leader = {
 	name = "Høgni Hoydal"
-	desc = ""
+	desc = "POLITICS_HOGNI_HOYDAL_DESC"
 	picture = "Portrait_FAR_Hogni_Hoydal.dds"
 	expire = "2090.1.1"
 	ideology = socialist_agrarian_socialism_subtype
 	traits = {
+		The_Cautious_Reformer
 	}
 }
