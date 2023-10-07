@@ -39,46 +39,7 @@ ideas = {
 				political_power_gain = 0.20
 			}
 		}
-		KdNcouncilmember = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KdNcouncilmember" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			picture = GFX_KdNcouncilmember
 
-			modifier = {
-				political_power_gain = 0.10
-			}
-		}
-		KdNmember = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KdNcouncilmember" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			picture = GFX_KdNnormalmember
-
-			modifier = {
-				
-			}
-		}
-		KdNobserver = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KdNcouncilmember" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			picture = GFX_KdNobserver
-
-			modifier = {
-				
-			}
-		}
-		KdNmandate = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea KdNcouncilmember" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			picture = GFX_KdNmandate
-
-			modifier = {
-				
-			}
-		}
 		#Militärverwaltung
 		Pakt_Military_Authority = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Military_Authority" }
@@ -146,11 +107,13 @@ ideas = {
 				mic_to_target_factor = 0.25
 			}
 		}	
+
 		Pakt_Paktrepublik = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Paktrepublik" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 		}
+		
 		#Puppet State
 		Pakt_Marionettenstaat = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Marionettenstaat" }

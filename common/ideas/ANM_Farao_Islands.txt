@@ -1,0 +1,53 @@
+ideas = {
+
+	country = {
+
+		FAR_Economic_Disaster = { 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FAR_Economic_Disaster"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = FAR_Economic_Disaster
+			modifier = {
+				civilian_factory_use = 2
+				consumer_goods_factor = 0.85
+				min_export = 0.70
+			}
+		} 
+		FAR_Dam_Legacy = { 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FAR_Dam_Legacy"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = FAR_Dam_Legacy
+			modifier = {
+				party_popularity_stability_factor = 0.20
+				political_power_gain = 0.05
+			}
+		} 
+		FAR_Can_We_Be_Independent = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FAR_Can_We_Be_Independent"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = FAR_Can_We_Be_Independent
+			modifier = {
+				stability_weekly_factor = -0.20
+				command_power_gain_mult = -0.15
+				land_reinforce_rate = -0.30
+			}
+		} 
+	} 
+}		

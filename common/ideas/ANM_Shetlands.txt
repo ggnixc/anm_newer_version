@@ -1,0 +1,52 @@
+ideas = {
+
+	country = {
+
+		SHL_Last_Free_Soil = { 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHL_Last_Free_Soil"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SHL_Last_Free_Soil
+			modifier = {
+				monthly_population = 0.15
+				conscription_factor = 0.25   
+			}
+		} 
+		SHL_Newfound_Autonomy = { 
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHL_Newfound_Autonomy"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SHL_Newfound_Autonomy
+			modifier = {
+				stability_factor = 0.20
+				political_power_gain = 0.10
+				autonomy_gain = 0.05
+			}
+		} 
+		SHL_Battle_For_Oil = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SHL_Battle_For_Oil"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SHL_Battle_For_Oil
+			modifier = {
+				fuel_gain = 100
+				naval_accidents_chance = 0.15  
+			}
+		} 
+	}
+}		
