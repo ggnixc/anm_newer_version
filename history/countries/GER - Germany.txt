@@ -16,13 +16,13 @@ set_popularities = {
 	liberal_conservatism = 0
 	conservatism = 0
 	paternalism = 0
-	despotism = 0
+	despotism = 7
 	fascism = 0
 	national_socialism = 37
 	national_socialism_1 = 45
-	national_socialism_2 = 2
-	national_socialism_3 = 5
-	national_socialism_4 = 11
+	national_socialism_2 = 11
+	national_socialism_3 = 0
+	national_socialism_4 = 0
 	esoteric_nazism = 0
 }
 
@@ -290,9 +290,6 @@ add_manpower = 402178
 
 load_focus_tree = GER_Focus_Millenium_Starter
 
-set_variable = { ANMKDN_showednation_agenda_one = 1 }
-set_variable = { ANMKDN_showednation_agenda_two = 9 }
-set_variable = { ANMKDN_showednation_agenda_three = 16 }
 
 set_variable = { global.GER_Speer_Inf_Top = 12 }
 set_variable = { global.GER_Front_Inf_Top = 8 }
@@ -307,7 +304,6 @@ GER_power_struggle_pulse_top = yes
 
 set_country_flag = reichsstability_tier_2
 
-set_country_flag = kdn_gui_alert_visible
 #TTNOMICS
 set_country_flag = gui_alert_visible
 set_country_flag = gui_alert_visible_2
@@ -319,19 +315,8 @@ set_variable = { TNO_economy_subtype = 20 }
 
 set_global_flag = pakt_reform_europamark
 
-set_variable = { global.anmkdnthefunnylolmonthticker = 0 }
-set_variable = { global.anmkdncurrentpriority = 10 }
 set_variable = { global.europapaktunity = 10 }
-set_variable = { global.europapaktstability = 60 }
-set_variable = { global.ANMKDNcurrentparliamentvoteissue = 0 }
-set_variable = { global.ANMKDNcurrentcouncilvoteissue = 0 }
-set_variable = { global.ANMKDNparliamentyesvote = 0 }
-set_variable = { global.ANMKDNparliamentnovote = 0 }
-set_variable = { global.ANMKDNparliamentmembercounts = 0 }
-set_variable = { global.ANMKDNcouncilyesvote = 0 }
-set_variable = { global.ANMKDNcouncilnovote = 0 }
-set_variable = { global.ANMKDNcouncilmembercounts = 0 }
-set_variable = { global.ANMKDNcurrentenemyofthekdn = 1 }	
+set_variable = { global.europapaktstability = 60 }	
 set_variable = { global.europaktgdpgrowthmodifier = 1.23 }  
 set_variable = { global.preeuropaktgdpgrowthmodifier = 1.23 }
 set_variable = { global.usaintelligence = 50 }
@@ -380,7 +365,6 @@ add_to_faction = IRE
 add_to_faction = BLR
 add_to_faction = HUN
 add_to_faction = MRZ
-add_to_faction = NDO
 add_to_faction = SER
 add_to_faction = MOS
 add_to_faction = CAU
@@ -388,8 +372,7 @@ add_to_faction = VLG
 add_to_faction = ENG
 add_to_faction = FLR
 add_to_faction = WLN
-
-add_opinion_modifier = {target = ISR modifier = jewish_nation_anm }
+add_to_faction = TNS
 
 if = {
 	limit = { has_dlc = "Together for Victory" }
@@ -427,6 +410,7 @@ create_country_leader = {
 	expire = "2099.1.1"
 	ideology = national_socialism_reformed_national_socialism_subtype
 	traits = { 
+		The_Heir
 	}
 }
 create_country_leader = {
@@ -440,9 +424,9 @@ create_country_leader = {
 	}
 }
 create_country_leader = {
-	name = "Reichsforschungsinstitut Ahnenerbe"
-	desc = "POLITICS_AHNENERBE_DESC"
-	picture = "Portrait_GER_Ahnenerbe.dds"
+	name = "Kein Anführer"
+	desc = "POLITICS_KEIN_ANFUHRER_DESC"
+	picture = "Portrait_GER_Kein_Anfuhrer.dds"
 	expire = "2099.1.1"
 	ideology = national_socialism_2_subtype
 	traits = { 
@@ -450,21 +434,11 @@ create_country_leader = {
 	}
 }
 create_country_leader = {
-	name = "Deutsche Arbeitsfront"
-	desc = "POLITICS_DEUTSCHE_ARBEITSFRONT_DESC"
-	picture = "Portrait_GER_Deutsche_Arbeitsfront.dds"
+	name = "Adolf von Thadden"
+	desc = "POLITICS_ADOLF_VON_THADDEN_DESC"
+	picture = "Portrait_GER_Adolf_von_Thadden.dds"
 	expire = "2099.1.1"
-	ideology = national_socialism_3_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "Kein Anführer"
-	desc = "POLITICS_KEIN_ANFUHRER_DESC"
-	picture = "Portrait_GER_Kein_Anfuhrer.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_4_subtype
+	ideology = despotism_subtype
 	traits = { 
 
 	}
