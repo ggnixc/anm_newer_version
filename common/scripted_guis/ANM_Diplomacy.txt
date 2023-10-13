@@ -13,22 +13,11 @@ scripted_gui = {
 					has_idea = Pakt_Observer
 				}
 			}
-			current_kdnmember_status_visible = {
-				OR = {
-		has_idea = KdNobserver
-		has_idea = KdNmandate
-		has_idea = KdNmember
-		has_idea = KdNcouncilmember
-				}
-			}
 		}
 
 		properties = {
 			current_faction_status = {
 				image = "[This.GetFactionStatus_icon]"
-			}
-			current_kdnmember_status = {
-				image = "[This.GetANMkdnStatus_icon]"
 			}
 		}
 	}
