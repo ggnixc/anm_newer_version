@@ -1,0 +1,159 @@
+
+	#The Balboite
+	shared_focus = {
+		id = ITA_the_balboite
+		icon = GFX_ITA_the_balboite
+		x = 5
+		y = 4
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_sitdownwiththebigfour  }
+		completion_reward = {
+
+	    }
+	}
+
+	#The Hardliners
+	shared_focus = {
+		id = ITA_the_hardliners
+		icon = GFX_ITA_the_hardliners
+		x = 7
+		y = 4
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_sitdownwiththebigfour  }
+		completion_reward = {
+
+	    }
+	}
+
+	#The Final Choice
+	shared_focus = {
+		id = ITA_the_final_choice
+		icon = GFX_ITA_the_final_choice
+		x = 4
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+
+	    }
+		prerequisite = { focus = ITA_the_reformer  } prerequisite = { focus = ITA_the_moderates  } prerequisite = { focus = ITA_the_balboite  } prerequisite = { focus = ITA_the_hardliners  }
+	}
+
+	#The Die Cast
+	shared_focus = {
+		id = ITA_the_die_cast
+		icon = GFX_ITA_the_die_cast
+		x = 4
+		y = 6
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_final_choice  }
+		completion_reward = {
+
+	    }
+	}
+
+	#The Reformer
+	shared_focus = {
+		id = ITA_the_reformer
+		icon = GFX_ITA_the_reformer
+		x = 1
+		y = 4
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_sitdownwiththebigfour  }
+		completion_reward = {
+
+	    }
+	}
+
+	#The moderates
+	shared_focus = {
+		id = ITA_the_moderates
+		icon = GFX_ITA_the_moderates
+		x = 3
+		y = 4
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_sitdownwiththebigfour  }
+		completion_reward = {
+
+	    }
+	}
+
+	#Sit Down With The 'BIG FOUR'
+	shared_focus = {
+		id = ITA_sitdownwiththebigfour
+		icon = GFX_ITA_sitdownwiththebigfour
+		x = 4
+		y = 3
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+
+	    }
+		prerequisite = { focus = ITA_andwhatwecouldnt  }
+	}
+
+	#What We Could...
+	shared_focus = {
+		id = ITA_whatwecould
+		icon = GFX_ITA_whatwecould
+		x = 4
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+	
+	    }
+		prerequisite = { focus = ITA_final_days_of_baghino  }
+	}
+
+	#...And What we couldn't
+	shared_focus = {
+		id = ITA_andwhatwecouldnt
+		icon = GFX_ITA_andwhatwecouldnt
+		x = 4
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+
+	    }
+		prerequisite = { focus = ITA_whatwecould  }
+	}
+
+	#Final Days Of Baghino
+	shared_focus = {
+		id = ITA_final_days_of_baghino
+		icon = GFX_ITA_final_days_of_baghino
+		x = 4
+		y = 0
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+	    
+	    }
+    }
