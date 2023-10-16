@@ -403,17 +403,18 @@ if = {
 
 
 ### Leaders ###
-create_country_leader = {
+ ## Country Leaders ##
+ create_country_leader = {
 	name = "Albert Friedrich Speer"
 	desc = "POLITICS_ALBERT_SPEER_JR_GERMANY_DESC"
-	picture = "portrait_ger_albert_speer_jr_starting.dds"
+	picture = "Portrait_GER_Albert_Speer_Jr_starting.dds"
 	expire = "2099.1.1"
 	ideology = national_socialism_reformed_national_socialism_subtype
 	traits = { 
 		The_Heir
 	}
-}
-create_country_leader = {
+ }
+ create_country_leader = {
 	name = "Martin Mußgnug"
 	desc = "POLITICS_MARTIN_MUSSGNUG_DESC"
 	picture = "Portrait_GER_Martin_Mussgnug.dds"
@@ -422,8 +423,8 @@ create_country_leader = {
 	traits = { 
 
 	}
-}
-create_country_leader = {
+ }
+ create_country_leader = {
 	name = "Kein Anführer"
 	desc = "POLITICS_KEIN_ANFUHRER_DESC"
 	picture = "Portrait_GER_Kein_Anfuhrer.dds"
@@ -432,8 +433,8 @@ create_country_leader = {
 	traits = { 
 
 	}
-}
-create_country_leader = {
+ }
+ create_country_leader = {
 	name = "Adolf von Thadden"
 	desc = "POLITICS_ADOLF_VON_THADDEN_DESC"
 	picture = "Portrait_GER_Adolf_von_Thadden.dds"
@@ -442,72 +443,112 @@ create_country_leader = {
 	traits = { 
 
 	}
-}
+ } 
 
-#See TNO_Germany_scripted_effects.txt ~<3 xoxo calph  
-
-create_field_marshal = {
-	name = "Günter Kießling"
-	desc = "FIELD_MARSHAL_guenther_kiessling"
-	picture = "portrait_anm_ger_guenther_kiessling.dds"
-	traits = { offensive_doctrine brilliant_strategist }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-	traits = { 
-	}
-}
-
-create_field_marshal = {
-	name = "Jörg Schönbohm"
-	desc = "MILITARY_joerg_schoenboehm_DESC"
-	picture = "Portrait_anm_ger_joerg_schoenboehm.dds"
-	traits = { harsh_leader politically_connected offensive_doctrine }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-	id = 3751
-}
-
-create_corps_commander = {
-	name = "Fritz Streletz"
-	picture = "Portrait_anm_ger_fritz_streletz.dds"
-	traits = { trait_reckless winter_specialist trickster }
-	skill = 2
+ ## Army ##
+ # Field Marshal #
+ create_field_marshal = {
+	name = "Rolf Berger"
+	desc = "FIELD_MARSHAL_Rolf_Berger"
+	picture = "Portrait_GER_Rolf_Berger.dds"
+	traits = { brilliant_strategist armor_officer trickster aggressive_assaulter expert_improviser }
+	skill = 3
 	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+	id = 5000
+ }
+ create_field_marshal = {
+	name = "Heinz Kessler"
+	desc = "FIELD_MARSHAL_Heinz_Kessler"
+	picture = "Portrait_GER_Heinz_Kessler.dds"
+	traits = { trait_cautious organizer skilled_staffer thorough_planner }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+	id = 5001
+ }
+
+ # Corps Commander #
+ create_corps_commander = {
+	name = "Jörg Vollmer"
+	desc = "CORPS_COMMANDER_Jorg_Vollmer"
+	picture = "Portrait_GER_Jorg_Vollmer.dds"
+	traits = { infantry_officer panzer_leader winter_specialist }
+	skill = 2
+	attack_skill = 1
 	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+	id = 5100
+ }
+ create_corps_commander = {
+	name = "Jürgen Setzer"
+	desc = "CORPS_COMMANDER_Jurgen_Setzer"
+	picture = "Portrait_GER_Jurgen_Setzer.dds"
+	traits = { organizer commando }
+	skill = 4
+	attack_skill = 1
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+	id = 5101
+ }
+ create_corps_commander = {
+	name = "Klaus Dieter Baumgarten" 
+	desc = "CORPS_COMMANDER_Klaus_Dieter_Baumgarten"
+	picture = "Portrait_GER_Klaus_Dieter_Baumgarten.dds"
+	traits = { infantry_leader }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+	id = 5102
+ }
+ create_corps_commander = {
+	name = "Klaus Naumann" 
+	desc = "CORPS_COMMANDER_Klaus_Naumann"
+	picture = "Portrait_GER_Klaus_Naumann.dds"
+	traits = { skilled_staffer urban_assault_specialist }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 1
-	id = 3759
-}
-
-create_corps_commander = {
-	name = "Klaus Reinhardt"
-	picture = "Portrait_anm_ger_klaus_reinhardt.dds"
-	traits = { harsh_leader infantry_leader }
-	skill = 2
+	id = 5103
+ } 
+ create_corps_commander = {
+	name = "Hans Helmut Speidel"  
+	desc = "CORPS_COMMANDER_Hans_Helmut_Speidel"
+	picture = "Portrait_GER_Hans_Helmut_Speidel.dds"
+	traits = { infantry_leader winter_specialist ranger }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+	id = 5104
+ }
+ create_corps_commander = {
+	name = "Berthold Schenk Graf von Stauffenberg"  
+	desc = "CORPS_COMMANDER_Berthold_Schenk_Graf_von_Stauffenberg"
+	picture = "Portrait_GER_Berthold_Schenk_Graf_von_Stauffenberg.dds"
+	traits = { career_officer trickster panzer_leader }
+	skill = 3
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 2
-	logistics_skill = 1
-	id = 3758
-}
+	logistics_skill = 3
+	id = 5105
+ }
 
-create_corps_commander = {
-	name = "Horst Brünner"
-	picture = "Portrait_anm_ger_horst_bruenner.dds"
-	traits = { infantry_officer organizer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 3753
-}
+
+
+## Navy ##
 
 create_navy_leader = { 
 	name = "Theodor Hoffmann"
