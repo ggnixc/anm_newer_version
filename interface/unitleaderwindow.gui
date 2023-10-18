@@ -394,8 +394,8 @@ guiTypes = {
 	# NAVAL LEADERS WINDOW
 	containerWindowType = {
 		name = "navyleaderwindow"
-		position = { x=-225 y=-225 }
-		size = { width=550 height=590 }
+		position = { x=-225 y=-395 }
+		size = { width=541 height=790 }
 		orientation = center
 		moveable = yes
 		clipping = no
@@ -412,35 +412,35 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "header_text"
-			position = { x = 10 y = 2 }
+			position = { x = 38 y = 7 }
 			textureFile = ""
-			font = "Bomb_28"
+			font = "aldrich_white_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = "CHOOSE_LEADER"
-			maxWidth = 470
-			maxHeight = 20
-			fixedsize = yes
+			maxWidth = 390
+			maxHeight = 32
 			format = left
+			fixedsize = yes
 		}
 
 		ButtonType = {
 			name = "sort_name"
-			position = {x=92 y=38}
+			position = {x=93 y=38}
 			spriteType = "GFX_sort_button_83x29"
 			buttonText = UNIT_LEADER_NAME_SORT
-			buttonFont = "aldrich_18_outline"
+			buttonFont = "aldrich_16_outline"
 			clicksound = click_scroll
 			frame = 1
 		}
 
 		editBoxType = {
 			name = "leader_view_search"
-			position = { x = 205 y = 40 }
+			position = { x = 188 y = 43 }
 			size = {x=267 y=20}
 			#textureFile = ""
-			font = "aldrich_22_outline"
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
-			text = "UNIT_LEADER_SEARCH"
+			text = UNIT_LEADER_SEARCH
 			#maxWidth = 300
 			#maxHeight = 20
 			#format = left
@@ -448,16 +448,17 @@ guiTypes = {
 
 		ButtonType = {
 			name = "sort_skills"
-			position = {x=11 y=38}
+			position = {x=17 y=38}
 			spriteType = "GFX_sort_button_83x29"
 			buttonText = UNIT_LEADER_SKILL_SORT
-			buttonFont = "aldrich_18_outline"
+			buttonFont = "aldrich_16_outline"
 			clicksound = click_scroll
+			frame = 0
 		}
 
 		ButtonType = {
 			name = "sort_capacity"
-			position = {x=455 y=38}
+			position = {x=454 y=38}
 			spriteType = "GFX_sort_button_83x29"
 			buttonText = UNIT_LEADER_CAPACITY_SORT
 			buttonFont = "aldrich_16_outline"
@@ -467,7 +468,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "sort_attack_skill"
-			position = {x=344 y=38}
+			position = {x=348 y=38}
 			spriteType = "GFX_sort_attack_trait"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_scroll
@@ -476,7 +477,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "sort_defense_skill"
-			position = {x=370 y=38}
+			position = {x=374 y=38}
 			spriteType = "GFX_sort_defense_trait"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_scroll
@@ -485,7 +486,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "sort_maneuvering_skill"
-			position = {x=396 y=38}
+			position = {x=400 y=38}
 			spriteType = "GFX_sort_maneuvering_trait"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_scroll
@@ -494,7 +495,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "sort_coordination_skill"
-			position = {x=422 y=38}
+			position = {x=426 y=38}
 			spriteType = "GFX_sort_coordination_trait"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_scroll
@@ -503,10 +504,10 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "leaders"
-			position = { x = 0 y = 62 }
-			size = { width = 98%% height = 507 }
+			position = { x = 8 y = 73}
+			size = { width = 100%% height = 675 }
 			verticalScrollbar = "right_vertical_slider"
-			margin = { top = 14 bottom = 22}
+			margin = { top = 8 bottom = 2}
 			scroll_wheel_factor = 98
 
 			background = {
@@ -516,7 +517,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "leaders_grid"
-				position = { x = 13 y = 1 }
+				position = { x = 13 y = 0 }
 				size = { width = 100%% height = 100%% }
 				slotsize = { width = 510 height = 98 }
 				max_slots_horizontal = 1
@@ -526,13 +527,12 @@ guiTypes = {
 
 		buttonType = {
 			name = "no_leader_button"
-			position = { x = -240 y = -30 }
+			position = { x = -380 y = -33 }
 			quadTextureSprite ="GFX_button_221x34"
-			buttonFont = "aldrich_20_outlinedark"
+			buttonFont = "aldrich_18_outline"
 			Orientation = "LOWER_RIGHT"
 			buttonText = "UNASSIGN"
 			pdx_tooltip = "UNASSIGN"
-			clicksound = click_default
 		}
 
 		buttonType = {
@@ -559,19 +559,20 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "show_assigned_text"
-			position = { x = 400 y = 11 }
+			position = { x = 395 y = 11 }
 			textureFile = ""
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_14_outline"
 			borderSize = {x = 0 y = 0}
 			text = "SHOW_ACTIVE"
-			maxWidth = 470
+			maxWidth = 100
 			maxHeight = 20
+			fixedsize = yes
 			format = left
 		}
 
 		checkboxType = {
 			name = "show_assigned"
-			position = { x = 485  y = 4 }
+			position = { x = 480  y = 4 }
 			quadTextureSprite ="GFX_checkbox_small_red_green"
 			Orientation = "UPPER_LEFT"
 			clicksound = click_default
@@ -609,7 +610,7 @@ guiTypes = {
 			position = {x=318 y=56}
 			quadTextureSprite ="GFX_sort_button_83x29"
 			buttonText = UNIT_LEADER_TRAITS
-			buttonFont = "aldrich_18_outline"
+			buttonFont = "aldrich_16_outline"
 			pdx_tooltip = "OPEN_LEADER_DETAILS"
 			clicksound = click_default
 			frame = 1
@@ -619,7 +620,7 @@ guiTypes = {
 			name = "generate_advisor_button"
 			position = {x=-8000 y=68}	
 			quadTextureSprite ="GFX_give_role_leader_strip"
-			buttonFont = "aldrich_20_outlinedark"	
+			buttonFont = "aldrich_16_outline"	
 			clicksound = click_default
 			frame = 1
 		}
@@ -627,7 +628,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "divisions_count"
 			position = {x=417 y=16}
-			font = "aldrich_22_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 85
 			maxHeight = 23
 			format = centre
@@ -636,7 +637,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "title"
 			position = { x = 119 y = 10 }
-			font = "aldrich_22_outline"
+			font = "aldrich_18_outline"
 			text = "Mr."
 			maxWidth = 150
 			maxHeight = 18
@@ -645,7 +646,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 119 y = 31 }
-			font = "aldrich_16_outline"
+			font = "aldrich_14_outline"
 			text = "name"
 			maxWidth = 180
 			maxHeight = 18
@@ -655,7 +656,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "skill"
 			position = { x = 9 y = 31 }
-			font = "aldrich_30_outline"
+			font = "aldrich_white_24_outline"
 			text = "skill"
 			maxWidth = 50
 			maxHeight = 18
@@ -697,7 +698,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_attack"
 			position = {x=309 y=31}
-			font = "aldrich_22_outline"
+			font = "aldrich_white_16_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -713,7 +714,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_defense"
 			position = {x=336 y=31}
-			font = "aldrich_22_outline"
+			font = "aldrich_white_16_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -729,7 +730,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_maneuvering"
 			position = {x=362 y=31}
-			font = "aldrich_22_outline"
+			font = "aldrich_white_16_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -745,7 +746,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_coordination"
 			position = {x=389 y=31}
-			font = "aldrich_22_outline"
+			font = "aldrich_white_16_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
