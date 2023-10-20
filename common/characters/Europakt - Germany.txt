@@ -1,0 +1,37 @@
+characters = {
+	GER_albert_friedrich_speer = { 
+		name = GER_albert_friedrich_speer
+		portraits = { civilian = { large = "gfx/leaders/GER/Portrait_GER_Albert_Speer_Jr_starting.dds" } }
+		country_leader = {
+			desc = "POLITICS_ALBERT_SPEER_JR_DESC"
+			ideology = national_socialism_reformed_national_socialism_subtype
+			traits = { The_Heir }
+			expire = "2999.1.1.1"
+		}
+	}
+	GER_martin_mussgnug = {
+		name = GER_martin_mussgnug
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/GER/Portrait_GER_Martin_Mussgnug.dds"
+				small = "GFX_idea_GER_Martin_Mussgnug" 
+			} 	
+		} 
+		country_leader = {
+			ideology = national_socialism_1_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = GER_Martin_Mussgnug_hog
+			traits = {
+				head_of_government
+				hog_flamboyant_brute
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+}

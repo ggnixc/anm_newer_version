@@ -1,5 +1,10 @@
 ﻿capital = 64
 
+
+### TEST ###
+recruit_character = GER_albert_friedrich_speer
+recruit_character = GER_martin_mussgnug
+
 set_politics = {
 	ruling_party = national_socialism
 	last_election = "1933.3.5"
@@ -217,10 +222,7 @@ add_ideas = {
 	GER_space_spirit
 
 	## Ministers ##
-	GER_minister_martin_mussgnug_hog
-	GER_minister_guenther_deckert_sec
-	GER_minister_joseph_fisher_for 
-	GER_minister_gerhardfrey_eco	
+	GER_Martin_Mussgnug_hog
 
 	### Laws ###
 	## Political ##
@@ -404,26 +406,6 @@ if = {
 
 ### Leaders ###
  ## Country Leaders ##
- create_country_leader = {
-	name = "Albert Friedrich Speer"
-	desc = "POLITICS_ALBERT_SPEER_JR_GERMANY_DESC"
-	picture = "Portrait_GER_Albert_Speer_Jr_starting.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_reformed_national_socialism_subtype
-	traits = { 
-		The_Heir
-	}
- }
- create_country_leader = {
-	name = "Martin Mußgnug"
-	desc = "POLITICS_MARTIN_MUSSGNUG_DESC"
-	picture = "Portrait_GER_Martin_Mussgnug.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_1_subtype
-	traits = { 
-
-	}
- }
  create_country_leader = {
 	name = "Kein Anführer"
 	desc = "POLITICS_KEIN_ANFUHRER_DESC"
