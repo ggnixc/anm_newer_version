@@ -1,9 +1,11 @@
 ﻿capital = 1272
 
+set_cosmetic_tag = SER_kingdom
+
 set_oob = "SER_1962"
 
 set_politics = {	
-	ruling_party = despotism
+	ruling_party = ultranationalism
 	last_election = "1962.1.1"
 	election_frequency = 36
 	elections_allowed = no
@@ -11,7 +13,7 @@ set_politics = {
 
 add_ideas = {
 	#Faction
-	Pakt_Bundnispartner
+	Pakt_Marionettenstaat
 	#Spirits
 	SER_Chetnik_Kingdom
 	SER_German_Controlled_Economy
@@ -77,15 +79,15 @@ set_popularities = {
     communist = 0
     socialist = 11
     progressivism = 0
-    liberalism = 2
+    liberalism = 0
     liberal_conservatism = 0
     ecopolitical = 0
     conservatism = 0
-    paternalism = 13
-    despotism = 46
+    paternalism = 2
+    despotism = 13
 	fascism = 0
 	national_socialism = 28
-	ultranationalism = 0
+	ultranationalism = 46
     esoteric_nazism = 0
 }
 
@@ -96,7 +98,7 @@ create_country_leader = {
 	desc = "POLITICS_SESELJ_DESC"
 	picture = "Portrait_SER_Vojislav_Seselj.dds"
 	expire = "2020.5.17"
-	ideology = despotism_military_junta_subtype
+	ideology = ultranationalism_reactionary_nationalism_subtype
 	traits = {
 		nationalist_symbol
 	}
