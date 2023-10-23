@@ -1,9 +1,66 @@
 ﻿capital = 64
 
-
-### TEST ###
+### Characters ###
 recruit_character = GER_albert_friedrich_speer
+recruit_character = GER_kein_anfuhrer
 recruit_character = GER_martin_mussgnug
+recruit_character = GER_adolf_von_thadden
+recruit_character = GER_gunther_deckert
+recruit_character = GER_joseph_fischer
+recruit_character = GER_gerhard_frey
+recruit_character = GER_rolf_berger
+recruit_character = GER_heinz_kessler
+recruit_character = GER_otto_carius
+recruit_character = GER_volker_wieker
+recruit_character = GER_hartmut_bagger
+recruit_character = GER_wolfgang_altenburg
+recruit_character = GER_hans_peter_von_kirchbach
+recruit_character = GER_werner_freers
+recruit_character = GER_reinhard_gunzel
+recruit_character = GER_jorg_vollmer
+recruit_character = GER_jurgen_setzer
+recruit_character = GER_klaus_dieter_baumgarten
+recruit_character = GER_klaus_naumann
+recruit_character = GER_hans_helmut_speidel
+recruit_character = GER_berthold_schenk_graf_von_stauffenberg
+recruit_character = GER_rudolf_striedinger
+recruit_character = GER_roland_ertl
+recruit_character = GER_horst_pleiner
+recruit_character = GER_karl_majcen
+recruit_character = GER_richard_rossmanith
+recruit_character = GER_edmund_entacher
+recruit_character = GER_hans_otto_budde
+recruit_character = GER_helmut_willman
+recruit_character = GER_robert_brieger
+recruit_character = GER_othmar_commenda
+recruit_character = GER_wolfgang_schneiderhan
+recruit_character = GER_ludwig_bauer
+recruit_character = GER_gunther_bahr
+recruit_character = GER_ebhard_header
+recruit_character = GER_eberhard_zorn
+recruit_character = GER_alexander_sollfrank
+recruit_character = GER_gert_gawellek
+recruit_character = GER_stephan_thomas
+recruit_character = GER_hans_werner_wiermann
+recruit_character = GER_manfred_gratz
+recruit_character = GER_heico_hubner
+recruit_character = GER_jurgen_joachim_von_sandrart
+recruit_character = GER_josef_blotz
+recruit_character = GER_erich_pfeffer
+recruit_character = GER_bernd_shutt
+recruit_character = GER_carsten_breuer
+recruit_character = GER_hendrik_born
+recruit_character = GER_carsten_stawitzki
+recruit_character = GER_thomas_jugel
+recruit_character = GER_wolfgang_brost
+recruit_character = GER_rainer_endres
+recruit_character = GER_georg_von_maltzan
+recruit_character = GER_rainer_brinkmann
+recruit_character = GER_thomas_daum
+recruit_character = GER_karsten_schneider
+recruit_character = GER_joachim_ruhle
+recruit_character = GER_manfred_nielson
+
 
 set_politics = {
 	ruling_party = national_socialism
@@ -223,6 +280,9 @@ add_ideas = {
 
 	## Ministers ##
 	GER_Martin_Mussgnug_hog
+	GER_Gunther_Deckert_sec
+	GER_Joseph_Fischer_for
+	GER_Gerhard_Frey_eco
 
 	### Laws ###
 	## Political ##
@@ -403,659 +463,3 @@ if = {
 	}
 }
 
-
-### Leaders ###
- ## Country Leaders ##
- create_country_leader = {
-	name = "Kein Anführer"
-	desc = "POLITICS_KEIN_ANFUHRER_DESC"
-	picture = "Portrait_GER_Kein_Anfuhrer.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_2_subtype
-	traits = { 
-
-	}
- }
- create_country_leader = {
-	name = "Adolf von Thadden"
-	desc = "POLITICS_ADOLF_VON_THADDEN_DESC"
-	picture = "Portrait_GER_Adolf_von_Thadden.dds"
-	expire = "2099.1.1"
-	ideology = despotism_subtype
-	traits = { 
-
-	}
- } 
-
- ## Army ##
- # Field Marshal #
- create_field_marshal = {
-	name = "Rolf Berger"
-	desc = "FIELD_MARSHAL_Rolf_Berger"
-	picture = "Portrait_GER_Rolf_Berger.dds"
-	traits = { brilliant_strategist armor_officer trickster aggressive_assaulter expert_improviser }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-	id = 5000
- }
- create_field_marshal = {
-	name = "Heinz Kessler"
-	desc = "FIELD_MARSHAL_Heinz_Kessler"
-	picture = "Portrait_GER_Heinz_Kessler.dds"
-	traits = { trait_cautious organizer skilled_staffer thorough_planner }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 4
-	id = 5001
- }
- create_field_marshal = {
-	name = "Otto Carius"
-	desc = "FIELD_MARSHAL_Otto_Carius"
-	picture = "Portrait_GER_Otto_Carius.dds"
-	traits = { old_guard panzer_leader defensive_doctrine }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-	id = 5002
- }
- create_field_marshal = {
-	name = "Volker Wieker"
-	desc = "FIELD_MARSHAL_Volker_Wieker"
-	picture = "Portrait_GER_Volker_Wieker.dds"
-	traits = { career_officer cavalry_officer trickster trait_engineer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 3
-	id = 5003
- }
- create_field_marshal = {
-	name = "Hartmut Bagger"
-	desc = "FIELD_MARSHAL_Hartmut_Bagger"
-	picture = "Portrait_GER_Hartmut_Bagger.dds"
-	traits = { old_guard organizer logistics_wizard thorough_planner }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 5
-	id = 5004
- }
- create_field_marshal = {
-	name = "Wolfgang Altenburg"
-	desc = "FIELD_MARSHAL_Wolfgang_Altenburg"
-	picture = "Portrait_GER_Wolfgang_Altenburg.dds"
-	traits = { war_hero inflexible_strategist }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-	id = 5005
- }
- create_field_marshal = {
-	name = "Hans-Peter von Kirchbach" 
-	desc = "FIELD_MARSHAL_Hans_Peter_von_Kirchbach"
-	picture = "Portrait_GER_Hans_Peter_von_Kirchbach.dds"
-	traits = { career_officer cavalry_officer infantry_leader offensive_doctrine }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 5006
- }
- create_field_marshal = {
-	name = "Werner Freers" 
-	desc = "FIELD_MARSHAL_Werner_Freers"
-	picture = "Portrait_GER_Werner_Freers.dds"
-	traits = { brilliant_strategist armor_officer trickster aggressive_assaulter expert_improviser }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-	id = 5007
- }
- create_field_marshal = {
-	name = "Reinhard Günzel" 
-	desc = "FIELD_MARSHAL_Reinhard_Gunzel"
-	picture = "Portrait_GER_Reinhard_Gunzel.dds"
-	traits = { high_command infantry_officer organizer infantry_leader infantry_expert }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-	id = 5008
- }
-
-
- # Corps Commander #
- create_corps_commander = {
-	name = "Jörg Vollmer"
-	desc = "CORPS_COMMANDER_Jorg_Vollmer"
-	picture = "Portrait_GER_Jorg_Vollmer.dds"
-	traits = { infantry_officer panzer_leader winter_specialist }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 3
-	id = 5100
- }
- create_corps_commander = {
-	name = "Jürgen Setzer"
-	desc = "CORPS_COMMANDER_Jurgen_Setzer"
-	picture = "Portrait_GER_Jurgen_Setzer.dds"
-	traits = { organizer commando }
-	skill = 4
-	attack_skill = 1
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 2
-	id = 5101
- }
- create_corps_commander = {
-	name = "Klaus Dieter Baumgarten" 
-	desc = "CORPS_COMMANDER_Klaus_Dieter_Baumgarten"
-	picture = "Portrait_GER_Klaus_Dieter_Baumgarten.dds"
-	traits = { infantry_leader }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-	id = 5102
- }
- create_corps_commander = {
-	name = "Klaus Naumann" 
-	desc = "CORPS_COMMANDER_Klaus_Naumann"
-	picture = "Portrait_GER_Klaus_Naumann.dds"
-	traits = { skilled_staffer urban_assault_specialist }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 1
-	id = 5103
- } 
- create_corps_commander = {
-	name = "Hans Helmut Speidel"  
-	desc = "CORPS_COMMANDER_Hans_Helmut_Speidel"
-	picture = "Portrait_GER_Hans_Helmut_Speidel.dds"
-	traits = { infantry_leader winter_specialist ranger }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-	id = 5104
- }
- create_corps_commander = {
-	name = "Berthold Schenk Graf von Stauffenberg"  
-	desc = "CORPS_COMMANDER_Berthold_Schenk_Graf_von_Stauffenberg"
-	picture = "Portrait_GER_Berthold_Schenk_Graf_von_Stauffenberg.dds"
-	traits = { career_officer trickster panzer_leader }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-	id = 5105
- }
- create_corps_commander = {
-	name = "Rudolf Striedinger"  
-	desc = "CORPS_COMMANDER_Rudolf_Striedinger"
-	picture = "Portrait_GER_Rudolf_Striedinger.dds"
-	traits = { commando skirmisher }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 5106
- }
- create_corps_commander = {
-	name = "Roland Ertl"  
-	desc = "CORPS_COMMANDER_Roland_Ertl"
-	picture = "Portrait_GER_Roland_Ertl.dds"
-	traits = { infantry_officer infantry_leader infantry_expert }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 5107
- }
- create_corps_commander = {
-	name = "Horst Pleiner"  
-	desc = "CORPS_COMMANDER_Horst_Pleiner"
-	picture = "Portrait_GER_Horst_Pleiner.dds"
-	traits = { trait_cautious infantry_officer trickster trait_engineer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 1
-	id = 5108
- }
- create_corps_commander = {
-	name = "Karl Majcen"  
-	desc = "CORPS_COMMANDER_Karl_Majcen"
-	picture = "Portrait_GER_Karl_Majcen.dds"
-	traits = { armor_officer trickster desert_fox }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 5109
- }
- create_corps_commander = {
-	name = "Richard Rossmanith"  
-	desc = "CORPS_COMMANDER_Richard_Rossmanith"
-	picture = "Portrait_GER_Richard_Rossmanith.dds"
-	traits = { inflexible_strategist infantry_leader }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-	id = 5110
- }
- create_corps_commander = {
-	name = "Edmund Entacher"  
-	desc = "CORPS_COMMANDER_Edmund_Entacher"
-	picture = "Portrait_GER_Edmund_Entacher.dds"
-	traits = { panzer_leader desert_fox trait_mountaineer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-	id = 5111
- }
- create_corps_commander = {
-	name = "Hans-Otto Budde"  
-	desc = "CORPS_COMMANDER_Hans_Otto_Budde"
-	picture = "Portrait_GER_Hans_Otto_Budde.dds"
-	traits = { career_officer organizer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 4
-	logistics_skill = 3
-	id = 5112
- }
- create_corps_commander = {
-	name = "Helmut Willmann"  
-	desc = "CORPS_COMMANDER_Helmut_Willmann"
-	picture = "Portrait_GER_Helmut_Willmann.dds"
-	traits = { harsh_leader cavalry_officer urban_assault_specialist }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-	id = 5113
- }
- create_corps_commander = {
-	name = "Robert Brieger"  
-	desc = "CORPS_COMMANDER_Robert_Brieger"
-	picture = "Portrait_GER_Robert_Brieger.dds"
-	traits = { media_personality commando paratrooper }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 5114
- }
- create_corps_commander = {
-	name = "Othmar Commenda"  
-	desc = "CORPS_COMMANDER_Othmar_Commenda"
-	picture = "Portrait_GER_Othmar_Commenda.dds"
-	traits = { old_guard infantry_officer infantry_leader winter_specialist }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-	id = 5115
- }
- create_corps_commander = {
-	name = "Wolfgang Schneiderhan"  
-	desc = "CORPS_COMMANDER_Wolfgang_Schneiderhan"
-	picture = "Portrait_GER_Wolfgang_Schneiderhan.dds"
-	traits = { commando winter_specialist desert_fox }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-	id = 5116
- }
- create_corps_commander = {
-	name = "Ludwig Bauer"  
-	desc = "CORPS_COMMANDER_Ludwig_Bauer"
-	picture = "Portrait_GER_Ludwig_Bauer.dds"
-	traits = { trickster panzer_leader }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-	id = 5117
- }
- create_corps_commander = {
-	name = "Günther Bahr"  
-	desc = "CORPS_COMMANDER_Gunther_Bahr"
-	picture = "Portrait_GER_Gunther_Bahr.dds"
-	traits = { infantry_officer organizer hill_fighter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 3
-	id = 5118
- }
- create_corps_commander = {
-	name = "Ebhard Header"  
-	desc = "CORPS_COMMANDER_Ebhard_Header"
-	picture = "Portrait_GER_Ebhard_Header.dds"
-	traits = { bearer_of_artillery trait_engineer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 5119
- }
- create_corps_commander = {
-	name = "Eberhard Zorn"  
-	desc = "CORPS_COMMANDER_Eberhard_Zorn"
-	picture = "Portrait_GER_Eberhard_Zorn.dds"
-	traits = { trait_reckless infantry_officer urban_assault_specialist }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-	id = 5120
- }
- create_corps_commander = {
-	name = "Alexander Sollfrank"  
-	desc = "CORPS_COMMANDER_Alexander_Sollfrank"
-	picture = "Portrait_GER_Alexander_Sollfrank.dds"
-	traits = { infantry_officer politically_connected commando camouflage_expert }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-	id = 5121
- }
- create_corps_commander = {
-	name = "Gert Gawellek"  
-	desc = "CORPS_COMMANDER_Gert_Gawellek"
-	picture = "Portrait_GER_Gert_Gawellek.dds"
-	traits = { harsh_leader trait_mountaineer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-	id = 5122
- }
- create_corps_commander = {
-	name = "Stephan Thomas"  
-	desc = "CORPS_COMMANDER_Stephan_Thomas"
-	picture = "Portrait_GER_Stephan_Thomas.dds"
-	traits = { infantry_leader urban_assault_specialist }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 5123
- }
- create_corps_commander = {
-	name = "Hans-Werner Wiermann"  
-	desc = "CORPS_COMMANDER_Hans_Werner_Wiermann"
-	picture = "Portrait_GER_Hans_Werner_Wiermann.dds"
-	traits = { trait_reckless panzer_leader winter_specialist }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 5124
- }
- create_corps_commander = {
-	name = "Manfred Grätz"  
-	desc = "CORPS_COMMANDER_Manfred_Gratz"
-	picture = "Portrait_GER_Manfred_Gratz.dds"
-	traits = { trait_reckless trickster panzer_leader }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 1
-	id = 5125
- }
- create_corps_commander = {
-	name = "Heico Hübner"  
-	desc = "CORPS_COMMANDER_Heico_Hubner"
-	picture = "Portrait_GER_Heico_Hubner.dds"
-	traits = { politically_connected organizer trickster }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 2
-	id = 5126
- }
- create_corps_commander = {
-	name = "Jürgen-Joachim von Sandrart"  
-	desc = "CORPS_COMMANDER_Jurgen_Joachim_von_Sandrart"
-	picture = "Portrait_GER_Jurgen_Joachim_von_Sandrart.dds"
-	traits = { politically_connected panzer_leader }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-	id = 5127
- }
- create_corps_commander = {
-	name = "Josef Blotz"  
-	desc = "CORPS_COMMANDER_Josef_Blotz"
-	picture = "Portrait_GER_Josef_Blotz.dds"
-	traits = { trickster guerrilla_fighter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-	id = 5128
- }
- create_corps_commander = {
-	name = "Erich Pfeffer"  
-	desc = "CORPS_COMMANDER_Erich_Pfeffer"
-	picture = "Portrait_GER_Erich_Pfeffer.dds"
-	traits = { trait_cautious cavalry_officer ranger }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 5129
- }
- create_corps_commander = {
-	name = "Bernd Shütt"  
-	desc = "CORPS_COMMANDER_Bernd_Shutt"
-	picture = "Portrait_GER_Bernd_Shutt.dds"
-	traits = { infantry_leader urban_assault_specialist }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 3
-	id = 5130
- }
- create_corps_commander = {
-	name = "Carsten Breuer"  
-	desc = "CORPS_COMMANDER_Carsten_Breuer"
-	picture = "Portrait_GER_Carsten_Breuer.dds"
-	traits = { trait_cautious infantry_leader }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-	id = 5131
- }
-
-
- ## Navy ##
- create_navy_leader = { 
-	name = "Hendrik Born"
-	desc = "NAVY_LEADER_Hendrik_Born"
-	picture = "Portrait_GER_Hendrik_Born.dds"
-	traits = { navy_career_officer seawolf spotter }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5200
- }
- create_navy_leader = { 
-	name = "Carsten Stawitzki"
-	desc = "NAVY_LEADER_Carsten_Stawitzki"
-	picture = "Portrait_GER_Carsten_Stawitzki.dds"
-	traits = { seawolf }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5201
- }
- create_navy_leader = { 
-	name = "Thomas Jugel"
-	desc = "NAVY_LEADER_Thomas_Jugel"
-	picture = "Portrait_GER_Thomas_Jugel.dds"
-	traits = { seawolf }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5202
- }
- create_navy_leader = { 
-	name = "Wolfgang Brost"
-	desc = "NAVY_LEADER_Wolfgang_Brost"
-	picture = "Portrait_GER_Wolfgang_Brost.dds"
-	traits = { old_guard_navy seawolf }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5203
- }
- create_navy_leader = { 
-	name = "Rainer Endres"
-	desc = "NAVY_LEADER_Rainer_Endres"
-	picture = "Portrait_GER_Rainer_Endres.dds"
-	traits = { blockade_runner }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5204
- }
- create_navy_leader = { 
-	name = "Georg von Maltzan"
-	desc = "NAVY_LEADER_Georg_von_Maltzan"
-	picture = "Portrait_GER_Georg_von_Maltzan.dds"
-	traits = { gunnery_expert }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5205
- }
- create_navy_leader = { 
-	name = "Rainer Brinkmann"
-	desc = "NAVY_LEADER_RainerB_rinkmann"
-	picture = "Portrait_GER_Rainer_Brinkmann.dds"
-	traits = { gentlemanly bold navy_career_officer seawolf superior_tactician spotter lancer }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5206
- }
- create_navy_leader = { 
-	name = "Thomas Daum"
-	desc = "NAVY_LEADER_Thomas_Daum"
-	picture = "Portrait_GER_Thomas_Daum.dds"
-	traits = { naval_lineage fly_swatter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5207
- }
- create_navy_leader = { 
-	name = "Karsten Schneider"
-	desc = "NAVY_LEADER_Karsten_Schneider"
-	picture = "Portrait_GER_Karsten_Schneider.dds"
-	traits = { bold spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5208
- }
- create_navy_leader = { 
-	name = "Joachim Rühle"
-	desc = "NAVY_LEADER_Joachim_Ruhle"
-	picture = "Portrait_GER_Joachim_Ruhle.dds"
-	traits = { gentlemanly gunnery_expert seawolf }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5209
- }
- create_navy_leader = { 
-	name = "Manfred Nielson"
-	desc = "NAVY_LEADER_Manfred_Nielson"
-	picture = "Portrait_GER_Manfred_Nielson.dds"
-	traits = { old_guard_navy }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 1
-	coordination_skill = 1
-	id = 5210
- }
