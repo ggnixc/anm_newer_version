@@ -1,14 +1,20 @@
 ﻿capital = 1404
 
+recruit_character = BLR_zianon_pazniak
+recruit_character = BLR_nikolaus_meyer_landrut
+recruit_character = BLR_aleksandr_chumakov
+recruit_character = BLR_sergei_gaidukevich
+recruit_character = BLR_alexander_lukashenko
+
 set_oob = "BLR_2000"
 
 add_ideas = {
 	Pakt_Reichsland
 	#ministers
-	BLR_minister_Nikolaus_Meyer_Landrut_hog
-	BLR_minister_Aleksandr_Chumakov_sec
-	BLR_minister_Sergei_Gaidukevich_for
-	BLR_minister_Alexander_Lukashenko_eco
+	BLR_Nikolaus_Meyer_Landrut_hog
+	BLR_Aleksandr_Chumakov_sec
+	BLR_Sergei_Gaidukevich_for
+	BLR_Alexander_Lukashenko_eco
 	#ideas
 	BLR_green_heart_project
 	BLR_deindustrialisation
@@ -85,14 +91,4 @@ set_party_name = {
 	ideology = national_socialism
 	long_name = BLR_collab_national_socialism_long
 	name = BLR_collab_national_socialism
-}
-create_country_leader = {
-	name = "Jonas Paschnek"
-	desc = "POLITICS_ZIANON_PAZNIAK_DESC"
-	picture = "Portrait_BLR_Zianon_Pazniak.dds"
-	expire = "2090.3.4"
-	ideology = national_socialism_reformed_national_socialism_subtype
-	traits = {	
-		collaborator				
-	}
 }
