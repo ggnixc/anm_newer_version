@@ -1,9 +1,11 @@
-﻿capital = 878 #Saigon
+﻿recruit_character = VIN_Duong_Hieu_Nghia
+
+capital = 878 #Saigon
 
 set_oob = "VIN_1962"
 
 set_politics = {
-	ruling_party = paternalism
+	ruling_party = despotism
 	last_election = "1960.11.11"
 	election_frequency = 36
 	elections_allowed = no
@@ -15,9 +17,9 @@ set_popularities = {
     progressivism = 8
     liberalism = 5
     liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 67
-    despotism = 16
+    conservatism = 21
+    paternalism = 16
+    despotism = 46
     fascism = 4
     national_socialism = 0
 	ultranationalism = 0
@@ -77,15 +79,6 @@ add_ideas = {
 	tno_academic_base_primary_schooling
 	tno_army_professionalism_political_interference
 	tno_nuclear_stockpile_none
-}
-
-create_country_leader = {
-	name = "Vietnam Guy"
-	picture = "Portrait_VIN_Vietnam_Guy.dds"
-	expire = "2090.12.12"
-	ideology = paternalism_subtype
-	traits = {
-	}
 }
 
 
