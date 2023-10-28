@@ -1,6 +1,6 @@
 guitypes = {
 	containerwindowtype = {
-		name = "TNO_EaW_state_lore_button"
+		name = "ANM_state_lore_button"
 		position = { x = 6 y = -69 }
 		icontype = {
 			name = "state_bg"
@@ -9,7 +9,7 @@ guitypes = {
 		buttontype = {
 			name = "state_button"
 			spritetype = "GFX_SL_state_book_button"
-			position = { x = 9 y = 20 }
+			position = { x = 9 y = 13 }
 			pdx_tooltip = SL_open_button_tt
 			pdx_tooltip_anchor = { x = 70 y = -27 }
 		}
@@ -20,7 +20,7 @@ guitypes = {
 		}
 	}
 	containerwindowtype = {
-		name = "TNO_EaW_state_lore"
+		name = "ANM_state_lore"
 		position = { x = 0 y = 0 }
 		size = { width = 429 height = 504 }
 		orientation = center
@@ -50,7 +50,7 @@ guitypes = {
 			name = "name"
 			position = { x = 10 y = 8 }
 			text = "[Statelore_Get_Name]"
-			font = "Bomb_36"
+			font = "aldrich_white_30_outline"
 			maxwidth = 370
 			maxheight = 36
 			format = left
@@ -60,7 +60,7 @@ guitypes = {
 			name = "description"
 			position = { x = 11 y = 121 }
 			text = "[Statelore_Get_Desc]"
-			font = "aldrich_16_outline"
+			font = "aldrich_14_outline"
 			maxwidth = 390
 			maxheight = 375
 			format = left
@@ -83,7 +83,7 @@ guitypes = {
 		}
 	}
 	containerwindowtype = {
-		name = "TNO_lore_selection_entry"
+		name = "ANM_lore_selection_entry"
 		size = { width = 101 height = 69 }
 		position = { x = 51 y = 0 }
 		buttontype = {
@@ -95,9 +95,9 @@ guitypes = {
 		}
 		instantTextBoxType = {
 			name = "initials"
-			position = { x = 0 y = 17 }
+			position = { x = 0 y = 18 }
 			text = "[Statelore_Get_Initials]"
-			font = "aldrich_32_outline"
+			font = "aldrich_36_outline"
 			maxwidth = 101
 			maxheight = 36
 			format = center
@@ -106,7 +106,7 @@ guitypes = {
 		}
 	}
 	containerwindowtype = {
-		name = "TNO_EaW_state_lore_mapicons"
+		name = "ANM_state_lore_mapicons"
 		position = { x = 34 y = -25 }
 		size = { width = 85 height = 85 }
 		buttonType = {
@@ -119,7 +119,7 @@ guitypes = {
 			name = "entry_amount"
 			position = { x = 21 y = 21 }
 			text = "[?FROM.lore_entries^num]"
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			maxheight = 16
 			maxwidth = 16
 			format = left
