@@ -1,10 +1,12 @@
-﻿capital = 48
+﻿recruit_character = BUL_Simeon_II
+
+capital = 48
 
 #set_oob = "BUL_1962"
 
 
 set_politics = {	
-	ruling_party = fascism
+	ruling_party = despotism
 	last_election = "1931.6.21"
 	election_frequency = 48
 	elections_allowed = no
@@ -17,46 +19,14 @@ set_popularities = {
     liberalism = 8
     liberal_conservatism = 0
     conservatism = 8
-    paternalism = 32
-    despotism = 10
-    fascism = 35
+    paternalism = 20
+    despotism = 42
+    fascism = 15
 	national_socialism = 0
 	ultranationalism = 0
     esoteric_nazism = 0
 }
 
-create_country_leader = {
-	name = "Traicho Kostov"
-	desc = "POLITICS_BORIS_III_DESC"
-	picture = "Portrait_Bulgaria_Traicho_Kostov.dds"
-	expire = "1999.1.1"
-	ideology = communist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Simeon II"
-	desc = "POLITICS_VOLEN_SIDEROV_DESC"
-	picture = "Portrait_Simeon_II.dds"
-	expire = "2099.1.1"
-	ideology = fascism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Nadezhda Neynsky"
-	desc = "POLITICS_NADEZHDA_NEYNSKY_DESC"
-	picture = "Portrait_Bulgaria_Nadezha_Neynsky.dds"
-	expire = "2999.1.1"
-	ideology = paternalism_subtype
-	traits = {
-		#
-	}
-}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -129,5 +99,5 @@ if = {
 }
 
 add_ideas = {
-	TRI_Member
+	Pakt_Bundnispartner
 }
