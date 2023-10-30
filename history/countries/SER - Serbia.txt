@@ -1,5 +1,11 @@
 ﻿capital = 1272
 
+recruit_character = SER_vojislav_seselj
+recruit_character = SER_slobodan_milosevic
+recruit_character = SER_sreto_peric
+recruit_character = SER_dubravko_bojic
+recruit_character = SER_tomislav_ljubenovic
+
 set_cosmetic_tag = SER_kingdom
 
 set_oob = "SER_1962"
@@ -19,10 +25,10 @@ add_ideas = {
 	SER_German_Controlled_Economy
 	SER_German_Garrison
 	#Ministers
-	SER_minister_sinisa_vucinic_hog
-	SER_minister_zeljko_raznatovic_sec
-	SER_minister_jovan_ilic_deretic_eco
-	SER_minister_peter_egner_for
+	SER_Slobodan_Milosevic_hog
+	SER_Sreto_Peric_sec
+	SER_Dubravko_Boji_for
+	SER_Tomislav_Ljubenovic_eco
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_atheism
@@ -92,14 +98,3 @@ set_popularities = {
 }
 
 set_stability = 0.8
-
-create_country_leader = {
-	name = "Vojislav Šešelj"
-	desc = "POLITICS_SESELJ_DESC"
-	picture = "Portrait_SER_Vojislav_Seselj.dds"
-	expire = "2020.5.17"
-	ideology = ultranationalism_reactionary_nationalism_subtype
-	traits = {
-		nationalist_symbol
-	}
-}
