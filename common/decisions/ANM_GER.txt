@@ -1,73 +1,50 @@
 GER_party_struggle = {
-	GER_dummy = {
+	picture = GER_GFX_party_struggle
+    icon = GER_power_stuggle
+    visible_when_empty = yes
 
-		icon = ger_reichskommissariats
+	GER_meeting_with_the_gauleiters = {
+		allowed = {
+            tag = GER
+        }
+        icon = GER_decision_meeting_gauleiters
+        days_re_enable = 30
+        days_remove = 15
+        modifier = {
+            political_power_factor = -0.15
+        }
+        remove_effect = {
+            	country_event = GER_meeting_gauleiters
+        }
+    }
 
-		available = {
-			always = no
-		}
+	GER_digital_campaign = {
+		allowed = {
+            tag = GER
+        }
+        icon = GER_decision_digital_campaign
+        days_re_enable = 30
+        days_remove = 15
+        modifier = {
+            political_power_factor = -0.15
+        }
+        remove_effect = {
+            	country_event = GER_digital_campaign
+        }
+    }
 
-		cost = 0
-		visible = {
-			
-		}
-
-		complete_effect = {
-			
-		}
-	}
-	
-	GER_positive = {
-		icon = ger_reichskommissariats
-
-		available = {
-			always = yes
-		}
-
-		cost = 0
-		visible = {
-			
-		}
-
-		complete_effect = {
-			GER_test_influence_high = yes
-		}
-	
-	}
-	GER_negative = {
-		icon = ger_reichskommissariats
-
-		available = {
-			always = yes
-		}
-
-		cost = 0
-		visible = {
-			
-		}
-
-		complete_effect = {
-			GER_test_influence_low = yes
-		}
-	
-	}
-	
-	GER_negative_2 = {
-		icon = ger_reichskommissariats
-
-		available = {
-			always = yes
-		}
-
-		cost = 0
-		visible = {
-			
-		}
-
-		complete_effect = {
-			GER_test_influence_low = yes
-		}
-	
-	}
-
+	GER_hold_an_interview = {
+		allowed = {
+            tag = GER
+        }
+        icon = GER_decision_hold_an_interview 
+        fire_only_once = yes
+        days_remove = 15
+        modifier = {
+            political_power_factor = -0.15
+        }
+        remove_effect = {
+            	country_event = GER_hold_an_interview_event_chain_start
+        }
+    }
 }
