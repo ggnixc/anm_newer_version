@@ -33,6 +33,35 @@ GER_party_struggle = {
         }
     }
 
+    GER_sabotage_mussgang = {
+        allowed = {
+            tag = GER
+        }
+
+        icon = GER_decision_sabotage
+        days_re_enable = 30
+        days_remove = 15
+        modifier = {
+            political_power_factor = -0.15
+        }
+        remove_effect = {
+            random_list = {
+                50 = {
+                    add_popularity = {
+                        ideology = national_socialism_4
+                        popularity = -0.15
+                    }
+                }
+                50 = {
+                    add_popularity = {
+                        ideology = national_socialism_4
+                        popularity = 0.15
+                    }
+                }
+            }
+    }
+    }
+
 	GER_hold_an_interview = {
 		allowed = {
             tag = GER
