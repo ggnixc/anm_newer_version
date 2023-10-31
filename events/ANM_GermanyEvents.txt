@@ -120,11 +120,11 @@ country_event = { #May ‘97:
 		name = GER_flavour_event.9.a
 	}
 }
-country_event = { #July ‘97: 
+country_event = { #July ‘97: Mother Goose
 	id = GER_flavour_event.10
 	title = GER_flavour_event.10.t
 	desc = GER_flavour_event.10.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_mother_goose
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -198,7 +198,162 @@ country_event = { #March ‘98:
 		name = GER_flavour_event.15.a
 	}
 }
+country_event = { #May ‘98: Just a Girl in the World (1/2)
+	id = GER_flavour_event.16
+	title = GER_flavour_event.16.t
+	desc = GER_flavour_event.16.desc
+	picture = GFX_anm_GER_movie_theater
 
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.16.a
+	}
+}
+country_event = { #May ‘98: Just a Girl in the World (2/2)
+	id = GER_flavour_event.17
+	title = GER_flavour_event.17.t
+	desc = GER_flavour_event.17.desc
+	picture = GFX_anm_GER_movie_theater
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.17.a
+	}
+}
+country_event = { #July ‘98:
+	id = GER_flavour_event.18
+	title = GER_flavour_event.18.t
+	desc = GER_flavour_event.18.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.18.a
+	}
+}
+country_event = { #September ‘98:
+	id = GER_flavour_event.19
+	title = GER_flavour_event.19.t
+	desc = GER_flavour_event.19.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.19.a
+	}
+}
+country_event = { #November ‘98: Face the Music
+	id = GER_flavour_event.20
+	title = GER_flavour_event.20.t
+	desc = GER_flavour_event.20.desc
+	picture = GFX_anm_GER_katharina_court
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.20.a
+	}
+}
+country_event = { #January ‘99:
+	id = GER_flavour_event.21
+	title = GER_flavour_event.21.t
+	desc = GER_flavour_event.21.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.21.a
+	}
+}
+country_event = { #March ‘99:
+	id = GER_flavour_event.22
+	title = GER_flavour_event.22.t
+	desc = GER_flavour_event.22.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.22.a
+	}
+}
+country_event = { #May ‘99:
+	id = GER_flavour_event.23
+	title = GER_flavour_event.23.t
+	desc = GER_flavour_event.23.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.23.a
+	}
+}
+country_event = { #July ‘99
+	id = GER_flavour_event.24
+	title = GER_flavour_event.24.t
+	desc = GER_flavour_event.24.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.24.a
+	}
+}
+country_event = { #September ‘99:
+	id = GER_flavour_event.25
+	title = GER_flavour_event.25.t
+	desc = GER_flavour_event.25.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.25.a
+	}
+}
+country_event = { #November ‘99:
+	id = GER_flavour_event.26
+	title = GER_flavour_event.26.t
+	desc = GER_flavour_event.26.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.26.a
+	}
+}
+country_event = { #January ‘00: CUT-OFF POINT?
+	id = GER_flavour_event.27
+	title = GER_flavour_event.27.t
+	desc = GER_flavour_event.27.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.27.a
+	}
+}
 
 
 ### Focus Tree Events ###
@@ -213,6 +368,22 @@ country_event = { #Event for ‘Reign of the Eagle’
 
 	option = { 
 		name = GER_focus_event.1.a
+		custom_effect_tooltip = GER_change_popularity_national_socialism_1_1
+		hidden_effect = { 
+			set_popularities = {
+				national_socialism = 36
+				national_socialism_1 = 46
+				national_socialism_2 = 11
+				despotism = 7
+			}
+			POL = { 
+				add_timed_idea = {
+					idea = POL_anniversary_poland_occupation
+					days = 230
+				}
+			}
+			country_event = { id = GER_misc_main_event.2 days = 230 }
+		}
 	}
 }
 country_event = { #Event for ‘Into the Digital Age’
@@ -291,6 +462,15 @@ country_event = { #Event for ‘A Harmonious Party’
 
 	option = { 
 		name = GER_focus_event.7.a
+		custom_effect_tooltip = GER_change_popularity_national_socialism_1_1
+		hidden_effect = { 
+			set_popularities = {
+				national_socialism = 35
+				national_socialism_1 = 47
+				national_socialism_2 = 11
+				despotism = 7
+			}
+		}
 	}
 }
 country_event = { #Event for ‘The Pakt’s Finest’ 1/2
@@ -434,6 +614,10 @@ country_event = { #Event for ‘Breaching The Unknown’
 
 	option = { 
 		name = GER_focus_event.18.a
+		swap_ideas = {
+			remove_idea = tno_research_facilities_modern
+			add_idea = tno_research_facilities_politicized
+		}
 	}
 }
 country_event = { #Event for ‘Launch The Euromark’ 1/2
@@ -462,11 +646,11 @@ country_event = { #Event for ‘Launch The Euromark’ 2/2
 		name = GER_focus_event.20.a
 	}
 }
-country_event = { #
+country_event = { #Event for ‘Does It, Really? 1/2
 	id = GER_focus_event.21
 	title = GER_focus_event.21.t
 	desc = GER_focus_event.21.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_my_fellow_aryans
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -475,58 +659,262 @@ country_event = { #
 		name = GER_focus_event.21.a
 	}
 }
-country_event = { #
+country_event = { #Event for ‘Does It, Really? 2/2
 	id = GER_focus_event.22 
 	title = GER_focus_event.22.t
 	desc = GER_focus_event.22.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_broken_nazi_eagle
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
 		name = GER_focus_event.22.a
+		custom_effect_tooltip = GER_my_fellow_aryans_tt
 	}
 }
-country_event = { #
+country_event = { #Event for ‘The Red Elephant in the Room’
 	id = GER_focus_event.23
 	title = GER_focus_event.23.t
 	desc = GER_focus_event.23.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_between_hammer_sickle
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
 		name = GER_focus_event.23.a
+		custom_effect_tooltip = GER_between_hammer_sickle_tt
 	}
 }
-country_event = { #
+country_event = { #Event for ‘The Pen is Mightier Than the Sword’
 	id = GER_focus_event.24 
 	title = GER_focus_event.24.t
 	desc = GER_focus_event.24.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_deckert_taperecorder
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
 		name = GER_focus_event.24.a
+		custom_effect_tooltip = GER_auf_der_mauer_tt
 	}
 }
-country_event = { #
+country_event = { #Event for ‘No Time for Diplomacy!’
 	id = GER_focus_event.25 
 	title = GER_focus_event.25.t
 	desc = GER_focus_event.25.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_deckert_taperecorder
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
 		name = GER_focus_event.25.a
+		custom_effect_tooltip = GER_leap_of_faith_tt
 	}
 }
+country_event = { #Event for ‘Finalize the Ostwall’
+	id = GER_focus_event.26
+	title = GER_focus_event.26.t
+	desc = GER_focus_event.26.desc
+	picture = GFX_anm_GER_construction_lunch_break
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.26.a
+	}
+}
+country_event = { #Event for ‘Prepare the Wehrmacht’
+	id = GER_focus_event.27 
+	title = GER_focus_event.27.t
+	desc = GER_focus_event.27.desc
+	picture = GFX_anm_GER_boombox
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.27.a
+		custom_effect_tooltip = GER_bulls_on_parade_tt
+	}
+}
+country_event = { #Event for ‘Pull Fundings from RLR’
+	id = GER_focus_event.28 
+	title = GER_focus_event.28.t
+	desc = GER_focus_event.28.desc
+	picture = GFX_anm_GER_RLR_logo
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.28.a
+		custom_effect_tooltip = GER_change_popularity_national_socialism_1_1
+	}
+}
+country_event = { #Event for ‘Reduce State Surveillance Budget’
+	id = GER_focus_event.29
+	title = GER_focus_event.29.t
+	desc = GER_focus_event.29.desc
+	picture = GFX_anm_GER_keeping_score
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.29.a
+		custom_effect_tooltip = GER_change_popularity_national_socialism_1_3
+	}
+}
+country_event = { #Event for ‘Squeeze the Megaprojects’
+	id = GER_focus_event.30 
+	title = GER_focus_event.30.t
+	desc = GER_focus_event.30.desc
+	picture = GFX_anm_GER_broken_euromark
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.30.a
+	}
+}
+country_event = { #Event for “Our Central European Allies”
+	id = GER_focus_event.31
+	title = GER_focus_event.31.t
+	desc = GER_focus_event.31.desc
+	picture = GFX_anm_GER_speer_fischer_chess
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.31.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.32 
+	title = GER_focus_event.32.t
+	desc = GER_focus_event.32.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.32.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.33 
+	title = GER_focus_event.33.t
+	desc = GER_focus_event.33.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.33.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.34
+	title = GER_focus_event.34.t
+	desc = GER_focus_event.34.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.34.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.35
+	title = GER_focus_event.35.t
+	desc = GER_focus_event.35.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.35.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.36 
+	title = GER_focus_event.36.t
+	desc = GER_focus_event.36.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.36.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.37 
+	title = GER_focus_event.37.t
+	desc = GER_focus_event.37.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.37.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.38
+	title = GER_focus_event.38.t
+	desc = GER_focus_event.38.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.38.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.39 
+	title = GER_focus_event.39.t
+	desc = GER_focus_event.39.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.39.a
+	}
+}
+country_event = { #
+	id = GER_focus_event.40
+	title = GER_focus_event.40.t
+	desc = GER_focus_event.40.desc
+	picture = GFX_anm_GER_
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_focus_event.40.a
+	}
+}
+
+
 
 
 
@@ -542,6 +930,81 @@ country_event = { #German-Irish relationship: Status Quo
 
 	option = { 
 		name = GER_misc_main_event.1.a
+	}
+}
+country_event = { #Annexation RL Polen
+	id = GER_misc_main_event.2
+	title = GER_misc_main_event.2.t
+	desc = GER_misc_main_event.2.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.2.a
+		annex_country = { target = POL transfer_troops = yes }
+	}
+}
+country_event = { #Load Phase 2
+	id = GER_misc_main_event.3
+	title = GER_misc_main_event.3.t
+	desc = GER_misc_main_event.3.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.3.a
+		load_focus_tree = GER_focus_phase_2
+	}
+}
+country_event = { #Load Iranian Civil War
+	id = GER_misc_main_event.4
+	title = GER_misc_main_event.4.t
+	desc = GER_misc_main_event.4.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.4.a
+		load_focus_tree = { tree = GER_focus_phase_2_icw keep_completed = yes }
+	}
+}
+country_event = { #Load Finnish Civil War
+	id = GER_misc_main_event.5
+	title = GER_misc_main_event.5.t
+	desc = GER_misc_main_event.5.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.5.a
+		load_focus_tree = { tree = GER_focus_phase_2_icw_fcw keep_completed = yes }
+	}
+}
+country_event = { #Load Phase 2 Final Showdown
+	id = GER_misc_main_event.6
+	title = GER_misc_main_event.6.t
+	desc = GER_misc_main_event.6.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.6.a
+		load_focus_tree = { tree = GER_focus_phase_2_final keep_completed = yes }
 	}
 }
 

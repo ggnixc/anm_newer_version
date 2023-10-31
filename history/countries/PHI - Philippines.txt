@@ -1,37 +1,36 @@
 ﻿capital = 327
 
-set_cosmetic_tag = PHI_coalition
 
 set_oob = "PHI_1962"
 
 set_politics = {
-	ruling_party = liberal_conservatism
+	ruling_party = paternalism
 	last_election = "1992.9.15"
 	election_frequency = 72
 	elections_allowed = yes
 }
 
 set_popularities = {
-	communist = 25
-	socialist = 10
-	progressivism = 5
-	liberalism = 10
-	liberal_conservatism = 37
-	conservatism = 3
-	paternalism = 5
-	despotism = 5
-	fascism = 0
-	ultranationalism = 0
+	communist = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+	liberal_conservatism = 0
+	conservatism = 0
+	paternalism = 60
+	despotism = 20
+	fascism = 10
+	ultranationalism = 10
 	esoteric_nazism = 0
 }
 
 
 create_country_leader = {
-	name = "Miriam Defensor Santiago"
-	desc = "POLITICS_MIRIAM_DEFENSOR_DESC"
-	picture = "Portrait_PHI_Miriam_Santiago.dds"
+	name = "Salvador Laurel"
+	desc = "POLITICS_SALVADOR_LAUREL_DESC"
+	picture = "Portrait_PHI_Salvador_Laurel.dds"
 	expire = "2000.1.1"
-	ideology = liberal_conservatism_christian_democracy_subtype
+	ideology = paternalism_oligarchy_subtype
 	traits = {
 		#
 	}
@@ -39,70 +38,10 @@ create_country_leader = {
 
 add_ideas = {
 	#FACTION STATUS
-	
+	Sphere_Fully_Dependent
 	#SPIRITS
-	PHI_religious_divide 
 	
 	#SOCIETAL DEVELOPMENT
-	tno_nuclear_stockpile_none
-	tno_poverty_rate_50
-	tno_army_professionalism_political_interference
-	tno_industrial_expertise_nascent
-	tno_industrial_equipment_factory_complexes
-	tno_agriculture_mass_mechanized
-	tno_research_facilities_outdated
-	tno_academic_base_primary_schooling
-
-	construction_level_5
-	
-	#Political#
-	tno_political_parties_multiparty_system
-	tno_religious_rights_secularism
-	tno_trade_unions_all_allowed
-	tno_immigration_open_immigration
-	tno_slavery_outlawed
-	tno_public_meetings_allowed
-	tno_press_rights_free_press
-	tno_vote_franchise_universal
-	tno_refugees_vetted_entry
-	
-	#Military#
-	tno_conscription_one_year_draft
-	tno_women_noncombat_only
-	tno_military_supervision_military_policing
-	tno_military_spending_medium_spending
-	tno_training_basic_training
-	tno_racial_integration_integrated_military
-	tno_draft_exemptions_religious_deferment
-	
-	#Economic#
-	tno_trade_laws_export_focus
-	tno_economic_focus_civilian_economy
-	tno_tax_rate_medium_taxation
-	tno_income_taxation_flat_taxes
-	tno_minimum_wage_low_minimum_wage
-	tno_max_workhours_8_hour_work_day
-	tno_child_labor_illegal
-	tno_pensions_low_pensions
-	tno_unemployment_trinket_subsidies
-	
-	#Social#
-	tno_safety_limited_regulations
-	tno_health_care_public_health_care
-	tno_pollution_few_regulations
-	tno_education_public_education
-	tno_penal_system_incarceration
-	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_women_in_the_workplace
-	tno_minorities_equal_rights
-	tno_drugs_weedbanned
-	tno_security_police
 	
 	#Ministers
-	PHI_Camilo_Osias_hog
-	PHI_Jose_Laurel_eco
-	PHI_Emanuel_Pelaez_for
-	PHI_Jose_Zulueta_sec
 }
-
-set_country_flag = PHI_Aquino_1

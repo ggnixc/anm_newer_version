@@ -27,17 +27,19 @@ set_politics = {
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 0
-    progressivism = 25
-    liberalism = 50
-    liberal_conservatism = 0
-    conservatism = 15
-    paternalism = 10
+    socialist = 4
+    progressivism = 15
+    liberalism = 37
+    liberal_conservatism = 25
+    conservatism = 14
+    paternalism = 5
     despotism = 0
     fascism = 0
     national_socialism = 0
     esoteric_nazism = 0
 }
+
+
 
 create_country_leader = {
 	name = "Jim Wallace"
@@ -45,13 +47,18 @@ create_country_leader = {
 	picture = "Portrait_SHL_Jim_Wallace.dds"
 	expire = "2090.1.1"
 	ideology = liberalism_national_liberal_subtype
-	traits = {
+	traits = { 
+		committed_bureaucrat
 	}
 }
 
 
 add_ideas = {
 	OFN_Dependent_Member
+	#spirits#
+	SHL_Last_Free_Soil
+	SHL_Newfound_Autonomy
+	SHL_Battle_For_Oil
 	#ministers#
 	#political#
 	tno_political_parties_controlled_opposition

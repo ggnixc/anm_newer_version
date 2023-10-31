@@ -1,0 +1,38 @@
+﻿add_namespace = SOV
+add_namespace = SOV_flavour
+add_namespace = SOV_space
+
+#### INTRO EVENTS ###
+
+news_event = {
+	id = SOV_space.1
+	title = SOV_space.1.t
+	desc = SOV_space.1.desc
+	picture = GFX_anm_sov_space_1
+	trigger = {
+		tag = SOV
+		date > 1996.1.10
+	}
+
+	fire_only_once = yes
+
+	option = { 
+		name = SOV_space.1.a
+		trigger = {
+			tag = SOV
+		}
+	}
+	option = { 
+		name = SOV_space.1.b
+		trigger = {
+			tag = GER
+		}
+	}
+	option = { 
+		name = SOV_space.1.c
+		trigger = {
+			NOT = { tag = SOV }
+			NOT = { tag = GER }
+		}
+	}
+}

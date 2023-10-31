@@ -1,0 +1,164 @@
+# Misc stuff
+
+defined_text = {
+	name = GetSLName
+	text = {
+		localization_key = "[THIS.GetName]"
+	}
+}
+
+## WINTER IMAGE LOGIC ##
+defined_text = {
+	name = Statelore_Get_winter
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					var:selected_lore_state = {
+						has_state_flag = SL_has_northern_winter
+					}
+				}
+				# 1st December until 1st March the next year.
+				OR = {
+					AND = {
+						date > 1961.12.1
+						date < 1962.3.1
+					}
+					AND = {
+						date > 1962.12.1
+						date < 1963.3.1
+					}
+					AND = {
+						date > 1963.12.1
+						date < 1964.3.1
+					}
+					AND = {
+						date > 1964.12.1
+						date < 1965.3.1
+					}
+					AND = {
+						date > 1965.12.1
+						date < 1966.3.1
+					}
+					AND = {
+						date > 1966.12.1
+						date < 1967.3.1
+					}
+					AND = {
+						date > 1967.12.1
+						date < 1968.3.1
+					}
+					AND = {
+						date > 1968.12.1
+						date < 1969.3.1
+					}
+					AND = {
+						date > 1969.12.1
+						date < 1970.3.1
+					}
+					AND = {
+						date > 1970.12.1
+						date < 1971.3.1
+					}
+					AND = {
+						date > 1971.12.1
+						date < 1972.3.1
+					}
+					AND = {
+						date > 1972.12.1
+						date < 1973.3.1
+					}
+					AND = {
+						date > 1973.12.1
+						date < 1974.3.1
+					}
+					AND = {
+						date > 1974.12.1
+						date < 1975.3.1
+					}
+					AND = {
+						date > 1975.12.1
+						date < 1976.3.1 # 1976 is end of USA's 1968 presidents' content
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					var:selected_lore_state = {
+						has_state_flag = SL_has_southern_winter
+					}
+				}
+				# 1st June until 31st August the same year.
+				OR = {
+					AND = {
+						date > 1962.6.1
+						date < 1962.8.31
+					}
+					AND = {
+						date > 1963.6.1
+						date < 1963.8.31
+					}
+					AND = {
+						date > 1964.6.1
+						date < 1964.8.31
+					}
+					AND = {
+						date > 1965.6.1
+						date < 1965.8.31
+					}
+					AND = {
+						date > 1966.6.1
+						date < 1966.8.31
+					}
+					AND = {
+						date > 1967.6.1
+						date < 1967.8.31
+					}
+					AND = {
+						date > 1968.6.1
+						date < 1968.8.31
+					}
+					AND = {
+						date > 1969.6.1
+						date < 1969.8.31
+					}
+					AND = {
+						date > 1970.6.1
+						date < 1970.8.31
+					}
+					AND = {
+						date > 1971.6.1
+						date < 1971.8.31
+					}
+					AND = {
+						date > 1972.6.1
+						date < 1972.8.31
+					}
+					AND = {
+						date > 1973.6.1
+						date < 1973.8.31
+					}
+					AND = {
+						date > 1974.6.1
+						date < 1974.8.31
+					}
+					AND = {
+						date > 1975.6.1
+						date < 1975.8.31
+					}
+					AND = {
+						date > 1976.6.1
+						date < 1976.8.31
+					}
+				}
+			}
+			else = { always = no }
+		}
+		localization_key = "GFX_state_lore_winter_img_[?selected_lore]"
+	}
+	text = {
+		localization_key = "GFX_state_lore_img_[?selected_lore]"
+	}
+}
+
+## END WINTER IMAGE LOGIC ##

@@ -1,0 +1,110 @@
+characters = {
+	ROM_radu_campeanu = { 
+		name = ROM_radu_campeanu
+		portraits = { 
+			civilian = { large = "gfx/leaders/ROM/Portrait_ROM_Radu_Campeanu.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_RADU_CAMPEANU_DESC"
+			ideology = liberalism_classical_liberalism_subtype
+			traits = {  }
+			expire = "2999.1.1.1"
+		}
+	}
+	ROM_emil_constantinescu = {  
+		name = ROM_emil_constantinescu
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ROM/Portrait_ROM_Emil_Constantinescu.dds"
+				small = "GFX_idea_ROM_Emil_Constantinescu" 
+			} 	
+		} 
+		country_leader = {
+			ideology = liberalism_1_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ROM_Emil_Constantinescu_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ROM_iulian_vlad = { 
+		name = ROM_iulian_vlad
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ROM/Portrait_ROM_Iulian_Vlad.dds"
+				small = "GFX_idea_ROM_Iulian_Vlad" 
+			} 	
+		} 
+		country_leader = {
+			ideology = progressivism_1_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ROM_Iulian_Vlad_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ROM_corneliu_coposu = {  
+		name = ROM_corneliu_coposu
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ROM/Portrait_ROM_Corneliu_Coposu.dds"
+				small = "GFX_idea_ROM_Corneliu_Coposu" 
+			} 	
+		} 
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = ROM_Corneliu_Coposu_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ROM_ion_diaconescu = { 
+		name = ROM_ion_diaconescu
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ROM/Portrait_ROM_Ion_Diaconescu.dds"
+				small = "GFX_idea_ROM_Ion_Diaconescu" 
+			} 	
+		} 
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = ROM_Ion_Diaconescu_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+} 

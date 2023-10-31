@@ -424,6 +424,18 @@ leader_traits = {
 		communist_acceptance = 10
 		socialist_acceptance = 10
 	}
+
+	### ANM ### 
+	hog_flamboyant_brute = { #Mussgnug
+		stability_factor = -0.05
+		political_power_gain = -0.05
+
+		random = no
+	}
+	reich_foreign = { }
+	reich_economy = { }
+	reich_defence = { }
+	reich_head_of_government = { }
 	
 	########################################
 	## ECONOMY MINISTERS
@@ -820,6 +832,16 @@ leader_traits = {
 		random = no
 		war_support_factor = -0.05
 	}
+
+	### ANM ###
+	eco_apolitical_workaholic = { #Frey
+		random = no
+		production_speed_buildings_factor = 0.05
+		local_resources_factor = 0.1
+		consumer_goods_factor = -0.05
+	}
+
+
 	########################################
 	## FOREIGN MINISTERS
 	########################################
@@ -990,6 +1012,17 @@ leader_traits = {
 		social_conservative_acceptance = 50
 		social_democrat_acceptance = 50
 	}
+
+	### ANM ###
+	for_naive_appeaser = { #Fisher
+		stability_factor = 0.05
+		opinion_gain_monthly_factor = 0.1
+		trade_opinion_factor = 0.1
+
+		random = no
+	}
+
+	
 
 	########################################
 	## SECURITY MINISTERS
@@ -1230,6 +1263,14 @@ leader_traits = {
 		navy_carrier_air_attack_factor = 0.06
 		navy_carrier_air_targetting_factor = 0.07
 		navy_carrier_air_agility_factor = 0.08
+	}
+
+	### ANM ###
+	sec_militaristic_technocrat = { #Deckert
+		random = no
+		training_time_factor = 0.10
+		army_morale_factor = 0.05
+		research_speed_factor = 0.02
 	}
 
 	########################################

@@ -762,9 +762,6 @@ country_event = {
 				amount = 50
 				producer = GER
 			}
-			add_ideas = {
-			KdNmandate
-			}
         }
 		GER = {
 			create_faction = GER_central_gov
@@ -2220,31 +2217,6 @@ country_event = { ##german civil war, first phase
 	}
 }
 
-#tests kdn vote 11
-country_event = { 
-	id = ANM_debug.26
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ANM_debug.26"}
-	title = ANM_debug.26.t
-	desc = ANM_debug.26.desc
-	picture = GFX_report_event_lithuania_army
-	fire_only_once = no
-	is_triggered_only = yes
-	
-	hidden = yes
-
-	option = {
-		name = ANM_debug.26.a
-				ZZZ = {
-		ANM_reloadleepickdn = yes
-		set_variable = { global.ANMKDNcurrentparliamentvoteissue = 11 }
-		ANM_parliamentmembercounting = yes
-		activate_mission = ANM_kdn_parliamentvotingmission
-		every_country = {
-		ANM_iskdnmember_kdnmembersvote = yes
-		}
-				}
-	}
-}
 #tests norway vote 1
 country_event = { 
 	id = ANM_debug.27

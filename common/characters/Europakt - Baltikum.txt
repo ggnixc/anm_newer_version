@@ -1,0 +1,94 @@
+characters = {
+	OST_frank_schwerdt = { 
+		name = OST_frank_schwerdt
+		portraits = { 
+			civilian = { large = "gfx/leaders/OST/Portrait_OST_Frank_Schwerdt.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_FRANK_SCHWERDT_DESC"
+			ideology = national_socialism_reformed_national_socialism_subtype
+			traits = { committed_bureaucrat }
+			expire = "2999.1.1.1"
+		}
+	}
+	OST_imants_paradnieks = { 
+		name = OST_imants_paradnieks
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/OST/Portrait_OST_Imants_Paradnieks.dds"
+				small = "GFX_idea_OST_Imants_Paradnieks" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = OST_Imants_Paradnieks_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	OST_jorg_hanel = { 
+		name = OST_jorg_hanel
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/OST/ortrait_OST_Jorg_Hanel.dds"
+				small = "GFX_idea_OST_Jorg_Hanel" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = OST_Jorg_Hanel_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	OST_ainars_slesers = {
+		name = OST_ainars_slesers
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/OST/Portrait_OST_Ainars_Slesers.dds"
+				small = "GFX_idea_OST_Ainars_Slesers" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = OST_Ainars_Slesers_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	OST_andreas_storr = { 
+		name = OST_andreas_storr
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/OST/Portrait_OST_Andreas_Storr.dds"
+				small = "GFX_idea_OST_Andreas_Storr" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = OST_Andreas_Storr_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+} 

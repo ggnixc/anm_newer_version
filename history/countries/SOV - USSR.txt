@@ -1,4 +1,12 @@
-﻿capital = 1442
+﻿### Characters ###
+
+recruit_character = SOV_Grigory_Romanov
+recruit_character = SOV_Gennady_Yanayev
+recruit_character = SOV_Anatoly_Lukyanov
+recruit_character = SOV_Vladimir_Kryuchkov
+recruit_character = SOV_Aleksandr_Bessmertnykh
+
+capital = 1442
 
 set_research_slots = 4
 
@@ -23,10 +31,10 @@ set_politics = {
 }
 
 set_popularities = {
-	communist = 41
-	communist_1 = 35
+	communist = 43
+	communist_1 = 32
 	communist_2 = 14
-	communist_3 = 10
+	communist_3 = 11
 	ultranationalism = 0
 	national_socialism = 0
 	socialist = 0
@@ -39,8 +47,6 @@ set_popularities = {
 	fascism = 0
 	esoteric_nazism = 0
 }
-
-load_focus_tree = SOV_start
 
 if = {
 	limit = { has_dlc = "La Resistance" }
@@ -64,10 +70,10 @@ add_ideas = {
 	COM_Member
 	
 	###MINISTERS###
- 	SOV_minister_Gennady_Yanayev_hog
- 	SOV_minister_Vladimir_Kryuchkov_sec
- 	SOV_minister_Aleksandr_Bessmertnykh_for
- 	SOV_minister_Anatoly_Lukyanov_eco
+ 	SOV_Gennady_Yanayev_hog
+ 	SOV_Vladimir_Kryuchkov_sec
+ 	SOV_Aleksandr_Bessmertnykh_for
+ 	SOV_Anatoly_Lukyanov_eco
 	
 	###IDEAS###
 	SOV_Suslov_Vision
@@ -128,60 +134,6 @@ add_ideas = {
 	tno_research_facilities_modern
 	tno_academic_base_secondary_schooling
 	tno_birthrate_many
-}
-
-### Country Leader ###
-create_country_leader = {
-	name = "Grigory Romanov"
-	picture = "Portrait_SOV_Grigory_Romanov.dds"
-	expire = "2090.1.1"
-	desc = "POLITICS_GRIGORY_ROMANOV_DESC"
-	ideology = communist_marxism_leninism_subtype
-	traits = {
-		hog_political_protege
-	}
-}
-
-create_country_leader = {
-	name = "Anatoly Lukyanov"
-	picture = "Portrait_SOV_Anatoly_Lukyanov.dds"
-	expire = "2090.1.1"
-	desc = "POLITICS_ANATOLY_LUKYANOV_DESC"
-	ideology = communist_1_yagodschina_subtype
-	traits = {
-		eco_reformer
-	}
-}
-
-create_country_leader = {
-	name = "Vladimir Kryuchkov"
-	picture = "Portrait_SOV_Vladimir_Kryuchkov.dds"
-	expire = "2090.1.1"
-	desc = "POLITICS_VLADMIR_KRYUCHKOV_DESC"
-	ideology = communist_2_marxism_leninism_subtype
-	traits = {
-		sec_secret_police_chief
-	}
-}
-
-create_country_leader = {
-	name = "No Specific Leader"
-	picture = "Portrait_SOV_Provisional_Council.dds"
-	expire = "2090.1.1"
-	desc = ""
-	ideology = communist_3_bolshevism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Viktor Samsonov"
-	picture = "Portrait_SOV_Viktor_Samsonov.dds"
-	expire = "2090.1.1"
-	desc = "POLITICS_VIKTOR_SAMSONOV_DESC"
-	ideology = despotism_interim_government_subtype
-	traits = {
-	}
 }
 
 set_technology = {

@@ -1,7 +1,15 @@
-﻿capital = 809
+﻿recruit_character = FER_Yevgeny_Nazdratenko
+recruit_character = FER_Viktor_Ozerov
+recruit_character = FER_Konstantin_Preobrazhenskiy
+recruit_character = FER_Yevgeny_Primakov
+recruit_character = FER_Viktor_Ishayev
+
+capital = 809
 
 add_offsite_building = { type = arms_factory level = 1 }
 add_offsite_building = { type = industrial_complex level = 1 }
+
+give_military_access = JAP
 
 set_politics = {
 	ruling_party = communist
@@ -11,9 +19,9 @@ set_politics = {
 }
 
 set_popularities = {
-	communist = 45
-	communist_1 = 25
-	communist_2 = 10
+	communist = 46
+	communist_1 = 19
+	communist_2 = 12
 	ultranationalism = 0
 	national_socialism = 0
 	socialist = 0
@@ -21,7 +29,7 @@ set_popularities = {
 	liberalism = 0
 	liberal_conservatism = 0
 	conservatism = 0
-	paternalism = 20
+	paternalism = 23
 	despotism = 0
 	fascism = 0
 	esoteric_nazism = 0
@@ -32,10 +40,10 @@ add_ideas = {
 	COM_Satellite
 	
 	###MINISTERS###
-	FER_minister_Viktor_Ozerov_hog
-	FER_minister_Konstantin_Preobrazhenskiy_sec
-	FER_minister_Yevgeny_Primakov_for
-	FER_minister_Viktor_Ishayev_eco
+	FER_Viktor_Ozerov_hog
+	FER_Konstantin_Preobrazhenskiy_sec
+	FER_Yevgeny_Primakov_for
+	FER_Viktor_Ishayev_eco
 	
 	###IDEAS###
 	FER_Neutral_Zone
@@ -94,18 +102,6 @@ add_ideas = {
 	tno_research_facilities_modern
 	tno_academic_base_secondary_schooling
 	tno_birthrate_many
-}
-
-### Country Leader ###
-create_country_leader = {
-	name = "Yevgeny Nazdratenko"
-	picture = "Portrait_FER_Yevgeny_Nazdratenko.dds"
-	expire = "2090.1.1"
-	desc = "POLITICS_YEVGENY_NAZDRATENKO_DESC"
-	ideology = communist_yagodschina_subtype
-	traits = {
-		eco_balanced_budget_economy
-	}
 }
 
 set_technology = {

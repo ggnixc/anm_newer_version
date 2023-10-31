@@ -21,17 +21,17 @@
  Sphere_Fully_Dependent_displaykey: "GFX_Sphere_Fully_Dependent"
  Sphere_Economic_Dependent_displaykey: "GFX_Sphere_Economic_Dependent"
  Sphere_Coequal_displaykey: "GFX_Sphere_Coequal"
- OFN_Leader_of_The_Free_World_displaykey:0 "GFX_OFN_leader_of_the_free_world"
- OFN_Independent_Member_displaykey:0 "GFX_OFN_Leader"
- OFN_Dependent_Member_displaykey:0 "GFX_OFN_dependent_ofn_member"
- OFN_Military_Government_displaykey:0 "GFX_OFN_ofn_military_government"
- OFN_Mandate_displaykey:0 "GFX_OFN_ofn_mandate"
- TRI_Founder_IT_displaykey:0 "GFX_TRI_Founder_IT"
- TRI_Founder_IB_displaykey:0 "GFX_TRI_Founder_IB"
- TRI_Founder_TR_displaykey:0 "GFX_TRI_Founder_TR"
- TRI_Member_displaykey:0 "GFX_TRI_Member"
- TRI_Member_Client_displaykey:0 "GFX_TRI_Member_Client"
- ITA_Member_displaykey:0 "GFX_ita_factionmember"
+ OFN_Leader_of_The_Free_World_displaykey: "GFX_OFN_leader_of_the_free_world"
+ OFN_Independent_Member_displaykey: "GFX_OFN_Leader"
+ OFN_Dependent_Member_displaykey: "GFX_OFN_dependent_ofn_member"
+ OFN_Military_Government_displaykey: "GFX_OFN_ofn_military_government"
+ OFN_Mandate_displaykey: "GFX_OFN_ofn_mandate"
+ TRI_Founder_IT_displaykey: "GFX_TRI_Founder_IT"
+ TRI_Founder_IB_displaykey: "GFX_TRI_Founder_IB"
+ TRI_Founder_TR_displaykey: "GFX_TRI_Founder_TR"
+ TRI_Member_displaykey: "GFX_TRI_Member"
+ TRI_Member_Client_displaykey: "GFX_TRI_Member_Client"
+ ITA_Member_displaykey: "GFX_ita_factionmember"
  ###Tooltips
  CURRENT_FACTION_STATUS_SHORT_TT: "§Y[This.GetFactionStatus_name]§![This.GetFactionStatus_effect]"
  CURRENT_FACTION_STATUS_TT: "[This.GetFactionStatus_tooltip]"
@@ -40,59 +40,60 @@
  FactionStatus_tooltip: "§L[This.GetFactionStatus_desc]§!"
  NoFaction: "GFX_generic_faction_small"
 
- ##Pakt
+ ### Europakt ###
+ # level 5 #
+ Pakt_Observer: "Paktbeobachter"
+ Pakt_Observer_effect: "[!Pakt_Observer]"
+ Pakt_Observer_desc: "This nation is one with close ties to the German Reich and its allies in the §BEuropakt§! and has been granted observer status within the organisation. While it maintains its Independence from the §BEuropakt§! by not being a formal member, this nation is given the privilege of participating in some Europapakt programs and activities while in turn, sharing some of the Pakt Members' responsibilities and obligations to ensure both sides are rewarded for their cooperation."
+
+ # level 4 #
  Pakt_Military_Authority: "Kolonialverwaltung: Militärbehörde"
  Pakt_Military_Authority_effect: "[!Pakt_Military_Authority]"
- Pakt_Military_Authority_desc: "Established under a series of treaties between Germany and its host state, the §YMilitary Authority§! recieves its orders directly from the offices of the Oberkommando des Heeres. With its special authority it manages near all affairs of its granted territory, overseeing in police operation, intervening in local government, and above all watching its host for any sign of indiscretion. It is by these means that the §YMilitary Authority§! is known to be the most pronounced arm of German control."
-
- Pakt_Protektorat: "Aufsichtsverwaltung: Protektorat"
- Pakt_Protektorat_effect: "[!Pakt_Protektorat]"
- Pakt_Protektorat_desc: "This nation is a §YProtektorat§!, the vestige of a former nation now almost fully integrated into the Reich. By Germania's account, the §YProtektorats§! are special regions of the Reich chosen to administrate themselves and to manage their affairs with some degree of autonomy. However, under this facade of autonomy rests a system of economic and political control ultimately drawing back to Germania. Their economies commanded by German companies, their politics closed with German stamps, §YProtektorats§! are the extended shadow of the Reich. Not all provinces of the Reich bear the name, and §YProtektorats§! might yet too."
+ Pakt_Military_Authority_desc: "Established under a series of treaties between the §BEuropakt§! and its host state, the Militärbehörde§! receives its orders directly from the offices of the Oberkommando des Heeres. With its special authority, it manages nearly all affairs of its granted territory, overseeing police operations, intervening in local government, and above all, watching its host for any sign of indiscretion. It is by these means that the Militärbehörde§! is known to be the most pronounced arm of German control, with almost all aspects of State and Society under their Control, or at the very least, their watch."
 
  Pakt_Integrated_Reichskommissariat: "Kolonialverwaltung: Paktkommission"
  Pakt_Integrated_Reichskommissariat_effect: "[!Pakt_Integrated_Reichskommissariat]"
- Pakt_Integrated_Reichskommissariat_desc: "An §YIntegrated Reichskommissariat§! is a colonial administration employed by the Reich to prepare it for and close to annexation. The administration is increasingly being tied to that of the Reich itself, to the point that business and people now flow without issue across their boundaries. Similarly the increasingly more political appointments within this §YReichskommissariat§!'s administration are only one of several signs of whats to come as a soon-to-be province of Germany."
+ Pakt_Integrated_Reichskommissariat_desc: "A Paktkommission§! is a colonial administration employed by the §BEuropakt§!, which serves as an overseas territory of the §BEuropakt§!, at least in theory. The administration is increasingly being tied to that of the Reich itself, to the point that business and people now flow without issue across their boundaries. The increasingly more political appointments within the Paktkommission§!'s administrations by Germania are only one of several signs of where their loyalty truly lies."
+
+ # level 3 #
+ Pakt_Reichsland: "Regierungsverwaltung: Reichsland"
+ Pakt_Reichsland_effect: "[!Pakt_Reichsland]"
+ Pakt_Reichsland_desc: "While by no means free from German supervision, a Reichsland§! enjoys a certain degree of autonomy within the German sphere. Rather than being directly administered by the Reich, the government of a Reichsland§! is composed of both Native Collaborators and German Administrators, led by a Native Reichstatthalter. This being said, these lands are still subject to the passive Germanization supported by the Reich - and are fully intended to one day be made part of the Fatherland, though their effects vary between each of the Reichsländer§!."
+ 
+ # level 2 #
+ Pakt_Protektorat: "Aufsichtsverwaltung: Protektorat"
+ Pakt_Protektorat_effect: "[!Pakt_Protektorat]"
+ Pakt_Protektorat_desc: "This nation is a Protektorat§!, the vestige of a former nation now almost fully integrated into the Reich. By Germania's account, the Protektorate§! are special regions of the Reich chosen to administer themselves and manage their affairs with some degree of autonomy. However, under this facade of autonomy rests a system of economic and political control, ultimately drawing them back to Germania. Their economies commanded by German companies, their politics under the approval of German stamps, Protektorate§! are the extended shadow of the Reich."
 
  Pakt_Autonomous_Reichskommissariat: "Aufsichtsverwaltung: Subsidiarität"
  Pakt_Autonomous_Reichskommissariat_effect: "[!Pakt_Autonomous_Reichskommissariat]"
- Pakt_Autonomous_Reichskommissariat_desc: "An §YAutonomous Reichskommissariat§!, much like its Integrated alternative, is not a nation but rather a colonial administration employed by the Greater German Reich to prepare it for its inevitable annexation. Headed by a Führer-appointed Reichskommissar, these administrative regions have been granted a degree of autonomy from the usually close oversight from Germania, either due to their distance from the homeland or regional particularities. The guise of autonomy applies only to its elite, and what they do with it is theirs only to decide."
-
- Pakt_Reichsland: "Regierungsverwaltung: Reichsland"
- Pakt_Reichsland_effect: "[!Pakt_Reichsland]"
- Pakt_Reichsland_desc: "This area has been defined as belonging to a §YReichsland.§! Though de jure and internationally still part of Germany, it is led by a government of collaborationist natives in an attempt to legitimise and harmonise the Reich's rule. \nGDP growth modifier: §G[?global.europaktgdpgrowthmodifier]§!"
+ Pakt_Autonomous_Reichskommissariat_desc: "An Subsidiarität§! is not a nation but rather a unique colonial administration employed by the Greater German Reich to administer its Caucasian territories. Headed by a Führer-approved Reichskommissar, these administrative regions have been granted a significant degree of autonomy from the usually close oversight from Germania, either due to their distance from the homeland or regional particularities. The guise of autonomy applies only to its elite, and what they do with it is theirs only to decide, but the German Eagle remains on the lookout in case they think they actually have total power."
  
- Pakt_Paktrepublik: "Autonome Republik"
- Pakt_Paktrepublik_effect: "[!Pakt_Paktrepublik]" 
- Pakt_Paktrepublik_desc: " " 
-  
+ # level 1 # 
  Pakt_Marionettenstaat: "Bündnisverwaltung: Schutzstaat"
  Pakt_Marionettenstaat_effect: "[!Pakt_Marionettenstaat]"
- Pakt_Marionettenstaat_desc: "This nation is a §YMarionettenstaat§!, an ostensibly independent member of the Pakt. So close is the brotherhood between this country and the Reich that they vote wholly in each others interests during Pakt Councils, closely following the lines put forward by Germanian representatives. There are Germans in the streets, at business ventures, in the barracks, and in the Halls of Government - such is their support for the Pan-European ideal. The Mitstreiter all are close brothers-in-arms of the Reich, but the §YMarionettenstaat§! are even closer, dancing at string's end to the Horst-Wessel-Leid.\nGDP growth modifier: §G[?global.europaktgdpgrowthmodifier]§!"
-
- Pakt_Mitstreiter: "Mitstreiter"
- Pakt_Mitstreiter_effect: "[!Pakt_Mitstreiter]"
- Pakt_Mitstreiter_desc: "A proud §YMitstreiter§! of the Greater German Reich, this nation has thrown off the shackles of degeneracy and entered into a new age. Now regarded as a close brother-in-arms in the fight for European Unity and Prosperity under the Europapakt, its fate is intertwined with Germany's. Germania insists this is a mutual and prosperous relationship, although in truth the so-called brother-in-arms serves more as an instrument than an equal partner.\nGDP growth modifier: §G[?global.europaktgdpgrowthmodifier]§!"
+ Pakt_Marionettenstaat_desc: "This nation is a Schutzstaat§!, an ostensibly independent member of the §BEuropakt§!. So close is the brotherhood between this country and the Reich that they vote wholly in each other's interests during §BEuropakt§! Councils, closely following the lines put forward by Germanian representatives. There are Germans in the streets, at business ventures, in the barracks, and in the Halls of Government - showing the unity between the two nations and their support for the Pan-European Ideals. The Büdnisverwaltungen all are close brothers-in-arms of the Reich, but the Schutzstaaten§! are even closer, dancing at string's end to the Horst-Wessel-Leid."
 
  Pakt_Bundnispartner: "Bündnisverwaltung: Büdnispartner"
  Pakt_Bundnispartner_effect: "[!Pakt_Bundnispartner]"
- Pakt_Bundnispartner_desc: "This Nation is a member state of the §MEuropakt§!, the ambitious alliance seeking to unite the economic and military power of Europe.\nGDP growth modifier: §G[?global.europaktgdpgrowthmodifier]§!"
+ Pakt_Bundnispartner_desc: "This Nation is a ‘Free’ member state of the §BEuropakt§!, an ambitious alliance that united the economic and military power of German-dominated Europe into one organisation. While these nations are free to decide their own fate and don’t follow orders from Germania, the Reich still holds economic and political influence within the nation to help prevent their ally from deviating too far from the line."
 
+ # unused / legacy #
+ Pakt_Paktrepublik: "Autonome Republik"
+ Pakt_Paktrepublik_effect: "[!Pakt_Paktrepublik]" 
+ Pakt_Paktrepublik_desc: " " 
+ Pakt_Mitstreiter: "Mitstreiter"
+ Pakt_Mitstreiter_effect: "[!Pakt_Mitstreiter]"
+ Pakt_Mitstreiter_desc: "A proud §YMitstreiter§! of the Greater German Reich, this nation has thrown off the shackles of degeneracy and entered into a new age. Now regarded as a close brother-in-arms in the fight for European Unity and Prosperity under the Europapakt, its fate is intertwined with Germany's. Germania insists this is a mutual and prosperous relationship, although in truth the so-called brother-in-arms serves more as an instrument than an equal partner.\nGDP growth modifier: §G[?global.europaktgdpgrowthmodifier]§!"
  Pakt_Ordensstaat: "Ordensstaat"
  Pakt_Ordensstaat_effect: "[!Pakt_Ordensstaat]"
  Pakt_Ordensstaat_desc: "Unique among the Pakt, this nation is an §YOrdensstaat§!, a military administration controlled exclusively by the SS. While formally politically, militarily, and economically part of the Reich as a whole, under the ultimate command of the Führer, in reality the §YOrdensstaat§! is little more than a private fiefdom of the Reichsführer-SS, Heinrich Himmler. Little information is revealed to the public on the inner workings of the §YOrdensstaat§!, but rumors abound of total and complete control of the citizenry's actions, words, and even thoughts. The illusion of German control over the §YOrdensstaat§! is a shaky one, and a single spark could set the whole thing ablaze..."
-
- Pakt_Observer: "Paktbeobachter"
- Pakt_Observer_effect: "[!Pakt_Observer]"
- Pakt_Observer_desc: "This nation is one with close ties to Germany and its fellows in the Europapakt, and having been granted §Yobserver status§! within the organization. While maintaining its independence from the Pakt, this nation is given the privilege of participating in some Europapakt programs and activities, while in turn sharing some of the Pakt Members' responsibilities and obligations."
- 
  Anti_Heydrich_Pact: "Anti-Heydrich Pact"
  Anti_Heydrich_Pact_effect: "[!Anti_Heydrich_Pact]"
  Anti_Heydrich_Pact_desc: ""
- 
  Anti_Himmler: "Anti-Himmler-Koalition"
  Anti_Himmler_effect: "[!Anti_Himmler]"
  Anti_Himmler_desc: ""
- 
  Anti_Heydrich: "Himmler Loyalisten"
  Anti_Heydrich_effect: "[!Anti_Heydrich]"
  Anti_Heydrich_desc: ""
@@ -133,7 +134,7 @@
  
  OFN_Dependent_Member: "Dependent Member of the OFN"
  OFN_Dependent_Member_effect: "[!OFN_Dependent_Member]"
- OFN_Dependent_Member_desc: "For member-states with neither the resources nor the manpower to maintain anything larger than a self-defense force, Article 5 - which mandates signatories to "assist the Party or Parties so attacked by taking forthwith... the use of armed force" - entails beggaring their economies for a standing force which they themselves scarcely use. Minor nations' place in the OFN, with these constraints in mind, was subject to vigorous debate until a compromise solution was amended into the New York Charter.\n\nThe now-termed "Dependent Status Clause" exempts member-states which fit a list of strict criteria from fulfilling their Article 5 obligations. In effect, the US Armed Forces subsumes a large portion of the duties their militaries are expected to perform. Only the West Indies Federation, Belize and Guyana classify for the special status as of 1962."
+ OFN_Dependent_Member_desc: "For member-states with neither the resources nor the manpower to maintain anything larger than a self-defense force, Article 5 - which mandates signatories to “assist the Party or Parties so attacked by taking forthwith... the use of armed force” - entails beggaring their economies for a standing force which they themselves scarcely use. Minor nations' place in the OFN, with these constraints in mind, was subject to vigorous debate until a compromise solution was amended into the San Francisco Charter.\n\nThe now-termed “Dependent Status Clause” exempts member-states which fit a list of strict criteria from fulfilling their Article 5 obligations. In effect, the US Armed Forces subsumes a large portion of the duties their militaries are expected to perform. The West Indies Federation, Haiti, Belize, Guyana, Suriname, Netherlands Antilles, Shetlands and the Faroes classify for the special status as of 1996."
  
  OFN_Military_Government: "American Military Government"
  OFN_Military_Government_effect: "[!OFN_Military_Government]"

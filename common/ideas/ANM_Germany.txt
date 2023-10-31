@@ -166,5 +166,40 @@ ideas = {
 				stability_weekly = -0.01
 			}
 		}
+		GER_fulfilled_people = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_fulfilled_people"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_fulfilled_people
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.02
+				political_power_factor = 0.20
+				monthly_population = 0.05
+			}
+		}
+		GER_the_weltnetz = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_weltnetz"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_GER_the_weltnetz
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.10
+			}
+		}
 	}
 }

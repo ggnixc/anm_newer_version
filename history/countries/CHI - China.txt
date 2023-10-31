@@ -5,10 +5,6 @@ oob = "CHI_1962"
 
 set_country_flag = CHI_Modernization
 
-set_variable = { ANMKDN_showednation_agenda_one = 7 }
-set_variable = { ANMKDN_showednation_agenda_two = 9 }
-set_variable = { ANMKDN_showednation_agenda_three = 16  }
-
 set_war_support = 1.00
 set_stability = 1.00
 
@@ -98,9 +94,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Hu Jintao"
-	desc = "POLITICS_HUJINTAO_DESC"
-	picture = "Portrait_CHI_Hu_Jintao.dds"
+	name = "Lien Chan"
+	desc = "POLITICS_LIENCHAN_DESC"
+	picture = "Portrait_CHI_Lien_Chan.dds"
 	expire = "2090.1.1"
 	ideology = paternalism_xunzheng_subtype 
 	traits = {
@@ -135,7 +131,6 @@ if = {
  	limit = {
  		OR = {
 			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
 		}
  	}
  	set_autonomy = {
@@ -150,20 +145,25 @@ if = {
  		target = GNG
  		autonomous_state = autonomy_China_Autonomous
  	}
+	else = {
+        puppet = TIB
+		puppet = MON
+		puppet = GNG
+	}
 }
 
 add_ideas = {
 
-	CHI_Ecomomic_takeoff
+	CHI_No435
 	CHI_The_Great_Wall_Never_Falls
-	CHI_Unhealed_Wounds
-	CHI_United_Front
+	CHI_Xinjiang_Land_of_Gold
+	CHI_Nuclear_Frenzy
 	
 	#Country
-	CHI_minister_Wen_Jiabao_hog
-    CHI_minister_Dai_Xianglong_eco
-    CHI_minister_Li_Zhaoxing_for
-    CHI_minister_Luo_Gan_sec
+	CHI_minister_Lee_Huan_hog
+    CHI_minister_Sun_Yunsuan_eco
+    CHI_minister_Fredrick_Chien_for
+    CHI_minister_Hau_Peitsun_sec
 	
 	#Political
 	tno_political_parties_controlled_opposition

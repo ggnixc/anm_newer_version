@@ -1,11 +1,21 @@
 ﻿capital = 10
 
 set_oob = "POL_1962"
+
+recruit_character = POL_henryk_kroll
+recruit_character = POL_jerzy_treder
+recruit_character = POL_henryk_glucklich
+recruit_character = POL_edward_flak
+recruit_character = POL_siegfried_emil_spindler
 		
 add_ideas = {
 	Pakt_Reichsland
+	#ministers
+	POL_Jerzy_Treder_hog
+	POL_Henryk_Glucklich_sec
+	POL_Edward_Flak_for
+	POL_Siegfried_Emil_Spindler_eco
 	#ideas
-	POL_anniversary_poland_occupation
 	POL_the_quiet_place
 	POL_declining_population
 	#political
@@ -58,24 +68,6 @@ set_politics = {
 
 }
 
-create_country_leader = {
-	name = "Henryk Kroll"
-	picture = "Portrait_POL_Henryk_Kroll.dds"
-	expire = "2090.3.4"
-	ideology = national_socialism_reformed_national_socialism_subtype
-}
-create_country_leader = {
-	name = "Leszek Balcerowicz"
-	picture = "Portrait_Poland_leszek_balcerowicz.dds"
-	expire = "2090.3.4"
-	ideology = paternalism_subtype
-}
-create_country_leader = {
-	name = "Roman Giertych"
-	picture = "Portrait_Poland_roman_giertych.dds"
-	expire = "2090.3.4"
-	ideology = despotism_personalistic_dictatorship_subtype
-}
 set_cosmetic_tag = POL_SGR2
 set_popularities = {
 	fascism = 10

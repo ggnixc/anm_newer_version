@@ -1,24 +1,61 @@
-﻿capital = 230 #Yerevan, Armenia
+﻿capital = 230
+
+set_cosmetic_tag = ARM_turk
 
 set_oob = "ARM_1962"
 
+TUR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = ARM autonomy_state = autonomy_puppet }
+        else = {
+            puppet = ARM
+        }
+    }
+}
+
 set_politics = {
-	ruling_party = socialist
-	last_election = "1934.3.26"
+	ruling_party = despotism
+	last_election = "1994.3.26"
 	election_frequency = 60
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-    communist = 0
-    despotism = 0
-    socialist = 55
-    progressivism = 45
+    communist = 10
+    despotism = 55
+    socialist = 0
+    progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
+    conservatism = 25
+    paternalism = 10
     fascism = 0
     national_socialism = 0
     esoteric_nazism = 0
+}
+
+create_country_leader = {
+	name = "Berç Turan"
+	desc = "POLITICS_BERC_TURAN_DESC"
+	picture = "Portrait_ARM_Berc_Turan.dds"
+	expire = "1997.8.3"
+	ideology = despotism_institutional_despotism_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Markar Esayan"
+	desc = "POLITICS_MARKAR_ESAYAN_DESC"
+	picture = "Portrait_ARM_Markar_Esayan.dds"
+	expire = "2090.8.3"
+	ideology = paternalism_controlled_democracy_subtype
+	traits = {
+	}
 }

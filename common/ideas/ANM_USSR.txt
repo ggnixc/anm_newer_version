@@ -1,18 +1,5 @@
 ideas = {
 	country = {
-		SOV_KdN_Bluehelmets = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = SOV_KdN_Bluehelmets
-			removal_cost = -1
-
-			modifier = {
-				resistance_decay_on_our_occupied_states = -0.15
-				experience_gain_army_factor = -0.05
-				encryption_factor = -0.07
-			}
-		}
 		SOV_Suslov_Vision = {
 
 			allowed = { always = yes }
@@ -22,6 +9,7 @@ ideas = {
 
 			modifier = {
 				party_popularity_stability_factor = 0.2
+				political_power_gain = 0.1
 				drift_defence_factor = 0.3
 			}
 		}
@@ -62,9 +50,10 @@ ideas = {
 
 			modifier = {
 				army_attack_factor = 0.1
-				army_speed_factor = 0.1
-				army_org = 5
-				fuel_cost = 50
+				army_speed_factor = -0.15
+				army_org = -5
+				fuel_cost = 2000
+				winter_attrition = -0.25
 			}
 		}
 		SOV_The_Scars_of_Moscowien = {
@@ -75,10 +64,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.1
-				supply_factor = -0.15
-				civilian_factory_use = 3
-				resistance_damage_to_garrison = 0.2
+				stability_factor = -0.15
+				supply_factor = -0.18
+				civilian_factory_use = 6
+				resistance_damage_to_garrison = 0.24
+				production_speed_buildings_factor = -0.12
 			}
 		}
 		SOV_Job_Half_Done = {

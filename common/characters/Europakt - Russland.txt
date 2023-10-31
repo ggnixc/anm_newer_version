@@ -1,0 +1,79 @@
+characters = {
+	MOS_horst_stechbarth = {  
+		name = MOS_horst_stechbarth
+		portraits = { 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Horst_Stechbarth.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_HORST_STECHBARTH_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { old_hero }
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_mikhail_gorbachev = {
+		name = MOS_mikhail_gorbachev
+		portraits = { 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Mikhail_Gorbachev.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_MIKHAIL_GORBACHEV_DESC"
+			ideology = national_socialism_reformed_national_socialism_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_militaramt = {  
+		name = MOS_militaramt
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/MOS/Portrait_MOS_Militaramt.dds"
+				small = "GFX_idea_MOS_Militaramt" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = MOS_Militaramt_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = MOS_Militaramt_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = MOS_Militaramt_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MOS_Militaramt_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+} 

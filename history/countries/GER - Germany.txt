@@ -1,5 +1,67 @@
 ﻿capital = 64
 
+### Characters ###
+recruit_character = GER_albert_friedrich_speer
+recruit_character = GER_kein_anfuhrer
+recruit_character = GER_martin_mussgnug
+recruit_character = GER_adolf_von_thadden
+recruit_character = GER_gunther_deckert
+recruit_character = GER_joseph_fischer
+recruit_character = GER_gerhard_frey
+recruit_character = GER_rolf_berger
+recruit_character = GER_heinz_kessler
+recruit_character = GER_otto_carius
+recruit_character = GER_volker_wieker
+recruit_character = GER_hartmut_bagger
+recruit_character = GER_wolfgang_altenburg
+recruit_character = GER_hans_peter_von_kirchbach
+recruit_character = GER_werner_freers
+recruit_character = GER_reinhard_gunzel
+recruit_character = GER_jorg_vollmer
+recruit_character = GER_jurgen_setzer
+recruit_character = GER_klaus_dieter_baumgarten
+recruit_character = GER_klaus_naumann
+recruit_character = GER_hans_helmut_speidel
+recruit_character = GER_berthold_schenk_graf_von_stauffenberg
+recruit_character = GER_rudolf_striedinger
+recruit_character = GER_roland_ertl
+recruit_character = GER_horst_pleiner
+recruit_character = GER_karl_majcen
+recruit_character = GER_richard_rossmanith
+recruit_character = GER_edmund_entacher
+recruit_character = GER_hans_otto_budde
+recruit_character = GER_helmut_willman
+recruit_character = GER_robert_brieger
+recruit_character = GER_othmar_commenda
+recruit_character = GER_wolfgang_schneiderhan
+recruit_character = GER_ludwig_bauer
+recruit_character = GER_gunther_bahr
+recruit_character = GER_ebhard_header
+recruit_character = GER_eberhard_zorn
+recruit_character = GER_alexander_sollfrank
+recruit_character = GER_gert_gawellek
+recruit_character = GER_stephan_thomas
+recruit_character = GER_hans_werner_wiermann
+recruit_character = GER_manfred_gratz
+recruit_character = GER_heico_hubner
+recruit_character = GER_jurgen_joachim_von_sandrart
+recruit_character = GER_josef_blotz
+recruit_character = GER_erich_pfeffer
+recruit_character = GER_bernd_shutt
+recruit_character = GER_carsten_breuer
+recruit_character = GER_hendrik_born
+recruit_character = GER_carsten_stawitzki
+recruit_character = GER_thomas_jugel
+recruit_character = GER_wolfgang_brost
+recruit_character = GER_rainer_endres
+recruit_character = GER_georg_von_maltzan
+recruit_character = GER_rainer_brinkmann
+recruit_character = GER_thomas_daum
+recruit_character = GER_karsten_schneider
+recruit_character = GER_joachim_ruhle
+recruit_character = GER_manfred_nielson
+
+
 set_politics = {
 	ruling_party = national_socialism
 	last_election = "1933.3.5"
@@ -8,18 +70,22 @@ set_politics = {
 }
 
 set_popularities = {
-	communist = 2
+	communist = 0
 	ultranationalism = 0
-	socialist = 2
-	progressivism = 1
-	liberalism = 3
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
 	liberal_conservatism = 0
-	conservatism = 2
-	paternalism = 24
-	despotism = 0
-	fascism = 20
-	national_socialism = 45
-	esoteric_nazism = 1
+	conservatism = 0
+	paternalism = 0
+	despotism = 7
+	fascism = 0
+	national_socialism = 37
+	national_socialism_1 = 45
+	national_socialism_2 = 11
+	national_socialism_3 = 0
+	national_socialism_4 = 0
+	esoteric_nazism = 0
 }
 
 if = {
@@ -203,20 +269,23 @@ set_naval_oob = "GER_navy_2000"
 set_air_oob = "GER_2000_air"
 
 add_ideas = {
-	#Faction Status
+	## Faction Status ##
 	Pakt_Leader
-	## Spirits
+
+	## Spirits ##
 	GER_millenium_rise
 	GER_the_puppet_fuehrer
 	GER_the_ailing_order
 	GER_space_spirit
-	## Ministers
-	GER_minister_martin_mussgnug_hog
-	GER_minister_guenther_deckert_sec
-	GER_minister_joseph_fisher_for 
-	GER_minister_gerhardfrey_eco	
-	## Laws
-	# Political
+
+	## Ministers ##
+	GER_Martin_Mussgnug_hog
+	GER_Gunther_Deckert_sec
+	GER_Joseph_Fischer_for
+	GER_Gerhard_Frey_eco
+
+	### Laws ###
+	## Political ##
 	tno_political_parties_one_party_state
 	tno_religious_rights_laicism
 	tno_trade_unions_state_controlled
@@ -226,51 +295,54 @@ add_ideas = {
 	tno_press_rights_state_press_only
 	tno_vote_franchise_no_voting
 	tno_refugees_skilled
-	# Military
-	tno_conscription_two_year_draft
-	tno_women_military_assistance
+
+	## Military ##
+	tno_conscription_volunteer_only
+	tno_women_banned
 	tno_military_supervision_military_policing
 	tno_military_spending_large_spending 
-	tno_training_basic_training
+	tno_training_combat_schooling
 	tno_racial_integration_none
 	tno_draft_exemptions_none
-	# Social
+
+	## Social ##
 	tno_safety_acceptable_regulations
-	tno_health_care_public_health_care
-	tno_pollution_some_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_good_regulations
 	tno_education_public_education
 	tno_penal_system_capital_punishment
 	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_women_in_the_workplace
-	tno_minorities_segregation
+	tno_gender_rights_traditional_roles
+	tno_minorities_oppression
 	tno_security_preemptive_security
 	tno_drugs_weedbanned
-	# Economic
+
+	## Economic ##
 	tno_trade_laws_export_focus
 	tno_economic_focus_civilian_economy
-	tno_tax_rate_medium_taxation
+	tno_tax_rate_low_taxation
 	tno_income_taxation_flat_taxes
 	tno_minimum_wage_low_minimum_wage
 	tno_max_workhours_12_hour_work_day
 	tno_child_labor_illegal
-	tno_pensions_acceptable_pensions
-	tno_unemployment_trinket_subsidies
+	tno_pensions_good_pensions
+	tno_unemployment_generous_subsidies
 
-	## Societal Development
+	## Societal Development ##
 	tno_nuclear_stockpile_massive
-	tno_poverty_rate_10
-	tno_army_professionalism_professional
-	tno_industrial_expertise_innovative
+	tno_poverty_rate_5
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_experienced
 	tno_industrial_equipment_modern
 	tno_agriculture_mass_mechanized
 	tno_research_facilities_modern
 	tno_academic_base_secondary_schooling
-	tno_immigration_many
-	tno_birthrate_one
-	#Construction Level
+	tno_immigration_one
+	tno_birthrate_many
+
+	## Construction Level ?!? ##
 	construction_level_5
 }
-
 
 set_research_slots = 4
 set_convoys = 200
@@ -280,9 +352,6 @@ add_manpower = 402178
 
 load_focus_tree = GER_Focus_Millenium_Starter
 
-set_variable = { ANMKDN_showednation_agenda_one = 1 }
-set_variable = { ANMKDN_showednation_agenda_two = 9 }
-set_variable = { ANMKDN_showednation_agenda_three = 16 }
 
 set_variable = { global.GER_Speer_Inf_Top = 12 }
 set_variable = { global.GER_Front_Inf_Top = 8 }
@@ -297,7 +366,6 @@ GER_power_struggle_pulse_top = yes
 
 set_country_flag = reichsstability_tier_2
 
-set_country_flag = kdn_gui_alert_visible
 #TTNOMICS
 set_country_flag = gui_alert_visible
 set_country_flag = gui_alert_visible_2
@@ -309,19 +377,8 @@ set_variable = { TNO_economy_subtype = 20 }
 
 set_global_flag = pakt_reform_europamark
 
-set_variable = { global.anmkdnthefunnylolmonthticker = 0 }
-set_variable = { global.anmkdncurrentpriority = 10 }
 set_variable = { global.europapaktunity = 10 }
-set_variable = { global.europapaktstability = 60 }
-set_variable = { global.ANMKDNcurrentparliamentvoteissue = 0 }
-set_variable = { global.ANMKDNcurrentcouncilvoteissue = 0 }
-set_variable = { global.ANMKDNparliamentyesvote = 0 }
-set_variable = { global.ANMKDNparliamentnovote = 0 }
-set_variable = { global.ANMKDNparliamentmembercounts = 0 }
-set_variable = { global.ANMKDNcouncilyesvote = 0 }
-set_variable = { global.ANMKDNcouncilnovote = 0 }
-set_variable = { global.ANMKDNcouncilmembercounts = 0 }
-set_variable = { global.ANMKDNcurrentenemyofthekdn = 1 }	
+set_variable = { global.europapaktstability = 60 }	
 set_variable = { global.europaktgdpgrowthmodifier = 1.23 }  
 set_variable = { global.preeuropaktgdpgrowthmodifier = 1.23 }
 set_variable = { global.usaintelligence = 50 }
@@ -345,30 +402,12 @@ set_variable = { GER_ANM_party_leadership_leaning = 25 }
 set_variable = { GER_ANM_party_leadership_influnce = 150 }
 
 
-
-
 set_country_flag = GER_nsdapgui_activatedanm
 
 country_event = {
     id = GER_anm_starterevents.1
     days = 103
 }
-
-country_event = {
-    id = GER_anm_starterevents.126
-    days = 81
-}
-
-country_event = {
-    id = GER_anm_starterevents.127
-    days = 29
-}
-country_event = {
-    id = GER_anm_starterevents.98
-    days = 51
-					}
-
-
 
 ### DIPLOMACY ###
 create_faction = Europakt
@@ -388,7 +427,6 @@ add_to_faction = IRE
 add_to_faction = BLR
 add_to_faction = HUN
 add_to_faction = MRZ
-add_to_faction = NDO
 add_to_faction = SER
 add_to_faction = MOS
 add_to_faction = CAU
@@ -396,10 +434,9 @@ add_to_faction = VLG
 add_to_faction = ENG
 add_to_faction = FLR
 add_to_faction = WLN
+add_to_faction = TNS
+add_to_faction = BUL
 
-add_opinion_modifier = {target = ISR modifier = jewish_nation_anm }
-
-TNO_worsen_birthrate_med = yes
 if = {
 	limit = { has_dlc = "Together for Victory" }
 	set_autonomy = { target = POL autonomy_state = autonomy_reichsprotektorat }
@@ -427,186 +464,3 @@ if = {
 	}
 }
 
-
-### Leaders
-create_country_leader = {
-	name = "Albert Friedrich Speer"
-	desc = "POLITICS_ALBERT_SPEER_JR_GERMANY_DESC"
-	picture = "portrait_ger_albert_speer_jr_starting.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_reformed_national_socialism_subtype
-	traits = { 
-	}
-}
-create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-	expire = "2099.1.1"
-	ideology = esoteric_nazism_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-	expire = "2099.1.1"
-	ideology = liberalism_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-	expire = "2099.1.1"
-	ideology = progressivism_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-	expire = "2099.1.1"
-	ideology = conservatism_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-	expire = "2099.1.1"
-	ideology = socialist_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "UNBEKANNT"
-	desc = "POLITICS_REINHARD_HEYDRICH_DESC"
-	picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-	expire = "2099.1.1"
-	ideology = communist_subtype
-	traits = { 
-
-	}
-}
-#See TNO_Germany_scripted_effects.txt ~<3 xoxo calph  
-
-create_field_marshal = {
-	name = "Günter Kießling"
-	desc = "FIELD_MARSHAL_guenther_kiessling"
-	picture = "portrait_anm_ger_guenther_kiessling.dds"
-	traits = { offensive_doctrine brilliant_strategist }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-	traits = { 
-	}
-}
-
-create_field_marshal = {
-	name = "Jörg Schönbohm"
-	desc = "MILITARY_joerg_schoenboehm_DESC"
-	picture = "Portrait_anm_ger_joerg_schoenboehm.dds"
-	traits = { harsh_leader politically_connected offensive_doctrine }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-	id = 3751
-}
-
-create_corps_commander = {
-	name = "Fritz Streletz"
-	picture = "Portrait_anm_ger_fritz_streletz.dds"
-	traits = { trait_reckless winter_specialist trickster }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-	id = 3759
-}
-
-create_corps_commander = {
-	name = "Klaus Reinhardt"
-	picture = "Portrait_anm_ger_klaus_reinhardt.dds"
-	traits = { harsh_leader infantry_leader }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-	id = 3758
-}
-
-create_corps_commander = {
-	name = "Horst Brünner"
-	picture = "Portrait_anm_ger_horst_bruenner.dds"
-	traits = { infantry_officer organizer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 3753
-}
-
-create_navy_leader = { 
-	name = "Theodor Hoffmann"
-	picture = "Portrait_anm_ger_Theodor_Hoffmann.dds"
-	traits = { spotter blockade_runner }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 4
-	coordination_skill = 2
-	id = 804
-}
-
-create_navy_leader = {
-	name = "Dieter Wellershoff"
-	picture = "Portrait_anm_ger_Dieter_Wellershoff.dds"
-	traits = { bold ironside inshore_fighter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-	id = 805
-}
-
-create_navy_leader = { 
-	name = "Wolfgang Brost"
-	picture = "Portrait_anm_ger_wolfgang_brost.dds"
-	traits = { bold spotter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 3
-	coordination_skill = 1
-	id = 806
-}
-
-create_navy_leader = {
-	name = "Gustav Hesse"
-	picture = "Portrait_anm_ger_gustav_hesse.dds"
-	traits = { ironside }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 2
-	id = 807
-}
