@@ -1,5 +1,11 @@
 ﻿capital = 113
 
+recruit_character = IRE_bertie_ahern
+recruit_character = IRE_desmond_omalley
+recruit_character = IRE_willie_odea
+recruit_character = IRE_micheal_martin
+recruit_character = IRE_brian_cowen
+
 set_oob = "IRE_1962"
 
 add_manpower = 20000
@@ -20,10 +26,10 @@ add_ideas = {
 	IRE_the_bloated_giant
 	
 	### MINISTERS ###
-	IRE_desmond_omalley_hog
-	IRE_willie_odea_sec
-	IRE_micheal_martin_for
-	IRE_brian_cowen_eco
+	IRE_Desmond_Omalley_hog
+	IRE_Willie_Odea_sec
+	IRE_Micheal_Martin_for
+	IRE_Brian_Cowen_eco
 	
 	### POLITICAL ###
 
@@ -108,87 +114,6 @@ set_popularities = {
 	national_socialism = 0
 	ultranationalism = 0
 	esoteric_nazism = 0
-}
-
-
-create_country_leader = {
-	name = "Bertie Ahern"
-	desc = "POLITICS_BERTIE_AHERN_DESC"
-	picture = "IRE_Bertie_Ahern.dds"
-	expire = "2222.2.2"
-	ideology = paternalism_dominant_party_democracy_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Gerry Adams"
-	desc = "POLITICS_GERRY_ADAMS_desc"
-	picture = "IRE_gerry_adams.dds"
-	expire = "2222.2.2"
-	ideology = progressivism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Gerry Adams"
-	desc = "POLITICS_GERRY_ADAMS_desc"
-	picture = "IRE_gerry_adams.dds"
-	expire = "2222.2.2"
-	ideology = socialist_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Martin McGuinness"
-	desc = "POLITICS_MCGUINNESS_desc"
-	picture = "IRE_mcguinness.dds"
-	expire = "2222.2.2"
-	ideology = communist_subtype
-	traits = {
-	}
-}
-
-create_corps_commander = {
-	name = "Colm Mangan"
-	portrait_path = "gfx/leaders/IRE/Colm_Mangan.dds"
-	traits = {
-		commando
-	}
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 646
-}
-
-create_field_marshal = {
-	name = "James Sreenan"
-	portrait_path = "gfx/leaders/IRE/James_Sreenan.dds"
-	traits = {
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 2
-	id = 647
-}
-
-create_navy_leader = {
-	name = "Mark Mellett"
-	desc = "POLITICS_THOMAS_MCKENNA_DESC"
-	portrait_path = "gfx/leaders/IRE/Mark_Mellett.dds"
-	traits = { blockade_runner }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
-	id = 648
 }
 
 if = {
