@@ -1,0 +1,91 @@
+on_actions = {
+
+	# FROM = winner
+	# ROOT = country being capitulated/loser
+	on_capitulation = {
+		effect = {
+			#This if block will only fire if FROM (capitulator) and ROOT (country being capitulated)
+			#That is to say, if one side has completely lost (nobody left to fight on)
+
+			if = {
+				#Peruvian Military defeats the MRA
+				if = {
+					limit = {
+						FROM = {
+							original_tag = PRU #The winner
+						}
+						ROOT = {
+							original_tag = MRA #The loser
+							owns_state = 1693
+							owns_state = 1692
+							owns_state = 1694
+							owns_state = 1688
+							owns_state = 494
+							owns_state = 1686
+							owns_state = 1684
+							owns_state = 491
+							owns_state = 490
+							owns_state = 1682
+							owns_state = 1681
+							owns_state = 1680
+							owns_state = 1687
+							owns_state = 1679	#The state to be annexed in the scripted peace deal
+						}
+					}
+
+					FROM = { #Affects the winner, Peru
+						white_peace = ROOT #White peace Peru and MRA
+						transfer_state = 1693
+						transfer_state = 1692
+						transfer_state = 1694
+						transfer_state = 1688
+						transfer_state = 494
+						transfer_state = 1686
+						transfer_state = 1684
+						transfer_state = 491
+						transfer_state = 490
+						transfer_state = 1682
+						transfer_state = 1681
+						transfer_state = 1680
+						transfer_state = 1687
+						transfer_state = 1679  #Transfers owner and controller status to Peru
+						add_war_support = 0.05 #Because why not
+					}
+
+					ROOT = { #Affects the loser, MRA
+						remove_state_core = 1693
+						remove_state_core = 1692
+						remove_state_core = 1694
+						remove_state_core = 1688
+						remove_state_core = 494
+						remove_state_core = 1686
+						remove_state_core = 1684
+						remove_state_core = 491
+						remove_state_core = 490
+						remove_state_core = 1682
+						remove_state_core = 1681
+						remove_state_core = 1680
+						remove_state_core = 1695
+						remove_state_core = 303
+						remove_state_core = 1689
+						remove_state_core = 1685
+						remove_state_core = 1683
+						remove_state_core = 492
+						remove_state_core = 1697
+						remove_state_core = 1696
+						remove_state_core = 1698
+						remove_state_core = 1691
+						remove_state_core = 1690
+						remove_state_core = 1687
+						remove_state_core = 1679
+					}
+					set_global_flag = skip_default_capitulation #Makes sure MRA does not just get completely annexed after peace deal like in TNO
+					every_country = {
+						limit = { is_ai = no }
+						news_event = { id = WORLD.18180 hours = 0 }
+					}
+				}
+			}
+		}
+	}
+}
