@@ -1,0 +1,133 @@
+characters = {
+	NOR_jack_erik_kjuus = {  
+		name = NOR_jack_erik_kjuus
+		portraits = { 
+			civilian = { large = "gfx/leaders/NOR/Portrait_NOR_Jack_Erik_Kjuus.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_JACK_ERIK_KJUUS_DESC"
+			ideology = national_socialism_reformed_national_socialism_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	NOR_tore_tvedt = {  
+		name = NOR_tore_tvedt
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/NOR/Portrait_NOR_Tore_Tvedt.dds"
+				small = "GFX_idea_NOR_Tore_Tvedt" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = NOR_Tore_Tvedt_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	NOR_erik_blucher = {  
+		name = NOR_erik_blucher
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/NOR/Portrait_NOR_Erik_Blucher.dds"
+				small = "GFX_idea_NOR_Erik_Blucher" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = NOR_Erik_Blucher_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	} 
+	NOR_arne_tumyr= {  
+		name = NOR_arne_tumyr
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/NOR/Portrait_NOR_Arne_Tumyr.dds"
+				small = "GFX_idea_NOR_Arne_Tumyr" 
+			} 	
+		} 
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = NOR_Arne_Tumyr_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	NOR_michael_von_tetzschner = {  
+		name = NOR_michael_von_tetzschner
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/NOR/Portrait_NOR_Michael_von_Tetzschner.dds"
+				small = "GFX_idea_NOR_Michael_von_Tetzschner" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = NOR_Michael_von_Tetzschner_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	NOR_carl_hagan = {  
+		name = NOR_carl_hagan
+		country_leader = {
+			ideology = despotism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	NOR_harald_sunde = {  
+		name = NOR_harald_sunde
+		country_leader = {
+			ideology = paternalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	NOR_jens_stoltenburg = {  
+		name = NOR_jens_stoltenburg
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	NOR_jo_benkow = {  
+		name = NOR_jo_benkow
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	NOR_torstein_dahle = {  
+		name = NOR_torstein_dahle
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+} 
