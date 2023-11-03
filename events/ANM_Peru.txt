@@ -18,8 +18,8 @@ country_event = {
 			promote_character = PRU_Cesar_Saucedo_Sanchez
 			set_party_name = {
 				ideology = despotism
-				long_name = "Ejército del Perú"
-				name = "EP"
+				long_name = "Fuerzas Armadas del Perú"
+				name = "FFAA"
 			}
 			every_country = {
 				limit = { is_ai = no }
@@ -46,6 +46,25 @@ country_event = {
 		        name = PRU.civilwar.1.a
 		hidden_effect = {
 			ANM_Peruvian_Civil_War = yes
+			set_popularities = {
+				communist = 0
+				socialist = 0
+				progressivism = 20
+				liberalism = 22
+				liberal_conservatism = 0
+				conservatism = 0
+				paternalism = 27
+				despotism = 31
+				fascism = 0
+				national_socialism = 0
+				ultranationalism = 0
+				esoteric_nazism = 0
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = "C90"
+				name = "Cambio 90"
+			}
 			every_country = {
 				limit = { is_ai = no }
 				news_event = { id = WORLD.18179 hours = 0 }
