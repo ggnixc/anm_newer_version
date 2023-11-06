@@ -7,9 +7,9 @@ recruit_character = NOR_arne_tumyr
 recruit_character = NOR_michael_von_tetzschner
 recruit_character = NOR_carl_hagan
 recruit_character = NOR_harald_sunde
-recruit_character = NOR_jens_stoltenburg
-recruit_character = NOR_torstein_dahle
-recruit_character = NOR_jo_benkow
+recruit_character = NOR_otto_straube
+recruit_character = NOR_eugen_dittrich
+recruit_character = NOR_jan_petersen
 
 set_oob = "NOR_1962"
 
@@ -89,18 +89,24 @@ set_politics = {
 
 set_popularities = {
     communist = 0
-    socialist = 3
-    progressivism = 4
+    socialist = 0
+    progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
-    conservatism = 3
-    paternalism = 10
-    despotism = 20
+    conservatism = 0
+    paternalism = 15
+	paternalism_1 = 6
+    despotism = 12
+	despotism_1 = 2
     fascism = 20
-    national_socialism = 40
+	fascism_1 = 3
+    national_socialism = 35
+	national_socialism_1 = 5
+	national_socialism_2 = 2
     ultranationalism = 0
     esoteric_nazism = 0
 }
+
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
