@@ -11,8 +11,8 @@ country_event = {
 	    is_triggered_only = yes
        	fire_only_once = yes
  
-	    option = {
-		        name = PRU.civilwar.1.a
+	option = {
+		    name = PRU.civilwar.1.a
 		hidden_effect = {
 			kill_country_leader = yes
 			promote_character = PRU_Cesar_Saucedo_Sanchez
@@ -21,6 +21,11 @@ country_event = {
 				long_name = "Fuerzas Armadas del Perú"
 				name = "FFAA"
 			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = "Cambio 90"
+				name = "C90"
+			}
 			every_country = {
 				limit = { is_ai = no }
 				news_event = { id = WORLD.18178 hours = 0 }
@@ -28,6 +33,10 @@ country_event = {
 			PRU = {
 				country_event = { id = PRU.civilwar.1 days = 10 }
 			}
+			USA = {
+				country_event = { id = CIA.reports.1 days = 5 }
+			}
+			ANM_Peru_Demilitarised = yes
 		}
 	}
 }
@@ -37,13 +46,13 @@ country_event = {
 	    immediate = { log = "[GetDateText]: [Root.GetName]: event PRU.civilwar.1" }
 	    title = PRU.civilwar.1.t
 	    desc = PRU.civilwar.1.desc
-		picture = GFX_anm_PRU.civilwar.1
+		picture = GFX_anm_PRU_civilwar
 
 	    is_triggered_only = yes
       	fire_only_once = yes
  
-	    option = {
-		        name = PRU.civilwar.1.a
+	option = {
+		    name = PRU.civilwar.1.a
 		hidden_effect = {
 			ANM_Peruvian_Civil_War = yes
 			set_popularities = {
@@ -60,11 +69,7 @@ country_event = {
 				ultranationalism = 0
 				esoteric_nazism = 0
 			}
-			set_party_name = {
-				ideology = paternalism
-				long_name = "C90"
-				name = "Cambio 90"
-			}
+			
 			every_country = {
 				limit = { is_ai = no }
 				news_event = { id = WORLD.18179 hours = 0 }
@@ -72,3 +77,127 @@ country_event = {
 		}
 	}
 }
+## Post-war ##
+country_event = {
+	    id = PRU.general.2
+	    immediate = { log = "[GetDateText]: [Root.GetName]: event PRU.general.2" }
+	    title = PRU.general.2.t
+	    desc = PRU.general.2.desc
+		picture = GFX_anm_PRU
+
+	    is_triggered_only = yes
+      	fire_only_once = yes
+ 
+	option = {
+			name = PRU.general.2.a
+			ai_factor = 0.4
+		hidden_effect = {
+			retire_country_leader = yes
+			promote_character = PRU_Keiko_Fujimori
+			set_party_name = {
+				ideology = despotism
+				long_name = "Cambio 90 - Ala Radical"
+				name = "C90 - AR"
+			}
+			set_politics = {	
+				ruling_party = paternalism
+			}
+			set_party_name = {
+				ideology = liberalism
+				long_name = "Peru Posible"
+				name = "PP"
+			}
+			set_popularities = {
+				communist = 0
+				socialist = 0
+				progressivism = 17
+				liberalism = 13
+				liberal_conservatism = 0
+				conservatism = 0
+				paternalism = 41
+				despotism = 29
+				fascism = 0
+				national_socialism = 0
+				ultranationalism = 0
+				esoteric_nazism = 0
+			}
+			USA = {
+				add_to_faction = PRU
+			}
+			PRU = {
+				add_ideas = {
+				OFN_Independent_Member
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD.18182 hours = 0 }
+			}
+		}
+	}
+	option = {			
+			name = PRU.general.2.b
+			ai_factor = 0.4
+		hidden_effect = {
+			retire_country_leader = yes
+			promote_character = PRU_Alan_Garcia
+			set_politics = {	
+				ruling_party = paternalism
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = "Partido Aprista Peruano"
+				name = "PAP"
+			}
+			set_party_name = {
+				ideology = progressivism
+				long_name = "Partido Aprista Peruano - Democraticos"
+				name = "PAP - D"
+			}
+			set_popularities = {
+				communist = 0
+				socialist = 0
+				progressivism = 26
+				liberalism = 13
+				liberal_conservatism = 0
+				conservatism = 17
+				paternalism = 44
+				despotism = 0
+				fascism = 0
+				national_socialism = 0
+				ultranationalism = 0
+				esoteric_nazism = 0
+			}
+			JAP = {
+				add_to_faction = PRU
+			}
+			PRU = {
+				add_ideas = {
+				Sphere_Coequal
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD.18183 hours = 0 }
+			}
+		}
+	}
+	option = {
+			name = PRU.general.2.c
+			ai_factor = 0.2
+		hidden_effect = {
+			PRU = {
+				set_politics = {
+					ruling_party = despotism
+					last_election = "1990.04.08"
+					election_frequency = 96
+					elections_allowed = yes
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD.18184 hours = 0 }
+			}
+		}
+	}
+}		
