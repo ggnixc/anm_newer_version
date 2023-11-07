@@ -1,5 +1,11 @@
 ﻿capital = 786
 
+recruit_character = FRA_jean_jacques_susini
+recruit_character = FRA_jean_marie_le_pen
+recruit_character = FRA_gerard_longuet
+recruit_character = FRA_bruno_megret
+recruit_character = FRA_georges_paul_wagner
+
 set_oob = "FRA_1962"
 
 set_research_slots = 2
@@ -11,14 +17,17 @@ country_lock_all_division_template = yes
 
 add_ideas = {
 	#NATIONAL SPIRITS
-	BRG_reconstruction_of_burgundy
+	FRA_pn_infighting
+	FRA_memory_of_burgundy
+	FRA_the_aos
+	FRA_legacy_of_marechal
 	#FACTION
 	Pakt_Bundnispartner
 	#Ministers
-	FRA_minister_Bruno_Megret_hog
-	FRA_minister_Francois_Duprat_sec
-	FRA_minister_Gerard_Nicoud_for
-	FRA_minister_Francois_Asselineau_eco
+	FRA_Jean_Marie_le_Pen_hog
+	FRA_Gerard_Longuet_sec
+	FRA_Bruno_Megret_for
+	FRA_Georges_Paul_Wagner_eco
 	#TNO LAWS
 	tno_military_spending_low_spending
 	tno_training_basic_training
@@ -64,39 +73,17 @@ set_politics = {
 }
 
 set_popularities = {
-    communist = 5
+    communist = 0
     ultranationalism = 0
     socialist = 0
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
     conservatism = 0
-    paternalism = 10
-    despotism = 19
-    fascism = 43
-    national_socialism = 21
-    esoteric_nazism = 2
-}
-
-create_country_leader = {
-	name = "Dominique de Villepin"
-	desc = "POLITICS_DOMINIQUE_DE_VILLEPIN_DESC"
-	picture = "gfx/leaders/FRA/Portrait_Dominique_de_Villepin.dds"
-	expire = "2965.1.1"
-	ideology = paternalism_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Jean-Jacques Susini"
-	desc = "POLITICS_JEAN-JACQUES_SUSINI_DESC"
-	picture = "Portrait_FRA_Jean-Jacques_Susini.dds"
-	expire = "2965.1.1"
-	ideology = fascism_subtype
-	traits = {
-	}
+    paternalism = 34
+    despotism = 25
+    fascism = 41
+    national_socialism = 0
 }
 
 if = {
