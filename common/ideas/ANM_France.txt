@@ -10,7 +10,11 @@ ideas = {
 			picture = FRA_pn_infighting
 			removal_cost = -1
 
-			modifier = { }
+			modifier = {
+				party_popularity_stability_factor = -0.25
+				political_power_factor = -0.10
+				stability_weekly = -0.01
+			}
 		}
         FRA_memory_of_burgundy = {  
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_memory_of_burgundy" }
@@ -20,7 +24,12 @@ ideas = {
 			picture = FRA_memory_of_burgundy
 			removal_cost = -1
 
-			modifier = { }
+			modifier = {
+				stability_factor = -0.15
+				recruitable_population_factor = -0.40
+				local_resources_factor = -0.30
+				overlord_trade_cost_factor = 0.25
+			}
 		}
         FRA_the_aos = {  
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_the_aos" }
@@ -30,7 +39,12 @@ ideas = {
 			picture = FRA_the_aos
 			removal_cost = -1
 
-			modifier = { }
+			modifier = {
+				stability_factor = 0.10
+				encryption = 2.5
+				required_garrison_factor = -0.15
+				resistance_activity = -0.15
+			}
 		}
         FRA_legacy_of_marechal = {  
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_legacy_of_marechal" }
@@ -40,7 +54,11 @@ ideas = {
 			picture = FRA_legacy_of_marechal
 			removal_cost = -1
 
-			modifier = { }
+			modifier = {
+				political_power_gain = 0.10
+				research_speed_factor = 0.10
+				global_building_slots = 1
+			}
 		}
 
 	}
