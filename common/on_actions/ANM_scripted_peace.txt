@@ -12,10 +12,10 @@ on_actions = {
 				if = {
 					limit = {
 						FROM = {
-							original_tag = PRU #The winner
+							tag = PRU #The winner
 						}
 						ROOT = {
-							original_tag = MRA #The loser
+							tag = MRA #The loser
 							owns_state = 1693
 							owns_state = 1692
 							owns_state = 1694
@@ -99,10 +99,10 @@ on_actions = {
 				if = {
 					limit = {
 						FROM = {
-							original_tag = MRA #The winner
+							tag = MRA #The winner
 						}
 						ROOT = {
-							original_tag = PRU #The loser
+							tag = PRU #The loser
 							owns_state = 1683
 							owns_state = 1685
 							owns_state = 303
@@ -173,6 +173,35 @@ on_actions = {
 						limit = { is_ai = no }
 						news_event = { id = WORLD.18181 hours = 0 }
 					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				#Peru defeats Commie Ecuador
+				if = {
+					limit = {
+						FROM = {
+							tag = PRU #The winner
+						}
+						ROOT = {
+							tag = ECU #The loser
+							owns_state = 305
+							owns_state = 1676 #The state to be annexed in the scripted peace deal
+						}
+					}
+
+					FROM = { #Affects the winner, Commie Ecuador
+						white_peace = ROOT #White peace MRA and Peru
+					}
+
+					ROOT = { #Affects the loser, Commie Ecuador
+						remove_state_core = 1676
+						remove_state_core = 305
+						remove_state_core = 649
+					}
+					set_global_flag = skip_default_capitulation #Makes sure Peru does not just get completely annexed after peace deal like in TNO
+					ANM_Condor_Pact_Victory = yes
 				}
 			}
 		}

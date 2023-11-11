@@ -89,3 +89,68 @@ ANM_Peruvian_Civil_War = {
 		}
 	}
 }
+ANM_Andean_War = {
+	ECU = {
+		declare_war_on = {
+		type = take_state_focus
+		generator = { 1679 }
+		target = PRU
+		}
+		create_faction = Andean_Revolutionary_Front
+		add_to_faction = MRA
+	}
+	GLP = {
+		declare_war_on = {
+	  	type = annex_everything
+	   	target = ECU
+		}
+		declare_war_on = {
+		type = take_state_focus
+		generator = { 1679 }
+		target = MRA
+		}
+		remove_ideas = {
+			OFN_Observer
+		}
+	}
+	PRU = {
+		create_faction = Condor_Pact
+		add_to_faction = GLP
+	}
+}
+ANM_Condor_Pact_Victory = {
+	PRU = {
+		puppet = ECD
+	}
+	ECD = {
+		set_politics = {	
+			ruling_party = paternalism
+			last_election = "1961.1.20"
+			election_frequency = 48
+			elections_allowed = no
+
+		}
+		set_popularities = {
+			communist = 0
+			ultranationalism = 0
+			socialist = 28
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 10
+			conservatism = 0
+			paternalism = 60
+			despotism = 12
+			fascism = 0
+			esoteric_nazism = 0
+		}
+		transfer_state = 305
+		add_state_core = 305
+		add_state_core = 1676
+		add_state_core 649
+		}
+	GLP = {
+		set_cosmetic_tag = GALAPAGOS_VICTORY
+		transfer_state = 1676
+		add_war_support = 0.10
+	}
+}
