@@ -1221,3 +1221,56 @@ news_event = {
 		name = WORLD.18184.a
 	}
 }
+news_event = {
+	id = WORLD.18185 #Finnish Civil War
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18185"}
+	title = WORLD.18185.t
+	desc = WORLD.18185.desc
+	picture = GFX_WORLD_GER_fcw
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18185.a
+		trigger = {
+			NOT = { tag = GER }
+			NOT = { tag = SOV }
+			NOT = {  is_in_faction_with = GER }
+			NOT = {  is_in_faction_with = SOV }
+		}
+	}
+	option = {
+		name = WORLD.18185.b
+		trigger = {
+			OR = { 
+				tag = SOV
+				is_in_faction_with = SOV
+			} 
+		}
+	}
+	option = {
+		name = WORLD.18185.c
+		trigger = {
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			} 
+		}
+	}
+}
+news_event = {
+	id = WORLD.18186 #Nuclear Fusion unlocked
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18186"}
+	title = WORLD.18186.t
+	desc = WORLD.18186.desc
+	picture = GFX_WORLD_GER_fusion_technology
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18186.a
+	}
+	
+}
+
+
