@@ -1,0 +1,113 @@
+ANM_caucasus_to_SOV = {
+	SOV = {
+		transfer_state = 218
+		transfer_state = 232
+		transfer_state = 234
+		transfer_state = 235
+		transfer_state = 237
+		transfer_state = 1559
+		transfer_state = 1560
+		transfer_state = 1561
+		transfer_state = 1564
+
+		add_state_core = 218
+		add_state_core = 232
+		add_state_core = 234
+		add_state_core = 235
+		add_state_core = 237
+		add_state_core = 1559
+		add_state_core = 1560
+		add_state_core = 1561
+		add_state_core = 1564
+		
+		set_autonomy = {
+			target = GEO
+			autonomy_state = autonomy_soviet_republic
+		}
+		set_autonomy = {
+			target = AZS
+			autonomy_state = autonomy_soviet_republic
+		}
+		
+	}
+	GEO = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		add_ideas = {
+			COM_Satellite
+		}
+		
+		transfer_state = 231
+		transfer_state = 1556
+		transfer_state = 1558
+
+		add_state_core = 231
+		add_state_core = 1556
+		add_state_core = 1558
+		
+		set_cosmetic_tag = GEO_SSR	
+		
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+	
+	AZS = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		transfer_state = 229
+		transfer_state = 1552
+		transfer_state = 1554
+
+		add_state_core = 229
+		add_state_core = 1552
+		add_state_core = 1554
+		
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
+
+ANM_armenia_to_SOV = {
+	SOV = {
+		set_autonomy = {
+			target = ARM
+			autonomy_state = autonomy_soviet_republic
+		}
+	}
+	ARM = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		add_ideas = {
+			COM_Satellite
+		}
+		
+		set_cosmetic_tag = ARM_SSR	
+		
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
