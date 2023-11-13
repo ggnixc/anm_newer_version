@@ -96,6 +96,9 @@ ANM_Andean_War = {
 		generator = { 1679 }
 		target = PRU
 		}
+		remove_ideas = {
+			COM_Observer
+		}
 		create_faction = Andean_Revolutionary_Front
 		add_to_faction = MRA
 	}
@@ -136,21 +139,25 @@ ANM_Condor_Pact_Victory = {
 			socialist = 28
 			progressivism = 0
 			liberalism = 0
-			liberal_conservatism = 10
+			liberal_conservatism = 0
 			conservatism = 0
 			paternalism = 60
 			despotism = 12
 			fascism = 0
 			esoteric_nazism = 0
 		}
-		transfer_state = 305
+		transfer_state = 2020
 		add_state_core = 305
 		add_state_core = 1676
-		add_state_core 649
+		add_state_core = 649
+		add_state_core = 2020
 		}
 	GLP = {
 		set_cosmetic_tag = GALAPAGOS_VICTORY
 		transfer_state = 1676
+		transfer_state = 305
 		add_war_support = 0.10
+		set_capital = { state = 305 remember_old_capital = no }
 	}
+	set_province_name = { id = 8252 name = VICTORY_POINTS_8252_WAR }
 }
