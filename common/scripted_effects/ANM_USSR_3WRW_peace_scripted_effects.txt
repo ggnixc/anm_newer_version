@@ -111,3 +111,57 @@ ANM_armenia_to_SOV = {
 		set_variable = { ECON_SPHERE_LEADER = SOV }
 	}
 }
+
+ANM_ukraine_to_SOV = {
+	UKR = {
+		every_owned_state = {
+			UKS = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+		}
+	}
+	SOV = {
+		transfer_state = 137
+		transfer_state = 218
+		transfer_state = 1532
+		
+		add_state_core = 137
+		add_state_core = 218
+		add_state_core = 1532
+		
+		set_autonomy = {
+			target = UKS
+			autonomy_state = autonomy_soviet_republic
+		}
+	}
+	UKS = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		transfer_state = 196
+		
+		add_state_core = 96
+	
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
+
+ANM_homel_to_SOV = {
+	MOS = {
+		every_owned_state = {
+			SOV = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+		}
+	}
+}
