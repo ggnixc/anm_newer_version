@@ -1,25 +1,13 @@
 ANM_caucasus_to_SOV = {
+	CAU = {
+		every_owned_state = {
+			SOV = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+		}
+	}
 	SOV = {
-		transfer_state = 218
-		transfer_state = 232
-		transfer_state = 234
-		transfer_state = 235
-		transfer_state = 237
-		transfer_state = 1559
-		transfer_state = 1560
-		transfer_state = 1561
-		transfer_state = 1564
-
-		add_state_core = 218
-		add_state_core = 232
-		add_state_core = 234
-		add_state_core = 235
-		add_state_core = 237
-		add_state_core = 1559
-		add_state_core = 1560
-		add_state_core = 1561
-		add_state_core = 1564
-		
 		set_autonomy = {
 			target = GEO
 			autonomy_state = autonomy_soviet_republic
@@ -28,6 +16,8 @@ ANM_caucasus_to_SOV = {
 			target = AZS
 			autonomy_state = autonomy_soviet_republic
 		}
+		transfer_state = 237
+		add_state_core = 237
 		
 	}
 	GEO = {
@@ -155,6 +145,37 @@ ANM_ukraine_to_SOV = {
 	}
 }
 
+ANM_belarus_to_SOV = {
+	BLR = {
+		every_owned_state = {
+			BLS = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+		}
+	}
+	SOV = {
+		set_autonomy = {
+			target = BLS
+			autonomy_state = autonomy_soviet_republic
+		}
+	}
+	BLS = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+	
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
+
 ANM_homel_to_SOV = {
 	MOS = {
 		every_owned_state = {
@@ -163,5 +184,134 @@ ANM_homel_to_SOV = {
 				add_state_core = PREV
 			}
 		}
+	}
+}
+
+ANM_karelia_to_SOV = {
+	SOV = {
+		transfer_state = 146
+		transfer_state = 147
+		transfer_state = 1712
+		
+		add_state_core = 146
+		add_state_core = 147
+		add_state_core = 1712
+	}
+}
+
+ANM_peaceful_transnistria_to_SOV = {
+	UKS = {
+		transfer_state = 192
+		transfer_state = 198
+		transfer_state = 1282
+		transfer_state = 1965
+		transfer_state = 1966
+		
+		add_state_core = 192
+		add_state_core = 198
+		add_state_core = 1282
+		add_state_core = 1965
+		add_state_core = 1966
+	}
+}
+
+ANM_war_transnistria_to_SOV = {
+	UKS = {
+		transfer_state = 192
+		transfer_state = 198
+		transfer_state = 1282
+		transfer_state = 1285
+		transfer_state = 1965
+		transfer_state = 1966
+		
+		add_state_core = 192
+		add_state_core = 198
+		add_state_core = 1282
+		add_state_core = 1285
+		add_state_core = 1965
+		add_state_core = 1966
+	}
+	SOV = {
+		set_autonomy = {
+			target = TNS
+			autonomy_state = autonomy_soviet_republic
+		}
+	}
+	TNS = {
+		remove_ideas = {
+			TNS_Last_Bastion_Of_Free_Ukraine
+			TNS_Spectre_Of_Communism
+		}
+		
+		remove_faction_status = yes
+		add_ideas = COM_Satellite
+		
+		set_cosmetic_tag = TNS_SSR
+
+		set_capital = { state = 78 }
+		
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		set_party_name = {
+			ideology = communist
+			long_name = TNS_SSR_communist_party_long
+			name = TNS_SSR_communist_party
+		}
+		
+		transfer_state = 78
+		transfer_state = 1286
+
+		add_state_core = 78
+		add_state_core = 1286
+		
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
+
+ANM_donetsk_to_RSFSR = {
+	SOV = {
+		set_autonomy = {
+			target = DKS
+			autonomy_state = autonomy_soviet_republic
+		}
+	}
+	DKS = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		transfer_state = 196
+		transfer_state = 200
+		transfer_state = 221
+		transfer_state = 225
+		transfer_state = 227
+		transfer_state = 228
+		transfer_state = 1426
+
+		add_state_core = 196
+		add_state_core = 200
+		add_state_core = 221
+		add_state_core = 225
+		add_state_core = 227
+		add_state_core = 228
+		add_state_core = 1426
+		
+		set_variable = { ECON_SPHERE_LEADER = SOV }
 	}
 }
