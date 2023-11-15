@@ -1,0 +1,396 @@
+VP_change_outman = {
+	if = {
+		limit = {
+			state = 657
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			657 = {
+				set_state_name = STATE_657_rus
+			}
+			set_province_name = {
+				id = 7801
+				name = VICTORY_POINTS_7801_rus
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					OR = {
+						is_in_faction_with = CHI
+						is_in_faction_with = JAP
+					}
+				}
+			}
+			657 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 7801
+		}
+	}
+	if = {
+		limit = {
+			state = 1646
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			1646 = {
+				set_state_name = STATE_1646_rus
+			}
+			set_province_name = {
+				id = 7672
+				name = VICTORY_POINTS_7672_rus
+			}
+			if = {
+				limit = {
+					ROOT = {
+						RUS_consider_communist_regime = yes
+					}
+				}
+				set_province_name = {
+					id = 12263
+					name = VICTORY_POINTS_12263_ruscom
+				}
+			}
+			else = {
+				set_province_name = {
+					id = 12263
+					name = VICTORY_POINTS_12263_rusnor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					OR = {
+						is_in_faction_with = CHI
+						is_in_faction_with = JAP
+					}
+				}
+			}
+			1646 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 12263
+			reset_province_name = 7672
+		}
+	}
+	if = {
+		limit = {
+			state = 1647
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			1647 = {
+				set_state_name = STATE_1647_rus
+			}
+			set_province_name = {
+				id = 12559
+				name = VICTORY_POINTS_12559_rus
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					OR = {
+						is_in_faction_with = CHI
+						is_in_faction_with = JAP
+					}
+				}
+			}
+			1647 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 12559
+		}
+	}
+	if = {
+		limit = {
+			state = 409
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			409 = {
+				set_state_name = STATE_409_rus
+			}
+			set_province_name = {
+				id = 12189
+				name = VICTORY_POINTS_12189_rus
+			}
+			if = {
+				limit = {
+					ROOT = {
+						RUS_consider_communist_regime = yes
+					}
+				}
+				set_province_name = {
+					id = 9604
+					name = VICTORY_POINTS_9604_ruscom
+				}
+			}
+			else = {
+				set_province_name = {
+					id = 9604
+					name = VICTORY_POINTS_9604_rusnor
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					OR = {
+						is_in_faction_with = CHI
+						is_in_faction_with = JAP
+					}
+				}
+			}
+			409 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 12189
+			reset_province_name = 9604
+		}
+	}
+	if = {
+		limit = {
+			state = 408
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			408 = {
+				set_state_name = STATE_408_rus
+			}
+			set_province_name = {
+				id = 11750
+				name = VICTORY_POINTS_11750_rus
+			}
+			set_province_name = {
+				id = 3977
+				name = VICTORY_POINTS_3977_rus
+			}
+			set_province_name = {
+				id = 6961
+				name = VICTORY_POINTS_6961_rus
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					is_in_faction_with = JAP
+				}
+			}
+			408 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 11750
+			reset_province_name = 3977
+			reset_province_name = 6961
+		}
+	}
+	if = {
+		limit = {
+			state = 809
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			809 = {
+				set_state_name = STATE_809_rus
+			}
+			set_province_name = {
+				id = 957
+				name = VICTORY_POINTS_957_rus
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					is_in_faction_with = JAP
+				}
+			}
+			809 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 957
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					OR = {
+						AND = {
+							is_in_faction_with = CHI
+							CHI = {
+								NOT = { is_in_faction_with = JAP }
+							}
+						}
+						AND = {
+							tag = YUN
+							OR = {
+								has_cosmetic_tag = YUN_NPA_Long_Yun
+								has_cosmetic_tag = YUN_NPA_China
+							}
+						}
+					}
+				}
+			}
+			809 = {
+				set_state_name = STATE_809_chi
+			}
+			set_province_name = {
+				id = 957
+				name = VICTORY_POINTS_957_chi
+			}
+		}
+	}
+}
+
+
+	### Fuck Finland ###
+
+
+VP_change_fin = {
+	if = {
+		limit = {
+			state = 213
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			213 = {
+				set_state_name = STATE_213_rus
+			}
+			set_province_name = {
+				id = 11117
+				name = VICTORY_POINTS_11117_rus
+			}
+			set_province_name = {
+				id = 9115
+				name = VICTORY_POINTS_9115_rus
+			}
+			set_province_name = {
+				id = 6181
+				name = VICTORY_POINTS_6181_rus
+			}
+		}
+		else = {
+			213 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 6181
+		}
+	}
+	if = {
+		limit = {
+			state = 1359
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			1359 = {
+				set_state_name = STATE_1359_rus
+			}
+			set_province_name = {
+				id = 3134
+				name = VICTORY_POINTS_3134_rus
+			}
+		}
+		else = {
+			1359 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 3134
+		}
+	}
+	if = {
+		limit = {
+			state = 215
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			215 = {
+				set_state_name = STATE_215_rus
+			}
+			set_province_name = {
+				id = 94
+				name = VICTORY_POINTS_94_rus
+			}
+		}
+		else = {
+			215 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 94
+		}
+	}
+	if = {
+		limit = {
+			state = 216
+		}
+		if = {
+			limit = {
+				ROOT = {
+					is_russian_nation = yes
+				}
+			}
+			216 = {
+				set_state_name = STATE_216_rus
+			}
+			set_province_name = {
+				id = 11159
+				name = VICTORY_POINTS_11159_rus
+			}
+		}
+		else = {
+			216 = {
+				reset_state_name = yes
+			}
+			reset_province_name = 11159
+		}
+	}
+}
+
+RUS_consider_communist_regime = {
+	is_russian_nation = yes
+	OR = {
+		has_government = communist
+		AND = {
+			has_government = socialist
+			NOT = {
+				original_tag = SBA
+			}
+		}
+	}
+}

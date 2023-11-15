@@ -3512,8 +3512,9 @@ state_control_effect_234 = {
 	}
 	else = {
 		set_province_name = { id = 3734 name = "Krasnodar" }
-		set_province_name = { id = 11668 name = "Novorosíisk" }
+		set_province_name = { id = 11668 name = "Novorossiysk" }
 		set_province_name = { id = 6783 name = "Yeysk" }
+		set_province_name = { id = 735 name = "Armavir" }
 	}
 }
 state_control_effect_235 = {
@@ -3723,6 +3724,45 @@ state_control_effect_1554 = {
 	else = {
 		set_state_name = "Nagorno-Karabakh" 
 		set_province_name = { id = 1467 name = "Xankendi" }
+	}
+}
+#Moldavia
+state_control_effect_78 = {
+	if = {
+		limit = {
+			is_controlled_by = ROM
+		}
+		reset_state_name = yes
+		reset_province_name = 11686
+	}
+	else = {
+		limit = {
+			controller = {
+				original_tag = TNS
+				is_in_faction_with = SOV
+			}
+		}
+		set_state_name = "Kishinev"
+		set_province_name = {id = 11686 name = "Kishinev"}
+	}
+}
+state_control_effect_1286 = {
+	if = {
+		limit = {
+			is_controlled_by = ROM
+		}
+		reset_state_name = yes
+		reset_province_name = 3577
+	}
+	else = {
+		limit = {
+			controller = {
+				original_tag = TNS
+				is_in_faction_with = SOV
+			}
+		}
+		set_state_name = "Beltsy"
+		set_province_name = {id = 3577 name = "Beltsy"}
 	}
 }
 #Transnistria
