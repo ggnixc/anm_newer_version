@@ -41,18 +41,6 @@ state_control_effect_252 = {
 		reset_state_name = yes
 		reset_province_name = 11375
 	}
-	else_if = {
-		limit = {
-			controller = {
-				RUS_consider_aryan_regime = yes
-			}
-		}
-		set_state_name = STATE_252_ary
-		set_province_name = {
-			id = 11375
-			name = VICTORY_POINTS_11375_ary
-		}
-	}
 	else = {
 		set_state_name = STATE_252_nor
 		set_province_name = {
@@ -364,38 +352,6 @@ state_control_effect_400 = {
 	}
 }
 #WRS
-state_control_effect_214 = {
-	if = {
-		limit = {
-			controller = {
-				RUS_consider_aryan_regime = yes
-			}
-		}
-		set_state_name = STATE_214_ary
-		set_province_name = {
-			id = 3338
-			name = VICTORY_POINTS_3338_ary
-		}
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 3338
-		if = {
-			limit = {
-				controller = {
-					RUS_consider_communist_regime = yes
-				}
-			}
-			reset_province_name = 312
-		}
-		else = {
-			set_province_name = {
-				id = 312
-				name = VICTORY_POINTS_312_rus
-			}
-		}
-	}
-}
 
 state_control_effect_1887 = {
 	if = {
