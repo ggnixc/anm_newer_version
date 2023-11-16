@@ -2843,18 +2843,22 @@ state_control_effect_197 = {
 		set_province_name = { id = 488 name = VICTORY_POINTS_488_ger }
 		set_province_name = { id = 3755 name = VICTORY_POINTS_3755_ger }
 	}
-	else = {
-		if = {
-			limit = {
-				OR = {
-					is_controlled_by = UKS
-					is_controlled_by = SOV
-					is_controlled_by = DKS
-				}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = UKS
+				is_controlled_by = SOV
+				is_controlled_by = DKS
 			}
-			set_province_name = { id = 3452 name = VICTORY_POINTS_3452_sov }
 		}
-		else = { set_province_name = { id = 3452 name = VICTORY_POINTS_3452_ukr } }
+		set_state_name = STATE_197_sov
+		set_province_name = { id = 3452 name = VICTORY_POINTS_3452_sov }
+		set_province_name = { id = 11546 name = VICTORY_POINTS_11546_sov }
+		reset_province_name = 3755
+		reset_province_name = 6597
+	}
+	else = { 
+		set_province_name = { id = 3452 name = VICTORY_POINTS_3452_ukr }
 		reset_state_name = yes
 		reset_province_name = 6597
 		reset_province_name = 11546
@@ -2894,6 +2898,17 @@ state_control_effect_200 = {
 		}
 		set_state_name = STATE_200_ger
 		set_province_name = { id = 11405 name = VICTORY_POINTS_11405_ger }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = UKS
+				is_controlled_by = SOV
+				is_controlled_by = DKS
+			}
+		}
+		set_province_name = { id = 11405 name = "Zaporozhye" }
+		set_state_name = "Zaporozhye"
 	}
 	else = {
 		reset_province_name = 11405
@@ -2967,15 +2982,19 @@ state_control_effect_221 = {
 					is_controlled_by = DKS
 				}
 			}
+			set_state_name = STATE_221_rus
 			set_province_name = { id = 3508 name = VICTORY_POINTS_3508_sov }
+			set_province_name = { id = 418 name = VICTORY_POINTS_418_rus }
+			set_province_name = { id = 9556 name = "Chuguev" }
+			set_province_name = { id = 6554 name = "Balakleya" }
 		}
 		else = {
 			set_province_name = { id = 3508 name = VICTORY_POINTS_3508_ukr }
+			reset_state_name = yes
+			reset_province_name = 418
+			reset_province_name = 9556
+			reset_province_name = 6554
 		}
-		reset_state_name = yes
-		reset_province_name = 418
-		reset_province_name = 6554
-		reset_province_name = 9556
 	}
 }
 state_control_effect_225 = {
@@ -3016,7 +3035,7 @@ state_control_effect_226 = {
 		}
 		set_state_name = STATE_226_ukr
 		set_province_name = { id = 11437 name = VICTORY_POINTS_11437_sov }
-		set_province_name = { id = 11561 name = VICTORY_POINTS_11561_ukr }
+		set_province_name = { id = 11561 name = "Krivoy Rog" }
 	}
 	else = {
 		set_state_name = STATE_226_ukr
@@ -3049,6 +3068,7 @@ state_control_effect_227 = {
 				}
 			}
 			set_province_name = { id = 6474 name = VICTORY_POINTS_6474_sov }
+			set_province_name = { id = 6493 name = VICTORY_POINTS_6493_sov }
 			set_state_name = STATE_227_sov
 		}
 		else = {
@@ -3138,6 +3158,18 @@ state_control_effect_1426 = {
 		set_province_name = { id = 11452 name = VICTORY_POINTS_11452_ger }
 		set_province_name = { id = 486 name = VICTORY_POINTS_486_ger }
 	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = UKS
+				is_controlled_by = SOV
+				is_controlled_by = DKS
+			}
+		}
+		set_province_name = { id = 486 name = "Pavlograd" }
+		reset_province_name = 11452
+		reset_state_name = yes
+	}
 	else = {
 		reset_state_name = yes
 		reset_province_name = 11452
@@ -3156,6 +3188,17 @@ state_control_effect_1427 = {
 		set_province_name = { id = 14536 name = VICTORY_POINTS_14536_ger }
 		set_province_name = { id = 9437 name = VICTORY_POINTS_9437_ger }
 		set_state_name = STATE_1427_ger
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = UKS
+				is_controlled_by = SOV
+				is_controlled_by = DKS
+			}
+		}
+		set_province_name = { id = 14536 name = "Chernigov" }
+		set_state_name = "Chernigov"
 	}
 	else = {
 		reset_state_name = yes
@@ -3180,6 +3223,17 @@ state_control_effect_1428 = {
 			set_state_name = STATE_1428_ger
 		}
 		reset_province_name = 525
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = UKS
+				is_controlled_by = SOV
+				is_controlled_by = DKS
+			}
+		}
+		set_province_name = { id = 525 name = VICTORY_POINTS_525_sov }
+		set_state_name = STATE_1428_sov
 	}
 	else = {
 		if = {
@@ -3744,6 +3798,7 @@ state_control_effect_78 = {
 		}
 		set_state_name = "Kishinev"
 		set_province_name = {id = 11686 name = "Kishinev"}
+		set_province_name = {id = 15984 name = "Bender"}
 	}
 }
 state_control_effect_1286 = {
