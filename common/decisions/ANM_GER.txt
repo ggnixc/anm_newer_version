@@ -48,13 +48,13 @@ GER_party_struggle = {
             random_list = {
                 50 = {
                     add_popularity = {
-                        ideology = national_socialism_4
+                        ideology = national_socialism_1
                         popularity = -0.15
                     }
                 }
                 50 = {
                     add_popularity = {
-                        ideology = national_socialism_4
+                        ideology = national_socialism_1
                         popularity = 0.15
                     }
                 }
@@ -76,4 +76,22 @@ GER_party_struggle = {
             	country_event = GER_hold_an_interview_event_chain_start
         }
     }
-}
+
+    GER_suppress_the_opposition = {
+        allowed = {
+            tag = GER
+        }
+        icon = GER_decision_fist_suppress
+        days_re_enable = 30
+        days_remove = 15
+        modifier = {
+            political_power_factor = -0.15
+        }
+        remove_effect = {
+            add_popularity = {
+                ideology = national_socialism_3
+                popularity = -0.15
+                }
+        }
+    }
+ }
