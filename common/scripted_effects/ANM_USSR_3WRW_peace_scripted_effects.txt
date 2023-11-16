@@ -1,10 +1,22 @@
 ANM_caucasus_to_SOV = {
-	CAU = {
-		every_owned_state = {
-			SOV = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
+	every_state = {
+		limit = {
+			is_owned_by = CAU
+		}
+		CAU = { remove_state_core = PREV }
+		SOV = {
+			add_state_core = PREV
+			transfer_state = PREV
+		}
+	}
+	every_state = {
+		limit = {
+			is_owned_by = VLG
+		}
+		VLG = { remove_state_core = PREV }
+		SOV = {
+			add_state_core = PREV
+			transfer_state = PREV
 		}
 	}
 	SOV = {
@@ -16,9 +28,6 @@ ANM_caucasus_to_SOV = {
 			target = AZS
 			autonomy_state = autonomy_soviet_republic
 		}
-		transfer_state = 237
-		add_state_core = 237
-		
 	}
 	GEO = {
 		set_politics = {
@@ -103,13 +112,20 @@ ANM_armenia_to_SOV = {
 }
 
 ANM_ukraine_to_SOV = {
-	UKR = {
-		every_owned_state = {
-			UKS = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
+	every_state = {
+		limit = {
+			is_owned_by = UKR
 		}
+		UKR = { remove_state_core = PREV }
+		UKS = {
+			add_state_core = PREV
+			transfer_state = PREV
+		}
+	}
+	GER = {
+		remove_state_core = 137
+		remove_state_core = 196
+		remove_state_core = 1532
 	}
 	SOV = {
 		transfer_state = 137
@@ -140,18 +156,21 @@ ANM_ukraine_to_SOV = {
 		transfer_state = 196
 		
 		add_state_core = 96
+		remove_state_core = 218
 	
 		set_variable = { ECON_SPHERE_LEADER = SOV }
 	}
 }
 
 ANM_belarus_to_SOV = {
-	BLR = {
-		every_owned_state = {
-			BLS = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
+	every_state = {
+		limit = {
+			is_owned_by = BLR
+		}
+		BLR = { remove_state_core = PREV }
+		BLS = {
+			add_state_core = PREV
+			transfer_state = PREV
 		}
 	}
 	SOV = {
@@ -177,12 +196,14 @@ ANM_belarus_to_SOV = {
 }
 
 ANM_homel_to_SOV = {
-	MOS = {
-		every_owned_state = {
-			SOV = {
-				transfer_state = PREV
-				add_state_core = PREV
-			}
+	every_state = {
+		limit = {
+			is_owned_by = MOS
+		}
+		MOS = { remove_state_core = PREV }
+		SOV = {
+			add_state_core = PREV
+			transfer_state = PREV
 		}
 	}
 }
@@ -200,36 +221,39 @@ ANM_karelia_to_SOV = {
 }
 
 ANM_peaceful_transnistria_to_SOV = {
-	UKS = {
-		transfer_state = 192
-		transfer_state = 198
-		transfer_state = 1282
-		transfer_state = 1965
-		transfer_state = 1966
-		
-		add_state_core = 192
-		add_state_core = 198
-		add_state_core = 1282
-		add_state_core = 1965
-		add_state_core = 1966
+	every_state = {
+		limit = {
+			is_core_of = TNS
+		}
+		TNS = { remove_state_core = PREV }
+		UKS = {
+			add_state_core = PREV
+			transfer_state = PREV
+		}
+	}
+	ROM = {
+		remove_state_core = 1282
 	}
 }
 
 ANM_war_transnistria_to_SOV = {
+	every_state = {
+		limit = {
+			is_core_of = TNS
+		}
+		TNS = { remove_state_core = PREV }
+		UKS = {
+			add_state_core = PREV
+			transfer_state = PREV
+		}
+	}
 	UKS = {
-		transfer_state = 192
-		transfer_state = 198
-		transfer_state = 1282
 		transfer_state = 1285
-		transfer_state = 1965
-		transfer_state = 1966
-		
-		add_state_core = 192
-		add_state_core = 198
-		add_state_core = 1282
 		add_state_core = 1285
-		add_state_core = 1965
-		add_state_core = 1966
+	}
+	ROM = {
+		remove_state_core = 1282
+		remove_state_core = 1285
 	}
 	SOV = {
 		set_autonomy = {
