@@ -9,24 +9,24 @@ set_research_slots = 3
 
 
 set_politics = {	
-	ruling_party = despotism
-	last_election = "1958.1.8"
-	election_frequency = 96
-	elections_allowed = no
+	ruling_party = paternalism
+	last_election = "1995.12.8"
+	election_frequency = 48
+	elections_allowed = yes
 }
 
 set_popularities = {
 	communist = 0
 	socialist = 0
-	progressivism = 0
-	liberalism = 0
+	progressivism = 5
+	liberalism = 27
 	liberal_conservatism = 0
 	conservatism = 10
-	paternalism = 27
-	despotism = 48
-	fascism = 7
+	paternalism = 48
+	despotism = 7
+	fascism = 0
 	national_socialism = 3
-	ultranationalism = 5
+	ultranationalism = 0
 }
 
 ##LEADERS##
@@ -44,7 +44,7 @@ create_country_leader = {
 	name = "Alparslan Türkeş"
 	picture = "Portrait_TUR_Alparslan_Turkes.dds"
 	expire = "2099.1.1"
-	ideology = despotism_military_junta_subtype
+	ideology = paternalism_national_conservatism_subtype
 	traits = {
 	}
 }
@@ -113,7 +113,7 @@ create_corps_commander = {
 
 add_ideas = {
 	#STARTING
-	
+	Pakt_Observer
 	#MINISTERS
 	
 	#POLITICAL

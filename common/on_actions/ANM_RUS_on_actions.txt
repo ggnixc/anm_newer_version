@@ -1,0 +1,32 @@
+on_actions = {
+	#EVENTS
+
+	on_government_change = {
+		effect = {
+			if = {
+				limit = { is_russian_nation = yes }
+				every_owned_state = {
+					limit = { has_state_flag = universal_renamings }
+					meta_effect = {
+						text = {
+							state_control_effect_[STATEID] = yes
+						}
+						STATEID = "[?This.GetID]"
+					}
+				}
+				if = {
+					limit = { NOT = { has_global_flag = TNO_exonym_mode } }
+					every_owned_state = {
+						limit = { has_state_flag = state_renamings }
+						meta_effect = {
+							text = {
+								state_control_effect_[STATEID] = yes
+							}
+							STATEID = "[?This.GetID]"
+						}
+					}
+				}
+			}
+		}
+	}
+}

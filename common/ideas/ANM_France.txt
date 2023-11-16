@@ -1,103 +1,65 @@
 ideas = {
-    head_of_government = {
-		FRA_minister_Bruno_Megret_hog = {
-                on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_minister_Bruno_Megret_hog"}
-                allowed = { original_tag = FRA }
-                picture = "FRA_minister_Bruno_Megret"
-                available = {
-                    tag = FRA
-                }
-                traits = {
-                    fascism
-                    head_of_government
-                    FRA_minister_Bruno_Megret_hog_desc
-                    The_Corrupt_Puppetmaster
-                }
-                cancel_if_invalid = no
-                ledger = civilian
-                    }
-            }
-                        
-    security_minister = { 
-        FRA_minister_Francois_Duprat_sec = {
-                on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_minister_Francois_Duprat_sec"}
-                allowed = { original_tag = FRA }
-                picture = "FRA_minister_Francois_Duprat"
-                available = {
-                    tag = FRA
-                }
-                traits = {
-                    national_socialism
-                    security_minister
-                    FRA_minister_Francois_Duprat_sec_desc
-                    The_Enigma_of_RNP
-                }
-                cancel_if_invalid = no
-                ledger = civilian
-                    } 
-            }
-                        
-    foreign_minister = {
-		FRA_minister_Gerard_Nicoud_for = {
-                on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_minister_Gerard_Nicoud_for"}
-                allowed = { original_tag = FRA }
-                picture = "FRA_minister_Gerard_Nicoud"
-                available = {
-                    tag = FRA
-                }
-                traits = {
-                    fascism
-                    foreign_minister
-                    FRA_minister_Gerard_Nicoud_for_desc
-                    The_peoples_minister
-                    
-                }
-                cancel_if_invalid = no
-                ledger = civilian
-                    }
-            }
-                        
-    economy_minister = {
-        FRA_minister_Francois_Asselineau_eco = {
-                on_add = {log = "[GetDateText]: [Root.GetName]: add idea FRA_minister_Francois_Asselineau_eco"}
-                allowed = { original_tag = FRA }
-                picture = "FRA_minister_Francois_Asselineau"
-                available = {
-                    tag = FRA
-                }
-                traits = {
-                    fascism
-                    economy_minister
-                    FRA_minister_Francois_Asselineau_eco_desc
-                    The_Technocrat
-                    
-                }
-                cancel_if_invalid = no
-                ledger = civilian
-                }
-        }
+
     country = {
-		FRA_the_great_divide = { 
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_the_great_divide" }
+        
+		FRA_pn_infighting = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_pn_infighting" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
 
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-
-			picture = GFX_idea_FRA_the_great_divide
-
+			picture = FRA_pn_infighting
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.05
-				political_power_factor = -0.1
-				national_socialism_drift = 0.001
-				paternalism_drift = 0.001
+				party_popularity_stability_factor = -0.25
+				political_power_factor = -0.10
+				stability_weekly = -0.01
 			}
 		}
+        FRA_memory_of_burgundy = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_memory_of_burgundy" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = FRA_memory_of_burgundy
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				recruitable_population_factor = -0.40
+				local_resources_factor = -0.30
+				overlord_trade_cost_factor = 0.25
+			}
+		}
+        FRA_the_aos = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_the_aos" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = FRA_the_aos
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				encryption = 2.5
+				required_garrison_factor = -0.15
+				resistance_activity = -0.15
+			}
+		}
+        FRA_legacy_of_marechal = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_legacy_of_marechal" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = FRA_legacy_of_marechal
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.10
+				research_speed_factor = 0.10
+				global_building_slots = 1
+			}
+		}
+
 	}
 }

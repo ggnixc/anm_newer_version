@@ -1,4 +1,4 @@
-﻿#NOTE - This file is for generic equipment loc. Use TNO_equipment_l_english for country specific stuff.
+﻿#NOTE - This file is for generic equipment loc. Use ANM_equipment_l_english for country specific stuff.
 l_english:
 
  EQUIPMENT_DESIGNER_DESC: "Designed by: $DESIGNER|Y$"
@@ -10,9 +10,11 @@ l_english:
  EQUIPMENT_SUBMARINE: "Submarine"
  EQUIPMENT_SCREEN: "Screen"
  EQUIPMENT_CONVOY: "Trade Convoy"
- EQUIPMENT_AIR_FIGHTER: "Fighter"
- EQUIPMENT_AIR_CAS: "Close Air Support"
+ EQUIPMENT_FIGHTER: "Fighter"
+ EQUIPMENT_CAS: "Close Air Support"
  EQUIPMENT_INTERCEPTOR: "Interceptor"
+ EQUIPMENT_SUICIDE: "Suicide Craft"
+ EQUIPMENT_SCOUT_PLANE: "Scout Plane"
  EQUIPMENT_TACTICAL_BOMBER: "Tactical Bomber"
  EQUIPMENT_STRATEGIC_BOMBER: "Strategic Bomber"
  EQUIPMENT_NAVAL_BOMBER: "Naval Bomber"
@@ -24,12 +26,15 @@ l_english:
  EQUIPMENT_ARTILLERY: "Artillery"
  EQUIPMENT_ANTI_TANK: "Anti-Tank"
  EQUIPMENT_ROCKET: "Rocket"
+ EQUIPMENT_FLAME: "Flame"
  EQUIPMENT_MISSILE: "Guided Missile"
  EQUIPMENT_LAND: "Land Equipment"
  EQUIPMENT_NAVAL: "Naval Equipment"
  EQUIPMENT_AIR: "Air Equipment"
  EQUIPMENT_VERSION: "Mk$VERSION|0$"
  EQUIPMENT_VEHICLE: "Vehicle"
+ EQUIPMENT_WEIGHT_LIGHT: "Light"
+ EQUIPMENT_WEIGHT_MEDIUM: "Medium"
  UNIT_GENERIC_NAME_GENERIC_INFANTRY: "$NR$. $NAME$"
  UNIT_GENERIC_NAME_GER: "$NR$. $NAME$"
  UNIT_GENERIC_NAME_FRA: "$NR$ème $NAME$"
@@ -43,7 +48,7 @@ l_english:
  REQUESTED_REINFORCEMENT_DELIVERING_TO: "\nDelivering to $UNIT|Y$ ($PROG|G%$):"
  REQUESTED_REINFORCEMENT_DELIVERING_TO_BLOCKED:1 "\nDelivering to $UNIT|Y$ ($PROG|G%$ §RBlocked: no supply from capital§! ):"
  REQUESTED_REINFORCEMENT_DELIVERING_TO_ENTRY: "\n    $NUM|Y0$ of $EQ|Y$"
- REQUESTED_REINFORCEMENT_DELIVERING_TO_MORE_ENTRIES:1 "\nAnd $COUNT|H$ requests more..."
+ REQUESTED_REINFORCEMENT_DELIVERING_TO_MORE_ENTRIES: "\nAnd $COUNT|H$ requests more..."
  REQUESTED_REINFORCEMENT_HEADER: "Reinforcement requests:"
  UPGRADE_REINFORCEMENT_HEADER: "Upgrade requests:"
  TIMED_ACTIVITY_HEADER: "Activity request:"
@@ -214,19 +219,19 @@ l_english:
   SAF_EQUIPMENT_VERSION_12: "Mk. XII"
   SAF_EQUIPMENT_VERSION_13: "Mk. XIII"
 
-  RAJ_EQUIPMENT_VERSION_1: "Mk. I"
-  RAJ_EQUIPMENT_VERSION_2: "Mk. II"
-  RAJ_EQUIPMENT_VERSION_3: "Mk. III"
-  RAJ_EQUIPMENT_VERSION_4: "Mk. IV"
-  RAJ_EQUIPMENT_VERSION_5: "Mk. V"
-  RAJ_EQUIPMENT_VERSION_6: "Mk. VI"
-  RAJ_EQUIPMENT_VERSION_7: "Mk. VII"
-  RAJ_EQUIPMENT_VERSION_8: "Mk. VIII"
-  RAJ_EQUIPMENT_VERSION_9: "Mk. IX"
-  RAJ_EQUIPMENT_VERSION_10: "Mk. X"
-  RAJ_EQUIPMENT_VERSION_11: "Mk. XI"
-  RAJ_EQUIPMENT_VERSION_13: "Mk. XIII"
-  RAJ_EQUIPMENT_VERSION_12: "Mk. XII"
+  IND_EQUIPMENT_VERSION_1: "Mk. I"
+  IND_EQUIPMENT_VERSION_2: "Mk. II"
+  IND_EQUIPMENT_VERSION_3: "Mk. III"
+  IND_EQUIPMENT_VERSION_4: "Mk. IV"
+  IND_EQUIPMENT_VERSION_5: "Mk. V"
+  IND_EQUIPMENT_VERSION_6: "Mk. VI"
+  IND_EQUIPMENT_VERSION_7: "Mk. VII"
+  IND_EQUIPMENT_VERSION_8: "Mk. VIII"
+  IND_EQUIPMENT_VERSION_9: "Mk. IX"
+  IND_EQUIPMENT_VERSION_10: "Mk. X"
+  IND_EQUIPMENT_VERSION_11: "Mk. XI"
+  IND_EQUIPMENT_VERSION_13: "Mk. XIII"
+  IND_EQUIPMENT_VERSION_12: "Mk. XII"
   
   FRA_EQUIPMENT_VERSION_1: "série A"
   FRA_EQUIPMENT_VERSION_2: "série B"
@@ -270,567 +275,6 @@ l_english:
   SWE_EQUIPMENT_VERSION_12: "S XII"
   SWE_EQUIPMENT_VERSION_13: "S XIII"
  ### Specific Equipment Versions ###
-
-### Upgrades (Used in Equipment Designer) ###
- ### Tanks ###
-  tank_armor_upgrade: "Armor"
-  tank_armor_upgrade_desc: "Better armor than your enemies can penetrate is a huge advantage to your divisions but is probably going to slow you down."
-
-  tank_gun_upgrade: "Main Gun"
-  tank_gun_upgrade_desc: "It is important to have a gun that keep up with enemy armor strength and can penetrate."
-
-  tank_aa_upgrade: "Anti-Air Armament"
-  tank_aa_upgrade_desc: "Ensure that our Anti-Air Armament is able to shoot down the latest planes."
-
-  tank_at_upgrade: "Anti-Tank Armament"
-  tank_at_upgrade_desc: "Ensure that our tank destroyers can defeat the latest enemy tanks."
-
-  tank_art_upgrade: "Artillery Armament"
-  tank_art_upgrade_desc:1 "Ensure that our self propelled artillery have massive firepower that will tear through any unarmored enemies."
-
-  tank_reliability_upgrade: "Reliability"
-  tank_reliability_upgrade_desc: "Improving reliability leads to less broken down tanks you will need to replace."
- 
-  tank_engine_upgrade: "Engine"
-  tank_engine_upgrade_desc: "More mobility give tactical and strategic advantages, as well as allowing more armor without being slowed down significantly."
- ### Tanks ###
-
- ### Ships ###
-  # Non-MTG
-  ship_gun_upgrade: "Gun"
-  ship_gun_upgrade_desc: "It is important to have a gun that keep up with enemy armor strength and can penetrate."
-
-  ship_torpedo_upgrade: "Torpedo"
-  ship_torpedo_upgrade_desc: "A torpedo is a powerful attack launchable by smaller ships once in range with a high chance of critical hits"
-
-  ship_armor_upgrade: "Armor"
-  ship_armor_upgrade_desc: "More armor to protect your ship against enemy fire"
-
-  carrier_armor_upgrade: "Armor"
-  carrier_armor_upgrade_desc: "More armor to protect your ship against enemy fire"
-
-  ship_engine_upgrade: "Engine"
-  ship_engine_upgrade_desc: "A ship with a more powerful engine can control distance to its opponents in battle"
-
-  ship_reliability_upgrade: "Reliability"
-  ship_reliability_upgrade_desc: "A ship with high reliability will be less prone to critical hits that can do massive damage to a ship without well thought out construction."
-
-  ship_anti_air_upgrade: "Anti-Air"
-  ship_anti_air_upgrade_desc: "More guns putting lead in the air means more enemy planes shot down!"
-
-  ship_ASW_upgrade: "ASW"
-  ship_ASW_upgrade_desc: "Anti-Submarine-Warfare weapons are important for locating and taking out submarines."
-
-  destroyer_engine_upgrade: "Engine"
-  destroyer_engine_upgrade_desc: "A ship with a more powerful engine can control distance to its opponents in battle"
-
-  sub_engine_upgrade: "Engine"
-  sub_engine_upgrade_desc: "A ship with a more powerful engine can control distance to its opponents in battle"
-
-  sub_stealth_upgrade: "Stealth"
-  sub_stealth_upgrade_desc: "A submarines greatest strength is its ability to remain undetected and only strike when it has the advantage."
-
-  sub_torpedo_upgrade: "Torpedo"
-  sub_torpedo_upgrade_desc: "A torpedo is a powerful attack launchable by smaller ships once in range with a high chance of critical hits"
-
-  ship_deckspace_upgrade: "Deck space"
-  ship_deckspace_upgrade_desc: "More room to carry and launch carrier-capable airplanes"
- ### Ships ###
- 
- ### Planes ###
-  # Some of these have Carrier-Variant (CV) versions
-  plane_gun_upgrade: "Weapons"
-  plane_gun_upgrade_desc: "Better weapons to fight other planes with"
-  cv_plane_gun_upgrade: "Weapons"
-  cv_plane_gun_upgrade_desc: "Better weapons to fight other planes with"
-
-  plane_engine_upgrade: "Engine"
-  plane_engine_upgrade_desc: "Higher speed gives a plane an advantage when it comes to positioning and target selection. Important for interceptors."
-
-  plane_range_upgrade: "Range"
-  plane_range_upgrade_desc: "A plane with better range can reach more strategic areas for missions"
-  cv_plane_range_upgrade: "Range"
-  cv_plane_range_upgrade_desc: "A plane with better range can reach more strategic areas for missions"
-
-  plane_reliability_upgrade: "Reliability"
-  plane_reliability_upgrade_desc: "A plane with low reliability has a chance of accidents during missions"
-
-  plane_naval_upgrade: "Attack"
-  plane_naval_upgrade_desc: "More carry capacity of anti-ship weapons."
-  cv_plane_naval_upgrade: "Attack"
-  cv_plane_naval_upgrade_desc: "More carry capacity of anti-ship weapons."
-
-  plane_bomb_upgrade: "Bombing"
-  plane_bomb_upgrade_desc: "Bigger bomb bay to deliver more payload."
-
-  plane_tac_bomb_upgrade: "Bombing"
-  plane_tac_bomb_upgrade_desc: "Bigger bomb bay to deliver more payload."
-
-  plane_cas_upgrade: "Attack"
-  plane_cas_upgrade_desc: "Improved weapons for attacking ground targets"
-  
- ### Planes ###
-### Upgrades (Used in Equipment Designer) ###
-
-##### General Equipment Loc #####
-# - Organized by Tech Folder
-# - See 'equip_naval_l_english.yml' for Generic *Naval* Equipment Loc
-# - And 'equip_air_l_english.yml' for Generic *Air* Equipment Loc
-
-#### Infantry ####
- ### Infantry Equipment ###
-  infantry_equipment: "Infantry Equipment"
-  infantry_equipment_short: "Infantry Eq."
-  infantry_equipment_desc: "Personal and crew served weapons for infantry as well as the various other bits of kit a soldier needs."
-
-  infantry_equipment_0: "Early Infantry Rifle"
-  infantry_equipment_0_short: "Early Infantry Rifle"
-  infantry_equipment_0_desc: "Basic infantry rifle developed before and during the Great War. Typically bolt action, this rifle can still be produced in a pinch if need be, although it may prove less effective in this modern age."
-
-  infantry_equipment_1: "Basic Infantry Rifle"
-  infantry_equipment_1_short: "Basic Infantry Rifle"
-  infantry_equipment_1_desc: "Infantry rifle developed during the later stages of the Second World War. Whether it is fully- or semi-automatic, this rifle's design is well adapted to the challenges faced during by its mother country."
-
-  infantry_equipment_2: "Improved Infantry Rifle"
-  infantry_equipment_2_short: "Improved Infantry Rifle"
-  infantry_equipment_2_desc: "Rifle improving upon shortcomings noticed in the Second World War. Less complex and more reliable, this rifle can be modified fairly easily to meet the demands of the environment it is serving in."
-
-  infantry_equipment_3: "Advanced Infantry Rifle"
-  infantry_equipment_3_short: "Advanced Infantry Rifle"
-  infantry_equipment_3_desc: "A improved gas operated piston rifle, often equipped with choice fire and gas blowback. This rifle is designed for the anticipated conflicts of the Cold War, from urban streets to African jungles."
-
-  infantry_equipment_4: "Semi-Modern Infantry Rifle"
-  infantry_equipment_4_short: "Semi-Modern Infantry Rifle"
-  infantry_equipment_4_desc: "A rifle incorporating lighter polymer materials, with more advanced addons available. This rifle generally fires a newly developed, relatively smaller, high-velocity bullet to allow for better recoil control and accuracy."
-
-  infantry_equipment_5: "Modern Infantry Rifle"
-  infantry_equipment_5_short: "Modern Infantry Rifle"
-  infantry_equipment_5_desc: "A modern rifle designed for high-tech compatibility and a larger range of operations. With the use of new computing technology, this rifle is designed to more exact specifications to further increase reliability."
- ### Infantry Equipment ###
-
- ### Support Equipment ###
-  ## Infantry Anti-Tank ##
-   anti_tank_equipment: "Anti-Tank Equipment"
-   anti_tank_equipment_desc: "Anti-Tank Equipment"
-
-   anti_tank_equipment_0: "Basic Anti-Tank Equipment"
-   anti_tank_equipment_0_desc: "Developed during the Second World War, this rudimentary shoulder-fired anti-tank system enables our troops to pose a decent threat to most armored vehicles."
-
-   anti_tank_equipment_1: "Improved Anti-Tank Equipment"
-   anti_tank_equipment_1_desc: "An improved shoulder-fired missile launcher, incorporating design improvements, such as lighter materials and better sights, and high-explosive anti-tank (HEAT) warheads."
-
-   anti_tank_equipment_2: "Advanced Anti-Tank Equipment"
-   anti_tank_equipment_2_desc: "Wire-guided shoulder-fired missile using a recoilless blowback system, with multiple types of warheads available, depending on the situation at hand."
-
-   anti_tank_equipment_3: "Semi-Modern Anti-Tank Equipment"
-   anti_tank_equipment_3_desc: "This launcher combines wire-guidance with improvements in warhead penetration in order to hit and pierce harder targets at a further distance. May include an integrated optical sight."
-
-   anti_tank_equipment_4: "Modern Anti-Tank Equipment"
-   anti_tank_equipment_4_desc: "A highly advanced laser-guided shoulder-fired missile with massive penetrating ability, pinpoint accuracy, and a myriad of warhead variants. Always includes an advanced, integrated optical sight."
-  ## Infantry Anti-Tank ##
-
-  ## Infantry Anti-Air ##
-   anti_air_shoulder_equipment: "Anti-Air Equipment"
-   anti_air_shoulder_equipment_desc: "Anti-Air Equipment"
-
-   anti_air_shoulder_equipment_0: "Improved Anti-Air Equipment"
-   anti_air_shoulder_equipment_0_desc: "Basic man-portable air-defense system (MANPADS) developed shortly after the Second World War, with integrated sensors to track aircraft engine heat-signatures"
-
-   anti_air_shoulder_equipment_1: "Advanced Anti-Air Equipment"
-   anti_air_shoulder_equipment_1_desc: "An improved MANPADS incorporating design improvements to both the rocket and warhead to increase velocity and damage, respectively, along with aircraft signature tracing." 
-
-   anti_air_shoulder_equipment_2: "Semi-Modern Anti-Air Equipment"
-   anti_air_shoulder_equipment_2_desc: "MANPADS with a recoilless blowback system, with built-in components that can attempt to detect and circumvent anti-MANPADS countermeasures, such as flares and electronic measures." 
-
-   anti_air_shoulder_equipment_3: "Modern Anti-Air Equipment"
-   anti_air_shoulder_equipment_3_desc: "A highly advanced MANPADS that incorporates electronic tracking with laser guidance along with lighter, composite materials, integrated digital systems, and multiple warhead variants." 
-  ## Infantry Anti-Air ##
- ### Support Equipment ###
-
- ### Mobile Infantry ###
-  motorized_equipment: "Motorized Equipment"
-  motorized_equipment_desc: "Motorized Equipment"
-
-  motorized_equipment_0: "Early Motorized Equipment"
-  motorized_equipment_0_desc: "Motorizing infantry is the first stage towards the mechanization of an army. Civilian trucks are readily adaptable to military uses of transporting soldiers, towing guns, and carrying equipment and supplies."
-
-  motorized_equipment_1: "Basic Motorized Equipment"
-  motorized_equipment_1_desc: "Custom military variants of civilian trucks with military-only improvements, such as upgraded engines and hardened components tailored to survive the harsh conditions and demands of military operations."
-
-  motorized_equipment_2: "Improved Motorized Equipment"
-  motorized_equipment_2_desc: "Specially designed vehicles, geared specifically for military usage, these vehicles feature a host of design choices based on lessons learned from recent wars, along with compatibility tweaks for use with other military equipment."
-
-  motorized_equipment_3: "Advanced Motorized Equipment"
-  motorized_equipment_3_desc: "These trucks were put through rigorous testing in order to maximize the endurance and lifespan of the vehicles, ensuring that they will not break down in the field even when pushed to the absolute limit."
-
-  motorized_equipment_4: "Modern Motorized Equipment"
-  motorized_equipment_4_desc: "Motorized equipment with fairly significant armor and anti-landmine plating on the underside of the vehicle. Tried and tested to be able to tackle almost any terrain on the globe."
- ### Mobile Infantry ###
-
- ### Deprecated ###
-  motorized_rocket_equipment: "Motorized Rocket Artillery"
-  motorized_rocket_equipment_short: "Mot. R. Artillery"
-  motorized_rocket_equipment_desc: "Multiple rocket launchers such as these deliver explosives to a target area more quickly than conventional artillery, but with lower accuracy and requiring a longer time to reload. Being mounted on trucks, this version is able to launch attacks and change positions before the enemy can return fire."
-
-  motorized_rocket_equipment_1: "Motorized Rocket Artillery"
-  motorized_rocket_equipment_1_short: "Mot. R. Artillery"
-  motorized_rocket_equipment_1_desc: "Multiple rocket launchers such as these deliver explosives to a target area more quickly than conventional artillery, but with lower accuracy and requiring a longer time to reload. Being mounted on trucks, this version is able to launch attacks and change positions before the enemy can return fire."
- ### Deprecated ###
-#### Infantry ####
-
-#### Support Equipment ####
- support_equipment_short: "Support Eq."
- support_equipment: "Support Equipment"
- support_equipment_desc: "Radios, tents, ammunition containers, generators & other equipment used to support troop formations and keep large scale operations running smoothly."
-
- support_equipment_1: "Support Equipment"
- support_equipment_1_desc: "Radios, tents, ammunition containers, generators & other equipment used to support troop formations and keep large scale operations running smoothly."
-#### Support Equipment ####
-
-#### Artillery & Anti-Air ####
- ### Artillery ###
-  ## Normal ##
-   artillery_equipment: "Towed Artillery"
-   artillery_equipment_short: "Artillery"
-   artillery_equipment_desc: "Light-weight artillery capable of being broken down for transport, making it possible to bring artillery support to areas previously difficult to reach."
-
-   artillery_equipment_1: "Towed Artillery"
-   artillery_equipment_1_short: "Artillery"
-   artillery_equipment_1_desc: "Light-weight artillery capable of being broken down for transport, making it possible to bring artillery support to areas previously difficult to reach."
-
-   artillery_equipment_2: "Early Artillery"
-   artillery_equipment_2_desc: "Light-weight artillery capable of being broken down for transport, making it possible to bring artillery support to areas previously difficult to reach."
-
-   artillery_equipment_3: "Basic Artillery"
-   artillery_equipment_3_desc: "Light-weight artillery capable of being broken down for transport, making it possible to bring artillery support to areas previously difficult to reach."
-
-   artillery_equipment_4: "Advanced Artillery"
-   artillery_equipment_4_desc: "Light-weight artillery capable of being broken down for transport, making it possible to bring artillery support to areas previously difficult to reach."
-
-   artillery_equipment_5: "Modern Artillery"
-   artillery_equipment_5_desc: "Light-weight artillery capable of being broken down for transport, making it possible to bring artillery support to areas previously difficult to reach."
-  ## Normal ##
-
-  ## Light Self-Propelled ##
-   APC_artillery_equipment: "Light SPART"
-   APC_artillery_equipment_desc: "Larger caliber rounds and better propellants are today's order in the post-war decade, even for self-propelled artillery chassis."
-    
-   # 1950
-   APC_artillery_equipment_1: "Basic Light SPART"
-   APC_artillery_equipment_1_short: "Basic Light SPART"
-   APC_artillery_equipment_1_desc: "Larger caliber rounds and better propellants are today's order in the post-war decade, even for self-propelled artillery chassis."
-
-   # 1960
-   APC_artillery_equipment_2: "Improved Light SPART"
-   APC_artillery_equipment_2_short: "Improved Light SPART"
-   APC_artillery_equipment_2_desc: "Larger caliber rounds and better propellants are today's order in the post-war decade, even for self-propelled artillery chassis"
-
-   # 1970
-   APC_artillery_equipment_3: "Advanced Light SPART"
-   APC_artillery_equipment_3_short: "Advanced Light SPART"
-   APC_artillery_equipment_3_desc: "Larger caliber rounds and better propellants are today's order in the post-war decade, even for self-propelled artillery chassis"
-   
-   # 1980
-   APC_artillery_equipment_4: "Semi-Modern Light SPART"
-   APC_artillery_equipment_4_short: "Semi-Modern Light SPART"
-   APC_artillery_equipment_4_desc: "Larger caliber rounds and better propellants are today's order in the post-war decade, even for self-propelled artillery chassis"
-
-   # 1990
-   APC_artillery_equipment_5: "Modern Light SPART"
-   APC_artillery_equipment_5_short: "Modern Light SPART"
-   APC_artillery_equipment_5_desc: "Larger caliber rounds and better propellants are today's order in the post-war decade, even for self-propelled artillery chassis"
-  ## Light Self-Propelled ##
-
-  ## Self-Propelled ##
-   MBT_artillery_equipment: "Heavy SPART"
-   MBT_artillery_equipment_desc: "A large artillery piece mounted on a heavy chassis, these self-propelled guns carry a lot of firepower."
-  
-   # 1950
-   MBT_artillery_equipment_1: "Basic Heavy SPART"
-   MBT_artillery_equipment_1_short: "Basic Heavy SPART"
-   MBT_artillery_equipment_1_desc: "A large artillery piece mounted on a heavy chassis, these self-propelled guns carry a lot of firepower."
-
-   # 1960
-   MBT_artillery_equipment_2: "Improved Heavy SPART"
-   MBT_artillery_equipment_2_short: "Improved Heavy SPART"
-   MBT_artillery_equipment_2_desc: "A large artillery piece mounted on a heavy chassis, these self-propelled guns carry a lot of firepower."
-
-   # 1970
-   MBT_artillery_equipment_3: "Advanced Heavy SPART"
-   MBT_artillery_equipment_3_short: "Advanced Heavy SPART"
-   MBT_artillery_equipment_3_desc: "A large artillery piece mounted on a heavy chassis, these self-propelled guns carry a lot of firepower."
-
-   # 1980
-   MBT_artillery_equipment_4: "Semi-Modern Heavy SPART"
-   MBT_artillery_equipment_4_short: "Semi-Modern Heavy SPART"
-   MBT_artillery_equipment_4_desc: "A large artillery piece mounted on a heavy chassis, these self-propelled guns carry a lot of firepower."
-
-   # 1990
-   MBT_artillery_equipment_5: "Modern Heavy SPART"
-   MBT_artillery_equipment_5_short: "Modern Heavy SPART"
-   MBT_artillery_equipment_5_desc: "A large artillery piece mounted on a heavy chassis, these self-propelled guns carry a lot of firepower."
-  ## Self-Propelled ##
-
-  ## Deprecated ##
-   rocket_artillery_equipment: "Towed Rocket Artillery"
-   rocket_artillery_equipment_short: "Rocket Artillery"
-   rocket_artillery_equipment_desc: "Rocket artillery is less accurate and has a much lower sustained rate of fire than batteries of traditional artillery guns. However, they have the capability of simultaneously hitting a target with multiple rockets with devastating effect."
-
-   rocket_artillery_equipment_1: "Towed Rocket Artillery"
-   rocket_artillery_equipment_1_short: "Rocket Artillery"
-   rocket_artillery_equipment_1_desc: "Rocket artillery is less accurate and has a much lower sustained rate of fire than batteries of traditional artillery guns. However, they have the capability of simultaneously hitting a target with multiple rockets with devastating effect."
-
-   rocket_artillery_equipment_2: "Advanced Rocket Artillery"
-   rocket_artillery_equipment_2_desc: "Spin-stabilized rockets, increasing the range of lighter artillery batteries."
-  ## Deprecated ##
- ### Artillery ###
-
- ### Anti-Air ###
-  ## Normal ##
-   anti_air_equipment: "Towed Anti-Air"
-   anti_air_equipment_short: "Anti-Air"
-   anti_air_equipment_desc: "The rapidly changing situation above the ground meant that anti-air guns needed to be able to move quickly from one place to another. Towed anti air made this possible."
-   anti_air_equipment_desc_old: "The rapidly changing situation above the ground meant that anti-air guns needed to be able to move quickly from one place to another. Towed anti air made this possible."
-
-   anti_air_equipment_1: "Early Anti-Air"
-   anti_air_equipment_1_short: "Early Anti-Air"
-   anti_air_equipment_1_desc: "The rapidly changing situation above the ground meant that anti-air guns needed to be able to move quickly from one place to another. Towed anti air made this possible."
-
-   anti_air_equipment_2: "Basic Anti-Air"
-   anti_air_equipment_2_short: "Basic Anti-Air"
-   anti_air_equipment_2_desc: "The rapidly changing situation above the ground meant that anti-air guns needed to be able to move quickly from one place to another. Towed anti air made this possible."
-
-   anti_air_equipment_3: "Advanced Anti-Air"
-   anti_air_equipment_3_short: "Advanced Anti-Air"
-   anti_air_equipment_3_desc:1 "The rapidly changing situation above the ground meant that anti-air guns needed to be able to move quickly from one place to another. Towed anti air made this possible."
-
-   anti_air_equipment_4: "Modern Anti-Air"
-   anti_air_equipment_4_short: "Modern Anti-Air"
-   anti_air_equipment_4_desc:1 "The rapidly changing situation above the ground meant that anti-air guns needed to be able to move quickly from one place to another. Towed anti air made this possible."
-  ## Normal ##
-
-  ## Light Self-Propelled ##
-   APC_aa_equipment: "Light SPAA"
-   APC_aa_equipment_desc: "With the mobile warfare doctrine fully adopted by most nations worldwide, it's only natural that artillery and support pieces have been adapted. Light and powerful, self-propelled anti-air batteries can protect the army from any airborne peril as it advances or retreats."
-    
-   # 1950
-   APC_aa_equipment_1: "Basic Light SPAA"
-   APC_aa_equipment_1_short: "Basic Light SPAA"
-   APC_aa_equipment_1_desc: "With the mobile warfare doctrine fully adopted by most nations worldwide, it's only natural that artillery and support pieces have been adapted. Light and powerful, self-propelled anti-air batteries can protect the army from any airborne peril as it advances or retreats."
-
-   # 1960
-   APC_aa_equipment_2: "Improved Light SPAA"
-   APC_aa_equipment_2_short: "Improved Light SPAA"
-   APC_aa_equipment_2_desc: "With the mobile warfare doctrine fully adopted by most nations worldwide, it's only natural that artillery and support pieces have been adapted. Light and powerful, self-propelled anti-air batteries can protect the army from any airborne peril as it advances or retreats."
-
-   # 1970
-   APC_aa_equipment_3: "Advanced Light SPAA"
-   APC_aa_equipment_3_short: "Advanced Light SPAA"
-   APC_aa_equipment_3_desc: "With the mobile warfare doctrine fully adopted by most nations worldwide, it's only natural that artillery and support pieces have been adapted. Light and powerful, self-propelled anti-air batteries can protect the army from any airborne peril as it advances or retreats."
-   
-   # 1980
-   APC_aa_equipment_4: "Semi-Modern Light SPAA"
-   APC_aa_equipment_4_short: "Semi-Modern Light SPAA"
-   APC_aa_equipment_4_desc: "With the mobile warfare doctrine fully adopted by most nations worldwide, it's only natural that artillery and support pieces have been adapted. Light and powerful, self-propelled anti-air batteries can protect the army from any airborne peril as it advances or retreats."
-
-   # 1990
-   APC_aa_equipment_5: "Modern Light SPAA"
-   APC_aa_equipment_5_short: "Modern Light SPAA"
-   APC_aa_equipment_5_desc: "With the mobile warfare doctrine fully adopted by most nations worldwide, it's only natural that artillery and support pieces have been adapted. Light and powerful, self-propelled anti-air batteries can protect the army from any airborne peril as it advances or retreats."
-  ## Light Self-Propelled ##
-
-  ## Self-Propelled ##
-   MBT_aa_equipment: "Heavy SPAA"
-   MBT_aa_equipment_desc: "Heavy anti-air batteries are perfect to protect the army from enemy bombers or other heavy aircraft with their powerful payload. No longer towed or fixed into place, they are now self propelled for higher autonomy and mobility."
-    
-   # 1950
-   MBT_aa_equipment_1: "Basic Heavy SPAA"
-   MBT_aa_equipment_1_short: "Basic Heavy SPAA"
-   MBT_aa_equipment_1_desc: "Heavy anti-air batteries are perfect to protect the army from enemy bombers or other heavy aircraft with their powerful payload. No longer towed or fixed into place, they are now self propelled for higher autonomy and mobility."
-
-   # 1960
-   MBT_aa_equipment_2: "Improved Heavy SPAA"
-   MBT_aa_equipment_2_short: "Improved Heavy SPAA"
-   MBT_aa_equipment_2_desc: "Heavy anti-air batteries are perfect to protect the army from enemy bombers or other heavy aircraft with their powerful payload. No longer towed or fixed into place, they are now self propelled for higher autonomy and mobility."
-
-   # 1970
-   MBT_aa_equipment_3: "Advanced Heavy SPAA"
-   MBT_aa_equipment_3_short: "Advanced Heavy SPAA"
-   MBT_aa_equipment_3_desc: "Heavy anti-air batteries are perfect to protect the army from enemy bombers or other heavy aircraft with their powerful payload. No longer towed or fixed into place, they are now self propelled for higher autonomy and mobility."
-
-   # 1980
-   MBT_aa_equipment_4: "Semi-Modern Heavy SPAA"
-   MBT_aa_equipment_4_short: "Semi-Modern Heavy SPAA"
-   MBT_aa_equipment_4_desc: "Heavy anti-air batteries are perfect to protect the army from enemy bombers or other heavy aircraft with their powerful payload. No longer towed or fixed into place, they are now self propelled for higher autonomy and mobility."
-
-   # 1990
-   MBT_aa_equipment_5: "Modern Heavy SPAA"
-   MBT_aa_equipment_5_short: "Modern Heavy SPAA"
-   MBT_aa_equipment_5_desc: "Heavy anti-air batteries are perfect to protect the army from enemy bombers or other heavy aircraft with their powerful payload. No longer towed or fixed into place, they are now self propelled for higher autonomy and mobility."
-  ## Self-Propelled ##
- ### Anti-Air ###
-
- ### Deprecated ###
-  anti_tank_equipment: "Anti-Tank Equipment"
-  anti_tank_equipment_desc: "Anti-Tank Equipment"
- ### Deprecated ###
-#### Artillery & Anti-Air ####
-
-#### Armor ####
- # See 'Artillery & Anti-Air' for Self-Propelled ART/AA
- ### Deprecated ###
-  # Great War Tank
-  gw_tank_equipment: "Great War Tank"
-  gw_tank_equipment_short: "Great War Tank"
-  gw_tank_equipment_desc: "Tanks in World War I were developed separately and simultaneously by the United Kingdom and France as a means to break the deadlock of trench warfare on the Western Front. The name Tank was adopted by the British during the early stages of their development, as a security measure to conceal their purpose. Early tanks were armed with machine guns and small cannons, moved slowly, and were armored only enough to stop small arms fire."
-  
-  # Mechanized
-  mechanised_infantry: "World War 2 Mechanized"
-  mechanised_infantry_desc: "World War 2 Mechanized"
-
-  mechanised_infantry_3: "World War 2 Mechanized"
-  mechanised_infantry_3_short: "W.W.2 Mechanized"
-  mechanised_infantry_3_desc: "World War 2 Mechanized"
-
-  # Light Tank
-  light_tank_equipment: "World War 2 Light Tank"
-  light_tank_equipment_desc: "World War 2 Light Tank"
-
-  light_tank_equipment_3: "World War 2 Light Tank"
-  light_tank_equipment_3_short: "W.W.2 L. Tank"
-  light_tank_equipment_3_desc: "World War 2 Light Tank"
-
-  # Medium Tank
-  medium_tank_equipment: "World War 2 Medium Tank"
-  medium_tank_equipment_desc: "World War 2 Medium Tank"
-
-  medium_tank_equipment_3: "World War 2 Medium Tank"
-  medium_tank_equipment_3_short: "W.W.2 M. Tank"
-  medium_tank_equipment_3_desc: "World War 2 Medium Tank"
- ### Deprecated ###
- 
- ### APC ###
-  APC_equipment: "Armored Personnel Carrier"
-
-  APC_equipment_0: "Early APC"
-  APC_equipment_0_desc: "Armored troop transport vehicle that was developed during the Second World War to carry personnel into combat. A bit crude in design, but effective enough to stop small arms and light artillery fire, and carry some light armaments."
-
-  APC_equipment_1: "Basic APC"
-  APC_equipment_1_desc: "A more refined transport vehicle, this APC can hold a larger number of soldiers and is more adapted to harsh combat environments. The vehicle's heavier armor can prove useful if ambushed or transporting troops through hostile areas."
-
-  APC_equipment_2: "Improved APC"
-  APC_equipment_2_desc: "Building our APC with amphibious capabilities in mind, and including features such as an exhaust snorkel or water jets, will allow them to preform river crossing if bridges are unavailable and be used in naval assaults."
-
-  APC_equipment_3: "Advanced APC"
-  APC_equipment_3_desc: "By improving the suspension system in the wheel or track system of our APCs, we can make them more comfortable to be in during transport, and allow the passengers to disembark more quickly when a rapid exit is required."
-
-  APC_equipment_4: "Semi-Modern APC"
-  APC_equipment_4_desc: "Newly developed bulletproof glass blends will make our APCs safer and protect the drivers from small arms fire in the event of an attack. Improved engines components will also make our vehicles more reliable and fuel efficient."
-
-  APC_equipment_5: "Modern APC"
-  APC_equipment_5_desc: "Thicker underside plating will help to make this vehicle more resistant to mines and other IEDs, and integrated computing technology will allow it to stay connected and provide additional support when not transporting gear."
- ### APC ###
-
- ### IFV ###
-  IFV_equipment: "Infantry Fighting Vehicle"
-
-  IFV_equipment_0: "Early IFV"
-  IFV_equipment_0_desc: "Infantry fighting vehicle that was developed during the Second World War, generally with a half-track or light tank design. Able to transport a squadron of soldiers while also having an autocannon or heavier gun for direct fire support."
-
-  IFV_equipment_1: "Basic IFV"
-  IFV_equipment_1_desc: "Intended to fill the gap between an APC and a MBT, this vehicle is purpose-designed with both troop transport and combat capability in mind. Its heavier armaments can prove useful in a firefight when no other support is available."
-
-  IFV_equipment_2: "Improved IFV"
-  IFV_equipment_2_desc: "This new generation of IFV is both heavily armed and armored, packing a powerful automatic cannon and adorned with armor nearly as thick as an APC. It can serve as an effective assault vehicle that can fight alongside the troops inside."
-
-  IFV_equipment_3: "Advanced IFV"
-  IFV_equipment_3_desc: "Featuring additional armaments such as a mounted machine gun in addition to the cannon, this IFV allows troops to fight from both within the vehicle using gun ports, or from outside the vehicle, using its heavier armor as cover."
-
-  IFV_equipment_4: "Semi-Modern IFV"
-  IFV_equipment_4_desc: "Additional armor features and countermeasures have been built into this IFV, offering improved protection from high-caliber rounds and artillery fragments, as well as thicker skirts to protect the wheels and treads from damage."
-
-  IFV_equipment_5: "Modern IFV"
-  IFV_equipment_5_desc: "Integrated digital systems and communications equipment enables this vehicle to provide substantial fire support, and specialized armor upgrades will allow it to keep its occupants safe in even the most hazardous of conditions."
- ### IFV ###
- 
- ### MBT ###
-  MBT_equipment: "Main Battle Tank"
-  MBT_Das_Liger: "Der Liger"
-  MBT_das_liger: "Der Liger"
-
-  MBT_equipment_0: "Early MBT"
-  MBT_equipment_0_desc: "Instead of developing a multitude of tank variants, it is much more efficient and effective to design a vehicle that can fill handle all roles. Early main battle tanks were developed from medium tanks used during the Second World War."
-  
-  MBT_equipment_1: "Basic MBT"
-  MBT_equipment_1_desc: "With the development of more powerful engines, lighter tanks can carry heavier armaments and thicker armor, all while keeping a respectable top speed. This main battle tank will form a key component of our armored forces."
-
-  MBT_equipment_2: "Improved MBT"
-  MBT_equipment_2_desc: "More powerful main cannons, with calibers around 100mm, can penetrate nearly any type of armor at long ranges. Specialized armor will help to increase tank survivability as anti-tank weapons continue to become more advanced."
-
-  MBT_equipment_3: "Advanced MBT"
-  MBT_equipment_3_desc: "Further increasing the capabilities of the engines in our main battle tanks will allow us to make their armor even thicker and cover more of the vehicle, as well as increase overall reliability and fuel efficiency."
-
-  MBT_equipment_4: "Semi-Modern MBT"
-  MBT_equipment_4_desc: "Explosive reactive armor and other countermeasure system can further increase vehicle survivability, as helicopters and missiles continue to become a greater threat to our armored vehicles."
-
-  MBT_equipment_5: "Modern MBT"
-  MBT_equipment_5_desc: "Integrated electronic fire control systems can make use of newly developed computing technology, allowing our tanks to engage targets over longer distances with higher accuracy, and lighten the workload of the crew during an engagement."
- ### MBT ###
-
- ### Misc Junk ###
-  super_heavy_tank_equipment: "Super-Heavy Tank"
-  super_heavy_tank_equipment_desc: "The Maus is in the haus."
-  super_heavy_tank_equipment_1: "Super-Heavy Tank"
-  super_heavy_tank_equipment_1_desc: "The Maus is in the haus."
-  GER_super_heavy_tank_equipment: "Maus"
-  GER_super_heavy_tank_equipment_desc: "The Maus is in the haus."
-  GER_super_heavy_tank_equipment_1: "Maus"
-  GER_super_heavy_tank_equipment_1_desc: "The Maus is in the haus."
-  Maus_equipment_1: "Panzer VIII Maus"
-  Maus_equipment_1_desc: "The Maus is in the haus."
-  maus: "Maus"
-  MBT_Maus_equipment: "Maus"
-  MBT_Maus_equipment_desc: "The Maus is in the haus."
-  flakmaus: "Flakmaus"
-  Maus_aa_equipment_1: "Panzer VIII Flakmaus"
-  Maus_aa_equipment_1_desc: "*THOOM THOOM THOOM THOOM THOOM THOOM THOOM*"
-  MBT_Maus_aa_equipment: "Flakmaus"
-  MBT_Maus_aa_equipment_desc: "*THOOM THOOM THOOM THOOM THOOM THOOM THOOM*"
-  kugelpanzer: "Kugelpanzer"
-  kugelpanzer_equipment: "Kugelpanzer"
-  kugelpanzer_equipment_desc: "Achtung! Kugelpanzer!"
-  kugelpanzer_equipment_1: "Kugelpanzer"
-  kugelpanzer_equipment_1_desc: "Achtung! Kugelpanzer!"
-  GER_kugelpanzer_equipment: "Kugelpanzer"
-  GER_kugelpanzer_equipment_desc: "Achtung! Kugelpanzer!"
-  GER_kugelpanzer_equipment_1: "Kugelpanzer"
-  GER_kugelpanzer_equipment_1_desc: "Achtung! Kugelpanzer!"
-  MBT_equipment: "MBT"
-  MBT_equipment_desc: "MBT"
-  IFV_equipment: "IFV"
-  IFV_equipment_desc: "IFV"
-  APC_equipment: "APC"
-  APC_equipment_desc: "APC"
-  infantry_anti_tank: "Infantry Anti-Tank"
- ### Misc Junk ###
-#### Armor ####
-
-#### Special ####
- ### Missiles ###
-  guided_missile: "Guided Missile"
-  guided_missile_equipment: "Guided Missile"
-  guided_missile_equipment_desc: "Guided Ballistic Missile"
-
-  ICBM_equipment: "Inter-Continental Ballistic Missile"
-  ICBM_equipment_desc: "Extremely powerful missile capable of hitting anywhere on the globe with ease."
-
-  MRBM_equipment: "Medium Range Ballistic Missile"
-  MRBM_equipment_desc: "Very powerful missile capable of hitting almost anywhere in the world."
-
-  SRBM_equipment: "Short Range Ballistic Missile"
-  SRBM_equipment_desc: "Powerful missile capable of hitting anywhere in the same continent and then some."
- ### Missiles ###
-#### Special ####
 
 ### Upgrades (Used in Equipment Designer) ###
  ### NSB Special ###
@@ -1519,7 +963,6 @@ l_english:
   
 ### MBT ###
   MBT_equipment: "Main Battle Tank"
-  MBT_das_liger: "Der Liger"
 
   MBT_equipment_0: "Early MBT"
   MBT_equipment_0_desc: "Instead of developing a multitude of tank variants, it is much more efficient and effective to design a vehicle that can fill any role. Early main battle tanks were developed from medium tanks used during the Second World War."
@@ -1775,61 +1218,3 @@ l_english:
   horse_tank_equipment_desc: "Previous R&D breakthroughs in crystal technology enabled the creation of a new, groundbreaking type of tank. Designed with pony operators in mind, the vehicule outclasses all our other currently used templates, and will serve as the core of our future armored forces."
 
   horse_tank_equipment_0: "Pony MBT"
-
-
-### Upgrades (Used in Equipment Designer) ###
- ### NSB Special ###
-  train_equipment: "Train"
-  train_equipment_desc: "Trains transport supplies from the Supply Capital to Supply Hubs connected by rail."
- 
-  train_equipment_1: "Steam Locomotive"
-  train_equipment_1_desc: "Taken over by the military from regular civilian freight duty, this train engine is well-suited to move a large amount of supplies over long distances. However, its civilian construction makes it vulnerable."
- 
-  train_equipment_2: "WW2 War Austerity Train"
-  train_equipment_2_desc: "A simplified design that omits many features commonly found on regular freight trains for the sake of cheaper production. It is still every bit as vulnerable as a regular train, but can more easily be replaced."
- 
-  train_equipment_3: "WW2 Armored Train"
-  train_equipment_3_desc: "A train engine encased in heavy armor to make it less vulnerable to enemy attack. It can carry as much cargo as any other design, but is more expensive to produce."
- 
-  railway_gun_equipment: "Railway Artillery"
-  railway_gun_equipment_desc: "A heavy cannon mounted on a railway carriage for transportation."
-  railway_gun_desc: "Railways offer an opportunity to move heavy guns far inland at a reasonable speed, allowing us to bombard enemy position at great range and with good effect."
-  railway_gun_equipment_1: "Railway Gun"
-
-  train_equipment_diesel_electric_1: "1955 Diesel-Electric Train Improvements"
-  train_equipment_diesel_electric_1_desc: "Diesel-electric trains work with a diesel generator which powers the motors that move the train. This results in both greater efficiency and lower costs when compared to regular locomotives."
-  train_equipment_diesel_electric_2: "1965 Diesel-Electric Train Improvements"
-  train_equipment_diesel_electric_2_desc: "By replacing DC generators with alternators and diode bridges we can eliminate several high-wear parts and thus increase reliability while also cutting down on maintenance costs."
-  train_equipment_diesel_electric_3: "1975 Diesel-Electric Train Improvements"
-  train_equipment_diesel_electric_3_desc: "New developments in diesel engine technology allow us to gain even more horsepower for even less space."
-  train_equipment_diesel_electric_4: "1985 Diesel-Electric Train Improvements"
-  train_equipment_diesel_electric_4_desc: "The invention of traction inverters allows us to design a truly modern and reliable locomotive with minimal maintenance costs."
-
-  floating_harbor_equipment: "Floating Harbor"
-  floating_harbor_equipment_desc:1 "A series of pontoons and pre-fabricated concrete structures that can be moved across water and assembled within hours to create a sheltered landing space to unload supplies."
-  floating_harbor_equipment_1: "Floating Harbor"
-  floating_harbor_equipment_1_desc:1 "A series of pontoons and pre-fabricated concrete structures that can be moved across water and assembled within hours to create a sheltered landing space to unload supplies."
- ### NSB Special ###
- 
- ### Tanks ###
-  tank_armor_upgrade: "Armor"
-  tank_armor_upgrade_desc: "Better armor than your enemies can penetrate is a huge advantage to your divisions but is probably going to slow you down."
-
-  tank_gun_upgrade: "Main Gun"
-  tank_gun_upgrade_desc: "It is important to have a gun that keep up with enemy armor strength and can penetrate."
-
-  tank_aa_upgrade: "Anti-Air Armament"
-  tank_aa_upgrade_desc: "Ensure that our Anti-Air Armament is able to shoot down the latest planes."
-
-  tank_at_upgrade: "Anti-Tank Armament"
-  tank_at_upgrade_desc: "Ensure that our tank destroyers can defeat the latest enemy tanks."
-
-  tank_art_upgrade: "Artillery Armament"
-  tank_art_upgrade_desc:1 "Ensure that our self propelled artillery have massive firepower that will tear through any unarmored enemies."
-
-  tank_reliability_upgrade: "Reliability"
-  tank_reliability_upgrade_desc: "Improving reliability leads to less broken down tanks you will need to replace."
- 
-  tank_engine_upgrade: "Engine"
-  tank_engine_upgrade_desc: "More mobility give tactical and strategic advantages, as well as allowing more armor without being slowed down significantly."
- ### Tanks ###

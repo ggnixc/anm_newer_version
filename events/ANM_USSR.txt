@@ -1,6 +1,7 @@
 ﻿add_namespace = SOV
 add_namespace = SOV_flavour
 add_namespace = SOV_space
+add_namespace = SOV_victory
 
 #### INTRO EVENTS ###
 
@@ -35,4 +36,49 @@ news_event = {
 			NOT = { tag = GER }
 		}
 	}
+}
+
+country_event = {
+	#USSR Victory debug
+	id = SOV_victory.99
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event SOV_victory.99"
+	}
+	title = SOV_victory.99.t
+	desc = SOV_victory.99.desc
+	picture = GFX_anm_GER_broken_nazi_eagle
+	is_triggered_only = yes
+	
+	option = { #limited win
+		ai_chance = {
+			factor = 20
+		}
+		name = SOV_victory.99.a
+		ANM_caucasus_to_SOV = yes
+		ANM_homel_to_SOV = yes
+	}
+	option = { #full win
+		ai_chance = {
+			factor = 60
+		}
+		name = SOV_victory.99.b
+		ANM_caucasus_to_SOV = yes
+		ANM_ukraine_to_SOV = yes
+		ANM_belarus_to_SOV = yes
+		ANM_homel_to_SOV = yes
+	}
+	option = { #all
+		ai_chance = {
+			factor = 20
+		}
+		name = SOV_victory.99.c
+		ANM_caucasus_to_SOV = yes
+		ANM_ukraine_to_SOV = yes
+		ANM_belarus_to_SOV = yes
+		ANM_homel_to_SOV = yes
+		ANM_karelia_to_SOV = yes
+		ANM_war_transnistria_to_SOV = yes
+		ANM_armenia_to_SOV = yes
+	}
+	
 }
