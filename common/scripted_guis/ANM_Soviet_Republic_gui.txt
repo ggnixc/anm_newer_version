@@ -1,0 +1,45 @@
+scripted_gui = {
+	
+	ANM_soviet_republic_Button_GUI = {
+		context_type = player_context
+		window_name = "soviet_republic_window_open_button_GUI"
+		parent_window_token = politics_tab
+
+		visible = {
+			tag = SOV
+		}
+		
+		triggers = {
+		}
+		
+		effects = {
+			soviet_republic_open_click = {
+				if = {
+					limit = { NOT = { has_country_flag = SOV_show_soviet_republic_window } }
+					set_country_flag = SOV_show_soviet_republic_window
+				}
+				else = { clr_country_flag = SOV_show_soviet_republic_window }
+			}
+		}
+		
+		properties = {
+		}
+	}
+	ANM_sov_republic_GUI = {
+		context_type = player_context
+		window_name = "sov_republic_gui_container"
+		visible = {
+			has_country_flag = SOV_show_soviet_republic_window
+		}
+		
+		triggers = {
+		}
+		
+		effects = {
+			close_button_click = {
+				clr_country_flag = SOV_show_soviet_republic_window
+			}
+		}
+
+	}
+}

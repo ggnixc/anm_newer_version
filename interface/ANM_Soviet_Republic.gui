@@ -1,0 +1,47 @@
+guiTypes = {
+	containerWindowType = {
+		name = "soviet_republic_window_open_button_GUI"
+		size = { width = 220 height = 128 }
+		position = { x = ß y = 289 }
+
+		buttonType = {
+			name = "soviet_republic_open"
+			spriteType = "GFX_soviet_republic_window_open"
+			position = { x = 238 y = 41 }
+			scale = 0.65
+		}
+	}		
+	containerWindowType = {
+		name = "sov_republic_gui_container"
+		position = { x = 700 y = 230 }
+		size = { width = 1204 height = 782 }
+		moveable = yes
+		fade_time = 100
+		fade_type = linear
+		clipping = no
+		
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_soviet_republic_gui_bg"
+		}
+
+		buttonType = {
+			name = "close_button"
+			spriteType = "GFX_epgui_closecompanywindow"
+			position = { x = -220 y = 10 }
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+		}
+
+		containerWindowType = {
+			name = "soviet_republic_Map_Container"
+			position = { x = 18 y = 73 }
+
+			iconType = {
+				name = "sov_republics_BaseOutline"
+				spriteType = "GFX_sov_republics_BaseOutline"
+				position = { x = 0 y = 0 }
+			}
+		}
+	}
+}
