@@ -1,0 +1,94 @@
+characters = {
+	HUN_miklos_nemeth = {   
+		name = HUN_miklos_nemeth
+		portraits = { 
+			civilian = { large = "gfx/leaders/HUN/Portrait_HUN_Miklos_Nemeth.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_MIKLOS_NEMETH_DESC"
+			ideology = paternalism_national_conservatism_subtype
+			traits = { smooth_talking_charmer }
+			expire = "2999.1.1.1"
+		}
+	}
+	HUN_sandor_lezsak = {  
+		name = HUN_sandor_lezsak
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/HUN/Portrait_HUN_Sandor_Lezsak.dds"
+				small = "GFX_idea_HUN_Sandor_Lezsak" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = HUN_Sandor_Lezsak_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	HUN_ferenc_karpati = { 
+		name = HUN_ferenc_karpati
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/HUN/Portrait_HUN_Ferenc_Karpati.dds"
+				small = "GFX_idea_HUN_Ferenc_Karpati" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = HUN_Ferenc_Karpati_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	} 
+	HUN_geze_jeszensky = { 
+		name = HUN_geze_jeszensky
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/HUN/Portrait_HUN_Geze_Jeszensky.dds"
+				small = "GFX_idea_HUN_Geze_Jeszensky" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = HUN_Geze_Jeszensky_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	HUN_gyorgy_matolcsy = {  
+		name = HUN_gyorgy_matolcsy
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/HUN/Portrait_HUN_Gyorgy_Matolcsy.dds"
+				small = "GFX_idea_HUN_Gyorgy_Matolcsy" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = HUN_Gyorgy_Matolcsy_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+} 

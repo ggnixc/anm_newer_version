@@ -1,9 +1,13 @@
 capital = 1290
 
+recruit_character = HUN_miklos_nemeth
+recruit_character = HUN_sandor_lezsak
+recruit_character = HUN_ferenc_karpati
+recruit_character = HUN_geze_jeszensky
+recruit_character = HUN_gyorgy_matolcsy
+
 set_oob = "HUN_2000"
-
 set_stability = 0.17
-
 set_war_support = 0.32
 
 
@@ -39,10 +43,10 @@ add_ideas = {
 	HUN_the_transylvanian_fights
 	
 	### <MINISTERS> ###
-	HUN_minister_Sandor_Lezsak_hog
-	HUN_minister_Ferenc_Karpati_sec
-	HUN_minister_Geze_Jeszensky_for
-	HUN_minister_Gyorgy_Matolcsy_eco
+	HUN_Sandor_Lezsak_hog
+	HUN_Ferenc_Karpati_sec
+	HUN_Geze_Jeszensky_for
+	HUN_Gyorgy_Matolcsy_eco
 	
 	### <LAWS> ###
 	###Political###
@@ -88,16 +92,6 @@ add_ideas = {
 
 	construction_level_2
 }
- ### POLITICAL LEADERS ###
-create_country_leader = {
-	name = "Miklós Németh"
-	desc = "POLITICS_MIKLOS_NEMETH_DESC"
-	picture = "Portrait_HUN_Miklos_Nemeth.dds"
-	expire = "2090.1.1"
-	ideology = paternalism_national_conservatism_subtype
-	traits = { smooth_talking_charmer }
-}
-
 
  ### MILITARY LEADERS ###
 create_field_marshal = { 

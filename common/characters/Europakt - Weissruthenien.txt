@@ -1,0 +1,94 @@
+characters = {
+	BLR_zianon_pazniak = { 
+		name = BLR_zianon_pazniak
+		portraits = { 
+			civilian = { large = "gfx/leaders/BLR/Portrait_BLR_Zianon_Pazniak.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_ZIANON_PAZNIAK_DESC"
+			ideology = national_socialism_reformed_national_socialism_subtype
+			traits = { collaborator }
+			expire = "2999.1.1.1"
+		}
+	}
+	BLR_nikolaus_meyer_landrut = {  
+		name = BLR_nikolaus_meyer_landrut
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/BLR/Portrait_BLR_Nikolaus_Meyer_Landrut.dds"
+				small = "GFX_idea_BLR_Nikolaus_Meyer_Landrut" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = BLR_Nikolaus_Meyer_Landrut_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BLR_aleksandr_chumakov = {
+		name = BLR_aleksandr_chumakov 
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/BLR/Portrait_BLR_Aleksandr_Chumakov.dds"
+				small = "GFX_idea_BLR_Aleksandr_Chumakov" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = BLR_Aleksandr_Chumakov_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BLR_sergei_gaidukevich = { 
+		name = BLR_sergei_gaidukevich
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/BLR/Portrait_BLR_Sergei_Gaidukevich.dds"
+				small = "GFX_idea_BLR_Sergei_Gaidukevich" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = BLR_Sergei_Gaidukevich_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BLR_alexander_lukashenko = { 
+		name = BLR_alexander_lukashenko
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/BLR/Portrait_BLR_Alexander_Lukashenko.dds"
+				small = "GFX_idea_BLR_Alexander_Lukashenko" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = BLR_Alexander_Lukashenko_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+} 

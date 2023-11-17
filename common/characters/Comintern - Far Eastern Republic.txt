@@ -1,0 +1,92 @@
+characters = {
+    FER_Yevgeny_Nazdratenko = { 
+		name = FER_Yevgeny_Nazdratenko
+		portraits = { 
+			civilian = { large = "gfx/leaders/FER/Portrait_FER_Yevgeny_Nazdratenko.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_YEVGENY_NAZDRATENKO_DESC"
+			ideology = communist_yagodschina_subtype
+			traits = { 
+                eco_balanced_budget_economy
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+    FER_Viktor_Ozerov = { 
+		name = FER_Viktor_Ozerov
+		portraits = { 
+			civilian = { 
+                small = "GFX_idea_FER_Viktor_Ozerov"
+            } 
+		}
+        advisor = {
+			slot = head_of_government
+			idea_token = FER_Viktor_Ozerov_hog
+            allowed = { original_tag = FER }
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+    FER_Konstantin_Preobrazhenskiy = { 
+		name = FER_Konstantin_Preobrazhenskiy
+		portraits = { 
+			civilian = { 
+                small = "GFX_idea_FER_Konstantin_Preobrazhenskiy"
+            } 
+		}
+        advisor = {
+			slot = security_minister
+			idea_token = FER_Konstantin_Preobrazhenskiy_sec
+            allowed = { original_tag = FER }
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+    FER_Yevgeny_Primakov = { 
+		name = FER_Yevgeny_Primakov
+		portraits = { 
+			civilian = { 
+                small = "GFX_idea_FER_Yevgeny_Primakov"
+            } 
+		}
+        advisor = {
+			slot = foreign_minister
+			idea_token = FER_Yevgeny_Primakov_for
+            allowed = { original_tag = FER }
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+    FER_Viktor_Ishayev = { 
+		name = FER_Viktor_Ishayev
+		portraits = { 
+			civilian = { 
+                small = "GFX_idea_FER_Viktor_Ishayev"
+            } 
+		}
+        advisor = {
+			slot = economy_minister
+			idea_token = FER_Viktor_Ishayev_eco
+            allowed = { original_tag = FER }
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+}

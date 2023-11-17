@@ -1,0 +1,163 @@
+ANM_Peru_Demilitarised = {
+		490 = { set_demilitarized_zone = yes }
+		491 = { set_demilitarized_zone = yes }
+		494 = { set_demilitarized_zone = yes }
+		1679 = { set_demilitarized_zone = yes }
+		1680 = { set_demilitarized_zone = yes }
+		1681 = { set_demilitarized_zone = yes }
+		1682 = { set_demilitarized_zone = yes }
+		1684 = { set_demilitarized_zone = yes }
+		1686 = { set_demilitarized_zone = yes }
+		1687 = { set_demilitarized_zone = yes }
+		1688 = { set_demilitarized_zone = yes }
+		1692 = { set_demilitarized_zone = yes }
+		1693 = { set_demilitarized_zone = yes }
+		1694 = { set_demilitarized_zone = yes }
+	}
+ANM_Peruvian_Civil_War = {
+		490 = { set_demilitarized_zone = no }
+		491 = { set_demilitarized_zone = no }
+		494 = { set_demilitarized_zone = no }
+		1679 = { set_demilitarized_zone = no }
+		1680 = { set_demilitarized_zone = no }
+		1681 = { set_demilitarized_zone = no }
+		1682 = { set_demilitarized_zone = no }
+		1684 = { set_demilitarized_zone = no }
+		1686 = { set_demilitarized_zone = no }
+		1687 = { set_demilitarized_zone = no }
+		1688 = { set_demilitarized_zone = no }
+		1692 = { set_demilitarized_zone = no }
+		1693 = { set_demilitarized_zone = no }
+		1694 = { set_demilitarized_zone = no }
+	MRA = {
+		transfer_state = 490
+		transfer_state = 491
+		transfer_state = 494
+		transfer_state = 1679
+		transfer_state = 1680
+		transfer_state = 1681
+		transfer_state = 1682
+		transfer_state = 1684
+		transfer_state = 1686
+		transfer_state = 1687
+		transfer_state = 1688
+		transfer_state = 1692
+		transfer_state = 1693
+		transfer_state = 1694
+		add_state_core = 490
+		add_state_core = 491
+		add_state_core = 494
+		add_state_core = 1679
+		add_state_core = 1680
+		add_state_core = 1681
+		add_state_core = 1682
+		add_state_core = 1683
+		add_state_core = 1685
+		add_state_core = 303
+		add_state_core = 1689
+		add_state_core = 1695
+		add_state_core = 492
+		add_state_core = 1697
+		add_state_core = 1698
+		add_state_core = 1696
+		add_state_core = 1691
+		add_state_core = 1690
+		add_state_core = 1684
+		add_state_core = 1686
+		add_state_core = 1687
+		add_state_core = 1688
+		add_state_core = 1692
+		add_state_core = 1693
+		add_state_core = 1694
+		add_ideas = {
+			PRU_Peruvian_Civil_War
+		}
+				
+		declare_war_on = {
+		   	type = annex_everything
+		   	target = PRU 
+		}
+	}
+	PRU = {
+		add_ideas = {
+			PRU_Peruvian_Civil_War
+		}
+		remove_ideas = {
+			PRU_Armed_Socialists
+			PRU_Fujishocked
+			PRU_Aristocratic_Alliance
+		}
+	}
+}
+ANM_Andean_War = {
+	ECU = {
+		declare_war_on = {
+		type = take_state_focus
+		generator = { 1679 }
+		target = PRU
+		}
+		remove_ideas = {
+			COM_Observer
+		}
+		create_faction = Andean_Revolutionary_Front
+		add_to_faction = MRA
+	}
+	GLP = {
+		declare_war_on = {
+	  	type = annex_everything
+	   	target = ECU
+		}
+		declare_war_on = {
+		type = take_state_focus
+		generator = { 1679 }
+		target = MRA
+		}
+		remove_ideas = {
+			OFN_Observer
+		}
+	}
+	PRU = {
+		create_faction = Condor_Pact
+		add_to_faction = GLP
+	}
+}
+ANM_Condor_Pact_Victory = {
+	PRU = {
+		puppet = ECD
+	}
+	ECD = {
+		set_politics = {	
+			ruling_party = paternalism
+			last_election = "1961.1.20"
+			election_frequency = 48
+			elections_allowed = no
+
+		}
+		set_popularities = {
+			communist = 0
+			ultranationalism = 0
+			socialist = 28
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 0
+			paternalism = 60
+			despotism = 12
+			fascism = 0
+			esoteric_nazism = 0
+		}
+		transfer_state = 2020
+		add_state_core = 305
+		add_state_core = 1676
+		add_state_core = 649
+		add_state_core = 2020
+		}
+	GLP = {
+		set_cosmetic_tag = GALAPAGOS_VICTORY
+		transfer_state = 1676
+		transfer_state = 305
+		add_war_support = 0.10
+		set_capital = { state = 305 remember_old_capital = no }
+	}
+	set_province_name = { id = 8252 name = VICTORY_POINTS_8252_WAR }
+}

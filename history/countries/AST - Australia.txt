@@ -9,7 +9,7 @@ set_stability = 0.6
 
 set_politics = {
 	ruling_party = despotism
-	last_election = "1971.13.3"
+	last_election = "1971.3.13"
 	election_frequency = 36
 	elections_allowed = no
 }
@@ -29,15 +29,11 @@ set_popularities = {
     esoteric_nazism = 0
 }
 
-create_country_leader = {
-	name = "Joh Bjelke-Petersen"
-	desc = "POLITICS_JOH_BJELKE_PETERSEN_DESC"
-	picture = "Portrait_AST_Joh_Bjelke_Petersen.dds"
-	expire = "2090.1.1"
-	ideology = despotism_aristocratic_conservatism_subtype
-	traits = {
-	}
-}
+recruit_character = AST_Joh_Bjelke_Petersen
+recruit_character = AST_Michael_Jeffery
+recruit_character = AST_Andrew_Peacock
+recruit_character = AST_Peter_Costello
+recruit_character = AST_Jocelyn_Newman
 
 create_country_leader = {
 	name = "John Howard"
@@ -252,12 +248,11 @@ add_ideas = {
 	
 	#FACTION STATUS
 	OFN_Independent_Member
-	#ministers
-	AST_Bill_Hayden_hog
-	AST_Michelle_Landry_for
+	#Ministers
+	AST_Michael_Jeffery_hog
+	AST_Jocelyn_Newman_sec
+	AST_Andrew_Peacock_for
 	AST_Peter_Costello_eco
-	AST_John_Moores_sec
-
 	#laws
 	tno_academic_base_secondary_schooling
 	tno_research_facilities_modern

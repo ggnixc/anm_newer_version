@@ -1,9 +1,17 @@
 ﻿capital = 1272
 
+recruit_character = SER_vojislav_seselj
+recruit_character = SER_slobodan_milosevic
+recruit_character = SER_sreto_peric
+recruit_character = SER_dubravko_bojic
+recruit_character = SER_tomislav_ljubenovic
+
+set_cosmetic_tag = SER_kingdom
+
 set_oob = "SER_1962"
 
 set_politics = {	
-	ruling_party = despotism
+	ruling_party = ultranationalism
 	last_election = "1962.1.1"
 	election_frequency = 36
 	elections_allowed = no
@@ -11,16 +19,16 @@ set_politics = {
 
 add_ideas = {
 	#Faction
-	Pakt_Bundnispartner
+	Pakt_Marionettenstaat
 	#Spirits
 	SER_Chetnik_Kingdom
 	SER_German_Controlled_Economy
 	SER_German_Garrison
 	#Ministers
-	SER_minister_sinisa_vucinic_hog
-	SER_minister_zeljko_raznatovic_sec
-	SER_minister_jovan_ilic_deretic_eco
-	SER_minister_peter_egner_for
+	SER_Slobodan_Milosevic_hog
+	SER_Sreto_Peric_sec
+	SER_Dubravko_Boji_for
+	SER_Tomislav_Ljubenovic_eco
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_atheism
@@ -77,27 +85,16 @@ set_popularities = {
     communist = 0
     socialist = 11
     progressivism = 0
-    liberalism = 2
+    liberalism = 0
     liberal_conservatism = 0
     ecopolitical = 0
     conservatism = 0
-    paternalism = 13
-    despotism = 46
+    paternalism = 2
+    despotism = 13
 	fascism = 0
 	national_socialism = 28
-	ultranationalism = 0
+	ultranationalism = 46
     esoteric_nazism = 0
 }
 
 set_stability = 0.8
-
-create_country_leader = {
-	name = "Vojislav Šešelj"
-	desc = "POLITICS_SESELJ_DESC"
-	picture = "Portrait_SER_Vojislav_Seselj.dds"
-	expire = "2020.5.17"
-	ideology = despotism_military_junta_subtype
-	traits = {
-		nationalist_symbol
-	}
-}

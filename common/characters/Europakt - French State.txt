@@ -1,0 +1,94 @@
+characters = {
+	FRA_jean_jacques_susini = {  
+		name = FRA_jean_jacques_susini 
+		portraits = { 
+			civilian = { large = "gfx/leaders/FRA/Portrait_FRA_Jean_Jacques_Susini.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_JEAN_JACQUES_SUSINI_DESC"
+			ideology = fascism_national_syndicalism_subtype
+			traits = {  }
+			expire = "2999.1.1.1"
+		}
+	}
+	FRA_jean_marie_le_pen = {  
+		name = FRA_jean_marie_le_pen
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FRA/Portrait_FRA_Jean_Marie_le_Pen.dds"
+				small = "GFX_idea_FRA_Jean_Marie_le_Pen" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = FRA_Jean_Marie_le_Pen_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FRA_gerard_longuet = { 
+		name = FRA_gerard_longuet
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FRA/Portrait_FRA_Gerard_Longuet.dds"
+				small = "GFX_idea_FRA_Gerard_Longuet" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = FRA_Gerard_Longuet_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FRA_bruno_megret = {  
+		name = FRA_bruno_megret
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FRA/Portrait_FRA_Bruno_Megret.dds"
+				small = "GFX_idea_FRA_Bruno_Megret" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = FRA_Bruno_Megret_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FRA_georges_paul_wagner = { 
+		name = FRA_georges_paul_wagner
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FRA/Portrait_FRA_Georges_Paul_Wagner.dds"
+				small = "GFX_idea_FRA_Georges_Paul_Wagner" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = FRA_Georges_Paul_Wagner_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+} 

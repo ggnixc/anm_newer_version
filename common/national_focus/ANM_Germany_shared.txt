@@ -1063,6 +1063,7 @@ shared_focus = {
 ### Finnish Civil War ###
 shared_focus = {
 	id = GER_the_north_in_flames
+	icon = GFX_GER_the_north_in_flames
 	x = 20
 	y = 7
 	cost = 1.00
@@ -1077,6 +1078,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_cutting_the_route
 	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_cutting_the_route
 	x = -2
 	y = 1
 	cost = 3.00
@@ -1094,6 +1096,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_lappland_investigations
 	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_lappland_investigations
 	x = -1
 	y = 2
 	cost = 3.00
@@ -1109,6 +1112,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_kuovola_offensive
 	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_kuovola_offensive
 	x = -1
 	y = 3
 	cost = 3.00
@@ -1124,6 +1128,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_there_is_no_lesser_evil
 	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_there_is_no_lesser_evil
 	x = 0
 	y = 1
 	cost = 3.00
@@ -1141,6 +1146,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_ripping_the_reds
 	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_ripping_the_reds
 	x = 2
 	y = 1
 	cost = 3.00
@@ -1173,6 +1179,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_operation_karelia
 	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_operation_karelia
 	x = 1
 	y = 3
 	cost = 3.00
@@ -1188,6 +1195,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_a_war_among_brothers
 	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_a_war_among_brothers
 	x = 0
 	y = 4
 	cost = 3.00
@@ -1201,5 +1209,216 @@ shared_focus = {
 		factor = 1
 	}
 	completion_reward = {
+	}
+}
+
+### 3WRW ###
+shared_focus = {
+	id = GER_a_nation_in_mourning
+	relative_position_id = GER_the_nsdap_prevails
+	icon = GFX_GER_a_nation_in_mourning
+	x = 4
+	y = 3
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_verbrechen_und_bestrafung
+	relative_position_id = GER_a_nation_in_mourning
+	icon = GFX_GER_verbrechen_und_bestrafung
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_a_nation_in_mourning
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_unleash_the_heer
+	relative_position_id = GER_verbrechen_und_bestrafung
+	x = -3
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_verbrechen_und_bestrafung
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_put_krieg_in_kriegsmarine
+	relative_position_id = GER_unleash_the_heer
+	icon = GFX_GER_put_krieg_in_kriegsmarine
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_unleash_the_heer
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_hell_from_above
+	relative_position_id = GER_unleash_the_heer
+	x = 1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_unleash_the_heer
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_uberraschen_ubernehmen
+	relative_position_id = GER_hell_from_above
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_hell_from_above
+	}
+	prerequisite = {
+		focus = GER_put_krieg_in_kriegsmarine
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_take_what_is_ours
+	relative_position_id = GER_verbrechen_und_bestrafung
+	icon = GFX_GER_take_what_is_ours
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_verbrechen_und_bestrafung
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_show_no_mercy
+	relative_position_id = GER_take_what_is_ours
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_take_what_is_ours
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_ubermenschen_ubernlegen
+	relative_position_id = GER_show_no_mercy
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_show_no_mercy
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_modern_warfare
+	relative_position_id = GER_verbrechen_und_bestrafung
+	x = 3
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_verbrechen_und_bestrafung
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_unmanned_combat_vehicles
+	relative_position_id = GER_modern_warfare
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_modern_warfare
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_soldiers_of_the_future
+	relative_position_id = GER_modern_warfare
+	x = 1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_modern_warfare
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_ubermachtig_uberfallen
+	relative_position_id = GER_soldiers_of_the_future
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_soldiers_of_the_future
+	}
+	prerequisite = {
+		focus = GER_unmanned_combat_vehicles
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_deutschland_deutschland_uber_allen
+	relative_position_id = GER_ubermenschen_ubernlegen
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_ubermenschen_ubernlegen
+	}
+	prerequisite = {
+		focus = GER_ubermachtig_uberfallen
+	}
+	prerequisite = {
+		focus = GER_uberraschen_ubernehmen
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
 	}
 }

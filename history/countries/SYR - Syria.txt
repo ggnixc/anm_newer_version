@@ -7,7 +7,7 @@ set_war_support = 0.25
 set_research_slots = 3
 
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = communist
 	last_election = "1958.1.8"
 	election_frequency = 48
 	elections_allowed = no
@@ -15,13 +15,13 @@ set_politics = {
 }
 
 set_popularities = {
-    communist = 1
+    communist = 55
     ultranationalism = 0
-    socialist = 55
+    socialist = 10
     progressivism = 7
     liberalism = 10
     liberal_conservatism = 0
-    conservatism = 10
+    conservatism = 1
     paternalism = 5
     despotism = 2
     fascism = 5
@@ -34,7 +34,7 @@ create_country_leader = {
 	desc = "POLITICS_SALAH_JADID_DESC"
 	picture = "gfx/leaders/SYR/Portrait_SYR_Jadid.dds"
 	expire = "2090.1.1"
-	ideology = socialist_baathism_subtype
+	ideology = communist_revolutionary_baathism_subtype
 	traits = {
 	}
 }
@@ -50,6 +50,7 @@ create_country_leader = {
 }
 
 add_ideas = {
+	COM_Observer
 	IRQ_Turkish_Threat
 	##Ministers 
 	#political#
