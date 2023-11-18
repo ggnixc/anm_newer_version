@@ -41,5 +41,23 @@ scripted_gui = {
 			}
 		}
 
+		effects = {
+			SOV_RSFSR_republic_button_click = {
+				set_variable = { SOV_republic_selected_region = 1 }
+			}
+			SOV_kazakh_republic_button_click = {
+				set_variable = { SOV_republic_selected_region = 2 }
+			}
+		}
+
+		properties = {
+			SOV_republic_select_portrait_icon = {
+				image = "[GetSOVPortraitPicture]"
+			}
+			SOV_republic_flag_icon = {
+				image = "[GetSOVRepublicFlag]"
+			}
+		}
+
 	}
 }

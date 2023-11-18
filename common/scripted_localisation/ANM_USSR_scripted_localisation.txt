@@ -1,0 +1,262 @@
+
+defined_text = {
+	name = SOV_Republic_Select_lockey
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region > 99 }
+		}
+		localization_key = SOV_Republic_occupied_region_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region = 1 }
+		}
+		localization_key = SOV_Republic_RSFSR_title_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region = 2 }
+		}
+		localization_key = SOV_Republic_kazakh_title_tt
+	}
+	text = {
+		trigger = { }
+		localization_key = SOV_Republic_select_a_state_tt
+	}
+}
+
+defined_text = {
+	name = SOV_Republic_First_Sec_lockey
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region > 99 }
+		}
+		localization_key = SOV_Republic_First_Sec_occupied_region_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region = 1 }
+		}
+		localization_key = SOV_Republic_RSFSR_First_Sec_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region = 2 }
+		}
+		localization_key = SOV_Republic_kazakh_First_Sec_tt
+	}
+	text = {
+		trigger = { }
+		localization_key = SOV_Republic_select_a_First_Sec_tt
+	}
+}
+
+defined_text = {
+	name = SOV_Republic_Desc_lockey
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region > 99 }
+		}
+		localization_key = SOV_Republic_occupied_region_desc_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region = 1 }
+		}
+		localization_key = SOV_Republic_RSFSR_desc_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_Republic_selected_region = 2 }
+		}
+		localization_key = SOV_Republic_kazakh_desc_tt
+	}
+	text = {
+		trigger = { }
+		localization_key = SOV_Republic_select_a_state_desc_tt
+	}
+}
+
+defined_text = {
+	name = GetSOVPortraitPicture
+	text = {
+		trigger = { 
+			check_variable = { SOV_Republic_selected_region = 1 }
+		}
+		localization_key = "GFX_SOV_RSFSR_leader_portrait"
+	}
+	text = {
+		trigger = { 
+			check_variable = { SOV_Republic_selected_region = 2 }
+		}
+		localization_key = "GFX_SOV_kazakh_leader_portrait"
+	}
+	text = {
+		trigger = {  }
+		localization_key = "GFX_SOV_select_leader_portrait"
+	}
+}
+
+defined_text = {
+	name = GetSOVRepublicFlag
+	text = {
+		trigger = { 
+			check_variable = { SOV_Republic_selected_region = 1 }
+		}
+		localization_key = "GFX_SOV_RSFSR_flag"
+	}
+	text = {
+		trigger = { 
+			check_variable = { SOV_Republic_selected_region = 2 }
+		}
+		localization_key = "GFX_SOV_kazakh_flag"
+	}
+	text = {
+		trigger = {  }
+		localization_key = "GFX_SOV_select_flag"
+	}
+}
+
+defined_text = {
+	name = GetSOVRegionGUI
+	text = {
+		trigger = { 
+			OR = {
+				check_variable = { SOV_Republic_selected_region = 100 }
+				check_variable = { SOV_Republic_selected_region = 101 }
+				check_variable = { SOV_Republic_selected_region = 102 }
+			}
+		}
+		localization_key = "GFX_SOV_japanese_occupation_gui"
+	}
+	text = {
+		trigger = { 
+			check_variable = { SOV_Republic_selected_region = 103 }
+		}
+		localization_key = "GFX_SOV_finland_occupation_gui"
+	}
+	text = {
+		trigger = { 
+			OR = {
+				check_variable = { SOV_Republic_selected_region = 105 }
+				check_variable = { SOV_Republic_selected_region = 106 }
+				check_variable = { SOV_Republic_selected_region = 107 }
+				check_variable = { SOV_Republic_selected_region = 109 }
+			}
+		}
+		localization_key = "GFX_SOV_german_occupation_gui"
+	}
+	text = {
+		trigger = { 
+			check_variable = { SOV_Republic_selected_region < 100 }
+		}
+		localization_key = "GFX_SOV_region_interaction_gui"
+	}
+	text = {
+		localization_key = "GFX_SOV_select_region_animation"
+	}
+}
+
+defined_text = {
+	name = SOVgetFarEastHighlight
+	text = {
+		trigger = {
+			owns_state = 809
+		}
+		localization_key = "GFX_SOV_Far_Eastern_District_Vladivostok_Highlight"
+	}
+	text = {
+		trigger = {
+			owns_state = 657
+			owns_state = 409
+			NOT = {	owns_state = 809 }
+		}
+		localization_key = "GFX_SOV_Far_Eastern_District_Khabarovsk_Highlight"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				owns_state = 409
+				owns_state = 809
+			}
+			owns_state = 657
+		}
+		localization_key = "GFX_SOV_Far_Eastern_District_Birobidzhan_Highlight"
+	}
+	text = {
+		trigger = {
+			NOT = {	owns_state = 657 }
+		}
+		localization_key = "GFX_SOV_Far_Eastern_District_Minimum_Highlight"
+	}
+}
+
+defined_text = {
+	name = SOVgetNorthHighlight
+	text = {
+		trigger = {
+			owns_state = 146
+			owns_state = 1359
+			owns_state = 195
+		}
+		localization_key = "GFX_SOV_Northern_District_Maximum_Highlight"
+	}
+	text = {
+		trigger = {
+			owns_state = 1359
+			owns_state = 195
+			NOT = { owns_state = 146 }
+		}
+		localization_key = "GFX_SOV_Northern_District_No_Vyborg_Highlight"
+	}
+	text = {
+		trigger = {
+			owns_state = 1359
+			NOT = { owns_state = 195 }
+		}
+		localization_key = "GFX_SOV_Northern_District_Karelia_Highlight"
+	}
+	text = {
+		trigger = {
+			owns_state = 195
+			NOT = { owns_state = 1359 }
+		}
+		localization_key = "GFX_SOV_Northern_District_No_Karelia_Highlight"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				owns_state = 195
+				owns_state = 1359
+			}
+		}
+		localization_key = "GFX_SOV_Northern_District_Minimum_Highlight"
+	}
+}
+
+defined_text = {
+	name = SOVgetCaucasusHighlight
+	text = {
+		trigger = {
+			owns_state = 243
+				owns_state = 234
+				owns_state = 1532
+		}
+		localization_key = "GFX_SOV_Crimea_Caucasia_District_Highlight"
+	}
+	text = {
+		trigger = {
+			owns_state = 243
+			owns_state = 234
+			NOT = { owns_state = 1532 }
+		}
+		localization_key = "GFX_SOV_Caucasia_District_Highlight"
+	}
+	text = {
+		trigger = {
+			owns_state = 243
+			NOT = { owns_state = 234 }
+		}
+		localization_key = "GFX_SOV_Kuban_District_Highlight"
+	}
+}
