@@ -121,9 +121,22 @@ ANM_Andean_War = {
 		add_to_faction = GLP
 	}
 }
+Activate_Commie_Loss = {
+	if = { 
+        limit = { 
+			has_global_flag = Commie_Ecuador_Defeated
+			has_global_flag = Socialist_Peru_Defeated
+		}
+	}
+   every_country = {
+		limit = { is_ai = no }
+		news_event = { id = WORLD.18180 hours = 0 }
+	}
+}
 ANM_Condor_Pact_Victory = {
 	PRU = {
 		puppet = ECD
+		dismantle_faction = yes
 	}
 	ECD = {
 		set_politics = {	

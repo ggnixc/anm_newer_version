@@ -1164,9 +1164,19 @@ news_event = {
 	picture = GFX_anm_PRU_Government_Wins
 	fire_only_once = yes
 	is_triggered_only = yes
-
+		
+	trigger = {
+		if = {
+			has_global_flag = Socialist_Peru_Defeated
+			has_global_flag = Commie_Ecuador_Defeated
+		}
+	}
 	option = {
 		name = WORLD.18180.a
+		hidden_effect = {
+			clr_global_flag = Socialist_Peru_Defeated
+			clr_global_flag = Commie_Ecuador_Defeated
+		}
 	}
 }
 news_event = {

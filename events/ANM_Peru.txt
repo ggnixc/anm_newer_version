@@ -145,11 +145,25 @@ country_event = {
 			}
 			USA = {
 				add_to_faction = PRU
+				add_to_faction = GLP
 			}
 			PRU = {
+				
 				add_ideas = {
-				OFN_Independent_Member
+					OFN_Independent_Member
 				}
+			}
+			GLP = {
+				transfer_state = 2020
+				add_ideas = {
+					OFN_Independent_Member
+				}
+			}
+			ECD = {
+				remove_state_core = 305
+				remove_state_core = 1676
+				remove_state_core = 649
+				remove_state_core = 2020
 			}
 			every_country = {
 				limit = { is_ai = no }
