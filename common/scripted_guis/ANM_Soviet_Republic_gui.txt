@@ -33,6 +33,12 @@ scripted_gui = {
 		}
 		
 		triggers = {
+			# region overlays
+			SOV_republic_Far_East_highlight_visible = {
+				NOT = {
+					owns_state = 809
+				}
+			}
 		}
 		
 		effects = {
@@ -51,9 +57,12 @@ scripted_gui = {
 		}
 
 		properties = {
+			# portrait
 			SOV_republic_select_portrait_icon = {
 				image = "[GetSOVPortraitPicture]"
 			}
+
+			# flag
 			SOV_republic_flag_icon = {
 				image = "[GetSOVRepublicFlag]"
 			}
