@@ -53,8 +53,6 @@ on_actions = {
 						remove_ideas = {
 							PRU_Peruvian_Civil_War
 						}
-						
-						set_global_flag = Socialist_Peru_Defeated
 					}
 
 					ROOT = { #Affects the loser, MRA
@@ -85,7 +83,9 @@ on_actions = {
 						remove_state_core = 1679
 						dismantle_faction = yes
 					}
+					
 					set_global_flag = skip_default_capitulation #Makes sure MRA does not just get completely annexed after peace deal like in TNO
+					Activate_MRA_Loss = yes
 					PRU = {
 						country_event = { id = PRU.general.2 days = 2 }
 					}
@@ -193,7 +193,6 @@ on_actions = {
 
 					FROM = { #Affects the winner, Peru
 						add_war_support = 0.10
-						set_global_flag = Commie_Ecuador_Defeated
 					}
 
 					ROOT = { #Affects the loser, Commie Ecuador
@@ -204,6 +203,7 @@ on_actions = {
 						dismantle_faction = yes
 					}
 					set_global_flag = skip_default_capitulation #Makes sure Ecuador does not just get completely annexed after peace deal like in TNO
+					Activate_Commie_Ecuador_Loss = yes
 					ANM_Condor_Pact_Victory = yes
 				}
 			}

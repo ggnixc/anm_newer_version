@@ -1167,15 +1167,25 @@ news_event = {
 		
 	trigger = {
 		if = {
-			has_global_flag = Socialist_Peru_Defeated
-			has_global_flag = Commie_Ecuador_Defeated
+			PRU = {
+				has_country_flag = Socialist_Peru_Defeated
+			}
+			AND = {
+				GLP = {
+				has_country_flag = Commie_Ecuador_Defeated
+				}
+			}
 		}
 	}
 	option = {
 		name = WORLD.18180.a
 		hidden_effect = {
-			clr_global_flag = Socialist_Peru_Defeated
-			clr_global_flag = Commie_Ecuador_Defeated
+			PRU = {
+				clr_country_flag = Socialist_Peru_Defeated
+			}
+			GLP = {
+				clr_country_flag = Commie_Ecuador_Defeated
+			}
 		}
 	}
 }
