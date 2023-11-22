@@ -3,7 +3,7 @@
 set_stability = 0.4
 
 set_politics = {
-	ruling_party = liberalism
+	ruling_party = fascism
 	last_election = "1996.5.25"
 	election_frequency = 72
 	elections_allowed = yes
@@ -12,43 +12,29 @@ set_politics = {
 set_popularities = {
 	communist = 0
 	ultranationalism = 0
-	socialist = 0
+	socialist = 8
 	progressivism = 0
-	liberalism = 70
-	liberal_conservatism = 0
-	conservatism = ß
-	paternalism = 30
+	liberalism = 22
+	liberal_conservatism = 13
+	conservatism = 0
+	paternalism = 0
 	despotism = 0
-	fascism = 0
+	fascism = 57
 	national_socialism = 0
-	esoteric_nazism = 0
 }
 
 create_country_leader = {
-	name = "Amine Gemayel"
+	name = "Boutros Khawand"
 	desc = ""
-	picture = "LEB_Amine_Gemayel.dds"
+	picture = "Portrait_LEB_Boutros_Khawand.dds"
 	expire = "2999.1.1"
-	ideology = fascism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Dory Chamoun"
-	desc = ""
-	picture = "Portrait_LEB_Dory_Chamoun.dds"
-	expire = "2999.1.1"
-	ideology = liberalism_national_liberal_subtype
-	traits = {
-		#
-	}
+	ideology = fascism_falangism_subtype
+	traits = { }
 }
 
 add_ideas = {
 	###IDEAS
-	LEB_The_people_of_Lebanon
+	
     ##FACTION STATUS##
 	#political#
 	tno_political_parties_multiparty_system

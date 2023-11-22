@@ -16,6 +16,10 @@ technologies = {
 			research_cost_coeff = 1
 		}	
 		path = {
+			leads_to_tech = tech_attack_helicopter_company
+			research_cost_coeff = 1
+		}
+		path = {
 			leads_to_tech = tech_field_hospital
 			research_cost_coeff = 1
 		}					
@@ -34,18 +38,6 @@ technologies = {
 		}
 		path = {
 			leads_to_tech = tech_maintenance_company
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_attack_helicopter_company
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_scout_helicopter_company
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_transport_helicopter_company
 			research_cost_coeff = 1
 		}
 		research_cost = 1.0
@@ -406,6 +398,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+
 		research_cost = 1.5
 		start_year = 2009
 		folder = {
@@ -455,6 +448,218 @@ technologies = {
 			
 		}
 	}
+
+	tech_attack_helicopter_company = {
+		dependencies = {
+			attack_helicopter_1960 = 1
+		}
+		enable_subunits = {
+			attack_helicopter_company
+			scout_helicopter_company
+			transport_helicopter_company
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company2
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1990
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 2 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_attack_helicopter_company2 = {
+		attack_helicopter_company = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		scout_helicopter_company = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		transport_helicopter_company = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company3
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 2000
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 7 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tech_attack_helicopter_company3 = {
+	
+		attack_helicopter_company = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		scout_helicopter_company = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		transport_helicopter_company = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company4
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 2003
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 12 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tech_attack_helicopter_company4 = {
+
+		attack_helicopter_company = {
+			breakthrough = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		scout_helicopter_company = {
+			breakthrough = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		transport_helicopter_company = {
+			breakthrough = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company5
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 2006
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 18 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tech_attack_helicopter_company5 = {
+
+		attack_helicopter_company = {
+			breakthrough = 0.05
+			ap_attack = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		scout_helicopter_company = {
+			breakthrough = 0.05
+			ap_attack = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		transport_helicopter_company = {
+			breakthrough = 0.05
+			ap_attack = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		path = {
+			leads_to_tech = tech_attack_helicopter_company6
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 2009
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 24 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	tech_attack_helicopter_company6 = {
+
+		attack_helicopter_company = {
+			breakthrough = 0.05
+			ap_attack = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		scout_helicopter_company = {
+			breakthrough = 0.05
+			ap_attack = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		transport_helicopter_company = {
+			breakthrough = 0.05
+			ap_attack = 0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		research_cost = 1.5
+		start_year = 2012
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 30 }
+		}
+
+		categories = {
+			support_tech
+			helicopter_support
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	tech_military_police = {
 
@@ -471,7 +676,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 2 }
+			position = { x = 6 y = 2 }
 		}
 		
 		categories = {
@@ -530,7 +735,7 @@ technologies = {
 		start_year = 2000
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 7 }
+			position = { x = 6 y = 7 }
 		}
 		
 		categories = {
@@ -562,7 +767,7 @@ technologies = {
 		start_year = 2003
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 12 }
+			position = { x = 6 y = 12 }
 		}
 		
 		categories = {
@@ -592,7 +797,7 @@ technologies = {
 		start_year = 2006
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 18 }
+			position = { x = 6 y = 18 }
 		}
 		
 		categories = {
@@ -623,7 +828,7 @@ technologies = {
 		start_year = 2009
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 24 }
+			position = { x = 6 y = 24 }
 		}
 		
 		categories = {
@@ -650,7 +855,7 @@ technologies = {
 		start_year = 2012
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 30 }
+			position = { x = 6 y = 30 }
 		}
 		
 		categories = {
@@ -683,7 +888,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 2 }
+			position = { x = 8 y = 2 }
 		}
 		
 		categories = {
@@ -714,7 +919,7 @@ technologies = {
 		start_year = 2000
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 7 }
+			position = { x = 8 y = 7 }
 		}
 		
 		categories = {
@@ -743,7 +948,7 @@ technologies = {
 		start_year = 2003
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 12 }
+			position = { x = 8 y = 12 }
 		}
 		
 		categories = {
@@ -770,7 +975,7 @@ technologies = {
 		start_year = 2006
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 18 }
+			position = { x = 8 y = 18 }
 		}
 		
 		categories = {
@@ -798,7 +1003,7 @@ technologies = {
 		start_year = 2009
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 24 }
+			position = { x = 8 y = 24 }
 		}
 		
 		categories = {
@@ -826,7 +1031,7 @@ technologies = {
 		start_year = 2012
 		folder = {
 			name = support_folder
-			position = { x = 6 y = 30 }
+			position = { x = 8 y = 30 }
 		}
 		
 		categories = {
@@ -859,7 +1064,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = support_folder
-			position = { x = 8 y = 2 }
+			position = { x = 10 y = 2 }
 		}
 		
 		categories = {
@@ -890,7 +1095,7 @@ technologies = {
 		start_year = 2000
 		folder = {
 			name = support_folder
-			position = { x = 8 y = 7 }
+			position = { x = 10 y = 7 }
 		}
 		
 		categories = {
@@ -920,7 +1125,7 @@ technologies = {
 		start_year = 2003
 		folder = {
 			name = support_folder
-			position = { x = 8 y = 12 }
+			position = { x = 10 y = 12 }
 		}
 		
 		categories = {
@@ -948,7 +1153,7 @@ technologies = {
 		start_year = 2006
 		folder = {
 			name = support_folder
-			position = { x = 8 y = 18 }
+			position = { x = 10 y = 18 }
 		}
 		
 		categories = {
@@ -977,7 +1182,7 @@ technologies = {
 		start_year = 2009
 		folder = {
 			name = support_folder
-			position = { x = 8 y = 24 }
+			position = { x = 10 y = 24 }
 		}
 		
 		categories = {
@@ -1002,7 +1207,7 @@ technologies = {
 		start_year = 2012
 		folder = {
 			name = support_folder
-			position = { x = 8 y = 30 }
+			position = { x = 10 y = 30 }
 		}
 		
 		categories = {
@@ -1036,7 +1241,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = support_folder
-			position = { x = 10 y = 2 }
+			position = { x = 12 y = 2 }
 		}
 		
 		categories = {
@@ -1068,7 +1273,7 @@ technologies = {
 		start_year = 2000
 		folder = {
 			name = support_folder
-			position = { x = 10 y = 7 }
+			position = { x = 12 y = 7 }
 		}
 		
 		categories = {
@@ -1098,7 +1303,7 @@ technologies = {
 		start_year = 2003
 		folder = {
 			name = support_folder
-			position = { x = 10 y = 12 }
+			position = { x = 12 y = 12 }
 		}
 		
 		categories = {
@@ -1126,7 +1331,7 @@ technologies = {
 		start_year = 2006
 		folder = {
 			name = support_folder
-			position = { x = 10 y = 18 }
+			position = { x = 12 y = 18 }
 		}
 		
 		categories = {
@@ -1155,7 +1360,7 @@ technologies = {
 		start_year = 2009
 		folder = {
 			name = support_folder
-			position = { x = 10 y = 24 }
+			position = { x = 12 y = 24 }
 		}
 		
 		categories = {
@@ -1181,7 +1386,7 @@ technologies = {
 		start_year = 2012
 		folder = {
 			name = support_folder
-			position = { x = 10 y = 30 }
+			position = { x = 12 y = 30 }
 		}
 		
 		categories = {
@@ -1216,7 +1421,7 @@ technologies = {
 		start_year = 1990
 		folder = {
 			name = support_folder
-			position = { x = 12 y = 2 }
+			position = { x = 14 y = 2 }
 		}
 		
 		categories = {
@@ -1246,7 +1451,7 @@ technologies = {
 		start_year = 2000
 		folder = {
 			name = support_folder
-			position = { x = 12 y = 7 }
+			position = { x = 14 y = 7 }
 		}
 		
 		categories = {
@@ -1275,7 +1480,7 @@ technologies = {
 		start_year = 2003
 		folder = {
 			name = support_folder
-			position = { x = 12 y = 12 }
+			position = { x = 14 y = 12 }
 		}
 		
 		categories = {
@@ -1302,7 +1507,7 @@ technologies = {
 		start_year = 2006
 		folder = {
 			name = support_folder
-			position = { x = 12 y = 18 }
+			position = { x = 14 y = 18 }
 		}
 		
 		categories = {
@@ -1330,7 +1535,7 @@ technologies = {
 		start_year = 2009
 		folder = {
 			name = support_folder
-			position = { x = 12 y = 24 }
+			position = { x = 14 y = 24 }
 		}
 		
 		categories = {
@@ -1354,7 +1559,7 @@ technologies = {
 		start_year = 2012
 		folder = {
 			name = support_folder
-			position = { x = 12 y = 30 }
+			position = { x = 14 y = 30 }
 		}
 		
 		categories = {
@@ -1367,327 +1572,6 @@ technologies = {
 			factor = 1
 		}
 	}
-	
-	tech_attack_helicopter_company = {
-		dependencies = {
-			attack_helicopter_1960 = 1
-		}
-		enable_subunits = {
-			attack_helicopter_company
-		}
-		path = {
-			leads_to_tech = tech_attack_helicopter_company2
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1990
-		folder = {
-			name = support_folder
-			position = { x = 14 y = 3 }
-		}
 
-		categories = {
-			support_tech
-			helicopter_support
-		}
 
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	tech_attack_helicopter_company2 = {
-
-		attack_helicopter_company = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-		path = {
-			leads_to_tech = tech_attack_helicopter_company3
-			research_cost_coeff = 1
-		}
-		research_cost = 1.5
-		start_year = 2000
-		folder = {
-			name = support_folder
-			position = { x = 14 y = 7 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	tech_attack_helicopter_company3 = {
-
-		attack_helicopter_company = {
-			breakthrough = 0.05
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-		path = {
-			leads_to_tech = tech_attack_helicopter_company4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2006
-		folder = {
-			name = support_folder
-			position = { x = 14 y = 18 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	tech_attack_helicopter_company4 = {
-
-		attack_helicopter_company = {
-			breakthrough = 0.05
-			ap_attack = 0.05
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-
-		research_cost = 1.5
-		start_year = 2012
-		folder = {
-			name = support_folder
-			position = { x = 14 y = 30 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	tech_scout_helicopter_company = {
-		dependencies = {
-			attack_helicopter_1960 = 1
-		}
-		enable_subunits = {
-			scout_helicopter_company
-		}
-		path = {
-			leads_to_tech = tech_scout_helicopter_company2
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1990
-		folder = {
-			name = support_folder
-			position = { x = 16 y = 3 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	tech_scout_helicopter_company2 = {
-
-		scout_helicopter_company = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-		path = {
-			leads_to_tech = tech_scout_helicopter_company3
-			research_cost_coeff = 1
-		}
-		research_cost = 1.5
-		start_year = 2000
-		folder = {
-			name = support_folder
-			position = { x = 16 y = 7 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	tech_scout_helicopter_company3 = {
-
-		scout_helicopter_company = {
-			breakthrough = 0.05
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-		path = {
-			leads_to_tech = tech_scout_helicopter_company4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2006
-		folder = {
-			name = support_folder
-			position = { x = 16 y = 18 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	tech_scout_helicopter_company4 = {
-
-		scout_helicopter_company = {
-			breakthrough = 0.05
-			ap_attack = 0.05
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-
-		research_cost = 1.5
-		start_year = 2012
-		folder = {
-			name = support_folder
-			position = { x = 16 y = 30 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	tech_transport_helicopter_company = {
-		dependencies = {
-			attack_helicopter_1960 = 1
-		}
-		enable_subunits = {
-			transport_helicopter_company
-		}
-		path = {
-			leads_to_tech = tech_transport_helicopter_company2
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1990
-		folder = {
-			name = support_folder
-			position = { x = 18 y = 3 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	tech_transport_helicopter_company2 = {
-
-		transport_helicopter_company = {
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-		path = {
-			leads_to_tech = tech_transport_helicopter_company3
-			research_cost_coeff = 1
-		}
-		research_cost = 1.5
-		start_year = 2000
-		folder = {
-			name = support_folder
-			position = { x = 18 y = 7 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	tech_transport_helicopter_company3 = {
-
-		transport_helicopter_company = {
-			breakthrough = 0.05
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-		path = {
-			leads_to_tech = tech_transport_helicopter_company4
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2006
-		folder = {
-			name = support_folder
-			position = { x = 18 y = 18 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	tech_transport_helicopter_company4 = {
-
-		transport_helicopter_company = {
-			breakthrough = 0.05
-			ap_attack = 0.05
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-
-		research_cost = 1.5
-		start_year = 2012
-		folder = {
-			name = support_folder
-			position = { x = 18 y = 30 }
-		}
-
-		categories = {
-			support_tech
-			helicopter_support
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
 }
