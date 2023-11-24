@@ -1,4 +1,4 @@
-﻿capital = 198
+﻿capital = 192
 
 recruit_character = TNS_Ivan_Bodiul
 
@@ -52,20 +52,6 @@ add_ideas = {
 	construction_level_4
 	
 	tno_poverty_rate_15
-}
-
-ROM = {
-    if = {
-        limit = { 
-            OR = { 
-                has_dlc = "Together for Victory" 
-            }
-        }
-        set_autonomy = { target = TNS autonomy_state = autonomy_puppet }
-        else = {
-            puppet = TNS
-        }
-    }
 }
 
 set_politics = {	

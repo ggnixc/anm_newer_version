@@ -1,12 +1,12 @@
 characters = {
-	ROM_radu_campeanu = { 
-		name = ROM_radu_campeanu
+	ROM_radu_vasile = {  
+		name = ROM_radu_vasile
 		portraits = { 
-			civilian = { large = "gfx/leaders/ROM/Portrait_ROM_Radu_Campeanu.dds" } 
+			civilian = { large = "gfx/leaders/ROM/Portrait_ROM_Radu_Vasile.dds" } 
 		}
 		country_leader = {
-			desc = "POLITICS_RADU_CAMPEANU_DESC"
-			ideology = liberalism_classical_liberalism_subtype
+			desc = "POLITICS_RADU_VASILE_DESC"
+			ideology = liberal_conservatism_subtype
 			traits = {  }
 			expire = "2999.1.1.1"
 		}
@@ -19,10 +19,6 @@ characters = {
 				small = "GFX_idea_ROM_Emil_Constantinescu" 
 			} 	
 		} 
-		country_leader = {
-			ideology = liberalism_1_subtype
-			expire = "2999.1.1.1"
-		}
 		advisor = {
 			slot = head_of_government
 			idea_token = ROM_Emil_Constantinescu_hog
@@ -35,17 +31,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	ROM_iulian_vlad = { 
-		name = ROM_iulian_vlad
+	ROM_gavril_dejeu = { 
+		name = ROM_gavril_dejeu
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/ROM/Portrait_ROM_Iulian_Vlad.dds"
-				small = "GFX_idea_ROM_Iulian_Vlad" 
+				large = "gfx/leaders/ROM/Portrait_ROM_Gavril_Dejeu.dds"
+				small = "GFX_idea_ROM_Gavril_Dejeu" 
 			} 	
 		} 
 		advisor = {
 			slot = security_minister
-			idea_token = ROM_Iulian_Vlad_sec
+			idea_token = ROM_Gavril_Dejeu_sec
 			traits = {
 				security_minister
 			}
@@ -54,24 +50,20 @@ characters = {
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
-	}
-	ROM_corneliu_coposu = {  
-		name = ROM_corneliu_coposu
+	} 
+	ROM_mircea_ciumara = {  
+		name = ROM_mircea_ciumara
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/ROM/Portrait_ROM_Corneliu_Coposu.dds"
-				small = "GFX_idea_ROM_Corneliu_Coposu" 
+				large = "gfx/leaders/ROM/Portrait_ROM_Mircea_Ciumara.dds"
+				small = "GFX_idea_ROM_Mircea_Ciumara" 
 			} 	
 		} 
-		country_leader = {
-			ideology = conservatism_subtype
-			expire = "2999.1.1.1"
-		}
 		advisor = {
-			slot = foreign_minister
-			idea_token = ROM_Corneliu_Coposu_for
+			slot = economy_minister
+			idea_token = ROM_Mircea_Ciumara_eco
 			traits = {
-				foreign_minister
+				economy_minister
 			}
 			ledger = civilian
 			cost = -1
@@ -87,15 +79,11 @@ characters = {
 				small = "GFX_idea_ROM_Ion_Diaconescu" 
 			} 	
 		} 
-		country_leader = {
-			ideology = progressivism_1_subtype
-			expire = "2999.1.1.1"
-		}
 		advisor = {
-			slot = economy_minister
-			idea_token = ROM_Ion_Diaconescu_eco
+			slot = foreign_minister
+			idea_token = ROM_Ion_Diaconescu_for
 			traits = {
-				economy_minister
+				foreign_minister
 			}
 			ledger = civilian
 			cost = -1
@@ -103,24 +91,43 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	ROM_corneliu_vadim_tudor = { 
-		name = ROM_corneliu_vadim_tudor
+	ROM_sergiu_cunescu = { 
+		name = ROM_sergiu_cunescu
 		country_leader = {
-			ideology = paternalism_subtype
+			ideology = progressivism_social_democracy_subtype
 			expire = "2999.1.1.1"
 		}
 	}
 	ROM_andreas_ruhrig = { 
 		name = ROM_andreas_ruhrig
 		country_leader = {
-			ideology = national_socialism_subtype
+			ideology = national_socialism_reformed_national_socialism_subtype
 			expire = "2999.1.1.1"
 		}
 	}
-	ROM_petre_roman = { 
-		name = ROM_petre_roman
+	ROM_liviu_petrina = { 
+		name = ROM_liviu_petrina
 		country_leader = {
-			ideology = progressivism_subtype
+			ideology = conservatism_christian_conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	ROM_anatoliy_kaminski = { 
+		name = ROM_anatoliy_kaminski
+		country_leader = {
+			ideology = conservatism_1_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	ROM_radu_campeanu = {  
+		name = ROM_radu_campeanu
+		portraits = { 
+			civilian = { large = "gfx/leaders/ROM/Portrait_ROM_Radu_Campeanu.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_RADU_CAMPEANU_DESC"
+			ideology = liberalism_subtype
+			traits = {  }
 			expire = "2999.1.1.1"
 		}
 	}
