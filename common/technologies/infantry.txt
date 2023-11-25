@@ -1823,7 +1823,7 @@ technologies = {
 
 
 		#If you change these
-		#Change the custom tooltip too: RAJ_jungle_training_effect
+		#Change the custom tooltip too: IND_jungle_training_effect
 		marine = {
 			jungle = {
 				attack = 0.025 
@@ -2332,6 +2332,10 @@ technologies = {
 
 	infantry_aa6 = {
 
+		enable_equipments = {
+			anti_air_shoulder_equipment_1
+		}
+
 		category_all_infantry = {
 			air_attack = 0.05
 		}
@@ -2395,7 +2399,7 @@ technologies = {
 		}
 
 		enable_equipments = {
-			anti_air_shoulder_equipment_1
+			anti_air_shoulder_equipment_2
 		}
 
 		enemy_army_bonus_air_superiority_factor = -0.02
@@ -3455,26 +3459,5 @@ technologies = {
 			}
 		}
 	}
-	
-	
-	basic_train = {
-		enable_equipments = {
-			train_equipment_1
-		}
 
-		research_cost = 1.5
-		start_year = 1970
-		folder = {
-			name = infantry_folder
-			position = { x = 0 y = 1 }
-		}
-
-		categories = {
-			train_tech
-		}
-		
-		ai_will_do = {
-			factor = 60
-		}
-	}
 }

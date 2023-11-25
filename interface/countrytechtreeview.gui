@@ -990,19 +990,6 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "infantry_subtitle_train"
-					position = { x = 1700 y = 936 }
-					textureFile = ""
-					font = "aldrich_32_outlinedark"
-					borderSize = { x = 0 y = 0}
-					text = "INFANTRY_TITLE_TRAINS"
-					maxWidth = 600
-					maxHeight = 62
-					format = left
-					Orientation = "UPPER_LEFT"
-				}
-
-				instantTextBoxType = {
 					name = "infantry_subtitle_supportweapons"
 					position = { x = 30 y = 270 }
 					textureFile = ""
@@ -1413,13 +1400,6 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
-
-			gridboxtype = {
-				name = "basic_train_tree"
-				position = { x = 1715 y = 1039 }
-				slotsize = { width = 70 height = 70 }
-				format = "LEFT"
-			}
 		}
 
 		containerWindowType = {
@@ -1454,7 +1434,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "support_year1"
-					position = { x = 102 y = 50 }
+					position = { x = 100 y = 50 }
 					textureFile = ""
 					font = "aldrich_32_outlinedark"
 					borderSize = { x = 0 y = 0}
@@ -1467,7 +1447,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "support_year2"
-					position = { x = 242 y = 50 }
+					position = { x = 305 y = 50 }
 					textureFile = ""
 					font = "aldrich_32_outlinedark"
 					borderSize = { x = 0 y = 0}
@@ -1480,7 +1460,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "support_year3"
-					position = { x = 592 y = 50 }
+					position = { x = 585 y = 50 }
 					font = "aldrich_32_outlinedark"
 					borderSize = { x = 0 y = 0}
 					text = "2000"
@@ -1492,7 +1472,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "support_year4"
-					position = { x = 941 y = 50 }
+					position = { x = 865 y = 50 }
 					font = "aldrich_32_outlinedark"
 					borderSize = { x = 0 y = 0}
 					text = "2003"
@@ -1504,7 +1484,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "support_year5"
-					position = { x = 1362 y = 50 }
+					position = { x = 1145 y = 50 }
 					font = "aldrich_32_outlinedark"
 					borderSize = { x = 0 y = 0}
 					text = "2006"
@@ -1516,7 +1496,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "support_year7"
-					position = { x = 1782 y = 50 }
+					position = { x = 1425 y = 50 }
 					font = "aldrich_32_outlinedark"
 					borderSize = { x = 0 y = 0}
 					text = "2009"
@@ -1528,7 +1508,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "support_year8"
-					position = { x = 2201 y = 50 }
+					position = { x = 1705  y = 50 }
 					font = "aldrich_32_outlinedark"
 					borderSize = { x = 0 y = 0}
 					text = "2012"
@@ -1777,11 +1757,11 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "armour_subtitle_APC"
-				position = { x = 280 y = 30 }
+				position = { x = 330 y = 30 }
 				font = "aldrich_32_outlinedark"
 				borderSize = {x = 0 y = 4}
 				text = "ARMOUR_TITLE_APC"
-				maxWidth = 200
+				maxWidth = 240
 				maxHeight = 62
 				format = center
 				Orientation = "UPPER_LEFT"
@@ -1789,22 +1769,22 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "armour_subtitle_MBT"
-				position = { x = 1245 y = 30 }
+				position = { x = 1270 y = 30 }
 				font = "aldrich_32_outlinedark"
 				borderSize = {x = 0 y = 4}
 				text = "ARMOUR_TITLE_MBT"
-				maxWidth = 150
+				maxWidth = 240
 				maxHeight = 62
 				format = center
 				Orientation = "UPPER_LEFT"
 			}
 			instantTextBoxType = {
 				name = "armour_subtitle_IFV"
-				position = { x = 750 y = 30 }
+				position = { x = 800 y = 30 }
 				font = "aldrich_32_outlinedark"
 				borderSize = {x = 0 y = 4}
 				text = "ARMOUR_TITLE_IFV"
-				maxWidth = 200
+				maxWidth = 240
 				maxHeight = 62
 				format = center
 				Orientation = "UPPER_LEFT"
@@ -3895,10 +3875,10 @@ guiTypes = {
 			name = "Name"
 			position = { x = 3 y = 0 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_bold_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "Happy-Go-Lucky-Tank"
-			maxWidth = 190
+			maxWidth = 220
 			maxHeight = 20
 			fixedsize = yes
 			format = left
@@ -4061,7 +4041,7 @@ guiTypes = {
 			name = "Name"
 			position = { x = 6 y = -1 }
 			textureFile = ""
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_bold_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "Happy-Go-Lucky-Tank"
 			maxWidth = 156
@@ -4185,12 +4165,12 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "Name"
-			position = { x = 6 y = -1 }
+			position = { x = 3 y = -1 }
 			textureFile = ""
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_bold_16_outline"
 			borderSize = {x = 4 y = 4}
 			text = "Happy-Go-Lucky-Tank"
-			maxWidth = 156
+			maxWidth = 220
 			maxHeight = 20
 			fixedsize = yes
 			format = left

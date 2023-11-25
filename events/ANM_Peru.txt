@@ -145,11 +145,25 @@ country_event = {
 			}
 			USA = {
 				add_to_faction = PRU
+				add_to_faction = GLP
 			}
 			PRU = {
+				
 				add_ideas = {
-				OFN_Independent_Member
+					OFN_Independent_Member
 				}
+			}
+			GLP = {
+				transfer_state = 2020
+				add_ideas = {
+					OFN_Independent_Member
+				}
+			}
+			ECD = {
+				remove_state_core = 305
+				remove_state_core = 1676
+				remove_state_core = 649
+				remove_state_core = 2020
 			}
 			every_country = {
 				limit = { is_ai = no }
@@ -222,4 +236,35 @@ country_event = {
 			}
 		}
 	}
-}		
+}	
+
+country_event = { # event peace deal
+	id = PRU.general.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event  PRU.general.3"}
+	title =  PRU.general.3.t
+	desc =  PRU.general.3.desc
+	picture = GFX_anm_PRU
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = Socialist_Peru_Defeated
+		has_global_flag = Commie_Ecuador_Defeated
+	}
+
+	option = {
+		name = PRU.general.3.a
+		ai_factor = 1.0
+
+		immediate = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = WORLD.18180
+					hours = 0
+				}
+			}
+		}
+	}
+}
