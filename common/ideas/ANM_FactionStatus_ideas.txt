@@ -267,6 +267,13 @@ ideas = {
 			allowed_civil_war = { always = no }
 			picture = Sphere_CoEqual_Partner
 		}
+
+		Sphere_Observer = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Sphere_Observer"}
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = Sphere_Observer
+		}
 		
 		##OFN##
 		OFN_Leader_of_The_Free_World = {
@@ -279,7 +286,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea OFN_Independent_Member"}
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
-			picture = OFN_Leader
+			picture = OFN_LeaderSphere_
 		}
 		OFN_Dependent_Member = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea OFN_Dependent_Member"}
@@ -299,6 +306,14 @@ ideas = {
 			allowed_civil_war = { always = no }
 			picture = OFN_Leader
 		}
+		OFN_Observer = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea OFN_Observer"}
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = OFN_Observer
+		}
+
+
 		CDP_full_member = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CDP_full_member"}
 			allowed = { always = no }

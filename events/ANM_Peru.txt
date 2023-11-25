@@ -236,4 +236,35 @@ country_event = {
 			}
 		}
 	}
-}		
+}	
+
+country_event = { # event peace deal
+	id = PRU.general.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event  PRU.general.3"}
+	title =  PRU.general.3.t
+	desc =  PRU.general.3.desc
+	picture = GFX_anm_PRU
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = Socialist_Peru_Defeated
+		has_global_flag = Commie_Ecuador_Defeated
+	}
+
+	option = {
+		name = PRU.general.3.a
+		ai_factor = 1.0
+
+		immediate = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = WORLD.18180
+					hours = 0
+				}
+			}
+		}
+	}
+}
