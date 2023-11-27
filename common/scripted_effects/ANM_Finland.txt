@@ -1,4 +1,16 @@
+ANM_finnish_unrest = { 
+	111 = { set_demilitarized_zone =  yes }
+	1712 = { set_demilitarized_zone =  yes }
+	1713 = { set_demilitarized_zone =  yes }
+	1719 = { set_demilitarized_zone =  yes }
+	1723 = { set_demilitarized_zone =  yes }
+}
+
 ANM_finnishcivilwar = {
+	SWE = { 
+		transfer_state = 145
+		145 = { set_demilitarized_zone =  yes }
+	}
 	FDR = {
 		add_equipment_to_stockpile = {
 			type = infantry_equipment_0
@@ -47,7 +59,7 @@ ANM_finnishcivilwar = {
 		}
 		leave_faction = yes
 		add_ideas = { 
-			FIN_civil_war
+			Pakt_Observer
 		}
 		declare_war_on = {
 			target = FDR

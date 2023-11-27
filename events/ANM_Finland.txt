@@ -19,3 +19,19 @@ country_event = {
 			}
 		}
 }
+
+country_event = {
+	id = FIN.civilwar.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.civilwar.1" }
+	title = FIN.civilwar.2.t
+	desc = FIN.civilwar.2.desc
+	picture = GFX_anm_FIN_civil_war
+
+	is_triggered_only = yes
+	   fire_only_once = yes
+
+	option = {
+	  name = FIN.civilwar.2.a
+	  ANM_finnish_unrest = yes
+  	}
+}
