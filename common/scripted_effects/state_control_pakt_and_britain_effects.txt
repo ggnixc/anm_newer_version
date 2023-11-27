@@ -2352,14 +2352,6 @@ state_control_effect_1288 = {
 
 state_control_effect_1289 = {
 	if = {
-		limit = {
-			is_controlled_by = ROM
-			has_global_flag = TNO_endonym_mode
-		}
-		set_state_name = STATE_1289_rom
-		reset_province_name = 9670
-	}
-	else_if = {
 		limit = { is_controlled_by = HUN }
 		set_province_name = { id = 9670 name = VICTORY_POINTS_9670_hun }
 		set_state_name = STATE_1289_hun
