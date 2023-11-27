@@ -11,17 +11,21 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
-	FIN_carl_bildt = { ###TBD###
-		name = FIN_carl_bildt
+	FIN_tarja_halonen = { 
+		name = FIN_tarja_halonen
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/FIN/Portrait_FIN_Carl_Bildt.dds"
-				small = "GFX_idea_FIN_Carl_Bildt" 
+				large = "gfx/leaders/FIN/Portrait_FIN_Tarja_Halonen.dds"
+				small = "GFX_idea_FIN_Tarja_Halonen" 
 			} 	
 		} 
+		country_leader = {
+			ideology = progressivism_1_subtype
+			expire = "2999.1.1.1"
+		}
 		advisor = {
 			slot = head_of_government
-			idea_token = FIN_Carl_Bildt_hog
+			idea_token = FIN_Tarja_Halonen_hog
 			traits = {
 				head_of_government
 			}
@@ -31,17 +35,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	FIN_maria_leissner = {  ###TBD### 
-		name = FIN_maria_leissner
+	FIN_esko_aho = {  
+		name = FIN_esko_aho
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/FIN/Portrait_FIN_Maria_Leissner.dds"
-				small = "GFX_idea_FIN_Maria_Leissner" 
+				large = "gfx/leaders/FIN/Portrait_FIN_Esko_Aho.dds"
+				small = "GFX_idea_FIN_Esko_Aho" 
 			} 	
 		} 
 		advisor = {
 			slot = security_minister
-			idea_token = FIN_Maria_Leissner_sec
+			idea_token = FIN_Esko_Aho_sec
 			traits = {
 				security_minister
 			}
@@ -51,17 +55,21 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	} 
-	FIN_alf_svensson = {   ###TBD###
-		name = FIN_alf_svensson
+	FIN_martti_ahtisaari = {   
+		name = FIN_martti_ahtisaari
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/FIN/Portrait_FIN_Alf_Svensson.dds"
-				small = "GFX_idea_FIN_Alf_Svensson" 
+				large = "gfx/leaders/FIN/Portrait_FIN_Martti_Ahtisaari.dds"
+				small = "GFX_idea_FIN_Martti_Ahtisaari" 
 			} 	
 		} 
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "2999.1.1.1"
+		}
 		advisor = {
 			slot = foreign_minister
-			idea_token = FIN_Alf_Svensson_for
+			idea_token = FIN_Martti_Ahtisaari_for
 			traits = {
 				foreign_minister
 			}
@@ -71,17 +79,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	FIN_gorel_thurdin = { ###TBD###
-		name = FIN_gorel_thurdin
+	FIN_sauli_niinisto = { 
+		name = FIN_sauli_niinisto
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/FIN/Portrait_FIN_Gorel_Thurdin.dds"
-				small = "GFX_idea_FIN_Gorel_Thurdin" 
+				large = "gfx/leaders/FIN/Portrait_FIN_Sauli_Niinisto.dds"
+				small = "GFX_idea_FIN_Sauli_Niinisto" 
 			} 	
 		} 
 		advisor = {
 			slot = economy_minister
-			idea_token = FIN_Gorel_Thurdin_eco
+			idea_token = FIN_Sauli_Niinisto_eco
 			traits = {
 				economy_minister
 			}
@@ -116,20 +124,6 @@ characters = {
 		name = FIN_matti_vanhanen
 		country_leader = {
 			ideology = conservatism_subtype
-			expire = "2999.1.1.1"
-		}
-	}
-	FIN_martti_ahtisaari = {  
-		name = FIN_martti_ahtisaari
-		country_leader = {
-			ideology = progressivism_subtype
-			expire = "2999.1.1.1"
-		}
-	}
-	FIN_tarja_halonen = {  
-		name = FIN_tarja_halonen
-		country_leader = {
-			ideology = progressivism_1_subtype
 			expire = "2999.1.1.1"
 		}
 	}

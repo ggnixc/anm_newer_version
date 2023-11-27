@@ -1,0 +1,187 @@
+on_actions = {
+	#### PEACE/WAR VICTORY ON_CAPITULATION BLOCK ####
+	#### PUT YOUR SHIT HERE
+	# At the end of each global block, set the skip_default_capitulation GLOBAL flag
+	# Otherwise shit will just get annexed
+	# Really
+	# It will.
+
+	# FROM = winner
+	# ROOT = country being capitulated/loser
+	
+	# Anytime y'all are triggering the popup manually, please add 1 to the dirty variable, `global.peace_popup_dirty`
+
+	on_capitulation = {
+		effect = {
+			log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
+
+			set_global_flag = show_peace_popup_alert
+			FROM = {
+				save_global_event_target_as = winning_country
+			}
+			ROOT = {
+				save_global_event_target_as = losing_country
+			}
+
+			log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
+
+			if = {
+				limit = {
+					event_target:losing_country = {
+						any_allied_country = {
+							has_war_together_with = event_target:losing_country
+						}
+					}
+				}
+				set_global_flag = losing_country_multiple
+			}
+
+			if = {
+				limit = {
+					event_target:winning_country = {
+						any_allied_country = {
+							has_war_together_with = event_target:winning_country
+						}
+					}
+				}
+				set_global_flag = winning_country_multiple
+			}
+			add_to_variable = { global.peace_popup_dirty = 1 }
+
+			#Annexation block
+			#This if block will only fire if FROM (capitulator) and ROOT (country being capitulated)
+			#That is to say, if one side has completely lost (nobody left to fight on)
+
+			if = {
+				limit = {
+					OR = {
+						ROOT = { is_in_faction = no }
+						ROOT = {
+							all_allied_country = {
+								if = {
+									limit = {
+										has_war_with = FROM
+										is_major = yes
+									}
+									has_capitulated = yes
+								}
+							}
+						}
+					}
+				}
+				log = "war_won"
+				set_global_flag = war_won
+
+				if = { # Finland Civil War
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = FDR
+								original_tag = FIN
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = FDR
+								original_tag = FIN
+							}
+						}
+					}
+
+					if = { # Red Finland Victory
+						limit = {
+							FROM = { original_tag = FDR }
+						}
+						FROM = {
+							white_peace = ROOT
+						}
+						FDR = {
+							annex_country = {
+								target = FIN
+								transfer_troops = no
+							}
+						}
+						every_state = { # clean up cores
+							limit = {
+								is_core_of = ROOT
+							}
+							remove_core_of = ROOT
+							add_core_of = FROM
+						}
+					}
+					else = { # White Finland Victory
+						limit = {
+							FROM = { original_tag = FIN }
+						}
+						FROM = {
+							white_peace = ROOT
+						}
+						FIN = {
+							annex_country = {
+								target = FDR
+								transfer_troops = no
+							}
+						}
+						every_state = { # clean up cores
+							limit = {
+								is_core_of = ROOT
+							}
+							remove_core_of = ROOT
+							add_core_of = FROM
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				#DEFAULT CAPITULATION
+				if = {
+					limit = { NOT = { has_global_flag = skip_default_capitulation } }
+					#Annex every country they've been fighting against
+					log = "Default Capitulation"
+					FROM = {
+						every_enemy_country = {
+							limit = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+									is_subject_of = ROOT
+								}
+							}
+							FROM = {
+								white_peace = PREV
+								annex_country = {
+									target = PREV
+									transfer_troops = no
+								}
+							}
+						}
+					}
+				}
+
+				if = { # Fixing all wars vs puppets
+					limit = {
+						ROOT = {
+							is_puppet = yes
+							if = {
+								limit = { is_puppet = yes }
+								OVERLORD = { has_capitulated = no }
+							}
+						}
+					}
+					log = "endded puppet"
+					ROOT = { OVERLORD = { end_puppet = PREV } }
+				}
+
+				#Capitulation block
+				set_global_flag = war_continuing
+			}
+			clr_global_flag = skip_default_capitulation
+		}
+	}
+	#don't mind me just logging wars
+	on_declare_war = {
+		effect = {
+			log="[GetDateText]: [Root.GetName] declared war on [From.GetName]"
+		}
+	}
+}
