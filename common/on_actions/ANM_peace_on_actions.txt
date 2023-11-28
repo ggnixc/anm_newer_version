@@ -108,6 +108,14 @@ on_actions = {
 							remove_core_of = ROOT
 							add_core_of = FROM
 						}
+						FDR = {
+							set_capital = { state = 111 remember_old_capital = no }
+							country_event = { id = FIN.red.1 days = 5 }
+						}
+						every_country = {
+							limit = { is_ai = no }
+							news_event = { id = WORLD.18187 hours = 0 }
+						}
 					}
 					else = { # White Finland Victory
 						limit = {
