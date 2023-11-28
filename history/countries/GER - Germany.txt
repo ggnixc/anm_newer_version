@@ -438,7 +438,7 @@ create_faction = Europakt
 add_to_faction = GER
 add_to_faction = ROM
 add_to_faction = FRA
-add_to_faction = POL
+add_to_faction = GGN
 add_to_faction = SLO
 add_to_faction = UKR
 add_to_faction = OST
@@ -462,7 +462,7 @@ add_to_faction = BUL
 
 if = {
 	limit = { has_dlc = "Together for Victory" }
-	set_autonomy = { target = POL autonomy_state = autonomy_reichsprotektorat }
+	set_autonomy = { target = GGN autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = OST autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = BLR autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = MRZ autonomy_state = autonomy_reichsprotektorat }
@@ -474,7 +474,7 @@ if = {
 	set_autonomy = { target = WLN autonomy_state = autonomy_reichsprotektorat }
 
 	else = {
-		puppet = POL
+		puppet = GGN
 		puppet = UKR
 		puppet = OST
 		puppet = BLR
