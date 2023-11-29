@@ -1,26 +1,25 @@
 ﻿capital = 327
 
-
 set_oob = "PHI_1962"
 
 set_politics = {
-	ruling_party = paternalism
+	ruling_party = despotism
 	last_election = "1992.9.15"
 	election_frequency = 72
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 set_popularities = {
-	communist = 0
+	communist = 10
 	socialist = 0
 	progressivism = 0
-	liberalism = 0
+	liberalism = 7
 	liberal_conservatism = 0
-	conservatism = 0
-	paternalism = 60
-	despotism = 20
-	fascism = 10
-	ultranationalism = 10
+	conservatism = 15
+	paternalism = 10
+	despotism = 50
+	fascism = 8
+	ultranationalism = 0
 	esoteric_nazism = 0
 }
 
@@ -30,7 +29,7 @@ create_country_leader = {
 	desc = "POLITICS_SALVADOR_LAUREL_DESC"
 	picture = "Portrait_PHI_Salvador_Laurel.dds"
 	expire = "2000.1.1"
-	ideology = paternalism_oligarchy_subtype
+	ideology = despotism_civilian_dictatorship_subtype
 	traits = {
 		#
 	}
@@ -40,7 +39,7 @@ add_ideas = {
 	#FACTION STATUS
 	Sphere_Fully_Dependent
 	#SPIRITS
-	
+	PHI_religious_divide
 	#SOCIETAL DEVELOPMENT
 	
 	#Ministers

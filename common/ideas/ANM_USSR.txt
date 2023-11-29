@@ -84,5 +84,49 @@ ideas = {
 				planning_speed = 0.1
 			}
 		}
+		SOV_A_Scarred_People = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_A_Scarred_People
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.2
+				political_power_cost = 1.0
+				resistance_activity	= 0.25
+				local_factory_sabotage = 0.1
+				local_resources = -0.3
+			}
+		}
+		SOV_Torn_Apart_Industry = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_Torn_Apart_Industry
+			removal_cost = -1
+
+			modifier = {
+				line_change_production_efficiency_factor = -0.15
+				consumer_goods_factor = 0.2
+				civilian_factory_use = 10
+				industrial_capacity_factory = -0.5
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		SOV_Freedom_At_Last = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_Freedom_At_Last
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				local_building_slots = 2
+				war_support_factor = 0.05
+				industry_repair_factor = 0.2
+			}
+		}
 	}
 }	
