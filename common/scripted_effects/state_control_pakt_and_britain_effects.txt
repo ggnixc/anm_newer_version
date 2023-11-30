@@ -1307,6 +1307,7 @@ state_control_effect_195 = {
 				is_controlled_by = WRS
 				is_controlled_by = TYM
 				is_controlled_by = IRK
+				is_controlled_by = SOV
 			}
 		}
 		set_state_name = STATE_195_com
@@ -1629,6 +1630,7 @@ state_control_effect_239 = {
 					is_controlled_by = WRS
 					is_controlled_by = TYM
 					is_controlled_by = IRK
+					is_controlled_by = SOV
 				}
 			}
 			set_state_name = STATE_239_com
@@ -1731,6 +1733,7 @@ state_control_effect_243 = {
 					is_controlled_by = WRS
 					is_controlled_by = TYM
 					is_controlled_by = IRK
+					is_controlled_by = SOV
 				}
 			}
 			set_state_name = STATE_243_com
@@ -1870,6 +1873,7 @@ state_control_effect_247 = {
 					is_controlled_by = WRS
 					is_controlled_by = TYM
 					is_controlled_by = IRK
+					is_controlled_by = SOV
 				}
 			}
 			set_state_name = STATE_247_com
@@ -2079,6 +2083,7 @@ state_control_effect_1421 = {
 					is_controlled_by = WRS
 					is_controlled_by = TYM
 					is_controlled_by = IRK
+					is_controlled_by = SOV
 				}
 			}
 			set_province_name = { id = 11068 name = VICTORY_POINTS_11068_sov }
@@ -3299,7 +3304,80 @@ state_control_effect_1431 = {
 		reset_province_name = 560
 	}
 }
+state_control_effect_192 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = UKS
+				is_controlled_by = SOV
+			}
+		}
+		set_province_name = { id = 11670 name = "Odessa" }
+		set_state_name = "Odessa"
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 11670
+	}
+}
+
 ### Finland ###
+state_control_effect_213 = {
+	if = {
+		limit = {
+			is_controlled_by = SOV
+		}
+		set_state_name = STATE_213_rus
+		set_province_name = { id = 11117 name = VICTORY_POINTS_11117_rus }
+		set_province_name = { id = 9115 name = VICTORY_POINTS_9115_rus }
+		set_province_name = { id = 6181 name = VICTORY_POINTS_6181_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 11117
+		reset_province_name = 9115
+		reset_province_name = 6181
+	}
+}
+state_control_effect_1359 = {
+	if = {
+		limit = {
+			is_controlled_by = SOV
+		}
+		set_state_name = STATE_1359_rus
+		set_province_name = { id = 3134 name = VICTORY_POINTS_3134_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 3134
+	}
+}
+state_control_effect_215 = {
+	if = {
+		limit = {
+			is_controlled_by = SOV
+		}
+		set_state_name = STATE_215_rus
+		set_province_name = { id = 94 name = VICTORY_POINTS_94_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 94
+	}
+}
+state_control_effect_216 = {
+	if = {
+		limit = {
+			is_controlled_by = SOV
+		}
+		set_state_name = STATE_216_rus
+		set_province_name = { id = 94 name = VICTORY_POINTS_11159_rus }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 11159
+	}
+}
 state_control_effect_1712 = {
 	if = {
 		limit = {

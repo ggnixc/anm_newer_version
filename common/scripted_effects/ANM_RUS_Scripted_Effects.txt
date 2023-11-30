@@ -1,3 +1,19 @@
+is_russian_nation = {
+	has_country_flag = is_russian_nation
+}
+
+TNO_is_russian_nation_initialize = {
+	if = {
+		limit = {
+			OR = {
+				original_tag = SOV
+				original_tag = FER
+			}
+		}
+		set_country_flag = is_russian_nation
+	}
+}
+
 VP_change_outman = {
 	if = {
 		limit = {
@@ -6,7 +22,7 @@ VP_change_outman = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			657 = {
@@ -39,7 +55,7 @@ VP_change_outman = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			1646 = {
@@ -90,7 +106,7 @@ VP_change_outman = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			1647 = {
@@ -123,7 +139,7 @@ VP_change_outman = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			409 = {
@@ -174,7 +190,7 @@ VP_change_outman = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			408 = {
@@ -214,7 +230,7 @@ VP_change_outman = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			809 = {
@@ -268,7 +284,8 @@ VP_change_outman = {
 }
 
 
-	### Fuck Finland ###
+
+### Fuck Finland ###
 
 
 VP_change_fin = {
@@ -279,7 +296,7 @@ VP_change_fin = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			213 = {
@@ -312,7 +329,7 @@ VP_change_fin = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			1359 = {
@@ -337,7 +354,7 @@ VP_change_fin = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			215 = {
@@ -362,7 +379,7 @@ VP_change_fin = {
 		if = {
 			limit = {
 				ROOT = {
-					is_russian_nation = yes
+					original_tag = SOV
 				}
 			}
 			216 = {
@@ -383,14 +400,9 @@ VP_change_fin = {
 }
 
 RUS_consider_communist_regime = {
-	is_russian_nation = yes
 	OR = {
-		has_government = communist
-		AND = {
-			has_government = socialist
-			NOT = {
-				original_tag = SBA
-			}
-		}
+		original_tag = SOV
+		original_tag = FER
 	}
+	has_government = communist
 }
