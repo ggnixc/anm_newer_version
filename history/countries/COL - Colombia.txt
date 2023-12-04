@@ -3,35 +3,28 @@
 set_oob = "COL_1962"
 
 set_politics = {	
-	ruling_party = conservatism
+	ruling_party = fascism
 	last_election = "1995.1.20"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 
 }
+
+recruit_character = COL_Rodrigo_Arango_Velasquez
 
 set_popularities = {
     communist = 0
-    ultranationalism = 0
-    socialist = 10
-    progressivism = 16
+    ultranationalism = 11
+    socialist = 0
+    progressivism = 0
     liberalism = 0
-    liberal_conservatism = 20
-    conservatism = 45
-    paternalism = 9
-    despotism = 0
-    fascism = 0
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Harold Bedoya Pizarro"
-	picture = "Portrait_COL_Harold_Bedoya_Pizarro.dds"
-	expire = "2095.1.1"
-	ideology = despotism_military_junta_subtype
-	traits = {
-		#
-	}
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 0
+    despotism = 20
+	despotism_1 = 18
+    fascism = 27
+	national_socialism = 24
 }
 
 create_country_leader = {
@@ -47,9 +40,4 @@ add_ideas = {
 	COL_Widespread_Poverty
 	
 	### Ministers
-
-	COL_Francisco_Calderon_hog
-	COL_Roberto_Junguito_eco
-	COL_Jorge_Mora_sec
-	COL_Carolina_Isakson_for
 }
