@@ -1,0 +1,95 @@
+characters = {
+	ENG_marlin_hanbury_tracy = { 
+		name = ENG_marlin_hanbury_tracy
+		portraits = { 
+			civilian = { large = "gfx/leaders/ENG/Portrait_ENG_Marlin_Hanbury_Tracy.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_MARLIN_HANBURY_TRACY_DESC"
+			ideology = fascism_social_credit_subtype
+			traits = {  }
+			expire = "2999.1.1.1"
+		}
+	}
+	ENG_gregory_lauder_frost = {  
+		name = ENG_gregory_lauder_frost
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ENG/Portrait_ENG_Gregory_Lauder_Frost.dds"
+				small = "GFX_idea_ENG_Gregory_Lauder_Frost" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = ENG_Gregory_Lauder_Frost_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ENG_john_graeme_wood = { 
+		name = ENG_john_graeme_wood
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ENG/Portrait_ENG_John_Graeme_Wood.dds"
+				small = "GFX_idea_ENG_John_Graeme_Wood" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = ENG_John_Graeme_Wood_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ENG_neil_hamilton = {
+		name = ENG_neil_hamilton
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ENG/Portrait_ENG_Neil_Hamilton.dds"
+				small = "GFX_idea_ENG_Neil_Hamilton" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = ENG_Neil_Hamilton_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ENG_john_bingham = { 
+		name = ENG_john_bingham
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ENG/Portrait_ENG_John_Bingham.dds"
+				small = "GFX_idea_ENG_John_Bingham" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = ENG_John_Bingham_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+ 
+} 

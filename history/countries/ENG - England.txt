@@ -1,4 +1,11 @@
 ﻿capital = 1300
+
+recruit_character = ENG_marlin_hanbury_tracy
+recruit_character = ENG_gregory_lauder_frost
+recruit_character = ENG_john_graeme_wood
+recruit_character = ENG_neil_hamilton
+recruit_character = ENG_john_bingham
+
 add_political_power = 150
 
 set_oob = "ENG_1962"
@@ -32,10 +39,10 @@ add_ideas = {
 	ENG_Blood_In_The_Water
 
 	### MINISTERS ###
-	ENG_minister_Christopher_Chope_hog
-	ENG_minister_Neil_Hamilton_for
-	ENG_minister_Patrick_Harrington_eco
-	ENG_minister_John_Carlisle_sec
+	ENG_Gregory_Lauder_Frost_hog
+	ENG_John_Graeme_Wood_sec
+	ENG_Neil_Hamilton_for
+	ENG_John_Bingham_eco
 
 	### POLITICAL ###
 	tno_political_parties_controlled_opposition
@@ -114,270 +121,6 @@ set_popularities = {
 	liberal_conservatism = 0
 }
 
-create_country_leader = {
-	name = "Edward IX"
-	desc = "FRIEDRICH_JOSIAS_DESC"
-	picture = "Portrait_ENG_Friedrich_Josias.dds"
-	expire = "2090.1.1"
-	ideology = paternalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Merlin Hanbury Tracy"
-	desc = "POLITICS_MERLIN_TRACY_DESC"
-	picture = "Portrait_ENG_Merlin_Hanbury_Tracy.dds"
-	expire = "2999.1.1"
-	ideology = fascism_social_credit_subtype
-	traits = {
-		
-	}
-}
-
-create_field_marshal = {
-	name = "Bernard Montgomery"
-	desc = "POLITICS_BERNARD_MONTGOMERY_DESC"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Bernard_Montgomery.dds"
-	traits = {
-		organizer
-		logistics_wizard
-		media_personality
-		trait_cautious
-		inflexible_strategist
-	}
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 4
-	id = 611
-}
-
-create_field_marshal = { 
-	name = "Gerald Templer" 
-	desc = "POLITICS_GERALD_TEMPLER_DESC"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Gerald_Templer_General.dds"
-	traits = {
-		trait_reckless
-		offensive_doctrine
-		aggressive_assaulter
-	}
-	skill = 4
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-	id = 612
-}
-
-create_corps_commander = {
-	name = "Charles Frederic Keightley"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Charles_Frederic_Keightley.dds"
-	traits = {
-		panzer_leader
-		cavalry_leader
-	}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 1
-	id = 613
-}
-
-create_corps_commander = {
-	name = "Evelyn Hugh Barker"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Evelyn_Hugh_Barker.dds"
-	traits = {
-		organizer
-		infantry_leader
-		urban_assault_specialist
-	}
-	skill = 4
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-	id = 614
-}
-
-create_corps_commander = {
-	name = "Geoffrey Baker"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Geoffrey_Baker.dds"
-	traits = {
-		skilled_staffer
-		fortress_buster
-		infantry_leader
-	}
-	skill = 4
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 615
-}
-
-create_corps_commander = {
-	name = "Hugh Charles Stockwell"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Hugh_Charles_Stockwell.dds"
-	traits = {
-		skilled_staffer
-		infantry_leader
-		trait_mountaineer
-	}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-	id = 616
-}
-
-create_corps_commander = {
-	name = "James Cassels"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_James_Cassels.dds"
-	traits = {
-		infantry_leader
-		ranger
-		commando
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 6
-	planning_skill = 3
-	logistics_skill = 4
-	id = 617
-}
-
-create_corps_commander = {
-	name = "Michael Carver"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Michael_Carver.dds"
-	traits = {
-		organizer
-		skilled_staffer
-		trait_engineer
-		cavalry_leader
-		panzer_leader
-	}
-	skill = 5
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 6
-	logistics_skill = 5
-	id = 618
-}
-
-create_corps_commander = {
-	name = "Orde Wingate"
-	desc = "POLITICS_ORDE_WINDGATE_COLLAB_DESC"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Orde_Wingate.dds"
-	traits = {
-		trickster
-		desert_fox
-		jungle_rat
-	}
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-	id = 619
-}
-
-create_corps_commander = {
-	name = "Ronald Gibbs"
-	portrait_path = "gfx/leaders/ENG/Generals/Portrait_ENG_Ronald_Gibbs.dds"
-	traits = {
-		infantry_leader
-		urban_assault_specialist
-		commando
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 5
-	logistics_skill = 3
-	id = 620
-}
-
-
-
-#create_navy_leader = { Dies in 62 :oof:
-#	name = "Bernard Rawlings"
-#	portrait_path = "gfx/leaders/ENG/Admirals/Portrait_ENG_Bernard_Rawlings.dds"
-#	traits = { spotter blockade_runner }
-#	skill = 3
-#	attack_skill = 3
-#	defense_skill = 2
-#	maneuvering_skill = 1
-#	coordination_skill = 3
-#	id = 801
-#}
-
-#create_navy_leader = { #HE DIED IN THE 20s YOU FUCK
-#	name = "Michael O'Moore Creagh"
-#	portrait_path = "gfx/leaders/ENG/Admirals/Portrait_ENG_Michael_O_Moore_Creagh.dds"
-#	traits = { spotter blockade_runner }
-#	skill = 3
-#	attack_skill = 2
-#	defense_skill = 3
-#	maneuvering_skill = 2
-#	coordination_skill = 2
-#	id = 802
-#}
-
-create_navy_leader = {
-	name = "Philip Vian"
-	portrait_path = "gfx/leaders/ENG/Admirals/Portrait_ENG_Philip_Vian.dds"
-	traits = {	
-		fleet_protector
-		destroyer_leader
-		old_guard
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 1
-	id = 803
-}
-
-#create_navy_leader = { #Retired in 1941
-#	name = "Richard Bell Davies"
-#	portrait_path = "gfx/leaders/ENG/Admirals/Portrait_ENG_Richard_Bell_Davies.dds"
-#	traits = { spotter blockade_runner }
-#	skill = 3
-#	attack_skill = 2
-#	defense_skill = 2
-#	maneuvering_skill = 3
-#	coordination_skill = 2
-#	id = 804
-#}
-
-create_navy_leader = {
-	name = "Victor Crutchley"
-	portrait_path = "gfx/leaders/ENG/Admirals/Portrait_ENG_Victor_Crutchley.dds"
-	traits = { bold ironside inshore_fighter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-	id = 805
-}
-
-#create_navy_leader = { #Dies in 63, Retired in 49
-#	name = "William Tennant"
-#	portrait_path = "gfx/leaders/ENG/Admirals/Portrait_ENG_William_Tennant.dds"
-#	traits = { spotter blockade_runner }
-#	skill = 2
-#	attack_skill = 2
-#	defense_skill = 1
-#	maneuvering_skill = 3
-#	coordination_skill = 3
-#	id = 806
-#}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -567,4 +310,3 @@ if = {
 
 }
 
-country_event = { id = ENG_flavor.1 days = 434 }
