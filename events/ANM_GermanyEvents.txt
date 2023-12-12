@@ -1175,17 +1175,22 @@ country_event = { #Event for 'Shipment of Civilian Goods?'
 		name = GER_focus_event.57.a
 	}
 }
-country_event = { #
+country_event = { #Event for ‘The French State’
 	id = GER_focus_event.58
 	title = GER_focus_event.58.t
 	desc = GER_focus_event.58.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_french_visit
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
 		name = GER_focus_event.58.a
+		custom_effect_tooltip = GER_the_shadows_shadow_a_tt
+	}
+	option = { 
+		name = GER_focus_event.58.b 
+		custom_effect_tooltip = GER_the_shadows_shadow_b_tt
 	}
 }
 country_event = { #
