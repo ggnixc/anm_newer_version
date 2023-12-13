@@ -1,8 +1,11 @@
-﻿capital = 544
+﻿capital = 880
+
+set_cosmetic_tag = MZB_mandate
 
 set_oob = ""
 
 add_ideas = {
+	OFN_Dependent_Member
 	#POLITICS
 	tno_political_parties_one_party_state
 	tno_religious_rights_pluralism
@@ -51,6 +54,24 @@ add_ideas = {
 	tno_academic_base_mass_illiteracy
 	construction_level_6
     ### MINISTERS ###
+}
+
+SAF = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_autonomy = {
+			target = MZB
+			autonomy_state = autonomy_integrated_puppet
+		}
+		else = {
+			puppet = MZB
+		}
+	}
 }
 
 set_research_slots = 3

@@ -1,26 +1,48 @@
-﻿capital = 778
+﻿recruit_character = NAM_Dirk_Mudge
+
+set_cosmetic_tag = NAM_mandate
+
+capital = 778
 
 set_oob = "NAM_1962"
 
+SAF = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = NAM autonomy_state = autonomy_puppet }
+        else = {
+            puppet = NAM
+        }
+    }
+}
+
+add_ideas = {
+	OFN_Dependent_Member
+}
+
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = despotism
 	last_election = "1993.10.5"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 60
-    progressivism = 10
-    liberalism = 10
+    socialist = 45
+    progressivism = 0
+    liberalism = 0
     liberal_conservatism = 0
-    conservatism = 10
-    paternalism = 10
-    despotism = 0
+    conservatism = 0
+    paternalism = 0
+    despotism = 55
     fascism = 0
-    esoteric_nazism = 0
 }
 
 create_country_leader = {
