@@ -3,11 +3,8 @@
 set_oob = "SMO_1962"
 
 add_ideas = {
+	Pakt_Protektorat
 	### Ministers ###
-	SMO_Shalom_Yoran_hog
-	SMO_Anatoly_Rubin_for
-	SMO_Boris_Vasilyev_eco
-	SMO_Tomasz_Blatt_sec
 
 	### Political ###
 	tno_political_parties_one_party_state
@@ -67,7 +64,7 @@ set_research_slots = 2
 set_stability = 0.74
 
 set_politics = {
-	ruling_party = socialist
+	ruling_party = national_socialism
 	last_election = "1941.4.17"
 	election_frequency = 48
 	elections_allowed = no
@@ -75,39 +72,14 @@ set_politics = {
 
 ### Country Leader ###
 create_country_leader = {
-	name = "Simcha Zorin"
+	name = " "
 	desc = "POLITICS_SIMCHA_ZORIN_DESC"
-	picture = "Portrait_Smolensk_Simcha_Zorin.dds"
+	picture = " "
 	expire = "1983.4.24"
-	ideology = socialist_subtype
+	ideology = national_socialism_naturalised_nazism_subtype
 	traits = {
 
 	}
-}
-
-### Generals ###
-create_corps_commander = {
-	name = "Simcha Zorin"
-	picture = "Portrait_Smolensk_Simcha_Zorin.dds"
-	traits = { trait_reckless inflexible_strategist commando }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 15021
-}
-
-create_corps_commander = {
-	name = "Anatoly Rubin"
-	picture = "Portrait_Smolensk_Anatoly_Rubin.dds"
-	traits = { war_hero politically_connected infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 15022
 }
 
 set_popularities = {
