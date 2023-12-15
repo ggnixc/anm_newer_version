@@ -1,14 +1,21 @@
 ANM_SOV_to_VLG = { 
 	VLG = { 
+		transfer_state = 217
+		transfer_state = 239
 		transfer_state = 243
 		transfer_state = 244
-		
+		transfer_state = 260
+
+		add_state_core = 217
+		add_state_core = 239
 		add_state_core = 243
 		add_state_core = 244
-	}
-	set_capital = {
-		state = 243
-		remember_old_capital = no
+		add_state_core = 260
+
+		set_capital = {
+			state = 243
+			remember_old_capital = no
+		}
 	}
 }
 
@@ -30,30 +37,31 @@ ANM_SOV_to_FIN = {
 
 ANM_SOV_to_MOS_small = {  
 	MOS = { 
+		transfer_state = 195
 		transfer_state = 209
 		transfer_state = 210
-		transfer_state = 217
 		transfer_state = 222
 		transfer_state = 224
 		transfer_state = 242
+		transfer_state = 247
 		transfer_state = 257
+		transfer_state = 401
 		transfer_state = 1421
+		transfer_state = 1434
 		transfer_state = 1435
-		
+
+		add_state_core = 195
 		add_state_core = 209
 		add_state_core = 210
-		add_state_core = 217
 		add_state_core = 222
 		add_state_core = 224
 		add_state_core = 242
+		add_state_core = 247
 		add_state_core = 257
+		add_state_core = 401
 		add_state_core = 1421
+		add_state_core = 1434
 		add_state_core = 1435
-	}
-	GER = { 
-		transfer_state = 195
-
-		add_state_core = 195
 	}
 }
 
@@ -61,21 +69,29 @@ ANM_SOV_to_MOS_big = {
 	MOS = { 
 		transfer_state = 209
 		transfer_state = 210
-		transfer_state = 217
+		transfer_state = 214
 		transfer_state = 219
 		transfer_state = 222
 		transfer_state = 224
 		transfer_state = 238
-		transfer_state = 239
 		transfer_state = 242
 		transfer_state = 245
 		transfer_state = 246
 		transfer_state = 247
+		transfer_state = 250
+		transfer_state = 252
+		transfer_state = 256
 		transfer_state = 257
-		transfer_state = 260
 		transfer_state = 263
 		transfer_state = 264
+		transfer_state = 351
 		transfer_state = 401
+		transfer_state = 855
+		transfer_state = 856
+		transfer_state = 857
+		transfer_state = 858
+		transfer_state = 859
+		transfer_state = 861
 		transfer_state = 1421
 		transfer_state = 1434
 		transfer_state = 1435
@@ -83,24 +99,33 @@ ANM_SOV_to_MOS_big = {
 		transfer_state = 1441
 		transfer_state = 1442
 		transfer_state = 1443
-		
+		transfer_state = 1887
+
 		add_state_core = 209
 		add_state_core = 210
-		add_state_core = 217
+		add_state_core = 214
 		add_state_core = 219
 		add_state_core = 222
 		add_state_core = 224
 		add_state_core = 238
-		add_state_core = 239
 		add_state_core = 242
 		add_state_core = 245
 		add_state_core = 246
 		add_state_core = 247
+		add_state_core = 250
+		add_state_core = 252
+		add_state_core = 256
 		add_state_core = 257
-		add_state_core = 260
 		add_state_core = 263
 		add_state_core = 264
+		add_state_core = 351
 		add_state_core = 401
+		add_state_core = 855
+		add_state_core = 856
+		add_state_core = 857
+		add_state_core = 858
+		add_state_core = 859
+		add_state_core = 861
 		add_state_core = 1421
 		add_state_core = 1434
 		add_state_core = 1435
@@ -108,6 +133,7 @@ ANM_SOV_to_MOS_big = {
 		add_state_core = 1441
 		add_state_core = 1442
 		add_state_core = 1443
+		add_state_core = 1887
 
 		set_capital = {
 			state = 1442
@@ -128,37 +154,39 @@ ANM_MOS_Dissolution = {
 		}
 		MOS = { remove_state_core = PREV }
 	}
-	SMO = { 
-		transfer_state = 222
+	PSK = { 
+		transfer_state = 195
+		transfer_state = 209
 		transfer_state = 241
 		transfer_state = 242
-		transfer_state = 1435
-		
-		add_state_core = 222
-		add_state_core = 241
-		add_state_core = 242
-		add_state_core = 1435
-	}
-	PSK = { 
-		transfer_state = 209
+		transfer_state = 247
 		transfer_state = 257
 		transfer_state = 1421
+		transfer_state = 1434
 		
+		add_state_core = 195
 		add_state_core = 209
+		add_state_core = 241
+		add_state_core = 242
+		add_state_core = 247
 		add_state_core = 257
 		add_state_core = 1421
+		add_state_core = 1434
 	}
 	VNH = { 
 		transfer_state = 210
-		transfer_state = 217
+		transfer_state = 222
 		transfer_state = 224
+		transfer_state = 401
+		transfer_state = 1435
 		
 		add_state_core = 210
-		add_state_core = 217
+		add_state_core = 222
 		add_state_core = 224
+		add_state_core = 401
+		add_state_core = 1435
 	} 
 	GER = { 
-		puppet = SMO
 		puppet = PSK
 		puppet = VNH
 	}
