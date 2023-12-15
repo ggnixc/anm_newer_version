@@ -31,5 +31,10 @@ replace_path="common/units/codenames_operatives"
 replace_path="common/units/equipment"
 replace_path="portraits"
 name="A New Millennium DEV VERSION"
+<<<<<<< Updated upstream
 supported_version="1.13.*"
+=======
+supported_version="1.12.*"
+path="mod/anm_newer_version"
+>>>>>>> Stashed changes
 picture="thumbnail.png"
