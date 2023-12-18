@@ -3734,6 +3734,26 @@ state_control_effect_1399 = {
 	}
 }
 #Lithuania
+state_control_effect_96 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 3320
+	}
+	else = {
+		set_state_name = "Vilnius"
+		set_province_name = { id = 3320 name = "Vilnius" }
+	}
+}
 state_control_effect_1400 = {
 	if = {
 		limit = {
