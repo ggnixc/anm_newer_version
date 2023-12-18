@@ -37,7 +37,6 @@ ANM_SOV_to_FIN = {
 
 ANM_SOV_to_MOS_small = {  
 	MOS = { 
-		transfer_state = 195
 		transfer_state = 209
 		transfer_state = 210
 		transfer_state = 222
@@ -50,7 +49,6 @@ ANM_SOV_to_MOS_small = {
 		transfer_state = 1434
 		transfer_state = 1435
 
-		add_state_core = 195
 		add_state_core = 209
 		add_state_core = 210
 		add_state_core = 222
@@ -62,6 +60,11 @@ ANM_SOV_to_MOS_small = {
 		add_state_core = 1421
 		add_state_core = 1434
 		add_state_core = 1435
+	}
+	GER = { 
+		transfer_state = 195
+
+		add_state_core = 195
 	}
 }
 
@@ -134,62 +137,90 @@ ANM_SOV_to_MOS_big = {
 		add_state_core = 1442
 		add_state_core = 1443
 		add_state_core = 1887
+	}
+	GER = { 
+		transfer_state = 195
 
+		add_state_core = 195
+	}
+}
+
+ANM_MOS_Grenzland = { 
+	210 = { set_demilitarized_zone = yes }
+	222 = { set_demilitarized_zone = yes }
+	242 = { set_demilitarized_zone = yes }
+	247 = { set_demilitarized_zone = yes }
+	401 = { set_demilitarized_zone = yes }
+	1434 = { set_demilitarized_zone = yes }
+
+	MOS = { 
+		set_capital = {
+			state = 242
+			remember_old_capital = no
+		}
+		set_cosmetic_tag = MOS_Grenzland
+		set_party_name = { 
+			ideology = national_socialism
+			long_name = MOS_Grenzland_national_socialism_party_long
+			name = MOS_Grenzland_national_socialism_party
+		}
+		remove_ideas = Pakt_Nebenland 
+		add_ideas = Pakt_Military_Authority
+		retire_country_leader = yes
+	}
+}
+
+ANM_MOS_Russia_Nazi = { 
+	MOS = { 
 		set_capital = {
 			state = 1442
 			remember_old_capital = no
 		}
-	}
-	GER = { 
-		transfer_state = 195
-
-		add_state_core = 195
-	}
-}
-
-ANM_MOS_Dissolution = { 
-	every_state = {
-		limit = {
-			is_owned_by = MOS
+		set_cosmetic_tag = MOS_Russia
+		set_party_name = { 
+			ideology = despotism
+			long_name = MOS_Russia_despotism_party_long
+			name = MOS_Russia_despotism_party
 		}
-		MOS = { remove_state_core = PREV }
-	}
-	PSK = { 
-		transfer_state = 195
-		transfer_state = 209
-		transfer_state = 241
-		transfer_state = 242
-		transfer_state = 247
-		transfer_state = 257
-		transfer_state = 1421
-		transfer_state = 1434
-		
-		add_state_core = 195
-		add_state_core = 209
-		add_state_core = 241
-		add_state_core = 242
-		add_state_core = 247
-		add_state_core = 257
-		add_state_core = 1421
-		add_state_core = 1434
-	}
-	VNH = { 
-		transfer_state = 210
-		transfer_state = 222
-		transfer_state = 224
-		transfer_state = 401
-		transfer_state = 1435
-		
-		add_state_core = 210
-		add_state_core = 222
-		add_state_core = 224
-		add_state_core = 401
-		add_state_core = 1435
-	} 
-	GER = { 
-		puppet = PSK
-		puppet = VNH
+		set_popularities = {
+			fascism = 23
+			national_socialism = 68
+			paternalism = 3
+			despotism = 6
+		}
+		remove_ideas = Pakt_Nebenland 
+		add_ideas = Pakt_Schutzstaat
 	}
 }
+ANM_MOS_Russia_Despotism = { 
+	MOS = { 
+		set_capital = {
+			state = 1442
+			remember_old_capital = no
+		}
+		set_cosmetic_tag = MOS_Russia
+		set_party_name = { 
+			ideology = despotism
+			long_name = MOS_Russia_despotism_party_long
+			name = MOS_Russia_despotism_party
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+			last_election = "1935.12.17"
+			election_frequency = 48
+		}
+		set_popularities = {
+			fascism = 28
+			national_socialism = 9
+			paternalism = 5
+			despotism = 58
+		}
+		remove_ideas = Pakt_Nebenland 
+		add_ideas = Pakt_Schutzstaat
+		retire_country_leader = yes
+	}
+}
+
 
 

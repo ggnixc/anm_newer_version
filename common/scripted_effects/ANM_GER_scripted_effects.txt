@@ -1,18 +1,30 @@
 ANM_Gouvernement_Russland = { 
 	MOS = { 
 		set_cosmetic_tag = MOS_Gouvernement
+
 		set_politics = {	
 			ruling_party = national_socialism
 			last_election = "1933.3.5"
 			election_frequency = 48
 			elections_allowed = no
 		}
+
 		set_popularities = {
 			fascism = 28
 			national_socialism = 58
 			paternalism = 5
 			despotism = 9
 		}
+
+		deactivate_advisor = MOS_Militaramt_hog
+		activate_advisor = MOS_Dmitriy_Vasilyev_hog
+		deactivate_advisor = MOS_Militaramt_sec
+		activate_advisor = MOS_Alexander_Barkashov_sec
+		deactivate_advisor = MOS_Militaramt_for
+		activate_advisor = MOS_Rostislav_Polchaninov_for
+		deactivate_advisor = MOS_Militaramt_eco
+		activate_advisor = MOS_Herman_Gref_eco
+
 		remove_ideas = Pakt_Military_Authority
 		add_ideas = Pakt_Nebenland
 	}	

@@ -1374,7 +1374,7 @@ country_event = { #3WRW endings
 		ANM_homel_to_SOV = yes
 	}
 }
-country_event = { #MOS dissolution
+country_event = { #MOS -> Grenzland
 	id = GER_misc_main_event.10
 	title = GER_misc_main_event.10.t
 	desc = GER_misc_main_event.10.desc
@@ -1384,14 +1384,29 @@ country_event = { #MOS dissolution
 	fire_only_once = yes
 	hidden = yes
 
-	option = {  #MOS dissolution
+	option = {  
 		name = GER_misc_main_event.10.a
-		ANM_MOS_Dissolution = yes 
-	}
-	option = { #Nope 
-		name = GER_misc_main_event.10.b
+		ANM_MOS_Grenzland = yes
 	}
 }
+country_event = { #MOS -> Russia
+	id = GER_misc_main_event.11
+	title = GER_misc_main_event.11.t
+	desc = GER_misc_main_event.11.desc
+	picture = GFX_anm_GER_speer_martin_talks
 
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {  #National Socialism
+		name = GER_misc_main_event.11.a
+		ANM_MOS_Russia_Nazi = yes
+	}
+	option = { #Despotism
+		name = GER_misc_main_event.11.b
+		ANM_MOS_Russia_Despotism = yes
+	} 	
+}
 
 
