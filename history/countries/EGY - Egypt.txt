@@ -2,7 +2,23 @@
 
 set_oob = "EGY_1962"
 
+ITA = {
+	if = {
+		limit = { 
+			OR = { 
+				has_dlc = "Together for Victory" 
+				has_dlc = "Man the Guns" 
+			}
+		}
+		set_autonomy = { target = EGY autonomy_state = autonomy_italy_reliant }
+		else = {
+			puppet = EGY
+		}
+	}
+}
+
 add_ideas = {
+	TRI_Member_Client
 
 	##laws##
 	#political#
@@ -51,25 +67,24 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = socialist
-	last_election = "1958.1.8"
+	ruling_party = liberal_conservatism
+	last_election = "1992.3.8"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 set_popularities = {
-	communist = 10
+	communist = 0
 	ultranationalism = 0
-	socialist = 42
-	progressivism = 5
-	liberalism = 8
-	liberal_conservatism = 10
-	conservatism = 0
-	paternalism = 0
-	despotism = 5
-	fascism = 5
-	national_socialism = 15
-	esoteric_nazism = 0
+	socialist = 0
+	progressivism = 15
+	liberalism = 12
+	liberal_conservatism = 50
+	conservatism = 15
+	paternalism = 5
+	despotism = 3
+	fascism = 0
+	national_socialism = 0
 }
 
 create_country_leader = {
