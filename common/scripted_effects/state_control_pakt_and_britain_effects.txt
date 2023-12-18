@@ -3506,7 +3506,314 @@ state_control_effect_146 = {
 		reset_province_name = 6153
 	}
 }
+#Estonia
+state_control_effect_191 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 11127
+	}
+	else = {
+		set_state_name = STATE_191_est
+		set_province_name = { id = 11127 name = VICTORY_POINTS_11127_est }
+	}
+}
+state_control_effect_13 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 3152
+	}
+	else = {
+		set_state_name = STATE_13_est
+		set_province_name = { id = 3152 name = VICTORY_POINTS_3512_est }
+	}
+}
 
+state_control_effect_1395 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 14602
+	}
+	else = {
+		set_state_name = STATE_1395_est
+		set_province_name = { id = 14602 name = VICTORY_POINTS_14602_est }
+	}
+}
+
+state_control_effect_1440 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 185
+	}
+	else = {
+		set_state_name = STATE_1440_est
+		set_province_name = { id = 185 name = VICTORY_POINTS_185_est }
+	}
+}
+
+state_control_effect_1396 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 9221
+		reset_province_name = 9485
+	}
+	else = {
+		set_state_name = STATE_1396_est
+		set_province_name = { id = 9221 name = VICTORY_POINTS_9221_est }
+		set_province_name = { id = 9485 name = VICTORY_POINTS_9485_est }
+	}
+}
+#Latvia
+state_control_effect_12 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 10493
+	}
+	else = {
+		set_state_name = STATE_12_lat
+		set_province_name = { id = 10493 name = VICTORY_POINTS_10493_lat }
+	}
+}
+state_control_effect_1402 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 3333
+	}
+	else = {
+		set_state_name = STATE_1402_lat
+		set_province_name = { id = 3333 name = VICTORY_POINTS_3333_lat }
+	}
+}
+state_control_effect_943 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 310
+	}
+	else = {
+		set_state_name = STATE_943_lat
+		set_province_name = { id = 310 name = VICTORY_POINTS_310_lat }
+	}
+}
+state_control_effect_1398 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 14591
+	}
+	else = {
+		set_state_name = "Semigallia"
+		set_province_name = { id = 14591 name = "Jēkabpils" }
+	}
+}
+state_control_effect_190 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 9262
+	}
+	else = {
+		set_state_name = "Courland"
+		set_province_name = { id = 9262 name = "Liepāja" }
+	}
+}
+state_control_effect_1399 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 3296
+	}
+	else = {
+		set_state_name = "Ventspils"
+		set_province_name = { id = 3296 name = "Ventspils" }
+	}
+}
+#Lithuania
+state_control_effect_1400 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 14585
+	}
+	else = {
+		set_state_name = "Aukštaitija"
+		set_province_name = { id = 14585 name = "Panevėžys" }
+	}
+}
+state_control_effect_11 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 6296
+	}
+	else = {
+		set_state_name = "Kaunas" #Sudovia
+		set_province_name = { id = 6296 name = "Kaunas" }
+	}
+}
+state_control_effect_1401 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 11312
+	}
+	else = {
+		set_state_name = "Marijampolė"
+		set_province_name = { id = 11312 name = "Marijampolė" }
+	}
+}
+state_control_effect_189 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = OST
+				is_controlled_by = GER
+				is_controlled_by = BLR
+				is_controlled_by = JST
+				is_controlled_by = DST
+				is_controlled_by = MST
+			}
+		}
+		reset_state_name = yes
+		reset_province_name = 9483
+	}
+	else = {
+		set_state_name = "Samogita"
+		set_province_name = { id = 9483 name = "Šiauliai" }
+	}
+}
 #Belarus
 state_control_effect_207 = {
 	if = {
