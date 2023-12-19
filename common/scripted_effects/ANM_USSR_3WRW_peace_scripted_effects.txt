@@ -271,7 +271,12 @@ ANM_war_transnistria_to_SOV = {
 		}
 		
 		remove_faction_status = yes
-		add_ideas = COM_Satellite
+		
+		add_ideas = {
+			COM_Satellite
+			TNS_False_Identity
+			SOV_Torn_Apart_Industry
+		}
 		
 		set_cosmetic_tag = TNS_SSR
 
