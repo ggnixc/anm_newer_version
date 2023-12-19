@@ -1,5 +1,7 @@
 ﻿capital = 446
 
+recruit_character = EGY_Fouad_Serageddin
+
 set_oob = "EGY_1962"
 
 ITA = {
@@ -22,7 +24,7 @@ add_ideas = {
 
 	##laws##
 	#political#
-	tno_political_parties_one_party_state
+	tno_political_parties_controlled_opposition
 	tno_religious_rights_pluralism
 	tno_trade_unions_illegal
 	tno_immigration_quota_immigration
@@ -67,44 +69,19 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = liberal_conservatism
-	last_election = "1992.3.8"
-	election_frequency = 48
+	ruling_party = conservatism
+	last_election = "1995.10.8"
+	election_frequency = 60
 	elections_allowed = yes
 }
 
 set_popularities = {
-	communist = 0
-	ultranationalism = 0
-	socialist = 0
 	progressivism = 15
 	liberalism = 12
-	liberal_conservatism = 50
-	conservatism = 15
+	liberal_conservatism = 15
+	conservatism = 50
 	paternalism = 5
 	despotism = 3
-	fascism = 0
-	national_socialism = 0
-}
-
-create_country_leader = {
-	name = "Husni Mubarak"
-	desc = "POLITICS_HAMDEEN_SABAHI_DESC"
-	picture = "Portrait_EGY_Hamdeen_Sabahi.dds"
-	expire = "2999.12.25"
-	ideology = paternalism_left_wing_corporatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Khaled Mohieddin"
-	desc = ""
-	picture = "Portrait_EGY_Khaled_Mohieddin.dds"
-	expire = "2999.12.25"
-	ideology = socialist_nasserism_subtype
-	traits = {
-	}
 }
 
 # Starting tech
