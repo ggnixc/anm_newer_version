@@ -1,8 +1,13 @@
-﻿capital = 544
+﻿recruit_character = MZB_Costa_Gomes
+
+capital = 880
+
+set_cosmetic_tag = MZB_mandate
 
 set_oob = ""
 
 add_ideas = {
+	OFN_Dependent_Member
 	#POLITICS
 	tno_political_parties_one_party_state
 	tno_religious_rights_pluralism
@@ -53,6 +58,24 @@ add_ideas = {
     ### MINISTERS ###
 }
 
+SAF = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_autonomy = {
+			target = MZB
+			autonomy_state = autonomy_integrated_puppet
+		}
+		else = {
+			puppet = MZB
+		}
+	}
+}
+
 set_research_slots = 3
 set_convoys = 200
 add_stability = 0.9
@@ -80,26 +103,4 @@ set_popularities = {
     fascism = 0
     national_socialism = 0
     esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "André Magibire"
-	desc = "POLITICS_ANDRE_MAGIBIRE_DESC"
-	picture = "Portrait_Andre_Magibire.dds"
-	expire = "2050.1.23"
-	ideology = paternalism_national_conservatism_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "André Magibire"
-	desc = "POLITICS_ANDRE_MAGIBIRE_DESC"
-	picture = "Portrait_Andre_Magibire.dds"
-	expire = "2999.1.23"
-	ideology = conservatism_subtype
-	traits = {
-		
-	}
 }

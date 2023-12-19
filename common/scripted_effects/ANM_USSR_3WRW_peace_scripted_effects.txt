@@ -342,3 +342,138 @@ ANM_donetsk_to_RSFSR = {
 		set_variable = { ECON_SPHERE_LEADER = SOV }
 	}
 }
+
+ANM_baltics_to_SOV = {
+	SOV = {
+		set_autonomy = {
+			target = LIT
+			autonomy_state = autonomy_soviet_republic
+		}
+		set_autonomy = {
+			target = LAT
+			autonomy_state = autonomy_soviet_republic
+		}
+		set_autonomy = {
+			target = EST
+			autonomy_state = autonomy_soviet_republic
+		}
+	}
+	every_state = {
+		limit = {
+			is_owned_by = OST
+		}
+		OST = { remove_state_core = PREV }
+	}
+	LIT = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		add_ideas = {
+			COM_Satellite
+
+			SOV_A_Scarred_People
+			SOV_Torn_Apart_Industry
+			SOV_Freedom_At_Last
+		}
+		
+		transfer_state = 11
+		transfer_state = 96
+		transfer_state = 189
+		transfer_state = 1400
+		transfer_state = 1401
+
+		add_state_core = 11
+		add_state_core = 96
+		add_state_core = 189
+		add_state_core = 1400
+		add_state_core = 1401
+		
+		set_cosmetic_tag = LIT_SSR	
+		
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+	LAT = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		add_ideas = {
+			COM_Satellite
+
+			SOV_A_Scarred_People
+			SOV_Torn_Apart_Industry
+			SOV_Freedom_At_Last
+		}
+		
+		transfer_state = 12
+		transfer_state = 190
+		transfer_state = 943
+		transfer_state = 1397
+		transfer_state = 1398
+		transfer_state = 1399
+		transfer_state = 1402
+
+		add_state_core = 12
+		add_state_core = 190
+		add_state_core = 943
+		add_state_core = 1397
+		add_state_core = 1398
+		add_state_core = 1399
+		add_state_core = 1402
+		
+		set_cosmetic_tag = LAT_SSR	
+		
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+	EST = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 100
+		}
+		
+		add_ideas = {
+			COM_Satellite
+
+			SOV_A_Scarred_People
+			SOV_Torn_Apart_Industry
+			SOV_Freedom_At_Last
+		}
+		
+		transfer_state = 13
+		transfer_state = 191
+		transfer_state = 1395
+		transfer_state = 1396
+		transfer_state = 1440
+
+		add_state_core = 13
+		add_state_core = 191
+		add_state_core = 1395
+		add_state_core = 1396
+		add_state_core = 1440
+		
+		set_cosmetic_tag = EST_SSR	
+		
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}

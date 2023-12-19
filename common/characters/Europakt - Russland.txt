@@ -18,6 +18,30 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_MIKHAIL_GORBACHEV_DESC"
+			ideology = progressivism_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_mikhail_nazarov = { 
+		name = MOS_mikhail_nazarov
+		portraits = { 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Mikhail_Nazarov.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_MIKHAIL_NAZAROV_DESC"
+			ideology = national_socialism_naturalised_nazism_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_klaus_naumann = { 
+		name = MOS_klaus_naumann
+		portraits = { 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Klaus_Naumann.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_KLAUS_NAUMANN_DESC"
 			ideology = national_socialism_reformed_national_socialism_subtype
 			traits = { }
 			expire = "2999.1.1.1"
@@ -76,4 +100,91 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
+	MOS_dmitriy_vasilyev = {  
+		name = MOS_dmitriy_vasilyev
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/MOS/Portrait_MOS_Dmitriy_Vasilyev.dds"
+				small = "GFX_idea_MOS_Dmitriy_Vasilyev" 
+			} 	
+		} 
+		country_leader = {
+			desc = "POLITICS_DMITRIY_VASILYEV_DESC"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = {  }
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MOS_Dmitriy_Vasilyev_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MOS_alexander_barkashov = {  
+		name = MOS_alexander_barkashov
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/MOS/Portrait_MOS_Alexander_Barkashov.dds"
+				small = "GFX_idea_MOS_Alexander_Barkashov" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = MOS_Alexander_Barkashov_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MOS_rostislav_polchaninov = {  
+		name = MOS_rostislav_polchaninov
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/MOS/Portrait_MOS_Rostislav_Polchaninov.dds"
+				small = "GFX_idea_MOS_Rostislav_Polchaninov" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = MOS_Rostislav_Polchaninov_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MOS_herman_gref = {  
+		name = MOS_herman_gref
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/MOS/Portrait_MOS_Herman_Gref.dds"
+				small = "GFX_idea_MOS_Herman_Gref" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = MOS_Herman_Gref_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	
 } 

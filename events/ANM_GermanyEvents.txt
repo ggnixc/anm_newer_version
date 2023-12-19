@@ -1175,17 +1175,22 @@ country_event = { #Event for 'Shipment of Civilian Goods?'
 		name = GER_focus_event.57.a
 	}
 }
-country_event = { #
+country_event = { #Event for ‘The French State’
 	id = GER_focus_event.58
 	title = GER_focus_event.58.t
 	desc = GER_focus_event.58.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_french_visit
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
 		name = GER_focus_event.58.a
+		custom_effect_tooltip = GER_the_shadows_shadow_a_tt
+	}
+	option = { 
+		name = GER_focus_event.58.b 
+		custom_effect_tooltip = GER_the_shadows_shadow_b_tt
 	}
 }
 country_event = { #
@@ -1308,6 +1313,100 @@ country_event = { #Load Phase 2 Final Showdown
 		load_focus_tree = { tree = GER_focus_phase_2_final keep_completed = yes }
 	}
 }
+country_event = { #Load Phase 3 Ending Demo
+	id = GER_misc_main_event.7
+	title = GER_misc_main_event.7.t
+	desc = GER_misc_main_event.7.desc
+	picture = GFX_anm_GER_speer_martin_talks
 
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		name = GER_misc_main_event.7.a
+		load_focus_tree = { tree = x }
+	}
+}
+country_event = { #MB Homel -> Gouvernement Russland
+	id = GER_misc_main_event.8
+	title = GER_misc_main_event.8.t
+	desc = GER_misc_main_event.8.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = { 
+		ANM_Gouvernement_Russland = yes
+	}
+}
+country_event = { #3WRW endings
+	id = GER_misc_main_event.9
+	title = GER_misc_main_event.9.t
+	desc = GER_misc_main_event.9.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {  #3WRW Decisive Victory
+		name = GER_misc_main_event.9.a
+		ANM_SOV_to_VLG = yes
+		ANM_SOV_to_FIN = yes 
+		ANM_SOV_to_MOS_big = yes
+	}
+	option = { #3WRW Partial Victory 
+		name = GER_misc_main_event.9.b
+		ANM_SOV_to_VLG = yes
+		ANM_SOV_to_FIN = yes
+		ANM_SOV_to_MOS_small = yes
+	}
+	option = { #3WRW Partial Victory excl. Finland
+		name = GER_misc_main_event.9.c
+		ANM_SOV_to_VLG = yes
+		ANM_SOV_to_MOS_small = yes
+	}
+	option = { #3WRW Stalemate
+		name = GER_misc_main_event.9.d
+		ANM_homel_to_SOV = yes
+	}
+}
+country_event = { #MOS -> Grenzland
+	id = GER_misc_main_event.10
+	title = GER_misc_main_event.10.t
+	desc = GER_misc_main_event.10.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {  
+		name = GER_misc_main_event.10.a
+		ANM_MOS_Grenzland = yes
+	}
+}
+country_event = { #MOS -> Russia
+	id = GER_misc_main_event.11
+	title = GER_misc_main_event.11.t
+	desc = GER_misc_main_event.11.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {  #National Socialism
+		name = GER_misc_main_event.11.a
+		ANM_MOS_Russia_Nazi = yes
+	}
+	option = { #Despotism
+		name = GER_misc_main_event.11.b
+		ANM_MOS_Russia_Despotism = yes
+	} 	
+}
 
 

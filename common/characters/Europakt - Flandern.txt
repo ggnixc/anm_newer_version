@@ -2,13 +2,21 @@ characters = {
 	FLR_klaus_armstroff = {    
 		name = FLR_klaus_armstroff
 		portraits = { 
-			civilian = { large = "gfx/leaders/FLR/Portrait_FLR_Klaus_Armstroff.dds" } 
+			civilian = { 
+				large = "gfx/leaders/FLR/Portrait_FLR_Klaus_Armstroff.dds"
+				small = "GFX_idea_FLR_Klaus_Armstroff" 
+			} 
 		}
-		country_leader = {
-			desc = "POLITICS_KLAUS_ARMSTROFF_DESC"
-			ideology = national_socialism_reformed_national_socialism_subtype
-			traits = {  }
-			expire = "2999.1.1.1"
+		advisor = {
+			slot = economy_minister
+			idea_token = FLR_Klaus_Armstroff_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
 	FLR_frank_vanhecke = { 
@@ -76,19 +84,13 @@ characters = {
 		portraits = { 
 			civilian = { 
 				large = "gfx/leaders/FLR/Portrait_FLR_Karel_Dillen.dds"
-				small = "GFX_idea_FLR_Karel_Dillen" 
 			} 	
 		} 
-		advisor = {
-			slot = economy_minister
-			idea_token = FLR_Karel_Dillen_eco
-			traits = {
-				economy_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
+		country_leader = {
+			desc = "POLITICS_KAREL_DILLEN_DESC"
+			ideology = national_socialism_reformed_national_socialism_subtype
+			traits = {  }
+			expire = "2999.1.1.1"
 		}
 	}
 	
