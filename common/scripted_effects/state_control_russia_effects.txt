@@ -148,51 +148,7 @@ state_control_effect_570 = {
 		reset_province_name = 12606
 	}
 }
-#PRC
-state_control_effect_329 = {
-	if = {
-		limit = {
-			controller = {
-				OR = {
-					RUS_consider_communist_regime = yes
-					original_tag = SBA
-				}
-			}
-		}
-		reset_province_name = 10627
-		reset_state_name = yes
-	}
-	else_if = {
-		limit = {
-			OR = {
-				is_controlled_by = VYT
-				is_controlled_by = CHT
-				is_controlled_by = AMR
-				is_controlled_by = GAY
-				is_controlled_by = OMO
-			}
-		}
-		set_province_name = {
-			id = 10627
-			name = VICTORY_POINTS_10627_nor
-		}
-		set_state_name = STATE_329_nor
-	}
-	else_if = {
-		limit = {
-			OR = {
-				is_controlled_by = CHI
-				is_controlled_by = YUN
-			}
-		}
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_state_name = STATE_329_chi
-		}
-		else = { set_state_name = STATE_329_chi_eng }
-		set_province_name = { id = 10627 name = VICTORY_POINTS_10627_chi }
-	}
-}
+
 #SAM
 state_control_effect_251 = {
 	if = {
