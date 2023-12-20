@@ -1,26 +1,4 @@
 defined_text = {
-	name = getGERnsdappartystructure
-	text = {
-		trigger = {
-			check_variable = { GER_ANM_party_leaning < 20000 }
-			check_variable = { GER_ANM_party_leaning > -20000}
-		}
-		localization_key = GER_nsdap_conservative_leaning_anm
-	}
-	text = {
-		trigger = {
-			check_variable = { GER_ANM_party_leaning < -20000 }
-		}
-		localization_key = GER_nsdap_reformist_leaning_anm 
-	}
-	text = {
-		trigger = {
-			check_variable = { GER_ANM_party_leaning > 20000 }
-		}
-		localization_key = GER_nsdap_reactionary_leaning_anm
-	}
-}
-defined_text = {
 	name = getGERfrontinfluence
 	text = {
 		trigger = {
@@ -157,6 +135,30 @@ defined_text = {
 	}
 	text = {
 		localization_key = reichsstability_party_button_2
+	}
+}
+
+### NSDAP PYRAMID ###
+defined_text = {
+	name = getGERnsdappartystructure
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leaning < 20000 }
+			check_variable = { GER_ANM_party_leaning > -20000}
+		}
+		localization_key = GER_nsdap_conservative_leaning_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leaning < -20000 }
+		}
+		localization_key = GER_nsdap_reformist_leaning_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leaning > 20000 }
+		}
+		localization_key = GER_nsdap_reactionary_leaning_anm
 	}
 }
 defined_text = {

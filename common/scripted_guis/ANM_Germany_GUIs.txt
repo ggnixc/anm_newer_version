@@ -1,16 +1,12 @@
 scripted_gui = {
 	
 	ANM_nsdapgui_Decisions_GUI = {
-		context_type = decision_category
 		window_name = "ANM_nsdapgui_Decisions_GUI"
+		context_type = decision_category
+		parent_window_token = decision_tab
 		
-		visible = {
-		always = yes
-		}
-		
-		triggers = {
-		}
-
+		visible = {	always = yes }
+		triggers = { }
 		
 		effects = {
 			Bottom_nsdapgui_bottom_click = {
@@ -39,9 +35,7 @@ scripted_gui = {
 			}
 		}
 		
-		properties = {
-		
-		}
+		properties = { }
 	}
 	
 	ANM_reichsstability_Button_GUI = {

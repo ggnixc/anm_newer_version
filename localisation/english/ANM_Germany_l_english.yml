@@ -98,6 +98,7 @@
  GER_joachim_ruhle: "Joachim Rühle"
  GER_manfred_nielson: "Manfred Nielson"
 
+
 ## Descriptions ##
  # Country Leader #
  POLITICS_ALBERT_SPEER_JR_DESC: "Albert Friedrich Speer Jr. is a far cry from the powerful man he once was. Born July 29, 1934 to one of the most powerful men in the Greater German Reich, the younger Speer enjoyed quite a cushy, comfortable life until his ascension to the Fuhrership.\n\nUnder Speer’s leadership, Germany suffered a humiliating defeat in the Second West Russian War at the hands of the resurgent USSR. Speer’s approval rating nosedived to unforeseen lows, and have languished in those depths ever since. Martin Mußgnug’s conservative faction, seeing an opportunity in Speer’s sudden weakness, worked to undermine his government at every possible point, eventually elevating Mußgnug’s influence higher than the Fuhrer above him.\n\nIn the following decade, Speer’s fortunes seldom improved. The loss of the East inspired widespread anarchist agitation throughout the Reich. A decade of stagnation and political deadlock tarnished Speer’s reputation further with each passing year, and the hasty formation of the Europakt — a merger of the Zolvereinn and Einheitspakt — did little to stymie Germany’s economic woes. Only within the last few years has the Europakt paid dividends — a desperately-needed win for Speer’s flagging regime.\n\nToday, the sidelined Fuhrer battles with conservative and reactionaries alike in an effort to reassert his formerly-unbridled power. Despite his unenviable position, Speer remains steadfast in his effort to establish his personal vision upon Germany, no matter how unlikely such a dream may be."
@@ -141,9 +142,6 @@
  GER_europapakt_member_desc: "The Europakt is the perhaps most ambitious international project of all time. Created as a merger of the Einheitspakt and the Zollverein economic union, it coordinates the Economy, Military and Politics of the German-aligned European Sphere. Travel, Trade and Borders are open for all members. It seems as if Europe has come together for the first time in millennia. However, the future of the Europakt is uncertain. With democratic and German-inspired regimes alike, the question of European Ideology is heavily debated. The more reactionary forces within Germany oppose the Pakt, some wish for more national control. Most of the EP power still rests within Germany itself, and conflicts are common, but \n§MEuropean Unity§! is not a distant dream anymore, although its character has not been decided."
 
 
-### Decisions ###
-
-
 ### Tooltips ###
  reich_foreign: "Reichsminister des Auswärtigen"
  reich_economy: "Reichswirtschaftsminister"
@@ -176,8 +174,111 @@
  GER_the_shadows_shadow_a_tt: "Cooperating with the French will strengthen our regime’s legitimacy with Europe as a whole."
  GER_the_shadows_shadow_b_tt: "Rejecting France’s request will bolster Speer’s popularity within the NSDAP."
 
+### Scripted Loc ###
+ ## NSDAP Pyramid ##
+ GER_nsdap_isreactionary_tt: "The NSDAP is not reactionary"
+ GER_nsdap_isreformist_tt: "The NSDAP is not reformist"
 
+ GER_nsdap_conservative_leaning_anm: "§qMixed§! "
+ GER_nsdap_reformist_leaning_anm: "§KRegime§! "
+ GER_nsdap_reactionary_leaning_anm: "§VKritiker§! "
+ GER_nsdap_lowerconservative_leaning_anm: "§qMixed§! "
+ GER_nsdap_lowerreformist_leaning_anm: "§KRegime§! "
+ GER_nsdap_lowerreactionary_leaning_anm: "§VKritiker§! "
+ GER_nsdap_innerconservative_leaning_anm: "§qMixed§! "
+ GER_nsdap_innerreformist_leaning_anm: "§KRegime§! "
+ GER_nsdap_innerreactionary_leaning_anm: "§VKritiker§! "
+ GER_nsdap_coreconservative_leaning_anm: "§qMixed§! "
+ GER_nsdap_corereformist_leaning_anm: "§KRegime§! "
+ GER_nsdap_corereactionary_leaning_anm: "§VKritiker§! "
+ GER_nsdap_leaderconservative_leaning_anm: "§qMixed§! "
+ GER_nsdap_leaderreformist_leaning_anm: "§KRegime§! "
+ GER_nsdap_leaderreactionary_leaning_anm: "§VKritiker§! "
+ 
+ GER_nsdap_conservative_lowerinfluence_anm: "§oIntermediate§! "
+ GER_nsdap_reformist_lowerinfluence_anm: "§oNegligible§! "
+ GER_nsdap_reactionary_lowerinfluence_anm: "§oSignificant§! "
+ GER_nsdap_innerconservative_influence_anm: "§oIntermediate§! "
+ GER_nsdap_innerreformist_influence_anm: "§oNegligible§! "
+ GER_nsdap_innerreactionary_influence_anm: "§oSignificant§! "
+ GER_nsdap_coreconservative_influence_anm: "§oIntermediate§! "
+ GER_nsdap_corereformist_influence_anm: "§oNegligible§! "
+ GER_nsdap_corereactionary_influence_anm: "§oSignificant§! "
+ GER_nsdap_leaderconservative_influence_anm: "§oIntermediate§! "
+ GER_nsdap_leaderreformist_influence_anm: "§oNegligible§! "
+ GER_nsdap_leaderreactionary_influence_anm: "§oSignificant§! "
+ 
+ GER_nsdap_lowerparty_select_tt: "Select Disctrict Level"
+ GER_nsdap_innerparty_select_tt: "Select Regional Level"
+ GER_nsdap_coreparty_select_tt: "Select National Level"
+ GER_nsdap_leaderparty_select_tt: "Select Party Leadership"
+ 
+ GER_nsdap_lowerparty_shiftcon_tt: "The Disctrict Party's loyalty fades.."
+ GER_nsdap_lowerparty_shiftreform_tt: "The Disctrict Party's loyalty grows.."
+ GER_nsdap_innerparty_shiftcon_tt: "The Regional Party's loyalty fades.."
+ GER_nsdap_innerparty_shiftreform_tt: "The Regional Party's loyalty grows.."
+ GER_nsdap_coreparty_shiftcon_tt: "The National Party's loyalty fades.."
+ GER_nsdap_coreparty_shiftreform_tt: "The National Party's loyalty grows.."
+ GER_nsdap_leadparty_shiftcon_tt: "The Party Leadership's loyalty fades.."
+ GER_nsdap_leadparty_shiftreform_tt: "The Party Leadership's loyalty grows.."
+ 
+ GER_nsdap_lowerparty_lessinfl_tt: "The District Leadership becomes less influential"
+ GER_nsdap_lowerparty_moreinfl_tt: "The District Leadership becomes more influential"
+ GER_nsdap_innerparty_lessinfl_tt: "The Regional Leadership becomes less influential"
+ GER_nsdap_innerparty_moreinfl_tt: "The Regional Leadership becomes more influential"
+ GER_nsdap_coreparty_lessinfl_tt: "The National Leaderschip becomes less influential"
+ GER_nsdap_coreparty_moreinfl_tt: "The National Leaderschip becomes more influential"
+ GER_nsdap_leadparty_lessinfl_tt: "The Party Leadership becomes less influential"
+ GER_nsdap_leadparty_moreinfl_tt: "The Party Leadership becomes more influential"
+ GER_nsdap_top_moreinfl_tt: "The Party Leadership becomes significantly more influential"
+ GER_nsdap_bottom_moreinfl_tt: "The District, Regional and National Leadership become more influential"
 
+ ANM_ger_decentralize_the_party: "Decentralize NSDAP Hierarchy"
+ ANM_ger_centralize_the_party: "Centralize NSDAP Hierarchy"
+ ANM_ger_strengthen_leadership_grip: "Strengthen the Führerprinzip"
+ ANM_ger_utilize_schroeders_clique: "Remind Them Of Their Obligation"
+ ANM_ger_utilize_deckerts_clique: "Organize Meeting"
+ ANM_ger_reeinforce_coreparty_authority: "Reeinforce National Authority"
+ ANM_ger_empower_conservative_governors: "Intervene In Governor Selection"
+ ANM_ger_sideline_party_suborganisations: "Sideline Regional Organisations"
+ ANM_ger_expand_administrative_system: "Expand the Administrative System"
+ ANM_ger_old_bureaucrats_retire: "Retire Old Bureaucrats"
+ ANM_ger_paranoia_among_inner_party: "Sow Paranoia Among Regional Party"
+ ANM_ger_more_party_recruitment: "Organize District Party Gathering"
+ ANM_ger_decrease_party_recruitment: "Inspect Recruitment Programs"
+ ANM_ger_spark_desires_for_reform: "Gather Public Opinion"
+
+ ## Government GUI ##
+ scripted_gui_open_reischsstability_button: "Open the Regierung des Deutschen Reiches GUI"
+ reichsstabilitat_guenther_deckert: "Guenther Deckert"
+ reichsstabilitat_martin_mussgnug: "Martin Mußgnug"
+ reichsstability_albert_speer_jr: "Albert Speer Jr."
+ reichsstability_albert_speer_jr_long: "The Führer"
+ reichsstabilitat_influencefront_power: "§jOpposition's influence:[getGERfrontinfluence]§! \n§nSpeer's influence:[getGERspeerinfluence]§!"
+ reichsstability_party_button_1: "Spend 50 political power for 5 influence"
+ reichsstability_party_button_2: " Spend 5 influence for 50 political power"
+ GER_reichsstabilitat_interaction_on_cooldown: "Interaction on cooldown"
+ GER_reichsstabilitat_interaction_notenoughpp: "Not enough political power"
+ reichsstability_party_button_1_tooltip: "[getGERreichsstabilitatcooldown1]"
+ reichsstability_party_button_2_tooltip: " [getGERreichsstabilitatcooldown2]"
+ reichsstability_tier_button_1_tooltip: "The Party's Peak"
+ reichsstability_tier_button_2_tooltip: "The Party's Top"
+ reichsstability_tier_button_3_tooltip: "The Party's Middle"
+ reichsstability_tier_button_4_tooltip: "The Party's Bottom"
+ GER_speer_inf_top: "[?global.GER_Front_Inf_Top]"
+ GER_speer_inf_middle: "[?global.GER_Front_Inf_Middle]"
+ GER_speer_inf_bottom: "[?global.GER_Front_Inf_Bottom]"
+ GER_front_inf_top: "[?global.GER_Speer_Inf_Top]"
+ GER_front_inf_middle: "[?global.GER_Speer_Inf_Middle]"
+ GER_front_inf_bottom: "[?global.GER_Speer_Inf_Bottom]"
+ GER_speer_inf: "[?global.GER_Speer_Inf_Total]"
+ GER_front_inf: "[?global.GER_Front_Inf_Total]"
+ GER_reichsstabilitat_interaction_peak: "You can't influence the party's peak! That's you!"
+ 
+
+### Decisions ###
+ ANM_ger_nsdap_category: "The NSDAP"
+ ANM_ger_nsdap_category_desc: "The NSDAP, the National Socialist German Workers Party, is the most powerful institution in the entirety of German History. Yet it could not be more divided as the loyalty torwards our unifying figure, the Führer, sinks to unimaganible depths.\n\nBroader NSDAP Loyalty: [getGERnsdappartystructure]([?GER_ANM_party_leaning|-0])\n\nParty Leadership Influence:\n[getGERnsdappartyleadershipinfluence]([?GER_ANM_party_leadership_influnce|-0])\nParty Leadership Loyalty:\n[getGERnsdappartyleadershipleaning]([?GER_ANM_party_leadership_leaning|-0])\n\nNational Party Influence:\n[getGERnsdapcorepartyinfluence]([?GER_ANM_upper_party_influence|-0])\nNational Party Loyalty:\n[getGERnsdapcorepartyleaning]([?GER_ANM_upper_party_leaning|-0])\n\nRegional Party Influence:\n[getGERnsdapinnerpartyinfluence]([?GER_ANM_middle_party_influence|-0])\nRegional Party Loyalty:\n[getGERnsdapinnerpartyleaning]([?GER_ANM_middle_party_leaning|-0])\n\nDistrict Party Influence:\n[getGERnsdaplowerpartyinfluence]([?GER_ANM_lower_party_influence|-0])\nDisctrict Party Loyalty:\n[getGERnsdaplowerpartyleaning]([?GER_ANM_lower_party_leaning|-0])"
 
 
 ### Focus Trees ###
@@ -355,34 +456,6 @@
  GER_deutschland_deutschland_uber_allen: "Deutschland, Deutschland Über Allen"
  GER_deutschland_deutschland_uber_allen_desc: ""
 
- 
-## Reichstabilität GUI ##
- scripted_gui_open_reischsstability_button: "Open the Reichsstabilitat GUI"
- reichsstabilitat_guenther_deckert: "Guenther Deckert"
- reichsstabilitat_martin_mussgnug: "Martin Mußgnug"
- reichsstability_albert_speer_jr: "Albert Speer Jr."
- reichsstability_albert_speer_jr_long: "The Führer"
- reichsstabilitat_influencefront_power: "§jOpposition's influence:[getGERfrontinfluence]§! \n§nSpeer's influence:[getGERspeerinfluence]§!"
- reichsstability_party_button_1: "Spend 50 political power for 5 influence"
- reichsstability_party_button_2: " Spend 5 influence for 50 political power"
- GER_reichsstabilitat_interaction_on_cooldown: "Interaction on cooldown"
- GER_reichsstabilitat_interaction_notenoughpp: "Not enough political power"
- reichsstability_party_button_1_tooltip: "[getGERreichsstabilitatcooldown1]"
- reichsstability_party_button_2_tooltip: " [getGERreichsstabilitatcooldown2]"
- reichsstability_tier_button_1_tooltip: "The Party's Peak"
- reichsstability_tier_button_2_tooltip: "The Party's Top"
- reichsstability_tier_button_3_tooltip: "The Party's Middle"
- reichsstability_tier_button_4_tooltip: "The Party's Bottom"
- GER_speer_inf_top: "[?global.GER_Front_Inf_Top]"
- GER_speer_inf_middle: "[?global.GER_Front_Inf_Middle]"
- GER_speer_inf_bottom: "[?global.GER_Front_Inf_Bottom]"
- GER_front_inf_top: "[?global.GER_Speer_Inf_Top]"
- GER_front_inf_middle: "[?global.GER_Speer_Inf_Middle]"
- GER_front_inf_bottom: "[?global.GER_Speer_Inf_Bottom]"
- GER_speer_inf: "[?global.GER_Speer_Inf_Total]"
- GER_front_inf: "[?global.GER_Front_Inf_Total]"
- GER_reichsstabilitat_interaction_peak: "You can't influence the party's peak! That's you!"
- 
  
 ### Events ###
  ## Flavour Events ##

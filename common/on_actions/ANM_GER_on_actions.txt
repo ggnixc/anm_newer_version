@@ -1,0 +1,23 @@
+on_actions = {
+	
+	### Calculating the Variables for the NSDAP Pyramid
+	on_weekly_GER = { 
+		effect = {
+			set_temp_variable = { temporaryanmgernsdap1 = GER_ANM_lower_party_leaning }
+			multiply_temp_variable = { temporaryanmgernsdap1 = GER_ANM_lower_party_influence }
+				set_temp_variable = { temporaryanmgernsdap2 = GER_ANM_middle_party_leaning }
+			multiply_temp_variable = { temporaryanmgernsdap2 = GER_ANM_middle_party_influence }
+				set_temp_variable = { temporaryanmgernsdap3 = GER_ANM_upper_party_leaning }
+			multiply_temp_variable = { temporaryanmgernsdap3 = GER_ANM_upper_party_influence }
+				set_temp_variable = { temporaryanmgernsdap4 = GER_ANM_party_leadership_leaning }
+			multiply_temp_variable = { temporaryanmgernsdap4 = GER_ANM_party_leadership_influnce }
+				set_temp_variable = { temporaryanmgernsdap5 = temporaryanmgernsdap1 }
+			add_to_temp_variable = { temporaryanmgernsdap5 = temporaryanmgernsdap2 }
+			add_to_temp_variable = { temporaryanmgernsdap5 = temporaryanmgernsdap3 }
+			add_to_temp_variable = { temporaryanmgernsdap5 = temporaryanmgernsdap4 }
+			set_variable = {
+				GER_ANM_party_leaning = temporaryanmgernsdap5
+			}
+		}
+	}
+}
