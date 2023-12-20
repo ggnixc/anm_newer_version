@@ -582,37 +582,6 @@ WSB_urals_strat_prep = {
 	}
 }
 
-Ignore_Sphere_strat = {
-	allowed = {
-		is_russian_nation = yes
-	}
-	enable = {
-		always = yes
-	}
-
-	abort = {
-		tag = PRC
-		OR = {
-			has_war_with = MEN
-			AND = {
-				owns_state = 814
-				NOT = { has_global_flag = PRC_MEN_peace_deal }
-			}
-		}
-		
-	}
-
-	ai_strategy = {
-		type = front_unit_request
-		tag = MEN
-		value = -10000
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = MAN
-		value = -10000
-	}
-}
 
 WSR_war_strat = {
 	allowed = {

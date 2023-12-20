@@ -593,67 +593,6 @@ JAP_GAW_Strat = { # Japan and Allies, Stage 5
 	}
 }
 
-MEN_PRC_invade = {
-	allowed = {
-		tag = MEN
-	}
-	enable = {
-		has_war_with = PRC
-	}
-
-	abort = {
-		NOT = { has_war_with = PRC }
-	}
-
-	ai_strategy = {
-		type = conquer
-		id = PRC
-		value = 1000
-	}
-}
-
-PRC_MEN_invade = {
-	allowed = {
-		tag = PRC
-	}
-	enable = {
-		has_war_with = MEN
-	}
-
-	abort = {
-		NOT = { has_war_with = MEN }
-	}
-
-	ai_strategy = {
-		type = conquer
-		id = MEN
-		value = 1000
-	}
-}
-
-SPHERE_ignore_PRC = {
-	allowed = {
-		OR = {
-			is_in_faction_with = JAP
-			tag = SHO
-		}
-		NOT = {
-			tag = JAP
-			tag = MAN
-			tag = CHI
-			tag = MEN
-		}
-	}
-	enable = {
-		always = yes
-	}
-
-	ai_strategy = {
-		type = front_unit_request
-		tag = PRC
-		value = -10000
-	}
-}
 
 SHO_war_strat = {
 	allowed = {

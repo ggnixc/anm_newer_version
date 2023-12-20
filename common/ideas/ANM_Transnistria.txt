@@ -23,6 +23,19 @@ ideas = {
 				communist_drift = 0.1
 				political_power_cost = 0.15
 			}
-		}	
+		}
+		TNS_False_Identity = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = TNS_False_Identity
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				communist_acceptance = -20
+				monthly_population = -0.05
+			}
+		}
 	}
 }
