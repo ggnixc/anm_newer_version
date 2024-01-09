@@ -352,18 +352,6 @@ add_manpower = 402178
 
 load_focus_tree = GER_Focus_Millenium_Starter
 
-
-set_variable = { global.GER_Speer_Inf_Top = 12 }
-set_variable = { global.GER_Front_Inf_Top = 8 }
-
-set_variable = { global.GER_Speer_Inf_Middle = 8 }
-set_variable = { global.GER_Front_Inf_Middle = 8 }
-
-set_variable = { global.GER_Speer_Inf_Bottom = 8 }
-set_variable = { global.GER_Front_Inf_Bottom = 10 }
-
-GER_power_struggle_pulse_top = yes
-
 ### Country Flags ###
 set_country_flag = GER_nsdapgui_activate
 set_country_flag = reichsstability_tier_2
@@ -377,31 +365,17 @@ set_country_flag = HAS_ECON_SPHERE
 set_variable = { TNO_economy_type = 1 }
 set_variable = { TNO_economy_subtype = 20 }
 
-set_global_flag = pakt_reform_europamark
-
-set_variable = { global.europapaktunity = 10 }
-set_variable = { global.europapaktstability = 60 }	
-set_variable = { global.europaktgdpgrowthmodifier = 1.23 }  
-set_variable = { global.preeuropaktgdpgrowthmodifier = 1.23 }
-set_variable = { global.usaintelligence = 50 }
-set_variable = { global.germanyintelligence = 30 }
-set_variable = { global.italyintelligence = 25 }
-set_variable = { global.sovjetintelligence = 25 }
-set_variable = { global.japanintelligence = 20 }
-set_variable = { global.britainintelligence = 20 }
-set_variable = { global.chinaintelligence = 15 }
-set_variable = { global.indiaintelligence = 15 }
-set_variable = { GER_ANM_social_stability = 50 }
-set_variable = { GER_ANM_protesttension = 15 }
 set_variable = { GER_ANM_party_leaning = 20 }
-set_variable = { GER_ANM_lower_party_leaning = -25 }
+set_variable = { GER_ANM_lower_party_leaning = 150 }
 set_variable = { GER_ANM_lower_party_influence = 50 }
 set_variable = { GER_ANM_middle_party_leaning = 120 }
 set_variable = { GER_ANM_middle_party_influence = 50 }
 set_variable = { GER_ANM_upper_party_leaning = 50 }
 set_variable = { GER_ANM_upper_party_influence = 80 }
-set_variable = { GER_ANM_party_leadership_leaning = 25 }
-set_variable = { GER_ANM_party_leadership_influnce = 150 }
+set_variable = { GER_ANM_party_leadership_leaning = -30 }
+set_variable = { GER_ANM_party_leadership_influnce = 100 }
+
+set_variable = { GER_ANM_government_loyaly_slot_1 = -1 }
 
 ### Flavour Events ###
 country_event = { id = GER_flavour_event.1  days = 10 }
