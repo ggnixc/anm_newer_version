@@ -2,19 +2,19 @@ ideas = {
 
     country = {
         
-		FRA_pn_infighting = {  
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_pn_infighting" }
+		FRA_rrn_infighting = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_rrn_infighting" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 
-			picture = FRA_pn_infighting
+			picture = FRA_rrn_infighting
 			removal_cost = -1
 
 			modifier = {
 				political_power_factor = -0.05
 				stability_weekly = -0.01
 				stability_factor = -0.10
-				national_socialism_drift = -0.05
+				fascism_drift = -0.03
 			}
 		}
         FRA_memory_of_burgundy = {  
@@ -32,12 +32,12 @@ ideas = {
 				production_speed_buildings_factor = -0.25
 			}
 		}
-        FRA_the_aos = {  
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_the_aos" }
+        FRA_the_sol = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_the_sol" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 
-			picture = FRA_the_aos
+			picture = FRA_the_sol
 			removal_cost = -1
 
 			modifier = {
