@@ -37,7 +37,18 @@ scripted_gui = {
 		
 		properties = { }
 	}
-	
+
+	ANM_GER_EP_Economy_Decisions_GUI = { 
+		window_name = "ANM_GER_EP_Economy_Decisions_GUI"
+		context_type = decision_category
+		parent_window_token = decision_tab
+			
+		visible = {	always = yes }
+		triggers = { }
+		effects = { }
+		properties = { }
+	}
+
 	ANM_reichsstability_Button_GUI = {
 		context_type = player_context
 		window_name = "ANM_reichsstability_Button_GUI"
@@ -53,18 +64,28 @@ scripted_gui = {
 		effects = {
 			reichsstability_open_click = {
 				if = {
-					limit = { NOT = { has_country_flag = GER_show_reichsstability_window } }
+					limit = { NOT = { 
+						has_country_flag = GER_show_reichsstability_window 
+						has_country_flag = GER_GdDR_Fuhrer
+						} 
+					} 
 					set_country_flag = GER_show_reichsstability_window
+					set_country_flag = GER_GdDR_Fuhrer
 				}
 				else_if = {
-					limit = { has_country_flag = GER_show_reichsstability_window }
+					limit = { 
+						has_country_flag = GER_show_reichsstability_window
+						has_country_flag = GER_GdDR_Fuhrer
+					}
 					clr_country_flag = GER_show_reichsstability_window
+					clr_country_flag = GER_GdDR_Fuhrer
 				}
 			}
 		}
 		properties = {
 		}
 	}
+	
 	ANM_reichsstabilitat_GUI = {
 		context_type = player_context
 		window_name = "ANM_reichsstabilitat_GUI"
@@ -75,7 +96,16 @@ scripted_gui = {
 		effects = {
 			reichsstabilitat_close_click = {
 				clr_country_flag = GER_show_reichsstability_window
+				clr_country_flag = GER_GdDR_Fuhrer
 			}
 		} 
+	}
+	ANM_GdDR_Fuhrer = {
+		context_type = player_context
+		window_name = "ANM_GdDR_Fuhrer"
+		parent_window_token = "ANM_reichsstabilitat_GUI"
+		visible = {
+			has_country_flag = GER_GdDR_Fuhrer
+		}
 	}
 }
