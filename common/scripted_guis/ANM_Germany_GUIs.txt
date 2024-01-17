@@ -43,9 +43,37 @@ scripted_gui = {
 		context_type = decision_category
 		parent_window_token = decision_tab
 			
+		visible = { always = yes }
+		triggers = { }
+		effects = { } 
+		properties = { }
+	}
+	ANM_GER_EP_Economy_Colourmap = { 
+		window_name = "ANM_GER_EP_Economy_Country"
+		context_type = decision_category
+		parent_window_token = "ANM_GER_EP_Economy_Decisions_GUI"
+			
 		visible = {	always = yes }
 		triggers = { }
-		effects = { }
+		effects = { 
+			ep_economy_toggle_button_1_click = { 
+			    set_country_flag = GER_EP_Economy_Country
+			}
+		}
+		properties = { }
+	}
+	ANM_GER_EP_Economy_Colourmap = { 
+		window_name = "ANM_GER_EP_Economy_Colourmap"
+		context_type = decision_category
+		parent_window_token = "ANM_GER_EP_Economy_Decisions_GUI"
+			
+		visible = {	has_country_flag = GER_EP_Economy_Colourmap }
+		triggers = { }
+		effects = { 
+			ep_economy_toggle_button_2_click = { 
+			    clr_country_flag = GER_EP_Economy_Country
+			}
+		}
 		properties = { }
 	}
 
