@@ -4,21 +4,31 @@ guiTypes = {
 		size = { width = 525 height = 420 }
 		position = { x = 0 y = 0 }
 
-	}
+		iconType = {
+			name = "ep_economy_background"
+			spriteType = "GFX_ep_economy_background"
+			position = { x = 3 y = 4 }
+		}
 		containerWindowType = {
 			name = "ANM_GER_EP_Economy_Country"
 			size = { width = 525 height = 420 }
 			position = { x = 0 y = 0 }
 
-			iconType = {
-				name = "ep_economy_background"
-				spriteType = "GFX_ep_economy_background"
-				position = { x = 3 y = 4 }
-			}
 			buttonType = {
 				name = "ep_economy_toggle_button_1"
 				spriteType = "GFX_ep_economy_toggle_button_1"
 				position = { x = 20 y = 6 }
+			}
+			instantTextboxType = {
+				name = "EP_Economic_Stability"
+				position = { x = 16 y = 65 }
+				textureFile = ""
+				font = "aldrich_18_outline"
+				borderSize = {x = 0 y = 0}
+				text = "E.P. Economic Stability: ([?GER_ANM_party_leadership_influnce|-0])"
+				maxWidth = 450
+				maxHeight = 30
+				fixedsize = yes
 			}
 			buttonType = {
 				name = "ep_economy_country_reich"
@@ -68,11 +78,12 @@ guiTypes = {
 				position = { x = 281 y = 239 }
 				pdx_tooltip = GER_ep_economy_country_ukraine
 			}
-			buttonType = {
+			iconType = {
 				name = "ep_economy_country_poland"
 				quadTextureSprite = "GFX_ep_economy_country_poland"
 				position = { x = 248 y = 236 }
 				pdx_tooltip = GER_ep_economy_country_poland
+				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_country_caucasus"
@@ -231,21 +242,5 @@ guiTypes = {
 				pdx_tooltip = GER_ep_economy_country_shetland
 			}
 		}			
-
-		containerWindowType = {
-			name = "ANM_GER_EP_Economy_Colourmap" 
-			size = { width = 525 height = 420 }
-			position = { x = 0 y = 0 }
-
-			iconType = {
-				name = "ep_economy_background"
-				spriteType = "GFX_ep_economy_background"
-				position = { x = 3 y = 4 }
-			}
-			buttonType = {
-				name = "ep_economy_toggle_button_2"
-				spriteType = "GFX_ep_economy_toggle_button_1"
-				position = { x = 20 y = 6 }
-			}
-		}
+	}  
 } 

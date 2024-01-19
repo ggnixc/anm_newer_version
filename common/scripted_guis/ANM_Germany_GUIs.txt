@@ -48,34 +48,6 @@ scripted_gui = {
 		effects = { } 
 		properties = { }
 	}
-	ANM_GER_EP_Economy_Colourmap = { 
-		window_name = "ANM_GER_EP_Economy_Country"
-		context_type = decision_category
-		parent_window_token = "ANM_GER_EP_Economy_Decisions_GUI"
-			
-		visible = {	always = yes }
-		triggers = { }
-		effects = { 
-			ep_economy_toggle_button_1_click = { 
-			    set_country_flag = GER_EP_Economy_Country
-			}
-		}
-		properties = { }
-	}
-	ANM_GER_EP_Economy_Colourmap = { 
-		window_name = "ANM_GER_EP_Economy_Colourmap"
-		context_type = decision_category
-		parent_window_token = "ANM_GER_EP_Economy_Decisions_GUI"
-			
-		visible = {	has_country_flag = GER_EP_Economy_Colourmap }
-		triggers = { }
-		effects = { 
-			ep_economy_toggle_button_2_click = { 
-			    clr_country_flag = GER_EP_Economy_Country
-			}
-		}
-		properties = { }
-	}
 
 	ANM_reichsstability_Button_GUI = {
 		context_type = player_context
@@ -131,7 +103,7 @@ scripted_gui = {
 	ANM_GdDR_Fuhrer = {
 		context_type = player_context
 		window_name = "ANM_GdDR_Fuhrer"
-		parent_window_token = "ANM_reichsstabilitat_GUI"
+		parent_window_name = "ANM_reichsstabilitat_GUI"
 		visible = {
 			has_country_flag = GER_GdDR_Fuhrer
 		}
