@@ -484,3 +484,41 @@ ANM_baltics_to_SOV = {
 		set_variable = { ECON_SPHERE_LEADER = SOV }
 	}
 }
+ANM_romania_to_SOV_puppet = {
+	SOV = {
+		set_autonomy = {
+			target = ROM
+			autonomy_state = autonomy_satellite
+		}
+	}
+
+	ROM = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 47
+			liberalism = 18
+			conservatism = 10
+			progressivism = 15
+			socialist = 10
+		}
+
+		remove_ideas = {
+			Pakt_Bundnispartner
+			ROM_michael_the_first
+			ROM_A_Decadent_Dream
+			ROM_dealing_with_the_devil
+		}
+		
+		add_ideas = {
+			COM_Satellite
+		}
+
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
