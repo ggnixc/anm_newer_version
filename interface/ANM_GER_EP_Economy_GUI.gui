@@ -9,27 +9,29 @@ guiTypes = {
 			spriteType = "GFX_ep_economy_background"
 			position = { x = 3 y = 4 }
 		}
-		containerWindowType = {
+		buttonType = {
+			name = "ep_economy_toggle_button_1"
+			spriteType = "GFX_ep_economy_toggle_button_1"
+			position = { x = 20 y = 6 }
+		}
+		instantTextboxType = {
+			name = "EP_Economic_Stability"
+			position = { x = 20 y = 6 }
+			textureFile = ""
+			font = "aldrich_18_outline"
+			borderSize = {x = 0 y = 0}
+			text = "E.P. Economic Stability: ([?GER_ANM_party_leadership_influnce|-0])"
+			maxWidth = 450
+			maxHeight = 30
+			fixedsize = yes
+		}
+
+		containerWindowType = { 
 			name = "ANM_GER_EP_Economy_Country"
 			size = { width = 525 height = 420 }
 			position = { x = 0 y = 0 }
-
-			buttonType = {
-				name = "ep_economy_toggle_button_1"
-				spriteType = "GFX_ep_economy_toggle_button_1"
-				position = { x = 20 y = 6 }
-			}
-			instantTextboxType = {
-				name = "EP_Economic_Stability"
-				position = { x = 16 y = 65 }
-				textureFile = ""
-				font = "aldrich_18_outline"
-				borderSize = {x = 0 y = 0}
-				text = "E.P. Economic Stability: ([?GER_ANM_party_leadership_influnce|-0])"
-				maxWidth = 450
-				maxHeight = 30
-				fixedsize = yes
-			}
+			
+			# Start 1996 buttons
 			buttonType = {
 				name = "ep_economy_country_reich"
 				quadTextureSprite = "GFX_ep_economy_country_reich"
@@ -78,12 +80,11 @@ guiTypes = {
 				position = { x = 281 y = 239 }
 				pdx_tooltip = GER_ep_economy_country_ukraine
 			}
-			iconType = {
+			buttonType = {
 				name = "ep_economy_country_poland"
 				quadTextureSprite = "GFX_ep_economy_country_poland"
 				position = { x = 248 y = 236 }
 				pdx_tooltip = GER_ep_economy_country_poland
-				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_country_caucasus"
@@ -241,6 +242,198 @@ guiTypes = {
 				position = { x = 86 y = 145 }
 				pdx_tooltip = GER_ep_economy_country_shetland
 			}
-		}			
+		}		
+
+		containerWindowType = { 
+			name = "ANM_GER_EP_Economy_Status"
+			size = { width = 525 height = 420 }
+			position = { x = 0 y = 0 }
+			
+			# Status Of Economy
+			buttonType = {
+				name = "ep_economy_status_reich"
+				quadTextureSprite = "GFX_ep_economy_status_reich"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_country_reich
+			}
+			buttonType = {
+				name = "ep_economy_status_norway"
+				quadTextureSprite = "GFX_ep_economy_status_norway"
+				position = { x = 136 y = 12 }
+				pdx_tooltip = GER_ep_economy_country_norway
+			}
+			buttonType = {
+				name = "ep_economy_status_sweden"
+				quadTextureSprite = "GFX_ep_economy_status_sweden"
+				position = { x = 185 y = 43 }
+				pdx_tooltip = GER_ep_economy_country_sweden
+			}
+			buttonType = {
+				name = "ep_economy_status_baltics"
+				quadTextureSprite = "GFX_ep_economy_status_baltics"
+				position = { x = 261 y = 159 }
+				pdx_tooltip = GER_ep_economy_country_baltics
+			}
+			buttonType = {
+				name = "ep_economy_status_belarus"
+				quadTextureSprite = "GFX_ep_economy_status_belarus"
+				position = { x = 290 y = 200 }
+				pdx_tooltip = GER_ep_economy_country_belarus
+			}
+			buttonType = {
+				name = "ep_economy_status_homel"
+				quadTextureSprite = "GFX_ep_economy_status_homel"
+				position = { x = 335 y = 234 }
+				pdx_tooltip = GER_ep_economy_country_homel
+			}
+			buttonType = {
+				name = "ep_economy_status_ukraine"
+				quadTextureSprite = "GFX_ep_economy_status_ukraine"
+				position = { x = 281 y = 239 }
+				pdx_tooltip = GER_ep_economy_country_ukraine
+			}
+			buttonType = {
+				name = "ep_economy_status_poland_good"
+				quadTextureSprite = "GFX_ep_economy_status_poland"
+				position = { x = 248 y = 236 }
+				pdx_tooltip = GER_ep_economy_country_poland
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_poland_average"
+				quadTextureSprite = "GFX_ep_economy_status_poland"
+				position = { x = 248 y = 236 }
+				pdx_tooltip = GER_ep_economy_country_poland
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_poland_poor"
+				quadTextureSprite = "GFX_ep_economy_status_poland"
+				position = { x = 248 y = 236 }
+				pdx_tooltip = GER_ep_economy_country_poland
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_poland_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_poland"
+				position = { x = 248 y = 236 }
+				pdx_tooltip = GER_ep_economy_country_poland
+				frame = 4
+			}
+			buttonType = {
+				name = "ep_economy_status_caucasus"
+				quadTextureSprite = "GFX_ep_economy_status_caucasus"
+				position = { x = 388 y = 292 }
+				pdx_tooltip = GER_ep_economy_country_caucasus
+			}
+			buttonType = {
+				name = "ep_economy_status_wolga"
+				quadTextureSprite = "GFX_ep_economy_status_wolga"
+				position = { x = 426 y = 282 }
+				pdx_tooltip = GER_ep_economy_country_wolga
+			}
+			buttonType = {
+				name = "ep_economy_status_slovakia"
+				quadTextureSprite = "GFX_ep_economy_status_slovakia"
+				position = { x = 229 y = 270 }
+				pdx_tooltip = GER_ep_economy_country_slovakia
+			}
+			buttonType = {
+				name = "ep_economy_status_hungary"
+				quadTextureSprite = "GFX_ep_economy_status_hungary"
+				position = { x = 225 y = 275 }
+				pdx_tooltip = GER_ep_economy_country_hungary
+			}
+			buttonType = {
+				name = "ep_economy_status_romania"
+				quadTextureSprite = "GFX_ep_economy_status_romania"
+				position = { x = 257 y = 282 }
+				pdx_tooltip = GER_ep_economy_country_romania
+			}
+			buttonType = {
+				name = "ep_economy_status_serbia"
+				quadTextureSprite = "GFX_ep_economy_status_serbia"
+				position = { x = 249 y = 306 }
+				pdx_tooltip = GER_ep_economy_country_serbia
+			}
+			buttonType = {
+				name = "ep_economy_status_bulgaria"
+				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
+				position = { x = 261 y = 325 }
+				pdx_tooltip = GER_ep_economy_country_bulgaria
+			}
+			buttonType = {
+				name = "ep_economy_status_transnitria"
+				quadTextureSprite = "GFX_ep_economy_status_transnitria"
+				position = { x = 314 y = 276 }
+				pdx_tooltip = GER_ep_economy_country_transnitria
+			}
+			buttonType = {
+				name = "ep_economy_status_netherlands"
+				quadTextureSprite = "GFX_ep_economy_status_netherlands"
+				position = { x = 125 y = 229 }
+				pdx_tooltip = GER_ep_economy_country_netherlands
+			}
+			buttonType = {
+				name = "ep_economy_status_flanders"
+				quadTextureSprite = "GFX_ep_economy_status_flanders"
+				position = { x = 110 y = 249 }
+				pdx_tooltip = GER_ep_economy_country_flanders
+			}
+			buttonType = {
+				name = "ep_economy_status_wallonia"
+				quadTextureSprite = "GFX_ep_economy_status_wallonia"
+				position = { x = 124 y = 257 }
+				pdx_tooltip = GER_ep_economy_country_wallonia
+			}
+			buttonType = {
+				name = "ep_economy_status_france"
+				quadTextureSprite = "GFX_ep_economy_status_france"
+				position = { x = 62 y = 264 }
+				pdx_tooltip = GER_ep_economy_country_france
+			}
+			buttonType = {
+				name = "ep_economy_status_ireland"
+				quadTextureSprite = "GFX_ep_economy_status_ireland"
+				position = { x = 17 y = 207 }
+				pdx_tooltip = GER_ep_economy_country_ireland
+			}
+			buttonType = {
+				name = "ep_economy_status_britain"
+				quadTextureSprite = "GFX_ep_economy_status_britain"
+				position = { x = 39 y = 161 }
+				pdx_tooltip = GER_ep_economy_country_britain
+			}
+			buttonType = {
+				name = "ep_economy_status_denmark"
+				quadTextureSprite = "GFX_ep_economy_status_denmark"
+				position = { x = 161 y = 183 }
+				pdx_tooltip = GER_ep_economy_country_denmark
+			}
+			buttonType = {
+				name = "ep_economy_status_finland"
+				quadTextureSprite = "GFX_ep_economy_status_finland"
+				position = { x = 250 y = 29 }
+				pdx_tooltip = GER_ep_economy_country_finland
+			}
+			buttonType = {
+				name = "ep_economy_status_spain"
+				quadTextureSprite = "GFX_ep_economy_status_spain"
+				position = { x = 22 y = 327 }
+				pdx_tooltip = GER_ep_economy_country_spain
+			}	
+			buttonType = {
+				name = "ep_economy_country_turkey"
+				spriteType = "GFX_ep_economy_country_turkey"
+				position = { x = 280 y = 344 }
+				pdx_tooltip = GER_ep_economy_country_turkey
+			}
+			buttonType = {
+				name = "ep_economy_country_iran"
+				spriteType = "GFX_ep_economy_country_iran"
+				position = { x = 444 y = 368 }
+				pdx_tooltip = GER_ep_economy_country_iran
+			}
+		}				
 	}  
 } 

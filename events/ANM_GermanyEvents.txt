@@ -1408,5 +1408,26 @@ country_event = { #MOS -> Russia
 		ANM_MOS_Russia_Despotism = yes
 	} 	
 }
+country_event = { #debugs
+	id = GER_misc_main_event.100
+	title = GER_misc_main_event.11.t
+	desc = GER_misc_main_event.11.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+
+	option = {  #National Socialism
+		name = GER_misc_main_event.100.a
+		GER = { set_variable = { GER_ANM_economy_status_1 = 1 } } 
+	}
+	option = { #Despotism
+		name = GER_misc_main_event.100.b
+		GER = { set_variable = { GER_ANM_economy_status_1 = 3 } } 
+	} 	
+	option = { #Despotism
+		name = GER_misc_main_event.100.c
+		GER = { set_variable = { GER_ANM_economy_status_1 = 4 } } 
+	}
+}
 
 

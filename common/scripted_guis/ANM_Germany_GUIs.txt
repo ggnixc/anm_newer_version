@@ -36,18 +36,27 @@ scripted_gui = {
 		}
 		
 		properties = { }
-	}
+	} 
 
 	ANM_GER_EP_Economy_Decisions_GUI = { 
 		window_name = "ANM_GER_EP_Economy_Decisions_GUI"
 		context_type = decision_category
 		parent_window_token = decision_tab
 			
-		visible = { always = yes }
-		triggers = { }
+		visible = { has_country_flag = GER_ANM_Economy_View_Activate } 
+		triggers = { 
+			ANM_GER_EP_Economy_Status_visible = {  has_country_flag = GER_ANM_Economy_View_Status }
+			
+			ep_economy_status_poland_good_visible = { check_variable = { GER_ANM_economy_status_1 = 1 } } 
+			ep_economy_status_poland_average_visible = { check_variable = { GER_ANM_economy_status_1 = 2 } } 
+			ep_economy_status_poland_poor_visible = { check_variable = { GER_ANM_economy_status_1 = 3 } } 
+			ep_economy_status_poland_unavailable_visible = { check_variable = { GER_ANM_economy_status_1 = 4 } } 
+
+		}
+
 		effects = { } 
 		properties = { }
-	}
+	} 
 
 	ANM_reichsstability_Button_GUI = {
 		context_type = player_context
@@ -108,4 +117,4 @@ scripted_gui = {
 			has_country_flag = GER_GdDR_Fuhrer
 		}
 	}
-}
+} 
