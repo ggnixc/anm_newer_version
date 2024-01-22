@@ -1,4 +1,14 @@
 ﻿capital = 681
+recruit_character = SAF_Ferdi_Hartzenberg
+recruit_character = SAF_Constand_Viljoen
+recruit_character = SAF_Pieter_Groenewald
+recruit_character = SAF_Blade_Nzimande
+recruit_character = SAF_Robert_Van_Tonder
+recruit_character = SAF_Nelson_Mandela_sd
+recruit_character = SAF_Nelson_Mandela_s
+recruit_character = SAF_Pieter_Mulder
+recruit_character = SAF_David_Graaff
+recruit_character = SAF_Andreas_Liebenberg
 
 set_oob = "SAF_1962"
 
@@ -10,6 +20,9 @@ add_ideas = {
 	SAF_awb_strongarming
 	SAF_scars_of_the_civil_war
 	SAF_international_influence
+	SAF_black_sheep_of_the_ofn
+	SAF_political_crisis
+	SAF_professional_army
     #POLITICAL
 	tno_political_parties_multiparty_system
 	tno_religious_rights_secularism
@@ -59,12 +72,18 @@ add_ideas = {
 	tno_academic_base_secondary_schooling
 	construction_level_8
 	### MINISTERS ###
+	SAF_Pieter_Mulder_hog
+	SAF_Ferdi_Hartzenberg_eco
+	SAF_Andreas_Liebenberg_sec
+	SAF_David_Graaff_for
 }
 
 set_research_slots = 3
 set_convoys = 200
 add_war_support = 0.15
 add_manpower = 180000
+
+country_lock_all_division_template = yes
 
 add_equipment_to_stockpile = {
 	type = infantry_equipment_2
@@ -119,16 +138,6 @@ set_popularities = {
     despotism = 3
     fascism = 4
     esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Pieter Mulder"
-	desc = "POLITICS_PIETER_MULDER_DESC"
-	picture = "Portrait_SAF_Pieter_Mulder.dds"
-	expire = "2999.4.20"
-	ideology = conservatism_paternalistic_conservatism_subtype
-	traits = {
-	}
 }
 
 if = {

@@ -36,6 +36,52 @@ ideas = {
 				social_liberal_drift = 0.02
 				production_speed_buildings_factor = 0.05 
 			}
-		}		
+		}
+		SAF_black_sheep_of_the_ofn = {
+			allowed = { always = no }
+			picture = SAF_black_sheep_of_the_ofn
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.25
+				political_power_gain = -0.30
+				political_power_gain = -0.02
+                army_org_factor = -0.1
+				offence = -0.1
+				defence = -0.1
+				production_speed_buildings_factor = -0.20
+            }
+		}
+		SAF_political_crisis = {
+			allowed = { always = no }
+			picture = SAF_political_crisis
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.50
+				political_power_gain = -0.04
+				production_speed_buildings_factor = -0.45
+				industrial_capacity_factory = -0.35
+				industrial_capacity_dockyard = -0.35
+				production_factory_start_efficiency_factor = -0.25
+				socialist_drift = 0.03
+				communist_drift = 0.03
+				conservatism_drift = 0.03
+            }
+		}	
+		SAF_professional_army = {
+			allowed = { always = no }
+			picture = SAF_professional_army
+			removal_cost = -1
+
+			modifier = {
+				training_time_army = -15.0
+				offence = 0.10
+				army_speed_factor = 0.10
+				experience_gain_army = 0.01
+            }
+		}	
 	}
 }
