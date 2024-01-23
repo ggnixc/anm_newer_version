@@ -1,6 +1,7 @@
 ﻿add_namespace = GER_flavour_event
 add_namespace = GER_focus_event
 add_namespace = GER_misc_main_event
+add_namespace = GER_debug_event
 
 ### Flavour Events ###
 country_event = { #January ‘96: Kids These Days
@@ -1409,24 +1410,28 @@ country_event = { #MOS -> Russia
 	} 	
 }
 country_event = { #debugs
-	id = GER_misc_main_event.100
-	title = GER_misc_main_event.11.t
-	desc = GER_misc_main_event.11.desc
+	id = GER_debug_event.100
+	title = GER_debug_event.100.t
+	desc = GER_debug_event.100.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
 
-	option = {  #National Socialism
-		name = GER_misc_main_event.100.a
-		GER = { set_variable = { GER_ANM_economy_status_1 = 1 } } 
+	option = {
+		name = GER_debug_event.100.a
+		GER = { set_variable = { GER_ANM_economy_status_1 = 0 } } 
 	}
-	option = { #Despotism
-		name = GER_misc_main_event.100.b
+	option = { 
+		name = GER_debug_event.100.b
 		GER = { set_variable = { GER_ANM_economy_status_1 = 3 } } 
 	} 	
-	option = { #Despotism
-		name = GER_misc_main_event.100.c
-		GER = { set_variable = { GER_ANM_economy_status_1 = 4 } } 
+	option = { 
+		name = GER_debug_event.100.c
+		GER = { set_variable = { GER_ANM_economy_status_1 = 5 } } 
+	}
+	option = { 
+		name = GER_debug_event.100.d
+		GER = { set_variable = { GER_ANM_economy_status_1 = 8 } } 
 	}
 }
 

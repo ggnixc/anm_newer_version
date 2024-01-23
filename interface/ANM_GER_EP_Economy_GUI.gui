@@ -10,18 +10,28 @@ guiTypes = {
 			position = { x = 3 y = 4 }
 		}
 		buttonType = {
-			name = "ep_economy_toggle_button_1"
-			spriteType = "GFX_ep_economy_toggle_button_1"
-			position = { x = 20 y = 6 }
+			name = "ep_economy_button_country"
+			spriteType = "GFX_ep_economy_button"
+			position = { x = 426 y = 9 }
+		}
+		buttonType = {
+			name = "ep_economy_button_status"
+			spriteType = "GFX_ep_economy_button"
+			position = { x = 452 y = 9 }
+		}
+		buttonType = {
+			name = "ep_economy_button_currency"
+			spriteType = "GFX_ep_economy_button"
+			position = { x = 478 y = 9 }
 		}
 		instantTextboxType = {
 			name = "EP_Economic_Stability"
-			position = { x = 20 y = 6 }
+			position = { x = 40 y = 20 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_14_outline"
 			borderSize = {x = 0 y = 0}
 			text = "E.P. Economic Stability: ([?GER_ANM_party_leadership_influnce|-0])"
-			maxWidth = 450
+			maxWidth = 350
 			maxHeight = 30
 			fixedsize = yes
 		}
@@ -251,189 +261,795 @@ guiTypes = {
 			
 			# Status Of Economy
 			buttonType = {
-				name = "ep_economy_status_reich"
+				name = "ep_economy_status_reich_good"
 				quadTextureSprite = "GFX_ep_economy_status_reich"
 				position = { x = 143 y = 111 }
-				pdx_tooltip = GER_ep_economy_country_reich
+				pdx_tooltip = GER_ep_economy_status_reich
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_norway"
+				name = "ep_economy_status_reich_average"
+				quadTextureSprite = "GFX_ep_economy_status_reich"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_status_reich
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_reich_poor"
+				quadTextureSprite = "GFX_ep_economy_status_reich"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_status_reich
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_reich_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_reich"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_status_reich
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_norway_good"
 				quadTextureSprite = "GFX_ep_economy_status_norway"
 				position = { x = 136 y = 12 }
-				pdx_tooltip = GER_ep_economy_country_norway
+				pdx_tooltip = GER_ep_economy_status_norway
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_sweden"
+				name = "ep_economy_status_norway_average"
+				quadTextureSprite = "GFX_ep_economy_status_norway"
+				position = { x = 136 y = 12 }
+				pdx_tooltip = GER_ep_economy_status_norway
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_norway_poor"
+				quadTextureSprite = "GFX_ep_economy_status_norway"
+				position = { x = 136 y = 12 }
+				pdx_tooltip = GER_ep_economy_status_norway
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_norway_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_norway"
+				position = { x = 136 y = 12 }
+				pdx_tooltip = GER_ep_economy_status_norway
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_sweden_good"
 				quadTextureSprite = "GFX_ep_economy_status_sweden"
 				position = { x = 185 y = 43 }
-				pdx_tooltip = GER_ep_economy_country_sweden
+				pdx_tooltip = GER_ep_economy_status_sweden
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_baltics"
+				name = "ep_economy_status_sweden_average"
+				quadTextureSprite = "GFX_ep_economy_status_sweden"
+				position = { x = 185 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_sweden
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_sweden_poor"
+				quadTextureSprite = "GFX_ep_economy_status_sweden"
+				position = { x = 185 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_sweden
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_sweden_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_sweden"
+				position = { x = 185 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_sweden
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_baltics_good"
 				quadTextureSprite = "GFX_ep_economy_status_baltics"
 				position = { x = 261 y = 159 }
-				pdx_tooltip = GER_ep_economy_country_baltics
+				pdx_tooltip = GER_ep_economy_status_baltics
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_belarus"
+				name = "ep_economy_status_baltics_average"
+				quadTextureSprite = "GFX_ep_economy_status_baltics"
+				position = { x = 261 y = 159 }
+				pdx_tooltip = GER_ep_economy_status_baltics
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_baltics_poor"
+				quadTextureSprite = "GFX_ep_economy_status_baltics"
+				position = { x = 261 y = 159 }
+				pdx_tooltip = GER_ep_economy_status_baltics
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_baltics_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_baltics"
+				position = { x = 261 y = 159 }
+				pdx_tooltip = GER_ep_economy_status_baltics
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_belarus_good"
 				quadTextureSprite = "GFX_ep_economy_status_belarus"
 				position = { x = 290 y = 200 }
-				pdx_tooltip = GER_ep_economy_country_belarus
+				pdx_tooltip = GER_ep_economy_status_belarus
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_homel"
+				name = "ep_economy_status_belarus_average"
+				quadTextureSprite = "GFX_ep_economy_status_belarus"
+				position = { x = 290 y = 200 }
+				pdx_tooltip = GER_ep_economy_status_belarus
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_belarus_poor"
+				quadTextureSprite = "GFX_ep_economy_status_belarus"
+				position = { x = 290 y = 200 }
+				pdx_tooltip = GER_ep_economy_status_belarus
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_belarus_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_belarus"
+				position = { x = 290 y = 200 }
+				pdx_tooltip = GER_ep_economy_status_belarus
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_homel_good"
 				quadTextureSprite = "GFX_ep_economy_status_homel"
 				position = { x = 335 y = 234 }
-				pdx_tooltip = GER_ep_economy_country_homel
+				pdx_tooltip = GER_ep_economy_status_homel
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_ukraine"
+				name = "ep_economy_status_homel_average"
+				quadTextureSprite = "GFX_ep_economy_status_homel"
+				position = { x = 335 y = 234 }
+				pdx_tooltip = GER_ep_economy_status_homel
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_homel_poor"
+				quadTextureSprite = "GFX_ep_economy_status_homel"
+				position = { x = 335 y = 234 }
+				pdx_tooltip = GER_ep_economy_status_homel
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_homel_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_homel"
+				position = { x = 335 y = 234 }
+				pdx_tooltip = GER_ep_economy_status_homel
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_ukraine_good"
 				quadTextureSprite = "GFX_ep_economy_status_ukraine"
 				position = { x = 281 y = 239 }
-				pdx_tooltip = GER_ep_economy_country_ukraine
+				pdx_tooltip = GER_ep_economy_status_ukraine
+				frame = 1
 			}
+			buttonType = {
+				name = "ep_economy_status_ukraine_average"
+				quadTextureSprite = "GFX_ep_economy_status_ukraine"
+				position = { x = 281 y = 239 }
+				pdx_tooltip = GER_ep_economy_status_ukraine
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_ukraine_poor"
+				quadTextureSprite = "GFX_ep_economy_status_ukraine"
+				position = { x = 281 y = 239 }
+				pdx_tooltip = GER_ep_economy_status_ukraine
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_ukraine_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_ukraine"
+				position = { x = 281 y = 239 }
+				pdx_tooltip = GER_ep_economy_status_ukraine
+				frame = 4
+			}
+
 			buttonType = {
 				name = "ep_economy_status_poland_good"
 				quadTextureSprite = "GFX_ep_economy_status_poland"
 				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_country_poland
+				pdx_tooltip = GER_ep_economy_status_poland
 				frame = 1
 			}
 			buttonType = {
 				name = "ep_economy_status_poland_average"
 				quadTextureSprite = "GFX_ep_economy_status_poland"
 				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_country_poland
+				pdx_tooltip = GER_ep_economy_status_poland
 				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_status_poland_poor"
 				quadTextureSprite = "GFX_ep_economy_status_poland"
 				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_country_poland
+				pdx_tooltip = GER_ep_economy_status_poland
 				frame = 3
 			}
 			buttonType = {
 				name = "ep_economy_status_poland_unavailable"
 				quadTextureSprite = "GFX_ep_economy_status_poland"
 				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_country_poland
+				pdx_tooltip = GER_ep_economy_status_poland
 				frame = 4
 			}
+
 			buttonType = {
-				name = "ep_economy_status_caucasus"
+				name = "ep_economy_status_caucasus_good"
 				quadTextureSprite = "GFX_ep_economy_status_caucasus"
 				position = { x = 388 y = 292 }
-				pdx_tooltip = GER_ep_economy_country_caucasus
+				pdx_tooltip = GER_ep_economy_status_caucasus
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_wolga"
+				name = "ep_economy_status_caucasus_average"
+				quadTextureSprite = "GFX_ep_economy_status_caucasus"
+				position = { x = 388 y = 292 }
+				pdx_tooltip = GER_ep_economy_status_caucasus
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_caucasus_poor"
+				quadTextureSprite = "GFX_ep_economy_status_caucasus"
+				position = { x = 388 y = 292 }
+				pdx_tooltip = GER_ep_economy_status_caucasus
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_caucasus_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_caucasus"
+				position = { x = 388 y = 292 }
+				pdx_tooltip = GER_ep_economy_status_caucasus
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_wolga_good"
 				quadTextureSprite = "GFX_ep_economy_status_wolga"
 				position = { x = 426 y = 282 }
-				pdx_tooltip = GER_ep_economy_country_wolga
+				pdx_tooltip = GER_ep_economy_status_wolga
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_slovakia"
+				name = "ep_economy_status_wolga_average"
+				quadTextureSprite = "GFX_ep_economy_status_wolga"
+				position = { x = 426 y = 282 }
+				pdx_tooltip = GER_ep_economy_status_wolga
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_wolga_poor"
+				quadTextureSprite = "GFX_ep_economy_status_wolga"
+				position = { x = 426 y = 282 }
+				pdx_tooltip = GER_ep_economy_status_wolga
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_wolga_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_wolga"
+				position = { x = 426 y = 282 }
+				pdx_tooltip = GER_ep_economy_status_wolga
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_slovakia_good"
 				quadTextureSprite = "GFX_ep_economy_status_slovakia"
 				position = { x = 229 y = 270 }
-				pdx_tooltip = GER_ep_economy_country_slovakia
+				pdx_tooltip = GER_ep_economy_status_slovakia
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_hungary"
+				name = "ep_economy_status_slovakia_average"
+				quadTextureSprite = "GFX_ep_economy_status_slovakia"
+				position = { x = 229 y = 270 }
+				pdx_tooltip = GER_ep_economy_status_slovakia
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_slovakia_poor"
+				quadTextureSprite = "GFX_ep_economy_status_slovakia"
+				position = { x = 229 y = 270 }
+				pdx_tooltip = GER_ep_economy_status_slovakia
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_slovakia_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_slovakia"
+				position = { x = 229 y = 270 }
+				pdx_tooltip = GER_ep_economy_status_slovakia
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_hungary_good"
 				quadTextureSprite = "GFX_ep_economy_status_hungary"
 				position = { x = 225 y = 275 }
-				pdx_tooltip = GER_ep_economy_country_hungary
+				pdx_tooltip = GER_ep_economy_status_hungary
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_romania"
+				name = "ep_economy_status_hungary_average"
+				quadTextureSprite = "GFX_ep_economy_status_hungary"
+				position = { x = 225 y = 275 }
+				pdx_tooltip = GER_ep_economy_status_hungary
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_hungary_poor"
+				quadTextureSprite = "GFX_ep_economy_status_hungary"
+				position = { x = 225 y = 275 }
+				pdx_tooltip = GER_ep_economy_status_hungary
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_hungary_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_hungary"
+				position = { x = 225 y = 275 }
+				pdx_tooltip = GER_ep_economy_status_hungary
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_romania_good"
 				quadTextureSprite = "GFX_ep_economy_status_romania"
 				position = { x = 257 y = 282 }
-				pdx_tooltip = GER_ep_economy_country_romania
+				pdx_tooltip = GER_ep_economy_status_romania
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_serbia"
+				name = "ep_economy_status_romania_average"
+				quadTextureSprite = "GFX_ep_economy_status_romania"
+				position = { x = 257 y = 282 }
+				pdx_tooltip = GER_ep_economy_status_romania
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_romania_poor"
+				quadTextureSprite = "GFX_ep_economy_status_romania"
+				position = { x = 257 y = 282 }
+				pdx_tooltip = GER_ep_economy_status_romania
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_romania_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_romania"
+				position = { x = 257 y = 282 }
+				pdx_tooltip = GER_ep_economy_status_romania
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_serbia_good"
 				quadTextureSprite = "GFX_ep_economy_status_serbia"
 				position = { x = 249 y = 306 }
-				pdx_tooltip = GER_ep_economy_country_serbia
+				pdx_tooltip = GER_ep_economy_status_serbia
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_bulgaria"
+				name = "ep_economy_status_serbia_average"
+				quadTextureSprite = "GFX_ep_economy_status_serbia"
+				position = { x = 249 y = 306 }
+				pdx_tooltip = GER_ep_economy_status_serbia
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_serbia_poor"
+				quadTextureSprite = "GFX_ep_economy_status_serbia"
+				position = { x = 249 y = 306 }
+				pdx_tooltip = GER_ep_economy_status_serbia
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_serbia_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_serbia"
+				position = { x = 249 y = 306 }
+				pdx_tooltip = GER_ep_economy_status_serbia
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_bulgaria_good"
 				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
 				position = { x = 261 y = 325 }
-				pdx_tooltip = GER_ep_economy_country_bulgaria
+				pdx_tooltip = GER_ep_economy_status_bulgaria
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_transnitria"
+				name = "ep_economy_status_bulgaria_average"
+				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
+				position = { x = 261 y = 325 }
+				pdx_tooltip = GER_ep_economy_status_bulgaria
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_bulgaria_poor"
+				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
+				position = { x = 261 y = 325 }
+				pdx_tooltip = GER_ep_economy_status_bulgaria
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_bulgaria_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
+				position = { x = 261 y = 325 }
+				pdx_tooltip = GER_ep_economy_status_bulgaria
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_transnitria_good"
 				quadTextureSprite = "GFX_ep_economy_status_transnitria"
 				position = { x = 314 y = 276 }
-				pdx_tooltip = GER_ep_economy_country_transnitria
+				pdx_tooltip = GER_ep_economy_status_transnitria
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_netherlands"
+				name = "ep_economy_status_transnitria_average"
+				quadTextureSprite = "GFX_ep_economy_status_transnitria"
+				position = { x = 314 y = 276 }
+				pdx_tooltip = GER_ep_economy_status_transnitria
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_transnitria_poor"
+				quadTextureSprite = "GFX_ep_economy_status_transnitria"
+				position = { x = 314 y = 276 }
+				pdx_tooltip = GER_ep_economy_status_transnitria
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_transnitria_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_transnitria"
+				position = { x = 314 y = 276 }
+				pdx_tooltip = GER_ep_economy_status_transnitria
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_netherlands_good"
 				quadTextureSprite = "GFX_ep_economy_status_netherlands"
 				position = { x = 125 y = 229 }
-				pdx_tooltip = GER_ep_economy_country_netherlands
+				pdx_tooltip = GER_ep_economy_status_netherlands
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_flanders"
+				name = "ep_economy_status_netherlands_average"
+				quadTextureSprite = "GFX_ep_economy_status_netherlands"
+				position = { x = 125 y = 229 }
+				pdx_tooltip = GER_ep_economy_status_netherlands
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_netherlands_poor"
+				quadTextureSprite = "GFX_ep_economy_status_netherlands"
+				position = { x = 125 y = 229 }
+				pdx_tooltip = GER_ep_economy_status_netherlands
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_netherlands_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_netherlands"
+				position = { x = 125 y = 229 }
+				pdx_tooltip = GER_ep_economy_status_netherlands
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_flanders_good"
 				quadTextureSprite = "GFX_ep_economy_status_flanders"
 				position = { x = 110 y = 249 }
-				pdx_tooltip = GER_ep_economy_country_flanders
+				pdx_tooltip = GER_ep_economy_status_flanders
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_wallonia"
+				name = "ep_economy_status_flanders_average"
+				quadTextureSprite = "GFX_ep_economy_status_flanders"
+				position = { x = 110 y = 249 }
+				pdx_tooltip = GER_ep_economy_status_flanders
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_flanders_poor"
+				quadTextureSprite = "GFX_ep_economy_status_flanders"
+				position = { x = 110 y = 249 }
+				pdx_tooltip = GER_ep_economy_status_flanders
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_flanders_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_flanders"
+				position = { x = 110 y = 249 }
+				pdx_tooltip = GER_ep_economy_status_flanders
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_wallonia_good"
 				quadTextureSprite = "GFX_ep_economy_status_wallonia"
 				position = { x = 124 y = 257 }
-				pdx_tooltip = GER_ep_economy_country_wallonia
+				pdx_tooltip = GER_ep_economy_status_wallonia
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_france"
+				name = "ep_economy_status_wallonia_average"
+				quadTextureSprite = "GFX_ep_economy_status_wallonia"
+				position = { x = 124 y = 257 }
+				pdx_tooltip = GER_ep_economy_status_wallonia
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_wallonia_poor"
+				quadTextureSprite = "GFX_ep_economy_status_wallonia"
+				position = { x = 124 y = 257 }
+				pdx_tooltip = GER_ep_economy_status_wallonia
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_wallonia_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_wallonia"
+				position = { x = 124 y = 257 }
+				pdx_tooltip = GER_ep_economy_status_wallonia
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_france_good"
 				quadTextureSprite = "GFX_ep_economy_status_france"
 				position = { x = 62 y = 264 }
-				pdx_tooltip = GER_ep_economy_country_france
+				pdx_tooltip = GER_ep_economy_status_france
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_ireland"
+				name = "ep_economy_status_france_average"
+				quadTextureSprite = "GFX_ep_economy_status_france"
+				position = { x = 62 y = 264 }
+				pdx_tooltip = GER_ep_economy_status_france
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_france_poor"
+				quadTextureSprite = "GFX_ep_economy_status_france"
+				position = { x = 62 y = 264 }
+				pdx_tooltip = GER_ep_economy_status_france
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_france_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_france"
+				position = { x = 62 y = 264 }
+				pdx_tooltip = GER_ep_economy_status_france
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_ireland_good"
 				quadTextureSprite = "GFX_ep_economy_status_ireland"
 				position = { x = 17 y = 207 }
-				pdx_tooltip = GER_ep_economy_country_ireland
+				pdx_tooltip = GER_ep_economy_status_ireland
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_britain"
+				name = "ep_economy_status_ireland_average"
+				quadTextureSprite = "GFX_ep_economy_status_ireland"
+				position = { x = 17 y = 207 }
+				pdx_tooltip = GER_ep_economy_status_ireland
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_ireland_poor"
+				quadTextureSprite = "GFX_ep_economy_status_ireland"
+				position = { x = 17 y = 207 }
+				pdx_tooltip = GER_ep_economy_status_ireland
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_ireland_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_ireland"
+				position = { x = 17 y = 207 }
+				pdx_tooltip = GER_ep_economy_status_ireland
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_britain_good"
 				quadTextureSprite = "GFX_ep_economy_status_britain"
 				position = { x = 39 y = 161 }
-				pdx_tooltip = GER_ep_economy_country_britain
+				pdx_tooltip = GER_ep_economy_status_britain
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_denmark"
+				name = "ep_economy_status_britain_average"
+				quadTextureSprite = "GFX_ep_economy_status_britain"
+				position = { x = 39 y = 161 }
+				pdx_tooltip = GER_ep_economy_status_britain
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_britain_poor"
+				quadTextureSprite = "GFX_ep_economy_status_britain"
+				position = { x = 39 y = 161 }
+				pdx_tooltip = GER_ep_economy_status_britain
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_britain_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_britain"
+				position = { x = 39 y = 161 }
+				pdx_tooltip = GER_ep_economy_status_britain
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_denmark_good"
 				quadTextureSprite = "GFX_ep_economy_status_denmark"
 				position = { x = 161 y = 183 }
-				pdx_tooltip = GER_ep_economy_country_denmark
+				pdx_tooltip = GER_ep_economy_status_denmark
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_finland"
+				name = "ep_economy_status_denmark_average"
+				quadTextureSprite = "GFX_ep_economy_status_denmark"
+				position = { x = 161 y = 183 }
+				pdx_tooltip = GER_ep_economy_status_denmark
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_denmark_poor"
+				quadTextureSprite = "GFX_ep_economy_status_denmark"
+				position = { x = 161 y = 183 }
+				pdx_tooltip = GER_ep_economy_status_denmark
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_denmark_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_denmark"
+				position = { x = 161 y = 183 }
+				pdx_tooltip = GER_ep_economy_status_denmark
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_finland_good"
 				quadTextureSprite = "GFX_ep_economy_status_finland"
 				position = { x = 250 y = 29 }
-				pdx_tooltip = GER_ep_economy_country_finland
+				pdx_tooltip = GER_ep_economy_status_finland
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_spain"
+				name = "ep_economy_status_finland_average"
+				quadTextureSprite = "GFX_ep_economy_status_finland"
+				position = { x = 250 y = 29 }
+				pdx_tooltip = GER_ep_economy_status_finland
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_finland_poor"
+				quadTextureSprite = "GFX_ep_economy_status_finland"
+				position = { x = 250 y = 29 }
+				pdx_tooltip = GER_ep_economy_status_finland
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_finland_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_finland"
+				position = { x = 250 y = 29 }
+				pdx_tooltip = GER_ep_economy_status_finland
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_spain_good"
 				quadTextureSprite = "GFX_ep_economy_status_spain"
 				position = { x = 22 y = 327 }
-				pdx_tooltip = GER_ep_economy_country_spain
-			}	
+				pdx_tooltip = GER_ep_economy_status_spain
+				frame = 1
+			}
 			buttonType = {
-				name = "ep_economy_country_turkey"
-				spriteType = "GFX_ep_economy_country_turkey"
+				name = "ep_economy_status_spain_average"
+				quadTextureSprite = "GFX_ep_economy_status_spain"
+				position = { x = 22 y = 327 }
+				pdx_tooltip = GER_ep_economy_status_spain
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_spain_poor"
+				quadTextureSprite = "GFX_ep_economy_status_spain"
+				position = { x = 22 y = 327 }
+				pdx_tooltip = GER_ep_economy_status_spain
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_spain_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_spain"
+				position = { x = 22 y = 327 }
+				pdx_tooltip = GER_ep_economy_status_spain
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_turkey_good"
+				quadTextureSprite = "GFX_ep_economy_status_turkey"
 				position = { x = 280 y = 344 }
-				pdx_tooltip = GER_ep_economy_country_turkey
+				pdx_tooltip = GER_ep_economy_status_turkey
+				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_country_iran"
-				spriteType = "GFX_ep_economy_country_iran"
-				position = { x = 444 y = 368 }
-				pdx_tooltip = GER_ep_economy_country_iran
+				name = "ep_economy_status_turkey_average"
+				quadTextureSprite = "GFX_ep_economy_status_turkey"
+				position = { x = 280 y = 344 }
+				pdx_tooltip = GER_ep_economy_status_turkey
+				frame = 2
 			}
-		}				
+			buttonType = {
+				name = "ep_economy_status_turkey_poor"
+				quadTextureSprite = "GFX_ep_economy_status_turkey"
+				position = { x = 280 y = 344 }
+				pdx_tooltip = GER_ep_economy_status_turkey
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_turkey_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_turkey"
+				position = { x = 280 y = 344 }
+				pdx_tooltip = GER_ep_economy_status_turkey
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_iran_good"
+				quadTextureSprite = "GFX_ep_economy_status_iran"
+				position = { x = 444 y = 368 }
+				pdx_tooltip = GER_ep_economy_status_iran
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_iran_average"
+				quadTextureSprite = "GFX_ep_economy_status_iran"
+				position = { x = 444 y = 368 }
+				pdx_tooltip = GER_ep_economy_status_iran
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_iran_poor"
+				quadTextureSprite = "GFX_ep_economy_status_iran"
+				position = { x = 444 y = 368 }
+				pdx_tooltip = GER_ep_economy_status_iran
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_iran_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_iran"
+				position = { x = 444 y = 368 }
+				pdx_tooltip = GER_ep_economy_status_iran
+				frame = 4
+			}
+
+		}	
+
+		containerWindowType = { 
+			name = "ANM_GER_EP_Economy_Currency"
+			size = { width = 525 height = 420 }
+			position = { x = 0 y = 0 }
+			
+		}						
 	}  
 } 
