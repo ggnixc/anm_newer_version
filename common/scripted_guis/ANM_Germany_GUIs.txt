@@ -45,12 +45,19 @@ scripted_gui = {
 			
 		visible = { always = yes } 
 		triggers = { 
+			ep_economy_background_oversees_visible = { has_country_flag = GER_ANM_Economy_View_Oversees }
+			ep_economy_country_china_visible = { has_country_flag = GER_ANM_Economy_View_Oversees }
+			ep_economy_country_DR_visible = { has_country_flag = GER_ANM_Economy_View_Oversees }
+			ep_economy_country_algeria_visible = { has_country_flag = GER_ANM_Economy_View_Oversees }
+			ep_economy_country_madagaskar_visible = { has_country_flag = GER_ANM_Economy_View_Oversees }
+			
 
 			ep_economy_status_reich_poor_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_1 > 0 } 
 					check_variable = { GER_ANM_economy_status_1 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+					NOT = { has_country_flag = GER_ANM_Economy_View_Oversees } 
 				} 
 			} 
 			ep_economy_status_reich_average_visible = { 	
@@ -58,6 +65,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_1 > 3 }
 					check_variable = { GER_ANM_economy_status_1 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+      				NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_reich_good_visible = {  
@@ -65,12 +73,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_1 > 7 }
 					check_variable = { GER_ANM_economy_status_1 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                	NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_reich_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_1 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                  	NOT = { has_country_flag = GER_ANM_Economy_View_Oversees } 
 				} 
 			} 
 
@@ -79,6 +89,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_2 > 0 } 
 					check_variable = { GER_ANM_economy_status_2 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_norway_average_visible = { 	
@@ -86,6 +97,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_2 > 3 }
 					check_variable = { GER_ANM_economy_status_2 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_norway_good_visible = {  
@@ -93,12 +105,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_2 > 7 }
 					check_variable = { GER_ANM_economy_status_2 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_norway_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_2 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -107,6 +121,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_3 > 0 } 
 					check_variable = { GER_ANM_economy_status_3 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_sweden_average_visible = { 	
@@ -114,6 +129,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_3 > 3 }
 					check_variable = { GER_ANM_economy_status_3 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_sweden_good_visible = {  
@@ -121,12 +137,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_3 > 7 }
 					check_variable = { GER_ANM_economy_status_3 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_sweden_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_3 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -135,6 +153,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_4 > 0 } 
 					check_variable = { GER_ANM_economy_status_4 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_baltics_average_visible = { 	
@@ -142,6 +161,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_4 > 3 }
 					check_variable = { GER_ANM_economy_status_4 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_baltics_good_visible = {  
@@ -149,12 +169,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_4 > 7 }
 					check_variable = { GER_ANM_economy_status_4 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_baltics_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_4 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -163,6 +185,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_5 > 0 } 
 					check_variable = { GER_ANM_economy_status_5 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_belarus_average_visible = { 	
@@ -170,6 +193,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_5 > 3 }
 					check_variable = { GER_ANM_economy_status_5 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_belarus_good_visible = {  
@@ -177,12 +201,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_5 > 7 }
 					check_variable = { GER_ANM_economy_status_5 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_belarus_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_5 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -191,6 +217,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_6 > 0 } 
 					check_variable = { GER_ANM_economy_status_6 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_homel_average_visible = { 	
@@ -198,6 +225,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_6 > 3 }
 					check_variable = { GER_ANM_economy_status_6 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_homel_good_visible = {  
@@ -205,12 +233,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_6 > 7 }
 					check_variable = { GER_ANM_economy_status_6 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_homel_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_6 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -219,6 +249,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_7 > 0 } 
 					check_variable = { GER_ANM_economy_status_7 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_ukraine_average_visible = { 	
@@ -226,6 +257,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_7 > 3 }
 					check_variable = { GER_ANM_economy_status_7 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_ukraine_good_visible = {  
@@ -233,12 +265,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_7 > 7 }
 					check_variable = { GER_ANM_economy_status_7 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_ukraine_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_7 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -247,6 +281,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_8 > 0 } 
 					check_variable = { GER_ANM_economy_status_8 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_caucasus_average_visible = { 	
@@ -254,6 +289,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_8 > 3 }
 					check_variable = { GER_ANM_economy_status_8 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_caucasus_good_visible = {  
@@ -261,12 +297,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_8 > 7 }
 					check_variable = { GER_ANM_economy_status_8 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_caucasus_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_8 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -275,6 +313,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_9 > 0 } 
 					check_variable = { GER_ANM_economy_status_9 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_wolga_average_visible = { 	
@@ -282,6 +321,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_9 > 3 }
 					check_variable = { GER_ANM_economy_status_9 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_wolga_good_visible = {  
@@ -289,12 +329,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_9 > 7 }
 					check_variable = { GER_ANM_economy_status_9 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_wolga_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_9 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -303,6 +345,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_10 > 0 } 
 					check_variable = { GER_ANM_economy_status_10 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_slovakia_average_visible = { 	
@@ -310,6 +353,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_10 > 3 }
 					check_variable = { GER_ANM_economy_status_10 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_slovakia_good_visible = {  
@@ -317,12 +361,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_10 > 7 }
 					check_variable = { GER_ANM_economy_status_10 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_slovakia_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_10 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -331,6 +377,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_11 > 0 } 
 					check_variable = { GER_ANM_economy_status_11 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_hungary_average_visible = { 	
@@ -338,6 +385,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_11 > 3 }
 					check_variable = { GER_ANM_economy_status_11 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_hungary_good_visible = {  
@@ -345,12 +393,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_11 > 7 }
 					check_variable = { GER_ANM_economy_status_11 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_hungary_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_11 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -359,6 +409,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_12 > 0 } 
 					check_variable = { GER_ANM_economy_status_12 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_romania_average_visible = { 	
@@ -366,6 +417,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_12 > 3 }
 					check_variable = { GER_ANM_economy_status_12 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_romania_good_visible = {  
@@ -373,12 +425,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_12 > 7 }
 					check_variable = { GER_ANM_economy_status_12 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_romania_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_12 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -387,6 +441,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_13 > 0 } 
 					check_variable = { GER_ANM_economy_status_13 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_serbia_average_visible = { 	
@@ -394,6 +449,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_13 > 3 }
 					check_variable = { GER_ANM_economy_status_13 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_serbia_good_visible = {  
@@ -401,12 +457,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_13 > 7 }
 					check_variable = { GER_ANM_economy_status_13 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_serbia_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_13 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			
@@ -415,6 +473,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_14 > 0 } 
 					check_variable = { GER_ANM_economy_status_14 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_bulgaria_average_visible = { 	
@@ -422,6 +481,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_14 > 3 }
 					check_variable = { GER_ANM_economy_status_14 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_bulgaria_good_visible = {  
@@ -429,12 +489,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_14 > 7 }
 					check_variable = { GER_ANM_economy_status_14 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_bulgaria_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_14 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -443,6 +505,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_15 > 0 } 
 					check_variable = { GER_ANM_economy_status_15 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_transnitria_average_visible = { 	
@@ -450,6 +513,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_15 > 3 }
 					check_variable = { GER_ANM_economy_status_15 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_transnitria_good_visible = {  
@@ -457,12 +521,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_15 > 7 }
 					check_variable = { GER_ANM_economy_status_15 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_transnitria_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_15 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -471,6 +537,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_16 > 0 } 
 					check_variable = { GER_ANM_economy_status_16 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_netherlands_average_visible = { 	
@@ -478,6 +545,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_16 > 3 }
 					check_variable = { GER_ANM_economy_status_16 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_netherlands_good_visible = {  
@@ -485,12 +553,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_16 > 7 }
 					check_variable = { GER_ANM_economy_status_16 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_netherlands_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_16 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -499,6 +569,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_17 > 0 } 
 					check_variable = { GER_ANM_economy_status_17 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_flanders_average_visible = { 	
@@ -506,6 +577,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_17 > 3 }
 					check_variable = { GER_ANM_economy_status_17 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_flanders_good_visible = {  
@@ -513,12 +585,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_17 > 7 }
 					check_variable = { GER_ANM_economy_status_17 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_flanders_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_17 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -527,6 +601,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_18 > 0 } 
 					check_variable = { GER_ANM_economy_status_18 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_wallonia_average_visible = { 	
@@ -534,6 +609,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_18 > 3 }
 					check_variable = { GER_ANM_economy_status_18 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_wallonia_good_visible = {  
@@ -541,12 +617,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_18 > 7 }
 					check_variable = { GER_ANM_economy_status_18 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_wallonia_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_18 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -555,6 +633,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_19 > 0 } 
 					check_variable = { GER_ANM_economy_status_19 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_france_average_visible = { 	
@@ -562,6 +641,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_19 > 3 }
 					check_variable = { GER_ANM_economy_status_19 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_france_good_visible = {  
@@ -569,12 +649,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_19 > 7 }
 					check_variable = { GER_ANM_economy_status_19 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_france_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_19 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -583,6 +665,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_20 > 0 } 
 					check_variable = { GER_ANM_economy_status_20 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_ireland_average_visible = { 	
@@ -590,6 +673,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_20 > 3 }
 					check_variable = { GER_ANM_economy_status_20 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_ireland_good_visible = {  
@@ -597,12 +681,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_20 > 7 }
 					check_variable = { GER_ANM_economy_status_20 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_ireland_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_20 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -611,6 +697,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_21 > 0 } 
 					check_variable = { GER_ANM_economy_status_21 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_britain_average_visible = { 	
@@ -618,6 +705,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_21 > 3 }
 					check_variable = { GER_ANM_economy_status_21 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_britain_good_visible = {  
@@ -625,12 +713,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_21 > 7 }
 					check_variable = { GER_ANM_economy_status_21 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_britain_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_21 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -639,6 +729,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_22 > 0 } 
 					check_variable = { GER_ANM_economy_status_22 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_denmark_average_visible = { 	
@@ -646,6 +737,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_22 > 3 }
 					check_variable = { GER_ANM_economy_status_22 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_denmark_good_visible = {  
@@ -653,12 +745,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_22 > 7 }
 					check_variable = { GER_ANM_economy_status_22 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_denmark_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_22 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -667,6 +761,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_23 > 0 } 
 					check_variable = { GER_ANM_economy_status_23 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_finland_average_visible = { 	
@@ -674,6 +769,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_23 > 3 }
 					check_variable = { GER_ANM_economy_status_23 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_finland_good_visible = {  
@@ -681,12 +777,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_23 > 7 }
 					check_variable = { GER_ANM_economy_status_23 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_finland_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_23 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -695,6 +793,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_24 > 0 } 
 					check_variable = { GER_ANM_economy_status_24 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 					has_country_flag = GER_ANM_Economy_View_Iberia_Member
 				} 
 			} 
@@ -703,6 +802,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_24 > 3 }
 					check_variable = { GER_ANM_economy_status_24 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 					has_country_flag = GER_ANM_Economy_View_Iberia_Member
 				} 
 			} 
@@ -711,6 +811,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_24 > 7 }
 					check_variable = { GER_ANM_economy_status_24 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 					has_country_flag = GER_ANM_Economy_View_Iberia_Member
 				} 
 			}       
@@ -718,6 +819,7 @@ scripted_gui = {
 				AND = { 
 					check_variable = { GER_ANM_economy_status_24 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 					has_country_flag = GER_ANM_Economy_View_Iberia_Member
 				} 
 			} 
@@ -727,6 +829,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_25 > 0 } 
 					check_variable = { GER_ANM_economy_status_25 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_turkey_average_visible = { 	
@@ -734,6 +837,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_25 > 3 }
 					check_variable = { GER_ANM_economy_status_25 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_turkey_good_visible = {  
@@ -741,12 +845,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_25 > 7 }
 					check_variable = { GER_ANM_economy_status_25 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_turkey_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_25 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -755,6 +861,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_26 > 0 } 
 					check_variable = { GER_ANM_economy_status_26 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_iran_average_visible = { 	
@@ -762,6 +869,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_26 > 3 }
 					check_variable = { GER_ANM_economy_status_26 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_iran_good_visible = {  
@@ -769,12 +877,14 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_26 > 7 }
 					check_variable = { GER_ANM_economy_status_26 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_iran_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_26 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 
@@ -783,6 +893,7 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_27 > 0 } 
 					check_variable = { GER_ANM_economy_status_27 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_poland_average_visible = { 	
@@ -790,6 +901,7 @@ scripted_gui = {
 					check_variable = {  GER_ANM_economy_status_27 > 3 }
 					check_variable = { GER_ANM_economy_status_27 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
 			ep_economy_status_poland_good_visible = {  
@@ -797,28 +909,176 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_27 > 7 }
 					check_variable = { GER_ANM_economy_status_27 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			}       
 			ep_economy_status_poland_unavailable_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_27 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
 			} 
+
+			ep_economy_status_china_poor_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_28 > 0 } 
+					check_variable = { GER_ANM_economy_status_28 < 4 } 
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			ep_economy_status_china_average_visible = { 	
+				AND = { 
+					check_variable = {  GER_ANM_economy_status_28 > 3 }
+					check_variable = { GER_ANM_economy_status_28 < 8 }  
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			ep_economy_status_china_good_visible = {  
+				AND = { 
+					check_variable = { GER_ANM_economy_status_28 > 7 }
+					check_variable = { GER_ANM_economy_status_28 < 11 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+					has_country_flag = GER_ANM_Economy_View_Oversees 
+				} 
+			}       
+			ep_economy_status_china_unavailable_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_28 = 0 }
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			
+			ep_economy_status_DR_poor_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_29 > 0 } 
+					check_variable = { GER_ANM_economy_status_29 < 4 } 
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			ep_economy_status_DR_average_visible = { 	
+				AND = { 
+					check_variable = {  GER_ANM_economy_status_29 > 3 }
+					check_variable = { GER_ANM_economy_status_29 < 8 }  
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			ep_economy_status_DR_good_visible = {  
+				AND = { 
+					check_variable = { GER_ANM_economy_status_29 > 7 }
+					check_variable = { GER_ANM_economy_status_29 < 11 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+					has_country_flag = GER_ANM_Economy_View_Oversees 
+				} 
+			}       
+			ep_economy_status_DR_unavailable_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_29 = 0 }
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+
+			ep_economy_status_algeria_poor_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_30 > 0 } 
+					check_variable = { GER_ANM_economy_status_30 < 4 } 
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			ep_economy_status_algeria_average_visible = { 	
+				AND = { 
+					check_variable = {  GER_ANM_economy_status_30 > 3 }
+					check_variable = { GER_ANM_economy_status_30 < 8 }  
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			ep_economy_status_algeria_good_visible = {  
+				AND = { 
+					check_variable = { GER_ANM_economy_status_30 > 7 }
+					check_variable = { GER_ANM_economy_status_30 < 11 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+					has_country_flag = GER_ANM_Economy_View_Oversees 
+				} 
+			}       
+			ep_economy_status_algeria_unavailable_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_30 = 0 }
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+
+			ep_economy_status_madagaskar_poor_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_31 > 0 } 
+					check_variable = { GER_ANM_economy_status_31 < 4 } 
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			ep_economy_status_madagaskar_average_visible = { 	
+				AND = { 
+					check_variable = {  GER_ANM_economy_status_31 > 3 }
+					check_variable = { GER_ANM_economy_status_31 < 8 }  
+					has_country_flag = GER_ANM_Economy_View_Status
+					has_country_flag = GER_ANM_Economy_View_Oversees  
+				} 
+			} 
+			ep_economy_status_madagaskar_good_visible = {  
+				AND = { 
+					check_variable = { GER_ANM_economy_status_31 > 7 }
+					check_variable = { GER_ANM_economy_status_31 < 11 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+					has_country_flag = GER_ANM_Economy_View_Oversees 
+				} 
+			}       
+			ep_economy_status_madagaskar_unavailable_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_31 = 0 }
+					has_country_flag = GER_ANM_Economy_View_Status
+				} 
+			} 
+
 		}
 
 		effects = {
 			ep_economy_button_country_click = { 
-				clr_country_flag = GER_ANM_Economy_View_Status
-				clr_country_flag = GER_ANM_Economy_View_Currency
+				if = {
+					limit = { NOT = { has_country_flag = GER_ANM_Economy_View_Oversees } } 
+					set_country_flag = GER_ANM_Economy_View_Oversees
+				}
+				else_if = {
+					limit = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					clr_country_flag = GER_ANM_Economy_View_Oversees
+				}
 			}
 			ep_economy_button_status_click = { 
-				set_country_flag = GER_ANM_Economy_View_Status
-				clr_country_flag = GER_ANM_Economy_View_Currency
+				if = {
+					limit = { NOT = { has_country_flag = GER_ANM_Economy_View_Status } } 
+					set_country_flag = GER_ANM_Economy_View_Status
+				}
+				else_if = {
+					limit = { has_country_flag = GER_ANM_Economy_View_Status }
+					clr_country_flag = GER_ANM_Economy_View_Status
+				}
 			} 
 			ep_economy_button_currency_click = { 
-				set_country_flag = GER_ANM_Economy_View_Currency
-			    clr_country_flag = GER_ANM_Economy_View_Status
+				if = {
+					limit = { NOT = { has_country_flag = GER_ANM_Economy_View_Currency } } 
+					set_country_flag = GER_ANM_Economy_View_Currency
+				}
+				else_if = {
+					limit = { has_country_flag = GER_ANM_Economy_View_Currency }
+					clr_country_flag = GER_ANM_Economy_View_Currency
+				}
 			}
 		} 
 		properties = { }

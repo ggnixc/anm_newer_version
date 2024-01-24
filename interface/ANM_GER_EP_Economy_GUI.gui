@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = {
 		name = "ANM_GER_EP_Economy_Decisions_GUI" 
-		size = { width = 525 height = 420 }
+		size = { width = 525 height = 425 }
 		position = { x = 0 y = 0 }
 
 		iconType = {
@@ -9,36 +9,10 @@ guiTypes = {
 			spriteType = "GFX_ep_economy_background"
 			position = { x = 3 y = 4 }
 		}
-		buttonType = {
-			name = "ep_economy_button_country"
-			spriteType = "GFX_ep_economy_button"
-			position = { x = 426 y = 9 }
-		}
-		buttonType = {
-			name = "ep_economy_button_status"
-			spriteType = "GFX_ep_economy_button"
-			position = { x = 452 y = 9 }
-		}
-		buttonType = {
-			name = "ep_economy_button_currency"
-			spriteType = "GFX_ep_economy_button"
-			position = { x = 478 y = 9 }
-		}
-		instantTextboxType = {
-			name = "EP_Economic_Stability"
-			position = { x = 40 y = 20 }
-			textureFile = ""
-			font = "aldrich_14_outline"
-			borderSize = {x = 0 y = 0}
-			text = "E.P. Economic Stability: ([?GER_ANM_party_leadership_influnce|-0])"
-			maxWidth = 350
-			maxHeight = 30
-			fixedsize = yes
-		}
 
 		containerWindowType = { 
 			name = "ANM_GER_EP_Economy_Country"
-			size = { width = 525 height = 420 }
+			size = { width = 525 height = 425 }
 			position = { x = 0 y = 0 }
 			
 			# Start 1996 buttons
@@ -252,11 +226,72 @@ guiTypes = {
 				position = { x = 86 y = 145 }
 				pdx_tooltip = GER_ep_economy_country_shetland
 			}
+
+			#Oversees Countries
+			iconType = {
+				name = "ep_economy_background_oversees"
+				spriteType = "GFX_ep_economy_background_oversees"
+				position = { x = 3 y = 4 }
+			}
+			buttonType = {
+				name = "ep_economy_country_china"
+				quadTextureSprite = "GFX_ep_economy_country_china"
+				position = { x = 112 y = 104 }
+				pdx_tooltip = GER_ep_economy_country_china
+			}
+			buttonType = {
+				name = "ep_economy_country_DR"
+				quadTextureSprite = "GFX_ep_economy_country_DR"
+				position = { x = 359 y = 43 }
+				pdx_tooltip = GER_ep_economy_country_DR
+			}
+			buttonType = {
+				name = "ep_economy_country_algeria"
+				quadTextureSprite = "GFX_ep_economy_country_algeria"
+				position = { x = 9 y = 43 }
+				pdx_tooltip = GER_ep_economy_country_algeria
+			}
+			buttonType = {
+				name = "ep_economy_country_madagaskar"
+				quadTextureSprite = "GFX_ep_economy_country_madagaskar"
+				position = { x = 22 y = 268 }
+				pdx_tooltip = GER_ep_economy_country_madagaskar
+			}
 		}		
 
+		buttonType = {
+			name = "ep_economy_button_country"
+			spriteType = "GFX_ep_economy_button_country"
+			position = { x = 426 y = 9 }
+			pdx_tooltip = GER_ep_economy_button_country
+		}
+		buttonType = {
+			name = "ep_economy_button_status"
+			spriteType = "GFX_ep_economy_button_status"
+			position = { x = 452 y = 9 }
+			pdx_tooltip = GER_ep_economy_button_status
+		}
+		buttonType = {
+			name = "ep_economy_button_currency"
+			spriteType = "GFX_ep_economy_button_currency"
+			position = { x = 478 y = 9 }
+			pdx_tooltip = GER_ep_economy_button_currency
+		}
+		instantTextboxType = {
+			name = "EP_Economic_Stability"
+			position = { x = 9 y = 415 }
+			textureFile = ""
+			font = "aldrich_14_outline"
+			borderSize = {x = 0 y = 0}
+			text = "E.P. Economic Stability: ([?GER_ANM_economy_status_overall|%0])"
+			maxWidth = 350
+			maxHeight = 30
+			fixedsize = yes
+		}
+		
 		containerWindowType = { 
 			name = "ANM_GER_EP_Economy_Status"
-			size = { width = 525 height = 420 }
+			size = { width = 525 height = 425 }
 			position = { x = 0 y = 0 }
 			
 			# Status Of Economy
@@ -1043,11 +1078,127 @@ guiTypes = {
 				frame = 4
 			}
 
+			buttonType = {
+				name = "ep_economy_status_china_good"
+				quadTextureSprite = "GFX_ep_economy_status_china"
+				position = { x = 112 y = 104 }
+				pdx_tooltip = GER_ep_economy_status_china
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_china_average"
+				quadTextureSprite = "GFX_ep_economy_status_china"
+				position = { x = 112 y = 104 }
+				pdx_tooltip = GER_ep_economy_status_china
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_china_poor"
+				quadTextureSprite = "GFX_ep_economy_status_china"
+				position = { x = 112 y = 104 }
+				pdx_tooltip = GER_ep_economy_status_china
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_china_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_china"
+				position = { x = 112 y = 104 }
+				pdx_tooltip = GER_ep_economy_status_china
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_DR_good"
+				quadTextureSprite = "GFX_ep_economy_status_DR"
+				position = { x = 359 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_DR
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_DR_average"
+				quadTextureSprite = "GFX_ep_economy_status_DR"
+				position = { x = 359 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_DR
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_DR_poor"
+				quadTextureSprite = "GFX_ep_economy_status_DR"
+				position = { x = 359 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_DR
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_DR_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_DR"
+				position = { x = 359 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_DR
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_algeria_good"
+				quadTextureSprite = "GFX_ep_economy_status_algeria"
+				position = { x = 9 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_algeria
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_algeria_average"
+				quadTextureSprite = "GFX_ep_economy_status_algeria"
+				position = { x = 9 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_algeria
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_algeria_poor"
+				quadTextureSprite = "GFX_ep_economy_status_algeria"
+				position = { x = 9 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_algeria
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_algeria_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_algeria"
+				position = { x = 9 y = 43 }
+				pdx_tooltip = GER_ep_economy_status_algeria
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_madagaskar_good"
+				quadTextureSprite = "GFX_ep_economy_status_madagaskar"
+				position = { x = 22 y = 268 }
+				pdx_tooltip = GER_ep_economy_status_madagaskar
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_madagaskar_average"
+				quadTextureSprite = "GFX_ep_economy_status_madagaskar"
+				position = { x = 22 y = 268 }
+				pdx_tooltip = GER_ep_economy_status_madagaskar
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_madagaskar_poor"
+				quadTextureSprite = "GFX_ep_economy_status_madagaskar"
+				position = { x = 22 y = 268 }
+				pdx_tooltip = GER_ep_economy_status_madagaskar
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_madagaskar_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_madagaskar"
+				position = { x = 22 y = 268 }
+				pdx_tooltip = GER_ep_economy_status_madagaskar
+				frame = 4
+			}
+
 		}	
 
 		containerWindowType = { 
 			name = "ANM_GER_EP_Economy_Currency"
-			size = { width = 525 height = 420 }
+			size = { width = 525 height = 425 }
 			position = { x = 0 y = 0 }
 			
 		}						
