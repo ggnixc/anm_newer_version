@@ -352,6 +352,12 @@ ideas = {
 			allowed_civil_war = { always = no }
 			picture = TRI_Member_Client
 		}
+		TRI_Observer = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRI_Observer"}
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			picture = TRI_Observer
+		}
 		##CONCORDATE##
 		CON_Founder = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CON_Founder"}
