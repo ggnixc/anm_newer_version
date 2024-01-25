@@ -23,10 +23,24 @@ guiTypes = {
 				pdx_tooltip = GER_ep_economy_country_reich
 			}
 			buttonType = {
+				name = "ep_economy_country_reich_upgrade1"
+				quadTextureSprite = "GFX_ep_economy_country_reich_upgrade1"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_country_reich
+			}
+			buttonType = {
 				name = "ep_economy_country_USSR"
 				spriteType = "GFX_ep_economy_country_USSR"
 				position = { x = 313 y = 31 }
 				pdx_tooltip = GER_ep_economy_country_USSR
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_country_Russland"
+				spriteType = "GFX_ep_economy_country_USSR"
+				position = { x = 313 y = 31 }
+				pdx_tooltip = GER_ep_economy_country_USSR
+				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_country_norway"
@@ -80,6 +94,12 @@ guiTypes = {
 				name = "ep_economy_country_wolga"
 				quadTextureSprite = "GFX_ep_economy_country_wolga"
 				position = { x = 426 y = 282 }
+				pdx_tooltip = GER_ep_economy_country_wolga
+			}
+			buttonType = {
+				name = "ep_economy_country_wolga_big"
+				quadTextureSprite = "GFX_ep_economy_country_wolga_big"
+				position = { x = 423 y = 247 }
 				pdx_tooltip = GER_ep_economy_country_wolga
 			}
 			buttonType = {
@@ -149,10 +169,18 @@ guiTypes = {
 				pdx_tooltip = GER_ep_economy_country_france
 			}
 			buttonType = {
-				name = "ep_economy_country_ireland"
+				name = "ep_economy_country_ireland_EP"
 				quadTextureSprite = "GFX_ep_economy_country_ireland"
 				position = { x = 17 y = 207 }
 				pdx_tooltip = GER_ep_economy_country_ireland
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_country_ireland_OFN"
+				quadTextureSprite = "GFX_ep_economy_country_ireland"
+				position = { x = 17 y = 207 }
+				pdx_tooltip = GER_ep_economy_country_ireland
+				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_country_britain"
@@ -167,9 +195,23 @@ guiTypes = {
 				pdx_tooltip = GER_ep_economy_country_denmark
 			}
 			buttonType = {
-				name = "ep_economy_country_finland"
+				name = "ep_economy_country_finland_EP"
 				quadTextureSprite = "GFX_ep_economy_country_finland"
 				position = { x = 250 y = 29 }
+				pdx_tooltip = GER_ep_economy_country_finland
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_country_finland_SOV"
+				quadTextureSprite = "GFX_ep_economy_country_finland"
+				position = { x = 250 y = 29 }
+				pdx_tooltip = GER_ep_economy_country_finland
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_country_finland_big"
+				quadTextureSprite = "GFX_ep_economy_country_finland_big"
+				position = { x = 251 y = 30 }
 				pdx_tooltip = GER_ep_economy_country_finland
 			}
 			buttonType = {
@@ -209,10 +251,25 @@ guiTypes = {
 				pdx_tooltip = GER_ep_economy_country_montenegro
 			}
 			buttonType = {
-				name = "ep_economy_country_iran"
+				name = "ep_economy_country_iran_EPobserver"
 				spriteType = "GFX_ep_economy_country_iran"
 				position = { x = 444 y = 368 }
 				pdx_tooltip = GER_ep_economy_country_iran
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_country_iran_EP"
+				spriteType = "GFX_ep_economy_country_iran"
+				position = { x = 444 y = 368 }
+				pdx_tooltip = GER_ep_economy_country_iran
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_country_iran_neutral"
+				spriteType = "GFX_ep_economy_country_iran"
+				position = { x = 444 y = 368 }
+				pdx_tooltip = GER_ep_economy_country_iran
+				frame = 3
 			}
 			buttonType = {
 				name = "ep_economy_country_faroe"
@@ -319,6 +376,34 @@ guiTypes = {
 			buttonType = {
 				name = "ep_economy_status_reich_unavailable"
 				quadTextureSprite = "GFX_ep_economy_status_reich"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_status_reich
+				frame = 4
+			}
+			buttonType = {
+				name = "ep_economy_status_reich_upgrade1_good"
+				quadTextureSprite = "GFX_ep_economy_status_reich_upgrade1"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_status_reich
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_reich_upgrade1_average"
+				quadTextureSprite = "GFX_ep_economy_status_reich_upgrade1"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_status_reich
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_reich_upgrade1_poor"
+				quadTextureSprite = "GFX_ep_economy_status_reich_upgrade1"
+				position = { x = 143 y = 111 }
+				pdx_tooltip = GER_ep_economy_status_reich
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_reich_upgrade1_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_reich_upgrade1"
 				position = { x = 143 y = 111 }
 				pdx_tooltip = GER_ep_economy_status_reich
 				frame = 4
@@ -581,6 +666,34 @@ guiTypes = {
 				name = "ep_economy_status_wolga_unavailable"
 				quadTextureSprite = "GFX_ep_economy_status_wolga"
 				position = { x = 426 y = 282 }
+				pdx_tooltip = GER_ep_economy_status_wolga
+				frame = 4
+			}
+			buttonType = {
+				name = "ep_economy_status_wolga_big_good"
+				quadTextureSprite = "GFX_ep_economy_status_wolga_big"
+				position = { x = 423 y = 247 }
+				pdx_tooltip = GER_ep_economy_status_wolga
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_wolga_big_average"
+				quadTextureSprite = "GFX_ep_economy_status_wolga_big"
+				position = { x = 423 y = 247 }
+				pdx_tooltip = GER_ep_economy_status_wolga
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_wolga_big_poor"
+				quadTextureSprite = "GFX_ep_economy_status_wolga_big"
+				position = { x = 423 y = 247 }
+				pdx_tooltip = GER_ep_economy_status_wolga
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_wolga_big_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_wolga_big"
+				position = { x = 423 y = 247 }
 				pdx_tooltip = GER_ep_economy_status_wolga
 				frame = 4
 			}
@@ -987,6 +1100,34 @@ guiTypes = {
 				name = "ep_economy_status_finland_unavailable"
 				quadTextureSprite = "GFX_ep_economy_status_finland"
 				position = { x = 250 y = 29 }
+				pdx_tooltip = GER_ep_economy_status_finland
+				frame = 4
+			}
+			buttonType = {
+				name = "ep_economy_status_finland_big_good"
+				quadTextureSprite = "GFX_ep_economy_status_finland_big"
+				position = { x = 251 y = 30 }
+				pdx_tooltip = GER_ep_economy_status_finland
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_finland_big_average"
+				quadTextureSprite = "GFX_ep_economy_status_finland_big"
+				position = { x = 251 y = 30 }
+				pdx_tooltip = GER_ep_economy_status_finland
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_finland_big_poor"
+				quadTextureSprite = "GFX_ep_economy_status_finland_big"
+				position = { x = 251 y = 30 }
+				pdx_tooltip = GER_ep_economy_status_finland
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_finland_big_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_finland_big"
+				position = { x = 251 y = 30 }
 				pdx_tooltip = GER_ep_economy_status_finland
 				frame = 4
 			}
