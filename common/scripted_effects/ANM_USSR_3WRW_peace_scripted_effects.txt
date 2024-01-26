@@ -484,6 +484,7 @@ ANM_baltics_to_SOV = {
 		set_variable = { ECON_SPHERE_LEADER = SOV }
 	}
 }
+
 ANM_romania_to_SOV_puppet = {
 	SOV = {
 		set_autonomy = {
@@ -520,5 +521,127 @@ ANM_romania_to_SOV_puppet = {
 		}
 
 		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
+
+ANM_hungary_to_SOV_puppet = {
+	SOV = {
+		set_autonomy = {
+			target = HUN
+			autonomy_state = autonomy_satellite
+		}
+	}
+
+	HUN = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 57
+			liberalism = 17
+			conservatism = 11
+			socialist = 15
+		}
+
+		remove_ideas = {
+			Pakt_Bundnispartner
+			HUN_jozsef_arpad
+			HUN_revizio
+			HUN_1000_year_kingdom
+			HUN_the_transylvanian_fights
+		}
+		
+		add_ideas = {
+			COM_Satellite
+		}
+
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
+
+ANM_serbia_to_SOV_puppet = {
+	SOV = {
+		set_autonomy = {
+			target = SER
+			autonomy_state = autonomy_satellite
+		}
+	}
+
+	SER = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 70
+			liberalism = 12
+			conservatism = 6
+			socialist = 12
+		}
+
+		remove_ideas = {
+			Pakt_Schutzstaat
+			SER_Chetnik_Kingdom
+			SER_German_Controlled_Economy
+			SER_German_Garrison
+		}
+		
+		add_ideas = {
+			COM_Satellite
+		}
+
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+
+		set_cosmetic_tag = SER
+	}
+}
+
+ANM_bulgaria_to_SOV_puppet = {
+	SOV = {
+		set_autonomy = {
+			target = BUL
+			autonomy_state = autonomy_satellite
+		}
+	}
+
+	BUL = {
+		set_politics = {
+			ruling_party = communist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 65
+			liberalism = 13
+			conservatism = 5
+			socialist = 17
+		}
+
+		remove_ideas = {
+			Pakt_Bundnispartner
+		}
+		
+		add_ideas = {
+			COM_Satellite
+		}
+
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
+
+ANM_transylvania_to_ROM = {
+	ROM = {
+		transfer_state = 76
+		transfer_state = 1288
+		transfer_state = 1289
 	}
 }
