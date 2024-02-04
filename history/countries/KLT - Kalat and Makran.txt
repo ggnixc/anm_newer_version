@@ -78,3 +78,20 @@ add_ideas = {
 	tno_admin_efficiency_deficient_administrative_systems
 	tno_army_professionalism_cronyism
 }
+
+AFG = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+			}
+		}
+		set_autonomy = {
+			target = KLT
+			autonomy_state = autonomy_puppet
+		}
+		else = {
+			puppet = KLT
+		}
+	}
+}
