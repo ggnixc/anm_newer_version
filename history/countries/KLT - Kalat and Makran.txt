@@ -15,6 +15,23 @@ set_politics = {
 	elections_allowed = no
 }
 
+AFG = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+			}
+		}
+		set_autonomy = {
+			target = KLT
+			autonomy_state = autonomy_puppet
+		}
+		else = {
+			puppet = KLT
+		}
+	}
+}
+
 set_popularities = {
 	communist = 15
 	socialist = 10
@@ -79,19 +96,3 @@ add_ideas = {
 	tno_army_professionalism_cronyism
 }
 
-AFG = {
-	if = {
-		limit = {
-			OR = {
-				has_dlc = "Together for Victory"
-			}
-		}
-		set_autonomy = {
-			target = KLT
-			autonomy_state = autonomy_puppet
-		}
-		else = {
-			puppet = KLT
-		}
-	}
-}

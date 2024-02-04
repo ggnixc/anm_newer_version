@@ -10,6 +10,21 @@ set_politics = {
 	elections_allowed = yes
 }
 
+if = {
+ 	limit = {
+ 		OR = {
+			has_dlc = "Together for Victory"
+		}
+ 	}
+ 	set_autonomy = {
+ 		target = KLT
+ 		autonomous_state = autonomy_puppet
+ 	}
+	else = {
+        puppet = KLT
+	}
+}
+
 set_popularities = {
     communist = 18
     socialist = 0
@@ -80,17 +95,3 @@ add_ideas = {
 	tno_nuclear_stockpile_none
 }
 
-if = {
- 	limit = {
- 		OR = {
-			has_dlc = "Together for Victory"
-		}
- 	}
- 	set_autonomy = {
- 		target = KLT
- 		autonomous_state = autonomy_puppet
- 	}
-	else = {
-        puppet = KLT
-	}
-}
