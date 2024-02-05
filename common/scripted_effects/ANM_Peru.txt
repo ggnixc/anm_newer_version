@@ -141,6 +141,12 @@ ANM_Condor_Pact_Victory = {
 		puppet = ECD
 		dismantle_faction = yes
 	}
+	every_state = { # clean up cores
+		limit = {
+			is_core_of = PRU
+		}
+		remove_core_of = MRA
+	}
 	ECD = {
 		set_politics = {	
 			ruling_party = paternalism
@@ -178,4 +184,32 @@ ANM_Condor_Pact_Victory = {
 	set_province_name = { id = 8252 name = VICTORY_POINTS_8252_WAR }
 	remove_global_flag = Andean_War
 	remove_global_flag = andean_war_ongoing
+}
+ANM_Andean_Revolutionary_Front_Victory = {
+	MRA = {
+		annex_country = {
+			target = PRU
+			transfer_troops = no
+		}
+		set_capital = { state = 1689 remember_old_capital = no }
+	}
+	ECU = {
+		annex_country = {
+			target = GLP
+			transfer_troops = no
+		}
+		dismantle_faction = yes
+	}
+	every_state = { # clean up cores
+		limit = {
+			is_core_of = MRA
+		}
+		remove_core_of = PRU
+	}
+	every_state = { # clean up cores
+		limit = {
+			is_core_of = ECU
+		}
+		remove_core_of = GLP
+	}
 }
