@@ -112,6 +112,10 @@ scripted_gui = {
 			ep_economy_country_Russland_visible = {
 				MOS = { owns_state = 1442 }
 			}
+			ep_economy_country_Grenzland_visible = {
+				MOS = { owns_state = 1436 }
+				NOT = { MOS = { owns_state = 1442 } } 
+			}
 
 			#Dynamic Economic Status
 			ep_economy_status_reich_poor_visible = { 
@@ -185,10 +189,86 @@ scripted_gui = {
 				} 
 			} 
 
-			ep_economy_status_norway_poor_visible = { 
+			ep_economy_status_USSR_poor_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_27  > 0 } 
+					check_variable = { GER_ANM_economy_status_27  < 4 } 
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					MOS = { owns_state = 1442 }
+				} 
+			} 
+			ep_economy_status_USSR_average_visible = { 	
+				AND = { 
+					check_variable = {  GER_ANM_economy_status_27 > 3 }
+					check_variable = { GER_ANM_economy_status_27 < 8 }  
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					MOS = { owns_state = 1442 }
+				} 
+			} 
+			ep_economy_status_USSR_good_visible = {  
+				AND = { 
+					check_variable = { GER_ANM_economy_status_27 > 7 }
+					check_variable = { GER_ANM_economy_status_27 < 11 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					MOS = { owns_state = 1442 }
+				} 
+			}       
+			ep_economy_status_USSR_unavailable_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_27 = 0 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					MOS = { owns_state = 1442 }
+				} 
+			} 
+
+			ep_economy_status_Grenzland_poor_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_2 > 0 } 
 					check_variable = { GER_ANM_economy_status_2 < 4 } 
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					MOS = { owns_state = 1436 }
+					NOT = { MOS = { owns_state = 1442 } } 
+				} 
+			} 
+			ep_economy_status_Grenzland_average_visible = { 	
+				AND = { 
+					check_variable = {  GER_ANM_economy_status_6 > 3 }
+					check_variable = { GER_ANM_economy_status_6 < 8 }  
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					MOS = { owns_state = 1436 }
+					NOT = { MOS = { owns_state = 1442 } } 
+				} 
+			} 
+			ep_economy_status_Grenzland_good_visible = {  
+				AND = { 
+					check_variable = { GER_ANM_economy_status_6 > 7 }
+					check_variable = { GER_ANM_economy_status_6 < 11 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					MOS = { owns_state = 1436 }
+					NOT = { MOS = { owns_state = 1442 } } 
+				} 
+			}       
+			ep_economy_status_Grenzland_unavailable_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_6 = 0 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					MOS = { owns_state = 1436 }
+					NOT = { MOS = { owns_state = 1442 } } 
+				} 
+			} 
+			
+			ep_economy_status_norway_poor_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_6 > 0 } 
+					check_variable = { GER_ANM_economy_status_6 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
                     NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
@@ -319,6 +399,8 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_6 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
                     NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					NOT = { MOS = { owns_state = 1436 } } 
+					NOT = { MOS = { owns_state = 1442 } } 
 				} 
 			} 
 			ep_economy_status_homel_average_visible = { 	
@@ -327,6 +409,8 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_6 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
                     NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					NOT = { MOS = { owns_state = 1436 } } 
+					NOT = { MOS = { owns_state = 1442 } } 
 				} 
 			} 
 			ep_economy_status_homel_good_visible = {  
@@ -335,6 +419,8 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_6 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
                     NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					NOT = { MOS = { owns_state = 1436 } } 
+					NOT = { MOS = { owns_state = 1442 } } 
 				} 
 			}       
 			ep_economy_status_homel_unavailable_visible = { 
@@ -342,6 +428,8 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_6 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
                     NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+					NOT = { MOS = { owns_state = 1436 } } 
+					NOT = { MOS = { owns_state = 1442 } } 
 				} 
 			} 
 
