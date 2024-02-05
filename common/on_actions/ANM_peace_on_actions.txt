@@ -210,6 +210,51 @@ on_actions = {
 					}
 					set_global_flag = skip_default_capitulation
 				}
+				else_if = { # Andean War
+					limit = {
+						is_in_array = { global.Andean_War_contender = FROM.id }
+						is_in_array = { global.Andean_War_contender = ROOT.id }
+						has_global_flag = andean_war_ongoing
+					}
+
+					FROM = {
+						every_enemy_country = {
+							limit = {
+								OR = {
+									original_tag = ROOT
+									is_in_faction_with = ROOT
+									is_subject_of = ROOT
+								}
+							}
+							FROM = {
+								white_peace = PREV
+								annex_country = {
+									target = PREV
+									transfer_troops = no
+								}
+							}
+						}
+					}
+					log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation AW"
+
+					if = { # 
+						limit = { has_global_flag = Andean_War }
+						if = { # Condor Pact victory
+							limit = { is_in_array = { global.AW_CP_faction = FROM.id } }
+							ZZZ = {
+								ANM_Condor_Pact_Victory = yes
+							}
+						}
+						else_if = { # Commie victory
+							limit = { is_in_array = { global.AW_ARF_faction = FROM.id } }
+							ZZZ = {
+								ANM_Andean_Revolutionary_Front_Victory = yes
+							}
+						}
+					}
+
+					set_global_flag = skip_default_capitulation
+				}
 
 				#DEFAULT CAPITULATION
 				if = {
