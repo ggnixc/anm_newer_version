@@ -2,23 +2,23 @@ add_namespace = FIN.civilwar
 add_namespace = FIN.red
 
 country_event = {
-	      id = FIN.civilwar.1
-	      immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.civilwar.1" }
-	      title = FIN.civilwar.1.t
-	      desc = FIN.civilwar.1.desc
-	      picture = GFX_anm_FIN_civil_war
+	id = FIN.civilwar.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.civilwar.1" }
+	title = FIN.civilwar.1.t
+	desc = FIN.civilwar.1.desc
+	picture = GFX_anm_FIN_civil_war
 
-	      is_triggered_only = yes
-       	  fire_only_once = yes
- 
-	      option = {
-		    name = FIN.civilwar.1.a
-			ANM_finnishcivilwar = yes
-			every_country = {
-				limit = { is_ai = no }
-				news_event = { id = WORLD.18185 hours = 1 }
-			}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN.civilwar.1.a
+		ANM_finnishcivilwar = yes
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = WORLD.18185 hours = 1 }
 		}
+	}
 }
 
 country_event = {
@@ -34,6 +34,9 @@ country_event = {
 	option = {
 		name = FIN.civilwar.2.a
 		ANM_finnish_unrest = yes
+		FIN = {
+			country_event = { id = FIN.civilwar.1 days = 5 }
+		}
   	}
 }
 
