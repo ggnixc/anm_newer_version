@@ -71,6 +71,8 @@ ANM_Peruvian_Civil_War = {
 		add_state_core = 1694
 		add_ideas = {
 			PRU_Peruvian_Civil_War
+			MRA_Revolutionary_Foquism
+			MRA_Disparate_Shades_of_Red
 		}
 				
 		declare_war_on = {
@@ -88,6 +90,7 @@ ANM_Peruvian_Civil_War = {
 			PRU_Aristocratic_Alliance
 		}
 	}
+	set_global_flag = Andean_War
 }
 ANM_Andean_War = {
 	ECU = {
@@ -120,12 +123,29 @@ ANM_Andean_War = {
 		create_faction = Condor_Pact
 		add_to_faction = GLP
 	}
+	every_country = {
+		limit = { is_in_faction_with = ECU }
+		add_to_array = { global.AW_ARF_faction = THIS }
+		add_to_array = { global.Andean_War_contender = THIS }
+	}
+	every_country = {
+		limit = { is_in_faction_with = ECU }
+		add_to_array = { global.AW_CP_faction = THIS }
+		add_to_array = { global.Andean_War_contender = THIS }
+	}
+	set_global_flag = andean_war_ongoing
 }
 
 ANM_Condor_Pact_Victory = {
 	PRU = {
 		puppet = ECD
 		dismantle_faction = yes
+	}
+	every_state = { # clean up cores
+		limit = {
+			is_core_of = PRU
+		}
+		remove_core_of = MRA
 	}
 	ECD = {
 		set_politics = {	
@@ -162,4 +182,34 @@ ANM_Condor_Pact_Victory = {
 		set_capital = { state = 305 remember_old_capital = no }
 	}
 	set_province_name = { id = 8252 name = VICTORY_POINTS_8252_WAR }
+	remove_global_flag = Andean_War
+	remove_global_flag = andean_war_ongoing
+}
+ANM_Andean_Revolutionary_Front_Victory = {
+	MRA = {
+		annex_country = {
+			target = PRU
+			transfer_troops = no
+		}
+		set_capital = { state = 1689 remember_old_capital = no }
+	}
+	ECU = {
+		annex_country = {
+			target = GLP
+			transfer_troops = no
+		}
+		dismantle_faction = yes
+	}
+	every_state = { # clean up cores
+		limit = {
+			is_core_of = MRA
+		}
+		remove_core_of = PRU
+	}
+	every_state = { # clean up cores
+		limit = {
+			is_core_of = ECU
+		}
+		remove_core_of = GLP
+	}
 }

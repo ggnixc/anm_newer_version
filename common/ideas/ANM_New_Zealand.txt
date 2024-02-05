@@ -1,66 +1,16 @@
 ideas = {
-
-	head_of_government = { 
-		NZL_Michael_Cullen_hog = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NZL_Michael_Cullen_hog"}
-			allowed = { original_tag = NZL }
-			picture = "NZL_Michael_Cullen_hog"
-			available = {
-				tag = NZL
+	country = {
+		NZL_Perfect_Little_Economy = {
+			allowed = { always = no }
+			picture = NZL_Perfect_Little_Economy
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.30
+				political_power_gain = 0.10
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.5
 			}
-			traits = {
-				NZL_Michael_Cullen_hog_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}
-	}
-	
-	security_minister = { 
-		NZL_Geoff_Braybrooke_sec = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NZL_Geoff_Braybrooke_sec"}
-			allowed = { original_tag = NZL }
-			picture = "NZL_Geoff_Braybrooke_sec"
-			available = {
-					tag = NZL
-			}
-			traits = {
-				NZL_Geoff_Braybrooke_sec_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}
-	} 
-	
-	foreign_minister = { 
-		NZL_Dover_Samuels_for = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NZL_Dover_Samuels_for"}
-			allowed = { original_tag = NZL }
-			picture = "NZL_Dover_Samuels_for"
-			available = {
-					tag = NZL
-			}
-			traits = {
-				NZL_Dover_Samuels_for_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}
-	}
-
-	economy_minister = { 
-		NZL_Paul_Swain_eco = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NZL_Paul_Swain_eco"}
-			allowed = { original_tag = NZL }
-			picture = "NZL_Paul_Swain_eco"
-			available = {
-					tag = NZL
-			}
-			traits = {
-				NZL_Paul_Swain_eco_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
 		}
 	}
 }

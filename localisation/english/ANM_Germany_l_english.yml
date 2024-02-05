@@ -27,21 +27,23 @@
  GER_ADJ: "German"
  
  ## Party Names ##
- GER_national_socialism_party: "NSDAP (Regime)"
+ GER_national_socialism_party: "NSDAP - Regime"
  GER_national_socialism_party_long: "Nationalsozialistische Deutsche Arbeiterpartei (Regime)"
- GER_national_socialism_1_party: "NSDAP (Kritiker)"
+ GER_national_socialism_1_party: "NSDAP - Kritiker"
  GER_national_socialism_1_party_long: "Nationalsozialistische Deutsche Arbeiterpartei (Kritiker)""
- GER_national_socialism_2_party: "NSDAP (Überparteilich)"
- GER_national_socialism_2_party_long: "Nationalsozialistische Deutsche Arbeiterpartei (Überparteilich)"
+ GER_national_socialism_4_party: "NSDAP - Überparteilich"
+ GER_national_socialism_4_party_long: "Nationalsozialistische Deutsche Arbeiterpartei (Überparteilich)"
  GER_despotism_party: "Nonkonformisten"
  GER_despotism_party_long: "Gruppe der Nonkonformisten"
+ GER_paternalism_party: "Nonkonformisten"
+ GER_paternalism_party_long: "Gruppe der Nonkonformisten"
+ GER_ultranationalism_party: "Paramilitärische Parteiflügel"
+ GER_ultranationalism_party_long: "Paramilitärische Parteiflügel"
 
 ### Leader Localisation ###
  ## Names ##
  GER_albert_friedrich_speer: "Albert Friedrich Speer"
  GER_martin_mussgnug: "Martin Mußgnug"
- GER_kein_anfuhrer: "Kein Anführer"
- GER_adolf_von_thadden: "Adolf von Thadden"
  GER_gunther_deckert: "Günther Deckert"
  GER_joseph_fischer: "Joseph Fischer"
  GER_gerhard_frey: "Gerhard Frey"
@@ -97,6 +99,11 @@
  GER_karsten_schneider: "Karsten Schneider"
  GER_joachim_ruhle: "Joachim Rühle"
  GER_manfred_nielson: "Manfred Nielson"
+
+ GER_unbekannt: "Unbekannt"
+ GER_walter_bachmann: "Walter Bachmann"
+ GER_joachim_starbatty: "Joachim Starbatty"
+ GER_jurgen_rieger: "Jürgen Hans Paul Rieger"
 
 
 ## Descriptions ##
@@ -279,7 +286,7 @@
  government_jonas_paschnek: "Jonas Paschnek\n§rReichsprotektor Weissruthenien\nFaction:§! [getGERgovernmentloyalty21]"
  government_jonas_paschnek_long: "Many would find the idea of a Belarusian still leading RK Weißruthenia laughable. Considering the Open Heart Project, the shifting of its industrial capital to other Reichslands and the high levels of resistance within the state, you’d be hard-pressed to find a native collaborator willing to lead RK Weißruthenia. However, someone has to do the job, and that someone is Jonas Paschnek.\n\nBorn as Zianon Pazniak just a few years after the start of the German Occupation of Belarus in 1944, Paschnek was one of the few native Belarusians able to attend the German-dominated Riga Arts and Culture University thanks to his father’s connections as a bureaucrat in the local Belarusian Administration. After Paschnek graduated, he became a Historian primarily focused on documenting the Soviet Occupation of Belarus, focusing on their crimes and atrocities. This included the NKVD’s involvement in the disappearance of his own grandfather.\n\nHe worked as a Historian within the administration up until the 2WRW. With the forced resignation of the previous leader of RK Weißruthenia due to the mass sabotage efforts by Soviet Collaborators, the Germans drew up plans to wipe out the Belarusian nation once and for all. When they checked for willing collaborators, Paschnek was the only one (who wasn’t a whackjob) who volunteered.\n\nWhy would he volunteer? In Paschnek’s eyes, he is the only one who could save Belarus. A German in charge would destroy the entire nation, but thanks to him, he was able to convince the leaders in Germania to leave a few cities left due to their economic benefits. Paschnek is doomed to be remembered as a Villain, the man who helped destroy his country, culture, and people. But he'll take it if being damned as a traitor is the only way to save his people."
  government_henryk_kroll: "Henryk Kroll\n§rReichsprotektor Weichselland\nFaction:§! [getGERgovernmentloyalty22]"
- government_henryk_kroll_long: "When Poland finally dies and is lost forever, Henryk Kroll shall be the only mourner for its funeral, for no one else in the Reich or Wider Europakt would care.\n\nBorn to Catagory 3 Volksdeutsche Parents, Kroll was granted the luck and luxury of being an “Ethnic German”. He worked in an animal shelter in his youth. Kroll soon attended the Technical University of Dresden thanks to new college funds for Polen youth created by Speer Sr. to help grant them new skills. After graduating, he became a Civil Engineer for the local Krakua Government, slowly working his way up the Civil Administration.\n\nHe helped rebuild the city after the destruction due to the reoccupation and slowly rose to become the Mayor of Krakau in 1988 and, finally, the Reichsstatthalter of Polen in 1992. To say skill was the main reason for Kroll’s slow rise up the Political Hierarchy would be false. Instead, his rise can mainly be attributed to simply knowing the right people and the right connections, be they within the Wehrmacht, Reichstag or the wider NSDAP. Polen deserves better. It deserved better."
+ government_henryk_kroll_long: "When Poland finally dies and is lost forever, Henryk Kroll shall be the only mourner for its funeral, for no one else in the Reich or Wider Europakt would care.\n\nBorn to Category 3 Volksdeutsche Parents, Kroll was granted the luck and luxury of being an “Ethnic German”. He worked in an animal shelter in his youth. Kroll soon attended the Technical University of Dresden thanks to new college funds for Polen youth created by Speer Sr. to help grant them new skills. After graduating, he became a Civil Engineer for the local Krakau Government, slowly working his way up the Civil Administration.\n\nHe helped rebuild the city after the destruction due to the reoccupation and slowly rose to become the Mayor of Krakau in 1988 and, finally, the Reichsstatthalter of Polen in 1992. To say skill was the main reason for Kroll’s slow rise up the Political Hierarchy would be false. Instead, his rise can mainly be attributed to simply knowing the right people and the right connections, be they within the Wehrmacht, Reichstag or the wider NSDAP. Polen deserves better. It deserved better."
 
  GER_government_loyalty_regime: "£faction_regime_icon §rRegime§!"
  GER_government_loyalty_kritiker: "£faction_kritiker_icon §eKritiker§!"
@@ -353,6 +360,8 @@
  GER_ep_economy_country_DR: "Dominikanische Republik"
  GER_ep_economy_country_algeria: "Französisch-Algerien"
  GER_ep_economy_country_madagaskar: "Paktkommission Madagaskar und Deutsche Überseebezirke"
+ GER_ep_economy_country_Russland: "Russland"
+ GER_ep_economy_country_Grenzland: "Grenzland"
 
  GER_ep_economy_status_reich: "Großdeutsches Reich\nRating: [?GER_ANM_economy_status_1]/10"
  GER_ep_economy_status_baltics: "Protektorat Baltenland\nRating: [?GER_ANM_economy_status_4]/10"
