@@ -12,7 +12,7 @@ MAN_focus_NAJUA_strat = {
 	}
 
 	ai_strategy = {
-		type = conquer
+		type = front_unit_request
 		id = PRC
 		value = 1000
 	}
@@ -97,7 +97,10 @@ USA_SEND_TO_PERU = {
 }
 SOV_SEND_TO_NAJUA = {
 	enable = {
-		original_tag = SOV
+		OR = {
+			original_tag = SOV
+			original_tag = CHI
+		}
 		PRC = {	has_war_with = MAN }
 	}
 	abort = {
