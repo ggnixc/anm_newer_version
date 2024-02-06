@@ -215,11 +215,144 @@ on_actions = {
 				add_to_temp_variable = { tempEPeconomymaxoverall = tempEPeconomytotal29 }
 				add_to_temp_variable = { tempEPeconomymaxoverall = tempEPeconomytotal30 }
 				add_to_temp_variable = { tempEPeconomymaxoverall = tempEPeconomytotal31 }
-			
-			#Total / Maximum
-			divide_temp_variable = { tempEPeconomyoverall = tempEPeconomymaxoverall }
-			set_variable = { GER_ANM_economy_status_overall = tempEPeconomyoverall }
 
+			#Total / Maximum
+				divide_temp_variable = { tempEPeconomyoverall = tempEPeconomymaxoverall }
+				set_variable = { GER_ANM_economy_status_overall = tempEPeconomyoverall }
+
+			#Control Percentage (Size * Control)
+			set_temp_variable = { tempEPeconomycontrol1 = GER_ANM_economy_status_1_size } 
+				multiply_temp_variable = { tempEPeconomycontrol1 = GER_ANM_economy_status_1_control } 
+			set_temp_variable = { tempEPeconomycontrol2 = GER_ANM_economy_status_2_size } 
+				multiply_temp_variable = { tempEPeconomycontrol2 = GER_ANM_economy_status_2_control }
+			set_temp_variable = { tempEPeconomycontrol3 = GER_ANM_economy_status_3_size } 
+				multiply_temp_variable = { tempEPeconomycontrol3 = GER_ANM_economy_status_3_control }
+			set_temp_variable = { tempEPeconomycontrol4 = GER_ANM_economy_status_4_size } 
+				multiply_temp_variable = { tempEPeconomycontrol4 = GER_ANM_economy_status_4_control }
+			set_temp_variable = { tempEPeconomycontrol5 = GER_ANM_economy_status_5_size } 
+				multiply_temp_variable = { tempEPeconomycontrol5 = GER_ANM_economy_status_5_control }
+			set_temp_variable = { tempEPeconomycontrol6 = GER_ANM_economy_status_6_size } 
+				multiply_temp_variable = { tempEPeconomycontrol6 = GER_ANM_economy_status_6_control }
+			set_temp_variable = { tempEPeconomycontrol7 = GER_ANM_economy_status_7_size } 
+				multiply_temp_variable = { tempEPeconomycontrol7 = GER_ANM_economy_status_7_control }
+			set_temp_variable = { tempEPeconomycontrol8 = GER_ANM_economy_status_8_size } 
+				multiply_temp_variable = { tempEPeconomycontrol8 = GER_ANM_economy_status_8_control }
+			set_temp_variable = { tempEPeconomycontrol9 = GER_ANM_economy_status_9_size } 
+				multiply_temp_variable = { tempEPeconomycontrol9 = GER_ANM_economy_status_9_control }
+			set_temp_variable = { tempEPeconomycontrol10 = GER_ANM_economy_status_10_size } 
+				multiply_temp_variable = { tempEPeconomycontrol10 = GER_ANM_economy_status_10_control }
+			set_temp_variable = { tempEPeconomycontrol11 = GER_ANM_economy_status_11_size } 
+				multiply_temp_variable = { tempEPeconomycontrol11 = GER_ANM_economy_status_11_control }
+			set_temp_variable = { tempEPeconomycontrol12 = GER_ANM_economy_status_12_size } 
+				multiply_temp_variable = { tempEPeconomycontrol12 = GER_ANM_economy_status_12_control }
+			set_temp_variable = { tempEPeconomycontrol13 = GER_ANM_economy_status_13_size } 
+				multiply_temp_variable = { tempEPeconomycontrol13 = GER_ANM_economy_status_13_control }
+			set_temp_variable = { tempEPeconomycontrol14 = GER_ANM_economy_status_14_size } 
+				multiply_temp_variable = { tempEPeconomycontrol14 = GER_ANM_economy_status_14_control }
+			set_temp_variable = { tempEPeconomycontrol15 = GER_ANM_economy_status_15_size } 
+				multiply_temp_variable = { tempEPeconomycontrol15 = GER_ANM_economy_status_15_control }
+			set_temp_variable = { tempEPeconomycontrol16 = GER_ANM_economy_status_16_size } 
+				multiply_temp_variable = { tempEPeconomycontrol16 = GER_ANM_economy_status_16_control }
+			set_temp_variable = { tempEPeconomycontrol17 = GER_ANM_economy_status_17_size } 
+				multiply_temp_variable = { tempEPeconomycontrol17 = GER_ANM_economy_status_17_control }
+			set_temp_variable = { tempEPeconomycontrol18 = GER_ANM_economy_status_18_size } 
+				multiply_temp_variable = { tempEPeconomycontrol18 = GER_ANM_economy_status_18_control }
+			set_temp_variable = { tempEPeconomycontrol19 = GER_ANM_economy_status_19_size } 
+				multiply_temp_variable = { tempEPeconomycontrol19 = GER_ANM_economy_status_19_control }
+			set_temp_variable = { tempEPeconomycontrol20 = GER_ANM_economy_status_20_size } 
+				multiply_temp_variable = { tempEPeconomycontrol20 = GER_ANM_economy_status_20_control }
+			set_temp_variable = { tempEPeconomycontrol21 = GER_ANM_economy_status_21_size } 
+				multiply_temp_variable = { tempEPeconomycontrol21 = GER_ANM_economy_status_21_control }
+			set_temp_variable = { tempEPeconomycontrol22 = GER_ANM_economy_status_22_size } 
+				multiply_temp_variable = { tempEPeconomycontrol22 = GER_ANM_economy_status_22_control }
+			set_temp_variable = { tempEPeconomycontrol23 = GER_ANM_economy_status_23_size } 
+				multiply_temp_variable = { tempEPeconomycontrol23 = GER_ANM_economy_status_23_control }
+			set_temp_variable = { tempEPeconomycontrol24 = GER_ANM_economy_status_24_size } 
+				multiply_temp_variable = { tempEPeconomycontrol24 = GER_ANM_economy_status_24_control }
+			set_temp_variable = { tempEPeconomycontrol25 = GER_ANM_economy_status_25_size } 
+				multiply_temp_variable = { tempEPeconomycontrol25 = GER_ANM_economy_status_25_control }
+			set_temp_variable = { tempEPeconomycontrol26 = GER_ANM_economy_status_26_size } 
+				multiply_temp_variable = { tempEPeconomycontrol26 = GER_ANM_economy_status_26_control }
+			set_temp_variable = { tempEPeconomycontrol27 = GER_ANM_economy_status_27_size } 
+				multiply_temp_variable = { tempEPeconomycontrol27 = GER_ANM_economy_status_27_control }
+			set_temp_variable = { tempEPeconomycontrol28 = GER_ANM_economy_status_28_size } 
+				multiply_temp_variable = { tempEPeconomycontrol28 = GER_ANM_economy_status_28_control }
+			set_temp_variable = { tempEPeconomycontrol29 = GER_ANM_economy_status_29_size } 
+				multiply_temp_variable = { tempEPeconomycontrol29 = GER_ANM_economy_status_29_control }
+			set_temp_variable = { tempEPeconomycontrol30 = GER_ANM_economy_status_30_size } 
+				multiply_temp_variable = { tempEPeconomycontrol30 = GER_ANM_economy_status_30_control }
+			set_temp_variable = { tempEPeconomycontrol31 = GER_ANM_economy_status_31_size } 
+				multiply_temp_variable = { tempEPeconomycontrol31 = GER_ANM_economy_status_31_control }
+
+			#Total Control Value
+			set_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol1 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol2 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol3 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol4 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol5 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol6 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol7 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol8 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol9 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol10 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol11 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol12 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol13 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol14 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol15 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol16 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol17 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol18 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol19 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol20 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol21 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol22 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol23 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol24 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol25 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol26 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol27 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol28 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol29 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol30 }
+				add_to_temp_variable = { tempEPeconomycontroloverall = tempEPeconomycontrol31 }
+
+			#Max Control Value
+			set_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_1_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_2_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_3_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_4_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_5_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_6_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_7_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_8_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_9_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_10_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_11_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_12_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_113_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_14_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_15_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_16_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_17_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_18_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_19_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_20_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_21_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_22_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_23_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_24_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_25_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_26_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_27_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_28_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_29_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_30_size }
+				add_to_temp_variable = { tempEPeconomymaxcontroloverall = GER_ANM_economy_status_31_size }
+
+			#Total / Maximum
+				divide_temp_variable = { tempEPeconomycontroloverall = tempEPeconomymaxcontroloverall }
+				set_variable = { GER_ANM_economy_control_overall = tempEPeconomycontroloverall }
 		}
 	}
 }
