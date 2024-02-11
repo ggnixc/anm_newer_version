@@ -1620,26 +1620,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 168 } #Estonian
-						}
-					}
-					set_temp_variable = { red = 0.551 }
-					set_temp_variable = { green = 0.680 }
-					set_temp_variable = { blue = 0.837 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 169 } #Latvian
-						}
-					}
-					set_temp_variable = { red = 0.568 }
-					set_temp_variable = { green = 0.164 }
-					set_temp_variable = { blue = 0.262 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							check_variable = { nationality = 170 } #Byelorussian
 						}
 					}
@@ -1716,16 +1696,6 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.729 }
 					set_temp_variable = { green = 0.505 }
 					set_temp_variable = { blue = 0.471 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 178 } #Polish
-						}
-					}
-					set_temp_variable = { red = 0.647 }
-					set_temp_variable = { green = 0.492 }
-					set_temp_variable = { blue = 0.492 }
 				}
 				else_if = {
 					limit = {
@@ -2610,16 +2580,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 268 } #Lithuanian
-						}
-					}
-					set_temp_variable = { red = 0.533 }
-					set_temp_variable = { green = 0.535 }
-					set_temp_variable = { blue = 0.253 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							check_variable = { nationality = 269 } #Sukuma
 						}
 					}
@@ -3380,16 +3340,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 346 } #Polish-Weichseldeutsch
-						}
-					}
-					set_temp_variable = { red = 0.647 }
-					set_temp_variable = { green = 0.572 }
-					set_temp_variable = { blue = 0.572 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							check_variable = { nationality = 347 } #Lur
 						}
 					}
@@ -3700,16 +3650,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 380 } # Polish-Ukrainian
-						}
-					}
-					set_temp_variable = { red = 0.498 }
-					set_temp_variable = { green = 0.482 }
-					set_temp_variable = { blue = 0.510 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							check_variable = { nationality = 381 } #Shona with English settlers
 						}
 					}
@@ -3866,36 +3806,6 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.404 }
 					set_temp_variable = { green = 0.4 }
 					set_temp_variable = { blue = 0.357 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 398 } # Baltisch Deutsch-Latvian
-						}
-					}
-					set_temp_variable = { red = 0.463 }
-					set_temp_variable = { green = 0.318 }
-					set_temp_variable = { blue = 0.322 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 399 } # Baltisch Deutsch-Estonian
-						}
-					}
-					set_temp_variable = { red = 0.494 }
-					set_temp_variable = { green = 0.569 }
-					set_temp_variable = { blue = 0.643 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 400 } # Russian-Latvian
-						}
-					}
-					set_temp_variable = { red = 0.404 }
-					set_temp_variable = { green = 0.227 }
-					set_temp_variable = { blue = 0.224 }
 				}
 				else_if = {
 					limit = {
@@ -5962,6 +5872,36 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.550 }
 					set_temp_variable = { green = 0.500 }
 					set_temp_variable = { blue = 0.112 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 607 } #Krakauer
+						}
+					}
+					set_temp_variable = { red = 0.458 }
+					set_temp_variable = { green = 0.420 }
+					set_temp_variable = { blue = 0.421 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 608 } #Weichseldeutsch
+						}
+					}
+					set_temp_variable = { red = 0.457 }
+					set_temp_variable = { green = 0.421 }
+					set_temp_variable = { blue = 0.422 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 609 } #Galizien
+						}
+					}
+					set_temp_variable = { red = 0.456 }
+					set_temp_variable = { green = 0.423 }
+					set_temp_variable = { blue = 0.423 }
 				}
 			}
 		}

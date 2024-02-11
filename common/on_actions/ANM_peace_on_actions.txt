@@ -210,9 +210,6 @@ on_actions = {
 					limit = {
 						OR = {
 							FROM = {
-								original_tag = GLP
-							}
-							FROM = {
 								original_tag = PRU
 							}
 						}
@@ -232,6 +229,9 @@ on_actions = {
 						puppet = ECD
 						dismantle_faction = yes
 						country_event = { id = PRU.general.2 days = 5 }
+						remove_ideas = {
+							PRU_Peruvian_Civil_War
+						}
 					}
 
 					every_state = { # clean up cores
@@ -277,6 +277,53 @@ on_actions = {
 					}
 					set_province_name = { id = 8252 name = VICTORY_POINTS_8252_WAR }
 					
+					set_global_flag = skip_default_capitulation
+				}
+				# Andean War, Andean Revolutionary Front Victory
+				else_if = {
+					limit = {
+						OR = {
+							FROM = {
+								original_tag = MRA
+							}
+							FROM = {
+								original_tag = ECU
+							}
+						}
+						OR = {
+							ROOT = {
+								original_tag = GLP
+							}
+							ROOT = {
+								original_tag = PRU
+							}
+						}
+					}
+
+					clr_global_flag = andean_war_ongoing
+
+					MRA = {
+						annex_country = {
+							target = PRU
+							transfer_troops = no
+						}
+						set_capital = { state = 1689 remember_old_capital = no }
+					}
+					ECU = {
+						annex_country = {
+						target = GLP
+						transfer_troops = no
+						}
+						dismantle_faction = yes
+					}
+
+					every_state = { # clean up cores
+						limit = {
+							is_core_of = ROOT
+						}
+						remove_core_of = ROOT
+						add_core_of = FROM
+					}
 					set_global_flag = skip_default_capitulation
 				}
 

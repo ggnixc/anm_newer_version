@@ -37,6 +37,7 @@ add_to_faction = SHL
 add_to_faction = VEN
 add_to_faction = NAM
 add_to_faction = CUB
+add_to_faction = ELS
 
 country_event = {
     id = USA_anm_events.2
@@ -69,6 +70,21 @@ if = {
 	}
 	else = {
 		puppet = GUY
+	}
+}
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = ELS
+		autonomy_state = autonomy_liberated_government
+	}
+	else = {
+		puppet = ELS
 	}
 }
 

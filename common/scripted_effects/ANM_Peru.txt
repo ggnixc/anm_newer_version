@@ -79,6 +79,7 @@ ANM_Peruvian_Civil_War = {
 		   	type = annex_everything
 		   	target = PRU 
 		}
+		load_oob = MRA_civilwar
 	}
 	PRU = {
 		add_ideas = {
@@ -89,10 +90,21 @@ ANM_Peruvian_Civil_War = {
 			PRU_Fujishocked
 			PRU_Aristocratic_Alliance
 		}
+		country_event = { id = PRU.civilwar.2 days = 10 }
+		load_oob = PRU_civilwar
+	}
+	every_country = {
+		limit = { is_ai = no }
+		news_event = { id = WORLD.18179 hours = 0 }
 	}
 	set_global_flag = Andean_War
 }
 ANM_Andean_War = {
+	MRA = {
+		add_ideas = {
+			Andean_Revolutionary_Front
+		}
+	}
 	ECU = {
 		declare_war_on = {
 		type = take_state_focus
@@ -101,6 +113,9 @@ ANM_Andean_War = {
 		}
 		remove_ideas = {
 			COM_Observer
+		}
+		add_ideas = {
+			Andean_Revolutionary_Front
 		}
 		create_faction = Andean_Revolutionary_Front
 		add_to_faction = MRA
