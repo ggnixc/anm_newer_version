@@ -1,13 +1,89 @@
 characters = {
-	FNM_Torstein_Dahle = {   
-		name = FNM_Torstein_Dahle  
+	FNM_Arne_Treholt = {   
+		name = FNM_Arne_Treholt  
 		portraits = { 
-			civilian = { large = "gfx/leaders/FNM/Portrait_FNM_Torstein_Dahle.dds" } 
+			civilian = { large = "gfx/leaders/FNM/Portrait_FNM_Arne_Treholt.dds" } 
 		}
 		country_leader = {
-			desc = "POLITICS_TORSTEIN_DAHLE_DESC"
-			ideology = communist_subtype
+			desc = "POLITICS_ARNE_TREHOLT_DESC"
+			ideology = despotism_partisan_movement_subtype
 			expire = "2999.1.1.1"
+		}
+	}
+	FNM_Erling_Folkvord = {  
+		name = FNM_Erling_Folkvord
+		portraits = { 
+			civilian = {
+				small = "GFX_idea_FNM_Erling_Folkvord" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = FNM_Erling_Folkvord_hog 
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FNM_Berge_Furre = {  
+		name = FNM_Berge_Furre
+		portraits = { 
+			civilian = {
+				small = "GFX_idea_FNM_Berge_Furre" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = FNM_Berge_Furre_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FNM_Tron_Ogrim = {  
+		name = FNM_Tron_Ogrim
+		portraits = { 
+			civilian = {
+				small = "GFX_idea_FNM_Tron_Ogrim" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = FNM_Tron_Ogrim_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FNM_Sverre_Diesen = {  
+		name = FNM_Sverre_Diesen
+		portraits = { 
+			civilian = {
+				small = "GFX_idea_FNM_Sverre_Diesen" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = FNM_Sverre_Diesen_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
 } 
