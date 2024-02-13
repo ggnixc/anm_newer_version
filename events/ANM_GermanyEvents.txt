@@ -402,13 +402,6 @@ country_event = { #Event for ‘Reign of the Eagle’
 				national_socialism_2 = 11
 				despotism = 7
 			}
-			GGN = { 
-				add_timed_idea = {
-					idea = GGN_anniversary_poland_occupation
-					days = 230
-				}
-			}
-			country_event = { id = GER_misc_main_event.2 days = 230 }
 		}
 	}
 }
@@ -1239,25 +1232,12 @@ country_event = { #German-Irish relationship: Status Quo
 		name = GER_misc_main_event.1.a
 	}
 }
-country_event = { #Annexation RL Polen
-	id = GER_misc_main_event.2
-	title = GER_misc_main_event.2.t
-	desc = GER_misc_main_event.2.desc
-	picture = GFX_anm_GER_speer_martin_talks
 
-	is_triggered_only = yes
-	fire_only_once = yes
-	hidden = yes
-
-	option = { 
-		name = GER_misc_main_event.2.a
-		annex_country = { target = GGN transfer_troops = yes }
-	}
-}
+### Debug Events ###
 country_event = { #Load Phase 2
-	id = GER_misc_main_event.3
-	title = GER_misc_main_event.3.t
-	desc = GER_misc_main_event.3.desc
+	id = GER_debug_event.3
+	title = GER_debug_event.3.t
+	desc = GER_debug_event.3.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1265,14 +1245,14 @@ country_event = { #Load Phase 2
 	hidden = yes
 
 	option = { 
-		name = GER_misc_main_event.3.a
+		name = GER_debug_event.3.a
 		load_focus_tree = GER_focus_phase_2
 	}
 }
 country_event = { #Load Iranian Civil War
-	id = GER_misc_main_event.4
-	title = GER_misc_main_event.4.t
-	desc = GER_misc_main_event.4.desc
+	id = GER_debug_event.4
+	title = GER_debug_event.4.t
+	desc = GER_debug_event.4.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1280,14 +1260,14 @@ country_event = { #Load Iranian Civil War
 	hidden = yes
 
 	option = { 
-		name = GER_misc_main_event.4.a
+		name = GER_debug_event.4.a
 		load_focus_tree = { tree = GER_focus_phase_2_icw keep_completed = yes }
 	}
 }
 country_event = { #Load Finnish Civil War
-	id = GER_misc_main_event.5
-	title = GER_misc_main_event.5.t
-	desc = GER_misc_main_event.5.desc
+	id = GER_debug_event.5
+	title = GER_debug_event.5.t
+	desc = GER_debug_event.5.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1295,14 +1275,14 @@ country_event = { #Load Finnish Civil War
 	hidden = yes
 
 	option = { 
-		name = GER_misc_main_event.5.a
+		name = GER_debug_event.5.a
 		load_focus_tree = { tree = GER_focus_phase_2_icw_fcw keep_completed = yes }
 	}
 }
 country_event = { #Load Phase 2 Final Showdown
-	id = GER_misc_main_event.6
-	title = GER_misc_main_event.6.t
-	desc = GER_misc_main_event.6.desc
+	id = GER_debug_event.6
+	title = GER_debug_event.6.t
+	desc = GER_debug_event.6.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1310,14 +1290,14 @@ country_event = { #Load Phase 2 Final Showdown
 	hidden = yes
 
 	option = { 
-		name = GER_misc_main_event.6.a
+		name = GER_debug_event.6.a
 		load_focus_tree = { tree = GER_focus_phase_2_final keep_completed = yes }
 	}
 }
 country_event = { #Load Phase 3 Ending Demo
-	id = GER_misc_main_event.7
-	title = GER_misc_main_event.7.t
-	desc = GER_misc_main_event.7.desc
+	id = GER_debug_event.7
+	title = GER_debug_event.7.t
+	desc = GER_debug_event.7.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1325,14 +1305,14 @@ country_event = { #Load Phase 3 Ending Demo
 	hidden = yes
 
 	option = { 
-		name = GER_misc_main_event.7.a
-		load_focus_tree = { tree = x }
+		name = GER_debug_event.7.a
+		load_focus_tree = { tree = GER_focus_phase_3_end_of_demo }
 	}
 }
 country_event = { #MB Homel -> Gouvernement Russland
-	id = GER_misc_main_event.8
-	title = GER_misc_main_event.8.t
-	desc = GER_misc_main_event.8.desc
+	id = GER_debug_event.8
+	title = GER_debug_event.8.t
+	desc = GER_debug_event.8.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1344,9 +1324,9 @@ country_event = { #MB Homel -> Gouvernement Russland
 	}
 }
 country_event = { #3WRW endings
-	id = GER_misc_main_event.9
-	title = GER_misc_main_event.9.t
-	desc = GER_misc_main_event.9.desc
+	id = GER_debug_event.9
+	title = GER_debug_event.9.t
+	desc = GER_debug_event.9.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1354,31 +1334,31 @@ country_event = { #3WRW endings
 	hidden = yes
 
 	option = {  #3WRW Decisive Victory
-		name = GER_misc_main_event.9.a
+		name = GER_debug_event.9.a
 		ANM_SOV_to_VLG = yes
 		ANM_SOV_to_FIN = yes 
 		ANM_SOV_to_MOS_big = yes
 	}
 	option = { #3WRW Partial Victory 
-		name = GER_misc_main_event.9.b
+		name = GER_debug_event.9.b
 		ANM_SOV_to_VLG = yes
 		ANM_SOV_to_FIN = yes
 		ANM_SOV_to_MOS_small = yes
 	}
 	option = { #3WRW Partial Victory excl. Finland
-		name = GER_misc_main_event.9.c
+		name = GER_debug_event.9.c
 		ANM_SOV_to_VLG = yes
 		ANM_SOV_to_MOS_small = yes
 	}
 	option = { #3WRW Stalemate
-		name = GER_misc_main_event.9.d
+		name = GER_debug_event.9.d
 		ANM_homel_to_SOV = yes
 	}
 }
 country_event = { #MOS -> Grenzland
-	id = GER_misc_main_event.10
-	title = GER_misc_main_event.10.t
-	desc = GER_misc_main_event.10.desc
+	id = GER_debug_event.10
+	title = GER_debug_event.10.t
+	desc = GER_debug_event.10.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1386,14 +1366,14 @@ country_event = { #MOS -> Grenzland
 	hidden = yes
 
 	option = {  
-		name = GER_misc_main_event.10.a
+		name = GER_debug_event.10.a
 		ANM_MOS_Grenzland = yes
 	}
 }
 country_event = { #MOS -> Russia
-	id = GER_misc_main_event.11
-	title = GER_misc_main_event.11.t
-	desc = GER_misc_main_event.11.desc
+	id = GER_debug_event.11
+	title = GER_debug_event.11.t
+	desc = GER_debug_event.11.desc
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
@@ -1401,15 +1381,15 @@ country_event = { #MOS -> Russia
 	hidden = yes
 
 	option = {  #National Socialism
-		name = GER_misc_main_event.11.a
+		name = GER_debug_event.11.a
 		ANM_MOS_Russia_Nazi = yes
 	}
 	option = { #Despotism
-		name = GER_misc_main_event.11.b
+		name = GER_debug_event.11.b
 		ANM_MOS_Russia_Despotism = yes
 	} 	
 }
-country_event = { #debugs
+country_event = { #TEMP Economy
 	id = GER_debug_event.100
 	title = GER_debug_event.100.t
 	desc = GER_debug_event.100.desc

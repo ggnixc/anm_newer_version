@@ -349,6 +349,7 @@ shared_focus = {
 			hidden_effect = {
 				country_event = GER_focus_event.19
 				country_event = { id = GER_focus_event.20 days = 14 }
+				ANM_GER_Focus_Phase_2 = yes
 			}
 			custom_effect_tooltip = GER_launch_the_euromark_tt
 		}
@@ -1321,6 +1322,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_show_no_mercy
 	relative_position_id = GER_take_what_is_ours
+	icon = GFX_GER_show_no_mercy
 	x = 0
 	y = 1
 	cost = 3.00
@@ -1335,6 +1337,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_ubermenschen_ubernlegen
 	relative_position_id = GER_show_no_mercy
+	icon = GFX_GER_ubermenschen_ubernlegen
 	x = 0
 	y = 1
 	cost = 3.00
@@ -1363,6 +1366,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_unmanned_combat_vehicles
 	relative_position_id = GER_modern_warfare
+	icon = GFX_GER_unmanned_combat_vehicles
 	x = -1
 	y = 1
 	cost = 3.00
@@ -1377,6 +1381,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_soldiers_of_the_future
 	relative_position_id = GER_modern_warfare
+	icon = GFX_GER_soldiers_of_the_future
 	x = 1
 	y = 1
 	cost = 3.00
@@ -1391,6 +1396,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_ubermachtig_uberfallen
 	relative_position_id = GER_soldiers_of_the_future
+	icon = GFX_GER_ubermachtig_uberfallen
 	x = -1
 	y = 1
 	cost = 3.00
@@ -1408,6 +1414,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_deutschland_deutschland_uber_allen
 	relative_position_id = GER_ubermenschen_ubernlegen
+	icon = GFX_GER_deutschland_deutschland_uber_allen
 	x = 0
 	y = 1
 	cost = 3.00
@@ -1423,5 +1430,131 @@ shared_focus = {
 	ai_will_do = { factor = 1 }
 	completion_reward = {
 		
+	}
+}
+
+### Demo Closure ###
+shared_focus = {
+	id = GER_the_beasts_depart
+
+	x = 9
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_patrol_corpse_littered_battlefields
+	relative_position_id = GER_the_beasts_depart
+	prerequisite = {
+		focus = GER_the_beasts_depart
+	}
+	x = -2
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_refit_the_wehrmacht
+	relative_position_id = GER_patrol_corpse_littered_battlefields
+	prerequisite = {
+		focus = GER_patrol_corpse_littered_battlefields
+	}
+	x = 0
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_changes_above
+	relative_position_id = GER_the_beasts_depart
+	prerequisite = {
+		focus = GER_the_beasts_depart
+	}
+	x = 2
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_the_reichtags_reaction
+	relative_position_id = GER_changes_above
+	prerequisite = {
+		focus = GER_changes_above
+	}
+	x = 0
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_a_move_against_nazism
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_reach_into_the_past }
+	mutually_exclusive = { focus = GER_like_father_like_son }
+	x = -4
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_like_father_like_son
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_reach_into_the_past }
+	mutually_exclusive = { focus = GER_a_move_against_nazism }
+	x = -2
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_reach_into_the_past
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_like_father_like_son }
+	mutually_exclusive = { focus = GER_a_move_against_nazism }
+	x = 0
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
 	}
 }
