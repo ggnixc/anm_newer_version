@@ -25,7 +25,33 @@ ideas = {
 				surrender_limit = -0.15
 				cic_to_overlord_factor = 0.2
 			}
-		}				
+		}	
+		MAN_A_Horseshoe_Of_Contradictions  = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_MAN_A_Horseshoe_Of_Contradictions
+			removal_cost = -1
+
+			modifier = {
+				communist_acceptance = 0.10
+				production_speed_buildings_factor = 0.15
+				political_power_gain = -0.05
+			}
+		}
+		MAN_Nissans_Playground  = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_MAN_Nissans_Playground
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.05
+				production_factory_max_efficiency_factor = 0.10
+				min_export = 0.10
+			}
+		}			
 	
 	}
 }
