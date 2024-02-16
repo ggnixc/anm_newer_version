@@ -394,15 +394,13 @@ country_event = { #Event for ‘Reign of the Eagle’
 
 	option = { 
 		name = GER_focus_event.1.a
-		custom_effect_tooltip = GER_change_popularity_national_socialism_1_1
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_small
 		hidden_effect = { 
-			set_popularities = {
-				national_socialism = 36
-				national_socialism_1 = 46
-				national_socialism_2 = 11
-				despotism = 7
-			}
-		}
+			add_to_variable = { GER_ANM_lower_party_leaning = 30 }
+			add_to_variable = { GER_ANM_middle_party_leaning = 10 }
+			add_to_variable = { GER_ANM_upper_party_leaning = 10 }
+			add_to_variable = { GER_ANM_party_leadership_leaning = 10 }
+		} 
 	}
 }
 country_event = { #Event for ‘Into the Digital Age’
@@ -455,6 +453,9 @@ country_event = { #Event for ‘A Satisfied People’ 1/2
 
 	option = { 
 		name = GER_focus_event.5.a
+		hidden_effect = {
+			country_event = GER_focus_event.6
+		}
 	}
 }
 country_event = { #Event for ‘A Satisfied People’ 2/2
@@ -481,14 +482,12 @@ country_event = { #Event for ‘A Harmonious Party’
 
 	option = { 
 		name = GER_focus_event.7.a
-		custom_effect_tooltip = GER_change_popularity_national_socialism_1_1
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_small
 		hidden_effect = { 
-			set_popularities = {
-				national_socialism = 35
-				national_socialism_1 = 47
-				national_socialism_2 = 11
-				despotism = 7
-			}
+			add_to_variable = { GER_ANM_upper_party_leaning = 30 }
+			add_to_variable = { GER_ANM_upper_party_influence = 10 }
+			add_to_variable = { GER_ANM_party_leadership_leaning = 10 }
+			add_to_variable = { GER_ANM_party_leadership_influnce = -10 }
 		}
 	}
 }
@@ -503,6 +502,9 @@ country_event = { #Event for ‘The Pakt’s Finest’ 1/2
 
 	option = { 
 		name = GER_focus_event.8.a
+		hidden_effect = {
+			country_event = GER_focus_event.9
+		}
 	}
 }
 country_event = { #Event for ‘The Pakt’s Finest’ 2/2 
@@ -516,6 +518,11 @@ country_event = { #Event for ‘The Pakt’s Finest’ 2/2
 
 	option = { 
 		name = GER_focus_event.9.a
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_large
+		hidden_effect = { 
+			add_to_variable = { GER_ANM_lower_party_leaning = 50 }
+			add_to_variable = { GER_ANM_middle_party_leaning = 30 }
+		}
 	}
 }
 country_event = { #Event for ‘A New Wirtschaftswunder’
@@ -650,6 +657,10 @@ country_event = { #Event for ‘Launch The Euromark’ 1/2
 
 	option = { 
 		name = GER_focus_event.19.a
+		hidden_effect = {
+			country_event = GER_focus_event.20
+			ANM_GER_Focus_Phase_2 = yes
+		}
 	}
 }
 country_event = { #Event for ‘Launch The Euromark’ 2/2
