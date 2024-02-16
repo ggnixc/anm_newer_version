@@ -26,10 +26,10 @@ shared_focus = {
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.2
-				swap_ideas = {
-					remove_idea = tno_security_preemptive_security
-					add_idea = tno_security_totalitarian
-				}
+			}
+			swap_ideas = {
+				remove_idea = tno_security_preemptive_security
+				add_idea = tno_security_totalitarian
 			}
 			add_ideas = GER_the_weltnetz
 		}
@@ -68,7 +68,6 @@ shared_focus = {
 				country_event = GER_focus_event.3
 			}
 			add_ideas = { GER_high_tech_military } 
-			add_manpower = 100000
 		}
 	}
 	
@@ -90,8 +89,8 @@ shared_focus = {
 				country_event = GER_focus_event.4
 			}
 			swap_ideas = {
-				remove_idea = tno_safety_acceptable_regulations
-				add_idea = tno_safety_excellent_regulations
+				remove_idea = tno_pollution_good_regulations
+				add_idea = tno_pollution_strict_regulations
 			}
 		}
 	}
@@ -110,7 +109,7 @@ shared_focus = {
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.5
-				country_event = { id = GER_focus_event.6 days = 14 }
+
 			}
 			add_timed_idea = {
 				idea = GER_fulfilled_people
@@ -249,14 +248,13 @@ shared_focus = {
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.8
-				country_event = { id = GER_focus_event.9 days = 14 }
 			}
 			add_opinion_modifier = {
 				target = SWE
 				modifier = offered_support
 			}
 			add_opinion_modifier = {
-				target = DEN
+				target = NOR
 				modifier = offered_support
 			}
 		}
@@ -341,27 +339,24 @@ shared_focus = {
 		cost = 4
 		prerequisite = {
 			focus = GER_a_thousand_years_more
-						}
+		}
 		x = 0
 		y = 1
 		relative_position_id = GER_a_thousand_years_more
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.19
-				country_event = { id = GER_focus_event.20 days = 14 }
-				ANM_GER_Focus_Phase_2 = yes
 			}
 			custom_effect_tooltip = GER_launch_the_euromark_tt
 		}
 	}
 
-
 ### Iranian Civil War Tree ###
 shared_focus = {
 	id = GER_the_troubled_empire
 	icon = GFX_GER_the_troubled_empire
-	x = 20
-	y = 1
+	x = 5
+	y = 9
 	cost = 1.00
 
 	#allow_branch = {
@@ -532,7 +527,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_the_euromark_triumphs
 	icon = GFX_GER_The_Euromark_triumphs
-	x = 9
+	x = 13
 	y = 1
 	cost = 5.00
 	prerequisite = {
@@ -563,7 +558,7 @@ shared_focus = {
 	id = GER_red_elephant
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_red_elephant
-	x = -4
+	x = -6
 	y = 2
 	cost = 3.00
 	prerequisite = {
@@ -689,7 +684,7 @@ shared_focus = {
 	id = GER_the_r_and_d_question
 	relative_position_id = GER_red_elephant
 	icon = GFX_GER_r_and_d_question
-	x = 2
+	x = 3
 	y = 3
 	cost = 3.00
 	prerequisite = {
@@ -790,7 +785,7 @@ shared_focus = {
 	id = GER_balance_the_europakt_partnership
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_balance_europakt_partnership
-	x = 2
+	x = 3
 	y = 5
 	cost = 3.00
 	prerequisite = {
@@ -809,7 +804,7 @@ shared_focus = {
 	id = GER_our_central_european_allies
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_central_europe
-	x = 4
+	x = 6
 	y = 2
 	cost = 3.00
 	prerequisite = {
@@ -907,7 +902,7 @@ shared_focus = {
 	id = GER_the_65th_nuremberg_party_congress
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_65th_nuremberg_congress
-	x = -1
+	x = -2
 	y = 6
 	cost = 5.00
 	prerequisite = {
@@ -927,7 +922,7 @@ shared_focus = {
 	id = GER_the_europakts_second_summit
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_second_europakt_summit
-	x = 1
+	x = 2
 	y = 6
 	cost = 5.00
 	prerequisite = {
@@ -947,7 +942,7 @@ shared_focus = {
 	id = GER_the_black_stain_of_europe
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_black_stain
-	x = -3
+	x = -4
 	y = 7
 	cost = 3.00
 	prerequisite = {
@@ -963,7 +958,7 @@ shared_focus = {
 	id = GER_the_reichs_citizens
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_the_reichs_citizens
-	x = -2
+	x = -3
 	y = 8
 	cost = 3.00
 	prerequisite = {
@@ -1011,7 +1006,7 @@ shared_focus = {
 	id = GER_looming_threat_internet
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_looming_threat_internet
-	x = 3
+	x = 4
 	y = 7
 	cost = 3.00
 	prerequisite = {
@@ -1027,7 +1022,7 @@ shared_focus = {
 	id = GER_the_purpose_of_education
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_purpose_of_education
-	x = 2
+	x = 3
 	y = 8
 	cost = 3.00
 	prerequisite = {
@@ -1066,8 +1061,8 @@ shared_focus = {
 shared_focus = {
 	id = GER_the_north_in_flames
 	icon = GFX_GER_the_north_in_flames
-	x = 20
-	y = 7
+	x = 21
+	y = 9
 	cost = 1.00
 	prerequisite = {
 	}
@@ -1220,8 +1215,8 @@ shared_focus = {
 	id = GER_a_nation_in_mourning
 	relative_position_id = GER_the_nsdap_prevails
 	icon = GFX_GER_a_nation_in_mourning
-	x = 4
-	y = 3
+	x = 0
+	y = 2
 	cost = 3.00
 	ai_will_do = { factor = 1 }
 	completion_reward = {
@@ -1308,7 +1303,7 @@ shared_focus = {
 	id = GER_take_what_is_ours
 	relative_position_id = GER_verbrechen_und_bestrafung
 	icon = GFX_GER_take_what_is_ours
-	x = 0
+	x = 1
 	y = 1
 	cost = 3.00
 	prerequisite = {
@@ -1352,7 +1347,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_modern_warfare
 	relative_position_id = GER_verbrechen_und_bestrafung
-	x = 3
+	x = 5
 	y = 1
 	cost = 3.00
 	prerequisite = {
@@ -1433,6 +1428,7 @@ shared_focus = {
 	}
 }
 
+
 ### Demo Closure ###
 shared_focus = {
 	id = GER_the_beasts_depart
@@ -1451,7 +1447,7 @@ shared_focus = {
 	prerequisite = {
 		focus = GER_the_beasts_depart
 	}
-	x = -2
+	x = -1
 	y = 1
 	cost = 3.00
 	ai_will_do = { factor = 1 }
@@ -1465,7 +1461,7 @@ shared_focus = {
 	prerequisite = {
 		focus = GER_patrol_corpse_littered_battlefields
 	}
-	x = 0
+	x = -1
 	y = 1
 	cost = 3.00
 	ai_will_do = { factor = 1 }
@@ -1479,7 +1475,7 @@ shared_focus = {
 	prerequisite = {
 		focus = GER_the_beasts_depart
 	}
-	x = 2
+	x = 1
 	y = 1
 	cost = 3.00
 	ai_will_do = { factor = 1 }
@@ -1493,7 +1489,7 @@ shared_focus = {
 	prerequisite = {
 		focus = GER_changes_above
 	}
-	x = 0
+	x = 1
 	y = 1
 	cost = 3.00
 	ai_will_do = { factor = 1 }
@@ -1512,7 +1508,7 @@ shared_focus = {
 	}
 	mutually_exclusive = { focus = GER_reach_into_the_past }
 	mutually_exclusive = { focus = GER_like_father_like_son }
-	x = -4
+	x = -5
 	y = 1
 	cost = 3.00
 	ai_will_do = { factor = 1 }
@@ -1550,7 +1546,7 @@ shared_focus = {
 	}
 	mutually_exclusive = { focus = GER_like_father_like_son }
 	mutually_exclusive = { focus = GER_a_move_against_nazism }
-	x = 0
+	x = 1
 	y = 1
 	cost = 3.00
 	ai_will_do = { factor = 1 }
