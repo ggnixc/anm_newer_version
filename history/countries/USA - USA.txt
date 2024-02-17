@@ -105,6 +105,10 @@ set_politics = {
 
 }
 
+#econtype
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_American_Capitalism }
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+
 set_popularities = {
     communist = 0
     ultranationalism = 0
@@ -684,9 +688,6 @@ if = {
 }
 
 set_country_flag = HAS_ECON_SPHERE
-
-set_variable = { TNO_economy_type = 1 }
-set_variable = { TNO_economy_subtype = 1 }
 
 #Starting Equipment
 add_equipment_to_stockpile = {

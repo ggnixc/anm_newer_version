@@ -25,6 +25,15 @@ TNO_startup_econ_type = {
 			}
 			set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
 		}
+		else_if = {
+			limit = {
+				OR = {
+					has_government = paternalism
+				}
+			}
+			set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+			set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }
+		}
 		else = {
 			set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
 		}
