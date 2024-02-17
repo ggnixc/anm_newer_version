@@ -359,8 +359,9 @@ set_country_flag = gui_alert_visible_2
 set_country_flag = country_has_gui
 set_country_flag = HAS_ECON_SPHERE
 
-set_variable = { TNO_economy_type = 1 }
-set_variable = { TNO_economy_subtype = 20 }
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft }
 
 #NSDAP Pyramid
 set_country_flag = GER_nsdapgui_activate

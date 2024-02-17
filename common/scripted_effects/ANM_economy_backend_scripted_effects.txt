@@ -1,0 +1,50 @@
+# Startup econ system
+TNO_startup_econ_type = {
+
+	#economic type setting default
+	if = {
+		limit = { check_variable = { TNO_economy_type = 0 } }
+
+		if = {
+			limit = {
+				OR = {
+					has_government = socialist
+					has_government = communist
+					has_government = despotism
+					has_government = ultranationalism
+				}
+			}
+			set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_government = fascism
+					has_government = national_socialism
+				}
+			}
+			set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+		}
+		else = {
+			set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { economic_centralization = 0 } #if you have an exception, put the change after
+		}
+		set_variable = { economic_centralization = 50 }
+	}
+	#dynmods
+	if = {
+		limit = { check_variable = { TNO_economy_type = token:Econ_Type_Planned } }
+		add_dynamic_modifier = { modifier = TNO_economy_type_planned_dynamic_modifier } #Planned (nerds)
+	}
+	else_if = {
+		limit = { check_variable = { TNO_economy_type = token:Econ_Type_Corporatism } }
+		add_dynamic_modifier = { modifier = TNO_economy_type_corporatism_dynamic_modifier } #Corpos (mean)
+	}
+	else = {
+		add_dynamic_modifier = { modifier = TNO_economy_type_capitalism_dynamic_modifier } #Crapitalists
+	}
+}
