@@ -256,6 +256,8 @@ scripted_gui = {
 		}
 
 		properties = {
+			category_6_collapse_btn = { frame = TNO_category_6_collapse }
+
 			category_5_academic_base_trend = {
 				image = "[get_academic_base_trend]"
 			}
@@ -289,6 +291,21 @@ scripted_gui = {
 		}
 
 		effects = {
+			category_6_collapse_btn_click = { # Assorted Laws is different
+				if = {
+					limit = { check_variable = { TNO_category_6_collapse = 1 } }
+					set_variable = { TNO_category_6_collapse = 2 }
+					clear_variable = tno_opened_laws_category
+				}
+				else_if = {
+					limit = { check_variable = { TNO_category_6_collapse = 2 } }
+					set_variable = { TNO_category_6_collapse = 1 }
+					set_variable = { tno_opened_laws_category = 100 }
+				}
+				
+				add_to_variable = { TNO_laws_dirty = 1 }
+			}
+
 			category_1_law_tno_political_parties_btn_click = {
 				set_variable = { tno_opened_laws_category = 10 }
 			}
@@ -1093,6 +1110,56 @@ scripted_gui = {
 		effects = {
 			close_click = {
 				clear_variable = tno_opened_laws_category
+			}
+		}
+	}
+
+	TNO_politics_sidebar_background = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "TNO_politics_sidebar_background_window"
+
+		visible = { has_variable = tno_opened_laws_category }
+	}
+
+
+#############################################################################################
+#############################################################################################
+# .___  ___.  __       _______.  ______     __          ___   ____    __    ____   _______.	#
+# |   \/   | |  |     /       | /      |   |  |        /   \  \   \  /  \  /   /  /       |	#
+# |  \  /  | |  |    |   (----`|  ,----'   |  |       /  ^  \  \   \/    \/   /  |   (----`	#
+# |  |\/|  | |  |     \   \    |  |        |  |      /  /_\  \  \            /    \   \    	#
+# |  |  |  | |  | .----)   |   |  `----.   |  `----./  _____  \  \    /\    / .----)   |   	#
+# |__|  |__| |__| |_______/     \______|   |_______/__/     \__\  \__/  \__/  |_______/   	#
+#																							#
+#############################################################################################
+#############################################################################################
+
+	# We say that the tno_opened_laws_category variable set to 100 is the misc laws
+	# We also make sure we clear the arrow
+	# Not perfect but w/e
+
+	TNO_SG_SD_category_tno_assorted_laws = {
+		context_type = player_context
+		parent_window_name = "TNO_politics_sidebar_background_window_inner"
+		window_name = "TNO_sd_category_tno_assorted_laws_window"
+
+		visible = {
+			check_variable = { tno_opened_laws_category = 100 }
+		}
+
+		effects = {
+			close_click = {
+				set_variable = { TNO_category_6_collapse = 2 }
+				clear_variable = tno_opened_laws_category
+			}
+		}
+
+		dynamic_lists = {
+			TNO_Politics_Assorted_Law_Grid = {
+				array = TNO_assorted_laws_display
+				change_scope = no
+				entry_container = "[GetMiscLawsContainer]"
 			}
 		}
 	}

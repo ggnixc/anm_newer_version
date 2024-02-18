@@ -13,7 +13,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "title"
 			position = { x = 16 y = 9 }
-			font = "Bomb_36"
+			font = "aldrich_24_outline"
 			text = "tno_assorted_laws"
 			maxWidth = 450
 			maxHeight = 30
@@ -84,7 +84,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 0 y = 10 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = tno_pollution
 			maxWidth = 320
 			maxHeight = 20
@@ -94,7 +94,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 0 y = 45 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = [get_law_tno_pollution]
 			maxWidth = 320
 			maxHeight = 20
@@ -124,7 +124,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 0 y = 10 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = tno_safety
 			maxWidth = 320
 			maxHeight = 20
@@ -134,7 +134,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 5 y = 45 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = [get_law_tno_safety]
 			maxWidth = 320
 			maxHeight = 20
@@ -164,7 +164,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 0 y = 10 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = tno_child_labor
 			maxWidth = 320
 			maxHeight = 20
@@ -174,7 +174,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 0 y = 45 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = [get_law_tno_child_labor]
 			maxWidth = 320
 			maxHeight = 20
@@ -204,7 +204,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 0 y = 10 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = tno_refugees
 			maxWidth = 320
 			maxHeight = 20
@@ -214,7 +214,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 0 y = 45 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = [get_law_tno_refugees]
 			maxWidth = 320
 			maxHeight = 20
@@ -244,7 +244,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 0 y = 10 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = tno_minorities
 			maxWidth = 320
 			maxHeight = 20
@@ -254,7 +254,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 0 y = 45 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = [get_law_tno_minorities]
 			maxWidth = 320
 			maxHeight = 20
@@ -285,7 +285,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 0 y = 10 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = tno_racial_integration
 			maxWidth = 320
 			maxHeight = 20
@@ -295,7 +295,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 0 y = 45 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = [get_law_tno_racial_integration]
 			maxWidth = 320
 			maxHeight = 20
@@ -325,7 +325,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 0 y = 10 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = tno_women
 			maxWidth = 320
 			maxHeight = 20
@@ -335,7 +335,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 0 y = 45 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = [get_law_tno_women]
 			maxWidth = 320
 			maxHeight = 20
@@ -365,7 +365,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 0 y = 10 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = tno_lgbt_rights
 			maxWidth = 320
 			maxHeight = 20
@@ -375,7 +375,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 0 y = 45 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = [get_law_tno_lgbt_rights]
 			maxWidth = 320
 			maxHeight = 20
@@ -383,6 +383,29 @@ guiTypes = {
 			text_color_code = W
 		}
 	}
+
+	containerWindowType = {
+		name = "TNO_ENG_assorted_laws"
+
+		iconType = {
+			name = "rectangle"
+			spriteType = "GFX_assorted_laws_rectangle"
+			alwaystransparent = yes
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextboxType = {
+			name = "law_name"
+			position = { x = 0 y = 0 }
+			font = "aldrich_white_18_outline"
+			text = "[GetAssortedLawsENG]"
+			maxWidth = 320
+			format = center
+			maxHeight = 84
+			vertical_alignment = center
+			text_color_code = b
+			pdx_tooltip = "ENG_get_law_tooltip"
+		}
+	}
 }
-
-

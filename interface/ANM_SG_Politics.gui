@@ -2132,6 +2132,42 @@ guiTypes = {
 				}
 			}
 		}
+
+		containerWindowType = {
+			name = "TNO_category_6"
+			position = { x = 20 y = 683 }
+			size = { width=500 height=200 }
+			iconType = {
+				name = "category_header_6"
+				quadTextureSprite = "GFX_category_header_assorted_laws"
+				position = { x = -3 y = 0 }
+			}
+			iconType = {
+				name = "category_6_icon"
+				alwaystransparent = yes
+				spriteType = "GFX_idea_categories_computer"
+				position = { x = 10 y = 15 }
+				Orientation = "UPPER_LEFT"
+				frame = 5
+			}
+			instantTextboxType = {
+				name = "category_6_name"
+				alwaystransparent = yes
+				position = { x = -3 y = 15 }
+				font = "aldrich_20_outline"
+				text = "tno_assorted_laws"
+				format = center
+				maxWidth = 498
+			}
+			buttonType = {
+				name = "category_6_collapse_btn"
+				position = { x = 422 y = 0 }
+				pdx_tooltip = "GetCategory_header_6_text"
+				quadTextureSprite = "GFX_category_assorted_laws_toggle"
+				clicksound = open_sub_window
+				#alwaystransparent = yes
+			}
+		}
 	}
 	containerWindowType = {
 		name = "TNO_laws_category_emergency_close"
@@ -2150,6 +2186,27 @@ guiTypes = {
 			quadTextureSprite ="GFX_blank"
 			Orientation = "UPPER_RIGHT"
 			scale = 40
+		}
+	}
+	containerWindowType = {
+		name = "TNO_politics_sidebar_background_window"
+		position = { x = 547 y = 2 }
+		size = { width = 730 height = 100%% }
+		clipping = yes
+		
+		containerWindowType = {
+			name = "TNO_politics_sidebar_background_window_inner"
+			size = { width = 730 height = 100%% }
+			position = { x = -1000 y = 0 }
+			hide_position = { x = -1000 y = 0 }
+			show_position = { x = 0 y = 0 }
+			hide_animation_type = accelerated
+			show_animation_type = decelerated
+			animation_time = 450
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
 		}
 	}
 	containerWindowType = {
