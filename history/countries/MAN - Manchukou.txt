@@ -2,50 +2,30 @@
 
 set_oob = "MAN_1962"
 
-set_stability = 0.62
+set_stability = 1.0
+set_war_support = 1.0
+
+recruit_character = MAN_Masashi_Ishibashi
 
 set_politics = {
-	ruling_party = despotism
+	ruling_party = fascism
 	last_election = "1962.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
-    communist = 34
-    ultranationalism = 4
-    socialist = 0
-    progressivism = 1
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 6
-    despotism = 49
-    fascism = 6
-    esoteric_nazism = 0
+	despotism = 5
+	fascism = 29
+	fascism_2 = 16
+	fascism_1 = 17
+	fascism_3 = 19
+	ultranationalism = 14
+	
 }
 
-create_country_leader = {
-	name = "Ruan Zhenduo"
-	desc = "POLITICS_RUAN_ZHENDUO_DESC"
-	picture = "gfx/leaders/MAN/Portrait_Manchuria_Ruan_Zhenduo.dds"
-	expire = "1990.1.1"
-	ideology = fascism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Sejima Ryūzō"
-	desc = "POLITICS_SEJIMA_RYUZO_DESC"
-	picture = "Portrait_MAN_Sejima_Ryuzo.dds"
-	expire = "2090.1.1"
-	ideology = despotism_military_junta_subtype
-	traits = {
-		#
-	}
-}
 
 add_ideas = {
 	#Country#
@@ -53,4 +33,8 @@ add_ideas = {
 
 	MAN_Problem_Of_NAJUA
 	MAN_Chained_To_Japan
+	MAN_A_Horseshoe_Of_Contradictions
+	MAN_Nissans_Playground
 }
+
+#Flavour Events

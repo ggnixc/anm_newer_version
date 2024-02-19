@@ -5,6 +5,7 @@ recruit_character = ENG_gregory_lauder_frost
 recruit_character = ENG_john_graeme_wood
 recruit_character = ENG_neil_hamilton
 recruit_character = ENG_john_bingham
+recruit_character = ENG_Bob_Crow
 
 add_political_power = 150
 
@@ -20,6 +21,7 @@ if = {
 	#set_naval_oob = "ENG_1962_naval_non_mtg"
 }
 
+misc_law_array_startup_special = yes
 
 set_research_slots = 3
 set_convoys = 200
@@ -105,6 +107,10 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Crown_Credit_Corporatism }
 
 set_popularities = {
 	communist = 0

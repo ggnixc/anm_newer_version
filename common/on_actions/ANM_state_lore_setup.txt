@@ -5,8 +5,28 @@ on_actions = {
 	on_startup = {
 		effect = {
 			# Santiago
-			279 = { add_to_array = { global.state_with_lore = THIS.id } }
-			add_to_array = { 279.lore_entries = 92 }
+			279 = { 
+				add_to_array = { global.state_with_lore = THIS.id } 
+				add_to_array = { lore_entries = 1 }
+			}
+
+			# Leningrad
+			195 = {
+				add_to_array = { global.state_with_lore = THIS.id }
+				add_to_array = { lore_entries = 2 }
+			}
+
+			# Stalingrad
+			243 = {
+				add_to_array = { global.state_with_lore = THIS.id }
+				add_to_array = { lore_entries = 3 }
+			}
+
+			# Moscow
+			1442 = {
+				add_to_array = { global.state_with_lore = THIS.id }
+				add_to_array = { lore_entries = 4 }
+			}
 		}
 	}
 }

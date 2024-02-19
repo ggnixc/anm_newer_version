@@ -233,6 +233,9 @@ add_to_faction = TUN
 add_to_faction = GRE
 add_to_faction = MOC
 add_to_faction = EGY
+add_to_faction = ISR
+add_to_faction = PAL
+add_to_faction = LEB
 
 MOC = {
 	set_politics = {
@@ -242,7 +245,9 @@ MOC = {
 		elections_allowed = no
 	}
 
-	set_popularities = {
+	TNO_startup_nation = yes
+
+set_popularities = {
 		communist = 0
 		ultranationalism = 0
 		socialist = 0
@@ -264,6 +269,8 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
@@ -297,6 +304,8 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
 	communist = 0
@@ -368,6 +377,8 @@ set_politics = {
 
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
 	communist = 0
 	ultranationalism = 0
@@ -393,7 +404,9 @@ GRE = {
 		elections_allowed = no
 	}
 
-	set_popularities = {
+	TNO_startup_nation = yes
+
+set_popularities = {
 		communist = 15
 		despotism = 0
 		socialist = 15
@@ -1694,3 +1707,4 @@ set_technology = {
 set_oob = "ITA_2000"
 set_naval_oob = "ITA_navy_2000"
 set_air_oob = "ITA_2000_air"
+set_global_flag = Triumvirate_Collapse

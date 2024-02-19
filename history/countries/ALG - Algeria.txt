@@ -1,36 +1,35 @@
 capital = 784
-
+set_cosmetic_tag = ALG_french
 set_oob = "ALG_1962"
 
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = despotism
 	last_election = "1962.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Planned }
+
 set_popularities = {
     communist = 0
-    ultranationalism = 13
-    socialist = 59
+    ultranationalism = 0
+    socialist = 23
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
     conservatism = 0
-    paternalism = 28
-    despotism = 0
-    fascism = 0
+    paternalism = 3
+    despotism = 61
+    fascism = 13
     esoteric_nazism = 0
 }
 
-create_country_leader = {
-	name = "Chadli Bendjedid"
-	desc = ""
-	picture = "Portrait_ALG_Chadli_Bendjedid.dds"
-	expire = "2999.10.20"
-	ideology = socialist_left_wing_nationalism_subtype
-	traits = {
-		#
-	}
+recruit_character = ALG_Pierre_Lagalliarde
+
+add_ideas = {
+ #FACTION
+ Pakt_Bundnispartner
 }
-		

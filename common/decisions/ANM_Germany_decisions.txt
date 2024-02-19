@@ -1,0 +1,296 @@
+ANM_ger_nsdap_category = {
+	
+	ANM_ger_decentralize_the_party = {
+		visible = { }
+		available = { tag = GER }
+
+		cost = 150
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_centralize_the_party"
+			custom_effect_tooltip = GER_nsdap_bottom_moreinfl_tt
+			add_to_variable = { GER_ANM_lower_party_influence = 20 }
+			add_to_variable = { GER_ANM_middle_party_influence = 20 }
+			add_to_variable = { GER_ANM_upper_party_influence = 20 }
+			add_to_variable = { GER_ANM_party_leadership_influnce = -40 }
+		}
+
+		ai_will_do = { factor = 150	}
+	}
+	
+	ANM_ger_centralize_the_party = {
+		visible = { }
+		available = { tag = GER }
+
+		cost = 150
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_centralize_the_party"
+			custom_effect_tooltip = GER_nsdap_top_moreinfl_tt
+			add_to_variable = { GER_ANM_lower_party_influence = -20 }
+			add_to_variable = { GER_ANM_middle_party_influence = -20 }
+			add_to_variable = { GER_ANM_upper_party_influence = -20 }
+			add_to_variable = { GER_ANM_party_leadership_influnce = 40 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_strengthen_leadership_grip = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_peak }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_leadparty_moreinfl_tt
+			add_to_variable = { GER_ANM_party_leadership_influnce = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_utilize_schroeders_clique = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_peak }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_leadparty_shiftreform_tt
+			add_to_variable = { GER_ANM_party_leadership_leaning = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_utilize_deckerts_clique = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_peak }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_leadparty_shiftcon_tt 
+			add_to_variable = { GER_ANM_party_leadership_leaning = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_reeinforce_coreparty_authority = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_top }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_coreparty_moreinfl_tt
+			add_to_variable = { GER_ANM_upper_party_influence = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_empower_conservative_governors = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_top }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_coreparty_shiftcon_tt
+			add_to_variable = { GER_ANM_upper_party_leaning = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_sideline_party_suborganisations = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_top }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_coreparty_lessinfl_tt
+			add_to_variable = { GER_ANM_upper_party_influence = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_expand_administrative_system = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_middle }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_innerparty_moreinfl_tt
+			add_to_variable = { GER_ANM_middle_party_influence = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_old_bureaucrats_retire = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_middle }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_innerparty_shiftreform_tt
+			add_to_variable = { GER_ANM_middle_party_leaning = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_paranoia_among_inner_party = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_middle
+		}
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+	
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_innerparty_shiftcon_tt
+			add_to_variable = { GER_ANM_middle_party_leaning = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_more_party_recruitment = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_bottom }
+		available = { tag = GER	}
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_more_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_lowerparty_moreinfl_tt
+			add_to_variable = { GER_ANM_lower_party_influence = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_decrease_party_recruitment = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_bottom }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_lowerparty_lessinfl_tt
+			add_to_variable = { GER_ANM_lower_party_influence = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_spark_desires_for_reform = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_bottom }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_lowerparty_shiftreform_tt
+			add_to_variable = { GER_ANM_lower_party_leaning = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+}
+
+ANM_GER_Europakt_category = { 
+
+	ANM_GER_ireland = {
+		visible = {  }
+		available = { tag = GER }
+
+		cost = 75
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_GER_ireland"
+			GER = { 
+				country_event = GER_misc_main_event.1
+			} 
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+
+}

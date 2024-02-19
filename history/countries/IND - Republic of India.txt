@@ -16,13 +16,17 @@ set_politics = {
 	elections_allowed = yes
 }
 
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Permit_Raj }
+
 set_popularities = {
-    communist = 10
-    socialist = 9
-    progressivism = 34
-    liberalism = 15
-    liberal_conservatism = 8
-    conservatism = 24
+    communist = 17
+    socialist = 22
+    progressivism = 31
+    liberalism = 11
+    liberal_conservatism = 0
+    conservatism = 19
     paternalism = 0
     despotism = 0
     fascism = 0
@@ -32,7 +36,12 @@ set_popularities = {
 
 
 add_ideas = {
-	#STARTING
+	#NAT SPIRITS
+	IND_Continued_Communal_Violence
+	IND_Stranglehold_of_Congress
+	IND_Legacy_of_Mirzapur
+	IND_Red_Spectre_in_the_South
+	#FACTION
 	OFN_Observer
 	#MINISTERS
 	#POLITICAL

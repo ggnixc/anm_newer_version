@@ -10,50 +10,6 @@ state_control_effect_1593 = {
 		reset_state_name = yes
 	}
 }
-#DOM
-state_control_effect_319 = {
-	if = {
-		limit = {
-			OR = {
-				is_controlled_by = CAL
-				is_controlled_by = HAI
-				AND = {
-					is_controlled_by = DOM
-					DOM = {
-						NOT = {
-							OR = {
-								has_country_leader = { character = DOM_Rafael_Trujillo ruling_only = yes }
-								has_country_leader = { character = DOM_Ramfis_Trujillo ruling_only = yes }
-								# Some other Trujillista
-							}
-						}
-					}
-				}
-			}
-		}
-		set_state_name = STATE_319_CAL
-		set_province_name = {
-			id = 7660
-			name = VICTORY_POINTS_7660_CAL
-		}
-	}
-	else_if = {
-		limit = {
-			AND = {
-				is_controlled_by = DOM
-				DOM = {
-					OR = {
-						has_country_leader = { character = DOM_Rafael_Trujillo ruling_only = yes }
-						has_country_leader = { character = DOM_Ramfis_Trujillo ruling_only = yes }
-						# Some other Trujillista
-					}
-				}
-			}
-		}
-		reset_state_name = yes
-		reset_province_name = 7660
-	}
-}
 state_control_effect_1706 = {
 	if = {
 		limit = {

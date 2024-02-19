@@ -1,38 +1,40 @@
 ﻿capital = 446
 
 recruit_character = EGY_Fouad_Serageddin
+recruit_character = EGY_Mounir_Fakhry_Abdul_Noor
+recruit_character = EGY_Fuad_II
 
 set_oob = "EGY_1962"
 
-ITA = {
-	if = {
-		limit = { 
-			OR = { 
-				has_dlc = "Together for Victory" 
-				has_dlc = "Man the Guns" 
-			}
-		}
-		set_autonomy = { target = EGY autonomy_state = autonomy_italy_reliant }
-		else = {
-			puppet = EGY
-		}
-	}
-}
+#ITA = {
+	#if = {
+	#	limit = { 
+	#		OR = { 
+	#			has_dlc = "Together for Victory" 
+	#			has_dlc = "Man the Guns" 
+	#		}
+	#	}
+	#	set_autonomy = { target = EGY autonomy_state = autonomy_italy_reliant }
+	#	else = {
+#			puppet = EGY
+#		}
+#	}
+#}
 
 add_ideas = {
-	TRI_Member_Client
+	TRI_Member
 
 	##laws##
 	#political#
-	tno_political_parties_controlled_opposition
-	tno_religious_rights_pluralism
-	tno_trade_unions_illegal
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_state_controlled
 	tno_immigration_quota_immigration
 	tno_slavery_outlawed
 	tno_public_meetings_regulated
-	tno_press_rights_state_press_only
-	tno_vote_franchise_no_voting
-	tno_refugees_open
+	tno_press_rights_censored_press
+	tno_vote_franchise_universal
+	tno_refugees_skilled
 
 	#military#
 	tno_conscription_one_year_draft
@@ -44,43 +46,45 @@ add_ideas = {
 	tno_draft_exemptions_educational_deferment
 
 	#economic#
-	tno_trade_laws_export_focus
+	tno_trade_laws_free_trade
 	tno_economic_focus_civilian_economy
-	tno_tax_rate_exploitative_taxation
+	tno_tax_rate_high_taxes
 	tno_income_taxation_low_income_weighted
-	tno_minimum_wage_no_minimum_wage
-	tno_max_workhours_12_hour_work_day
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_8_hour_work_day
 	tno_child_labor_illegal
-	tno_pensions_low_pensions
+	tno_pensions_acceptable_pensions
 	tno_unemployment_no_subsidies
 
 	#social#
 	tno_safety_limited_regulations
 	tno_health_care_public_health_care
-	tno_pollution_no_controls
-	tno_education_public_education
+	tno_pollution_some_regulations
+	tno_education_public_higher_education
 	tno_penal_system_capital_punishment
 	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
-	tno_minorities_segregation
+	tno_gender_rights_gender_equality
+	tno_minorities_equal_rights
 	tno_security_security_service
 
 	#ministers#
 }
 
 set_politics = {
-	ruling_party = conservatism
+	ruling_party = liberalism
 	last_election = "1995.10.8"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
 	progressivism = 15
-	liberalism = 12
+	liberalism = 32
 	liberal_conservatism = 15
-	conservatism = 50
-	paternalism = 5
+	conservatism = 20
+	paternalism = 15
 	despotism = 3
 }
 

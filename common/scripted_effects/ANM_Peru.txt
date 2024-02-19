@@ -71,12 +71,15 @@ ANM_Peruvian_Civil_War = {
 		add_state_core = 1694
 		add_ideas = {
 			PRU_Peruvian_Civil_War
+			MRA_Revolutionary_Foquism
+			MRA_Disparate_Shades_of_Red
 		}
 				
 		declare_war_on = {
 		   	type = annex_everything
 		   	target = PRU 
 		}
+		load_oob = MRA_civilwar
 	}
 	PRU = {
 		add_ideas = {
@@ -87,9 +90,21 @@ ANM_Peruvian_Civil_War = {
 			PRU_Fujishocked
 			PRU_Aristocratic_Alliance
 		}
+		country_event = { id = PRU.civilwar.2 days = 10 }
+		load_oob = PRU_civilwar
 	}
+	every_country = {
+		limit = { is_ai = no }
+		news_event = { id = WORLD.18179 hours = 0 }
+	}
+	set_global_flag = Andean_War
 }
 ANM_Andean_War = {
+	MRA = {
+		add_ideas = {
+			Andean_Revolutionary_Front
+		}
+	}
 	ECU = {
 		declare_war_on = {
 		type = take_state_focus
@@ -98,6 +113,9 @@ ANM_Andean_War = {
 		}
 		remove_ideas = {
 			COM_Observer
+		}
+		add_ideas = {
+			Andean_Revolutionary_Front
 		}
 		create_faction = Andean_Revolutionary_Front
 		add_to_faction = MRA
@@ -120,46 +138,49 @@ ANM_Andean_War = {
 		create_faction = Condor_Pact
 		add_to_faction = GLP
 	}
+	every_country = {
+		limit = { is_in_faction_with = ECU }
+		add_to_array = { global.AW_ARF_faction = THIS }
+		add_to_array = { global.Andean_War_contender = THIS }
+	}
+	every_country = {
+		limit = { is_in_faction_with = ECU }
+		add_to_array = { global.AW_CP_faction = THIS }
+		add_to_array = { global.Andean_War_contender = THIS }
+	}
+	set_global_flag = andean_war_ongoing
+	ECU = { set_major = yes }
+	GLP = { set_major = yes }
+	PRU = { set_major = yes }
+	MRA = { set_major = yes }
 }
 
-ANM_Condor_Pact_Victory = {
-	PRU = {
-		puppet = ECD
+
+ANM_Andean_Revolutionary_Front_Victory = {
+	MRA = {
+		annex_country = {
+			target = PRU
+			transfer_troops = no
+		}
+		set_capital = { state = 1689 remember_old_capital = no }
+	}
+	ECU = {
+		annex_country = {
+			target = GLP
+			transfer_troops = no
+		}
 		dismantle_faction = yes
 	}
-	ECD = {
-		set_politics = {	
-			ruling_party = paternalism
-			last_election = "1961.1.20"
-			election_frequency = 48
-			elections_allowed = no
-
+	every_state = { # clean up cores
+		limit = {
+			is_core_of = MRA
 		}
-		set_popularities = {
-			communist = 0
-			ultranationalism = 0
-			socialist = 28
-			progressivism = 0
-			liberalism = 0
-			liberal_conservatism = 0
-			conservatism = 0
-			paternalism = 60
-			despotism = 12
-			fascism = 0
-			esoteric_nazism = 0
-		}
-		transfer_state = 2020
-		add_state_core = 305
-		add_state_core = 1676
-		add_state_core = 649
-		add_state_core = 2020
-		}
-	GLP = {
-		set_cosmetic_tag = GALAPAGOS_VICTORY
-		transfer_state = 1676
-		transfer_state = 305
-		add_war_support = 0.10
-		set_capital = { state = 305 remember_old_capital = no }
+		remove_core_of = PRU
 	}
-	set_province_name = { id = 8252 name = VICTORY_POINTS_8252_WAR }
+	every_state = { # clean up cores
+		limit = {
+			is_core_of = ECU
+		}
+		remove_core_of = GLP
+	}
 }

@@ -1,54 +1,49 @@
 ﻿capital = 267
 
 set_oob = "AFG_2000"
+recruit_character = AFG_Mohammad_Zahir_Shah
 
 set_politics = {
-	ruling_party = progressivism
+	ruling_party = paternalism
 	last_election = "1993.8.29"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
-set_popularities = {
-    communist = 20
-    socialist = 0
-    progressivism = 40
-    liberalism = 0
-    ecopolitical = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 20
-    despotism = 10
-    fascism = 0
-    national_socialism = 0
-    ultranationalism = 10
+if = {
+ 	limit = {
+ 		OR = {
+			has_dlc = "Together for Victory"
+		}
+ 	}
+ 	set_autonomy = {
+ 		target = KLT
+ 		autonomous_state = autonomy_puppet
+ 	}
+	else = {
+        puppet = KLT
+	}
 }
 
-create_country_leader = {
-	name = "Anwar Ul Huq"
-	desc = "POLITICS_ANWAR_GRIFFIN_DESC"
-	picture = "gfx/leaders/AFG/Portrait_Afghanistan_Anwar_Ul_Huq.dds"
-	expire = "2999.1.1"
-	ideology = progressivism_left_wing_populism_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Muhammad Zahir Shah"
-	desc = "POLITICS_ZAHIR_SHAH_DESC"
-	picture = "gfx/leaders/AFG/Portrait_Afghanistan_Zahir_Shah.dds"
-	expire = "2999.1.1"
-	ideology = paternalism_semi_constitutional_monarchy_subtype
-	traits = {
-		#
-	}
+TNO_startup_nation = yes
+
+set_popularities = {
+    communist = 18
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 71
+    despotism = 0
+    fascism = 0
+    national_socialism = 0
+    ultranationalism = 11
 }
 
 
 add_ideas = {
 	#STARTING#
-	AFG_Zahir_Shah
 	#AFG_us_support
 	
 	#MINISTERS
@@ -100,3 +95,4 @@ add_ideas = {
 	tno_army_professionalism_cronyism
 	tno_nuclear_stockpile_none
 }
+

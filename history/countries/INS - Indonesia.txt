@@ -1,4 +1,4 @@
-﻿capital = 795 #Jakarta
+﻿capital = 334
 load_focus_tree = ZZZ_national_focus
 set_oob = "INS_1962"
 
@@ -18,6 +18,8 @@ set_politics = {
 	election_frequency = 60
 	elections_allowed = yes
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
@@ -107,6 +109,11 @@ add_ideas = {
 	INS_Suwiryo_eco
 }
 
+### Characters ###
+recruit_character = INS_Eros_Djarot
+
+
+###Base game TNO shits###
 create_country_leader = {
 	name = "Lukman Njoto"
 	expire = "2090.1.1"
@@ -153,16 +160,6 @@ create_country_leader = {
 	desc = "POLITICS_SUKARNO_DESC"
 	picture = "Portrait_INS_Alwi_Shihab.dds"
 	ideology = conservatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Supeni Pudjobuntoro"
-	expire = "2090.1.1"
-	desc = ""
-	picture = "Portrait_INS_Supeni_Pudjobuntoro.dds"
-	ideology = paternalism_controlled_democracy_subtype
 	traits = {
 	}
 }

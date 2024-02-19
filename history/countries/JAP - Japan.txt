@@ -11,7 +11,6 @@ add_stability = -0.30
 set_country_flag = gui_alert_visible
 
 create_faction = Japanese_Co-Prosperity_Sphere
-add_to_faction = KOR
 add_to_faction = SYO
 add_to_faction = INS
 add_to_faction = SRK
@@ -22,6 +21,7 @@ add_to_faction = BUR
 add_to_faction = PHI
 add_to_faction = VIN
 add_to_faction = CAM
+add_to_faction = SBH
 
 if = {
 	limit = { has_dlc = "La Resistance" }
@@ -37,95 +37,23 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = yes
 }
+recruit_character = JAP_Yasuo_Fukada
+
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
     socialist = 0
-    progressivism = 5
-    liberalism = 8
-    conservatism = 12
-    paternalism = 69
-    despotism = 0
-    fascism = 6
+    progressivism = 4
+    liberalism = 29
+    conservatism = 0
+    paternalism = 48
+    despotism = 10
+    fascism = 9
     national_socialism = 0
     ultranationalism = 0
     esoteric_nazism = 0
 }
-
-create_country_leader = {
-	name = "Nariaki Nakayama"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Takeo Hiranuma"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Junichiro Koizumi"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = conservatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Koichi Kato"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_JAP_Koichi_Kato.dds"
-	expire = "2090.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hiromi Okazaki"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = progressivism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hiromi Okazaki"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = socialist_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Ishihara Shintaro"
-	desc = "POLITICS_ISHIHARA_SHINTARO_DESC"
-	picture = "Portrait_JAP_Ishihara_Shintaro.dds"
-	expire = "2999.1.1"
-	ideology = paternalism_dominant_party_democracy_subtype
-	traits = {
-	}
-}
-
-set_autonomy = {
- 		target = KOR
- 		autonomous_state = autonomy_integrated_puppet
- 	}
 
 add_ideas = {
 

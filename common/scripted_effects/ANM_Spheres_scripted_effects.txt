@@ -46,6 +46,8 @@ TNO_Spheres_init = {
 				tag = ARM
 				tag = TCP
 				tag = BEL
+				tag = ALG
+				tag = ULS
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = GER }
@@ -107,6 +109,7 @@ TNO_Spheres_init = {
 				tag = MZB
 				tag = ANG
 				tag = CFS
+				tag = QUE
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = USA }
@@ -138,6 +141,7 @@ TNO_Spheres_init = {
 				tag = PHI
 				tag = VIN
 				tag = CAM
+				tag = SBH
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = JAP }
@@ -165,12 +169,12 @@ TNO_Spheres_init = {
 				tag = TUN
 				tag = GRE
 				tag = JOR
-				tag = JER
 				tag = PAL
 				tag = ISR
 				tag = IRQ
 				tag = SWI
 				tag = EGY
+			    tag = LEB
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = ITA }
@@ -219,6 +223,7 @@ TNO_Spheres_init = {
 				tag = AZH
 				tag = ETH
 				tag = GZO
+				tag = PRC
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = SOV }
@@ -237,17 +242,6 @@ TNO_Spheres_init = {
 		set_variable = { ECON_SPHERE_LEADER = CHI }
 	}
 
-	### Andean
-	ADN = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = ADN
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = ADN }
-	}
-
 	### Iberia
 	IBR = { set_country_flag = HAS_ECON_SPHERE }
 	every_country = {
@@ -256,6 +250,7 @@ TNO_Spheres_init = {
 				tag = IBR
 				tag = PAD
 				tag = COL
+				tag = MOR
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = IBR }

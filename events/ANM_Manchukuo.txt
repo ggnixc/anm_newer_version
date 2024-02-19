@@ -1,0 +1,100 @@
+add_namespace = MAN.civilwar
+add_namespace = MAN.NAJUA
+
+country_event = {
+	id = MAN.civilwar.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MAN.civilwar.1" }
+	title = MAN.civilwar.1.t
+	desc = MAN.civilwar.1.desc
+	picture = GFX_anm_CHI_empty_city_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MAN.civilwar.1.a
+		ANM_manchukuo_unrest = yes
+		country_event = { id = MAN.civilwar.2 days = 10 }
+  	}
+}
+
+country_event = {
+	id = MAN.civilwar.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MAN.civilwar.2" }
+	title = MAN.civilwar.2.t
+	desc = MAN.civilwar.2.desc
+	picture = GFX_anm_CHI_empty_city_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MAN.civilwar.2.a
+		ANM_manchukuo_civilwar = yes
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = WORLD.18189 hours = 0 }
+		}
+  	}
+}
+
+country_event = {
+	id = MAN.civilwar.99
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MAN.civilwar.99" }
+	title = MAN.civilwar.99.t
+	desc = MAN.civilwar.99.desc
+	picture = GFX_anm_CHI_empty_city_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MAN.civilwar.99.a
+		JAP = { add_to_faction = MAN }
+		remove_ideas = Sphere_Observer
+		add_ideas = Sphere_Core_Member
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = WORLD.18190 hours = 0 }
+		}
+  	}
+}
+
+country_event = {
+	id = MAN.NAJUA.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MAN.NAJUA.1" }
+	title = MAN.NAJUA.1.t
+	desc = MAN.NAJUA.1.desc
+	picture = GFX_anm_CHI_empty_city_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # negotiations fail, NAJUA aligns with USSR
+		name = MAN.NAJUA.1.a
+		ai_factor = 0.5
+		SOV = { add_to_faction = PRC }
+		PRC = { 
+			set_cosmetic_tag = PRC_SOV
+			remove_ideas = COM_Observer
+			add_ideas = COM_Member
+		}
+  	}
+	option = { # negotations succeed, NAJUA integrated into china
+		name = MAN.NAJUA.1.b
+		ai_factor = 0.5
+		CHI = {
+			annex_country = {
+				target = PRC
+				transfer_troops = no
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = PRC
+			}
+			remove_core_of = PRC
+			add_core_of = CHI
+		}
+  	}
+}

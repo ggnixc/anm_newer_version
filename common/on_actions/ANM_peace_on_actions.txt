@@ -58,13 +58,7 @@ on_actions = {
 						ROOT = { is_in_faction = no }
 						ROOT = {
 							all_allied_country = {
-								if = {
-									limit = {
-										has_war_with = FROM
-										is_major = yes
-									}
-									has_capitulated = yes
-								}
+								has_capitulated = yes
 							}
 						}
 					}
@@ -141,6 +135,198 @@ on_actions = {
 					set_global_flag = skip_default_capitulation
 				}
 
+				else_if = { # Manchukuo Civil War
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = MAN
+								original_tag = PRC
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = MAN
+								original_tag = PRC
+							}
+						}
+					}
+
+					if = { # NAJUA Victory
+						limit = {
+							FROM = { original_tag = PRC }
+						}
+						FROM = {
+							white_peace = ROOT
+						}
+						PRC = {
+							annex_country = {
+								target = MAN
+								transfer_troops = no
+							}
+						}
+						every_state = { # clean up cores
+							limit = {
+								is_core_of = ROOT
+							}
+							remove_core_of = ROOT
+							add_core_of = FROM
+						}
+						PRC = {
+							set_capital = { state = 328 remember_old_capital = no }
+							country_event = { id = MAN.NAJUA.1 days = 30 }
+						}
+						every_country = {
+							limit = { is_ai = no }
+							news_event = { id = WORLD.18191 hours = 0 }
+						}
+					}
+					else = { # Manchukuo Victory
+						limit = {
+							FROM = { original_tag = MAN }
+						}
+						FROM = {
+							white_peace = ROOT
+						}
+						MAN = {
+							annex_country = {
+								target = PRC
+								transfer_troops = no
+							}
+							country_event = { id = MAN.civilwar.99 days = 2 }
+						}
+						every_state = { # clean up cores
+							limit = {
+								is_core_of = ROOT
+							}
+							remove_core_of = ROOT
+							add_core_of = FROM
+						}
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
+				# Andean War, Condor Pact Victory
+				else_if = {
+					limit = {
+						OR = {
+							FROM = {
+								original_tag = PRU
+							}
+						}
+						OR = {
+							ROOT = {
+								original_tag = MRA
+							}
+							ROOT = {
+								original_tag = ECU
+							}
+						}
+					}
+
+					clr_global_flag = andean_war_ongoing
+
+					PRU = {
+						puppet = ECD
+						dismantle_faction = yes
+						country_event = { id = PRU.general.2 days = 5 }
+						remove_ideas = {
+							PRU_Peruvian_Civil_War
+						}
+					}
+
+					every_state = { # clean up cores
+						limit = {
+							is_core_of = ROOT
+						}
+						remove_core_of = ROOT
+						add_core_of = FROM
+					}
+
+					ECD = {
+						set_politics = {	
+							ruling_party = paternalism
+							last_election = "1961.1.20"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							communist = 0
+							ultranationalism = 0
+							socialist = 28
+							progressivism = 0
+							liberalism = 0
+							liberal_conservatism = 0
+							conservatism = 0
+							paternalism = 60
+							despotism = 12
+							fascism = 0
+							esoteric_nazism = 0
+						}
+						transfer_state = 2020
+						add_state_core = 305
+						add_state_core = 1676
+						add_state_core = 649
+						add_state_core = 2020
+					}
+					GLP = {
+						set_cosmetic_tag = GALAPAGOS_VICTORY
+						transfer_state = 1676
+						transfer_state = 305
+						add_war_support = 0.10
+						set_capital = { state = 305 remember_old_capital = no }
+					}
+					set_province_name = { id = 8252 name = VICTORY_POINTS_8252_WAR }
+					
+					set_global_flag = skip_default_capitulation
+				}
+				# Andean War, Andean Revolutionary Front Victory
+				else_if = {
+					limit = {
+						OR = {
+							FROM = {
+								original_tag = MRA
+							}
+							FROM = {
+								original_tag = ECU
+							}
+						}
+						OR = {
+							ROOT = {
+								original_tag = GLP
+							}
+							ROOT = {
+								original_tag = PRU
+							}
+						}
+					}
+
+					clr_global_flag = andean_war_ongoing
+
+					MRA = {
+						annex_country = {
+							target = PRU
+							transfer_troops = no
+						}
+						set_capital = { state = 1689 remember_old_capital = no }
+					}
+					ECU = {
+						annex_country = {
+						target = GLP
+						transfer_troops = no
+						}
+						dismantle_faction = yes
+					}
+
+					every_state = { # clean up cores
+						limit = {
+							is_core_of = ROOT
+						}
+						remove_core_of = ROOT
+						add_core_of = FROM
+					}
+					set_global_flag = skip_default_capitulation
+				}
+
 				#DEFAULT CAPITULATION
 				if = {
 					limit = { NOT = { has_global_flag = skip_default_capitulation } }
@@ -164,6 +350,86 @@ on_actions = {
 							}
 						}
 					}
+				}
+			}
+			else = {
+				log = "war_goes_on"
+				if = { # Shining Path or Peru Falls Andean War
+					limit = {
+						has_global_flag = andean_war_ongoing
+						FROM = {
+							OR = {
+								original_tag = PRU
+								original_tag = MRA
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = PRU
+								original_tag = MRA
+							}
+						}
+					}
+					set_global_flag = skip_default_capitulation
+					FROM = {
+						white_peace = ROOT
+						annex_country = {
+							target = ROOT
+							transfer_troops = no
+						}
+					}
+				}
+				else_if = { # Ecuador dies before Condor Peru, Andean War
+					limit = {
+						has_global_flag = andean_war_ongoing
+						FROM = {
+							OR = {
+								original_tag = PRU
+								original_tag = GLP
+							}
+						}
+						ROOT = {
+							original_tag = ECU
+						}
+					}
+					set_global_flag = skip_default_capitulation
+					PRU = {
+						puppet = ECD
+					}
+					ECD = {
+						set_politics = {	
+							ruling_party = paternalism
+							last_election = "1961.1.20"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						set_popularities = {
+							communist = 0
+							ultranationalism = 0
+							socialist = 28
+							progressivism = 0
+							liberalism = 0
+							liberal_conservatism = 0
+							conservatism = 0
+							paternalism = 60
+							despotism = 12
+							fascism = 0
+							esoteric_nazism = 0
+						}
+						transfer_state = 2020
+						add_state_core = 305
+						add_state_core = 1676
+						add_state_core = 649
+						add_state_core = 2020
+					}
+					GLP = {
+						set_cosmetic_tag = GALAPAGOS_VICTORY
+						transfer_state = 1676
+						transfer_state = 305
+						add_war_support = 0.10
+						set_capital = { state = 305 remember_old_capital = no }
+					}
+					set_province_name = { id = 8252 name = VICTORY_POINTS_8252_WAR }
 				}
 
 				if = { # Fixing all wars vs puppets
