@@ -64,7 +64,10 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-TNO_startup_nation = yes
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft }
 
 set_popularities = {
 	fascism = 9

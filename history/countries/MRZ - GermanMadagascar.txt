@@ -62,7 +62,10 @@ set_politics = {
 			election_frequency = 48
 			elections_allowed = no
 }
-TNO_startup_nation = yes
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }
 
 set_popularities = {
 			despotism = 60

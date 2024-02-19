@@ -16,7 +16,9 @@ set_politics = {
 	elections_allowed = yes
 }
 
-TNO_startup_nation = yes
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Permit_Raj }
 
 set_popularities = {
     communist = 17
