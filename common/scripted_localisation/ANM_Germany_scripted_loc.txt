@@ -3,20 +3,20 @@ defined_text = {
 	name = getGERnsdappartystructure
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning < 20000 }
-			check_variable = { GER_ANM_party_leaning > -20000}
+			check_variable = { GER_ANM_party_leaning < 10000 }
+			check_variable = { GER_ANM_party_leaning > -10000}
 		}
 		localization_key = GER_nsdap_conservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning < -20000 }
+			check_variable = { GER_ANM_party_leaning < -10000 }
 		}
 		localization_key = GER_nsdap_reformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning > 20000 }
+			check_variable = { GER_ANM_party_leaning > 10000 }
 		}
 		localization_key = GER_nsdap_reactionary_leaning_anm
 	}
@@ -25,20 +25,20 @@ defined_text = {
 	name = getGERnsdaplowerpartyleaning
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_leaning < 100 }
-			check_variable = { GER_ANM_lower_party_leaning > -100}
+			check_variable = { GER_ANM_lower_party_leaning < 50 }
+			check_variable = { GER_ANM_lower_party_leaning > -50}
 		}
 		localization_key = GER_nsdap_lowerconservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_leaning < -100 }
+			check_variable = { GER_ANM_lower_party_leaning < -50 }
 		}
 		localization_key = GER_nsdap_lowerreformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_leaning > 100 }
+			check_variable = { GER_ANM_lower_party_leaning > 50 }
 		}
 		localization_key = GER_nsdap_lowerreactionary_leaning_anm
 	}
@@ -47,20 +47,20 @@ defined_text = {
 	name = getGERnsdaplowerpartyinfluence
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_influence < 100 }
-			check_variable = { GER_ANM_lower_party_influence > -100}
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
 		}
 		localization_key = GER_nsdap_conservative_lowerinfluence_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_influence < -100 }
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
 		}
 		localization_key = GER_nsdap_reformist_lowerinfluence_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_influence > 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
 		}
 		localization_key = GER_nsdap_reactionary_lowerinfluence_anm
 	}
@@ -69,20 +69,20 @@ defined_text = {
 	name = getGERnsdapinnerpartyleaning
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_leaning < 100 }
-			check_variable = { GER_ANM_middle_party_leaning > -100}
+			check_variable = { GER_ANM_middle_party_leaning < 50 }
+			check_variable = { GER_ANM_middle_party_leaning > -50}
 		}
 		localization_key = GER_nsdap_innerconservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_leaning < -100 }
+			check_variable = { GER_ANM_middle_party_leaning < -50 }
 		}
 		localization_key = GER_nsdap_innerreformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_leaning > 100 }
+			check_variable = { GER_ANM_middle_party_leaning > 50 }
 		}
 		localization_key = GER_nsdap_innerreactionary_leaning_anm
 	}
@@ -91,20 +91,20 @@ defined_text = {
 	name = getGERnsdapinnerpartyinfluence
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_influence < 100 }
-			check_variable = { GER_ANM_middle_party_influence > -100}
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
 		}
 		localization_key = GER_nsdap_innerconservative_influence_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_influence < -100 }
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
 		}
 		localization_key = GER_nsdap_innerreformist_influence_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_influence > 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
 		}
 		localization_key = GER_nsdap_innerreactionary_influence_anm
 	}
@@ -113,20 +113,20 @@ defined_text = {
 	name = getGERnsdapcorepartyleaning
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_leaning < 100 }
-			check_variable = { GER_ANM_upper_party_leaning > -100}
+			check_variable = { GER_ANM_upper_party_leaning < 50 }
+			check_variable = { GER_ANM_upper_party_leaning > -50}
 		}
 		localization_key = GER_nsdap_coreconservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_leaning < -100 }
+			check_variable = { GER_ANM_upper_party_leaning < -50 }
 		}
 		localization_key = GER_nsdap_corereformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_leaning > 100 }
+			check_variable = { GER_ANM_upper_party_leaning > 50 }
 		}
 		localization_key = GER_nsdap_corereactionary_leaning_anm
 	}
@@ -135,20 +135,20 @@ defined_text = {
 	name = getGERnsdapcorepartyinfluence
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_influence < 100 }
-			check_variable = { GER_ANM_upper_party_influence > -100}
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
 		}
 		localization_key = GER_nsdap_coreconservative_influence_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_influence < -100 }
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
 		}
 		localization_key = GER_nsdap_corereformist_influence_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_influence > 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
 		}
 		localization_key = GER_nsdap_corereactionary_influence_anm
 	}
@@ -157,20 +157,20 @@ defined_text = {
 	name = getGERnsdappartyleadershipleaning
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_leaning < 100 }
-			check_variable = { GER_ANM_party_leadership_leaning > -100}
+			check_variable = { GER_ANM_party_leadership_leaning < 50 }
+			check_variable = { GER_ANM_party_leadership_leaning > -50}
 		}
 		localization_key = GER_nsdap_leaderconservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_leaning < -100 }
+			check_variable = { GER_ANM_party_leadership_leaning < -50 }
 		}
 		localization_key = GER_nsdap_leaderreformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_leaning > 100 }
+			check_variable = { GER_ANM_party_leadership_leaning > 50 }
 		}
 		localization_key = GER_nsdap_leaderreactionary_leaning_anm
 	}
@@ -179,20 +179,20 @@ defined_text = {
 	name = getGERnsdappartyleadershipinfluence
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_influnce < 100 }
-			check_variable = { GER_ANM_party_leadership_influnce > -100}
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
 		}
 		localization_key = GER_nsdap_leaderconservative_influence_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_influnce < -100 }
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
 		}
 		localization_key = GER_nsdap_leaderreformist_influence_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_influnce > 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
 		}
 		localization_key = GER_nsdap_leaderreactionary_influence_anm
 	}
