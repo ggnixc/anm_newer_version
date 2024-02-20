@@ -1,3 +1,6 @@
+################################################# 
+#                   SSR GUI                     #
+#################################################
 
 defined_text = {
 	name = SOV_Republic_Select_lockey
@@ -114,5 +117,87 @@ defined_text = {
 	text = {
 		trigger = {  }
 		localization_key = "GFX_SOV_select_flag"
+	}
+}
+
+################################################# TNO_assorted_laws_display^i
+#                   Misc Laws                   #
+#################################################
+
+defined_text = {
+	name = GetAssortedLawsSOV
+	text = { # Secession of Republics, Forbidden
+		trigger = { check_variable = { v = 1 } }
+		localization_key = "SOV_Laws_Secession_Republics_Forbidden"
+	}
+	text = { # Guiding Hand of the People
+		trigger = { check_variable = { v = 2 } }
+		localization_key = "SOV_Laws_Guiding_Hand"
+	}
+	text = { # Law on Extermination of Bandits
+		trigger = { check_variable = { v = 3 } }
+		localization_key = "SOV_Laws_Exterminate_Bandits"
+	}
+	text = { # Collective Rule
+		trigger = { check_variable = { v = 4 } }
+		localization_key = "SOV_Laws_Collective_Rule"
+	}
+	text = { # Far Eastern Republic Different
+		trigger = { check_variable = { v = 5 } }
+		localization_key = "SOV_Laws_FER_Different"
+	}
+	text = { # COMECON
+		trigger = { check_variable = { v = 6 } }
+		localization_key = "SOV_Laws_COMECON"
+	}
+	text = { # Partial Collectivisation
+		trigger = { check_variable = { v = 7 } }
+		localization_key = "SOV_Laws_Partial_Collectivisation"
+	}
+}
+
+defined_text = {
+	name = GetAssortedLawsDescSOV
+	text = { # Secession of Republics, Forbidden
+		trigger = { 
+			check_variable = { v = 1 }
+		}
+		localization_key = SOV_Laws_Secession_Republics_Forbidden_desc
+	}
+	text = { # Guiding Hand of the People
+		trigger = {
+			check_variable = { v = 2 }
+		}
+		localization_key = SOV_Laws_Guiding_Hand_desc
+	}
+	text = { # Law on Extermination of Bandits
+		trigger = {
+			check_variable = { v = 3 }
+		}
+		localization_key = SOV_Laws_Exterminate_Bandits_desc
+	}
+	text = { # Collective Rule
+		trigger = {
+			check_variable = { v = 4 }
+		}
+		localization_key = SOV_Laws_Collective_Rule_desc
+	}
+	text = { # Far Eastern Republic Different
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = SOV_Laws_FER_Different_desc
+	}
+	text = { # COMECON
+		trigger = {
+			check_variable = { v = 6 }
+		}
+		localization_key = SOV_Laws_COMECON_desc
+	}
+	text = { # Partial Collectivisation
+		trigger = {
+			check_variable = { v = 7 }
+		}
+		localization_key = SOV_Laws_Partial_Collectivisation_desc
 	}
 }

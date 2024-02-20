@@ -385,6 +385,31 @@ guiTypes = {
 	}
 
 	containerWindowType = {
+		name = "ANM_SOV_assorted_laws"
+
+		iconType = {
+			name = "rectangle"
+			spriteType = "GFX_assorted_laws_rectangle"
+			alwaystransparent = yes
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextboxType = {
+			name = "law_name"
+			position = { x = 0 y = 0 }
+			font = "aldrich_white_18_outline"
+			text = "[GetAssortedLawsSOV]"
+			maxWidth = 320
+			format = center
+			maxHeight = 84
+			vertical_alignment = center
+			text_color_code = b
+			pdx_tooltip = "SOV_get_law_tooltip"
+		}
+	}
+
+	containerWindowType = {
 		name = "TNO_ENG_assorted_laws"
 
 		iconType = {
