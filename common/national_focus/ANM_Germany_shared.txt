@@ -111,10 +111,7 @@ shared_focus = {
 				country_event = GER_focus_event.5
 
 			}
-			add_timed_idea = {
-				idea = GER_fulfilled_people
-				days = 60
-			}
+			add_ideas = GER_fulfilled_people
 		}
 	}
 	
@@ -168,9 +165,9 @@ shared_focus = {
 			hidden_effect = {
 				country_event = GER_focus_event.15
 			}
-			add_war_support = 0.15
-			add_stability = 0.15
-			add_command_power = 15
+			add_war_support = 0.10
+			add_stability = 0.10
+			add_command_power = 25
 		}
 	}
 	
@@ -192,6 +189,22 @@ shared_focus = {
 				country_event = GER_focus_event.11
 			}
 			custom_effect_tooltip = GER_harvest_from_afar_tt
+			set_building_level = {
+				type = infrastructure
+				level = 6 naval_base
+				province = {
+					id = 15914
+				}
+				instant_build = yes
+			}
+			set_building_level = {
+				type = naval_base
+				level = 4
+				province = {
+					id = 15914
+				}
+				instant_build = yes
+			}
 		}
 	}
 	
@@ -206,10 +219,7 @@ shared_focus = {
 		y = 1
 		relative_position_id = GER_the_eagles_reign
 		completion_reward = {
-			add_timed_idea = {
-				idea = GER_euromark_preperations
-				days = 180
-			}
+			add_ideas = GER_euromark_preperations
 			hidden_effect = {
 				country_event = GER_focus_event.16
 			}
@@ -303,7 +313,7 @@ shared_focus = {
 			}
 			add_timed_idea = {
 				idea = GER_out_of_the_world_discoveries
-				days = 364
+				days = 140
 			}
 		}
 	}
@@ -327,7 +337,7 @@ shared_focus = {
 			} 
 			every_subject_country = { 
 				add_autonomy_score = {
-					value = -10
+					value = -25
 				}
 			}
 		}
@@ -346,6 +356,7 @@ shared_focus = {
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.19
+				remove_ideas = GER_euromark_preperations
 			}
 			custom_effect_tooltip = GER_launch_the_euromark_tt
 		}
