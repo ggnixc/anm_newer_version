@@ -276,21 +276,16 @@ ANM_ger_nsdap_category = {
 
 ANM_GER_Europakt_category = { 
 
-	ANM_GER_ireland = {
-		visible = {  }
+	EP_Economy_Reich_1 = {
+		visible = { }
 		available = { tag = GER }
-
-		cost = 75
+		cost = 45
 		fire_only_once = yes
+		ai_will_do = { factor = 150 }
 		
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision ANM_GER_ireland"
-			GER = { 
-				country_event = GER_misc_main_event.1
-			} 
+		
 		}
-
-		ai_will_do = { factor = 150 }
 	}
 
 }

@@ -3,20 +3,20 @@ defined_text = {
 	name = getGERnsdappartystructure
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning < 10000 }
-			check_variable = { GER_ANM_party_leaning > -10000}
+			check_variable = { GER_ANM_party_leaning < 5000 }
+			check_variable = { GER_ANM_party_leaning > -5000}
 		}
 		localization_key = GER_nsdap_conservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning < -10000 }
+			check_variable = { GER_ANM_party_leaning < -5000 }
 		}
 		localization_key = GER_nsdap_reformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning > 10000 }
+			check_variable = { GER_ANM_party_leaning > 5000 }
 		}
 		localization_key = GER_nsdap_reactionary_leaning_anm
 	}
