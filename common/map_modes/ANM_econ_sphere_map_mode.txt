@@ -125,6 +125,16 @@ scripted_map_modes = {
 		 			set_temp_variable = { green = 0.109 }
 		 			set_temp_variable = { blue = 0.809 }
 				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = TUR }
+						}
+					}
+					set_temp_variable = { red = 0.631 }
+					set_temp_variable = { green = 0.271 }
+					set_temp_variable = { blue = 0.271 }
+				}
 				else = {
 					set_temp_variable = { red = 0.5 }
 					set_temp_variable = { green = 0.5 }

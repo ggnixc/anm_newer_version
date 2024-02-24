@@ -25,7 +25,6 @@ TNO_Spheres_init = {
 				tag = SWE
 				tag = FIN
 				tag = DEN
-				tag = HOL
 				tag = NOR
 				tag = IRE
 				tag = BLR
@@ -38,14 +37,8 @@ TNO_Spheres_init = {
 				tag = ENG
 				tag = PER
 				tag = DOM
-				tag = FLR
-				tag = WLN
 				tag = TNS
 				tag = BUL
-				tag = TUR
-				tag = ARM
-				tag = TCP
-				tag = BEL
 				tag = ALG
 				tag = ULS
 			}
@@ -219,7 +212,7 @@ TNO_Spheres_init = {
 				tag = EWE
 				tag = IVO
 				tag = ECU
-				tag = SYR
+				tag = OMA
 				tag = AZH
 				tag = ETH
 				tag = GZO
@@ -254,6 +247,20 @@ TNO_Spheres_init = {
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = IBR }
+	}
+
+	### Turkey
+	TUR = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = TUR
+				tag = SYR
+				tag = ARM
+				tag = TCP
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = TUR }
 	}
 }
 
