@@ -56,7 +56,13 @@ scripted_gui = {
 			ep_economy_country_ireland_EP_visible = { 
 				check_variable = { GER_ANM_economy_status_20_size = 5 } 
 			}
+			ep_economy_country_NI_EP_visible = { 
+				check_variable = { GER_ANM_economy_status_20_size = 5 } 
+			}
 			ep_economy_country_ireland_OFN_visible = { 
+				check_variable = { GER_ANM_economy_status_20_size < 5 } 
+			}
+			ep_economy_country_NI_OFN_visible = { 
 				check_variable = { GER_ANM_economy_status_20_size < 5 } 
 			}
 
@@ -76,30 +82,20 @@ scripted_gui = {
 				FIN = { owns_state = 213 }
 			}
 
-			ep_economy_country_iran_EPobserver = {
+			ep_economy_country_iran_EPobserver_visible = {
 				check_variable = { GER_ANM_economy_status_26_size = 5 } 
 			} 
-			ep_economy_country_iran_EP = {
+			ep_economy_country_iran_EP_visible = {
 				check_variable = { GER_ANM_economy_status_26_size > 5 } 
 			}
-			ep_economy_country_iran_neutral = { 
+			ep_economy_country_iran_neutral_visible = { 
 				check_variable = { GER_ANM_economy_status_26_size < 5 } 
-			}
-
-			ep_economy_country_reich_visible = { 
-				GGN = { owns_state = 88 }
-			}
-			ep_economy_country_poland_visible = { 
-				GGN = { owns_state = 88 }
-			}
-			ep_economy_country_reich_upgrade1 = {
-				GER = { owns_state = 88 }
 			}
 
 			ep_economy_country_wolga_visible = { 
 				AND = { 
 					NOT = { VLG = { owns_state = 243 } } 
-					check_variable = { GER_ANM_economy_status_9_size < 5 } 
+					NOT = { check_variable = { GER_ANM_economy_status_9_size < 5 } } 
 				} 
 			}
 			ep_economy_country_wolga_big_visible = { 
@@ -124,7 +120,6 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_1 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
 					NOT = { has_country_flag = GER_ANM_Economy_View_Oversees } 
-					GGN = { owns_state = 88 }
 				} 
 			} 
 			ep_economy_status_reich_average_visible = { 	
@@ -133,7 +128,6 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_1 < 8 }  
 					has_country_flag = GER_ANM_Economy_View_Status 
       				NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					GGN = { owns_state = 88 }
 				} 
 			} 
 			ep_economy_status_reich_good_visible = {  
@@ -142,7 +136,6 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_1 < 11 }
 					has_country_flag = GER_ANM_Economy_View_Status 
                 	NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					GGN = { owns_state = 88 }
 				} 
 			}       
 			ep_economy_status_reich_unavailable_visible = { 
@@ -150,44 +143,8 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_1 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
                   	NOT = { has_country_flag = GER_ANM_Economy_View_Oversees } 
-					GGN = { owns_state = 88 }
 				} 
-			} 
-			ep_economy_status_reich_upgrade1_poor_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_1 > 0 } 
-					check_variable = { GER_ANM_economy_status_1 < 4 } 
-					has_country_flag = GER_ANM_Economy_View_Status 
-					NOT = { has_country_flag = GER_ANM_Economy_View_Oversees } 
-					GER = { owns_state = 88 }
-				} 
-			} 
-			ep_economy_status_reich_upgrade1_average_visible = { 	
-				AND = { 
-					check_variable = {  GER_ANM_economy_status_1 > 3 }
-					check_variable = { GER_ANM_economy_status_1 < 8 }  
-					has_country_flag = GER_ANM_Economy_View_Status 
-      				NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					GER = { owns_state = 88 }
-				} 
-			} 
-			ep_economy_status_reich_upgrade1_good_visible = {  
-				AND = { 
-					check_variable = { GER_ANM_economy_status_1 > 7 }
-					check_variable = { GER_ANM_economy_status_1 < 11 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                	NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					GER = { owns_state = 88 }
-				} 
-			}       
-			ep_economy_status_reich_upgrade1_unavailable_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_1 = 0 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                  	NOT = { has_country_flag = GER_ANM_Economy_View_Oversees } 
-					GER = { owns_state = 88 }
-				} 
-			} 
+			}
 
 			ep_economy_status_USSR_poor_visible = { 
 				AND = { 
@@ -267,8 +224,8 @@ scripted_gui = {
 			
 			ep_economy_status_norway_poor_visible = { 
 				AND = { 
-					check_variable = { GER_ANM_economy_status_6 > 0 } 
-					check_variable = { GER_ANM_economy_status_6 < 4 } 
+					check_variable = { GER_ANM_economy_status_2 > 0 } 
+					check_variable = { GER_ANM_economy_status_2 < 4 } 
 					has_country_flag = GER_ANM_Economy_View_Status 
                     NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
@@ -760,102 +717,6 @@ scripted_gui = {
 				} 
 			} 
 
-			ep_economy_status_netherlands_poor_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_16 > 0 } 
-					check_variable = { GER_ANM_economy_status_16 < 4 } 
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-			ep_economy_status_netherlands_average_visible = { 	
-				AND = { 
-					check_variable = {  GER_ANM_economy_status_16 > 3 }
-					check_variable = { GER_ANM_economy_status_16 < 8 }  
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-			ep_economy_status_netherlands_good_visible = {  
-				AND = { 
-					check_variable = { GER_ANM_economy_status_16 > 7 }
-					check_variable = { GER_ANM_economy_status_16 < 11 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			}       
-			ep_economy_status_netherlands_unavailable_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_16 = 0 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-
-			ep_economy_status_flanders_poor_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_17 > 0 } 
-					check_variable = { GER_ANM_economy_status_17 < 4 } 
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-			ep_economy_status_flanders_average_visible = { 	
-				AND = { 
-					check_variable = {  GER_ANM_economy_status_17 > 3 }
-					check_variable = { GER_ANM_economy_status_17 < 8 }  
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-			ep_economy_status_flanders_good_visible = {  
-				AND = { 
-					check_variable = { GER_ANM_economy_status_17 > 7 }
-					check_variable = { GER_ANM_economy_status_17 < 11 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			}       
-			ep_economy_status_flanders_unavailable_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_17 = 0 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-
-			ep_economy_status_wallonia_poor_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_18 > 0 } 
-					check_variable = { GER_ANM_economy_status_18 < 4 } 
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-			ep_economy_status_wallonia_average_visible = { 	
-				AND = { 
-					check_variable = {  GER_ANM_economy_status_18 > 3 }
-					check_variable = { GER_ANM_economy_status_18 < 8 }  
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-			ep_economy_status_wallonia_good_visible = {  
-				AND = { 
-					check_variable = { GER_ANM_economy_status_18 > 7 }
-					check_variable = { GER_ANM_economy_status_18 < 11 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			}       
-			ep_economy_status_wallonia_unavailable_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_18 = 0 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-
 			ep_economy_status_france_poor_visible = { 
 				AND = { 
 					check_variable = { GER_ANM_economy_status_19 > 0 } 
@@ -914,7 +775,39 @@ scripted_gui = {
 			}       
 			ep_economy_status_ireland_unavailable_visible = { 
 				AND = { 
-					check_variable = { GER_ANM_economy_status_20 = 0 }
+					check_variable = { GER_ANM_economy_status_16 = 0 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+				} 
+			} 
+
+			ep_economy_status_NI_poor_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_16 > 0 } 
+					check_variable = { GER_ANM_economy_status_16 < 4 } 
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+				} 
+			} 
+			ep_economy_status_NI_average_visible = { 	
+				AND = { 
+					check_variable = {  GER_ANM_economy_status_16 > 3 }
+					check_variable = { GER_ANM_economy_status_16 < 8 }  
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+				} 
+			} 
+			ep_economy_status_NI_good_visible = {  
+				AND = { 
+					check_variable = { GER_ANM_economy_status_16 > 7 }
+					check_variable = { GER_ANM_economy_status_16 < 11 }
+					has_country_flag = GER_ANM_Economy_View_Status 
+                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
+				} 
+			}       
+			ep_economy_status_NI_unavailable_visible = { 
+				AND = { 
+					check_variable = { GER_ANM_economy_status_16 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
                     NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
 				} 
@@ -1321,6 +1214,7 @@ scripted_gui = {
 		}
 
 		effects = {
+			#Buttons top right 
 			ep_economy_button_country_click = { 
 				if = {
 					limit = { NOT = { has_country_flag = GER_ANM_Economy_View_Oversees } } 
@@ -1351,6 +1245,1001 @@ scripted_gui = {
 					clr_country_flag = GER_ANM_Economy_View_Currency
 				}
 			}
+
+			#Country Buttons
+			ep_economy_country_reich_click = {
+				set_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_Russland_click = { 
+				clr_country_flag = ep_economy_country_reich_click
+				set_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_Grenzland_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				set_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_norway_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				set_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_sweden_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				set_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_baltics_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				set_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_belarus_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				set_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_homel_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				set_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_ukraine_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				set_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_caucasus_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				set_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_wolga_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				set_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_wolga_big_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				set_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_slovakia_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				set_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_hungary_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				set_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_romania_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				set_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_serbia_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				set_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_bulgaria_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				set_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_transnitria_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				set_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_france_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				set_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_britain_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				set_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_ireland_EP_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				set_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_NI_EP_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				set_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_denmark_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				set_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_finland_EP_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				set_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_finland_big_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				set_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_spain_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				set_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_iran_EPobserver_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				set_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_iran_EP_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				set_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_china_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				set_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_DR_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				set_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_algeria_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				set_country_flag = ep_economy_country_algeria_click
+				clr_country_flag = ep_economy_country_madagaskar_click	
+			}
+			ep_economy_country_madagaskar_click= { 
+				clr_country_flag = ep_economy_country_reich_click
+				clr_country_flag = ep_economy_country_Russland_click
+				clr_country_flag = ep_economy_country_Grenzland_click
+				clr_country_flag = ep_economy_country_norway_click
+				clr_country_flag = ep_economy_country_sweden_click
+				clr_country_flag = ep_economy_country_baltics_click
+				clr_country_flag = ep_economy_country_belarus_click
+				clr_country_flag = ep_economy_country_homel_click
+				clr_country_flag = ep_economy_country_ukraine_click
+				clr_country_flag = ep_economy_country_caucasus_click
+				clr_country_flag = ep_economy_country_wolga_click
+				clr_country_flag = ep_economy_country_slovakia_click
+				clr_country_flag = ep_economy_country_hungary_click
+				clr_country_flag = ep_economy_country_romania_click
+				clr_country_flag = ep_economy_country_serbia_click
+				clr_country_flag = ep_economy_country_bulgaria_click
+				clr_country_flag = ep_economy_country_transnitria_click
+				clr_country_flag = ep_economy_country_france_click
+				clr_country_flag = ep_economy_country_britain_click
+				clr_country_flag = ep_economy_country_ireland_click
+				clr_country_flag = ep_economy_country_NI_click
+				clr_country_flag = ep_economy_country_denmark_click
+				clr_country_flag = ep_economy_country_finland_click
+				clr_country_flag = ep_economy_country_spain_click
+				clr_country_flag = ep_economy_country_iran_click
+				clr_country_flag = ep_economy_country_china_click
+				clr_country_flag = ep_economy_country_DR_click
+				clr_country_flag = ep_economy_country_algeria_click
+				set_country_flag = ep_economy_country_madagaskar_click	
+			}
+		
 		} 
 		properties = { }
 	} 
