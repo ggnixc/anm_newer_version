@@ -2,27 +2,31 @@
 
 set_oob = "TIG_2000"
 
+set_stability = 0.9
+set_war_support = 0.9
+
 declare_war_on = {
 	target = CYL
 	type = annex_everything
 }
 
 set_politics = {
- 	ruling_party = communist
+ 	ruling_party = socialist
  	last_election = "1933.3.5"
  	election_frequency = 48
  	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
-	communist_1 = 14
-	communist = 50
-	socialist = 8
-	progressivism = 10
-	liberalism = 6
+	communist = 0
+	socialist = 60
+	progressivism = 0
+	liberalism = 0
 	liberal_conservatism = 0
-	conservatism = 12
-	paternalism = 0
+	conservatism = 0
+	paternalism = 40
 	despotism = 0
 	fascism = 0
 	national_socialism = 0
@@ -45,17 +49,7 @@ create_country_leader = {
 	desc = "POLITICS_NADARAJAH_THANGAVELU_DESC"
 	expire = "2099.1.1"
 	picture = "Portrait_TIG_Velupillai_Prabhakaran.dds"
-	ideology = communist_national_communism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "D. Siddarthan"
-	desc = "POLITICS_NADARAJAH_THANGAVELU_DESC"
-	expire = "2099.1.1"
-	picture = "Portrait_Tamils_Velupillai_Prabhakaran.dds"
-	ideology = socialist_subtype
+	ideology = socialist_left_wing_nationalism_subtype
 	traits = {
 	}
 }
@@ -93,8 +87,8 @@ create_country_leader = {
 	activate_mission = ANM_ceyloncivilwarendmission
 
 add_ideas = {
-	TIG_tamileelamuprising
-	TIG_tamileelamuprisinginitialoffensive
+	TIG_A_Century_Of_Hatred
+	TIG_Made_In_Calcutta
 	#POLITICAL	
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_atheism

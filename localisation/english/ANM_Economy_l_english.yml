@@ -1353,7 +1353,7 @@ econ_sphere_button_tt_delayed_no_shere: "Click for more information about the gl
 econ_sphere_custom_name_text: "[GetSphereName]"
 econ_sphere_tab_lower_title_tt: "TOP 10 ECONOMIES"
 
-econ_sphere_name_GER: "Großraum"
+econ_sphere_name_GER: "EWG"
 econ_sphere_name_ZV: "Europakt Wirtschaftsraum"
 econ_sphere_name_JAP: "Co-Prosperity Sphere"
 econ_sphere_name_ITA: "Italian Sphere"
@@ -1368,9 +1368,10 @@ econ_sphere_name_CAO: "PACMEA"
 econ_sphere_name_SOV: "COMECON"
 econ_sphere_name_ENG: "British Sphere"
 econ_sphere_name_CHI: "Chinese Sphere"
+econ_sphere_name_TUR: "Turkish Sphere"
 econ_sphere_name_none: "No Sphere"
 
-econ_sphere_name_long_GER: "Großraum Kontinentaleuropa"
+econ_sphere_name_long_GER: "Europäische Wirtschaftsgemeinschaft"
 econ_sphere_name_long_ZV: "Europakt Wirtschaftsraum"
 econ_sphere_name_long_JAP: "Co-Prosperity Sphere"
 econ_sphere_name_long_ITA: "Italian Sphere"
@@ -1385,8 +1386,9 @@ econ_sphere_name_long_CAO: "Pan-African Community for Mutual Economic Assistance
 econ_sphere_name_long_SOV: "Council for Mutual Economic Assistance"
 econ_sphere_name_long_ENG: "British Sphere"
 econ_sphere_name_long_CHI: "Chinese Sphere"
+econ_sphere_name_long_TUR: "Turkish Sphere"
 
-econ_sphere_name_tab_GER: "Großraum Kontinentaleuropa"
+econ_sphere_name_tab_GER: "Europäische Wirtschaftsgemeinschaft"
 econ_sphere_name_tab_ZV: "Europakt Wirtschaftsraum"
 econ_sphere_name_tab_JAP: "Co-Prosperity Sphere"
 econ_sphere_name_tab_ITA: "Italian Sphere"
@@ -1401,6 +1403,7 @@ econ_sphere_name_tab_CAO: "PACMEA"
 econ_sphere_name_tab_SOV: "Council for Mutual Economic Assistance"
 econ_sphere_name_tab_ENG: "British Sphere"
 econ_sphere_name_tab_CHI: "Chinese Sphere"
+econ_sphere_name_tab_TUR: "Turkish Sphere"
 
 econ_sphere_leader_text: "The leader of our sphere is [?ECON_SPHERE_LEADER.GetFlag] [?ECON_SPHERE_LEADER.GetName]."
 econ_sphere_navy_satisfaction_text: "[GetSphereNavySatisfactionTooltip]"
@@ -1877,91 +1880,69 @@ TNO_economy_type_planned_dynamic_modifier: "Planned Economy Type"
 ## Subtypes
 Econ_Subtype_American_Capitalism: "American Capitalism"
 Econ_Subtype_American_Capitalism_desc: "American capitalism is the blueprint from which other free, capitalist nations model themselves on. It is still based around free trade with minimal government intervention in the economy, however there are several aspects that make this system different from other forms of capitalism. For instance, the American economy is backed by the United States dollar, a strong currency highly valued for its stability and therefore used as the world's primary reserve currency. This helped America to recover after the Second World War from the Great Depression, building the foundations of a strong economy backed by the military-industrial complex."
-Econ_Subtype_American_Capitalism_change_tt: "Our economy will change to §YAmerican Capitalism§!."
 
 Econ_Subtype_Worker_Directed: "Worker Directed"
 Econ_Subtype_Worker_Directed_desc: "While planned economies are often believed to be only ones which are directed by the state, not all planned economies follow this convention.\n\nWorker Directed economies are not planned by state officials or bureaucrats, but by the workers themselves, often in the form of worker councils or unions. Through these bodies, workers often retain direct control over their production, and usually exercise a high degree of autonomy as a result.\n\nWhile lacking the efficiency and focus of traditional state-directed central planning, this decentralized and local approach often has the strong support of workers, who are given a voice in the process where they otherwise would not have."
-Econ_Subtype_Worker_Directed_change_tt: "Our economy will change to §YWorker Directed§!."
 
 Econ_Subtype_Crown_Corporatism: "Crown Corporatism"
 Econ_Subtype_Crown_Corporatism_desc: "Born in the frozen lands of Central Siberia, Crown Corporatism is an economic system in which the economic output is decided by Crown-sponsored unions and corporations. A peculiar system coming from the just-as-peculiar Principality of Kemerovo, it gives the workers' unions great power in the economy, which helps to keep the Russian workers happy while simultaneously having good working conditions. Only time will tell if such a system shall leave Russia, however..."
-Econ_Subtype_Crown_Corporatism_change_tt: "Our economy will change to §YCrown Corporatism§!."
 
 Econ_Subtype_Anarchic: "Anarchic"
 Econ_Subtype_Anarchic_desc: "In an anarchic territory, the state either doesn't exist, or is mainly influenced by small, local communities or villages. Large-scale monetary transactions are sparse, and there is no central authority or formal central bank to speak of. Such states of anarchy are generally attained after large-scale catastrophes, like wars or natural disasters."
-Econ_Subtype_Anarchic_change_tt: "Our economy will change to §YAnarchic§!."
 
-Econ_Subtype_Nazi_Corporatocracy: "National Socialist Corporatism"
-Econ_Subtype_Nazi_Corporatocracy_desc: "Much like Italian Fascism, German National Socialism is organized around a system of corporations, on which German society bases itself. Finding its roots in the Volksgemeinschaft, or "people's community", it pairs workers and bosses alike into different corporations depending on their professional occupation, organized on a racial basis, and promotes class cooperation as the best way for a strong state."
-Econ_Subtype_Nazi_Corporatocracy_change_tt: "Our economy will change to §YNational Socialist Corporatism§!."
+Econ_Subtype_Gelenkte_Wirtschaft: "Gelenkte Wirtschaft"
+Econ_Subtype_Gelenkte_Wirtschaft_desc: "Much like Italian Fascism, German National Socialism is organized around a system of corporations, on which German society bases itself. Finding its roots in the Volksgemeinschaft, or "people's community", it pairs workers and bosses alike into different corporations depending on their professional occupation, organized on a racial basis, and promotes class cooperation as the best way for a strong state."
 
 Econ_Subtype_Military_Directed: "Military Directed"
 Econ_Subtype_Military_Directed_desc: "In a military directed economy, the military controls the economy directly, with most if not all of the economic output being geared toward their goals. Most popular in stratocracies and military dictatorships of all stripes, it however tends to neglect the wellbeing of its citizens for the benefit of the army, as regimes using this economic system are more often than not of a quite nationalistic if not ultranationalist nature."
-Econ_Subtype_Military_Directed_change_tt: "Our economy will change to §YMilitary Directed§!."
 
 Econ_Subtype_Burgsys: "The Burgundian System"
 Econ_Subtype_Burgsys_desc: "There is only one individual who deserves to profit from the state: the Aryan.\n\nAll others are disposable.\n\nThe Burgundian System embodies the most extreme views of National Socialism, where all non-Aryans are considered disposable to the state, as are their economic policies. Burgundian economies are defined by an underclass of impure races being exploited to squeeze every last drop out of productivity out of them.\n\nMany of this underclass are slaves, and even those who are not do not thrive. This often drives the Burgundian adherents to more radical ends, while expanding the underclass, all in a desperate attempt to stave off the inevitable collapse of such an unsustainable system."
-Econ_Subtype_Burgsys_change_tt: "Our economy will change to the §YBurgundian System§!."
 
 Econ_Subtype_Banditry: "Banditry"
 Econ_Subtype_Banditry_desc: "In a system of Banditry, the economy is centered around theft and extortion of the common people by one or more groups of bandits and pillagers. Relying on the stolen wealth of others, those bandits see theft and extortion as the best way to enrich themselves off the backs of nearby countries, or in the most extreme cases, of people inside their very own. Such a system can be found in war-torn and unstable countries, as those conditions are often necessary for the bandits to take power in the first place."
-Econ_Subtype_Banditry_change_tt: "Our economy will change to §YBanditry§!."
 
 Econ_Subtype_Corporate_Oligopoly: "Corporate Oligopoly"
 Econ_Subtype_Corporate_Oligopoly_desc: "Similar to several other countries, economic activity in this nation operates on free market principles, albeit with a high degree of market concentration, with competition dominated by a small handful of corporations. What distinguishes this economic system from its other capitalist cousins, however, is the minimal intervention of the state. To an exceptional degree, the regulatory and administrative arms of the state are stunted, captured, or largely ineffectual in both form and function, with the whims of the dominant corporations subsuming public interest."
-Econ_Subtype_Corporate_Oligopoly_change_tt: "Our economy will change to §YCorporate Oligopoly§!."
 
 Econ_Subtype_Dirigisme: "Dirigisme"
 Econ_Subtype_Dirigisme_desc: "The doctrine of Dirigisme, literally "to direct" in French, certainly lives up to its name. While the ill-informed might mistake its embrace of the capitalist market for tolerance of laissez-faire practices, Dirigisme is anything but; for the reins of commercial and productive power lies firmly in the hands of the state - the enforcer, the burden-bearer, and the sole overseer of the great economic clockwork. Nation-wide projections, concrete planning, targeted investment - whatever vital matters not to be trusted with independent actors shall fall upon the shoulders of state institutions; where the markets fail and falter the state shall duly intervene, curbing inefficiencies and ensuring that national objectives shall remain viable and attainable for years to come.\n\nDespite heavy state involvement, however, private sectors remain just as crucial, if not doubly so. "National Champions", active or prospective private patrons of the interests of the state, are to be prioritized above the rest. Other private industries are expected to thrive and prosper through self-incentivization, serving the state while heeding its guidance all the same. All shall align themselves towards the greater good, and all shall not be exempt from it."
-Econ_Subtype_Dirigisme_change_tt: "Our economy will change to §YDirigisme§!."
 
 Econ_Subtype_Anarcho_Communism: "Anarchist Communism"
 Econ_Subtype_Anarcho_Communism_desc: "The definition of anarchist economics requires one to shift their definition of the economy at its core. The common held understanding of economics as a means for business to grow and, therefore, for men to get richer, is but one narrow view of what the economy can be. To the anarchists of Central Siberia, the economy ought to act for the people, in the most direct way possible. Day to day economics are simple, people, not corporations, take their goods and services where needed and exchange them for their wants and needs. Inter-communal trade is much more convoluted. A struggling commune in dire need of food during a poor harvest, medical supplies in times of hardship, or whatever other challenges the Russian Anarchy may present may request the aid of fellow communes at the General Assembly. At that point, their people will decide how to allocate to ensure the economy works to meet the needs of everyone. To ensure the economy is kept up to date, the Sub-Council on Economic Development, headed by Comrade Mikhail Kilchichakov, has been tasked with handling the day to day redistribution of supplies and also cooperating with workers to establish industrial plants, bringing a whole new meaning to keeping the economy in the black."
-Econ_Subtype_Anarcho_Communism_change_tt: "Our economy will change to §YAnarchist Communism§!."
 
 Econ_Subtype_Deytsch_Economics: "Deytsch Economics"
 Econ_Subtype_Deytsch_Economics_desc: "Less of a proper codified system and more of a shallow attempt at imitating the German Reich's 'superior Aryan economics', the most noticeable features of this system as it exists currently are the naming of large, state-run industrial enterprises after famous German corporations, an emphasis on the use of unpaid, involuntary labour, and the overall reorganization of the industrial economy to fit the needs of the state as opposed to individual consumers. Perhaps it may be regarded as a success for the Aryan Brotherhood that its economy has succeeded in aping that of Germany's at least by its frequent economic crises and general inefficiencies."
-Econ_Subtype_Deytsch_Economics_change_tt: "Our economy will change to §YDeytsch Economics§!."
 
 Econ_Subtype_War_Communism: "War Communism"
 Econ_Subtype_War_Communism_desc: "Despite the lofty-sounding name, War Communism is not so much a coherent economic policy as it is an adaptation of Leninist rhetoric to fit the urgent need of a nation in a state of total war. With first priority for resources and manpower going to the military, second to the towns and factories, and last of all to the rural population, the end goal is victory at any cost - be that political, human, or economic."
-Econ_Subtype_War_Communism_change_tt: "Our economy will change to §YWar Communism§!."
 
 Econ_Subtype_Permit_Raj: "Permit Raj"
 Econ_Subtype_Permit_Raj_desc: "Marked by rampant and excessive bureaucratic obstructions towards private enterprise, the Permit Raj is an unintended consequence of India's sudden independence and mixture of planned, socialistic economy within an ostensibly free system. The result is sky-high corruption, painfully slow development, and the retardation of growth rates that would otherwise be very considerable in a newly-developing economy."
-Econ_Subtype_Permit_Raj_change_tt: "Our economy will change to the §YPermit Raj§!."
 
 Econ_Subtype_Christian_Anarchism: "Christian Anarchism"
 Econ_Subtype_Christian_Anarchism_desc: "The economic development of the Siberian far north has not been of much note until late, as the disparate tribes have come together, with little to no industrial capabilities. As much is simply the state of affairs in the northern Siberian plains and as a result, a distinct economic system has arisen to form even the foundations of a functioning state. For the most part, this system takes the form of what one could consider being close to anarchism, as the limitations of the circumstances have created a unique blend of independent communes cooperating alongside one another to keep themselves afloat.\n\nThese local powers aim to maintain growth for the nation and the local municipalities through extensive donations towards the poor, as well as through state programs which largely consist of establishing apartment complexes and other such buildings for the less fortunate of society. Using these advancements, the mandate can progress as a proper society, and the anarchic, Christian principles can be maintained just as they need to be."
-Econ_Subtype_Christian_Anarchism_change_tt: "Our economy will change to §YChristian Anarchism§!."
 
 Econ_Subtype_Social_Market: "Social Market"
 Econ_Subtype_Social_Market_desc: "In a social market, the state combines the existence of private enterprises and businesses with a fair amount of regulation and state intervention in the economy to make sure it is well-functioning. In the eyes of its supporters, such a system maintains a balance between a high rate of economic growth, and low levels of inflation and unemployment, along with good working conditions and a degree of social welfare. Popularised by the writings of German economist Ludwig Erhard, the concept of the Social Market has been gaining ground in recent years."
-Econ_Subtype_Social_Market_change_tt: "Our economy will change to §YSocial Market§!."
-
-Econ_Subtype_Agrarian_Spartanism: "Agrarian Spartanism"
-Econ_Subtype_Agrarian_Spartanism_desc: "A deviation of the Burgundian System, agrarian spartanism places a fanatical emphasis on rural production: having little to no private nor state enterprise, it aims to establish a total agricultural society by tearing down the "degenerate" urban and industrial institutions - always by force.\n\nAgrarian spartanism is a niche, radical and truly totalitarian socio-economic system, developed mostly by rhetorics of "Blood and Soil" program such as Richard Walther Darré and Herbert Ernst Backe."
-Econ_Subtype_Agrarian_Spartanism_change_tt: "Our economy will change to §YAgrarian Spartanism§!."
 
 Econ_Subtype_Socialized_Economy: "Socialized Economy"
 Econ_Subtype_Socialized_Economy_desc: "A socialized economy is a heavily centralized form of corporatism, where large parts of the economy have been nationalized by direct state intervention, especially in strategic sectors such as arms production and heavy industry.\n\nComing close to an actual planned economy, it differs from its close relative due to the permanence of private economic initiative - albeit subjected to state subsidies and regulations - and for the important role of the corporations, fundamental instruments to ensure that all social classes cooperate instead of fighting one other."
-Econ_Subtype_Socialized_Economy_change_tt: "Our economy will change to a §YSocialized Economy§!."
 
 Econ_Subtype_Yagoda: "System of Khozraschyot"
 Econ_Subtype_Yagoda_desc: "Khozraschyot is often translated into English as "cost accounting"-- the apparent reference to market capitalism is by no means a mistake. Bringing together the security of a planned economy and the unique motivations of a capitalist economy, the Khozraschyot System encourages liberalization of the Soviet economy with the express aim of building up productive forces in order to bring about socialism. At its most basic, it is the simple introduction of the concept of profit to a centrally planned economy, though the term has a much more expansive connotation of free market liberalization due to Genrikh Yagoda's use of the term."
-Econ_Subtype_Yagoda_change_tt: "Our economy will change to the §YSystem of Khozraschyot§!."
 
 Econ_Subtype_Colonial_Economy_Free_Market: "Autonomous Colonial Economy"
 Econ_Subtype_Colonial_Economy_Free_Market_desc: "A colonial economy is a system propped up and constructed by a colonizing country to serve its interests. While the exact balance of civilian and military economic interests varies, the system's goal above all else is to sack and plunder the colony, to extract and export as many resources as possible to the colonizing nation.\n\nIn the colonial subjects of nations that employ free market economies, the power of the colonizer to totally exploit its subjects is less powerful. While the market systems can and often do have the hands of the colonizer deep inside of them, the economy remains fairly decentralized. The majority of colonial exploitation is instead usually done through private companies, who exploit the resources and sell them back to the colonizing nation."
-Econ_Subtype_Colonial_Economy_Free_Market_change_tt: "Our economy will change to the §YAutonomous Colonial Economy§!."
 
 Econ_Subtype_Colonial_Economy_Corporatism: "Corporativist Colonial Economy"
 Econ_Subtype_Colonial_Economy_Corporatism_desc: "A colonial economy is a system propped up and constructed by a colonizing country to serve its interests. While the exact balance of civilian and military economic interests varies, the system's goal above all else is to sack and plunder the colony, to extract and export as many resources as possible to the colonizing nation.\n\nIn colonies subjected to corporativist systems, this relationship becomes even more apparent. Corporate monopolies from the metropolis run these states, and extract all of the resources that they can. As seen in examples of this system such as in the reichskommissariats of the German Reich, few accommodations are typically given to the native peoples laboring under these systems."
-Econ_Subtype_Colonial_Economy_Corporatism_change_tt: "Our economy will change to the §YCorporativist Colonial Economy!."
 
 Econ_Subtype_Colonial_Economy_Planned: "Centralized Colonial Economy"
 Econ_Subtype_Colonial_Economy_Planned_desc: "A colonial economy is a system propped up and constructed by a colonizing country to serve its interests. While the exact balance of civilian and military economic interests varies, the system's goal above all else is to sack and plunder the colony, to extract and export as many resources as possible to the colonizing nation.\n\nWhile some colonies may be more autonomous in their economic structure, this particular system is highly centralized. All economic decisions are determined either by a local colonial authority, or directly by the overlord nation themselves. In these systems, the economy is planned from top to bottom to ensure that as many resources as possible are exported as efficiently as possible."
-Econ_Subtype_Colonial_Economy_Planned_change_tt: "Our economy will change to the §YCentralized Colonial Economy§!."
+
+Econ_Subtype_Crown_Credit_Corporatism: "Crown Credit"
+Econ_Subtype_Crown_Credit_Corporatism_desc: "Crown Credit, on its surface, is little different from Social Credit as proposed by CH Douglas. However, under close examination, Crown Credit is a far more uniquely English institution than Social Credit. It shares Douglas' analysis regarding banking being the source of all social ills, but takes it a step further than that - explicitly blaming Jewish people for what they see as a decline in the English stock and the decline in the English countryside, urbanisation to them being driven by Jewish banking interests.\n\nIt seeks to build a thriving rural market economy made up of small businesses that do not have the size or ability to cause much damage to the land. This unfortunately puts it into direct conflict with the German megacorporations, who are not eager to leave the countryside at the government's say so. Therefore the new economic model seeks to dislodge them by force, and reverse the trend of rural migration to urban areas by giving preferential treatment to English business in the countryside. Leading to these businesses being able to compete with the megacorporations, greater economic growth in the countryside - and hopefully a widespread move back to the green fields of England by the people."
 
 econ_help_x_t: "[GetEconHelpTitle]"
 econ_help_0_t: "£tt_prod_unit Production Units"

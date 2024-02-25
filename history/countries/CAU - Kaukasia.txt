@@ -319,6 +319,10 @@ set_politics = {
 
 }
 
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft }
+
 set_popularities = {
 	communist = 0
 	ultranationalism = 8
@@ -332,12 +336,6 @@ set_popularities = {
 	national_socialism = 92
 	esoteric_nazism = 0
 }
-
-#econtype
-set_variable = { TNO_economy_type = 2 }
-set_variable = { TNO_economy_subtype = 20 }
-
-
 
 if = {
 	limit = { has_dlc = "Man the Guns" }

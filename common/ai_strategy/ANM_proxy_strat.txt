@@ -1,197 +1,177 @@
-
-
-
-GER_civilwar_GER_sendtroops_ALP = {
+MAN_focus_NAJUA_strat = {
+	allowed = {
+		tag = MAN
+	}
+	abort = {
+		always = no
+	}
 	enable = {
-		tag = GER
-		ALP = { has_war = yes }
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = ALP
-		value = 1000
-	}
-}
-GER_civilwar_GER_sendtroops_HSS = {
-	enable = {
-		tag = GER
-		HSS = { has_war = yes }
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = HSS
-		value = 1000
-	}
-}
-GER_civilwar_GER_sendtroops_LIE = {
-	enable = {
-		tag = GER
-		LIE = { has_war = yes }
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = LIE
-		value = 1000
-	}
-}
-GER_civilwar_GER_sendtroops_OBY = {
-	enable = {
-		tag = GER
-		OBY = { has_war = yes }
-		NOT = { has_country_flag = GER_support_franken }
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = OBY
-		value = 1000
-	}
-}
-GER_civilwar_GER_sendtroops_FRK = {
-	enable = {
-		tag = GER
-		FRK = { has_war = yes }
-		has_country_flag = GER_support_franken
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = FRK
-		value = 1000
-	}
-}
-GER_civilwar_STY_sendtroops_BRN = {
-	enable = {
-		tag = STY
-		BRN = { has_war = yes }
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = BRN
-		value = 1000
-	}
-}
-GER_civilwar_BRN_sendtroops_STY = {
-	enable = {
-		tag = BRN
-		STY = { has_war = yes }
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = STY
-		value = 1000
-	}
-}
-GER_civilwar_NSF_sendtroops_NBY = {
-	enable = {
-		tag = NSF
-		NBY = { has_war = yes }
-		GER = {
-		has_country_flag = GER_support_franken
+		OR = {
+			PRC = {	exists = yes }
 		}
 	}
 
 	ai_strategy = {
-		type = send_volunteers_desire
-		id = NBY 
+		type = front_unit_request
+		id = PRC
 		value = 1000
 	}
 }
-GER_civilwar_NSF_sendtroops_FRK = {
-	enable = {
-		tag = NSF
-		FRK = { has_war = yes }
-		GER = {
-		NOT = { has_country_flag = GER_support_franken }
+IND_SEND_TO_SRILANKA = {
+	allowed = {
+		OR = {
+			original_tag = IND
+			original_tag = JAP
 		}
 	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = FRK 
-		value = 1000
-	}
-}
-
-
-
-
-
-GER_SEND_TO_SRILANKA = {
 	enable = {
-		original_tag = GER
+		original_tag = IND
 		CYL = {	has_war_with = TIG }
 	}
-
+	abort = {
+		always = no
+	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = CYL
 		value = 1000
 	}
-}				
-
-FRA_SEND_TO_BURGUNDY = {
-	enable = {
-		original_tag = FRA
-		BIS = {	has_war_with = BRG }
+}
+AZH_SEND_TO_SRILANKA = {
+	allowed = {
+		OR = {
+			original_tag = AZH
+			original_tag = SOV
+		}
 	}
-
+	enable = {
+		original_tag = AZH
+		TIG = {	has_war_with = CYL }
+	}
+	abort = {
+		always = no
+	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = BRG
+		id = TIG
 		value = 1000
 	}
 }
-GER_SEND_TO_BURGUNDY = {
+SOV_SEND_TO_PERU = {
+	enable = {
+		original_tag = SOV
+		MRA = {	has_war_with = PRU }
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MRA
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ECU
+		value = 1000
+	}
+}
+USA_SEND_TO_PERU = {
+	enable = {
+		original_tag = USA
+		MRA = {	has_war_with = PRU }
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = PRU
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = GLP
+		value = 1000
+	}
+}
+SOV_SEND_TO_NAJUA = {
+	enable = {
+		OR = {
+			original_tag = SOV
+			original_tag = CHI
+		}
+		PRC = {	has_war_with = MAN }
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = PRC
+		value = 1000
+	}
+}
+JAP_SEND_TO_MAN = {
+	enable = {
+		original_tag = JAP
+		PRC = {	has_war_with = MAN }
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MAN
+		value = 1000
+	}
+}
+SOV_SEND_TO_FIN = {
+	enable = {
+		original_tag = SOV
+		FDR = {	has_war_with = FIN }
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FDR
+		value = 1000
+	}
+}
+GER_SEND_TO_FIN = {
 	enable = {
 		original_tag = GER
-		BIS = {	has_war_with = BRG }
+		FDR = {	has_war_with = FIN }
 	}
-
+	abort = {
+		always = no
+	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = BRG
+		id = FIN
 		value = 1000
 	}
 }
-GER_SEND_TO_SHAN = {
+SOV_SEND_TO_IRA = {
 	enable = {
-		original_tag = GER
-		BUR = {	has_war_with = SHA }
+		original_tag = SOV
+		OR = {
+			IRA = {	has_war_with = IRI }
+			IRA = {	has_war_with = IRN }
+			IRA = {	has_war_with = AZR }
+			IRA = {	has_war_with = KHU }
+			IRA = {	has_war_with = PER }
+			IRA = {	has_war_with = IKR }
+		}
 	}
-
+	abort = {
+		always = no
+	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = SHA
-		value = 1000
-	}
-}
-ITA_SEND_TO_TUNISIA = {
-	enable = {
-		original_tag = ITA
-		TUN = {	has_war_with = TFF }
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = TUN
-		value = 1000
-	}
-}
-SOVIETS_SEND_TO_TUNISIA = {
-	enable = {
-		original_tag = WRS
-		TUN = {	has_war_with = TFF }
-	}
-
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = TFF
+		id = IRA
 		value = 1000
 	}
 }

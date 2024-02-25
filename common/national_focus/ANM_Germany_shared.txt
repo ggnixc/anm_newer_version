@@ -26,10 +26,10 @@ shared_focus = {
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.2
-				swap_ideas = {
-					remove_idea = tno_security_preemptive_security
-					add_idea = tno_security_totalitarian
-				}
+			}
+			swap_ideas = {
+				remove_idea = tno_security_preemptive_security
+				add_idea = tno_security_totalitarian
 			}
 			add_ideas = GER_the_weltnetz
 		}
@@ -68,7 +68,6 @@ shared_focus = {
 				country_event = GER_focus_event.3
 			}
 			add_ideas = { GER_high_tech_military } 
-			add_manpower = 100000
 		}
 	}
 	
@@ -90,8 +89,8 @@ shared_focus = {
 				country_event = GER_focus_event.4
 			}
 			swap_ideas = {
-				remove_idea = tno_safety_acceptable_regulations
-				add_idea = tno_safety_excellent_regulations
+				remove_idea = tno_pollution_good_regulations
+				add_idea = tno_pollution_strict_regulations
 			}
 		}
 	}
@@ -110,12 +109,9 @@ shared_focus = {
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.5
-				country_event = { id = GER_focus_event.6 days = 14 }
+
 			}
-			add_timed_idea = {
-				idea = GER_fulfilled_people
-				days = 60
-			}
+			add_ideas = GER_fulfilled_people
 		}
 	}
 	
@@ -169,9 +165,9 @@ shared_focus = {
 			hidden_effect = {
 				country_event = GER_focus_event.15
 			}
-			add_war_support = 0.15
-			add_stability = 0.15
-			add_command_power = 15
+			add_war_support = 0.10
+			add_stability = 0.10
+			add_command_power = 25
 		}
 	}
 	
@@ -193,6 +189,22 @@ shared_focus = {
 				country_event = GER_focus_event.11
 			}
 			custom_effect_tooltip = GER_harvest_from_afar_tt
+			set_building_level = {
+				type = infrastructure
+				level = 6 naval_base
+				province = {
+					id = 15914
+				}
+				instant_build = yes
+			}
+			set_building_level = {
+				type = naval_base
+				level = 4
+				province = {
+					id = 15914
+				}
+				instant_build = yes
+			}
 		}
 	}
 	
@@ -207,10 +219,7 @@ shared_focus = {
 		y = 1
 		relative_position_id = GER_the_eagles_reign
 		completion_reward = {
-			add_timed_idea = {
-				idea = GER_euromark_preperations
-				days = 180
-			}
+			add_ideas = GER_euromark_preperations
 			hidden_effect = {
 				country_event = GER_focus_event.16
 			}
@@ -249,14 +258,13 @@ shared_focus = {
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.8
-				country_event = { id = GER_focus_event.9 days = 14 }
 			}
 			add_opinion_modifier = {
 				target = SWE
 				modifier = offered_support
 			}
 			add_opinion_modifier = {
-				target = DEN
+				target = NOR
 				modifier = offered_support
 			}
 		}
@@ -305,7 +313,7 @@ shared_focus = {
 			}
 			add_timed_idea = {
 				idea = GER_out_of_the_world_discoveries
-				days = 364
+				days = 140
 			}
 		}
 	}
@@ -329,7 +337,7 @@ shared_focus = {
 			} 
 			every_subject_country = { 
 				add_autonomy_score = {
-					value = -10
+					value = -25
 				}
 			}
 		}
@@ -341,26 +349,25 @@ shared_focus = {
 		cost = 4
 		prerequisite = {
 			focus = GER_a_thousand_years_more
-						}
+		}
 		x = 0
 		y = 1
 		relative_position_id = GER_a_thousand_years_more
 		completion_reward = {
 			hidden_effect = {
 				country_event = GER_focus_event.19
-				country_event = { id = GER_focus_event.20 days = 14 }
+				remove_ideas = GER_euromark_preperations
 			}
 			custom_effect_tooltip = GER_launch_the_euromark_tt
 		}
 	}
 
-
 ### Iranian Civil War Tree ###
 shared_focus = {
 	id = GER_the_troubled_empire
 	icon = GFX_GER_the_troubled_empire
-	x = 20
-	y = 1
+	x = 5
+	y = 9
 	cost = 1.00
 
 	#allow_branch = {
@@ -531,7 +538,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_the_euromark_triumphs
 	icon = GFX_GER_The_Euromark_triumphs
-	x = 9
+	x = 13
 	y = 1
 	cost = 5.00
 	prerequisite = {
@@ -562,7 +569,7 @@ shared_focus = {
 	id = GER_red_elephant
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_red_elephant
-	x = -4
+	x = -6
 	y = 2
 	cost = 3.00
 	prerequisite = {
@@ -688,7 +695,7 @@ shared_focus = {
 	id = GER_the_r_and_d_question
 	relative_position_id = GER_red_elephant
 	icon = GFX_GER_r_and_d_question
-	x = 2
+	x = 3
 	y = 3
 	cost = 3.00
 	prerequisite = {
@@ -789,7 +796,7 @@ shared_focus = {
 	id = GER_balance_the_europakt_partnership
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_balance_europakt_partnership
-	x = 2
+	x = 3
 	y = 5
 	cost = 3.00
 	prerequisite = {
@@ -808,7 +815,7 @@ shared_focus = {
 	id = GER_our_central_european_allies
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_central_europe
-	x = 4
+	x = 6
 	y = 2
 	cost = 3.00
 	prerequisite = {
@@ -906,7 +913,7 @@ shared_focus = {
 	id = GER_the_65th_nuremberg_party_congress
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_65th_nuremberg_congress
-	x = -1
+	x = -2
 	y = 6
 	cost = 5.00
 	prerequisite = {
@@ -926,7 +933,7 @@ shared_focus = {
 	id = GER_the_europakts_second_summit
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_second_europakt_summit
-	x = 1
+	x = 2
 	y = 6
 	cost = 5.00
 	prerequisite = {
@@ -946,7 +953,7 @@ shared_focus = {
 	id = GER_the_black_stain_of_europe
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_black_stain
-	x = -3
+	x = -4
 	y = 7
 	cost = 3.00
 	prerequisite = {
@@ -962,7 +969,7 @@ shared_focus = {
 	id = GER_the_reichs_citizens
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_the_reichs_citizens
-	x = -2
+	x = -3
 	y = 8
 	cost = 3.00
 	prerequisite = {
@@ -1010,7 +1017,7 @@ shared_focus = {
 	id = GER_looming_threat_internet
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_looming_threat_internet
-	x = 3
+	x = 4
 	y = 7
 	cost = 3.00
 	prerequisite = {
@@ -1026,7 +1033,7 @@ shared_focus = {
 	id = GER_the_purpose_of_education
 	relative_position_id = GER_the_euromark_triumphs
 	icon = GFX_GER_purpose_of_education
-	x = 2
+	x = 3
 	y = 8
 	cost = 3.00
 	prerequisite = {
@@ -1065,8 +1072,8 @@ shared_focus = {
 shared_focus = {
 	id = GER_the_north_in_flames
 	icon = GFX_GER_the_north_in_flames
-	x = 20
-	y = 7
+	x = 21
+	y = 9
 	cost = 1.00
 	prerequisite = {
 	}
@@ -1219,8 +1226,8 @@ shared_focus = {
 	id = GER_a_nation_in_mourning
 	relative_position_id = GER_the_nsdap_prevails
 	icon = GFX_GER_a_nation_in_mourning
-	x = 4
-	y = 3
+	x = 0
+	y = 2
 	cost = 3.00
 	ai_will_do = { factor = 1 }
 	completion_reward = {
@@ -1307,7 +1314,7 @@ shared_focus = {
 	id = GER_take_what_is_ours
 	relative_position_id = GER_verbrechen_und_bestrafung
 	icon = GFX_GER_take_what_is_ours
-	x = 0
+	x = 1
 	y = 1
 	cost = 3.00
 	prerequisite = {
@@ -1321,6 +1328,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_show_no_mercy
 	relative_position_id = GER_take_what_is_ours
+	icon = GFX_GER_show_no_mercy
 	x = 0
 	y = 1
 	cost = 3.00
@@ -1335,6 +1343,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_ubermenschen_ubernlegen
 	relative_position_id = GER_show_no_mercy
+	icon = GFX_GER_ubermenschen_ubernlegen
 	x = 0
 	y = 1
 	cost = 3.00
@@ -1349,7 +1358,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_modern_warfare
 	relative_position_id = GER_verbrechen_und_bestrafung
-	x = 3
+	x = 5
 	y = 1
 	cost = 3.00
 	prerequisite = {
@@ -1363,6 +1372,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_unmanned_combat_vehicles
 	relative_position_id = GER_modern_warfare
+	icon = GFX_GER_unmanned_combat_vehicles
 	x = -1
 	y = 1
 	cost = 3.00
@@ -1377,6 +1387,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_soldiers_of_the_future
 	relative_position_id = GER_modern_warfare
+	icon = GFX_GER_soldiers_of_the_future
 	x = 1
 	y = 1
 	cost = 3.00
@@ -1391,6 +1402,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_ubermachtig_uberfallen
 	relative_position_id = GER_soldiers_of_the_future
+	icon = GFX_GER_ubermachtig_uberfallen
 	x = -1
 	y = 1
 	cost = 3.00
@@ -1408,6 +1420,7 @@ shared_focus = {
 shared_focus = {
 	id = GER_deutschland_deutschland_uber_allen
 	relative_position_id = GER_ubermenschen_ubernlegen
+	icon = GFX_GER_deutschland_deutschland_uber_allen
 	x = 0
 	y = 1
 	cost = 3.00
@@ -1423,5 +1436,132 @@ shared_focus = {
 	ai_will_do = { factor = 1 }
 	completion_reward = {
 		
+	}
+}
+
+
+### Demo Closure ###
+shared_focus = {
+	id = GER_the_beasts_depart
+
+	x = 9
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_patrol_corpse_littered_battlefields
+	relative_position_id = GER_the_beasts_depart
+	prerequisite = {
+		focus = GER_the_beasts_depart
+	}
+	x = -1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_refit_the_wehrmacht
+	relative_position_id = GER_patrol_corpse_littered_battlefields
+	prerequisite = {
+		focus = GER_patrol_corpse_littered_battlefields
+	}
+	x = -1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_changes_above
+	relative_position_id = GER_the_beasts_depart
+	prerequisite = {
+		focus = GER_the_beasts_depart
+	}
+	x = 1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_the_reichtags_reaction
+	relative_position_id = GER_changes_above
+	prerequisite = {
+		focus = GER_changes_above
+	}
+	x = 1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_a_move_against_nazism
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_reach_into_the_past }
+	mutually_exclusive = { focus = GER_like_father_like_son }
+	x = -5
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_like_father_like_son
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_reach_into_the_past }
+	mutually_exclusive = { focus = GER_a_move_against_nazism }
+	x = -2
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_reach_into_the_past
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_like_father_like_son }
+	mutually_exclusive = { focus = GER_a_move_against_nazism }
+	x = 1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
 	}
 }

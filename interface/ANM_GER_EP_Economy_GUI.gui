@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = {
 		name = "ANM_GER_EP_Economy_Decisions_GUI" 
-		size = { width = 525 height = 425 }
+		size = { width = 525 height = 435 }
 		position = { x = 0 y = 0 }
 
 		iconType = {
@@ -10,22 +10,22 @@ guiTypes = {
 			position = { x = 3 y = 4 }
 		}
 
+		iconType = {
+			name = "ep_economy_textboxes"
+			spriteType = "GFX_ep_economy_textboxes"
+			position = { x = 3 y = 407 }
+		}
+
 		containerWindowType = { 
 			name = "ANM_GER_EP_Economy_Country"
-			size = { width = 525 height = 425 }
+			size = { width = 425 height = 435 }
 			position = { x = 0 y = 0 }
 			
 			# Start 1996 buttons
 			buttonType = {
 				name = "ep_economy_country_reich"
 				quadTextureSprite = "GFX_ep_economy_country_reich"
-				position = { x = 143 y = 111 }
-				pdx_tooltip = GER_ep_economy_country_reich
-			}
-			buttonType = {
-				name = "ep_economy_country_reich_upgrade1"
-				quadTextureSprite = "GFX_ep_economy_country_reich_upgrade1"
-				position = { x = 143 y = 111 }
+				position = { x = 110 y = 111 }
 				pdx_tooltip = GER_ep_economy_country_reich
 			}
 			buttonType = {
@@ -39,8 +39,14 @@ guiTypes = {
 				name = "ep_economy_country_Russland"
 				spriteType = "GFX_ep_economy_country_USSR"
 				position = { x = 313 y = 31 }
-				pdx_tooltip = GER_ep_economy_country_USSR
+				pdx_tooltip = GER_ep_economy_country_Russland
 				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_country_Grenzland"
+				spriteType = "GFX_ep_economy_country_Grenzland"
+				position = { x = 310 y = 128 }
+				pdx_tooltip = GER_ep_economy_country_Grenzland
 			}
 			buttonType = {
 				name = "ep_economy_country_norway"
@@ -77,12 +83,6 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_country_ukraine"
 				position = { x = 281 y = 239 }
 				pdx_tooltip = GER_ep_economy_country_ukraine
-			}
-			buttonType = {
-				name = "ep_economy_country_poland"
-				quadTextureSprite = "GFX_ep_economy_country_poland"
-				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_country_poland
 			}
 			buttonType = {
 				name = "ep_economy_country_caucasus"
@@ -145,48 +145,44 @@ guiTypes = {
 				pdx_tooltip = GER_ep_economy_country_transnitria
 			}
 			buttonType = {
-				name = "ep_economy_country_netherlands"
-				quadTextureSprite = "GFX_ep_economy_country_netherlands"
-				position = { x = 125 y = 229 }
-				pdx_tooltip = GER_ep_economy_country_netherlands
-			}
-			buttonType = {
-				name = "ep_economy_country_flanders"
-				quadTextureSprite = "GFX_ep_economy_country_flanders"
-				position = { x = 110 y = 249 }
-				pdx_tooltip = GER_ep_economy_country_flanders
-			}
-			buttonType = {
-				name = "ep_economy_country_wallonia"
-				quadTextureSprite = "GFX_ep_economy_country_wallonia"
-				position = { x = 124 y = 257 }
-				pdx_tooltip = GER_ep_economy_country_wallonia
-			}
-			buttonType = {
 				name = "ep_economy_country_france"
 				quadTextureSprite = "GFX_ep_economy_country_france"
-				position = { x = 62 y = 264 }
+				position = { x = 62 y = 267 }
 				pdx_tooltip = GER_ep_economy_country_france
-			}
-			buttonType = {
-				name = "ep_economy_country_ireland_EP"
-				quadTextureSprite = "GFX_ep_economy_country_ireland"
-				position = { x = 17 y = 207 }
-				pdx_tooltip = GER_ep_economy_country_ireland
-				frame = 1
-			}
-			buttonType = {
-				name = "ep_economy_country_ireland_OFN"
-				quadTextureSprite = "GFX_ep_economy_country_ireland"
-				position = { x = 17 y = 207 }
-				pdx_tooltip = GER_ep_economy_country_ireland
-				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_country_britain"
 				quadTextureSprite = "GFX_ep_economy_country_britain"
 				position = { x = 39 y = 161 }
 				pdx_tooltip = GER_ep_economy_country_britain
+			}
+			buttonType = {
+				name = "ep_economy_country_ireland_EP"
+				quadTextureSprite = "GFX_ep_economy_country_ireland"
+				position = { x = 19 y = 209 }
+				pdx_tooltip = GER_ep_economy_country_ireland
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_country_ireland_OFN"
+				quadTextureSprite = "GFX_ep_economy_country_ireland"
+				position = { x = 19 y = 209 }
+				pdx_tooltip = GER_ep_economy_country_ireland
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_country_NI_EP"
+				quadTextureSprite = "GFX_ep_economy_country_NI"
+				position = { x = 40 y = 209 }
+				pdx_tooltip = GER_ep_economy_country_NI
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_country_NI_OFN"
+				quadTextureSprite = "GFX_ep_economy_country_NI"
+				position = { x = 40 y = 209 }
+				pdx_tooltip = GER_ep_economy_country_NI
+				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_country_denmark"
@@ -319,28 +315,39 @@ guiTypes = {
 		buttonType = {
 			name = "ep_economy_button_country"
 			spriteType = "GFX_ep_economy_button_country"
-			position = { x = 426 y = 9 }
+			position = { x = 423 y = 6 }
 			pdx_tooltip = GER_ep_economy_button_country
 		}
 		buttonType = {
 			name = "ep_economy_button_status"
 			spriteType = "GFX_ep_economy_button_status"
-			position = { x = 452 y = 9 }
+			position = { x = 449 y = 6 }
 			pdx_tooltip = GER_ep_economy_button_status
 		}
 		buttonType = {
 			name = "ep_economy_button_currency"
 			spriteType = "GFX_ep_economy_button_currency"
-			position = { x = 478 y = 9 }
+			position = { x = 475 y = 6 }
 			pdx_tooltip = GER_ep_economy_button_currency
 		}
 		instantTextboxType = {
 			name = "EP_Economic_Stability"
-			position = { x = 9 y = 415 }
+			position = { x = 11 y = 415 }
 			textureFile = ""
-			font = "aldrich_14_outline"
+			font = "aldrich_12_outline"
 			borderSize = {x = 0 y = 0}
-			text = "E.P. Economic Stability: ([?GER_ANM_economy_status_overall|%0])"
+			text = "E.P. Economy Rating: [?GER_ANM_economy_status_overall|1]/10"
+			maxWidth = 350
+			maxHeight = 30
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "EP_Economic_Control"
+			position = { x = 261 y = 415 }
+			textureFile = ""
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "German Economic Authority: [?GER_ANM_economy_control_overall|%0]"
 			maxWidth = 350
 			maxHeight = 30
 			fixedsize = yes
@@ -348,64 +355,105 @@ guiTypes = {
 		
 		containerWindowType = { 
 			name = "ANM_GER_EP_Economy_Status"
-			size = { width = 525 height = 425 }
+			size = { width = 525 height = 435 }
 			position = { x = 0 y = 0 }
 			
 			# Status Of Economy
 			buttonType = {
 				name = "ep_economy_status_reich_good"
 				quadTextureSprite = "GFX_ep_economy_status_reich"
-				position = { x = 143 y = 111 }
+				position = { x = 110 y = 111 }
 				pdx_tooltip = GER_ep_economy_status_reich
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
 				name = "ep_economy_status_reich_average"
 				quadTextureSprite = "GFX_ep_economy_status_reich"
-				position = { x = 143 y = 111 }
+				position = { x = 110 y = 111 }
 				pdx_tooltip = GER_ep_economy_status_reich
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_status_reich_poor"
 				quadTextureSprite = "GFX_ep_economy_status_reich"
-				position = { x = 143 y = 111 }
+				position = { x = 110 y = 111 }
 				pdx_tooltip = GER_ep_economy_status_reich
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
 				name = "ep_economy_status_reich_unavailable"
 				quadTextureSprite = "GFX_ep_economy_status_reich"
-				position = { x = 143 y = 111 }
+				position = { x = 110 y = 111 }
 				pdx_tooltip = GER_ep_economy_status_reich
+				alwaystransparent = yes 
 				frame = 4
 			}
 			buttonType = {
-				name = "ep_economy_status_reich_upgrade1_good"
-				quadTextureSprite = "GFX_ep_economy_status_reich_upgrade1"
-				position = { x = 143 y = 111 }
-				pdx_tooltip = GER_ep_economy_status_reich
+				name = "ep_economy_status_USSR_good"
+				spriteType = "GFX_ep_economy_status_USSR"
+				position = { x = 313 y = 31 }
+				pdx_tooltip = GER_ep_economy_country_Russland
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
-				name = "ep_economy_status_reich_upgrade1_average"
-				quadTextureSprite = "GFX_ep_economy_status_reich_upgrade1"
-				position = { x = 143 y = 111 }
-				pdx_tooltip = GER_ep_economy_status_reich
+				name = "ep_economy_status_USSR_average"
+				spriteType = "GFX_ep_economy_status_USSR"
+				position = { x = 313 y = 31 }
+				pdx_tooltip = GER_ep_economy_country_Russland
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
-				name = "ep_economy_status_reich_upgrade1_poor"
-				quadTextureSprite = "GFX_ep_economy_status_reich_upgrade1"
-				position = { x = 143 y = 111 }
-				pdx_tooltip = GER_ep_economy_status_reich
+				name = "ep_economy_status_USSR_poor"
+				spriteType = "GFX_ep_economy_status_USSR"
+				position = { x = 313 y = 31 }
+				pdx_tooltip = GER_ep_economy_country_Russland
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
-				name = "ep_economy_status_reich_upgrade1_unavailable"
-				quadTextureSprite = "GFX_ep_economy_status_reich_upgrade1"
-				position = { x = 143 y = 111 }
-				pdx_tooltip = GER_ep_economy_status_reich
+				name = "ep_economy_status_USSR_unavailable"
+				spriteType = "GFX_ep_economy_status_USSR"
+				position = { x = 313 y = 31 }
+				pdx_tooltip = GER_ep_economy_country_USSR
+				alwaystransparent = yes 
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_Grenzland_good"
+				spriteType = "GFX_ep_economy_status_Grenzland"
+				position = { x = 310 y = 128 }
+				pdx_tooltip = GER_ep_economy_country_Grenzland
+				alwaystransparent = yes 
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_Grenzland_average"
+				spriteType = "GFX_ep_economy_status_Grenzland"
+				position = { x = 310 y = 128 }
+				pdx_tooltip = GER_ep_economy_country_Grenzland
+				alwaystransparent = yes 
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_Grenzland_poor"
+				spriteType = "GFX_ep_economy_status_Grenzland"
+				position = { x = 310 y = 128 }
+				pdx_tooltip = GER_ep_economy_country_Grenzland
+				alwaystransparent = yes 
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_Grenzland_unavailable"
+				spriteType = "GFX_ep_economy_status_Grenzland"
+				position = { x = 310 y = 128 }
+				pdx_tooltip = GER_ep_economy_country_Grenzland
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -414,6 +462,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_norway"
 				position = { x = 136 y = 12 }
 				pdx_tooltip = GER_ep_economy_status_norway
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -421,6 +470,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_norway"
 				position = { x = 136 y = 12 }
 				pdx_tooltip = GER_ep_economy_status_norway
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -428,6 +478,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_norway"
 				position = { x = 136 y = 12 }
 				pdx_tooltip = GER_ep_economy_status_norway
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -435,6 +486,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_norway"
 				position = { x = 136 y = 12 }
 				pdx_tooltip = GER_ep_economy_status_norway
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -443,6 +495,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_sweden"
 				position = { x = 185 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_sweden
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -450,6 +503,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_sweden"
 				position = { x = 185 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_sweden
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -457,6 +511,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_sweden"
 				position = { x = 185 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_sweden
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -464,6 +519,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_sweden"
 				position = { x = 185 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_sweden
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -472,6 +528,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_baltics"
 				position = { x = 261 y = 159 }
 				pdx_tooltip = GER_ep_economy_status_baltics
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -479,6 +536,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_baltics"
 				position = { x = 261 y = 159 }
 				pdx_tooltip = GER_ep_economy_status_baltics
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -486,6 +544,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_baltics"
 				position = { x = 261 y = 159 }
 				pdx_tooltip = GER_ep_economy_status_baltics
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -493,6 +552,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_baltics"
 				position = { x = 261 y = 159 }
 				pdx_tooltip = GER_ep_economy_status_baltics
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -501,6 +561,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_belarus"
 				position = { x = 290 y = 200 }
 				pdx_tooltip = GER_ep_economy_status_belarus
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -508,6 +569,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_belarus"
 				position = { x = 290 y = 200 }
 				pdx_tooltip = GER_ep_economy_status_belarus
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -515,6 +577,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_belarus"
 				position = { x = 290 y = 200 }
 				pdx_tooltip = GER_ep_economy_status_belarus
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -522,6 +585,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_belarus"
 				position = { x = 290 y = 200 }
 				pdx_tooltip = GER_ep_economy_status_belarus
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -530,6 +594,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_homel"
 				position = { x = 335 y = 234 }
 				pdx_tooltip = GER_ep_economy_status_homel
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -537,6 +602,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_homel"
 				position = { x = 335 y = 234 }
 				pdx_tooltip = GER_ep_economy_status_homel
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -544,6 +610,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_homel"
 				position = { x = 335 y = 234 }
 				pdx_tooltip = GER_ep_economy_status_homel
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -551,6 +618,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_homel"
 				position = { x = 335 y = 234 }
 				pdx_tooltip = GER_ep_economy_status_homel
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -559,6 +627,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_ukraine"
 				position = { x = 281 y = 239 }
 				pdx_tooltip = GER_ep_economy_status_ukraine
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -566,6 +635,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_ukraine"
 				position = { x = 281 y = 239 }
 				pdx_tooltip = GER_ep_economy_status_ukraine
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -573,6 +643,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_ukraine"
 				position = { x = 281 y = 239 }
 				pdx_tooltip = GER_ep_economy_status_ukraine
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -580,43 +651,15 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_ukraine"
 				position = { x = 281 y = 239 }
 				pdx_tooltip = GER_ep_economy_status_ukraine
+				alwaystransparent = yes 
 				frame = 4
 			}
-
-			buttonType = {
-				name = "ep_economy_status_poland_good"
-				quadTextureSprite = "GFX_ep_economy_status_poland"
-				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_status_poland
-				frame = 1
-			}
-			buttonType = {
-				name = "ep_economy_status_poland_average"
-				quadTextureSprite = "GFX_ep_economy_status_poland"
-				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_status_poland
-				frame = 2
-			}
-			buttonType = {
-				name = "ep_economy_status_poland_poor"
-				quadTextureSprite = "GFX_ep_economy_status_poland"
-				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_status_poland
-				frame = 3
-			}
-			buttonType = {
-				name = "ep_economy_status_poland_unavailable"
-				quadTextureSprite = "GFX_ep_economy_status_poland"
-				position = { x = 248 y = 236 }
-				pdx_tooltip = GER_ep_economy_status_poland
-				frame = 4
-			}
-
 			buttonType = {
 				name = "ep_economy_status_caucasus_good"
 				quadTextureSprite = "GFX_ep_economy_status_caucasus"
 				position = { x = 388 y = 292 }
 				pdx_tooltip = GER_ep_economy_status_caucasus
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -624,6 +667,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_caucasus"
 				position = { x = 388 y = 292 }
 				pdx_tooltip = GER_ep_economy_status_caucasus
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -631,6 +675,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_caucasus"
 				position = { x = 388 y = 292 }
 				pdx_tooltip = GER_ep_economy_status_caucasus
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -638,6 +683,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_caucasus"
 				position = { x = 388 y = 292 }
 				pdx_tooltip = GER_ep_economy_status_caucasus
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -646,6 +692,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_wolga"
 				position = { x = 426 y = 282 }
 				pdx_tooltip = GER_ep_economy_status_wolga
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -653,6 +700,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_wolga"
 				position = { x = 426 y = 282 }
 				pdx_tooltip = GER_ep_economy_status_wolga
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -660,6 +708,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_wolga"
 				position = { x = 426 y = 282 }
 				pdx_tooltip = GER_ep_economy_status_wolga
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -667,6 +716,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_wolga"
 				position = { x = 426 y = 282 }
 				pdx_tooltip = GER_ep_economy_status_wolga
+				alwaystransparent = yes 
 				frame = 4
 			}
 			buttonType = {
@@ -674,6 +724,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_wolga_big"
 				position = { x = 423 y = 247 }
 				pdx_tooltip = GER_ep_economy_status_wolga
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -681,6 +732,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_wolga_big"
 				position = { x = 423 y = 247 }
 				pdx_tooltip = GER_ep_economy_status_wolga
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -688,6 +740,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_wolga_big"
 				position = { x = 423 y = 247 }
 				pdx_tooltip = GER_ep_economy_status_wolga
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -695,6 +748,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_wolga_big"
 				position = { x = 423 y = 247 }
 				pdx_tooltip = GER_ep_economy_status_wolga
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -703,6 +757,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_slovakia"
 				position = { x = 229 y = 270 }
 				pdx_tooltip = GER_ep_economy_status_slovakia
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -710,6 +765,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_slovakia"
 				position = { x = 229 y = 270 }
 				pdx_tooltip = GER_ep_economy_status_slovakia
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -717,6 +773,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_slovakia"
 				position = { x = 229 y = 270 }
 				pdx_tooltip = GER_ep_economy_status_slovakia
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -724,6 +781,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_slovakia"
 				position = { x = 229 y = 270 }
 				pdx_tooltip = GER_ep_economy_status_slovakia
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -732,6 +790,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_hungary"
 				position = { x = 225 y = 275 }
 				pdx_tooltip = GER_ep_economy_status_hungary
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -739,6 +798,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_hungary"
 				position = { x = 225 y = 275 }
 				pdx_tooltip = GER_ep_economy_status_hungary
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -746,6 +806,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_hungary"
 				position = { x = 225 y = 275 }
 				pdx_tooltip = GER_ep_economy_status_hungary
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -753,6 +814,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_hungary"
 				position = { x = 225 y = 275 }
 				pdx_tooltip = GER_ep_economy_status_hungary
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -761,6 +823,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_romania"
 				position = { x = 257 y = 282 }
 				pdx_tooltip = GER_ep_economy_status_romania
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -768,6 +831,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_romania"
 				position = { x = 257 y = 282 }
 				pdx_tooltip = GER_ep_economy_status_romania
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -775,6 +839,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_romania"
 				position = { x = 257 y = 282 }
 				pdx_tooltip = GER_ep_economy_status_romania
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -782,6 +847,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_romania"
 				position = { x = 257 y = 282 }
 				pdx_tooltip = GER_ep_economy_status_romania
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -790,6 +856,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_serbia"
 				position = { x = 249 y = 306 }
 				pdx_tooltip = GER_ep_economy_status_serbia
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -797,6 +864,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_serbia"
 				position = { x = 249 y = 306 }
 				pdx_tooltip = GER_ep_economy_status_serbia
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -804,6 +872,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_serbia"
 				position = { x = 249 y = 306 }
 				pdx_tooltip = GER_ep_economy_status_serbia
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -811,6 +880,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_serbia"
 				position = { x = 249 y = 306 }
 				pdx_tooltip = GER_ep_economy_status_serbia
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -819,6 +889,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
 				position = { x = 261 y = 325 }
 				pdx_tooltip = GER_ep_economy_status_bulgaria
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -826,6 +897,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
 				position = { x = 261 y = 325 }
 				pdx_tooltip = GER_ep_economy_status_bulgaria
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -833,6 +905,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
 				position = { x = 261 y = 325 }
 				pdx_tooltip = GER_ep_economy_status_bulgaria
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -840,6 +913,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_bulgaria"
 				position = { x = 261 y = 325 }
 				pdx_tooltip = GER_ep_economy_status_bulgaria
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -848,6 +922,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_transnitria"
 				position = { x = 314 y = 276 }
 				pdx_tooltip = GER_ep_economy_status_transnitria
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -855,6 +930,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_transnitria"
 				position = { x = 314 y = 276 }
 				pdx_tooltip = GER_ep_economy_status_transnitria
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -862,6 +938,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_transnitria"
 				position = { x = 314 y = 276 }
 				pdx_tooltip = GER_ep_economy_status_transnitria
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -869,151 +946,40 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_transnitria"
 				position = { x = 314 y = 276 }
 				pdx_tooltip = GER_ep_economy_status_transnitria
-				frame = 4
-			}
-
-			buttonType = {
-				name = "ep_economy_status_netherlands_good"
-				quadTextureSprite = "GFX_ep_economy_status_netherlands"
-				position = { x = 125 y = 229 }
-				pdx_tooltip = GER_ep_economy_status_netherlands
-				frame = 1
-			}
-			buttonType = {
-				name = "ep_economy_status_netherlands_average"
-				quadTextureSprite = "GFX_ep_economy_status_netherlands"
-				position = { x = 125 y = 229 }
-				pdx_tooltip = GER_ep_economy_status_netherlands
-				frame = 2
-			}
-			buttonType = {
-				name = "ep_economy_status_netherlands_poor"
-				quadTextureSprite = "GFX_ep_economy_status_netherlands"
-				position = { x = 125 y = 229 }
-				pdx_tooltip = GER_ep_economy_status_netherlands
-				frame = 3
-			}
-			buttonType = {
-				name = "ep_economy_status_netherlands_unavailable"
-				quadTextureSprite = "GFX_ep_economy_status_netherlands"
-				position = { x = 125 y = 229 }
-				pdx_tooltip = GER_ep_economy_status_netherlands
-				frame = 4
-			}
-
-			buttonType = {
-				name = "ep_economy_status_flanders_good"
-				quadTextureSprite = "GFX_ep_economy_status_flanders"
-				position = { x = 110 y = 249 }
-				pdx_tooltip = GER_ep_economy_status_flanders
-				frame = 1
-			}
-			buttonType = {
-				name = "ep_economy_status_flanders_average"
-				quadTextureSprite = "GFX_ep_economy_status_flanders"
-				position = { x = 110 y = 249 }
-				pdx_tooltip = GER_ep_economy_status_flanders
-				frame = 2
-			}
-			buttonType = {
-				name = "ep_economy_status_flanders_poor"
-				quadTextureSprite = "GFX_ep_economy_status_flanders"
-				position = { x = 110 y = 249 }
-				pdx_tooltip = GER_ep_economy_status_flanders
-				frame = 3
-			}
-			buttonType = {
-				name = "ep_economy_status_flanders_unavailable"
-				quadTextureSprite = "GFX_ep_economy_status_flanders"
-				position = { x = 110 y = 249 }
-				pdx_tooltip = GER_ep_economy_status_flanders
-				frame = 4
-			}
-
-			buttonType = {
-				name = "ep_economy_status_wallonia_good"
-				quadTextureSprite = "GFX_ep_economy_status_wallonia"
-				position = { x = 124 y = 257 }
-				pdx_tooltip = GER_ep_economy_status_wallonia
-				frame = 1
-			}
-			buttonType = {
-				name = "ep_economy_status_wallonia_average"
-				quadTextureSprite = "GFX_ep_economy_status_wallonia"
-				position = { x = 124 y = 257 }
-				pdx_tooltip = GER_ep_economy_status_wallonia
-				frame = 2
-			}
-			buttonType = {
-				name = "ep_economy_status_wallonia_poor"
-				quadTextureSprite = "GFX_ep_economy_status_wallonia"
-				position = { x = 124 y = 257 }
-				pdx_tooltip = GER_ep_economy_status_wallonia
-				frame = 3
-			}
-			buttonType = {
-				name = "ep_economy_status_wallonia_unavailable"
-				quadTextureSprite = "GFX_ep_economy_status_wallonia"
-				position = { x = 124 y = 257 }
-				pdx_tooltip = GER_ep_economy_status_wallonia
+				alwaystransparent = yes 
 				frame = 4
 			}
 
 			buttonType = {
 				name = "ep_economy_status_france_good"
 				quadTextureSprite = "GFX_ep_economy_status_france"
-				position = { x = 62 y = 264 }
+				position = { x = 62 y = 267 }
 				pdx_tooltip = GER_ep_economy_status_france
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
 				name = "ep_economy_status_france_average"
 				quadTextureSprite = "GFX_ep_economy_status_france"
-				position = { x = 62 y = 264 }
+				position = { x = 62 y = 267 }
 				pdx_tooltip = GER_ep_economy_status_france
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
 				name = "ep_economy_status_france_poor"
 				quadTextureSprite = "GFX_ep_economy_status_france"
-				position = { x = 62 y = 264 }
+				position = { x = 62 y = 267 }
 				pdx_tooltip = GER_ep_economy_status_france
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
 				name = "ep_economy_status_france_unavailable"
 				quadTextureSprite = "GFX_ep_economy_status_france"
-				position = { x = 62 y = 264 }
+				position = { x = 62 y = 267 }
 				pdx_tooltip = GER_ep_economy_status_france
-				frame = 4
-			}
-
-			buttonType = {
-				name = "ep_economy_status_ireland_good"
-				quadTextureSprite = "GFX_ep_economy_status_ireland"
-				position = { x = 17 y = 207 }
-				pdx_tooltip = GER_ep_economy_status_ireland
-				frame = 1
-			}
-			buttonType = {
-				name = "ep_economy_status_ireland_average"
-				quadTextureSprite = "GFX_ep_economy_status_ireland"
-				position = { x = 17 y = 207 }
-				pdx_tooltip = GER_ep_economy_status_ireland
-				frame = 2
-			}
-			buttonType = {
-				name = "ep_economy_status_ireland_poor"
-				quadTextureSprite = "GFX_ep_economy_status_ireland"
-				position = { x = 17 y = 207 }
-				pdx_tooltip = GER_ep_economy_status_ireland
-				frame = 3
-			}
-			buttonType = {
-				name = "ep_economy_status_ireland_unavailable"
-				quadTextureSprite = "GFX_ep_economy_status_ireland"
-				position = { x = 17 y = 207 }
-				pdx_tooltip = GER_ep_economy_status_ireland
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1022,6 +988,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_britain"
 				position = { x = 39 y = 161 }
 				pdx_tooltip = GER_ep_economy_status_britain
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1029,6 +996,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_britain"
 				position = { x = 39 y = 161 }
 				pdx_tooltip = GER_ep_economy_status_britain
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1036,6 +1004,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_britain"
 				position = { x = 39 y = 161 }
 				pdx_tooltip = GER_ep_economy_status_britain
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1043,6 +1012,73 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_britain"
 				position = { x = 39 y = 161 }
 				pdx_tooltip = GER_ep_economy_status_britain
+				alwaystransparent = yes 
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_ireland_good"
+				quadTextureSprite = "GFX_ep_economy_status_ireland"
+				position = { x = 19 y = 209 }
+				pdx_tooltip = GER_ep_economy_status_ireland
+				alwaystransparent = yes 
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_ireland_average"
+				quadTextureSprite = "GFX_ep_economy_status_ireland"
+				position = { x = 19 y = 209 }
+				pdx_tooltip = GER_ep_economy_status_ireland
+				alwaystransparent = yes 
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_ireland_poor"
+				quadTextureSprite = "GFX_ep_economy_status_ireland"
+				position = { x = 19 y = 209 }
+				pdx_tooltip = GER_ep_economy_status_ireland
+				alwaystransparent = yes 
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_ireland_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_ireland"
+				position = { x = 19 y = 209 }
+				pdx_tooltip = GER_ep_economy_status_ireland
+				alwaystransparent = yes 
+				frame = 4
+			}
+
+			buttonType = {
+				name = "ep_economy_status_NI_good"
+				quadTextureSprite = "GFX_ep_economy_status_NI"
+				position = { x = 40 y = 209 }
+				pdx_tooltip = GER_ep_economy_status_NI
+				alwaystransparent = yes 
+				frame = 1
+			}
+			buttonType = {
+				name = "ep_economy_status_NI_average"
+				quadTextureSprite = "GFX_ep_economy_status_NI"
+				position = { x = 40 y = 209 }
+				pdx_tooltip = GER_ep_economy_status_NI
+				alwaystransparent = yes 
+				frame = 2
+			}
+			buttonType = {
+				name = "ep_economy_status_NI_poor"
+				quadTextureSprite = "GFX_ep_economy_status_NI"
+				position = { x = 40 y = 209 }
+				pdx_tooltip = GER_ep_economy_status_NI
+				alwaystransparent = yes 
+				frame = 3
+			}
+			buttonType = {
+				name = "ep_economy_status_NI_unavailable"
+				quadTextureSprite = "GFX_ep_economy_status_NI"
+				position = { x = 40 y = 209 }
+				pdx_tooltip = GER_ep_economy_status_NI
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1051,6 +1087,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_denmark"
 				position = { x = 161 y = 183 }
 				pdx_tooltip = GER_ep_economy_status_denmark
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1058,6 +1095,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_denmark"
 				position = { x = 161 y = 183 }
 				pdx_tooltip = GER_ep_economy_status_denmark
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1065,6 +1103,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_denmark"
 				position = { x = 161 y = 183 }
 				pdx_tooltip = GER_ep_economy_status_denmark
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1072,6 +1111,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_denmark"
 				position = { x = 161 y = 183 }
 				pdx_tooltip = GER_ep_economy_status_denmark
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1080,6 +1120,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_finland"
 				position = { x = 250 y = 29 }
 				pdx_tooltip = GER_ep_economy_status_finland
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1087,6 +1128,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_finland"
 				position = { x = 250 y = 29 }
 				pdx_tooltip = GER_ep_economy_status_finland
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1094,6 +1136,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_finland"
 				position = { x = 250 y = 29 }
 				pdx_tooltip = GER_ep_economy_status_finland
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1101,6 +1144,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_finland"
 				position = { x = 250 y = 29 }
 				pdx_tooltip = GER_ep_economy_status_finland
+				alwaystransparent = yes 
 				frame = 4
 			}
 			buttonType = {
@@ -1108,6 +1152,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_finland_big"
 				position = { x = 251 y = 30 }
 				pdx_tooltip = GER_ep_economy_status_finland
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1115,6 +1160,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_finland_big"
 				position = { x = 251 y = 30 }
 				pdx_tooltip = GER_ep_economy_status_finland
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1122,6 +1168,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_finland_big"
 				position = { x = 251 y = 30 }
 				pdx_tooltip = GER_ep_economy_status_finland
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1129,6 +1176,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_finland_big"
 				position = { x = 251 y = 30 }
 				pdx_tooltip = GER_ep_economy_status_finland
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1137,6 +1185,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_spain"
 				position = { x = 22 y = 327 }
 				pdx_tooltip = GER_ep_economy_status_spain
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1144,6 +1193,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_spain"
 				position = { x = 22 y = 327 }
 				pdx_tooltip = GER_ep_economy_status_spain
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1151,6 +1201,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_spain"
 				position = { x = 22 y = 327 }
 				pdx_tooltip = GER_ep_economy_status_spain
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1158,6 +1209,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_spain"
 				position = { x = 22 y = 327 }
 				pdx_tooltip = GER_ep_economy_status_spain
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1166,6 +1218,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_turkey"
 				position = { x = 280 y = 344 }
 				pdx_tooltip = GER_ep_economy_status_turkey
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1173,6 +1226,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_turkey"
 				position = { x = 280 y = 344 }
 				pdx_tooltip = GER_ep_economy_status_turkey
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1180,6 +1234,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_turkey"
 				position = { x = 280 y = 344 }
 				pdx_tooltip = GER_ep_economy_status_turkey
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1187,6 +1242,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_turkey"
 				position = { x = 280 y = 344 }
 				pdx_tooltip = GER_ep_economy_status_turkey
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1195,6 +1251,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_iran"
 				position = { x = 444 y = 368 }
 				pdx_tooltip = GER_ep_economy_status_iran
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1202,6 +1259,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_iran"
 				position = { x = 444 y = 368 }
 				pdx_tooltip = GER_ep_economy_status_iran
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1209,6 +1267,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_iran"
 				position = { x = 444 y = 368 }
 				pdx_tooltip = GER_ep_economy_status_iran
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1216,6 +1275,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_iran"
 				position = { x = 444 y = 368 }
 				pdx_tooltip = GER_ep_economy_status_iran
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1224,6 +1284,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_china"
 				position = { x = 112 y = 104 }
 				pdx_tooltip = GER_ep_economy_status_china
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1231,6 +1292,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_china"
 				position = { x = 112 y = 104 }
 				pdx_tooltip = GER_ep_economy_status_china
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1238,6 +1300,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_china"
 				position = { x = 112 y = 104 }
 				pdx_tooltip = GER_ep_economy_status_china
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1245,6 +1308,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_china"
 				position = { x = 112 y = 104 }
 				pdx_tooltip = GER_ep_economy_status_china
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1253,6 +1317,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_DR"
 				position = { x = 359 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_DR
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1260,6 +1325,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_DR"
 				position = { x = 359 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_DR
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1267,6 +1333,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_DR"
 				position = { x = 359 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_DR
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1274,6 +1341,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_DR"
 				position = { x = 359 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_DR
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1282,6 +1350,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_algeria"
 				position = { x = 9 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_algeria
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1289,6 +1358,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_algeria"
 				position = { x = 9 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_algeria
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1296,6 +1366,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_algeria"
 				position = { x = 9 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_algeria
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1303,6 +1374,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_algeria"
 				position = { x = 9 y = 43 }
 				pdx_tooltip = GER_ep_economy_status_algeria
+				alwaystransparent = yes 
 				frame = 4
 			}
 
@@ -1311,6 +1383,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_madagaskar"
 				position = { x = 22 y = 268 }
 				pdx_tooltip = GER_ep_economy_status_madagaskar
+				alwaystransparent = yes 
 				frame = 1
 			}
 			buttonType = {
@@ -1318,6 +1391,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_madagaskar"
 				position = { x = 22 y = 268 }
 				pdx_tooltip = GER_ep_economy_status_madagaskar
+				alwaystransparent = yes 
 				frame = 2
 			}
 			buttonType = {
@@ -1325,6 +1399,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_madagaskar"
 				position = { x = 22 y = 268 }
 				pdx_tooltip = GER_ep_economy_status_madagaskar
+				alwaystransparent = yes 
 				frame = 3
 			}
 			buttonType = {
@@ -1332,6 +1407,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_ep_economy_status_madagaskar"
 				position = { x = 22 y = 268 }
 				pdx_tooltip = GER_ep_economy_status_madagaskar
+				alwaystransparent = yes 
 				frame = 4
 			}
 

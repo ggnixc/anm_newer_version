@@ -3097,3 +3097,29 @@ defined_text = {
 		localization_key = tno_immigration_apocalyptic_MODIFIER_COMBINED
 	}
 }
+defined_text = {
+	name = GetCategory_header_6_tt
+	text = {
+		trigger = {
+			check_variable = { TNO_category_6_collapse = 1 }
+		}
+		localization_key = TNO_Category_collapse_tt
+	}
+	text = {
+		localization_key = TNO_Category_expand_tt
+	}
+}
+
+# Misc Laws container
+defined_text = {
+	name = GetMiscLawsContainer
+	text = { # Britain System
+		trigger = {
+			tag = ENG
+		}
+		localization_key = TNO_ENG_assorted_laws
+	}
+	text = {
+		localization_key = TNO_assorted_law_[?v]
+	}
+}

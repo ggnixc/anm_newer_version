@@ -4,6 +4,11 @@ set_major = yes
 oob = "CHI_1962"
 
 set_country_flag = CHI_Modernization
+recruit_character = CHI_Zhu_Rongji
+recruit_character = CHI_Wen_Jiabao
+recruit_character = CHI_Zhou_Tienong
+recruit_character = CHI_Zhang_Qingwei
+recruit_character = CHI_Qian_Qichen
 
 set_war_support = 1.00
 set_stability = 1.00
@@ -33,98 +38,21 @@ set_politics = {
 	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
-    communist = 2
-    socialist = 9
-    progressivism = 2
-    liberalism = 13
-    conservatism = 16
-    liberal_conservatism = 0
+    communist = 4
+    socialist = 0
+    progressivism = 16
+    liberalism = 0
+    conservatism = 0
+    liberal_conservatism = 32
     fascism = 0
     despotism = 0
-    paternalism = 58
+    paternalism = 48
     national_socialism = 0
     ultranationalism = 0
     esoteric_nazism = 0
-}
-
-#actually Kong Qingdong
-create_country_leader = {
-	name = "The Helmsman"
-	picture = "Portrait_CHI_Hu_Jintao_1.dds"
-	desc = "POLITICS_HU_JINTAO_DESC"
-	expire = "2090.1.1"
-	ideology = communist_1_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Social Democrat"
-	picture = "Portrait_Lee_Yuan_tsu.tga"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = social_democracy_left_wing_populism_subtype 
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Lang Xianping"
-	picture = "Portrait_CHI_Lang_Xianping.tga"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = liberalism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Hu Jintao"
-	picture = "Portrait_CHI_Hu_Jintao.dds"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = progressivism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Lien Chan"
-	desc = "POLITICS_LIENCHAN_DESC"
-	picture = "Portrait_CHI_Lien_Chan.dds"
-	expire = "2090.1.1"
-	ideology = paternalism_xunzheng_subtype 
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mei Aiwen"
-	picture = "Portrait_CHI_Mei_Aiwen.dds"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = despotism_civilian_dictatorship_subtype 
-	traits = {
-		#
-	}
-}
-
-#maybe Wei Jingsheng
-create_country_leader = {
-	name = "Pan-Asianist"
-	picture = "Portrait_Lee_Yuan_tsu.tga"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = fascism_revolutionary_nationalism_subtype  
-	traits = {
-		#
-	}
 }
 
 if = {
@@ -154,16 +82,16 @@ if = {
 
 add_ideas = {
 
-	CHI_No435
-	CHI_The_Great_Wall_Never_Falls
-	CHI_Xinjiang_Land_of_Gold
-	CHI_Nuclear_Frenzy
+    CHI_Fracturing_Dangguo
+	CHI_visions
+	CHI_incomplete_liberation
+	CHI_shadow_of_the_eagle
 	
 	#Country
-	CHI_minister_Lee_Huan_hog
-    CHI_minister_Sun_Yunsuan_eco
-    CHI_minister_Fredrick_Chien_for
-    CHI_minister_Hau_Peitsun_sec
+	CHI_minister_Wen_Jiabao_hog
+    CHI_minister_Zhang_Qingwei_eco
+    CHI_minister_Qian_Qichen_for
+    CHI_minister_Zhou_Tienong_sec
 	
 	#Political
 	tno_political_parties_controlled_opposition

@@ -1,22 +1,40 @@
-﻿recruit_character = FNM_Torstein_Dahle
+﻿recruit_character = FNM_Arne_Treholt
+recruit_character = FNM_Erling_Folkvord
+recruit_character = FNM_Berge_Furre
+recruit_character = FNM_Tron_Ogrim
+recruit_character = FNM_Sverre_Diesen
 
 capital = 896
 
 set_politics = {
-	ruling_party = communist
+	ruling_party = despotism
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
-	communist = 100
+	despotism = 47
+	conservatism = 2
+	liberalism = 3
+	progressivism = 8
+	socialist = 27
+	communist = 13
 }
 
 add_ideas = {
 	###FACTION###
 	###MINISTERS###
+	FNM_Erling_Folkvord_hog
+	FNM_Berge_Furre_eco
+	FNM_Tron_Ogrim_for
+	FNM_Sverre_Diesen_sec
 	###IDEAS###
+	FNM_The_Finnmark_Situation
+	FNM_Loyal_to_Marx_and_Harald
+	FNM_Limited_Supply_Lines
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_atheism

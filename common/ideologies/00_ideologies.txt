@@ -72,6 +72,7 @@ ideologies = {
 			national_socialism_reformed_national_socialism_subtype = { can_be_randomly_selected = no }
 			national_socialism_esoteric_baathism_subtype = { can_be_randomly_selected = no }
 			national_socialism_naturalised_nazism_subtype = { can_be_randomly_selected = no }
+			national_socialism_rosenbergite_tendency_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
 		color = { 50 33 30 }
@@ -252,6 +253,7 @@ ideologies = {
 			despotism_national_catholicism_subtype = { can_be_randomly_selected = no }
 			despotism_managerial_state_subtype = { can_be_randomly_selected = no }
 			despotism_institutional_despotism_subtype = { can_be_randomly_selected = no }
+			despotism_wang_jingwei_thought_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
 		color = { 65 65 65 }
@@ -321,7 +323,8 @@ ideologies = {
 			paternalism_poujadism_subtype = { can_be_randomly_selected = no }
 			paternalism_democratic_fascism_subtype = { can_be_randomly_selected = no }
 			paternalism_pinochetism_subtype = { can_be_randomly_selected = no }
-
+			paternalism_authoritarian_developmentalism_subtype = { can_be_randomly_selected = no }
+			paternalism_wang_jingwei_thought_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
 		color = { 111 111 111 }
@@ -494,35 +497,6 @@ ideologies = {
 		color = { 98 111 157 }
 		ai_neutral = yes
 		can_be_boosted = no
-	}
-
-	########################################
-	#         WHAT THE FUCK IS THIS        #
-	########################################
-	ecopolitical = {
-		types = {
-			ecopolitical_subtype = {}
-		}
-		dynamic_faction_names = {}
-		color = { 80 163 78 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 20.0
-				army_intel_to_others = 10.0
-				navy_intel_to_others = 20.0
-				airforce_intel_to_others = 10.0
-			}
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-		
 	}
 
 	########################################

@@ -25,12 +25,9 @@ add_to_faction = NZL
 add_to_faction = WIN
 add_to_faction = GUY
 add_to_faction = BLZ
-add_to_faction = GRN
 add_to_faction = SAF
 add_to_faction = URG
 add_to_faction = HAI
-add_to_faction = SUR
-add_to_faction = FEN
 add_to_faction = FAR
 add_to_faction = LIB
 add_to_faction = MDI
@@ -40,6 +37,7 @@ add_to_faction = SHL
 add_to_faction = VEN
 add_to_faction = NAM
 add_to_faction = CUB
+add_to_faction = ELS
 
 country_event = {
     id = USA_anm_events.2
@@ -74,6 +72,21 @@ if = {
 		puppet = GUY
 	}
 }
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = ELS
+		autonomy_state = autonomy_liberated_government
+	}
+	else = {
+		puppet = ELS
+	}
+}
 
 create_import = {
     resource = rubber
@@ -91,6 +104,10 @@ set_politics = {
 	elections_allowed = yes
 
 }
+
+#econtype
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_American_Capitalism }
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
 
 set_popularities = {
     communist = 0
@@ -671,9 +688,6 @@ if = {
 }
 
 set_country_flag = HAS_ECON_SPHERE
-
-set_variable = { TNO_economy_type = 1 }
-set_variable = { TNO_economy_subtype = 1 }
 
 #Starting Equipment
 add_equipment_to_stockpile = {

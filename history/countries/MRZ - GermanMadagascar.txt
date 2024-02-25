@@ -10,7 +10,6 @@ add_ideas = {
 	### Faction ###
 	Pakt_Paktkommission
 	### National Spirit ###
-	MRZ_lighter_shade_of_black
 	### Ministers### 
 	MRZ_Pierre_de_Chevigne_hog
 	MRZ_Gunther_Rall_sec
@@ -62,6 +61,11 @@ set_politics = {
 			election_frequency = 48
 			elections_allowed = no
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }
+
 set_popularities = {
 			despotism = 60
 			national_socialism = 12
