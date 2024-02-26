@@ -1,3 +1,136 @@
+ANM_ger_debug_category = {
+    
+    show_hide_german_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				has_country_flag = hide_german_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				NOT = { has_country_flag = hide_german_debug_decisions }
+			}
+		}
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision show_hide_german_debug_decisions"
+			if = {
+				limit = { has_country_flag = hide_german_debug_decisions }
+				clr_country_flag = hide_german_debug_decisions
+			}
+			else = {
+				set_country_flag = hide_german_debug_decisions
+			}
+		}
+	}
+	
+	debug_trigger_ger_load_phase_2 = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_phase_2"
+			country_event = {
+				id = GER_debug_event.3
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_trigger_ger_load_iranian_civil_war = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_iranian_civil_war"
+			country_event = {
+				id = GER_debug_event.4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_trigger_ger_load_finnish_civil_war = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_finnish_civil_war"
+			country_event = {
+				id = GER_debug_event.5
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_trigger_ger_load_phase_2_finale = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_phase_2_finale"
+			country_event = {
+				id = GER_debug_event.6
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_trigger_ger_load_phase_3 = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_phase_3"
+			country_event = {
+				id = GER_debug_event.7
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
 ANM_ger_nsdap_category = {
 	
 	ANM_ger_decentralize_the_party = {
