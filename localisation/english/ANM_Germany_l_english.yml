@@ -367,6 +367,7 @@
  ANM_ger_nsdap_category_desc: "The NSDAP, the National Socialist German Workers Party, is the most powerful institution in the entirety of German History. Yet it could not be more divided as the loyalty torwards our unifying figure, the Führer, sinks to unimaganible depths.\n\nBroader NSDAP Loyalty: [getGERnsdappartystructure]([?GER_ANM_party_leaning|-0])\n\nParty Leadership Influence:\n[getGERnsdappartyleadershipinfluence]([?GER_ANM_party_leadership_influnce|-0])\nParty Leadership Loyalty:\n[getGERnsdappartyleadershipleaning]([?GER_ANM_party_leadership_leaning|-0])\n\nNational Party Influence:\n[getGERnsdapcorepartyinfluence]([?GER_ANM_upper_party_influence|-0])\nNational Party Loyalty:\n[getGERnsdapcorepartyleaning]([?GER_ANM_upper_party_leaning|-0])\n\nRegional Party Influence:\n[getGERnsdapinnerpartyinfluence]([?GER_ANM_middle_party_influence|-0])\nRegional Party Loyalty:\n[getGERnsdapinnerpartyleaning]([?GER_ANM_middle_party_leaning|-0])\n\nDistrict Party Influence:\n[getGERnsdaplowerpartyinfluence]([?GER_ANM_lower_party_influence|-0])\nDisctrict Party Loyalty:\n[getGERnsdaplowerpartyleaning]([?GER_ANM_lower_party_leaning|-0])\n"
  ANM_GER_Europakt_category: "E.P. Wirtschaftsraum"
  ANM_GER_Europakt_category_desc: "The Europakt-connected economies."
+ ANM_ger_debug_category: "German Debug Decisions"
 
 ## Decisions ##
  ANM_ger_decentralize_the_party: "Decentralize NSDAP Hierarchy"
@@ -387,6 +388,13 @@
 
  ANM_GER_ireland: "Visit Ireland"
  ANM_GER_ireland_desc: "Why would you ever do this?"
+
+ show_hide_german_debug_decisions: "Show/Hide German Debug Decisions"
+ debug_trigger_ger_load_phase_2: "Load Phase 2"
+ debug_trigger_ger_load_iranian_civil_war: "Load Iranian Civil War"
+ debug_trigger_ger_load_finnish_civil_war: "Load Finnish Civil War"
+ debug_trigger_ger_load_phase_2_finale: "Load Phase 2 Finale"
+ debug_trigger_ger_load_phase_3: "Load Phase 3"
 
 
 ### Focus Trees ###
@@ -836,12 +844,34 @@
  GER_focus_event.60.desc: " "
  GER_focus_event.60.a: " "
  
- 
  # Misc. Story Events #
  GER_misc_main_event.1.t: "Keeping the Status Quo"
  GER_misc_main_event.1.desc: "Sighing with relief, Albert Speer pecked the buttons of the same telephone used by his father. For once, luck seemed to be on his side.\n     Ireland had never been that close to Germania, but ever since the end of WWII, the small island nation, led by the conservative Fianna Fáil party, had been one of the few democracies willing to work with the Reich. Under Taoiseach Bertie Ahern, however, Fianna Fáil had become unabashedly corrupt, leading to the collapse of his Government and the call for snap elections.\n     Speer rubbed his eyes. He’d lost plenty of sleep over the last few days, doing everything in his power to ensure that Fianna Fáil’s successor party, led by Micheál Martin, prevailed in the election. Should they fail, there was a real threat of Ireland distancing itself from the Europakt —  or even leaving the alliance altogether. The Fuhrer, already desperately digging himself out of a deep trench of unpopularity, simply couldn’t afford another diplomatic blunder.\n\n     “Herr Speer! Always a pleasure.” Micheál Martin’s voice rang out through the ancient phone’s tinny speaker, breaking Speer’s train of thought. “What can I do for you?”\n     Speer smiled — just the man he wanted to hear. “Just calling to congratulate you on your hard-earned promotion.” Reclining, the Fuhrer tapped on his desk, glancing at the Emerald Isle on the large map of Europe hanging on his wall. “I certainly didn’t expect you to ascend to the top job this way, though.”\n     Martin laughed. “You and me both.”\n     “I’m just thrilled to have someone of your skill leading the helm in Ireland. I trust that you will continue the prosperous partnership between our two countries, yes?”\n     “I—” An unnatural pause interrupted Martin’s reply. “— Yes. Of course.”\n\n     Speer could tell Martin was hesitant. If Ireland was anything, it was fiercely independent. “Well, I’m sure you’ve got plenty of work to do, so I won’t keep you too long.” Speer said, quickly changing the subject. He glanced out his window, spotting the Volkshalle gleaming beneath a cloudless sky. “Perhaps you’ll make a visit to Germania in the near future? The weather is certainly more pleasant in my neck of the woods.”\n     “You’ve got me there.” Martin laughed. “The constant rain over here has certainly gotten old. I’d be eager to jet to the north pole at this point.”"
  GER_misc_main_event.1.a: "“You know where to reach me. We’ll make your visit a pleasant one.”"
 
+ # Debug Events #
+ GER_debug_event.3.t: "LOADING..."
+ GER_debug_event.3.desc: "This is a notice from the Reich Security Bureau (RSB) monitoring your online activity. Your recent actions have been flagged as potential violations of classified information dissemination protocols outlined in Directive 8742.\n\nContinued disregard for these regulations may result in severe consequences, including but not limited to: interrogation by RSB agents, suspension of Weltznet privileges, and possible imprisonment in a re-education facility.\n\nTo avoid further repercussions, it is imperative that you cease and desist any activities deemed in violation of Reich cyber laws immediately. Failure to comply will be met with swift and decisive action by the authorities.\n\nHeed this warning and abide by the laws of the Greater Germanic Reich to ensure your safety and security within our nation."
+ GER_debug_event.3.a: "EXECUTE?"
+ GER_debug_event.4.t: "LOADING..."
+ GER_debug_event.4.desc: "This is a notice from the Reich Security Bureau (RSB) monitoring your online activity. Your recent actions have been flagged as potential violations of classified information dissemination protocols outlined in Directive 8742.\n\nContinued disregard for these regulations may result in severe consequences, including but not limited to: interrogation by RSB agents, suspension of Weltznet privileges, and possible imprisonment in a re-education facility.\n\nTo avoid further repercussions, it is imperative that you cease and desist any activities deemed in violation of Reich cyber laws immediately. Failure to comply will be met with swift and decisive action by the authorities.\n\nHeed this warning and abide by the laws of the Greater Germanic Reich to ensure your safety and security within our nation."
+ GER_debug_event.4.a: "EXECUTE?"
+ GER_debug_event.5.t: "LOADING..."
+ GER_debug_event.5.desc: "This is a notice from the Reich Security Bureau (RSB) monitoring your online activity. Your recent actions have been flagged as potential violations of classified information dissemination protocols outlined in Directive 8742.\n\nContinued disregard for these regulations may result in severe consequences, including but not limited to: interrogation by RSB agents, suspension of Weltznet privileges, and possible imprisonment in a re-education facility.\n\nTo avoid further repercussions, it is imperative that you cease and desist any activities deemed in violation of Reich cyber laws immediately. Failure to comply will be met with swift and decisive action by the authorities.\n\nHeed this warning and abide by the laws of the Greater Germanic Reich to ensure your safety and security within our nation."
+ GER_debug_event.5.a: "EXECUTE?"
+ GER_debug_event.6.t: "LOADING..."
+ GER_debug_event.6.desc: "This is a notice from the Reich Security Bureau (RSB) monitoring your online activity. Your recent actions have been flagged as potential violations of classified information dissemination protocols outlined in Directive 8742.\n\nContinued disregard for these regulations may result in severe consequences, including but not limited to: interrogation by RSB agents, suspension of Weltznet privileges, and possible imprisonment in a re-education facility.\n\nTo avoid further repercussions, it is imperative that you cease and desist any activities deemed in violation of Reich cyber laws immediately. Failure to comply will be met with swift and decisive action by the authorities.\n\nHeed this warning and abide by the laws of the Greater Germanic Reich to ensure your safety and security within our nation."
+ GER_debug_event.6.a: "EXECUTE?"
+ GER_debug_event.7.t: "LOADING..."
+ GER_debug_event.7.desc: "This is a notice from the Reich Security Bureau (RSB) monitoring your online activity. Your recent actions have been flagged as potential violations of classified information dissemination protocols outlined in Directive 8742.\n\nContinued disregard for these regulations may result in severe consequences, including but not limited to: interrogation by RSB agents, suspension of Weltznet privileges, and possible imprisonment in a re-education facility.\n\nTo avoid further repercussions, it is imperative that you cease and desist any activities deemed in violation of Reich cyber laws immediately. Failure to comply will be met with swift and decisive action by the authorities.\n\nHeed this warning and abide by the laws of the Greater Germanic Reich to ensure your safety and security within our nation."
+ GER_debug_event.7.a: "EXECUTE?"
+ GER_debug_event.9.t: "Victory over the Ivans"
+ GER_debug_event.9.desc: "We're barack, Speerbros"
+ GER_debug_event.9.a: "Decisive Victory"
+ GER_debug_event.9.b: "Partial Victory"
+ GER_debug_event.9.c: "Partial Victory (excl. Finland)"
+ GER_debug_event.9.d: "Stalemate"
+ 
  # World News Events #
  WORLD.18186.t: "Nuclear Fusion Cracked!"
  WORLD.18186.desc: "Hours ago, German representatives from the European Commission of Collaborative Research announced the successful development of the world’s first fusion-powered nuclear reactor on Pionier, Germany’s moonbase.\n\nEfforts to crack the golden goose of nuclear fusion have long been written off as an impossible feat, but the rush to claim credit for the discovery suggests that theory has at last become reality. Compared to existing nuclear power plants, the newly-discovered method would produce thousands of volts with extreme efficiency, powering entire provinces with little effort.\n\nThough the astounding scientific achievement has been met with applause from the international scientific community, many OFN-aligned leaders have reacted with shock. Unconfirmed reports suggest that the United States plans to revitalize previously-unsuccessful attempts to create their own fusion program."
