@@ -390,12 +390,19 @@
  ANM_GER_ireland_desc: "Why would you ever do this?"
 
  show_hide_german_debug_decisions: "Show/Hide German Debug Decisions"
- debug_trigger_ger_load_phase_2: "Load Phase 2"
- debug_trigger_ger_load_iranian_civil_war: "Load Iranian Civil War"
- debug_trigger_ger_load_finnish_civil_war: "Load Finnish Civil War"
- debug_trigger_ger_load_phase_2_finale: "Load Phase 2 Finale"
- debug_trigger_ger_load_phase_3: "Load Phase 3"
-
+ debug_trigger_ger_load_phase_2: "Load Phase 2 - Main Focus Tree"
+ debug_trigger_ger_load_iranian_civil_war: "Load Phase 2 - ICW Focus Tree"
+ debug_trigger_ger_load_finnish_civil_war: "Load Phase 2 - FCW Focus Tree"
+ debug_trigger_ger_load_phase_2_finale: "Load Phase 2 - 3WRW Focus Tree"
+ debug_trigger_ger_load_phase_3: "Load Phase 3 - Outro Demo"
+ debug_trigger_ger_homel_gouvernement_russland: "MB Homel -> Gouvernement Russland"
+ debug_trigger_ger_homel_gouvernement_russland_desc: "Cosmetic change that will occur to MB Homel after the failure of the Euromark in 1997"
+ debug_trigger_ger_gouvernement_russland_victory_war: "Gouvernement Russland: Decisive Victory"
+ debug_trigger_ger_gouvernement_russland_victory_war_desc: "Only launch if Russland won the war decisively"
+ debug_trigger_ger_gouvernement_russland_defeat_war: "Gouvernement Russland: Partial Victory"
+ debug_trigger_ger_gouvernement_russland_defeat_war: "Only launch if Russland won the war partially"
+ debug_trigger_ger_finland_victory_3wrw: "Finland: Victory in 3WRW" 
+ debug_trigger_ger_finland_victory_3wrw_desc: "Only launch if German-alligned Finland won the Civil War"
 
 ### Focus Trees ###
  ## Phase 1 - Starting Tree ##
@@ -869,8 +876,11 @@
  GER_debug_event.9.desc: "We're barack, Speerbros"
  GER_debug_event.9.a: "Decisive Victory"
  GER_debug_event.9.b: "Partial Victory"
- GER_debug_event.9.c: "Partial Victory (excl. Finland)"
- GER_debug_event.9.d: "Stalemate"
+ GER_debug_event.9.c: "Stalemate"
+ GER_debug_event.11.t: "The future of Russland"
+ GER_debug_event.11.desc: "What kind of government will take control over Russland?"
+ GER_debug_event.11.a: "National Socialism"
+ GER_debug_event.11.b: "Despotism"
  
  # World News Events #
  WORLD.18186.t: "Nuclear Fusion Cracked!"
