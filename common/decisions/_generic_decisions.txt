@@ -48,6 +48,27 @@ global_debug_decisions = {
 		}
 	}
 
+    debug_trigger_ger_3wrw_victory = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_3wrw_victory"
+			country_event = {
+				id = GER_debug_event.9
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
     debug_trigger_sov_3wrw_victory = {
 		icon = GFX_decision_generic_visibility
 

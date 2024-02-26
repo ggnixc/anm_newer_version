@@ -1,10 +1,11 @@
-﻿capital = 914
+﻿capital = 294
 
 set_oob = "OMA_1962"
 
+recruit_character = OMA_Layla_Fakhro
 
 set_politics = {	
-	ruling_party = despotism
+	ruling_party = communist
 	last_election = "1933.2.16"
 	election_frequency = 36
 	elections_allowed = no
@@ -13,31 +14,22 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
+    communist = 74
     ultranationalism = 0
-    socialist = 26
+    socialist = 16
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
     conservatism = 0
     paternalism = 0
-    despotism = 74
+    despotism = 10
     fascism = 0
 }
 
-create_country_leader = {
-	name = "Ghalib al-Hinai"
-	desc = " "
-	picture = "Portrait_OMA_Ghalib_al_Hinai.dds"
-	expire = "2999.1.1"
-	ideology = despotism_theocracy_subtype
-	traits = { }
-}
-
 add_ideas = {
-	
+	COM_observer
 	#political#
-	tno_political_parties_controlled_opposition
+	tno_political_parties_one_party_state
 	tno_religious_rights_state_religion
 	tno_trade_unions_state_controlled
 	tno_immigration_quota_immigration
