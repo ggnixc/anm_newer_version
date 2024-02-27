@@ -1,0 +1,125 @@
+### Phase 3 - Demo Closure ###
+shared_focus = {
+	id = GER_the_beasts_depart
+
+	x = 9
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_patrol_corpse_littered_battlefields
+	relative_position_id = GER_the_beasts_depart
+	prerequisite = {
+		focus = GER_the_beasts_depart
+	}
+	x = -1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_refit_the_wehrmacht
+	relative_position_id = GER_patrol_corpse_littered_battlefields
+	prerequisite = {
+		focus = GER_patrol_corpse_littered_battlefields
+	}
+	x = -1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_changes_above
+	relative_position_id = GER_the_beasts_depart
+	prerequisite = {
+		focus = GER_the_beasts_depart
+	}
+	x = 1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_the_reichtags_reaction
+	relative_position_id = GER_changes_above
+	prerequisite = {
+		focus = GER_changes_above
+	}
+	x = 1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_a_move_against_nazism
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_reach_into_the_past }
+	mutually_exclusive = { focus = GER_like_father_like_son }
+	x = -5
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_like_father_like_son
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_reach_into_the_past }
+	mutually_exclusive = { focus = GER_a_move_against_nazism }
+	x = -2
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_reach_into_the_past
+	relative_position_id = GER_the_reichtags_reaction
+	prerequisite = {
+		focus = GER_the_reichtags_reaction
+	}
+	prerequisite = {
+		focus = GER_refit_the_wehrmacht
+	}
+	mutually_exclusive = { focus = GER_like_father_like_son }
+	mutually_exclusive = { focus = GER_a_move_against_nazism }
+	x = 1
+	y = 1
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}

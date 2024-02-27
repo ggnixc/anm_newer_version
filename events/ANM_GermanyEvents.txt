@@ -687,6 +687,9 @@ country_event = { #Event for ‘Does It, Really? 1/2
 
 	option = { 
 		name = GER_focus_event.21.a
+		hidden_effect = {
+			country_event = GER_focus_event.22
+		}
 	}
 }
 country_event = { #Event for ‘Does It, Really? 2/2
@@ -804,7 +807,7 @@ country_event = { #Event for ‘Squeeze the Megaprojects’
 	id = GER_focus_event.30 
 	title = GER_focus_event.30.t
 	desc = GER_focus_event.30.desc
-	picture = GFX_anm_GER_broken_euromark
+	picture = GFX_anm_GER_the_euromark
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -872,11 +875,11 @@ country_event = { #Event for ‘The Ukrainian Harvests’
 		custom_effect_tooltip = GER_change_popularity_national_socialism_1
 	}
 }
-country_event = { #Event for ‘The R&D Question’
+country_event = { #Event for ‘The Price of Loyalty’
 	id = GER_focus_event.35
 	title = GER_focus_event.35.t
 	desc = GER_focus_event.35.desc
-	picture = GFX_anm_GER_broken_nazi_eagle
+	picture = GFX_anm_GER_professional_disagreement
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -966,6 +969,12 @@ country_event = { #Event for ‘The Black Stain of Europe/ Reevaluate the Euroma
 	option = { 
 		name = GER_focus_event.41.a
 		custom_effect_tooltip = GER_five_four_tt
+		hidden_effect = { 
+			country_event = { 
+				id = GER_focus_event.42
+				days = 1
+			}
+		}
 	}
 }
 country_event = { #Event for ‘The Black Stain of Europe/ Reevaluate the Euromark/ The Looming Internet Threat’ (3)
@@ -1034,6 +1043,12 @@ country_event = { #Event for ‘The Black Stain of Europe/ Reevaluate the Euroma
 	option = { 
 		name = GER_focus_event.46.a
 		custom_effect_tooltip = GER_five_four_tt
+		hidden_effect = { 
+			country_event = { 
+				id = GER_focus_event.47
+				days = 1
+			}
+		}
 	}
 }
 country_event = { #Event for ‘The Black Stain of Europe/ Reevaluate the Euromark/ The Looming Internet Threat’ (3):
@@ -1198,17 +1213,18 @@ country_event = { #Event for ‘The French State’
 		custom_effect_tooltip = GER_the_shadows_shadow_b_tt
 	}
 }
-country_event = { #
+country_event = { #Event for ‘The Last Resort’
 	id = GER_focus_event.59
 	title = GER_focus_event.59.t
 	desc = GER_focus_event.59.desc
-	picture = GFX_anm_GER_
+	picture = GFX_anm_GER_protests_failed_diplomacy
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
 		name = GER_focus_event.59.a
+		custom_effect_tooltip = GER_playing_with_fire_tt
 	}
 }
 country_event = { #
