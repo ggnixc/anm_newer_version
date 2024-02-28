@@ -26,64 +26,7 @@ ANM_ger_debug_category = {
 		}
 	}
 	
-	debug_trigger_ger_load_phase_2 = {
-		icon = GFX_decision_generic_visibility
-
-		available = {
-			is_ai = no
-		}
-		visible = {
-			NOT = { has_country_flag = hide_german_debug_decisions }
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_phase_2"
-			ANM_GER_Focus_Phase_2 = yes
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	debug_trigger_ger_load_iranian_civil_war = {
-		icon = GFX_decision_generic_visibility
-
-		available = {
-			is_ai = no
-		}
-		visible = {
-			NOT = { has_country_flag = hide_german_debug_decisions }
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_iranian_civil_war"
-			ANM_GER_Focus_Phase_2_ICW = yes
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	debug_trigger_ger_load_finnish_civil_war = {
-		icon = GFX_decision_generic_visibility
-
-		available = {
-			is_ai = no
-		}
-		visible = {
-			NOT = { has_country_flag = hide_german_debug_decisions }
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_finnish_civil_war"
-			ANM_GER_Focus_Phase_2_FCW = yes
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	debug_trigger_ger_load_phase_2_finale = {
+	debug_trigger_ger_load_phase_2_complete = {
 		icon = GFX_decision_generic_visibility
 
 		available = {
