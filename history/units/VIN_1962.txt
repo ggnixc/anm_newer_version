@@ -37,6 +37,24 @@ division_template = {
 	}
 }
 division_template = {
+	name = "Motorized Division"
+	regiments = {
+		APC = { x = 0 y = 0 }
+		APC = { x = 0 y = 1 }
+		APC = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
 	name = "Marine Division"
 	regiments = {
 		marine = { x = 0 y = 0 }
@@ -50,7 +68,26 @@ division_template = {
 		artillery = { x = 0 y = 0 }
 		engineer = { x = 0 y = 1 }
 	}
+	priority = 2
 }
+division_template = {
+	name = "Airborne Division"
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+		paratrooper = { x = 1 y = 2 }
+	}
+	support = {
+	    engineer = { x = 0 y = 0 }
+	    #recon = { x = 0 y = 2 } 
+		logistics_company = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
 division_template = {
 	name = "Armored Division"
 	regiments = {
@@ -73,5 +110,158 @@ division_template = {
 }
 
 units = {
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4401
+		division_template = "Marine Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4401
+		division_template = "Armored Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4401
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4401
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4341
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 4341
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 12232
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 12232
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10162
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1400
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4401
+		division_template = "Motorized Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 4401
+		division_template = "Motorized Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4401
+		division_template = "Motorized Division"
+		start_experience_factor = 0.1
+	}
+division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4401
+		division_template = "Airborne Division"
+		start_experience_factor = 0.5
+	}
+}
 
+air_wings = {
+	4401 = name = "Jet Fighter Air Wing"
+		jet_fighter_equipment_1 = {		
+			owner = "VIN" 
+			amount = 45
+		}
+name = "CAS Air Wing"
+		jet_CAS_equipment_1 = {		
+			owner = "VIN" 
+			amount = 35
+		}
+name = "Tactical Bombers"	
+		jet_tac_bomber_equipment_2 = {		
+			owner = "VIN" 
+			amount = 15
+		}
+name = "Transport"
+		transport_plane_equipment_2 = {
+			owner = "VIN"
+			amount = 10
+		}
+name = "Naval Bomber Wing"
+		cv_nav_bomber_equipment_1 = {
+			owner = "VIN"
+			amount = 20
+		}
 }
