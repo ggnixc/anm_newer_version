@@ -1,4 +1,4 @@
-version="1.13"
+version="1.14"
 tags={
 	"Alternative History"
 }
@@ -31,5 +31,5 @@ replace_path="common/units/codenames_operatives"
 replace_path="common/units/equipment"
 replace_path="portraits"
 name="A New Millennium DEV VERSION"
-supported_version="1.13.*"
+supported_version="1.14.*"
 picture="thumbnail.png"

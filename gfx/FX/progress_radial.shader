@@ -53,7 +53,9 @@ VertexShader =
 {
 	MainCode VertexShader
 	[[
-		VS_OUTPUT main(const VS_INPUT v ) {
+		
+		VS_OUTPUT main(const VS_INPUT v )
+		{
 			VS_OUTPUT Out;
 		   	Out.vPosition  = mul( WorldViewProjectionMatrix, v.vPosition );
 			Out.vTexCoord0  = v.vTexCoord;
@@ -76,6 +78,7 @@ PixelShader =
 			else
 				return vSecondColor;
 		}
+		
 	]]
 
 	MainCode PixelTexture
@@ -91,6 +94,7 @@ PixelShader =
 			float4 vTwo = tex2D( TextureTwo, v.vTexCoord0.xy );
 			return lerp( vOne, vTwo, vLerp );
 		}
+		
 	]]
 }
 
