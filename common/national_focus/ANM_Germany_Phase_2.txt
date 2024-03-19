@@ -1,0 +1,1183 @@
+### Phase 2 - Iranian Civil War Tree ###
+shared_focus = {
+	id = GER_the_troubled_empire
+	icon = GFX_GER_the_troubled_empire
+	x = 5
+	y = 9
+	cost = 1.43
+
+	#allow_branch = {
+	#	has_global_flag = iranian_civil_war
+	#}
+
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_secure_our_assets
+	icon = GFX_GER_secure_our_assets
+	relative_position_id = GER_the_troubled_empire
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_troubled_empire
+	}
+	mutually_exclusive = {
+		focus = GER_throw_a_lifeline
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.53
+	}
+}
+shared_focus = {
+	id = GER_throw_a_lifeline
+	icon = GFX_GER_throw_a_lifeline
+	relative_position_id = GER_the_troubled_empire
+	x = 1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_troubled_empire
+	}
+	mutually_exclusive = {
+		focus = GER_secure_our_assets
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.54
+	}
+}
+shared_focus = {
+	id = GER_evacuate_the_embassy
+	icon = GFX_GER_evacuate_the_embassy
+	relative_position_id = GER_secure_our_assets
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_secure_our_assets
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.55
+	}
+}
+shared_focus = {
+	id = GER_provide_humanitarian_aid
+	icon = GFX_GER_provide_humanitarian_aid
+	relative_position_id = GER_evacuate_the_embassy
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_evacuate_the_embassy
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_funding_the_war_industry
+	icon = GFX_GER_funding_the_war_industry
+	relative_position_id = GER_the_troubled_empire
+	x = 0
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_secure_our_assets
+		focus = GER_throw_a_lifeline
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_shipment_of_civilian_goods
+	icon = GFX_GER_shipment_of_civilian_goods
+	relative_position_id = GER_funding_the_war_industry
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_funding_the_war_industry
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.57
+	}
+}
+shared_focus = {
+	id = GER_send_fresh_recruits
+	icon = GFX_GER_send_fresh_recruits
+	relative_position_id = GER_throw_a_lifeline
+	x = 1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_throw_a_lifeline
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.56
+	}
+}
+shared_focus = {
+	id = GER_a_technological_advantage
+	icon = GFX_GER_a_technological_advantage
+	relative_position_id = GER_send_fresh_recruits
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_send_fresh_recruits
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_war_ruins_what_peace_built
+	icon = GFX_GER_war_ruins_what_peace_built
+	relative_position_id = GER_shipment_of_civilian_goods
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_provide_humanitarian_aid
+		focus = GER_shipment_of_civilian_goods
+		focus = GER_a_technological_advantage
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+
+###  Phase 2 -  Main Tree ###
+shared_focus = {
+	id = GER_the_euromark_triumphs
+	icon = GFX_GER_The_Euromark_triumphs
+	x = 13
+	y = 1
+	cost = 4.00
+	prerequisite = {
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_does_it_really
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_The_Euromark_fail
+	x = 0
+	y = 1
+	cost = 4.00
+	prerequisite = {
+		focus = GER_the_euromark_triumphs
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.21
+	}
+}
+shared_focus = {
+	id = GER_red_elephant
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_red_elephant
+	x = -6
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_does_it_really
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.23
+	}
+}
+shared_focus = {
+	id = GER_finalize_the_ostwall
+	relative_position_id = GER_red_elephant
+	icon = GFX_GER_finalize_the_ostwall
+	x = -2
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_red_elephant
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.26
+	}
+}
+shared_focus = {
+	id = GER_reichslander_directive
+	relative_position_id = GER_red_elephant
+	icon = GFX_GER_reichslander_directive
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_red_elephant
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_prepare_the_wehrmacht
+	relative_position_id = GER_red_elephant
+	icon = GFX_GER_prepare_the_wehrmacht
+	x = 2
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_red_elephant
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.27
+	}
+}
+shared_focus = {
+	id = GER_pen_mightier_then_sword
+	relative_position_id = GER_red_elephant
+	icon = GFX_GER_pen_better_than_sword
+	x = -1
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_prepare_the_wehrmacht
+	}
+	prerequisite = {
+		focus = GER_reichslander_directive
+	}
+	prerequisite = {
+		focus = GER_finalize_the_ostwall
+	}
+	mutually_exclusive = { focus = GER_no_time_for_diplomacy }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.24
+	}
+}
+shared_focus = {
+	id = GER_last_resort
+	relative_position_id = GER_red_elephant
+	icon = GFX_GER_last_resort
+	x = -1
+	y = 3
+	cost = 3.00
+	prerequisite = {
+		focus = GER_pen_mightier_then_sword
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.59
+	}
+}
+shared_focus = {
+	id = GER_no_time_for_diplomacy
+	relative_position_id = GER_red_elephant
+	icon = GFX_GER_no_time_for_diplomacy
+	x = 1
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_prepare_the_wehrmacht 
+	}
+	prerequisite = {
+		focus = GER_reichslander_directive
+	}
+	prerequisite = {
+		focus = GER_finalize_the_ostwall
+	}
+	mutually_exclusive = { focus = GER_pen_mightier_then_sword }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.25
+	}
+}
+shared_focus = {
+	id = GER_the_r_and_d_question
+	relative_position_id = GER_red_elephant
+	icon = GFX_GER_r_and_d_question
+	x = 3
+	y = 3
+	cost = 3.00
+	prerequisite = {
+		focus = GER_no_time_for_diplomacy
+	}
+	prerequisite = {
+		focus = GER_redistribute_infrastructure_funds
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.35
+	}
+}
+shared_focus = {
+	id = GER_pull_fundings_from_esro
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_pull_fundings_from_esro
+	x = -1
+	y = 2
+	cost = 5.00
+	prerequisite = {
+		focus = GER_does_it_really
+	}
+	mutually_exclusive = { focus = GER_reduce_survelance_budget }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.28
+	}
+}
+shared_focus = {
+	id = GER_reduce_survelance_budget
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_reduce_state_survailance_budget
+	x = 1
+	y = 2
+	cost = 5.00
+	prerequisite = {
+		focus = GER_does_it_really
+	}
+	mutually_exclusive = { focus = GER_pull_fundings_from_esro }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.29
+	}
+}
+shared_focus = {
+	id = GER_squeeze_megaprojects
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_sweeze_the_megaprojects
+	x = 0
+	y = 3
+	cost = 5.00
+	prerequisite = {
+		focus = GER_reduce_survelance_budget focus = GER_pull_fundings_from_esro
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.30
+	}
+}
+shared_focus = {
+	id = GER_redistribute_infrastructure_funds
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_redistribute_infrastructure_funds
+	x = -1
+	y = 4
+	cost = 5.00
+	prerequisite = {
+		focus = GER_squeeze_megaprojects
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_minimize_redundant_military_budgets
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_minimize_redundant_military_budgets
+	x = 1
+	y = 4
+	cost = 5.00
+	prerequisite = {
+		focus = GER_squeeze_megaprojects
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_balance_the_europakt_partnership
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_balance_europakt_partnership
+	x = 3
+	y = 5
+	cost = 3.00
+	prerequisite = {
+		focus = GER_minimize_redundant_military_budgets
+	}
+	prerequisite = {
+		focus = GER_the_atlantic_archipelago
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.36
+	}
+}
+shared_focus = {
+	id = GER_our_central_european_allies
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_central_europe
+	x = 6
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_does_it_really
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.31
+	}
+}
+shared_focus = {
+	id = GER_the_french_state
+	relative_position_id = GER_our_central_european_allies
+	icon = GFX_GER_the_french_state
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_our_central_european_allies
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.58
+	}
+}
+shared_focus = {
+	id = GER_the_atlantic_archipelago
+	relative_position_id = GER_our_central_european_allies
+	icon = GFX_GER_the_atlantic_archapelago
+	x = -1
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_french_state
+	}
+	mutually_exclusive = { focus = GER_ukranian_harvests }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.33
+	}
+}
+shared_focus = {
+	id = GER_kaukasian_riches
+	relative_position_id = GER_our_central_european_allies
+	icon = GFX_GER_the_kaukasian_riches
+	x = 1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_our_central_european_allies
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.32
+	}
+}
+shared_focus = {
+	id = GER_ukranian_harvests
+	relative_position_id = GER_our_central_european_allies
+	icon = GFX_GER_the_ukrainian_harvest
+	x = 1
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_kaukasian_riches
+	}
+	mutually_exclusive = { focus = GER_the_atlantic_archipelago }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.34
+	}
+}
+shared_focus = {
+	id = GER_feed_the_war_machine
+	relative_position_id = GER_our_central_european_allies
+	icon = GFX_GER_feed_the_war_machine
+	x = 1
+	y = 3
+	cost = 3.00
+	prerequisite = {
+		focus = GER_ukranian_harvests
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.37
+	}
+}
+shared_focus = {
+	id = GER_the_65th_nuremberg_party_congress
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_65th_nuremberg_congress
+	x = -1
+	y = 6
+	cost = 5.00
+	prerequisite = {
+		focus = GER_last_resort focus = GER_the_r_and_d_question
+	}
+	prerequisite = {
+		focus = GER_balance_the_europakt_partnership focus = GER_feed_the_war_machine
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	mutually_exclusive = { focus = GER_the_europakts_second_summit }
+	select_effect = { 
+		country_event = GER_focus_event.38
+	}
+	completion_reward = {
+		country_event = GER_focus_event.39
+	}
+}
+shared_focus = {
+	id = GER_the_europakts_second_summit
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_second_europakt_summit
+	x = 1
+	y = 6
+	cost = 5.00
+	prerequisite = {
+		focus = GER_balance_the_europakt_partnership focus = GER_feed_the_war_machine
+	}
+	prerequisite = {
+		focus = GER_last_resort focus = GER_the_r_and_d_question
+	}
+	mutually_exclusive = { focus = GER_the_65th_nuremberg_party_congress }
+	ai_will_do = {
+		factor = 1
+	}
+	select_effect = { 
+		country_event = GER_focus_event.43
+	}
+	completion_reward = {
+		country_event = GER_focus_event.44
+	}
+}
+shared_focus = {
+	id = GER_the_black_stain_of_europe
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_black_stain
+	x = -4
+	y = 7
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_europakts_second_summit focus = GER_the_65th_nuremberg_party_congress
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	select_effect = { 
+		if = { 
+			limit = { has_completed_focus = GER_the_65th_nuremberg_party_congress } 
+			country_event = {  
+				id = GER_focus_event.40
+				days = 3
+			} 
+		} 
+		else = { 
+			country_event = {  
+				id = GER_focus_event.45
+				days = 3
+			} 
+		}
+	}
+	completion_reward = {
+		if = { 
+			limit = { has_completed_focus = GER_the_65th_nuremberg_party_congress } 
+			country_event = GER_focus_event.41
+		} 
+		else = { 
+			has_completed_focus = GER_the_europakts_second_summit
+			country_event = GER_focus_event.46
+		}
+	}
+}
+shared_focus = {
+	id = GER_the_reichs_citizens
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_the_reichs_citizens
+	x = -3
+	y = 8
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_black_stain_of_europe
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_revaluate_the_euromark
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_revaluate_the_euromark
+	x = 0
+	y = 7
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_europakts_second_summit focus = GER_the_65th_nuremberg_party_congress
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	select_effect = { 
+		if = { 
+			limit = { has_completed_focus = GER_the_65th_nuremberg_party_congress } 
+			country_event = {  
+				id = GER_focus_event.40
+				days = 3
+			} 
+		} 
+		else = { 
+			country_event = {  
+				id = GER_focus_event.45
+				days = 3
+			} 
+		}
+	}
+	completion_reward = {
+		if = { 
+			limit = { has_completed_focus = GER_the_65th_nuremberg_party_congress } 
+			country_event = GER_focus_event.41
+		} 
+		else = { 
+			has_completed_focus = GER_the_europakts_second_summit
+			country_event = GER_focus_event.46
+		}
+	}
+}
+shared_focus = {
+	id = GER_the_resources_of_the_future
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_the_resources_of_the_future
+	x = 0
+	y = 8
+	cost = 3.00
+	prerequisite = {
+		focus = GER_revaluate_the_euromark
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_looming_threat_internet
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_looming_threat_internet
+	x = 4
+	y = 7
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_europakts_second_summit focus = GER_the_65th_nuremberg_party_congress
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	select_effect = { 
+		if = { 
+			limit = { has_completed_focus = GER_the_65th_nuremberg_party_congress } 
+			country_event = {  
+				id = GER_focus_event.40
+				days = 3
+			} 
+		} 
+		else = { 
+			country_event = {  
+				id = GER_focus_event.45
+				days = 3
+			} 
+		}
+	}
+	completion_reward = {
+		if = { 
+			limit = { has_completed_focus = GER_the_65th_nuremberg_party_congress } 
+			country_event = GER_focus_event.41
+		} 
+		else = { 
+			has_completed_focus = GER_the_europakts_second_summit
+			country_event = GER_focus_event.46
+		}
+	}
+}
+shared_focus = {
+	id = GER_the_purpose_of_education
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_purpose_of_education
+	x = 3
+	y = 8
+	cost = 3.00
+	prerequisite = {
+		focus = GER_looming_threat_internet
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_the_nsdap_prevails
+	relative_position_id = GER_the_euromark_triumphs
+	icon = GFX_GER_the_nsdap_prevails
+	x = 0
+	y = 9
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_reichs_citizens
+	}
+	prerequisite = {
+		focus = GER_the_purpose_of_education
+	}
+	prerequisite = {
+		focus = GER_the_resources_of_the_future
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+
+### Phase 2 - Finnish Civil War Tree ###
+shared_focus = {
+	id = GER_the_north_in_flames
+	icon = GFX_GER_the_north_in_flames
+	x = 21
+	y = 9
+	cost = 1.43
+	prerequisite = {
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.48
+	}
+}
+shared_focus = {
+	id = GER_cutting_the_route
+	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_cutting_the_route
+	x = -2
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_north_in_flames
+	}
+	mutually_exclusive = { focus = GER_there_is_no_lesser_evil }
+	mutually_exclusive = { focus = GER_ripping_the_reds }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_lappland_investigations
+	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_lappland_investigations
+	x = -1
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_cutting_the_route focus = GER_there_is_no_lesser_evil focus = GER_ripping_the_reds
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.49
+	}
+}
+shared_focus = {
+	id = GER_kuovola_offensive
+	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_kuovola_offensive
+	x = -1
+	y = 3
+	cost = 3.00
+	prerequisite = {
+		focus = GER_lappland_investigations
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.50
+	}
+}
+shared_focus = {
+	id = GER_there_is_no_lesser_evil
+	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_there_is_no_lesser_evil
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_north_in_flames
+	}
+	mutually_exclusive = { focus = GER_cutting_the_route }
+	mutually_exclusive = { focus = GER_ripping_the_reds }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_ripping_the_reds
+	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_ripping_the_reds
+	x = 2
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_the_north_in_flames
+	}
+	mutually_exclusive = { focus = GER_cutting_the_route }
+	mutually_exclusive = { focus = GER_there_is_no_lesser_evil }
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = GER_hindering_their_supplies
+	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_hindering_their_supplies
+	x = 1
+	y = 2
+	cost = 3.00
+	prerequisite = {
+		focus = GER_cutting_the_route focus = GER_there_is_no_lesser_evil focus = GER_ripping_the_reds
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.51
+	}
+}
+shared_focus = {
+	id = GER_operation_karelia
+	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_operation_karelia
+	x = 1
+	y = 3
+	cost = 3.00
+	prerequisite = {
+		focus = GER_hindering_their_supplies
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+		country_event = GER_focus_event.52
+	}
+}
+shared_focus = {
+	id = GER_a_war_among_brothers
+	relative_position_id = GER_the_north_in_flames
+	icon = GFX_GER_a_war_among_brothers
+	x = 0
+	y = 4
+	cost = 3.00
+	prerequisite = {
+		focus = GER_operation_karelia
+	}
+	prerequisite = {
+		focus = GER_kuovola_offensive
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	completion_reward = {
+	}
+}
+
+### Phase 2 - WRW Tree ###
+shared_focus = {
+	id = GER_a_nation_in_mourning
+	relative_position_id = GER_the_nsdap_prevails
+	icon = GFX_GER_a_nation_in_mourning
+	x = 0
+	y = 2
+	cost = 3.00
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+
+	}
+}
+shared_focus = {
+	id = GER_verbrechen_und_bestrafung
+	relative_position_id = GER_a_nation_in_mourning
+	icon = GFX_GER_verbrechen_und_bestrafung
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_a_nation_in_mourning
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_unleash_the_heer
+	relative_position_id = GER_verbrechen_und_bestrafung
+	icon = GFX_GER_unleash_the_heer
+	x = -4
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_verbrechen_und_bestrafung
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_put_krieg_in_kriegsmarine
+	relative_position_id = GER_unleash_the_heer
+	icon = GFX_GER_put_krieg_in_kriegsmarine
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_unleash_the_heer
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_hell_from_above
+	relative_position_id = GER_unleash_the_heer
+	icon = GFX_GER_hell_from_above
+	x = 1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_unleash_the_heer
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_uberraschen_ubernehmen
+	relative_position_id = GER_hell_from_above
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_hell_from_above
+	}
+	prerequisite = {
+		focus = GER_put_krieg_in_kriegsmarine
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_take_what_is_ours
+	relative_position_id = GER_verbrechen_und_bestrafung
+	icon = GFX_GER_take_what_is_ours
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_verbrechen_und_bestrafung
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_show_no_mercy
+	relative_position_id = GER_take_what_is_ours
+	icon = GFX_GER_show_no_mercy
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_take_what_is_ours
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_ubermenschen_ubernlegen
+	relative_position_id = GER_show_no_mercy
+	icon = GFX_GER_ubermenschen_ubernlegen
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_show_no_mercy
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_modern_warfare
+	relative_position_id = GER_verbrechen_und_bestrafung
+	icon = GFX_GER_modern_warfare
+	x = 4
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_verbrechen_und_bestrafung
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_unmanned_combat_vehicles
+	relative_position_id = GER_modern_warfare
+	icon = GFX_GER_unmanned_combat_vehicles
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_modern_warfare
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_soldiers_of_the_future
+	relative_position_id = GER_modern_warfare
+	icon = GFX_GER_soldiers_of_the_future
+	x = 1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_modern_warfare
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_ubermachtig_uberfallen
+	relative_position_id = GER_soldiers_of_the_future
+	icon = GFX_GER_ubermachtig_uberfallen
+	x = -1
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_soldiers_of_the_future
+	}
+	prerequisite = {
+		focus = GER_unmanned_combat_vehicles
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = GER_deutschland_deutschland_uber_allen
+	relative_position_id = GER_ubermenschen_ubernlegen
+	icon = GFX_GER_deutschland_deutschland_uber_allen
+	x = 0
+	y = 1
+	cost = 3.00
+	prerequisite = {
+		focus = GER_ubermenschen_ubernlegen
+	}
+	prerequisite = {
+		focus = GER_ubermachtig_uberfallen
+	}
+	prerequisite = {
+		focus = GER_uberraschen_ubernehmen
+	}
+	ai_will_do = { factor = 1 }
+	completion_reward = {
+		
+	}
+}

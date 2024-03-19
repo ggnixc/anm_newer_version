@@ -2,6 +2,7 @@
 
 set_oob = "ITA_1962"
 
+recruit_character = ITA_Gianfranco_Fini
 
 
 set_variable = {
@@ -207,29 +208,23 @@ if = {
 	}
 	set_autonomy = { target = SNM autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = CRO autonomy_state = autonomy_italy_reliant }
-	set_autonomy = { target = ALB autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = MNT autonomy_state = autonomy_italy_reliant }
-	set_autonomy = { target = TUN autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = MOC autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = GRE autonomy_state = autonomy_italy_reliant }
 	else = {
 		puppet = CRO
-		puppet = ALB
 		puppet = MNT
-		puppet = TUN
 		puppet = MOC
 		puppet = SNM
 		puppet = GRE
 	}
 }
 ita_parliament_gui_initial = yes
-create_faction = Concordato_di_Parma
+create_faction = Patto_di_Roma
 add_to_faction = ITA
 add_to_faction = CRO
 add_to_faction = SNM
-add_to_faction = ALB
 add_to_faction = MNT
-add_to_faction = TUN
 add_to_faction = GRE
 add_to_faction = MOC
 add_to_faction = EGY
@@ -433,16 +428,16 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Francesco Giulio Baghino"
-	desc = "POLITICS_FRANCESCOBAGHINO_DESC"
-	picture = "Portrait_ITA_Francesco_Baghino.dds"
-	expire = "2965.1.1"
-	ideology = fascism_subtype
-	traits = {
-
-	}
-}
+#create_country_leader = {
+#	name = "Francesco Giulio Baghino"
+#	desc = "POLITICS_FRANCESCOBAGHINO_DESC"
+#	picture = "Portrait_ITA_Francesco_Baghino.dds"
+#	expire = "2965.1.1"
+#	ideology = fascism_subtype
+#	traits = {
+#
+#	}
+#}
 create_country_leader = {
 	name = "Franco Freda"
 	desc = "POLITICS_FRANCO_FREDA_DESC"
@@ -1442,12 +1437,9 @@ if = {
 }
 
 add_ideas = {
-	ITA_King_Amedeo
-	ITA_recoveringeconomy
-	ITA_Collapsed_Hegemony
-	ITA_Strait_Bridge
-	ITA_computergoldenage
 	TRI_Founder_IT
+	ITA_Strait_Bridge
+	ITA_computergoldenage	
 	
 	#political#
 	tno_political_parties_controlled_opposition

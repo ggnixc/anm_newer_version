@@ -3,7 +3,6 @@ ideas = {
 	country = {
 		
 		### Starting Spirits ### 
-		
 		GER_the_puppet_fuehrer = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_puppet_fuehrer"}
 			allowed = {
@@ -92,8 +91,7 @@ ideas = {
 			}
 		}
 		
-		### Focus Tree Spirits ###
-		
+		### Phase 1 Focus Tree Spirits ###
 		GER_millenium_boom = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_millenium_boom"}
 			allowed = {
@@ -198,6 +196,114 @@ ideas = {
 			modifier = {
 				research_speed_factor = 0.05
 				stability_factor = -0.10
+			}
+		}
+
+		### Phase 2 Focus Tree Spirits ###
+		GER_Euromark_Stability_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_Euromark_Stability_1"}
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_GER_Euromark_Stability_1
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				production_factory_max_efficiency_factor = -0.5
+				production_factory_efficiency_gain_factor = -0.5
+				civilian_factory_use = 20
+				global_building_slots = -5
+				research_speed_factor = -0.5
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		GER_Euromark_Stability_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_Euromark_Stability_2"}
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_GER_Euromark_Stability_2
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				production_factory_max_efficiency_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.25
+				civilian_factory_use = 10
+				research_speed_factor = -0.25
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		GER_Euromark_Stability_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_Euromark_Stability_3"}
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_GER_Euromark_Stability_3
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				civilian_factory_use = 5
+				production_speed_buildings_factor = -0.10
+			}
+		}
+		GER_Euromark_Stability_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_Euromark_Stability_4"}
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_GER_Euromark_Stability_4
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		GER_Euromark_Stability_5 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_Euromark_Stability_5"}
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_GER_Euromark_Stability_5
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		GER_Euromark_Stability_6 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_Euromark_Stability_6"}
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_GER_Euromark_Stability_6
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				production_factory_max_efficiency_factor = 0.20
+				production_factory_efficiency_gain_factor = 0.20
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.10
+				base_fuel_gain_factor = 0.10
 			}
 		}
 	}

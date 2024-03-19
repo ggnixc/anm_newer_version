@@ -1,3 +1,145 @@
+ANM_ger_debug_category = {
+    
+    show_hide_german_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				has_country_flag = hide_german_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				NOT = { has_country_flag = hide_german_debug_decisions }
+			}
+		}
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision show_hide_german_debug_decisions"
+			if = {
+				limit = { has_country_flag = hide_german_debug_decisions }
+				clr_country_flag = hide_german_debug_decisions
+			}
+			else = {
+				set_country_flag = hide_german_debug_decisions
+			}
+		}
+	}
+	
+	debug_trigger_ger_load_phase_2_complete = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_phase_2_finale"
+			ANM_GER_Focus_Phase_2_3WRW = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_trigger_ger_load_phase_3 = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_phase_3"
+			ANM_GER_Focus_Phase_3_End_Demo = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_trigger_ger_homel_gouvernement_russland = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_homel_gouvernement_russland"
+			ANM_Gouvernement_Russland = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_trigger_ger_gouvernement_russland_victory_war = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_gouvernement_russland_victory_war"
+			country_event = { id = GER_debug_event.11 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_trigger_ger_gouvernement_russland_defeat_war = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_gouvernement_russland_defeat_war"
+			ANM_MOS_Grenzland = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_trigger_ger_finland_victory_3wrw = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_finland_victory_3wrw"
+			ANM_SOV_to_FIN = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
 ANM_ger_nsdap_category = {
 	
 	ANM_ger_decentralize_the_party = {
@@ -272,12 +414,606 @@ ANM_ger_nsdap_category = {
 
 		ai_will_do = { factor = 150 }
 	}
-}
+}	
 
 ANM_GER_Europakt_category = { 
 
 	EP_Economy_Reich_1 = {
-		visible = { }
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_2 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_3 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_4 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_5 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_6 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_7 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_8 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_9 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Reich_10 = {
+		visible = { has_country_flag = ep_economy_country_reich_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Baltenland_1 = {
+		visible = { has_country_flag = ep_economy_country_baltics_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Belarus_1 = {
+		visible = { has_country_flag = ep_economy_country_belarus_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Ukraine_1 = {
+		visible = { has_country_flag = ep_economy_country_ukraine_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Ukraine_2 = {
+		visible = { has_country_flag = ep_economy_country_ukraine_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_France_1 = {
+		visible = { has_country_flag = ep_economy_country_france_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_France_2 = {
+		visible = { has_country_flag = ep_economy_country_france_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_France_3 = {
+		visible = { has_country_flag = ep_economy_country_france_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_France_4 = {
+		visible = { has_country_flag = ep_economy_country_france_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Britain_1 = {
+		visible = { has_country_flag = ep_economy_country_britain_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Britain_2 = {
+		visible = { has_country_flag = ep_economy_country_britain_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Britain_3 = {
+		visible = { has_country_flag = ep_economy_country_britain_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Britain_4 = {
+		visible = { has_country_flag = ep_economy_country_britain_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Denmark_1 = {
+		visible = { has_country_flag = ep_economy_country_denmark_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Denmark_2 = {
+		visible = { has_country_flag = ep_economy_country_denmark_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Denmark_3 = {
+		visible = { has_country_flag = ep_economy_country_denmark_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Norway_1 = {
+		visible = { has_country_flag = ep_economy_country_norway_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Norway_2 = {
+		visible = { has_country_flag = ep_economy_country_norway_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Norway_3 = {
+		visible = { has_country_flag = ep_economy_country_norway_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Finland_1 = {
+		visible = { has_country_flag = ep_economy_country_finland_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Finland_2 = {
+		visible = { has_country_flag = ep_economy_country_finland_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Finland_3 = {
+		visible = { has_country_flag = ep_economy_country_finland_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Finland_4 = {
+		visible = { has_country_flag = ep_economy_country_finland_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Slovakia_1 = {
+		visible = { has_country_flag = ep_economy_country_slovakia_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Serbia_1 = {
+		visible = { has_country_flag = ep_economy_country_serbia_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Serbia_2 = {
+		visible = { has_country_flag = ep_economy_country_serbia_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Romania_1 = {
+		visible = { has_country_flag = ep_economy_country_romania_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Romania_2 = {
+		visible = { has_country_flag = ep_economy_country_romania_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Romania_3 = {
+		visible = { has_country_flag = ep_economy_country_romania_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Transnistria_1 = {
+		visible = { has_country_flag = ep_economy_country_transnitria_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Transnistria_2 = {
+		visible = { has_country_flag = ep_economy_country_transnitria_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Hungary_1 = {
+		visible = { has_country_flag = ep_economy_country_hungary_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Hungary_2 = {
+		visible = { has_country_flag = ep_economy_country_hungary_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Hungary_3 = {
+		visible = { has_country_flag = ep_economy_country_hungary_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Bulgaria_1 = {
+		visible = { has_country_flag = ep_economy_country_bulgaria_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Bulgaria_2 = {
+		visible = { has_country_flag = ep_economy_country_bulgaria_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Wolga_1 = {
+		visible = { has_country_flag = ep_economy_country_wolga_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Wolga_2 = {
+		visible = { has_country_flag = ep_economy_country_wolga_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Kaukasia_1 = {
+		visible = { has_country_flag = ep_economy_country_caucasus_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Kaukasia_2 = {
+		visible = { has_country_flag = ep_economy_country_caucasus_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Homel_1 = {
+		visible = { has_country_flag = ep_economy_country_homel_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Homel_2 = {
+		visible = { has_country_flag = ep_economy_country_homel_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Russland_1 = {
+		visible = { has_country_flag = ep_economy_country_Russland_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Sweden_1 = {
+		visible = { has_country_flag = ep_economy_country_sweden_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Sweden_2 = {
+		visible = { has_country_flag = ep_economy_country_sweden_click }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = {
+		
+		}
+	}
+	EP_Economy_Sweden_2 = {
+		visible = { has_country_flag = ep_economy_country_sweden_click }
 		available = { tag = GER }
 		cost = 45
 		fire_only_once = yes

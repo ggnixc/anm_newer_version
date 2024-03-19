@@ -585,12 +585,6 @@ PixelShader =
 			alpha *= clipalpha * smoothalpha;
 
 			return float4(vColor, alpha);
-		#endif
-
-		#ifdef ALPHA_TRANSP
-				alpha = vDiffuse.a;
-				DebugReturn(vColor, lightingProperties, fShadowTerm);
-				return float4(vColor, alpha);
 		#else
 			return float4(vColor, max(alpha, MinMeshAlpha));
 		#endif
@@ -710,14 +704,6 @@ BlendState BlendState
 	AlphaTest = no
 }
 
-BlendState BlendStateAlpha
-{
-	BlendEnable = yes
-	SourceBlend = "SRC_ALPHA"
-	DestBlend = "INV_SRC_ALPHA"
-	WriteMask = "RED|GREEN|BLUE"
-}
-
 BlendState BlendStateAlphaTest
 {
 	BlendEnable = no
@@ -797,34 +783,6 @@ Effect PdxMeshAdvancedSkinnedShadow
 	PixelShader = "PixelPdxMeshStandardShadow"
 }
 
-Effect PdxMeshAdvancedAlpha
-{
-	VertexShader = "VertexPdxMeshStandard"
-	PixelShader = "PixelPdxMeshStandard"
-	Defines = { "EMISSIVE" "PDX_IMPROVED_BLINN_PHONG" "RIM_LIGHT" "ALPHA_TRANSP" }
-}
-
-Effect PdxMeshAdvancedAlphaSkinned
-{
-	VertexShader = "VertexPdxMeshStandardSkinned"
-	PixelShader = "PixelPdxMeshStandard"
-	BlendState = "BlendStateAlpha"
-	Defines = { "EMISSIVE" "PDX_IMPROVED_BLINN_PHONG" "ATLAS" "RIM_LIGHT" "ALPHA_TRANSP" }
-}
-
-Effect PdxMeshAdvancedAlphaShadow
-{
-	VertexShader = "VertexPdxMeshStandardShadow"
-	PixelShader = "PixelPdxMeshStandardShadow"
-	BlendState = "BlendStateAlpha"
-}
-
-Effect PdxMeshAdvancedAlphaSkinnedShadow
-{
-	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
-	PixelShader = "PixelPdxMeshStandardShadow"
-	BlendState = "BlendStateAlpha"
-}
 
 Effect PdxMeshAdvancedSnow
 {

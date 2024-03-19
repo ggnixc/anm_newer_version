@@ -13,7 +13,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "title"
 			position = { x = 16 y = 9 }
-			font = "aldrich_24_outline"
+			font = "aldrich_white_24_outline"
 			text = "tno_assorted_laws"
 			maxWidth = 450
 			maxHeight = 30
@@ -42,7 +42,7 @@ guiTypes = {
 
 				background = {
 					name = "Background"
-					quadTextureSprite = "GFX_tiled_window_1b_no_border"
+					quadTextureSprite = "GFX_tiled_focus_bg"
 				}
 			}
 		}
@@ -385,30 +385,6 @@ guiTypes = {
 	}
 
 	containerWindowType = {
-		name = "TNO_ENG_assorted_laws"
-
-		iconType = {
-			name = "rectangle"
-			spriteType = "GFX_assorted_laws_rectangle"
-			alwaystransparent = yes
-			position = { x = 0 y = 0 }
-			Orientation = "UPPER_LEFT"
-		}
-
-		instantTextboxType = {
-			name = "law_name"
-			position = { x = 0 y = 0 }
-			font = "aldrich_white_18_outline"
-			text = "[GetAssortedLawsENG]"
-			maxWidth = 320
-			format = center
-			maxHeight = 84
-			vertical_alignment = center
-			text_color_code = b
-			pdx_tooltip = "ENG_get_law_tooltip"
-		}
-	}
-	containerWindowType = {
 		name = "ANM_SOV_assorted_laws"
 
 		iconType = {
@@ -430,6 +406,31 @@ guiTypes = {
 			vertical_alignment = center
 			text_color_code = b
 			pdx_tooltip = "SOV_get_law_tooltip"
+		}
+	}
+
+	containerWindowType = {
+		name = "TNO_ENG_assorted_laws"
+
+		iconType = {
+			name = "rectangle"
+			spriteType = "GFX_assorted_laws_rectangle"
+			alwaystransparent = yes
+			position = { x = 0 y = 0 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextboxType = {
+			name = "law_name"
+			position = { x = 0 y = 0 }
+			font = "aldrich_white_18_outline"
+			text = "[GetAssortedLawsENG]"
+			maxWidth = 320
+			format = center
+			maxHeight = 84
+			vertical_alignment = center
+			text_color_code = b
+			pdx_tooltip = "ENG_get_law_tooltip"
 		}
 	}
 }
