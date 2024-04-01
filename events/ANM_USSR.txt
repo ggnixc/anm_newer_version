@@ -84,3 +84,27 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	#Great Trial
+	id = SOV_victory.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event SOV_victory.1"
+	}
+	title = SOV_victory.1.t
+	desc = SOV_victory.1.desc
+	picture = GFX_anm_GER_broken_nazi_eagle
+	is_triggered_only = yes
+	
+	option = { #limited win
+		ai_chance = {
+			factor = 20
+		}
+		name = SOV_victory.1.a
+		set_cosmetic_tag = SOV_slavic
+		declare_war_on = { 
+			target = GER 
+			type = annex_everything
+		}
+	}	
+}
