@@ -22,9 +22,11 @@ set_stability = 0.90
 add_offsite_building = { type = arms_factory level = 2 }
 add_offsite_building = { type = industrial_complex level = 1 }
 
+create_faction = Communist_International
+add_to_faction = FER
 
 set_politics = {
-	ruling_party = ultranationalism
+	ruling_party = communist
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
@@ -33,7 +35,11 @@ set_politics = {
 set_variable = { TNO_economy_type = token:Econ_Type_Planned }
 
 set_popularities = {
-	ultranationalism = 80
+	communist_1 = 32
+	communist_2 = 14
+	communist = 43
+	communist_3 = 11
+	ultranationalism = 0
 	national_socialism = 0
 	socialist = 0
 	progressivism = 0
@@ -41,8 +47,9 @@ set_popularities = {
 	liberal_conservatism = 0
 	conservatism = 0
 	paternalism = 0
-	despotism = 20
+	despotism = 0
 	fascism = 0
+	esoteric_nazism = 0
 }
 
 if = {
