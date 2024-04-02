@@ -236,11 +236,19 @@ on_actions = {
 
 					every_state = { # clean up cores
 						limit = {
-							is_core_of = ROOT
+							is_core_of = ECU
 						}
-						remove_core_of = ROOT
-						add_core_of = FROM
+						remove_core_of = ECU
+						add_core_of = GLP
 					}
+					every_state = { # clean up cores
+						limit = {
+							is_core_of = MRA
+						}
+						remove_core_of = MRA
+						add_core_of = PRU
+					}
+					set_global_flag = skip_default_
 
 					ECD = {
 						set_politics = {	
@@ -319,10 +327,17 @@ on_actions = {
 
 					every_state = { # clean up cores
 						limit = {
-							is_core_of = ROOT
+							is_core_of = GLP
 						}
-						remove_core_of = ROOT
-						add_core_of = FROM
+						remove_core_of = GLP
+						add_core_of = ECU
+					}
+					every_state = { # clean up cores
+						limit = {
+							is_core_of = PRU
+						}
+						remove_core_of = PRU
+						add_core_of = MRA
 					}
 					set_global_flag = skip_default_capitulation
 				}
