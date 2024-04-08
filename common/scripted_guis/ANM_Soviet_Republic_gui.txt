@@ -31,6 +31,31 @@ scripted_gui = {
 		visible = {
 			has_country_flag = SOV_show_soviet_republic_window
 		}
+
+		effects = {
+			sov_republic_stability_increase_button_click = {
+				add_to_variable = { SOV_REPUBLIC_STABILITY = 10 } 
+				clamp_variable = {
+					var = SOV_REPUBLIC_STABILITY
+					min = 0
+					max = 100
+				}
+			}
+			sov_republic_stability_decrease_button_click = {
+				add_to_variable = { SOV_REPUBLIC_STABILITY = -10 } 
+				clamp_variable = {
+					var = SOV_REPUBLIC_STABILITY
+					min = 0
+					max = 100
+				}
+			} 
+		}
+
+		properties = {
+			sov_republic_stability_progress_bar = { 
+				frame = SOV_REPUBLIC_STABILITY 
+			}
+		}
 		
 		triggers = {
 			# region overlays
@@ -70,6 +95,8 @@ scripted_gui = {
 				image = "[GetSOVRepublicFlag]"
 			}
 		}
+
+
 
 	}
 }
