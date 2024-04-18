@@ -209,17 +209,6 @@ guiTypes = {
 		}
 
 		instantTextboxType = {
-			name = "government_title_text"
-			position = { x = 42 y = 12 }
-			textureFile = ""
-			font = "aldrich_white_28_outline"
-			borderSize = {x = 0 y = 0}
-			text = "Regierung des Deutschen Reiches"
-			maxWidth = 750
-			maxHeight = 30
-			fixedsize = yes
-		}
-		instantTextboxType = {
 			name = "government_reichsministers"
 			position = { x = 88 y = 445 }
 			textureFile = ""
@@ -241,16 +230,56 @@ guiTypes = {
 			maxHeight = 30
 			fixedsize = yes
 		}
+
+		iconType = {
+			name = "reichsstabilitat_background_2"
+			spriteType = "GFX_reichsstabilitat_background_2"
+			position = { x = 0 y = 0 } 
+		}
+
 		instantTextboxType = {
-			name = "government_tab_1"
-			position = { x = 16 y = 65 }
+			name = "government_title_text"
+			position = { x = 42 y = 12 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_white_28_outline"
 			borderSize = {x = 0 y = 0}
-			text = "National Party Leadership"
-			maxWidth = 350
+			text = "Regierung des Deutschen Reiches"
+			maxWidth = 750
 			maxHeight = 30
 			fixedsize = yes
+		}
+		buttonType = {
+			name = "government_tab_1_unclicked"
+			quadTextureSprite = "GFX_reichsstabilitat_category_1"
+			position = { x = 12 y = 57 }
+		}
+		buttonType = {
+			name = "government_tab_1_clicked"
+			quadTextureSprite = "GFX_reichsstabilitat_category_1"
+			position = { x = 12 y = 57 }
+			frame = 3
+		}
+		buttonType = {
+			name = "government_tab_2_unclicked"
+			quadTextureSprite = "GFX_reichsstabilitat_category_2"
+			position = { x = 234 y = 57 }
+		}
+		buttonType = {
+			name = "government_tab_2_clicked"
+			quadTextureSprite = "GFX_reichsstabilitat_category_2"
+			position = { x = 234 y = 57 }
+			frame = 3
+		}
+		buttonType = {
+			name = "government_tab_3_unclicked"
+			quadTextureSprite = "GFX_reichsstabilitat_category_3"
+			position = { x = 403 y = 57 }
+		}
+		buttonType = {
+			name = "government_tab_3_clicked"
+			quadTextureSprite = "GFX_reichsstabilitat_category_3"
+			position = { x = 403 y = 57 }
+			frame = 3
 		}
 		
 		containerWindowType = {
