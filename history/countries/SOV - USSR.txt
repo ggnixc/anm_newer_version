@@ -23,7 +23,6 @@ add_offsite_building = { type = arms_factory level = 2 }
 add_offsite_building = { type = industrial_complex level = 1 }
 
 create_faction = Communist_International
-add_to_faction = FER
 
 set_politics = {
 	ruling_party = communist
@@ -57,15 +56,6 @@ if = {
 	create_intelligence_agency = {
 		name = "Ministerstvo Gosudarstvennoy Bezopasnosti" 
 		icon = "GFX_intelligence_agency_logo_sov" 
-	}
-}
-
-if = {
-	limit = { has_dlc = "Together for Victory" }
-	set_autonomy = { target = FER autonomy_state = autonomy_soviet_republic }
-
-	else = {
-		puppet = FER
 	}
 }
 

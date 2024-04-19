@@ -147,18 +147,26 @@ GetFactionStatus_icon = {
 		trigger = { has_idea = Sphere_Leader }
 		localization_key = Sphere_Leader_displaykey
 	}
+	#Core Member - China
+	text = {
+		trigger = { 
+			has_idea = Sphere_Core_Member
+			original_tag = CHI
+		}
+		localization_key = "GFX_Sphere_Core_Member_CHI"
+	}
 	#Core Member - Manchukuo
 	text = {
 		trigger = { 
 			has_idea = Sphere_Core_Member
 			original_tag = MAN
 		}
-		localization_key = Sphere_Core_Member_MAN_displaykey
+		localization_key = "GFX_Sphere_Core_Member_MAN"
 	}
 	#Special Economic Zone
 	text = {
-		trigger = { has_idea = Sphere_Special_Econ_Zone }
-		localization_key = Sphere_Special_Econ_Zone_displaykey
+		trigger = { has_idea = Sphere_Corporate_Dependency }
+		localization_key = Sphere_Corporate_Dependency_displaykey
 	}
 	#Imperial Protectorate
 	text = {
@@ -381,10 +389,10 @@ GetFactionStatus_name = {
 		trigger = { has_idea = Sphere_Core_Member }
 		localization_key = Sphere_Core_Member
 	}
-	#Special Economic Zone
+	#Sphere Corporate Dependency
 	text = {
-		trigger = { has_idea = Sphere_Special_Econ_Zone }
-		localization_key = Sphere_Special_Econ_Zone
+		trigger = { has_idea = Sphere_Corporate_Dependency }
+		localization_key = Sphere_Corporate_Dependency
 	}
 	#Imperial Protectorate
 	text = {
@@ -633,8 +641,8 @@ GetFactionStatus_effect = {
 	}
 	#Special Economic Zone
 	text = {
-		trigger = { has_idea = Sphere_Special_Econ_Zone }
-		localization_key = Sphere_Special_Econ_Zone_effect
+		trigger = { has_idea = Sphere_Corporate_Dependency }
+		localization_key = Sphere_Corporate_Dependency_effect
 	}
 	#Imperial Protectorate
 	text = {
@@ -814,8 +822,8 @@ GetFactionStatus_desc = {
 	}
 	#Special Economic Zone
 	text = {
-		trigger = { has_idea = Sphere_Special_Econ_Zone }
-		localization_key = Sphere_Special_Econ_Zone_desc
+		trigger = { has_idea = Sphere_Corporate_Dependency }
+		localization_key = Sphere_Corporate_Dependency_desc
 	}
 	#Imperial Protectorate
 	text = {
