@@ -3335,6 +3335,192 @@ TNO_active_endonyms = {
 		}
 	}
 
+	#GNG
+	326 = {
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = GNG
+					is_controlled_by = JAP
+
+				}
+			}
+			set_province_name = { id = 10062 name = VICTORY_POINTS_10062_gng_jap }
+			set_state_name = STATE_326_gng_jap
+		}
+		else = {
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 10062 name = VICTORY_POINTS_10062_chi }
+				set_state_name = STATE_326_chi
+			}
+			else = {
+				reset_province_name = 10062
+				set_state_name = STATE_326_chi
+			}
+		}
+	}
+
+	592 = {
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = GNG
+					is_controlled_by = JAP
+				}
+			}
+			set_province_name = { id = 1047 name = VICTORY_POINTS_1047_gng_jap }
+			set_state_name = STATE_592_gng_jap
+		}
+		else = {
+			reset_province_name = 1047
+			reset_state_name = yes
+		}
+	}
+
+	593 = {
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = GNG
+					is_controlled_by = JAP
+
+				}
+			}
+			set_province_name = { id = 7067 name = VICTORY_POINTS_7067_gng_jap }
+			set_province_name = { id = 7108 name = VICTORY_POINTS_7108_gng_jap }
+			set_province_name = { id = 9938 name = VICTORY_POINTS_9938_gng_jap }
+			set_province_name = { id = 4207 name = VICTORY_POINTS_4207_gng_jap }
+			set_province_name = { id = 4165 name = VICTORY_POINTS_4165_gng_jap }
+			set_province_name = { id = 7182 name = VICTORY_POINTS_7182_gng_jap }
+			set_province_name = { id = 15742 name = VICTORY_POINTS_15742_gng_jap }
+			set_state_name = STATE_593_gng_jap
+		}
+		else = {
+			reset_state_name = yes
+			reset_province_name = 7067
+			reset_province_name = 7108
+			reset_province_name = 9938
+			reset_province_name = 4207
+			reset_province_name = 4165
+			reset_province_name = 7182
+			reset_province_name = 15742
+		}
+	}
+
+	729 = {
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = GNG
+					is_controlled_by = JAP
+				}
+			}
+			set_province_name = { id = 4189 name = VICTORY_POINTS_4189_gng_jap }
+			set_state_name = STATE_729_gng_jap
+		}
+		else = {
+			if = {
+				limit = { has_global_flag = TNO_endonym_mode }
+				set_province_name = { id = 4189 name = VICTORY_POINTS_4189_chi }
+				set_state_name = STATE_729_chi
+			}
+			else = {
+				reset_province_name = 4189
+				set_state_name = STATE_729_chi
+			}
+		}
+	}
+
+	1017 = {
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = GNG
+					is_controlled_by = JAP
+
+				}
+			}
+			set_province_name = { id = 9963 name = VICTORY_POINTS_9963_gng_jap }
+			set_province_name = { id = 7152 name = VICTORY_POINTS_7152_gng_jap }
+			set_province_name = { id = 7039 name = VICTORY_POINTS_7039_gng_jap }
+			set_province_name = { id = 1131 name = VICTORY_POINTS_1131_gng_jap }
+			set_province_name = { id = 1087 name = VICTORY_POINTS_1087_gng_jap }
+			set_state_name = STATE_1017_gng_jap
+		}
+		else = {
+			reset_state_name = yes
+			reset_province_name = 7152
+			reset_province_name = 9963
+			reset_province_name = 7039
+			reset_province_name = 1131
+			reset_province_name = 1087
+		}
+	}
+
+	1438 = {
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = GNG
+					is_controlled_by = JAP
+
+				}
+			}
+			set_province_name = { id = 4092 name = VICTORY_POINTS_4092_gng_jap }
+			set_state_name = STATE_1438_gng_jap
+		}
+		else = {
+			reset_state_name = yes
+			reset_province_name = 4092
+		}
+	}
+
+	1439 = {
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = GNG
+					is_controlled_by = JAP
+
+				}
+			}
+			set_province_name = { id = 1120 name = VICTORY_POINTS_1120_gng_jap }
+			set_province_name = { id = 1202 name = VICTORY_POINTS_1202_gng_jap }
+			set_province_name = { id = 12095 name = VICTORY_POINTS_12095_gng_jap }
+			set_province_name = { id = 1162 name = VICTORY_POINTS_1162_gng_jap }
+			set_state_name = STATE_1439_gng_jap
+		}
+		else = {
+			reset_state_name = yes
+			reset_province_name = 1120
+			reset_province_name = 1202
+			reset_province_name = 12095
+			reset_province_name = 1162
+		}
+	}
+
+	1464 = {
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = GNG
+					is_controlled_by = JAP
+				}
+			}
+			set_province_name = { id = 10004 name = VICTORY_POINTS_10004_gng_jap }
+			set_province_name = { id = 4023 name = VICTORY_POINTS_4023_gng_jap }
+			set_province_name = { id = 1018 name = VICTORY_POINTS_1018_gng_jap }
+			set_state_name = STATE_1464_gng_jap
+		}
+		else = {
+			reset_state_name = yes
+			reset_province_name = 1018
+			reset_province_name = 4023
+			reset_province_name = 10004
+		}
+	}
+
 	#GUX
 	594 = {
 		if = {

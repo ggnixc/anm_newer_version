@@ -2,7 +2,7 @@
 
 set_oob = "LAO_1962"
 set_politics = {
-	ruling_party = socialist
+	ruling_party = paternalism
 	last_election = "1960.11.11"
 	election_frequency = 36
 	elections_allowed = no
@@ -11,19 +11,11 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 10
-	communist_1 = 15
-    socialist = 42
-    progressivism = 10
-    liberalism = 8
-    liberal_conservatism = 0
-    conservatism = 1
-    paternalism = 8
-    despotism = 6
-    fascism = 0
-    national_socialism = 0
-    ultranationalism = 0
-    esoteric_nazism = 0
+    socialist = 7
+    liberalism = 18
+    conservatism = 11
+    paternalism = 48
+    despotism = 16
 }
 
 create_country_leader = {
@@ -48,7 +40,7 @@ create_country_leader = {
 	name = "Sauryavong Savang"
 	picture = "Portrait_Laos_Sauryavong_Savang.dds"
 	expire = "2090.12.12"
-	ideology = conservatism_subtype
+	ideology = paternalism_semi_constitutional_monarchy_subtype
 	traits = {
 	}
 }
@@ -82,7 +74,7 @@ create_country_leader = {
 
 add_ideas = {
 	#COUNTRY
-	COM_Observer
+	Sphere_Fully_Dependent
 	#POLITICAL
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_atheism
