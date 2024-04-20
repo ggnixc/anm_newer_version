@@ -551,6 +551,7 @@ state_control_effect_1464 = {
 		set_province_name = { id = 10004 name = VICTORY_POINTS_10004_gng_jap }
 		set_province_name = { id = 4023 name = VICTORY_POINTS_4023_gng_jap }
 		set_province_name = { id = 1018 name = VICTORY_POINTS_1018_gng_jap }
+		set_province_name = { id = 11981 name = VICTORY_POINTS_11981_gng_jap }
 		set_state_name = STATE_1464_gng_jap
 	}
 	else = {
@@ -558,6 +559,7 @@ state_control_effect_1464 = {
 		reset_province_name = 1018
 		reset_province_name = 4023
 		reset_province_name = 10004
+		reset_province_name = 11981
 	}
 }
 
@@ -616,11 +618,6 @@ state_control_effect_591 = {
 		reset_state_name = yes
 		reset_province_name = 994
 		reset_province_name = 1070
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_province_name = { id = 11981 name = VICTORY_POINTS_11981_chi }
-		}
-		else = { reset_province_name = 11981 }
 	}
 }
 

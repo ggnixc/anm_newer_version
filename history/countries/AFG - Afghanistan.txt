@@ -10,21 +10,6 @@ set_politics = {
 	elections_allowed = yes
 }
 
-if = {
- 	limit = {
- 		OR = {
-			has_dlc = "Together for Victory"
-		}
- 	}
- 	set_autonomy = {
- 		target = KLT
- 		autonomous_state = autonomy_puppet
- 	}
-	else = {
-        puppet = KLT
-	}
-}
-
 TNO_startup_nation = yes
 
 set_popularities = {
