@@ -8,11 +8,31 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.10
 				stability_factor = -0.10
-				paternalism_drift = -0.10
-				liberalism_drift = -0.10
-				conservatism_drift = -0.10
+				custom_modifier_tooltip = AST_Coalition_tt
+				hidden_effect = {
+					paternalism_drift = -0.05
+					liberalism_drift = -0.05
+					conservatism_drift = -0.05
+				}
 			}
 		}
-	
-	
+		AST_Labour_Opposition = {
+			allowed = { always = no }
+			picture = AST_Labour_Opposition
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		AST_Wolves_of_Australia = {
+			allowed = { always = no }
+			picture = AST_Wolves_of_Australia
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+	}
 }
