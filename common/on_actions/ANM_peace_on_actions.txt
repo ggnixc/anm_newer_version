@@ -157,22 +157,13 @@ on_actions = {
 						}
 						FROM = {
 							white_peace = ROOT
+							transfer_state = 408
+							transfer_state = 409
+							transfer_state = 1644
+							transfer_state = 1645
 						}
 						PRC = {
-							annex_country = {
-								target = MAN
-								transfer_troops = no
-							}
-						}
-						every_state = { # clean up cores
-							limit = {
-								is_core_of = ROOT
-							}
-							remove_core_of = ROOT
-							add_core_of = FROM
-						}
-						PRC = {
-							set_capital = { state = 328 remember_old_capital = no }
+							set_capital = { state = 409 remember_old_capital = no }
 							country_event = { id = MAN.NAJUA.1 days = 30 }
 						}
 						every_country = {

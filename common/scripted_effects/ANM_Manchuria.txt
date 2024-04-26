@@ -1,10 +1,8 @@
 ANM_manchukuo_unrest = { 
-	610 = { set_demilitarized_zone =  yes }
-	714 = { set_demilitarized_zone =  yes }
-	715 = { set_demilitarized_zone =  yes }
-	1641 = { set_demilitarized_zone =  yes }
-	1642 = { set_demilitarized_zone =  yes }
-	1643 = { set_demilitarized_zone =  yes }
+	657 = { set_demilitarized_zone =  yes }
+	1645 = { set_demilitarized_zone =  yes }
+	1646 = { set_demilitarized_zone =  yes }
+	1647 = { set_demilitarized_zone =  yes }
 }
 
 ANM_manchukuo_civilwar = {
@@ -23,11 +21,13 @@ ANM_manchukuo_civilwar = {
 			producer = SOV
 		}
 
-		transfer_state = 714
-		transfer_state = 715
-		transfer_state = 1643
+		transfer_state = 657
+		transfer_state = 1646
+		transfer_state = 1647
 
 		load_oob = "PRC_1996"
+
+		set_variable = { ECON_SPHERE_LEADER = SOV }
 	}
 	MAN = {
 		every_owned_state = {
@@ -40,11 +40,6 @@ ANM_manchukuo_civilwar = {
 		}
 
 		leave_faction = yes
-		remove_faction_status = yes
-
-		add_ideas = { 
-			Sphere_Observer
-		}
 
 		declare_war_on = {
 			target = PRC
