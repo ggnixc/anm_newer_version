@@ -78,9 +78,9 @@ NDefines.NMilitary.NON_CORE_SUPPLY_SPEED = -0.2						-- we are not running on ou
 NDefines.NMilitary.NON_CORE_SUPPLY_AIR_SPEED = -0.05				-- we are not running on our own VP supply so need to steal stuff along the way, a bit less due to air supply
 NDefines.NMilitary.OUT_OF_SUPPLY_MORALE = -0.15						-- max org regain reduction from supply
 NDefines.NMilitary.MAX_OUT_OF_SUPPLY_DAYS = 60						-- how many days of shitty supply until max penalty achieved
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 24				-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 24					-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 5						-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 12				-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 12			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 3						-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.NUKE_DELAY_HOURS = 0								-- nukes fire off immediately
 NDefines.NMilitary.UNIT_DIGIN_CAP = 6								-- how "deep" you can dig you can dig in until hitting max bonus
 NDefines.NMilitary.UNIT_DIGIN_SPEED = 0.5							-- how "deep" you can dig a day.
