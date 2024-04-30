@@ -1,22 +1,3 @@
-MAN_focus_NAJUA_strat = {
-	allowed = {
-		tag = MAN
-	}
-	abort = {
-		always = no
-	}
-	enable = {
-		OR = {
-			PRC = {	exists = yes }
-		}
-	}
-
-	ai_strategy = {
-		type = front_unit_request
-		id = PRC
-		value = 1000
-	}
-}
 IND_SEND_TO_SRILANKA = {
 	allowed = {
 		OR = {
@@ -99,7 +80,6 @@ SOV_SEND_TO_NAJUA = {
 	enable = {
 		OR = {
 			original_tag = SOV
-			original_tag = CHI
 		}
 		PRC = {	has_war_with = MAN }
 	}

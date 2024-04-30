@@ -22,11 +22,6 @@ set_stability = 0.90
 add_offsite_building = { type = arms_factory level = 2 }
 add_offsite_building = { type = industrial_complex level = 1 }
 
-create_faction = Communist_International
-add_to_faction = FER
-
-set_country_flag = Karelia_SSR_exists
-
 set_politics = {
 	ruling_party = communist
 	last_election = "1933.3.5"
@@ -39,21 +34,10 @@ misc_law_array_startup_special = yes
 set_variable = { TNO_economy_type = token:Econ_Type_Planned }
 
 set_popularities = {
-	communist_1 = 32
+	communist_1 = 22
 	communist_2 = 14
 	communist = 43
-	communist_3 = 11
-	ultranationalism = 0
-	national_socialism = 0
-	socialist = 0
-	progressivism = 0
-	liberalism = 0
-	liberal_conservatism = 0
-	conservatism = 0
-	paternalism = 0
-	despotism = 0
-	fascism = 0
-	esoteric_nazism = 0
+	communist_3 = 21
 }
 
 if = {
@@ -64,18 +48,8 @@ if = {
 	}
 }
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
-	set_autonomy = { target = FER autonomy_state = autonomy_soviet_republic }
-
-	else = {
-		puppet = FER
-	}
-}
-
 add_ideas = {
 	###FACTION###
-	COM_Member
 	
 	###MINISTERS###
  	SOV_Gennady_Yanayev_hog
@@ -89,6 +63,7 @@ add_ideas = {
 	SOV_Legacy_of_Zhukov
 	SOV_The_Scars_of_Moscowien
 	SOV_Job_Half_Done
+	SOV_System_of_Khozraschyot
 	
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state

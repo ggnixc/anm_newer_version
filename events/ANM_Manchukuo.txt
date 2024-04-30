@@ -39,6 +39,75 @@ country_event = {
 }
 
 country_event = {
+	id = MAN.civilwar.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MAN.civilwar.3" }
+	title = MAN.civilwar.3.t
+	desc = MAN.civilwar.3.desc
+	picture = GFX_anm_CHI_empty_city_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MAN.civilwar.3.a
+		PRC = {
+			white_peace = MAN
+			transfer_state = 408
+			transfer_state = 409
+			transfer_state = 1644
+			transfer_state = 1645
+			set_capital = { state = 409 remember_old_capital = no }
+			country_event = { id = MAN.civilwar.4 days = 40 }
+		}
+
+		JAP = { add_to_faction = MAN }
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = WORLD.18191 hours = 0 }
+		}
+  	}
+}
+
+country_event = {
+	id = MAN.civilwar.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MAN.civilwar.4" }
+	title = MAN.civilwar.4.t
+	desc = MAN.civilwar.4.desc
+	picture = GFX_anm_CHI_empty_city_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MAN.civilwar.4.a
+		SOV = {
+			set_autonomy = {
+				target = FER
+				autonomy_state = autonomy_soviet_republic
+			}
+		}
+		FER = {
+			annex_country = {
+				target = PRC
+				transfer_troops = yes
+			}
+			set_politics = {
+				ruling_party = communist
+				last_election = "1933.3.5"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				communist = 54
+				communist_1 = 27
+				communist_2 = 19
+			}
+			set_variable = { ECON_SPHERE_LEADER = SOV }
+		}
+  	}
+}
+
+country_event = {
 	id = MAN.civilwar.99
 	immediate = { log = "[GetDateText]: [Root.GetName]: event MAN.civilwar.99" }
 	title = MAN.civilwar.99.t
@@ -56,45 +125,6 @@ country_event = {
 		every_country = {
 			limit = { is_ai = no }
 			news_event = { id = WORLD.18190 hours = 0 }
-		}
-  	}
-}
-
-country_event = {
-	id = MAN.NAJUA.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event MAN.NAJUA.1" }
-	title = MAN.NAJUA.1.t
-	desc = MAN.NAJUA.1.desc
-	picture = GFX_anm_CHI_empty_city_1
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	option = { # negotiations fail, NAJUA aligns with USSR
-		name = MAN.NAJUA.1.a
-		ai_factor = 0.5
-		SOV = { add_to_faction = PRC }
-		PRC = { 
-			set_cosmetic_tag = PRC_SOV
-			remove_ideas = COM_Observer
-			add_ideas = COM_Member
-		}
-  	}
-	option = { # negotations succeed, NAJUA integrated into china
-		name = MAN.NAJUA.1.b
-		ai_factor = 0.5
-		CHI = {
-			annex_country = {
-				target = PRC
-				transfer_troops = no
-			}
-		}
-		every_state = {
-			limit = {
-				is_core_of = PRC
-			}
-			remove_core_of = PRC
-			add_core_of = CHI
 		}
   	}
 }

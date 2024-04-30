@@ -1,29 +1,9 @@
 ﻿capital = 1061
-set_cosmetic_tag = ZIM_mandate
-recruit_character = ZIM_Peter_Walls
 
 set_oob = "BFR_1962"
 
-SAF = {
-	if = {
-		limit = {
-			OR = {
-				has_dlc = "Together for Victory"
-				has_dlc = "Man the Guns"
-			}
-		}
-		set_autonomy = {
-			target = ZIM
-			autonomy_state = autonomy_integrated_puppet
-		}
-		else = {
-			puppet = ZIM
-		}
-	}
-}
-
 set_politics = {	
-	ruling_party = despotism
+	ruling_party = paternalism
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
@@ -32,16 +12,16 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 20
+    communist = 0
     ultranationalism = 0
 	national_socialism = 0
-    socialist = 50
+    socialist = 36
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
-    despotism = 30
+    conservatism = 15
+    paternalism = 49
+    despotism = 0
     fascism = 0
     esoteric_nazism = 0
 }
@@ -58,5 +38,4 @@ create_country_leader = {
 }
 
 add_ideas = {
-	OFN_dependent_member
 }

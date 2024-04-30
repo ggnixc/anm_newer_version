@@ -14,21 +14,21 @@ TNO_startup_nation = yes
 set_popularities = {
 	communist = 0
 	ultranationalism = 0
-	socialist = 8
+	socialist = 0
 	progressivism = 0
-	liberalism = 22
-	liberal_conservatism = 13
-	conservatism = 0
+	liberalism = 10
+	liberal_conservatism = 0
+	conservatism = 15
 	paternalism = 0
 	despotism = 0
-	fascism = 57
+	fascism = 75
 	national_socialism = 0
 }
 
 create_country_leader = {
-	name = "Boutros Khawand"
+	name = "Bashir Al Gemayel"
 	desc = ""
-	picture = "Portrait_LEB_Boutros_Khawand.dds"
+	picture = "Portrait_LEB_Bashir_Al_Gemayel.dds"
 	expire = "2999.1.1"
 	ideology = fascism_falangism_subtype
 	traits = { }
@@ -36,11 +36,12 @@ create_country_leader = {
 
 add_ideas = {
 	###IDEAS
+	LEB_Lebanese_Drug_Route
 	
     ##FACTION STATUS##
 	TRI_Member_Client
 	#political#
-	tno_political_parties_multiparty_system
+	tno_political_parties_one_party_state
 	tno_religious_rights_pluralism
 	tno_trade_unions_all_allowed
 	tno_immigration_quota_immigration

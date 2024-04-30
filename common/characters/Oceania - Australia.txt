@@ -2,7 +2,10 @@ characters = {
 	AST_Joh_Bjelke_Petersen = { 
 		name = AST_Joh_Bjelke_Petersen
 		portraits = { 
-			civilian = { large = "gfx/leaders/AST/Portrait_AST_Joh_Bjelke_Petersen.dds" } 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Joh_Bjelke_Petersen.dds"			
+				small = "GFX_idea_AST_Joh_Bjelke_Petersen" 
+			}
 		}
 		country_leader = {
 			desc = "POLITICS_AST_Joh_Bjelke_Petersen_DESC"
@@ -10,18 +13,9 @@ characters = {
 			traits = {}
 			expire = "2999.1.1.1"
 		}
-	}
-	AST_Michael_Jeffery = {
-		name = AST_Michael_Jeffery
-		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/AST/Portrait_AST_Michael_Jeffery.dds"
-				small = "GFX_idea_AST_Michael_Jeffery" 
-			} 	
-		} 
 		advisor = {
 			slot = head_of_government
-			idea_token = AST_Michael_Jeffery_hog
+			idea_token = AST_Joh_Bjelke_Petersen_hog
 			traits = {
 				head_of_government
 			}
@@ -31,17 +25,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	AST_Jocelyn_Newman = {
-		name = AST_Jocelyn_Newman
+	AST_Ian_McLachlan = {
+		name = AST_Ian_McLachlan
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/AST/AST_Jocelyn_Newman.dds"
-				small = "GFX_idea_AST_Jocelyn_Newman" 
+				large = "gfx/leaders/AST/AST_Ian_McLachlan.dds"
+				small = "GFX_idea_AST_Ian_McLachlan" 
 			} 	
 		} 
 		advisor = {
 			slot = security_minister
-			idea_token = AST_Jocelyn_Newman_sec
+			idea_token = AST_Ian_McLachlan_sec
 			traits = {
 				security_minister
 			}

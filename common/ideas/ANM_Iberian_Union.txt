@@ -1,173 +1,42 @@
-###PIED NOIR REPUBLIC IDEAS###
 ideas = {
-### MINISTERS
-	head_of_government = {
-		IBR_mariano_rajoy_hog = {
-			allowed = { original_tag = IBR }
-			picture = IBR_mariano_rajoy
-			available = {
-				tag = IBR
-			}
-			traits = {
-				head_of_government
-				conservatism
-				IBR_mariano_rajoy_hog_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}	
+country = {
+	IBR_Tourist_Hotspot = {
+		allowed = { always = no }
+		picture = IBR_Tourist_Hotspot
+		removal_cost = -1
+
+		modifier = {
+			consumer_goods_factor = 0.15
+			monthly_population = 0.03
+			stability_factor = 0.10
+			trade_opinion_factor = 0.30
+		}
 	}
-	
-	foreign_minister = {
-		IBR_jose_manuel_barroso_for = {
-			allowed = { original_tag = IBR }
-			picture = IBR_jose_manuel_barroso
-			available = {
-				tag = IBR
-			}
-			traits = {
-				foreign_minister
-				liberal_conservatism	
-				IBR_jose_manuel_barroso_for_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}	
+
+	IBR_Between_Two_Worlds = {
+		allowed = { always = no }
+		picture = IBR_Between_Two_Worlds
+		removal_cost = -1
+
+		modifier = {
+			drift_defence_factor = 0.50
+			party_popularity_stability_factor = -0.10
+			political_power_gain = 0.10
+			encryption = -1
+		}
 	}
-	
-	economy_minister = {
-		IBR_rodrigo_rato_eco = {
-			allowed = { original_tag = IBR }
-			picture = IBR_rodrigo_rato
-			available = {
-				tag = IBR
-			}
-			traits = {
-				economy_minister
-				liberal_conservatism	
-				IBR_rodrigo_rato_eco_desc				
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}	
-	}	
-	
-	security_minister = {
-		IBR_josep_pique_i_camps_sec  = {
-			allowed = { original_tag = IBR }
-			picture = IBR_josep_pique_i_camps
-			available = {
-				tag = IBR
-			}
-			traits = {
-				security_minister
-				liberal_conservatism
-				IBR_josep_pique_i_camps_sec_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}	
-	}		
-#NATIONAL IDEAS	
-	country = {
-		IBR_iberia_va_bien = {
-			allowed = { always = no }
-			picture = IBR_iberia_va_bien
-			removal_cost = -1
 
-			modifier = {
-				gdp_growth_modifier = 2.0
-			}
-		}
-		IBR_brick_fever = {
-			allowed = { always = no }
-			picture = IBR_brick_fever
-			removal_cost = -1
+	IBR_The_Basque_Conflict = {
+		allowed = { always = no }
+		picture = IBR_The_Basque_Conflict
+		removal_cost = -1
 
-			modifier = {
-				production_speed_buildings_factor = 0.4
-			}
-		}
-		IBR_legacy_of_the_carnation_revolution = {
-			allowed = { always = no }
-			picture = IBR_legacy_of_the_carnation_revolution
-			removal_cost = -1
-
-			modifier = {
-				drift_defence_factor = 0.05
-			}
-		}
-		IBR_growing_nationalism = {
-			allowed = { always = no }
-			picture = IBR_growing_nationalism
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.1
-			}
-		}	
-		IBR_la_mili = {
-			allowed = { always = no }
-			picture = IBR_la_mili
-			removal_cost = -1
-
-			modifier = {
-				conscription_factor = 0.1
-				stability_factor = -0.025
-			}
-		}
-		IBR_Tourist_Hotspot = {
-			allowed = { always = no }
-			picture = IBR_Tourist_Hotspot
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = 0.1
-				production_speed_buildings_factor = 0.2
-			}
-		}
-		IBR_State_of_Union_Strong = {
-			allowed = { always = no }
-			picture = IBR_State_of_Union_Strong
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = -0.1
-				war_support_factor = 0.15
-				conscription_factor = 0.1
-			}
-		}
-		IBR_Between_Two_Worlds = {
-			allowed = { always = no }
-			picture = IBR_Between_Two_Worlds
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.1
-				political_power_gain = -0.05
-			}
-		}
-		IBR_Sociological_Francoism = {
-			allowed = { always = no }
-			picture = IBR_Sociological_Francoism
-			removal_cost = -1
-
-			modifier = {
-				fascism_acceptance = 50
-				national_socialism_acceptance = 50
-				despotism_acceptance = 50
-				drift_defence_factor = 0.05
-			}
-		}
-		IBR_The_Basque_Conflict = {
-			allowed = { always = no }
-			picture = IBR_The_Basque_Conflict
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.05
-				compliance_gain = -0.1
-			}
-		}
-	}	
-}
+		modifier = {
+			conscription = -0.03
+			attrition = 0.05
+			required_garrison_factor = 0.15
+			resistance_activity = 0.30
+		} 	
+	}
+}	
+} 

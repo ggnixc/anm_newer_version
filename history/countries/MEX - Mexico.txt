@@ -2,9 +2,10 @@
 
 set_oob = "MEX_1962"
 recruit_character = MEX_Vicente_Fox
+recruit_character = MEX_Ernesto_Zedillo
 
 set_politics = {
-	ruling_party = conservatism
+	ruling_party = despotism
 	last_election = "1994.8.21"
 	election_frequency = 72
 	elections_allowed = yes
@@ -13,17 +14,15 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    ultranationalism = 0
-    socialist = 20
-    progressivism = 10
-    liberalism = 22
-	paternalism = 0
-    liberal_conservatism = 0
-    conservatism = 48
-	communist = 0
-    despotism = 0
-    fascism = 0
-    esoteric_nazism = 0
+    fascism = 4
+	despotism = 60
+	despotism_1 = 8
+	despotism_2 = 5
+	conservatism = 10
+	conservatism_1 = 4
+	liberalism = 4
+	communist = 3
+	communist_1 = 2
 }
 
 set_stability = 0.8
@@ -32,8 +31,14 @@ set_variable = { MEX_ANM_legitmacy = 52 }
 
 add_ideas = {
 
+	## General
+
 	MEX_Manufacturing_Giant
 	MEX_Crime_Drugs
+
+	## Faction
+
+	OFN_Observer
 
 	### Ministers
 

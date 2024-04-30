@@ -15,13 +15,26 @@ ideas = {
 		}	
 	}
 	country = {
-		ISR_homeland_for_the_jewish_people = {
+		ISR_Free_Aliyah = {
 			allowed = { always = no }
-			picture = GFX_idea_ISR_homeland_for_the_jewish_people
+			picture = ISR_Free_Aliyah
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = +0.05
+				monthly_population = 0.30
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		ISR_Controlled_Aliyah = {
+			allowed = { always = no }
+			picture = ISR_Controlled_Aliyah
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.10
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
 			}
 		}
 		ISR_developed_economy = {
@@ -42,6 +55,19 @@ ideas = {
 				political_power_gain = -0.05
 				recruitable_population_factor = -0.05
 			}
+		}
+		#Palestine
+		PAL_socialist_revolutionaries = {
+			picture = jap_the_unthinkable_option
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.03
+				socialist_drift = 0.03
+			}
+				
 		}
 	}
 }

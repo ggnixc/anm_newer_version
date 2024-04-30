@@ -121,9 +121,19 @@ scripted_map_modes = {
 							check_variable = { ECON_SPHERE_LEADER = CHI }
 						}
 					}
-		 			set_temp_variable = { red = 0.221 }
-		 			set_temp_variable = { green = 0.109 }
-		 			set_temp_variable = { blue = 0.809 }
+		 			set_temp_variable = { red = 0.784 }
+		 			set_temp_variable = { green = 0.500 }
+		 			set_temp_variable = { blue = 0.290 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = TUR }
+						}
+					}
+					set_temp_variable = { red = 0.631 }
+					set_temp_variable = { green = 0.271 }
+					set_temp_variable = { blue = 0.271 }
 				}
 				else_if = {
 					limit = {

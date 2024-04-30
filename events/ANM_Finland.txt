@@ -52,11 +52,20 @@ country_event = {
 
 	option = {
 		name = FIN.red.1.a
-		SOV = { add_to_faction = FDR }
+		SOV = {
+			set_autonomy = {
+				target = FDR
+				autonomy_state = autonomy_satellite
+			}
+		}
 		FDR = {
 			set_variable = { ECON_SPHERE_LEADER = SOV }
+			set_popularities = {
+				communist = 50
+				socialist = 30
+				progressivism = 15
+				liberalism = 5
+			}
 		}
-		remove_ideas = COM_Observer
-		add_ideas = COM_Member
   	}
 }

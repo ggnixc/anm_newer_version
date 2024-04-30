@@ -193,27 +193,19 @@ ideas = {
 			picture = idea_Sphere_Leader
 		}
 
-		#Core Member - MAN
+		#Core Member
 		Sphere_Core_Member = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Sphere_Core_Member"}
 			allowed = {always = no}
 			allowed_civil_war = {always = no}
-			picture = Sphere_Core_Member_MAN
 		}
 		
-		#Special Economic Zone
-		Sphere_Special_Econ_Zone = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea Sphere_Special_Econ_Zone"}
+		#Corporate_Dependency
+		Sphere_Corporate_Dependency = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Sphere_Corporate_Dependency" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
-			picture = Sphere_Special_Economic_zone
-
-			targeted_modifier = {
-				tag = JAP
-
-				cic_to_target_factor = 0.70
-				mic_to_target_factor = 0.40
-			}
+			picture = Sphere_Corporate_Dependency
 		}
 		
 		#Imperial Protectorate
@@ -370,45 +362,15 @@ ideas = {
 			allowed_civil_war = { always = no }
 		}
 
-		#PALF
-		PALF_Faction = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PALF_Faction"}
+		#UIAS
+		UIAS_Faction = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea UIAS_Faction"}
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
-			picture = PALF_Faction
+			picture = UIAS_Faction
 			modifier = {
 				annual_gdp_growth_factor = 0.05
 				army_attack_factor = 0.15
-			}
-		}
-		PALF_Satellite = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PALF_Satellite"}
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			picture = PALF_Satellite
-			modifier = {
-				annual_gdp_growth_factor = 0.02
-				GDP_to_sphere_leader_modifier = 0.075
-			}
-		}
-
-		PALF_Faction_peace = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PALF_Faction_peace"}
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			picture = PALF_Faction
-			modifier = {
-				annual_gdp_growth_factor = 0.05
-			}
-		}
-		PALF_Satellite_peace = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea PALF_Satellite_peace"}
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			picture = PALF_Satellite
-			modifier = {
-				annual_gdp_growth_factor = 0.02
-				GDP_to_sphere_leader_modifier = 0.075
 			}
 		}
 		GCC_Faction = {

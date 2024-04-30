@@ -1,13 +1,8 @@
-﻿recruit_character = MZB_George_Meiring
-
-capital = 880
-
-set_cosmetic_tag = MZB_mandate
+﻿capital = 880
 
 set_oob = ""
 
 add_ideas = {
-	OFN_Dependent_Member
 	#POLITICS
 	tno_political_parties_one_party_state
 	tno_religious_rights_pluralism
@@ -58,24 +53,6 @@ add_ideas = {
     ### MINISTERS ###
 }
 
-SAF = {
-	if = {
-		limit = {
-			OR = {
-				has_dlc = "Together for Victory"
-				has_dlc = "Man the Guns"
-			}
-		}
-		set_autonomy = {
-			target = MZB
-			autonomy_state = autonomy_integrated_puppet
-		}
-		else = {
-			puppet = MZB
-		}
-	}
-}
-
 set_research_slots = 3
 set_convoys = 200
 add_stability = 0.9
@@ -83,7 +60,7 @@ add_war_support = 0.8
 add_manpower = 113672
 
 set_politics = {	
-	ruling_party = despotism
+	ruling_party = communist
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
@@ -93,15 +70,15 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 15
+    communist = 58
     ultranationalism = 0
     socialist = 0
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
-    conservatism = 12
-    paternalism = 0
-    despotism = 73
+    conservatism = 9
+    paternalism = 33
+    despotism = 0
     fascism = 0
     national_socialism = 0
     esoteric_nazism = 0
