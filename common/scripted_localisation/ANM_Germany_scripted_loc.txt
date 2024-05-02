@@ -198,6 +198,30 @@ defined_text = {
 	}
 }
 
+### Faction Naming ###
+defined_text = {
+	name = getGERnsdappartyleadershipinfluence
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
+		}
+		localization_key = GER_nsdap_leaderconservative_influence_anm
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
+		}
+		localization_key = GER_nsdap_leaderreformist_influence_anm 
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
+		}
+		localization_key = GER_nsdap_leaderreactionary_influence_anm
+	}
+}
+
 ### Government GUI ###
 defined_text = {
 	name = getGERgovernmentloyalty1
