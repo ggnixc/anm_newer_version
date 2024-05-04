@@ -167,7 +167,23 @@ DIPLOMACY_PEACE_PROPOSAL_ENABLE_TRIGGER = {
 	}
 }
 DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
-	always = yes
+	if = {
+		limit = {
+			ROOT = {
+				has_country_flag = may_send_volunteers
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_proxy_war
+				always = yes
+			}
+		}
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = no_proxy_war
+			always = no
+		}
+	}
 }
 
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
