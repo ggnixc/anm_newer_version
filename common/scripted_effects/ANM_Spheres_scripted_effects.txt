@@ -104,6 +104,7 @@ TNO_Spheres_init = {
 				tag = COG
 				tag = QUE
 				tag = EAF
+				tag = CYL
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = USA }
@@ -137,7 +138,6 @@ TNO_Spheres_init = {
 				tag = SBH
 				tag = LAO
 				tag = GNG
-				tag = AZH
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = JAP }
@@ -233,6 +233,19 @@ TNO_Spheres_init = {
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = CHI }
+	}
+
+	### Indian Sphere
+	AZH = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = AZH
+				tag = NEP
+				tag = BHU
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = AZH }
 	}
 
 	### Iberia
