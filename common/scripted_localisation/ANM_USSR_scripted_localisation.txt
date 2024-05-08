@@ -120,6 +120,34 @@ defined_text = {
 	}
 }
 
+defined_text = {
+	name = GetSOVRepublicStatus
+	text = {
+		trigger = { 
+			check_variable = {
+				var = SOV_REPUBLIC_STABILITY
+				value = 0
+				compare = equals
+			}
+		}
+		localization_key = "GFX_thumbs_down_button_image"
+	}
+	text = {
+		trigger = { 
+			check_variable = {
+				var = SOV_REPUBLIC_STABILITY
+				value = 100
+				compare = equals
+			}
+		}
+		localization_key = "GFX_thumbs_up_button_image"
+	}
+	text = {
+		trigger = {  }
+		localization_key = "GFX_neutral_button_image"
+	}
+}
+
 ################################################# TNO_assorted_laws_display^i
 #                   Misc Laws                   #
 #################################################
