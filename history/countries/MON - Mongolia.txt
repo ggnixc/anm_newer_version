@@ -5,7 +5,7 @@ set_oob = "MON_1962"
 set_stability = 0.84
 
 set_politics = {
-	ruling_party = despotism
+	ruling_party = communist
 	last_election = "1962.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -14,14 +14,10 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    progressivism = 13
-    conservatism = 9
-    paternalism = 10
-    despotism = 68
+    communist = 100
 }
 
 add_ideas = {
-	Sphere_Fully_Dependent
 	#Political#
 	tno_political_parties_controlled_opposition
 	tno_religious_rights_secularism
@@ -86,81 +82,4 @@ add_equipment_to_stockpile = {
    type = anti_tank_equipment_0
    amount = 200
    producer = MON
-}
-
-create_country_leader = {
-	name = "Sharavyn Gungaadorj"
-	picture = "Portrait_Lee_Yuan_tsu.tga"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = communist_bukharinism_subtype 
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ukhnaagiin Khürelsükh"
-	picture = "Portrait_Lee_Yuan_tsu.tga"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Puntsagiin Jasrai"
-	desc = "POLITICS_YUUMJAAGIIN_TSEDENBAL_DESC"
-	picture = "Portrait_MON_Puntsagiin_Jasrai.dds"
-	expire = "2090.1.1"
-	ideology = social_democracy_popular_front_subtype 
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Sanjaasürengiin Zorig"
-	picture = "Portrait_Lee_Yuan_tsu.tga"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = liberalism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Mendsaikhany Enkhsaikhan"
-	picture = "Portrait_Lee_Yuan_tsu.tga"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = conservatism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Wang Lijun"
-	desc = ""
-	picture = "Portrait_MON_Wang_Lijun.dds"
-	expire = "2090.1.1"
-	ideology = paternalism_national_conservatism_subtype 
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Bazarsad Jargalsaikhan"
-	picture = "Portrait_Lee_Yuan_tsu.tga"
-	desc = "POLITICS_LEEYUANTSU_DESC"
-	expire = "2090.1.1"
-	ideology = despotism_aristocratic_conservatism_subtype 
-	traits = {
-		#
-	}
 }

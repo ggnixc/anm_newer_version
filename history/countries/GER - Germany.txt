@@ -427,7 +427,6 @@ set_variable = { GER_ANM_economy_status_7_control = 0.85 }
 set_variable = { GER_ANM_economy_status_8 = 6 } #Kaukasia
 set_variable = { GER_ANM_economy_status_8_size = 10 } 
 set_variable = { GER_ANM_economy_status_8_control = 0.75 } 
-set_variable = { GER_ANM_economy_status_9 = 2 } #Wolga
 set_variable = { GER_ANM_economy_status_9_size = 10 } 
 set_variable = { GER_ANM_economy_status_9_control = 0.65 } 
 set_variable = { GER_ANM_economy_status_10 = 4 } #Slovakia
@@ -545,7 +544,6 @@ add_to_faction = MRZ
 add_to_faction = SER
 add_to_faction = MOS
 add_to_faction = CAU
-add_to_faction = VLG
 add_to_faction = ENG
 add_to_faction = TNS
 add_to_faction = BUL
@@ -560,7 +558,6 @@ if = {
 	set_autonomy = { target = UKR autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = MOS autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = CAU autonomy_state = autonomy_reichsprotektorat }
-	set_autonomy = { target = VLG autonomy_state = autonomy_reichsprotektorat }
 
 	else = {
 		puppet = UKR
@@ -569,7 +566,6 @@ if = {
 		puppet = MRZ
 		puppet = MOS
 		puppet = CAU
-		puppet = VLG
 	}
 }
 
