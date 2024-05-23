@@ -92,16 +92,6 @@ scripted_gui = {
 				check_variable = { GER_ANM_economy_status_26_size < 5 } 
 			}
 
-			ep_economy_country_wolga_visible = { 
-				AND = { 
-					NOT = { VLG = { owns_state = 243 } } 
-					NOT = { check_variable = { GER_ANM_economy_status_9_size < 5 } } 
-				} 
-			}
-			ep_economy_country_wolga_big_visible = { 
-				VLG = { owns_state = 243 }
-			}
-
 			ep_economy_country_USSR_visible = {
 				SOV = { owns_state = 1442 }
 			}
@@ -451,77 +441,6 @@ scripted_gui = {
 					check_variable = { GER_ANM_economy_status_8 = 0 }
 					has_country_flag = GER_ANM_Economy_View_Status 
                     NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-				} 
-			} 
-
-			ep_economy_status_wolga_poor_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_9 > 0 } 
-					check_variable = { GER_ANM_economy_status_9 < 4 } 
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					NOT = { VLG = { owns_state = 243 } } 
-				} 
-			} 
-			ep_economy_status_wolga_average_visible = { 	
-				AND = { 
-					check_variable = {  GER_ANM_economy_status_9 > 3 }
-					check_variable = { GER_ANM_economy_status_9 < 8 }  
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					NOT = { VLG = { owns_state = 243 } } 
-				} 
-			} 
-			ep_economy_status_wolga_good_visible = {  
-				AND = { 
-					check_variable = { GER_ANM_economy_status_9 > 7 }
-					check_variable = { GER_ANM_economy_status_9 < 11 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					NOT = { VLG = { owns_state = 243 } } 
-				} 
-			}       
-			ep_economy_status_wolga_unavailable_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_9 = 0 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					NOT = { VLG = { owns_state = 243 } } 
-				} 
-			} 
-			ep_economy_status_wolga_big_poor_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_9 > 0 } 
-					check_variable = { GER_ANM_economy_status_9 < 4 } 
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					VLG = { owns_state = 243 }
-				} 
-			} 
-			ep_economy_status_wolga_big_average_visible = { 	
-				AND = { 
-					check_variable = {  GER_ANM_economy_status_9 > 3 }
-					check_variable = { GER_ANM_economy_status_9 < 8 }  
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					VLG = { owns_state = 243 }
-				} 
-			} 
-			ep_economy_status_wolga_big_good_visible = {  
-				AND = { 
-					check_variable = { GER_ANM_economy_status_9 > 7 }
-					check_variable = { GER_ANM_economy_status_9 < 11 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					VLG = { owns_state = 243 }
-				} 
-			}       
-			ep_economy_status_wolga_big_unavailable_visible = { 
-				AND = { 
-					check_variable = { GER_ANM_economy_status_9 = 0 }
-					has_country_flag = GER_ANM_Economy_View_Status 
-                    NOT = { has_country_flag = GER_ANM_Economy_View_Oversees }
-					VLG = { owns_state = 243 }
 				} 
 			} 
 
@@ -1258,7 +1177,6 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1290,7 +1208,6 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1322,7 +1239,6 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1354,7 +1270,6 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1386,7 +1301,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1418,7 +1333,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1450,7 +1365,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1482,7 +1397,7 @@ scripted_gui = {
 				set_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1514,7 +1429,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				set_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1546,71 +1461,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				set_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
-				clr_country_flag = ep_economy_country_slovakia_click
-				clr_country_flag = ep_economy_country_hungary_click
-				clr_country_flag = ep_economy_country_romania_click
-				clr_country_flag = ep_economy_country_serbia_click
-				clr_country_flag = ep_economy_country_bulgaria_click
-				clr_country_flag = ep_economy_country_transnitria_click
-				clr_country_flag = ep_economy_country_france_click
-				clr_country_flag = ep_economy_country_britain_click
-				clr_country_flag = ep_economy_country_ireland_click
-				clr_country_flag = ep_economy_country_NI_click
-				clr_country_flag = ep_economy_country_denmark_click
-				clr_country_flag = ep_economy_country_finland_click
-				clr_country_flag = ep_economy_country_spain_click
-				clr_country_flag = ep_economy_country_iran_click
-				clr_country_flag = ep_economy_country_china_click
-				clr_country_flag = ep_economy_country_DR_click
-				clr_country_flag = ep_economy_country_algeria_click
-				clr_country_flag = ep_economy_country_madagaskar_click	
-				clr_country_flag = ep_economy_country_turkey_click
-			}
-			ep_economy_country_wolga_click = { 
-				clr_country_flag = ep_economy_country_reich_click
-				clr_country_flag = ep_economy_country_Russland_click
-				clr_country_flag = ep_economy_country_Grenzland_click
-				clr_country_flag = ep_economy_country_norway_click
-				clr_country_flag = ep_economy_country_sweden_click
-				clr_country_flag = ep_economy_country_baltics_click
-				clr_country_flag = ep_economy_country_belarus_click
-				clr_country_flag = ep_economy_country_homel_click
-				clr_country_flag = ep_economy_country_ukraine_click
-				clr_country_flag = ep_economy_country_caucasus_click
-				set_country_flag = ep_economy_country_wolga_click
-				clr_country_flag = ep_economy_country_slovakia_click
-				clr_country_flag = ep_economy_country_hungary_click
-				clr_country_flag = ep_economy_country_romania_click
-				clr_country_flag = ep_economy_country_serbia_click
-				clr_country_flag = ep_economy_country_bulgaria_click
-				clr_country_flag = ep_economy_country_transnitria_click
-				clr_country_flag = ep_economy_country_france_click
-				clr_country_flag = ep_economy_country_britain_click
-				clr_country_flag = ep_economy_country_ireland_click
-				clr_country_flag = ep_economy_country_NI_click
-				clr_country_flag = ep_economy_country_denmark_click
-				clr_country_flag = ep_economy_country_finland_click
-				clr_country_flag = ep_economy_country_spain_click
-				clr_country_flag = ep_economy_country_iran_click
-				clr_country_flag = ep_economy_country_china_click
-				clr_country_flag = ep_economy_country_DR_click
-				clr_country_flag = ep_economy_country_algeria_click
-				clr_country_flag = ep_economy_country_madagaskar_click	
-				clr_country_flag = ep_economy_country_turkey_click
-			}
-			ep_economy_country_wolga_big_click = { 
-				clr_country_flag = ep_economy_country_reich_click
-				clr_country_flag = ep_economy_country_Russland_click
-				clr_country_flag = ep_economy_country_Grenzland_click
-				clr_country_flag = ep_economy_country_norway_click
-				clr_country_flag = ep_economy_country_sweden_click
-				clr_country_flag = ep_economy_country_baltics_click
-				clr_country_flag = ep_economy_country_belarus_click
-				clr_country_flag = ep_economy_country_homel_click
-				clr_country_flag = ep_economy_country_ukraine_click
-				clr_country_flag = ep_economy_country_caucasus_click
-				set_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1642,7 +1493,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				set_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1674,7 +1525,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				set_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1706,7 +1557,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				set_country_flag = ep_economy_country_romania_click
@@ -1738,7 +1589,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1770,7 +1621,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1802,7 +1653,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1834,7 +1685,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1866,7 +1717,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1898,7 +1749,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1930,7 +1781,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1962,7 +1813,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -1994,7 +1845,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2026,7 +1877,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2058,7 +1909,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2090,7 +1941,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2122,7 +1973,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2154,7 +2005,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2186,7 +2037,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2218,7 +2069,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2250,7 +2101,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click
@@ -2282,7 +2133,7 @@ scripted_gui = {
 				clr_country_flag = ep_economy_country_homel_click
 				clr_country_flag = ep_economy_country_ukraine_click
 				clr_country_flag = ep_economy_country_caucasus_click
-				clr_country_flag = ep_economy_country_wolga_click
+				 
 				clr_country_flag = ep_economy_country_slovakia_click
 				clr_country_flag = ep_economy_country_hungary_click
 				clr_country_flag = ep_economy_country_romania_click

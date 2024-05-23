@@ -2420,6 +2420,11 @@ technologies = {
 	
 	MBT_1970 = { #King Tiger
 		
+		path = {
+			leads_to_tech = MBT_1980
+			research_cost_coeff = 1
+		}
+
 		path = { #MBT armor
 			leads_to_tech = MBT_1970_basic_armor
 			research_cost_coeff = 1
@@ -2744,6 +2749,29 @@ technologies = {
 		}
 	}
 	
+	MBT_1980 = {
+		
+		enable_equipments = {
+			MBT_equipment_4
+		}
+		
+		research_cost = 2.5
+		start_year = 2012
+		
+		folder = {
+			name = armour_folder
+			position = { x = 1 y = 36 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			armor
+			MBT
+		}
+	}
 
 	laser_AA_tech = { #Szhatie
 		

@@ -1,53 +1,39 @@
 ideas = {
 	country = {
-		AZH_Success_of_the_Hindustan_Land_Development_Program = {
+		AZH_Sphere_Matters = {
 			allowed = { always = no }
 			allowed_civil_war = { always = yes }
-			picture = AZH_Success_of_the_Hindustan_Land_Development_Program
+			picture = AZH_Sphere_Matters
 			removal_cost = -1
 
 			modifier = {
-				party_popularity_stability_factor = 0.15
-				political_power_factor = 0.20
-				stability_factor = 0.15
-			}
-		}
-		AZH_Revolutionary_Government = {
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			picture = AZH_Revolutionary_Government
-			removal_cost = -1
-
-			modifier = {
-				communist_drift = 0.03
-				socialist_drift = 0.05
-				stability_factor = -0.10
-				war_support_factor = 0.15
-				
-			}
-		}
-		AZH_Ghost_of_the_Samurai = {
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			picture = AZH_Ghost_of_the_Samurai
-			removal_cost = -1
-
-			modifier = {
-				industrial_capacity_factory = -0.20
-				production_factory_start_efficiency_factor = -0.20
-				production_factory_efficiency_gain_factor = -0.25
-				production_factory_max_efficiency_factor = -0.10
-			}
-		}
-		AZH_Facade_of_Equality = {
-			allowed = { always = no }
-			allowed_civil_war = { always = yes }
-			picture = AZH_Facade_of_Equality
-			removal_cost = -1
-
-			modifier = {
-				stability_weekly = -0.001
+				socialist_acceptance = 50
 				stability_factor = 0.05
+				faction_trade_opinion_factor = -0.01
+			}
+		}
+		AZH_Liberation_Arsenal = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = AZH_Liberation_Arsenal
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.15
+				war_support_factor = 0.15
+			}
+		}
+		AZH_Red_Spectre = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = AZH_Red_Spectre
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.10
+				communist_drift = +0.02
+				stability_factor = -0.15
 			}
 		}
 	}	

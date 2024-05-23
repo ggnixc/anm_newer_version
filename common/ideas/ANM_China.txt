@@ -30,43 +30,5 @@ ideas = {
 				industrial_capacity_factory = 0.25
 			}
 		}
-		CHI_incomplete_liberation = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_incomplete_liberation
-			removal_cost = -1
-
-			modifier = {
-				war_support_factor = 0.35
-				army_core_defence_factor = 0.35
-				army_core_attack_factor = 0.3
-				production_factory_efficiency_gain_factor = 0.15
-
-			}
-		}
-		CHI_shadow_of_the_eagle = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_shadow_of_the_eagle
-			removal_cost = -1
-
-			modifier = {
-				research_speed_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.10
-				production_factory_start_efficiency_factor = 0.20
-				consumer_goods_factor = 0.1
-				trade_opinion_factor = -0.5
-				opinion_gain_monthly = -0.15
-				encryption = 0.25
-
-			}
-			targeted_modifier = {
-				tag = GER
-                extra_trade_to_target_factor = 0.15
-			}
-		}
-
 	}
 }

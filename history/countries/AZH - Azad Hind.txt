@@ -1,4 +1,7 @@
 ﻿recruit_character = AZH_Chitta_Basu
+recruit_character = AZH_Jayanta_Roy
+
+load_focus_tree = ZZZ_national_focus
 
 capital = 1349
 set_oob = "AZH_1962"
@@ -6,7 +9,7 @@ set_stability = 0.6
 set_war_support = 0.6
 
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = paternalism
 	last_election = "1970.2.1"
 	election_frequency = 36
 	elections_allowed = no
@@ -15,25 +18,26 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 20
+    communist = 16
+	communist_1 = 8
     ultranationalism = 0
-    socialist = 55
-    progressivism = 25
+    socialist = 23
+    progressivism = 6
     liberalism = 0
     liberal_conservatism = 0
     conservatism = 0
-    paternalism = 0
+    paternalism = 24
+	paternalism_1 = 20
     despotism = 0
-    fascism = 0
+    fascism = 3
     national_socialism = 0
 }
 
 add_ideas = {
 	#NAT SPIRITS
-	AZH_Success_of_the_Hindustan_Land_Development_Program
-	AZH_Revolutionary_Government
-	AZH_Ghost_of_the_Samurai
-	AZH_Facade_of_Equality
+	AZH_Sphere_Matters
+	AZH_Liberation_Arsenal
+	AZH_Red_Spectre
 	#FACTIONS
 	Sphere_Coequal
 	#MINISTERS
@@ -77,7 +81,7 @@ add_ideas = {
 	tno_pensions_acceptable_pensions
 	tno_unemployment_low_subsidies
 	#DEVELOPMENT#
-	tno_nuclear_stockpile_massive
+	tno_nuclear_stockpile_none
 	tno_poverty_rate_15
 	tno_army_professionalism_professional
 	tno_industrial_expertise_innovative 
