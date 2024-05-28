@@ -11,17 +11,17 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
-	IRE_desmond_omalley = {  
-		name = IRE_desmond_omalley
+	IRE_sile_de_velera = {   
+		name = IRE_sile_de_velera
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/IRE/Portrait_IRE_Desmond_Omalley.dds"
-				small = "GFX_idea_IRE_Desmond_Omalley" 
+				large = "gfx/leaders/IRE/Portrait_IRE_Sile_De_Velera.dds"
+				small = "GFX_idea_IRE_Sile_De_Velera" 
 			} 	
 		} 
 		advisor = {
 			slot = head_of_government
-			idea_token = IRE_Desmond_Omalley_hog
+			idea_token = IRE_Sile_De_Velera_hog
 			traits = {
 				head_of_government
 			}
@@ -165,7 +165,7 @@ characters = {
 		}
 	}
 
-	### ULSTER ###
+	### Northern Ireland ###
 	ULS_John_Gorman = {  
 		name = ULS_John_Gorman
 		portraits = { 
@@ -175,6 +175,136 @@ characters = {
 			desc = "POLITICS_JOHN_GORMAN_DESC"
 			ideology = conservatism_progressive_conservatism_subtype
 			traits = {  }
+			expire = "2999.1.1.1"
+		}
+	}
+	ULS_John_Turnley = {   
+		name = ULS_John_Turnley
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/IRE/Portrait_ULS_John_Turnley.dds"
+				small = "GFX_idea_ULS_John_Turnley" 
+			} 	
+		} 
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ULS_John_Turnley_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ULS_John_Alderdice = {   
+		name = ULS_John_Alderdice
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/IRE/Portrait_ULS_John_Alderdice.dds"
+				small = "GFX_idea_ULS_John_Alderdice" 
+			} 	
+		} 
+		country_leader = {
+			ideology = liberalism_1_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ULS_John_Alderdice_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ULS_David_Trimble = {   
+		name = ULS_David_Trimble
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/IRE/Portrait_ULS_David_Trimble.dds"
+				small = "GFX_idea_ULS_David_Trimble" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = ULS_David_Trimble_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ULS_Reg_Empey = {  
+		name = ULS_Reg_Empey
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/IRE/Portrait_ULS_Reg_Empey.dds"
+				small = "GFX_idea_ULS_Reg_Empey" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = ULS_Reg_Empey_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ULS_Gusty_Spence = { 
+		name = ULS_Gusty_Spence
+		country_leader = {
+			ideology = ultranationalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	ULS_Peter_Robinson = { 
+		name = ULS_Peter_Robinson
+		country_leader = {
+			ideology = paternalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	ULS_Fergus_McAteer = { 
+		name = ULS_Fergus_McAteer
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	ULS_Hugh_Smyth = { 
+		name = ULS_Hugh_Smyth
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	ULS_Ruari_O_Bradiagh = { 
+		name = ULS_Ruari_O_Bradiagh
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	ULS_Seamus_Costello = { 
+		name = ULS_Seamus_Costello
+		country_leader = {
+			ideology = communist_subtype
 			expire = "2999.1.1.1"
 		}
 	}

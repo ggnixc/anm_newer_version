@@ -1,0 +1,47 @@
+ideas = {
+	country = {
+		BUL_History_Nonpartisanship = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BUL_History_Nonpartisanship"}
+			allowed = {
+				always = no
+			}
+			picture = GFX_idea_BUL_History_Nonpartisanship
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = 0.15
+				communist_drift = -0.03
+				liberalism_drift = -0.01
+				conservatism_drift = -0.01
+				liberal_conservatism_drift = -0.01
+			}
+		}
+		BUL_Skopje_Miracle = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BUL_Skopje_Miracle"}
+			allowed = {
+				always = no
+			}
+			picture = GFX_idea_BUL_Skopje_Miracle
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				resistance_activity = -0.25
+				custom_modifier_tooltip = BUL_Skopje_Mircale_tt
+			}
+	
+		}	
+		BUL_Lackluster_Development = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BUL_Lackluster_Development"}
+			allowed = {
+				always = no
+			}
+			picture = GFX_idea_BUL_Lackluster_Development
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.025
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+				production_speed_buildings_factor = -0.15
+			}
+		}	
+	}
+}
