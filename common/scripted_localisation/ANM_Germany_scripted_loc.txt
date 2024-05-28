@@ -1162,8 +1162,22 @@ defined_text = {
 		localization_key = "GER_Deutsche_Weltgemeinschaft"
 	}
 	text = { 
-		trigger = { check_variable = { v = 4 } }
-		localization_key = "GER_Das_Euromark_Projekt"
+		trigger = { 
+			AND = { 
+				check_variable = { v = 4 }
+				GER = { NOT = { has_completed_focus = GER_launch_the_euromark } } 
+			}	
+		}
+		localization_key = "GER_Das_Euromark_Projekt_Preparing"
+	}
+	text = { 
+		trigger = { 
+			AND = { 
+				check_variable = { v = 4 }
+				GER = { has_completed_focus = GER_launch_the_euromark } 
+			}	
+		}
+		localization_key = "GER_Das_Euromark_Projekt_Launched"
 	}
 	text = { 
 		trigger = { check_variable = { v = 5 } }
@@ -1204,9 +1218,21 @@ defined_text = {
 	}
 	text = { 
 		trigger = {
-			check_variable = { v = 4 }
+			AND = { 
+				check_variable = { v = 4 }
+				GER = { NOT = { has_completed_focus = GER_launch_the_euromark } }  
+			}	
 		}
-		localization_key = GER_Das_Euromark_Projek_desc
+		localization_key = GER_Das_Euromark_Projek_Preparation_desc
+	}
+	text = { 
+		trigger = {
+			AND = { 
+				check_variable = { v = 4 }
+				GER = { has_completed_focus = GER_launch_the_euromark } 
+			}
+		}
+		localization_key = GER_Das_Euromark_Projek_Launched_desc
 	}
 	text = { 
 		trigger = {
