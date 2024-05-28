@@ -68,4 +68,88 @@ characters = {
 			id = -1
 		}
 	}
+	IRQ_Nasser_Chaderchi={
+		name = IRQ_Nasser_Chaderchi
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/IRQ/Portrait_IRQ_Nasser_Chaderchi.dds"
+				small = "gfx/interface/ideas/IRQ/IRQ_minister_Nasser_Chaderchi_hog.dds"
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = IRQ_minister_Nasser_Chaderchi_hog
+			traits = {
+				Deputy_Prime_Minister
+				hog_believer_in_democracy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IRQ_Arif_Abdul_Razzaq={
+		name = IRQ_Arif_Abdul_Razzaq
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/IRQ/IRQ_Arif_Abdul_Razzaq.dds"
+				small = "gfx/interface/ideas/IRQ/IRQ_minister_Arif_Abdul_Razzaq_sec.dds"
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = IRQ_minister_Arif_Abdul_Razzaq_sec
+			traits = {
+				Minister_of_Defence
+				sec_retired_general
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IRQ_Tariq_Aziz={
+		name = IRQ_Tariq_Aziz
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/IRQ/Portrait_IRQ_Tariq_Aziz.dds"
+				small = "gfx/interface/ideas/IRQ/IRQ_minister_Tariq_Aziz_for.dds"
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = IRQ_minister_Tariq_Aziz_for
+			traits = {
+				Minister_of_Exterior
+				for_well_connected
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	IRQ_Fakhri_Qadouri={
+		name = IRQ_Fakhri_Qadouri
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/IRQ/Portrait_IRQ_Nasser_Chaderchi.dds"
+				small = "gfx/interface/ideas/IRQ/IRQ_minister_Fakhri_Qadouri_eco.dds"
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = IRQ_minister_Fakhri_Qadouri_eco
+			traits = {
+				Minister_of_Finance
+				eco_mixed_economy
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
 }
