@@ -1137,8 +1137,6 @@ technologies = {
 			IFV_cannon
 			APC_infantry_AP_weapon
 			MBT_cannon
-			heavy_cannon
-			superheavy_cannon
 		}
 	}
 
@@ -1183,8 +1181,6 @@ technologies = {
 			IFV_cannon_2
 			APC_infantry_AP_weapon_2
 			MBT_cannon_2
-			heavy_cannon_2
-			superheavy_cannon_2
 			IFV_light_artillery
 			APC_support_art
 		}
@@ -1218,8 +1214,6 @@ technologies = {
 			IFV_cannon_3
 			APC_infantry_AP_weapon_3
 			MBT_cannon_3
-			heavy_cannon_3
-			superheavy_cannon_3
 			IFV_light_artillery_2
 			APC_support_art_2
 			MBT_heavy_artillery
@@ -1347,8 +1341,6 @@ technologies = {
 			IFV_cannon_4
 			APC_infantry_AP_weapon_4
 			MBT_cannon_4
-			heavy_cannon_4
-			superheavy_cannon_4
 			IFV_light_artillery_3
 			APC_support_art_3
 			MBT_heavy_artillery_2
@@ -2086,203 +2078,6 @@ technologies = {
 		categories = {
 			armor
 			IFV
-		}
-	}
-
-###########
-### HVY ###
-###########
-
-	NSB_heavy_1945 = {
-		enable_equipments = {
-			heavy_tank_chassis_0
-		}
-		enable_equipment_modules = {
-			Heavy_three_man_tank_turret
-			Heavy_four_man_tank_turret
-			Heavy_fixed_superstructure_turret
-		}
-		path = {
-			leads_to_tech = NSB_heavy_1950
-			research_cost_coeff = 1
-		}
-		research_cost = 2.5
-		start_year = 1945
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 0 y = 0 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		enable_subunits = {
-			heavy_tank
-		}
-	}
-
-	NSB_heavy_1950 = {
-		enable_equipments = {
-			heavy_tank_chassis_1
-		}
-		path = {
-			leads_to_tech = NSB_heavy_1960
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1950
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 0 y = 4 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-	}
-
-	NSB_heavy_1960 = {
-		enable_equipments = {
-			heavy_tank_chassis_2
-		}
-		path = {
-			leads_to_tech = NSB_heavy_1970
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1960
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 0 y = 8 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-	}
-
-	NSB_heavy_1970 = {
-		enable_equipments = {
-			heavy_tank_chassis_3
-		}
-		path = {
-			leads_to_tech = NSB_heavy_1980
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1970
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 0 y = 12 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-	}
-
-###########
-### SHY ###
-###########
-
-	NSB_superheavy_1945 = {
-		enable_equipments = {
-			superheavy_tank_chassis_0
-		}
-		enable_equipment_modules = {
-			Superheavy_three_man_tank_turret
-			Superheavy_four_man_tank_turret
-			Superheavy_fixed_superstructure_turret
-		}
-		path = {
-			leads_to_tech = NSB_superheavy_1950
-			research_cost_coeff = 1
-		}
-		research_cost = 2.5
-		start_year = 1945
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 0 y = 0 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		enable_subunits = {
-			superheavy_armor
-		}
-	}
-
-	NSB_superheavy_1950 = {
-		enable_equipments = {
-			superheavy_tank_chassis_1
-		}
-		path = {
-			leads_to_tech = NSB_superheavy_1960
-			research_cost_coeff = 1
-		}
-		research_cost = 2
-		start_year = 1950
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 0 y = 4 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 50
-		}
-	}
-
-	NSB_superheavy_1960 = {
-		enable_equipments = {
-			superheavy_tank_chassis_2
-		}
-		research_cost = 2
-		start_year = 1960
-		folder = {
-			name = nsb_armour_folder
-			position = { x = 0 y = 8 }
-		}
-
-		categories = {
-			motorized_equipment
-			armor
-		}
-
-		ai_will_do = {
-			factor = 50
 		}
 	}
 
