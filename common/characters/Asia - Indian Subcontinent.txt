@@ -84,15 +84,87 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/PAK/Portrait_PAK_Abida_Hussain.dds"
+				small = "GFX_idea_PAK_Abida_Hussain"
 			}
 		}
 		country_leader = {
 			expire = "2999.1.1"
-			desc = ""
+			desc = "POLITICS_ABIDA_HUSSEIN_DESC"
 			ideology = despotism_aristocratic_conservatism_subtype
 			traits = {
 			}
 			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PAK_Abida_Hussain_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PAK_Shaukat_Aziz = {
+		name = PAK_Shaukat_Aziz
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAK/Portrait_PAK_Shaukat_Aziz.dds"
+				small = "GFX_idea_PAK_Shaukat_Aziz"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PAK_Shaukat_Aziz_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PAK_Nawar_Akbar_Bugti = {
+		name = PAK_Nawar_Akbar_Bugti
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAK/Portrait_PAK_Nawar_Akbar_Bugti.dds"
+				small = "GFX_idea_PAK_Nawar_Akbar_Bugti"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PAK_Nawar_Akbar_Bugti_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PAK_Jehangir_Karamat = {
+		name = PAK_Jehangir_Karamat
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAK/Portrait_PAK_Jehangir_Karamat.dds"
+				small = "GFX_idea_PAK_Jehangir_Karamat"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PAK_Jehangir_Karamat_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
 }
