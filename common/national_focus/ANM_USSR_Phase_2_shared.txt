@@ -1,0 +1,404 @@
+### Foreign Policy ###
+shared_focus = {
+	id = SOV_the_bessmertnykh_doctrine
+	icon = GFX_SOV_the_bessmertnykh_doctrine
+	cost = 4.00
+	x = 15
+	y = 0
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_reach_out_to_socialist_world
+	icon = GFX_SOV_reach_out_to_socialist_world
+	relative_position_id = SOV_the_bessmertnykh_doctrine
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_the_bessmertnykh_doctrine
+	}
+	x = -1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_a_spectre_is_haunting_europe
+	icon = GFX_SOV_a_spectre_is_haunting_europe
+	relative_position_id = SOV_the_bessmertnykh_doctrine
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_the_bessmertnykh_doctrine
+	}
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_world_congress_of_the_communist_international
+	icon = GFX_SOV_world_congress_of_the_communist_international
+	relative_position_id = SOV_the_bessmertnykh_doctrine
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_reach_out_to_socialist_world
+	}
+	prerequisite = {
+		focus = SOV_a_spectre_is_haunting_europe
+	}
+	x = 0
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_playground_of_the_swastika
+	icon = GFX_SOV_playground_of_the_swastika
+	relative_position_id = SOV_world_congress_of_the_communist_international
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_world_congress_of_the_communist_international
+	}
+	x = -13
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_boost_the_scandinavian_reds
+	icon = GFX_SOV_boost_the_scandinavian_reds
+	relative_position_id = SOV_playground_of_the_swastika
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_playground_of_the_swastika
+	}
+	x = -1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_contacts_in_the_caucasus
+	icon = GFX_SOV_contacts_in_the_caucasus
+	relative_position_id = SOV_playground_of_the_swastika
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_playground_of_the_swastika
+	}
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_red_riflemen
+	icon = GFX_SOV_the_red_riflemen
+	relative_position_id = SOV_playground_of_the_swastika
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_boost_the_scandinavian_reds
+	}
+	prerequisite = {
+		focus = SOV_contacts_in_the_caucasus
+	}
+	x = -2
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_soft_underbelly_of_the_balkans
+	icon = GFX_SOV_soft_underbelly_of_the_balkans
+	relative_position_id = SOV_playground_of_the_swastika
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_boost_the_scandinavian_reds
+	}
+	prerequisite = {
+		focus = SOV_contacts_in_the_caucasus
+	}
+	x = 0
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_brave_partisans_of_the_western_rus
+	icon = GFX_SOV_brave_partisans_of_the_western_rus
+	relative_position_id = SOV_playground_of_the_swastika
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_boost_the_scandinavian_reds
+	}
+	prerequisite = {
+		focus = SOV_contacts_in_the_caucasus
+	}
+	x = 2
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_approach_iberian_separatists
+	icon = GFX_SOV_approach_iberian_separatists
+	relative_position_id = SOV_the_red_riflemen
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_the_red_riflemen
+	}
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_british_isles_ignited_red
+	icon = GFX_SOV_the_british_isles_ignited_red
+	relative_position_id = SOV_brave_partisans_of_the_western_rus
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_brave_partisans_of_the_western_rus
+	}
+	x = -1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_motherland_calls_west
+	icon = GFX_SOV_the_motherland_calls_west
+	relative_position_id = SOV_soft_underbelly_of_the_balkans
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_soft_underbelly_of_the_balkans
+	}
+	x = 0
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_swastika_dented
+	icon = GFX_SOV_the_swastika_dented
+	relative_position_id = SOV_the_motherland_calls_west
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_the_motherland_calls_west
+	}
+	x = 0
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+
+shared_focus = {
+	id = SOV_look_towards_the_eagles_backyard
+	icon = GFX_SOV_look_towards_the_eagles_backyard
+	relative_position_id = SOV_world_congress_of_the_communist_international
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_world_congress_of_the_communist_international
+	}
+	x = -7
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_la_tri_beacon_of_latam
+	icon = GFX_SOV_la_tri_beacon_of_latam
+	relative_position_id = SOV_look_towards_the_eagles_backyard
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_look_towards_the_eagles_backyard
+	}
+	x = -1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_support_left_wing_of_cuba
+	icon = GFX_SOV_support_left_wing_of_cuba
+	relative_position_id = SOV_look_towards_the_eagles_backyard
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_look_towards_the_eagles_backyard
+	}
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_storm_brews_over_peru
+	icon = GFX_SOV_storm_brews_over_peru
+	relative_position_id = SOV_look_towards_the_eagles_backyard
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_la_tri_beacon_of_latam
+	}
+	x = -1
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_influence_the_land_of_the_palm_trees
+	icon = GFX_SOV_influence_the_land_of_the_palm_trees
+	relative_position_id = SOV_look_towards_the_eagles_backyard
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_support_left_wing_of_cuba
+	}
+	x = 1
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_brown_curse_plagues_the_new_world
+	icon = GFX_SOV_the_brown_curse_plagues_the_new_world
+	relative_position_id = SOV_look_towards_the_eagles_backyard
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_storm_brews_over_peru
+	}
+	prerequisite = {
+		focus = SOV_influence_the_land_of_the_palm_trees
+	}
+	x = 0
+	y = 3
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_colombias_catholic_nightmare
+	icon = GFX_SOV_colombias_catholic_nightmare
+	relative_position_id = SOV_the_brown_curse_plagues_the_new_world
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_the_brown_curse_plagues_the_new_world
+	}
+	x = -2
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_destabilise_patagonia
+	icon = GFX_SOV_destabilise_patagonia
+	relative_position_id = SOV_the_brown_curse_plagues_the_new_world
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_the_brown_curse_plagues_the_new_world
+	}
+	x = 0
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_topple_the_trujillos
+	icon = GFX_SOV_topple_the_trujillos
+	relative_position_id = SOV_the_brown_curse_plagues_the_new_world
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_the_brown_curse_plagues_the_new_world
+	}
+	x = 2
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_new_world_painted_red
+	icon = GFX_SOV_the_new_world_painted_red
+	relative_position_id = SOV_the_brown_curse_plagues_the_new_world
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_colombias_catholic_nightmare
+	}
+	prerequisite = {
+		focus = SOV_destabilise_patagonia
+	}
+	prerequisite = {
+		focus = SOV_topple_the_trujillos
+	}
+	x = 0
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+

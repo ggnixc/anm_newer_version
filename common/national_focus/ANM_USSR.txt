@@ -1,3 +1,4 @@
+### Starting Tree ###
 focus_tree = {
 	id = SOV_start
 	country = {
@@ -9,4 +10,19 @@ focus_tree = {
 	}
 	default = no
 	shared_focus = SOV_union_resurgent
+}
+
+### Phase 2 ###
+### Foreign Policy ###
+focus_tree = {
+	id = SOV_focus_phase_2_foreign
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	default = no
+	shared_focus = SOV_the_bessmertnykh_doctrine
 }
