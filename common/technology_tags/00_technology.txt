@@ -8,15 +8,13 @@ technology_categories = {
 	motorized_equipment
 	marine_tech
 	land_doctrine
-	cat_combined_operations #4 branches of the land doctrine
+	cat_combined_operations #3 branches of the land doctrine
 	cat_maneuver_warfare
 	cat_strategic_theorem
-	cat_rapid_response
 	support_tech #All support companies
-	para_tech #Paratroopers tech, now for air assault
+	air_assault_tech
 	engineers_tech
 	recon_tech
-	drone_tech
 	mountaineers_tech
 	military_police_tech
 	hospital_tech
@@ -44,7 +42,6 @@ technology_categories = {
 	ICBM
 	MRBM
 	SRBM
-	ucav_drone
 	fighter #Any fighter
 	jet_fighter #Jet fighters only
 	strategic_bomber
@@ -71,7 +68,50 @@ technology_categories = {
 	air_parity
 	naval_bomber #Do something with this, currently has no use
 	air_equipment #All planes
-
+	cat_scout_plane
+	train_tech
+	cat_production
+	cat_synth_rubber
+	cat_synth_oil
+	cat_armored_cars
+	cat_special_forces_generic
+	cat_torpedoes
+	cat_ship_light_battery
+	cat_ship_medium_battery
+	cat_ship_heavy_battery
+	plane_modules_tech
+	cat_air_guns
+	cat_air_engine
+	cat_air_bombs
+	light_air
+	medium_air
+	heavy_air
+	cat_light_armor
+	cat_medium_armor
+	cat_heavy_armor
+	cat_anti_tank
+	cat_anti_air
+	cat_mechanized_equipment
+	strategic_destruction_tree
+	battlefield_support_tree
+	operational_integrity_tree
+	trade_interdiction_tree
+	convoy_defense_tree
+	light_fighter
+	cat_heavy_fighter
+	cat_strategic_bomber
+	cas_bomber
+	cat_mobile_warfare
+	cat_superior_firepower
+	cat_grand_battle_plan
+	cat_mass_assault
+	cat_base_strike
+	cat_trade_interdiction
+	cat_fleet_in_being
+	cat_strategic_destruction
+	cat_battlefield_support
+	cat_operational_integrity
+	
 	###Naval
 	naval_equipment #Anything related to the navy
 	blue_water_navy #2 branches of the naval doctrine
@@ -109,6 +149,9 @@ technology_categories = {
 	jet_technology #Not for planes, just jet research
 	missile #For the 3 missile types
 	helicopter_support #For heli support companies
+	pony_tech # Project Ferus
+	
+	train_tech
 }
 
 technology_folders = {
@@ -119,14 +162,20 @@ technology_folders = {
 		ledger = army
 	}
 	armour_folder = {
+		available = {
+			NOT = { has_dlc = "No Step Back" }
+		}
 		ledger = army
 	}
 	artillery_folder = {
+		available = {
+			NOT = { has_dlc = "No Step Back" }
+		}
 		ledger = army
 	}
 	nsb_armour_folder = {
 		available = {
-			always = no
+			has_dlc = "No Step Back"
 		}
 		ledger = army
 	}
@@ -151,6 +200,12 @@ technology_folders = {
 		}
 		ledger = navy
 	}
+	mtgnavalsupportfolder = {
+		available = {
+			has_dlc = "Man the Guns"
+		}
+		ledger = navy
+	}
 	industry_folder = {
 		ledger = civilian
 	}
@@ -169,7 +224,14 @@ technology_folders = {
 	electronics_folder = {
 		ledger = civilian
 	}
-	hidden_folder = {	###For holding custom techs
+	horse_folder = {
+		ledger = army
+		available = {
+			original_tag = OMO
+			OMO_2022_aprilfools_gamerule_active = yes
+		}
+	}
+	hidden_folder = { # For holding custom techs
 		available = {
 			always = no
 		}

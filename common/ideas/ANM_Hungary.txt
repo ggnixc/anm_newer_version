@@ -1,22 +1,6 @@
 ideas = {
 
 	country = {
-		HUN_revizio = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_revizio"}
-			picture = HUN_revizio
-			allowed = {
-				original_tag = "HUN"
-				always = no
-			}
-			
-			removal_cost = -1
-
-			modifier = {
-			    recruitable_population = 0.05
-				war_support_factor = 0.05
-				conscription_factor = 0.15
-			}
-		}
 		HUN_the_transylvanian_fights = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_the_transylvanian_fights"}
 			picture = HUN_the_transylvanian_fights
@@ -46,6 +30,23 @@ ideas = {
 			modifier = {
 				stability_factor = 0.15
 				political_power_factor = 0.15
+			}
+		}
+		HUN_perpetual_coalition = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_perpetual_coalition"}
+			picture = HUN_perpetual_coalition
+			allowed = {
+				original_tag = "HUN"
+				always = no
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				party_popularity_stability_factor = -0.25
+				political_power_cost = 0.20
+				drift_defence_factor = -0.25
+				research_speed_factor = -0.20
 			}
 		}
 		

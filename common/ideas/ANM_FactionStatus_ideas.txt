@@ -27,7 +27,7 @@ ideas = {
 			picture = GFX_ROC_Autonomous_Region
 		}
 	
-		### Pakt ###
+		### German World Community ###
 		#Master of Europe
 		Pakt_Leader = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Leader" }
@@ -107,13 +107,6 @@ ideas = {
 				mic_to_target_factor = 0.25
 			}
 		}	
-
-		#Distrikt
-		Pakt_Distrikt = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Distrikt" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-		}
 		
 		#Schutzstaat
 		Pakt_Schutzstaat = {
@@ -129,57 +122,31 @@ ideas = {
 			}
 		}
 
-		#Collaborating Member
-		Pakt_Mitstreiter = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Mitstreiter" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-
-			targeted_modifier = {
-				tag = GER
-				extra_trade_to_target_factor = 0.05
-				mic_to_target_factor = 0.05
-			}
-		}
-
 		#Sovereign Member
 		Pakt_Bundnispartner = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Bundnispartner" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 		}
-
-		#Ordensstaat
-		Pakt_Ordensstaat = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Ordensstaat" }
+		Pakt_Bundnispartner_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Bundnispartner_2" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 		}
-
+		Pakt_Bundnispartner_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Bundnispartner_3" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+		}
+		
 		#Observer
 		Pakt_Observer = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Observer" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 		}
-
-		## Anti-Heydrich Pact
-		Anti_Heydrich_Pact = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Anti_Heydrich_Pact" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-		}
-
-		## Anti-Himmler
-		Anti_Himmler = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Anti_Himmler" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-		}
-
-		## Anti-Heydrich
-		Anti_Heydrich = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Anti_Heydrich" }
+		Pakt_Observer_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Observer_2" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 		}
