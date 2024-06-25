@@ -477,7 +477,7 @@ guiTypes = {
 			vertical_alignment = center
 			format = left
 			text = "desc"
-#			alwaystransparent = yes
+			# alwaystransparent = yes
 		}
 
 		iconType = {
@@ -495,7 +495,7 @@ guiTypes = {
 			maxHeight = 32
 			format = right
 			text = "1000"
-#			alwaystransparent = yes
+			# alwaystransparent = yes
 		}
 
 		instantTextboxType = {
@@ -506,7 +506,7 @@ guiTypes = {
 			maxHeight = 32
 			format = center
 			text = "+22 per month"
-#			alwaystransparent = yes
+			# alwaystransparent = yes
 		}
 
 		dropDownBoxType = {
@@ -899,9 +899,9 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "message_popup_window"
-		position = { x = 0 y = 0 }
-		size = { width = 550 height = 300 }
-		orientation= center
+		position = { x = -174 y = -551 }
+		size = { width = 350 height = 165 }
+		orientation= lower_right
 		origo = center
 		moveable = yes
 		fade_time = 200
@@ -924,15 +924,16 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 105 y = 24 }
+			position = { x = 74 y = 34 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_12_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Title"
-			maxWidth = 340
+			maxWidth = 200
 			maxHeight = 24
-			fixedsize = no
+			fixedsize = yes
 			format = centre
+			alwaystransparent = yes
 		}
 
 		iconType = {
@@ -953,48 +954,51 @@ guiTypes = {
 
 		iconType = {
 			name = "sender_flag"
-			quadTextureSprite ="GFX_player_flag"
-			position = { x= 20 y = 17 }
+			quadTextureSprite ="GFX_flag_small2"
+			position = { x= 25 y = 30 }
 			Orientation = "UPPER_LEFT"
 		}
 
 		iconType = {
 			name = "sender_flag_frame"
-			spriteType = "GFX_flag_overlay_stateview_large"
-			position = { x = 18 y = 16 }
+			spriteType = "GFX_flag_frame_warscreen"
+			position = { x = 20 y = 26 }
 		}
 
 		iconType = {
 			name = "receiver_flag"
-			quadTextureSprite ="GFX_player_flag"
-			position = { x= -104 y = 17 }
+			quadTextureSprite ="GFX_flag_small2"
+			position = { x= -64 y = 30 }
 			Orientation = "UPPER_RIGHT"
 		}
 
 		iconType = {
 			name = "receiver_flag_frame"
-			position = { x= -106 y = 16 }
-			spriteType = "GFX_flag_overlay_stateview_large"
+			position = { x= -69 y = 26 }
+			spriteType = "GFX_flag_frame_warscreen"
 			Orientation = "UPPER_RIGHT"
 		}
 
 		instantTextBoxType = {
 			name = "message"
-			position = { x = 47 y = 88 }
+			position = { x = 27 y = 65 }
 			textureFile = ""
-			font = "aldrich_20_outline"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Long text here!"
-			maxWidth = 438
-			maxHeight = 150
+			maxWidth = 300
+			maxHeight = 90
+			fixedsize = yes
 			format = centre
-			scrollbartype = "standardtext_slider"
+			# scrollbartype = "standardtext_slider"
+			alwaystransparent = yes
+			vertical_alignment = center
 		}
 
 		iconType = {
 			name ="diplo_popup_bottom"
 			spriteType = "GFX_diplo_popup_bottom"
-			position = { x= 3 y = 209 }
+			position = { x= 3 y = -9209 }
 		}
 
 		buttonType = {
