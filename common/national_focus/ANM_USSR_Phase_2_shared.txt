@@ -13,7 +13,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_reach_out_to_socialist_world
-	icon = GFX_SOV_reach_out_to_socialist_world
+	icon = GFX_SOV_reach_out_to_the_socialist_world
 	relative_position_id = SOV_the_bessmertnykh_doctrine
 	cost = 4.00
 	prerequisite = {
@@ -64,13 +64,13 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_playground_of_the_swastika
-	icon = GFX_SOV_playground_of_the_swastika
+	icon = GFX_SOV_the_playground_of_the_swastika
 	relative_position_id = SOV_world_congress_of_the_communist_international
 	cost = 4.00
 	prerequisite = {
 		focus = SOV_world_congress_of_the_communist_international
 	}
-	x = -13
+	x = -14
 	y = 1
 	ai_will_do = { 
 		factor = 1 
@@ -150,7 +150,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_brave_partisans_of_the_western_rus
-	icon = GFX_SOV_brave_partisans_of_the_western_rus
+	icon = GFX_SOV_the_brave_partisans_of_the_western_rus
 	relative_position_id = SOV_playground_of_the_swastika
 	cost = 4.00
 	prerequisite = {
@@ -206,6 +206,12 @@ shared_focus = {
 	cost = 4.00
 	prerequisite = {
 		focus = SOV_soft_underbelly_of_the_balkans
+	}
+	prerequisite = {
+		focus = SOV_the_british_isles_ignited_red
+	}
+	prerequisite = {
+		focus = SOV_approach_iberian_separatists
 	}
 	x = 0
 	y = 2
@@ -402,3 +408,558 @@ shared_focus = {
 	}
 }
 
+shared_focus = {
+	id = SOV_allies_in_the_dark_continent
+	icon = GFX_SOV_allies_in_the_dark_continent
+	relative_position_id = SOV_world_congress_of_the_communist_international
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_world_congress_of_the_communist_international
+	}
+	x = 0
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_arming_the_derg
+	icon = GFX_SOV_arming_the_derg
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_allies_in_the_dark_continent
+	}
+	x = -2
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_loango_the_shining_star
+	icon = GFX_SOV_loango_the_shining_star
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_allies_in_the_dark_continent
+	}
+	x = 0
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_mozambique_forever_resisting
+	icon = GFX_SOV_mozambique_forever_resisting
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_allies_in_the_dark_continent
+	}
+	x = 2
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_smash_segregation_in_south_africa
+	icon = GFX_SOV_smash_segregation_in_south_africa
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_arming_the_derg
+	}
+	prerequisite = {
+		focus = SOV_loango_the_shining_star
+	}
+	prerequisite = {
+		focus = SOV_mozambique_forever_resisting
+	}
+	x = -1
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_remnants_of_the_fln
+	icon = GFX_SOV_remnants_of_the_fln
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_arming_the_derg
+	}
+	prerequisite = {
+		focus = SOV_loango_the_shining_star
+	}
+	prerequisite = {
+		focus = SOV_mozambique_forever_resisting
+	}
+	x = 1
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_expose_mining_crimes_in_the_congo
+	icon = GFX_SOV_expose_mining_crimes_in_the_congo
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_smash_segregation_in_south_africa
+	}
+	prerequisite = {
+		focus = SOV_remnants_of_the_fln
+	}
+	x = 0
+	y = 3
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_condemn_french_bootlickers_of_the_cwa
+	icon = GFX_SOV_condemn_french_bootlickers_of_the_cwa
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_expose_mining_crimes_in_the_congo
+	}
+	x = -1
+	y = 4
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_destabilise_the_malagasy_corporate_hell
+	icon = GFX_SOV_destabilise_the_malagasy_corporate_hell
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_expose_mining_crimes_in_the_congo
+	}
+	x = 1
+	y = 4
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_pan_african_dream_of_liberation
+	icon = GFX_SOV_pan_african_dream_of_liberation
+	relative_position_id = SOV_allies_in_the_dark_continent
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_destabilise_the_malagasy_corporate_hell
+	}
+	prerequisite = {
+		focus = SOV_condemn_french_bootlickers_of_the_cwa
+	}
+	x = 0
+	y = 5
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+
+shared_focus = {
+	id = SOV_eyes_on_the_mashriq
+	icon = GFX_SOV_eyes_on_the_mashriq
+	relative_position_id = SOV_world_congress_of_the_communist_international
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_world_congress_of_the_communist_international
+	}
+	x = 7
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_oman_the_base_for_arab_liberation
+	icon = GFX_SOV_oman_the_base_for_arab_liberation
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_eyes_on_the_mashriq
+	}
+	x = -1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_an_olive_branch_to_the_turkish
+	icon = GFX_SOV_an_olive_branch_to_the_turkish
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_eyes_on_the_mashriq
+	}
+	x = 1
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_germanias_shah_cash_cow
+	icon = GFX_SOV_germanias_shah_cash_cow
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_oman_the_base_for_arab_liberation
+	}
+	prerequisite = {
+		focus = SOV_an_olive_branch_to_the_turkish
+	}
+	x = -2
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_two_kings_double_the_oppression
+	icon = GFX_SOV_two_kings_double_the_oppression
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_oman_the_base_for_arab_liberation
+	}
+	prerequisite = {
+		focus = SOV_an_olive_branch_to_the_turkish
+	}
+	x = 0
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_infiltrate_the_home_of_islam
+	icon = GFX_SOV_infiltrate_the_home_of_islam
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_oman_the_base_for_arab_liberation
+	}
+	prerequisite = {
+		focus = SOV_an_olive_branch_to_the_turkish
+	}
+	x = 2
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_baathism_beaten_but_not_forgotten
+	icon = GFX_SOV_baathism_beaten_but_not_forgotten
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_germanias_shah_cash_cow
+	}
+	prerequisite = {
+		focus = SOV_two_kings_double_the_oppression
+	}
+	prerequisite = {
+		focus = SOV_infiltrate_the_home_of_islam
+	}
+	x = 0
+	y = 3
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_tremors_in_the_pyramids
+	icon = GFX_SOV_tremors_in_the_pyramids
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_baathism_beaten_but_not_forgotten
+	}
+	x = -2
+	y = 4
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_oldest_capital_breathes_anew
+	icon = GFX_SOV_the_oldest_capital_breathes_anew
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_baathism_beaten_but_not_forgotten
+	}
+	x = 0
+	y = 4
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_light_up_the_fourth_shore
+	icon = GFX_SOV_light_up_the_fourth_shore
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_baathism_beaten_but_not_forgotten
+	}
+	x = 2
+	y = 4
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_black_gold_red_sand
+	icon = GFX_SOV_black_gold_red_sand
+	relative_position_id = SOV_eyes_on_the_mashriq
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_tremors_in_the_pyramids
+	}
+	prerequisite = {
+		focus = SOV_the_oldest_capital_breathes_anew
+	}
+	prerequisite = {
+		focus = SOV_light_up_the_fourth_shore
+	}
+	x = 0
+	y = 5
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+
+shared_focus = {
+	id = SOV_evaluate_the_orient
+	icon = GFX_SOV_evaluate_the_orient
+	relative_position_id = SOV_world_congress_of_the_communist_international
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_world_congress_of_the_communist_international
+	}
+	x = 14
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_reassemble_the_cpc_remnants
+	icon = GFX_SOV_reassemble_the_cpc_remnants
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_evaluate_the_orient
+	}
+	x = -2
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_supply_the_brave_manchurian_partisans
+	icon = GFX_SOV_supply_the_brave_manchurian_partisans
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_evaluate_the_orient
+	}
+	x = 0	
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_dismantle_the_mongolian_aristocracy
+	icon = GFX_SOV_dismantle_the_mongolian_aristocracy
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_evaluate_the_orient
+	}
+	x = 2
+	y = 1
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_tiger_friends_and_crescent_foes
+	icon = GFX_SOV_tiger_friends_and_crescent_foes
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_reassemble_the_cpc_remnants
+	}
+	prerequisite = {
+		focus = SOV_supply_the_brave_manchurian_partisans
+	}
+	prerequisite = {
+		focus = SOV_dismantle_the_mongolian_aristocracy
+	}
+	x = -1
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_fighting_filipinos
+	icon = GFX_SOV_the_fighting_filipinos
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_reassemble_the_cpc_remnants
+	}
+	prerequisite = {
+		focus = SOV_supply_the_brave_manchurian_partisans
+	}
+	prerequisite = {
+		focus = SOV_dismantle_the_mongolian_aristocracy
+	}
+	x = 1
+	y = 2
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_contacts_with_the_chinese_diaspora
+	icon = GFX_SOV_contacts_with_the_chinese_diaspora
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_tiger_friends_and_crescent_foes
+	}
+	prerequisite = {
+		focus = SOV_the_fighting_filipinos
+	}
+	x = 0
+	y = 3
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_prop_up_the_malayan_insurgency
+	icon = GFX_SOV_prop_up_the_malayan_insurgency
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_contacts_with_the_chinese_diaspora
+	}
+	x = -1
+	y = 4
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_nasutions_folly
+	icon = GFX_SOV_nasutions_folly
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_contacts_with_the_chinese_diaspora
+	}
+	x = 1
+	y = 4
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
+shared_focus = {
+	id = SOV_the_east_is_red
+	icon = GFX_SOV_the_east_is_red
+	relative_position_id = SOV_evaluate_the_orient
+	cost = 4.00
+	prerequisite = {
+		focus = SOV_prop_up_the_malayan_insurgency
+	}
+	prerequisite = {
+		focus = SOV_nasutions_folly
+	}
+	x = 0
+	y = 5
+	ai_will_do = { 
+		factor = 1 
+	}
+	completion_reward = {
+	}
+}
