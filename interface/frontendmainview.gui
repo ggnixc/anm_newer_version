@@ -92,7 +92,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "mainmenu_single_player"
 		position = { x=0 y =0}
-		size = { width = 320 height = 395}
+		size = { width = 320 height = 300}
 		Orientation = CENTER
 		Origo = center
 
@@ -231,9 +231,9 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="version_label"
-			position = { x = 600 y = 5 }
+			position = { x = 600 y = -35 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_14_outline"
 			borderSize = {x = 0 y = 0}
 			text = "V1.0.3"
 			format = right
@@ -243,9 +243,9 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="tno_version_label"
-			position = { x = 100 y = 5 }
+			position = { x = 127 y = 3 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_white_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = tno_current_version
 			format = left
@@ -257,8 +257,8 @@ guiTypes = {
 		#ghost window used for buttons background
 		containerWindowType = {
 			name ="mainmenu_panel_bottom_ghost"
-			position = { x= 0 y= 0 }
-			size = { width = 938 height = 75 }
+			position = { x= 2 y= 0 }
+			size = { width = 934 height = 70 }
 			Orientation = CENTER
 			Origo = center
 
