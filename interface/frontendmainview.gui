@@ -231,21 +231,21 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="version_label"
-			position = { x = 600 y = -35 }
+			position = { x = 721 y = 48 }
 			textureFile = ""
 			font = "aldrich_14_outline"
 			borderSize = {x = 0 y = 0}
 			text = "V1.0.3"
-			format = right
+			format = left
 			maxWidth = 400
 			maxHeight = 20
 		}
 
 		instantTextBoxType = {
 			name ="tno_version_label"
-			position = { x = 127 y = 3 }
+			position = { x = 128 y = 6 }
 			textureFile = ""
-			font = "aldrich_white_18_outline"
+			font = "aldrich_white_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = tno_current_version
 			format = left
@@ -257,8 +257,8 @@ guiTypes = {
 		#ghost window used for buttons background
 		containerWindowType = {
 			name ="mainmenu_panel_bottom_ghost"
-			position = { x= 2 y= 0 }
-			size = { width = 934 height = 70 }
+			position = { x= 0 y= 0 }
+			size = { width = 934 height = 66 }
 			Orientation = CENTER
 			Origo = center
 
@@ -271,7 +271,7 @@ guiTypes = {
 		######################################### Buttons at the bottom
 		ButtonType = {
 			name = "single_player_button"
-			position = { x = 96 y = 375 }
+			position = { x = 96 y = 380 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "aldrich_18_outline"
 			text = "FE_SINGLE_PLAYER"
@@ -281,7 +281,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "multi_player_button"
-			position = { x = 409 y = 375}
+			position = { x = 409 y = 380}
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "aldrich_18_outline"
 			text = "FE_MULTI_PLAYER"
@@ -357,7 +357,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "exit_button"
-			position = { x = 716 y = 375 }
+			position = { x = 716 y = 380 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "aldrich_18_outline"
 			text = "FE_EXIT"
