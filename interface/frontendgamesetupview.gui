@@ -139,7 +139,6 @@ guiTypes = {
 			name = "country_leader_frame"
 			quadTextureSprite ="GFX_naval_unit_leader_frame"
 			position = { x = 10 y = 90 }
-			scale=1.75
 			alwaystransparent = yes
 		}
 
@@ -524,7 +523,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = -60 y = 6 }
+			position = { x = -29 y = -21 }
 			textureFile = ""
 			font = "aldrich_white_20_outline"
 			borderSize = {x = 0 y = 0}
@@ -537,7 +536,7 @@ guiTypes = {
 		background = {
 			name = "single_player_date_bg"
 			quadTextureSprite ="GFX_select_date_bg"
-			position = { x = 0 y = -5 }
+			position = { x = -74 y = -34 }
 		}
 
 		containerWindowType = {
@@ -571,25 +570,35 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "bookmark_title"
-			position = { x = 15 y = 55 }
+			position = { x = 326 y = 22 }
 			font = "aldrich_16_outline"
-			maxWidth = 355
-			maxHeight = 30
-			format = center
-		}
-
-		instantTextBoxType = {
-			name = "bookmark_desc"
-			position = { x = 10 y = 95 }
-			font = "aldrich_14_outline"
 			maxWidth = 355
 			maxHeight = 30
 			format = left
 		}
 
+		instantTextBoxType = {
+			name = "bookmark_mothership_title"
+			position = { x = -27 y = 22 }
+			font = "aldrich_16_outline"
+			maxWidth = 355
+			maxHeight = 30
+			format = left
+			text = "The New Order"
+		}
+
+		instantTextBoxType = {
+			name = "bookmark_desc"
+			position = { x = -57 y = 63 }
+			font = "aldrich_16_outline"
+			maxWidth = 691
+			maxHeight = 415
+			format = left
+		}
+
 		ButtonType = {
 			name = "back_button"
-			position = { x = 44 y = 18 }
+			position = { x = 311 y = -18 }
 			quadTextureSprite ="GFX_tno_bookmark_button"
 			buttonText = "BACK"
 			buttonFont = "aldrich_18_outline"
@@ -601,7 +610,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "select_button"
-			position = { x = -252 y = 18 }
+			position = { x = -101 y = -18 }
 			quadTextureSprite ="GFX_tno_bookmark_button"
 			buttonText = "FE_SELECT_SCENARIO_BUTTON"
 			buttonFont = "aldrich_18_outline"
