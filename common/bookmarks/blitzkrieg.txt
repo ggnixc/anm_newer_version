@@ -1,16 +1,16 @@
 bookmarks = {
 
 
-	###################################################################
-	##### DON'T DELETE THIS, ALSO EDIT IN the_gathering_storm.txt #####
-	##### DON'T DELETE THIS, ALSO EDIT IN the_gathering_storm.txt #####
-	###################################################################
+	##########################################################
+	##### DON'T DELETE THIS, ALSO EDIT IN blitzkrieg.txt #####
+	##### DON'T DELETE THIS, ALSO EDIT IN blitzkrieg.txt #####
+	##########################################################
 
 	bookmark = {
 		name = "THENEWORDER_NAME"
 		desc = "THENEWORDER_DESC"
-		date = 1996.1.1.1
-		picture = "GFX_select_date_1939"
+		date = 2008.3.4.1
+		picture = "GFX_select_date_2004"
 		default_country = "GER"
 		default = yes
 
@@ -20,6 +20,20 @@ bookmarks = {
 		}
 
 		#### MAJORS ####
+		"USA" = {
+			history = "USA_THENEWORDER_DESC"
+			ideology = liberal_conservatism
+			ideas = {
+				USA_dotcomboom
+				USA_hegemonyinwaiting
+				USA_affirmativeactionact
+			}
+			focuses = {
+				USA_anotherdickinthewhitehouse
+				USA_the_overreach_of_gore
+				USA_roll_back_regulations
+			}
+		}
 		"GER" = {
 			history = "GER_THENEWORDER_DESC"
 			ideology = national_socialism
@@ -35,27 +49,12 @@ bookmarks = {
 				GER_launch_the_euromark
 			}
 		}
-
-		"USA" = {
-			history = "USA_THENEWORDER_DESC"
-			ideology = liberal_conservatism
-			ideas = {
-				USA_dotcomboom
-				USA_hegemonyinwaiting
-				USA_affirmativeactionact
-			}
-			focuses = {
-				USA_anotherdickinthewhitehouse
-				USA_the_overreach_of_gore
-				USA_roll_back_regulations
-			}
-		}
 		"JAP" = {
 			history = "JAP_THENEWORDER_DESC"
 			ideology = paternalism
 		}
 		"SOV" = {
-			history = "SOV_THENEWORDER_DESC"
+			history = "WRS_THENEWORDER_DESC"
 			ideology = communist
 			ideas = {
 				SOV_Suslov_Vision
@@ -63,73 +62,12 @@ bookmarks = {
 				SOV_The_Scars_of_Moscowien
 			}
 			focuses = {
-				SOV_diamond_jubilee
 			}
-		}
-		"ITA" = {
-			history = "ITA_THENEWORDER_DESC"
-			ideology = fascism
-			ideas = {
-				ITA_recoveringeconomy
-				ITA_nomoreempire
-				ITA_Strait_Bridge
-			}
-		}
-		"CHI" = {
-			history = "CHI_THENEWORDER_DESC"
-			ideology = paternalism
-		}
-		"IBR" = {
-			history = "IBR_THENEWORDER_DESC"
-			ideology = paternalism
-		}
-		"---" = {
-			history = "BLANK_DESC"
 		}
 
 
 		## MINORS ##
-		"MEX" = {
-			minor = yes
-			history = "MEX_THENEWORDER_DESC"
-			ideology = conservatism
-		}
-		"FRA" = {
-			minor = yes
-			history = "FRA_THENEWORDER_DESC"
-			ideology = fascism
-		}
-		"BRA" = {
-			minor = yes
-			history = "BRA_THENEWORDER_DESC"
-			ideology = socialist
-		}
-		"AZH" = {
-			minor = yes
-			history = "AZH_THENEWORDER_DESC"
-			ideology = paternalism
-		}
-		"ARG" = {
-			minor = yes
-			history = "ARG_THENEWORDER_DESC"
-			ideology = fascism
-		}
-		"INS" = {
-			minor = yes
-			history = "INS_THENEWORDER_DESC"
-			ideology = paternalism
-		}
-		"AST" = {
-			minor = yes
-			history = "AST_THENEWORDER_DESC"
-			ideology = liberal_conservatism
-		}
-		"MRZ" = {
-			minor = yes
-			history = "MRZ_THENEWORDER_DESC"
-			ideology = despotism
-		}	
-			## OFN ##
+				## OFN ##
 
 			### ROW 3 ###
 		#### MINORS ####
