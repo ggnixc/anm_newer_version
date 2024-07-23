@@ -1,4 +1,10 @@
 spriteTypes = {
+	# New Opening 
+	spriteType = {
+		name = "GFX_topbar_star_button"
+		textureFile = "gfx/interface/topbar/topbar_star_button.dds"
+	}
+
 	spriteType = {
 		name = "GFX_CountryInfo_background"
 		texturefile = "gfx/interface/country_info_screen/background.dds"
@@ -57,6 +63,29 @@ spriteTypes = {
 		texturefile = "gfx/interface/country_info_screen/entry_content.dds"
 		noofframes = 2
 	}
+	spriteType = {
+		name = "GFX_CountryInfo_block_signal_lost"
+		textureFile = "gfx/interface/country_info_screen/block_signal_lost.dds"
+	}
+	frameanimatedspritetype = {
+		name = "GFX_CountryInfo_animated_signal_lost"
+		texturefile = "gfx/interface/country_info_screen/animated_signal_lost.dds"
+		noofframes = 20
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0
+	}
+
+	# Buttons
+	spriteType = {
+		name = "GFX_opening_button_next_page"
+		textureFile = "gfx/interface/opening_screen/opening_button_next_page.dds"
+	}
+	spriteType = {
+		name = "GFX_opening_button_prev_page"
+		textureFile = "gfx/interface/opening_screen/opening_button_prev_page.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_discord_button"
@@ -82,4 +111,10 @@ spriteTypes = {
 		name = "GFX_tvtropes_button"
 		textureFile = "gfx/interface/country_info_screen/socmed/tvtropes_button.dds"
 	}
+
+	# Posters
+	spriteType = {
+		name = "GFX_ANM_OpeningScreen_Poster_Germany"
+		textureFile = "gfx/interface/opening_screen/ANM_OpeningScreen_Poster_Germany.dds"
+	}	
 }
