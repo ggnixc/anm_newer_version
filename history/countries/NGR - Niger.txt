@@ -7,26 +7,25 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = NGR_Ali_Saibou
+
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
+    communist = 29
     ultranationalism = 0
     socialist = 0
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
-    conservatism = 15
-    paternalism = 30
-    despotism = 55
+    conservatism = 0
+    paternalism = 16
+    despotism = 47
+	despotism_1 = 8
     fascism = 0
      
 }
 
-create_country_leader = {
-    name = "Muhammadu Buhari"
-    desc = "POLITICS_MUHAMMADU_BUHARI_DESC"
-    picture = "Portrait_Nigeria_Muhammadu_Buhari.dds"
-    expire = "2999.1.1"
-    ideology = despotism_subtype
+add_ideas = {
+	CWA_Faction
 }

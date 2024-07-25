@@ -65,7 +65,6 @@ TNO_Spheres_init = {
 				tag = FEN
 				tag = LIB
 				tag = SAF
-				tag = MDI
 				tag = COS
 				tag = GLP
 				tag = GUA
@@ -106,6 +105,7 @@ TNO_Spheres_init = {
 				tag = CYL
 				tag = HON
 				tag = PAN
+				tag = GAB
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = USA }
@@ -207,7 +207,7 @@ TNO_Spheres_init = {
 			OR = {
 				tag = SOV
 				tag = FER
-				tag = CAO
+				tag = BZZ
 				tag = IVO
 				tag = ECU
 				tag = OMA
@@ -245,6 +245,27 @@ TNO_Spheres_init = {
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = AZH }
+	}
+	
+	### West African Sphere
+	SEN = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = SEN
+				tag = JOL
+				tag = SUS
+				tag = SLE
+				tag = IVO
+				tag = MLI
+				tag = BKF
+				tag = NGR
+				tag = GHA
+				tag = GBE
+				tag = NIG
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = SEN }
 	}
 
 	### Iberia

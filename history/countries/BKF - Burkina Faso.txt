@@ -3,16 +3,13 @@
 set_oob = "BKR_1962"
 
 add_ideas = {
-	PALF_Faction
-	
-	BKF_Maurice_Yameogo_hog
-	BKF_Moussa_Kargougou_for
-	BKF_Gerard_Kango_Ouedraogo_eco
-	BKF_Aboubacar_Sangoule_Lamizana_sec
+	CWA_Faction
 }
 
+recruit_character = BKF_Aboubakar_Sangoule_Lamizana
+
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = despotism
 	last_election = "1993.1.1"
 	election_frequency = 96
 	elections_allowed = no
@@ -21,95 +18,18 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 10
-    socialist = 55
-    progressivism = 2
-    liberalism = 1
+    communist = 0
+    socialist = 0
+    progressivism = 32
+    liberalism = 0
     liberal_conservatism = 0
-    conservatism = 14
+    conservatism = 26
     paternalism = 0
-    despotism = 15
-    fascism = 3
+    despotism = 42
+    fascism = 0
     national_socialism = 0
     ultranationalism = 0
      
-}
-
-create_country_leader = {
-	name = "Henri Zongo"
-	desc = "POLITICS_HENRI_ZONGO_DESC"
-	picture = "Portrait_Burkina_Faso_Henri_Zongo.dds"
-	expire = "1965.1.1"
-	ideology = communist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Joseph Ki-Zerbo"
-	desc = "POLITICS_JOSEPH_KI_ZERBO_DESC"
-	picture = "Portrait_BKF_Joseph_Ki_Zerbo.dds"
-	expire = "2090.1.1"
-	ideology = socialist_panafricanism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Joseph Ouédraogo"
-	desc = "POLITICS_JOSEPH_OUEDRAOGO_DESC"
-	picture = "Portrait_Burkina_Faso_Joseph_Ouedraogo.dds"
-	expire = "1965.1.1"
-	ideology = progressivism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Macaire Ouédraogo"
-	desc = "POLITICS_MAURICE_OUEDRAOGO_DESC"
-	picture = "Portrait_Burkina_Faso_Macaire_Ouedraogo.dds"
-	expire = "1965.1.1"
-	ideology = liberalism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Maurice Yaméogo"
-	desc = "POLITICS_MAURICE_YAMEOGO_DESC"
-	picture = "Portrait_Burkina_Faso_Maurice_Yameogo.dds"
-	expire = "1965.1.1"
-	ideology = paternalism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Naaba Kougri"
-	desc = "POLITICS_NAABA_KOUGRI_DESC"
-	picture = "Portrait_Burkina_Faso_Naaba_Kougri.dds"
-	expire = "1965.1.1"
-	ideology = despotism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Aboubacar Sangoulé Lamizana"
-	desc = "POLITICS_ABOUBACAR_SANGOULE_LAMIZANA_DESC"
-	picture = "Portrait_Burkina_Faso_Aboubacar_Sangoule_Lamizana.dds"
-	expire = "1965.1.1"
-	ideology = fascism_subtype
-	traits = {
-		#
-	}
 }
 
 create_field_marshal = {
