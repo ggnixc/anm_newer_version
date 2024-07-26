@@ -1,0 +1,70 @@
+
+# Adds 'conflict_id' to the list of active conflicts
+ANM_add_fopo_conflict_tab = {
+	custom_effect_tooltip = ANM_add_fopo_conflict_tab_tt
+	if = {
+		limit = { NOT = { is_in_array = { ANM_active_conflicts = conflict_id } } }
+		add_to_array = { ANM_active_conflicts = conflict_id }
+
+		set_variable = { selected_conflict_id = conflict_id }
+		clear_array = world_conflict_guis
+		add_to_array = { world_conflict_guis = selected_conflict_id }
+
+		set_variable = { ANM_fopo_selected_front = 1 }
+	}
+	set_temp_variable = { alert_id = token:Alert_Proxy_War_Active }
+	add_ANM_alert_unless_exists = yes
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { NATIONAL_cp_gain_proxy = 0 }
+			}
+			add_dynamic_modifier = { modifier = PROXYNATIONAL_CP_GAIN }
+		}
+		add_to_variable = { NATIONAL_cp_gain_proxy = 0.07 }
+	}
+}
+
+# Removes `conflict_id` from the list of active conflicts
+ANM_remove_fopo_conflict_tab = {
+	custom_effect_tooltip = ANM_remove_fopo_conflict_tab_tt
+	if = {
+		limit = { is_in_array = { ANM_active_conflicts = conflict_id } }
+		remove_from_array = { array = ANM_active_conflicts value = conflict_id }
+	}
+
+	if = {
+		limit = { check_variable = { selected_conflict_id = conflict_id } }
+
+		set_variable = { selected_conflict_id = -1 }
+
+		if = {
+			limit = { check_variable = { ANM_active_conflicts^num > 0 } }
+
+			set_temp_variable = { next_conflict_idx = ANM_active_conflicts^num }
+			subtract_from_temp_variable = { next_conflict_idx = 1 }
+			set_variable = { selected_conflict_id = ANM_active_conflicts^next_conflict_idx }
+
+			clear_array = world_conflict_guis
+			add_to_array = { world_conflict_guis = selected_conflict_id }
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = { ANM_active_conflicts^num = 0 }
+		}
+		set_temp_variable = { alert_id = token:Alert_Proxy_War_Active }
+		remove_ANM_alert = yes
+	}
+
+	hidden_effect = {
+		add_to_variable = { NATIONAL_cp_gain_proxy = -0.07 }
+		if = {
+			limit = {
+				check_variable = { NATIONAL_cp_gain_proxy = 0 }
+			}
+			remove_dynamic_modifier = { modifier = PROXYNATIONAL_CP_GAIN }
+		}
+	}
+}
