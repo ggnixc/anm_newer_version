@@ -206,12 +206,14 @@ if = {
 			has_dlc = "Man the Guns" 
 		}
 	}
+	set_autonomy = { target = ALB autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = SNM autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = CRO autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = MNT autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = MOC autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = GRE autonomy_state = autonomy_italy_reliant }
 	else = {
+		puppet = ALB
 		puppet = CRO
 		puppet = MNT
 		puppet = MOC
@@ -222,15 +224,13 @@ if = {
 ita_parliament_gui_initial = yes
 create_faction = Patto_di_Roma
 add_to_faction = ITA
+add_to_faction = ALB
 add_to_faction = CRO
 add_to_faction = SNM
 add_to_faction = MNT
 add_to_faction = GRE
 add_to_faction = MOC
-add_to_faction = EGY
-add_to_faction = ISR
-add_to_faction = PAL
-add_to_faction = LEB
+add_to_faction = TUN
 
 MOC = {
 	set_politics = {
