@@ -2,6 +2,7 @@ NDefines.NGame.START_DATE = "1996.1.1.1"
 NDefines.NGame.END_DATE = "2010.12.31.1"
 NDefines.NGame.SAVE_VERSION = 7
 NDefines.NGame.MAX_SCRIPTED_LOC_RECURSION = 60
+NDefines.NGame.MAX_EFFECT_ITERATION = 15000
 NDefines.NGame.HANDS_OFF_START_TAG = "ZZZ"
 NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 7
 
@@ -78,9 +79,9 @@ NDefines.NMilitary.NON_CORE_SUPPLY_SPEED = -0.2						-- we are not running on ou
 NDefines.NMilitary.NON_CORE_SUPPLY_AIR_SPEED = -0.05				-- we are not running on our own VP supply so need to steal stuff along the way, a bit less due to air supply
 NDefines.NMilitary.OUT_OF_SUPPLY_MORALE = -0.15						-- max org regain reduction from supply
 NDefines.NMilitary.MAX_OUT_OF_SUPPLY_DAYS = 60						-- how many days of shitty supply until max penalty achieved
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 12				-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 12			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 3						-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 24				-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 24					-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 5						-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.NUKE_DELAY_HOURS = 0								-- nukes fire off immediately
 NDefines.NMilitary.UNIT_DIGIN_CAP = 6								-- how "deep" you can dig you can dig in until hitting max bonus
 NDefines.NMilitary.UNIT_DIGIN_SPEED = 0.5							-- how "deep" you can dig a day.
@@ -102,6 +103,16 @@ NDefines.NAI.ATTACK_HEAVILY_DEFENDED_LIMIT = 0.45
 --NDefines.NAI.DIPLOMATIC_ACTION_PROPOSE_SCORE = 300
 --NDefines.NAI.DIPLOMACY_CREATE_FACTION_FACTOR = 0.01
 --NDefines.NAI.SEND_VOLUNTEER_EVAL_MAJOER_POWER = 50.0
+
+NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 5.5
+NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 5
+NDefines.NProduction.MAX_CIV_FACTORIES_PER_LINE = 20
+NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 200
+NDefines.NProduction.FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 10
+NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10
+NDefines.NProduction.PRODUCTION_RESOURCE_LACK_PENALTY = 0.0 -- For the new trade system
+NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_VALUE = 0
+NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.0
 
 NDefines.NResistance.INITIAL_HISTORY_RESISTANCE = 0.0
 NDefines.NResistance.INITIAL_HISTORY_COMPLIANCE = 85.0
@@ -157,3 +168,5 @@ NDefines.NSupply.VP_TO_SUPPLY_BONUS_CONVERSION = 0.07
 NDefines.NSupply.AVAILABLE_MANPOWER_STATE_SUPPLY = 0.3
 
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 10				-- This much progress can be saved while not having a focus selected
+
+NDefines.NGame.MAP_SCALE_PIXEL_TO_KM = 6.8977
