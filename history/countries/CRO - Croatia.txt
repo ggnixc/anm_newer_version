@@ -1,12 +1,10 @@
 ﻿capital = 109
 
+recruit_character = CRO_Josip_Torbar
+
 set_oob = "CRO_1962"
 
 add_manpower = 60000
-set_variable = {
-	var = CRO_italian_influence
-	value = 0.5
-}
 
 add_ideas = {
 
@@ -66,17 +64,13 @@ add_ideas = {
 	construction_level_7
 
 	#ministers#
-	CRO_minister_Dobroslav_Paraga_hog
-	CRO_minister_Marko_Skejo_sec
-	CRO_minister_Anto_Djapic_for
-	CRO_minister_Tihomir_Janjicek_eco
 }
 
 set_politics = {
-	ruling_party = fascism
-	last_election = "1936.1.1"
+	ruling_party = conservatism
+	last_election = "1993.5.1"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 TNO_startup_nation = yes
@@ -84,69 +78,14 @@ TNO_startup_nation = yes
 set_popularities = {
 	communist = 0
 	ultranationalism = 0
-	socialist = 0
-	progressivism = 0
+	socialist = 7
+	progressivism = 21
 	liberalism = 0
-	liberal_conservatism = 0
-	conservatism = 6
-	paternalism = 27
-	despotism = 21
-	fascism = 33
-	national_socialism = 13
+	liberal_conservatism = 13
+	conservatism = 39
+	paternalism = 20
+	despotism = 0
+	fascism = 0
+	national_socialism = 0
 	 
-}
-
-create_country_leader = {
-	name = "Ante Paradžik"
-	desc = "POLITICS_ANTE_PARAZDIK_DESC"
-	picture = "Portrait_CRO_Ante_Paradzik.dds"
-	expire = "2099.1.1"
-	ideology = fascism_clerical_fascism_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Dobroslav Paraga"
-	desc = "POLITICS_DOBROSLAV_PARAGA_DESC"
-	picture = "dobroslav_paraga.dds"
-	expire = "2999.1.1"
-	ideology = paternalism_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Marko Skejo"
-	desc = "POLITICS_MARKO_SKEJO_DESC"
-	picture = "marko_skejo.dds"
-	expire = "2999.1.1"
-	ideology = national_socialism_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Ante Gotovina"
-	desc = "POLITICS_MARKO_SKEJO_DESC"
-	picture = "marko_skejo.dds"
-	expire = "2999.1.1"
-	ideology = conservatism_subtype
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Mate Kapović"
-	desc = "POLITICS_MARKO_SKEJO_DESC"
-	picture = "marko_skejo.dds"
-	expire = "2999.1.1"
-	ideology = socialist_subtype
-	traits = {
-
-	}
 }

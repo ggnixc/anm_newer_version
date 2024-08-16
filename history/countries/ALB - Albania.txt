@@ -1,5 +1,7 @@
 ﻿capital = 1295
 
+recruit_character = ALB_Ekrem_Spahiu
+
 add_ideas = {
 	TRI_Member_Client
 	##POLITICAL LAWS##
@@ -55,9 +57,9 @@ add_ideas = {
 set_research_slots = 2
 
 set_politics = {	
-	ruling_party = fascism
-	last_election = "1962.1.1"
-	election_frequency = 48
+	ruling_party = paternalism
+	last_election = "1994.8.1"
+	election_frequency = 40
 	elections_allowed = no
 }
 
@@ -65,25 +67,13 @@ TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
-    ultranationalism = 23
-    socialist = 0
-    progressivism = 20
-    liberalism = 0
+    ultranationalism = 0
+    socialist = 23
+    progressivism = 0
+    liberalism = 20
     liberal_conservatism = 0
     conservatism = 0
-    paternalism = 0
+    paternalism = 57
     despotism = 0
-    fascism = 57
-     
-}
-
-create_country_leader = {
-	name = "Adriatik Alimahdi"
-	desc = "POLITICS_ADRIATIL_ALIMAHDI_DESC"
-	picture = "Portrait_ALB_adriatik_alimadhi.dds"
-	expire = "2999.1.1"
-	ideology = fascism_subtype
-	traits = {
-		#
-	}
+    fascism = 0     
 }

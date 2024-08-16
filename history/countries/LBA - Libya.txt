@@ -1,36 +1,26 @@
 ﻿capital = 448
 
+recruit_character = LBA_Ben_Halim
+
 set_politics = {	
 	ruling_party = paternalism
-	last_election = "1958.1.8"
+	last_election = "1994.9.8"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
+    communist = 3
     ultranationalism = 0
     socialist = 0
     progressivism = 0
-    liberalism = 10
+    liberalism = 2
     liberal_conservatism = 0
-    conservatism = 15
-    paternalism = 55
+    conservatism = 5
+    paternalism = 90
     despotism = 0
-    fascism = 10
-    national_socialism = 10
-     
-}
-
-create_country_leader = {
-	name = "Muammar Gaddafi"
-	desc = "POLITICS_MUAMMAR_GADDAFI_DESC"
-	picture = "Portrait_Libya_Muammar_al_Gaddafi.dds"
-	expire = "1983.4.24"
-	ideology = paternalism_subtype
-	traits = {
-		
-	}
+    fascism = 0
+    national_socialism = 0
 }

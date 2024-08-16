@@ -89,11 +89,17 @@ on_actions = {
 						FROM = {
 							white_peace = ROOT
 						}
+						SWE = { 
+							transfer_state = 145
+							145 = { set_demilitarized_zone =  yes }
+						}
 						FDR = {
 							annex_country = {
 								target = FIN
 								transfer_troops = no
 							}
+							set_capital = { state = 111 remember_old_capital = no }
+							country_event = { id = FIN.red.1 days = 5 }
 						}
 						every_state = { # clean up cores
 							limit = {
@@ -101,10 +107,6 @@ on_actions = {
 							}
 							remove_core_of = ROOT
 							add_core_of = FROM
-						}
-						FDR = {
-							set_capital = { state = 111 remember_old_capital = no }
-							country_event = { id = FIN.red.1 days = 5 }
 						}
 						every_country = {
 							limit = { is_ai = no }
