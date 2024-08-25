@@ -6,32 +6,31 @@ set_politics = {
 	ruling_party = paternalism
 	last_election = "1991.6.1"
 	election_frequency = 96
-	elections_allowed = yes
+	elections_allowed = no
 }
 
+recruit_character = KEN_Ronald_Gideon_Ngala
+
 TNO_startup_nation = yes
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }
 
 set_popularities = {
 	communist = 0
 	ultranationalism = 0
-	socialist = 23
+	socialist = 0
 	progressivism = 0
-	liberalism = 16
+	liberalism = 0
 	liberal_conservatism = 0
-	conservatism = 4
-	paternalism = 57
-	despotism = 0
+	conservatism = 0
+	paternalism = 34
+	despotism = 66
 	fascism = 0
 	 
 }
 
-create_country_leader = {
-	name = "Daniel Arap Moi"
-	desc = "POLITICS_ARAP_MOI_DESC"
-	picture = "Portrait_KEN_Daniel_Arap_Moi.dds"
-	expire = "1985.1.1"
-	ideology = paternalism_controlled_democracy_subtype
-	traits = {
-		#
-	}
+add_ideas = {
+	TRI_Member_Client
 }

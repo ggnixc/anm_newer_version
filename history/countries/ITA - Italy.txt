@@ -31,6 +31,10 @@ if = {
 	set_autonomy = { target = MNT autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = MOC autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = GRE autonomy_state = autonomy_italy_reliant }
+	set_autonomy = { target = ETH autonomy_state = autonomy_italy_reliant }
+	set_autonomy = { target = SML autonomy_state = autonomy_italy_reliant }
+	set_autonomy = { target = KEN autonomy_state = autonomy_italy_reliant }
+	set_autonomy = { target = ERT autonomy_state = autonomy_italy_reliant }
 	else = {
 		puppet = ALB
 		puppet = CRO
@@ -38,6 +42,10 @@ if = {
 		puppet = MOC
 		puppet = SNM
 		puppet = GRE
+		puppet = ETH
+		puppet = SML
+		puppet = KEN
+		puppet = ERT
 	}
 }
 ita_parliament_gui_initial = yes
@@ -50,6 +58,10 @@ add_to_faction = MNT
 add_to_faction = GRE
 add_to_faction = MOC
 add_to_faction = TUN
+add_to_faction = ETH
+add_to_faction = ERT
+add_to_faction = SML
+add_to_faction = KEN
 
 MOC = {
 	set_politics = {
@@ -106,6 +118,71 @@ SNM = {
 		last_election = "1936.1.1"
 		election_frequency = 48
 		elections_allowed = no
+	}
+}
+ERT = {
+	set_politics = {
+		ruling_party = despotism
+		last_election = "1940.3.26"
+		election_frequency = 36
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		communist = 30
+		ultranationalism = 0
+		socialist = 0
+		progressivism = 0
+		liberalism = 0
+		liberal_conservatism = 0
+		conservatism = 0
+		paternalism = 12
+		despotism = 58
+		fascism = 0
+		 
+	}
+}
+SML = {
+	set_politics = {
+		ruling_party = despotism
+		last_election = "1940.3.26"
+		election_frequency = 36
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		communist = 0
+		ultranationalism = 0
+		socialist = 0
+		progressivism = 0
+		liberalism = 0
+		liberal_conservatism = 0
+		conservatism = 26
+		paternalism = 36
+		despotism = 37
+		fascism = 0
+     
+	}
+}
+KEN = {
+	set_politics = {
+		ruling_party = paternalism
+		last_election = "1991.6.1"
+		election_frequency = 96
+		elections_allowed = no
+	}
+
+	set_popularities = {
+	communist = 0
+	ultranationalism = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+	liberal_conservatism = 0
+	conservatism = 0
+	paternalism = 34
+	despotism = 66
+	fascism = 0
 	}
 }
 TNO_startup_nation = yes
