@@ -1,0 +1,39 @@
+add_namespace = AST_general
+add_namespace = AST_postpetersen
+
+country_event = {
+	    id = AST_postpetersen.1
+	    immediate = { log = "[GetDateText]: [Root.GetName]: event AST_postpetersen.1" }
+	    title = AST_postpetersen.1.t
+	    desc = AST_postpetersen.1.desc
+	    picture = GFX_anm_AST_Petersen_Dead
+
+	    is_triggered_only = yes
+       	fire_only_once = yes
+ 
+	option = {
+		    name = AST_postpetersen.1.a
+		hidden_effect = {
+			kill_country_leader = yes
+			
+			AST = {
+				set_politics = {
+					ruling_party = conservatism
+					last_election = "1995.4.13"
+					election_frequency = 36
+					elections_allowed = yes
+				}
+				remove_ideas = {
+					AST_Joh_Bjelke_Petersen_hog
+					AST_Ian_McLachlan_sec
+					AST_Andrew_Peacock_for
+					AST_Peter_Costello_eco
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD.18192 hours = 0 }
+			}
+		}
+	}
+}
