@@ -5934,9 +5934,9 @@ scripted_map_modes = {
 							check_variable = { nationality = 613 } #Sudauen-Lithuanian
 						}
 					}
-					set_temp_variable = { red = 0.608 }
-					set_temp_variable = { green = 0.502 }
-					set_temp_variable = { blue = 0.408 }
+					set_temp_variable = { red = 0.439 }
+					set_temp_variable = { green = 0.420 }
+					set_temp_variable = { blue = 0.329 }
 				}
 				else_if = {
 					limit = {
@@ -5987,6 +5987,26 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.465 }
 					set_temp_variable = { green = 0.453 }
 					set_temp_variable = { blue = 0.452 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 619 } #Kriwitschen
+						}
+					}
+					set_temp_variable = { red = 0.40 }
+					set_temp_variable = { green = 0.42 }
+					set_temp_variable = { blue = 0.43 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 620 } #Belarusian-Kriwitschen
+						}
+					}
+					set_temp_variable = { red = 0.290 }
+					set_temp_variable = { green = 0.455 }
+					set_temp_variable = { blue = 0.314 }
 				}
 			}
 		}

@@ -1,18 +1,18 @@
 add_namespace = AST_general
-add_namespace = AST_postpetersen
+add_namespace = AST_scripted
 
 country_event = {
-	    id = AST_postpetersen.1
-	    immediate = { log = "[GetDateText]: [Root.GetName]: event AST_postpetersen.1" }
-	    title = AST_postpetersen.1.t
-	    desc = AST_postpetersen.1.desc
+	    id = AST_scripted.1
+	    immediate = { log = "[GetDateText]: [Root.GetName]: event AST_scripted.1" }
+	    title = AST_scripted.1.t
+	    desc = AST_scripted.1.desc
 	    picture = GFX_anm_AST_Petersen_Dead
 
 	    is_triggered_only = yes
        	fire_only_once = yes
  
 	option = {
-		    name = AST_postpetersen.1.a
+		    name = AST_scripted.1.a
 		hidden_effect = {
 			kill_country_leader = yes
 			
