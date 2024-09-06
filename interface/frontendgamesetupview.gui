@@ -1089,7 +1089,7 @@ guiTypes = {
 		iconType = {
 			name = "country_leader"
 			quadTextureSprite ="GFX_leader_unknown"
-			position = { x = 20 y = 79 }
+			position = { x = 29 y = 89 }
 			scale=0.37
 		}
 
@@ -1103,26 +1103,26 @@ guiTypes = {
 		iconType ={
 			name = "pol_faction_icon"
 			spriteType = "GFX_pol_factions_strip"
-			position = { x = 79 y = 85 }
+			position = { x = 25 y = 176 }
 			#Orientation = "UPPER_LEFT"
 			frame = 1
 		}
 
 		gridboxtype = {
 			name = "spirit_grid"
-			position = { x = 148 y = 85 }
+			position = { x = 118 y = 93 }
 			size = { width = 230 height = 70 }
 			slotsize = { width = 60 height = 68 }
-			max_slots = { x = 6 y = 1 }
+			max_slots = { x = 4 y = 1 }
 			format = "UPPER_LEFT"
 		}
 
 		gridboxtype = {
 			name = "spirit_grid_over_defined"
-			position = { x = 148 y = 85 }
+			position = { x = 118 y = 93 }
 			size = { width = 230 height = 70 }
 			slotsize = { width = 60 height = 68 }
-			max_slots = { x = 100 y = 1 }
+			max_slots = { x = 4 y = 1 }
 			format = "UPPER_LEFT"
 		}
 
@@ -1157,8 +1157,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "leader_label"
-				position = { x = -10 y = 28 }
-				font = "aldrich_22_outline"
+				position = { x = 1000 y = 33 }
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "LEADER"
 				maxWidth = 340
@@ -1167,19 +1167,19 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "leader"
-				position = { x = 100 y = 28 }
-				font = "aldrich_22_outline"
+				position = { x = 101 y = 33 }
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 250
 				maxHeight = 40
 				fixedsize = yes
-				format = right
+				format = left
 			}
 
 			instantTextBoxType = {
 				name = "ideology_label"
-				position = { x = -10 y = 48 }
-				font = "aldrich_22_outline"
+				position = { x = 1000 y = 58 }
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "IDEOLOGY"
 				maxWidth = 340
@@ -1188,19 +1188,19 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ideology"
-				position = { x = 50 y = 48 }
-				font = "aldrich_22_outline"
+				position = { x = 101 y = 58 }
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 300
 				maxHeight = 40
 				fixedsize = yes
-				format = right
+				format = left
 			}
 
 			instantTextBoxType = {
 				name = "government_label"
 				position = { x = 1000 y = 68 }
-				font = "aldrich_22_outline"
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "GOVERNMENT"
 				maxWidth = 340
@@ -1209,9 +1209,9 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "government"
-				position = { x = 10000 y = 68 }
+				position = { x = 1000 y = 68 }
 				textureFile = ""
-				font = "aldrich_22_outline"
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
 				format = right
@@ -1240,9 +1240,9 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party_label"
-				position = { x = -10 y = 70 }
+				position = { x = 1000 y = 83 }
 				textureFile = ""
-				font = "aldrich_22_outline"
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "RULING_PARTY"
 				maxWidth = 340
@@ -1251,14 +1251,14 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party"
-				position = { x = 100 y = 70 }
+				position = { x = 101 y = 83 }
 				textureFile = ""
-				font = "aldrich_22_outline"
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 250
 				maxHeight = 40
 				fixedsize = yes
-				format = right
+				format = left
 			}
 		}
 	}
@@ -2325,7 +2325,7 @@ guiTypes = {
 			}
 
 			ButtonType = {
-				position = { x= -369 y = 10 }
+				position = { x= -373 y = 14 }
 				name = "player_shield"
 				quadTextureSprite ="GFX_player_flag"
 				Orientation = "UPPER_RIGHT"
@@ -2345,8 +2345,8 @@ guiTypes = {
 
 			iconType ={
 				name ="large_flag_frame"
-				spriteType = "GFX_topbar_flag_overlay"
-				position = { x = -369 y = 7 }
+				spriteType = "GFX_topbar_flag_overlay_2"
+				position = { x = -380 y = 8 }
 				Orientation = "UPPER_RIGHT"
 			}
 
@@ -2359,13 +2359,13 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "selected_nation_label"
-				position = { x = -277 y = 25 }
+				position = { x = -270 y = 17 }
 				textureFile = ""
-				font = "aldrich_22_outline"
+				font = "aldrich_bold_20_outline"
 				borderSize = {x = 0 y = 0}
 				text = "FE_NO_COUNTRY_SELECTED"
-				maxWidth = 274
-				maxHeight = 40
+				maxWidth = 250
+				maxHeight = 100
 				fixedsize = yes
 				format = centre
 				Orientation = "UPPER_RIGHT"
