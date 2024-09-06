@@ -1,0 +1,92 @@
+﻿add_namespace = HUN_skeleton_event
+
+
+country_event = { #1998 Election event
+	id = HUN_skeleton_event.1
+	title = HUN_skeleton_event.1.t
+	desc = HUN_skeleton_event.1.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Liberals
+		name = HUN_skeleton_event.1.a
+		hidden_effect = {
+			set_politics = {
+				ruling_party = liberalism
+				last_election = "1998.5.18"
+				election_frequency = 48
+				elections_allowed = yes
+			
+			}
+			set_popularities = {
+				progressivism = 22
+				liberalism = 18
+				conservatism = 25
+				paternalism = 15
+				paternalism_1 = 0
+				fascism = 17
+				national_socialism = 3
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = HUN_paternalism_1_party_long
+				name = HUN_paternalism_1_party
+			}
+		}
+		
+	}
+	option = { #Progressives
+		name = HUN_skeleton_event.1.b
+		hidden_effect = {
+			set_politics = {
+				ruling_party = progressivism
+				last_election = "1998.5.18"
+				election_frequency = 48
+				elections_allowed = yes
+			
+			}
+			set_popularities = {
+				progressivism = 22
+				liberalism = 18
+				conservatism = 25
+				paternalism = 15
+				paternalism_1 = 0
+				fascism = 17
+				national_socialism = 3
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = HUN_paternalism_1_party_long
+				name = HUN_paternalism_1_party
+			}
+		}
+	}	
+	option = { #Conservatives
+		name = HUN_skeleton_event.1.c
+		hidden_effect = {
+			set_politics = {
+				ruling_party = conservatism
+				last_election = "1998.5.18"
+				election_frequency = 48
+				elections_allowed = yes
+			
+			}
+			set_popularities = {
+				progressivism = 22
+				liberalism = 18
+				conservatism = 25
+				paternalism = 15
+				paternalism_1 = 0
+				fascism = 17
+				national_socialism = 3
+			}
+			set_party_name = {
+				ideology = paternalism
+				long_name = HUN_paternalism_1_party_long
+				name = HUN_paternalism_1_party
+			}
+		}
+	}
+}
