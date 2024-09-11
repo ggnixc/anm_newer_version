@@ -1,5 +1,6 @@
 ﻿capital = 446
 
+recruit_character = EGY_Hani_Saeed_Ramadan
 recruit_character = EGY_Fouad_Serageddin
 recruit_character = EGY_Mounir_Fakhry_Abdul_Noor
 recruit_character = EGY_Fuad_II
@@ -25,12 +26,12 @@ add_ideas = {
 	
 	##laws##
 	#political#
-	tno_political_parties_multiparty_system
-	tno_religious_rights_secularism
-	tno_trade_unions_state_controlled
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_state_religion
+	tno_trade_unions_nonsocialist_allowed
 	tno_immigration_quota_immigration
 	tno_slavery_outlawed
-	tno_public_meetings_regulated
+	tno_public_meetings_allowed
 	tno_press_rights_censored_press
 	tno_vote_franchise_universal
 	tno_refugees_skilled
@@ -45,13 +46,13 @@ add_ideas = {
 	tno_draft_exemptions_educational_deferment
 
 	#economic#
-	tno_trade_laws_free_trade
+	tno_trade_laws_export_focus
 	tno_economic_focus_civilian_economy
-	tno_tax_rate_high_taxes
-	tno_income_taxation_low_income_weighted
-	tno_minimum_wage_low_minimum_wage
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_tax_havens
+	tno_minimum_wage_acceptable_minimum
 	tno_max_workhours_8_hour_work_day
-	tno_child_labor_illegal
+	tno_child_labor_restricted
 	tno_pensions_acceptable_pensions
 	tno_unemployment_no_subsidies
 
@@ -59,18 +60,18 @@ add_ideas = {
 	tno_safety_limited_regulations
 	tno_health_care_public_health_care
 	tno_pollution_some_regulations
-	tno_education_public_higher_education
+	tno_education_free_education
 	tno_penal_system_capital_punishment
 	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_gender_equality
+	tno_gender_rights_women_in_the_workplace
 	tno_minorities_equal_rights
-	tno_security_security_service
+	tno_security_wire_tapping
 
 	#ministers#
 }
 
 set_politics = {
-	ruling_party = liberalism
+	ruling_party = conservatism
 	last_election = "1995.10.8"
 	election_frequency = 60
 	elections_allowed = yes
@@ -79,15 +80,15 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-	progressivism = 11
-	liberalism = 37
-	liberal_conservatism = 13
-	conservatism = 10
-	paternalism = 9
-	despotism = 0
-	communist = 0
-	socialist = 9
-	fascism = 11
+	progressivism = 13
+	liberalism = 8
+	liberal_conservatism = 12
+	conservatism = 41
+	paternalism = 0
+	despotism = 10
+	communist = 7
+	socialist = 0
+	fascism = 9
 }
 
 # Starting tech

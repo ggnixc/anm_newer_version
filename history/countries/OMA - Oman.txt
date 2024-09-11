@@ -1,11 +1,13 @@
 ﻿capital = 294
 
 set_oob = "OMA_1962"
-
+recruit_character = OMA_Qaboos_bin_Said_al_Said
+recruit_character = OMA_Ghalib_al_Hinai
+recruit_character = OMA_Yusuf_bin_Alawi
 recruit_character = OMA_Ahmad_al-Ghassani
 
 set_politics = {	
-	ruling_party = communist
+	ruling_party = liberal_conservatism
 	last_election = "1933.2.16"
 	election_frequency = 36
 	elections_allowed = no
@@ -14,13 +16,13 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 43
+    communist = 0
     ultranationalism = 0
     socialist = 14
     progressivism = 0
     liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
+    liberal_conservatism = 33
+    conservatism = 10
     paternalism = 16
     despotism = 27
     fascism = 0
@@ -29,14 +31,14 @@ set_popularities = {
 add_ideas = {
 
 	#political#
-	tno_political_parties_one_party_state
-	tno_religious_rights_state_religion
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
 	tno_trade_unions_state_controlled
 	tno_immigration_quota_immigration
 	tno_slavery_outlawed
 	tno_public_meetings_regulated
 	tno_press_rights_state_press_only
-	tno_vote_franchise_elite_voting
+	tno_vote_franchise_registered_voting
 	tno_refugees_skilled
 	
 	#military#
