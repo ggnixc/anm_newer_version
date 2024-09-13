@@ -1401,4 +1401,30 @@ news_event = {
 		name = WORLD.18196.a
 	}
 }
+news_event = {
+	id = WORLD.18197 #Canberra riots fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18197"}
+	title = WORLD.18197.t
+	desc = WORLD.18197.desc
+	picture = GFX_news_event_canberra_riots_fail
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18197.a
+	}
+}
+news_event = {
+	id = WORLD.18198 #Canberra riots succeed
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18198"}
+	title = WORLD.18198.t
+	desc = WORLD.18198.desc
+	picture = GFX_news_event_canberra_riots_succeed
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18198.a
+	}
+}
 

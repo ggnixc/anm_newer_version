@@ -85,7 +85,7 @@ characters = {
 		name = AST_Michael_Jeffery
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/AST/AST_Michael_Jeffery.dds"
+				large = "gfx/leaders/AST/Portrait_AST_Michael_Jeffery.dds"
 				small = "GFX_idea_AST_Michael_Jeffery" 
 			} 	
 		} 
@@ -105,7 +105,7 @@ characters = {
 		name = AST_Philip_Flood
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/AST/AST_Philip_Flood.dds"
+				large = "gfx/leaders/AST/Portrait_AST_Philip_Flood.dds"
 				small = "GFX_idea_AST_Philip_Flood" 
 			} 	
 		} 
@@ -139,6 +139,20 @@ characters = {
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
+		}
+	}
+	AST_Parliament_of_Australia = { 
+		name = AST_Parliament_of_Australia
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Parliament_of_Australia.dds"	
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AST_Parliament_of_Australia_DESC"
+			ideology = progressivism_democratic_socialism_subtype
+			traits = {}
+			expire = "2999.1.1.1"
 		}
 	}
 } 
