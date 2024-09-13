@@ -699,13 +699,6 @@ guiTypes = {
 				spriteType = "GFX_flag_blank_82_52"
 				position = { x = 206 y = 50 }
 			}
-			iconType = { # GERMANY INFO
-				name = "country_selection_info_germany"
-				position = { x = 260 y = 0 }
-				spriteType = "GFX_country_selection_alert_big"
-				pdx_tooltip = "BOOKMARK_GERMANY_INFO"
-				pdx_tooltip_delayed = "BOOKMARK_GERMANY_INFO_DELAYED"
-			}
 			iconType = { # GERMANY NEW
 				name = "country_selection_new_germany"
 				position = { x = 365 y = 30 }
@@ -713,24 +706,31 @@ guiTypes = {
 				pdx_tooltip = "BOOKMARK_GERMANY_NEW"
 				pdx_tooltip_delayed = "BOOKMARK_GERMANY_NEW_DELAYED"
 			}
+			iconType = { # GERMANY INFO
+				name = "country_selection_info_germany"
+				position = { x = 260 y = 0 }
+				spriteType = "GFX_country_selection_alert_big"
+				pdx_tooltip = "BOOKMARK_GERMANY_INFO"
+				pdx_tooltip_delayed = "BOOKMARK_GERMANY_INFO_DELAYED"
+			}
 			iconType = { # USA BLOCKED ENTRY
 				name = "countries_blocker_big_ofn_1_entry"
 				position = { x = 26 y = 22 }
-				spriteType = "GFX_country_selection_screen_blocker_big"
+				spriteType = "GFX_country_selection_screen_blocker_big_USA"
 				pdx_tooltip = "BOOKMARK_USA_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_USA_BLOCKER_DELAYED"
 			}
 			iconType = { # JAPAN BLOCKED ENTRY
 				name = "countries_blocker_big_cps_1_entry"
 				position = { x = 514 y = 22 }
-				spriteType = "GFX_country_selection_screen_blocker_big"
+				spriteType = "GFX_country_selection_screen_blocker_big_JAP"
 				pdx_tooltip = "BOOKMARK_JAPAN_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_JAPAN_BLOCKER_DELAYED"
 			}
 			iconType = { # USSR BLOCKED ENTRY
 				name = "countries_blocker_big_comintern_1_entry"
 				position = { x = 758 y = 22 }
-				spriteType = "GFX_country_selection_screen_blocker_big"
+				spriteType = "GFX_country_selection_screen_blocker_big_SOV"
 				pdx_tooltip = "BOOKMARK_USSR_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_USSR_BLOCKER_DELAYED"
 			}
@@ -809,6 +809,7 @@ guiTypes = {
 			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Cheats"
+			pdx_tooltip = "FRONTEND_CHEATS_LONG"
 			maxWidth = 340
 			maxHeight = 30
 			format = left
@@ -1098,6 +1099,15 @@ guiTypes = {
 			quadTextureSprite ="GFX_minor_portrait_overlay"
 			position = { x = 1400 y = 73 }
 			scale=0.55
+		}
+
+		instantTextBoxType = {
+			name = "national_ideas_title"
+			position = { x = 123 y = 81 }
+			font = "aldrich_12_outline"
+			text = "National Ideas"
+			maxWidth = 340
+			format = left
 		}
 
 		iconType ={
