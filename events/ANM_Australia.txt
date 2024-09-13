@@ -30,10 +30,179 @@ country_event = {
 					AST_Peter_Costello_eco
 				}
 			}
+			country_event = { id = AST_scripted.2 days = 0 }
 			every_country = {
 				limit = { is_ai = no }
 				news_event = { id = WORLD.18192 hours = 0 }
 			}
 		}
+	}
+}
+country_event = { #1998 federal election
+	id = AST_scripted.2 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AST_scripted.2 " }
+	title = AST_scripted.2.t
+	desc = AST_scripted.2.d
+	#picture = 
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = AST_scripted.2.a
+		ai_chance = {
+			factor = 38
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
+			}
+			
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = liberal_conservatism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = paternalism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.01
+		}
+		set_country_flag = peacock_98
+		news_event = { id = WORLD.18193 }
+	}
+	option = {
+		name = AST_scripted.2.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
+			}
+
+		}
+		set_politics = {
+			ruling_party = liberal_conservatism
+			last_election = "1998.5.6"
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = liberal_conservatism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = paternalism
+			popularity = 0.02
+		}
+		set_country_flag = downer_98
+		news_event = { id = WORLD.18194 }
+	}
+	option = {
+		name = AST_scripted.2.a
+		ai_chance = {
+			factor = 28
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
+			}
+		}
+		set_politics = {
+			ruling_party = paternalism
+			last_election = "1998.5.6"
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = liberal_conservatism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = paternalism
+			popularity = 0.04
+		}
+		set_country_flag = gray_98
+		news_event = { id = WORLD.18195 }
+	}
+	option = {
+		name = AST_scripted.2.a
+		ai_chance = {
+			factor = 14
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+			last_election = "1998.5.6"
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = paternalism
+			popularity = 0.02
+		}
+		set_country_flag = cameron_98
+		news_event = { id = WORLD.18196 }
 	}
 }
