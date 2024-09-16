@@ -1,31 +1,6 @@
 ideas = {
 	
 	country = {
-		ROM_ethnic_tensions = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_ethnic_tensions" }
-			allowed = { always = no }
-		
-			picture = ROM_ethnic_tensions 
-			removal_cost = -1 
-
-			modifier = {
-				stability_factor = -0.05
-				political_power_gain = -0.02
-			}
-		}
-		ROM_avatar_of_democracy = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_avatar_of_democracy" }
-			allowed = { always = no }
-		
-			picture = ROM_avatar_of_democracy 
-			removal_cost = -1 
-
-			modifier = {
-				stability_factor = -0.05
-				political_power_gain = 0.01
-				war_support_factor = -0.05
-			}
-		}
 		ROM_michael_the_first = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_michael_the_first" }
 			allowed = { always = no }
@@ -34,8 +9,8 @@ ideas = {
 			removal_cost = -1 
 
 			modifier = {
-				stability_factor = 0.03
-				political_power_factor = 0.10
+				stability_factor = 0.10
+				political_power_factor = 0.15
 			}
 		}
 		ROM_dealing_with_the_devil = {
@@ -46,21 +21,24 @@ ideas = {
 			removal_cost = -1 
 
 			modifier = {
-				max_fuel_factor = -0.30 
-				fuel_gain_factor = -0.50
+				consumer_goods_factor = 0.20
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+				max_fuel_factor = -0.35
+				fuel_gain_factor = -0.40
 			}
 		}
-		ROM_major_trade_partner_reich = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_major_trade_partner_reich" }
+		ROM_A_Decadent_Dream = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ROM_A_Decadent_Dream" }
 			allowed = { always = no }
 		
-			picture = ROM_major_trade_partner_reich 
+			picture = ROM_A_Decadent_Dream 
 			removal_cost = -1 
 
 			modifier = {
-				consumer_goods_factor = 0.05
-				production_speed_buildings_factor = 0.20
-				industrial_capacity_factory = 0.20
+				stability_factor = 0.05
+				political_power_cost = 0.20
+				required_garrison_factor = 0.15
 			}
 		}
 		

@@ -2,47 +2,48 @@
 
 set_oob = "BRA_1962"
 
-add_ideas = {
-	#NATIONAL SPIRITS#
-	BRA_Beacon_Democracy
-	BRA_Stains_Corruption
-	BRA_Rising_Star
-	BRA_Populism_Debate
-	
-	#MINISTERS
-	BRA_Leonel_Brizola_hog
-	BRA_Maria_Tavares_eco
-	BRA_Celso_Amorim_for
-	BRA_Dias_Toffoli_sec
-}	
+recruit_character = BRA_Leonel_Brizola
+recruit_character = BRA_Wellington_Moreira_Franco
+recruit_character = BRA_Andre_Franco_Montoro
+recruit_character = BRA_Carlos_Lupi
+recruit_character = BRA_Ciro_Gomes
 
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = progressivism
 	last_election = "1995.10.3"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
-    communist = 5
+    communist = 1
+	communist_1 = 2
     ultranationalism = 0
-    socialist = 35
-    progressivism = 10
-    liberalism = 15
-    liberal_conservatism = 10
-    conservatism = 10
-    paternalism = 5
+    socialist = 10
+    progressivism = 20
+    liberalism = 14
+    liberal_conservatism = 16
+    conservatism = 15
+    paternalism = 11
     despotism = 0
-    fascism = 10
-    esoteric_nazism = 0
+    fascism = 9
+	fascism_1 = 2
+     
 }
 
-create_country_leader = {
-	name = "Luiz Inácio Lula da Silva"
-	desc = "POLITICS_LULA_SILVA_DESC"
-	picture = "Portrait_BRA_Lula_Silva.dds"
-	expire = "2999.1.1"
-	ideology = socialist_lulism_subtype
-	traits = {
-	}
-}
+add_ideas = {
+	OFN_Observer
+	#NATIONAL SPIRITS#
+	BRA_Beacon_Democracy
+	BRA_Stains_Corruption
+	BRA_Rising_Star
+	BRA_Populist_Republic
+	
+	#MINISTERS
+	BRA_Wellington_Moreira_Franco_hog
+	BRA_Carlos_Lupi_eco
+	BRA_Ciro_Gomes_for
+	BRA_Andre_Franco_Montoro_sec
+}	

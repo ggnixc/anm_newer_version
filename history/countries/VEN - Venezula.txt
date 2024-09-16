@@ -6,27 +6,32 @@ VEN = {
 
 set_oob = "VEN_1962"
 
+recruit_character = VEN_Andres_Velasquez
+
 set_politics = {	
-	ruling_party = national_socialism
-	last_election = "1961.1.20"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = progressivism
+	last_election = "1993.12.6"
+	election_frequency = 60
+	elections_allowed = yes
 
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 47
-    progressivism = 0
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
+    socialist = 17
+    progressivism = 26
+	progressivism_1 = 14
+    liberalism = 16
+    liberal_conservatism = 15
+    conservatism = 12
     paternalism = 0
-    despotism = 13
-    fascism = 7
-    esoteric_nazism = 0
-	national_socialism = 33
+    despotism = 0
+    fascism = 0
+     
+	national_socialism = 0
 }
 
 create_country_leader = {
@@ -39,17 +44,8 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Felix Diaz Ortega"
-	picture = "Portrait_VEN_Felix_Ortega.dds"
-	expire = "2965.1.1"
-	ideology = national_socialism_stratocratic_nazism_subtype
-	traits = {
-		#
-	}
-}
-
 
 add_ideas = {
+	OFN_Independent_Member
 	VEN_Oil_Baron
 }

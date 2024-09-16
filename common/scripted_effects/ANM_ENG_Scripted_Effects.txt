@@ -1,0 +1,45 @@
+ANM_britain_becomes_socialist = {
+	ENG = {
+		set_politics = {
+			ruling_party = socialist
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		
+		set_popularities = {
+			communist = 23
+			liberalism = 9
+			conservatism = 10
+			progressivism = 11
+			socialist = 47
+		}
+
+		remove_ideas = {
+			Pakt_Bundnispartner
+			ENG_Legacy_Of_The_BPP
+			ENG_Growing_Disillusionment
+			ENG_British_Malaise
+			ENG_Blood_In_The_Water
+		}
+		
+		add_ideas = {
+			COM_Observer
+		}
+
+		set_cosmetic_tag = ENG_commonwealth_britain
+
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+	GER = {
+		remove_from_faction = ENG
+	}
+}
+
+ANM_britain_joins_COM = {
+	SOV = { add_to_faction = ENG }
+	ENG = {
+		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+	add_ideas = COM_Member
+}

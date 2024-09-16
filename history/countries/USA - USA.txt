@@ -6,10 +6,10 @@ set_stability = .91 #fuck you
 add_political_power = 3 #allows you to start campaigning instantly
 
 set_country_flag = gui_alert_visible
+set_country_flag = country_has_gui
 
-set_variable = { ANMKDN_showednation_agenda_one = 2 }
-set_variable = { ANMKDN_showednation_agenda_two = 5 }
-set_variable = { ANMKDN_showednation_agenda_three = 7 }
+recruit_character = USA_Gary_Hart
+
 
 #set_variable = { USA_mil_research_speed_factor = 0.10 }
 #add_dynamic_modifier = {
@@ -19,24 +19,30 @@ set_variable = { ANMKDN_showednation_agenda_three = 7 }
 create_faction = Organization_of_Free_Nations
 add_to_faction = USA
 add_to_faction = CAN
+add_to_faction = QUE
 add_to_faction = AST
 add_to_faction = ICE
 add_to_faction = NZL
 add_to_faction = WIN
 add_to_faction = GUY
 add_to_faction = BLZ
-add_to_faction = GRN
 add_to_faction = SAF
 add_to_faction = URG
 add_to_faction = HAI
-add_to_faction = SUR
-add_to_faction = FEN
 add_to_faction = FAR
 add_to_faction = LIB
-add_to_faction = MDI
 add_to_faction = CUR
-add_to_faction = ZIM
 add_to_faction = SHL
+add_to_faction = VEN
+add_to_faction = NAM
+add_to_faction = CUB
+add_to_faction = ELS
+add_to_faction = CYL
+add_to_faction = COG
+add_to_faction = EAF
+add_to_faction = COS
+add_to_faction = PAN
+add_to_faction = FJI
 
 country_event = {
     id = USA_anm_events.2
@@ -71,6 +77,21 @@ if = {
 		puppet = GUY
 	}
 }
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = ELS
+		autonomy_state = autonomy_liberated_government
+	}
+	else = {
+		puppet = ELS
+	}
+}
 
 create_import = {
     resource = rubber
@@ -83,11 +104,15 @@ set_convoys = 500
 add_political_power = 99
 set_politics = {
 	ruling_party = liberalism		
-	last_election = "1996.11.5"
+	last_election = "1992.11.3"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
+
+#econtype
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_American_Capitalism }
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
 
 set_popularities = {
     communist = 0
@@ -100,20 +125,8 @@ set_popularities = {
     paternalism = 20
     despotism = 0
     fascism = 0
-    esoteric_nazism = 0
+     
 	national_socialism = 0
-}
-
-
-create_country_leader = {
-	name = "Al Gore"
-	desc = "POLITICS_AL_GORE_DESC"
-	picture = "Portrait_USA_Al_Gore.dds"
-	expire = "2999.4.20"
-	ideology = liberalism_atari_liberalism_subtype 
-	traits = {
-		Tennessean_Technocrat
-	}
 }
 
 add_ideas = {
@@ -680,9 +693,6 @@ if = {
 }
 
 set_country_flag = HAS_ECON_SPHERE
-
-set_variable = { TNO_economy_type = 1 }
-set_variable = { TNO_economy_subtype = 1 }
 
 #Starting Equipment
 add_equipment_to_stockpile = {

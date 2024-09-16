@@ -1,0 +1,82 @@
+characters = {
+	ARG_Manuel_de_Anchorena = {
+		name = ARG_Manuel_de_Anchorena
+		portraits = { civilian = { large = "gfx/leaders/ARG/Portrait_ARG_Manuel_de_Anchorena.dds" } }
+		country_leader = {
+			desc = "POLITICS_MANUEL_ANCHORENA_DESC"
+			expire = "2090.4.20"
+			ideology = fascism_fascist_populism_subtype
+			traits = { 
+			}
+			id = -1
+		}
+	}
+	ARG_Jose_Joe_Baxter = {
+		name = ARG_Jose_Joe_Baxter
+		portraits = { civilian = { large = "gfx/leaders/ARG/Portrait_ARG_Jose_Joe_Baxter.dds" } }
+		country_leader = {
+			desc = "POLITICS_JOSE_BAXTER_DESC"
+			expire = "2090.4.20"
+			ideology = national_socialism_revolutionary_nazism_subtype
+			traits = { 
+			}
+			id = -1
+		}
+	}
+	ARG_Julio_Jose_Yessi = {
+		name = ARG_Julio_Jose_Yessi
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ARG/Portrait_ARG_Julio_Jose_Yessi.dds"
+				small = "GFX_idea_ARG_Julio_Jose_Yessi"
+				} 
+			}
+		country_leader = {
+			desc = ""
+			expire = "2090.4.20"
+			ideology = ultranationalism_reactionary_nationalism_subtype
+			traits = { 
+			}
+			id = -1
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = ARG_Julio_Jose_Yessi_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	ARG_Carlos_Saul_Menem = {
+		name = ARG_Carlos_Saul_Menem
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/ARG/Portrait_ARG_Carlos_Saul_Menem.dds"
+				small = "GFX_idea_ARG_Carlos_Saul_Menem" 
+			} 	
+		} 
+		country_leader = {
+			desc = ""
+			expire = "2090.4.20"
+			ideology = paternalism_peronism_subtype
+			traits = { 
+			}
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = ARG_Carlos_Saul_Menem_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+}

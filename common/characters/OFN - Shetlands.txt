@@ -1,0 +1,121 @@
+characters = {
+	SHL_jim_wallace = {   
+		name = SHL_jim_wallace  
+		portraits = { 
+			civilian = { large = "gfx/leaders/SHL/Portrait_SHL_Jim_Wallace.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_JIM_WALLACE_DESC"
+			ideology = liberalism_national_liberal_subtype
+			traits = { committed_bureaucrat }
+			expire = "2999.1.1.1"
+		}
+	}
+	SHL_tavish_scott = {  
+		name = SHL_tavish_scott
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SHL/Portrait_SHL_Tavish_Scott.dds"
+				small = "GFX_idea_SHL_Tavish_Scott" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = SHL_Tavish_Scott_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	} 
+	SHL_nigel_essenhigh = {  
+		name = SHL_nigel_essenhigh
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SHL/Portrait_SHL_Nigel_Essenhigh.dds"
+				small = "GFX_idea_SHL_Nigel_Essenhigh" 
+			} 	
+		} 
+		country_leader = {
+			ideology =  paternalism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = SHL_Nigel_Essenhigh_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SHL_michael_stout = {  
+		name = SHL_michael_stout
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SHL/Portrait_SHL_Michael_Stout.dds"
+				small = "GFX_idea_SHL_Michael_Stout" 
+			} 	
+		} 
+		country_leader = {
+			ideology =  liberal_conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = SHL_Michael_Stout_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SHL_william_smith = { 
+		name = SHL_william_smith
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SHL/Portrait_SHL_William_Smith.dds"
+				small = "GFX_idea_SHL_William_Smith" 
+			} 	
+		} 
+		country_leader = {
+			ideology =  progressivism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = SHL_William_Smith_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SHL_hector_monro = { 
+		name = SHL_hector_monro
+		country_leader = {
+			ideology =  conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	SHL_ian_scott = { 
+		name = SHL_ian_scott
+		country_leader = {
+			ideology =  progressivism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+} 

@@ -9,49 +9,28 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = ERT_Hami_Idris_Awate
+
+TNO_startup_nation = yes
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }
+
 set_popularities = {
-    communist = 0
+    communist = 30
     ultranationalism = 0
     socialist = 0
     progressivism = 0
-    liberalism = 8
+    liberalism = 0
     liberal_conservatism = 0
-    conservatism = 16
-    paternalism = 13
-    despotism = 57
-    fascism = 6
-    esoteric_nazism = 0
+    conservatism = 0
+    paternalism = 12
+    despotism = 58
+    fascism = 0
+     
 }
 
-create_country_leader = {
-	name = "Woldeab Woldemariam"
-	desc = "POLITICS_OJUKWU_DESC"
-	picture = "Portrait_Eritrea_Woldeab_Woldemariam.dds"
-	expire = "1985.1.1"
-	ideology = liberalism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Isaias Afwerki"
-	desc = "POLITICS_AFWERKI_DESC"
-	picture = "Portrait_ERT_Isaias_Afwerki.dds"
-	expire = "2090.1.1"
-	ideology = despotism_civilian_dictatorship_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Isaias Afwerki"
-	desc = "POLITICS_OJUKWU_DESC"
-	picture = "Portrait_Eritrea_Isaias_Afwerki.dds"
-	expire = "1985.1.1"
-	ideology = fascism_subtype
-	traits = {
-		#
-	}
+add_ideas = {
+	TRI_Member_Client
 }

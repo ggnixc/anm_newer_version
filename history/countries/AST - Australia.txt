@@ -9,83 +9,37 @@ set_stability = 0.6
 
 set_politics = {
 	ruling_party = despotism
-	last_election = "1971.13.3"
+	last_election = "1971.3.13"
 	election_frequency = 36
 	elections_allowed = no
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
     socialist = 0
     progressivism = 5
-    liberalism = 5
-    liberal_conservatism = 10
-    conservatism = 5
-    paternalism = 10
+    liberalism = 10
+    liberal_conservatism = 5
+    conservatism = 0
+    paternalism = 15
     despotism = 65
     fascism = 0
     national_socialism = 0
 	ultranationalism = 0
-    esoteric_nazism = 0
+     
 }
 
-create_country_leader = {
-	name = "Joh Bjelke-Petersen"
-	desc = "POLITICS_JOH_BJELKE_PETERSEN_DESC"
-	picture = "Portrait_AST_Joh_Bjelke_Petersen.dds"
-	expire = "2090.1.1"
-	ideology = despotism_aristocratic_conservatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "John Howard"
-	picture = "Portrait_AST_John_Howard.dds"
-	expire = "2090.1.1"
-	ideology = liberal_conservatism_subtype
-	traits = {
-	}
-}
-
-
-create_country_leader = {
-	name = "John Anderson"
-	picture = "Portrait_AST_John_Howard.dds"
-	expire = "2090.1.1"
-	ideology = conservatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Peter Dutton"
-	picture = "Portrait_AST_John_Howard.dds"
-	expire = "2090.1.1"
-	ideology = paternalism_subtype
-	traits = {
-	}
-}
-
-
-create_country_leader = {
-	name = "Malcolm Turnbull"
-	picture = "Portrait_AST_John_Howard.dds"
-	expire = "2090.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-
-create_country_leader = {
-	name = "Kim Beazley"
-	picture = "Portrait_AST_John_Howard.dds"
-	expire = "2090.1.1"
-	ideology = progressivism_social_democracy_subtype
-	traits = {
-	}
-}
+recruit_character = AST_Joh_Bjelke_Petersen
+recruit_character = AST_Philip_Flood
+recruit_character = AST_Andrew_Peacock
+recruit_character = AST_Peter_Costello
+recruit_character = AST_Michael_Jeffery
+recruit_character = AST_Alexander_Downer
+recruit_character = AST_Robin_Gray
+recruit_character = AST_Graeme_Campbell
+recruit_character = AST_Parliament_of_Australia
 
 create_field_marshal = {
 	name = "Reginald Pollard"
@@ -249,15 +203,17 @@ create_navy_leader = {
 }
 
 add_ideas = {
-	
+	#NAT SPIRITS
+	AST_United_in_Name_Only
+	AST_Red_Menace
+	AST_Werewolves_of_Australia
 	#FACTION STATUS
 	OFN_Independent_Member
-	#ministers
-	AST_Bill_Hayden_hog
-	AST_Michelle_Landry_for
+	#Ministers
+	AST_Andrew_Peacock_hog
+	AST_Michael_Jeffery_sec
+	AST_Philip_Flood_for
 	AST_Peter_Costello_eco
-	AST_John_Moores_sec
-
 	#laws
 	tno_academic_base_secondary_schooling
 	tno_research_facilities_modern

@@ -1,41 +1,52 @@
 ﻿capital = 337
 
+recruit_character = FAR_anfinn_kallsberg
+recruit_character = FAR_jenis_av_rana
+recruit_character = FAR_finnbogi_arge
+recruit_character = FAR_bill_justinussen
+recruit_character = FAR_jorgen_niclasen
+recruit_character = FAR_kari_p_hojgaard
+recruit_character = FAR_alti_dam
+recruit_character = FAR_hogni_hoydal
+
 set_war_support = 0.8
 set_stability = 0.5
 
 set_oob = ""
 
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = liberal_conservatism
 	last_election = "1994.2.16"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 48
-    progressivism = 0
-    liberalism = 9
-    liberal_conservatism = 11
-    conservatism = 32
+    socialist = 16
+    progressivism = 27
+    liberalism = 4
+    liberal_conservatism = 31
+    conservatism = 22
     paternalism = 0
     despotism = 0
     fascism = 0
-    esoteric_nazism = 0
+     
 }
 
 add_ideas = {
 	OFN_Dependent_Member
-}
+	#spirits#
+	FAR_Economic_Disaster
+	FAR_Dam_Legacy
+	FAR_Can_We_Be_Independent
+	#ministers#
+	FAR_Jenis_av_Rana_hog
+	FAR_Finnbogi_Arge_sec
+	FAR_Bill_Justinussen_for
+	FAR_Jorgen_Niclasen_eco
 
-create_country_leader = {
-	name = "Høgni Hoydal"
-	desc = ""
-	picture = "Portrait_FAR_Hogni_Hoydal.dds"
-	expire = "2090.1.1"
-	ideology = socialist_agrarian_socialism_subtype
-	traits = {
-	}
 }

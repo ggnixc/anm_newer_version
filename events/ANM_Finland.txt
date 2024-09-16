@@ -1,21 +1,71 @@
 add_namespace = FIN.civilwar
+add_namespace = FIN.red
 
 country_event = {
-	      id = FIN.civilwar.1
-	      immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.civilwar.1" }
-	      title = FIN.civilwar.1.t
-	      desc = FIN.civilwar.1.desc
-	      picture = GFX_anm_FIN_civil_war
+	id = FIN.civilwar.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.civilwar.1" }
+	title = FIN.civilwar.1.t
+	desc = FIN.civilwar.1.desc
+	picture = GFX_anm_FIN_civil_war
 
-	      is_triggered_only = yes
-       	  fire_only_once = yes
- 
-	      option = {
-		           name = FIN.civilwar.1.a
-			ANM_finnishcivilwar = yes
-			every_country = {
-				limit = { is_ai = no }
-				news_event = { id = WORLD.18179 hours = 1 }
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN.civilwar.1.a
+		ANM_finnishcivilwar = yes
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = WORLD.18185 hours = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = FIN.civilwar.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.civilwar.2" }
+	title = FIN.civilwar.2.t
+	desc = FIN.civilwar.2.desc
+	picture = GFX_anm_FIN_civil_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN.civilwar.2.a
+		ANM_finnish_unrest = yes
+		FIN = {
+			country_event = { id = FIN.civilwar.1 days = 5 }
+		}
+  	}
+}
+
+country_event = {
+	id = FIN.red.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.red.1" }
+	title = FIN.red.1.t
+	desc = FIN.red.1.desc
+	picture = GFX_anm_FIN_civil_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN.red.1.a
+		SOV = {
+			set_autonomy = {
+				target = FDR
+				autonomy_state = autonomy_satellite
 			}
 		}
+		FDR = {
+			set_variable = { ECON_SPHERE_LEADER = SOV }
+			set_popularities = {
+				communist = 50
+				socialist = 30
+				progressivism = 15
+				liberalism = 5
+			}
+		}
+  	}
 }

@@ -1,49 +1,73 @@
 ﻿#charecters
-recruit_character = VIN_Duong_Hieu_Nghia
 recruit_character = VIN_Bui_Diem
-recruit_character = VIN_Le_Minh_Dao
-recruit_character = VIN_Nguyen_Xuan_Oanh
-recruit_character = VIN_Ha_Thuc_Ky
 
-capital = 878 #Saigon
+capital = 671 #Hue
 
 set_oob = "VIN_1962"
 
 set_politics = {
-	ruling_party = despotism
+	ruling_party = paternalism
 	last_election = "1960.11.11"
 	election_frequency = 36
 	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
+<<<<<<<< HEAD:history/countries/VIN - Vietnam.txt
+    communist = 34
+    socialist = 40
+    progressivism = 12
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 3
+    despotism = 11
+    fascism = 0
+========
     communist = 0
     socialist = 0
     progressivism = 8
     liberalism = 5
     liberal_conservatism = 0
     conservatism = 21
-    paternalism = 16
-    despotism = 46
+    paternalism = 46
+    despotism = 16
     fascism = 4
+>>>>>>>> main:history/countries/VIN - Republic of Vietnam.txt
     national_socialism = 0
 	ultranationalism = 0
-    esoteric_nazism = 0
+     
 }
 
 add_ideas = {
 	#Ideas
-	Sphere_Fully_Dependent
-	VIN_Whole_One_Day
-	VIN_Pearl_of_the_Far_East
-	VIN_Japanese_Military_Programs
-	VIN_National_Malaise
+<<<<<<<< HEAD:history/countries/VIN - Vietnam.txt
+<<<<<<< Updated upstream:history/countries/VIN - Vietnam.txt
 	#Ministers
-recruit_character = VIN_Bui_Diem_hog
-recruit_character = VIN_Le_Minh_Dao_sec
-recruit_character = VIN_Nguyen_Xuan_Oanh_eco
-recruit_character = VIN_Ha_Thuc_Ky_for
+	VIN_minister_Le_Duc_Anh_hog
+	VIN_minister_Bui_Thien_Ngo_sec
+	VIN_minister_Nguyen_Manh_Cam_for
+	VIN_minister_Do_Muoi_eco
+=======
+	COM_Observer
+	VIC_Whole_One_Day
+	VIC_Our_Friends_in_the_Kremlin 
+	VIC_Difficult_Reforms
+	VIC_Partial_Isolation
+	#Ministers
+	VIC_Le_Duc_Anh_hog
+	VIC_Bui_Thien_Ngo_sec
+	VIC_Nguyen_Manh_Cam_for
+	VIC_Do_Muoi_eco
+>>>>>>> Stashed changes:history/countries/VIC - Socialist Vietnam.txt
+	
+========
+	Sphere_Fully_Dependent
 
+	#Ministers
+>>>>>>>> main:history/countries/VIN - Republic of Vietnam.txt
 	#POLITICAL
 	tno_political_parties_controlled_opposition
 	tno_religious_rights_state_atheism

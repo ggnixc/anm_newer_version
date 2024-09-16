@@ -1,54 +1,38 @@
 ideas = {
-	
-	
-	
-	foreign_minister= { 
-		AST_Michelle_Landry_for = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AST_Michelle_Landry_for"}
-			allowed = { original_tag = AST }
-			picture = "AST_Michelle_Landry_for"
-			available = {
-					tag = AST
+	country = {
+		AST_United_in_Name_Only = {
+			allowed = { always = no }
+			picture = AST_United_in_Name_Only
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.10
+				custom_modifier_tooltip = AST_Coalition_tt
+				hidden_effect = {
+					paternalism_drift = -0.05
+					liberalism_drift = -0.05
+					conservatism_drift = -0.05
+				}
 			}
-			traits = {
-				AST_Michelle_Landry_for_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
 		}
-	} 
-	
-	 economy_minister= { 
-		AST_Peter_Costello_eco = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AST_Peter_Costello_eco"}
-			allowed = { original_tag = AST }
-			picture = "AST_Peter_Costello_eco"
-			available = {
-					tag = AST
+		AST_Red_Menace = {
+			allowed = { always = no }
+			picture = AST_Red_Menace
+			removal_cost = -1
+			
+			modifier = {
+				
 			}
-			traits = {
-				AST_Peter_Costello_eco_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
 		}
-	}
-
-	security_minister = { 
-		AST_John_Moores_sec = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AST_John_Moores_sec"}
-			allowed = { original_tag = AST }
-			picture = "AST_John_Moores_sec"
-			available = {
-					tag = AST
+		AST_Werewolves_of_Australia = {
+			allowed = { always = no }
+			picture = AST_Werewolves_of_Australia
+			removal_cost = -1
+			
+			modifier = {
+				
 			}
-			traits = {
-				AST_John_Moores_sec_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
 		}
 	}
-	
-	
 }

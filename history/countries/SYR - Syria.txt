@@ -2,57 +2,38 @@
 
 set_oob = "SYR_1962"
 
+recruit_character = SYR_Lu'ay_al-Atassi
+
 set_stability = 0.65
 set_war_support = 0.25
 set_research_slots = 3
 
-set_variable = { ANMKDN_showednation_agenda_one = 20 }
-
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = despotism
 	last_election = "1958.1.8"
 	election_frequency = 48
 	elections_allowed = no
 
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
-    communist = 1
+    communist = 6
     ultranationalism = 0
-    socialist = 55
-    progressivism = 7
-    liberalism = 10
+    socialist = 12
+    progressivism = 10
+    liberalism = 8
     liberal_conservatism = 0
-    conservatism = 10
-    paternalism = 5
-    despotism = 2
-    fascism = 5
-    national_socialism = 5
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Salah Jadid"
-	desc = "POLITICS_SALAH_JADID_DESC"
-	picture = "gfx/leaders/SYR/Portrait_SYR_Jadid.dds"
-	expire = "2090.1.1"
-	ideology = socialist_baathism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Ziad al-Hariri"
-	desc = "POLITICS_HEFAZ_AL_ASSAD_DESC"
-	picture = "Portrai_Syria_Ziad_al-Hariri.dds"
-	expire = "1985.1.1"
-	ideology = paternalism_subtype
-	traits = {	
-	}
+    conservatism = 0
+    paternalism = 0
+    despotism = 50
+    fascism = 14
+    national_socialism = 0
+     
 }
 
 add_ideas = {
-	IRQ_Turkish_Threat
 	##Ministers 
 	#political#
 	tno_political_parties_one_party_state

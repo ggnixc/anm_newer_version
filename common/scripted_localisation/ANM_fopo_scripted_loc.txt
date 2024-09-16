@@ -1,0 +1,13 @@
+
+defined_text = {
+	name = Get_ANM_fopo_conflict_guis
+	text = {
+		trigger = {
+			check_variable = { ANM_active_conflicts^num = 0 }
+		}
+		localization_key = "ANM_fopo_no_conflict"
+	}
+	text = {
+		localization_key = "ANM_fopo_generic_conflict"
+	}
+}

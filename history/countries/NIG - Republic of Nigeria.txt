@@ -1,34 +1,33 @@
-﻿capital = 1187
+﻿capital = 825
 
 set_oob = "NIG_2000"
 
 set_politics = {	
-	ruling_party = communist
+	ruling_party = paternalism
 	last_election = "1931.1.1"
 	election_frequency = 96
-	elections_allowed = yes
+	elections_allowed = no
 }
 
-set_cosmetic_tag = NIG
+recruit_character = NIG_Yakubu_Gowon
+
+TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 62
+    communist = 0
     ultranationalism = 0
     socialist = 0
-    progressivism = 20
-    liberalism = 14
+    progressivism = 0
+    liberalism = 0
     liberal_conservatism = 0
     conservatism = 0
-    paternalism = 4
-    despotism = 0
+    paternalism = 42
+	paternalism_1 = 29
+	paternalism_2 = 25
+    despotism = 4
     fascism = 0
-    esoteric_nazism = 0
+     
 }
-
-create_country_leader = {
-    name = "Donald Dick Etiebet"
-    desc = "POLITICS_DONALD_DICK_DESC"
-    picture = "gfx/leaders/anm_unspecified/Portrait_donald_dick_etibet.dds"
-    expire = "2999.1.1"
-    ideology = conservatism_subtype
+add_ideas = {
+	CWA_Faction
 }

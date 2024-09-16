@@ -1,22 +1,34 @@
 ﻿capital = 111
 
-set_oob = "FIN_1962"
+recruit_character = FIN_elizabeth_rehn
+recruit_character = FIN_tarja_halonen
+recruit_character = FIN_esko_aho
+recruit_character = FIN_martti_ahtisaari
+recruit_character = FIN_sauli_ninisto
+recruit_character = FIN_pertti_linkola
+recruit_character = FIN_olavi_maenpaa
+recruit_character = FIN_timo_soini
+recruit_character = FIN_matti_vanhanen
+recruit_character = FIN_erkki_tuomioja
+recruit_character = FIN_osmo_soininvaara
+recruit_character = FIN_yrjo_hakanen
+
+set_oob = "FIN_1996"
 
 add_manpower = 100000
 
-#country_event = { id = GER_anm_starterevents.112  days = 1858 }
-#operation nordlicht, deactivated
 add_ideas = {
 	#Faction Status
-	Pakt_Bundnispartner
+	Pakt_Observer
 
 	### Ideas ###
+	FIN_connecting_people
+	FIN_population_shelters
 	### Ministers ###
-	FIN_Martti_Miettunen_hog
-	FIN_Mauno_Koivisto_eco
-	FIN_Arvo_Pentti_sec
-	FIN_Ahti_Karjalainen_for
-
+	FIN_Tarja_Halonen_hog
+	FIN_Esko_Aho_sec
+	FIN_Martti_Ahtisaari_for
+	FIN_Sauli_Ninisto_eco
 	##POLITICAL LAWS##
 	tno_political_parties_controlled_opposition
 	tno_religious_rights_pluralism
@@ -78,38 +90,21 @@ set_politics = {
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 7
-    progressivism = 21
-    liberalism = 0
-    liberal_conservatism = 42
-    conservatism = 21
-    paternalism = 0
-    despotism = 6
-    fascism = 3
-    esoteric_nazism = 0
+    communist = 14
+    ultranationalism = 4
+    socialist = 0
+    progressivism = 10
+	progressivism_1 = 5
+	progressivism_2 = 4
+    liberalism = 6
+    liberal_conservatism = 20
+    conservatism = 16
+    paternalism = 14
+    despotism = 0
+    fascism = 7
+	national_socialism = 0
 }
 
-create_country_leader = {
-	name = "Esko Aho"
-	desc = ""
-	picture = "Portrait_Finland_Esko_Aho.dds"
-	expire = "2090.1.1"
-	ideology = conservatism_agrarianism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Elizabeth Rehn"
-	desc = ""
-	picture = "Portrait_FIN_Elizabeth_Rehn.dds"
-	expire = "2090.1.1"
-	ideology = liberal_conservatism_subtype
-	traits = {
-		#
-	}
-}

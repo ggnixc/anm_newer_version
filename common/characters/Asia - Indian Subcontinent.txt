@@ -1,0 +1,253 @@
+characters = {
+	IND_Chandra_Sekhar = {
+		name = IND_Chandra_Sekhar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IND/Portrait_IND_Chandra_Sekhar.dds"
+			}
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_CHANDRA_SEKHAR_DESC"
+			ideology = progressivism_liberal_socialism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+    AZH_Chitta_Basu = {
+		name = AZH_Chitta_Basu
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZH/Portrait_AZH_Chitta_Basu.dds"
+			}
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_CHITTA_BASU_DESC"
+			ideology = socialist_revolutionary_subhasism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	AZH_Jayanta_Roy = {
+		name = AZH_Jayanta_Roy
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZH/Portrait_AZH_Jayanta_Roy.dds"
+			}
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_JAYANTA_ROY_DESC"
+			ideology = paternalism_subhasism_subtype
+			traits = {
+				the_aged_caretaker
+			}
+			id = -1
+		}
+	}
+	AZH_Mulayam_Singh_Yadav = {
+		name = AZH_Mulayam_Singh_Yadav
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZH/Portrait_AZH_Mulayam_Singh_Yadav.dds"
+				small = "gfx/interface/ideas/AZH/ministers/AZH_Mulayam_Singh_Yadav.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AZH_Mulayam_Singh_Yadav_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AZH_Priya_Ranjan_Dasmunsi = {
+		name = AZH_Priya_Ranjan_Dasmunsi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZH/Portrait_AZH_Priya_Ranjan_Dasmunsi.dds"
+				small = "gfx/interface/ideas/AZH/ministers/AZH_Priya_Ranjan_Dasmunsi.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = AZH_Priya_Ranjan_Dasmunsi_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AZH_Laxmi_Indira_Panda = {
+		name = AZH_Laxmi_Indira_Panda
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZH/Portrait_AZH_Laxmi_Indira_Panda.dds"
+				small = "gfx/interface/ideas/AZH/ministers/AZH_Laxmi_Indira_Panda.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = AZH_Laxmi_Indira_Panda_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AZH_Kanshi_Ram = {
+		name = AZH_Kanshi_Ram
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/AZH/Portrait_AZH_Kanshi_Ram.dds"
+				small = "gfx/interface/ideas/AZH/ministers/AZH_Kanshi_Ram.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = AZH_Kanshi_Ram_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	CYL_Chandrika_Kumaratunga = {
+		name = CYL_Chandrika_Kumaratunga
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CYL/Portrait_CYL_Chandrika_Kumaratunga.dds"
+			}
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_CHANDRIKA_KUMARATUNGA_DESC"
+			ideology = progressivism_social_democracy_subtype
+
+			traits = {
+			}
+			id = -1
+		}
+	}
+    CYL_Ranil_Wickremesinghe = {
+		name = CYL_Ranil_Wickremesinghe
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CYL/Portrait_CYL_Ranil_Wickremesinghe.dds"
+			}
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_RANIL_WICKREMESINGHE_DESC"
+			ideology = conservatism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+	PAK_Abida_Hussain = {
+		name = PAK_Abida_Hussain
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAK/Portrait_PAK_Abida_Hussain.dds"
+				small = "GFX_idea_PAK_Abida_Hussain"
+			}
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_ABIDA_HUSSEIN_DESC"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = {
+				the_liege_of_punjab
+			}
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = PAK_Abida_Hussain_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PAK_Shaukat_Aziz = {
+		name = PAK_Shaukat_Aziz
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAK/Portrait_PAK_Shaukat_Aziz.dds"
+				small = "GFX_idea_PAK_Shaukat_Aziz"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = PAK_Shaukat_Aziz_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PAK_Nawar_Akbar_Bugti = {
+		name = PAK_Nawar_Akbar_Bugti
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAK/Portrait_PAK_Nawar_Akbar_Bugti.dds"
+				small = "GFX_idea_PAK_Nawar_Akbar_Bugti"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = PAK_Nawar_Akbar_Bugti_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PAK_Jehangir_Karamat = {
+		name = PAK_Jehangir_Karamat
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/PAK/Portrait_PAK_Jehangir_Karamat.dds"
+				small = "GFX_idea_PAK_Jehangir_Karamat"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = PAK_Jehangir_Karamat_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+}

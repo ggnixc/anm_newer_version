@@ -1,122 +1,43 @@
 ﻿capital = 1316
 
-set_cosmetic_tag = PAK_FIXED
+set_oob = "PAK_1962"
 
-
-set_oob = "PAK_1962
+recruit_character = PAK_Abida_Hussain
+recruit_character = PAK_Shaukat_Aziz
+recruit_character = PAK_Nawar_Akbar_Bugti
+recruit_character = PAK_Jehangir_Karamat
 
 set_politics = {
-	ruling_party = conservatism
-	last_election = "1962.2.1"
-	election_frequency = 57
-	elections_allowed = no
+	ruling_party = despotism
+	last_election = "1993.10.1"
+	election_frequency = 42
+	elections_allowed = yes
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
-    socialist = 0
-    progressivism = 8
-    liberalism = 30
-    liberal_conservatism = 0
-    conservatism = 42
-    paternalism = 20
-    despotism = 0
-    fascism = 0
-    national_socialism = 0
-    ultranationalism = 0
-    esoteric_nazism = 0
+    despotism = 63
+	despotism_1 = 37
 }
 
-
-create_field_marshal = { 
-	name = "Muhammad Musa Khan Hazara"
-	picture = "Portrait_Pakistan_Muhammad_Musa_Khan_Hazara.dds"
-	traits = { inflexible_strategist fast_planner unyielding_defender }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = { 
-	name = "Muhammad Aslam Khan"
-	picture = "Portrait_Pakistan_Muhammad_Aslam_Khan.dds"
-	traits = { war_hero guerilla_fighter jungle_rat }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Hassan Nasir"
-	picture = "Portrait_India_Hassan_Nasir.dds"
-	traits = { harsh_leader trickster guerilla_fighter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = { 
-	name = "Bakhtiar Rana"
-	picture = "Portrait_Pakistan_Bakhtiar_Rana.dds"
-	traits = { career_officer organizer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_corps_commander = { 
-	name = "Attiqur Rahman"
-	picture = "Portrait_Pakistan_Attiqur_Rahman.dds"
-	traits = { infantry_officer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = { 
-	name = "Tikka Khan"
-	picture = "Portrait_Pakistan_Tikka_Khan.dds"
-	traits = { bearer_of_artillery adaptable }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = { 
-	name = "Akhtar Hussain Malik"
-	picture = "Portrait_Pakistan_Akhtar_Hussain_Malik.dds"
-	traits = { brilliant_strategist }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-}
-
-create_corps_commander = { 
-	name = "Yahya Khan"
-	picture = "Portrait_Pakistan_Yahya_Khan.dds"
-	traits = { politically_connected }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }
 
 add_ideas = {
+	#IDEAS
+	PAK_Something_Is_Happening
+	PAK_Metastasis
+	PAK_Those_That_We_Must_Sacrifice
+	PAK_For_The_Ones_Who_Will_Always_Rule_Us
+	#FACTION
+	Pakt_Bundnispartner_2
+	#MINISTERS
+	PAK_Abida_Hussain_hog
+	PAK_Shaukat_Aziz_eco
+	PAK_Nawar_Akbar_Bugti_for
+	PAK_Jehangir_Karamat_sec
 	#POLITICAL
 	tno_political_parties_multiparty_system
 	tno_religious_rights_pluralism

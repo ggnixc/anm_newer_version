@@ -3,24 +3,26 @@
 set_oob = "BFR_1962"
 
 set_politics = {	
-	ruling_party = progressivism
-	last_election = "1933.3.5"
+	ruling_party = despotism
+	last_election = "1992.11.5"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 0
-    progressivism = 60
-    liberalism = 40
+    socialist = 26
+    progressivism = 11
+    liberalism = 0
     liberal_conservatism = 0
     conservatism = 0
     paternalism = 0
-    despotism = 0
+    despotism = 63
     fascism = 0
-    esoteric_nazism = 0
+     
 }
 
 create_country_leader = {
@@ -28,7 +30,7 @@ create_country_leader = {
 	desc = "POLITICS_LEVY_MWANAWASA_DESC"
 	picture = "Portrait_Zambia_Levy_Mwanawasa.dds"
 	expire = "2999.1.23"
-	ideology = progressivism_subtype
+	ideology = despotism_civilian_dictatorship_subtype
 	traits = {
 		
 	}

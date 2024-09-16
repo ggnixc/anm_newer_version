@@ -1,10 +1,20 @@
 ﻿capital = 945
-load_focus_tree = ZZZ_national_focus
+
+recruit_character = MRZ_klaus_kleinfeld
+recruit_character = MRZ_pierre_de_chevigne
+recruit_character = MRZ_gunther_rall
+recruit_character = MRZ_hans_dietrich_genscher
+recruit_character = MRZ_erich_hoppmann
 
 add_ideas = {
-	Pakt_Integrated_Reichskommissariat
-	MRZ_lighter_shade_of_black
-
+	### Faction ###
+	Pakt_Paktkommission
+	### National Spirit ###
+	### Ministers### 
+	MRZ_Pierre_de_Chevigne_hog
+	MRZ_Gunther_Rall_sec
+	MRZ_Hans_Dietrich_Genscher_for
+	MRZ_Erich_Hoppmann_eco
 	#political
 	tno_political_parties_one_party_state
 	tno_religious_rights_secularism
@@ -43,47 +53,27 @@ add_ideas = {
 	tno_child_labor_illegal
 	tno_pensions_acceptable_pensions
 	tno_unemployment_trinket_subsidies
-	#ministers
 }
 
 set_politics = {	
-			ruling_party = despotism
-			last_election = "1933.3.5"
-			election_frequency = 48
-			elections_allowed = no
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }
+
 set_popularities = {
-			despotism = 36
-			national_socialism = 25
-			paternalism = 2
-			fascism = 12
-			communist = 3
-			progressivism = 6
-			socialist = 4
-			conservatism = 3
-			liberalism = 7
-			ecopolitical = 2
+			fascism = 60
+			national_socialism = 12
+			despotism = 18
+			communist = 0
+			progressivism = 0
+			socialist = 10
+			conservatism = 0
+			liberalism = 0
+			liberal_conservatism = 0
 }
-
-create_country_leader = {
-			name = "Klaus Kleinfeld"
-			desc = ""
-			picture = "Portrait_MRZ_Klaus_Kleinfeld.dds"
-			expire = "2090.3.4"
-			ideology = despotism_colonial_government_subtype
-			traits = {	
-						
-			}
-}
-create_country_leader = {
-			name = "Reinhard Siekaczek"
-			desc = "POLITICS_HORST_VON_SCHROETER_DESC"
-			picture = "Portrait_Mauritius_Horst_von_Schroeter.dds"
-			expire = "2090.3.4"
-			ideology = paternalism_subtype
-			traits = {	
-						
-			}
-}
-
-

@@ -1,7 +1,14 @@
 ﻿capital = 1322
 
-set_oob = ""
+recruit_character = SHL_jim_wallace
+recruit_character = SHL_tavish_scott
+recruit_character = SHL_nigel_essenhigh
+recruit_character = SHL_michael_stout
+recruit_character = SHL_william_smith
+recruit_character = SHL_hector_monro
+recruit_character = SHL_ian_scott
 
+set_oob = ""
 set_stability = 0.6
 
 # Starting tech
@@ -24,35 +31,36 @@ set_politics = {
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
     ultranationalism = 0
     socialist = 0
-    progressivism = 22
-    liberalism = 48
-    liberal_conservatism = 0
-    conservatism = 24
-    paternalism = 6
+    progressivism = 15
+    progressivism_2 = 4
+    liberalism = 37
+    liberal_conservatism = 25
+    conservatism = 14
+    paternalism = 5
     despotism = 0
     fascism = 0
     national_socialism = 0
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Jim Wallace"
-	desc = "POLITICS_JIM_WALLACE_DESC"
-	picture = "Portrait_SHL_Jim_Wallace.dds"
-	expire = "2090.1.1"
-	ideology = liberalism_national_liberal_subtype
-	traits = {
-	}
+     
 }
 
 
 add_ideas = {
 	OFN_Dependent_Member
+	#spirits#
+	SHL_Last_Free_Soil
+	SHL_Newfound_Autonomy
+	SHL_Battle_For_Oil
 	#ministers#
+	SHL_Tavish_Scott_hog
+	SHL_Nigel_Essenhigh_sec
+	SHL_Michael_Stout_for
+	SHL_William_Smith_eco
 	#political#
 	tno_political_parties_controlled_opposition
 	tno_religious_rights_state_religion

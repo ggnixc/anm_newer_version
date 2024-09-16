@@ -2,168 +2,33 @@
 
 set_oob = "BUR_1962"
 
+recruit_character = BUR_Sein_Win
 
 set_convoys = 200
 set_politics = {	
-	ruling_party = despotism
-	last_election = "1961.1.20"
+	ruling_party = paternalism
+	last_election = "1994.9.20"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
 
 set_popularities = {
-    communist = 3
+    communist = 8
     ultranationalism = 0
-    socialist = 2
-    progressivism = 1
-    liberalism = 0
+    socialist = 0
+    progressivism = 0
+    liberalism = 10
     liberal_conservatism = 0
     conservatism = 0
-    paternalism = 12
-    despotism = 40
-    fascism = 30
-    national_socialism = 12
-    esoteric_nazism = 0
+    paternalism = 45
+    despotism = 18
+    fascism = 7
+    national_socialism = 0
+	paternalism_2 = 12
 }
-
-create_country_leader = {
-	name = "Than Tun"
-	#picture = "Portrait_Burma_Aung_San.tga"
-	expire = "1999.1.1"
-	ideology = communist_subtype
-}
-
-create_country_leader = {
-	name = "Soe"
-	picture = "Portrait_Burma_Soe.dds"
-	expire = "1999.1.1"
-	ideology = communist_subtype
-}
-
-create_country_leader = {
-	name = "Ba Swe"
-	picture = "Portrait_Burma_Ba_Swe.dds"
-	expire = "1999.1.1"
-	ideology = progressivism_subtype
-}
-
-create_country_leader = {
-	name = "Shwe Kyin"
-	#picture =
-	expire = "1999.1.1"
-	ideology = liberalism_subtype
-}
-
-create_country_leader = {
-	name = "Ba Sein"
-	#picture =
-	expire = "1991.1.1"
-	ideology = conservatism_subtype
-}
-
-create_country_leader = {
-	name = "Aung Thaung"
-	picture = "Portrait_Aung_Thaung.dds"
-	expire = "2991.1.1"
-	ideology = paternalism_subtype
-}
-
-create_country_leader = {
-	name = "Aung San"
-	picture = "Portrait_Burma_Aung_San.dds"
-	expire = "1999.1.1"
-	ideology = despotism_subtype
-}
-
-create_country_leader = {
-	name = "Than Shwe"
-	desc = "POLITICS_BA_MAW_DESC"
-	picture = "Portrait_Burma_Than_Shwe.dds"
-	expire = "2090.1.1"
-	ideology = despotism_military_junta_subtype
-}
-
-create_country_leader = {
-	name = "Ne Win"
-	picture = "Portrait_Burma_Ne_Win.dds"
-	expire = "1999.1.1"
-	ideology = national_socialism_subtype
-}
-
-create_field_marshal = { 
-	name = "Ne Win"
-	picture = "Portrait_Burma_Ne_Win.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-	id = 2702
-}
-
-create_field_marshal = { 
-	name = "Than Shwe"
-	picture = "Portrait_Burma_Than_Shwe.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-	id = 2701
-}
-
-create_corps_commander = { 
-	name = "Aung San"
-	picture = "Portrait_Burma_Aung_San.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 2703
-}
-
-create_corps_commander = { 
-	name = "Let Ya"
-	picture = "Let_Ya.tga"
-	traits = { }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 1
-	id = 2706
-}
-
-
-create_corps_commander = { 
-	name = "Kyaw Zaw"
-	picture = "Kyaw_Zaw.tga"
-	traits = { }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
-	id = 2704
-}
-
-create_corps_commander = { 
-	name = "Hmu Aung"
-	picture = "Hmu_Aung.tga"
-	traits = { }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-	id = 2705
-}
-
-
 
 add_ideas = {
 	##Starting##

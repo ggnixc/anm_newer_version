@@ -3,29 +3,35 @@
 set_oob = "CHL_1962"
 
 set_politics = {	
-	ruling_party = liberalism
+	ruling_party = despotism
 	last_election = "1992.11.21"
 	election_frequency = 72
-	elections_allowed = yes
+	elections_allowed = no
 
 }
+
+recruit_character = CHL_Sergio_Onofre_Jarpa
+
+TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 8
-    ultranationalism = 0
-    socialist = 18		
-    progressivism = 15
-    liberalism = 17
-    liberal_conservatism = 17
-    conservatism = 9
-    paternalism = 9
-	national_socialism = 0
-    despotism = 7
-    fascism = 0
-    esoteric_nazism = 0
+    communist = 0
+    ultranationalism = 8
+    socialist = 0	
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
+    paternalism = 20
+	national_socialism = 5
+    despotism = 27
+	despotism_1 = 16
+	despotism_2 = 14
+    fascism = 10
+     
 }
 
-create_country_leader = {
+#create_country_leader = {
 	name = "Ricardo Lagos"
 	desc = "POLITICS_RICARDO_LAGOS_DESC"
 	picture = "Portrait_Chile_Ricardo_Lagos.dds"
@@ -34,20 +40,9 @@ create_country_leader = {
 	traits = {
 		#
 	}
-}
+#}
 
-create_country_leader = {
-	name = "Patricio Aylwin"
-	desc = "POLITICS_PATRICIO_AYLWIN_DESC"
-	picture = "CHL_Patricio_Aylwin.dds"
-	expire = "2999.1.1"
-	ideology = liberalism_christian_liberalism_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
+#create_country_leader = {
 	name = "José Antonio Kast"
 	desc = "POLITICS_JOSE_KAST_DESC"
 	picture = "Portrait_CHL_Jose_Kast.dds"
@@ -56,7 +51,7 @@ create_country_leader = {
 	traits = {
 		#
 	}
-}
+#}
 
 add_ideas = {
 	#Sprits

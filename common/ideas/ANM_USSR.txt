@@ -1,18 +1,5 @@
 ideas = {
 	country = {
-		SOV_KdN_Bluehelmets = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = SOV_KdN_Bluehelmets
-			removal_cost = -1
-
-			modifier = {
-				resistance_decay_on_our_occupied_states = -0.15
-				experience_gain_army_factor = -0.05
-				encryption_factor = -0.07
-			}
-		}
 		SOV_Suslov_Vision = {
 
 			allowed = { always = yes }
@@ -26,11 +13,11 @@ ideas = {
 				drift_defence_factor = 0.3
 			}
 		}
-		SOV_Supremacy_MGB = {
+		SOV_Supremacy_MVD = {
 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = SOV_Supremacy_MGB
+			picture = SOV_Supremacy_MVD
 			removal_cost = -1
 
 			modifier = {
@@ -95,6 +82,50 @@ ideas = {
 				offensive_war_stability_factor = 0.2
 				war_support_factor = 0.15
 				planning_speed = 0.1
+			}
+		}
+		SOV_A_Scarred_People = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_A_Scarred_People
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = -0.2
+				political_power_cost = 1.0
+				resistance_activity	= 0.25
+				local_factory_sabotage = 0.1
+				local_resources = -0.3
+			}
+		}
+		SOV_Torn_Apart_Industry = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_Torn_Apart_Industry
+			removal_cost = -1
+
+			modifier = {
+				line_change_production_efficiency_factor = -0.15
+				consumer_goods_factor = 0.2
+				civilian_factory_use = 10
+				industrial_capacity_factory = -0.5
+				production_speed_buildings_factor = -0.25
+			}
+		}
+		SOV_Freedom_At_Last = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_Freedom_At_Last
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				local_building_slots = 2
+				war_support_factor = 0.05
+				industry_repair_factor = 0.2
 			}
 		}
 	}

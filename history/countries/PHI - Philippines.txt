@@ -1,46 +1,42 @@
 ﻿capital = 327
 
-
 set_oob = "PHI_1962"
 
 set_politics = {
 	ruling_party = paternalism
 	last_election = "1992.9.15"
 	election_frequency = 72
-	elections_allowed = yes
+	elections_allowed = no
 }
+
+recruit_character = PHI_Jose_Laurel_Jr
+recruit_character = PHI_Salvador_Laurel
+
+TNO_startup_nation = yes
+
+promote_character = PHI_Jose_Laurel_Jr
 
 set_popularities = {
 	communist = 0
 	socialist = 0
 	progressivism = 0
 	liberalism = 0
-	liberal_conservatism = 0
+	liberal_conservatism = 17
 	conservatism = 0
-	paternalism = 60
-	despotism = 20
-	fascism = 10
-	ultranationalism = 10
-	esoteric_nazism = 0
-}
-
-
-create_country_leader = {
-	name = "Salvador Laurel"
-	desc = "POLITICS_SALVADOR_LAUREL_DESC"
-	picture = "Portrait_PHI_Salvador_Laurel.dds"
-	expire = "2000.1.1"
-	ideology = paternalism_oligarchy_subtype
-	traits = {
-		#
-	}
+	paternalism = 40
+	paternalism_1 = 18
+	paternalism_2 = 18
+	despotism = 7
+	fascism = 0
+	ultranationalism = 0
+	 
 }
 
 add_ideas = {
 	#FACTION STATUS
-	Sphere_Fully_Dependent
+	Sphere_Economic_Dependent
 	#SPIRITS
-	
+	PHI_religious_divide
 	#SOCIETAL DEVELOPMENT
 	
 	#Ministers

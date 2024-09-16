@@ -1,100 +1,32 @@
-﻿capital = 1535
-set_cosmetic_tag = CAM_PRK
+﻿recruit_character = CAM_Son_Soubert
+
+set_cosmetic_tag = CAM_Republic
+
+capital = 1535
 
 set_oob = "CAM_1962"
 set_politics = {
-	ruling_party = socialist
-	last_election = "1960.11.11"
-	election_frequency = 36
-	elections_allowed = no
+	ruling_party = paternalism
+	last_election = "1993.1.11"
+	election_frequency = 60
+	elections_allowed = yes
 }
  
+TNO_startup_nation = yes
+
 set_popularities = {
-	communist_1 = 10
-    communist = 18
-    socialist = 42
+    communist = 8
+    socialist = 0
     progressivism = 10
     liberalism = 0
     liberal_conservatism = 0
-    conservatism = 4
-    paternalism = 8
+    conservatism = 24
+    paternalism = 50
     despotism = 8
     fascism = 0
     national_socialism = 0
     ultranationalism = 0
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Pen Sovan"
-	picture = "Portrait_Cambodia_Pol_Pot.dds"
-	expire = "2090.12.12"
-	ideology = communist_1_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Heng Samrin"
-	picture = "Portrait_CAM_Heng_Samrin.dds"
-	expire = "2090.12.12"
-	ideology = socialist_left_wing_nationalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Keng Vannsak"
-	picture = "Portrait_Cambodia_Pol_Pot.dds"
-	expire = "2090.12.12"
-	ideology = communist_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Mam Sonando"
-	picture = "Portrait_Cambodia_Pol_Pot.dds"
-	expire = "2090.12.12"
-	ideology = progressivism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Pen Sovan"
-	picture = "Portrait_Cambodia_Pol_Pot.dds"
-	expire = "2090.12.12"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Sam Rainsy"
-	picture = "Portrait_CAM_Norodom_Ranariddh.dds"
-	expire = "2090.12.12"
-	ideology = conservatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Norodom Ranariddh"
-	picture = "Portrait_CAM_Norodom_Ranariddh.dds"
-	expire = "2090.12.12"
-	ideology = paternalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hun Sen"
-	picture = "Portrait_Cambodia_Norodom_Sihanouk.dds"
-	expire = "2090.12.12"
-	ideology = despotism_subtype
-	traits = {
-	}
+     
 }
 
 add_ideas = {

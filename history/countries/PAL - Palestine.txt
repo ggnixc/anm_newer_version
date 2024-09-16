@@ -1,44 +1,45 @@
-﻿capital = 1248
+﻿recruit_character = PAL_Ahmed_Yassin
+recruit_character = PAL_Sabri_Khalil_Al_Banna
+recruit_character = PAL_Mahmud_Rakad_Salam
+recruit_character = PAL_Sari_Nusseibeh
+recruit_character = PAL_Issa_Nakhleh
+recruit_character = PAL_Ismail_Abu_Shanab
+recruit_character = PAL_Yasser_Arafat
+recruit_character = PAL_Sharif_Kanana
+recruit_character = PAL_Siham_Barghouti
+recruit_character = PAL_Zuhier_Muhsen
+recruit_character = PAL_George_Habash
+capital = 1306
 
 set_stability = 0.3
 
 set_politics = {	
-	ruling_party = progressivism
-	last_election = "1996.1.8"
+	ruling_party = liberal_conservatism
+	last_election = "1995.1.8"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
-set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 12
-    progressivism = 35
-    liberalism = 16
-    liberal_conservatism = 0
-    conservatism = 15
-    paternalism = 16
-    despotism = 6
-    fascism = 0
-    national_socialism = 0
-    esoteric_nazism = 0
-}
+TNO_startup_nation = yes
 
-create_country_leader = {
-    name = "Mustafa Barghouti"
-    desc = ""
-    picture = "PAL_Mustafa_Barghouti.dds"
-    expire = "1992.1.1"
-    ideology = progressivism_democratic_socialism_subtype
-    traits = {
-        #
-    }
+set_popularities = {
+    communist = 6
+    socialist = 5
+    progressivism = 5
+    liberalism = 20
+    liberal_conservatism = 33
+    conservatism = 11
+    paternalism = 5
+    despotism = 5
+    ultranationalism = 5
+    fascism = 4
+    national_socialism = 1
+     
 }
 
 add_ideas = {
-     ##FACTION STATUS##
-	Levantine_Union_Member
-	
+    ##FACTION STATUS##
+     
     #political#
     tno_political_parties_multiparty_system
     tno_religious_rights_pluralism

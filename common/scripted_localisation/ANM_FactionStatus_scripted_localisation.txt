@@ -1,22 +1,3 @@
-GetANMkdnStatus_icon = {
-	name = GetANMkdnStatus_icon
-	text = {
-		trigger = { has_idea = KdNmandate }
-		localization_key = thedisplaykeyKdNmandate
-	}
-	text = {
-		trigger = { has_idea = KdNobserver }
-		localization_key = thedisplaykeyKdNobserver
-	}
-	text = {
-		trigger = { has_idea = KdNmember }
-		localization_key = thedisplaykeyKdNnormalmember
-	}
-	text = {
-		trigger = { has_idea = KdNcouncilmember }
-		localization_key = thedisplaykeyKdNcouncilmember
-	}
-}
 ### Image Locations
 GetFactionStatus_icon = {
 	name = GetFactionStatus_icon
@@ -50,20 +31,8 @@ GetFactionStatus_icon = {
 
 	### West Africa
 	text = {
-		trigger = { has_idea = PALF_Faction }
-		localization_key = PALF_Faction_displaykey
-	}
-	text = {
-		trigger = { has_idea = PALF_Satellite }
-		localization_key = PALF_Satellite_displaykey
-	}
-	text = {
-		trigger = { has_idea = PALF_Faction_peace }
-		localization_key = PALF_Faction_displaykey
-	}
-	text = {
-		trigger = { has_idea = PALF_Satellite_peace }
-		localization_key = PALF_Satellite_displaykey
+		trigger = { has_idea = CWA_Faction }
+		localization_key = CWA_Faction_displaykey
 	}
 	
 	### Republic of China ###
@@ -83,81 +52,63 @@ GetFactionStatus_icon = {
 		localization_key = Levantine_Union_Member_displaykey
 	}
 
-	### Pakt ###
+	### German World Community ###
 	#Master of Europe
 	text = {
 		trigger = { has_idea = Pakt_Leader }
 		localization_key = Pakt_Leader_displaykey
 	}
-	#Militärverwaltung
+	#Militärbehörde
 	text = {
 		trigger = { has_idea = Pakt_Military_Authority }
 		localization_key = Pakt_Military_Authority_displaykey
 	}
-	#Protectorate
+	#Reichsprotektorat
 	text = {
-		trigger = { has_idea = Pakt_Protektorat }
-		localization_key = Pakt_Protektorat_displaykey
+		trigger = { has_idea = Pakt_Reichsprotektorat }
+		localization_key = Pakt_Reichsprotektorat_displaykey
 	}
-	#Integrated Reichskommissariat
+	#Nebenland
 	text = {
-		trigger = { has_idea = Pakt_Integrated_Reichskommissariat }
-		localization_key = Pakt_Integrated_Reichskommissariat_displaykey
+		trigger = { has_idea = Pakt_Nebenland }
+		localization_key = Pakt_Nebenland_displaykey
 	}
-	#Autonomous Reichskommissariat
+	#Subsidiarität
 	text = {
-		trigger = { has_idea = Pakt_Autonomous_Reichskommissariat }
-		localization_key = Pakt_Autonomous_Reichskommissariat_displaykey
+		trigger = { has_idea = Pakt_Subsidiaritat }
+		localization_key = Pakt_Subsidiaritat_displaykey
 	}
-	#Reichsland
+	#Paktkommission
 	text = {
-		trigger = { has_idea = Pakt_Reichsland }
-		localization_key = Pakt_Reichsland_displaykey
+		trigger = { has_idea = Pakt_Paktkommission }
+		localization_key = Pakt_Paktkommission_displaykey
 	}
-	#Republik
+	#Schutzstaat
 	text = {
-		trigger = { has_idea = Pakt_Paktrepublik }
-		localization_key = Pakt_Paktrepublik_displaykey
-	}
-	#Puppet State
-	text = {
-		trigger = { has_idea = Pakt_Marionettenstaat }
-		localization_key = Pakt_Marionettenstaat_displaykey
-	}
-	#Collaborating Member
-	text = {
-		trigger = { has_idea = Pakt_Mitstreiter }
-		localization_key = Pakt_Mitstreiter_displaykey
+		trigger = { has_idea = Pakt_Schutzstaat }
+		localization_key = Pakt_Schutzstaat_displaykey
 	}
 	#Sovereign Member
 	text = {
 		trigger = { has_idea = Pakt_Bundnispartner }
 		localization_key = Pakt_Bundnispartner_displaykey
 	}
-	#Ordensstaat
 	text = {
-		trigger = { has_idea = Pakt_Ordensstaat }
-		localization_key = Pakt_Ordensstaat_displaykey
+		trigger = { has_idea = Pakt_Bundnispartner_2 }
+		localization_key = Pakt_Bundnispartner_2_displaykey
+	}
+	text = {
+		trigger = { has_idea = Pakt_Bundnispartner_3 }
+		localization_key = Pakt_Bundnispartner_3_displaykey
 	}
 	#Observer
 	text = {
 		trigger = { has_idea = Pakt_Observer }
 		localization_key = Pakt_Observer_displaykey
 	}
-
 	text = {
-		trigger = { has_idea = Anti_Heydrich_Pact }
-		localization_key = Anti_Heydrich_Pact_displaykey
-	}
-
-	text = {
-		trigger = { has_idea = Anti_Himmler }
-		localization_key = Anti_Himmler_displaykey
-	}
-
-	text = {
-		trigger = { has_idea = Anti_Heydrich }
-		localization_key = Anti_Heydrich_displaykey
+		trigger = { has_idea = Pakt_Observer_2 }
+		localization_key = Pakt_Observer_2_displaykey
 	}
 
 	### Sphere ###
@@ -166,18 +117,26 @@ GetFactionStatus_icon = {
 		trigger = { has_idea = Sphere_Leader }
 		localization_key = Sphere_Leader_displaykey
 	}
+	#Core Member - China
+	text = {
+		trigger = { 
+			has_idea = Sphere_Core_Member
+			original_tag = CHI
+		}
+		localization_key = "GFX_Sphere_Core_Member_CHI"
+	}
 	#Core Member - Manchukuo
 	text = {
 		trigger = { 
 			has_idea = Sphere_Core_Member
 			original_tag = MAN
 		}
-		localization_key = Sphere_Core_Member_MAN_displaykey
+		localization_key = "GFX_Sphere_Core_Member_MAN"
 	}
 	#Special Economic Zone
 	text = {
-		trigger = { has_idea = Sphere_Special_Econ_Zone }
-		localization_key = Sphere_Special_Econ_Zone_displaykey
+		trigger = { has_idea = Sphere_Corporate_Dependency }
+		localization_key = Sphere_Corporate_Dependency_displaykey
 	}
 	#Imperial Protectorate
 	text = {
@@ -200,6 +159,11 @@ GetFactionStatus_icon = {
 		localization_key = Sphere_Coequal_displaykey
 	}
 
+	text = {
+		trigger = { has_idea = Sphere_Observer }
+		localization_key = Sphere_Observer_displaykey
+	}
+
 	### OFN ###
 	text = {
 		trigger = { has_idea = OFN_Leader_of_The_Free_World }
@@ -220,6 +184,10 @@ GetFactionStatus_icon = {
 	text = {
 		trigger = { has_idea = OFN_Mandate }
 		localization_key = OFN_Mandate_displaykey
+	}
+	text = {
+		trigger = { has_idea = OFN_Observer }
+		localization_key = OFN_Observer_displaykey
 	}
 
 	text = {
@@ -247,6 +215,16 @@ GetFactionStatus_icon = {
 	text = {
 		trigger = { has_idea = TRI_Member_Client }
 		localization_key = TRI_Member_Client_displaykey
+	}
+	text = {
+		trigger = { has_idea = TRI_Observer }
+		localization_key = TRI_Observer_displaykey
+	}
+	
+	### Peru
+	text = {
+		trigger = { has_idea = Andean_Revolutionary_Front }
+		localization_key = Andean_Revolutionary_Front_displaykey
 	}
 
 	#
@@ -293,80 +271,63 @@ GetFactionStatus_name = {
 		localization_key = Republic_of_China_Autonomous_Region
 	}
 
-	### Pakt ###
+	### German World Community ###
 	#Master of Europe
 	text = {
 		trigger = { has_idea = Pakt_Leader }
 		localization_key = Pakt_Leader
 	}
-	#Militärverwaltung
+	#Militärbehörde
 	text = {
 		trigger = { has_idea = Pakt_Military_Authority }
 		localization_key = Pakt_Military_Authority
 	}
-	#Protectorate
+	#Reichsprotektorat
 	text = {
-		trigger = { has_idea = Pakt_Protektorat }
-		localization_key = Pakt_Protektorat
+		trigger = { has_idea = Pakt_Reichsprotektorat }
+		localization_key = Pakt_Reichsprotektorat
 	}
-	#Integrated Reichskommissariat
+	#Nebenland
 	text = {
-		trigger = { has_idea = Pakt_Integrated_Reichskommissariat }
-		localization_key = Pakt_Integrated_Reichskommissariat
+		trigger = { has_idea = Pakt_Nebenland }
+		localization_key = Pakt_Nebenland
 	}
-	#Autonomous Reichskommissariat
+	#Subsidiarität
 	text = {
-		trigger = { has_idea = Pakt_Autonomous_Reichskommissariat }
-		localization_key = Pakt_Autonomous_Reichskommissariat
+		trigger = { has_idea = Pakt_Subsidiaritat }
+		localization_key = Pakt_Subsidiaritat
 	}
-	#Reichsland
+	#Paktkommission
 	text = {
-		trigger = { has_idea = Pakt_Reichsland }
-		localization_key = Pakt_Reichsland
+		trigger = { has_idea = Pakt_Paktkommission }
+		localization_key = Pakt_Paktkommission
 	}
+	#Schutzstaat
 	text = {
-		trigger = { has_idea = Pakt_Paktrepublik }
-		localization_key = Pakt_Paktrepublik
-	}
-	#Puppet State
-	text = {
-		trigger = { has_idea = Pakt_Marionettenstaat }
-		localization_key = Pakt_Marionettenstaat
-	}
-	#Collaborating Member
-	text = {
-		trigger = { has_idea = Pakt_Mitstreiter }
-		localization_key = Pakt_Mitstreiter
+		trigger = { has_idea = Pakt_Schutzstaat }
+		localization_key = Pakt_Schutzstaat
 	}
 	#Sovereign Member
 	text = {
 		trigger = { has_idea = Pakt_Bundnispartner }
 		localization_key = Pakt_Bundnispartner
 	}
-	#Ordensstaat
 	text = {
-		trigger = { has_idea = Pakt_Ordensstaat }
-		localization_key = Pakt_Ordensstaat
+		trigger = { has_idea = Pakt_Bundnispartner_2 }
+		localization_key = Pakt_Bundnispartner_2
+	}
+	text = {
+		trigger = { has_idea = Pakt_Bundnispartner_3 }
+		localization_key = Pakt_Bundnispartner_3
 	}
 	#Observer
 	text = {
 		trigger = { has_idea = Pakt_Observer }
 		localization_key = Pakt_Observer
 	}
-
 	text = {
-		trigger = { has_idea = Anti_Heydrich_Pact }
-		localization_key = Anti_Heydrich_Pact
-	}
-
-	text = {
-		trigger = { has_idea = Anti_Himmler }
-		localization_key = Anti_Himmler
-	}
-
-	text = {
-		trigger = { has_idea = Anti_Heydrich }
-		localization_key = Anti_Heydrich
+		trigger = { has_idea = Pakt_Observer_2 }
+		localization_key = Pakt_Observer_2
 	}
 
 	### Sphere ###
@@ -380,10 +341,10 @@ GetFactionStatus_name = {
 		trigger = { has_idea = Sphere_Core_Member }
 		localization_key = Sphere_Core_Member
 	}
-	#Special Economic Zone
+	#Sphere Corporate Dependency
 	text = {
-		trigger = { has_idea = Sphere_Special_Econ_Zone }
-		localization_key = Sphere_Special_Econ_Zone
+		trigger = { has_idea = Sphere_Corporate_Dependency }
+		localization_key = Sphere_Corporate_Dependency
 	}
 	#Imperial Protectorate
 	text = {
@@ -405,6 +366,12 @@ GetFactionStatus_name = {
 		trigger = { has_idea = Sphere_Coequal }
 		localization_key = Sphere_Coequal
 	}
+
+	text = {
+		trigger = { has_idea = Sphere_Observer }
+		localization_key = Sphere_Observer
+	}
+
 	text = {
 		trigger = { has_idea = OFN_Leader_of_The_Free_World }
 		localization_key = OFN_Leader_of_The_Free_World
@@ -424,6 +391,10 @@ GetFactionStatus_name = {
 	text = {
 		trigger = { has_idea = OFN_Mandate }
 		localization_key = OFN_Mandate
+	}
+	text = {
+		trigger = { has_idea = OFN_Observer }
+		localization_key = OFN_Observer
 	}
 	
 	text = {
@@ -451,6 +422,10 @@ GetFactionStatus_name = {
 		trigger = { has_idea = TRI_Member_Client }
 		localization_key = TRI_Member_Client
 	}
+	text = {
+		trigger = { has_idea = TRI_Observer }
+		localization_key = TRI_Observer
+	}
 	
 	#CONCORDATE
 	text = {
@@ -464,20 +439,8 @@ GetFactionStatus_name = {
 
 	### West Africa
 	text = {
-		trigger = { has_idea = PALF_Faction }
-		localization_key = PALF_Faction
-	}
-	text = {
-		trigger = { has_idea = PALF_Satellite }
-		localization_key = PALF_Satellite
-	}
-	text = {
-		trigger = { has_idea = PALF_Faction_peace }
-		localization_key = PALF_Faction
-	}
-	text = {
-		trigger = { has_idea = PALF_Satellite_peace }
-		localization_key = PALF_Satellite
+		trigger = { has_idea = CWA_Faction }
+		localization_key = CWA_Faction
 	}
 
 	### Arabia
@@ -491,7 +454,13 @@ GetFactionStatus_name = {
 		trigger = { has_idea = Federal_Union_Army }
 		localization_key = Federal_Union_Army
 	}
-
+	
+	### Peru
+	text = {
+		trigger = { has_idea = Andean_Revolutionary_Front }
+		localization_key = Andean_Revolutionary_Front
+	}
+	
 	### Communist International Soviet
 	text = {
 		trigger = { has_idea = COM_Member}
@@ -527,80 +496,63 @@ GetFactionStatus_effect = {
 		localization_key = Republic_of_China_Autonomous_Region_effect
 	}
 	
-	### Pakt ###
+	### German World Community ###
 	#Master of Europe
 	text = {
 		trigger = { has_idea = Pakt_Leader }
 		localization_key = Pakt_Leader_effect
 	}
-	#Militärverwaltung
+	#Militärbehörde
 	text = {
 		trigger = { has_idea = Pakt_Military_Authority }
 		localization_key = Pakt_Military_Authority_effect
 	}
-	#Protectorate
+	#Reichsprotektorat
 	text = {
-		trigger = { has_idea = Pakt_Protektorat }
-		localization_key = Pakt_Protektorat_effect
+		trigger = { has_idea = Pakt_Reichsprotektorat }
+		localization_key = Pakt_Reichsprotektorat_effect
 	}
-	#Integrated Reichskommissariat
+	#Nebenland
 	text = {
-		trigger = { has_idea = Pakt_Integrated_Reichskommissariat }
-		localization_key = Pakt_Integrated_Reichskommissariat_effect
+		trigger = { has_idea = Pakt_Nebenland }
+		localization_key = Pakt_Nebenland_effect
 	}
-	#Autonomous Reichskommissariat
+	#Subsidiarität
 	text = {
-		trigger = { has_idea = Pakt_Autonomous_Reichskommissariat }
-		localization_key = Pakt_Autonomous_Reichskommissariat_effect
+		trigger = { has_idea = Pakt_Subsidiaritat }
+		localization_key = Pakt_Subsidiaritat_effect
 	}
-	#Autonomous Reichskommissariat
+	#Paktkommission
 	text = {
-		trigger = { has_idea = Pakt_Reichsland }
-		localization_key = Pakt_Reichsland_effect
-	}
-	text = {
-		trigger = { has_idea = Pakt_Paktrepublik }
-		localization_key = Pakt_Paktrepublik_effect
-	}
-	#Puppet State
-	text = {
-		trigger = { has_idea = Pakt_Marionettenstaat }
-		localization_key = Pakt_Marionettenstaat_effect
-	}
-	#Collaborating Member
-	text = {
-		trigger = { has_idea = Pakt_Mitstreiter }
-		localization_key = Pakt_Mitstreiter_effect
+		trigger = { has_idea = Pakt_Paktkommission }
+		localization_key = Pakt_Paktkommission_effect
 	}
 	#Sovereign Member
 	text = {
 		trigger = { has_idea = Pakt_Bundnispartner }
 		localization_key = Pakt_Bundnispartner_effect
 	}
-	#Ordensstaat
 	text = {
-		trigger = { has_idea = Pakt_Ordensstaat }
-		localization_key = Pakt_Ordensstaat_effect
+		trigger = { has_idea = Pakt_Bundnispartner_2 }
+		localization_key = Pakt_Bundnispartner_2_effect
+	}
+	text = {
+		trigger = { has_idea = Pakt_Bundnispartner_3 }
+		localization_key = Pakt_Bundnispartner_3_effect
 	}
 	#Observer
 	text = {
 		trigger = { has_idea = Pakt_Observer }
 		localization_key = Pakt_Observer_effect
 	}
-
 	text = {
-		trigger = { has_idea = Anti_Heydrich_Pact }
-		localization_key = Anti_Heydrich_Pact_effect
+		trigger = { has_idea = Pakt_Observer_2 }
+		localization_key = Pakt_Observer_2_effect
 	}
-
+	#Schutzstaat
 	text = {
-		trigger = { has_idea = Anti_Himmler }
-		localization_key = Anti_Himmler_effect
-	}
-
-	text = {
-		trigger = { has_idea = Anti_Heydrich }
-		localization_key = Anti_Heydrich_effect
+		trigger = { has_idea = Pakt_Schutzstaat }
+		localization_key = Pakt_Schutzstaat_effect
 	}
 
 	### Sphere ###
@@ -611,8 +563,8 @@ GetFactionStatus_effect = {
 	}
 	#Special Economic Zone
 	text = {
-		trigger = { has_idea = Sphere_Special_Econ_Zone }
-		localization_key = Sphere_Special_Econ_Zone_effect
+		trigger = { has_idea = Sphere_Corporate_Dependency }
+		localization_key = Sphere_Corporate_Dependency_effect
 	}
 	#Imperial Protectorate
 	text = {
@@ -633,6 +585,11 @@ GetFactionStatus_effect = {
 	text = {
 		trigger = { has_idea = Sphere_Coequal }
 		localization_key = Sphere_Coequal_effect
+	}
+
+	text = {
+		trigger = { has_idea = Sphere_Observer }
+		localization_key = Sphere_Observer_effect
 	}
 
 	### OFN ###
@@ -656,6 +613,11 @@ GetFactionStatus_effect = {
 		trigger = { has_idea = OFN_Mandate }
 		localization_key = OFN_Mandate_effect
 	}
+	text = {
+		trigger = { has_idea = OFN_Observer }
+		localization_key = OFN_Observer_effect
+	}
+
 	#CONCORDATE
 	text = {
 		trigger = { has_idea = CON_Founder }
@@ -664,6 +626,12 @@ GetFactionStatus_effect = {
 	text = {
 		trigger = { has_idea = CON_Satellite }
 		localization_key = CON_Satellite_effect
+	}
+	
+	#Peru
+	text = {
+		trigger = { has_idea = Andean_Revolutionary_Front }
+		localization_key = Andean_Revolutionary_Front_effect
 	}
 }
 
@@ -686,82 +654,65 @@ GetFactionStatus_desc = {
 		localization_key = Republic_of_China_Autonomous_Region_desc
 	}
 
-	### Pakt ###
+	### German World Community ###
 	#Master of Europe
 	text = {
 		trigger = { has_idea = Pakt_Leader }
 		localization_key = Pakt_Leader_desc
 	}
-	#Militärverwaltung
+	#Militärbehörde
 	text = {
 		trigger = { has_idea = Pakt_Military_Authority }
 		localization_key = Pakt_Military_Authority_desc
 	}
-	#Protectorate
+	#Reichsprotektorat
 	text = {
-		trigger = { has_idea = Pakt_Protektorat }
-		localization_key = Pakt_Protektorat_desc
+		trigger = { has_idea = Pakt_Reichsprotektorat }
+		localization_key = Pakt_Reichsprotektorat_desc
 	}
-	#Integrated Reichskommissariat
+	#Nebenland
 	text = {
-		trigger = { has_idea = Pakt_Integrated_Reichskommissariat }
-		localization_key = Pakt_Integrated_Reichskommissariat_desc
+		trigger = { has_idea = Pakt_Nebenland }
+		localization_key = Pakt_Nebenland_desc
 	}
-	#Autonomous Reichskommissariat
+	#Subsidiarität
 	text = {
-		trigger = { has_idea = Pakt_Autonomous_Reichskommissariat }
-		localization_key = Pakt_Autonomous_Reichskommissariat_desc
+		trigger = { has_idea = Pakt_Subsidiaritat }
+		localization_key = Pakt_Subsidiaritat_desc
 	}
-	#Reichsland
+	#Paktkommission
 	text = {
-		trigger = { has_idea = Pakt_Reichsland }
-		localization_key = Pakt_Reichsland_desc
+		trigger = { has_idea = Pakt_Paktkommission }
+		localization_key = Pakt_Paktkommission_desc
 	}
-	#paktrepublik
+	#Schutzstaat
 	text = {
-		trigger = { has_idea = Pakt_Paktrepublik }
-		localization_key = Pakt_Paktrepublik_desc
-	}
-	#Puppet State
-	text = {
-		trigger = { has_idea = Pakt_Marionettenstaat }
-		localization_key = Pakt_Marionettenstaat_desc
-	}
-	#Collaborating Member
-	text = {
-		trigger = { has_idea = Pakt_Mitstreiter }
-		localization_key = Pakt_Mitstreiter_desc
+		trigger = { has_idea = Pakt_Schutzstaat }
+		localization_key = Pakt_Schutzstaat_desc
 	}
 	#Sovereign Member
 	text = {
 		trigger = { has_idea = Pakt_Bundnispartner }
 		localization_key = Pakt_Bundnispartner_desc
 	}
-	#Ordensstaat
 	text = {
-		trigger = { has_idea = Pakt_Ordensstaat }
-		localization_key = Pakt_Ordensstaat_desc
+		trigger = { has_idea = Pakt_Bundnispartner_2 }
+		localization_key = Pakt_Bundnispartner_2_desc
+	}
+	text = {
+		trigger = { has_idea = Pakt_Bundnispartner_3 }
+		localization_key = Pakt_Bundnispartner_3_desc
 	}
 	#Observer
 	text = {
 		trigger = { has_idea = Pakt_Observer }
 		localization_key = Pakt_Observer_desc
 	}
-
 	text = {
-		trigger = { has_idea = Anti_Heydrich_Pact }
-		localization_key = Anti_Heydrich_Pact_desc
+		trigger = { has_idea = Pakt_Observer_2 }
+		localization_key = Pakt_Observer_2_desc
 	}
 
-	text = {
-		trigger = { has_idea = Anti_Himmler }
-		localization_key = Anti_Himmler_desc
-	}
-
-	text = {
-		trigger = { has_idea = Anti_Heydrich }
-		localization_key = Anti_Heydrich_desc
-	}
 
 	### Sphere ###
 	#Leader
@@ -776,8 +727,8 @@ GetFactionStatus_desc = {
 	}
 	#Special Economic Zone
 	text = {
-		trigger = { has_idea = Sphere_Special_Econ_Zone }
-		localization_key = Sphere_Special_Econ_Zone_desc
+		trigger = { has_idea = Sphere_Corporate_Dependency }
+		localization_key = Sphere_Corporate_Dependency_desc
 	}
 	#Imperial Protectorate
 	text = {
@@ -799,6 +750,12 @@ GetFactionStatus_desc = {
 		trigger = { has_idea = Sphere_Coequal }
 		localization_key = Sphere_Coequal_desc
 	}
+
+	text = {
+		trigger = { has_idea = Sphere_Observer }
+		localization_key = Sphere_Observer_desc
+	}
+
 	### OFN ###
 	text = {
 		trigger = { has_idea = OFN_Leader_of_The_Free_World }
@@ -819,6 +776,14 @@ GetFactionStatus_desc = {
 	text = {
 		trigger = { has_idea = OFN_Mandate }
 		localization_key = OFN_Mandate_desc
+	}
+	text = {
+		trigger = { has_idea = OFN_Observer }
+		localization_key = OFN_Observer_desc
+	}
+	text = {
+		trigger = { has_idea = OFN_Observer }
+		localization_key = OFN_Observer_desc
 	}
 	#CONCORDATE
 	text = {
@@ -851,24 +816,16 @@ GetFactionStatus_desc = {
 		trigger = { has_idea = TRI_Member_Client }
 		localization_key = TRI_Member_Client_desc
 	}
+	text = {
+		trigger = { has_idea = TRI_Observer }
+		localization_key = TRI_Observer_desc
+	}
 	### West Africa
 	text = {
-		trigger = { has_idea = PALF_Faction }
-		localization_key = PALF_Faction_desc
+		trigger = { has_idea = CWA_Faction }
+		localization_key = CWA_Faction_desc
 	}
-	text = {
-		trigger = { has_idea = PALF_Satellite }
-		localization_key = PALF_Satellite_desc
-	}
-	text = {
-		trigger = { has_idea = PALF_Faction_peace }
-		localization_key = PALF_Faction_desc
-	}
-	text = {
-		trigger = { has_idea = PALF_Satellite_peace }
-		localization_key = PALF_Satellite_desc
-	}
-
+	
 	### Arabia
 	text = {
 		trigger = { has_idea = GCC_Faction }
@@ -878,6 +835,12 @@ GetFactionStatus_desc = {
 	text = {
 		trigger = { has_idea = Federal_Union_Army }
 		localization_key = Federal_Union_Army_desc
+	}
+	
+	### Peru
+	text = {
+		trigger = { has_idea = Andean_Revolutionary_Front }
+		localization_key = Andean_Revolutionary_Front_desc
 	}
 
 	### Communist International Soviet

@@ -1,25 +1,6 @@
 ﻿capital = 1061
-set_cosmetic_tag = ZIM_milocc
 
 set_oob = "BFR_1962"
-
-SAF = {
-	if = {
-		limit = {
-			OR = {
-				has_dlc = "Together for Victory"
-				has_dlc = "Man the Guns"
-			}
-		}
-		set_autonomy = {
-			target = ZIM
-			autonomy_state = autonomy_integrated_puppet
-		}
-		else = {
-			puppet = ZIM
-		}
-	}
-}
 
 set_politics = {	
 	ruling_party = paternalism
@@ -28,19 +9,21 @@ set_politics = {
 	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
-    communist = 20
+    communist = 0
     ultranationalism = 0
 	national_socialism = 0
-    socialist = 50
+    socialist = 36
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 30
+    conservatism = 15
+    paternalism = 49
     despotism = 0
     fascism = 0
-    esoteric_nazism = 0
+     
 }
 
 create_country_leader = {
@@ -54,17 +37,5 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "George Meiring"
-	desc = ""
-	picture = "Portrait_ZIM_George_Meiring.dds"
-	expire = "2099.1.23"
-	ideology = paternalism_military_mandate_subtype
-	traits = {
-		
-	}
-}
-
 add_ideas = {
-	OFN_dependent_member
 }

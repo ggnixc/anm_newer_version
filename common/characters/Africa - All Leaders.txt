@@ -1,0 +1,387 @@
+characters = {
+	#Biafra
+	BFR_Chukwuemeka_Odumegwu_Ojukwu = {
+		name = BFR_Chukwuemeka_Odumegwu_Ojukwu
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BFR/Portrait_BFR_Chukwuemeka_Odumegwu_Ojukwu.dds"
+			}
+			army = {
+				large = "gfx/leaders/BFR/Portrait_BFR_Chukwuemeka_Odumegwu_Ojukwu.dds"
+			}
+		}
+		field_marshal = {
+			traits = { media_personality inspirational_leader organizer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		country_leader = {
+			desc = "POLITICS_OJUKWU_DESC"
+			expire = "2000.7.7"
+			ideology = paternalism_anocracy_subtype
+			traits = { }
+			id = -1
+		}
+		country_leader = {
+			desc = "POLITICS_OJUKWU_DESC"
+			expire = "2000.7.7"
+			ideology = paternalism_anocracy_subtype
+			traits = { }
+			id = -1
+		}
+	}
+	#Kanem
+    KNM_Hessian_Habre = { 
+		name = "Hissène Habré"
+		portraits = {
+			civilian = { large = "gfx/leaders/KNM/Portrait_KNM_Hessian_Habre.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+
+	#Namibia
+	NAM_Dirk_Mudge = { 
+		name = "Dirk Mudge"
+		portraits = {
+			civilian = { large = "gfx/leaders/NAM/Portrait_NAM_Dirk_Mudge.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = despotism_colonial_government_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+
+	#Katanga
+	KTG_Jean_Baptiste_Kibwe = { 
+		name = KTG_Jean_Baptiste_Kibwe
+		portraits = {
+			civilian = { large = "gfx/leaders/KTG/Portrait_KTG_Jean_Baptiste_Kibwe.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+
+	#Congo
+	COG_Leon_Kengo_Wa_Dondo = { 
+		name = COG_Leon_Kengo_Wa_Dondo
+		portraits = {
+			civilian = { large = "gfx/leaders/COG/Portrait_COG_Leon_Kengo_Wa_Dondo.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = conservatism_paternalistic_conservatism_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+
+	#Southern Rhodesia
+	ZIM_Peter_Walls = { 
+		name = ZIM_Peter_Walls
+		portraits = {
+			civilian = { large = "gfx/leaders/ZIM/Portrait_ZIM_Peter_Walls.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = despotism_colonial_government_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+
+	#South Africa
+	SAF_Ferdi_Hartzenberg = { 
+		name = SAF_Ferdi_Hartzenberg
+		portraits = {
+			civilian = { 
+				large = "gfx/leaders/SAF/Portrait_SAF_Ferdi_Hartzenberg.dds"  
+				small = "GFX_idea_SAF_Ferdi_Hartzenberg" 
+			} 
+		}
+		country_leader = {
+			desc = ""
+			ideology = despotism_personalistic_dictatorship_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = SAF_Ferdi_Hartzenberg_eco
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	
+	SAF_Pieter_Mulder = { 
+		name = SAF_Pieter_Mulder
+		portraits = {
+			civilian = { 
+				large = "gfx/leaders/SAF/Portrait_SAF_Pieter_Mulder.dds" 
+				small = "GFX_idea_SAF_Pieter_Mulder" 
+			}
+		}
+		country_leader = {
+			desc = ""
+			ideology = conservatism_paternalistic_conservatism_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = SAF_Pieter_Mulder_hog
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	
+	SAF_Andreas_Liebenberg = { 
+		name = SAF_Andreas_Liebenberg
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SAF_Andreas_Liebenberg" 
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = SAF_Andreas_Liebenberg_sec
+			allowed = { original_tag = SAF }
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	
+	SAF_David_Graaff = { 
+		name = SAF_David_Graaff
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SAF_David_Graaff" 
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = SAF_David_Graaff_for
+			allowed = { original_tag = SAF }
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	
+	SAF_Constand_Viljoen = { 
+		name = SAF_Constand_Viljoen
+		portraits = {
+			civilian = { large = "gfx/leaders/SAF/Portrait_SAF_Constand_Viljoen.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = despotism_military_junta_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	
+	SAF_Pieter_Groenewald = { 
+		name = SAF_Pieter_Groenewald
+		portraits = {
+			civilian = { large = "gfx/leaders/SAF/Portrait_SAF_Pieter_Groenewald.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = paternalism_national_conservatism_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	
+	SAF_Blade_Nzimande = { 
+		name = SAF_Blade_Nzimande
+		portraits = {
+			civilian = { large = "gfx/leaders/SAF/Portrait_SAF_Blade_Nzimande.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = communist_national_communism_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	
+	SAF_Robert_Van_Tonder = { 
+		name = SAF_Robert_Van_Tonder
+		portraits = {
+			civilian = { large = "gfx/leaders/SAF/Portrait_SAF_Robert_Van_Tonder.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = fascism_fascist_populism_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	
+	SAF_Nelson_Mandela_sd = { 
+		name = SAF_Nelson_Mandela_sd
+		portraits = {
+			civilian = { large = "gfx/leaders/SAF/Portrait_SAF_Nelson_Mandela.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = progressivism_social_democracy_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	
+	SAF_Nelson_Mandela_s = { 
+		name = SAF_Nelson_Mandela_s
+		portraits = {
+			civilian = { large = "gfx/leaders/SAF/Portrait_SAF_Nelson_Mandela.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = socialist_african_socialism_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+
+	#Mozambique
+	MZB_George_Meiring = { 
+		name = MZB_George_Meiring
+		portraits = {
+			civilian = { large = "gfx/leaders/MZB/Portrait_MZB_George_Meiring.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = despotism_colonial_government_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+
+	GZO_Tobias_Joaquim_Dai = {
+		name = GZO_Tobias_Joaquim_Dai
+		portraits = {
+			civilian = { large = "gfx/leaders/GZO/Portrait_GZO_Tobias_Joaquim_Dai.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = socialist_african_socialism_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+
+	#Egypt
+	EGY_Fouad_Serageddin = { 
+		name = EGY_Fouad_Serageddin
+		portraits = {
+			civilian = { large = "gfx/leaders/EGY/Portrait_EGY_Fouad_Serageddin.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = liberal_conservatism_big_tent_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	EGY_Fuad_II = { 
+		name = EGY_Fuad_II
+		portraits = {
+			civilian = { large = "gfx/leaders/EGY/Portrait_EGY_Fuad_II.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = paternalism_semi_constitutional_monarchy_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	EGY_Mounir_Fakhry_Abdul_Noor = { 
+		name = EGY_Mounir_Fakhry_Abdul_Noor
+		portraits = {
+			civilian = { large = "gfx/leaders/EGY/Portrait_EGY_Mounir_Fakhry_Abdul_Noor.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = liberalism_national_liberal_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	EGY_Hani_Saeed_Ramadan = { 
+		name = EGY_Hani_Saeed_Ramadan
+		portraits = {
+			civilian = { large = "gfx/leaders/EGY/Portrait_EGY_Hani_Saeed_Ramadan.dds" } 
+		}
+		country_leader = {
+			desc = ""
+			ideology = conservatism_islamic_conservatism_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+	
+	#Libya
+	LBA_Ben_Halim = { 
+		name = LBA_Ben_Halim
+		portraits = {
+			civilian = { large = "gfx/leaders/LBA/Portrait_LBA_Ben_Halim.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_BEN_HALIM_DESC"
+			ideology = paternalism_anocracy_subtype
+			traits = { 
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+}

@@ -1,132 +1,55 @@
 ideas = {
-	
-	head_of_government = { 
-		RAJ_minister_APJ_Abdul_Kalam_hog = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RAJ_minister_APJ_Abdul_Kalam_hog"}
-			allowed = { original_tag = RAJ }
-			picture = "RAJ_minister_APJ_Abdul_Kalam"
-			available = {
-				tag = RAJ
-			}
-			traits = {
-				RAJ_minister_APJ_Abdul_Kalam_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}
-	}
-	
-	security_minister = { 
-		RAJ_minister_Mulayam_Singh_Yadav_sec = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RAJ_minister_Mulayam_Singh_Yadav_sec"}
-			allowed = { original_tag = RAJ }
-			picture = "RAJ_minister_Mulayam_Singh_Yadav"
-			available = {
-					tag = RAJ
-			}
-			traits = {
-				RAJ_minister_Mulayam_Singh_Yadav_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}
-	} 
-	
-	foreign_minister = { 
-		RAJ_minister_Pranab_Mukherjee_for = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RAJ_minister_Pranab_Mukherjee_for"}
-			allowed = { original_tag = RAJ }
-			picture = "RAJ_minister_Pranab_Mukherjee"
-			available = {
-					tag = RAJ
-			}
-			traits = {
-				RAJ_minister_Pranab_Mukherjee_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}
-	}
-
-	economy_minister = { 
-		RAJ_minister_Yashwant_Sinha_eco = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RAJ_minister_Yashwant_Sinha_eco"}
-			allowed = { original_tag = RAJ }
-			picture = "RAJ_minister_Yashwant_Sinha"
-			available = {
-					tag = RAJ
-			}
-			traits = {
-				RAJ_minister_Yashwant_Sinha_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		}
-	}
-
-
-    country = {
-        Jai_Hind = {
-		    allowed = { always = yes }
-			picture = 
+	country = {
+		IND_Continued_Communal_Violence = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = IND_Continued_Communal_Violence
 			removal_cost = -1
 
 			modifier = {
-			army_core_attack_factor	= 0.15
-			army_core_defence_factor = 0.15
+				recruitable_population_factor = -0.25
+				war_support_factor = -0.20
+				stability_factor = -0.15
 			}
 		}
-		Our_american_Friends = {
-		    allowed = { always = yes }
-			picture = 
+		IND_Stranglehold_of_Congress = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = IND_Stranglehold_of_Congress
 			removal_cost = -1
 
 			modifier = {
-			political_power_gain = 0.50
-			production_speed_buildings_factor = 0.10
+				drift_defence_factor = -0.45
+				party_popularity_stability_factor = -0.40
+				political_power_factor = -0.20
+				war_support_weekly = -0.10
+				stability_weekly = -0.005
+				
 			}
 		}
-		Infrastructure_Reform_plan = {
-		    allowed = { always = yes }
-			picture = 
+		IND_Legacy_of_Mirzapur = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = IND_Legacy_of_Mirzapur
 			removal_cost = -1
 
 			modifier = {
-			production_speed_rail_way_factor = 0.15
-			production_speed_infrastructure_factor = 0.15
-			production_speed_supply_node_factor = 0.10
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.15
+				war_support_factor = 0.15
 			}
 		}
-		Poverty_reduction_plan = {
-		    allowed = { always = yes }
-			picture = 
+		IND_Red_Spectre_in_the_South = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = IND_Red_Spectre_in_the_South
 			removal_cost = -1
 
 			modifier = {
-			weekly_manpower = 1000
+				political_power_factor = -0.10
+				communist_drift = +0.02
+				stability_factor = -0.15
 			}
 		}
-		The_Double_Front_COLD_WAR  = {
-		    allowed = { always = yes }
-			picture = 
-			removal_cost = -1
-
-			modifier = {
-			war_support_weekly = 0.15
-			weekly_manpower = 1000
-			}
-		}
-		Cast_Crisis = {
-		
-		    allowed = { always = yes }
-			picture = 
-			removal_cost = -1
-
-			modifier = {
-			stability_factor = -0.10
-			war_support_weekly = 0.15
-			}
-		}
-    }
-
-}
+	}	
+}	

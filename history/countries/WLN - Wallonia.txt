@@ -1,9 +1,17 @@
 ﻿capital = 34
 
+recruit_character = WLN_antoine_duquesne
+recruit_character = WLN_andre_damseaux
+recruit_character = WLN_francois_xavier_de_donnea
+recruit_character = WLN_karl_heinz_lambertz
+recruit_character = WLN_alain_destexhe
+
 set_politics = {	
 	ruling_party = national_socialism
 	elections_allowed = no
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
@@ -17,21 +25,16 @@ set_popularities = {
     paternalism = 10
     despotism = 10
     fascism = 10
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Antoine Duquesne"
-	desc = "POLITICS_ANTOINE_DUQUESNE_DESC"
-	picture = "Portrait_WLN_Antoine_Duquesne.dds"
-	expire = "2090.4.24"
-	ideology = national_socialism_reformed_national_socialism_subtype
-	traits = {
-	}
+     
 }
 
 add_ideas = {
-    Pakt_Protektorat
-
+    Pakt_Nebenland
+    #Ministers
+    WLN_Andre_Damseaux_hog
+    WLN_Francois_Xavier_de_Donnea_sec
+    WLN_Karl_Heinz_Lambertz_for
+    WLN_Alain_Destexhe_eco
+    #Ideas
     BRG_reconstruction_of_burgundy
 }

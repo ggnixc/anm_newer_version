@@ -1,0 +1,67 @@
+ideas = {
+
+    country = {
+
+        FIN_connecting_people = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FIN_connecting_people" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = FIN_connecting_people
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				encryption = 1
+			}
+		}
+		FIN_finlandsierung = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FIN_finlandsierung" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = FIN_finlandsierung
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.20
+				party_popularity_stability_factor = -0.20
+				war_support_weekly = -0.02
+			}
+		}
+		FIN_population_shelters  = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FIN_population_shelters" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = FIN_population_shelters
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.15
+				land_bunker_effectiveness_factor = 0.05
+			}
+		}
+		FIN_civil_war = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FIN_civil_war" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = FIN_civil_war
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.10
+				resistance_activity = 0.10
+				required_garrison_factor = 0.10
+				training_time_army_factor = -0.30
+				hidden_effect = { 
+					ai_join_ally_desire_factor = -1000
+					ai_call_ally_desire_factor = -1000
+				} 
+			}
+		}
+       
+
+	}
+}

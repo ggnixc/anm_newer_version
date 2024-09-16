@@ -1,6 +1,12 @@
 ﻿capital = 1013
 set_cosmetic_tag = IBR_CONGRESS
 
+recruit_character = IBR_jose_utrera_molina
+recruit_character = IBR_manuel_monteiro
+recruit_character = IBR_alfonso_armada
+recruit_character = IBR_jose_miguel_judice
+recruit_character = IBR_antonio_hernandez_mancha
+
 set_war_support = 0.8
 set_stability = 0.4
 add_manpower = 10000 
@@ -16,6 +22,8 @@ set_politics = {
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 4
     ultranationalism = 0
@@ -27,11 +35,9 @@ set_popularities = {
     paternalism = 65
     despotism = 0
     fascism = 0
-    esoteric_nazism = 0
 }
 
 # RESISTANCE / COMPLIANCE
-
 #BASQUE
 984 = { 
 	start_resistance = yes
@@ -39,7 +45,6 @@ set_popularities = {
 	set_resistance = 30
 	set_garrison_strength = 1.0
 }
-
 993 = { 
 	start_resistance = yes
 	set_compliance = 70
@@ -49,10 +54,14 @@ set_popularities = {
 
 add_ideas = {
 	#cabinet# 
-	IBR_mariano_rajoy_hog
-	IBR_jose_manuel_barroso_for
-	IBR_rodrigo_rato_eco
-	IBR_josep_pique_i_camps_sec
+	IBR_Manuel_Monteiro_hog
+	IBR_Alfonso_Armada_sec
+	IBR_Jose_Miguel_Judice_for
+	IBR_Antonio_Hernandez_Mancha_eco
+	#country ideas
+	IBR_Tourist_Hotspot
+	IBR_Between_Two_Worlds
+	IBR_The_Basque_Conflict	
 	#political#
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_religion
@@ -100,34 +109,10 @@ add_ideas = {
 	tno_agriculture_mass_mechanized
 	tno_research_facilities_outdated
 	tno_academic_base_primary_schooling
-	#country ideas
-	IBR_Tourist_Hotspot
-	IBR_State_of_Union_Strong
-	IBR_Between_Two_Worlds
-	IBR_Sociological_Francoism
-	IBR_The_Basque_Conflict
 
 	construction_level_3
 }
 
-
-create_country_leader = {
-	name = "José María Aznar"
-	picture = "Portrait_Iberia_Jose_Maria_Aznar.dds"
-	expire = "2100.1.1"
-	ideology = liberal_conservatism_market_liberalism_subtype
-	traits = { lame_politician  IBR_Jose_Maria_aznar_desc }
-		#
-}
-
-create_country_leader = {
-	name = "José Utrera Molina"
-	picture = "Portrait_IBR_José_Utrera_Molina.dds"
-	expire = "2100.1.1"
-	ideology = paternalism_national_conservatism_subtype
-	traits = {
-	}
-}
 set_technology = {
 
 	##LIGHT AIR##

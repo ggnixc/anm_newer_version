@@ -1,0 +1,155 @@
+characters = {
+	SWE_lars_leijonborg = {   
+		name = SWE_lars_leijonborg
+		portraits = { 
+			civilian = { large = "gfx/leaders/SWE/Portrait_SWE_Lars_Leijonborg.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_LARS_LEIJONBORG_DESC"
+			ideology = liberalism_classical_liberalism_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	SWE_carl_bildt = { 
+		name = SWE_carl_bildt
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SWE/Portrait_SWE_Carl_Bildt.dds"
+				small = "GFX_idea_SWE_Carl_Bildt" 
+			} 	
+		} 
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = SWE_Carl_Bildt_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SWE_maria_leissner = {   
+		name = SWE_maria_leissner
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SWE/Portrait_SWE_Maria_Leissner.dds"
+				small = "GFX_idea_SWE_Maria_Leissner" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = SWE_Maria_Leissner_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	} 
+	SWE_alf_svensson = {   
+		name = SWE_alf_svensson
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SWE/Portrait_SWE_Alf_Svensson.dds"
+				small = "GFX_idea_SWE_Alf_Svensson" 
+			} 	
+		} 
+		country_leader = {
+			ideology = liberal_conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = SWE_Alf_Svensson_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SWE_gorel_thurdin = { 
+		name = SWE_gorel_thurdin
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SWE/Portrait_SWE_Gorel_Thurdin.dds"
+				small = "GFX_idea_SWE_Gorel_Thurdin" 
+			} 	
+		} 
+		country_leader = {
+			ideology = liberalism_1_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = SWE_Gorel_Thurdin_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SWE_curt_linusson = {  
+		name = SWE_curt_linusson
+		country_leader = {
+			ideology = national_socialism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	SWE_nils_eric_hennix = {  
+		name = SWE_nils_eric_hennix
+		country_leader = {
+			ideology = national_socialism_1_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	SWE_mona_sahlin = {  
+		name = SWE_mona_sahlin
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	SWE_goran_persson = {  
+		name = SWE_goran_persson
+		country_leader = {
+			ideology = progressivism_1_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	SWE_marita_ulvskog = {  
+		name = SWE_marita_ulvskog
+		country_leader = {
+			ideology = progressivism_2_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	SWE_lars_werner = {  
+		name = SWE_lars_werner
+		country_leader = {
+			ideology = socialist_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	SWE_frank_baude = {  
+		name = SWE_frank_baude
+		country_leader = {
+			ideology = communist_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+} 

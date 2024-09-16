@@ -117,6 +117,7 @@ guiTypes = {
 
 		iconType = {
 			name = "icon"
+			scale = 0.5
 			quadTextureSprite ="GFX_idea_unknown"
 			orientation = "CENTER"
 			centerPosition = yes
@@ -129,24 +130,15 @@ guiTypes = {
 
 		buttonType = {
 			name = "country_leader"
-			quadTextureSprite ="GFX_leader_unknown"
-			position = { x = 15 y = 100  }
-			scale=0.7
-			clicksound = click_checkbox
-		}
-
-		iconType = {
-			name = "country_leader_frame"
-			quadTextureSprite ="GFX_naval_unit_leader_frame"
-			position = { x = 10 y = 90 }
-			scale=1.75
-			alwaystransparent = yes
+			quadTextureSprite ="GFX_blank"
+			position = { x = -2500 y = -2500 }
+			scale=0.01
 		}
 
 		iconType = {
 			name = "country_flag"
 			quadTextureSprite ="GFX_shield_medium"
-			position = { x = 26 y = 22 }
+			position = { x = 33 y = 32 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -154,7 +146,7 @@ guiTypes = {
 		buttonType = {
 			name = "country"
 			quadTextureSprite = "GFX_country_selection_minor_entry"
-			position = { x = 26 y = 22 }
+			position = { x = 20 y = 20 }
 			clicksound = click_checkbox
 		}
 
@@ -168,11 +160,11 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "country_name"
-			position = { x = 15 y = 260}
-			font = "Bomb_18"
+			position = { x = -2500 y = -2500 }
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 130
-			maxHeight = 70
+			maxWidth = 131
+			maxHeight = 20
 			fixedsize = yes
 			Orientation = "UPPER_LEFT"
 		}
@@ -185,7 +177,7 @@ guiTypes = {
 		iconType = {
 			name = "country_flag"
 			quadTextureSprite ="GFX_flag_small2"
-			position = { x = 6 y = 45 }
+			position = { x = 8 y = 7 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -193,7 +185,7 @@ guiTypes = {
 		buttonType = {
 			name = "country"
 			quadTextureSprite = "GFX_mini_country_selector"
-			position = { x= -2 y = 38 }
+			position = { x=0 y =0 }
 			clicksound = click_checkbox
 		}
 	}
@@ -205,7 +197,7 @@ guiTypes = {
 		iconType = {
 			name = "country_flag"
 			quadTextureSprite ="GFX_flag_small2"
-			position = { x = 9 y = 33 }
+			position = { x = 8 y = 7 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -213,7 +205,7 @@ guiTypes = {
 		buttonType = {
 			name = "country"
 			quadTextureSprite = "GFX_mini_country_selector"
-			position = { x=0 y =25 }
+			position = { x=0 y =0 }
 			clicksound = click_checkbox
 		}
 	}
@@ -524,9 +516,9 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = -50 y = 4 }
+			position = { x = -29 y = -21 }
 			textureFile = ""
-			font = "aldrich_20_outline"
+			font = "aldrich_white_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = "FE_SELECT_SCENARIO"
 			maxWidth = 579
@@ -537,7 +529,7 @@ guiTypes = {
 		background = {
 			name = "single_player_date_bg"
 			quadTextureSprite ="GFX_select_date_bg"
-			position = { x = -100 y = -5 }
+			position = { x = -74 y = -34 }
 		}
 
 		containerWindowType = {
@@ -571,25 +563,35 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "bookmark_title"
-			position = { x = 310 y = 55 }
-			font = "aldrich_20_outline"
-			maxWidth = 355
-			maxHeight = 30
-			format = center
-		}
-
-		instantTextBoxType = {
-			name = "bookmark_desc"
-			position = { x = 312 y = 95 }
-			font = "aldrich_12_outline"
+			position = { x = 326 y = 22 }
+			font = "aldrich_16_outline"
 			maxWidth = 355
 			maxHeight = 30
 			format = left
 		}
 
+		instantTextBoxType = {
+			name = "bookmark_mothership_title"
+			position = { x = -27 y = 22 }
+			font = "aldrich_16_outline"
+			maxWidth = 355
+			maxHeight = 30
+			format = left
+			text = "The New Order"
+		}
+
+		instantTextBoxType = {
+			name = "bookmark_desc"
+			position = { x = -57 y = 63 }
+			font = "aldrich_16_outline"
+			maxWidth = 691
+			maxHeight = 415
+			format = left
+		}
+
 		ButtonType = {
 			name = "back_button"
-			position = { x = 44 y = 18 }
+			position = { x = 311 y = -18 }
 			quadTextureSprite ="GFX_tno_bookmark_button"
 			buttonText = "BACK"
 			buttonFont = "aldrich_18_outline"
@@ -601,7 +603,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "select_button"
-			position = { x = -252 y = 18 }
+			position = { x = -101 y = -18 }
 			quadTextureSprite ="GFX_tno_bookmark_button"
 			buttonText = "FE_SELECT_SCENARIO_BUTTON"
 			buttonFont = "aldrich_18_outline"
@@ -622,13 +624,13 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 435 y = 12 }
+			position = { x = 44 y = 13 }
 			textureFile = ""
-			font = "aldrich_22_outline"
+			font = "aldrich_white_20_outline"
 			text = "FE_SELECT_COUNTRY"
 			maxWidth = 340
 			maxHeight = 30
-			format = center
+			format = left
 		}
 
 		background = {
@@ -645,10 +647,10 @@ guiTypes = {
 
 		ButtonType = {
 			name = "back_button"
-			position = { x = -158 y = -56 }
+			position = { x = 267 y = -54 }
 			quadTextureSprite ="GFX_tno_button_148x34"
 			buttonText = "BACK"
-			buttonFont = "aldrich_18_outlinedark"
+			buttonFont = "aldrich_18_outline"
 			Orientation = "CENTER_DOWN"
 			clicksound = click_close
 			oversound = ui_menu_over
@@ -664,10 +666,10 @@ guiTypes = {
 
 		ButtonType = {
 			name = "select_button"
-			position = { x = 10 y = -56 }
+			position = { x = 434 y = -54 }
 			quadTextureSprite ="GFX_tno_button_148x34"
 			buttonText = "FE_SELECT_COUNTRY"
-			buttonFont = "aldrich_18_outlinedark"
+			buttonFont = "aldrich_18_outline"
 			Orientation = "CENTER_DOWN"
 			clicksound = click_default
 			oversound = ui_menu_over
@@ -676,14 +678,14 @@ guiTypes = {
 
 		containerWindowType = {
 			name ="countries"
-			position = { x = 15 y = 45 }
+			position = { x = 165 y = 70 }
 			size = { width = -15 height = 120}
 
 			gridboxType = {
 				name ="countries_grid"
 				position = { x = 1 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 150 height = 0 }
+				slotsize = { width = 244 height = 0 }
 				add_horizontal = yes
 				max_slots_vertical = 1
 				max_slots_horizontal = 8
@@ -696,6 +698,41 @@ guiTypes = {
 				name ="dud_countries_overlay_1"
 				spriteType = "GFX_flag_blank_82_52"
 				position = { x = 206 y = 50 }
+			}
+			iconType = { # GERMANY NEW
+				name = "country_selection_new_germany"
+				position = { x = 365 y = 30 }
+				spriteType = "GFX_country_selection_new_big"
+				pdx_tooltip = "BOOKMARK_GERMANY_NEW"
+				pdx_tooltip_delayed = "BOOKMARK_GERMANY_NEW_DELAYED"
+			}
+			iconType = { # GERMANY INFO
+				name = "country_selection_info_germany"
+				position = { x = 260 y = 0 }
+				spriteType = "GFX_country_selection_alert_big"
+				pdx_tooltip = "BOOKMARK_GERMANY_INFO"
+				pdx_tooltip_delayed = "BOOKMARK_GERMANY_INFO_DELAYED"
+			}
+			iconType = { # USA BLOCKED ENTRY
+				name = "countries_blocker_big_ofn_1_entry"
+				position = { x = 22 y = 21 }
+				spriteType = "GFX_country_selection_screen_blocker_big_USA"
+				pdx_tooltip = "BOOKMARK_USA_BLOCKER"
+				pdx_tooltip_delayed = "BOOKMARK_USA_BLOCKER_DELAYED"
+			}
+			iconType = { # JAPAN BLOCKED ENTRY
+				name = "countries_blocker_big_cps_1_entry"
+				position = { x = 510 y = 21 }
+				spriteType = "GFX_country_selection_screen_blocker_big_JAP"
+				pdx_tooltip = "BOOKMARK_JAPAN_BLOCKER"
+				pdx_tooltip_delayed = "BOOKMARK_JAPAN_BLOCKER_DELAYED"
+			}
+			iconType = { # USSR BLOCKED ENTRY
+				name = "countries_blocker_big_comintern_1_entry"
+				position = { x = 754 y = 21 }
+				spriteType = "GFX_country_selection_screen_blocker_big_SOV"
+				pdx_tooltip = "BOOKMARK_USSR_BLOCKER"
+				pdx_tooltip_delayed = "BOOKMARK_USSR_BLOCKER_DELAYED"
 			}
 		}
 		
@@ -756,13 +793,56 @@ guiTypes = {
 		## Info
 		instantTextBoxType = {
 			name = "info_title"
-			position = { x = -90 y = 450 }
-			font = "aldrich_18_outline"
+			position = { x = 58 y = 420 }
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "FE_COUNTRY_INFO_TITLE"
 			maxWidth = 340
 			maxHeight = 30
-			format = centre
+			format = left
+		}
+
+		# Fluff
+		instantTextBoxType = {
+			name = "cheats_title"
+			position = { x = 221 y = 422 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Cheats"
+			pdx_tooltip = "FRONTEND_CHEATS_LONG"
+			maxWidth = 340
+			maxHeight = 30
+			format = left
+		}
+		instantTextBoxType = {
+			name = "ideology_box"
+			position = { x = 415 y = 465 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Ideology"
+			maxWidth = 340
+			maxHeight = 30
+			format = left
+		}
+		instantTextBoxType = {
+			name = "national_ideas_box"
+			position = { x = 515 y = 465 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "National Ideas"
+			maxWidth = 340
+			maxHeight = 30
+			format = left
+		}
+		instantTextBoxType = {
+			name = "national_focus_box"
+			position = { x = 433 y = 564 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "National Focus"
+			maxWidth = 340
+			maxHeight = 30
+			format = left
 		}
 
 		containerWindowType = {
@@ -771,7 +851,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "leader_label"
-				position = { x = 7 y = 8 }
+				position = { x = -9 y = -29 }
 				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "LEADER"
@@ -781,7 +861,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "leader"
-				position = { x = 7 y = 25 }
+				position = { x = -6 y = -9 }
 				textureFile = ""
 				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
@@ -792,7 +872,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ideology_label"
-				position = { x = 7 y = 48 }
+				position = { x = -8 y = 16 }
 				textureFile = ""
 				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
@@ -803,7 +883,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ideology"
-				position = { x = 7 y = 65 }
+				position = { x = -7 y = 36 }
 				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
@@ -834,7 +914,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "elections_label"
-				position = { x = 7 y = 128 }
+				position = { x = -9 y = 106 }
 				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "ELECTIONS"
@@ -844,7 +924,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "elections"
-				position = { x = 7 y = 145 }
+				position = { x = -7 y = 126 }
 				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
@@ -853,7 +933,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party_label"
-				position = { x = 7 y = 88 }
+				position = { x = -9 y = 61 }
 				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "RULING_PARTY"
@@ -863,7 +943,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party"
-				position = { x = 7 y = 105 }
+				position = { x = -7 y = 81 }
 				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
@@ -876,25 +956,26 @@ guiTypes = {
 		iconType = {
 			name = "minor_country_leader"
 			quadTextureSprite ="GFX_leader_unknown"
-			position = { x = 250 y = 470 }
+			position = { x = 252 y = 477 }
 			scale=0.696
 		}
 
 		iconType = {
 			name ="minor_portrait_overlay"
 			spriteType = "GFX_minor_portrait_overlay"
-			position = { x = 300 y = 416 }
+			position = { x = 244 y = 470 }
 		}
 
 		instantTextBoxType = {
 			name = "nation_title"
-			position = { x = 451 y = 428 }
-			font = "Bomb_18"
+			position = { x = 9999 y = 9999 }
+			font = "aldrich_bold_18_outline"
 			maxWidth = 326
 			maxHeight = 30
-			format = centre
+			format = left
 			vertical_alignment = center
 		}
+
 
 		containerWindowType = {
 			name = "spirit"
@@ -903,12 +984,12 @@ guiTypes = {
 			iconType ={
 				name ="pol_faction_icon"
 				spriteType = "GFX_pol_factions_strip"
-				position = { x = 7 y = -5 }
+				position = { x = -39 y = 9 }
 			}
 
 			containerWindowType = {
 				name = "ideas"
-				position = { x = 90 y = -3 }
+				position = { x = 76 y = 7 }
 				size = { width = 100%% height = 70 }
 
 				gridboxType = {
@@ -924,14 +1005,14 @@ guiTypes = {
 
 			containerWindowType = {
 				name ="focus"
-				position = { x = 9 y = 87 }
+				position = { x = 2 y = 88 }
 				size = { width = 100% height = 100 }
 
 				gridboxType = {
 					name ="focus_grid"
-					position = { x = 17 y = 8 }
+					position = { x = 0 y = 0 }
 					size = { width = 100% height = 100 }
-					slotsize = { width = 105 height = 100 }
+					slotsize = { width = 60 height = 70 }
 					max_slots = { x = 4 y = 1 }
 					add_horizontal = yes
 					format = "UPPER_LEFT"
@@ -941,22 +1022,22 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "history_title"
-			position = { x = 830 y = 449 }
-			font = "aldrich_22_outline"
+			position = { x = 778 y = 452 }
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "FE_COUNTRY_HISTORY_TITLE"
 			maxWidth = 340
 			maxHeight = 30
-			format = centre
+			format = left
 		}
 
 		instantTextBoxType = {
 			name = "history"
-			position = { x = 815 y = 482 }
+			position = { x = 783 y = 476 }
 			font = "aldrich_14_outline"
 			borderSize = {x = 0 y = 0}
-			maxWidth = 355
-			maxHeight = 210
+			maxWidth = 393
+			maxHeight = 165
 			format = left
 			scrollbarType = standardtext_slider
 		}
@@ -1009,7 +1090,7 @@ guiTypes = {
 		iconType = {
 			name = "country_leader"
 			quadTextureSprite ="GFX_leader_unknown"
-			position = { x = 20 y = 79 }
+			position = { x = 29 y = 89 }
 			scale=0.37
 		}
 
@@ -1020,29 +1101,38 @@ guiTypes = {
 			scale=0.55
 		}
 
+		instantTextBoxType = {
+			name = "national_ideas_title"
+			position = { x = 123 y = 81 }
+			font = "aldrich_12_outline"
+			text = "National Ideas"
+			maxWidth = 340
+			format = left
+		}
+
 		iconType ={
 			name = "pol_faction_icon"
 			spriteType = "GFX_pol_factions_strip"
-			position = { x = 79 y = 85 }
+			position = { x = 25 y = 176 }
 			#Orientation = "UPPER_LEFT"
 			frame = 1
 		}
 
 		gridboxtype = {
 			name = "spirit_grid"
-			position = { x = 148 y = 85 }
+			position = { x = 118 y = 93 }
 			size = { width = 230 height = 70 }
 			slotsize = { width = 60 height = 68 }
-			max_slots = { x = 6 y = 1 }
+			max_slots = { x = 4 y = 1 }
 			format = "UPPER_LEFT"
 		}
 
 		gridboxtype = {
 			name = "spirit_grid_over_defined"
-			position = { x = 148 y = 85 }
+			position = { x = 118 y = 93 }
 			size = { width = 230 height = 70 }
 			slotsize = { width = 60 height = 68 }
-			max_slots = { x = 100 y = 1 }
+			max_slots = { x = 4 y = 1 }
 			format = "UPPER_LEFT"
 		}
 
@@ -1077,8 +1167,8 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "leader_label"
-				position = { x = -10 y = 28 }
-				font = "aldrich_22_outline"
+				position = { x = 1000 y = 33 }
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "LEADER"
 				maxWidth = 340
@@ -1087,19 +1177,19 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "leader"
-				position = { x = 100 y = 28 }
-				font = "aldrich_22_outline"
+				position = { x = 101 y = 33 }
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 250
 				maxHeight = 40
 				fixedsize = yes
-				format = right
+				format = left
 			}
 
 			instantTextBoxType = {
 				name = "ideology_label"
-				position = { x = -10 y = 48 }
-				font = "aldrich_22_outline"
+				position = { x = 1000 y = 58 }
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "IDEOLOGY"
 				maxWidth = 340
@@ -1108,19 +1198,19 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "ideology"
-				position = { x = 50 y = 48 }
-				font = "aldrich_22_outline"
+				position = { x = 101 y = 58 }
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 300
 				maxHeight = 40
 				fixedsize = yes
-				format = right
+				format = left
 			}
 
 			instantTextBoxType = {
 				name = "government_label"
 				position = { x = 1000 y = 68 }
-				font = "aldrich_22_outline"
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "GOVERNMENT"
 				maxWidth = 340
@@ -1129,9 +1219,9 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "government"
-				position = { x = 10000 y = 68 }
+				position = { x = 1000 y = 68 }
 				textureFile = ""
-				font = "aldrich_22_outline"
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 340
 				format = right
@@ -1160,9 +1250,9 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party_label"
-				position = { x = -10 y = 70 }
+				position = { x = 1000 y = 83 }
 				textureFile = ""
-				font = "aldrich_22_outline"
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				text = "RULING_PARTY"
 				maxWidth = 340
@@ -1171,14 +1261,14 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "party"
-				position = { x = 100 y = 70 }
+				position = { x = 101 y = 83 }
 				textureFile = ""
-				font = "aldrich_22_outline"
+				font = "aldrich_16_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 250
 				maxHeight = 40
 				fixedsize = yes
-				format = right
+				format = left
 			}
 		}
 	}
@@ -1880,12 +1970,12 @@ guiTypes = {
 
 	containerWindowType = {
 		name ="gamesetup_gameplay_settings_window"
-		position = { x = 600 y = 41}
-		show_position = { x = 2 y = 41}
+		position = { x = 597 y = 175 }
+		show_position = { x = 0 y = 0 }
 		animation_type = decelerated
 		animation_time = 1000
 		clipping = no
-		size = { width = 598 height = 196}
+		size = { width = 597 height = 175 }
 		orientation = lower_right
 		origo = lower_right
 
@@ -1897,10 +1987,21 @@ guiTypes = {
 
 		buttonType = {
 			name = "custom_settings_btn"
-			position = { x = 198 y = 20 }
+			position = { x = 191 y = 8 }
 			quadTextureSprite ="GFX_TNO_map_select_bottomright_custom_button"
+			font = "aldrich_12_outline"
+			text = "Alternative Security Protocol"
 			pdx_tooltip = FE_CUSTOM_DIFFUCULTY
 		}
+
+		iconType = {
+			name = "custom_settings_btn_overlay"
+			position = { x = 191 y = 8 }
+			quadTextureSprite ="GFX_TNO_map_select_bottomright_custom_button_overlay"
+			pdx_tooltip = FE_CUSTOM_DIFFUCULTY
+		}
+
+	
 
 		#instantTextBoxType={
 		#	position = { x = 478 y = 18 }
@@ -1927,53 +2028,65 @@ guiTypes = {
 
 		checkboxType = {
 			name = "very_easy_cb"
-			position = { x=17 y=42}
-			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_5_button"
+			position = { x=9 y=30}
+			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_1_button"
 			buttonText = "FE_DIFFICULTY_VERY_EASY"
-			buttonFont = "hoi_20b"
+			buttonFont = "aldrich_16_outline"
 			clicksound = click_checkbox
 		}
 
 		checkboxType = {
 			name = "easy_cb"
-			position = { x=133 y=42}
-			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_4_button"
+			position = { x=125 y=30}
+			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_2_button"
 			buttonText = "FE_DIFFICULTY_EASY"
-			buttonFont = "hoi_20b"
+			buttonFont = "aldrich_16_outline"
 			clicksound = click_checkbox
 		}
 
 		checkboxType = {
 			name = "normal_cb"
-			position = { x=249 y=42}
+			position = { x=241 y=30}
 			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_3_button"
 			clicksound = click_checkbox
 			buttonText = "FE_DIFFICULTY_NORMAL"
-			buttonFont = "hoi_20b"
+			buttonFont = "aldrich_16_outline"
 		}
 
 		checkboxType = {
 			name = "hard_cb"
-			position = { x=365 y=42}
-			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_2_button"
+			position = { x=357 y=30}
+			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_4_button"
 			buttonText = "FE_DIFFICULTY_HARD"
-			buttonFont = "hoi_20b"
+			buttonFont = "aldrich_16_outline"
 			clicksound = click_checkbox
 		}
 
 		checkboxType = {
 			name = "very_hard_cb"
-			position = { x=481 y=42}
-			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_1_button"
+			position = { x=473 y=30}
+			quadTextureSprite ="GFX_TNO_map_select_bottomright_defcon_5_button"
 			buttonText = "FE_DIFFICULTY_VERY_HARD"
-			buttonFont = "hoi_20b"
+			buttonFont = "aldrich_16_outline"
 			clicksound = click_checkbox
 		}
 
 		instantTextBoxType={
-			position = {x=18 y=53 }
+			position = {x=2 y=9 }
+			name = "alert_level_title"
+			font = "aldrich_bold_14_outline"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 200
+			maxHeight = 16
+			text = "Alert Level"
+			format = center
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType={
+			position = {x=9 y=37 }
 			name = "civilian_text"
-			font = "hoi_20b"
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 115
 			maxHeight = 16
@@ -1983,9 +2096,9 @@ guiTypes = {
 		}
 
 		instantTextBoxType={
-			position = {x=133 y=53 }
+			position = {x=125 y=37 }
 			name = "beginner_text"
-			font = "hoi_20b"
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 115
 			maxHeight = 16
@@ -1995,9 +2108,9 @@ guiTypes = {
 		}
 
 		instantTextBoxType={
-			position = {x=250 y=53 }
+			position = {x=241 y=37 }
 			name = "normal_text"
-			font = "hoi_20b"
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 115
 			maxHeight = 16
@@ -2007,9 +2120,9 @@ guiTypes = {
 		}
 
 		instantTextBoxType={
-			position = {x=368 y=53 }
+			position = {x=357 y=37 }
 			name = "hard_text"
-			font = "hoi_20b"
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 115
 			maxHeight = 16
@@ -2019,9 +2132,9 @@ guiTypes = {
 		}
 
 		instantTextBoxType={
-			position = {x=480 y=53 }
+			position = {x=473 y=37 }
 			name = "very_hard_text"
-			font = "hoi_20b"
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 115
 			maxHeight = 16
@@ -2032,16 +2145,36 @@ guiTypes = {
 
 		checkboxType = {
 			name = "ironman_cb"
-			position = { x = 430 y = -26 }
-			#testposition = { x = 390 y = -6 }
+			position = { x = 430 y = -32 }
 			quadTextureSprite ="GFX_generic_checkbox"
 			clicksound = click_checkbox
 		}
 
+		iconType = {
+			name = "ironman_bg_box"
+			spriteType = "GFX_TNO_map_select_ironman_bg"
+			Orientation = "BOTTOM_RIGHT"
+			position = { x = 419 y = -42 }
+			alwaystransparent = yes
+		}
+
 		instantTextBoxType={
-			position = {x = 30 y = 148 }
+			position = {x=468 y=-28 }
+			name = "ironman_title_text"
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 115
+			maxHeight = 16
+			text = "Ironman"
+			format = centre
+			alwaystransparent = yes
+		}
+
+
+		instantTextBoxType={
+			position = {x = 1030 y = 1148 }
 			name = "historical_text"
-			font = "hoi_24header"
+			font = "aldrich_16_outline"
 			maxWidth = 370
 			maxHeight = 16
 			text = "FE_HISTORICAL"
@@ -2203,10 +2336,10 @@ guiTypes = {
 
 			ButtonType = {
 				name = "interesting_countries_button"
-				position = { x = -583 y = -75 }
+				position = { x = -588 y = -87 }
 				quadTextureSprite ="GFX_TNO_map_select_bottomright_interesting_countries_button"
-				buttonText = ""
-				buttonFont = "hoi_20b"
+				buttonText = "Interesting Countries"
+				buttonFont = "aldrich_18_outline"
 				Orientation = "lower_right"
 				clicksound = click_default
 				oversound = ui_menu_over
@@ -2245,7 +2378,7 @@ guiTypes = {
 			}
 
 			ButtonType = {
-				position = { x= -369 y = 10 }
+				position = { x= -373 y = 14 }
 				name = "player_shield"
 				quadTextureSprite ="GFX_player_flag"
 				Orientation = "UPPER_RIGHT"
@@ -2265,8 +2398,8 @@ guiTypes = {
 
 			iconType ={
 				name ="large_flag_frame"
-				spriteType = "GFX_topbar_flag_overlay"
-				position = { x = -369 y = 7 }
+				spriteType = "GFX_topbar_flag_overlay_2"
+				position = { x = -380 y = 8 }
 				Orientation = "UPPER_RIGHT"
 			}
 
@@ -2279,13 +2412,13 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "selected_nation_label"
-				position = { x = -277 y = 25 }
+				position = { x = -270 y = 17 }
 				textureFile = ""
-				font = "aldrich_22_outline"
+				font = "aldrich_bold_20_outline"
 				borderSize = {x = 0 y = 0}
 				text = "FE_NO_COUNTRY_SELECTED"
-				maxWidth = 274
-				maxHeight = 40
+				maxWidth = 250
+				maxHeight = 100
 				fixedsize = yes
 				format = centre
 				Orientation = "UPPER_RIGHT"
@@ -2324,17 +2457,9 @@ guiTypes = {
 			}
 
 			iconType = {
-				name = "ironman_bg_box"
-				spriteType = "GFX_TNO_map_select_ironman_bg"
-				Orientation = "BOTTOM_RIGHT"
-				position = { x = 121 y = -97 }
-				alwaystransparent = yes
-			}
-
-			iconType = {
 				name ="bottom_bg"
 				spriteType = "GFX_TNO_map_select_bottomleft_bg"
-				position = { x = -415 y = -19 }
+				position = { x = -416 y = -17 }
 				Orientation = "BOTTOM_RIGHT"
 			}
 
@@ -2347,11 +2472,11 @@ guiTypes = {
 
 			ButtonType = {
 				name = "back_button"
-				position = { x = -403 y = -3 }
-				quadTextureSprite ="GFX_TNO_map_select_menu_button"
-				buttonText = ""
-				buttonFont = "aldrich_22_outline"
-				Orientation = "UPPER_LEFT"
+				position = { x = -709 y = -74 }
+				quadTextureSprite ="GFX_TNO_map_select_options_button"
+				buttonText = "Menu"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "CENTER"
 				clicksound = click_close
 				oversound = ui_menu_over
 				shortcut = "ESCAPE"
@@ -2359,11 +2484,11 @@ guiTypes = {
 
 			ButtonType = {
 				name = "load_button"
-				position = { x = -403 y = 32 }
-				quadTextureSprite ="GFX_TNO_map_select_load_button"
-				buttonText = ""
-				buttonFont = "aldrich_22_outline"
-				Orientation = "UPPER_LEFT"
+				position = { x = -709 y = -39 }
+				quadTextureSprite ="GFX_TNO_map_select_options_button"
+				buttonText = "Load"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "CENTER"
 				clicksound = click_default
 				oversound = ui_menu_over
 				shortcut = "l"
@@ -2371,11 +2496,11 @@ guiTypes = {
 
 			ButtonType = {
 				name = "options_button"
-				position = { x = -403 y = 67 }
+				position = { x = -709 y = -4 }
 				quadTextureSprite ="GFX_TNO_map_select_options_button"
-				buttonText = ""
-				buttonFont = "aldrich_22_outline"
-				Orientation = "UPPER_LEFT"
+				buttonText = "Options"
+				buttonFont = "aldrich_16_outline"
+				Orientation = "CENTER"
 				clicksound = click_default
 				oversound = ui_menu_over
 				shortcut = "o"
@@ -2383,27 +2508,26 @@ guiTypes = {
 
 			iconType = {
 				name = "enabled_achievement_icons_bg"
-				position = { x = -520 y = -101 }
+				position = { x = -528 y = -120 }
 				quadTextureSprite ="GFX_TNO_map_select_bottomright_achievements_bg"
 				Orientation = "LOWER_RIGHT"
 			}
 
 			iconType = {
 				name = "enabled_achievement_icons"
-				position = { x = -515 y = -95 }
+				position = { x = -523 y = -114 }
 				quadTextureSprite ="GFX_TNO_map_select_bottomright_achievements_icon"
 				Orientation = "LOWER_RIGHT"
 			}
 
 			ButtonType = {
 				name = "play_button"
-				position = { x = -445 y = -102 }
+				position = { x = -435 y = -115 }
 				quadTextureSprite ="GFX_TNO_map_select_bottomright_start_button"
 				buttonText = "FE_START"
-				buttonFont = "aldrich_22_outline"
+				buttonFont = "aldrich_18_outline"
 				Orientation = "LOWER_RIGHT"
 				shortcut = "RETURN"
-				#frame = 1
 			}
 
 			ButtonType = {

@@ -1,0 +1,97 @@
+characters = {
+	FLR_klaus_armstroff = {    
+		name = FLR_klaus_armstroff
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FLR/Portrait_FLR_Klaus_Armstroff.dds"
+				small = "GFX_idea_FLR_Klaus_Armstroff" 
+			} 
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = FLR_Klaus_Armstroff_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FLR_frank_vanhecke = { 
+		name = FLR_frank_vanhecke
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FLR/Portrait_FLR_Frank_Vanhecke.dds"
+				small = "GFX_idea_FLR_Frank_Vanhecke" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = FLR_Frank_Vanhecke_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FLR_johan_demol = {   
+		name = FLR_johan_demol
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FLR/Portrait_FLR_Johan_Demol.dds"
+				small = "GFX_idea_FLR_Johan_Demol" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = FLR_Johan_Demol_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	} 
+	FLR_gerolf_annemans = {   
+		name = FLR_gerolf_annemans
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FLR/Portrait_FLR_Gerolf_Annemans.dds"
+				small = "GFX_idea_FLR_Gerolf_Annemans" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = FLR_Gerolf_Annemans_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FLR_karel_dillen = { 
+		name = FLR_karel_dillen
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FLR/Portrait_FLR_Karel_Dillen.dds"
+			} 	
+		} 
+		country_leader = {
+			desc = "POLITICS_KAREL_DILLEN_DESC"
+			ideology = national_socialism_reformed_national_socialism_subtype
+			traits = {  }
+			expire = "2999.1.1.1"
+		}
+	}
+	
+} 

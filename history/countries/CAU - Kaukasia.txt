@@ -1,15 +1,12 @@
 capital = 231
 
+recruit_character = CAU_tengiz_kitovani
+recruit_character = CAU_adam_amirilayev
+recruit_character = CAU_aslan_maskhadov
+recruit_character = CAU_tofig_kocharli
+recruit_character = CAU_vladimir_chovan
+
 oob = "CAU_1962"
-
-create_country_leader = { 
-	name = "Tengiz Kitovani"
-	desc = "POLITICS_TENGIZ_KITOVANI_DESC"
-	picture = "Portrait_CAU_Tengiz_Kitovani.dds"
-	expire = "1999.1.1"
-	ideology = national_socialism_reformed_national_socialism_subtype
-}
-
 set_cosmetic_tag = CAU_SGR2
 
 give_resource_rights = {
@@ -257,15 +254,15 @@ set_war_support = 0.6
 
 add_ideas = {
 	#FACTION
-	Pakt_Autonomous_Reichskommissariat	
+	Pakt_Subsidiaritat	
 	#SPIRITS
 	CAU_blood_of_the_empire
 	CAU_unequal_federation
 	#MINISTERS
-	CAU_minister_Adam_Amirilayev_hog
-	CAU_minister_Aslan_Maskhadov_sec
-	CAU_minister_Tofig_Kocharli_for
-	CAU_minister_Artyom_Tarasov_eco
+	CAU_Adam_Amirilayev_hog
+	CAU_Aslan_Maskhadov_sec
+	CAU_Tofig_Kocharli_for
+	CAU_Artyom_Tarasov_eco
 	#POLITICAL
 	tno_political_parties_one_party_state
 	tno_religious_rights_supression_of_churches
@@ -322,6 +319,10 @@ set_politics = {
 
 }
 
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft }
+
 set_popularities = {
 	communist = 0
 	ultranationalism = 8
@@ -333,14 +334,8 @@ set_popularities = {
 	despotism = 0
 	fascism = 0
 	national_socialism = 92
-	esoteric_nazism = 0
+	 
 }
-
-#econtype
-set_variable = { TNO_economy_type = 2 }
-set_variable = { TNO_economy_subtype = 20 }
-
-
 
 if = {
 	limit = { has_dlc = "Man the Guns" }

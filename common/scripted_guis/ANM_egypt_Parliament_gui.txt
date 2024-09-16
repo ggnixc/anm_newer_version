@@ -1,0 +1,201 @@
+scripted_gui = {
+	
+	egypt_gui_button_GUI = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "egypt_gui_button_GUI"
+		
+		visible = {
+			tag = EGY
+		}
+		
+		triggers = {
+			egypt_window_open_arrows_visible = {
+				has_country_flag = egypt_gui_alert_visible
+			}
+		}
+		effects = {
+			egypt_window_open_click = {
+				if = {
+					limit = { NOT = { has_country_flag = egypt_gui_visible } }
+					set_country_flag = egypt_gui_visible
+					reload_egy_parliament_gui = yes
+				}
+				else_if = {
+					limit = { has_country_flag = egypt_gui_visible }
+					clr_country_flag = egypt_gui_visible
+				}
+				clr_country_flag = egypt_gui_alert_visible
+			}
+		}
+		
+	}
+	
+	
+	egy_parliament_gui_container = {
+		context_type = player_context
+		window_name = "egy_parliament_gui_container"
+
+		visible = {
+			has_country_flag = egypt_gui_visible
+		}
+
+		triggers = {
+
+		}
+		
+		dynamic_lists = {
+			egy_parliament_main_grid = {
+				array = egy_parliament_main_array
+				index = egy_parliament_main_index
+				change_scope = no
+				entry_container = egy_parliament_main_entry
+			}
+			egy_parliament_semicircle_main_grid = {
+				array = egy_parliament_main_array
+				index = egy_parliament_main_index
+				change_scope = no
+				entry_container = egy_parliament_semicircle_main_entry
+			}
+			egy_parliament_member_grid = {
+				array = egy_parliament_member_array
+				index = egy_parliament_member_index
+				change_scope = no
+				entry_container = egy_parliament_member_entry
+			}
+		}
+		
+		effects = {
+			egypt_gui_party_1_click = {
+				set_variable = { selectedparty = 1 }
+			}
+			egypt_gui_party_2_click = {
+				set_variable = { selectedparty = 2 }
+			}
+			egypt_gui_party_3_click = {
+				set_variable = { selectedparty = 3 }
+			}
+			egypt_gui_party_4_click = {
+				set_variable = { selectedparty = 4 }
+			}
+			egypt_gui_party_5_click = {
+				set_variable = { selectedparty = 5 }
+			}
+			egypt_gui_party_6_click = {
+				set_variable = { selectedparty = 6 }
+			}
+			egypt_gui_party_7_click = {
+				set_variable = { selectedparty = 7 }
+			}
+			egypt_gui_party_8_click = {
+				set_variable = { selectedparty = 8 }
+			}
+			
+			
+			egy_parliament_radicalize_bill_click = {
+				if = {
+					limit = {
+						check_variable = { current_egyptvote > 0 }
+						check_variable = { bill_radicalism < 15 }
+						has_political_power > 45
+					}
+				reload_egy_parliament_gui = yes
+				add_political_power = -45
+				add_to_variable = { bill_radicalism = 1 }
+				}
+			}
+			egy_parliament_unradicalize_bill_click = {
+				if = {
+				limit = {
+							check_variable = { current_egyptvote > 0 }
+							check_variable = { bill_radicalism > 0 }
+							has_political_power > 45
+						}
+					reload_egy_parliament_gui = yes
+					add_political_power = -45
+					add_to_variable = { bill_radicalism = -1 }
+				}
+			}
+			
+			egy_parliament_seragddein_bill_click = {
+				if = {
+				limit = {
+							check_variable = { current_egyptvote > 0 }
+							check_variable = { egy_parliament_partysupport^selectedparty > 1 }
+							check_variable = { egy_parliament_yesvoters^selectedparty < 8 }
+							has_political_power > 30
+						}
+				reload_egy_parliament_gui = yes
+				add_political_power = -30
+				
+				add_to_variable = { egy_parliament_yesvoters^selectedparty = 3 }
+				add_to_variable = { egy_parliament_partysupport^selectedparty = -1 }
+				}
+			}
+			egy_parliament_mubarak_bill_click = {
+				if = {
+					limit = {
+								check_variable = { current_egyptvote > 0 }
+								check_variable = { egy_parliament_partysupport^selectedparty > 4 }
+								check_variable = { egy_parliament_yesvoters^selectedparty < 5 }
+								has_political_power > 30
+							}
+				reload_egy_parliament_gui = yes
+				add_political_power = -30
+				
+				add_to_variable = { egy_parliament_yesvoters^selectedparty = 6 }
+				add_to_variable = { egy_parliament_partysupport^selectedparty = -4 }
+				}
+			}
+			egy_parliament_abdul_nour_bill_click = {
+				if = {
+					limit = {
+								check_variable = { current_egyptvote > 0 }
+								check_variable = { egy_parliament_partysupport^selectedparty < 200 }
+								has_political_power > 30
+							}
+				reload_egy_parliament_gui = yes
+				add_political_power = -30
+				
+				
+				add_to_variable = { egy_parliament_partysupport^selectedparty = 2 }
+				}
+			}
+			egypt_gui_closebutton_click = {
+				clr_country_flag = egypt_gui_visible
+			}
+
+			
+		}
+		
+		
+		
+		
+		properties = {
+			egy_parliament_main_icon = {
+				frame = v
+			}
+			egy_parliament_semicircle_main_icon = {
+				frame = v
+				x = egy_parliament_x_array^egy_parliament_main_index
+				y = egy_parliament_y_array^egy_parliament_main_index
+			}
+			egy_parliament_member_icon = {
+				frame = v
+			}
+			egy_parliament_party_support_icon = {
+				frame = egy_parliament_partysupport^selectedparty
+			}
+			egy_parliament_party_no_icon = {
+				frame = egy_parliament_novoters_displayed^selectedparty
+			}
+			egy_parliament_party_yes_icon = {
+				frame = egy_parliament_yesvoters_displayed^selectedparty
+			}
+			egypt_party_leader_portrait = {
+				image = "[getEGYpartyleader]"
+			}
+			
+		}
+	}
+}

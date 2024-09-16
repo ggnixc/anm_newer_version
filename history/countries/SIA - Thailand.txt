@@ -2,6 +2,7 @@
 
 set_oob = "SIA_1962"
 
+recruit_character = SIA_Damrong_Latthapipat
 
 set_technology = {
 	
@@ -9,21 +10,25 @@ set_technology = {
 
 
 set_politics = {
-	ruling_party = conservatism
+	ruling_party = paternalism
 	last_election = "1994.4.22"
 	election_frequency = 36
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
     socialist = 0
-    liberalism = 15
-    progressivism = 2
-    conservatism = 42
-    paternalism = 22
-    despotism = 15
-    fascism = 4
+    liberalism = 8
+	liberalism_1 = 4
+    progressivism = 0
+    conservatism = 33
+	conservatism_1 = 5
+    paternalism = 50
+    despotism = 0
+    fascism = 0
 }
 
 add_ideas = {
@@ -75,51 +80,6 @@ add_ideas = {
 	tno_security_security_service
 }
 
-create_country_leader = {
-	name = "Chuan Leekpai"
-	desc = "POLITICS_CHUAN_LEEKPAI_DESC"
-	picture = "Portrait_SIA_Chuan_Leekpai.dds"
-	expire = "2099.12.12"
-	ideology = conservatism_free_market_conservatism_subtype
-	traits = {
-	}
-}
-#create_country_leader = {
-#	name = "Thaksin Shinawatra"
-#	desc = "ILOVETHESMOOTHTASTEOFMALBOROCIGARETTES"
-#	picture = "gfx/leaders/SIA/Thaksin_Shinawatra_Portrait.png"
-#	expire = "2100.12.12"
-#	ideology = social_conservative_populist_conservatism_subtype
-#	traits = {
-#	}
-#}
-create_country_leader = {
-	name = "Surayud Chulanont"
-	desc = "ILOVETHESMOOTHTASTEOFMALBOROCIGARETTES"
-	picture = "gfx/leaders/SIA/Portrait_Thailand_Surayud_Chulanont.dds"
-	expire = "2100.12.12"
-	ideology = despotism_military_junta_subtype
-	traits = {
-	}
-}
-#create_country_leader = {
-#	name = "Chavalit Yongchaiyudh"
-#	desc = "ILOVETHESMOOTHTASTEOFMALBOROCIGARETTES"
-#	picture = "gfx/leaders/SIA/Chavalit_Yongchaiyudh.png"
-#	expire = "2100.12.12"
-#	ideology = social_conservative_populist_conservatism_subtype
-#	traits = {
-#	}
-#}
-create_country_leader = {
-	name = "Chaiwat Sinsuwong"
-	desc = "ILOVETHESMOOTHTASTEOFMALBOROCIGARETTES"
-	picture = "gfx/leaders/SIA/Chaiwat_Sinsuwong_Portrait.png"
-	expire = "2100.12.12"
-	ideology = paternalism_subtype
-	traits = {
-	}
-}
 
 ### Military Commanders ###
 ## Field Marshal ##

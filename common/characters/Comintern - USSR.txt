@@ -1,0 +1,116 @@
+characters = {
+    SOV_Grigory_Romanov = { 
+		name = SOV_Grigory_Romanov
+		portraits = { 
+			civilian = { large = "gfx/leaders/SOV/Portrait_SOV_Grigory_Romanov.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_GRIGORY_ROMANOV_DESC"
+			ideology = communist_bolshevism_subtype
+			traits = { 
+                the_duke_of_leningrad
+            }
+			expire = "2999.1.1.1"
+		}
+	}
+    SOV_Gennady_Yanayev = { 
+		name = SOV_Gennady_Yanayev
+		portraits = { 
+			civilian = { 
+                small = "GFX_idea_SOV_Gennady_Yanayev"
+            } 
+		}
+        advisor = {
+			slot = head_of_government
+			idea_token = SOV_Gennady_Yanayev_hog
+            allowed = { original_tag = SOV }
+			traits = {
+				hog_pragmatic_statesman
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+    SOV_Anatoly_Lukyanov = { 
+		name = SOV_Anatoly_Lukyanov
+		portraits = { 
+			civilian = { 
+                large = "gfx/leaders/SOV/Portrait_SOV_Anatoly_Lukyanov.dds"
+                small = "GFX_idea_SOV_Anatoly_Lukyanov"
+            } 
+		}
+		country_leader = {
+			desc = "POLITICS_ANATOLY_LUKYANOV_DESC"
+			ideology = communist_1_subtype
+			traits = { 
+                eco_reformer
+            }
+			expire = "2999.1.1.1"
+            id = -1
+		}
+        advisor = {
+			slot = economy_minister
+			idea_token = SOV_Anatoly_Lukyanov_eco
+            allowed = { original_tag = SOV }
+			traits = {
+				eco_reformer
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+    SOV_Vladimir_Kryuchkov = { 
+		name = SOV_Vladimir_Kryuchkov
+		portraits = { 
+			civilian = { 
+                large = "gfx/leaders/SOV/Portrait_SOV_Vladimir_Kryuchkov.dds"
+                small = "GFX_idea_SOV_Vladimir_Kryuchkov"
+            } 
+		}
+		country_leader = {
+			desc = "POLITICS_VLADIMIR_KRYUCHKOV_DESC"
+			ideology = communist_2_subtype
+			traits = { 
+                sec_secret_police_chief
+            }
+			expire = "2999.1.1.1"
+            id = -1
+		}
+        advisor = {
+			slot = security_minister
+			idea_token = SOV_Vladimir_Kryuchkov_sec
+            allowed = { original_tag = SOV }
+			traits = {
+				sec_secret_police_chief
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+    SOV_Aleksandr_Bessmertnykh = { 
+		name = SOV_Aleksandr_Bessmertnykh
+		portraits = { 
+			civilian = { 
+                small = "GFX_idea_SOV_Aleksandr_Bessmertnykh"
+            } 
+		}
+        advisor = {
+			slot = foreign_minister
+			idea_token = SOV_Aleksandr_Bessmertnykh_for
+            allowed = { original_tag = SOV }
+			traits = {
+				for_seasoned_ambassador
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+}

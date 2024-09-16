@@ -1,8 +1,10 @@
-﻿capital = 291
+﻿capital = 658
 
 set_oob = ""
 
 set_stability = 0.7
+
+recruit_character = UAE_Zayed_Al-Nahyan
 
 # Starting tech
 
@@ -13,36 +15,24 @@ set_politics = {
 	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "Zayed Al-Nahyan"
-	desc = "POLITICS_ZAYED_AL_NAHYAN_DESC"
-	picture = "Portrait_UAE_Zayed_Al-Nahyan.dds"
-	expire = "2999.1.1"
-	ideology = paternalism_semi_constitutional_monarchy_subtype
-	traits = {
-		#
-	}
-}
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 0
+    socialist = 20
     progressivism = 0
-    liberalism = 5
+    liberalism = 10
     liberal_conservatism = 0
     conservatism = 10
-    paternalism = 20
+    paternalism = 50
     despotism = 10
-    fascism = 35
-    national_socialism = 20
-    esoteric_nazism = 0
+    fascism = 0
+    national_socialism = 0
 }
 
 add_ideas = {
-	ARABIA_GCC
-	GCC_Faction
-	
+	TRI_Observer
 	#political#
 	tno_political_parties_controlled_opposition
 	tno_religious_rights_state_religion

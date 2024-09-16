@@ -1,0 +1,184 @@
+global_debug_decisions = {
+    show_hide_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				has_country_flag = hide_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				NOT = { has_country_flag = hide_debug_decisions }
+			}
+		}
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision show_hide_debug_decisions"
+			if = {
+				limit = { has_country_flag = hide_debug_decisions }
+				clr_country_flag = hide_debug_decisions
+			}
+			else = {
+				set_country_flag = hide_debug_decisions
+			}
+		}
+	}
+
+    debug_trigger_peru_civil_war = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_peru_civil_war"
+            PRU = {
+                country_event = {
+                    id = PRU.general.1
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    debug_trigger_petersen_assassination = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_petersen_assassination"
+            AST = {
+                country_event = {
+                    id = AST_scripted.1
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    debug_trigger_ger_3wrw_victory = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_3wrw_victory"
+			country_event = {
+				id = GER_debug_event.9
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    debug_trigger_sov_3wrw_victory = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_sov_3wrw_victory"
+			country_event = {
+				id = SOV_victory.99
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+    debug_trigger_finnish_civil_war = {
+        icon = GFX_decision_generic_visibility
+
+        available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_finnish_civil_war"
+            FIN = {
+                country_event = {
+                    id = FIN.civilwar.2
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+    }
+
+    debug_trigger_iranian_civil_war = {
+        icon = GFX_decision_generic_visibility
+
+        available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_iranian_civil_war"
+            PER = {
+                country_event = {
+                    id = PER.civilwar.1
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+    }
+
+    debug_trigger_manchu_civil_war = {
+        icon = GFX_decision_generic_visibility
+
+        available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_manchu_civil_war"
+            MAN = {
+                country_event = {
+                    id = MAN.civilwar.1
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+    }
+}

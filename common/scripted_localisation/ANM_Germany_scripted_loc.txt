@@ -1,182 +1,44 @@
+### NSDAP PYRAMID ###
 defined_text = {
 	name = getGERnsdappartystructure
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning < 20000 }
-			check_variable = { GER_ANM_party_leaning > -20000}
+			check_variable = { GER_ANM_party_leaning < 5000 }
+			check_variable = { GER_ANM_party_leaning > -5000}
 		}
 		localization_key = GER_nsdap_conservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning < -20000 }
+			check_variable = { GER_ANM_party_leaning < -5000 }
 		}
 		localization_key = GER_nsdap_reformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leaning > 20000 }
+			check_variable = { GER_ANM_party_leaning > 5000 }
 		}
 		localization_key = GER_nsdap_reactionary_leaning_anm
-	}
-}
-defined_text = {
-	name = getGERfrontinfluence
-	text = {
-		trigger = {
-			has_country_flag = reichsstability_tier_2
-			
-		}
-		localization_key = GER_front_inf_top
-	}
-	text = {
-		trigger = {
-			has_country_flag = reichsstability_tier_3
-			
-		}
-		localization_key = GER_front_inf_middle
-	}
-	text = {
-		trigger = {
-			has_country_flag = reichsstability_tier_4
-			
-		}
-		localization_key = GER_front_inf_bottom
-	}
-	text = {
-		localization_key = GER_front_inf
-	}
-}
-defined_text = {
-	name = getGERspeerinfluence
-	text = {
-		trigger = {
-			has_country_flag = reichsstability_tier_2
-			
-		}
-		localization_key = GER_speer_inf_top
-	}
-	text = {
-		trigger = {
-			has_country_flag = reichsstability_tier_3
-			
-		}
-		localization_key = GER_speer_inf_middle
-	}
-	text = {
-		trigger = {
-			has_country_flag = reichsstability_tier_4
-			
-		}
-		localization_key = GER_speer_inf_bottom
-	}
-	text = {
-		localization_key = GER_speer_inf
-	}
-}
-defined_text = {
-	name = getGERreichsstabilitatcooldown1
-	text = {
-		trigger = {
-			AND = {
-				has_country_flag = GER_reichsstabilitat_interaction_1
-				has_country_flag = reichsstability_tier_2
-			}
-		}
-		localization_key = GER_reichsstabilitat_interaction_on_cooldown
-	}
-	text = {
-		trigger = {
-			AND = {
-				has_country_flag = GER_reichsstabilitat_interaction_2
-				has_country_flag = reichsstability_tier_3
-			}
-		}
-		localization_key = GER_reichsstabilitat_interaction_on_cooldown
-	}
-	text = {
-		trigger = {
-			AND = {
-				has_country_flag = GER_reichsstabilitat_interaction_3
-				has_country_flag = reichsstability_tier_4
-			}
-		}
-		localization_key = GER_reichsstabilitat_interaction_on_cooldown
-	}
-	text = {
-		trigger = {
-			has_country_flag = reichsstability_tier_1
-		}
-		localization_key = GER_reichsstabilitat_interaction_peak
-	}
-	text = {
-		trigger = {
-			has_political_power < 50
-		}
-		localization_key = GER_reichsstabilitat_interaction_notenoughpp
-	}
-	
-	text = {
-		localization_key = reichsstability_party_button_1
-	}
-}
-defined_text = {
-	name = getGERreichsstabilitatcooldown2
-	text = {
-		trigger = {
-			AND = {
-				has_country_flag = GER_reichsstabilitat_interaction_1
-				has_country_flag = reichsstability_tier_2
-			}
-		}
-		localization_key = GER_reichsstabilitat_interaction_on_cooldown
-	}
-	text = {
-		trigger = {
-			AND = {
-				has_country_flag = GER_reichsstabilitat_interaction_2
-				has_country_flag = reichsstability_tier_3
-			}
-		}
-		localization_key = GER_reichsstabilitat_interaction_on_cooldown
-	}
-	text = {
-		trigger = {
-			AND = {
-				has_country_flag = GER_reichsstabilitat_interaction_3
-				has_country_flag = reichsstability_tier_4
-			}
-		}
-		localization_key = GER_reichsstabilitat_interaction_on_cooldown
-	}
-	text = {
-		trigger = {
-			has_country_flag = reichsstability_tier_1
-		}
-		localization_key = GER_reichsstabilitat_interaction_peak
-	}
-	text = {
-		localization_key = reichsstability_party_button_2
 	}
 }
 defined_text = {
 	name = getGERnsdaplowerpartyleaning
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_leaning < 100 }
-			check_variable = { GER_ANM_lower_party_leaning > -100}
+			check_variable = { GER_ANM_lower_party_leaning < 50 }
+			check_variable = { GER_ANM_lower_party_leaning > -50}
 		}
 		localization_key = GER_nsdap_lowerconservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_leaning < -100 }
+			check_variable = { GER_ANM_lower_party_leaning < -50 }
 		}
 		localization_key = GER_nsdap_lowerreformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_leaning > 100 }
+			check_variable = { GER_ANM_lower_party_leaning > 50 }
 		}
 		localization_key = GER_nsdap_lowerreactionary_leaning_anm
 	}
@@ -185,20 +47,20 @@ defined_text = {
 	name = getGERnsdaplowerpartyinfluence
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_influence < 100 }
-			check_variable = { GER_ANM_lower_party_influence > -100}
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
 		}
 		localization_key = GER_nsdap_conservative_lowerinfluence_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_influence < -100 }
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
 		}
 		localization_key = GER_nsdap_reformist_lowerinfluence_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_lower_party_influence > 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
 		}
 		localization_key = GER_nsdap_reactionary_lowerinfluence_anm
 	}
@@ -207,20 +69,20 @@ defined_text = {
 	name = getGERnsdapinnerpartyleaning
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_leaning < 100 }
-			check_variable = { GER_ANM_middle_party_leaning > -100}
+			check_variable = { GER_ANM_middle_party_leaning < 50 }
+			check_variable = { GER_ANM_middle_party_leaning > -50}
 		}
 		localization_key = GER_nsdap_innerconservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_leaning < -100 }
+			check_variable = { GER_ANM_middle_party_leaning < -50 }
 		}
 		localization_key = GER_nsdap_innerreformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_leaning > 100 }
+			check_variable = { GER_ANM_middle_party_leaning > 50 }
 		}
 		localization_key = GER_nsdap_innerreactionary_leaning_anm
 	}
@@ -229,20 +91,20 @@ defined_text = {
 	name = getGERnsdapinnerpartyinfluence
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_influence < 100 }
-			check_variable = { GER_ANM_middle_party_influence > -100}
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
 		}
 		localization_key = GER_nsdap_innerconservative_influence_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_influence < -100 }
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
 		}
 		localization_key = GER_nsdap_innerreformist_influence_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_middle_party_influence > 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
 		}
 		localization_key = GER_nsdap_innerreactionary_influence_anm
 	}
@@ -251,20 +113,20 @@ defined_text = {
 	name = getGERnsdapcorepartyleaning
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_leaning < 100 }
-			check_variable = { GER_ANM_upper_party_leaning > -100}
+			check_variable = { GER_ANM_upper_party_leaning < 50 }
+			check_variable = { GER_ANM_upper_party_leaning > -50}
 		}
 		localization_key = GER_nsdap_coreconservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_leaning < -100 }
+			check_variable = { GER_ANM_upper_party_leaning < -50 }
 		}
 		localization_key = GER_nsdap_corereformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_leaning > 100 }
+			check_variable = { GER_ANM_upper_party_leaning > 50 }
 		}
 		localization_key = GER_nsdap_corereactionary_leaning_anm
 	}
@@ -273,20 +135,20 @@ defined_text = {
 	name = getGERnsdapcorepartyinfluence
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_influence < 100 }
-			check_variable = { GER_ANM_upper_party_influence > -100}
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
 		}
 		localization_key = GER_nsdap_coreconservative_influence_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_influence < -100 }
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
 		}
 		localization_key = GER_nsdap_corereformist_influence_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_upper_party_influence > 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
 		}
 		localization_key = GER_nsdap_corereactionary_influence_anm
 	}
@@ -295,20 +157,20 @@ defined_text = {
 	name = getGERnsdappartyleadershipleaning
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_leaning < 100 }
-			check_variable = { GER_ANM_party_leadership_leaning > -100}
+			check_variable = { GER_ANM_party_leadership_leaning < 50 }
+			check_variable = { GER_ANM_party_leadership_leaning > -50}
 		}
 		localization_key = GER_nsdap_leaderconservative_leaning_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_leaning < -100 }
+			check_variable = { GER_ANM_party_leadership_leaning < -50 }
 		}
 		localization_key = GER_nsdap_leaderreformist_leaning_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_leaning > 100 }
+			check_variable = { GER_ANM_party_leadership_leaning > 50 }
 		}
 		localization_key = GER_nsdap_leaderreactionary_leaning_anm
 	}
@@ -317,21 +179,1083 @@ defined_text = {
 	name = getGERnsdappartyleadershipinfluence
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_influnce < 100 }
-			check_variable = { GER_ANM_party_leadership_influnce > -100}
+			check_variable = { GER_ANM_party_leadership_influnce > 49 }
+			check_variable = { GER_ANM_party_leadership_influnce < 75 }
 		}
 		localization_key = GER_nsdap_leaderconservative_influence_anm
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_influnce < -100 }
+			check_variable = { GER_ANM_party_leadership_influnce < 50 }
 		}
 		localization_key = GER_nsdap_leaderreformist_influence_anm 
 	}
 	text = {
 		trigger = {
-			check_variable = { GER_ANM_party_leadership_influnce > 100 }
+			check_variable = { GER_ANM_party_leadership_influnce > 74 }
 		}
 		localization_key = GER_nsdap_leaderreactionary_influence_anm
 	}
+}
+
+### Government GUI ###
+defined_text = {
+	name = getGERgovernmentloyalty1
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_1 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty2
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_2 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty3
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_3 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty4
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_4 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty5
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_5 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty6
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_6 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty7
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_7 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty8
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_8 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty9
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_9 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty10
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_10 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty11
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_11 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty12
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_12 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty13
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_13 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty14
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_14 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty15
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_15 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty16
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_16 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty17
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_17 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty18
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_18 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty19
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_19 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty20
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_20 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty21
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_21 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+defined_text = {
+	name = getGERgovernmentloyalty22
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_22 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+
+### Assorted Laws ###
+defined_text = {
+	name = GetAssortedLawsGER
+	text = { 
+		trigger = { check_variable = { v = 1 } }
+		localization_key = "GER_Reichskonkordat_II"
+	}
+	text = { 
+		trigger = { check_variable = { v = 2 } }
+		localization_key = "GER_Grossdeutsche_Volksliste"
+	}
+	text = { 
+		trigger = { check_variable = { v = 3 } }
+		localization_key = "GER_Deutsche_Weltgemeinschaft"
+	}
+	text = { 
+		trigger = { 
+			AND = { 
+				check_variable = { v = 4 }
+				GER = { NOT = { has_completed_focus = GER_launch_the_euromark } } 
+			}	
+		}
+		localization_key = "GER_Das_Euromark_Projekt_Preparing"
+	}
+	text = { 
+		trigger = { 
+			AND = { 
+				check_variable = { v = 4 }
+				GER = { has_completed_focus = GER_launch_the_euromark } 
+			}	
+		}
+		localization_key = "GER_Das_Euromark_Projekt_Launched"
+	}
+	text = { 
+		trigger = { check_variable = { v = 5 } }
+		localization_key = "GER_Lebensraum_Im_Osten"
+	}
+	text = { 
+		trigger = { check_variable = { v = 6 } }
+		localization_key = "GER_1948_Nuremberg_Constitution"
+	}
+	text = {
+		trigger = { check_variable = { v = 7 } }
+		localization_key = "GER_Drexler_Score"
+	}
+	text = { 
+		trigger = { check_variable = { v = 8 } }
+		localization_key = "GER_Prevailing_Partocracy"
+	}
+}
+defined_text = {
+	name = GetAssortedLawsDescGER
+	text = { 
+		trigger = { 
+			check_variable = { v = 1 }
+		}
+		localization_key = GER_Reichskonkordat_II_desc
+	}
+	text = { 
+		trigger = {
+			check_variable = { v = 2 }
+		}
+		localization_key = GER_Grossdeutsche_Volksliste_desc
+	}
+	text = { 
+		trigger = {
+			check_variable = { v = 3 }
+		}
+		localization_key = GER_Deutsche_Weltgemeinschaft_desc
+	}
+	text = { 
+		trigger = {
+			AND = { 
+				check_variable = { v = 4 }
+				GER = { NOT = { has_completed_focus = GER_launch_the_euromark } }  
+			}	
+		}
+		localization_key = GER_Das_Euromark_Projek_Preparation_desc
+	}
+	text = { 
+		trigger = {
+			AND = { 
+				check_variable = { v = 4 }
+				GER = { has_completed_focus = GER_launch_the_euromark } 
+			}
+		}
+		localization_key = GER_Das_Euromark_Projek_Launched_desc
+	}
+	text = { 
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = GER_Lebensraum_Im_Osten_desc
+	}
+	text = { 
+		trigger = {
+			check_variable = { v = 6 }
+		}
+		localization_key = GER_1948_Nuremberg_Constitution_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 7 }
+		}
+		localization_key = GER_Drexler_Score_desc
+	}
+	text = { 
+		trigger = {
+			check_variable = { v = 8 }
+		}
+		localization_key = GER_Prevailing_Partocracy_desc
+	}	
 }

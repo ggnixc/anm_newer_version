@@ -1,0 +1,124 @@
+##################################################################
+##################################################################
+##    _____ _    _ _____   __  __          _____ _____ _  __	##
+##   / ____| |  | |_   _| |  \/  |   /\   / ____|_   _| |/ /	##
+##  | |  __| |  | | | |   | \  / |  /  \ | |  __  | | | ' / 	##
+##  | | |_ | |  | | | |   | |\/| | / /\ \| | |_ | | | |  <  	##
+##  | |__| | |__| |_| |_  | |  | |/ ____ \ |__| |_| |_| . \ 	##
+##   \_____|\____/|_____| |_|  |_/_/    \_\_____|_____|_|\_\	##
+##																##
+##################################################################
+##################################################################
+
+
+# Examples of gui
+# TNO_assorted_laws_display = [ 1, 3, 2, 50, 51 ] 
+
+### Drawing
+#
+#	[ Law 1  ] [ Law 3  ]
+#   [ Law 2  ] [ Law 50 ]
+#   [ Law 51 ]
+#
+
+# TNO_assorted_laws_display = [ 1, 2, special, 0, 3 ] 
+
+#	[ Law 1 ] [ Law 2 ]
+#   [ special bloc ] []
+#	[ Law 3 ]
+
+### ID Table - Please mark here your laws!!!
+#
+#	0 means empty.
+#   Don't use -1, reserved for gui fixing stuff!!!!!
+# 
+#	[1, 10] Old Laws that got cut
+#
+#	1  -> tno_pollution	
+#	2  -> tno_safety	
+#	3  -> tno_child_labor	
+#	4  -> tno_refugees	
+#	5  -> tno_minorities	
+#	6  -> tno_racial_integration	
+#	7  -> tno_women	
+#	8  -> tno_lgbt_rights	
+#
+
+misc_law_array_startup = {
+	clear_array = TNO_assorted_laws_display
+
+	add_to_array = { TNO_assorted_laws_display = 1 }
+	add_to_array = { TNO_assorted_laws_display = 2 }
+	add_to_array = { TNO_assorted_laws_display = 3 }
+	add_to_array = { TNO_assorted_laws_display = 4 }
+	add_to_array = { TNO_assorted_laws_display = 5 }
+	add_to_array = { TNO_assorted_laws_display = 6 }
+	add_to_array = { TNO_assorted_laws_display = 7 }
+	add_to_array = { TNO_assorted_laws_display = 8 }
+}
+
+misc_law_array_fix_scrollbar = {
+	while_loop_effect = {
+		limit = {
+			is_in_array = { TNO_assorted_laws_display = -1 }
+		}
+		remove_from_array = { TNO_assorted_laws_display = -1 }
+	}
+	
+	set_temp_variable = { temp_modulo = TNO_assorted_laws_display^num }
+	modulo_temp_variable = { temp_modulo = 2 }
+
+	if = {
+		limit = { check_variable = { temp_modulo = 1 } }
+		add_to_array = { TNO_assorted_laws_display = -1 }
+	}
+	add_to_array = { TNO_assorted_laws_display = -1 }
+	add_to_array = { TNO_assorted_laws_display = -1 }
+}
+
+#For Tags that have special misc laws only
+
+misc_law_array_startup_special = {
+	if = {
+		limit = {
+			tag = ENG
+		}
+		clear_array = TNO_assorted_laws_display
+		set_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 1 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 2 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 3 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 4 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 5 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 6 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 7 }
+	}
+	else_if = {
+		limit = {
+			tag = GER
+		}
+		clear_array = TNO_assorted_laws_display
+		set_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 1 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 2 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 3 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 4 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 5 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 6 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 7 }
+		add_to_temp_variable = { v = 1 }
+		add_to_array = { TNO_assorted_laws_display = 8 }
+	}
+}

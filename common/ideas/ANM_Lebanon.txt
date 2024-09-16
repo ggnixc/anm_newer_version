@@ -1,13 +1,19 @@
 ideas = {
 	country = {
-		LEB_The_people_of_Lebanon = {
-			allowed = { always = no }
-			picture = LEB_The_people_of_Lebanon
-			removal_cost = -1
-
-			modifier = {
-				stability_factor = -0.1
-			}
-		}		
+		LEB_Lebanese_Drug_Route = { 
+            allowed = {
+                always = yes
+            }
+            allowed_civil_war = {
+                always = no
+            }
+            picture = generic_drugs_stimulant
+            modifier = {
+				political_power_cost = -0.05
+				political_power_gain = 0.05
+				trade_opinion_factor = -0.1
+				opinion_gain_monthly = -0.1
+            }
+        }	
 	}	
 }

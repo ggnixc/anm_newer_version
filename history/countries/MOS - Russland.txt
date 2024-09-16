@@ -1,4 +1,15 @@
-﻿capital = 219
+﻿capital = 241
+
+recruit_character = MOS_horst_stechbarth
+recruit_character = MOS_mikhail_gorbachev
+recruit_character = MOS_militaramt
+recruit_character = MOS_mikhail_nazarov
+recruit_character = MOS_mikhail_nazarov 
+recruit_character = MOS_dmitriy_vasilyev
+recruit_character = MOS_alexander_barkashov
+recruit_character = MOS_rostislav_polchaninov
+recruit_character = MOS_herman_gref
+recruit_character = MOS_klaus_naumann
 
 set_oob = "MOS_1962"
 
@@ -9,7 +20,10 @@ add_ideas = {
 	MOS_anti_soviet_fanatiscism
 	MOS_refugee_conscripts
 	### MINISTERS ###
-
+	MOS_Militaramt_hog
+	MOS_Militaramt_sec
+	MOS_Militaramt_for
+	MOS_Militaramt_eco
 	### POLITICAL LAWS ###
 
 	### MILITARY LAWS ###
@@ -66,6 +80,10 @@ set_politics = {
 
 }
 
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Military_Directed }
+
 set_popularities = {
     communist = 5
     ultranationalism = 0
@@ -78,40 +96,7 @@ set_popularities = {
     despotism = 60
     fascism = 15
 	national_socialism = 20
-    esoteric_nazism = 0
+     
 }
 
-### Country Leader ###
-create_country_leader = {
-	name = "Horst Stechbarth"
-	desc = "POLITICS_HORST_STECHBARTH_DESC"
-	picture = "Portrait_MOS_Horst_Stechbarth.dds"
-	expire = "1999.10.12"
-	ideology = despotism_military_junta_subtype
-	traits = {
-		
-	}
-}
-create_country_leader = {
-	name = "Mikhail Sergeyevich Gorbachev"
-	desc = "POLITICS_MIKHAIL_GORBACHEV_DESC"
-	picture = "Portrait_MOS_Mikhail_Gorbachev.dds"
-	expire = "2090.10.12"
-	ideology = national_socialism_reformed_national_socialism_subtype
-	traits = {
-		
-	}
-}
-
-### Generals ###
-create_corps_commander = {
-	name = "Bronislav Kaminski"
-	picture = "Portrait_Moskowien_Bronislaw_Kaminski.dds"
-	traits = { politically_connected harsh_leader }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-	id = 15024
-}
+set_cosmetic_tag = MOS_MB

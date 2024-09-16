@@ -7,32 +7,33 @@ set_cosmetic_tag = IRQ_Arabia
 set_stability = 0.4
 set_war_support = 0.1
 
-set_variable = { ANMKDN_showednation_agenda_one = 20 }
 
 
 # Starting tec
 
 
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = paternalism
 	last_election = "1995.2.16"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 5
     ultranationalism = 0
-    socialist = 40
-    progressivism = 0
+    socialist = 9
+    progressivism = 14
     liberalism = 10
     liberal_conservatism = 5
-    conservatism = 0
-    paternalism = 15
-    despotism = 10
-    fascism = 10
-    national_socialism = 5
-    esoteric_nazism = 0
+    conservatism = 12
+    paternalism = 32
+    despotism = 7
+    fascism = 6
+    national_socialism = 0
+     
 }
 
 country_event = { id = irq.flavour.1 days = 11 }
@@ -44,12 +45,17 @@ recruit_character = IRQ_Faisal_II
 recruit_character = IRQ_Saddam_Hussien
 recruit_character = IRQ_Hussien_bin_Talal
 recruit_character = IRQ_Ali_Salih
+recruit_character = IRQ_Nasser_Chaderchi
+recruit_character = IRQ_Arif_Abdul_Razzaq
+recruit_character = IRQ_Tariq_Aziz
+recruit_character = IRQ_Fakhri_Qadouri
 add_ideas = {
-	IRQ_Idea_Faisal_II
-	IRQ_Idea_Hussien_II
+	TRI_Observer
+	IRQ_Idea_Faisal_II_Hussien_II
+	#IRQ_Idea_Faisal_II
+	#IRQ_Idea_Hussien_II
 	IRQ_Welfare_state
 	IRQ_Controled_Democracy
-	IRQ_Baath_Threat
 	##Ministers 
 	IRQ_minister_Nasser_Chaderchi_hog
 	IRQ_minister_Arif_Abdul_Razzaq_sec
@@ -97,4 +103,6 @@ add_ideas = {
 	tno_minorities_equal_rights
 	tno_security_wire_tapping
 	construction_level_7
+	tno_birthrate_many
+	tno_poverty_rate_5
 }

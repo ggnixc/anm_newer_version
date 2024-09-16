@@ -1,133 +1,34 @@
 ideas = {
 	country = {
-		CHI_Ecomomic_takeoff = {
+		CHI_Fracturing_Dangguo = {
 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_Ecomomic_takeoff
+			picture = GFX_idea_CHI_Fracturing_Dangguo
 			removal_cost = -1
 
 			modifier = {
+				stability_factor = -0.05
+				drift_defence_factor = -0.5
+				political_power_gain = -0.15
+				party_popularity_stability_factor = -0.65
 			}
 		}
-		CHI_Minliu_Decisive  = {
+		CHI_visions = {
 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_Minliu_Decisive
+			picture = GFX_idea_CHI_visions
 			removal_cost = -1
 
 			modifier = {
-
+				stability_factor = 0.25
+				war_support_factor = 0.2
+				paternalism_drift = 0.0001
+				drift_defence_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.25
 			}
 		}
-		CHI_No435 = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_No435
-			removal_cost = -1
-
-			modifier = {
-
-			}
-		}
-		CHI_The_Great_Wall_Never_Falls = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_The_Great_Wall_Never_Falls
-			removal_cost = -1
-
-			modifier = {
-
-			}
-		}
-		CHI_Xinjiang_Land_of_Gold = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_Xinjiang_Land_of_Gold
-			removal_cost = -1
-
-			modifier = {
-
-			}
-		}
-		CHI_Nuclear_Frenzy = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_Nuclear_Frenzy
-			removal_cost = -1
-
-			modifier = {
-
-			}
-		}
-	}
-	head_of_government = {
-		
-		CHI_Wen_Jia-bao_hog = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHI_Wen_Jia-bao_hog"}
-			allowed = { original_tag = CHI }
-			picture = "CHI_Wen_Jia-bao_hog"
-			available = {
-				tag = CHI
-			}
-			traits = {
-				CHI_Wen_Jia-bao_hog_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-									}
-						}
-						
-	security_minister = {
-		CHI_Chi_Hao-Tien_sec = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHI_Chi_Hao-Tien_sec"}
-			allowed = { original_tag = CHI }
-			picture = "CHI_Chi_Hao-Tien_sec"
-			available = {
-					tag = CHI
-			}
-			traits = {
-				CHI_Chi_Hao-Tien_sec
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-									}
-						}
-						
-	foreign_minister = {
-		CHI_Li_Zhao-Xing_for = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHI_Li_Zhao-Xing_for"}
-			allowed = { original_tag = CHI }
-			picture = "CHI_Li_Zhao-Xing_for"
-			available = {
-					tag = CHI
-			}
-			traits = {
-				CHI_Li_Zhao-Xing_for_desc 
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-											}
-						}
-						
-	economy_minister = {
-		CHI_Li_Yuan-Chao_eco = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CHI_Li_Yuan-Chao_eco"}
-			allowed = { original_tag = CHI }
-			picture = "CHI_Li_Yuan-Chao_eco"
-			available = {
-					tag = CHI
-			}
-			traits = {
-				CHI_Li_Yuan-Chao_eco_desc
-			}
-			cancel_if_invalid = no
-			ledger = civilian
-		    }
 	}
 }

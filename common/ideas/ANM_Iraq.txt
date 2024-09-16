@@ -1,5 +1,16 @@
 ideas = {
 	country = {
+		IRQ_Idea_Faisal_II_Hussien_II = {
+			allowed = { always = no }
+			picture = IRQ_Idea_Faisal_II_Hussien_II
+			removal_cost = -1
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = 0.1
+				paternalism_drift = 0.02
+				fascism_drift = 0.01
+			}
+		}
 		IRQ_Idea_Faisal_II = {
 			allowed = { always = no }
 			picture = IRQ_Idea_Faisal_II
@@ -27,7 +38,7 @@ ideas = {
 			picture = IRQ_Welfare_state
 			removal_cost = -1
 			modifier = {
-				socialist_drift = 0.5
+				paternalism_drift = 0.05
 				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.1
 				monthly_population = 0.5

@@ -1,19 +1,4 @@
 ﻿l_english:
- #KdN stuff
- thedisplaykeyKdNcouncilmember: "GFX_KdNcouncilmember"
- thedisplaykeyKdNnormalmember: "GFX_KdNnormalmember"
- thedisplaykeyKdNobserver: "GFX_KdNobserver"
- thedisplaykeyKdNmandate: "GFX_KdNmandate"
- CURRENT_ANMKDN_STATUS_SHORT_TT: "[This.GetANMKDN_STATUS_SHORTStatus_tooltip]"
- CURRENT_ANMKDN_STATUS_TT: "[This.GetANMKDN_STATUS_tooltip]"
- shortdescriptionofKdNmandate: "§MKoalition der Nationen - Mandate§!"
- shortdescriptionofKdNobserver: "§MKoalition der Nationen - Observer§!"
- shortdescriptionofKdNnormalmember: "§MKoalition der Nationen - Member§!"
- shortdescriptionofKdNcouncilmember: "§MKoalition der Nationen - Permanent Security Council Member§!"
- longdescriptionofKdNmandate: "The KdN was made to prevent international crises and devastating conflicts from happening. Unfortunately, peace remains a distant dream for many in the troubled areas of the world. For this purpose, KdN mandates are set up in certain regions which require international administration. Although nominally serving stability and the protection of civillians, they are at the mercy of the KdN Security Council, and can be used for their own benefit."
- longdescriptionofKdNobserver: "Although this nation cannot vote in the KdN Parliament and does not have the same status as a member state, usually due to not being recognized by other member states, it is heavily connected to the KdN institutions."
- longdescriptionofKdNnormalmember: "A brainchild of the Speerite foreign policy and German-American-Japanese attempts at de-escalation of the Cold War during the 70s, the Koalition der Nationen, Coalition of Nations, or KdN for short, is a powerful international institution for the purpose of preventing war, advancing international cooperation, and being a forum for international diplomacy. KdN membership is seen as the 'legitimisation' of a nation in front of the international community, and allows it to vote in the KdN parliament."
- longdescriptionofKdNcouncilmember: "Originating from the three major KdN members at the time of its foundation, Germany, America and Japan, the Permanent Council Members of the KdN security council hold enormous power over the international community. They decide on KdN intervention across the globe, and administrate the KdN Mandates. Multiple powers aspire to be on the permanent council, and be granted the rank of permanent member."
  #DisplayKeys
  Levantine_Union_Member_displaykey: "GFX_Levantine_Union_Member"
  Republic_of_China_Autonomous_Region_displaykey: "GFX_ROC_Autonomous_Region"
@@ -32,9 +17,14 @@
  CON_Satellite: "Concordate of Parma - Satellite"
  CON_Satellite_effect: "[!CON_Satellite]"
  CON_Satellite_desc: "Concordate of Parma - Satellite"
- Pakt_Leader: "Paktführung"
+
+ COM_observer_displaykey: "GFX_COM_Observer"
+
+ ### Europäische Pakt ### 
+ Pakt_Leader: "£sphere_main_icon Deutsche Weltgemeinschaft\n£sphere_europe_icon Europäischer Unabhängigkeits- und Integritätspakt\n£sphere_middle_east_icon Mitteler Osten Verteidigungsbündnis\n--------------\nPaktführung"
  Pakt_Leader_effect: "[!Pakt_Leader]"
- Pakt_Leader_desc: "The Europakt is a pan-European alliance, with Germany being its most influential and leading power. It is a merger of the military alliance of the Unity-Pakt and the Zollverein Economic Union, unifying the German Diplomatic Sphere under a single Block of Nations, the Europakt. With freedom of trade, joint economic programs and a planned common currency, the Europapakt has created a massive European market, an economic and military behemoth.\nGDP growth modifier: §G[?global.europaktgdpgrowthmodifier]§!"
+ Pakt_Leader_desc: "The §BEuropäische Pakt§!, a single block of nations unifying the German Diplomatic Sphere, was formed following a merger between the military alliance of the Einheitspakt and the Zollverein Economic Union. Member states enjoy freedom of trade, joint economic programs, and the copious advantages that will come with the Euromark, the union’s common currency, all under the banner of Pan-Europeanism and Germania.\n\nThe §BEuropäische Pakt§!, the world’s largest economy, is inhabited by a pure Aryan race, and protected by the most powerful army the world has ever seen under the German Reich, also known as the Paktführung. Our Prosperous and Dominant Empire is the envy of the world!"
+
  ###Tooltips
  CURRENT_FACTION_STATUS_SHORT_TT: "§Y[This.GetFactionStatus_name]§![This.GetFactionStatus_effect]"
  CURRENT_FACTION_STATUS_TT: "[This.GetFactionStatus_tooltip]"
@@ -43,27 +33,19 @@
  FactionStatus_tooltip: "§L[This.GetFactionStatus_desc]§!"
  NoFaction: "GFX_generic_faction_small"
  #ep
- Europakt_researchmodifier_lol: "Europakt Scientific Cooperation Member"
+ Europakt_researchmodifier_lol: "Europäische Pakt Scientific Cooperation Member"
  Europakt_researchmodifier_lol_desc: " "
  ##Levantine Union
  Levantine_Union_Member: "Levantine Union Member"
  Levantine_Union_Member_effect: "[!Levantine_Union_Member]"
- Levantine_Union_Member_desc: "GDP Growth Boost: 3%§!\n\nThe 'Levantine Union' emerged as agreements on Free Trade within the Levant and Security Promises to threats outside the Levant such as the Republic of Turkey in the Successful Jerusalem Conference that the Italian Empire offered to the various Negotiating Parties and Ethnicites following Italy's Victory in the Middle East War. Israel's second Prime Minister, Shimon Peres, has deliberately made this union much more comprehensive; he attempted to create a Levantine identity through joint cultural projects. There was great hope that the Levantine Union would eventually become a Confederation one day, and several politicians in Palestine and Lebanon even offered a single currency and an internal market, however, after Shimon Peres' time in power, the Levantine countries seemed to prefer to continue with the status-quo rather than expedite the process of integration."
+ Levantine_Union_Member_desc: "This nation is a member of the Levantine Union, a mutual alliance, a powerful economic bloc, and a foreign alignment at the same time. Born after the Jerusalem Conference, this nation is young but promising. If the Union survives, perhaps it could be the first of a new breed of cooperation between nations."
  Levantine_Union_Member_displaykey: "GFX_Levantine_Union_Member"
 
- #PALF
- PALF_Faction_peace: "Member of the Pan-African Liberation Front"
- PALF_Faction_peace_desc: "GDP Growth Boost: 5%§!\n\nBorn in the fires of German terror bombings and the revolutionary halls of Yaoundé, the Pan-African Liberation Front has dedicated itself to the liberation of Africa from the colonialist devils that wrack it. Based primarily in Cameroon, the organization crosses borders and cultures, striving for one goal- freedom and unity for all Africans.\n\nPan-Africanism is not without its opponents, of course. The Germans and English occupy everything south of the Sahara, the Italians control much of what's left, and the rest is snapped up by Iberians and French alike, leaving only slivers free. Still, the PALF fights on, waiting for its opportunity- an opportunity which will surely come, for nothing can hold the African people down forever."
- PALF_Satellite_peace: "Liberated Satellite"
- PALF_Satellite_peace_desc: "GDP Growth Boost: 2%§!\nGDP to Sphere Leader Modifier: 7.5%§!\n\nThis nation is a Liberated Satellite, and has been freed by the Pan-African Liberation Front from the forces of colonialism and reaction. Its newly formed administration has chosen to cooperate with and be supervised by the Front in order to dismantle the remnants and legacies of imperialism. This nation and its leadership now follow the principles of Pan-Africanism, and work towards creating a united Africa, even if they are still nominally independent from their allies at this time. United by a common ideology, these Liberated Satellites shall work alongside the Front in order to create a new future for Africa."
- PALF_Faction_displaykey: "GFX_PALF_Faction"
- PALF_Satellite_displaykey: "GFX_PALF_Satellite"
-
- PALF_Faction: "Member of the Pan-African Liberation Front"
- PALF_Faction_desc: "GDP Growth Boost: 5%§!\n\nBorn in the fires of German terror bombings and the revolutionary halls of Yaoundé, the Pan-African Liberation Front has dedicated itself to the liberation of Africa from the colonialist devils that wrack it. Based primarily in Cameroon, the organization crosses borders and cultures, striving for one goal- freedom and unity for all Africans.\n\nPan-Africanism is not without its opponents, of course. The Germans and English occupy everything south of the Sahara, the Italians control much of what's left, and the rest is snapped up by Iberians and French alike, leaving only slivers free. Still, the PALF fights on, waiting for its opportunity- an opportunity which will surely come, for nothing can hold the African people down forever."
- PALF_Satellite: "Liberated Satellite"
- PALF_Satellite_desc: "GDP Growth Boost: 2%§!\nGDP to Sphere Leader Modifier: 7.5%§!\n\nThis nation is a Liberated Satellite, and has been freed by the Pan-African Liberation Front from the forces of colonialism and reaction. Its newly formed administration has chosen to cooperate with and be supervised by the Front in order to dismantle the remnants and legacies of imperialism. This nation and its leadership now follow the principles of Pan-Africanism, and work towards creating a united Africa, even if they are still nominally independent from their allies at this time. United by a common ideology, these Liberated Satellites shall work alongside the Front in order to create a new future for Africa."
-
+ #CWA
+ CWA_Faction: "Member of the Community of Western Africa"
+ CWA_Faction_desc: "Placeholder"
+ CWA_Faction_displaykey: "GFX_CWA_Faction"
+ 
  #Arabia Gulf
  GCC_Faction: "Member of the Cooperation Council for the Arab States of the Gulf"
  GCC_Faction_desc: "GDP Growth Boost: 6%§!\n\nMember of the Cooperation Council for the Arab States of the Gulf."
@@ -74,12 +56,6 @@
  Federal_Union_Army_desc: "Placeholder"
  Federal_Union_Army_displaykey: "GFX_Federal_Union_Army"
  
- #Sphere
- Sphere_Core_Member: "Core Member of the Sphere"
- Sphere_Core_Member_desc: "GDP Growth Boost: 7%§!\nGDP to Sphere Leader Modifier: 5%§!\n\nWhen Pan-Asianism was in its infancy, Hsinking and Nanjing were forced into an economic bloc with Tokyo, fueling the Empire's oppressive war machine. This all changed when Nanjing revolted during the Great Asian War and became free from Tokyo's Grasp, leaving Xinjing as the remaining 'Core Member' of the Sphere other than the Rising Sun.\n\nHowever, while Manchukuo enjoys a de jure seniority among other members of the Sphere, the reality is far less rosy than it appears. Xinjing, thanks to their higher on-paper status only, contribute a greater share into the Sphere's - or more accurately Japan's - defense and infrastructure fund. Needless to say, the "Core Membership" serves merely as an excuse to extort the peoples of Manchuria, yet Manchukuo would never give up this title upon which their legitimacy hinges."
- Sphere_Core_Member_MAN_displaykey: "GFX_Sphere_Core_Member_MAN"
- #Sphere_Leader_tt: "§MAs the leader of the Sphere, our yearly budget is further increased, thanks to regular payments from subordinate Sphere members.\n\nAdditionally, a fraction of each subject's industrial capacities will be transferred to us, according to their level of dependency.§!"
-
  #Communist International
  COM_Member: "Member of the Communist International"
  COM_Member_desc: "GDP Growth Boost: 5%§!\n\nThis nation is a fully independent member of the Communist Internationale, aligned with the Union of Soviet Socialist Republics to liberate the workers of the world. Such nations may or may not align with Moscow's Ideological Line and may take a more independent stance in determining the Socialist System within their own borders. Nevertheless, they will join a war should any other member get attacked."

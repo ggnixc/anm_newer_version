@@ -30,5 +30,26 @@ ideas = {
 				intel_network_gain_factor = 0.30
 			}
 		}
+		ULS_sectarian_state = { 
+			allowed = { always = no }
+			picture = ULS_sectarian_state
+			removal_cost = -1
+			modifier = {
+				party_popularity_stability_factor = -0.25
+				political_power_cost = 0.30
+				research_speed_factor = -0.15
+			}
+		}
+		ULS_rifle_for_every_man = { 
+			allowed = { always = no }
+			picture = ULS_rifle_for_every_man
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.05
+				supply_consumption_factor = 0.20
+				command_power_gain = -0.10
+				base_fuel_gain_factor = -0.20
+			}
+		}
 	}
 }

@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+			TUR_broken = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TUR_broken"}
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = TUR_broken
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+			    stability_factor = -0.10
+				 political_power_gain = -0.5
+                 war_support_factor = -0.05
+               compliance_gain_factor = -0.0025
+				
+			}
+		}
+
+	}
+}

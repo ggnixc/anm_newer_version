@@ -1,5 +1,6 @@
 ﻿add_namespace = USA_anm_events
 add_namespace = USA_election_events
+add_namespace = CIA.reports
 #### INTRO EVENTS ###
 ## ANGELS AND DEMONS
 country_event = {
@@ -33,6 +34,23 @@ country_event = {
 	option = { #
 		name = USA_anm_events.2.a
 		ai_chance = { factor = 1 }
+	}
+}
+country_event = {
+	    id = CIA.reports.1
+	    immediate = { log = "[GetDateText]: [Root.GetName]: event CIA.reports.1" }
+	    title = CIA.reports.1.t
+	    desc = CIA.reports.1.desc
+	    picture = GFX_anm_cia
+
+	    is_triggered_only = yes
+       	fire_only_once = yes
+ 
+	    option = {
+		    name = CIA.reports.1.a
+		hidden_effect = {
+			
+		}
 	}
 }
 

@@ -1,4 +1,7 @@
-﻿capital = 795 #Jakarta
+﻿### Characters ###
+recruit_character = INS_Sayidiman_Suryohadiprojo
+
+capital = 795
 load_focus_tree = ZZZ_national_focus
 set_oob = "INS_1962"
 
@@ -19,6 +22,8 @@ set_politics = {
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
     socialist = 2
@@ -31,18 +36,16 @@ set_popularities = {
     fascism = 4
     national_socialism = 0
     ultranationalism = 0
-    esoteric_nazism = 0
+     
 }
 
 add_ideas = {
+	#FACTION STATUS
+	
 	INS_minister_Ali_Saidkin_hog
 	INS_minister_Ali_Alatas_for
 	INS_minister_Try_Sutrisno_sec
 	INS_minister_Kwik_Gian_Gie_eco
-
-	Sphere_Coequal
-
-	INS_Guided_Democracy
 
 	#SOCIETAL DEVELOPMENT
 	tno_nuclear_stockpile_none
@@ -107,167 +110,4 @@ add_ideas = {
 	INS_Suwiryo_eco
 }
 
-create_country_leader = {
-	name = "Lukman Njoto"
-	expire = "2090.1.1"
-	desc = "POLITICS_SUKARNO_DESC"
-	picture = "Portrait_Indonesia_Sukarno.dds"
-	ideology = communist_subtype
-	traits = {
-	}
-}
 
-create_country_leader = {
-	name = "Agus Jabo Priyono"
-	expire = "2090.1.1"
-	desc = "POLITICS_SUKARNO_DESC"
-	picture = "Portrait_Indonesia_Sukarno.dds"
-	ideology = socialist_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Muchtar Pakpahan"
-	expire = "2090.1.1"
-	desc = "POLITICS_SUKARNO_DESC"
-	picture = "Portrait_Indonesia_Sukarno.dds"
-	ideology = progressivism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Siswono Yudo Husodo"
-	expire = "2090.1.1"
-	desc = "POLITICS_SUKARNO_DESC"
-	picture = "Portrait_Indonesia_Sukarno.dds"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Alwi Shihab"
-	expire = "1989.1.1"
-	desc = "POLITICS_SUKARNO_DESC"
-	picture = "Portrait_INS_Alwi_Shihab.dds"
-	ideology = conservatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Supeni Pudjobuntoro"
-	expire = "2090.1.1"
-	desc = ""
-	picture = "Portrait_INS_Supeni_Pudjobuntoro.dds"
-	ideology = paternalism_controlled_democracy_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Amien Rais"
-	expire = "2090.1.1"
-	desc = "POLITICS_SUKARNO_DESC"
-	picture = "Portrait_Indonesia_Sukarno.dds"
-	ideology = despotism_subtype
-	traits = {
-	}
-}
-	
-create_country_leader = {
-	name = "Yapto Soerjosoemarno"
-	expire = "2090.1.1"
-	desc = "POLITICS_SUKARNO_DESC"
-	picture = "Portrait_Indonesia_Sukarno.dds"
-	ideology = fascism_subtype
-	traits = {
-	}
-}	
-	
-create_field_marshal = {
-	name = "Suharto"
-	desc = "FIELD_MARSHAL_SUHARTO"
-	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_GeneralSuharto.dds"
-	traits = {
-		offensive_doctrine 
-		thorough_planner
-		organizer
-	}
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Abdul Haris Nasution"
-	desc = "FIELD_MARSHAL_ABDUL_HARIS_NASUTION"
-	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_General_Abdul_Haris_Nasution.dds"
-	traits = {
-		defensive_doctrine 
-		inspirational_leader
-	}
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "L.B Moerdani"
-	desc = "GENERAL_LB_MOERDANI"
-	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_General_LB_Moerdani.dds"
-	traits = { old_guard jungle_rat }
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Ignatius Rijadi"
-	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_General_Ignatius_Slamet_Rijadi.dds"
-	traits = {
-		trait_engineer
-		scavenger
-	}
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Alex Kawilarang"
-	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_Alex_Kawilarang.dds"
-	traits = {
-		infantry_leader
-	}
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_navy_leader = {
- 	name = "Yos Sudarso"
- 	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_Admiral_Yos_Sudarso.dds"
- 	traits = { blockade_runner }
- 	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 5
-	coordination_skill = 2
-}
-
-create_navy_leader = {
- 	name = "Sudomo"
- 	portrait_path = "gfx/leaders/INS/Portrait_Indonesia_Admiral_Sudomo.dds"
- 	traits = { old_guard }
- 	attack_skill = 3
-	defense_skill = 5
-	maneuvering_skill = 2
-	coordination_skill = 3
-}

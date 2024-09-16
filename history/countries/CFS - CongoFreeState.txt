@@ -1,17 +1,10 @@
-﻿capital = 295
+﻿
+capital = 295
 
-set_oob = "CFS_2000"
+set_oob = "COG_2000"
 add_ideas = {
-
 	#Standard Ideas#
-	
-	CFS_congo_war_congo_democratic_front
-	CFS_congo_spirit_of_freedom
 	#ministers
-	CFS_minister_muadiamvita_eco
-	CFS_minister_balumuene_for
-	CFS_minister_seeth_nadine_sec
-	CFS_minister_ernest_wamba_dia_wamba_hog
 	#polticial laws#
 	
 	tno_political_parties_controlled_opposition
@@ -28,80 +21,17 @@ add_ideas = {
 	
 }
 set_politics = {	
-	ruling_party = liberalism
-	last_election = "1933.5.17"
+	ruling_party = conservatism
+	last_election = "1992.7.17"
 	election_frequency = 60
-	elections_allowed = no
+	elections_allowed = yes
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 0
     progressivism = 10
-    liberalism = 60
-    liberal_conservatism = 0
-    conservatism = 12
-    paternalism = 8
-    despotism = 10
-    fascism = 0
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Jean-Philibert Mabaya"
-	desc = "POLITICS_THE_JEAN_PHILIBERT_MABAYA_DESC"
-	picture = "Portrait_Congo_Jean_Philibert_Mabaya.dds"
-	expire = "2999.1.23"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Why am I here?"
-	desc = "POLITICS_FUNNY_CONGO_DESC"
-	picture = "Portrait_Congo_Mama.dds"
-	expire = "2999.1.1"
-	ideology = esoteric_nazism_subtype
-	traits = {
-	}
-}
-create_corps_commander = {
-	name = "Kongolu 'Sseth' Nadine"
-	desc = "GENERAL_KONGOLOU_NADINE_DESC"
-	picture = "Portrait_Congo_Kongolou_Nadine.dds"
-	traits = { }
-
-	skill = 4
-	id = 100000
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Komayombi Kaposho"
-	desc = "GENERAL_CONGO_KOMAYOMBI_KAPOSHO_DESC"
-	picture = "Portrait_Congo_Komayombi_Kaposho.dds"
-	traits = { }
-	
-	skill = 1
-	id = 100003
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_field_marshal = {
-	name = "Kisempia Sungilanga"
-	desc = "GENERAL_CONGO_KISEMPIA_SUNGILANGA_DESC"
-	picture = "Portrait_Congo_Kisempia_Sungilanga.dds"
-	traits = { }
-	
-	skill = 1
-	id = 100004
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
+    liberalism = 12
+    conservatism = 60
+    paternalism = 18
 }

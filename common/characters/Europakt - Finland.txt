@@ -1,0 +1,165 @@
+characters = { 
+	FIN_elizabeth_rehn = {   
+		name = FIN_elizabeth_rehn
+		portraits = { 
+			civilian = { large = "gfx/leaders/FIN/Portrait_FIN_Elizabeth_Rehn.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_ELIZABETH_REHN_DESC"
+			ideology = liberal_conservatism_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	FIN_tarja_halonen = { 
+		name = FIN_tarja_halonen
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FIN/Portrait_FIN_Tarja_Halonen.dds"
+				small = "GFX_idea_FIN_Tarja_Halonen" 
+			} 	
+		} 
+		country_leader = {
+			ideology = progressivism_1_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = FIN_Tarja_Halonen_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FIN_esko_aho = {  
+		name = FIN_esko_aho
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FIN/Portrait_FIN_Esko_Aho.dds"
+				small = "GFX_idea_FIN_Esko_Aho" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = FIN_Esko_Aho_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	} 
+	FIN_martti_ahtisaari = {   
+		name = FIN_martti_ahtisaari
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FIN/Portrait_FIN_Martti_Ahtisaari.dds"
+				small = "GFX_idea_FIN_Martti_Ahtisaari" 
+			} 	
+		} 
+		country_leader = {
+			ideology = progressivism_subtype
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = FIN_Martti_Ahtisaari_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FIN_sauli_ninisto = { 
+		name = FIN_sauli_ninisto
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/FIN/Portrait_FIN_Sauli_Ninisto.dds"
+				small = "GFX_idea_FIN_Sauli_Ninisto" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = FIN_Sauli_Ninisto_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FIN_pertti_linkola = {  
+		name = FIN_pertti_linkola
+		country_leader = {
+			ideology = ultranationalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	FIN_olavi_maenpaa = {  
+		name = FIN_olavi_maenpaa
+		country_leader = {
+			ideology = fascism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	FIN_timo_soini = {  
+		name = FIN_timo_soini
+		country_leader = {
+			ideology = paternalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	FIN_matti_vanhanen = {  
+		name = FIN_matti_vanhanen
+		country_leader = {
+			ideology = conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	FIN_erkki_tuomioja = {  
+		name = FIN_erkki_tuomioja
+		country_leader = {
+			ideology = progressivism_2_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	FIN_osmo_soininvaara = {  
+		name = FIN_osmo_soininvaara
+		country_leader = {
+			ideology = liberalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	FIN_yrjo_hakanen = {  
+		name = FIN_yrjo_hakanen
+		country_leader = {
+			ideology = communist_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+	#Communists
+	FDR_Yrjo_Hakanen = {   
+		name = FDR_Yrjo_Hakanen
+		portraits = { 
+			civilian = { large = "gfx/leaders/FDR/Portrait_FIN_Yrjo_Hakanen.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_YRJO_HAKANEN_DESC"
+			ideology = communist_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+} 

@@ -1,0 +1,94 @@
+characters = {
+	SLO_jozef_sasik = { 
+		name = SLO_jozef_sasik
+		portraits = { 
+			civilian = { large = "gfx/leaders/SLO/Portrait_SLO_Jozef_Sasik.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_JOZEF_SASIK_DESC"
+			ideology = national_socialism_clerical_fascism_subtype
+			traits = { affable_puppet }
+			expire = "2999.1.1.1"
+		}
+	}
+	SLO_mizik_stanislav = {  
+		name = SLO_mizik_stanislav
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SLO/Portrait_SLO_Mizik_Stanislav.dds"
+				small = "GFX_idea_SLO_Mizik_Stanislav" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = SLO_Mizik_Stanislav_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SLO_jozef_viktorin = {  
+		name = SLO_jozef_viktorin
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SLO/Portrait_SLO_Jozef_Viktorin.dds"
+				small = "GFX_idea_SLO_Jozef_Viktorin" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = SLO_Jozef_Viktorin_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SLO_lubomir_hudo = {  
+		name = SLO_lubomir_hudo
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SLO/Portrait_SLO_Lubomir_Hudo.dds"
+				small = "GFX_idea_SLO_Lubomir_Hudo" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = SLO_Lubomir_Hudo_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	SLO_vladimir_chovan = { 
+		name = SLO_vladimir_chovan
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/SLO/Portrait_SLO_Vladimir_Chovan.dds"
+				small = "GFX_idea_SLO_Vladimir_Chovan" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = SLO_Vladimir_Chovan_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+} 

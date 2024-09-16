@@ -539,18 +539,6 @@ news_event = { #Burgandian War
 	}
 }
 
-news_event = { #Israel in the KdN
-	id = WORLD.18136
-	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18136"}
-	title = WORLD.18136.t
-	desc = WORLD.18136.d
-	picture = GFX_anm_kdn1
-	is_triggered_only = yes
-	option = {
-		name = WORLD.18136.a
-	}
-}
-
 news_event = { #European Democratisation
 	id = WORLD.18137
 	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18137"}
@@ -623,17 +611,6 @@ news_event = { #RL Baltikum invasion
 	}
 }
 
-news_event = { #kdn capital moves
-	id = WORLD.18143
-	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18143"}
-	title = WORLD.18143.t
-	desc = WORLD.18143.d
-	picture = GFX_anm_kdn1
-	is_triggered_only = yes
-	option = {
-		name = WORLD.18143.a
-	}
-}
 
 news_event = { #nigeria civilwar
 	id = WORLD.18144
@@ -1055,16 +1032,6 @@ news_event = { #dems wins 2GCW
 		name = WORLD.18168.a
 	}
 }
-news_event = { #kdn mandate wins 2GCW
-	id = WORLD.18169
-	title = WORLD.18169.t
-	desc = WORLD.18169.d
-	picture = GFX_anm_kdn
-	is_triggered_only = yes
-	option = {
-		name = WORLD.18169.a
-	}
-}
 news_event = { #italy thing
 	id = WORLD.18170
 	title = WORLD.18170.t
@@ -1176,3 +1143,288 @@ news_event = {
 		name = WORLD.18178.a
 	}
 }
+news_event = {
+	id = WORLD.18179 #Peruvian Civil War
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18179"}
+	title = WORLD.18179.t
+	desc = WORLD.18179.desc
+	picture = GFX_anm_PRU_peruvian_civilwar
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18179.a
+	}
+}
+news_event = {
+	id = WORLD.18180 #Peruvian Govt Wins
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18180"}
+	title = WORLD.18180.t
+	desc = WORLD.18180.desc
+	picture = GFX_anm_PRU_Government_Wins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18180.a
+	}
+}
+news_event = {
+	id = WORLD.18181 #MRA Wins
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18181"}
+	title = WORLD.18181.t
+	desc = WORLD.18181.desc
+	picture = GFX_anm_MRA_wins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18181.a
+	}
+}
+news_event = {
+	id = WORLD.18182 #Keiko Takes Over
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18182"}
+	title = WORLD.18182.t
+	desc = WORLD.18182.desc
+	picture = GFX_anm_Keiko_wins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18182.a
+	}
+}
+news_event = {
+	id = WORLD.18183 #Garcia Takes Over
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18183"}
+	title = WORLD.18183.t
+	desc = WORLD.18183.desc
+	picture = GFX_anm_Garcia_wins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18183.a
+	}
+}
+news_event = {
+	id = WORLD.18184 #Peru hold elections
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18184"}
+	title = WORLD.18184.t
+	desc = WORLD.18184.desc
+	picture = GFX_anm_Peru_elections
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18184.a
+	}
+}
+news_event = {
+	id = WORLD.18185 #Finnish Civil War
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18185"}
+	title = WORLD.18185.t
+	desc = WORLD.18185.desc
+	picture = GFX_WORLD_GER_fcw
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18185.a
+		trigger = {
+			NOT = { tag = GER }
+			NOT = { tag = SOV }
+			NOT = {  is_in_faction_with = GER }
+			NOT = {  is_in_faction_with = SOV }
+		}
+	}
+	option = {
+		name = WORLD.18185.b
+		trigger = {
+			OR = { 
+				tag = SOV
+				is_in_faction_with = SOV
+			} 
+		}
+	}
+	option = {
+		name = WORLD.18185.c
+		trigger = {
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			} 
+		}
+	}
+}
+news_event = {
+	id = WORLD.18186 #Nuclear Fusion unlocked
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18186"}
+	title = WORLD.18186.t
+	desc = WORLD.18186.desc
+	picture = GFX_WORLD_GER_fusion_technology
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18186.a
+	}
+}
+news_event = {
+	id = WORLD.18187 #Finnish Communist Victory
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18187"}
+	title = WORLD.18187.t
+	desc = WORLD.18187.desc
+	picture = GFX_anm_finnish_communist_victory_parade
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18187.a
+	}
+}
+news_event = {
+	id = WORLD.18188 #Jose Joe Baxter Takes Over Argentina
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18188"}
+	title = WORLD.18188.t
+	desc = WORLD.18188.desc
+	picture = GFX_anm_baxter_takes_over
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18188.a
+	}
+}
+news_event = {
+	id = WORLD.18189 #Manchukuo CW breaks out
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18189"}
+	title = WORLD.18189.t
+	desc = WORLD.18189.desc
+	picture = GFX_news_event_italy_war_germany
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18189.a
+	}
+}
+news_event = {
+	id = WORLD.18190 #Japan wins in Manchukuo
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18190"}
+	title = WORLD.18190.t
+	desc = WORLD.18190.desc
+	picture = GFX_news_event_manchukuo
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18190.a
+	}
+}
+news_event = {
+	id = WORLD.18191 #NAJUA wins in Manchukuo
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18191"}
+	title = WORLD.18191.t
+	desc = WORLD.18191.desc
+	picture = GFX_news_event_NAJUA_win
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18191.a
+	}
+}
+news_event = {
+	id = WORLD.18192 #Joh Bjelke-Petersen is killed
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18192"}
+	title = WORLD.18192.t
+	desc = WORLD.18192.desc
+	picture = GFX_news_event_petersen_assassinated
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18192.a
+	}
+}
+news_event = {
+	id = WORLD.18193 #Andrew Peacock holds on
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18193"}
+	title = WORLD.18193.t
+	desc = WORLD.18193.desc
+	picture = GFX_news_event_peacock_wins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18193.a
+	}
+}
+news_event = {
+	id = WORLD.18194 #Alexander Downer wins
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18194"}
+	title = WORLD.18194.t
+	desc = WORLD.18194.desc
+	picture = GFX_news_event_downer_wins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18194.a
+	}
+}
+news_event = {
+	id = WORLD.18195 #Robin Gray wins
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18195"}
+	title = WORLD.18195.t
+	desc = WORLD.18195.desc
+	picture = GFX_news_event_gray_wins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18195.a
+	}
+}
+news_event = {
+	id = WORLD.18196 #Graeme Campbell wins
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18196"}
+	title = WORLD.18196.t
+	desc = WORLD.18196.desc
+	picture = GFX_news_event_campbell_wins
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18196.a
+	}
+}
+news_event = {
+	id = WORLD.18197 #Canberra riots fail
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18197"}
+	title = WORLD.18197.t
+	desc = WORLD.18197.desc
+	picture = GFX_news_event_canberra_riots_fail
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18197.a
+	}
+}
+news_event = {
+	id = WORLD.18198 #Canberra riots succeed
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18198"}
+	title = WORLD.18198.t
+	desc = WORLD.18198.desc
+	picture = GFX_news_event_canberra_riots_succeed
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18198.a
+	}
+}
+

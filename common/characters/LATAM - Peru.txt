@@ -1,4 +1,96 @@
 characters = {
+	PRU_Mario_Vargas_Llosa = {
+		name = PRU_Mario_Vargas_Llosa
+		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Mario_Vargas_Llosa.dds" } }
+		country_leader = {
+			desc = ""
+			expire = "2090.4.20"
+			ideology = despotism_civilian_dictatorship_subtype
+			traits = { 
+			}
+			id = -1
+		}
+	}
+	PRU_Ricardo_Marquez_Flores = {
+		name = PRU_Ricardo_Marquez_Flores
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/PRU/Portrait_PRU_Ricardo_Marquez_Flores.dds"
+				small = "GFX_idea_PRU_Ricardo_Marquez_Flores" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = PRU_Ricardo_Marquez_Flores_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PRU_Victor_Malca_Villanueva = {
+		name = PRU_Victor_Malca_Villanueva
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/PRU/Portrait_PRU_Victor_Malca_Villanueva.dds"
+				small = "GFX_idea_PRU_Victor_Malca_Villanueva" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = PRU_Victor_Malca_Villanueva_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PRU_Efrain_Goldenberg = {
+		name = PRU_Efrain_Goldenberg
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/PRU/Portrait_PRU_Efrain_Goldenberg.dds"
+				small = "GFX_idea_PRU_Efrain_Goldenberg" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = PRU_Efrain_Goldenberg_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	PRU_Jorge_Camet = {
+		name = PRU_Jorge_Camet
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/PRU/Portrait_PRU_Jorge_Camet.dds"
+				small = "GFX_idea_PRU_Jorge_Camet" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = PRU_Jorge_Camet_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
 	PRU_Cesar_Saucedo_Sanchez = {
 		name = PRU_Cesar_Saucedo_Sanchez
 		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Cesar_Sanchez.dds" } }
@@ -7,6 +99,38 @@ characters = {
 			expire = "2060.4.20"
 			ideology = despotism_military_junta_subtype
 			traits = { }
+			id = -1
+		}
+		field_marshal = {
+			traits = { infantry_officer organizer infantry_leader infantry_expert }
+			skill = 5
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	PRU_Keiko_Fujimori = {
+		name = PRU_Keiko_Fujimori
+		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Keiko_Fujimori.dds" } }
+		country_leader = {
+			desc = ""
+			expire = "2090.4.20"
+			ideology = paternalism_right_wing_populism_subtype
+			traits = { 
+			}
+			id = -1
+		}
+	}
+	PRU_Alan_Garcia = {
+		name = PRU_Alan_Garcia
+		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Alan_Garcia.dds" } }
+		country_leader = {
+			desc = ""
+			expire = "2090.4.20"
+			ideology = paternalism_social_nationalism_subtype
+			traits = { 
+			}
 			id = -1
 		}
 	}

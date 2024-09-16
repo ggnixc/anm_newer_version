@@ -92,7 +92,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "mainmenu_single_player"
 		position = { x=0 y =0}
-		size = { width = 320 height = 395}
+		size = { width = 320 height = 300}
 		Orientation = CENTER
 		Origo = center
 
@@ -217,7 +217,7 @@ guiTypes = {
 	#width = 938 height = 75
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=0 y =-32}
+		position = { x=0 y =-35}
 		size = { width = 1100 height = 800 }
 		Orientation = CENTER_DOWN
 		Origo = center
@@ -226,26 +226,26 @@ guiTypes = {
 		iconType = {
 			name ="GFX_fronticons"
 			spriteType = "GFX_fronticons"
-			position = { x= 83 y = -4 }
+			position = { x= 83 y = -84 }
 		}
 
 		instantTextBoxType = {
 			name ="version_label"
-			position = { x = 600 y = 5 }
+			position = { x = 721 y = -24 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_14_outline"
 			borderSize = {x = 0 y = 0}
 			text = "V1.0.3"
-			format = right
+			format = left
 			maxWidth = 400
 			maxHeight = 20
 		}
 
 		instantTextBoxType = {
 			name ="tno_version_label"
-			position = { x = 100 y = 5 }
+			position = { x = 128 y = -71 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_white_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = tno_current_version
 			format = left
@@ -258,7 +258,7 @@ guiTypes = {
 		containerWindowType = {
 			name ="mainmenu_panel_bottom_ghost"
 			position = { x= 0 y= 0 }
-			size = { width = 938 height = 75 }
+			size = { width = 934 height = 74 }
 			Orientation = CENTER
 			Origo = center
 
@@ -271,7 +271,7 @@ guiTypes = {
 		######################################### Buttons at the bottom
 		ButtonType = {
 			name = "single_player_button"
-			position = { x = 96 y = 375 }
+			position = { x = 96 y = 382 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "aldrich_18_outline"
 			text = "FE_SINGLE_PLAYER"
@@ -281,7 +281,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "multi_player_button"
-			position = { x = 409 y = 375}
+			position = { x = 409 y = 382 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "aldrich_18_outline"
 			text = "FE_MULTI_PLAYER"
@@ -300,10 +300,13 @@ guiTypes = {
 
 		ButtonType = {
 			name = "settings_button"
-			position = { x = 43 y = 14 }
+			position = { x = 99 y = -33 }
 			quadTextureSprite ="GFX_settings_icon"
+			font = "aldrich_18_outline"
 			clicksound = click_default
 			oversound = ui_menu_over
+			text = "  Settings"
+			format = left
 			pdx_tooltip = OPTIONS_TOOLTIP
 		}
 		
@@ -328,19 +331,25 @@ guiTypes = {
 
 		ButtonType = {
 			name = "credits_button"
-			position = {  x = 43 y = 54 }
+			position = {  x = 202 y = -33 }
 			quadTextureSprite ="GFX_credits_icon"
+			font = "aldrich_18_outline"
 			clicksound = click_default
 			oversound = ui_menu_over
+			text = "  Credits"
+			format = left
 			pdx_tooltip = FE_CREDITS_TOOLTIP
 		}
 
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 43 y = 94 }
+			position = { x = 292 y = -33 }
 			quadTextureSprite = "GFX_nudge_icon"
+			font = "aldrich_18_outline"
 			clicksound = click_default
 			oversound = ui_menu_over
+			text = "  Nudge"
+			format = left
 			pdx_tooltip = FE_NUDGE_TOOLTIP
 		}
 		
@@ -357,7 +366,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "exit_button"
-			position = { x = 716 y = 375 }
+			position = { x = 716 y = 382 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "aldrich_18_outline"
 			text = "FE_EXIT"

@@ -18,20 +18,18 @@ TNO_Spheres_init = {
 				tag = BRG
 				tag = ROM
 				tag = FRA
-				tag = POL
+				tag = GGN
 				tag = SLO
 				tag = UKR
 				tag = OST
 				tag = SWE
 				tag = FIN
 				tag = DEN
-				tag = HOL
 				tag = NOR
 				tag = IRE
 				tag = BLR
 				tag = HUN
 				tag = MRZ
-				tag = NDO
 				tag = SER
 				tag = MOS
 				tag = CAU
@@ -39,9 +37,11 @@ TNO_Spheres_init = {
 				tag = ENG
 				tag = PER
 				tag = DOM
-				tag = VEN
-				tag = FLR
-				tag = WLN
+				tag = TNS
+				tag = BUL
+				tag = ALG
+				tag = ULS
+				tag = PAK
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = GER }
@@ -63,9 +63,7 @@ TNO_Spheres_init = {
 			OR = {
 				tag = USA
 				tag = FEN
-				tag = LIB
 				tag = SAF
-				tag = MDI
 				tag = COS
 				tag = GLP
 				tag = GUA
@@ -89,16 +87,24 @@ TNO_Spheres_init = {
 				tag = SUR
 				tag = FEN
 				tag = FAR
-				tag = LIB
 				tag = MEX
-				tag = COL
-				tag = RAJ
+				tag = VEN
+				tag = IND
 				tag = CUR
-				tag = NIC
 				tag = LTH
 				tag = SWZ
-				tag = ZIM
 				tag = SHL
+				tag = NAM
+				tag = MZB
+				tag = ANG
+				tag = COG
+				tag = QUE
+				tag = EAF
+				tag = CYL
+				tag = HON
+				tag = PAN
+				tag = GAB
+				tag = FJI
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = USA }
@@ -122,13 +128,16 @@ TNO_Spheres_init = {
 				tag = BUR
 				tag = KOR
 				tag = SYO
-				tag = INS
 				tag = SRK
 				tag = SIA
 				tag = BRU
 				tag = MAN
-				tag = BEN
 				tag = PHI
+				tag = VIN
+				tag = CAM
+				tag = SBH
+				tag = LAO
+				tag = GNG
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = JAP }
@@ -148,24 +157,24 @@ TNO_Spheres_init = {
 				tag = SNM
 				tag = VAC
 				tag = ITA
-				tag = SAU
-				tag = CRO
-				tag = OMA
 				tag = CRO
 				tag = SNM
-				tag = ALB
 				tag = MNT
-				tag = TUN
-				tag = BUL
 				tag = GRE
-				tag = JOR
-				tag = JER
 				tag = PAL
 				tag = ISR
-				tag = LEB
-				tag = UAE
-				tag = YEM
 				tag = IRQ
+				tag = SWI
+				tag = LBA
+				tag = EGY
+			    tag = LEB
+				tag = UAE
+				tag = TUN
+				tag = ALB
+				tag = ETH
+				tag = ERT
+				tag = SML
+				tag = KEN
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = ITA }
@@ -202,16 +211,15 @@ TNO_Spheres_init = {
 			OR = {
 				tag = SOV
 				tag = FER
-				tag = VIN
-				tag = LAO
-				tag = CAM
-				tag = CAO
-				tag = BKF
-				tag = GBE
-				tag = EWE
+				tag = BZZ
 				tag = IVO
-				tag = ETH
 				tag = ECU
+				tag = OMA
+				tag = GZO
+				tag = PRC
+				tag = FDR
+				tag = MZB
+				tag = NIC
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = SOV }
@@ -223,22 +231,46 @@ TNO_Spheres_init = {
 			OR = {
 				tag = CHI
 				tag = TIB
-				tag = MON
-				tag = GNG
+				tag = MEN
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = CHI }
 	}
 
-	### Andean
-	ADN = { set_country_flag = HAS_ECON_SPHERE }
+	### Indian Sphere
+	AZH = { set_country_flag = HAS_ECON_SPHERE }
 	every_country = {
 		limit = {
 			OR = {
-				tag = ADN
+				tag = AZH
+				tag = NEP
+				tag = BHU
 			}
 		}
-		set_variable = { ECON_SPHERE_LEADER = ADN }
+		set_variable = { ECON_SPHERE_LEADER = AZH }
+	}
+	
+	### West African Sphere
+	SEN = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = SEN
+				tag = JOL
+				tag = SUS
+				tag = SLE
+				tag = IVO
+				tag = MLI
+				tag = BKF
+				tag = NGR
+				tag = GHA
+				tag = GBE
+				tag = NIG
+				tag = GNB
+				tag = LIB
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = SEN }
 	}
 
 	### Iberia
@@ -247,12 +279,23 @@ TNO_Spheres_init = {
 		limit = {
 			OR = {
 				tag = IBR
-				tag = HON
-				tag = PAN
 				tag = PAD
+				tag = COL
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = IBR }
+	}
+
+	### Turkey
+	TUR = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = TUR
+				tag = ARM
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = TUR }
 	}
 }
 

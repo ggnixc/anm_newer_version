@@ -1,0 +1,41 @@
+ideas = {
+	country = {
+		TNS_Last_Bastion_Of_Free_Ukraine = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = TNS_Last_Bastion_Of_Free_Ukraine
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				autonomy_gain = 1
+			}
+		}
+		TNS_Spectre_Of_Communism = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = TNS_Spectre_Of_Communism
+			removal_cost = -1
+
+			modifier = {
+				communist_drift = 0.1
+				political_power_cost = 0.15
+			}
+		}
+		TNS_False_Identity = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = TNS_False_Identity
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.10
+				communist_acceptance = -20
+				monthly_population = -0.05
+			}
+		}
+	}
+}

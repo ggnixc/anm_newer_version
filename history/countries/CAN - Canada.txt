@@ -1,6 +1,13 @@
 ﻿capital = 276
 
-set_cosmetic_tag = CAN_UK
+#set_cosmetic_tag = CAN_UK
+recruit_character = CAN_Jean_Charest
+recruit_character = CAN_Dave_Barrett
+recruit_character = CAN_Peter_MacKay
+recruit_character = CAN_Preston_Manning
+recruit_character = CAN_Paul_Martin
+recruit_character = CAN_Jack_Layton
+recruit_character = CAN_Gilles_Duceppe
 
 set_oob = "CAN_1962"
 
@@ -61,88 +68,31 @@ add_ideas = {
 }
 
 set_politics = {	
-	ruling_party = conservatism
-	last_election = "1958.6.30"
+	ruling_party = progressivism
+	last_election = "1993.10.25"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
 	socialist = 8
-    progressivism = 11
-    liberalism = 40
+    progressivism = 39
+    liberalism = 20
     liberal_conservatism = 11
-    conservatism = 19
+    conservatism = 11
 	paternalism = 11
     socialist = 0
     despotism = 0
     fascism = 0
     national_socialism = 0
     ultranationalism = 0
-    esoteric_nazism = 0
+     
 }
 
-create_country_leader = {
-	name = "Jean Charest"
-	picture = "Portrait_CAN_Jean_Charest.dds"
-	expire = "2999.4.20"
-	ideology = conservatism_subtype
-	traits = {
-	}
-}
-
-
-create_country_leader = {
-	name = "Peter MacKay"
-	picture = ".dds"
-	expire = "2999.4.20"
-	ideology = liberal_conservatism_subtype
-	traits = {
-	}
-}
-
-
-create_country_leader = {
-	name = "Preston Manning"
-	picture = ".dds"
-	expire = "2999.4.20"
-	ideology = paternalism_right_wing_populism_subtype
-	traits = {
-	}
-}
-
-
-create_country_leader = {
-	name = "Paul Martin"
-	picture = ".dds"
-	expire = "2999.4.20"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-
-create_country_leader = {
-	name = "Jack Layton"
-	picture = ".dds"
-	expire = "2999.4.20"
-	ideology = progressivism_democratic_socialism_subtype
-	traits = {
-	}
-}
-
-
-create_country_leader = {
-	name = "Gilles Duceppe"
-	picture = ".dds"
-	expire = "2999.4.20"
-	ideology = socialist_left_wing_nationalism_subtype
-	traits = {
-	}
-}
-
-###Leaders
+###Military Leaders
 
 create_field_marshal = {
 	name = "Jacques Dextraze"

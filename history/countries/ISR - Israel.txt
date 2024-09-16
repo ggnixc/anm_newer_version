@@ -1,18 +1,15 @@
-﻿capital = 454
+﻿recruit_character = ISR_Avraham_Poraz
+recruit_character = ISR_Yitzhak_Rabin
+capital = 454
 
-unlock_national_focus = ISR_a_narrow_victory
+set_cosmetic_tag = ISR_JAR
 
 set_oob = "ISR_2000"
 
-set_variable = { ANMKDN_showednation_agenda_one = 2 }
-set_variable = { ANMKDN_showednation_agenda_two = 4 }
-set_variable = { ANMKDN_showednation_agenda_three = 19 }
-
 add_ideas = {
+	
 	##MINISTERS
-	ISR_michael_b_oren_for
     ##FACTION STATUS##
-	Levantine_Union_Member
 	##POLITICAL LAWS##
 	tno_political_parties_multiparty_system
 	tno_religious_rights_pluralism
@@ -60,67 +57,32 @@ add_ideas = {
 	tno_agriculture_basic_mechanized
 	tno_research_facilities_modern
 	tno_academic_base_secondary_schooling
-	##CUSTOM##
-	ISR_homeland_for_the_jewish_people
-	ISR_developed_economy
-	ISR_a_pluralistic_nation
+}
+
+IRQ = {
+	puppet = ISR
 }
 
 set_politics = {	
-	ruling_party = progressivism
+	ruling_party = paternalism
 	last_election = "1933.3.5"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 
 }
 
-add_opinion_modifier = {target = GER modifier = amalek_nation }
+TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 12
+    communist = 0
     ultranationalism = 0
-    socialist = 13
-    progressivism = 11
+    socialist = 8
+    progressivism = 13
     liberalism = 17
     liberal_conservatism = 0
-    conservatism = 29
-    paternalism = 18
+    conservatism = 11
+    paternalism = 32
     despotism = 0
-    fascism = 0
-    national_socialism = 0
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Yitzhak Rabin"
-	picture = "Portrait_Israel_Yitzhak_Rabin.dds"
-	expire = "2999.2.6"
-	desc = "POLITICS_Yitzhak_Rabin_DESC"
-	ideology = progressivism_labor_zionism_subtype
-	traits = {
-		
-	}
-}
-
-create_corps_commander = {
-	name = "Gadi Eizenkot"
-	portrait_path = "Portrait_Israel_Army_Gadi_Eizenkot.dds"
-	traits = { urban_assault_specialist fortress_buster }
-	skill = 3
-    attack_skill = 1
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 3
-}
-
-
-create_corps_commander = {
-	name = "Aviv Kochavi"
-	portrait_path = "Portrait_Israel_Army_Aviv_Kochavi.dds"
-	traits = { urban_assault_specialist fortress_buster }
-	skill = 3
-    attack_skill = 1
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 3
+    fascism = 19
+    national_socialism = 0    
 }

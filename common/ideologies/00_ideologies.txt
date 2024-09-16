@@ -8,36 +8,23 @@
 #Note: AI changed back to all neutral ai. This is because the other AI doesn't want to be apart of things if the tension is so low (IE at game start)
 
 ideologies = {
-	esoteric_nazism = {
-		types = {
-			esoteric_nazism_subtype = {}
-
-			esoteric_nazism_burgundian_system_subtype = { can_be_randomly_selected = no }
-			esoteric_nazism_imperial_cult_subtype = { can_be_randomly_selected = no }
-			esoteric_nazism_agrarian_spartanism_subtype = { can_be_randomly_selected = no }
-			esoteric_nazism_deep_ecology_nazism_subtype = { can_be_randomly_selected = no }
-		}
+	########################################
+	#          National Socialism          #
+	########################################
+	national_socialism_1 = {
+		types = { national_socialism_1_subtype = {} }
 		dynamic_faction_names = {}
-		color = { 52 25 80 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 5.0
-				army_intel_to_others = 5.0
-				navy_intel_to_others = 5.0
-				airforce_intel_to_others = 5.0
-			}
-		}
+		color = { 30 13 10 }
 		ai_neutral = yes
 		can_be_boosted = no
 	}
-
+	national_socialism_2 = {
+		types = { national_socialism_2_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 40 23 20 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 	national_socialism = {
 		types = {
 			national_socialism_subtype = {}
@@ -51,6 +38,8 @@ ideologies = {
 			national_socialism_revolutionary_nazism_subtype = { can_be_randomly_selected = no }
 			national_socialism_reformed_national_socialism_subtype = { can_be_randomly_selected = no }
 			national_socialism_esoteric_baathism_subtype = { can_be_randomly_selected = no }
+			national_socialism_naturalised_nazism_subtype = { can_be_randomly_selected = no }
+			national_socialism_rosenbergite_tendency_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
 		color = { 50 33 30 }
@@ -72,113 +61,38 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
-
-	national_socialism_1 = {
-		types = {
-			national_socialism_1_subtype = {}
-
-			national_socialism_1_idiosyncratic_nazism_subtype = { can_be_randomly_selected = no }
-
-		}
-		dynamic_faction_names = {}
-		color = { 30 13 10 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 15.0
-				army_intel_to_others = 10.0
-				navy_intel_to_others = 10.0
-				airforce_intel_to_others = 10.0
-			}
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	national_socialism_2 = {
-		types = {
-			national_socialism_2_subtype = {}
-
-		}
-		dynamic_faction_names = {}
-		color = { 40 23 20 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 15.0
-				army_intel_to_others = 10.0
-				navy_intel_to_others = 10.0
-				airforce_intel_to_others = 10.0
-			}
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
 	national_socialism_3 = {
-		types = {
-			national_socialism_3_subtype = {}
-
-		}
+		types = { national_socialism_3_subtype = {} }
 		dynamic_faction_names = {}
 		color = { 60 43 40 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 15.0
-				army_intel_to_others = 10.0
-				navy_intel_to_others = 10.0
-				airforce_intel_to_others = 10.0
-			}
-		}
 		ai_neutral = yes
 		can_be_boosted = no
 	}
-
 	national_socialism_4 = {
-		types = {
-			national_socialism_4_subtype = {}
-
-		}
+		types = { national_socialism_4_subtype = {} }
 		dynamic_faction_names = {}
 		color = { 70 53 50 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 15.0
-				army_intel_to_others = 10.0
-				navy_intel_to_others = 10.0
-				airforce_intel_to_others = 10.0
-			}
-		}
 		ai_neutral = yes
 		can_be_boosted = no
 	}
 
+	########################################
+	#                Fascism               #
+	########################################
+	fascism_1 = {
+		types = { fascism_1_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 90 25 15 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	fascism_2 = {
+		types = { fascism_2_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 100 35 25 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 	fascism = {
 		types = {
 			fascism_subtype = {}
@@ -197,10 +111,12 @@ ideologies = {
 			fascism_integralism_subtype = { can_be_randomly_selected = no }
 			fascism_neofascism_subtype = { can_be_randomly_selected = no }
 			fascism_falangism_subtype = { can_be_randomly_selected = no }
-			fascism_ecclesiastic_nationalism_subtype = { can_be_randomly_selected = no }
+			fascism_clerical_fascism_subtype = { can_be_randomly_selected = no }
 			fascism_balboite_fascism_subtype = { can_be_randomly_selected = no }
 			fascism_Saddamism_subtype = { can_be_randomly_selected = no }
+			fascism_baathism_subtype = { can_be_randomly_selected = no }
 			fascism_Salafism_subtype = { can_be_randomly_selected = no }
+			fascism_social_credit_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
 		color = { 110 45 35 }
@@ -222,7 +138,25 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
+	fascism_3 = {
+		types = { fascism_3_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 120 55 45 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	fascism_4 = {
+		types = { fascism_4_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 130 65 55 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 
+	
+	########################################
+	#           Ultranationalism           #
+	########################################
 	ultranationalism = {
 		types = {
 			ultranationalism_subtype = {}
@@ -255,7 +189,16 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
-
+	########################################
+	#               Despotism              #
+	########################################
+	despotism_1 = {
+		types = { despotism_1_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 55 55 55 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 	despotism = {
 		types = {
 			despotism_subtype = {}
@@ -278,6 +221,7 @@ ideologies = {
 			despotism_national_catholicism_subtype = { can_be_randomly_selected = no }
 			despotism_managerial_state_subtype = { can_be_randomly_selected = no }
 			despotism_institutional_despotism_subtype = { can_be_randomly_selected = no }
+			despotism_wang_jingwei_thought_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
 		color = { 65 65 65 }
@@ -299,7 +243,24 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
+	despotism_2 = {
+		types = { despotism_2_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 75 75 75 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 
+	########################################
+	#              Paternalism             #
+	########################################
+	paternalism_1 = {
+		types = { paternalism_1_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 101 101 101 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 	paternalism = {
 		types = {
 			paternalism_subtype = {}
@@ -331,7 +292,9 @@ ideologies = {
 			paternalism_poujadism_subtype = { can_be_randomly_selected = no }
 			paternalism_democratic_fascism_subtype = { can_be_randomly_selected = no }
 			paternalism_pinochetism_subtype = { can_be_randomly_selected = no }
-
+			paternalism_authoritarian_developmentalism_subtype = { can_be_randomly_selected = no }
+			paternalism_wang_jingwei_thought_subtype = { can_be_randomly_selected = no }
+			paternalism_subhasism_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
 		color = { 111 111 111 }
@@ -353,7 +316,24 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
+	paternalism_2 = {
+		types = { paternalism_2_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 121 121 121 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 
+	########################################
+	#             Conservatism             #
+	########################################
+	conservatism_1 = {
+		types = { conservatism_1_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 16 16 91 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 	conservatism = {
 		types = {
 			conservatism_subtype = {}
@@ -390,7 +370,17 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
+	conservatism_2 = {
+		types = { conservatism_2_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 36 36 111 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 
+	########################################
+	#         Liberal Conservatism         #
+	########################################
 	liberal_conservatism = {
 		types = {
 			liberal_conservatism_subtype = {}
@@ -417,6 +407,17 @@ ideologies = {
 				airforce_intel_to_others = 10.0
 			}
 		}
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+
+	########################################
+	#              Liberalism              #
+	########################################
+	liberalism_1 = {
+		types = { liberalism_1_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 78 91 137 }
 		ai_neutral = yes
 		can_be_boosted = no
 	}
@@ -460,30 +461,23 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
-	ecopolitical = {
-		types = {
-			ecopolitical_subtype = {}
-		}
+	liberalism_2 = {
+		types = { liberalism_2_subtype = {} }
 		dynamic_faction_names = {}
-		color = { 80 163 78 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 20.0
-				army_intel_to_others = 10.0
-				navy_intel_to_others = 20.0
-				airforce_intel_to_others = 10.0
-			}
-		}
+		color = { 98 111 157 }
 		ai_neutral = yes
 		can_be_boosted = no
-		
+	}
+
+	########################################
+	#             Progressivism            #
+	########################################
+	progressivism_1 = {
+		types = { progressivism_1_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 144 41 72 }
+		ai_neutral = yes
+		can_be_boosted = no
 	}
 	progressivism = {
 		types = {
@@ -524,7 +518,24 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
-
+	progressivism_2 = {
+		types = { progressivism_2_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 164 61 92 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	
+	########################################
+	#               Socialism              #
+	########################################
+	socialist_1 = {
+		types = { socialist_1_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 123 23 23 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 	socialist = {
 		types = {
 			socialist_subtype = {}
@@ -549,6 +560,7 @@ ideologies = {
 			socialist_lulism_subtype = { can_be_randomly_selected = no }
 			socialist_revolutionary_gaitanismo_subtype = { can_be_randomly_selected = no }
 			socialist_ecuadorian_model_subtype = { can_be_randomly_selected = no }
+			socialist_revolutionary_subhasism_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
 		color = { 133 33 33 }
@@ -571,7 +583,45 @@ ideologies = {
 		ai_neutral = yes
 		can_be_boosted = no
 	}
+	socialist_2 = {
+		types = { socialist_2_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 143 43 43 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 
+	########################################
+	#               Communism              #
+	########################################
+	communist_1 = {
+		types = { communist_1_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 77 15 15 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	communist_2 = {
+		types = { communist_2_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 80 20 20 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	communist_3 = {
+		types = { communist_3_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 100 35 35 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
+	communist_4 = {
+		types = { communist_4_subtype = {} }
+		dynamic_faction_names = {}
+		color = { 110 45 45 }
+		ai_neutral = yes
+		can_be_boosted = no
+	}
 	communist = {
 		types = {
 			communist_subtype = {}
@@ -591,92 +641,10 @@ ideologies = {
 			communist_harmonism_subtype = { can_be_randomly_selected = no }
 			communist_revolutionary_baathism_subtype = { can_be_randomly_selected = no }
 			communist_autarkic_marxism_subtype = { can_be_randomly_selected = no }
-			communist_yagodschina_subtype = { can_be_randomly_selected = no }
+			communist_pragmatic_communism_subtype = { can_be_randomly_selected = no }
 		}
 		dynamic_faction_names = {}
-		color = { 90 25 25 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 10.0
-				army_intel_to_others = 15.0
-				navy_intel_to_others = 15.0
-				airforce_intel_to_others = 15.0
-			}
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	communist_1 = {
-		types = {
-			communist_1_subtype = {}
-
-			communist_1_bolshevism_subtype = { can_be_randomly_selected = no }
-			communist_1_yagodschina_subtype = { can_be_randomly_selected = no }
-		}
-		dynamic_faction_names = {}
-		color = { 70 5 5 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 10.0
-				army_intel_to_others = 15.0
-				navy_intel_to_others = 15.0
-				airforce_intel_to_others = 15.0
-			}
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	communist_2 = {
-		types = {
-			communist_2_subtype = {}
-			
-			communist_2_marxism_leninism_subtype = { can_be_randomly_selected = no }
-		}
-		dynamic_faction_names = {}
-		color = { 80 15 15 }
-		rules = {
-			can_create_collaboration_government = no
-			can_force_government = no
-			can_puppet = no
-			can_join_factions = no
-			can_send_volunteers = yes
-		}
-		modifiers = {
-			hidden_modifier = {
-				civilian_intel_to_others = 10.0
-				army_intel_to_others = 15.0
-				navy_intel_to_others = 15.0
-				airforce_intel_to_others = 15.0
-			}
-		}
-		ai_neutral = yes
-		can_be_boosted = no
-	}
-
-	communist_3 = {
-		types = {
-			communist_3_subtype = {}
-			
-			communist_3_bolshevism_subtype = { can_be_randomly_selected = no }
-		}
-		dynamic_faction_names = {}
-		color = { 100 35 35 }
+		color = { 97 23 23 }
 		rules = {
 			can_create_collaboration_government = no
 			can_force_government = no

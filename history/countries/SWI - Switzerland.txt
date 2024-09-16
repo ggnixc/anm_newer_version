@@ -3,10 +3,14 @@
 capital = 3
 
 set_oob = "SWI_1962"
+recruit_character = SWI_Federal_Council
 
 add_ideas = {
 	## Spirts
-
+    TRI_Observer
+	SWI_Pain_in_the_Alps
+	SWI_What_We_Are_Proud_Of
+	SWI_And_What_We_Are_Not
 	## Laws
 	# Political
 	tno_political_parties_multiparty_system
@@ -62,33 +66,25 @@ add_ideas = {
 }
 
 set_politics = {	
-	ruling_party = conservatism
+	ruling_party = paternalism
 	last_election = "1959.10.25"
 	election_frequency = 48
 	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
     ultranationalism = 0
     socialist = 0
-    progressivism = 5
-    liberalism = 8
-    liberal_conservatism = 0
-    conservatism = 77
-    paternalism = 10
-    despotism = 0
-    fascism = 0
-    national_socialism = 0
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Swiss Federal Council"
-	#desc =
-	picture = "Portrait_SWI_Federal_Council.dds"
-	expire = "2999.12.12"
-	ideology = conservatism_agrarianism_subtype
-	traits = {
-	}
+    progressivism = 14
+    liberalism = 16
+    liberal_conservatism = 17
+    conservatism = 14
+    paternalism = 20
+    despotism = 8
+    fascism = 10
+    national_socialism = 1
+     
 }

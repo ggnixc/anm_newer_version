@@ -1,20 +1,40 @@
 ﻿capital = 446
 
+recruit_character = EGY_Hani_Saeed_Ramadan
+recruit_character = EGY_Fouad_Serageddin
+recruit_character = EGY_Mounir_Fakhry_Abdul_Noor
+recruit_character = EGY_Fuad_II
+
 set_oob = "EGY_1962"
 
-add_ideas = {
+#ITA = {
+	#if = {
+	#	limit = { 
+	#		OR = { 
+	#			has_dlc = "Together for Victory" 
+	#			has_dlc = "Man the Guns" 
+	#		}
+	#	}
+	#	set_autonomy = { target = EGY autonomy_state = autonomy_italy_reliant }
+	#	else = {
+#			puppet = EGY
+#		}
+#	}
+#}
 
+add_ideas = {
+	
 	##laws##
 	#political#
-	tno_political_parties_one_party_state
-	tno_religious_rights_pluralism
-	tno_trade_unions_illegal
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_state_religion
+	tno_trade_unions_nonsocialist_allowed
 	tno_immigration_quota_immigration
 	tno_slavery_outlawed
-	tno_public_meetings_regulated
-	tno_press_rights_state_press_only
-	tno_vote_franchise_no_voting
-	tno_refugees_open
+	tno_public_meetings_allowed
+	tno_press_rights_censored_press
+	tno_vote_franchise_universal
+	tno_refugees_skilled
 
 	#military#
 	tno_conscription_one_year_draft
@@ -28,68 +48,47 @@ add_ideas = {
 	#economic#
 	tno_trade_laws_export_focus
 	tno_economic_focus_civilian_economy
-	tno_tax_rate_exploitative_taxation
-	tno_income_taxation_low_income_weighted
-	tno_minimum_wage_no_minimum_wage
-	tno_max_workhours_12_hour_work_day
-	tno_child_labor_illegal
-	tno_pensions_low_pensions
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_tax_havens
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_8_hour_work_day
+	tno_child_labor_restricted
+	tno_pensions_acceptable_pensions
 	tno_unemployment_no_subsidies
 
 	#social#
 	tno_safety_limited_regulations
 	tno_health_care_public_health_care
-	tno_pollution_no_controls
-	tno_education_public_education
+	tno_pollution_some_regulations
+	tno_education_free_education
 	tno_penal_system_capital_punishment
 	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
-	tno_minorities_segregation
-	tno_security_security_service
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_equal_rights
+	tno_security_wire_tapping
 
 	#ministers#
 }
 
 set_politics = {
-	ruling_party = socialist
-	last_election = "1958.1.8"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = conservatism
+	last_election = "1995.10.8"
+	election_frequency = 60
+	elections_allowed = yes
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
-	communist = 10
-	ultranationalism = 0
-	socialist = 42
-	progressivism = 5
+	progressivism = 13
 	liberalism = 8
-	liberal_conservatism = 10
-	conservatism = 0
+	liberal_conservatism = 12
+	conservatism = 41
 	paternalism = 0
-	despotism = 5
-	fascism = 5
-	national_socialism = 15
-	esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Husni Mubarak"
-	desc = "POLITICS_HAMDEEN_SABAHI_DESC"
-	picture = "Portrait_EGY_Hamdeen_Sabahi.dds"
-	expire = "2999.12.25"
-	ideology = paternalism_left_wing_corporatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Khaled Mohieddin"
-	desc = ""
-	picture = "Portrait_EGY_Khaled_Mohieddin.dds"
-	expire = "2999.12.25"
-	ideology = socialist_nasserism_subtype
-	traits = {
-	}
+	despotism = 10
+	communist = 7
+	socialist = 0
+	fascism = 9
 }
 
 # Starting tech

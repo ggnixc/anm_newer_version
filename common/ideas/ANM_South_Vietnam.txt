@@ -1,58 +1,41 @@
 ideas = {
 	country = {
-		VIN_Whole_One_Day = {
+		VIN_Poking_The_Beehive = {
 			allowed = { always = no }
-			picture = GFX_idea_VIN_Whole_One_Day
 			removal_cost = -1
 			
 			modifier = {
-			stability_factor = -0.15
-			war_support_factor = 0.2
-			recruitable_population_factor = 1.5
+			    stability_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.30
+		        production_factory_max_efficiency_factor = -0.30
 			}
 		}
-		VIN_Pearl_of_the_Far_East = {
+		VIN_Sharpening_The_Sword = {
 			allowed = { always = no}
-			picture = GFX_idea_VIN_Pearl_of_the_East
 			removal_cost = -1
 			modifier = {
-			production_factory_efficiency_gain_factor = 0.1
+                army_attack_factor = 0.10
+			    army_defence_factor = 0.10
+				research_speed_factor = 0.10
+			}
+		}
+		VIN_Dealing_With_The_Malaise = {
+		    allowed = { always = no}
+		    removal_cost = -1
 
-			production_speed_air_base_factor = 0.1
-			production_speed_naval_base_factor = 0.1
-			production_speed_buildings_factor = -0.15
-			local_resources = -0.15
-			industrial_capacity_factory = -0.15
+		    modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.10
+		    }
 		}
-
-		}
-		VIN_Japanese_Military_Programs = {
-		allowed = { always = no}
-		picture = GFX_idea_VIN_Japanese_Military_Training
-		removal_cost = -1
-
-		modifier = {
-			army_attack_factor = 0.15
-			army_defence_factor = 0.15
-			army_speed_factor = 0.15
-			land_reinforce_rate = 0.10
-			special_forces_cap_flat = 0.2
-		}
-		}
-		VIN_National_Malaise = {
-		allowed = { always = no}
-		picture = GFX_idea_VIN_National_Malaise
-		removal_cost = -1
-		modifier = {
-		stability_factor = -0.2
-		production_factory_max_efficiency_factor = -0.15
-		industry_repair_factor = -0.15
-		industrial_capacity_factory = -0.15
-		monthly_population = -0.015
-		army_core_defence_factor = -0.15
-		army_org_factor = -0.15
-		}
+		VIN_A_Republic_In_Name_Only = {
+		    allowed = { always = no}
+		    removal_cost = -1
+		    
+			modifier = {
+		        stability_factor = -0.10
+			    war_support_factor = -0.10
+		    }
 		}
 	}
-
 }

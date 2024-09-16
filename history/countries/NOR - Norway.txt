@@ -1,5 +1,16 @@
 ﻿capital = 897
 
+recruit_character = NOR_jack_erik_kjuus
+recruit_character = NOR_tore_tvedt
+recruit_character = NOR_erik_blucher
+recruit_character = NOR_arne_tumyr
+recruit_character = NOR_michael_von_tetzschner
+recruit_character = NOR_carl_hagan
+recruit_character = NOR_harald_sunde
+recruit_character = NOR_otto_straube
+recruit_character = NOR_eugen_dittrich
+recruit_character = NOR_jan_petersen
+
 set_oob = "NOR_1962"
 
 set_research_slots = 3
@@ -10,9 +21,16 @@ set_war_support = 0.15
 
 add_ideas = {
 	###FACTION###
-	Pakt_Marionettenstaat
+	Pakt_Schutzstaat
 	###SPIRITS###
+	NOR_deep_unpopularity
+	NOR_parliamentary_fascism
+	NOR_great_oil_robbery
 	###MINISTERS###
+	NOR_Tore_Tvedt_hog
+	NOR_Erik_Blucher_sec
+	NOR_Arne_Tumyr_for
+	NOR_Michael_von_Tetzschner_eco
     ##POLITICAL LAWS##
 	tno_political_parties_one_party_state
 	tno_religious_rights_secularism
@@ -69,98 +87,27 @@ set_politics = {
 	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
-    socialist = 3
-    progressivism = 4
+    socialist = 0
+    progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
-    conservatism = 3
-    paternalism = 10
-    despotism = 20
-    fascism = 20
-    national_socialism = 40
+    conservatism = 0
+    paternalism = 8
+	paternalism_1 = 4
+    despotism = 12
+	despotism_1 = 2
+    fascism = 23
+	fascism_1 = 3
+    national_socialism = 41
+	national_socialism_1 = 5
+	national_socialism_2 = 2
     ultranationalism = 0
-    esoteric_nazism = 0
 }
 
-create_country_leader = {
-	name = "Jack Erik Kjuus"
-	desc = "POLITICS_JACK_ERIK_KJUUS_DESC"
-	picture = "Portrait_NOR_Jack_Erik_Kjuus.dds"
-	expire = "2100.5.6"
-	ideology = national_socialism_reformed_national_socialism_subtype
-}
-create_country_leader = {
-	name = "Arne Tumyr"
-	desc = "POLITICS_ARNE_TUMYR_DESC"
-	picture = "Portrait_NOR_Arne_Tumyr.dds"
-	expire = "2016.6.29"
-	ideology = fascism_subtype
-}
-create_country_leader = {
-	name = "Carl Hagan"
-	desc = "POLITICS_CARL_HAGAN_DESC"
-	picture = "Portrait_NOR_Carl_Hagan.dds"
-	expire = "2016.6.29"
-	ideology = paternalism_subtype
-}
-create_country_leader = {
-	name = "Harald Sunde"
-	desc = "POLITICS_HARALD_SUNDE_DESC"
-	picture = "Portrait_NOR_Harald_Sunde.dds"
-	expire = "2016.6.29"
-	ideology = despotism_subtype
-}
-create_country_leader = {
-	name = "Jens Stoltenburg"
-	desc = "POLITICS_JENS_STOLTENBURG_DESC"
-	picture = "Portrait_NOR_Jens_Stoltenburg.dds"
-	expire = "2016.6.29"
-	ideology = progressivism_subtype
-}
-create_country_leader = {
-	name = "Jo Benkow"
-	desc = "POLITICS_JO_BENKOW_DESC"
-	picture = "Portrait_NOR_Jo_Benkow.dds"
-	expire = "2016.6.29"
-	ideology = conservatism_subtype
-}
-create_country_leader = {
-	name = "Torstein Dahle"
-	desc = "POLITICS_TORSTEIN_DAHLE_DESC"
-	picture = "Portrait_NOR_Torstein_Dahle.dds"
-	expire = "2016.6.29"
-	ideology = socialist_subtype
-}
-
-
-
-### Unit Leaders ###
-
-# create_corps_commander = {
-# 	name = "Jürgen Bennecke"
-# 	picture = "Portrait_Norway_Jurgen_Bennecke.dds"
-# 	traits = { career_officer organizer infantry_officer }
-# 	skill = 4
-# 	attack_skill = 2
-# 	defense_skill = 3
-# 	planning_skill = 4
-# 	logistics_skill = 3
-# 	# id = 
-# }
-
-create_navy_leader = {
-	name = "Hans-Georg Hess"
-	picture = "Portrait_Norway_Hans_Georg_Hess.dds"
-	traits = { seawolf mine_sweeper }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 3
-	coordination_skill = 2
-	id = 792
-}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }

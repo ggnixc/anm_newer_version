@@ -3,6 +3,7 @@
 set_oob = ""
 
 add_ideas = {
+    OFN_Observer
 	#NATIONAL SPIRITS#
 	GLP_Prepare_Reclamation
 	#MINISTERS
@@ -16,6 +17,10 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = GLP_Guillermo_Freile_Posso
+
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
     ultranationalism = 11
@@ -27,15 +32,5 @@ set_popularities = {
     paternalism = 37
     despotism = 52
     fascism = 0
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Guillermo Freile Posso"
-	desc = ""
-	picture = "Portrait_GLP_Guillermo_Posso.dds"
-	expire = "2999.1.1"
-	ideology = despotism_military_junta_subtype
-	traits = {
-	}
+     
 }

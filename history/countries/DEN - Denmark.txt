@@ -1,82 +1,44 @@
 ﻿capital = 37
 
+set_stability = 0.8
+
+recruit_character = DEN_Henning_Christophersen
+recruit_character = DEN_povl_heinrich_riis_knudsen
+recruit_character = DEN_pia_kjaersgaard
+recruit_character = DEN_erling_hallas
+recruit_character = DEN_esben_rohde_kristensen
+recruit_character = DEN_soren_krarup
+recruit_character = DEN_jonni_hansen
+recruit_character = DEN_mogens_glistrup
+recruit_character = DEN_bendt_bendtsen
+recruit_character = DEN_anker_jorgensen
+recruit_character = DEN_henrik_stamer_hedin
+
 set_oob = "DEN_1962"
 
 add_ideas = { 
 	#Faction
-	Pakt_Marionettenstaat
+	Pakt_Schutzstaat
 	#Spirits
-	DEN_germanias_puppet
-	DEN_a_collapsing_economy
-	DEN_olshausens_garrison
-	DEN_the_crimson_flag_rises_once_again
 	#Ministers
-	DEN_minister_Bendt_Bendtsen_eco
-	DEN_minister_Klaus_Olshausen_sec
-	DEN_minister_Pia_Merete_Kjaersgaard_hog
-	DEN_minister_Povl_Heinrich_Riis-Knudsen_for
 }
 
 set_politics = {	
-	ruling_party = fascism
-	last_election = "1935.10.22"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = liberal_conservatism
+	last_election = "1994.9.22"
+	election_frequency = 42
+	elections_allowed = yes
 }
+
+TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 22
-    socialist = 0
-    progressivism = 12
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 16
-    paternalism = 0
-    despotism = 5
-    fascism = 33
-    national_socialism = 12
-    ultranationalism = 0
-    esoteric_nazism = 0
-}
-
-create_country_leader = {
-	name = "Poul Nyrup Rasmussen"
-	desc = ""
-	picture = ""
-	expire = "2090.10.12"
-	ideology = progressivism_subtype
-}
-
-create_country_leader = {
-	name = "Henrik Stamer Hedin"
-	desc = ""
-	picture = "Portrait_DEN_Henrik_Hedin.dds"
-	expire = "2090.10.12"
-	ideology = communist_subtype
-}
-
-create_country_leader = {
- 	name = "Anders Fogh Rasmussen"
- 	desc = ""
- 	picture = ""
- 	expire = "2090.10.12"
- 	ideology = conservatism_subtype
-}
-
-create_country_leader = {
-	name = "Povl Heinrich Riis-Knudsen"
-	desc = ""
-	picture = ""
-	expire = "2090.10.12"
-	ideology = national_socialism_subtype
-}
-
-create_country_leader = {
-	name = "Martin Durvard"
-	desc = ""
-	picture = "Portrait_Denmark_Martin_Durvard.dds"
-	expire = "2090.10.12"
-	ideology = fascism_reformed_national_socialism_subtype
+    progressivism = 21
+    liberalism = 16
+    liberal_conservatism = 24
+    conservatism = 21
+    national_socialism = 8
+	national_socialism_1 = 10
 }
 
 if = {

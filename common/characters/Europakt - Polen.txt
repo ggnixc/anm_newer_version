@@ -1,0 +1,94 @@
+characters = {
+	GGN_henryk_kroll = { 
+		name = GGN_henryk_kroll
+		portraits = { 
+			civilian = { large = "gfx/leaders/GGN/Portrait_GGN_Henryk_Kroll.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_HENRYK_KROLL_DESC"
+			ideology = national_socialism_reformed_national_socialism_subtype
+			traits = { compassionate_gentleman }
+			expire = "2999.1.1.1"
+		}
+	}
+	GGN_jerzy_treder = {
+		name = GGN_jerzy_treder
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/GGN/Portrait_GGN_Jerzy_Treder.dds"
+				small = "GFX_idea_GGN_Jerzy_Treder" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = GGN_Jerzy_Treder_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GGN_henryk_glucklich = {
+		name = GGN_henryk_glucklich
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/GGN/Portrait_GGN_Henryk_Glucklich.dds"
+				small = "GFX_idea_GGN_Henryk_Glucklich" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = GGN_Henryk_Glucklich_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GGN_edward_flak = {
+		name = GGN_edward_flak
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/GGN/Portrait_GGN_Edward_Flak.dds"
+				small = "GFX_idea_GGN_Edward_Flak" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = GGN_Edward_Flak_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	GGN_siegfried_emil_spindler = {
+		name = GGN_siegfried_emil_spindler
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/GGN/Portrait_GGN_Siegfried_Emil_Spindler.dds"
+				small = "GFX_idea_GGN_Siegfried_Emil_Spindler" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = GGN_Siegfried_Emil_Spindler_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+} 

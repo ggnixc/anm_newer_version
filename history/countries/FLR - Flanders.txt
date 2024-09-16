@@ -1,37 +1,40 @@
 ﻿capital = 6
 
+recruit_character = FLR_klaus_armstroff
+recruit_character = FLR_frank_vanhecke
+recruit_character = FLR_johan_demol
+recruit_character = FLR_gerolf_annemans
+recruit_character = FLR_karel_dillen
+
 set_politics = {	
 	ruling_party = national_socialism
 	elections_allowed = no
 }
 
+TNO_startup_nation = yes
+
 set_popularities = {
     communist = 0
     ultranationalism = 10
-    national_socialism = 75
+    national_socialism = 55
     socialist = 0
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
     conservatism = 0
     paternalism = 0
-    despotism = 5
-    fascism = 10
-    esoteric_nazism = 0
+    despotism = 15
+    fascism = 20
 }
 
-create_country_leader = {
-	name = "Karel Dillen"
-	desc = "POLITICS_KAREL_DILLEN_DESC"
-	picture = "Portrait_FLR_Karel_Dillen.dds"
-	expire = "2090.4.24"
-	ideology = national_socialism_reformed_national_socialism_subtype
-	traits = {
-	}
-}
 
 add_ideas = {
-    Pakt_Protektorat
-
+    Pakt_Nebenland
+    #Ministers#
+    FLR_Frank_Vanhecke_hog
+    FLR_Johan_Demol_sec
+    FLR_Gerolf_Annemans_for
+    FLR_Klaus_Armstroff_eco
+    #Spirits#
     BRG_reconstruction_of_burgundy
 }

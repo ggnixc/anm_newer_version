@@ -1,5 +1,68 @@
 ﻿capital = 64
 
+### Characters ###
+recruit_character = GER_albert_friedrich_speer
+recruit_character = GER_martin_mussgnug
+recruit_character = GER_gunther_deckert
+recruit_character = GER_joseph_fischer
+recruit_character = GER_gerhard_frey
+recruit_character = GER_rolf_berger
+recruit_character = GER_heinz_kessler
+recruit_character = GER_otto_carius
+recruit_character = GER_volker_wieker
+recruit_character = GER_hartmut_bagger
+recruit_character = GER_wolfgang_altenburg
+recruit_character = GER_hans_peter_von_kirchbach
+recruit_character = GER_werner_freers
+recruit_character = GER_reinhard_gunzel
+recruit_character = GER_jorg_vollmer
+recruit_character = GER_jurgen_setzer
+recruit_character = GER_klaus_dieter_baumgarten
+recruit_character = GER_klaus_naumann
+recruit_character = GER_hans_helmut_speidel
+recruit_character = GER_berthold_schenk_graf_von_stauffenberg
+recruit_character = GER_rudolf_striedinger
+recruit_character = GER_roland_ertl
+recruit_character = GER_horst_pleiner
+recruit_character = GER_karl_majcen
+recruit_character = GER_richard_rossmanith
+recruit_character = GER_edmund_entacher
+recruit_character = GER_hans_otto_budde
+recruit_character = GER_helmut_willman
+recruit_character = GER_robert_brieger
+recruit_character = GER_othmar_commenda
+recruit_character = GER_wolfgang_schneiderhan
+recruit_character = GER_ludwig_bauer
+recruit_character = GER_gunther_bahr
+recruit_character = GER_ebhard_header
+recruit_character = GER_eberhard_zorn
+recruit_character = GER_alexander_sollfrank
+recruit_character = GER_gert_gawellek
+recruit_character = GER_stephan_thomas
+recruit_character = GER_hans_werner_wiermann
+recruit_character = GER_manfred_gratz
+recruit_character = GER_heico_hubner
+recruit_character = GER_jurgen_joachim_von_sandrart
+recruit_character = GER_josef_blotz
+recruit_character = GER_erich_pfeffer
+recruit_character = GER_bernd_shutt
+recruit_character = GER_carsten_breuer
+recruit_character = GER_hendrik_born
+recruit_character = GER_carsten_stawitzki
+recruit_character = GER_thomas_jugel
+recruit_character = GER_wolfgang_brost
+recruit_character = GER_rainer_endres
+recruit_character = GER_georg_von_maltzan
+recruit_character = GER_rainer_brinkmann
+recruit_character = GER_thomas_daum
+recruit_character = GER_karsten_schneider
+recruit_character = GER_joachim_ruhle
+recruit_character = GER_manfred_nielson
+recruit_character = GER_unbekannt
+recruit_character = GER_walter_bachmann
+recruit_character = GER_jurgen_rieger
+recruit_character = GER_joachim_starbatty
+
 set_politics = {
 	ruling_party = national_socialism
 	last_election = "1933.3.5"
@@ -9,21 +72,21 @@ set_politics = {
 
 set_popularities = {
 	communist = 0
-	ultranationalism = 0
+	ultranationalism = 4
 	socialist = 0
 	progressivism = 0
 	liberalism = 0
 	liberal_conservatism = 0
 	conservatism = 0
-	paternalism = 0
-	despotism = 0
+	paternalism = 7
+	despotism = 13
 	fascism = 0
-	national_socialism = 37
-	national_socialism_1 = 45
-	national_socialism_2 = 2
-	national_socialism_3 = 5
-	national_socialism_4 = 11
-	esoteric_nazism = 0
+	national_socialism_1 = 35
+	national_socialism_2 = 0
+	national_socialism = 32
+	national_socialism_3 = 0
+	national_socialism_4 = 9
+	 
 }
 
 if = {
@@ -211,16 +274,16 @@ add_ideas = {
 	Pakt_Leader
 
 	## Spirits ##
-	GER_millenium_rise
+	GER_millennium_rise
 	GER_the_puppet_fuehrer
 	GER_the_ailing_order
 	GER_space_spirit
 
 	## Ministers ##
-	GER_minister_martin_mussgnug_hog
-	GER_minister_guenther_deckert_sec
-	GER_minister_joseph_fisher_for 
-	GER_minister_gerhardfrey_eco	
+	GER_Martin_Mussgnug_hog
+	GER_Gunther_Deckert_sec
+	GER_Joseph_Fischer_for
+	GER_Gerhard_Frey_eco
 
 	### Laws ###
 	## Political ##
@@ -288,297 +351,224 @@ add_stability = 0.35
 add_war_support = 0.08
 add_manpower = 402178
 
+#Focus tree
 load_focus_tree = GER_Focus_Millenium_Starter
 
-set_variable = { ANMKDN_showednation_agenda_one = 1 }
-set_variable = { ANMKDN_showednation_agenda_two = 9 }
-set_variable = { ANMKDN_showednation_agenda_three = 16 }
+#Assorted Laws
+misc_law_array_startup_special = yes
 
-set_variable = { global.GER_Speer_Inf_Top = 12 }
-set_variable = { global.GER_Front_Inf_Top = 8 }
-
-set_variable = { global.GER_Speer_Inf_Middle = 8 }
-set_variable = { global.GER_Front_Inf_Middle = 8 }
-
-set_variable = { global.GER_Speer_Inf_Bottom = 8 }
-set_variable = { global.GER_Front_Inf_Bottom = 10 }
-
-GER_power_struggle_pulse_top = yes
-
-set_country_flag = reichsstability_tier_2
-
-set_country_flag = kdn_gui_alert_visible
 #TTNOMICS
 set_country_flag = gui_alert_visible
 set_country_flag = gui_alert_visible_2
 set_country_flag = country_has_gui
 set_country_flag = HAS_ECON_SPHERE
 
-set_variable = { TNO_economy_type = 1 }
-set_variable = { TNO_economy_subtype = 20 }
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Social_Market }
 
-set_global_flag = pakt_reform_europamark
-
-set_variable = { global.anmkdnthefunnylolmonthticker = 0 }
-set_variable = { global.anmkdncurrentpriority = 10 }
-set_variable = { global.europapaktunity = 10 }
-set_variable = { global.europapaktstability = 60 }
-set_variable = { global.ANMKDNcurrentparliamentvoteissue = 0 }
-set_variable = { global.ANMKDNcurrentcouncilvoteissue = 0 }
-set_variable = { global.ANMKDNparliamentyesvote = 0 }
-set_variable = { global.ANMKDNparliamentnovote = 0 }
-set_variable = { global.ANMKDNparliamentmembercounts = 0 }
-set_variable = { global.ANMKDNcouncilyesvote = 0 }
-set_variable = { global.ANMKDNcouncilnovote = 0 }
-set_variable = { global.ANMKDNcouncilmembercounts = 0 }
-set_variable = { global.ANMKDNcurrentenemyofthekdn = 1 }	
-set_variable = { global.europaktgdpgrowthmodifier = 1.23 }  
-set_variable = { global.preeuropaktgdpgrowthmodifier = 1.23 }
-set_variable = { global.usaintelligence = 50 }
-set_variable = { global.germanyintelligence = 30 }
-set_variable = { global.italyintelligence = 25 }
-set_variable = { global.sovjetintelligence = 25 }
-set_variable = { global.japanintelligence = 20 }
-set_variable = { global.britainintelligence = 20 }
-set_variable = { global.chinaintelligence = 15 }
-set_variable = { global.indiaintelligence = 15 }
-set_variable = { GER_ANM_social_stability = 50 }
-set_variable = { GER_ANM_protesttension = 15 }
-set_variable = { GER_ANM_party_leaning = 20 }
-set_variable = { GER_ANM_lower_party_leaning = -25 }
-set_variable = { GER_ANM_lower_party_influence = 50 }
+#NSDAP Pyramid
+set_country_flag = GER_nsdapgui_activate
+set_variable = { GER_ANM_party_leaning = 1550 }
+set_variable = { GER_ANM_lower_party_leaning = 150 }
+set_variable = { GER_ANM_lower_party_influence = 10 }
 set_variable = { GER_ANM_middle_party_leaning = 120 }
-set_variable = { GER_ANM_middle_party_influence = 50 }
-set_variable = { GER_ANM_upper_party_leaning = 50 }
-set_variable = { GER_ANM_upper_party_influence = 80 }
-set_variable = { GER_ANM_party_leadership_leaning = 25 }
-set_variable = { GER_ANM_party_leadership_influnce = 150 }
+set_variable = { GER_ANM_middle_party_influence = 25 }
+set_variable = { GER_ANM_upper_party_leaning = 70 }
+set_variable = { GER_ANM_upper_party_influence = 55 }
+set_variable = { GER_ANM_party_leadership_leaning = -85 }
+set_variable = { GER_ANM_party_leadership_influnce = 80 }
+
+#Government GUI
+set_variable = { GER_ANM_government_loyaly_slot_1 = 1 } #Kritker
+set_variable = { GER_ANM_government_loyaly_slot_2 = 100 } #Unbekannt
+set_variable = { GER_ANM_government_loyaly_slot_3 = -1 } #Regime
+set_variable = { GER_ANM_government_loyaly_slot_4 = 0 } #Uberparteilich
+set_variable = { GER_ANM_government_loyaly_slot_5 = -4 } #Nonkonformisten
+set_variable = { GER_ANM_government_loyaly_slot_6 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_7 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_8 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_9 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_10 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_11 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_12 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_13 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_14 = -4 } 
+set_variable = { GER_ANM_government_loyaly_slot_15 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_16 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_17 = 0 }
+set_variable = { GER_ANM_government_loyaly_slot_18 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_19 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_20 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_21 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_22 = -1 }
+
+#Economy GUI
+set_country_flag = GER_ANM_Economy_View_Activate
+set_variable = { GER_ANM_economy_status_overall = 5.5 } 
+set_variable = { GER_ANM_economy_control_overall = 0.51 } 
+set_variable = { GER_ANM_economy_status_1 = 8 } #Germany
+set_variable = { GER_ANM_economy_status_1_size = 100 } 
+set_variable = { GER_ANM_economy_status_1_control = 1.00 } 
+set_variable = { GER_ANM_economy_status_2 = 6 } #Norway
+set_variable = { GER_ANM_economy_status_2_size = 15 } 
+set_variable = { GER_ANM_economy_status_2_control = 0.20 } 
+set_variable = { GER_ANM_economy_status_3 = 8 } #Sweden
+set_variable = { GER_ANM_economy_status_3_size = 15 } 
+set_variable = { GER_ANM_economy_status_3_control = 0.07 } 
+set_variable = { GER_ANM_economy_status_4 = 7 } #Baltenland
+set_variable = { GER_ANM_economy_status_4_size = 10 } 
+set_variable = { GER_ANM_economy_status_4_control = 0.85 } 
+set_variable = { GER_ANM_economy_status_5 = 2 } #Belarus
+set_variable = { GER_ANM_economy_status_5_size = 10 } 
+set_variable = { GER_ANM_economy_status_5_control = 0.85 } 
+set_variable = { GER_ANM_economy_status_6 = 1 } #Homel
+set_variable = { GER_ANM_economy_status_6_size = 10 } 
+set_variable = { GER_ANM_economy_status_6_control = 1.00 } 
+set_variable = { GER_ANM_economy_status_7 = 4 } #Ukraine
+set_variable = { GER_ANM_economy_status_7_size = 10 } 
+set_variable = { GER_ANM_economy_status_7_control = 0.85 } 
+set_variable = { GER_ANM_economy_status_8 = 6 } #Kaukasia
+set_variable = { GER_ANM_economy_status_8_size = 10 } 
+set_variable = { GER_ANM_economy_status_8_control = 0.75 } 
+	set_variable = { GER_ANM_economy_status_9 = 0 } ###VACANT###
+	set_variable = { GER_ANM_economy_status_9_size = 0 } 
+	set_variable = { GER_ANM_economy_status_9_control = 0  } 
+set_variable = { GER_ANM_economy_status_10 = 4 } #Slovakia
+set_variable = { GER_ANM_economy_status_10_size = 10 } 
+set_variable = { GER_ANM_economy_status_10_control = 0.35 } 
+set_variable = { GER_ANM_economy_status_11 = 5 } #Hungary
+set_variable = { GER_ANM_economy_status_11_size = 10 } 
+set_variable = { GER_ANM_economy_status_11_control = 0.12 } 
+set_variable = { GER_ANM_economy_status_12 = 5 } #Romania
+set_variable = { GER_ANM_economy_status_12_size = 10 } 
+set_variable = { GER_ANM_economy_status_12_control = 0.15 } 
+set_variable = { GER_ANM_economy_status_13 = 3 } #Serbia
+set_variable = { GER_ANM_economy_status_13_size = 10 } 
+set_variable = { GER_ANM_economy_status_13_control = 0.30 } 
+set_variable = { GER_ANM_economy_status_14 = 4 } #Bulgaria
+set_variable = { GER_ANM_economy_status_14_size = 10 } 
+set_variable = { GER_ANM_economy_status_14_control = 0.11 } 
+set_variable = { GER_ANM_economy_status_15 = 3 } #Transnitria
+set_variable = { GER_ANM_economy_status_15_size = 10 } 
+set_variable = { GER_ANM_economy_status_15_control = 0.35 } 
+set_variable = { GER_ANM_economy_status_16 = 4 } #Northern Ireland
+set_variable = { GER_ANM_economy_status_16_size = 5 } 
+set_variable = { GER_ANM_economy_status_16_control = 0.01 } 
+	set_variable = { GER_ANM_economy_status_17 = 0 } ###VACANT###
+	set_variable = { GER_ANM_economy_status_17_size = 0 } 
+	set_variable = { GER_ANM_economy_status_17_control = 0 } 
+	set_variable = { GER_ANM_economy_status_18 = 0 } ###VACANT###
+	set_variable = { GER_ANM_economy_status_18_size = 0 } 
+	set_variable = { GER_ANM_economy_status_18_control = 0 } 
+set_variable = { GER_ANM_economy_status_19 = 6 } #France
+set_variable = { GER_ANM_economy_status_19_size = 25 } 
+set_variable = { GER_ANM_economy_status_19_control = 0.10 } 
+set_variable = { GER_ANM_economy_status_20 = 8 } #Ireland
+set_variable = { GER_ANM_economy_status_20_size = 5 } 
+set_variable = { GER_ANM_economy_status_20_control = 0.03 } 
+set_variable = { GER_ANM_economy_status_21 = 5 } #Britain
+set_variable = { GER_ANM_economy_status_21_size = 25 } 
+set_variable = { GER_ANM_economy_status_21_control = 0.10 } 
+set_variable = { GER_ANM_economy_status_22 = 5 } #Denmark
+set_variable = { GER_ANM_economy_status_22_size = 15 } 
+set_variable = { GER_ANM_economy_status_22_control = 0.25 } 
+set_variable = { GER_ANM_economy_status_23 = 8 } #Finland
+set_variable = { GER_ANM_economy_status_23_size = 10 } 
+set_variable = { GER_ANM_economy_status_23_control = 0.08 } 
+set_variable = { GER_ANM_economy_status_24 = 6 } #Iberia
+set_variable = { GER_ANM_economy_status_24_size = 0 } 
+set_variable = { GER_ANM_economy_status_24_control = 0.02 } 
+set_variable = { GER_ANM_economy_status_25 = 5 } #Turkey
+set_variable = { GER_ANM_economy_status_25_size = 5 } 
+set_variable = { GER_ANM_economy_status_25_control = 0.01 } 
+set_variable = { GER_ANM_economy_status_26 = 3 } #Iran
+set_variable = { GER_ANM_economy_status_26_size = 5 } 
+set_variable = { GER_ANM_economy_status_26_control = 0.02 } 
+	set_variable = { GER_ANM_economy_status_27 = 0 } ###VACANT###
+	set_variable = { GER_ANM_economy_status_27_size = 0 } 
+	set_variable = { GER_ANM_economy_status_27_control = 0 } 
+set_variable = { GER_ANM_economy_status_28 = 6 } #China
+set_variable = { GER_ANM_economy_status_28_size = 7 } 
+set_variable = { GER_ANM_economy_status_28_control = 0.005 } 
+set_variable = { GER_ANM_economy_status_29 = 2 } #DR
+set_variable = { GER_ANM_economy_status_29_size = 5 }
+set_variable = { GER_ANM_economy_status_29_control = 0.15 }  
+set_variable = { GER_ANM_economy_status_30 = 2} #Algeria
+set_variable = { GER_ANM_economy_status_30_size = 10 } 
+set_variable = { GER_ANM_economy_status_30_control = 0.20 } 
+set_variable = { GER_ANM_economy_status_31 = 3 } #Madagaskar
+set_variable = { GER_ANM_economy_status_31_size = 10 } 
+set_variable = { GER_ANM_economy_status_31_control = 1.00 } 
 
 
-set_country_flag = GER_nsdapgui_activatedanm
+### Flavour Events ###
+country_event = { id = GER_flavour_event.1  days = 10 }
+country_event = { id = GER_flavour_event.2  days = 69 }
+country_event = { id = GER_flavour_event.3  days = 130 }
+country_event = { id = GER_flavour_event.4  days = 191 }
+country_event = { id = GER_flavour_event.5  days = 253 }
+country_event = { id = GER_flavour_event.6  days = 314 }
+country_event = { id = GER_flavour_event.7  days = 375 }
+country_event = { id = GER_flavour_event.8  days = 434 }
+country_event = { id = GER_flavour_event.9  days = 495 }
+country_event = { id = GER_flavour_event.10 days = 556 }
+country_event = { id = GER_flavour_event.11 days = 618 }
+country_event = { id = GER_flavour_event.12 days = 679 }
+country_event = { id = GER_flavour_event.13 days = 740 }
+country_event = { id = GER_flavour_event.15 days = 779 }
+country_event = { id = GER_flavour_event.16 days = 860 }
+country_event = { id = GER_flavour_event.18 days = 921 }
+country_event = { id = GER_flavour_event.19 days = 983 }
+country_event = { id = GER_flavour_event.20 days = 1044 }
+country_event = { id = GER_flavour_event.21 days = 1105 }
+country_event = { id = GER_flavour_event.22 days = 1164 }
+country_event = { id = GER_flavour_event.23 days = 1225 }
+country_event = { id = GER_flavour_event.24 days = 1286 }
+country_event = { id = GER_flavour_event.25 days = 1348 }
+country_event = { id = GER_flavour_event.26 days = 1409 }
+country_event = { id = GER_flavour_event.27 days = 1470 }
+country_event = { id = GER_flavour_event.28 days = 283 }
 
-country_event = {
-    id = GER_anm_starterevents.1
-    days = 103
-}
 
 ### DIPLOMACY ###
-create_faction = Europakt
+create_faction = European_Pact
 add_to_faction = GER
 add_to_faction = ROM
 add_to_faction = FRA
-add_to_faction = POL
 add_to_faction = SLO
 add_to_faction = UKR
 add_to_faction = OST
-add_to_faction = SWE
-add_to_faction = FIN
 add_to_faction = DEN
-add_to_faction = HOL
 add_to_faction = NOR
-add_to_faction = IRE
 add_to_faction = BLR
 add_to_faction = HUN
 add_to_faction = MRZ
-add_to_faction = NDO
 add_to_faction = SER
 add_to_faction = MOS
 add_to_faction = CAU
-add_to_faction = VLG
 add_to_faction = ENG
-add_to_faction = FLR
-add_to_faction = WLN
-
-add_opinion_modifier = {target = ISR modifier = jewish_nation_anm }
+add_to_faction = TNS
+add_to_faction = BUL
+add_to_faction = ALG
+add_to_faction = PAK
 
 if = {
 	limit = { has_dlc = "Together for Victory" }
-	set_autonomy = { target = POL autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = OST autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = BLR autonomy_state = autonomy_reichsprotektorat }
-	set_autonomy = { target = MRZ autonomy_state = autonomy_reichsprotektorat }
+	set_autonomy = { target = MRZ autonomy_state = autonomy_autonomous_reichskommissariat }
 	set_autonomy = { target = UKR autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = MOS autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = CAU autonomy_state = autonomy_reichsprotektorat }
-	set_autonomy = { target = VLG autonomy_state = autonomy_reichsprotektorat }
-	set_autonomy = { target = FLR autonomy_state = autonomy_reichsprotektorat }
-	set_autonomy = { target = WLN autonomy_state = autonomy_reichsprotektorat }
 
 	else = {
-		puppet = POL
 		puppet = UKR
 		puppet = OST
 		puppet = BLR
 		puppet = MRZ
 		puppet = MOS
 		puppet = CAU
-		puppet = VLG
-		puppet = FLR
-		puppet = WLN
 	}
 }
 
-
-### Leaders ###
-create_country_leader = {
-	name = "Albert Friedrich Speer"
-	desc = "POLITICS_ALBERT_SPEER_JR_GERMANY_DESC"
-	picture = "portrait_ger_albert_speer_jr_starting.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_reformed_national_socialism_subtype
-	traits = { 
-	}
-}
-create_country_leader = {
-	name = "Martin Mußgnug"
-	desc = "POLITICS_MARTIN_MUSSGNUG_DESC"
-	picture = "Portrait_GER_Martin_Mussgnug.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_1_idiosyncratic_nazism_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "Reichsforschungsinstitut Ahnenerbe"
-	desc = "POLITICS_AHNENERBE_DESC"
-	picture = "Portrait_GER_Ahnenerbe.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_2_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "Deutsche Arbeitsfront"
-	desc = "POLITICS_DEUTSCHE_ARBEITSFRONT_DESC"
-	picture = "Portrait_GER_Deutsche_Arbeitsfront.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_3_subtype
-	traits = { 
-
-	}
-}
-create_country_leader = {
-	name = "Kein Anführer"
-	desc = "POLITICS_KEIN_ANFUHRER_DESC"
-	picture = "Portrait_GER_Kein_Anfuhrer.dds"
-	expire = "2099.1.1"
-	ideology = national_socialism_4_subtype
-	traits = { 
-
-	}
-}
-
-#See TNO_Germany_scripted_effects.txt ~<3 xoxo calph  
-
-create_field_marshal = {
-	name = "Günter Kießling"
-	desc = "FIELD_MARSHAL_guenther_kiessling"
-	picture = "portrait_anm_ger_guenther_kiessling.dds"
-	traits = { offensive_doctrine brilliant_strategist }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-	traits = { 
-	}
-}
-
-create_field_marshal = {
-	name = "Jörg Schönbohm"
-	desc = "MILITARY_joerg_schoenboehm_DESC"
-	picture = "Portrait_anm_ger_joerg_schoenboehm.dds"
-	traits = { harsh_leader politically_connected offensive_doctrine }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-	id = 3751
-}
-
-create_corps_commander = {
-	name = "Fritz Streletz"
-	picture = "Portrait_anm_ger_fritz_streletz.dds"
-	traits = { trait_reckless winter_specialist trickster }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-	id = 3759
-}
-
-create_corps_commander = {
-	name = "Klaus Reinhardt"
-	picture = "Portrait_anm_ger_klaus_reinhardt.dds"
-	traits = { harsh_leader infantry_leader }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-	id = 3758
-}
-
-create_corps_commander = {
-	name = "Horst Brünner"
-	picture = "Portrait_anm_ger_horst_bruenner.dds"
-	traits = { infantry_officer organizer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 3753
-}
-
-create_navy_leader = { 
-	name = "Theodor Hoffmann"
-	picture = "Portrait_anm_ger_Theodor_Hoffmann.dds"
-	traits = { spotter blockade_runner }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 4
-	coordination_skill = 2
-	id = 804
-}
-
-create_navy_leader = {
-	name = "Dieter Wellershoff"
-	picture = "Portrait_anm_ger_Dieter_Wellershoff.dds"
-	traits = { bold ironside inshore_fighter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-	id = 805
-}
-
-create_navy_leader = { 
-	name = "Wolfgang Brost"
-	picture = "Portrait_anm_ger_wolfgang_brost.dds"
-	traits = { bold spotter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 3
-	coordination_skill = 1
-	id = 806
-}
-
-create_navy_leader = {
-	name = "Gustav Hesse"
-	picture = "Portrait_anm_ger_gustav_hesse.dds"
-	traits = { ironside }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 2
-	id = 807
-}

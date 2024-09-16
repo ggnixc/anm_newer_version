@@ -7,103 +7,29 @@ set_research_slots = 3
 set_stability = 0.8
 
 set_politics = {	
-	ruling_party = socialist
-	last_election = "1990.5.1"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = despotism
+	last_election = "1995.10.22"
+	election_frequency = 60
+	elections_allowed = yes
 }
+
+recruit_character = IVO_Henri_Konan_Bedie
+
+
+TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 3
-	socialist = 60
-    conservatism = 2
-    liberalism = 2
-    paternalism = 19
+    communist = 0
+	socialist = 0
+	progressivism = 18
+    conservatism = 11
+    liberalism = 0
+	liberal_conservatism = 0
+    paternalism = 24
     fascism = 0
-    national_socialism = 8
-    despotism = 6
-}
-
-create_country_leader = {
-	name = "Christophe Kragbe Gnagbe"
-	desc = ""
-	picture = "Portrait_Ivory_Coast_Christophe_Kragbe_Gnagbe.dds"
-	expire = "2965.1.1"
-	ideology = socialist_panafricanism_subtype
-	traits = { 
-	}
-}
-
-create_country_leader = {
-	name = "Jean-Marie Le Pen"
-	desc = "POLITICS_JEAN_MARIE_LE_PEN_DESC"
-	picture = "Portrait_Jean_Marie_Le_Pen.dds"
-	expire = "2965.1.1"
-	ideology = authoritarian_democracy_oligarchy_subtype
-	traits = { 
-		le_chef 
-	}
-}
-
-
-create_country_leader = {
-	name = "André Gerin"
-	desc = "POLITICS_JEAN_MARIE_LE_PEN_DESC"
-	picture = "Portrait_Jean_Marie_Le_Pen.dds"
-	expire = "2965.1.1"
-	ideology = communist_subtype
-	traits = {  
-	}
-}
-
-create_country_leader = {
-	name = "Michèle Ollier-Marie"
-	desc = "POLITICS_JEAN_MARIE_LE_PEN_DESC"
-	picture = "Portrait_Jean_Marie_Le_Pen.dds"
-	expire = "2965.1.1"
-	ideology = liberalism_subtype
-	traits = {  
-	}
-}
-
-create_country_leader = {
-	name = "Alain Robert"
-	desc = "POLITICS_JEAN_MARIE_LE_PEN_DESC"
-	picture = "Portrait_Jean_Marie_Le_Pen.dds"
-	expire = "2965.1.1"
-	ideology = national_socialism_subtype
-	traits = {  
-	}
-}
-
-create_country_leader = {
-	name = "Alassane Ouattara"
-	desc = "POLITICS_JEAN_MARIE_LE_PEN_DESC"
-	picture = "Portrait_Jean_Marie_Le_Pen.dds"
-	expire = "2965.1.1"
-	ideology = conservatism_subtype
-	traits = {  
-	}
-}
-
-create_country_leader = {
-	name = "Jacques Bompard"
-	desc = "POLITICS_JEAN_MARIE_LE_PEN_DESC"
-	picture = "Portrait_Jean_Marie_Le_Pen.dds"
-	expire = "2965.1.1"
-	ideology = fascism_subtype
-	traits = {  
-	}
-}
-
-create_country_leader = {
-	name = "François Bel-Ker"
-	desc = "POLITICS_JEAN_MARIE_LE_PEN_DESC"
-	picture = "Portrait_Jean_Marie_Le_Pen.dds"
-	expire = "2965.1.1"
-	ideology = despotism_subtype
-	traits = {  
-	}
+    national_socialism = 0
+    despotism = 38
+	progressivism_1 = 9
 }
 
 create_field_marshal = {
@@ -131,5 +57,5 @@ create_corps_commander = {
 }
 
 add_ideas = {
-	PALF_Satellite
+	CWA_Faction
 }

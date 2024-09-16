@@ -1,0 +1,143 @@
+characters = {
+	DEN_Henning_Christophersen = {
+		name = DEN_Henning_Christophersen
+		portraits = { 
+			civilian = { large = "gfx/leaders/DEN/Portrait_DEN_Henning_Christophersen.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_HENNING_CHRISTOPHERSEN_DESC"
+			ideology = liberal_conservatism_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	DEN_povl_heinrich_riis_knudsen = {  
+		name = DEN_povl_heinrich_riis_knudsen
+		portraits = { 
+			civilian = { large = "gfx/leaders/DEN/Portrait_DEN_Povl_Heinrich_Riis_Knudsen.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_POVL_HEINRICH_RIIS_KNUDSEN_DESC"
+			ideology = national_socialism_revolutionary_nazism_subtype
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	DEN_pia_kjaersgaard = {  
+		name = DEN_pia_kjaersgaard
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/DEN/Portrait_DEN_Pia_Kjaersgaard.dds"
+				small = "GFX_idea_DEN_Pia_Kjaersgaard" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = DEN_Pia_Kjaersgaard_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	DEN_erling_hallas = { 
+		name = DEN_erling_hallas
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/DEN/Portrait_DEN_Erling_Hallas.dds"
+				small = "GFX_idea_DEN_Erling_Hallas" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = DEN_Erling_Hallas_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	} 
+	DEN_esben_rohde_kristensen = { 
+		name = DEN_esben_rohde_kristensen
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/DEN/Portrait_DEN_Esben_Rohde_Kristensen.dds"
+				small = "GFX_idea_DEN_Esben_Rohde_Kristensen" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = DEN_Esben_Rohde_Kristensen_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	DEN_soren_krarup = {  
+		name = DEN_soren_krarup
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/DEN/Portrait_DEN_Soren_Krarup.dds"
+				small = "GFX_idea_DEN_Soren_Krarup" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = DEN_Soren_Krarup_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	DEN_jonni_hansen = {  
+		name = DEN_jonni_hansen
+		country_leader = {
+			ideology = national_socialism_1_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	DEN_mogens_glistrup = {  
+		name = DEN_mogens_glistrup
+		country_leader = {
+			ideology = despotism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	DEN_bendt_bendtsen = {  
+		name = DEN_bendt_bendtsen
+		country_leader = {
+			ideology = despotism_1_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	DEN_anker_jorgensen = {  
+		name = DEN_anker_jorgensen
+		country_leader = {
+			ideology = paternalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	DEN_henrik_stamer_hedin = {  
+		name = DEN_henrik_stamer_hedin
+		country_leader = {
+			ideology = communist_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+} 

@@ -1343,9 +1343,9 @@ scripted_map_modes = {
 							check_variable = { nationality = 140 } #Burgundian
 						}
 					}
-					set_temp_variable = { red = 0.311 }
-					set_temp_variable = { green = 0.05 }
-					set_temp_variable = { blue = 0.210 }
+					set_temp_variable = { red = 0.411 }
+					set_temp_variable = { green = 0.405 }
+					set_temp_variable = { blue = 0.410 }
 				}
 				else_if = {
 					limit = {
@@ -1620,26 +1620,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 168 } #Estonian
-						}
-					}
-					set_temp_variable = { red = 0.551 }
-					set_temp_variable = { green = 0.680 }
-					set_temp_variable = { blue = 0.837 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 169 } #Latvian
-						}
-					}
-					set_temp_variable = { red = 0.568 }
-					set_temp_variable = { green = 0.164 }
-					set_temp_variable = { blue = 0.262 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							check_variable = { nationality = 170 } #Byelorussian
 						}
 					}
@@ -1716,16 +1696,6 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.729 }
 					set_temp_variable = { green = 0.505 }
 					set_temp_variable = { blue = 0.471 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 178 } #Polish
-						}
-					}
-					set_temp_variable = { red = 0.647 }
-					set_temp_variable = { green = 0.492 }
-					set_temp_variable = { blue = 0.492 }
 				}
 				else_if = {
 					limit = {
@@ -2610,16 +2580,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 268 } #Lithuanian
-						}
-					}
-					set_temp_variable = { red = 0.533 }
-					set_temp_variable = { green = 0.535 }
-					set_temp_variable = { blue = 0.253 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							check_variable = { nationality = 269 } #Sukuma
 						}
 					}
@@ -3370,22 +3330,12 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 345 } #Polish-Belarusian
+							check_variable = { nationality = 345 } #Belarusian-Sudauen
 						}
 					}
 					set_temp_variable = { red = 0.617 }
 					set_temp_variable = { green = 0.552 }
 					set_temp_variable = { blue = 0.492 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 346 } #Polish-Weichseldeutsch
-						}
-					}
-					set_temp_variable = { red = 0.647 }
-					set_temp_variable = { green = 0.572 }
-					set_temp_variable = { blue = 0.572 }
 				}
 				else_if = {
 					limit = {
@@ -3700,16 +3650,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 380 } # Polish-Ukrainian
-						}
-					}
-					set_temp_variable = { red = 0.498 }
-					set_temp_variable = { green = 0.482 }
-					set_temp_variable = { blue = 0.510 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							check_variable = { nationality = 381 } #Shona with English settlers
 						}
 					}
@@ -3866,36 +3806,6 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.404 }
 					set_temp_variable = { green = 0.4 }
 					set_temp_variable = { blue = 0.357 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 398 } # Baltisch Deutsch-Latvian
-						}
-					}
-					set_temp_variable = { red = 0.463 }
-					set_temp_variable = { green = 0.318 }
-					set_temp_variable = { blue = 0.322 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 399 } # Baltisch Deutsch-Estonian
-						}
-					}
-					set_temp_variable = { red = 0.494 }
-					set_temp_variable = { green = 0.569 }
-					set_temp_variable = { blue = 0.643 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							check_variable = { nationality = 400 } # Russian-Latvian
-						}
-					}
-					set_temp_variable = { red = 0.404 }
-					set_temp_variable = { green = 0.227 }
-					set_temp_variable = { blue = 0.224 }
 				}
 				else_if = {
 					limit = {
@@ -4103,7 +4013,7 @@ scripted_map_modes = {
 							check_variable = { nationality = 421 } # Hungarian-Osterreichisch
 						}
 					}
-					set_temp_variable = { red = 0.631 }
+					set_temp_variable = { red = 0.632 }
 					set_temp_variable = { green = 0.486 }
 					set_temp_variable = { blue = 0.463 }
 				}
@@ -5938,11 +5848,6 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.50 }
 					set_temp_variable = { blue = 0.60 }
 				}
-				else = {
-					set_temp_variable = { red = 0.001 }
-					set_temp_variable = { green = 0.001 }
-					set_temp_variable = { blue = 0.001 }
-				}
 				else_if = {
 					limit = {
 						FROM = {
@@ -5952,6 +5857,156 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.622 }
 					set_temp_variable = { green = 0.726 }
 					set_temp_variable = { blue = 0.522 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 606 } #African Blanke
+						}
+					}
+					set_temp_variable = { red = 0.550 }
+					set_temp_variable = { green = 0.500 }
+					set_temp_variable = { blue = 0.112 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 607 } #Krakauer
+						}
+					}
+					set_temp_variable = { red = 0.40 }
+					set_temp_variable = { green = 0.38 }
+					set_temp_variable = { blue = 0.37 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 608 } #Weichseldeutsche
+						}
+					}
+					set_temp_variable = { red = 0.38 }
+					set_temp_variable = { green = 0.37 }
+					set_temp_variable = { blue = 0.39 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 609 } #Galizien
+						}
+					}
+					set_temp_variable = { red = 0.37 }
+					set_temp_variable = { green = 0.38 }
+					set_temp_variable = { blue = 0.39 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 610 } #Schwarzmeerdeutsche
+						}
+					}
+					set_temp_variable = { red = 0.39 }
+					set_temp_variable = { green = 0.39 }
+					set_temp_variable = { blue = 0.39 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 611 } #Wolhyniendeutsche
+						}
+					}
+					set_temp_variable = { red = 0.40 }
+					set_temp_variable = { green = 0.40 }
+					set_temp_variable = { blue = 0.40 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 612 } #Sudauen
+						}
+					}
+					set_temp_variable = { red = 0.37 }
+					set_temp_variable = { green = 0.39 }
+					set_temp_variable = { blue = 0.40 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 613 } #Sudauen-Lithuanian
+						}
+					}
+					set_temp_variable = { red = 0.439 }
+					set_temp_variable = { green = 0.420 }
+					set_temp_variable = { blue = 0.329 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 614 } #Belarusian-Polesien
+						}
+					}
+					set_temp_variable = { red = 0.616 }
+					set_temp_variable = { green = 0.550 }
+					set_temp_variable = { blue = 0.490 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 615 } #Ukrainian-Polesien
+						}
+					}
+					set_temp_variable = { red = 0.351 }
+					set_temp_variable = { green = 0.473 }
+					set_temp_variable = { blue = 0.534 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 616 } #Kiewer
+						}
+					}
+					set_temp_variable = { red = 0.381 }
+					set_temp_variable = { green = 0.374 }
+					set_temp_variable = { blue = 0.391 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 617 } #Krimdeutsche
+						}
+					}
+					set_temp_variable = { red = 0.461 }
+					set_temp_variable = { green = 0.452 }
+					set_temp_variable = { blue = 0.452 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 618 } #Krimdeutsche-Ukrainian
+						}
+					}
+					set_temp_variable = { red = 0.465 }
+					set_temp_variable = { green = 0.453 }
+					set_temp_variable = { blue = 0.452 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 619 } #Kriwitschen
+						}
+					}
+					set_temp_variable = { red = 0.40 }
+					set_temp_variable = { green = 0.42 }
+					set_temp_variable = { blue = 0.43 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 620 } #Belarusian-Kriwitschen
+						}
+					}
+					set_temp_variable = { red = 0.290 }
+					set_temp_variable = { green = 0.455 }
+					set_temp_variable = { blue = 0.314 }
 				}
 			}
 		}

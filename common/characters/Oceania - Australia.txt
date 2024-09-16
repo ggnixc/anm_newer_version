@@ -1,0 +1,158 @@
+characters = {
+	AST_Joh_Bjelke_Petersen = { 
+		name = AST_Joh_Bjelke_Petersen
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Joh_Bjelke_Petersen.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AST_Joh_Bjelke_Petersen_DESC"
+			ideology = despotism_aristocratic_conservatism_subtype
+			traits = {}
+			expire = "2999.1.1.1"
+		}
+	}
+	AST_Andrew_Peacock = {
+		name = AST_Andrew_Peacock
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Andrew_Peacock.dds"
+				small = "GFX_idea_AST_Andrew_Peacock" 
+			} 	
+		} 
+		country_leader = {
+			desc = "POLITICS_AST_ANDREW_PEACOCK_DESC"
+			ideology = conservatism_paternalistic_conservatism_subtype
+			traits = {}
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AST_Andrew_Peacock_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AST_Alexander_Downer = { 
+		name = AST_Alexander_Downer
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Alexander_Downer.dds"	
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AST_Alexander_Downer_DESC"
+			ideology = liberal_conservatism_market_liberalism_subtype
+			traits = {}
+			expire = "2999.1.1.1"
+		}
+	}
+	AST_Robin_Gray = { 
+		name = AST_Robin_Gray
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Robin_Gray.dds"	
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AST_Robin_Gray_DESC"
+			ideology = paternalism_right_wing_populism_subtype
+			traits = {}
+			expire = "2999.1.1.1"
+		}
+	}
+	AST_Graeme_Campbell = { 
+		name = AST_Graeme_Campbell
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Graeme_Campbell.dds"	
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AST_Graeme_Campbell_DESC"
+			ideology = despotism_personalistic_dictatorship_subtype
+			traits = {}
+			expire = "2999.1.1.1"
+		}
+	}
+	AST_Michael_Jeffery = {
+		name = AST_Michael_Jeffery
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Michael_Jeffery.dds"
+				small = "GFX_idea_AST_Michael_Jeffery" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = AST_Michael_Jeffery_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AST_Philip_Flood = {
+		name = AST_Philip_Flood
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Philip_Flood.dds"
+				small = "GFX_idea_AST_Philip_Flood" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = AST_Philip_Flood_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AST_Peter_Costello = {
+		name = AST_Peter_Costello
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Peter_Costello.dds"
+				small = "GFX_idea_AST_Peter_Costello" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = AST_Peter_Costello_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	AST_Parliament_of_Australia = { 
+		name = AST_Parliament_of_Australia
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/AST/Portrait_AST_Parliament_of_Australia.dds"	
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_AST_Parliament_of_Australia_DESC"
+			ideology = progressivism_democratic_socialism_subtype
+			traits = {}
+			expire = "2999.1.1.1"
+		}
+	}
+} 

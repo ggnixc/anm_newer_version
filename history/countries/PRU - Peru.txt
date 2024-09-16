@@ -1,6 +1,6 @@
-﻿capital = 303
+﻿capital = 1689
 
-set_oob = "PRU_1962"
+set_oob = ""
 
 set_politics = {	
 	ruling_party = despotism
@@ -9,32 +9,42 @@ set_politics = {
 	elections_allowed = no
 }
 
+recruit_character = PRU_Mario_Vargas_Llosa
+recruit_character = PRU_Ricardo_Marquez_Flores
+recruit_character = PRU_Victor_Malca_Villanueva
+recruit_character = PRU_Efrain_Goldenberg
+recruit_character = PRU_Jorge_Camet
 recruit_character = PRU_Cesar_Saucedo_Sanchez
+recruit_character = PRU_Keiko_Fujimori
+recruit_character = PRU_Alan_Garcia
+
+TNO_startup_nation = yes
 
 set_popularities = {
-	communist = 14
-	socialist = 22
+	communist = 17
+	socialist = 25
 	progressivism = 12
-	liberalism = 8
+	liberalism = 0
 	liberal_conservatism = 10
 	conservatism = 0
 	paternalism = 0
-	despotism = 34
+	despotism = 36
 	fascism = 0
 	national_socialism = 0
 	ultranationalism = 0
-	esoteric_nazism = 0
+	 
 }
 
-create_country_leader = {
-	name = "Alberto Fujimori"
-	picture = "Portrait_PRU_Alberto_Fujimori.dds"
-	expire = "2090.1.1"
-	ideology = despotism_personalistic_dictatorship_subtype
-	traits = { 
-	}
-}
+promote_character = PRU_Mario_Vargas_Llosa
 
 add_ideas = {
-PRU_shiningpathinsurgency
+#Ministers
+PRU_Ricardo_Marquez_Flores_hog
+PRU_Victor_Malca_Villanueva_sec
+PRU_Efrain_Goldenberg_for
+PRU_Jorge_Camet_eco
+#Nat Spirits
+PRU_Armed_Socialists
+PRU_Fujishocked
+PRU_Aristocratic_Alliance
 }

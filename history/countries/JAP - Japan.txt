@@ -8,23 +8,24 @@ set_research_slots = 4
 set_convoys = 200
 add_stability = -0.30
 
-set_variable = { ANMKDN_showednation_agenda_one = 7 }
-set_variable = { ANMKDN_showednation_agenda_one = 11 }
-set_variable = { ANMKDN_showednation_agenda_one = 16 }
 
 set_country_flag = gui_alert_visible
 
 create_faction = Japanese_Co-Prosperity_Sphere
-add_to_faction = KOR
+add_to_faction = CHI
+add_to_faction = GNG
 add_to_faction = SYO
-add_to_faction = INS
 add_to_faction = SRK
 add_to_faction = SIA
 add_to_faction = BRU
 add_to_faction = MAN
-add_to_faction = BEN
 add_to_faction = BUR
 add_to_faction = PHI
+add_to_faction = VIN
+add_to_faction = CAM
+add_to_faction = SBH
+add_to_faction = LAO
+add_to_faction = AZH
 
 if = {
 	limit = { has_dlc = "La Resistance" }
@@ -36,99 +37,27 @@ if = {
 
 set_politics = {	
 	ruling_party = paternalism
-	last_election = "1962.1.1"
-	election_frequency = 48
+	last_election = "1993.10.1"
+	election_frequency = 40
 	elections_allowed = yes
 }
+recruit_character = JAP_Yasuo_Fukada
+
+TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
     socialist = 0
-    progressivism = 5
-    liberalism = 8
-    conservatism = 12
-    paternalism = 69
-    despotism = 0
-    fascism = 6
+    progressivism = 4
+    liberalism = 29
+    conservatism = 0
+    paternalism = 48
+    despotism = 10
+    fascism = 9
     national_socialism = 0
     ultranationalism = 0
-    esoteric_nazism = 0
+     
 }
-
-create_country_leader = {
-	name = "Nariaki Nakayama"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Takeo Hiranuma"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Junichiro Koizumi"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = conservatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Koichi Kato"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_JAP_Koichi_Kato.dds"
-	expire = "2090.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hiromi Okazaki"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = progressivism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Hiromi Okazaki"
-	desc = "POLITICS_AKIHITO_DESC"
-	picture = "Portrait_Japan_Akihito.dds"
-	expire = "2999.1.1"
-	ideology = socialist_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Ishihara Shintaro"
-	desc = "POLITICS_ISHIHARA_SHINTARO_DESC"
-	picture = "Portrait_JAP_Ishihara_Shintaro.dds"
-	expire = "2999.1.1"
-	ideology = paternalism_dominant_party_democracy_subtype
-	traits = {
-	}
-}
-
-set_autonomy = {
- 		target = KOR
- 		autonomous_state = autonomy_integrated_puppet
- 	}
 
 add_ideas = {
 
@@ -137,7 +66,6 @@ add_ideas = {
 	Sphere_Leader
 
    	JAP_Colonial_Crisis
-	JAP_The_Dimming_Sun
 	JAP_The_Democratic_Facade
 	JAP_The_Economic_Web
 
