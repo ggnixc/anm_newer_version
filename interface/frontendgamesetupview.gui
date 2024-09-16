@@ -229,6 +229,19 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
+		instantTextBoxType = {
+			name = "load_game_title"
+			position = { x = 6 y = 74 }
+			font = "aldrich_white_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Saveloader.bat"
+			maxWidth = 250
+			maxHeight = 20
+			fixedsize = yes
+			Orientation = "UPPER_LEFT"
+			format = centre
+		}
+
 		#iconType = {
 		#	name ="menu_bottom"
 		#	spriteType = "GFX_load_save_bottom_screen"
@@ -250,7 +263,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "localgames_tab"
-			position = { x = 35  y = 84 }
+			position = { x = 9  y = 113 }
 			quadTextureSprite ="GFX_save_game_btn"
 			Orientation = "UPPER_LEFT"
 			clicksound = click_checkbox
@@ -258,7 +271,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "remotegames_tab"
-			position = { x = 185 y = 84 }
+			position = { x = 138 y = 113 }
 			quadTextureSprite ="GFX_save_game_btn"
 			Orientation = "UPPER_LEFT"
 			clicksound = click_checkbox
@@ -266,11 +279,11 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "localgames_label"
-			position = { x = 45 y = 91 }
-			font = "Bomb_24"
+			position = { x = 9 y = 118 }
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "MENU_BAR_LOCALGAMES"
-			maxWidth = 100
+			maxWidth = 120
 			maxHeight = 20
 			fixedsize = yes
 			Orientation = "UPPER_LEFT"
@@ -279,11 +292,11 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "cloudgames_label"
-			position = { x = 195 y = 91 }
-			font = "Bomb_24"
+			position = { x = 138 y = 116 }
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "MENU_BAR_CLOUDGAMES"
-			maxWidth = 100
+			maxWidth = 120
 			maxHeight = 20
 			fixedsize = yes
 
@@ -1996,7 +2009,7 @@ guiTypes = {
 
 		iconType = {
 			name = "custom_settings_btn_overlay"
-			position = { x = 191 y = 8 }
+			position = { x = 190 y = 8 }
 			quadTextureSprite ="GFX_TNO_map_select_bottomright_custom_button_overlay"
 			pdx_tooltip = FE_CUSTOM_DIFFUCULTY
 		}
