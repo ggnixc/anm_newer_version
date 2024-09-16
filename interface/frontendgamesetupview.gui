@@ -146,7 +146,7 @@ guiTypes = {
 		buttonType = {
 			name = "country"
 			quadTextureSprite = "GFX_country_selection_minor_entry"
-			position = { x = 26 y = 22 }
+			position = { x = 20 y = 20 }
 			clicksound = click_checkbox
 		}
 
@@ -715,21 +715,21 @@ guiTypes = {
 			}
 			iconType = { # USA BLOCKED ENTRY
 				name = "countries_blocker_big_ofn_1_entry"
-				position = { x = 26 y = 22 }
+				position = { x = 22 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_USA"
 				pdx_tooltip = "BOOKMARK_USA_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_USA_BLOCKER_DELAYED"
 			}
 			iconType = { # JAPAN BLOCKED ENTRY
 				name = "countries_blocker_big_cps_1_entry"
-				position = { x = 514 y = 22 }
+				position = { x = 510 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_JAP"
 				pdx_tooltip = "BOOKMARK_JAPAN_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_JAPAN_BLOCKER_DELAYED"
 			}
 			iconType = { # USSR BLOCKED ENTRY
 				name = "countries_blocker_big_comintern_1_entry"
-				position = { x = 758 y = 22 }
+				position = { x = 754 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_SOV"
 				pdx_tooltip = "BOOKMARK_USSR_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_USSR_BLOCKER_DELAYED"
@@ -1993,6 +1993,15 @@ guiTypes = {
 			text = "Alternative Security Protocol"
 			pdx_tooltip = FE_CUSTOM_DIFFUCULTY
 		}
+
+		iconType = {
+			name = "custom_settings_btn_overlay"
+			position = { x = 191 y = 8 }
+			quadTextureSprite ="GFX_TNO_map_select_bottomright_custom_button_overlay"
+			pdx_tooltip = FE_CUSTOM_DIFFUCULTY
+		}
+
+	
 
 		#instantTextBoxType={
 		#	position = { x = 478 y = 18 }
