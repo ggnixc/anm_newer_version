@@ -9,8 +9,11 @@ ideas = {
 			picture = GFX_idea_ENG_slug
 			removal_cost = -1
 			modifier = {
-
+				production_factory_start_efficiency_factor = -0.15
+				line_change_production_efficiency_factor = -0.25
+				industrial_capacity_factory = -0.05
 			}
+			
 		}
 		ENG_ministry_shadow = {
 			allowed = { always = yes }
@@ -18,7 +21,8 @@ ideas = {
 			picture = GFX_idea_ENG_ministry_shadow
 			removal_cost = -1
 			modifier = {
-
+				stability_factor = -0.15
+				war_support_factor = -0.15
 			}
 		}
 		ENG_better_bred = {
@@ -27,7 +31,9 @@ ideas = {
 			picture = GFX_idea_ENG_better_bred
 			removal_cost = -1
 			modifier = {
-
+				political_power_gain = -0.25
+				political_power_factor = -0.10
+				party_popularity_stability_factor = -0.10
 			}
 		}
 		ENG_pariah = {
@@ -36,7 +42,10 @@ ideas = {
 			picture = GFX_idea_ENG_pariah
 			removal_cost = -1
 			modifier = {
-
+				army_morale_factor = -0.15
+				army_org_factor = -0.15
+				experience_gain_factor = -0.25
+				command_power_gain_mult = -0.25
 			}
 		}
 		ENG_politt_name = {
@@ -45,7 +54,9 @@ ideas = {
 			picture = GFX_idea_ENG_politt_name
 			removal_cost = -1
 			modifier = {
-
+				stability_weekly = -0.01
+				stability_factor = -0.20
+				political_power_gain = -0.25
 			}
 		}
 	
