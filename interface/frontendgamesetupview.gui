@@ -696,9 +696,9 @@ guiTypes = {
 
 			gridboxType = {
 				name ="countries_grid"
-				position = { x = 1 y = 0 }
+				position = { x = -105 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 200 height = 100 } 
+				slotsize = { width = 238 height = 100 } 
 				add_horizontal = yes
 				max_slots_vertical = 3
 				max_slots_horizontal = 5
@@ -710,39 +710,46 @@ guiTypes = {
 			iconType = {
 				name ="dud_countries_overlay_1"
 				spriteType = "GFX_flag_blank_82_52"
-				position = { x = 206 y = 50 }
+				position = { x = 100 y = 100 }
 			}
 			iconType = { # GERMANY NEW
 				name = "country_selection_new_germany"
-				position = { x = 365 y = 30 }
+				position = { x = 491 y = 30 }
 				spriteType = "GFX_country_selection_new_big"
 				pdx_tooltip = "BOOKMARK_GERMANY_NEW"
 				pdx_tooltip_delayed = "BOOKMARK_GERMANY_NEW_DELAYED"
 			}
 			iconType = { # GERMANY INFO
 				name = "country_selection_info_germany"
-				position = { x = 260 y = 0 }
+				position = { x = 386 y = 0 }
 				spriteType = "GFX_country_selection_alert_big"
 				pdx_tooltip = "BOOKMARK_GERMANY_INFO"
 				pdx_tooltip_delayed = "BOOKMARK_GERMANY_INFO_DELAYED"
 			}
 			iconType = { # USA BLOCKED ENTRY
 				name = "countries_blocker_big_ofn_1_entry"
-				position = { x = 22 y = 21 }
+				position = { x = -84 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_USA"
 				pdx_tooltip = "BOOKMARK_USA_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_USA_BLOCKER_DELAYED"
 			}
+			iconType = { # ITA BLOCKED ENTRY
+				name = "countries_blocker_big_spaghetti_1_entry"
+				position = { x = 154 y = 21 }
+				spriteType = "GFX_country_selection_screen_blocker_big_ITA"
+				pdx_tooltip = "BOOKMARK_ITA_BLOCKER"
+				pdx_tooltip_delayed = "BOOKMARK_ITA_BLOCKER_DELAYED"
+			}
 			iconType = { # JAPAN BLOCKED ENTRY
 				name = "countries_blocker_big_cps_1_entry"
-				position = { x = 510 y = 21 }
+				position = { x = 630 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_JAP"
 				pdx_tooltip = "BOOKMARK_JAPAN_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_JAPAN_BLOCKER_DELAYED"
 			}
 			iconType = { # USSR BLOCKED ENTRY
 				name = "countries_blocker_big_comintern_1_entry"
-				position = { x = 754 y = 21 }
+				position = { x = 868 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_SOV"
 				pdx_tooltip = "BOOKMARK_USSR_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_USSR_BLOCKER_DELAYED"

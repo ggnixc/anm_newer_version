@@ -1,5 +1,39 @@
 ﻿add_namespace = ENG_flavour_event
+add_namespace = ENG_debug_event
 
+
+country_event = { #Leader change 
+	id = ENG_debug_event.1
+	title = ENG_debug_event.1.t
+	desc = ENG_debug_event.1.desc
+	picture = GFX_anm_ENG_Dusty_Shelves
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = ENG_debug_event.1.a	
+		effect = { 
+			ENG = { 
+				retire_country_leader = yes
+				ENG_neil_hamilton = {
+					promote_character = yes 
+				}
+			}	
+		} 
+	}
+	option = { 
+		name = ENG_debug_event.1.b	
+		effect = { 
+			ENG = {
+				retire_country_leader = yes
+				ENG_Nikolai_Tolstoy = {
+					promote_character = yes 
+				} 
+			} 
+		}	
+	}
+}
 
 country_event = { #January 1996: Dusty Shelves 
 	id = ENG_flavour_event.1
