@@ -28,10 +28,10 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 		advisor = {
-			slot = head_of_government
-			idea_token = AST_Andrew_Peacock_hog
+			slot = foreign_minister
+			idea_token = AST_Andrew_Peacock_for
 			traits = {
-				head_of_government
+				foreign_minister
 			}
 			ledger = civilian
 			cost = -1
@@ -58,6 +58,7 @@ characters = {
 		portraits = { 
 			civilian = { 
 				large = "gfx/leaders/AST/Portrait_AST_Robin_Gray.dds"	
+				small = "GFX_idea_AST_Robin_Gray"
 			}
 		}
 		country_leader = {
@@ -65,6 +66,17 @@ characters = {
 			ideology = paternalism_right_wing_populism_subtype
 			traits = {}
 			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AST_Robin_Gray_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
 	AST_Graeme_Campbell = { 
@@ -94,26 +106,6 @@ characters = {
 			idea_token = AST_Michael_Jeffery_sec
 			traits = {
 				security_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-	}
-	AST_Philip_Flood = {
-		name = AST_Philip_Flood
-		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/AST/Portrait_AST_Philip_Flood.dds"
-				small = "GFX_idea_AST_Philip_Flood" 
-			} 	
-		} 
-		advisor = {
-			slot = foreign_minister
-			idea_token = AST_Philip_Flood_for
-			traits = {
-				foreign_minister
 			}
 			ledger = civilian
 			cost = -1

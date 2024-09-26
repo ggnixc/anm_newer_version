@@ -18,14 +18,14 @@ country_event = {
 			
 			AST = {
 				set_politics = {
-					ruling_party = conservatism
+					ruling_party = paternalism
 					last_election = "1995.4.13"
 					election_frequency = 36
 					elections_allowed = yes
 				}
 				remove_ideas = {
-					AST_Joh_Bjelke_Petersen_hog
-					AST_Ian_McLachlan_sec
+					AST_Robin_Gray_hog
+					AST_Michael_Jeffery_sec
 					AST_Andrew_Peacock_for
 					AST_Peter_Costello_eco
 				}
@@ -51,7 +51,7 @@ country_event = { #1998 federal election
 	option = {
 		name = AST_scripted.2.a
 		ai_chance = {
-			factor = 38
+			factor = 28
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
@@ -85,6 +85,11 @@ country_event = { #1998 federal election
 		add_popularity = {
 			ideology = despotism
 			popularity = 0.01
+		}
+		set_politics = {
+			ruling_party = conservatism
+			last_election = "1998.5.6"
+			elections_allowed = yes
 		}
 		set_country_flag = peacock_98
 		news_event = { id = WORLD.18193 }
@@ -134,7 +139,7 @@ country_event = { #1998 federal election
 	option = {
 		name = AST_scripted.2.a
 		ai_chance = {
-			factor = 28
+			factor = 38
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
@@ -149,7 +154,6 @@ country_event = { #1998 federal election
 			}
 		}
 		set_politics = {
-			ruling_party = paternalism
 			last_election = "1998.5.6"
 			elections_allowed = yes
 		}
