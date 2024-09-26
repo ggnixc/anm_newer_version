@@ -6008,6 +6008,16 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.455 }
 					set_temp_variable = { blue = 0.314 }
 				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 621 } #Hungarian-Ruthenian
+						}
+					}
+					set_temp_variable = { red = 0.729 } #0.729
+					set_temp_variable = { green = 0.471 } #0.505
+					set_temp_variable = { blue = 0.531 } #.471
+				}
 			}
 		}
 		far_text = none
