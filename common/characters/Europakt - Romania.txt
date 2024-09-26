@@ -30,6 +30,7 @@ characters = {
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
+		# Christian Progressivism
 	}
 	ROM_gavril_dejeu = { 
 		name = ROM_gavril_dejeu
@@ -50,6 +51,7 @@ characters = {
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
+		# Christian Conservatism
 	} 
 	ROM_mircea_ciumara = {  
 		name = ROM_mircea_ciumara
@@ -70,6 +72,7 @@ characters = {
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
+		# Liberal Corporatism
 	}
 	ROM_ion_diaconescu = { 
 		name = ROM_ion_diaconescu
@@ -98,28 +101,14 @@ characters = {
 	ROM_sergiu_cunescu = { 
 		name = ROM_sergiu_cunescu
 		country_leader = {
-			ideology = progressivism_1_subtype
-			expire = "2999.1.1.1"
-		}
-	}
-	ROM_andreas_ruhrig = { 
-		name = ROM_andreas_ruhrig
-		country_leader = {
-			ideology = national_socialism_reformed_national_socialism_subtype
-			expire = "2999.1.1.1"
-		}
-	}
-	ROM_liviu_petrina = { 
-		name = ROM_liviu_petrina
-		country_leader = {
-			ideology = conservatism_christian_conservatism_subtype
+			ideology = progressivism_1_subtype #Reformed Socialism
 			expire = "2999.1.1.1"
 		}
 	}
 	ROM_anatoliy_kaminski = { 
 		name = ROM_anatoliy_kaminski
 		country_leader = {
-			ideology = conservatism_1_subtype
+			ideology = conservatism_1_subtype #Free Market Conservatism
 			expire = "2999.1.1.1"
 		}
 	}
@@ -130,11 +119,13 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_RADU_CAMPEANU_DESC"
-			ideology = liberalism_1_subtype
+			ideology = liberalism_progressive_liberalism_subtype 
 			traits = {  }
 			expire = "2999.1.1.1"
 		}
 	}
+
+	### Commie victory ###
 	ROM_Gheorghe_Apostol = {
 		name = ROM_Gheorghe_Apostol
 		portraits = { 
@@ -147,5 +138,4 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
-	
 } 

@@ -14,23 +14,35 @@ country_event = { #Leader change
 	option = { 
 		name = ENG_debug_event.1.a	
 		effect = { 
-			ENG = { 
-				retire_country_leader = yes
-				ENG_neil_hamilton = {
-					promote_character = yes 
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ENG_neil_hamilton
+				promote_leader = yes
+				country_leader = {
+					ideology = fascism_social_credit_subtype
+					desc = "POLITICS_NEIL_HAMILTON_DESC"
+					expire = "2999.1.1.1"
+					traits = { }
 				}
-			}	
+			}
 		} 
 	}
+
+
 	option = { 
 		name = ENG_debug_event.1.b	
 		effect = { 
-			ENG = {
-				retire_country_leader = yes
-				ENG_Nikolai_Tolstoy = {
-					promote_character = yes 
-				} 
-			} 
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ENG_Nikolai_Tolstoy
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_NIKOLAI_TOLSTOY_DESC"
+					ideology = fascism_social_credit_subtype
+					traits = {  }
+					expire = "2999.1.1.1"
+				}
+			}
 		}	
 	}
 }
