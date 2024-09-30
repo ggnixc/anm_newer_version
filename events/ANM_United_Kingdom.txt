@@ -2,19 +2,21 @@
 add_namespace = ENG_debug_event
 
 
-country_event = { #Leader change 
+country_event = { #Leader change
 	id = ENG_debug_event.1
 	title = ENG_debug_event.1.t
 	desc = ENG_debug_event.1.desc
 	picture = GFX_anm_ENG_Dusty_Shelves
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = { 
-		name = ENG_debug_event.1.a	
-		effect = { 
-			retire_country_leader = yes
+		name = ENG_debug_event.1.a
+		hidden_effect = { 
+			remove_country_leader_role = {
+				character = ENG_marlin_hanbury_tracy
+				ideology = fascism_social_credit_subtype
+			}
 			add_country_leader_role = {
 				character = ENG_neil_hamilton
 				promote_leader = yes
@@ -28,11 +30,13 @@ country_event = { #Leader change
 		} 
 	}
 
-
 	option = { 
-		name = ENG_debug_event.1.b	
-		effect = { 
-			retire_country_leader = yes
+		name = ENG_debug_event.1.b
+		hidden_effect = { 
+			remove_country_leader_role = {
+				character = ENG_marlin_hanbury_tracy
+				ideology = fascism_social_credit_subtype
+			}
 			add_country_leader_role = {
 				character = ENG_Nikolai_Tolstoy
 				promote_leader = yes
