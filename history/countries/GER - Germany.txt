@@ -379,29 +379,36 @@ set_variable = { GER_ANM_upper_party_influence = 55 }
 set_variable = { GER_ANM_party_leadership_leaning = -85 }
 set_variable = { GER_ANM_party_leadership_influnce = 80 }
 
-#Government GUI
-set_variable = { GER_ANM_government_loyaly_slot_1 = 1 } #Kritker
-set_variable = { GER_ANM_government_loyaly_slot_2 = 100 } #Unbekannt
-set_variable = { GER_ANM_government_loyaly_slot_3 = -1 } #Regime
-set_variable = { GER_ANM_government_loyaly_slot_4 = 0 } #Uberparteilich
-set_variable = { GER_ANM_government_loyaly_slot_5 = -4 } #Nonkonformisten
+### Government GUI ###
+# -4 Nonkonformisten, -3 Identitären, -2 Cyberkraten, -1 Regime, 0 Uberparteilich, #
+# 1 Kritiker, 2 Traditionalisten, 3 Religiös, 4 Puristen, 100 Unbekannt #
+## Row 1 ##
+set_variable = { GER_ANM_government_loyaly_slot_1 = -1 } 
+set_variable = { GER_ANM_government_loyaly_slot_2 = 1 } 
+set_variable = { GER_ANM_government_loyaly_slot_3 = -1 } 
+set_variable = { GER_ANM_government_loyaly_slot_4 = 0 } 
+set_variable = { GER_ANM_government_loyaly_slot_5 = 100 } 
+## Row 2 ##
 set_variable = { GER_ANM_government_loyaly_slot_6 = 1 }
 set_variable = { GER_ANM_government_loyaly_slot_7 = 100 }
-set_variable = { GER_ANM_government_loyaly_slot_8 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_9 = -1 }
-set_variable = { GER_ANM_government_loyaly_slot_10 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_11 = -1 }
-set_variable = { GER_ANM_government_loyaly_slot_12 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_8 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_9 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_10 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_11 = 0 }
+set_variable = { GER_ANM_government_loyaly_slot_12 = 1 }
 set_variable = { GER_ANM_government_loyaly_slot_13 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_14 = -4 } 
+set_variable = { GER_ANM_government_loyaly_slot_14 = 1 } 
+## Row 3 ##
 set_variable = { GER_ANM_government_loyaly_slot_15 = 100 }
-set_variable = { GER_ANM_government_loyaly_slot_16 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_17 = 0 }
-set_variable = { GER_ANM_government_loyaly_slot_18 = 100 }
-set_variable = { GER_ANM_government_loyaly_slot_19 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_20 = 100 }
-set_variable = { GER_ANM_government_loyaly_slot_21 = -1 }
-set_variable = { GER_ANM_government_loyaly_slot_22 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_16 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_17 = -4 }
+set_variable = { GER_ANM_government_loyaly_slot_18 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_19 = -4 }
+set_variable = { GER_ANM_government_loyaly_slot_20 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_21 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_22 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_23 = -1 }
+
 
 #Economy GUI
 set_country_flag = GER_ANM_Economy_View_Activate
