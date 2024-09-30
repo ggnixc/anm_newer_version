@@ -2174,21 +2174,13 @@ scripted_gui = {
 		effects = {
 			reichsstability_open_click = {
 				if = {
-					limit = { NOT = { 
-						has_country_flag = GER_show_reichsstability_window 
-						has_country_flag = GER_GdDR_Fuhrer
-						} 
-					} 
+					limit = { 
+						NOT = { has_country_flag = GER_show_reichsstability_window } } 
 					set_country_flag = GER_show_reichsstability_window
-					set_country_flag = GER_GdDR_Fuhrer
 				}
 				else_if = {
-					limit = { 
-						has_country_flag = GER_show_reichsstability_window
-						has_country_flag = GER_GdDR_Fuhrer
-					}
+					limit = { has_country_flag = GER_show_reichsstability_window }
 					clr_country_flag = GER_show_reichsstability_window
-					clr_country_flag = GER_GdDR_Fuhrer
 				}
 			}
 		}
@@ -2205,56 +2197,17 @@ scripted_gui = {
 		}
 
 		triggers = { 
-			government_tab_1_unclicked_visible = { 
-				has_country_flag = GER_show_reichsstability_window
-			}
-			government_tab_1_clicked_visible = { 
-				has_country_flag = government_tab_1_click
-			}
-			government_tab_2_unclicked_visible = { 
-				has_country_flag = GER_show_reichsstability_window
-			}
-			government_tab_2_clicked_visible = { 
-				has_country_flag = government_tab_2_click
-			}
-			government_tab_3_unclicked_visible = { 
-				has_country_flag = GER_show_reichsstability_window
-			}
-			government_tab_3_clicked_visible = { 
-				has_country_flag = government_tab_3_click
-			}
-			reichsstabilitat_background_2_visible = { 
-				has_country_flag = government_tab_2_click
-			}
+			
 		} 
 		effects = {
 			reichsstabilitat_close_click = {
 				clr_country_flag = GER_show_reichsstability_window
-				clr_country_flag = GER_GdDR_Fuhrer
 			}
-			government_tab_1_unclicked_click = { 
-				set_country_flag = government_tab_1_click
-				clr_country_flag = government_tab_2_click
-				clr_country_flag = government_tab_3_click
-			}
-			government_tab_2_unclicked_click = { 
-				clr_country_flag = government_tab_1_click
-				set_country_flag = government_tab_2_click
-				clr_country_flag = government_tab_3_click
-			}
-			government_tab_3_unclicked_click = { 
-				clr_country_flag = government_tab_1_click
-				clr_country_flag = government_tab_2_click
-				set_country_flag = government_tab_3_click
-			}
+			#government_tab_1_unclicked_click = { 
+			#	set_country_flag = government_tab_1_click
+			#	clr_country_flag = government_tab_2_click
+			#	clr_country_flag = government_tab_3_click
+			#}
 		} 
-	}
-	ANM_GdDR_Fuhrer = {
-		context_type = player_context
-		window_name = "ANM_GdDR_Fuhrer"
-		parent_window_name = "ANM_reichsstabilitat_GUI"
-		visible = {
-			has_country_flag = GER_GdDR_Fuhrer
-		}
 	}
 } 
