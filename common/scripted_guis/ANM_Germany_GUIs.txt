@@ -2181,6 +2181,7 @@ scripted_gui = {
 				else_if = {
 					limit = { has_country_flag = GER_show_reichsstability_window }
 					clr_country_flag = GER_show_reichsstability_window
+					clr_country_flag = GER_Government_Tab_1_Additional_Faction_Information
 				}
 			}
 		}
@@ -2197,6 +2198,23 @@ scripted_gui = {
 		}
 
 		triggers = { 
+			#Interact system
+			Button_2_Tab_1_disabled_visble = { 
+				NOT = { 
+					has_country_flag = GER_Government_Tab_1_Interaction_Available 
+				}
+			}
+			#Additional Faction Info
+			Additional_Faction_Info_Box_visible = {
+				has_country_flag = GER_Government_Tab_1_Additional_Faction_Information 
+			}
+			Additional_Faction_Info_Text_visible = { 
+				has_country_flag = GER_Government_Tab_1_Additional_Faction_Information 
+			}
+			Button_1_Tab_1_Pressed_visible = { 
+				has_country_flag = GER_Government_Tab_1_Additional_Faction_Information
+			}
+			#Selection Overlays
 			Tab_1_Overlay_70_Slot1_visible = { 
 				has_country_flag = {
 					flag = GER_Government_Tab_1_Click
@@ -2342,6 +2360,19 @@ scripted_gui = {
 			#Closing the UI
 			reichsstabilitat_close_click = {
 				clr_country_flag = GER_show_reichsstability_window
+				clr_country_flag = GER_Government_Tab_1_Additional_Faction_Information
+			}
+			#Displaying additional faction information
+			Button_1_Tab_1_click = { 
+				if = {
+					limit = { 
+						NOT = { has_country_flag = GER_Government_Tab_1_Additional_Faction_Information } } 
+					set_country_flag = GER_Government_Tab_1_Additional_Faction_Information
+				}
+				else_if = {
+					limit = { has_country_flag = GER_Government_Tab_1_Additional_Faction_Information }
+					clr_country_flag = GER_Government_Tab_1_Additional_Faction_Information
+				}
 			}
 
 			#Selection frames
@@ -2360,132 +2391,220 @@ scripted_gui = {
 					flag = GER_Government_Tab_1_Click
 					value = 2
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_2
+				}
 			}
 			government_olaf_rose_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 3
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_3
+				}
 			}
 			government_gerhard_frey_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 4
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_4
+				}
 			}
 			government_rudiger_lucassen_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 5
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_5
+				}
 			}
 			government_albrecht_glaser_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 6
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_6
+				}
 			}
 			government_alexander_gauland_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 7
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_7
+				}
 			}
 			government_hans_helmuth_knutter_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 8
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_8
+				}
 			}
 			government_franz_schonhuber_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 9
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_9
+				}
 			}
 			government_otto_riehs_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 10
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_10
+				}
 			}
 			government_wolfgang_vaerst_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 11
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_11
+				}
 			}
 			government_christian_worch_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 12
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_12
+				}
 			}
 			government_henryk_kroll_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 13
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_13
+				}
 			}
 			government_karl_albrecht_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 14
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_14
+				}
 			}
 			government_horst_ubelacker_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 15
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_15
+				}
 			}
 			government_jorg_haider_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 16
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_16
+				}
 			}
 			government_walter_bachmann_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 17
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_17
+				}
 			}
 			government_gunther_deckert_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 18
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_18
+				}
 			}
 			government_joachim_starbatty_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 19
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_19
+				}
 			}
 			government_gerd_schultze_rhonhof_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 20
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_20
+				}
 			}
 			government_frank_schwerdt_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 21
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_21
+				}
 			}
 			government_alexander_siech_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 22
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_22
+				}
 			}
 			government_jonas_paschnek_click = { 
 				set_country_flag = { 
 					flag = GER_Government_Tab_1_Click
 					value = 23
 				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_23
+				}
 			}
 
 		

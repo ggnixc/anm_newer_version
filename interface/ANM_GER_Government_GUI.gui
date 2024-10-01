@@ -16,8 +16,10 @@ guiTypes = {
 	containerWindowType = {
 		name = "ANM_reichsstabilitat_GUI"
 		size = { width = 1002 height = 752 }
-		position = { x = 545 y = 80 }
-		show_position = { x= 0 y= 80 }
+		position = { x = 0 y = 80 }
+		show_position = { x= 545 y= 80 }
+		show_animation_type = decelerated 
+		animation_time = 800
 		moveable = yes
 		
 		background = {
@@ -37,16 +39,48 @@ guiTypes = {
 			position = { x = 662 y = 691 }
 			quadTextureSprite ="GFX_reichsstabilitat_button"
 			clicksound = click_close
-			buttonText = "Info"
-			pdx_tooltip = "Test test [getGERgovernmentloyaltyadditionalinformation]"
+			buttonText = "Faction Info"
 			buttonFont =  "aldrich_16_outline"
+		}
+		buttonType = {
+			name = "Button_1_Tab_1_Pressed"
+			position = { x = 662 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button"
+			clicksound = click_close
+			buttonText = "Faction Info"
+			buttonFont = "aldrich_16_outline"
+			alwaystransparent = yes
+			frame = 2
+		}
+
+		iconType = {
+			name = "Additional_Faction_Info_Box"
+			spriteType = "GFX_Additional_Faction_Info_Box"
+			position = { x = 17 y = 695 }
+		}
+
+		instantTextboxType = {
+			name = "Additional_Faction_Info_Text"
+			position = { x = 22 y = 700 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "[getGERgovernmentloyaltyadditionalinformation]"
+			maxWidth = 624
+			maxHeight = 32
 		}
 
 		buttonType = {
 			name = "Button_2_Tab_1"
 			position = { x = 829 y = 691 }
 			quadTextureSprite ="GFX_reichsstabilitat_button"
+			buttonFont = "aldrich_16_outline"
+			buttonText = "Interact"
 			clicksound = click_close
+		}
+		iconType = {
+			name = "Button_2_Tab_1_disabled"
+			position = { x = 829 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button_unable"
 		}
 		
 		buttonType = {
@@ -249,121 +283,144 @@ guiTypes = {
 			name = "Tab_1_Overlay_70_Slot1" 
 			spriteType = "GFX_Tab_1_Overlay_70"
 			position = { x = 438 y = 165 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_70_Slot2" 
 			spriteType = "GFX_Tab_1_Overlay_70"
 			position = { x = 50 y = 188 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_70_Slot3" 
 			spriteType = "GFX_Tab_1_Overlay_70"
 			position = { x = 205 y = 188 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_70_Slot4" 
 			spriteType = "GFX_Tab_1_Overlay_70"
 			position = { x = 668 y = 188 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_70_Slot5" 
 			spriteType = "GFX_Tab_1_Overlay_70"
 			position = { x = 823 y = 188 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot6" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 62 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot7" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 161 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot8" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 260 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot9" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 359 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot10" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 459 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot11" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 558 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot12" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 657 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot13" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 756 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot14" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 855 y = 405 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot15" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 62 y = 528 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot16" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 161 y = 528 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot17" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 260 y = 528 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot18" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 359 y = 528 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot19" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 459 y = 528 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot20" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 558 y = 528 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot21" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 657 y = 528 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot22" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 756 y = 528 } 
+			alwaystransparent = yes
 		}
 		iconType = {
 			name = "Tab_1_Overlay_45_Slot23" 
 			spriteType = "GFX_Tab_1_Overlay_45"
 			position = { x = 855 y = 528 } 
+			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "reichstabilitat_title"
-			position = { x = 37 y = 14 }
+			position = { x = 37 y = 13 }
 			font = "aldrich_white_22_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Regierung des Deutschen Reiches"
