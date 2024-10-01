@@ -2,6 +2,7 @@
 add_namespace = GER_focus_event
 add_namespace = GER_misc_main_event
 add_namespace = GER_debug_event
+add_namespace = GER_government_loyalty_event
 
 ### Flavour Events ###
 country_event = { #January ‘96: Kids These Days
@@ -1242,9 +1243,6 @@ country_event = { #
 }
 
 
-
-
-
 ### Misc. Main-Story Events ###
 country_event = { #German-Irish relationship: Status Quo
 	id = GER_misc_main_event.1 
@@ -1257,6 +1255,74 @@ country_event = { #German-Irish relationship: Status Quo
 
 	option = { 
 		name = GER_misc_main_event.1.a
+	}
+}
+
+
+### Government GUI Loyalty Events ###
+country_event = { #
+	id = GER_government_loyalty_event.1 
+	title = GER_government_loyalty_event.1.t
+	desc = GER_government_loyalty_event.1.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_loyalty_event.1.a
+	}
+}
+country_event = { #
+	id = GER_government_loyalty_event.2 
+	title = GER_government_loyalty_event.2.t
+	desc = GER_government_loyalty_event.2.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_loyalty_event.2.a
+	}
+}
+country_event = { #
+	id = GER_government_loyalty_event.3 
+	title = GER_government_loyalty_event.3.t
+	desc = GER_government_loyalty_event.3.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_loyalty_event.3.a
+	}
+}
+country_event = { #
+	id = GER_government_loyalty_event.4 
+	title = GER_government_loyalty_event.4.t
+	desc = GER_government_loyalty_event.4.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_loyalty_event.4.a
+	}
+}
+country_event = { #
+	id = GER_government_loyalty_event.5 
+	title = GER_government_loyalty_event.5.t
+	desc = GER_government_loyalty_event.5.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_loyalty_event.5.a
 	}
 }
 
