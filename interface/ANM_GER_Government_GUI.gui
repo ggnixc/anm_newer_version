@@ -29,66 +29,26 @@ guiTypes = {
 			spriteType = "GFX_reichsstabilitat_background"
 		}
 
+		containerWindowType = {
+			name = "ANM_reichsstabilitat_GUI_tab1"
+			size = { width = 1002 height = 752 }
+			position = { x = 0 y = 0 }
+	
 		iconType = {
 			name = "reichsstabilitat_tab_1"
 			spriteType = "GFX_reichsstabilitat_tab_1"
 			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
-
-		buttonType = {
-			name = "Button_1_Tab_1"
-			position = { x = 662 y = 691 }
-			quadTextureSprite ="GFX_reichsstabilitat_button"
-			clicksound = click_close
-			buttonText = "Faction Info"
-			buttonFont =  "aldrich_16_outline"
-		}
-		buttonType = {
-			name = "Button_1_Tab_1_Pressed"
-			position = { x = 662 y = 691 }
-			quadTextureSprite ="GFX_reichsstabilitat_button"
-			clicksound = click_close
-			buttonText = "Faction Info"
-			buttonFont = "aldrich_16_outline"
-			alwaystransparent = yes
-			frame = 2
-		}
-
-		iconType = {
-			name = "Additional_Faction_Info_Box"
-			spriteType = "GFX_Additional_Faction_Info_Box"
-			position = { x = 17 y = 695 }
-		}
-
 		instantTextboxType = {
-			name = "Additional_Faction_Info_Text"
-			position = { x = 22 y = 700 }
-			font = "aldrich_12_outline"
+			name = "reichstabilitat_title"
+			position = { x = 37 y = 13 }
+			font = "aldrich_white_22_outline"
 			borderSize = {x = 0 y = 0}
-			text = "[getGERgovernmentloyaltyadditionalinformation]"
-			maxWidth = 624
-			maxHeight = 32
-		}
-
-		buttonType = {
-			name = "Button_2_Tab_1"
-			position = { x = 829 y = 691 }
-			quadTextureSprite ="GFX_reichsstabilitat_button"
-			buttonFont = "aldrich_16_outline"
-			buttonText = "Interact"
-			clicksound = click_close
-		}
-		iconType = {
-			name = "Button_2_Tab_1_disabled"
-			position = { x = 829 y = 691 }
-			quadTextureSprite ="GFX_reichsstabilitat_button_unable"
-		}
-		
-		buttonType = {
-			name = "reichsstabilitat_close"
-			spriteType = "GFX_reichsstability_close_button"
-			position = { x = 961 y = 13 }
+			text = "Regierung des Deutschen Reiches"
+			maxWidth = 500
+			maxHeight = 30
+			fixedsize = yes
 		}
 
 		### Tab 1 - Persons ### 
@@ -452,53 +412,104 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
-		instantTextboxType = {
-			name = "reichstabilitat_title"
-			position = { x = 37 y = 13 }
-			font = "aldrich_white_22_outline"
-			borderSize = {x = 0 y = 0}
-			text = "Regierung des Deutschen Reiches"
-			maxWidth = 500
-			maxHeight = 30
-			fixedsize = yes
+		buttonType = {
+			name = "Button_1_Tab_1"
+			position = { x = 662 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button"
+			clicksound = click_close
+			buttonText = "Faction Info"
+			buttonFont =  "aldrich_16_outline"
+		}
+		buttonType = {
+			name = "Button_1_Tab_1_Pressed"
+			position = { x = 662 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button"
+			clicksound = click_close
+			buttonText = "Faction Info"
+			buttonFont = "aldrich_16_outline"
+			alwaystransparent = yes
+			frame = 2
+		}
+
+		iconType = {
+			name = "Additional_Faction_Info_Box"
+			spriteType = "GFX_Additional_Faction_Info_Box"
+			position = { x = 17 y = 695 }
 		}
 		instantTextboxType = {
+			name = "Additional_Faction_Info_Text"
+			position = { x = 22 y = 700 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "[getGERgovernmentloyaltyadditionalinformation]"
+			maxWidth = 624
+			maxHeight = 32
+		}
+
+		buttonType = {
+			name = "Button_2_Tab_1"
+			position = { x = 829 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button"
+			buttonFont = "aldrich_16_outline"
+			buttonText = "Interact"
+			clicksound = click_close
+		}
+		iconType = {
+			name = "Button_2_Tab_1_disabled"
+			position = { x = 829 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button_unable"
+		}
+		} #Closing bracket Tab 1
+
+		containerWindowType = {
+			name = "ANM_reichsstabilitat_GUI_tab2"
+			size = { width = 1002 height = 752 }
+			position = { x = 0 y = 0 }
+
+		iconType = {
+			name = "reichsstabilitat_tab_2"
+			spriteType = "GFX_reichsstabilitat_tab_2"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		} #Closing bracket Tab 2
+
+		
+		buttonType = {
+			name = "reichsstabilitat_close"
+			spriteType = "GFX_reichsstability_close_button"
+			position = { x = 961 y = 13 }
+		}
+		#Tab buttons
+		buttonType = {
 			name = "Tab_1_Title"
 			position = { x = 55 y = 66 }
-			font = "aldrich_18_outline"
-			borderSize = {x = 0 y = 0}
-			text = "Reichsleitung"
-			maxWidth = 500
-			maxHeight = 30
-			fixedsize = yes
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "Reichsleitung"
 		}
-		instantTextboxType = {
+		buttonType = {
 			name = "Tab_2_Title"
 			position = { x = 253 y = 68 }
-			font = "aldrich_18_outline"
-			borderSize = {x = 0 y = 0}
-			text = "NSDAP Institutions"
-			maxWidth = 500
-			maxHeight = 30
-			fixedsize = yes
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "NSDAP Institutions"
 		}
-		instantTextboxType = {
+		buttonType = {
 			name = "Tab_3_Title"
 			position = { x = 509 y = 68 }
-			font = "aldrich_18_outline"
-			borderSize = {x = 0 y = 0}
-			text = "Reich Senate"
-			maxWidth = 500
-			maxHeight = 30
-			fixedsize = yes
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "Reich Senate"
 		}
+
 
 		instantTextboxType = {
 			name = "Tab_1_Reichsleiters"
 			position = { x = 68 y = 378 }
 			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
-			text = "Reichsleitung"
+			text = "Reichsleiters"
 			maxWidth = 500
 			maxHeight = 30
 			fixedsize = yes
