@@ -1,5 +1,6 @@
 ﻿capital = 786
 
+recruit_character = FRA_francois_mitterrand
 recruit_character = FRA_jean_jacques_susini
 recruit_character = FRA_jean_marie_le_pen
 recruit_character = FRA_gerard_longuet
@@ -24,10 +25,6 @@ add_ideas = {
 	#FACTION
 	Pakt_Bundnispartner
 	#Ministers
-	FRA_Jean_Marie_le_Pen_hog
-	FRA_Gerard_Longuet_sec
-	FRA_Bruno_Megret_for
-	FRA_Georges_Paul_Wagner_eco
 	#TNO LAWS
 	tno_military_spending_low_spending
 	tno_training_basic_training
@@ -66,27 +63,24 @@ add_ideas = {
 }
 
 set_politics = {	
-	ruling_party = ultranationalism
-	last_election = "1932.5.1"
+	ruling_party = despotism
+	last_election = "1936.5.3"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 #econtype
 set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }
 
 set_popularities = {
-    communist = 0
-    ultranationalism = 44
-    socialist = 0
-    progressivism = 0
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 10
-    despotism = 19
+    ultranationalism = 10
+    paternalism = 11
+    despotism = 34
+	despotism_1 = 15
+	despotism_2 = 8
     fascism = 17
-    national_socialism = 10
+    national_socialism = 5
 }
 
 if = {
