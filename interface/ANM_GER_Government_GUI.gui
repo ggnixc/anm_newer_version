@@ -16,36 +16,73 @@ guiTypes = {
 	containerWindowType = {
 		name = "ANM_reichsstabilitat_GUI"
 		size = { width = 1002 height = 752 }
-		position = { x = 0 y = 80 }
-		show_position = { x= 545 y= 80 }
-		hide_position = { x = 0 y = 80 }
-		show_animation_type = decelerated 
-		hide_animation_type = accelerated
-		animation_time = 800
-		moveable = yes
+		position = { x= 545 y= 80 }
 		
 		background = {
 			name = "reichsstabilitat_background"
 			spriteType = "GFX_reichsstabilitat_background"
 		}
 
-		containerWindowType = {
-			name = "ANM_reichsstabilitat_GUI_tab1"
-			size = { width = 1002 height = 752 }
-			position = { x = 0 y = 0 }
-	
-		iconType = {
-			name = "reichsstabilitat_tab_1"
-			spriteType = "GFX_reichsstabilitat_tab_1"
-			position = { x = 0 y = 0 }
-			alwaystransparent = yes
-		}
 		instantTextboxType = {
 			name = "reichstabilitat_title"
 			position = { x = 37 y = 13 }
 			font = "aldrich_white_22_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Regierung des Deutschen Reiches"
+			maxWidth = 500
+			maxHeight = 30
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "reichsstabilitat_close"
+			spriteType = "GFX_reichsstability_close_button"
+			position = { x = 961 y = 13 }
+		}
+
+		#Tab buttons
+		buttonType = {
+			name = "Tab_1_Title"
+			position = { x = 55 y = 66 }
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "Reichsleitung"
+		}
+		buttonType = {
+			name = "Tab_2_Title"
+			position = { x = 253 y = 68 }
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "NSDAP Institutions"
+		}
+		buttonType = {
+			name = "Tab_3_Title"
+			position = { x = 509 y = 68 }
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "Reich Senate"
+		}
+
+	} 
+	
+	containerWindowType = {
+		name = "ANM_reichsstabilitat_GUI_tab1"
+		size = { width = 1002 height = 752 }
+		position = { x= 545 y= 80 }
+
+		iconType = {
+			name = "reichsstabilitat_tab_1"
+			spriteType = "GFX_reichsstabilitat_tab_1"
+			position = { x= 0 y= 0 } 
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "Tab_1_Reichsleiters"
+			position = { x = 68 y = 378 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Reichsleiters"
 			maxWidth = 500
 			maxHeight = 30
 			fixedsize = yes
@@ -411,6 +448,7 @@ guiTypes = {
 			position = { x = 754 y = 524 } 
 			alwaystransparent = yes
 		}
+	
 
 		buttonType = {
 			name = "Button_1_Tab_1"
@@ -459,12 +497,13 @@ guiTypes = {
 			position = { x = 829 y = 691 }
 			quadTextureSprite ="GFX_reichsstabilitat_button_unable"
 		}
-		} #Closing bracket Tab 1
+	
+	} #Closing bracket Tab 1
 
-		containerWindowType = {
-			name = "ANM_reichsstabilitat_GUI_tab2"
-			size = { width = 1002 height = 752 }
-			position = { x = 0 y = 0 }
+	containerWindowType = {
+		name = "ANM_reichsstabilitat_GUI_tab2"
+		size = { width = 1002 height = 752 }
+		position = { x= 545 y= 80 }
 
 		iconType = {
 			name = "reichsstabilitat_tab_2"
@@ -472,49 +511,97 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
-		} #Closing bracket Tab 2
 
-		
+		#Institutions
 		buttonType = {
-			name = "reichsstabilitat_close"
-			spriteType = "GFX_reichsstability_close_button"
-			position = { x = 961 y = 13 }
-		}
-		#Tab buttons
-		buttonType = {
-			name = "Tab_1_Title"
-			position = { x = 55 y = 66 }
-			spriteType = "GFX_Government_Tab_Button"
-			buttonFont = "aldrich_18_outline"
-			buttonText = "Reichsleitung"
+			name = "Button_Institution_1"
+			position = { x = 48 y = 140 }
+			spriteType = "GFX_Button_Institution_1"
 		}
 		buttonType = {
-			name = "Tab_2_Title"
-			position = { x = 253 y = 68 }
-			spriteType = "GFX_Government_Tab_Button"
-			buttonFont = "aldrich_18_outline"
-			buttonText = "NSDAP Institutions"
+			name = "Button_Institution_2"
+			position = { x = 199 y = 140 }
+			spriteType = "GFX_Button_Institution_2"
 		}
 		buttonType = {
-			name = "Tab_3_Title"
-			position = { x = 509 y = 68 }
-			spriteType = "GFX_Government_Tab_Button"
-			buttonFont = "aldrich_18_outline"
-			buttonText = "Reich Senate"
+			name = "Button_Institution_3"
+			position = { x = 350 y = 140 }
+			spriteType = "GFX_Button_Institution_3"
+		}
+		buttonType = {
+			name = "Button_Institution_4"
+			position = { x = 501 y = 140 }
+			spriteType = "GFX_Button_Institution_4"
+		}
+		buttonType = {
+			name = "Button_Institution_5"
+			position = { x = 48 y = 338 }
+			spriteType = "GFX_Button_Institution_5"
+		}
+		buttonType = {
+			name = "Button_Institution_6"
+			position = { x = 199 y = 338 }
+			spriteType = "GFX_Button_Institution_6"
+		}
+		buttonType = {
+			name = "Button_Institution_7"
+			position = { x = 350 y = 338 }
+			spriteType = "GFX_Button_Institution_7"
+		}
+		buttonType = {
+			name = "Button_Institution_8"
+			position = { x = 501 y = 338 }
+			spriteType = "GFX_Button_Institution_8"
 		}
 
+		#Institution Leaders
+		iconType = {
+			name = "Institution_Leader_NAME"
+			spriteType = "GFX_Institution_Leader_NAME"
+			position = { x = 674 y = 170 }
+			scale = 0.7
+		}
 
 		instantTextboxType = {
-			name = "Tab_1_Reichsleiters"
-			position = { x = 68 y = 378 }
+			name = "Government_GUI_Tab2_Header_title"
+			position =  { x = 668 y = 140 }
 			font = "aldrich_16_outline"
-			borderSize = {x = 0 y = 0}
-			text = "Reichsleiters"
-			maxWidth = 500
-			maxHeight = 30
-			fixedsize = yes
+			text = "Information:"
 		}
-		
 
-	}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Header_agendas"
+			position =  { x = 65 y = 534 }
+			font = "aldrich_16_outline"
+			text = "Agenda(s):"
+		}
+
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Institution_title"
+			position =  { x = 672 y = 375 }
+			font = "aldrich_16_outline"
+			text = "Title Title"
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Institution_desc"
+			position = { x = 672 y = 405 }
+			font = "aldrich_14_outline"
+			borderSize = {x = 672 y = 375 }
+			text = "Description Description"
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Institution_leadername"
+			position =  { x = 677 y = 325 }
+			font = "aldrich_16_outline"
+			text = "Name Name"
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Institution_leaderdesc"
+			position =  { x = 817 y = 169 }
+			font = "aldrich_12_outline"
+			text = "Description Description"
+		}
+
+
+	} #Closing bracket Tab 2
 }

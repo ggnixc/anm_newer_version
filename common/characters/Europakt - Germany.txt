@@ -33,42 +33,36 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	GER_gunther_deckert = {
-		name = GER_gunther_deckert
+	GER_Rudiger_Lucassen = { 
+		name = GER_Rudiger_Lucassen
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/GER/Portrait_GER_Gunther_Deckert.dds"
-				small = "GFX_idea_GER_Gunther_Deckert" 
+				large = "gfx/leaders/GER/Portrait_GER_Rudiger_Lucassen.dds"
+				small = "GFX_idea_GER_Rudiger_Lucassen" 
 			} 	
 		} 
 		advisor = {
 			slot = security_minister
-			idea_token = GER_Gunther_Deckert_sec
-			traits = {
-				reich_defence
-				sec_militaristic_technocrat
-			}
+			idea_token = GER_Rudiger_Lucassen_sec
+			traits = { sec_militaristic_technocrat }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
 	}
-	GER_joseph_fischer = {
-		name = GER_joseph_fischer
+	GER_Olaf_Rose = { 
+		name = GER_Olaf_Rose
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/GER/Portrait_GER_Joseph_Fischer.dds"
-				small = "GFX_idea_GER_Joseph_Fischer" 
+				large = "gfx/leaders/GER/Portrait_GER_Olaf_Rose.dds"
+				small = "GFX_idea_GER_Olaf_Rose" 
 			} 	
 		} 
 		advisor = {
 			slot = foreign_minister
-			idea_token = GER_Joseph_Fischer_for
-			traits = {
-				reich_foreign
-				for_naive_appeaser
-			}
+			idea_token = GER_Olaf_Rose_for
+			traits = { for_naive_appeaser }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
@@ -86,10 +80,7 @@ characters = {
 		advisor = {
 			slot = economy_minister
 			idea_token = GER_Gerhard_Frey_eco
-			traits = {
-				reich_economy
-				eco_apolitical_workaholic
-			}
+			traits = { eco_apolitical_workaholic }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no

@@ -2176,10 +2176,6 @@ scripted_gui = {
 				if = {
 					limit = { NOT = { has_country_flag = GER_show_reichsstability_window } } 
 					set_country_flag = GER_show_reichsstability_window 
-					set_country_flag = {
-						flag = GER_Government_Tab_Visible
-						value = 1
-					}
 				}
 				else_if = {
 					limit = { has_country_flag = GER_show_reichsstability_window }
@@ -2199,20 +2195,50 @@ scripted_gui = {
 			has_country_flag = GER_show_reichsstability_window
 		}
 
-		triggers = { 
-			#Tabs
-			ANM_reichsstabilitat_GUI_tab1_visible = { 
-				has_country_flag = {
+		triggers = { } 
+
+		effects = {
+			#Closing the UI
+			reichsstabilitat_close_click = {
+				clr_country_flag = GER_show_reichsstability_window
+			}
+			#Switching tabs
+			Tab_1_Title_click = { 
+				set_country_flag = { 
 					flag = GER_Government_Tab_Visible
 					value = 1
-				}
+				} 
 			}
-			ANM_reichsstabilitat_GUI_tab2_visble = { 
-				has_country_flag = {
+			Tab_2_Title_click = { 
+				set_country_flag = { 
 					flag = GER_Government_Tab_Visible
 					value = 2
-				}
+				} 
 			}
+			Tab_3_Title_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 3
+				} 
+			}	
+		} 
+	}
+
+	ANM_reichsstabilitat_GUI_Tab1 = {
+		context_type = player_context
+		window_name = "ANM_reichsstabilitat_GUI_tab1"
+		parent_window_token = "ANM_reichsstabilitat_GUI"
+		visible = {
+			AND = { 
+				has_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 1
+				} 
+				has_country_flag = GER_show_reichsstability_window
+			} 
+		}
+		
+		triggers = { 
 			#Interact system
 			Button_2_Tab_1_disabled_visible = { 
 				has_country_flag = GER_Government_Tab_1_Interactions_Unavailable
@@ -2381,33 +2407,9 @@ scripted_gui = {
 					value = 23
 				}
 			}
-
-
 		} 
+
 		effects = {
-			#Closing the UI
-			reichsstabilitat_close_click = {
-				clr_country_flag = GER_show_reichsstability_window
-			}
-			#Switching tabs
-			Tab_1_Title_click = { 
-				set_country_flag = { 
-					flag = GER_Government_Tab_Visible
-					value = 1
-				} 
-			}
-			Tab_2_Title_click = { 
-				set_country_flag = { 
-					flag = GER_Government_Tab_Visible
-					value = 2
-				} 
-			}
-			Tab_3_Title_click = { 
-				set_country_flag = { 
-					flag = GER_Government_Tab_Visible
-					value = 3
-				} 
-			}
 			#Selection frames
 			government_albert_speer_jr_click = { 
 				set_country_flag = { 
@@ -2722,8 +2724,40 @@ scripted_gui = {
 					clr_country_flag = GER_Government_Tab_1_Additional_Faction_Information
 				}
 			}
-			
-		
 		} 
+	} 
+	
+	ANM_reichsstabilitat_GUI_Tab2 = {
+		context_type = player_context
+		window_name = "ANM_reichsstabilitat_GUI_tab2"
+		parent_window_token = "ANM_reichsstabilitat_GUI"
+		visible = {
+			AND = { 
+				has_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 2
+				} 
+				has_country_flag = GER_show_reichsstability_window
+			} 
+		}
+		
+		triggers = {
+		}
+		
+		effects = {
+			reichsstability_open_click = {
+				if = {
+					limit = { NOT = { has_country_flag = GER_show_reichsstability_window } } 
+					set_country_flag = GER_show_reichsstability_window 
+				}
+				else_if = {
+					limit = { has_country_flag = GER_show_reichsstability_window }
+					clr_country_flag = GER_show_reichsstability_window
+				}
+			}
+		}
+		properties = {
+		}
 	}
+
 } 
