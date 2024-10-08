@@ -188,5 +188,17 @@ spriteTypes = {
 		name = "GFX_Institution_Leader_NAME"
 		texturefile = "gfx/interface/GER_Reichsstabilitat_GUI/Institution_Leader_NAME.dds"
 	}
+	progressbartype = {
+		name = "GFX_Progressbar_Institutions"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/GER_Reichsstabilitat_GUI/Progressbar_Institution_Full.dds"
+		textureFile2 = "gfx/interface/GER_Reichsstabilitat_GUI/Progressbar_Institution_Empty.dds"
+		size = { x = 116 y = 26 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+		steps = 116 #12 actual steps: 0, 4, 13, 24, 35, 46, 57, 68, 79, 90, 101, 112
+	} 
+
 
 }

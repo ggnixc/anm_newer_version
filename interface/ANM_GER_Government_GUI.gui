@@ -37,6 +37,7 @@ guiTypes = {
 		buttonType = {
 			name = "reichsstabilitat_close"
 			spriteType = "GFX_reichsstability_close_button"
+			shortcut = "ESCAPE"
 			position = { x = 961 y = 13 }
 		}
 
@@ -554,17 +555,59 @@ guiTypes = {
 			spriteType = "GFX_Button_Institution_8"
 		}
 
+		#Institution Loadingbar
+		iconType = {
+			name = "Progressbar_Institution_1"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 51 y = 280 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_2"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 202 y = 280 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_3"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 353 y = 280 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_4"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 504 y = 280 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_5"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 51 y = 478 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_6"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 202 y = 478 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_7"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 353 y = 478 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_8"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 504 y = 478 }
+		}
+
 		#Institution Leaders
 		iconType = {
 			name = "Institution_Leader_NAME"
 			spriteType = "GFX_Institution_Leader_NAME"
-			position = { x = 674 y = 170 }
+			position = { x = 747 y = 170 }
 			scale = 0.7
 		}
 
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Header_title"
-			position =  { x = 668 y = 140 }
+			position =  { x = 668 y = 133 }
 			font = "aldrich_16_outline"
 			text = "Information:"
 		}
@@ -578,28 +621,16 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Institution_title"
-			position =  { x = 672 y = 375 }
+			position =  { x = 680 y = 328 }
 			font = "aldrich_16_outline"
-			text = "Title Title"
+			text = "[getGERgovernmentinstitutionname]"
+			format = center
 		}
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Institution_desc"
-			position = { x = 672 y = 405 }
-			font = "aldrich_14_outline"
-			borderSize = {x = 672 y = 375 }
-			text = "Description Description"
-		}
-		instantTextboxType = {
-			name = "Government_GUI_Tab2_Institution_leadername"
-			position =  { x = 677 y = 325 }
-			font = "aldrich_16_outline"
-			text = "Name Name"
-		}
-		instantTextboxType = {
-			name = "Government_GUI_Tab2_Institution_leaderdesc"
-			position =  { x = 817 y = 169 }
+			position = { x = 672 y = 360 }
 			font = "aldrich_12_outline"
-			text = "Description Description"
+			text = "[getGERgovernmentinstitutiondesc]"
 		}
 
 

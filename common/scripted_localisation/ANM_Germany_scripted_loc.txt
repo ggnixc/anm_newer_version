@@ -199,6 +199,7 @@ defined_text = {
 }
 
 ### Government GUI ###
+## Tab 1 - Factions ##
 defined_text = {
 	name = getGERgovernmentloyalty1
 	text = {
@@ -1188,6 +1189,7 @@ defined_text = {
 		localization_key = GER_government_loyalty_unbekannt
 	}
 }
+## Tab 1 - Faction Description ##
 defined_text = {
 	name = getGERgovernmentloyaltyadditionalinformation
 	text = {
@@ -1231,6 +1233,78 @@ defined_text = {
 		localization_key = GER_government_loyalty_unbekannt_info
 	}
 }
+## Tab 2 - Institutions ##
+defined_text = {
+	name = getGERgovernmentinstitutionname
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 1 } }
+		localization_key = GER_government_institution_1_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 2 } }
+		localization_key = GER_government_institution_2_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 3 } }
+		localization_key = GER_government_institution_3_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 4 } }
+		localization_key = GER_government_institution_4_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 5 } }
+		localization_key = GER_government_institution_5_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 6 } }
+		localization_key = GER_government_institution_6_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 7 } }
+		localization_key = GER_government_institution_7_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 8 } }
+		localization_key = GER_government_institution_8_name
+	}
+}
+defined_text = {
+	name = getGERgovernmentinstitutiondesc
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 1 } }
+		localization_key = GER_government_institution_1_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 2 } }
+		localization_key = GER_government_institution_2_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 3 } }
+		localization_key = GER_government_institution_3_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 4 } }
+		localization_key = GER_government_institution_4_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 5 } }
+		localization_key = GER_government_institution_5_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 6 } }
+		localization_key = GER_government_institution_6_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 7 } }
+		localization_key = GER_government_institution_7_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 8 } }
+		localization_key = GER_government_institution_8_desc
+	}
+}
+
 
 ### Assorted Laws ###
 defined_text = {
