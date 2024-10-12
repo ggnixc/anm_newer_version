@@ -71,7 +71,6 @@ TNO_Spheres_init = {
 				tag = PRU
 				tag = CHL
 				tag = URG
-				tag = CUB
 				tag = CAN
 				tag = AST
 				tag = ICE
@@ -87,7 +86,6 @@ TNO_Spheres_init = {
 				tag = SUR
 				tag = FEN
 				tag = FAR
-				tag = MEX
 				tag = VEN
 				tag = IND
 				tag = CUR
@@ -166,7 +164,6 @@ TNO_Spheres_init = {
 				tag = ISR
 				tag = IRQ
 				tag = SWI
-				tag = LBA
 				tag = EGY
 			    tag = LEB
 				tag = UAE
@@ -187,7 +184,6 @@ TNO_Spheres_init = {
 		limit = {
 			OR = {
 				tag = BRA
-				tag = PAR
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = BRA }
@@ -215,7 +211,6 @@ TNO_Spheres_init = {
 				tag = BZZ
 				tag = IVO
 				tag = ECU
-				tag = OMA
 				tag = GZO
 				tag = PRC
 				tag = FDR
@@ -282,6 +277,7 @@ TNO_Spheres_init = {
 				tag = IBR
 				tag = PAD
 				tag = COL
+				tag = MOR
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = IBR }
@@ -297,6 +293,18 @@ TNO_Spheres_init = {
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = TUR }
+	}
+
+	### Mexican Sphere
+	MEX = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = MEX
+				tag = CUB
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = MEX }
 	}
 }
 
