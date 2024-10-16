@@ -2,7 +2,7 @@
 
 set_oob = "ITA_1962"
 
-recruit_character = ITA_Gianfranco_Fini
+recruit_character = ITA_Arnaldo_Forlani
 
 set_research_slots = 4
 set_convoys = 100
@@ -53,7 +53,7 @@ ita_parliament_gui_initial = yes
 
 MOC = {
 	set_politics = {
-		ruling_party = fascism
+		ruling_party = paternalism
 		last_election = "1940.3.26"
 		election_frequency = 36
 		elections_allowed = no
@@ -69,9 +69,9 @@ MOC = {
 		liberalism = 0
 		liberal_conservatism = 0
 		conservatism = 10
-		paternalism = 10
+		paternalism = 80
 		despotism = 10
-		fascism = 70
+		fascism = 0
 		 
 	}
 }
@@ -208,28 +208,26 @@ set_popularities = {
 
 ### ITA ### 
 set_politics = {
-	ruling_party = fascism
-	last_election = "1934.3.26"
+	ruling_party = conservatism
+	last_election = "1994.3.26"
 	election_frequency = 60
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 TNO_startup_nation = yes
 
 set_popularities = {
-	communist = 0
-	ultranationalism = 0
-	socialist = 0
-	progressivism = 0
-	liberalism = 0
-	liberal_conservatism = 0
-	conservatism = 0
-	paternalism = 0
-	despotism = 0
-	fascism = 43
-	fascism_1 = 25
-	fascism_4 = 32
-	national_socialism = 0
+	communist = 2
+	socialist = 9
+	progressivism = 10
+	liberal_conservatism = 5
+	liberalism = 22
+	liberalism_1 = 6
+	conservatism = 26
+	conservatism_1 = 10
+	paternalism = 7
+	despotism = 2
+	fascism = 1
 }
 
 
@@ -427,9 +425,6 @@ if = {
 }
 
 add_ideas = {
-	TRI_Founder_IT
-	ITA_Strait_Bridge
-	ITA_computergoldenage	
 	
 	#political#
 	tno_political_parties_controlled_opposition
@@ -690,3 +685,7 @@ set_oob = "ITA_2000"
 set_naval_oob = "ITA_navy_2000"
 set_air_oob = "ITA_2000_air"
 set_global_flag = Triumvirate_Collapse
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }

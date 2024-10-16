@@ -2,6 +2,21 @@
 
 set_oob = ""
 
+PAR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = STC autonomy_state = autonomy_puppet }
+        else = {
+            puppet = STC
+        }
+    }
+}
+
 set_politics = {	
 	ruling_party = fascism
 	last_election = "1961.1.20"
