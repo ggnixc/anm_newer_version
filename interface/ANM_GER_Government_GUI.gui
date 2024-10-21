@@ -621,14 +621,17 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Institution_title"
-			position =  { x = 680 y = 328 }
+			position =  { x = 702 y = 328 }
 			font = "aldrich_16_outline"
 			text = "[getGERgovernmentinstitutionname]"
 			format = center
 		}
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Institution_desc"
-			position = { x = 672 y = 360 }
+			position = { x = 676 y = 357 }
+			maxWidth = 238
+			maxHeight = 257
+			scrollbarType = standardtext_slider
 			font = "aldrich_12_outline"
 			text = "[getGERgovernmentinstitutiondesc]"
 		}
