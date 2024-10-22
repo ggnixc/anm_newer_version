@@ -3,7 +3,7 @@
 set_oob = "NIC_1962"
 
 set_politics = {	
-	ruling_party = socialist
+	ruling_party = communist
 	last_election = "1934.11.8"
 	election_frequency = 48
 	elections_allowed = no
@@ -12,25 +12,17 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
+    communist = 42
+	communist_1 = 26
     ultranationalism = 0
-    socialist = 50
+    socialist = 22
     progressivism = 0
-    liberalism = 10
-    liberal_conservatism = 20
-    conservatism = 20
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 0
     paternalism = 0
-    despotism = 0
+    despotism = 10
     fascism = 0
      
 }
-
-create_country_leader = {
-	name = "Sergio Ramirez"
-	picture = "Portrait_NIC_Sergio_Ramirez.dds"
-	expire = "2099.1.1"
-	ideology = socialist_left_wing_nationalism_subtype
-	traits = {
-		
-	}
-}
+recruit_character = NIC_Jaime_Wheelock
