@@ -148,6 +148,16 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
+							check_variable = { ECON_SPHERE_LEADER = CAO }
+						}
+					}
+					set_temp_variable = { red = 0.207 }
+					set_temp_variable = { green = 0.419 }
+					set_temp_variable = { blue = 0.262 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
 							check_variable = { ECON_SPHERE_LEADER = TUR }
 						}
 					}

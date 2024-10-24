@@ -101,10 +101,11 @@ TNO_Spheres_init = {
 				tag = HON
 				tag = PAN
 				tag = FJI
-				tag = CAF
 				tag = GAB
 				tag = RMB
 				tag = ZAM
+				tag = ZIM
+				tag = MZB
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = USA }
@@ -216,7 +217,6 @@ TNO_Spheres_init = {
 				tag = GZO
 				tag = PRC
 				tag = FDR
-				tag = MZB
 				tag = NIC
 			}
 		}
@@ -269,6 +269,19 @@ TNO_Spheres_init = {
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = SEN }
+	}
+	
+	### Pan African Sphere
+	CAO = { set_country_flag = HAS_ECON_SPHERE }
+	every_country = {
+		limit = {
+			OR = {
+				tag = CAO
+				tag = CAF
+				tag = COG
+			}
+		}
+		set_variable = { ECON_SPHERE_LEADER = CAO }
 	}
 
 	### Iberia

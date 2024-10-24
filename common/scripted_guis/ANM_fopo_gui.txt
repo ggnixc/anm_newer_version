@@ -145,13 +145,13 @@ scripted_gui = {
 	#################################################
 	#             Generic Conflicts GUI             #
 	#################################################
-	TNO_fopo_generic_conflict = {
-		window_name = "TNO_fopo_generic_conflict"
+	ANM_fopo_generic_conflict = {
+		window_name = "ANM_fopo_generic_conflict"
 		context_type = player_context
 		parent_window_name = powerbalanceview
 
 		visible = { # pain
-			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
 			NOT = {
 				AND = {
 					OR = {
@@ -195,13 +195,13 @@ scripted_gui = {
 	#################################################
 	#          Generic Conflict Topbar GUI          #
 	#################################################
-	TNO_fopo_generic_conflict_topbar = {
-		window_name = "TNO_fopo_generic_conflict_topbar"
+	ANM_fopo_generic_conflict_topbar = {
+		window_name = "ANM_fopo_generic_conflict_topbar"
 		context_type = player_context
 		parent_window_name = powerbalanceview
 
 		visible = {
-			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
 			OR = {
 				check_variable = { selected_conflict_id = token:GC_WAC }
 				check_variable = { selected_conflict_id = token:GC_SAW }
@@ -211,14 +211,14 @@ scripted_gui = {
 
 		triggers = {
 			info_tab_visible = {
-				TNO_fopo_show_info_tab = yes
+				ANM_fopo_show_info_tab = yes
 			}
 		}
 
 		properties = {
 			topbar = {
 				image = "[Get_fopo_topbar]"
-				frame = TNO_fopo_selected_front
+				frame = ANM_fopo_selected_front
 			}
 			seal = {
 				image = "[Get_fopo_seal]"

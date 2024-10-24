@@ -6,7 +6,7 @@ set_politics = {
 	ruling_party = despotism
 	last_election = "1992.11.5"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 TNO_startup_nation = yes
@@ -25,13 +25,8 @@ set_popularities = {
      
 }
 
-create_country_leader = {
-	name = "Levy Mwanawasa"
-	desc = "POLITICS_LEVY_MWANAWASA_DESC"
-	picture = "Portrait_Zambia_Levy_Mwanawasa.dds"
-	expire = "2999.1.23"
-	ideology = despotism_civilian_dictatorship_subtype
-	traits = {
-		
-	}
+recruit_character = ZAM_Reuben_Kamanga
+
+add_ideas = {
+	OFN_Observer
 }
