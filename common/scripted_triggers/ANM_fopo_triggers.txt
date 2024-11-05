@@ -22,3 +22,12 @@ ANM_fopo_show_info_tab = {
 		}
 	}
 }
+ANM_fopo_finland_selected = {
+	OR = {
+		check_variable = { selected_conflict_id = token:GC_FinlandCW }
+		AND = {
+			is_in_array = { TNO_active_conflicts = token:GC_FinlandCW }
+			is_ai = yes
+		}
+	}
+}

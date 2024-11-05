@@ -153,31 +153,7 @@ scripted_gui = {
 		visible = { # pain
 			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
 			NOT = {
-				AND = {
-					OR = {
-						check_variable = { selected_conflict_id = token:GC_WAC }
-						check_variable = { selected_conflict_id = token:GC_SAW }
-					}
-					tag = USA
-				}
-				check_variable = { selected_conflict_id = token:GC_IndonesiaCW }
-				check_variable = { selected_conflict_id = token:GC_JamaicanReferendum }
-				check_variable = { selected_conflict_id = token:GC_JamaicanCrisis }
-				check_variable = { selected_conflict_id = token:GC_TrinidadRev }
-				check_variable = { selected_conflict_id = token:GC_Turkestan }
-				AND = { check_variable = { selected_conflict_id = token:GC_PhilippinesWar } tag = JAP }
-				AND = { check_variable = { selected_conflict_id = token:GC_SAWReconstruction } tag = USA }
-				check_variable = { selected_conflict_id = token:GC_PhilippinesReconstruction }
-				check_variable = { selected_conflict_id = token:GC_SAWWithdrawal }
-				check_variable = { selected_conflict_id = token:GC_WACReconstruction }
-				AND = { check_variable = { selected_conflict_id = token:GC_PuertoPlata } tag = USA }
-				AND = { check_variable = { selected_conflict_id = token:GC_PuertoPlata } tag = IBR }
-				AND = { check_variable = { selected_conflict_id = token:GC_PuertoPlata } tag = GER }
-				check_variable = { selected_conflict_id = token:GC_FranceCW }
-				check_variable = { selected_conflict_id = token:GC_IcelandElections }
-				AND = { check_variable = { selected_conflict_id = token:GC_Haitian_Civil_War } tag = USA }
-				check_variable = { selected_conflict_id = token:GC_MalagasyCW }
-				check_variable = { selected_conflict_id = token:GC_ChannelCrisis }
+				check_variable = { selected_conflict_id = token:GC_FinlandCW }
 				check_variable = { ANM_active_conflicts^num = 0 }
 			}
 		}
@@ -202,10 +178,6 @@ scripted_gui = {
 
 		visible = {
 			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
-			OR = {
-				check_variable = { selected_conflict_id = token:GC_WAC }
-				check_variable = { selected_conflict_id = token:GC_SAW }
-			}
 			tag = USA
 		}
 
@@ -225,4 +197,47 @@ scripted_gui = {
 			}
 		}
 	}
+	
+	#################################################
+	##=|          Conflict-Specific GUIs         |=##
+	##======================| |====================##
+	#################################################
+
+	#################################################
+	#           Finnish Civil War GUI               #
+	#################################################
+	ANM_Finnish_Civil_War_GUI = {
+		window_name = "ANM_Finnish_Civil_War_GUI"
+		context_type = player_context
+		parent_window_name = powerbalanceview
+
+		visible = {
+			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+			check_variable = { selected_conflict_id = token:GC_FinlandCW }
+		}
+
+		effects = {
+			discontent_effect_box_click = {
+				effect_tooltip = {
+					INS_ICW_discontent_effect = yes
+				}
+			}
+		}
+
+		properties = {
+			escalation_bar = {
+				frame = global.ICW_escalation
+			}
+			discontent_bar = {
+				frame = ICW_discontent
+			}
+			sidebar = {
+				image = "[Get_fopo_sidebar]"
+			}
+			seal = {
+				image = "[Get_fopo_seal]"
+			}
+		}
+	}
+
 }

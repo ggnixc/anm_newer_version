@@ -68,3 +68,14 @@ ANM_remove_fopo_conflict_tab = {
 		}
 	}
 }
+
+# Add/remove Malayan Civil War
+
+ANM_fopo_add_finland_civil_war_tab = {
+	set_temp_variable = { conflict_id = token:GC_FinlandCW }
+	ANM_add_fopo_conflict_tab = yes
+}
+ANM_fopo_remove_finland_civil_war_tab = {
+	set_temp_variable = { conflict_id = token:GC_FinlandCW }
+	ANM_remove_fopo_conflict_tab = yes
+}
