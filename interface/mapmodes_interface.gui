@@ -5,7 +5,7 @@ guiTypes = {
 	#	position = { x=41 y=0 }
 	#}
 
-	containerWindowType =  {
+	containerWindowType = {
 		name = "MapmodesInterface_Ingame"
 		position = { x=-631 y=-244 }
 		size = { width=314 height=31 }
@@ -1088,7 +1088,7 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType =  {
+	containerWindowType = {
 		name = "ConfigurableMapModeSlot"
 		position = { x=0 y=0 }
 		size = { width=160 height=20 }
@@ -1100,15 +1100,15 @@ guiTypes = {
 			name = "bg"
 			position = { x=0 y=0 }
 			quadTextureSprite ="GFX_mapmode_configure_bg"
-			font = "aldrich_16_outline"
-			buttontext = ""
+			font = "aldrich_18_outline"
+			buttonText = ""
 			clicksound = click_default
 		}
 
 		instantTextBoxType = {
 			name ="name"
 			position = { x=0 y=0 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = ""
 			format = right
 			maxWidth = 160
@@ -1118,7 +1118,7 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType =  {
+	containerWindowType = {
 		name = "ConfigurableMapMode"
 		position = { x=0 y=0 }
 		size = { width=160 height=20 }
@@ -1129,8 +1129,8 @@ guiTypes = {
 		buttonType = {
 			name = "bg"
 			position = { x=2 y=0 }
-			font = "aldrich_16_outline"
-			buttontext = ""
+			font = "aldrich_18_outline"
+			buttonText = ""
 			quadTextureSprite ="GFX_mapmode_configure_bg"
 			clicksound = click_default
 			pdx_tooltip_anchor =
@@ -1144,7 +1144,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="name"
 			position = { x=-4 y=3 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = ""
 			format = right
 			maxWidth = 140
@@ -1156,7 +1156,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="shortcut"
 			position = { x=7 y=1 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "Hi!"
 			format = left
 			maxWidth = 140
@@ -1179,7 +1179,7 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType =  {
+	containerWindowType = {
 		name = "WindowWithMapModeSlots"
 		position = { x=-253 y=-240 }
 		size = { width=180 height=192 }
@@ -1204,7 +1204,7 @@ guiTypes = {
 			name = "default"
 			position = { x=-47 y=-33 }
 			font = "hoi_16mbs"
-			buttontext = "DEFAULT"
+			buttonText = "DEFAULT"
 			quadTextureSprite ="GFX_button_94x31"
 			clicksound = click_default
 			orientation = "center_DOWN"
@@ -1219,7 +1219,7 @@ guiTypes = {
 	}
 
 	# A window with the list of all possible map modes that is attached to the "WindowWithMapModeSlots".
-	containerWindowType =  {
+	containerWindowType = {
 		name = "WindowWithAllMapModes"
 		position = { x=-255 y=-300 }
 		size = { width=180 height=274 }
@@ -1242,10 +1242,10 @@ guiTypes = {
 	}
 
 	# A window with the list of all possible map modes that is attached to the main map-modes window.
-	containerWindowType =  {
+	containerWindowType = {
 		name = "WindowWithAllMapModes_Standalone"
-		position = { x=-255 y=-300 }
-		size = { width=180 height=274 }
+		position = { x=-255 y=-315 }
+		size = { width=180 height=319 }
 		Orientation = lower_RIGHT
 		fade_time = 500
 		fade_type = linear

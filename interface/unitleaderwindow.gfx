@@ -363,9 +363,14 @@ spriteTypes = {
 	#######
 
 	spriteType = {
-		name = "GFX_leader_selection_entry_bg"
+		name = "GFX_leader_selection_entry_bg" #this is normally for all general lists but now it's for field officers only
+		texturefile = "gfx/interface/leader_selection_field_officer_bg.dds"
+		# transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_leader_selection_entry_real_bg" #we had to steal the original one for field officers because god has abandoned us
 		texturefile = "gfx/interface/leader_selection_entry_bg.dds"
-		transparencecheck = yes
 	}
 
 	spriteType = {

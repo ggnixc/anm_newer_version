@@ -24,12 +24,12 @@ guiTypes = {
 			name = "ability_list_container"
 			position = {x=218 y=38}
 		}
-		
+
 		editBoxType = {
 			name = "operation_name"
-			position = {x=-22 y=8}
+			position = {x=-22 y=10}
 			size = {x=380 y=23}
-			font = "hoi_18mbs"
+			font = "aldrich_20_outline"
 			text = ""
 			#maxWidth = 300
 			#maxHeight = 20
@@ -90,29 +90,28 @@ guiTypes = {
 
 			buttonType = {
 				name = "btn_order_draw_naval_inv"
-				position = {x=96 y=33}	
+				position = {x=96 y=33}
 				spriteType = "GFX_BPT_order_draw_naval_inv_btn"
 				clicksound = click_battleplan
 			}
-			
+
 			buttonType = {
-				name = "btn_order_draw_naval_inv_with_harbor" 
-				position = {x=133 y=33}	
+				name = "btn_order_draw_naval_inv_with_harbor"
+				position = {x=133 y=33}
 				spriteType = "GFX_BPT_order_draw_naval_inv_with_harbor_btn"
 				clicksound = click_battleplan
 				oversound = ui_menu_over
 			}
 
-			buttonType = { # removed to make room for the above - re-added for ANM
+			buttonType = { # removed to make room for the above
 				name = "btn_order_draw_paradrop"
-				position = {x=148 y=33}
-				#position = {x=96 y=-3300}
+				#position = {x=96 y=33}
+				position = {x=96 y=-3300}
 				spriteType = "GFX_BPT_order_draw_paradrop_btn"
 				clicksound = click_battleplan
 			}
 
-			iconType = { #this has to be here
-			
+			iconType = { #the paradrop button is already disabled if you don't have paradropable units, making this unnecssary, keeping it in code for now in case it messes with anything # now twice as redundant
 				name = "placeholder_paradrop"
 				position = {x=-4000 y=33}
 				spriteType = "GFX_BPT_order_draw_paradrop_btn"
@@ -217,7 +216,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "title"
 				position = {x=-23 y=4}
-				font = "aldrich_30_outline"
+				font = "aldrich_32_outline"
 				text = "BATTLE_PLANS"
 				maxWidth = 514
 				maxHeight = 23
@@ -228,7 +227,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "hint"
 				position = {x=150 y=11}
-				font = "aldrich_14_outline"
+				font = "aldrich_16_outline"
 				text = "?"
 				maxWidth = 346
 				maxHeight = 23
@@ -238,8 +237,8 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "battleplantools_area_defense_config_window"
-				position = {x=173 y=-50}
-				size = { width=454 height=280 }
+				position = {x=176 y=-50}
+				size = { width=494 height=280 }
 				#animation_time = 300
 				#Orientation = center_down
 				#clipping = yes
@@ -294,20 +293,38 @@ guiTypes = {
 				}
 
 				buttonType = {
-					name = "btn_setting_forts"
+					name = "btn_setting_borders"
 					position = {x=175 y=29}
+					spriteType = "GFX_garr_borders"
+					clicksound = click_battleplan
+					oversound = ui_menu_over
+					pdx_tooltip = "GARRISON_CONF_BORDERS"
+				}
+
+				buttonType = {
+					name = "btn_setting_forts"
+					position = {x=215 y=29}
 					spriteType = "GFX_garr_fort"
 					clicksound = click_battleplan
 					pdx_tooltip = "GARRISON_CONF_FORT"
 				}
-				
+
 				buttonType = {
-					name = "btn_setting_rail" 
-					position = {x=215 y=29}		
+					name = "btn_setting_rail"
+					position = {x=255 y=29}
 					spriteType = "GFX_garr_rail"
-					clicksound = click_battleplan 
+					clicksound = click_battleplan
 					oversound = ui_menu_over
 					pdx_tooltip = "GARRISON_CONF_RAIL"
+				}
+
+				buttonType = {
+					name = "btn_setting_facility"
+					position = {x=295 y=29}
+					spriteType = "GFX_garr_facility"
+					clicksound = click_battleplan
+					oversound = ui_menu_over
+					pdx_tooltip = "GARRISON_CONF_FACILITY"
 				}
 
 				#iconType = {
@@ -382,7 +399,7 @@ guiTypes = {
 					alwaystransparent = yes
 				}
 			}
-			
+
 			containerWindowType = {
 				name = "cohesion_window"
 				position = {x=-1 y=-40}
