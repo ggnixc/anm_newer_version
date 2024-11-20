@@ -1,154 +1,78 @@
 ideas = {
 	country = {
-		JAP_Lost_30_Years = {
-
+		JAP_Samurai_and_Wolf = { 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_Lost_30_Years
+			picture = GFX_idea_JAP_Samurai_and_Wolf
 			removal_cost = -1
 
 			modifier = {
-				gdp_growth_modifier = 0.15
+				political_power_gain = 0.05
+				fuel_gain_factor = 0.075
+				trade_opinion_factor = 0.20
+			}
+			targeted_modifier = {
+				tag = ITA
+				extra_trade_to_target_factor = 0.15
+				trade_cost_for_target_factor = -0.1
 			}
 		}
-		JAP_Dysmorphic_Country  = {
-
+		JAP_Two_Suns_One_Sky = {
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_Chineseeconmoicmiracle
+			picture = GFX_idea_JAP_Two_Suns_One_Sky
 			removal_cost = -1
 
 			modifier = {
-
+				political_power_cost = 0.2
+				command_power_gain = 0.05
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.05
 			}
-		}
-		JAP_Remnants_of_Radicalism = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_Chineseeconmoicmiracle
-			removal_cost = -1
-
-			modifier = {
-
-				}
+			targeted_modifier = {
+				tag = CHI
+				extra_trade_to_target_factor = -0.07
 			}
-
-		JAP_Colonial_Crisis = {
-
+		} 
+		JAP_Legacy_of_Bronzes = { 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_Colonial_Crisis
+			picture = GFX_idea_JAP_Legacy_of_Bronzes
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.15
-				resistance_target = 0.1
-				}	
-				
-						
-		}
-
-		JAP_The_Dimming_Sun = {
-
+				stability_factor = -0.05
+				war_support_factor = -0.025
+				political_power_cost = 0.10
+				industrial_capacity_factory = -0.10
+			}
+		} 
+		JAP_Okurajotai = { 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_The_Dimming_Sun
+			picture = GFX_idea_JAP_Okurajotai
 			removal_cost = -1
 
 			modifier = {
-				war_support_factor = -0.1
-				political_power_gain = -0.15
-				}	
-				
-						
-		}	
-		
-		JAP_The_Democratic_Facade = {
-
+				consumer_goods_expected_value = -0.20
+				production_speed_buildings_factor = 0.10
+				local_resources_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		} 
+		JAP_Mas_Maiorum = { 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_The_Democratic_Facade
+			picture = GFX_idea_JAP_Mas_Maiorum
 			removal_cost = -1
 
 			modifier = {
-				drift_defence_factor = 0.1
 				stability_factor = 0.05
-				}	
-				
-						
-		}			
-
-		JAP_The_Economic_Web = {
-
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_The_Economic_Web
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-			}	
-		}	
-			JAP_Okurajotai = {
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_The_Economic_Web
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-			}	
-		}
-
-			JAP_BarkBark = {
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_The_Economic_Web
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-			}	
-		}
-
-			JAP_TwoSuns = {
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_The_Economic_Web
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-			}	
-		}
-
-			JAP_BronzeLegacy = {
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_The_Economic_Web
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-			}	
-		}
-
-			JAP_Maiorum = {
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_JAP_The_Economic_Web
-			removal_cost = -1
-
-			modifier = {
-				consumer_goods_factor = 0.1
-				production_factory_efficiency_gain_factor = -0.15
-			}	
-		}		
+				drift_defence_factor = -0.10
+				party_popularity_stability_factor = 0.05
+				political_power_gain = 0.20
+			}
+		} 
+	
 	}
 }

@@ -9,10 +9,163 @@ characters = {
 		country_leader = {
 			expire = "2999.1.1"
 			desc = "POLITICS_YASUO_FUKADA_DESC"
-			ideology = paternalism_authoritarian_developmentalism_subtype
+			ideology = paternalism_technocratic_corporatism_subtype
+			traits = { }
+		}
+	}
+	JAP_Ibuki_Bunmei = {   
+		name = JAP_Ibuki_Bunmei
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/JAP/Portrait_JAP_Ibuki_Bunmei.dds"
+				small = "GFX_idea_JAP_Ibuki_Bunmei" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = JAP_Ibuki_Bunmei_hog
 			traits = {
+				head_of_government
 			}
-			id = -1
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	JAP_Ibuki_Bunmei_1 = {   
+		name = JAP_Ibuki_Bunmei_1
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/JAP/Portrait_JAP_Ibuki_Bunmei.dds"
+			} 	
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_IBUKI_BUNMEI_DESC"
+			ideology = paternalism_authoritarian_developmentalism_subtype
+			traits = { }
+		}
+	}
+	JAP_Hiroshi_Miyazawa = {   
+		name = JAP_Hiroshi_Miyazawa
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/JAP/Portrait_JAP_Hiroshi_Miyazawa.dds"
+				small = "GFX_idea_JAP_Hiroshi_Miyazawa" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = JAP_Hiroshi_Miyazawa_sec
+			traits = {
+				security_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	} 
+	JAP_Tadao_Chino = {  
+		name = JAP_Tadao_Chino
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/JAP/Portrait_JAP_Tadao_Chino.dds"
+				small = "GFX_idea_JAP_Tadao_Chino" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = JAP_Tadao_Chino_eco
+			traits = {
+				economy_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	JAP_Yukihiko_Ikeda = {  
+		name = JAP_Yukihiko_Ikeda
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/JAP/Portrait_JAP_Yukihiko_Ikeda.dds"
+				small = "GFX_idea_JAP_Yukihiko_Ikeda" 
+			} 	
+		} 
+		country_leader = {
+			expire = "2999.1.1"
+			ideology = paternalism_1_subtype
+			traits = { }
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = JAP_Yukihiko_Ikeda_for
+			traits = {
+				foreign_minister
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	JAP_Yukihiko_Ikeda_1 = {  
+		name = JAP_Yukihiko_Ikeda_1
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/JAP/Portrait_JAP_Yukihiko_Ikeda.dds"
+			} 	
+		} 
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_YUKIJIKO_IKEDA_DESC"
+			ideology = paternalism_authoritarian_developmentalism_subtype
+			traits = { }
+		}
+	}
+	JAP_Koji_Kakizawa = { 
+		name = JAP_Koji_Kakizawa
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JAP/Portrait_JAP_Koji_Kakizawa.dds"
+			}
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_KOJI_KAKIZAWA_DESC"
+			ideology = despotism_interim_government_subtype
+			traits = { }
+		}
+	}
+	JAP_Hirohisa_Fujii = { 
+		name = JAP_Hirohisa_Fujii
+		country_leader = {
+			expire = "2999.1.1"
+			ideology = paternalism_2_subtype
+		}
+	}
+	JAP_Masahiko_Komura = { 
+		name = JAP_Masahiko_Komura
+		country_leader = {
+			expire = "2999.1.1"
+			ideology = liberalism_subtype
+		}
+	}
+	JAP_Fukushiro_Nukaga = { 
+		name = JAP_Fukushiro_Nukaga
+		country_leader = {
+			expire = "2999.1.1"
+			ideology = conservatism_subtype
+		}
+	}
+	JAP_Takeshi_Noda = { 
+		name = JAP_Takeshi_Noda
+		country_leader = {
+			expire = "2999.1.1"
+			ideology = liberal_conservatism_subtype
 		}
 	}
 }
