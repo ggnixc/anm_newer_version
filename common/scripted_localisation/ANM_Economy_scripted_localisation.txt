@@ -2073,21 +2073,6 @@ defined_text = {
 		localization_key = econ_poverty_rate_change_NOV_MC4_number_tt
 	}
 }
-#ideas
-defined_text = {
-	name = econ_poverty_rate_change_ENG_reconstruction_of_England_sl
-	text = {
-		trigger = { has_idea = ENG_reconstruction_of_England }
-		localization_key = econ_poverty_rate_change_ENG_reconstruction_of_England_tt
-	}
-}
-defined_text = {
-	name = econ_poverty_rate_change_ENG_Lying_In_Ruins_sl
-	text = {
-		trigger = { has_idea = ENG_Lying_In_Ruins }
-		localization_key = econ_poverty_rate_change_ENG_Lying_In_Ruins_tt
-	}
-}
 defined_text = {
 	name = econ_poverty_rate_change_FEN_Reconstruction_Of_England_sl
 	text = {
@@ -4293,35 +4278,20 @@ defined_text = {
 defined_text = {
 	name = GetJoinSphereTooltip
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = WOL } }
-		localization_key = econ_sphere_name_WOL
-	}
-	text = {
-		trigger = {
-			OR = {
-				check_variable = { ECON_SPHERE_LEADER = FFR }
-				AND = {
-					check_variable = { ECON_SPHERE_LEADER = FRA }
-					OR = {
-						has_global_flag = FFR_reclamation_successful
-						has_global_flag = FFR_reconciliation_happened
-					}
-				}
-			}
-		}
-		localization_key = econ_sphere_name_FFR
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
+		localization_key = econ_sphere_name_SOV
 	}
 	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CAO } }
 		localization_key = econ_sphere_name_CAO
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = ADN } }
-		localization_key = econ_sphere_name_ADN
+		trigger = { check_variable = { ECON_SPHERE_LEADER = AZH } }
+		localization_key = econ_sphere_name_AZH
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = CME } }
-		localization_key = econ_sphere_name_CME
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SEN } }
+		localization_key = econ_sphere_name_SEN
 	}
 	text = { localization_key = econ_join_sphere_target_0_tt }
 }
@@ -4375,49 +4345,34 @@ defined_text = {
 		localization_key = econ_sphere_name_USA
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = WOL } }
-		localization_key = econ_sphere_name_WOL
-	}
-	text = {
-		trigger = {
-			OR = {
-				check_variable = { ECON_SPHERE_LEADER = FFR }
-				AND = {
-					check_variable = { ECON_SPHERE_LEADER = FRA }
-					OR = {
-						has_global_flag = FFR_reclamation_successful
-						has_global_flag = FFR_reconciliation_happened
-					}
-				}
-			}
-		}
-		localization_key = econ_sphere_name_FFR
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
+		localization_key = econ_sphere_name_SOV
 	}
 	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CAO } }
 		localization_key = econ_sphere_name_CAO
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = ENG } }
-		localization_key = econ_sphere_name_ENG
+		trigger = { check_variable = { ECON_SPHERE_LEADER = CHI } }
+		localization_key = econ_sphere_name_CHI
 	}
 	text = {
 		trigger = {
 			OR = {
-				check_variable = { ECON_SPHERE_LEADER = ADN }
-				tag = ADN
+				check_variable = { ECON_SPHERE_LEADER = AZH }
+				tag = AZH
 			}
 		}
-		localization_key = econ_sphere_name_ADN
+		localization_key = econ_sphere_name_AZH
 	}
 	text = {
 		trigger = {
 			OR = {
-				check_variable = { ECON_SPHERE_LEADER = CME }
-				tag = CME
+				check_variable = { ECON_SPHERE_LEADER = SEN }
+				tag = SEN
 			}
 		}
-		localization_key = econ_sphere_name_CME
+		localization_key = econ_sphere_name_SEN
 	}
 	text = { localization_key = econ_sphere_name_none }
 }
@@ -4471,49 +4426,34 @@ defined_text = {
 		localization_key = econ_sphere_name_long_USA
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = WOL } }
-		localization_key = econ_sphere_name_long_WOL
-	}
-	text = {
-		trigger = {
-			OR = {
-				check_variable = { ECON_SPHERE_LEADER = FFR }
-				AND = {
-					check_variable = { ECON_SPHERE_LEADER = FRA }
-					OR = {
-						has_global_flag = FFR_reclamation_successful
-						has_global_flag = FFR_reconciliation_happened
-					}
-				}
-			}
-		}
-		localization_key = econ_sphere_name_long_FFR
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
+		localization_key = econ_sphere_name_long_SOV
 	}
 	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CAO } }
 		localization_key = econ_sphere_name_long_CAO
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = ENG } }
-		localization_key = econ_sphere_name_long_ENG
+		trigger = { check_variable = { ECON_SPHERE_LEADER = CHI } }
+		localization_key = econ_sphere_name_long_CHI
 	}
 	text = {
 		trigger = {
 			OR = {
-				check_variable = { ECON_SPHERE_LEADER = ADN }
-				tag = ADN
+				check_variable = { ECON_SPHERE_LEADER = AZH }
+				tag = AZH
 			}
 		}
-		localization_key = econ_sphere_name_long_ADN
+		localization_key = econ_sphere_name_long_AZH
 	}
 	text = {
 		trigger = {
 			OR = {
-				check_variable = { ECON_SPHERE_LEADER = CME }
-				tag = CME
+				check_variable = { ECON_SPHERE_LEADER = SEN }
+				tag = SEN
 			}
 		}
-		localization_key = econ_sphere_name_long_CME
+		localization_key = econ_sphere_name_long_SEN
 	}
 	text = { localization_key = econ_sphere_name_none }
 }
@@ -4567,49 +4507,34 @@ defined_text = {
 		localization_key = econ_sphere_name_tab_USA
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = WOL } }
-		localization_key = econ_sphere_name_tab_WOL
-	}
-	text = {
-		trigger = {
-			OR = {
-				check_variable = { ECON_SPHERE_LEADER = FFR }
-				AND = {
-					check_variable = { ECON_SPHERE_LEADER = FRA }
-					OR = {
-						has_global_flag = FFR_reclamation_successful
-						has_global_flag = FFR_reconciliation_happened
-					}
-				}
-			}
-		}
-		localization_key = econ_sphere_name_tab_FFR
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
+		localization_key = econ_sphere_name_tab_SOV
 	}
 	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CAO } }
 		localization_key = econ_sphere_name_tab_CAO
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = ENG } }
-		localization_key = econ_sphere_name_tab_ENG
+		trigger = { check_variable = { ECON_SPHERE_LEADER = CHI } }
+		localization_key = econ_sphere_name_tab_CHI
 	}
 	text = {
 		trigger = {
 			OR = {
-				check_variable = { ECON_SPHERE_LEADER = ADN }
-				tag = ADN
+				check_variable = { ECON_SPHERE_LEADER = AZH }
+				tag = AZH
 			}
 		}
-		localization_key = econ_sphere_name_tab_ADN
+		localization_key = econ_sphere_name_tab_AZH
 	}
 	text = {
 		trigger = {
 			OR = {
-				check_variable = { ECON_SPHERE_LEADER = CME }
-				tag = CME
+				check_variable = { ECON_SPHERE_LEADER = SEN }
+				tag = SEN
 			}
 		}
-		localization_key = econ_sphere_name_tab_CME
+		localization_key = econ_sphere_name_tab_SEN
 	}
 	text = { localization_key = econ_sphere_name_none }
 }
@@ -4787,24 +4712,9 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			OR = {
-				check_variable = { ECON_SPHERE_LEADER = FFR }
-				AND = {
-					check_variable = { ECON_SPHERE_LEADER = FRA }
-					OR = {
-						has_global_flag = FFR_reclamation_successful
-						has_global_flag = FFR_reconciliation_happened
-					}
-				}
-			}
+			check_variable = { ECON_SPHERE_LEADER = SOV }
 		}
-		localization_key = "GFX_econ_sphere_icon_FFR"
-	}
-	text = {
-		trigger = {
-			check_variable = { ECON_SPHERE_LEADER = WOL }
-		}
-		localization_key = "GFX_econ_sphere_icon_WOL"
+		localization_key = "GFX_econ_sphere_icon_SOV"
 	}
 	text = {
 		trigger = {
@@ -4814,21 +4724,21 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			check_variable = { ECON_SPHERE_LEADER = ADN }
+			check_variable = { ECON_SPHERE_LEADER = AZH }
 		}
-		localization_key = "GFX_econ_sphere_icon_ADN"
+		localization_key = "GFX_econ_sphere_icon_AZH"
 	}
 	text = {
 		trigger = {
-			check_variable = { ECON_SPHERE_LEADER = CME }
+			check_variable = { ECON_SPHERE_LEADER = SEN }
 		}
-		localization_key = "GFX_econ_sphere_icon_CME"
+		localization_key = "GFX_econ_sphere_icon_SEN"
 	}
 	text = {
 		trigger = {
-			check_variable = { ECON_SPHERE_LEADER = ENG }
+			check_variable = { ECON_SPHERE_LEADER = CHI }
 		}
-		localization_key = "GFX_econ_sphere_icon_ENG"
+		localization_key = "GFX_econ_sphere_icon_CHI"
 	}
 	text = {
 		localization_key = "GFX_econ_sphere_icon_none"
