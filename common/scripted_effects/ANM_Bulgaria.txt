@@ -1,0 +1,24 @@
+ANM_West_Thrace_Unrest = { 
+	1984 = { set_demilitarized_zone = yes }
+	1266 = { set_demilitarized_zone = yes }
+}
+
+ANM_West_Thrace_Uprising = {
+	WTH = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 1000
+			producer = TUR
+		}
+		1984 = { set_demilitarized_zone = no }
+		1266 = { set_demilitarized_zone = no }
+
+		transfer_state = 1984
+		transfer_state = 1266
+
+		add_state_core = 1984
+		add_state_core = 1266
+
+		load_oob = " "
+	}
+}

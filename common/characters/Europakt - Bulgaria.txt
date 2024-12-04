@@ -25,4 +25,136 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
+	BUL_Ongyan_Gerdzhikov = {  
+		name = BUL_Ongyan_Gerdzhikov
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/BUL/Portrait_BUL_Ongyan_Gerdzhikov.dds"
+				small = "GFX_idea_BUL_Ongyan_Gerdzhikov" 
+			} 	
+		} 
+		advisor = {
+			slot = head_of_government
+			idea_token = BUL_Ongyan_Gerdzhikov_hog
+			traits = { }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BUL_Stoyan_Stalev = { 
+		name = BUL_Stoyan_Stalev
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/BUL/Portrait_BUL_Stoyan_Stalev.dds"
+				small = "GFX_idea_BUL_Stoyan_Stalev" 
+			} 	
+		} 
+		advisor = {
+			slot = foreign_minister
+			idea_token = BUL_Stoyan_Stalev_for
+			traits = { }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BUL_Kiril_of_Saxe_Coburg = {  
+		name = BUL_Kiril_of_Saxe_Coburg
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/BUL/Portrait_BUL_Kiril_of_Saxe_Coburg.dds"
+				small = "GFX_idea_BUL_Kiril_of_Saxe_Coburg" 
+			} 	
+		} 
+		advisor = {
+			slot = economy_minister
+			idea_token = BUL_Kiril_of_Saxe_Coburg_eco
+			traits = { }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	BUL_Boyko_Borisov = {  
+		name = BUL_Boyko_Borisov
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/BUL/Portrait_BUL_Boyko_Borisov.dds"
+				small = "GFX_idea_BUL_Boyko_Borisov" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token = BUL_Boyko_Borisov_sec
+			traits = { }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	BUL_Milan_Drenchev = { 
+		name = BUL_Milan_Drenchev
+		country_leader = {
+			ideology = liberalism_liberal_agrarianism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	BUL_Decentralized_Leadership = {  
+		name = BUL_Decentralized_Leadership
+		country_leader = {
+			ideology = progressivism_1_subtype #Left-Wing Agrarianism
+			expire = "2999.1.1.1"
+		}
+	}
+	BUL_Petar_Dertliev = { 
+		name = BUL_Petar_Dertliev
+		country_leader = {
+			ideology = progressivism_reformist_socialism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+
+	### West Thracian Rebellion ###
+	WTH_Ahmed_Dogan = { 
+		name = WTH_Ahmed_Dogan
+		portraits = { 
+			civilian = { large = "gfx/leaders/WTH/Portrait_WTH_Ahmed_Dogan.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_AHMED_DOGAN_DESC"
+			ideology = liberal_conservatism_big_tent_subtype #Oligarchic Liberalism TBD
+			traits = { }
+			expire = "2999.1.1.1"
+		}
+	}
+	WTH_Decentralized_Leadership = { 
+		name = WTH_Decentralized_Leadership
+		country_leader = {
+			ideology = paternalism_social_nationalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	WTH_Osman_Oktay = {  
+		name = WTH_Osman_Oktay
+		country_leader = {
+			ideology = progressivism_left_kemalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	WTH_Nedim_Gencev = { 
+		name = WTH_Nedim_Gencev
+		country_leader = {
+			ideology = conservatism_islamic_conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+
 }
