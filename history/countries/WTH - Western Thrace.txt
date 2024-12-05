@@ -9,6 +9,21 @@ set_research_slots = 1
 
 set_stability = 0.8
 
+TUR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = WTH autonomy_state = autonomy_puppet }
+        else = {
+            puppet = WTH
+        }
+    }
+}
+
 add_ideas = {
 	### Starting Ideas ###
 	### Ministers ###
