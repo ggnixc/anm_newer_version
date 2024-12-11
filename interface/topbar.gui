@@ -53,7 +53,7 @@ guiTypes = {
 		buttonType = {
 			name = "player_flag"
 			quadTextureSprite ="GFX_shield_medium"
-			position = { x = 12 y = 14 }
+			position = { x = 17 y = 12 }
 			Orientation = "UPPER_LEFT"
 			clicksound = click_close
 			oversound = ui_menu_over
@@ -70,7 +70,7 @@ guiTypes = {
 		iconType = {
 			name ="topbar_flag_overlay"
 			spriteType = "GFX_topbar_flag_overlay"
-			position = { x = 3 y = 1 }
+			position = { x = 4 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -128,7 +128,7 @@ guiTypes = {
 			buttonType = {
 				name = "musicplayer_button"
 				quadTextureSprite ="GFX_musicplayer_button"
-				position = { x= -106 y = 8 }
+				position = { x= -108 y = 7 }
 				Orientation = "UPPER_RIGHT"
 				pdx_tooltip = "MUSICPLAYER_OPEN_PLAYER"
 			}
@@ -138,7 +138,7 @@ guiTypes = {
 		iconType = {
 			name ="armyoverview_buttons_bg"
 			spriteType = "GFX_armyoverview_buttons_bg"
-			position = { x= -399 y = -2 }
+			position = { x= -401 y = 0 }
 			Orientation = "UPPER_RIGHT"
 			alwaystransparent = yes
 		}
@@ -167,8 +167,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="pol_power"
-			position = { x = 126 y = 8 }
-			font = "aldrich_14_outline"
+			position = { x = 126 y = 10 }
+			font = "aldrich_12_outline"
 			text = "999"
 			format = center
 			maxWidth = 52
@@ -192,8 +192,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="manpower"
-			position = { x = 339 y = 8 }
-			font = "aldrich_14_outline"
+			position = { x = 339 y = 10 }
+			font = "aldrich_12_outline"
 			text = "9999"
 			format = center
 			maxWidth = 77
@@ -217,8 +217,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="stability"
-			position = { x = 189 y = 8 }
-			font = "aldrich_14_outline"
+			position = { x = 187 y = 10 }
+			font = "aldrich_12_outline"
 			text = "100%"
 			format = right
 			maxWidth = 57
@@ -242,8 +242,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="war_support"
-			position = { x= 260 y = 8 }
-			font = "aldrich_14_outline"
+			position = { x= 258 y = 10 }
+			font = "aldrich_12_outline"
 			text = "100%"
 			format = right
 			maxWidth = 57
@@ -267,8 +267,8 @@ guiTypes = {
 		}		
 		instantTextBoxType = {
 			name ="supply_value"
-			position = { x = 692 y = 4 }
-			font = "aldrich_16_outline"
+			position = { x = 690 y = 7 }
+			font = "aldrich_12_outline"
 			text = "999"
 			format = center
 			maxWidth = 59
@@ -300,7 +300,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="experience_value"
 			position = { x = 768 y = 10 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_12_outline"
 			text = "999"
 			format = center
 			maxWidth = 45
@@ -325,7 +325,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="navy_experience_value"
 			position = { x = 814 y = 10 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_12_outline"
 			text = "999"
 			format = center
 			maxWidth = 46
@@ -350,7 +350,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="air_experience_value"
 			position = { x = 860 y = 10 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_12_outline"
 			text = "999"
 			format = center
 			maxWidth = 46
@@ -374,8 +374,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="command_power_value"
-			position = { x= 619 y = 8 }
-			font = "aldrich_14_outline"
+			position = { x= 619 y = 10 }
+			font = "aldrich_12_outline"
 			text = "999"
 			format = center
 			maxWidth = 40
@@ -399,8 +399,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="industrial_capacity"
-			position = { x = 445 y = 8 }
-			font = "aldrich_14_outline"
+			position = { x = 443 y = 10 }
+			font = "aldrich_12_outline"
 			text = "12/12/12"
 			format = center
 			maxWidth = 60
@@ -457,8 +457,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name ="fuel_value"
-			position = { x = 526 y = 4 }
-			font = "aldrich_14_outline"
+			position = { x = 526 y = 7 }
+			font = "aldrich_12_outline"
 			text = "999"
 			format = center
 			maxWidth = 59
@@ -477,7 +477,7 @@ guiTypes = {
 		buttonType = {
 			name = "threat_button"
 			spriteType = "GFX_world_tension_icon_big_strip"
-			position = { x=-96 y=20 }
+			position = { x=-98 y=22 }
 			Orientation = "UPPER_RIGHT"
 			clicksound = click_default
 			pdx_tooltip = ""
@@ -513,7 +513,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "time_control_window"
-			position = { x=-378 y=7 }
+			position = { x=-379 y=9 }
 			size = { width=253 height=30 }
 			Orientation = UPPER_RIGHT
 
@@ -529,7 +529,7 @@ guiTypes = {
 			buttonType = {
 				name = "pause_button_date_paused"
 				quadTextureSprite ="GFX_date_pause_button"
-				position = { x = -197 y = -1 }
+				position = { x = -202 y = 0 }
 				Orientation = "UPPER_RIGHT"
 				shortcut = "SPACE" #Will be disabled in MP from code
 				clicksound = pause_button
@@ -607,7 +607,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "menu_button"
-			position = { x = -28 y = 3 }
+			position = { x = -32 y = 5 }
 			quadTextureSprite ="GFX_menu_button"
 			buttonText = ""
 			buttonFont = "Main_14_black"
@@ -620,7 +620,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "help_button"
-			position = { x = -27 y = 27 }
+			position = { x = -32 y = 31 }
 			quadTextureSprite ="GFX_help_button"
 			buttonText = ""
 			buttonFont = "Main_14_black"
@@ -649,7 +649,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "playlist_button"
-			position = { x = -343 y = 2 }
+			position = { x = -347 y = 6 }
 			quadTextureSprite ="GFX_playlist_button"
 			buttonText = ""
 			buttonFont = "Main_14_black"
@@ -661,7 +661,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "dismissed_alerts_button"
-			position = { x = -30 y = 51 }
+			position = { x = -32 y = 56 }
 			quadTextureSprite ="GFX_show_dismissed_alerts_icon"
 			buttonText = ""
 			buttonFont = "Main_14_black"
