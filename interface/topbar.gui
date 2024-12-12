@@ -96,8 +96,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "toggle_music_commands_win"
-			position = { x = -259 y = 34 }
-			show_position = { x = -450 y = 34 }
+			position = { x = -259 y = 36 }
+			show_position = { x = -450 y = 36 }
 			show_animation_type = decelerated
 			hide_animation_type = accelerated
 			animation_time = 450
@@ -113,14 +113,14 @@ guiTypes = {
 			buttonType = {
 				name = "music_pause_button"
 				quadTextureSprite ="GFX_music_pause_button"
-				position = { x= -171 y = 8 }
+				position = { x= -171 y = 10 }
 				Orientation = "UPPER_RIGHT"
 			}
 
 			buttonType = {
 				name = "music_next_button"
 				quadTextureSprite ="GFX_music_next_button"
-				position = { x= -141 y = 8 }
+				position = { x= -140 y = 10 }
 				Orientation = "UPPER_RIGHT"
 				pdx_tooltip = "MUSICPLAYER_NEXT"
 			}
@@ -128,7 +128,7 @@ guiTypes = {
 			buttonType = {
 				name = "musicplayer_button"
 				quadTextureSprite ="GFX_musicplayer_button"
-				position = { x= -108 y = 7 }
+				position = { x= -109 y = 10 }
 				Orientation = "UPPER_RIGHT"
 				pdx_tooltip = "MUSICPLAYER_OPEN_PLAYER"
 			}
@@ -529,7 +529,7 @@ guiTypes = {
 			buttonType = {
 				name = "pause_button_date_paused"
 				quadTextureSprite ="GFX_date_pause_button"
-				position = { x = -202 y = 0 }
+				position = { x = -202 y = -1 }
 				Orientation = "UPPER_RIGHT"
 				shortcut = "SPACE" #Will be disabled in MP from code
 				clicksound = pause_button
@@ -615,12 +615,11 @@ guiTypes = {
 			oversound = ui_menu_over
 			Orientation = "UPPER_RIGHT"
 			pdx_tooltip = "MAIN_MENU"
-			scale = 1.05
 		}
 
 		buttonType = {
 			name = "help_button"
-			position = { x = -32 y = 31 }
+			position = { x = -32 y = 30 }
 			quadTextureSprite ="GFX_help_button"
 			buttonText = ""
 			buttonFont = "Main_14_black"
@@ -629,7 +628,6 @@ guiTypes = {
 			Orientation = "UPPER_RIGHT"
 			pdx_tooltip = "HELP_MENU"
 			web_link = ""
-			scale = 1.05
 		}
 
 		buttonType = {
@@ -649,7 +647,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "playlist_button"
-			position = { x = -347 y = 6 }
+			position = { x = -348 y = 6 }
 			quadTextureSprite ="GFX_playlist_button"
 			buttonText = ""
 			buttonFont = "Main_14_black"
@@ -661,14 +659,13 @@ guiTypes = {
 
 		buttonType = {
 			name = "dismissed_alerts_button"
-			position = { x = -32 y = 56 }
+			position = { x = -32 y = 55 }
 			quadTextureSprite ="GFX_show_dismissed_alerts_icon"
 			buttonText = ""
 			buttonFont = "Main_14_black"
 			clicksound = click_ok
 			oversound = ui_menu_over
 			Orientation = "UPPER_RIGHT"
-			scale = 1.05
 		}
 
 		containerWindowType = {
