@@ -44,21 +44,21 @@ guiTypes = {
 		#Tab buttons
 		buttonType = {
 			name = "Tab_1_Title"
-			position = { x = 55 y = 66 }
+			position = { x = 20 y = 61 }
 			spriteType = "GFX_Government_Tab_Button"
 			buttonFont = "aldrich_18_outline"
 			buttonText = "Reichsleitung"
 		}
 		buttonType = {
 			name = "Tab_2_Title"
-			position = { x = 253 y = 68 }
+			position = { x = 242 y = 61 }
 			spriteType = "GFX_Government_Tab_Button"
 			buttonFont = "aldrich_18_outline"
 			buttonText = "NSDAP Institutions"
 		}
 		buttonType = {
 			name = "Tab_3_Title"
-			position = { x = 509 y = 68 }
+			position = { x = 464 y = 61 }
 			spriteType = "GFX_Government_Tab_Button"
 			buttonFont = "aldrich_18_outline"
 			buttonText = "Reich Senate"
@@ -94,7 +94,7 @@ guiTypes = {
 		iconType = {
 			name = "government_albert_speer_jr"
 			pdx_tooltip = "government_albert_speer_jr"
-			pdx_tooltip_delayed= "government_albert_speer_jr_long"
+			pdx_tooltip_delayed = "government_albert_speer_jr_long"
 			spriteType = "GFX_government_albert_speer_jr"
 			position = { x = 446 y = 173 }
 			scale = 0.7
@@ -480,7 +480,7 @@ guiTypes = {
 			position = { x = 22 y = 700 }
 			font = "aldrich_12_outline"
 			borderSize = {x = 0 y = 0}
-			text = "[governmentloyaltyadditionalinformation]"
+			text = "Additional_Faction_Info_Text"
 			maxWidth = 624
 			maxHeight = 32
 		}
@@ -601,35 +601,45 @@ guiTypes = {
 		iconType = {
 			name = "Institution_Leader_ARMBAND"
 			spriteType = "GFX_Institution_Leader_ARMBAND"
-			position = { x = 697 y = 183 }
+			position = { x = 830 y = 181 }
 		}
-		
+		iconType = {
+			name = "Institution_Leader_Tooltip"
+			spriteType = "GFX_Institution_Leader_Tooltip"
+			position = { x = 696 y = 170 }
+			pdx_tooltip = "Institution_Leader_Tooltip"
+			pdx_tooltip_delayed = "Institution_Leader_Tooltip_desc"
+		}
 		iconType = {
 			name = "Institution_Leader_NAME"
 			spriteType = "GFX_Institution_Leader_NAME"
-			position = { x = 747 y = 170 }
+			position = { x = 696 y = 170 }
+			alwaystransparent = yes
 			scale = 0.7
 		}
 
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Header_title"
-			position =  { x = 668 y = 133 }
+			position =  { x = 668 y = 131 }
 			font = "aldrich_16_outline"
+			maxWidth = 300
+			maxHeight = 40
 			text = "Information:"
 		}
 
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Header_agendas"
-			position =  { x = 65 y = 534 }
+			position =  { x = 64 y = 532 }
 			font = "aldrich_16_outline"
 			text = "Agenda(s):"
 		}
 
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Institution_title"
-			position =  { x = 702 y = 328 }
-			font = "aldrich_16_outline"
+			position =  { x = 652 y = 328 }
+			font = "aldrich_bold_16_outline"
 			text = "[getGERgovernmentinstitutionname]"
+			maxWidth = 300
 			format = center
 		}
 		instantTextboxType = {
@@ -644,4 +654,42 @@ guiTypes = {
 
 
 	} #Closing bracket Tab 2
+
+	containerWindowType = {
+		name = "ANM_reichsstabilitat_GUI_tab3"
+		size = { width = 1002 height = 752 }
+		position = { x= 545 y= 80 }
+
+		iconType = {
+			name = "reichsstabilitat_tab_3"
+			spriteType = "GFX_reichsstabilitat_tab_3"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Senate_Title"
+			position =  { x = 304 y = 127 }
+			font = "aldrich_16_outline"
+			text = "Senator's Hall"
+		}
+
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Current_Topic"
+			position =  { x = 55 y = 130 }
+			font = "aldrich_bold_16_outline"
+			format = center
+			text = "The Euromark"
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Current_Topicdesc"
+			position =  { x = 57 y = 150 }
+			font = "aldrich_12_outline"
+			format = left
+			text = "The Euromark"
+		}
+
+
+	} #Closing bracket Tab 3
+
 }

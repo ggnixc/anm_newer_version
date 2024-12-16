@@ -2176,6 +2176,14 @@ scripted_gui = {
 				if = {
 					limit = { NOT = { has_country_flag = GER_show_reichsstability_window } } 
 					set_country_flag = GER_show_reichsstability_window 
+					set_variable = { 
+						var = GER_Government_Tab_2_Instution
+						value = 9
+					}
+					set_variable = { 
+						var = GER_Government_Tab_2_Leader_Rank
+						value = 10
+					}
 				}
 				else_if = {
 					limit = { has_country_flag = GER_show_reichsstability_window }
@@ -2935,6 +2943,32 @@ scripted_gui = {
 			Button_Institution_6 = { frame = GER_Government_Tab_2_Instution_6_Pressed }
 			Button_Institution_7 = { frame = GER_Government_Tab_2_Instution_7_Pressed }
 			Button_Institution_8 = { frame = GER_Government_Tab_2_Instution_8_Pressed }		
+		} 
+	}
+
+	ANM_reichsstabilitat_GUI_Tab3 = {
+		context_type = player_context
+		window_name = "ANM_reichsstabilitat_GUI_tab3"
+		parent_window_token = "ANM_reichsstabilitat_GUI"
+		visible = {
+			AND = { 
+				has_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 3
+				} 
+				has_country_flag = GER_show_reichsstability_window
+			} 
+		}
+		
+		triggers = {
+
+		}
+		
+		effects = {
+			
+		}
+		properties = {
+				
 		} 
 	}
 
