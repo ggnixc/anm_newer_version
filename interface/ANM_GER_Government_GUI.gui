@@ -598,6 +598,14 @@ guiTypes = {
 		}
 
 		#Institution Leaders
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Header_title"
+			position =  { x = 668 y = 131 }
+			font = "aldrich_16_outline"
+			maxWidth = 300
+			maxHeight = 40
+			text = "Information:"
+		}
 		iconType = {
 			name = "Institution_Leader_ARMBAND"
 			spriteType = "GFX_Institution_Leader_ARMBAND"
@@ -617,23 +625,6 @@ guiTypes = {
 			alwaystransparent = yes
 			scale = 0.7
 		}
-
-		instantTextboxType = {
-			name = "Government_GUI_Tab2_Header_title"
-			position =  { x = 668 y = 131 }
-			font = "aldrich_16_outline"
-			maxWidth = 300
-			maxHeight = 40
-			text = "Information:"
-		}
-
-		instantTextboxType = {
-			name = "Government_GUI_Tab2_Header_agendas"
-			position =  { x = 64 y = 532 }
-			font = "aldrich_16_outline"
-			text = "Agenda(s):"
-		}
-
 		instantTextboxType = {
 			name = "Government_GUI_Tab2_Institution_title"
 			position =  { x = 652 y = 328 }
@@ -652,6 +643,70 @@ guiTypes = {
 			text = "[getGERgovernmentinstitutiondesc]"
 		}
 
+		#Agenda's 
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Header_agendas"
+			position =  { x = 64 y = 532 }
+			font = "aldrich_16_outline"
+			text = "Agenda(s):"
+		}
+		checkBoxType = {
+			name = "Government_GUI_Tab2_Agendabox1"
+			position = { x = 66 y = 559 }
+			quadTextureSprite = "GFX_Government_GUI_Agendabox"
+			clicksound = decisions_ui_button
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Agendatext1"
+			position =  { x = 96 y = 564 }
+			font = "aldrich_14_outline"
+			maxWidth = 220
+			maxHeight = 25
+			text = "Government_GUI_Tab2_Agendatext1"
+		}
+		checkBoxType = {
+			name = "Government_GUI_Tab2_Agendabox2"
+			position = { x = 66 y = 592 }
+			quadTextureSprite = "GFX_Government_GUI_Agendabox"
+			clicksound = decisions_ui_button
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Agendatext2"
+			position =  { x = 96 y = 597 }
+			font = "aldrich_14_outline"
+			maxWidth = 220
+			maxHeight = 25
+			text = "Government_GUI_Tab2_Agendatext2"
+		}
+		checkBoxType = {
+			name = "Government_GUI_Tab2_Agendabox3"
+			position = { x = 368 y = 559 }
+			quadTextureSprite = "GFX_Government_GUI_Agendabox"
+			clicksound = decisions_ui_button
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Agendatext3"
+			position =  { x = 398 y = 564 }
+			font = "aldrich_14_outline"
+			maxWidth = 220
+			maxHeight = 25
+			text = "Government_GUI_Tab2_Agendatext3"
+		}
+		checkBoxType = {
+			name = "Government_GUI_Tab2_Agendabox4"
+			position = { x = 368 y = 592 }
+			quadTextureSprite = "GFX_Government_GUI_Agendabox"
+			clicksound = decisions_ui_button
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Agendatext4"
+			position =  { x = 398 y = 597 }
+			font = "aldrich_14_outline"
+			maxWidth = 220
+			maxHeight = 25
+			text = "Government_GUI_Tab2_Agendatext4"
+		}
+
 
 	} #Closing bracket Tab 2
 
@@ -666,7 +721,6 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
-
 		instantTextboxType = {
 			name = "Government_GUI_Tab3_Senate_Title"
 			position =  { x = 304 y = 127 }
@@ -679,15 +733,69 @@ guiTypes = {
 			position =  { x = 55 y = 130 }
 			font = "aldrich_bold_16_outline"
 			format = center
-			text = "The Red Menace"
+			text = "Government_GUI_Tab3_Current_Topic"
 		}
 		instantTextboxType = {
 			name = "Government_GUI_Tab3_Current_Topicdesc"
-			position =  { x = 57 y = 150 }
+			position =  { x = 53 y = 161 }
 			font = "aldrich_12_outline"
 			format = left
-			text = "The Soviet Union has become increasingly agressive with their actions over the past decade. Recent Intelligence Reports indicate an increasing amount of soldiers stationed within 100km of the border. What would be the best course of action?\n\nThis is a placeholder event, The Reich Senate is not summoned for regular day to day activities within the Reich. This is a text written for the teaser to prevent spoilers."
+			maxWidth = 192
+			maxHeight = 254
+			scrollbarType = standardtext_slider
+			text = "Government_GUI_Tab3_Current_Topicdesc"
 		}
+
+		buttonType = {
+			name = "Button_Senate_Big1"
+			position = { x = 47 y = 443 }
+			spriteType = "GFX_Button_Senate_Big"
+			buttonFont = "aldrich_16_outline"
+			buttontext = "Preventive Action"
+		}
+		buttonType = {
+			name = "Button_Senate_Big2"
+			position = { x = 47 y = 499 }
+			spriteType = "GFX_Button_Senate_Big"
+			buttonFont = "aldrich_16_outline"
+			buttontext = "Diplomacy"
+		}
+		buttonType = {
+			name = "Button_Senate_Big3"
+			position = { x = 47 y = 555 }
+			spriteType = "GFX_Button_Senate_Big_Pressed"
+			buttonFont = "aldrich_16_outline"
+			buttontext = "Covert Infiltration"
+		}
+
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Vote1"
+			position =  { x = 62 y = 621 }
+			font = "aldrich_bold_16_outline"
+			format = left
+			text = "Government_GUI_Tab3_Vote1"
+			maxWidth = 40
+			maxHeight = 40
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Vote2"
+			position =  { x = 148 y = 621 }
+			font = "aldrich_bold_16_outline"
+			format = left
+			text = "Government_GUI_Tab3_Vote2"
+			maxWidth = 40
+			maxHeight = 40
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Vote3"
+			position =  { x = 234 y = 621 }
+			font = "aldrich_bold_16_outline"
+			format = left
+			text = "Government_GUI_Tab3_Vote3"
+			maxWidth = 40
+			maxHeight = 40
+		}
+
 
 
 	} #Closing bracket Tab 3

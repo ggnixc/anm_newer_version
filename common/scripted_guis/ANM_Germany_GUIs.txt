@@ -2176,14 +2176,6 @@ scripted_gui = {
 				if = {
 					limit = { NOT = { has_country_flag = GER_show_reichsstability_window } } 
 					set_country_flag = GER_show_reichsstability_window 
-					set_variable = { 
-						var = GER_Government_Tab_2_Instution
-						value = 9
-					}
-					set_variable = { 
-						var = GER_Government_Tab_2_Leader_Rank
-						value = 10
-					}
 				}
 				else_if = {
 					limit = { has_country_flag = GER_show_reichsstability_window }
