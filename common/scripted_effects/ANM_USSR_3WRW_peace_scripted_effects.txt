@@ -50,10 +50,12 @@ ANM_caucasus_to_SOV = {
 		}
 		
 		transfer_state = 231
+		transfer_state = 1293
 		transfer_state = 1556
 		transfer_state = 1558
 
 		add_state_core = 231
+		add_state_core = 1293
 		add_state_core = 1556
 		add_state_core = 1558
 		
@@ -75,12 +77,18 @@ ANM_caucasus_to_SOV = {
 		}
 		
 		transfer_state = 229
+		transfer_state = 244
 		transfer_state = 1552
 		transfer_state = 1554
+		transfer_state = 1730
+		transfer_state = 2131
 
 		add_state_core = 229
+		add_state_core = 244
 		add_state_core = 1552
 		add_state_core = 1554
+		add_state_core = 1730
+		add_state_core = 2131
 		
 		set_variable = { ECON_SPHERE_LEADER = SOV }
 	}
@@ -183,6 +191,11 @@ ANM_belarus_to_SOV = {
 			target = BLS
 			autonomy_state = autonomy_soviet_republic
 		}
+		transfer_state = 241
+		transfer_state = 2452
+
+		add_state_core = 241
+		add_state_core = 2452
 	}
 	BLS = {
 		set_politics = {
@@ -215,12 +228,12 @@ ANM_homel_to_SOV = {
 
 ANM_karelia_to_SOV = {
 	SOV = {
-		transfer_state = 146
-		transfer_state = 147
+		transfer_state = 213
+		transfer_state = 216
 		transfer_state = 1712
 		
-		add_state_core = 146
-		add_state_core = 147
+		add_state_core = 213
+		add_state_core = 216
 		add_state_core = 1712
 	}
 }
@@ -282,7 +295,7 @@ ANM_war_transnistria_to_SOV = {
 		
 		set_cosmetic_tag = TNS_SSR
 
-		set_capital = { state = 78 }
+		set_capital = { state = 1286 }
 		
 		set_politics = {
 			ruling_party = communist
@@ -353,6 +366,12 @@ ANM_donetsk_to_RSFSR = {
 }
 
 ANM_baltics_to_SOV = {
+	every_state = {
+		limit = {
+			is_core_of = OST
+		}
+		OST = { remove_state_core = PREV }
+	}
 	SOV = {
 		set_autonomy = {
 			target = LIT
@@ -366,12 +385,16 @@ ANM_baltics_to_SOV = {
 			target = EST
 			autonomy_state = autonomy_soviet_republic
 		}
-	}
-	every_state = {
-		limit = {
-			is_owned_by = OST
-		}
-		OST = { remove_state_core = PREV }
+
+		transfer_state = 209
+		transfer_state = 257
+		transfer_state = 1402
+		transfer_state = 1421
+
+		add_state_core = 209
+		add_state_core = 257
+		add_state_core = 1402
+		add_state_core = 1421
 	}
 	LIT = {
 		set_politics = {
@@ -394,16 +417,20 @@ ANM_baltics_to_SOV = {
 		}
 		
 		transfer_state = 11
+		transfer_state = 79
 		transfer_state = 96
 		transfer_state = 189
 		transfer_state = 1400
 		transfer_state = 1401
+		transfer_state = 2451
 
 		add_state_core = 11
+		add_state_core = 79
 		add_state_core = 96
 		add_state_core = 189
 		add_state_core = 1400
 		add_state_core = 1401
+		add_state_core = 2451
 		
 		set_cosmetic_tag = LIT_SSR	
 		
@@ -435,7 +462,6 @@ ANM_baltics_to_SOV = {
 		transfer_state = 1397
 		transfer_state = 1398
 		transfer_state = 1399
-		transfer_state = 1402
 
 		add_state_core = 12
 		add_state_core = 190
@@ -443,7 +469,6 @@ ANM_baltics_to_SOV = {
 		add_state_core = 1397
 		add_state_core = 1398
 		add_state_core = 1399
-		add_state_core = 1402
 		
 		set_cosmetic_tag = LAT_SSR	
 		
@@ -474,16 +499,36 @@ ANM_baltics_to_SOV = {
 		transfer_state = 1395
 		transfer_state = 1396
 		transfer_state = 1440
+		transfer_state = 2450
 
 		add_state_core = 13
 		add_state_core = 191
 		add_state_core = 1395
 		add_state_core = 1396
 		add_state_core = 1440
+		add_state_core = 2450
 		
 		set_cosmetic_tag = EST_SSR	
 		
 		set_variable = { ECON_SPHERE_LEADER = SOV }
+	}
+}
+
+ANM_ostland_border_to_SOV = {
+	SOV = {
+		transfer_state = 209
+		transfer_state = 241
+		transfer_state = 257
+		transfer_state = 1402
+		transfer_state = 1421
+		transfer_state = 2452
+
+		add_state_core = 209
+		add_state_core = 241
+		add_state_core = 257
+		add_state_core = 1402
+		add_state_core = 1421
+		add_state_core = 2452
 	}
 }
 

@@ -47,7 +47,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Dai Shidan"
+	name = "Hohei Shidan"
 	is_locked = yes
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -60,12 +60,12 @@ division_template = {
 	support = {
 		artillery = { x = 0 y = 0 }
 		engineer = { x = 0 y = 1 }
-		signal_company = { x = 0 y = 2}
+		signal_company = { x = 0 y = 2 }
 	}
 }
 
 division_template = {
-	name = "Dokuritsu Konsei"
+	name = "Dokuritsu Konsei Ryodan"
 	is_locked = yes
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -79,7 +79,7 @@ division_template = {
 	}
 	support = {
 		engineer = { x = 0 y = 0 }
-		signal_company = { x = 0 y = 1}
+		signal_company = { x = 0 y = 1 }
 	}
 }
 
@@ -97,7 +97,7 @@ division_template = {
 	support = {
 		artillery = { x = 0 y = 0 }
 		engineer = { x = 0 y = 1 }
-		recon = { x = 0 y = 2}
+		recon = { x = 0 y = 2 }
 	}
 }
 
@@ -137,6 +137,29 @@ units = {
 	}
 
 	###Brigadang Makapili (the cannon fodder)
+	division = {
+		name = "Brigadang 'Antonio Luna'"
+		location = 1261 #Bacolod, Kanlurang Bisayas
+		division_template = "Brigadang Makapili"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "Brigadang 'Emilio Aguinaldo'"
+		location = 14722 #Iloilo, Kanlurang Bisayas
+		division_template = "Brigadang Makapili"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "Brigadang 'Gregorio del Pilar'"
+		location = 1368 #Kanlurang Bisayas
+		division_template = "Brigadang Makapili"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
 
 	division = {
 		name = "Brigadang 'Artemio Ricarte'"
@@ -157,6 +180,22 @@ units = {
 	division = {
 		#name = "Brigadang 'Benigno Ramos'"
 		location = 10165 #Gitnang Luzon
+		division_template = "Brigadang Makapili"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "Brigadang 'Miguel Malvar'"
+		location = 10186 #Kanlurang Bisayas
+		division_template = "Brigadang Makapili"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		#name = "Brigadang 'Miguel Malvar'"
+		location = 10186 #Kanlurang Bisayas
 		division_template = "Brigadang Makapili"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0
@@ -194,52 +233,75 @@ units = {
 		start_equipment_factor = 1.0
 	}
 
-	###Dai Shidan
+	###Hohei Shidan
+	division = {
+		name = "Dai-Yon Shidan 'Yodo'"
+		location = 4429 #Puerto Princesa, Timog-Kanlurang Tagalog
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		#name = "Dai-Juuroku Shidan 'Kaki'"
+		location = 10272 #Calapan Timog-Kanlurang Tagalog
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
 
 	division = {
 		#name = "Dai-Yonjuuhachi Shidan 'Umi'"
 		location = 14712 #Cavite City, Katimugang Tagalog
-		division_template = "Dai Shidan"
+		division_template = "Hohei Shidan"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 
 	division = {
-		name = "Dai-Yonjuuhachi Shidan 'Umi'"
+		name = "Dai-Hachi Shidan 'Sugi'"
+		location = 10272 #Calapan Timog-Kanlurang Tagalog
+		division_template = "Hohei Shidan"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		name = "Dai-Sanjū Shidan 'Hyō'"
 		location = 14712 #Cavite City, Katimugang Tagalog
-		division_template = "Dai Shidan"
+		division_template = "Hohei Shidan"
 		start_experience_factor = 0.4
 		start_equipment_factor = 1.0
 	}
 
-	###Dokuritsu Konsei
+	###Dokuritsu Konsei Ryodan
 	division = {
-		name = "Dokuritsu Konsei Dai-Rokujuugo Ryodan"
+		name = "Dokuritsu Konsei Ryodan Dai-Rokujuugo Ryodan"
 		location = 14711 #Manila
-		division_template = "Dokuritsu Konsei"
+		division_template = "Dokuritsu Konsei Ryodan"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 
 	division = {
-		#name = "Dokuritsu Konsei Dai-Rokujuugo Ryodan"
+		#name = "Dokuritsu Konsei Ryodan Dai-Rokujuugo Ryodan"
 		location = 14711 #Manila
-		division_template = "Dokuritsu Konsei"
+		division_template = "Dokuritsu Konsei Ryodan"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 
 	division = {
-		#name = "Dokuritsu Konsei Dai-Rokujuugo Ryodan"
+		#name = "Dokuritsu Konsei Ryodan Dai-Rokujuugo Ryodan"
 		location = 14711 #Manila
-		division_template = "Dokuritsu Konsei"
+		division_template = "Dokuritsu Konsei Ryodan"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 
 	###Konoe Shidan
 	division = {
-		name = "Konoe Dai-Ichi Shidan"
+		name = "Konoe Dai-Ichi Shidan 'Sumi'"
 		location = 14711 #Manila
 		division_template = "Konoe Shidan"
 		start_experience_factor = 0.7
@@ -247,7 +309,7 @@ units = {
 	}
 
 	division = {
-		#name = "Konoe Dai-Ichi Shidan"
+		name = "Konoe Dai-Ichi Shidan 'Nori'"
 		location = 14711 #Manila
 		division_template = "Konoe Shidan"
 		start_experience_factor = 0.7

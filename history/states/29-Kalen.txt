@@ -1,27 +1,40 @@
-###POP DONE 
-state={
-	id=29
-	name="STATE_29"
-	manpower = 1873416
-	
-	state_category = city
-	resources={
-		steel=28
-		aluminium=5
+state = {
+	id = 29
+	name = "STATE_29"
+	resources = {
+		steel = 28.000
+		aluminium = 5.000
 	}
 
-	history={
+	history = {
 		owner = GER
-		add_core_of = GER
-		victory_points = { 575 5 }
-		victory_points = { 11483 10 }
-		victory_points = { 11548 5 }
+		victory_points = {
+			575 2
+		}
+		victory_points = {
+			11483 30
+		}
+		victory_points = {
+			18117 7
+		}
+		victory_points = {
+			11606 4
+		}
+		victory_points = {
+			18112 4
+		}
+		victory_points = {
+			18110 4
+		}
+		victory_points = {
+			18115 2
+		}
 		buildings = {
-
+			arms_factory = 1
 			infrastructure = 6
 			air_base = 10
 			dockyard = 2
-			11548 = {
+ 			11548 = {
 				naval_base = 6
 				coastal_bunker = 3
 			}
@@ -30,11 +43,15 @@ state={
 				naval_base = 1
 			}
 		}
-		 
+		add_core_of = GER
 		set_state_flag = universal_renamings
-	}
+ 	}
 
-	provinces={
-		575 3536 11483 11548
+	provinces = {
+		575 3536 11483 11548 11606 18110 18112 18115 18117
 	}
+	manpower = 1873416
+	buildings_max_level_factor = 1.000
+	state_category = city
+	local_supplies = 0.000
 }

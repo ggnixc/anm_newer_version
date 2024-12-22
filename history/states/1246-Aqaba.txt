@@ -1,25 +1,31 @@
+state = {
+	id = 1246
+	name = "STATE_1246"
 
-state={
-	id=1246
-	name="STATE_1246"
+	resources = {
+		oil = 2
+	}
 
-	history={
+	history = {
 		owner = IRQ
-		victory_points = { 4115 12 }
+		victory_points = {
+			4115 1
+		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			4115 = {
 				naval_base = 1
 			}
 		}
 		add_core_of = IRQ
-		add_core_of = JOR
+		set_state_flag = universal_renamings
 	}
 
-	provinces={
-		4115 4017
+	provinces = {
+		4017 4115
 	}
-	manpower=197310
-	buildings_max_level_factor=1.000
-	state_category=pastoral
+	manpower = 10834
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+	local_supplies = 0.000
 }

@@ -1,19 +1,13 @@
-##POP DONE
-state={
-	id=309
-	name="STATE_309"
-	manpower = 722997
+state = {
+	id = 309
+	name = "STATE_309"
+	resources = {
+		aluminium = 23.000
+	}
 
-	resources={
-		aluminium=23
-	}	
-	
-	state_category = rural
-
-	history={
+	history = {
 		owner = CUR
 		add_core_of = CUR
-		add_core_of = SUR
 		buildings = {
 			industrial_complex = 1
 			infrastructure = 3
@@ -22,10 +16,16 @@ state={
 				naval_base = 2
 			}
  		}
-		victory_points = { 10906 10 }
+		victory_points = {
+			10906 15
+		}
 	}
 
-	provinces={
-		1928 10906 12828 
+	provinces = {
+		1928 10906 12828 17376 17377 17380
 	}
+	manpower = 322997
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
 }

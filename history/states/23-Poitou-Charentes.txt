@@ -1,46 +1,54 @@
-###POP DONE 
-state={
-	id=23
-	name="STATE_23"
-	resources={
-		steel=48.000
+state = {
+	id = 23
+	name = "STATE_23"
+	resources = {
+		steel = 48.000
 	}
 
-	history={
+	history = {
 		owner = FRA
-		add_core_of = FRA
-		victory_points = { 6657 20 }
-		victory_points = { 15254 3 }
-		victory_points = { 15252 1 }
-		victory_points = { 15253 1 }
-		victory_points = { 11582 1 }
-		victory_points = { 629 15 }
+		victory_points = {
+			15254 3
+		}
+		victory_points = {
+			15252 10
+		}
+		victory_points = {
+			15253 1
+		}
+		victory_points = {
+			11582 1
+		}
+		victory_points = {
+			629 10
+		}
+		victory_points = {
+			9597 1
+		}
 		buildings = {
 			infrastructure = 5
 			dockyard = 1
-			6657 = {
+ 			15252 = {
 				naval_base = 3
 				coastal_bunker = 2
 			}
 			9597 = {
 				coastal_bunker = 2
 			}
-
 			15251 = {
 				coastal_bunker = 2
 			}
-			15252 = {
-				coastal_bunker = 2
-			}
-
+			arms_factory = 1
+			industrial_complex = 1
 		}
+		add_core_of = FRA
+ 	}
 
+	provinces = {
+		595 629 3598 3659 9597 11582 11596 11869 13365 13366 15251 15252 15253 15254 15255 17985 17986
 	}
-
-	provinces={
-		595 6657 9597 11582 13366 3598 15251 15252 15253 15254 15255 3659 13365 629 11596 625 11869
-	}
-	manpower=1430000
-	buildings_max_level_factor=1.000
-	state_category=large_town
+	manpower = 1430000
+	buildings_max_level_factor = 1.000
+	state_category = large_town
+	local_supplies = 0.000
 }

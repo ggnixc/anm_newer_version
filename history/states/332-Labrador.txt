@@ -1,33 +1,33 @@
-state={
-	id=332
-	name="STATE_332"
-	
-	state_category = pastoral
+state = {
+	id = 332
+	name = "STATE_332"
 
-	history={
+	history = {
 		owner = CAN
 		buildings = {
- 			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			infrastructure = 2
 			radar_station = 3
-			air_base = 2
-
+			air_base = 3
 			12503 = {
-				naval_base = 1
+				naval_base = 2
 			}
 		}
 		add_core_of = CAN
-		victory_points = { # Goose Bay
-			12503 1 
+		victory_points = {
+			12503 1
 		}
-		victory_points = { # Labrador City
+		victory_points = {
 			1785 1
 		}
+ 	}
 
+	provinces = {
+		1426 1785 4720 4787 12503 13165 13180 17255 17258
 	}
-
-	provinces={
-		1426 1785 4720 4787 12503 13165 13180 
-	}
-	manpower=11079
-	buildings_max_level_factor=1.000
+	manpower = 13789
+	buildings_max_level_factor = 1.000
+	state_category = pastoral
+	local_supplies = 0.000
 }

@@ -135,6 +135,30 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 
+			containerWindowType = {
+				name = "lock_overlay"
+				position = { x = 0 y = 0 }
+				size = { width = 112 height = 112 }
+				orientation = center
+				origo = center
+
+				background = {
+					name = "background"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_tiled_career_profile_brown_60"
+					orientation = center
+					centerposition = yes
+				}
+
+				iconType = {
+					name = "lock"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_profile_lock"
+					centerposition = yes
+					orientation = center
+				}
+			}
+
 			iconType = {
 				name = "profile_picture_lock"
 				position = { x = 0 y = 0 }

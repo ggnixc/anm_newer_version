@@ -1,14 +1,15 @@
 units = {
-	#start positions: 8305, 8487, 8459, 8433, 8536, 8836, 8887, 6472, 6660, 5601, 5755, 5781, 5652
+	#start positions: 8487, 8433, 8536, 8836, 8887, 6472, 6660, 5601, 5755, 5781, 5652
 	fleet = {
 		name = "1st Fleet" #pacific fleet
 		naval_base = 1562 #San Diego
 		#each 50's+ destroyer gets 6 destroyer Escorts + WWII destoyers
 		task_force = {
 			name = "Carrier Group 16"
-			location = 8305 #outside hawaii
+			location = 2875
 			ship = { name = "USS Randolph" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Charles F. Adams" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = USA version_name = "Charles F. Adams Class" } } }
+			ship = { name = "USS Parle" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #technically a Rudderow
 			ship = { name = "USS Fletcher" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Radford" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Jenkins" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -17,9 +18,10 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 18"
-			location = 8459 #outside hawaii
+			location = 5430 
 			ship = { name = "USS Lake Champlain" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Lynde McCormick" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = USA version_name = "Charles F. Adams Class" } } }
+			ship = { name = "USS Lansing" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS McDermut" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS McNair" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Hopewell" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -28,9 +30,11 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 19"
-			location = 8536 #outside hawaii
+			location = 2875 
 			ship = { name = "USS Bon Homme Richard" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Towers" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = USA version_name = "Charles F. Adams Class" } } }
+			ship = { name = "USS Huse" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
+			ship = { name = "USS Dealy" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Rogers" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Perkins" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Vesole" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -39,10 +43,10 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 20"
-			location = 8887 #outside hawaii
-			#originally the USS Midway, a battle the US would not be proud of.
+			location = 5430 
 			ship = { name = "USS Ascension" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Sampson" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = USA version_name = "Charles F. Adams Class" } } }
+			ship = { name = "USS Brough" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Joseph P. Kennedy Jr." definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Rupertus" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Leonard F. Mason" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -51,10 +55,10 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 21"
-			location = 6660
-			#ORIGINALLY THE USS Shangri-La, A REFERENCE TO AN FDR QUOTE THAT NEVER WOULD HAVE HAPPENED.
+			location = 3253
 			ship = { name = "USS Gettysburg" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Sellers" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = USA version_name = "Charles F. Adams Class" } } }
+			ship = { name = "USS Newell" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } }#actually a Edsall
 			ship = { name = "USS Power" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Glennon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Noa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -63,10 +67,10 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 22"
-			location = 7283 #outside hawaii
-			#originally the USS Saratoga (1956).
+			location = 3253 
 			ship = { name = "USS Justice" definition = carrier equipment = { carrier_2 = { amount = 1 owner = USA version_name = "Forrestal Class" } } }
 			ship = { name = "USS Robinson" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = USA version_name = "Charles F. Adams Class" } } }
+			ship = { name = "USS Brister" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Charles P. Cecil" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS George K. MacKenzie " definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Sarsfield" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -75,9 +79,10 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 23"
-			location = 3599
+			location = 7669
 			ship = { name = "USS Ranger" definition = carrier equipment = { carrier_2 = { amount = 1 owner = USA version_name = "Forrestal Class" } } }
 			ship = { name = "USS Mitscher" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Mitscher
+			ship = { name = "USS Snowden" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Higbee" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Dennis J. Buckley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Corry" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -86,10 +91,11 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 24"
-			location = 8487 #outside hawaii
-			#originally the USS Coral Sea, a battle that would not have happened in TNO. Now a Reference to McArthur "I Shall Return"
+			location = 604 
 			ship = { name = "USS Redeemer" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Wilkinson" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Mitscher
+			ship = { name = "USS Thomas J. Gary" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
+			ship = { name = "USS Forster" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Furse" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Warrington" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Everett F. Larson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -99,9 +105,11 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 25"
-			location = 8433 #outside hawaii
+			location = 604
 			ship = { name = "USS Princeton" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Edson" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Koiner" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
+			ship = { name = "USS Howard D. Crow" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Myles C. Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Hanson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Ozbourn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -112,9 +120,10 @@ units = {
 		task_force = {
 			name = "Carrier Group 15"
 			location = 6471
-			ship = { name = "USS Wasp" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } }}
+			ship = { name = "USS Wasp" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Little Rock" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_3 = { amount = 1 owner = USA version_name = "Albany Class" } } } #actually a Galveston
 			ship = { name = "USS Manley" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Vance" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Harold J. Ellison" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Cone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Stribling" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -123,9 +132,10 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 27"
-			location = 8836
+			location = 2970
 			ship = { name = "USS Hancock" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Willis A. Lee" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Mitscher
+			ship = { name = "USS Cromwell" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Hollister" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Damato" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Hawkins" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -134,8 +144,9 @@ units = {
 		}
 		task_force = {
 			name = "Task Force 1"
-			location = 6472
+			location = 2875
 			ship = { name = "USS Morton" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Hooper" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS McKean" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Henderson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Richard B. Anderson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -144,11 +155,12 @@ units = {
 		}
 		task_force = {
 			name = "Carrier Group 13"
-			location = 5601
+			location = 5335
 			ship = { name = "USS Valley Forge" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Saint Paul" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_1 = { amount = 1 owner = USA version_name = "Des Moines Class" } } } #actually a Baltimore
 			ship = { name = "USS Parsons" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
 			ship = { name = "USS Walker" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
+			ship = { name = "USS Durant" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS William M. Wood" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Witsie" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Theodore E. Channler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -159,6 +171,7 @@ units = {
 			name = "Task Force 4"
 			location = 5781
 			ship = { name = "USS Davis" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Wilhoite" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Steinker" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Samuel B. Roberts" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Herbery J. Thomas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -170,6 +183,7 @@ units = {
 			name = "Task Force 8"
 			location = 3450
 			ship = { name = "USS Luce" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Finch" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Sproston" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Shields" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Picking" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -180,6 +194,7 @@ units = {
 			name = "Task Force 11"
 			location = 3642
 			ship = { name = "USS William V. Pratt" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS McMorris" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "High Point Class" } } } #actually a Claud Jones
 			ship = { name = "USS Laws" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Prichett" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Robinson WW2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -190,11 +205,88 @@ units = {
 			name = "Task Force 9"
 			location = 2771
 			ship = { name = "USS Prebale" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Courtney" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Gainard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Soley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Harlan R. Dickson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Hyman" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Purdy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
+		}
+		task_force = {
+			name = "Patrol Group 2"
+			location = 2875
+			ship = { name = "USS Brattleboro" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Fairview" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Havre" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Lamar" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Worland" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+		}
+		task_force = {
+			name = "Patrol Group 1"
+			location = 5430
+			ship = { name = "USS Rockville" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Amherst" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Rexburg" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS PCE-898" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS PCE-882" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+		}
+		task_force = {
+			name = "Mine Patrol Group 9"
+			location = 5513
+			ship = { name = "USS Detector" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Direct" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Dominant" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Meadowlark" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Parrot" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Peacock" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Phoebe" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Shrike" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Thrasher" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Thrush" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Vireo" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			#all other ships were comissioned after the startdate. i included every ship commissioned before January 1st, 1962
+		}
+		task_force = {
+			name = "Mine Patrol Group 4"
+			location = 5755
+			ship = { name = "USS Inflict" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Loyalty" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Lucid" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Nimble" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Notable" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Observer" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Pinnacle" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Pivot" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Pluck" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Prime" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+		}
+		task_force = {
+			name = "Mine Patrol Group 6"
+			location = 5257
+			ship = { name = "USS Exultant" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Fearless" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Fidelity" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Firm" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Force" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Fortify" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Guide" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Hummingbird" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Jacana" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Kingbird" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+		}
+		task_force = {
+			name = "Mine Patrol Group 8"
+			location = 8834
+			ship = { name = "USS Ozark" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Turner Class" } } } #actually a catskill
+			ship = { name = "USS Orleans Parish" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Turner Class" } } } #technically a LST Class
+			ship = { name = "USS Epping Forest" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Turner Class" } } } #technically a MCS7 Class
+			ship = { name = "USS Aggressive" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Avenge" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Bold" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Bulwark" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Conflict" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Constant" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Dash" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
 		}
 		task_force = {
 			name = "Task Force 19"
@@ -309,6 +401,7 @@ units = {
 			location = 6732
 			ship = { name = "USS Bennington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Henry B. Wilson" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = USA version_name = "Charles F. Adams Class" } } }
+			ship = { name = "USS Rhodes" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Saufley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Waller" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Taylor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -320,6 +413,7 @@ units = {
 			location = 6732
 			ship = { name = "USS Kearsarge" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS John King" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = USA version_name = "Charles F. Adams Class" } } }
+			ship = { name = "USS Roy O. Hale" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Phillip" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Renshaw" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Conway" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -331,6 +425,8 @@ units = {
 			location = 6732
 			ship = { name = "USS Forrestal" definition = carrier equipment = { carrier_2 = { amount = 1 owner = USA version_name = "Forrestal Class" } } }
 			ship = { name = "USS Mullinnix" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Camp" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
+			ship = { name = "USS Lowe" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Eversole" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Shelton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Rich" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -341,6 +437,7 @@ units = {
 			name = "Task Force 2"
 			location = 6732
 			ship = { name = "USS Turner Joy" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Hissem" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Keppler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Chevalier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Stickell" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -354,6 +451,7 @@ units = {
 			ship = { name = "USS Constellation" definition = carrier equipment = { carrier_3 = { amount = 1 owner = USA version_name = "Kitty Hawk Class" } } }
 			ship = { name = "USS Canberra" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } }#HEAVY missle cruiser, actually a Boston
 			ship = { name = "USS Somers" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Mills" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Douglas H. Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Stormes" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Robert K. Huntington" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -366,6 +464,7 @@ units = {
 			ship = { name = "USS Intrepid" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Los Angeles" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_1 = { amount = 1 owner = USA version_name = "Des Moines Class" } } } #actually a Baltimore
 			ship = { name = "USS Decatur" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Falgout" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS James C. Owens" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Zellars" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Massey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -387,6 +486,7 @@ units = {
 			name = "Task Force 5"
 			location = 6732
 			ship = { name = "USS John Paul Jones" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS John R. Perry" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "High Point Class" } } } #actually a Claud Jones
 			ship = { name = "USS John W. Thomas" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Buck" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Henley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -397,6 +497,7 @@ units = {
 			name = "Task Force 7"
 			location = 6732
 			ship = { name = "USS John S. McCain" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Mitscher
+			ship = { name = "USS Charles Berry" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "High Point Class" } } } #actually a Claud Jones
 			ship = { name = "USS Hugh Purvis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Barton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Walke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -409,6 +510,7 @@ units = {
 			ship = { name = "USS Antietam" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Northampton" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } } #actually a Northampton
 			ship = { name = "USS Farragut" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Lester" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Ingraham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS English" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Charles S. Sperry" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -421,6 +523,7 @@ units = {
 			ship = { name = "USS Tichonderoga" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Topeka" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } } #actually a providence
 			ship = { name = "USS Barry" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Hammerberg" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Cowell" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Wren" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Murray" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -433,6 +536,7 @@ units = {
 			ship = { name = "USS Independence" definition = carrier equipment = { carrier_2 = { amount = 1 owner = USA version_name = "Forrestal Class" } } }
 			ship = { name = "USS Oklahoma City" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_3 = { amount = 1 owner = USA version_name = "Albany Class" } } } #actually a Galveston
 			ship = { name = "USS Dewey" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Harverfield" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Ingersoll" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Bearss" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS John Hood" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -445,11 +549,63 @@ units = {
 			ship = { name = "USS Kitty Hawk" definition = carrier equipment = { carrier_3 = { amount = 1 owner = USA version_name = "Kitty Hawk Class" } } }
 			ship = { name = "USS Newport News" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } } #actually a Des Moines
 			ship = { name = "USS Richard S. Edwards" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Claud Jones" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "High Point Class" } } }#actually a Claud Jones
 			ship = { name = "USS Braine" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Cogswell" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Black" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Hunt" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Marshell" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
+		}
+		task_force = {
+			name = "Patrol Group 4"
+			location = 6732
+			ship = { name = "USS Somersworth" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Marysville" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Magnet" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Lodestone" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Deperm" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+		}
+		task_force = {
+			name = "Mine Patrol Group 3"
+			location = 6732
+			ship = { name = "USS Skill" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Valor" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Vigor" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Vital" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Conquest" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Gallant" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Leader" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Persistent" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Pledge" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Stalwart" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+		}
+		task_force = {
+			name = "Mine Patrol Group 2"
+			location = 6732
+			ship = { name = "USS Swerve" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Venture" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Acme" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Adroit" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Advance" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Affray" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Ability" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "Garcia Class" } } } #actually an ability
+			ship = { name = "USS Alacrity" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "Garcia Class" } } } #actually an ability
+			ship = { name = "USS Assurance" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "Garcia Class" } } } #actually an ability
+			ship = { name = "USS Cormorant" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+		}
+		task_force = {
+			name = "Mine Patrol Group 5"
+			location = 6732
+			ship = { name = "USS Illusive" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Impervious" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Implicit" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Reaper" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Rival" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Sagacity" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Salute" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Sturdy" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Falcon" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Frigate Bird" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
 		}
 		task_force = {
 			name = "Task Force 20"
@@ -511,11 +667,34 @@ units = {
 			ship = { name = "USS Silversides" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA version_name = "Balao Class" } } }#actually a Gato
 		}
 		task_force = {
+			name = "Mine Patrol Group 1"
+			location = 7617
+			ship = { name = "USS Warbler" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Whippoorwill" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Widgeon" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Woodpecker" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Albatross" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Gannet" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
+			ship = { name = "USS Cove" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "High Point Class" } } } #actually a cove
+			ship = { name = "USS Cape" definition = frigate equipment = { frigate_3 = { amount = 1 owner = USA version_name = "High Point Class" } } } #actually a cove
+			ship = { name = "USS Bittern" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } }
+		}
+		task_force = {
+			name = "Patrol Group 3"
+			location = 7617
+			ship = { name = "USS PCE-869" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Whitehall" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Ely" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS Truswell" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+			ship = { name = "USS PCE-897" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a PCE842 Class
+		}
+		task_force = {
 			name = "Carrier Group 6"
 			location = 7617
 			ship = { name = "USS Yorktown" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Springfield" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } }#actually a providence
 			ship = { name = "USS Mahan" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Van Voorhis" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS John W. Weeks" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Hank" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Wallace L. Lind" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -528,6 +707,7 @@ units = {
 			ship = { name = "USS Boxer" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Boston" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } } #HEAVY missle cruiser, actually a Boston
 			ship = { name = "USS Du Pont" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Joseph K. Taussig" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Samuel N. Moore" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Harry E. Hubbard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Alfread A. Cunnigham" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -541,6 +721,7 @@ units = {
 			ship = { name = "USS Concord" definition = carrier equipment = { carrier_3 = { amount = 1 owner = USA version_name = "Kitty Hawk Class" } } }
 			ship = { name = "USS Galveston" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_3 = { amount = 1 owner = USA version_name = "Albany Class" } } } #actually a Galveston
 			ship = { name = "USS Dahlgren" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Bauer" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Borie" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Compton" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS Blue" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -553,6 +734,7 @@ units = {
 			ship = { name = "USS Oriskany" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Long Beach" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } } #technically its own class, close enough
 			ship = { name = "USS Forrest Sherman" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Kretchmer" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Goodrich" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Kenneth D. Bailey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Fred T. Berry" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -565,6 +747,7 @@ units = {
 			ship = { name = "USS Lexington" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Northamptone" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } } #actually an Oregon
 			ship = { name = "USS Coontz" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Hartley" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Preston" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Gregory" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Rooks" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -575,6 +758,7 @@ units = {
 			name = "Task Force 3"
 			location = 7617
 			ship = { name = "USS Jonas Ingraham" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Savage" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Duncan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Frank Knox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Harwood" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -586,6 +770,7 @@ units = {
 			name = "Task Force 6"
 			location = 7617
 			ship = { name = "USS King" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Calcaterra" definition = frigate equipment = { frigate_1 = { amount = 1 owner = USA version_name = "Flower Class" } } } #actually a Edsall
 			ship = { name = "USS Laffey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS O'Brien" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
 			ship = { name = "USS De Haven" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually an Allan M. Summner
@@ -602,6 +787,7 @@ units = {
 			ship = { name = "USS Hornet" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } } #actually an Essex
 			ship = { name = "USS Helena" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_1 = { amount = 1 owner = USA version_name = "Des Moines Class" } } } #actually a Baltimore
 			ship = { name = "USS Hull" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS John Willis" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Basilone" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Carpenter" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Agerholm" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
@@ -656,20 +842,22 @@ units = {
 		task_force = {
 			name = "Mine Patrol Group 7"
 			location = 5563 #australia, north coast
-			ship = { name = "USS Dynamic" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
-			ship = { name = "USS Engage" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
-			ship = { name = "USS Embattle" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
-			ship = { name = "USS Endurance" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
-			ship = { name = "USS Energy" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
-			ship = { name = "USS Enhance" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
-			ship = { name = "USS Esteem" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
-			ship = { name = "USS Excel" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
-			ship = { name = "USS Exploit" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Dynamic" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Engage" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Embattle" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Endurance" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Energy" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Enhance" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Esteem" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Excel" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Exploit" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Halsey Class" } } } #actually an agile
+			ship = { name = "USS Limpkin" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a bluebird
 		}
 		task_force = {
 			name = "Task Force 10"
 			location = 5364 #australia, north coast
 			ship = { name = "USS Macdonough" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } } #actually a Farragut
+			ship = { name = "USS Evans" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Twining" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Boyd" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
 			ship = { name = "USS Brown" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } } #actually a fletcher
@@ -683,6 +871,7 @@ units = {
 			ship = { name = "USS Thomas E. Dewey" definition = carrier equipment = { carrier_1 = { amount = 1 owner = USA version_name = "Ascension Class" } } }
 			ship = { name = "USS Providence" definition = cruiser start_experience_factor = 0.1 equipment = { heavy_cruiser_2 = { amount = 1 owner = USA version_name = "Worchester Class" } } } #actually a providence, Providence had missles
 			ship = { name = "USS Blandy" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = USA version_name = "Forrest Sherman Class" } } }
+			ship = { name = "USS Bridget" definition = frigate equipment = { frigate_2 = { amount = 1 owner = USA version_name = "Lafayette Class" } } } #actually a Dealey
 			ship = { name = "USS Epperson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS Southerland" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }
 			ship = { name = "USS William C. Lawe" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Gearing Class" } } }

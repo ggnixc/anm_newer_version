@@ -782,7 +782,6 @@ country_event = {
 		BRN = {
 			create_faction = GER_national_revival_front
 			add_to_faction = BRN
-			add_to_faction = HBR
 			add_to_faction = SDT
 		}
 		
@@ -1548,43 +1547,7 @@ country_event = {
     id = ANM_debug.13
     immediate = { 
 	log = "[GetDateText]: [Root.GetName]: event ANM_debug.13" 
-	HBR = {
-            transfer_state = 775
-			transfer_state = 58
-			transfer_state = 1411
-			transfer_state = 774
-			inherit_technology = GER
-			load_oob = "HBR_warlordstart"
-			country_event = { id = GER_anm_warlordera.16 hours = 1 }
-			add_ideas = {
-			GER_anm_germancivilwar
-			}
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 1500
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = motorized_equipment
-				amount = 200
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
-				amount = 200
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 100
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = modern_tank_equipment
-				amount = 50
-				producer = GER
-			}
-       }
+
 	HNO = {
             transfer_state = 188
 			transfer_state = 59
@@ -1669,15 +1632,10 @@ country_event = {
 	 option = { 
         name = ANM_debug.13.b
         ai_chance = { factor = 1 }
-		HBR = { change_tag_from = GER }
-    }
-	 option = { 
-        name = ANM_debug.13.c
-        ai_chance = { factor = 1 }
 		HNO = { change_tag_from = GER }
     }
 	 option = { 
-        name = ANM_debug.13.d
+        name = ANM_debug.13.c
         ai_chance = { factor = 1 }
 		MEC = { change_tag_from = GER }
     }

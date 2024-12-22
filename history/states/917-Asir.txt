@@ -1,20 +1,27 @@
-state={
-	id=917
-	name="STATE_917"
-	provinces={
-		1923 8073 10786 13431 13437 
-	}
-	history={
+state = {
+	id = 917
+	name = "STATE_917"
+
+	history = {
 		owner = SAU
 		add_core_of = SAU
 		buildings = {
- 			infrastructure = 1
+ 			infrastructure = 3
 		}
-		victory_points = { 8073 1 }
-		victory_points = { 13437 1 }
-		victory_points = { 13431 1 }
+		victory_points = {
+			8073 1
+		}
+		victory_points = {
+			13437 1
+		}
+		set_state_flag = state_renamings
 	}
-	manpower=138665
-	buildings_max_level_factor=1.000
-	state_category=rural
+
+	provinces = {
+		1923 8073 10786 13437 18572
+	}
+	manpower = 371781
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
 }

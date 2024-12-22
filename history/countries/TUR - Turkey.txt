@@ -9,7 +9,7 @@ set_research_slots = 3
 
 
 set_politics = {	
-	ruling_party = paternalism
+	ruling_party = fascism
 	last_election = "1995.12.8"
 	election_frequency = 48
 	elections_allowed = yes
@@ -20,13 +20,13 @@ TNO_startup_nation = yes
 set_popularities = {
 	communist = 0
 	socialist = 0
-	progressivism = 5
-	liberalism = 27
+	progressivism = 0
+	liberalism = 5
 	liberal_conservatism = 0
 	conservatism = 10
-	paternalism = 48
+	paternalism = 27
 	despotism = 7
-	fascism = 0
+	fascism = 48
 	national_socialism = 3
 	ultranationalism = 0
 }
@@ -46,71 +46,9 @@ create_country_leader = {
 	name = "Alparslan Türkeş"
 	picture = "Portrait_TUR_Alparslan_Turkes.dds"
 	expire = "2099.1.1"
-	ideology = paternalism_national_conservatism_subtype
+	ideology = fascism_revolutionary_nationalism_subtype
 	traits = {
 	}
-}
-
-##COMMANDERS##
-
-create_field_marshal = {
-	name = "Cemal Gürsel"
-	picture = "Portrait_Turkey_Cemal_Gursel.dds"
-	traits = { trait_cautious organizer fast_planner }
-	skill = 4
-	id = 530
-	attack_skill = 2
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Rüştü Erdelhun"
-	picture = "Portrait_Turkey_Rustu_Erdelhun.dds"
-	traits = { old_guard war_hero aggressive_assaulter }
-	skill = 3
-	id = 531
-	attack_skill = 3
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Kenan Evren"
-	picture = "Portrait_Turkey_Kenan_Evren.dds"
-	traits = { media_personality guerilla_fighter }
-	skill = 2
-	id = 532
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Cemal Tural"
-	picture = "Portrait_Turkey_Cemal_Tural.dds"
-	traits = { infantry_expert }
-	skill = 2
-	id = 533
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Memduh Tağmaç"
-	picture = "Portrait_Turkey_Memduh_Tagmac.dds"
-	traits = { panzer_leader }
-	skill = 1
-	id = 534
-	attack_skill = 3
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 2
 }
 
 add_ideas = {

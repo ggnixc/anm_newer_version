@@ -83,19 +83,6 @@ set_popularities = {
 }
 
 if = {
-	limit = { 
-		OR = { 
-			has_dlc = "Together for Victory" 
-			has_dlc = "Man the Guns" 
-		}
-	}
-	set_autonomy = { target = ALG autonomy_state = autonomy_overseasdepartment }
-	else = {
-		puppet = ALG
-	}
-}
-
-if = {
 	limit = { has_dlc = "Man the Guns" }
 	##set_naval_oob = FRA_mtg_navy_1962
 	

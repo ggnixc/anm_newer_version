@@ -1,34 +1,28 @@
+state = {
+	id = 113
+	name = "STATE_113"
 
-state={
-	id=113
-	name="STATE_113"
-	resources={
-		aluminium=2.000
-		steel=2.000
-	}
-
-	history={
+	history = {
 		owner = IRE
 		victory_points = {
-			11293 20
+			11293 25
 		}
 		buildings = {
 			infrastructure = 5
+ 			arms_factory = 1
+			industrial_complex = 1
 			air_base = 2
-
-			11293 = {
+ 			11293 = {
 				naval_base = 3
 			}
-
 		}
 		add_core_of = IRE
-		add_extra_state_shared_building_slots = 2
 	}
 
-	provinces={
-		11293 
+	provinces = {
+		11293
 	}
-	manpower=718332
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 718332
+	buildings_max_level_factor = 1.000
+	state_category = large_town
 }

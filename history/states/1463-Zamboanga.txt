@@ -1,19 +1,13 @@
-state={
-	id=1463
-	name="STATE_1463"
-	provinces={
-		1421 4399 7360 7389 7417 14737 
-	}
-	state_category = rural 
-	resources={
+state = {
+	id = 1463
+	name = "STATE_1463"
+
+	resources = {
 		chromium = 6
 	}
 
-	history={
-		set_demilitarized_zone = yes
+	history = {
 		owner = PHI
-		add_core_of = UPH
-		add_core_of = PHI
 		buildings = {
 			infrastructure = 3
 			air_base = 2
@@ -21,10 +15,17 @@ state={
 				naval_base = 3
 			}
 		}
-
 		victory_points = { 14737 10 }
 		victory_points = { 7360 3 }
+		add_core_of = PHI
+		add_core_of = PHI
+		add_core_of = PHI
+		set_state_flag = state_renamings
 	}
-	manpower= 772935
-	buildings_max_level_factor=1.000
+	provinces = {
+		1421 4399 7360 7389 7417 14737
+	}
+	manpower = 976801
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

@@ -1,23 +1,27 @@
+state = {
+	id = 785
+	name = "STATE_785"
 
-state={
-	id=785
-	name="STATE_785"
+	resources = {
+		oil = 2
+	}
 
-	history={
+	history = {
 		owner = ALG
+		add_core_of = FRA
 		add_core_of = ALG
 		buildings = {
 			infrastructure = 2
-			air_base = 3
-
 		}
-		victory_points = { 12888 1 }
+		victory_points = { 4970 1 }
+		victory_points = { 9943 2 }
+		set_state_flag = state_renamings
 	}
 
-	provinces={
-		4970 5053 7149 9943 12888 
+	provinces = {
+		4970 5053 9943 8077 8061
 	}
-	manpower=423120
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 369134
+	buildings_max_level_factor = 1.000
+	state_category = rural
 }

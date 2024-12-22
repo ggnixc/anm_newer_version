@@ -4,9 +4,7 @@
 state_control_effect_685 = {
 	if = {
 		limit = {
-			JAP = {
-				owns_state = 685
-			}
+			is_controlled_by = JAP
 		}
 		set_province_name = { id = 7617 name = VICTORY_POINTS_7617_jap }
 	}
@@ -21,61 +19,34 @@ state_control_effect_685 = {
 state_control_effect_768 = {
 	if = {
 		limit = {
-			USA = {
-				owns_state = 768
-			}
+			is_controlled_by = USA
 		}
-		set_state_name = STATE_768_usa
-		set_province_name = { id = 13285 name = VICTORY_POINTS_13285_usa }
+		reset_state_name = yes
+		reset_province_name = 13285
+		
 	}
 	else_if = {
 		limit = {
 			is_controlled_by = JAP
 		}
-		reset_state_name = yes
-		reset_province_name = 13285
+		set_state_name = STATE_768_jap
+		set_province_name = { id = 13285 name = VICTORY_POINTS_13285_jap }
 	}
 }
 
 state_control_effect_769 = {
 	if = {
 		limit = {
-			USA = {
-				owns_state = 769
-			}
-		}
-		set_state_name = STATE_769_usa
-		set_province_name = { id = 13280 name = VICTORY_POINTS_13280_usa }
-	}
-	else_if = {
-		limit = {
-			is_controlled_by = JAP
+			is_controlled_by = USA
 		}
 		reset_state_name = yes
 		reset_province_name = 13280
 	}
-}
-
-state_control_effect_772 = {
-	if = {
-		limit = {
-			USA = { has_country_flag = attu_npp }
-		}
-		set_state_name = STATE_772_usa_npp
-		set_province_name = { id = 13067 name = VICTORY_POINTS_13067_usa }
-	}
-	else_if = {
-		limit = {
-			USA = { has_country_flag = attu_rdc }
-		}
-		set_state_name = STATE_772_usa_rd
-		set_province_name = { id = 13067 name = VICTORY_POINTS_13067_usa }
-	}
 	else_if = {
 		limit = {
 			is_controlled_by = JAP
 		}
-		reset_state_name = yes
-		reset_province_name = 13067
+		set_state_name = STATE_769_jap
+		set_province_name = { id = 13280 name = VICTORY_POINTS_13280_jap }
 	}
 }

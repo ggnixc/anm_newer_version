@@ -196,6 +196,16 @@ econ_subtype_change = { #super janky, if there's a better option tell me
 	}
 	else_if = {
 		limit = {
+			check_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Subsistence_Economy }
+		}
+		custom_effect_tooltip = Econ_Subtype_change_tt
+		set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+		hidden_effect = {
+			add_dynamic_modifier = { modifier = TNO_economy_type_capitalism_dynamic_modifier }
+		}
+	}
+	else_if = {
+		limit = {
 			check_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Colonial_Economy_Free_Market }
 		}
 		custom_effect_tooltip = Econ_Subtype_change_tt
@@ -232,6 +242,16 @@ econ_subtype_change = { #super janky, if there's a better option tell me
 		set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
 		hidden_effect = {
 			add_dynamic_modifier = { modifier = TNO_economy_type_capitalism_dynamic_modifier }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Stabilizing_Development }
+		}
+		custom_effect_tooltip = Econ_Subtype_change_tt
+		set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+		hidden_effect = {
+			add_dynamic_modifier = { modifier = TNO_economy_type_corporatism_dynamic_modifier }
 		}
 	}
 	else_if = { # Econ Subtype Wipe
