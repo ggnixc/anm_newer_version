@@ -2,7 +2,6 @@
 capital = 2062
 
 # Vacant
-recruit_character = AAG_Generic_Vacant
 
 oob = "Antarctic_Garrison"
 
@@ -24,55 +23,8 @@ GER = {
 	}
 }
 
-recruit_character = AAG_Rudolf_Mayr
-recruit_character = AAG_Alfred_Ritscher
-recruit_character = AAG_Richard_Heinrich_Schirmacher
-recruit_character = AAG_Ernst_Herrmann
-recruit_character = AAG_Erich_Schumann
-recruit_character = AAG_Anton_Grasser
-recruit_character = AAG_No_Authority
-recruit_character = AAG_Kurt_Diebner
-recruit_character = AAG_Carl_Friedrich_von_Weizsacker
-recruit_character = AAG_Rudolf_Mentzel
-recruit_character = AAG_Karl_Weiken
-recruit_character = AAG_Werner_Dankwort
-recruit_character = AAG_Walther_Hofmann
-recruit_character = AAG_Otto_Abetz
-recruit_character = AAG_Rudolf_Rahn
-recruit_character = AAG_Karl_Maria_Hettlage
-recruit_character = AAG_Erich_Ehrlinger
-recruit_character = AAG_Eberhard_Kinzel
-recruit_character = AAG_Hasso_von_Manteuffel
-recruit_character = AAG_Martin_Harlinghausen
-recruit_character = AAG_Ernst_Klasing
-recruit_character = AAG_Konstanty_Gutschow
-recruit_character = AAG_Viktor_Lutze
-recruit_character = AAG_Hans_Degen
-recruit_character = AAG_Eduard_Zorn
-recruit_character = AAG_Erwin_Fussenegger
-recruit_character = AAG_Valentin_Feurstein
-recruit_character = AAG_Alfred_Kottas
-recruit_character = AAG_Franz_Preuschoff
-recruit_character = AAG_Vacant_Position
-
 add_ideas = Antarctica_Territory_Generic_Idea
-add_ideas = AAG_Precarious_Supply_Situation
-add_ideas = Pakt_Military_Authority
-set_variable = { Antarctica_AAG_Testing_Politcal_Power_Factor = 0 }
-add_dynamic_modifier = { modifier = AAG_Aircraft_Testing_Site }
 
-add_ideas = AAG_Richard_Heinrich_Schirmacher_hog
-add_ideas = AAG_Ernst_Herrmann_for
-add_ideas = AAG_Erich_Schumann_eco
-add_ideas = AAG_Anton_Grasser_sec
-
-add_ideas = AAG_Hans_Degen_high_command
-add_ideas = AAG_Eduard_Zorn_high_command
-add_ideas = AAG_Erwin_Fussenegger_high_command
-add_ideas = AAG_Valentin_Feurstein_theorist
-add_ideas = AAG_Hans_Degen_army_chief
-add_ideas = AAG_Alfred_Kottas_navy_chief
-add_ideas = AAG_Franz_Preuschoff_air_chief
 
 GER = { add_to_tech_sharing_group = aag_tech_group }
 add_to_tech_sharing_group = aag_tech_group
@@ -97,59 +49,6 @@ set_popularities = {
 	national_socialism = 34
 	national_socialism_1 = 66
 }
-
-country_event = { id = antarctica_aag.10 days = 1 } # Opening event
-country_event = { id = antarctica_aag.20 days = 7 } # Weapons Mech event
-country_event = { id = antarctica_aag.30 days = 14 } # Mayr character intro event
-country_event = { id = antarctica_aag.40 days = 17 } # Schirmacher character intro event
-country_event = { id = antarctica_aag.50 days = 21 } # Schumann character intro/nuclear planning 1 event
-country_event = { id = antarctica_aag.60 days = 28 } # Grasser character intro event
-country_event = { id = antarctica_aag.70 days = 35 } # Herrmann character intro event
-country_event = { id = antarctica_aag.80 days = 56 } # Ahnenerbe intro event
-country_event = { id = antarctica_aag.90 days = 92 } # Nuclear planning 2 event
-country_event = { id = antarctica_aag.100 days = 217 } # Nuclear planning 3 event
-country_event = { id = antarctica_aag.110 days = 329 } # Nuclear planning 4 event
-country_event = { id = antarctica_aag.120 days = 575 } # Nuclear planning 5 event
-country_event = { id = antarctica_aag_schumann_chain.10 days = 597 } # Schumann event chain starter - August 20th 1963
-country_event = { id = antarctica_aag_grasser_chain.10 days = 500 } # Grasser event chain starter - May 15th 1963
-country_event = { id = antarctica_aag_pervitin.1 days = 605 } # Pervitin chain start - End of April (485)
-country_event = { id = antarctica_aag_testing.300 days = 271 } # Helicopter Arrives
-country_event = { id = antarctica_aag_testing.301 days = 365 } # Bomber Arrives
-country_event = { id = antarctica_aag_ahnenerbe.1 days = 679 } # SS Chain - November 10th 1963
-every_country = { news_event = { id = antarctica_news_events.5 days = 454 } } # Ritscher News Event
-country_event = { id = antarctica_aag_survival.220 days = 471 } # Dog event chain starter, March 1963
-
-country_event = { id = antarctica_aag_flavor.2 days = 146 } # 
-country_event = { id = antarctica_aag_flavor.3 days = 24 } # 
-country_event = { id = antarctica_aag_flavor.4 days = 231 } # 
-country_event = { id = antarctica_aag_flavor.9 days = 255 } # 
-country_event = { id = antarctica_aag_flavor.10 days = 108 } # 
-country_event = { id = antarctica_aag_flavor.11 days = 393 } # 
-country_event = { id = antarctica_aag_flavor.12 days = 537 } # 
-country_event = { id = antarctica_aag_flavor.13 days = 119 } # 
-country_event = { id = antarctica_aag_flavor.14 days = 303 } # 
-country_event = { id = antarctica_aag_flavor.15 days = 454 } # 
-country_event = { id = antarctica_aag_flavor.16 days = 565 } # 
-country_event = { id = antarctica_aag_flavor.17 days = 349 } # 
-country_event = { id = antarctica_aag_flavor.18 days = 103 } # 
-country_event = { id = antarctica_aag_flavor.20 days = 42 } # 
-country_event = { id = antarctica_aag_flavor.21 days = 539 } # 
-country_event = { id = antarctica_aag_flavor.22 days = 721 } # 
-country_event = { id = antarctica_aag_flavor.25 days = 90 random_days = 14 }
-country_event = { id = antarctica_aag_flavor.26 days = 244 random_days = 14 }
-
-country_event = { id = antarctica_aag_division.10 days = 109 } # 
-country_event = { id = antarctica_aag_madagascar.10 days = 448 } # March 27th 1963
-
-# Firing the Germany flavor events, which one appears determined by the trigger in the event
-GER = { country_event = { id = germany_antarctica.1 days = 104 } }
-GER = { country_event = { id = germany_antarctica.2 days = 104 } }
-GER = { country_event = { id = germany_antarctica.3 days = 104 } }
-GER = { country_event = { id = germany_antarctica.4 days = 104 } }
-
-set_country_flag = tno_defined_startup_effectiveness
-set_country_flag = tno_playable_country # Disabled, as it prevents the power plants from being added, and turns of fiscal crises
-set_country_flag = TNO_eliminate_building_demand
 
 add_ideas = {
 	# Political
@@ -518,11 +417,4 @@ if = {
 	}
 }
 
-set_variable = { Antarctica_Situation_Overview_Supply_AAG_mission_days = 26 }
-set_variable = { Antarctica_Situation_Overview_Supply_AAG_mission_amount = 55 }
-set_variable = { Antarctica_Situation_Overview_Supply_AAG_min_amount = -10 }
-set_variable = { Antarctica_Situation_Overview_Supply_AAG_max_amount = 10 }
-activate_mission = Antarctica_Situation_Overview_Supply_AAG_mission
-
-Antarctica_Clear_Effectiveness = yes
 TNO_startup_nation = yes
