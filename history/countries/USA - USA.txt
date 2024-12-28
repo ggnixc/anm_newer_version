@@ -39,6 +39,7 @@ add_to_faction = CYL
 add_to_faction = COS
 add_to_faction = PAN
 add_to_faction = FIJ
+add_to_faction = GRN
 
 country_event = {
     id = USA_anm_events.2
@@ -71,6 +72,21 @@ if = {
 	}
 	else = {
 		puppet = GUY
+	}
+}
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = GRN
+		autonomy_state = autonomy_puppet
+	}
+	else = {
+		puppet = GRN
 	}
 }
 if = {
