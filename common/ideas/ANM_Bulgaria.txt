@@ -7,7 +7,8 @@ ideas = {
 			modifier = {
 				stability_factor = 0.10
 				drift_defence_factor = 0.2
-				
+				resistance_activity = -0.25
+				encryption_factor = 0.25
 			}
 		}
 		BUL_Soldiers_Of_Tato = { 
@@ -15,12 +16,10 @@ ideas = {
 			picture = GFX_idea_BUL_Soldiers_Of_Tato
 			removal_cost = -1
 			modifier = {
-				communism_acceptance = -20
+				communist_acceptance = -150
 				stability_factor = -0.05
-				communism_drift = 0.01
-				
-				
-				
+				communist_drift = 0.01
+				custom_modifier_tooltip = BUL_Hate_Soviet
 			}
 		}
 		BUL_New_Fatherland_Front = {
@@ -28,6 +27,7 @@ ideas = {
 			picture = GFX_idea_BUL_New_Fatherland_Front
 			removal_cost = -1
 			modifier = {
+				political_power_gain = 0.10
 				political_power_factor = 0.25
 				party_popularity_stability_factor = 0.05
 			}
@@ -37,9 +37,9 @@ ideas = {
 			picture = GFX_idea_BUL_Muslim_Tensions
 			removal_cost = -1
 			modifier = {
-				stability_weekly = -0.0025
+				stability_weekly = -0.0020
 				industrial_capacity_factory = -0.10
-				
+				resistance_damage_to_garrison = 0.10
 			}
 		}
 	}
