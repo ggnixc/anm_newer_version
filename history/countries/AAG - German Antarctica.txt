@@ -53,45 +53,11 @@ set_popularities = {
 	national_socialism = 100
 }
 
-add_ideas = {
-	# Political
-	tno_political_parties_not_applicable
-	tno_religious_rights_not_applicable
-	tno_trade_unions_not_applicable
-	tno_immigration_not_applicable
-	tno_slavery_not_applicable
-	tno_public_meetings_not_applicable
-	tno_press_rights_not_applicable
-	tno_vote_franchise_not_applicable
-	tno_refugees_not_applicable
-	# Military
-	tno_conscription_not_applicable
-	tno_women_not_applicable
-	tno_military_supervision_not_applicable
-	tno_training_not_applicable
-	tno_racial_integration_not_applicable
-	tno_draft_exemptions_not_applicable
-	# Social
-	tno_racial_integration_not_applicable
-	tno_health_care_not_applicable
-	tno_pollution_not_applicable
-	tno_education_not_applicable
-	tno_penal_system_not_applicable
-	tno_lgbt_rights_not_applicable
-	tno_gender_rights_not_applicable
-	tno_minorities_not_applicable
-	tno_security_not_applicable
-	tno_safety_not_applicable
-	# Economic
-	tno_trade_laws_not_applicable
-	tno_income_taxation_not_applicable
-	tno_minimum_wage_not_applicable
-	tno_max_workhours_not_applicable
-	tno_child_labor_not_applicable
-	tno_pensions_not_applicable
-	tno_regulations_not_applicable
-	tno_unemployment_not_applicable
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_None }
 
+add_ideas = {
 	## Societal Development
 	tno_army_professionalism_spartan_discipline
 	tno_industrial_expertise_innovative
