@@ -1441,3 +1441,40 @@ news_event = {
 	}
 }
 
+news_event = {
+	id = WORLD.18200 #West Thrace Rises
+	title = WORLD.18200.t
+	desc = WORLD.18200.desc
+	picture = GFX_news_event_west_thrace
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18200.a
+		trigger = {
+			NOT = { tag = GER }
+			NOT = { tag = SOV }
+			NOT = {  is_in_faction_with = GER }
+			NOT = {  is_in_faction_with = SOV }
+		}
+	}
+	option = {
+		name = WORLD.18200.b
+		trigger = {
+			OR = { 
+				tag = SOV
+				is_in_faction_with = SOV
+			} 
+		}
+	}
+	option = {
+		name = WORLD.18200.c
+		trigger = {
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			} 
+		}
+	}
+}
+
