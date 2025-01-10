@@ -3,12 +3,10 @@ ideas = {
 	country = {
 
 		SLO_German_Autonomous_Zones = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SLO_German_Autonomous_Zones"}
-			allowed = {
-				always = no
-			}
+			allowed = { always = no}
 			removal_cost = -1
 			picture = SLO_German_Autonomous_Zones
+
 			modifier = {
                 stability_factor = -0.15
                 political_power_factor = -0.10
@@ -17,13 +15,12 @@ ideas = {
 			}
 		}
 		SLO_Out_Of_Date_Military = { 
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SLO_Out_Of_Date_Military"}
-			allowed = {
-				always = no
-			}
+			allowed = { always = no }
 			removal_cost = -1
 			picture = SLO_Out_Of_Date_Military
+
 			modifier = {
+				war_support_factor = -0.20
 				experience_gain_army_factor = -0.10
                 experience_gain_navy_factor = -0.10
                 experience_gain_air_factor = -0.10
@@ -38,7 +35,10 @@ ideas = {
 			removal_cost = -1
 			picture = SLO_Helplessly_Dependent
 			modifier = {
-              
+				min_export = 0.55
+				production_factory_max_efficiency_factor = -0.35
+				production_speed_buildings_factor = -0.35
+				consumer_goods_factor = 0.35
 			}
 		}
 		

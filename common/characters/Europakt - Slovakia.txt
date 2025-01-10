@@ -1,94 +1,122 @@
 characters = {
-	SLO_jozef_sasik = { 
-		name = SLO_jozef_sasik
+	SLO_Peter_Dubcek = { 
+		name = SLO_Peter_Dubcek
 		portraits = { 
-			civilian = { large = "gfx/leaders/SLO/Portrait_SLO_Jozef_Sasik.dds" } 
+			civilian = { large = "gfx/leaders/SLO/Portrait_SLO_Peter_Dubcek.dds" } 
 		}
 		country_leader = {
-			desc = "POLITICS_JOZEF_SASIK_DESC"
+			desc = "POLITICS_PETER_DUBCEK_DESC"
 			ideology = national_socialism_clerical_fascism_subtype
-			traits = { affable_puppet }
+			traits = {  }
 			expire = "2999.1.1.1"
 		}
 	}
-	SLO_mizik_stanislav = {  
-		name = SLO_mizik_stanislav
+	SLO_Jozef_Sasik = { 
+		name = SLO_Jozef_Sasik
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/SLO/Portrait_SLO_Mizik_Stanislav.dds"
-				small = "GFX_idea_SLO_Mizik_Stanislav" 
-			} 	
-		} 
+				large = "gfx/leaders/SLO/Portrait_SLO_Jozef_Sasik.dds" 
+				small = "GFX_idea_SLO_Jozef_Sasik"
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_JOZEF_SASIK_DESC"
+			ideology = national_socialism_1_subtype #Naturalised Nat Soc
+			traits = {  }
+			expire = "2999.1.1.1"
+		}
 		advisor = {
 			slot = head_of_government
-			idea_token = SLO_Mizik_Stanislav_hog
-			traits = {
-				head_of_government
-			}
+			idea_token = SLO_Jozef_Sasik_hog
+			traits = { }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
 	}
-	SLO_jozef_viktorin = {  
-		name = SLO_jozef_viktorin
+	SLO_Jozef_Tuchyna = {  
+		name = SLO_Jozef_Tuchyna
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/SLO/Portrait_SLO_Jozef_Viktorin.dds"
-				small = "GFX_idea_SLO_Jozef_Viktorin" 
+				large = "gfx/leaders/SLO/Portrait_SLO_Jozef_Tuchyna.dds"
+				small = "GFX_idea_SLO_Jozef_Tuchyna" 
 			} 	
 		} 
 		advisor = {
 			slot = security_minister
-			idea_token = SLO_Jozef_Viktorin_sec
-			traits = {
-				security_minister
-			}
+			idea_token = SLO_Jozef_Tuchyna_sec
+			traits = { }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
 	}
-	SLO_lubomir_hudo = {  
-		name = SLO_lubomir_hudo
+	SLO_Jaroslav_Paska = {  
+		name = SLO_Jaroslav_Paska
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/SLO/Portrait_SLO_Lubomir_Hudo.dds"
-				small = "GFX_idea_SLO_Lubomir_Hudo" 
+				large = "gfx/leaders/SLO/Portrait_SLO_Jaroslav_Paska.dds"
+				small = "GFX_idea_SLO_Jaroslav_Paska" 
 			} 	
 		} 
 		advisor = {
 			slot = foreign_minister
-			idea_token = SLO_Lubomir_Hudo_for
-			traits = {
-				foreign_minister
-			}
+			idea_token = SLO_Jaroslav_Paska_for
+			traits = { }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
 	}
-	SLO_vladimir_chovan = { 
-		name = SLO_vladimir_chovan
+	SLO_Ludovit_Cernak = {   
+		name = SLO_Ludovit_Cernak
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/SLO/Portrait_SLO_Vladimir_Chovan.dds"
-				small = "GFX_idea_SLO_Vladimir_Chovan" 
+				large = "gfx/leaders/SLO/Portrait_SLO_Ludovit_Cernak.dds"
+				small = "GFX_idea_SLO_Ludovit_Cernak" 
 			} 	
 		} 
 		advisor = {
 			slot = economy_minister
-			idea_token = SLO_Vladimir_Chovan_eco
-			traits = {
-				economy_minister
-			}
+			idea_token = SLO_Ludovit_Cernak_eco
+			traits = { }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
 	}
-} 
+
+	SLO_Rudolf_Schuster = { 
+		name = SLO_Rudolf_Schuster
+		country_leader = {
+			ideology = national_socialism_2_subtype #Reformed Nat Soc
+			expire = "2999.1.1.1"
+		}
+	}
+	SLO_Milan_Fogas = { 
+		name = SLO_Milan_Fogas
+		country_leader = {
+			ideology = ultranationalism_subtype #Ultramilitarism
+			expire = "2999.1.1.1"
+		}
+	}
+	SLO_Vitazoslav_Moric = {
+		name = SLO_Vitazoslav_Moric
+		country_leader = {
+			ideology = paternalism_provisional_government_subtype 
+			expire = "2999.1.1.1"
+		}
+	}
+	SLO_Anton_Neuwirth = {
+		name = SLO_Anton_Neuwirth
+		country_leader = {
+			ideology = liberal_conservatism_christian_democracy_subtype 
+			expire = "2999.1.1.1"
+		}
+	}
+
+}
