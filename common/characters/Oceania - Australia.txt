@@ -4,13 +4,25 @@ characters = {
 		portraits = { 
 			civilian = { 
 				large = "gfx/leaders/AST/Portrait_AST_Joh_Bjelke_Petersen.dds"
+				small = "GFX_idea_AST_Robin_Gray"
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_AST_Joh_Bjelke_Petersen_DESC"
+			desc = "POLITICS_Joh_Bjelke_Petersen_DESC"
 			ideology = despotism_aristocratic_conservatism_subtype
 			traits = {}
 			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AST_Joh_Bjelke_Petersen_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
 	AST_Andrew_Peacock = {
@@ -22,7 +34,7 @@ characters = {
 			} 	
 		} 
 		country_leader = {
-			desc = "POLITICS_AST_ANDREW_PEACOCK_DESC"
+			desc = "POLITICS_ANDREW_PEACOCK_DESC"
 			ideology = conservatism_paternalistic_conservatism_subtype
 			traits = {}
 			expire = "2999.1.1.1"
@@ -58,25 +70,13 @@ characters = {
 		portraits = { 
 			civilian = { 
 				large = "gfx/leaders/AST/Portrait_AST_Robin_Gray.dds"	
-				small = "GFX_idea_AST_Robin_Gray"
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_AST_Robin_Gray_DESC"
+			desc = "POLITICS_ROBIN_GRAY_DESC"
 			ideology = paternalism_right_wing_populism_subtype
 			traits = {}
 			expire = "2999.1.1.1"
-		}
-		advisor = {
-			slot = head_of_government
-			idea_token = AST_Robin_Gray_hog
-			traits = {
-				head_of_government
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
 		}
 	}
 	AST_Graeme_Campbell = { 
