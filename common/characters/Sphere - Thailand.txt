@@ -5,67 +5,79 @@ characters = {
 			civilian = { large = "gfx/leaders/SIA/Portrait_SIA_Damrong_Latthapipat.dds" } 
 		}
 		country_leader = {
-			desc = ""
+			desc = "POLITICS_DAMRONG_LATTHAPIPAT_DESC"
 			ideology = paternalism_anocracy_subtype
 			traits = {
             }
 			expire = "2999.1.1.1"
 		}
 	}
-	SIA_Chalermphan_Srivikorn = { 
+	SIA_Chalermphan_Srivikorn = {
 		name = SIA_Chalermphan_Srivikorn
 		portraits = { 
-			civilian = { large = "gfx/leaders/SIA/Portrait_Chalermphan_Srivikorn.dds" } 
+			civilian = { small = GFX_idea_SIA_Chalermphan_Srivikorn } 
 		}
 		advisor = {
-		slot = head_of_government
-		traits = {
+			slot = head_of_government
+			idea_token = SIA_Chalermphan_Srivikorn_hog
+			allowed = { original_tag = SIA }
+			traits = {
             }
-		ledger = civilian
-		cost = -1
-		can_be_fired = no
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
-		SIA_Thaksin_Shinawatra = { 
+	SIA_Thaksin_Shinawatra = { 
 		name = SIA_Thaksin_Shinawatra
 		portraits = { 
-			civilian = { large = "gfx/leaders/SIA/Portrait_Thaksin_Shinawatra.dds" } 
+			civilian = { small = GFX_idea_SIA_Thaksin_Shinawatra } 
 		}
 		advisor = {
-		slot = foreign_minister
-		traits = {
+			slot = foreign_minister
+			idea_token = SIA_Thaksin_Shinawatra_for
+			allowed = { original_tag = SIA }
+			traits = {
             }
-		ledger = civilian
-		cost = -1
-		can_be_fired = no
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
-		SIA_Montree_Phongpanich = { 
+	SIA_Montree_Phongpanich = { 
 		name = SIA_Montree_Phongpanich
 		portraits = { 
-			civilian = { large = "gfx/leaders/SIA/Portrait_Montree_Phongpanich.dds" } 
+			civilian = { small = GFX_idea_SIA_Montree_Phongpanich } 
 		}
 		advisor = {
-		slot = economy_minister
-		ledger = civilian
-		traits = {
+			slot = economy_minister
+			idea_token = SIA_Montree_Phongpanich_eco
+			allowed = { original_tag = SIA }
+			traits = {
             }
-		cost = -1
-		can_be_fired = no
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
-		SIA_Thaksin_Shinawatra = { 
-		name = SIA_Thaksin_Shinawatra
+	SIA_Senae_Sittipunt = { 
+		name = SIA_Senae_Sittipunt
 		portraits = { 
-			civilian = { large = "gfx/leaders/SIA/Portrait_Thaksin_Shinawatra.dds" } 
+			civilian = { small = GFX_idea_SIA_Senae_Sittipunt } 
 		}
 		advisor = {
-		slot = head_of_government
-		traits = {
+			slot = security_minister
+			idea_token = SIA_Senae_Sittipunt_sec
+			allowed = { original_tag = SIA }
+			traits = {
             }
-		ledger = civilian
-		cost = -1
-		can_be_fired = no
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
 }
