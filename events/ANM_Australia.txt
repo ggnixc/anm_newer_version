@@ -25,9 +25,9 @@ country_event = {
 				}
 				remove_ideas = {
 					AST_Robin_Gray_hog
-					AST_Michael_Jeffery_sec
+					AST_Bruce_Scott_sec
 					AST_Andrew_Peacock_for
-					AST_Peter_Costello_eco
+					AST_Ray_Braithwaite_eco
 				}
 			}
 			country_event = { id = AST_scripted.2 days = 69 }
@@ -51,18 +51,6 @@ country_event = { #1998 federal election
 		name = AST_scripted.2.a
 		ai_chance = {
 			factor = 28
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
-			}
 		}
 		add_popularity = {
 			ideology = liberalism
@@ -96,19 +84,6 @@ country_event = { #1998 federal election
 		name = AST_scripted.2.b
 		ai_chance = {
 			factor = 20
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
-			}
-
 		}
 		set_politics = {
 			ruling_party = liberal_conservatism
@@ -138,20 +113,9 @@ country_event = { #1998 federal election
 		name = AST_scripted.2.c
 		ai_chance = {
 			factor = 38
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
-			}
 		}
 		set_politics = {
+			ruling_party = paternalism
 			last_election = "1998.5.6"
 			elections_allowed = yes
 		}
@@ -178,18 +142,6 @@ country_event = { #1998 federal election
 		name = AST_scripted.2.d
 		ai_chance = {
 			factor = 14
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
-			}
 		}
 		set_politics = {
 			ruling_party = despotism
@@ -223,12 +175,10 @@ country_event = { #Canberra Riots
 		name = AST_scripted.3.a
 		ai_chance = {
 			factor = 65
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_CANBERRA_RIOTS_OUTCOME option = AST_CANBERRA_RIOTS_OUTCOME_SUCCESS }
-			}
 		}
 		set_politics = {
+			ruling_party = despotism
+			last_election = "1998.5.6"
 			elections_allowed = no
 		}
 		add_popularity = {
@@ -245,10 +195,6 @@ country_event = { #Canberra Riots
 		name = AST_scripted.3.a
 		ai_chance = {
 			factor = 35
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_CANBERRA_RIOTS_OUTCOME option = AST_CANBERRA_RIOTS_OUTCOME_FAILURE }
-			}
 		}
 		set_politics = {
 			ruling_party = progressivism
