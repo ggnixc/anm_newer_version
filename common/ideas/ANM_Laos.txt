@@ -6,6 +6,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.075
+				industrial_capacity_factory = 0.10
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 		LAO_Tripartite_Tug_of_War = {
@@ -14,6 +18,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				political_power_gain = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.075
 			}
 		}
 		LAO_Golden_Shadow = {
@@ -22,6 +29,11 @@ ideas = {
 		    removal_cost = -1
 
 		    modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.10
+				army_org_factor = -0.15
+				army_speed_factor = -0.10
+				command_power_gain = -0.20
 		    }
 		}
 		LAO_Never_Ending_War = {
@@ -30,7 +42,15 @@ ideas = {
 		    removal_cost = -1
 		    
 			modifier = {
+				war_support_factor = 0.25
+				army_morale_factor = 0.20
+				army_core_attack_factor = 0.20
+				army_core_defence_factor = 0.25
 		    }
+			targeted_modifier = {
+				tag = CAM
+				defense_bonus_against = 0.3
+			}
 		}
 	}
 }
