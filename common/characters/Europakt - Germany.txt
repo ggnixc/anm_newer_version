@@ -26,52 +26,43 @@ characters = {
 		advisor = {
 			slot = head_of_government
 			idea_token = GER_Martin_Mussgnug_hog
-			traits = {
-				reich_head_of_government
-				hog_flamboyant_brute
-			}
+			traits = { GER_flamboyant_brute }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
 	}
-	GER_gunther_deckert = {
-		name = GER_gunther_deckert
+	GER_Rudiger_Lucassen = { 
+		name = GER_Rudiger_Lucassen
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/GER/Portrait_GER_Gunther_Deckert.dds"
-				small = "GFX_idea_GER_Gunther_Deckert" 
+				large = "gfx/leaders/GER/Portrait_GER_Rudiger_Lucassen.dds"
+				small = "GFX_idea_GER_Rudiger_Lucassen" 
 			} 	
 		} 
 		advisor = {
 			slot = security_minister
-			idea_token = GER_Gunther_Deckert_sec
-			traits = {
-				reich_defence
-				sec_militaristic_technocrat
-			}
+			idea_token = GER_Rudiger_Lucassen_sec
+			traits = { sec_militaristic_technocrat }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
 	}
-	GER_joseph_fischer = {
-		name = GER_joseph_fischer
+	GER_Olaf_Rose = { 
+		name = GER_Olaf_Rose
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/GER/Portrait_GER_Joseph_Fischer.dds"
-				small = "GFX_idea_GER_Joseph_Fischer" 
+				large = "gfx/leaders/GER/Portrait_GER_Olaf_Rose.dds"
+				small = "GFX_idea_GER_Olaf_Rose" 
 			} 	
 		} 
 		advisor = {
 			slot = foreign_minister
-			idea_token = GER_Joseph_Fischer_for
-			traits = {
-				reich_foreign
-				for_naive_appeaser
-			}
+			idea_token = GER_Olaf_Rose_for
+			traits = { for_naive_appeaser }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
@@ -89,10 +80,7 @@ characters = {
 		advisor = {
 			slot = economy_minister
 			idea_token = GER_Gerhard_Frey_eco
-			traits = {
-				reich_economy
-				eco_apolitical_workaholic
-			}
+			traits = { eco_apolitical_workaholic }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
@@ -141,7 +129,198 @@ characters = {
 		}
 	}
 
+	### Armed Forces ###
+	## Wehrmacht ##
+	# Field Marshals #
+	GER_Reinhard_Gunzel = {  
+		name = GER_Reinhard_Gunzel
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Reinhard_Gunzel.dds" }
+		}
+		field_marshal = {
+			traits = { commando paratrooper camouflage_expert trickster winter_expert }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+	GER_Hartmut_Bagger = {  
+		name = GER_Hartmut_Bagger
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Hartmut_Bagger.dds" }
+		}
+		field_marshal = {
+			traits = { infantry_leader infantry_expert cavalry_expert trait_reckless }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	GER_Hans_von_Kirchbach = {  
+		name = GER_Hans_von_Kirchbach
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Hans_von_Kirchbach.dds" }
+		}
+		field_marshal = {
+			traits = { cavalry_expert fast_planner politically_connected }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	# Generals #
+	GER_Berthold_von_Stauffenberg = {  
+		name = GER_Berthold_von_Stauffenberg
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Berthold_von_Stauffenberg.dds" }
+		}
+		corps_commander = {
+			traits = { war_hero brilliant_strategist skilled_staffer trickster trait_engineer }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	GER_Edmund_Entacher = {  
+		name = GER_Edmund_Entacher
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Edmund_Entacher.dds" }
+		}
+		corps_commander = {
+			traits = { infantry_officer career_officer trait_mountaineer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+		}
+	}
+	GER_Wolfgang_Schneiderhan = {  
+		name = GER_Wolfgang_Schneiderhan
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Wolfgang_Schneiderhan.dds" }
+		}
+		corps_commander = {
+			traits = { armor_officer career_officer trait_reckless panzer_leader }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	GER_Klaus_Naumann = {  
+		name = GER_Klaus_Naumann
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Klaus_Naumann.dds" }
+		}
+		corps_commander = {
+			traits = { inflexible_strategist organizer trait_cautious }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	GER_Helmut_Willmann = {  
+		name = GER_Helmut_Willmann
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Helmut_Willmann.dds" }
+		}
+		corps_commander = {
+			traits = { career_officer cavalry_leader panzer_leader winter_specialist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	GER_Hans_Speidel = {  
+		name = GER_Hans_Speidel
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Hans_Speidel.dds" }
+		}
+		corps_commander = {
+			traits = { armor_officer politically_connected organizer ranger }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	GER_Hans_Otto_Budde = {  
+		name = GER_Hans_Otto_Budde
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Hans_Otto_Budde.dds" }
+		}
+		corps_commander = {
+			traits = { commando paratrooper panzer_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	GER_Roland_Ertl = {  
+		name = GER_Roland_Ertl
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Roland_Ertl.dds" }
+		}
+		corps_commander = {
+			traits = { organizer hill_fighter infantry_expert career_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+	GER_Karl_Majcen = {  
+		name = GER_Karl_Majcen
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Karl_Majcen.dds" }
+		}
+		corps_commander = {
+			traits = { commando skirmisher old_guard }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	GER_Horst_Pleiner  = {  
+		name = GER_Horst_Pleiner
+		portraits = {
+			army = { large = "gfx/leaders/GER/Army/Portrait_GER_Horst_Pleiner.dds" }
+		}
+		corps_commander = {
+			traits = { harsh_leader infantry_officer infantry_leader }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
 	
+
+	## Kriegsmarine ##
+	## Luftwaffe ##
+
+	## Old Generals ##
 	GER_rolf_berger = {
 		name = GER_rolf_berger
 		portraits = {

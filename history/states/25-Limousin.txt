@@ -1,31 +1,33 @@
-###POP DONE 
-state={
-	id=25
-	name="STATE_25"
-
+state = {
+	id = 25
+	name = "STATE_25"
 	resources = {
-		steel = 1
+		steel = 1.000
 	}
 
-	history={
+	history = {
 		owner = FRA
-		add_core_of = FRA
 		buildings = {
 			infrastructure = 4
-
-		}
-		victory_points = {
+			industrial_complex = 1
+ 		}
+		add_core_of = FRA
+ 		victory_points = {
 			3771 2
 		}
-		victory_points = { 620 10 }
-		victory_points = { 3751 1 }		
+		victory_points = {
+			620 10
+		}
+		victory_points = {
+			3751 1
+		}
 	}
 
-	provinces={
-		3771 13368 15232 15233 13367 6648 620 3621 6618 3626 3751
+	provinces = {
+		620 625 3621 3626 3751 3771 6618 6648 13367 13368 15233
 	}
-	manpower=736323
-
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 736323
+	buildings_max_level_factor = 1.000
+	state_category = town
+	local_supplies = 0.000
 }

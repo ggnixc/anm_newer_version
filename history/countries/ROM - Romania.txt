@@ -6,8 +6,6 @@ recruit_character = ROM_gavril_dejeu
 recruit_character = ROM_mircea_ciumara
 recruit_character = ROM_ion_diaconescu
 recruit_character = ROM_sergiu_cunescu
-recruit_character = ROM_andreas_ruhrig
-recruit_character = ROM_liviu_petrina
 recruit_character = ROM_anatoliy_kaminski
 recruit_character = ROM_radu_campeanu
 recruit_character = ROM_Gheorghe_Apostol
@@ -61,33 +59,37 @@ add_ideas = {
 	tno_gender_rights_women_in_the_workplace
 	tno_minorities_segregation
 	tno_security_police
-	construction_level_4
-	
+ 	
 	tno_poverty_rate_15
 }
 
 set_politics = {	
-	ruling_party = liberalism
+	ruling_party = conservatism
 	last_election = "1933.12.20"
 	election_frequency = 11
 	elections_allowed = yes
 }
 
+# TNO stuff
 TNO_startup_nation = yes
+
+# EconType
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Type_Corporatism }
+
 
 set_popularities = {
 	communist = 0
     socialist = 0
-    progressivism = 17
-	progressivism_1 = 18
-    liberalism = 26
-	liberalism_1 = 24
+    progressivism = 21
+	progressivism_1 = 13
+    liberalism = 24
     liberal_conservatism = 0
-    conservatism = 8
+    conservatism = 38
 	conservatism_1 = 4
     paternalism = 0
     despotism = 0
 	fascism = 0
-	national_socialism = 3
+	national_socialism = 0
     ultranationalism = 0
 }

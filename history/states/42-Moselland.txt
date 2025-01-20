@@ -1,33 +1,35 @@
-
-state={
-	id=42
-	name="STATE_42"
-	resources={
-		steel=100.000
-		aluminium=24.000
+state = {
+	id = 42
+	name = "STATE_42"
+	resources = {
+		steel = 100.000
+		aluminium = 24.000
 	}
 
-	history={
+	history = {
 		owner = GER
 		victory_points = {
-			9575 5 
+			9575 10
 		}
 		victory_points = {
-			11494 5
+			11494 10
+		}
+		victory_points = {
+			529 3
 		}
 		buildings = {
-
+			arms_factory = 1
 			infrastructure = 5
-
-		}
+			missile_silo = 1
+ 		}
 		add_core_of = GER
-
 	}
 
-	provinces={
-		529 3423 9575 11435 11470 11494 15848 15849 15852
+	provinces = {
+		529 3423 9575 11435 11470 11494 15849 15852
 	}
-	manpower=2049697
-	buildings_max_level_factor=1.000
-	state_category=city
+	manpower = 2049697
+	buildings_max_level_factor = 1.000
+	state_category = city
+	local_supplies = 0.000
 }

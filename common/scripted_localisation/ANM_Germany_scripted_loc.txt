@@ -199,6 +199,7 @@ defined_text = {
 }
 
 ### Government GUI ###
+## Tab 1 - Factions ##
 defined_text = {
 	name = getGERgovernmentloyalty1
 	text = {
@@ -1145,6 +1146,237 @@ defined_text = {
 		localization_key = GER_government_loyalty_unbekannt
 	}
 }
+defined_text = {
+	name = getGERgovernmentloyalty23
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = -3 } }
+		localization_key = GER_government_loyalty_identitaren
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = -1 } }
+		localization_key = GER_government_loyalty_regime
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = 1 } }
+		localization_key = GER_government_loyalty_kritiker 
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = 3 } }
+		localization_key = GER_government_loyalty_religios
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = 4 } }
+		localization_key = GER_government_loyalty_puristen
+	}
+	text = {
+		trigger = { check_variable = { GER_ANM_government_loyaly_slot_23 = 100 } }
+		localization_key = GER_government_loyalty_unbekannt
+	}
+}
+## Tab 1 - Faction Description ##
+defined_text = {
+	name = getGERgovernmentloyaltyadditionalinformation
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = -4 } }
+		localization_key = GER_government_loyalty_nonkonformist_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = -3 } }
+		localization_key = GER_government_loyalty_identitaren_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = -2 } }
+		localization_key = GER_government_loyalty_cyberkraten_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = -1 } }
+		localization_key = GER_government_loyalty_regime_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = 0 } }
+		localization_key = GER_government_loyalty_uberparteilich_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = 1 } }
+		localization_key = GER_government_loyalty_kritiker_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = 2 } }
+		localization_key = GER_government_loyalty_traditionalisten_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = 3 } }
+		localization_key = GER_government_loyalty_religios_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = 4 } }
+		localization_key = GER_government_loyalty_puristen_info
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_1_Faction = 100 } }
+		localization_key = GER_government_loyalty_unbekannt_info
+	}
+}
+## Tab 2 - Institutions ##
+defined_text = {
+	name = getGERgovernmentinstitutionname
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 1 } }
+		localization_key = GER_government_institution_1_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 2 } }
+		localization_key = GER_government_institution_2_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 3 } }
+		localization_key = GER_government_institution_3_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 4 } }
+		localization_key = GER_government_institution_4_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 5 } }
+		localization_key = GER_government_institution_5_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 6 } }
+		localization_key = GER_government_institution_6_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 7 } }
+		localization_key = GER_government_institution_7_name
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 8 } }
+		localization_key = GER_government_institution_8_name
+	}
+}
+defined_text = {
+	name = getGERgovernmentinstitutiondesc
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 1 } }
+		localization_key = GER_government_institution_1_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 2 } }
+		localization_key = GER_government_institution_2_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 3 } }
+		localization_key = GER_government_institution_3_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 4 } }
+		localization_key = GER_government_institution_4_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 5 } }
+		localization_key = GER_government_institution_5_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 6 } }
+		localization_key = GER_government_institution_6_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 7 } }
+		localization_key = GER_government_institution_7_desc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 8 } }
+		localization_key = GER_government_institution_8_desc
+	}
+}
+defined_text = {
+	name = getGERgovernmentinstitutionleader
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 1 } }
+		localization_key = GER_government_institution_1_leader
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 2 } }
+		localization_key = GER_government_institution_2_leader
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 3 } }
+		localization_key = GER_government_institution_3_leader
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 4 } }
+		localization_key = GER_government_institution_4_leader
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 5 } }
+		localization_key = GER_government_institution_5_leader
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 6 } }
+		localization_key = GER_government_institution_6_leader
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 7 } }
+		localization_key = GER_government_institution_7_leader
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 8 } }
+		localization_key = GER_government_institution_8_leader
+	}
+}
+defined_text = {
+	name = getGERgovernmentinstitutionleaderdesc
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 1 } }
+		localization_key = GER_government_institution_1_leaderdesc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 2 } }
+		localization_key = GER_government_institution_2_leaderdesc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 3 } }
+		localization_key = GER_government_institution_3_leaderdesc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 4 } }
+		localization_key = GER_government_institution_4_leaderdesc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 5 } }
+		localization_key = GER_government_institution_5_leaderdesc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 6 } }
+		localization_key = GER_government_institution_6_leaderdesc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 7 } }
+		localization_key = GER_government_institution_7_leaderdesc
+	}
+	text = {
+		trigger = { check_variable = { GER_Government_Tab_2_Instution = 8 } }
+		localization_key = GER_government_institution_8_leaderdesc
+	}
+}
+
+
+
 
 ### Assorted Laws ###
 defined_text = {

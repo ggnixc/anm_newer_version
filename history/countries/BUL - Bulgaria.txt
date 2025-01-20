@@ -1,10 +1,17 @@
 ﻿recruit_character = BUL_Simeon_II
 recruit_character = BUL_Aleksander_Lilov
+recruit_character = BUL_Ongyan_Gerdzhikov
+recruit_character = BUL_Stoyan_Stalev
+recruit_character = BUL_Kiril_of_Saxe_Coburg
+recruit_character = BUL_Boyko_Borisov
+recruit_character = BUL_Milan_Drenchev
+recruit_character = BUL_Decentralized_Leadership
+recruit_character = BUL_Petar_Dertliev
+
 
 capital = 48
 
 #set_oob = "BUL_1962"
-
 
 set_politics = {	
 	ruling_party = paternalism
@@ -16,20 +23,19 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 19
+    communist = 0
     socialist = 0
-    progressivism = 0
-    liberalism = 8
+    progressivism = 7
+	progressivism_1 = 2
+    liberalism = 12
     liberal_conservatism = 0
-    conservatism = 21
-    paternalism = 39
-	paternalism_1 = 2
-    despotism = 4
-    fascism = 7
+    conservatism = 0
+    paternalism = 79
+    despotism = 0
+    fascism = 0
 	national_socialism = 0
 	ultranationalism = 0
 }
-
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -102,9 +108,16 @@ if = {
 }
 
 add_ideas = {
+	# Alliance #
 	Pakt_Bundnispartner
-	
-	BUL_History_Nonpartisanship
-	BUL_Skopje_Miracle
-	BUL_Lackluster_Development
+	# Spirits #
+	BUL_A_Tsarist_System
+	BUL_Soldiers_Of_Tato
+	BUL_New_Fatherland_Front
+	BUL_Muslim_Tensions
+	# Ministers #
+	BUL_Ongyan_Gerdzhikov_hog
+	BUL_Stoyan_Stalev_for
+	BUL_Kiril_of_Saxe_Coburg_eco
+	BUL_Boyko_Borisov_sec
 }

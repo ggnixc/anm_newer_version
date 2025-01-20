@@ -1,26 +1,42 @@
-###POP DONE 
-state={
-	id=6
-	name="STATE_6" # Flanders
-	manpower = 3862866
-	resources={
-		steel=48
+state = {
+	id = 6
+	name = "STATE_6"
+	resources = {
+		steel = 48.000
 	}
-	
-	state_category = large_city
 
-	history={
+	history = {
 		owner = GER
-		add_core_of = GER
-		victory_points = { 6598 10 }
-		victory_points = { 6560 5 }
-		victory_points = { 6446 5 }
-		victory_points = { 3576 2 }
+		victory_points = {
+			6598 10
+		}
+		victory_points = {
+			18111 10
+		}
+		victory_points = {
+			6560 5
+		}
+		victory_points = {
+			3576 4
+		}
+		victory_points = {
+			13068 4
+		}
+		victory_points = {
+			18116 4
+		}
+		victory_points = {
+			18118 3
+		}
+		victory_points = {
+			9574 5
+		}
 		buildings = {
+			industrial_complex = 1
 			infrastructure = 7
 			air_base = 3
 			dockyard = 1
-			6560 = {
+  			6560 = {
 				naval_base = 4
 				coastal_bunker = 2
 			}
@@ -32,11 +48,15 @@ state={
 				naval_base = 1
 			}
 		}
-		 
+		add_core_of = GER
 		set_state_flag = universal_renamings
 	}
 
-	provinces={
-		3576 6446 6560 6598 9574 11419 13068 
+	provinces = {
+		3576 6446 6560 6598 9574 11419 13068 18111 18116 18118
 	}
+	manpower = 3862866
+	buildings_max_level_factor = 1.000
+	state_category = metropolis
+	local_supplies = 0.000
 }

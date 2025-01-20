@@ -15,6 +15,10 @@ recruit_character = SWE_frank_baude
 
 set_oob = "SWE_1962"
 
+give_guarantee = FIN
+diplomatic_relation = { country = FIN relation = non_aggression_pact }
+
+
 set_research_slots = 3
 
 set_politics = {
@@ -50,9 +54,9 @@ set_war_support	= 0.3
 
 add_ideas = {
 	#Faction Status
-	Pakt_Observer
 
 	# Starting ideas
+	SWE_FIN_Armed_Neutrality
 	SWE_the_coalition_cracks
 	SWE_made_in_sweden
 	SWE_bloated_welfare_state
@@ -97,5 +101,4 @@ add_ideas = {
 	tno_gender_rights_women_in_the_workplace
 	tno_minorities_equal_rights
 	tno_security_police
-	construction_level_4
-}
+ }

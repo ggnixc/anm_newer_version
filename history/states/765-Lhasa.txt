@@ -1,27 +1,26 @@
+state = {
+	id = 765
+	name = "STATE_765"
+	resources = {
+		chromium = 6.000
+	}
 
-state={
-	id=765
-	name="STATE_765"
-
-	history={
+	history = {
 		owner = TIB
 		add_core_of = TIB
-		add_core_of = CHI
 		buildings = {
-			infrastructure = 1
-			air_base = 1
-
+			infrastructure = 3
 		}
-		add_extra_state_shared_building_slots = 1
-		victory_points = { 5033 10 }
-		victory_points = { 7926 3 }
-		set_state_flag = state_renamings
-	}
+		victory_points = {
+			17034 15
+		}
+  	}
 
-	provinces={
-		2098 5033 7926 13231 
+	provinces = {
+		5033 13224 17026 17034 17045 19437
 	}
-	manpower=1097000
-	buildings_max_level_factor=1.000
-	state_category=town
+	manpower = 382197
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
 }

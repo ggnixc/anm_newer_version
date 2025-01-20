@@ -1,31 +1,32 @@
-state={
-	id=1335
-	name="STATE_1335"
+state = {
+	id = 1335
+	name = "STATE_1335"
 
-	state_category = town
+	state_category = pastoral
 
-	resources={
-		oil=55
+	resources = {
+		oil = 56
 	}
 
 	history = {
 		owner = UAE
+		add_core_of = QAT
 		add_core_of = UAE
-		victory_points = { 8051 2 }
+		victory_points = { 8051 1 }
 		buildings = {
 			infrastructure = 3
 			dockyard = 3
 			8051 = {
 				naval_base = 2
-
 			}
 		}
 		add_extra_state_shared_building_slots = 1
+		set_state_flag = state_renamings
 	}
 
-	provinces={
+	provinces = {
 		8051 15807
 	}
 	manpower = 45123
-	buildings_max_level_factor=1.000
+	buildings_max_level_factor = 1.000
 }

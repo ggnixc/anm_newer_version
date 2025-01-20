@@ -1,0 +1,37 @@
+﻿
+
+add_namespace = BUL_skeleton_event
+
+country_event = {
+	id = BUL_skeleton_event.1 #West Thrace - unrest
+ 	title = BUL_skeleton_event.1.t
+ 	desc = BUL_skeleton_event.1.desc
+ 	picture = GFX_anm_veniceopera
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+ 	option = { 
+ 		name = BUL_skeleton_event.1.a
+		 ANM_West_Thrace_Unrest = yes
+
+	}
+}
+
+country_event = {
+	id = BUL_skeleton_event.2 #West Thracian - uprising?
+ 	title = BUL_skeleton_event.2.t
+ 	desc = BUL_skeleton_event.2.desc
+ 	picture = GFX_anm_veniceopera
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+ 	option = {
+ 		name = BUL_skeleton_event.2.a
+		ANM_West_Thrace_Uprising = yes
+	}
+	option = {
+		name = BUL_skeleton_event.2.b
+   	}
+}

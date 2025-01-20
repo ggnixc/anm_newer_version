@@ -1,8 +1,8 @@
-﻿capital = 1464
+﻿capital = 2
 
 set_oob = "ITA_1962"
 
-recruit_character = ITA_Gianfranco_Fini
+recruit_character = ITA_Arnaldo_Forlani
 
 set_research_slots = 4
 set_convoys = 100
@@ -27,18 +27,17 @@ if = {
 	}
 	set_autonomy = { target = ALB autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = SNM autonomy_state = autonomy_italy_reliant }
-	set_autonomy = { target = CRO autonomy_state = autonomy_italy_reliant }
-	set_autonomy = { target = MNT autonomy_state = autonomy_italy_reliant }
+	set_autonomy = { target = CRO autonomy_state = autonomy_italy_associate }
 	set_autonomy = { target = MOC autonomy_state = autonomy_italy_reliant }
-	set_autonomy = { target = GRE autonomy_state = autonomy_italy_reliant }
+	set_autonomy = { target = GRE autonomy_state = autonomy_italy_associate }
 	set_autonomy = { target = ETH autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = SML autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = KEN autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = ERT autonomy_state = autonomy_italy_reliant }
+	set_autonomy = { target = TUN autonomy_state = autonomy_italy_reliant }
 	else = {
 		puppet = ALB
 		puppet = CRO
-		puppet = MNT
 		puppet = MOC
 		puppet = SNM
 		puppet = GRE
@@ -46,26 +45,15 @@ if = {
 		puppet = SML
 		puppet = KEN
 		puppet = ERT
+		puppet = TUN
 	}
 }
 ita_parliament_gui_initial = yes
-create_faction = Patto_di_Roma
-add_to_faction = ITA
-add_to_faction = ALB
-add_to_faction = CRO
-add_to_faction = SNM
-add_to_faction = MNT
-add_to_faction = GRE
-add_to_faction = MOC
-add_to_faction = TUN
-add_to_faction = ETH
-add_to_faction = ERT
-add_to_faction = SML
-add_to_faction = KEN
+
 
 MOC = {
 	set_politics = {
-		ruling_party = fascism
+		ruling_party = paternalism
 		last_election = "1940.3.26"
 		election_frequency = 36
 		elections_allowed = no
@@ -81,9 +69,9 @@ MOC = {
 		liberalism = 0
 		liberal_conservatism = 0
 		conservatism = 10
-		paternalism = 10
+		paternalism = 80
 		despotism = 10
-		fascism = 70
+		fascism = 0
 		 
 	}
 }
@@ -114,12 +102,26 @@ CRO = {
 
 SNM = {
 	set_politics = {
-		ruling_party = fascism
-		last_election = "1936.1.1"
+		ruling_party = conservatism
+		last_election = "1993.8.1"
 		election_frequency = 48
-		elections_allowed = no
+		elections_allowed = yes
+	}
+
+	set_popularities = {
+		communist = 20
+		ultranationalism = 0
+		socialist = 30
+		progressivism = 0
+		liberalism = 0
+		liberal_conservatism = 0
+		conservatism = 50
+		paternalism = 0
+		despotism = 0
+		fascism = 0
 	}
 }
+
 ERT = {
 	set_politics = {
 		ruling_party = despotism
@@ -220,28 +222,26 @@ set_popularities = {
 
 ### ITA ### 
 set_politics = {
-	ruling_party = fascism
-	last_election = "1934.3.26"
+	ruling_party = conservatism
+	last_election = "1994.3.26"
 	election_frequency = 60
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 TNO_startup_nation = yes
 
 set_popularities = {
-	communist = 0
-	ultranationalism = 0
-	socialist = 0
-	progressivism = 0
-	liberalism = 0
-	liberal_conservatism = 0
-	conservatism = 0
-	paternalism = 0
-	despotism = 0
-	fascism = 43
-	fascism_1 = 25
-	fascism_4 = 32
-	national_socialism = 0
+	communist = 2
+	socialist = 9
+	progressivism = 10
+	liberal_conservatism = 5
+	liberalism = 22
+	liberalism_1 = 6
+	conservatism = 26
+	conservatism_1 = 10
+	paternalism = 7
+	despotism = 2
+	fascism = 1
 }
 
 
@@ -439,9 +439,6 @@ if = {
 }
 
 add_ideas = {
-	TRI_Founder_IT
-	ITA_Strait_Bridge
-	ITA_computergoldenage	
 	
 	#political#
 	tno_political_parties_controlled_opposition
@@ -507,8 +504,7 @@ add_ideas = {
 	ITA_minister_Giulio_Tremonti_eco
 	
 	# construction
-	construction_level_3
-}
+ }
 
 #intro tree completed focuses#
 complete_national_focus = ita_grand_council_session
@@ -702,3 +698,7 @@ set_oob = "ITA_2000"
 set_naval_oob = "ITA_navy_2000"
 set_air_oob = "ITA_2000_air"
 set_global_flag = Triumvirate_Collapse
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }

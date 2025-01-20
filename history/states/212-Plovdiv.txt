@@ -1,28 +1,35 @@
-
-state={
-	id=212
-	name="STATE_212"
-	manpower = 1103163
-
+state = {
+	id = 212
+	name = "STATE_212"
 	resources = {
-		chromium=6
+		chromium = 6.000
+		
 	}
-	
-	state_category = city
 
-	history={
+	history = {
 		owner = BUL
-		victory_points = { 6923 10 }
-		victory_points = { 6982 1 }
+		victory_points = {
+			6923 15
+		}
+		victory_points = {
+			3937 5
+		}
+		victory_points = {
+			9818 2
+		}
 		buildings = {
 			infrastructure = 5
 			air_base = 2
 			radar_station = 1
-		}
+ 		}
 		add_core_of = BUL
-	}
+ 	}
 
-	provinces={
-		3937 6923 6982 11813 9818
+	provinces = {
+		3937 6923 6982 9818 18189 18196
 	}
+	manpower = 1103163
+	buildings_max_level_factor = 1.000
+	state_category = city
+	local_supplies = 0.000
 }

@@ -2,10 +2,11 @@
 
 recruit_character = ENG_marlin_hanbury_tracy
 recruit_character = ENG_gregory_lauder_frost
-recruit_character = ENG_john_graeme_wood
 recruit_character = ENG_neil_hamilton
-recruit_character = ENG_roger_scrunton
+recruit_character = ENG_Nikolai_Tolstoy
 recruit_character = ENG_Bob_Crow
+recruit_character = ENG_Jane_Birdwood
+recruit_character = ENG_John_Skeffington
 
 add_political_power = 150
 
@@ -43,9 +44,9 @@ add_ideas = {
 
 	### MINISTERS ###
 	ENG_Gregory_Lauder_Frost_hog
-	ENG_John_Graeme_Wood_sec
-	ENG_Neil_Hamilton_for
-	ENG_Roger_Scrunton_eco
+	ENG_Neil_Hamilton_eco
+	ENG_Jane_Birdwood_for
+	ENG_John_Skeffington_sec
 
 	### POLITICAL ###
 	tno_political_parties_controlled_opposition
@@ -77,8 +78,7 @@ add_ideas = {
 	tno_child_labor_illegal
 	tno_pensions_low_pensions
 	tno_unemployment_no_subsidies
-	construction_level_4
-
+ 
 	### SOCIAL ###
 	tno_safety_limited_regulations
 	tno_health_care_public_health_care
@@ -114,18 +114,12 @@ set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Crown_Credit_Corporatism }
 
 set_popularities = {
-	communist = 0
-	ultranationalism = 0
-	socialist = 0
-	progressivism = 0
-	liberalism = 5
-	conservatism = 7
-	paternalism = 1
-	despotism = 25
-	fascism = 54
-	national_socialism = 8
-	 
-	liberal_conservatism = 0
+	paternalism = 6
+	despotism = 26
+	despotism_1 = 8
+	fascism = 40
+	fascism_1 = 16
+	fascism_2 = 4
 }
 
 

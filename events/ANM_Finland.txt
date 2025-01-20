@@ -1,5 +1,6 @@
 add_namespace = FIN.civilwar
 add_namespace = FIN.red
+add_namespace = FIN
 
 country_event = {
 	id = FIN.civilwar.1
@@ -20,6 +21,29 @@ country_event = {
 		}
 	}
 }
+
+country_event = { #Germany can intervene
+	id = FIN.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event FIN.1" }
+	title = FIN.1.t
+	desc = FIN.1.desc
+	picture = GFX_report_event_FIN_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FIN.1.a
+		custom_effect_tooltip = GER_can_send_aid_finland
+		hidden_effect = {
+			set_country_flag = GER_aid_FIN
+			set_temp_variable = { target = FIN }
+			TNO_increase_volunteer_cap_1 = yes
+		}
+		ANM_fopo_add_finland_civil_war_tab = yes
+	}
+}
+
 
 country_event = {
 	id = FIN.civilwar.2

@@ -18,16 +18,25 @@ country_event = {
 			
 			AST = {
 				set_politics = {
-					ruling_party = conservatism
+					ruling_party = paternalism
 					last_election = "1995.4.13"
 					election_frequency = 36
 					elections_allowed = yes
 				}
 				remove_ideas = {
-					AST_Joh_Bjelke_Petersen_hog
-					AST_Ian_McLachlan_sec
+					AST_Robin_Gray_hog
+					AST_Bruce_Scott_sec
 					AST_Andrew_Peacock_for
-					AST_Peter_Costello_eco
+					AST_Ray_Braithwaite_eco
+				}
+				set_popularities = {
+					socialist = 3
+					progressivism = 15
+					liberalism = 11
+					liberal_conservatism = 4
+					conservatism = 12
+					paternalism = 41
+					despotism = 14
 				}
 			}
 			country_event = { id = AST_scripted.2 days = 69 }
@@ -40,10 +49,9 @@ country_event = {
 }
 country_event = { #1998 federal election
 	id = AST_scripted.2 
-	immediate = { log = "[GetDateText]: [Root.GetName]: event AST_scripted.2" }
 	title = AST_scripted.2.t
 	desc = AST_scripted.2.d
-	#picture = 
+	picture = GFX_anm_AST_Petersen_Dead
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -51,20 +59,7 @@ country_event = { #1998 federal election
 	option = {
 		name = AST_scripted.2.a
 		ai_chance = {
-			factor = 38
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
-			}
-			
+			factor = 28
 		}
 		add_popularity = {
 			ideology = liberalism
@@ -86,26 +81,18 @@ country_event = { #1998 federal election
 			ideology = despotism
 			popularity = 0.01
 		}
+		set_politics = {
+			ruling_party = conservatism
+			last_election = "1998.5.6"
+			elections_allowed = yes
+		}
 		set_country_flag = peacock_98
 		news_event = { id = WORLD.18193 }
 	}
 	option = {
-		name = AST_scripted.2.a
+		name = AST_scripted.2.b
 		ai_chance = {
 			factor = 20
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
-			}
-
 		}
 		set_politics = {
 			ruling_party = liberal_conservatism
@@ -132,21 +119,9 @@ country_event = { #1998 federal election
 		news_event = { id = WORLD.18194 }
 	}
 	option = {
-		name = AST_scripted.2.a
+		name = AST_scripted.2.c
 		ai_chance = {
-			factor = 28
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS_RADICALS }
-			}
+			factor = 38
 		}
 		set_politics = {
 			ruling_party = paternalism
@@ -173,21 +148,9 @@ country_event = { #1998 federal election
 		news_event = { id = WORLD.18195 }
 	}
 	option = {
-		name = AST_scripted.2.a
+		name = AST_scripted.2.d
 		ai_chance = {
 			factor = 14
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_NATIONAL_RIGHT }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_LIBERALS_MODERATES }
-			}
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_FED_ELECTION_98_OUTCOME option = AST_FED_ELECTION_98_OUTCOME_NATIONALS }
-			}
 		}
 		set_politics = {
 			ruling_party = despotism
@@ -212,7 +175,7 @@ country_event = { #Canberra Riots
 	immediate = { log = "[GetDateText]: [Root.GetName]: event AST_scripted.3" }
 	title = AST_scripted.3.t
 	desc = AST_scripted.3.d
-	#picture = 
+	picture = GFX_anm_AST_Petersen_Dead
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -221,12 +184,10 @@ country_event = { #Canberra Riots
 		name = AST_scripted.3.a
 		ai_chance = {
 			factor = 65
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_CANBERRA_RIOTS_OUTCOME option = AST_CANBERRA_RIOTS_OUTCOME_SUCCESS }
-			}
 		}
 		set_politics = {
+			ruling_party = despotism
+			last_election = "1998.5.6"
 			elections_allowed = no
 		}
 		add_popularity = {
@@ -243,10 +204,6 @@ country_event = { #Canberra Riots
 		name = AST_scripted.3.a
 		ai_chance = {
 			factor = 35
-			modifier = {
-				factor = 0
-				has_game_rule = { rule = AST_CANBERRA_RIOTS_OUTCOME option = AST_CANBERRA_RIOTS_OUTCOME_FAILURE }
-			}
 		}
 		set_politics = {
 			ruling_party = progressivism
@@ -271,3 +228,4 @@ country_event = { #Canberra Riots
 		}
 		news_event = { id = WORLD.18198 }
 	}
+} 

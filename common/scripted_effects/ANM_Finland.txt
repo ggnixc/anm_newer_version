@@ -1,8 +1,7 @@
 ANM_finnish_unrest = { 
-	111 = { set_demilitarized_zone =  yes }
+	216 = { set_demilitarized_zone =  yes }
 	1712 = { set_demilitarized_zone =  yes }
-	1713 = { set_demilitarized_zone =  yes }
-	1719 = { set_demilitarized_zone =  yes }
+	1722 = { set_demilitarized_zone =  yes }
 	1723 = { set_demilitarized_zone =  yes }
 }
 
@@ -13,34 +12,20 @@ ANM_finnishcivilwar = {
 			amount = 5000
 			producer = SOV
 		}
+		every_state = {
+			limit = {
+				is_core_of = FIN
+			}
+			FDR = {
+				add_state_core = PREV
+			}
+		}
 
-		transfer_state = 146
+		transfer_state = 216
 		transfer_state = 1712
-		transfer_state = 1713
-		transfer_state = 1718
-		transfer_state = 1719
-		transfer_state = 1723
+		transfer_state = 1721
 		transfer_state = 1722
-
-		add_state_core = 111
-		add_state_core = 146
-		add_state_core = 147
-		add_state_core = 148
-		add_state_core = 149
-		add_state_core = 150
-		add_state_core = 722
-		add_state_core = 1712
-		add_state_core = 1713
-		add_state_core = 1714
-		add_state_core = 1715
-		add_state_core = 1716
-		add_state_core = 1717
-		add_state_core = 1718
-		add_state_core = 1719
-		add_state_core = 1720
-		add_state_core = 1721
-		add_state_core = 1722
-		add_state_core = 1723
+		transfer_state = 1723
 
 		load_oob = "FDR_1996"
 	}

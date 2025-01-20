@@ -22,7 +22,7 @@ TUR = {
 }
 
 set_politics = {
-	ruling_party = despotism
+	ruling_party = paternalism
 	last_election = "1994.3.26"
 	election_frequency = 60
 	elections_allowed = yes
@@ -32,13 +32,13 @@ TNO_startup_nation = yes
 
 set_popularities = {
     communist = 10
-    despotism = 55
+    despotism = 10
     socialist = 0
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 0
     conservatism = 25
-    paternalism = 10
+    paternalism = 55
     fascism = 0
     national_socialism = 0
      
@@ -49,21 +49,7 @@ create_country_leader = {
 	desc = "POLITICS_BERC_TURAN_DESC"
 	picture = "Portrait_ARM_Berc_Turan.dds"
 	expire = "1997.8.3"
-	ideology = despotism_institutional_despotism_subtype
+	ideology = paternalism_anocracy_subtype
 	traits = {
 	}
-}
-
-create_country_leader = {
-	name = "Markar Esayan"
-	desc = "POLITICS_MARKAR_ESAYAN_DESC"
-	picture = "Portrait_ARM_Markar_Esayan.dds"
-	expire = "2090.8.3"
-	ideology = paternalism_controlled_democracy_subtype
-	traits = {
-	}
-}
-
-add_ideas = { 
-    Pakt_Observer
 }

@@ -10,6 +10,29 @@ state_control_effect_1593 = {
 		reset_state_name = yes
 	}
 }
+#DOM
+state_control_effect_319 = {
+	if = {
+		limit = {
+			AND = {
+				is_controlled_by = DOM
+				DOM = {
+					OR = {
+						has_country_leader = { character = DOM_Rafael_Trujillo ruling_only = yes }
+						has_country_leader = { character = DOM_Ramfis_Trujillo ruling_only = yes }
+						# Some other Trujillista
+					}
+				}
+			}
+		}
+		set_state_name = STATE_319_trj
+		set_province_name = { id = 7660 name = VICTORY_POINTS_7660_trj }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7660
+	}
+}
 state_control_effect_1706 = {
 	if = {
 		limit = {
@@ -18,17 +41,9 @@ state_control_effect_1706 = {
 				is_controlled_by = DOM
 			}
 		}
-		set_province_name = {
-			id = 15584
-			name = VICTORY_POINTS_15584_DOM
-		}
+		 set_province_name = { id = 15584 name = VICTORY_POINTS_15584_DOM }
 	}
-	else = {
-		set_province_name = {
-			id = 15584
-			name = VICTORY_POINTS_15584
-		}
-	}
+	else = { reset_province_name = 15584 }
 	if = {
 		limit = {
 			OR = {
@@ -68,20 +83,138 @@ state_control_effect_1706 = {
 		reset_state_name = yes
 	}
 }
-#ECU
-state_control_effect_1676 = {
+#PAR
+state_control_effect_301 = {
 	if = {
 		limit = {
-			ECU = { has_country_flag = ecu_revolution_happened }
+			OR = {
+				is_controlled_by = BRA
+				is_controlled_by = BRP
+			}
+			has_global_flag = TNO_endonym_mode
 		}
-		set_province_name = { id = 8252 name = VICTORY_POINTS_8252_revolution }
+		set_state_name = STATE_301_bra
+	}
+	else = { reset_state_name = yes }
+}
+state_control_effect_1616 = {
+	if = {
+		limit = {
+			is_controlled_by = PAR
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1616_par
 	}
 	else_if = {
-		limit = { is_controlled_by = CHL }
-		reset_province_name = 8252
+		limit = {
+			OR = {
+				is_controlled_by = BRA
+				is_controlled_by = BRP
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1616_bra
+		set_province_name = { id = 2152 name = VICTORY_POINTS_2152_bra }
+	}
+	else = { reset_state_name = yes }
+}
+state_control_effect_1619 = {
+	if = {
+		limit = {
+			is_controlled_by = PAR
+			has_global_flag = TNO_endonym_mode
+		}
+		set_province_name = { id = 11023 name = VICTORY_POINTS_11023_par }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = BRA
+				is_controlled_by = BRP
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1619_bra
+		set_province_name = { id = 11023 name = VICTORY_POINTS_11023_bra }
+		set_province_name = { id = 15270 name = VICTORY_POINTS_15270_bra }
+	}
+	else = { 
+		reset_state_name = yes
+		reset_province_name = 11023
+		reset_province_name = 15270
 	}
 }
-#PAR
+state_control_effect_1620 = {
+	if = {
+		limit = { is_controlled_by = PAR }
+		set_state_name = STATE_1620_par_bra
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+		if = {
+			limit = {
+				PAR = {
+					has_global_flag = PAR_FULNA_defeat
+					has_country_leader = { character = PAR_Alfredo_Stroessner ruling_only = yes }
+				}	
+			}
+			set_province_name = { id = 15262 name = VICTORY_POINTS_15262_stroessner }
+		}
+		else_if = {
+			limit = {
+				PAR = {
+					has_global_flag = PAR_FULNA_defeat
+					has_country_flag =  stroessner_coup
+					NOT = { has_country_leader = { character = PAR_Alfredo_Stroessner ruling_only = yes } }
+				}
+			}
+			set_province_name = { id = 15262 name = VICTORY_POINTS_15262_post_stroessner }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = BRA
+				is_controlled_by = BRP
+			}
+		}
+		set_state_name = STATE_1620_par_bra
+		reset_province_name = 15262
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 15262 name = VICTORY_POINTS_15262_bra }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 15262
+	}
+}
+state_control_effect_1621 = {
+	if = {
+		limit = {
+			is_controlled_by = PAR
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1621_par
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = BRA
+				is_controlled_by = BRP
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1621_bra
+	}
+	else = { reset_state_name = yes }
+}
 state_control_effect_1622 = {
 	if = {
 		limit = {
@@ -91,14 +224,54 @@ state_control_effect_1622 = {
 			}
 		}
 		set_state_name = STATE_1622_arg
-		set_province_name = {
-			id = 2209
-			name = VICTORY_POINTS_2209_arg
-		}
+		set_province_name = { id = 2209 name = VICTORY_POINTS_2209_arg }
 	}
-	else_if = {
-		limit = { is_controlled_by = PAR }
+	else = {
 		reset_state_name = yes
 		reset_province_name = 2209
+	}
+}
+state_control_effect_1623 = {
+	set_state_name = STATE_1623_par
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = BRA
+				is_controlled_by = BRP
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1623_bra
+		set_province_name = { id = 5165 name = VICTORY_POINTS_5165_bra }
+	}
+	else = { reset_province_name = 5165 }
+}
+state_control_effect_1624 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = PAR
+				is_controlled_by = BRA
+				is_controlled_by = BRP
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1624_par_bra
+	}
+	else = { reset_state_name = yes }
+}
+#PRU
+state_control_effect_1685 = {
+	if = {
+		limit = { 
+			date < 1975.12.31
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1691_pru_1976
+		set_province_name = { id = 5166 name = VICTORY_POINTS_5166_pru_1976 } 
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5166
 	}
 }

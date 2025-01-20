@@ -1,29 +1,36 @@
-state={
-	id=813
-	name="STATE_813"
+state = {
+	id = 813
+	name = "STATE_813"
 	resources = {
-		steel = 20.000
+		steel = 12.000
 	}
-	provinces={
-		7014 12076 
-	}
+
 	history = {
 		owner = CHI
 		add_core_of = CHI
 		buildings = {
  			industrial_complex = 1
 			arms_factory = 1
- 			infrastructure = 5
-			radar_station = 2
-			air_base = 3
+ 			infrastructure = 6
+			air_base = 5
 			7014 = {
-				naval_base = 7
+				naval_base = 4
 			}
- 		}
-		victory_points = { 7014 40 }
-		set_state_flag = state_renamings
+			dockyard = 2
+		}
+		victory_points = {
+			7014 60
+		}
+		victory_points = {
+			19809 4
+		}
+  	}
+
+	provinces = {
+		7014 12076 19858 19809
 	}
-	manpower=11693974
-	state_category=metropolis
-	buildings_max_level_factor=1.000
+	manpower = 10306547
+	buildings_max_level_factor = 1.000
+	state_category = metropolis
+	local_supplies = 0.000
 }

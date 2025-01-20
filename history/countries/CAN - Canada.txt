@@ -9,6 +9,23 @@ recruit_character = CAN_Paul_Martin
 recruit_character = CAN_Jack_Layton
 recruit_character = CAN_Gilles_Duceppe
 
+CAN = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+			}
+		}
+		set_autonomy = {
+			target = QUE
+			autonomous_state = autonomy_italy_associate
+		}
+		else = {
+			puppet = QUE
+		}
+	}
+}
+
 set_oob = "CAN_1962"
 
 add_ideas = {
@@ -64,8 +81,7 @@ add_ideas = {
 	tno_research_facilities_modern
 	tno_academic_base_primary_schooling
 	
-	construction_level_5
-}
+ }
 
 set_politics = {	
 	ruling_party = progressivism

@@ -31,32 +31,32 @@ characters = {
 			id = -1
 		}
 	}
-	CHI_Wang_Jianxuan = {
-		name = CHI_Wang_Jianxuan
+	CHI_Wang_Zhaoming = {
+		name = CHI_Wang_Zhaoming
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/CHI/Portrait_CHI_Wang_Jianxuan.dds"
+				large = "gfx/leaders/CHI/Portrait_CHI_Wang_Zhaoming.png"
 			}
 		}
 		country_leader = {
 			expire = "2999.1.1"
-			desc = "POLITICS_WANG_JIANXUAN_DESC"
-			ideology = paternalism_left_wing_corporatism_subtype
+			desc = "POLITICS_WANG_ZHAOMING_DESC"
+			ideology = paternalism_chen_gonbo_thought_subtype
 			traits = {
 			}
 			id = -1
 		}
 	}
-	CHI_Wen_Jiabao = {
-		name = CHI_Wen_Jiabao
+	CHI_Zhao_Yaodong = {
+		name = CHI_Zhao_Yaodong
 		portraits = { 
 			civilian = { 
-				small = "GFX_idea_CHI_minister_Wen_Jiabao" 
+				small = "GFX_idea_CHI_minister_CHI_Zhao_Yaodong" 
 			} 	
 		} 
 		advisor = {
 			slot = head_of_government
-			idea_token = CHI_minister_Wen_Jiabao_hog
+			idea_token = CHI_minister_Zhao_Yaodong_hog
 			traits = {
 			}
 			ledger = civilian
@@ -65,34 +65,16 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	CHI_Zhou_Tienong = {
-		name = CHI_Zhou_Tienong
+	CHI_Qiu_Jinyi = {
+		name =  CHI_Qiu_Jinyi
 		portraits = { 
 			civilian = { 
-				small = "GFX_idea_CHI_minister_Zhou_Tienong" 
-			} 	
-		} 
-		advisor = {
-			slot = security_minister
-			idea_token = CHI_minister_Zhou_Tienong_sec
-			traits = {
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-	}
-	CHI_Qian_Qichen = {
-		name = CHI_Qian_Qichen
-		portraits = { 
-			civilian = { 
-				small = "GFX_idea_CHI_minister_Qian_Qichen" 
+				small = "GFX_idea_CHI_minister_Qiu_Jinyi" 
 			} 	
 		} 
 		advisor = {
 			slot = foreign_minister
-			idea_token = CHI_minister_Qian_Qichen_for
+			idea_token =  CHI_minister_Qiu_Jinyi_for
 			traits = {
 			}
 			ledger = civilian
@@ -101,16 +83,34 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	CHI_Zhang_Qingwei = {
-		name = CHI_Zhang_Qingwei
+	CHI_Xu_Lide = {
+		name =  CHI_Xu_Lide
 		portraits = { 
 			civilian = { 
-				small = "GFX_idea_CHI_minister_Zhang_Qingwei" 
+				small = "GFX_idea_CHI_minister_Xu_Lide" 
 			} 	
 		} 
 		advisor = {
 			slot = economy_minister
-			idea_token = CHI_minister_Zhang_Qingwei_eco
+			idea_token =  CHI_minister_Xu_Lide_eco
+			traits = {
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	CHI_Zhou_Shufu = {
+		name =  CHI_Zhou_Shufu
+		portraits = { 
+			civilian = { 
+				small = "GFX_idea_CHI_minister_Zhou_Shufu" 
+			} 	
+		} 
+		advisor = {
+			slot = security_minister
+			idea_token =  CHI_minister_Zhou_Shufu_sec
 			traits = {
 			}
 			ledger = civilian

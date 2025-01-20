@@ -1,27 +1,27 @@
-###POP DONE
-state={
-	id=671
-	name="STATE_671"
-	manpower = 452565
+state = { #Population Done
+	id = 671
+	name = "STATE_671"
+	manpower = 431680
 
 	resources = {
- 	}
-	
-	state_category = town
-
-	history={
-		owner = VIN
-		add_core_of = VIN
-		victory_points = { 4379 25 }
-		buildings = {
-			infrastructure = 3
-			air_base = 1
-			arms_factory = 1
-  		}
-
+ 		rubber = 2
 	}
 
-	provinces={
+	state_category = rural
+
+	history = {
+		add_core_of = VIN
+		add_core_of = VIC
+		owner = VIN
+		victory_points = { 4379 10 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+ 		}
+		set_state_flag = universal_renamings
+	}
+
+	provinces = {
 		4379
 	}
 }

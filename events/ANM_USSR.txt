@@ -2,6 +2,7 @@
 add_namespace = SOV_flavour
 add_namespace = SOV_space
 add_namespace = SOV_victory
+add_namespace = SOV_antarctica
 
 #### INTRO EVENTS ###
 
@@ -38,6 +39,31 @@ news_event = {
 	}
 }
 
+#### ANTARCTICA FLAVOUR ###
+
+country_event = {
+	id = SOV_antarctica.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event SOV_antarctica.1"
+	}
+	title = SOV_antarctica.1.t
+	desc = SOV_antarctica.1.desc
+	picture = GFX_anm_sov_NZL_election
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = SOV_antarctica.1.a
+		NZL = {
+			add_popularity = { ideology = progressivism popularity = 0.03 }
+		}
+	}
+}
+
+### DEBUG ###
+
 country_event = {
 	#USSR Victory debug
 	id = SOV_victory.99
@@ -56,6 +82,7 @@ country_event = {
 		name = SOV_victory.99.a
 		ANM_caucasus_to_SOV = yes
 		ANM_homel_to_SOV = yes
+		ANM_ostland_border_to_SOV = yes
 	}
 	option = { #full win
 		ai_chance = {
@@ -82,5 +109,4 @@ country_event = {
 		ANM_armenia_to_SOV = yes
 		ANM_baltics_to_SOV = yes
 	}
-	
 }

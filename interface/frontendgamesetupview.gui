@@ -9,8 +9,8 @@ guiTypes = {
 	### bookmark entry
 	containerWindowType = {
 		name = "bookmark_entry"
-		position = { x = 130 y =0 }
-		size = { width=232 height=211}
+		position = { x = -101 y = -36 }
+		size = { width=325 height=211}
 		clipping = no
 		fade_time = 500
 		fade_type = linear
@@ -30,15 +30,14 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "date"
-			#position = { x = 22 y = 147 }
-			position = { x = -6000 y = 147 }
+			position = { x = 2500 y = 2500 }
 			font = "aldrich_22_outline"
 			borderSize = {x = 0 y = 0}
 			text = "FE_BOOKMARK_DATE"
 			maxWidth = 185
 			maxHeight = 20
 			fixedsize = yes
-			format = centre
+			format = left
 		}
 	}
 
@@ -229,6 +228,19 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 
+		instantTextBoxType = {
+			name = "load_game_title"
+			position = { x = 6 y = 74 }
+			font = "aldrich_white_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Saveloader.bat"
+			maxWidth = 250
+			maxHeight = 20
+			fixedsize = yes
+			Orientation = "UPPER_LEFT"
+			format = centre
+		}
+
 		#iconType = {
 		#	name ="menu_bottom"
 		#	spriteType = "GFX_load_save_bottom_screen"
@@ -250,7 +262,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "localgames_tab"
-			position = { x = 35  y = 84 }
+			position = { x = 9  y = 113 }
 			quadTextureSprite ="GFX_save_game_btn"
 			Orientation = "UPPER_LEFT"
 			clicksound = click_checkbox
@@ -258,7 +270,7 @@ guiTypes = {
 
 		checkboxType = {
 			name = "remotegames_tab"
-			position = { x = 185 y = 84 }
+			position = { x = 138 y = 113 }
 			quadTextureSprite ="GFX_save_game_btn"
 			Orientation = "UPPER_LEFT"
 			clicksound = click_checkbox
@@ -266,11 +278,11 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "localgames_label"
-			position = { x = 45 y = 91 }
-			font = "Bomb_24"
+			position = { x = 9 y = 118 }
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "MENU_BAR_LOCALGAMES"
-			maxWidth = 100
+			maxWidth = 120
 			maxHeight = 20
 			fixedsize = yes
 			Orientation = "UPPER_LEFT"
@@ -279,11 +291,11 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "cloudgames_label"
-			position = { x = 195 y = 91 }
-			font = "Bomb_24"
+			position = { x = 138 y = 116 }
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "MENU_BAR_CLOUDGAMES"
-			maxWidth = 100
+			maxWidth = 120
 			maxHeight = 20
 			fixedsize = yes
 
@@ -542,10 +554,10 @@ guiTypes = {
 				position = { x = 0 y = 0 }
 				size = { width = 100%% height = 100%% }
 				#slotsize = { width = 2060 height = 0 }
-				slotsize = { width = 260 height = 0 }
+				slotsize = { width = 353 height = 0 }
 				#change this for extra starting dates visible
 				add_horizontal = yes
-				max_slots_vertical = 1
+				max_slots_vertical = 2
 				format = "UPPER_LEFT"
 			}
 		}
@@ -563,7 +575,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "bookmark_title"
-			position = { x = 326 y = 22 }
+			position = { x = 2500 y = 2500 }
 			font = "aldrich_16_outline"
 			maxWidth = 355
 			maxHeight = 30
@@ -572,7 +584,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "bookmark_mothership_title"
-			position = { x = -27 y = 22 }
+			position = { x = 326 y = 22 }
 			font = "aldrich_16_outline"
 			maxWidth = 355
 			maxHeight = 30
@@ -581,13 +593,26 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
+			name = "bookmark_anm_title"
+			position = { x = -27 y = 22 }
+			font = "aldrich_16_outline"
+			maxWidth = 355
+			maxHeight = 30
+			format = left
+			text = "A New Millennium"
+		}
+
+		instantTextBoxType = {
 			name = "bookmark_desc"
 			position = { x = -57 y = 63 }
 			font = "aldrich_16_outline"
-			maxWidth = 691
+			scrollbarType = standardtext_slider
+			maxWidth = 679
 			maxHeight = 415
 			format = left
 		}
+
+
 
 		ButtonType = {
 			name = "back_button"
@@ -605,7 +630,7 @@ guiTypes = {
 			name = "select_button"
 			position = { x = -101 y = -18 }
 			quadTextureSprite ="GFX_tno_bookmark_button"
-			buttonText = "FE_SELECT_SCENARIO_BUTTON"
+			buttonText = "FE_SELECT_SCENARIO"
 			buttonFont = "aldrich_18_outline"
 			Orientation = "LOWER_RIGHT"
 			clicksound = click_ok
@@ -683,12 +708,12 @@ guiTypes = {
 
 			gridboxType = {
 				name ="countries_grid"
-				position = { x = 1 y = 0 }
+				position = { x = -105 y = 0 }
 				size = { width = 100% height = 100% }
-				slotsize = { width = 244 height = 0 }
+				slotsize = { width = 238 height = 100 } 
 				add_horizontal = yes
-				max_slots_vertical = 1
-				max_slots_horizontal = 8
+				max_slots_vertical = 3
+				max_slots_horizontal = 5
 				format = "UPPER_LEFT"
 			}
 			
@@ -697,39 +722,46 @@ guiTypes = {
 			iconType = {
 				name ="dud_countries_overlay_1"
 				spriteType = "GFX_flag_blank_82_52"
-				position = { x = 206 y = 50 }
+				position = { x = 100 y = 100 }
 			}
 			iconType = { # GERMANY NEW
 				name = "country_selection_new_germany"
-				position = { x = 365 y = 30 }
+				position = { x = 491 y = 30 }
 				spriteType = "GFX_country_selection_new_big"
 				pdx_tooltip = "BOOKMARK_GERMANY_NEW"
 				pdx_tooltip_delayed = "BOOKMARK_GERMANY_NEW_DELAYED"
 			}
 			iconType = { # GERMANY INFO
 				name = "country_selection_info_germany"
-				position = { x = 260 y = 0 }
+				position = { x = 386 y = 0 }
 				spriteType = "GFX_country_selection_alert_big"
 				pdx_tooltip = "BOOKMARK_GERMANY_INFO"
 				pdx_tooltip_delayed = "BOOKMARK_GERMANY_INFO_DELAYED"
 			}
 			iconType = { # USA BLOCKED ENTRY
 				name = "countries_blocker_big_ofn_1_entry"
-				position = { x = 22 y = 21 }
+				position = { x = -84 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_USA"
 				pdx_tooltip = "BOOKMARK_USA_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_USA_BLOCKER_DELAYED"
 			}
+			iconType = { # ITA BLOCKED ENTRY
+				name = "countries_blocker_big_spaghetti_1_entry"
+				position = { x = 154 y = 21 }
+				spriteType = "GFX_country_selection_screen_blocker_big_ITA"
+				pdx_tooltip = "BOOKMARK_ITA_BLOCKER"
+				pdx_tooltip_delayed = "BOOKMARK_ITA_BLOCKER_DELAYED"
+			}
 			iconType = { # JAPAN BLOCKED ENTRY
 				name = "countries_blocker_big_cps_1_entry"
-				position = { x = 510 y = 21 }
+				position = { x = 630 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_JAP"
 				pdx_tooltip = "BOOKMARK_JAPAN_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_JAPAN_BLOCKER_DELAYED"
 			}
 			iconType = { # USSR BLOCKED ENTRY
 				name = "countries_blocker_big_comintern_1_entry"
-				position = { x = 754 y = 21 }
+				position = { x = 868 y = 21 }
 				spriteType = "GFX_country_selection_screen_blocker_big_SOV"
 				pdx_tooltip = "BOOKMARK_USSR_BLOCKER"
 				pdx_tooltip_delayed = "BOOKMARK_USSR_BLOCKER_DELAYED"
@@ -1996,7 +2028,7 @@ guiTypes = {
 
 		iconType = {
 			name = "custom_settings_btn_overlay"
-			position = { x = 191 y = 8 }
+			position = { x = 190 y = 8 }
 			quadTextureSprite ="GFX_TNO_map_select_bottomright_custom_button_overlay"
 			pdx_tooltip = FE_CUSTOM_DIFFUCULTY
 		}

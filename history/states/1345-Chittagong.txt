@@ -1,19 +1,29 @@
-state={
-	id=1345
-	name="STATE_1345"
-	provinces={
-		9991 12010 16141 11968 16140 7179
-	}
+state = {
+	id = 1345
+	name = "STATE_1345"
 	resources = {
-		rubber = 6
-		steel = 7
-		chromium = 11
+		rubber = 6.000
+		steel = 7.000
+		chromium = 11.000
 	}
-	history={
-		victory_points = { 9991 20 }
-		victory_points = { 11968 5 }
-		victory_points = { 12010 1 }
-		victory_points = { 16141 1 }
+
+	history = {
+		owner = AZH
+		victory_points = {
+			9991 20
+		}
+		victory_points = {
+			11968 6
+		}
+		victory_points = {
+			12010 3
+		}
+		victory_points = {
+			16140 3
+		}
+		victory_points = {
+			16141 1
+		}
 		buildings = {
 			infrastructure = 2
 			9991 = {
@@ -21,11 +31,14 @@ state={
 			}
 			dockyard = 1
 		}
-		owner = AZH
-		 
 		add_core_of = AZH
+  	}
+
+	provinces = {
+		7179 9991 11968 12010 16140 16141 18847 18882
 	}
-	manpower=13525725
-	buildings_max_level_factor=1.000
-	state_category=rural
+	manpower = 13525725
+	buildings_max_level_factor = 1.000
+	state_category = town
+	local_supplies = 0.000
 }

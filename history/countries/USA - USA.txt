@@ -33,16 +33,13 @@ add_to_faction = FAR
 add_to_faction = LIB
 add_to_faction = CUR
 add_to_faction = SHL
-add_to_faction = VEN
 add_to_faction = NAM
-add_to_faction = CUB
 add_to_faction = ELS
 add_to_faction = CYL
-add_to_faction = COG
-add_to_faction = EAF
 add_to_faction = COS
 add_to_faction = PAN
-add_to_faction = FJI
+add_to_faction = FIJ
+add_to_faction = GRN
 
 country_event = {
     id = USA_anm_events.2
@@ -75,6 +72,21 @@ if = {
 	}
 	else = {
 		puppet = GUY
+	}
+}
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = GRN
+		autonomy_state = autonomy_puppet
+	}
+	else = {
+		puppet = GRN
 	}
 }
 if = {
@@ -193,8 +205,7 @@ add_ideas = {
 	tno_research_facilities_modern
 	tno_academic_base_primary_schooling
 
-	construction_level_5
-
+ 
 }
 
 if = {

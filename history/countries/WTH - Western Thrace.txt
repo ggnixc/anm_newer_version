@@ -1,8 +1,28 @@
 ﻿capital = 1984
 
+recruit_character = WTH_Ahmed_Dogan
+recruit_character = WTH_Decentralized_Leadership
+recruit_character = WTH_Osman_Oktay
+recruit_character = WTH_Nedim_Gencev
+
 set_research_slots = 1
 
 set_stability = 0.8
+
+TUR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = WTH autonomy_state = autonomy_client_state }
+        else = {
+            puppet = WTH
+        }
+    }
+}
 
 add_ideas = {
 	### Starting Ideas ###
@@ -10,10 +30,10 @@ add_ideas = {
 }
 
 set_politics = {
-	ruling_party = liberalism
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = liberal_conservatism
+	last_election = "1991.11.1"
+	election_frequency = 120
+	elections_allowed = yes
 }
 
 TNO_startup_nation = yes
@@ -22,24 +42,14 @@ set_popularities = {
     communist = 0
     ultranationalism = 0
     socialist = 0
-    progressivism = 0
-    liberalism = 100
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
+    progressivism = 4
+    liberalism = 0
+    liberal_conservatism = 88
+    conservatism = 2
+    paternalism = 6
     despotism = 0
     fascism = 0
      
 }
 
-create_country_leader = {
-	name = "Ahmed Dogan"
-	desc = "POLITICS_Ahmed_Dogan_DESC"
-	picture = "Portrait_WTH_Ahmed_Dogan.dds"
-	expire = "2989.1.1"
-	ideology = liberalism_national_liberal_subtype
-	traits = {
-		#
-	}
-}
 

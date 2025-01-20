@@ -1,26 +1,21 @@
+state = {
+	id = 1248
+	name = "STATE_1248"
+	manpower = 167496
 
-state={
-	id=1248
-	name="STATE_1248"
-	manpower = 155108
-	
-	state_category = large_town
-	buildings_max_level_factor=1.250
+	state_category = rural
 
-	history={
+	history = {
 		owner = IRQ
-		victory_points = { 14453 10 }
+		victory_points = { 14453 5 }
 		buildings = {
 			infrastructure = 3
-			14453 = {
-				naval_base = 2
-			}
 		}
 		add_core_of = IRQ
-		add_core_of = PAL
+		set_state_flag = state_renamings
 	}
 
-	provinces={
+	provinces = {
 		14453
 	}
 }

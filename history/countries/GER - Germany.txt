@@ -1,11 +1,33 @@
 ﻿capital = 64
 
+#German endo/exo
+set_country_flag = german_names
+
 ### Characters ###
 recruit_character = GER_albert_friedrich_speer
 recruit_character = GER_martin_mussgnug
-recruit_character = GER_gunther_deckert
-recruit_character = GER_joseph_fischer
+recruit_character = GER_Olaf_Rose
+recruit_character = GER_Rudiger_Lucassen
 recruit_character = GER_gerhard_frey
+recruit_character = GER_unbekannt
+recruit_character = GER_walter_bachmann
+recruit_character = GER_jurgen_rieger
+recruit_character = GER_joachim_starbatty
+
+recruit_character = GER_Berthold_von_Stauffenberg
+recruit_character = GER_Edmund_Entacher
+recruit_character = GER_Wolfgang_Schneiderhan
+recruit_character = GER_Klaus_Naumann
+recruit_character = GER_Helmut_Willmann
+recruit_character = GER_Hans_Speidel
+recruit_character = GER_Hans_Otto_Budde
+recruit_character = GER_Roland_Ertl
+recruit_character = GER_Karl_Majcen
+recruit_character = GER_Horst_Pleiner
+recruit_character = GER_Reinhard_Gunzel
+recruit_character = GER_Hartmut_Bagger
+recruit_character = GER_Hans_von_Kirchbach
+
 recruit_character = GER_rolf_berger
 recruit_character = GER_heinz_kessler
 recruit_character = GER_otto_carius
@@ -58,10 +80,6 @@ recruit_character = GER_thomas_daum
 recruit_character = GER_karsten_schneider
 recruit_character = GER_joachim_ruhle
 recruit_character = GER_manfred_nielson
-recruit_character = GER_unbekannt
-recruit_character = GER_walter_bachmann
-recruit_character = GER_jurgen_rieger
-recruit_character = GER_joachim_starbatty
 
 set_politics = {
 	ruling_party = national_socialism
@@ -281,9 +299,9 @@ add_ideas = {
 
 	## Ministers ##
 	GER_Martin_Mussgnug_hog
-	GER_Gunther_Deckert_sec
-	GER_Joseph_Fischer_for
 	GER_Gerhard_Frey_eco
+	GER_Rudiger_Lucassen_sec
+	GER_Olaf_Rose_for
 
 	### Laws ###
 	## Political ##
@@ -342,8 +360,7 @@ add_ideas = {
 	tno_birthrate_many
 
 	## Construction Level ?!? ##
-	construction_level_5
-}
+ }
 
 set_research_slots = 4
 set_convoys = 200
@@ -379,29 +396,58 @@ set_variable = { GER_ANM_upper_party_influence = 55 }
 set_variable = { GER_ANM_party_leadership_leaning = -85 }
 set_variable = { GER_ANM_party_leadership_influnce = 80 }
 
-#Government GUI
-set_variable = { GER_ANM_government_loyaly_slot_1 = 1 } #Kritker
-set_variable = { GER_ANM_government_loyaly_slot_2 = 100 } #Unbekannt
-set_variable = { GER_ANM_government_loyaly_slot_3 = -1 } #Regime
-set_variable = { GER_ANM_government_loyaly_slot_4 = 0 } #Uberparteilich
-set_variable = { GER_ANM_government_loyaly_slot_5 = -4 } #Nonkonformisten
+### Government GUI ###
+# -4 Nonkonformisten, -3 Identitären, -2 Cyberkraten, -1 Regime, 0 Uberparteilich, #
+# 1 Kritiker, 2 Traditionalisten, 3 Religiös, 4 Puristen, 100 Unbekannt #
+## Tab 1 ##
+# Row 1 #
+set_variable = { GER_ANM_government_loyaly_slot_1 = -1 } 
+set_variable = { GER_ANM_government_loyaly_slot_2 = 1 } 
+set_variable = { GER_ANM_government_loyaly_slot_3 = -1 } 
+set_variable = { GER_ANM_government_loyaly_slot_4 = 0 } 
+set_variable = { GER_ANM_government_loyaly_slot_5 = 100 } 
+# Row 2 #
 set_variable = { GER_ANM_government_loyaly_slot_6 = 1 }
 set_variable = { GER_ANM_government_loyaly_slot_7 = 100 }
-set_variable = { GER_ANM_government_loyaly_slot_8 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_9 = -1 }
-set_variable = { GER_ANM_government_loyaly_slot_10 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_11 = -1 }
-set_variable = { GER_ANM_government_loyaly_slot_12 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_8 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_9 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_10 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_11 = 0 }
+set_variable = { GER_ANM_government_loyaly_slot_12 = 1 }
 set_variable = { GER_ANM_government_loyaly_slot_13 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_14 = -4 } 
+set_variable = { GER_ANM_government_loyaly_slot_14 = 1 } 
+# Row 3 #
 set_variable = { GER_ANM_government_loyaly_slot_15 = 100 }
-set_variable = { GER_ANM_government_loyaly_slot_16 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_17 = 0 }
-set_variable = { GER_ANM_government_loyaly_slot_18 = 100 }
-set_variable = { GER_ANM_government_loyaly_slot_19 = 1 }
-set_variable = { GER_ANM_government_loyaly_slot_20 = 100 }
-set_variable = { GER_ANM_government_loyaly_slot_21 = -1 }
-set_variable = { GER_ANM_government_loyaly_slot_22 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_16 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_17 = -4 }
+set_variable = { GER_ANM_government_loyaly_slot_18 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_19 = -4 }
+set_variable = { GER_ANM_government_loyaly_slot_20 = -1 }
+set_variable = { GER_ANM_government_loyaly_slot_21 = 1 }
+set_variable = { GER_ANM_government_loyaly_slot_22 = 100 }
+set_variable = { GER_ANM_government_loyaly_slot_23 = -1 }
+#TEMP
+#set_country_flag = GER_Government_Tab_1_Notification_5 
+#set_country_flag = GER_Government_Tab_1_Notification_7
+#set_country_flag = GER_Government_Tab_1_Notification_8
+#set_country_flag = GER_Government_Tab_1_Notification_15
+#set_country_flag = GER_Government_Tab_1_Notification_22
+set_country_flag = {
+	flag = GER_Government_Tab_Visible
+	value = 1
+}
+## Tab 2 ##
+set_variable  = { Institution_1_Progress = 68 } #DAF
+set_variable  = { Institution_2_Progress = 90 } #SA
+set_variable  = { Institution_3_Progress = 46 } #Red Cross
+set_variable  = { Institution_4_Progress = 79 } #RND
+set_variable  = { Institution_5_Progress = 46 } #RAD
+set_variable  = { Institution_6_Progress = 35 } #SS
+set_variable  = { Institution_7_Progress = 79 } #Church
+set_variable  = { Institution_8_Progress = 57 } #Reichsjugend
+## Tab 3 ##
+set_variable = { GER_Government_Tab_2_Instution = 9 }
+set_variable = { GER_Government_Tab_2_Leader_Rank = 10 }
 
 #Economy GUI
 set_country_flag = GER_ANM_Economy_View_Activate
@@ -543,21 +589,19 @@ add_to_faction = DEN
 add_to_faction = NOR
 add_to_faction = BLR
 add_to_faction = HUN
-add_to_faction = MRZ
+add_to_faction = MAD
 add_to_faction = SER
 add_to_faction = MOS
 add_to_faction = CAU
 add_to_faction = ENG
 add_to_faction = TNS
 add_to_faction = BUL
-add_to_faction = ALG
 add_to_faction = PAK
 
 if = {
 	limit = { has_dlc = "Together for Victory" }
 	set_autonomy = { target = OST autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = BLR autonomy_state = autonomy_reichsprotektorat }
-	set_autonomy = { target = MRZ autonomy_state = autonomy_autonomous_reichskommissariat }
 	set_autonomy = { target = UKR autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = MOS autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = CAU autonomy_state = autonomy_reichsprotektorat }
@@ -566,7 +610,6 @@ if = {
 		puppet = UKR
 		puppet = OST
 		puppet = BLR
-		puppet = MRZ
 		puppet = MOS
 		puppet = CAU
 	}

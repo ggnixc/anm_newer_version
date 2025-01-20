@@ -4,13 +4,25 @@ characters = {
 		portraits = { 
 			civilian = { 
 				large = "gfx/leaders/AST/Portrait_AST_Joh_Bjelke_Petersen.dds"
+				small = "GFX_idea_AST_Joh_Bjelke_Petersen"
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_AST_Joh_Bjelke_Petersen_DESC"
+			desc = "POLITICS_Joh_Bjelke_Petersen_DESC"
 			ideology = despotism_aristocratic_conservatism_subtype
 			traits = {}
 			expire = "2999.1.1.1"
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = AST_Joh_Bjelke_Petersen_hog
+			traits = {
+				head_of_government
+			}
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
 	AST_Andrew_Peacock = {
@@ -22,16 +34,16 @@ characters = {
 			} 	
 		} 
 		country_leader = {
-			desc = "POLITICS_AST_ANDREW_PEACOCK_DESC"
+			desc = "POLITICS_ANDREW_PEACOCK_DESC"
 			ideology = conservatism_paternalistic_conservatism_subtype
 			traits = {}
 			expire = "2999.1.1.1"
 		}
 		advisor = {
-			slot = head_of_government
-			idea_token = AST_Andrew_Peacock_hog
+			slot = foreign_minister
+			idea_token = AST_Andrew_Peacock_for
 			traits = {
-				head_of_government
+				foreign_minister
 			}
 			ledger = civilian
 			cost = -1
@@ -61,7 +73,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_AST_Robin_Gray_DESC"
+			desc = "POLITICS_ROBIN_GRAY_DESC"
 			ideology = paternalism_right_wing_populism_subtype
 			traits = {}
 			expire = "2999.1.1.1"
@@ -81,17 +93,17 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
-	AST_Michael_Jeffery = {
-		name = AST_Michael_Jeffery
+	AST_Bruce_Scott = {
+		name = AST_Bruce_Scott
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/AST/Portrait_AST_Michael_Jeffery.dds"
-				small = "GFX_idea_AST_Michael_Jeffery" 
+				large = "gfx/leaders/AST/Portrait_AST_Bruce_Scott.dds"
+				small = "GFX_idea_AST_Bruce_Scott" 
 			} 	
 		} 
 		advisor = {
 			slot = security_minister
-			idea_token = AST_Michael_Jeffery_sec
+			idea_token = AST_Bruce_Scott_sec
 			traits = {
 				security_minister
 			}
@@ -101,37 +113,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	AST_Philip_Flood = {
-		name = AST_Philip_Flood
+	AST_Ray_Braithwaite = {
+		name = AST_Ray_Braithwaite
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/AST/Portrait_AST_Philip_Flood.dds"
-				small = "GFX_idea_AST_Philip_Flood" 
-			} 	
-		} 
-		advisor = {
-			slot = foreign_minister
-			idea_token = AST_Philip_Flood_for
-			traits = {
-				foreign_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-	}
-	AST_Peter_Costello = {
-		name = AST_Peter_Costello
-		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/AST/Portrait_AST_Peter_Costello.dds"
-				small = "GFX_idea_AST_Peter_Costello" 
+				large = "gfx/leaders/AST/Portrait_AST_Ray_Braithwaite.dds"
+				small = "GFX_idea_AST_Ray_Braithwaite" 
 			} 	
 		} 
 		advisor = {
 			slot = economy_minister
-			idea_token = AST_Peter_Costello_eco
+			idea_token = AST_Ray_Braithwaite_eco
 			traits = {
 				economy_minister
 			}
@@ -150,7 +142,7 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_AST_Parliament_of_Australia_DESC"
-			ideology = progressivism_democratic_socialism_subtype
+			ideology = progressivism_reformist_socialism_subtype
 			traits = {}
 			expire = "2999.1.1.1"
 		}

@@ -1,10 +1,14 @@
 ﻿capital = 1498
 
-recruit_character = SLO_jozef_sasik
-recruit_character = SLO_mizik_stanislav
-recruit_character = SLO_jozef_viktorin
-recruit_character = SLO_lubomir_hudo
-recruit_character = SLO_vladimir_chovan
+recruit_character = SLO_Peter_Dubcek
+recruit_character = SLO_Jozef_Sasik
+recruit_character = SLO_Jaroslav_Paska
+recruit_character = SLO_Ludovit_Cernak
+recruit_character = SLO_Jozef_Tuchyna
+recruit_character = SLO_Rudolf_Schuster
+recruit_character = SLO_Milan_Fogas
+recruit_character = SLO_Vitazoslav_Moric
+recruit_character = SLO_Anton_Neuwirth
 
 set_oob = "SLO_1962_2"
 
@@ -14,13 +18,14 @@ add_ideas = {
 	###FACTION###
 	Pakt_Schutzstaat
 	###Ministers###
-	SLO_Mizik_Stanislav_hog
-	SLO_Jozef_Viktorin_sec
-	SLO_Lubomir_Hudo_for
-	SLO_Vladimir_Chovan_eco
+	SLO_Jozef_Sasik_hog
+	SLO_Jozef_Tuchyna_sec
+	SLO_Jaroslav_Paska_for
+	SLO_Ludovit_Cernak_eco
 	###Ideas###
 	SLO_German_Autonomous_Zones
 	SLO_Out_Of_Date_Military
+	SLO_Helplessly_Dependent 
 	###SPIRITS###
 	tno_conscription_volunteer_only
 	tno_women_noncombat_only
@@ -56,8 +61,7 @@ add_ideas = {
 	tno_gender_rights_women_in_the_workplace
 	tno_minorities_equal_rights
 	tno_security_police
-	construction_level_4
-	
+ 	
 } 
 
 add_manpower = 15000
@@ -72,16 +76,18 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-	communist = 5
-    socialist = 4
-    progressivism = 4
-    liberalism = 7
-    liberal_conservatism = 0
-    conservatism = 15
-    paternalism = 6
+	communist = 0
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 4
+    conservatism = 0
+    paternalism = 10
     despotism = 0
-    fascism = 12
-	national_socialism = 47
-	ultranationalism = 0
+    fascism = 0
+	national_socialism = 41
+	national_socialism_1 = 25
+	national_socialism_2 = 9
+	ultranationalism = 11
      
 }

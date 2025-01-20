@@ -1,5 +1,18 @@
 capital = 282
 
+recruit_character = JAP_Yasuo_Fukada
+recruit_character = JAP_Ibuki_Bunmei
+recruit_character = JAP_Ibuki_Bunmei_Min
+recruit_character = JAP_Hiroshi_Miyazawa_Min
+recruit_character = JAP_Tadao_Chino_Min
+recruit_character = JAP_Yukihiko_Ikeda
+recruit_character = JAP_Yukihiko_Ikeda_Min
+recruit_character = JAP_Koji_Kakizawa
+recruit_character = JAP_Hirohisa_Fujii
+recruit_character = JAP_Masahiko_Komura
+recruit_character = JAP_Fukushiro_Nukaga
+recruit_character = JAP_Takeshi_Noda
+
 set_oob = "JAP_1962"
 
 load_focus_tree = JAP_focus_starter
@@ -16,8 +29,7 @@ set_country_flag = gui_alert_visible
 create_faction = Japanese_Co-Prosperity_Sphere
 add_to_faction = CHI
 add_to_faction = GNG
-add_to_faction = SYO
-add_to_faction = SRK
+add_to_faction = MLY
 add_to_faction = SIA
 add_to_faction = BRU
 add_to_faction = MAN
@@ -25,7 +37,6 @@ add_to_faction = BUR
 add_to_faction = PHI
 add_to_faction = VIN
 add_to_faction = CAM
-add_to_faction = SBH
 add_to_faction = LAO
 add_to_faction = AZH
 
@@ -43,34 +54,40 @@ set_politics = {
 	election_frequency = 40
 	elections_allowed = yes
 }
-recruit_character = JAP_Yasuo_Fukada
 
 TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
     socialist = 0
-    progressivism = 4
-    liberalism = 29
-    conservatism = 0
-    paternalism = 48
-    despotism = 10
-    fascism = 9
+    progressivism = 0
+    liberalism = 13
+	liberal_conservatism = 10
+    conservatism = 11
+    paternalism = 20
+	paternalism_1 = 19
+	paternalism_2 = 11
+    despotism = 16
+    fascism = 0
     national_socialism = 0
     ultranationalism = 0
-     
 }
 
+
 add_ideas = {
-
-	#Standard#
-
+	#Alliance#
 	Sphere_Leader
-
-   	JAP_Colonial_Crisis
-	JAP_The_Democratic_Facade
-	JAP_The_Economic_Web
-
+	#Spirits#
+	JAP_Samurai_and_Wolf
+	JAP_Two_Suns_One_Sky
+	JAP_Legacy_of_Bronzes
+	JAP_Okurajotai
+	JAP_Mas_Maiorum
+	#Ministers#
+	JAP_Ibuki_Bunmei_hog
+	JAP_Hiroshi_Miyazawa_sec
+	JAP_Tadao_Chino_eco
+	JAP_Yukihiko_Ikeda_for
 	#SOCIETAL DEVELOPMENT
 	tno_nuclear_stockpile_few
 	tno_poverty_rate_10
@@ -81,8 +98,7 @@ add_ideas = {
 	tno_research_facilities_modern
 	tno_academic_base_secondary_schooling
 
-	construction_level_5
-	
+ 	
 	#Political#
 	tno_political_parties_multiparty_system
 	tno_religious_rights_pluralism
@@ -125,12 +141,6 @@ add_ideas = {
 	tno_minorities_segregation
 	tno_drugs_weedbanned
 	tno_security_security_service
-	
-	#Ministers#
-	JAP_minister_Shinzo_Abe_hog
-	JAP_minister_Oriki_Ryoichi_sec
-	JAP_minister_Yoriko_Kawaguchi_for
-	JAP_minister_Hiranuma_Takeo_eco
 }
 
 

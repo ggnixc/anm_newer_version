@@ -1,15 +1,20 @@
-﻿division_template = {
+﻿focus = {
+	current = "MEX_averting_the_crisis"
+	progress = 0
+}
+
+division_template = {
 	name = "División del Ejército"
 
 	#division_names_group = MEX_ARMY_01
 
 	regiments = {
-		APC = { x = 0 y = 0 }
-		APC = { x = 0 y = 1 }
-		APC = { x = 0 y = 2 }
-		IFV = { x = 1 y = 0 }
-		IFV = { x = 1 y = 1 }
-		IFV = { x = 1 y = 2 }
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
 	}
 	support = {
 		artillery = { x = 0 y = 0 }
@@ -21,95 +26,95 @@ division_template = {
 	#division_names_group = MEX_ARMORED_01
 
 	regiments = {
-		MBT = { x = 0 y = 0 }
-		MBT = { x = 0 y = 1 }
+		IFV = { x = 0 y = 0 }
+		IFV = { x = 0 y = 1 }
 		APC = { x = 1 y = 0 }
 		APC = { x = 1 y = 1 }
 	}
 	support = {
-		IFV_recon = { x = 0 y = 0 }
+		AC_recon = { x = 0 y = 0 }
 	}
 }
 
 units = {
-	division= {
+	division = {
 		name = "1ra. División del Ejército"
 		location = 1965 # CDMX
 		division_template = "División del Ejército"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1
 	}
-	division= {
+	division = {
 		name = "2da. División del Ejército"
 		location = 10830 # Chihuahua
 		division_template = "División del Ejército"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.74
 	}
-	division= {
+	division = {
 		name = "3ra. División del Ejército"
 		location = 12461 # Tijuana
 		division_template = "División del Ejército"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1
 	}
-	division= {
+	division = {
 		name = "4ta. División del Ejército"
 		location = 10832 # Chilpancingo
 		division_template = "División del Ejército"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.74
 	}
-	division= {
+	division = {
 		name = "5ta. División del Ejército"
 		location = 14496 # Veracruz
 		division_template = "División del Ejército"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.74
 	}
-	division= {
+	division = {
 		name = "6ta. División del Ejército"
 		location = 12715 # Mérida
 		division_template = "División del Ejército"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.74
 	}
-	division= {
+	division = {
 		name = "7ma. División del Ejército"
 		location = 2021 # Villahermosa
 		division_template = "División del Ejército"
 		start_experience_factor = 0.75
 		start_equipment_factor = 1
 	}
-	division= {
+	division = {
 		name = "8va. División del Ejército"
 		location = 10769 # Monterrey
 		division_template = "División del Ejército"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.74
 	}
-	division= {
+	division = {
 		name = "9na. División del Ejército"
 		location = 7921 # Durango
 		division_template = "División del Ejército"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.74
 	}
-	division= {
+	division = {
 		name = "1ra. Brigada Acorazada"
 		location = 4956 # San Luis Potosí
 		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
 	}
-	division= {
+	division = {
 		name = "2da. Brigada Acorazada"
 		location = 2021 # Villahermosa
 		division_template = "Brigada Acorazada"
 		start_experience_factor = 0.75
 		start_equipment_factor = 0.8
 	}
-	division= {
+	division = {
 		name = "3ra. Brigada Acorazada"
 		location = 5052 # Guadalajara
 		division_template = "Brigada Acorazada"
@@ -180,5 +185,61 @@ instant_effect = {
 		requested_factories = 2
 		progress = 0.1
 		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_0
+			creator = "MEX"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_3
+			creator = "MEX"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "MEX"
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+	if = {
+		limit = {
+			NOT = { has_dlc = "No Step Back" }
+		}
+		add_equipment_production = {
+			equipment = {
+				type = armored_car_equipment_0
+				creator = "MEX"
+			}
+			requested_factories = 1
+			progress = 0.1
+			efficiency = 50
+		}
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		add_equipment_production = {
+			equipment = {
+				type = armored_car_chassis_0
+				creator = "MEX"
+				version_name = "M8 Greyhound"
+			}
+			requested_factories = 1
+			progress = 0.1
+			efficiency = 50
+		}
 	}
 }

@@ -466,7 +466,7 @@ defined_text = {
 	name = GetRedGreenBaseGDPGrowth
 	text = {
 		trigger = {
-			check_variable = { gdp_growth > 0}
+			check_variable = { gdp_growth > 0 }
 		}
 
 		localization_key = DeficitColorRatioGreen
@@ -504,7 +504,7 @@ defined_text = {
 	name = GetRedGreenModifierGDPGrowth
 	text = {
 		trigger = {
-			check_variable = { modifier@gdp_growth_modifier > 0}
+			check_variable = { modifier@gdp_growth_modifier > 0 }
 		}
 
 		localization_key = DeficitColorRatioGreen
@@ -542,7 +542,7 @@ defined_text = {
 	name = GetRedGreenSpendingEffect
 	text = {
 		trigger = {
-			check_variable = { deficit_GDP_growth_effect > 0}
+			check_variable = { deficit_GDP_growth_effect > 0 }
 		}
 
 		localization_key = DeficitColorRatioGreen
@@ -581,7 +581,7 @@ defined_text = {
 	name = GetRedGreenGDPMultiplier
 	text = {
 		trigger = {
-			check_variable = { GDP_growth_multiplier > 0}
+			check_variable = { GDP_growth_multiplier > 0 }
 		}
 
 		localization_key = DeficitColorRatioGreen
@@ -795,7 +795,7 @@ defined_text = {
 	name = GetRedGreenInflationCycling
 	text = {
 		trigger = {
-			check_variable = { inflation_cycling_effect_adjusted < 0}
+			check_variable = { inflation_cycling_effect_adjusted < 0 }
 		}
 
 		localization_key = DeficitColorRatioGreen
@@ -818,7 +818,7 @@ defined_text = {
 	name = GetRedYellowRubberbandInflationCycling
 	text = {
 		trigger = {
-			check_variable = { rubberband_inflation_rate > 0}
+			check_variable = { rubberband_inflation_rate > 0 }
 		}
 
 		localization_key = DeficitColorRatioRed
@@ -845,7 +845,7 @@ defined_text = {
 	name = GetRedGreenInflationRateModifier
 	text = {
 		trigger = {
-			check_variable = { modifier@inflation_rate_modifier < 0}
+			check_variable = { modifier@inflation_rate_modifier < 0 }
 		}
 
 		localization_key = DeficitColorRatioGreen
@@ -969,10 +969,10 @@ defined_text = {
 			set_temp_variable = { surplus = deficit }
 			multiply_temp_variable = { surplus = -1 }
 		}
-		localization_key = "[?surplus|2]"
+		localization_key = "surplus_var_tt"
 	}
 	text = {
-		localization_key = "[?deficit|2]"
+		localization_key = "deficit_var_tt"
 	}
 }
 
@@ -1529,7 +1529,7 @@ defined_text = {
 			multiply_temp_variable = { percent = 100 }
 			divide_temp_variable = { percent = 60 }
 		}
-		localization_key = "[?percent|2]%"
+		localization_key = "percent_var_tt"
 	}
 }
 
@@ -1538,7 +1538,7 @@ defined_text = {
 	text = {
 		trigger = {
 			set_temp_variable = { spending_slider_percent = button_idx }
-			multiply_temp_variable = { spending_slider_percent = 1.66}
+			multiply_temp_variable = { spending_slider_percent = 1.66 }
 			round_temp_variable = spending_slider_percent
 		}
 		localization_key = econ_spending_percent
@@ -1901,6 +1901,25 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = econ_poverty_rate_change_it_number_sl
+	text = {
+		trigger = {
+			set_temp_variable = { poverty_it_display = tno_income_taxation_poverty_monthly_rate }
+			multiply_temp_variable = { poverty_it_display = -1 }
+			check_variable = { poverty_it_display > 0 }
+		}
+		localization_key = econ_poverty_rate_change_it_number_tt_neg
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { poverty_it_display = tno_income_taxation_poverty_monthly_rate }
+			multiply_temp_variable = { poverty_it_display = -1 }
+			check_variable = { poverty_it_display < 0 }
+		}
+		localization_key = econ_poverty_rate_change_it_number_tt_pos
+	}
+}
+defined_text = {
 	name = econ_poverty_rate_change_mw_number_sl
 	text = {
 		trigger = {
@@ -2054,21 +2073,6 @@ defined_text = {
 		localization_key = econ_poverty_rate_change_NOV_MC4_number_tt
 	}
 }
-#ideas
-defined_text = {
-	name = econ_poverty_rate_change_ENG_reconstruction_of_England_sl
-	text = {
-		trigger = { has_idea = ENG_reconstruction_of_England }
-		localization_key = econ_poverty_rate_change_ENG_reconstruction_of_England_tt
-	}
-}
-defined_text = {
-	name = econ_poverty_rate_change_ENG_Lying_In_Ruins_sl
-	text = {
-		trigger = { has_idea = ENG_Lying_In_Ruins }
-		localization_key = econ_poverty_rate_change_ENG_Lying_In_Ruins_tt
-	}
-}
 defined_text = {
 	name = econ_poverty_rate_change_FEN_Reconstruction_Of_England_sl
 	text = {
@@ -2196,7 +2200,7 @@ defined_text = {
 			divide_temp_variable = { missing_gdp = production_units_multiplier }
 			subtract_from_temp_variable = { missing_gdp = totalstateGDP }
 		}
-		localization_key = "[?missing_gdp|2]"
+		localization_key = "missing_gdp_var_tt"
 	}
 }
 
@@ -2293,7 +2297,7 @@ defined_text = {
 defined_text = {
 	name = get_can_afford_consumer_goods_shift_left
 	text = {
-		trigger = { has_political_power > 29 }
+		trigger = { has_political_power > 29.99 }
 		localization_key = econ_consumer_goods_slider_button_left_have_pp_tt
 	}
 	text = {
@@ -2304,7 +2308,7 @@ defined_text = {
 defined_text = {
 	name = get_can_afford_consumer_goods_shift_right
 	text = {
-		trigger = { has_political_power > 29 }
+		trigger = { has_political_power > 29.99 }
 		localization_key = econ_consumer_goods_slider_button_right_have_pp_tt
 	}
 	text = {
@@ -2414,7 +2418,7 @@ defined_text = {
 			set_temp_variable = { total = PU_imports_m }
 			divide_temp_variable = { total = pu_to_gdp_ratio }
 		}
-		localization_key = "[?total|2]"
+		localization_key = "total_var_tt"
 	}
 }
 defined_text = {
@@ -2424,7 +2428,7 @@ defined_text = {
 			set_temp_variable = { total = PU_exports_m }
 			divide_temp_variable = { total = pu_to_gdp_ratio }
 		}
-		localization_key = "[?total|2]"
+		localization_key = "total_var_tt"
 	}
 }
 defined_text = {
@@ -2434,7 +2438,7 @@ defined_text = {
 			set_temp_variable = { total = 1 }
 			divide_temp_variable = { total = pu_to_gdp_ratio }
 		}
-		localization_key = "[?total|2]"
+		localization_key = "total_var_tt"
 	}
 }
 
@@ -2445,7 +2449,7 @@ defined_text = {
 			set_temp_variable = { cost = amount }
 			multiply_temp_variable = { cost = 10 }
 		}
-		localization_key = "[?cost|0]"
+		localization_key = "cost_var_tt"
 	}
 }
 defined_text = {
@@ -2455,7 +2459,7 @@ defined_text = {
 			set_temp_variable = { cost = amount }
 			multiply_temp_variable = { cost = 10 }
 		}
-		localization_key = "[?cost|0]"
+		localization_key = "cost_var_tt"
 	}
 }
 defined_text = {
@@ -2464,7 +2468,7 @@ defined_text = {
 		trigger = {
 			set_temp_variable = { cost = 0 }
 		}
-		localization_key = "[?cost|0]"
+		localization_key = "cost_var_tt"
 	}
 }
 defined_text = {
@@ -2473,7 +2477,7 @@ defined_text = {
 		trigger = {
 			set_temp_variable = { cost = 0 }
 		}
-		localization_key = "[?cost|0]"
+		localization_key = "cost_var_tt"
 	}
 }
 
@@ -2711,7 +2715,7 @@ defined_text = {
 			set_temp_variable = { total = trade_consumer_goods@var:trade_partner }
 			multiply_temp_variable = { total = ZZZ.TNO_export_size^TNO_market_selected_resource }
 		}
-		localization_key = "[?total|0]"
+		localization_key = "[?total]"
 	}
 }
 
@@ -2791,27 +2795,27 @@ defined_text = {
 	name = GetTradeStockpileChange
 	text = {
 		trigger = { check_variable = { resource_type = 2 } }
-		localization_key = "[?TNO_stockpile_aluminium|0=+]"
+		localization_key = "TNO_stockpile_aluminium_var_tt"
 	}
 	text = {
 		trigger = { check_variable = { resource_type = 3 } }
-		localization_key = "[?TNO_stockpile_rubber|0=+]"
+		localization_key = "TNO_stockpile_rubber_var_tt"
 	}
 	text = {
 		trigger = { check_variable = { resource_type = 4 } }
-		localization_key = "[?TNO_stockpile_tungsten|0=+]"
+		localization_key = "TNO_stockpile_tungsten_var_tt"
 	}
 	text = {
 		trigger = { check_variable = { resource_type = 5 } }
-		localization_key = "[?TNO_stockpile_steel|0=+]"
+		localization_key = "TNO_stockpile_steel_var_tt"
 	}
 	text = {
 		trigger = { check_variable = { resource_type = 6 } }
-		localization_key = "[?TNO_stockpile_chromium|0=+]"
+		localization_key = "TNO_stockpile_chromium_var_tt"
 	}
 	text = {
 		trigger = { check_variable = { resource_type = 7 } }
-		localization_key = "[?TNO_stockpile_uranium|0=+]"
+		localization_key = "TNO_stockpile_uranium_var_tt"
 	}
 }
 
@@ -2823,7 +2827,7 @@ defined_text = {
 			add_to_temp_variable = { total = buildings_power_demand }
 			add_to_temp_variable = { total = buildings_uranium_missing_demand }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 }
 
@@ -2837,7 +2841,7 @@ defined_text = {
 			add_to_temp_variable = { total = buildings_oil_demand }
 			add_to_temp_variable = { total = economy_fuel_cost }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -2847,7 +2851,7 @@ defined_text = {
 			add_to_temp_variable = { total = resource_produced@aluminium }
 			add_to_temp_variable = { total = TNO_consumer_goods_aluminium_demand }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -2857,7 +2861,7 @@ defined_text = {
 			add_to_temp_variable = { total = resource_produced@rubber }
 			add_to_temp_variable = { total = TNO_consumer_goods_rubber_demand }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -2867,7 +2871,7 @@ defined_text = {
 			add_to_temp_variable = { total = resource_produced@tungsten }
 			add_to_temp_variable = { total = TNO_consumer_goods_tungsten_demand }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -2878,7 +2882,7 @@ defined_text = {
 			add_to_temp_variable = { total = resource_produced@steel }
 			add_to_temp_variable = { total = TNO_consumer_goods_steel_demand }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -2888,7 +2892,7 @@ defined_text = {
 			add_to_temp_variable = { total = resource_produced@chromium }
 			add_to_temp_variable = { total = TNO_consumer_goods_chromium_demand }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -2898,7 +2902,7 @@ defined_text = {
 			add_to_temp_variable = { total = buildings_uranium_demand }
 			add_to_temp_variable = { total = resource_produced@uranium }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -2906,7 +2910,7 @@ defined_text = {
 			set_temp_variable = { total = PU_consumer_goods_production }
 			multiply_temp_variable = { total = -1 }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 }
 defined_text = {
@@ -2919,7 +2923,7 @@ defined_text = {
 			add_to_temp_variable = { total = buildings_oil_demand }
 			add_to_temp_variable = { total = economy_fuel_cost }
 		}
-		localization_key = "[?total|-0]"
+		localization_key = "total_var_2_tt"
 	}
 	text = {
 		trigger = {
@@ -2928,7 +2932,7 @@ defined_text = {
 			subtract_from_temp_variable = { total = resource@aluminium }
 			add_to_temp_variable = { total = TNO_consumer_goods_aluminium_demand }
 		}
-		localization_key = "[?total|-0]"
+		localization_key = "total_var_2_tt"
 	}
 	text = {
 		trigger = {
@@ -2937,7 +2941,7 @@ defined_text = {
 			subtract_from_temp_variable = { total = resource@rubber }
 			add_to_temp_variable = { total = TNO_consumer_goods_rubber_demand }
 		}
-		localization_key = "[?total|-0]"
+		localization_key = "total_var_2_tt"
 	}
 	text = {
 		trigger = {
@@ -2946,7 +2950,7 @@ defined_text = {
 			subtract_from_temp_variable = { total = resource@tungsten }
 			add_to_temp_variable = { total = TNO_consumer_goods_tungsten_demand }
 		}
-		localization_key = "[?total|-0]"
+		localization_key = "total_var_2_tt"
 	}
 	text = {
 		trigger = {
@@ -2956,7 +2960,7 @@ defined_text = {
 			subtract_from_temp_variable = { total = resource@steel }
 			add_to_temp_variable = { total = TNO_consumer_goods_steel_demand }
 		}
-		localization_key = "[?total|-0]"
+		localization_key = "total_var_2_tt"
 	}
 	text = {
 		trigger = {
@@ -2965,7 +2969,7 @@ defined_text = {
 			subtract_from_temp_variable = { total = resource@chromium }
 			add_to_temp_variable = { total = TNO_consumer_goods_chromium_demand }
 		}
-		localization_key = "[?total|-0]"
+		localization_key = "total_var_2_tt"
 	}
 	text = {
 		trigger = {
@@ -2974,13 +2978,13 @@ defined_text = {
 			add_to_temp_variable = { total = buildings_uranium_demand }
 			subtract_from_temp_variable = { total = resource@uranium }
 		}
-		localization_key = "[?total|-0]"
+		localization_key = "total_var_2_tt"
 	}
 	text = {
 		trigger = {
 			check_variable = { resource_type = 8 }
 		}
-		localization_key = "[?consumer_goods_monthly_use|-0]"
+		localization_key = "consumer_goods_monthly_use_var_tt"
 	}
 }
 defined_text = {
@@ -2990,7 +2994,7 @@ defined_text = {
 			check_variable = { resource_type = 1 }
 			set_temp_variable = { total = resource@oil }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -2998,7 +3002,7 @@ defined_text = {
 			set_temp_variable = { total = TNO_stockpile_aluminium }
 			add_to_temp_variable = { total = resource@aluminium }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -3006,7 +3010,7 @@ defined_text = {
 			set_temp_variable = { total = TNO_stockpile_rubber }
 			add_to_temp_variable = { total = resource@rubber }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -3014,7 +3018,7 @@ defined_text = {
 			set_temp_variable = { total = TNO_stockpile_tungsten }
 			add_to_temp_variable = { total = resource@tungsten }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -3022,7 +3026,7 @@ defined_text = {
 			set_temp_variable = { total = TNO_stockpile_steel }
 			add_to_temp_variable = { total = resource@steel }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -3030,7 +3034,7 @@ defined_text = {
 			set_temp_variable = { total = TNO_stockpile_chromium }
 			add_to_temp_variable = { total = resource@chromium }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -3038,7 +3042,7 @@ defined_text = {
 			set_temp_variable = { total = TNO_stockpile_uranium }
 			add_to_temp_variable = { total = resource@uranium }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 	text = {
 		trigger = {
@@ -3048,7 +3052,7 @@ defined_text = {
 			subtract_from_temp_variable = { total = consumer_goods_monthly_use }
 			subtract_from_temp_variable = { total = TNO_market_consumer_goods }
 		}
-		localization_key = "[?total|+0]"
+		localization_key = "total_var_3_tt"
 	}
 }
 defined_text = {
@@ -4274,12 +4278,20 @@ defined_text = {
 defined_text = {
 	name = GetJoinSphereTooltip
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = SEN } }
-		localization_key = econ_sphere_name_SEN
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
+		localization_key = econ_sphere_name_SOV
 	}
 	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CAO } }
 		localization_key = econ_sphere_name_CAO
+	}
+	text = {
+		trigger = { check_variable = { ECON_SPHERE_LEADER = AZH } }
+		localization_key = econ_sphere_name_AZH
+	}
+	text = {
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SEN } }
+		localization_key = econ_sphere_name_SEN
 	}
 	text = { localization_key = econ_join_sphere_target_0_tt }
 }
@@ -4333,28 +4345,34 @@ defined_text = {
 		localization_key = econ_sphere_name_USA
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = SEN } }
-		localization_key = econ_sphere_name_SEN
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
+		localization_key = econ_sphere_name_SOV
 	}
 	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CAO } }
 		localization_key = econ_sphere_name_CAO
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
-		localization_key = econ_sphere_name_SOV
-	}
-	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CHI } }
 		localization_key = econ_sphere_name_CHI
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = AZH } }
+		trigger = {
+			OR = {
+				check_variable = { ECON_SPHERE_LEADER = AZH }
+				tag = AZH
+			}
+		}
 		localization_key = econ_sphere_name_AZH
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = ENG } }
-		localization_key = econ_sphere_name_ENG
+		trigger = {
+			OR = {
+				check_variable = { ECON_SPHERE_LEADER = SEN }
+				tag = SEN
+			}
+		}
+		localization_key = econ_sphere_name_SEN
 	}
 	text = { localization_key = econ_sphere_name_none }
 }
@@ -4408,28 +4426,34 @@ defined_text = {
 		localization_key = econ_sphere_name_long_USA
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = SEN } }
-		localization_key = econ_sphere_name_long_SEN
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
+		localization_key = econ_sphere_name_long_SOV
 	}
 	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CAO } }
 		localization_key = econ_sphere_name_long_CAO
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
-		localization_key = econ_sphere_name_long_SOV
-	}
-	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CHI } }
 		localization_key = econ_sphere_name_long_CHI
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = AZH } }
+		trigger = {
+			OR = {
+				check_variable = { ECON_SPHERE_LEADER = AZH }
+				tag = AZH
+			}
+		}
 		localization_key = econ_sphere_name_long_AZH
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = ENG } }
-		localization_key = econ_sphere_name_long_ENG
+		trigger = {
+			OR = {
+				check_variable = { ECON_SPHERE_LEADER = SEN }
+				tag = SEN
+			}
+		}
+		localization_key = econ_sphere_name_long_SEN
 	}
 	text = { localization_key = econ_sphere_name_none }
 }
@@ -4483,28 +4507,34 @@ defined_text = {
 		localization_key = econ_sphere_name_tab_USA
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = SEN } }
-		localization_key = econ_sphere_name_tab_SEN
+		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
+		localization_key = econ_sphere_name_tab_SOV
 	}
 	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CAO } }
 		localization_key = econ_sphere_name_tab_CAO
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = SOV } }
-		localization_key = econ_sphere_name_tab_SOV
-	}
-	text = {
 		trigger = { check_variable = { ECON_SPHERE_LEADER = CHI } }
 		localization_key = econ_sphere_name_tab_CHI
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = AZH } }
+		trigger = {
+			OR = {
+				check_variable = { ECON_SPHERE_LEADER = AZH }
+				tag = AZH
+			}
+		}
 		localization_key = econ_sphere_name_tab_AZH
 	}
 	text = {
-		trigger = { check_variable = { ECON_SPHERE_LEADER = ENG } }
-		localization_key = econ_sphere_name_tab_ENG
+		trigger = {
+			OR = {
+				check_variable = { ECON_SPHERE_LEADER = SEN }
+				tag = SEN
+			}
+		}
+		localization_key = econ_sphere_name_tab_SEN
 	}
 	text = { localization_key = econ_sphere_name_none }
 }
@@ -4536,70 +4566,20 @@ defined_text = {
 	name = GetSphereNavySatisfactionTooltip
 	text = {
 		trigger = {
+			has_dlc = "Man the Guns"
 			has_variable = ECON_SPHERE_LEADER
 		}
-		localization_key = econ_sphere_navy_satisfaction_sphere_leader_text
+		localization_key = econ_sphere_navy_satisfaction_sphere_leader_mtg_text
+	}
+	text = {
+		trigger = {
+			NOT = { has_dlc = "Man the Guns" }
+			has_variable = ECON_SPHERE_LEADER
+		}
+		localization_key = econ_sphere_navy_satisfaction_sphere_leader_non_mtg_text
 	}
 	text = {
 		localization_key = econ_sphere_navy_satisfaction_not_sphere_leader_text
-	}
-}
-
-defined_text = {
-	name = GetCurrency
-	# text = {
-	# 	trigger = {
-	# 		# OR = {
-	# 		# 	tag = GER
-	# 		# 	check_variable = { ECON_SPHERE_LEADER = GER }
-	# 			ROOT = {
-	# 				OR = {
-	# 					tag = GER
-	# 					check_variable = { ECON_SPHERE_LEADER = GER }
-	# 				}
-	# 			}
-	# 		#}
-	# 	}
-
-	# 	localization_key = CURRENCY_REICHSMARK
-	# }
-
-	# text = {
-	# 	trigger = {
-	# 		# OR = {
-	# 		# 	tag = JAP
-	# 		# 	check_variable = { ECON_SPHERE_LEADER = JAP }
-	# 			ROOT = {
-	# 				OR = {
-	# 					tag = JAP
-	# 					check_variable = { ECON_SPHERE_LEADER = JAP }
-	# 				}
-	# 			}
-	# 		#}
-	# 	}
-
-	# 	localization_key = CURRENCY_YEN
-	# }
-
-	# text = { # ask about coding this in for all russian folks
-	# 	trigger = {
-	# 		# OR = {
-	# 		# 	is_russian_nation = yes
-	# 		# 	is_kazakh_nation = yes
-	# 			ROOT = {
-	# 				OR = {
-	# 					is_russian_nation = yes
-	# 					is_kazakh_nation = yes
-	# 				}
-	# 			}
-	# 		#}
-	# 	}
-
-	# 	localization_key = CURRENCY_RUBLE
-	# }
-
-	text = {
-		localization_key = CURRENCY_USD
 	}
 }
 
@@ -4613,7 +4593,6 @@ defined_text = {
 				tag = GGR
 				tag = SGR
 				tag = HGR
-				tag = RNW
 				tag = BRG
 				check_variable = { ECON_SPHERE_LEADER = GER }
 			}
@@ -4733,9 +4712,9 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			check_variable = { ECON_SPHERE_LEADER = SEN }
+			check_variable = { ECON_SPHERE_LEADER = SOV }
 		}
-		localization_key = "GFX_econ_sphere_icon_SEN"
+		localization_key = "GFX_econ_sphere_icon_SOV"
 	}
 	text = {
 		trigger = {
@@ -4745,27 +4724,21 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			check_variable = { ECON_SPHERE_LEADER = SOV }
-		}
-		localization_key = "GFX_econ_sphere_icon_SOV"
-	}
-	text = {
-		trigger = {
-			check_variable = { ECON_SPHERE_LEADER = CHI }
-		}
-		localization_key = "GFX_econ_sphere_icon_CHI"
-	}
-	text = {
-		trigger = {
 			check_variable = { ECON_SPHERE_LEADER = AZH }
 		}
 		localization_key = "GFX_econ_sphere_icon_AZH"
 	}
 	text = {
 		trigger = {
-			check_variable = { ECON_SPHERE_LEADER = ENG }
+			check_variable = { ECON_SPHERE_LEADER = SEN }
 		}
-		localization_key = "GFX_econ_sphere_icon_ENG"
+		localization_key = "GFX_econ_sphere_icon_SEN"
+	}
+	text = {
+		trigger = {
+			check_variable = { ECON_SPHERE_LEADER = CHI }
+		}
+		localization_key = "GFX_econ_sphere_icon_CHI"
 	}
 	text = {
 		localization_key = "GFX_econ_sphere_icon_none"
@@ -4782,7 +4755,7 @@ defined_text = {
 				TAG = GGR
 				TAG = SGR
 				TAG = HGR
-				TAG = RNW
+				TAG = UKR
 				check_variable = { ECON_SPHERE_LEADER = GER }
 			}
 		}
@@ -4859,10 +4832,10 @@ defined_text = {
 		trigger = {
 			check_variable = { state_value_B < 1 }
 		}
-		localization_key = "[?state_GDP_contribution|2]M"
+		localization_key = "state_GDP_contribution_var_tt"
 	}
 	text = {
-		localization_key = "[?state_GDP_contribution_B|2]B"
+		localization_key = "state_GDP_contribution_B_var_tt"
 	}
 }
 
@@ -4872,10 +4845,10 @@ defined_text = {
 		trigger = {
 			check_variable = { state_value_B < 1 }
 		}
-		localization_key = "[?state_value|2]M"
+		localization_key = "state_value_var_tt"
 	}
 	text = {
-		localization_key = "[?state_value_B|2]B"
+		localization_key = "state_value_B_var_tt"
 	}
 }
 
@@ -4913,7 +4886,7 @@ defined_text = {
 
 			# NO MORE UNIFICATION HERE
 		}
-		localization_key = "[?temp_real_GDP_growth|2]%"
+		localization_key = "temp_real_GDP_growth_var_tt"
 	}
 }
 
@@ -5326,115 +5299,32 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetEconomyTypeMapTooltip
+	text = {
+		trigger = { check_variable = { TNO_economy_subtype = 0 } }
+		localization_key = "[?TNO_economy_type.GetTokenKey]"
+	}
+	text = { localization_key = "[?TNO_economy_subtype.GetTokenKey]" }
+}
+
+defined_text = {
 	name = GetEconomyTypeTooltip
 	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_American_Capitalism } }
-		localization_key = Econ_Subtype_American_Capitalism_desc
+		trigger = { check_variable = { TNO_economy_subtype = 0 } }
+		localization_key = "[?TNO_economy_type.GetTokenKey]_desc"
 	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Worker_Directed } }
-		localization_key = Econ_Subtype_Worker_Directed_desc
+	text = { localization_key = "[?TNO_economy_subtype.GetTokenKey]_desc" }
+}
+
+# Unique Economy Types Descs
+defined_text = {
+	name = GetStabilizingDevelopmentDesc
+	text = { # Mexico
+		trigger = { tag = MEX }
+		localization_key = "Econ_Subtype_Stabilizing_Development_desc_MEX"
 	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Crown_Corporatism } }
-		localization_key = Econ_Subtype_Crown_Corporatism_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Anarchic } }
-		localization_key = Econ_Subtype_Anarchic_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft } }
-		localization_key = Econ_Subtype_Gelenkte_Wirtschaft_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Military_Directed } }
-		localization_key = Econ_Subtype_Military_Directed_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Burgsys } }
-		localization_key = Econ_Subtype_Burgsys_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Banditry } }
-		localization_key = Econ_Subtype_Banditry_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly } }
-		localization_key = Econ_Subtype_Corporate_Oligopoly_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme } }
-		localization_key = Econ_Subtype_Dirigisme_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Anarcho_Communism } }
-		localization_key = Econ_Subtype_Anarcho_Communism_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Deytsch_Economics } }
-		localization_key = Econ_Subtype_Deytsch_Economics_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_War_Communism } }
-		localization_key = Econ_Subtype_War_Communism_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Permit_Raj } }
-		localization_key = Econ_Subtype_Permit_Raj_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Christian_Anarchism } }
-		localization_key = Econ_Subtype_Christian_Anarchism_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Social_Market } }
-		localization_key = Econ_Subtype_Social_Market_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Socialized_Economy } }
-		localization_key = Econ_Subtype_Socialized_Economy_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Yagoda } }
-		localization_key = Econ_Subtype_Yagoda_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Free_Market } }
-		localization_key = Econ_Subtype_Colonial_Economy_Free_Market_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism } }
-		localization_key = Econ_Subtype_Colonial_Economy_Corporatism_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Planned } }
-		localization_key = Econ_Subtype_Colonial_Economy_Planned_desc
-	}
-	text = {
-		trigger = { check_variable = { TNO_economy_subtype = token:Econ_Subtype_Crown_Credit_Corporatism } }
-		localization_key = Econ_Subtype_Crown_Credit_Corporatism_desc
-	}
-	text = {
-		trigger = {
-			check_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
-			check_variable = { TNO_economy_subtype = 0 }
-		}
-		localization_key = Econ_Type_Capitalism_desc
-	}
-	text = {
-		trigger = {
-			check_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
-			check_variable = { TNO_economy_subtype = 0 }
-		}
-		localization_key = Econ_Type_Corporatism_desc
-	}
-	text = {
-		trigger = {
-			check_variable = { TNO_economy_type = token:Econ_Type_Planned }
-			check_variable = { TNO_economy_subtype = 0 }
-		}
-		localization_key = Econ_Type_Planned_desc
+	text = { # Everyone Else
+		localization_key = "Econ_Subtype_Stabilizing_Development_desc_other"
 	}
 }
 
@@ -5443,7 +5333,7 @@ defined_text = {
 defined_text = {
 	name = econ_schools_coverage
 	text = {
-		trigger = {has_country_flag = TNO_eliminate_building_demand}
+		trigger = { has_country_flag = TNO_eliminate_building_demand } 
 		localization_key = ""
 	}
 	text = {
@@ -5454,7 +5344,7 @@ defined_text = {
 defined_text = {
 	name = econ_offices_coverage
 	text = {
-		trigger = {has_country_flag = TNO_eliminate_building_demand}
+		trigger = { has_country_flag = TNO_eliminate_building_demand } 
 		localization_key = ""
 	}
 	text = {
@@ -5465,7 +5355,7 @@ defined_text = {
 defined_text = {
 	name = econ_hospitals_coverage
 	text = {
-		trigger = {has_country_flag = TNO_eliminate_building_demand}
+		trigger = { has_country_flag = TNO_eliminate_building_demand } 
 		localization_key = ""
 	}
 	text = {
@@ -5476,7 +5366,7 @@ defined_text = {
 defined_text = {
 	name = econ_prisons_coverage
 	text = {
-		trigger = {has_country_flag = TNO_eliminate_building_demand}
+		trigger = { has_country_flag = TNO_eliminate_building_demand } 
 		localization_key = ""
 	}
 	text = {
@@ -5487,7 +5377,7 @@ defined_text = {
 defined_text = {
 	name = econ_barracks_coverage
 	text = {
-		trigger = {has_country_flag = TNO_eliminate_building_demand}
+		trigger = { has_country_flag = TNO_eliminate_building_demand } 
 		localization_key = ""
 	}
 	text = {
@@ -5498,7 +5388,7 @@ defined_text = {
 defined_text = {
 	name = econ_empty_schools_coverage
 	text = {
-		trigger = {check_variable = {school_in_best_empty_state=0}}
+		trigger = { check_variable = { school_in_best_empty_state=0 } }
 		localization_key = ""
 	}
 	text = {
@@ -5509,7 +5399,7 @@ defined_text = {
 defined_text = {
 	name = econ_empty_offices_coverage
 	text = {
-		trigger = {check_variable = {office_in_best_empty_state=0}}
+		trigger = { check_variable = { office_in_best_empty_state=0 } }
 		localization_key = ""
 	}
 	text = {
@@ -5520,7 +5410,7 @@ defined_text = {
 defined_text = {
 	name = econ_empty_hospitals_coverage
 	text = {
-		trigger = {check_variable = {hospital_in_best_empty_state=0}}
+		trigger = { check_variable = { hospital_in_best_empty_state=0 } }
 		localization_key = ""
 	}
 	text = {
@@ -5531,7 +5421,7 @@ defined_text = {
 defined_text = {
 	name = econ_empty_racks_coverage
 	text = {
-		trigger = {check_variable = {barrack_in_best_empty_state=0}}
+		trigger = { check_variable = { barrack_in_best_empty_state=0 } }
 		localization_key = ""
 	}
 	text = {
@@ -5542,7 +5432,7 @@ defined_text = {
 defined_text = {
 	name = econ_empty_prisons_coverage
 	text = {
-		trigger = {check_variable = {prison_in_best_empty_state=0}}
+		trigger = { check_variable = { prison_in_best_empty_state=0 } }
 		localization_key = ""
 	}
 	text = {
@@ -5589,17 +5479,5 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { TNO_economy_help_index = 3 } }
 		localization_key = econ_help_3_d
-	}
-}
-
-## Nuclear Research Trigger Loc
-defined_text = {
-	name = GetAbilitytoResearchNuclear
-	text = {
-		trigger = { has_country_flag = tno_can_research_nuclear_tech }
-		localization_key = TNO_ABLE_TO_RESEARCH_NUCLEAR
-	}
-	text = {
-		localization_key = TNO_UNABLE_TO_RESEARCH_NUCLEAR
 	}
 }

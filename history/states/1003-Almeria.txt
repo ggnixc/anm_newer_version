@@ -1,22 +1,29 @@
-state={
-	id=1003
-	name="STATE_1003"
-	provinces={
-		1192 4065 4095 7196 11956 12038 12083 
-	}
-	history={
+state = {
+	id = 1003
+	name = "STATE_1003"
+
+	history = {
 		owner = IBR
-		victory_points = { 12038 5 }
+		victory_points = {
+			12038 8
+		}
+		victory_points = {
+			747 1
+		}
 		add_core_of = IBR
-		
 		buildings = {
- 			infrastructure = 4
+			infrastructure = 4
 			12038 = {
 				naval_base = 1
 			}
 		}
 	}
-	manpower=466219
-	buildings_max_level_factor=1.000
-	state_category = town
+
+	provinces = {
+		747 4065 7196 11956 12038
+	}
+	manpower = 362759
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
 }

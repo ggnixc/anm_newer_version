@@ -1,31 +1,33 @@
+state = {
+	id = 1642
+	name = "STATE_1642"
 
-state={
-	id=1642
-	name="STATE_1642"
-
-	history={
+	history = {
 		owner = MAN
 		victory_points = {
-			14629 5 
+			14629 10
 		}
 		victory_points = {
-			7812 5 
+			19588 3
 		}
-		set_state_flag = state_renamings
+		victory_points = {
+			14632 1
+		}
+  		set_state_flag = state_renamings
 		buildings = {
 			arms_factory = 1
- 			infrastructure = 4
- 
-		}
+			infrastructure = 3
+ 		}
 		add_core_of = MAN
-
+		set_state_flag = state_category_pastoral
 	}
 
-	provinces={
-		1502 1558 1638 7812 11903 12337 12485 14626 14629 14631 
+	provinces = {
+		1502 1558 1638 4514 6893 7812 9831 11836 11903 12337 12469 14626 14629 14632 19542 19588 19825
 	}
-	manpower=2976090
-	buildings_max_level_factor=1.000
-	state_category=town
-	local_supplies=0.000
+	manpower = 2870499
+
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
 }

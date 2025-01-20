@@ -1,49 +1,144 @@
 ﻿add_namespace = JAP.general
 add_namespace = JAP.new
+add_namespace = JAP_debug_event
 
-## Japan
+### Debug events ###
+country_event = { #Leader change
+	id = JAP_debug_event.1
+	title = JAP_debug_event.1.t
+	desc = JAP_debug_event.1.desc
 
-country_event = {
-      	id = JAP.general.1
-      	immediate = { log = "[GetDateText]: [Root.GetName]: event JAP.general.1" }
-	      title = JAP.general.1.t
-	      desc = JAP.general.1.desc
-	      picture = GFX_anm_JAP_POV
+	is_triggered_only = yes
 
-	      is_triggered_only = no
-	      fire_only_once = yes
- 
-	      option = { #
-		            name = JAP.general.1.a
-	      }
+	option = { 
+		name = JAP_debug_event.1.a
+		hidden_effect = { 
+			remove_country_leader_role = {
+				character = JAP_Yasuo_Fukada
+				ideology = paternalism_technocratic_corporatism_subtype
+			}
+			add_country_leader_role = {
+				character = JAP_Ibuki_Bunmei
+				promote_leader = yes
+				country_leader = {
+					expire = "2999.1.1"
+					desc = "POLITICS_IBUKI_BUNMEI_DESC"
+					ideology = paternalism_paternalistic_developmentalism_subtype
+					traits = { JAP_Prime_Minister }
+				}
+			}
+		} 
+	}
+	option = { 
+		name = JAP_debug_event.1.b
+		hidden_effect = { 
+			remove_country_leader_role = {
+				character = JAP_Yasuo_Fukada
+				ideology = paternalism_technocratic_corporatism_subtype
+			}
+			add_country_leader_role = {
+				character = JAP_Yukihiko_Ikeda
+				promote_leader = yes
+				country_leader = {
+					expire = "2999.1.1"
+					desc = "POLITICS_YUKIJIKO_IKEDA_DESC"
+					ideology = paternalism_paternalistic_developmentalism_subtype
+					traits = { JAP_Prime_Minister }
+				}
+			}
+		}	
+	}
+	option = { 
+		name = JAP_debug_event.1.c
+		hidden_effect = { 
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = yes
+				last_election = "1996.10.10"
+				election_frequency = 48
+			}
+			remove_country_leader_role = {
+				character = JAP_Yasuo_Fukada
+				ideology = paternalism_technocratic_corporatism_subtype
+			}
+			add_country_leader_role = {
+				character = JAP_Koji_Kakizawa
+				promote_leader = yes
+				country_leader = {
+					expire = "2999.1.1"
+					desc = "POLITICS_KOJI_KAKIZAWA_DESC"
+					ideology = despotism_interim_government_subtype
+					traits = { JAP_Prime_Minister }
+				}
+			}
+		}	
+	}
 }
 
-country_event = {
-      	id = JAP.general.2
-      	immediate = { log = "[GetDateText]: [Root.GetName]: event JAP.general.2" }
-	      title = JAP.general.2.t
-	      desc = JAP.general.2.desc
-	      picture = GFX_anm_JAP_Paradox_POV
 
-	      is_triggered_only = no
-	      fire_only_once = yes
+### ??? ###
+country_event = {
+    id = JAP.general.1
+	title = JAP.general.1.t
+	desc = JAP.general.1.desc
+	picture = GFX_anm_JAP_Reflections
+
+	is_triggered_only = no
+	fire_only_once = yes
  
-	      option = { #
-		            name = JAP.general.2.a
-	      }
+	option = { #
+		name = JAP.general.1.a
+	}
 }
-
 country_event = {
-      	id = JAP.general.3
-      	immediate = { log = "[GetDateText]: [Root.GetName]: event JAP.general.3" }
-	      title = JAP.general.3.t
-	      desc = JAP.general.3.desc
-	      picture = GFX_anm_JAP_Debate_POV
+    id = JAP.general.2
+	title = JAP.general.2.t
+	desc = JAP.general.2.desc
+	picture = GFX_anm_JAP_Reckoning
 
-	      is_triggered_only = no
-	      fire_only_once = yes
+	is_triggered_only = no
+	fire_only_once = yes
  
-	      option = { #
-		            name = JAP.general.3.a
-	      }
+	option = { #
+		name = JAP.general.2.a
+	}
+}
+country_event = {
+    id = JAP.general.3
+	title = JAP.general.3.t
+	desc = JAP.general.3.desc
+	picture = GFX_anm_JAP_SNL
+
+	is_triggered_only = no
+	fire_only_once = yes
+ 
+	option = { #
+		name = JAP.general.3.a
+	}
+}
+country_event = {
+    id = JAP.general.4
+	title = JAP.general.4.t
+	desc = JAP.general.4.desc
+	picture = GFX_anm_JAP_Conference
+
+	is_triggered_only = no
+	fire_only_once = yes
+ 
+	option = { #
+		name = JAP.general.4.a
+	}
+}
+country_event = {
+    id = JAP.general.5
+	title = JAP.general.5.t
+	desc = JAP.general.5.desc
+	picture = GFX_anm_JAP_Poking
+
+	is_triggered_only = no
+	fire_only_once = yes
+ 
+	option = { #
+		name = JAP.general.5.a
+	}
 }

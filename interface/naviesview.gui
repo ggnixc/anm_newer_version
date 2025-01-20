@@ -27,7 +27,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "taskforces_selected"
 			position = {x=22 y=3}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 500
 			maxHeight = 23
 			format = left
@@ -244,13 +244,6 @@ guiTypes = {
 			name = "hidden_btn_hold_h"
 			spriteType = "GFX_tiled_window_transparent_transparent"
 			shortcut = "h"
-			clicksound = click_default
-		}
-
-		# hidden shortcut button for the hold mission
-		buttonType = {
-			name = "hidden_btn_hold_ctrl_h"
-			spriteType = "GFX_tiled_window_transparent_transparent"
 			shortcut = "ctrl+h"
 			clicksound = click_default
 		}
@@ -374,6 +367,20 @@ guiTypes = {
 				position = {x=214 y=@nv_tb_btn_y}
 				spriteType = "GFX_NV_btn_taskforce_o_matic"
 				clicksound = click_default
+			}
+
+			buttonType = {
+				position = { x=244 y=@nv_tb_btn_y }
+				name = "btn_base_underway_replenishment"
+				spriteType = "GFX_NV_btn_base_partial_toggle"
+				clicksound = click_default
+			}
+
+			iconType = {
+				name = "btn_underway_replenishment"
+				position = {x=244 y=@nv_tb_btn_y}
+				spriteType = "GFX_NV_btn_underway_replenishment"
+				alwaystransparent = yes
 			}
 
 			buttonType = {
@@ -521,7 +528,7 @@ guiTypes = {
 		editBoxType = {
 			name = "fleet_name"
 			position = {x=46 y=12}
-			font = "aldrich_20_outlinedark"
+			font = "Bomb_16"
 			size = { x=212 y=23 }
 			text = "FLEET_NAME_HERE"
 		}
@@ -529,7 +536,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "taskforce_count"
 			position = {x=318 y=12}
-			font = "aldrich_white_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 90
 			maxHeight = 23
 			format = center
@@ -604,14 +611,14 @@ guiTypes = {
 			spriteType = "GFX_select_all_armylist_short_btn"
 			position = { x=383 y=136 }
 			clicksound = click_default
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "SELECT_ALL"
 		}
 
 		instantTextboxType = {
 			name = "active_in_regions"
 			position = {x=16 y=135}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 290
 			maxHeight = 23
 			format = left
@@ -643,14 +650,14 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "click_to_assign"
-			position = { x = 7 y = 56 }
-			font = "aldrich_18_outlinedark"
+			position = { x = 6 y = 60 }
+			font = "aldrich_18_outline"
+			borderSize = { x = 2 y = 2 }
 			text = "CLICK_TO_ASSIGN"
-			maxWidth = 62
-			maxHeight = 40
+			maxWidth = 58
+			maxHeight = 32
 			format = center
 			Orientation = "UPPER_LEFT"
-			alwaystransparent = yes
 		}
 
 		iconType = {
@@ -666,11 +673,20 @@ guiTypes = {
 			spriteType = "GFX_leader_details_icon"
 			pdx_tooltip = "CLICK_TO_ASSIGN_TRAITS"
 		}
+		
+		buttonType = {
+			name = "btn_advisor_tree"
+			position = { x=38 y = 110}
+			quadTextureSprite ="GFX_give_role_leader_strip"
+			buttonFont = "aldrich_18_outline"
+			clicksound = click_default
+			frame = 1
+		}
 
 		instantTextboxType = {
 			name = "leader_desc"
 			position = {x=81 y=50}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 140
 			maxHeight = 23
 			format = left
@@ -680,7 +696,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_name"
 			position = {x=81 y=70}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 350
 			maxHeight = 23
 			fixedsize = yes
@@ -696,7 +712,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_attack_text"
 			position = {x=217 y=53}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -712,7 +728,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_defense_text"
 			position = {x=235 y=53}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -728,7 +744,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_maneuvering_text"
 			position = {x=253 y=53}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -744,7 +760,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "leader_stat_coordination_text"
 			position = {x=270 y=53}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -791,7 +807,7 @@ guiTypes = {
 			name = "background"
 			position = { x=0 y=0 }
 			size = { x=72 y=93 }
-			spriteType = "GFX_tiled_plain_bg_small"
+			spriteType = "GFX_tiled_decisions_bg_crt_small"
 		}
 
 		iconType = {
@@ -851,7 +867,7 @@ guiTypes = {
 		editBoxType = {
 			name = "unit_name"
 			position = {x=46 y=10}
-			font = "aldrich_20_outlinedark"
+			font = "Bomb_16"
 			size = { x=212 y=23 }
 			orientation = left
 		}
@@ -876,7 +892,7 @@ guiTypes = {
 			position = { x=396 y=9 }
 			spriteType = "GFX_NV_btn_select"
 			text = "SELECT"
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_22_outline"
 		}
 
 		buttonType = {
@@ -927,7 +943,7 @@ guiTypes = {
 			name = "activity_description"
 			position = { x=60 y=38 }
 			text = "I DO THAT"
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 299
 			maxHeight = 40
 			format = left
@@ -952,6 +968,13 @@ guiTypes = {
 			name = "current_activity"
 			position = { x=12 y=41 }
 			spriteType = "GFX_NV_all_activities"
+			frame = 1
+		}
+
+		iconType = {
+			name = "underway_replenishment_icon"
+			position = {x=330 y=43}
+			spriteType = "GFX_NV_btn_underway_replenishment"
 			frame = 1
 		}
 
@@ -1151,7 +1174,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_name"
 			position = {x=184 y=3}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 300
 			maxHeight = 23
 			fixedsize = yes
@@ -1171,7 +1194,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_type"
 			position = {x=210 y=23}
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			text = "test"
 			maxWidth = 200
 			maxHeight = 23
@@ -1278,7 +1301,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ships_count"
 			position = {x=34 y=-1}
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 30
 			maxHeight = 16
 			format = left
@@ -1296,7 +1319,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "required_ships_count"
 			position = {x=34 y=16}
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 15
 			maxHeight = 23
 			format = left
@@ -1331,7 +1354,7 @@ guiTypes = {
 			name = "header_text"
 			position = { x = 35 y = 14 }
 			textureFile = ""
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = "MOVE_SHIPS_TITLE"
 			maxWidth = 470
@@ -1434,7 +1457,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "header_text"
 			position = { x = 20 y = 15 }
-			font = "aldrich_30_outlinedark"
+			font = "aldrich_32_outline"
 			borderSize = {x = 0 y = 0}
 			text = "TASK_FORCE_COMPOSITION_EDITOR_TITLE"
 			maxWidth = 470
@@ -1457,7 +1480,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_sort_button_140x29"
 			frame = 1
 			buttonText = "FE_CANCEL"
-			buttonFont = "aldrich_22_outlinedark"
+			buttonFont = "aldrich_24_outline"
 			clicksound = click_default
 		}
 
@@ -1468,7 +1491,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_sort_button_140x29"
 			frame = 1
 			buttonText = "OK"
-			buttonFont = "aldrich_22_outlinedark"
+			buttonFont = "aldrich_24_outline"
 			shortcut = "RETURN"
 			clicksound = click_default
 		}
@@ -1529,7 +1552,7 @@ guiTypes = {
 			editBoxType = {
 				name = "template_name"
 				position = { x = 45 y = 2 }
-				font = "aldrich_22_outlinedark"
+				font = "aldrich_24_outline"
 				size = { x=268 y=20 }
 				text = "TEMPLATE_NAME"
 			}
@@ -1557,7 +1580,7 @@ guiTypes = {
 
 				background = {
 					name = "Background"
-					quadTextureSprite ="GFX_tiled_window_1b_thin_border"
+					quadTextureSprite ="GFX_tiled_decisions_bg_crt_small"
 					position = { x = 0 y = 0 }
 				}
 
@@ -1608,7 +1631,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "header_text"
 			position = { x = 16 y = 14 }
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = "NAVAL_SUB_UNIT_DEF_SELECTION_WINDOW_TITLE"
 			maxWidth = 340
@@ -1682,7 +1705,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_name"
 			position = {x=160 y=11}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 300
 			maxHeight = 23
 			fixedsize = yes
@@ -1712,7 +1735,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_name"
 			position = {x=127 y=5}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 300
 			maxHeight = 23
 			format = left
@@ -1721,7 +1744,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_type"
 			position = {x=127 y=21}
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			maxWidth = 300
 			maxHeight = 23
 			format = left
@@ -1749,7 +1772,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "label"
 			position = { x=0 y=0 }
-			font = "aldrich_18_outlinedark"
+			font = "aldrich_20_outline"
 			text = "Template entry"
 			maxWidth = 268
 		}
@@ -1777,7 +1800,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_name"
 			position = {x=196 y=11}
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			maxWidth = 220
 			maxHeight = 23
 			format = left
@@ -1810,7 +1833,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "amount"
 			position = { x=404 y=15 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			maxWidth = 50
 			maxHeight = 23
 			format = center
@@ -1925,7 +1948,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "ship_count_box"
 			position = { x = 10 y = 16 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			text = 999
 			maxWidth = 30
 			maxHeight = 16
@@ -2047,7 +2070,7 @@ guiTypes = {
 			name = "outdated_equipment_label"
 			position = { x = -317 y = 14 }
 			textureFile = ""
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = "OUTDATED_EQ"
 			maxWidth = 200
@@ -2061,7 +2084,7 @@ guiTypes = {
 			name = "description"
 			position = { x = 20 y = 48 }
 			textureFile = ""
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = "REFIT_DESCRIPTION"
 			maxWidth = 455
@@ -2075,7 +2098,7 @@ guiTypes = {
 			name = "no_matches"
 			position = { x = 95 y = 98 }
 			textureFile = ""
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = "REFIT_NO_SHARED_MATCHES"
 			maxWidth = 301

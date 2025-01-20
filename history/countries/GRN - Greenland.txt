@@ -1,4 +1,10 @@
-﻿capital = 1335
+﻿capital = 101
+
+recruit_character = GRN_Lars_Emil_Johansen
+recruit_character = GRN_Josef_Motzfeldt
+recruit_character = GRN_Per_Berthelsen
+recruit_character = GRN_Daniel_Skifte
+recruit_character = GRN_John_McCain
 
 add_ideas = {
     ##FACTION STATUS##
@@ -14,17 +20,17 @@ add_ideas = {
 	##SOCIETAL DEVELOPMENT##
 	
 	##MINISTERS##
-	GRN_gary_roughead_hog
-	GRN_james_cain_for
-	GRN_asii_chemnitz_narup_eco
-	GRN_barry_costello_sec
+	GRN_johnathan_motzfeldt_hog
+	GRN_josef_motzfeldt_for
+	GRN_per_berthelsen_eco
+	GRN_wesley_clark_sec
 }
 
 set_research_slots = 3
 
 set_politics = {	
-	ruling_party = paternalism
-	last_election = "1962.1.1"
+	ruling_party = progressivism
+	last_election = "1996.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
@@ -34,24 +40,13 @@ TNO_startup_nation = yes
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 0
-    progressivism = 0
-    liberalism = ß
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 100
+    socialist = 22
+    progressivism = 45
+    liberalism = 5
+    liberal_conservatism = 20
+    conservatism = 8
+    paternalism = 0
     despotism = 0
     fascism = 0
      
-}
-
-create_country_leader = {
-	name = "Hans Enoksen"
-	desc = "POLITICS_HANS_ENOKSEN_DESC"
-	picture = "Portrait_GRN_Hans_Enoksen.dds"
-	expire = "1999.1.1"
-	ideology = paternalism_subtype
-	traits = {
-		#
-	}
 }

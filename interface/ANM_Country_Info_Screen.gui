@@ -15,7 +15,7 @@ guiTypes = {
 
 	containerwindowtype = {
 		name = "ANM_Country_Info_Screen"
-		size = { width = 943 height = 442 }
+		size = { width = 945 height = 552 }
 		orientation = center
 		position = { x = -471 y = -221 }
 		moveable = yes
@@ -30,7 +30,7 @@ guiTypes = {
 		}
 		iconType = {
 			name = "poster"
-			position = { x = 747 y = 29 }
+			position = { x = 747 y = 50 }
 			alwaystransparent = yes
 		} 
 		iconType = {
@@ -39,13 +39,23 @@ guiTypes = {
 			spriteType = "GFX_CountryInfo_background"
 			alwaystransparent = yes
 		}
+		instantTextBoxType = {
+			name = "countryinfo_title"
+			position = { x = 40 y = 13 }
+			text = "Country Information Panel"
+			font = "aldrich_white_20_outline"
+			maxwidth = 500
+			maxheight = 32
+			format = left
+			alwaystransparent = yes
+		}
 
 		### Tabs at the top ###
 		# CountryInfo_top_tabs_entry
 		gridboxtype = {
 			name = "top_tabs"
-			position = { x = 99 y = -42 }
-			slotsize = { width = 188 height = 45 }
+			position = { x = 69 y = 46 }
+			slotsize = { width = 122 height = 70 }
 			add_horizontal = yes
 			max_slots_horizontal = 4
 		}
@@ -54,12 +64,12 @@ guiTypes = {
 
 		iconType = {
 			name = "flag"
-			position = { x = 10 y = 35 }
+			position = { x = 8 y = 81 }
 			spriteType = "GFX_flag_small"
 		}
 		instantTextBoxType = {
 			name = "country_name"
-			position = { x = 40 y = 28 }
+			position = { x = 38 y = 74 }
 			text = "[ROOT.GetName]"
 			font = "aldrich_16_outline"
 			maxwidth = 150
@@ -72,7 +82,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "gridbox_container"
 			size = { width = 177 height = 400 }
-			position = { x = 14 y = 70 }
+			position = { x = 14 y = 112 }
 			clipping = yes
 			# CountryInfo_Folder_Entry and CountryInfo_Content_Entry
 			gridboxtype = {
@@ -87,18 +97,17 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "center_title"
-			position = { x = 195 y = 37 }
+			position = { x = 195 y = 79 }
 			text = "==[CountryInfo_GET_Content_Country]=="
-			font = "aldrich_28_outline"
+			font = "aldrich_bold_24_outline"
 			maxwidth = 545
 			maxheight = 32
 			format = left
-			text_color_code = G
 			format = center
 		}
 		instantTextBoxType = {
 			name = "center_desc"
-			position = { x = 195 y = 80 }
+			position = { x = 195 y = 122 }
 			text = "[CountryInfo_GET_Content_desc_Country]"
 			font = "aldrich_16_outline"
 			maxwidth = 545
@@ -110,11 +119,11 @@ guiTypes = {
 		
 		buttonType = {
 			name = "close_button"
-			quadTextureSprite = "GFX_button_123x34" 
-			buttonFont = "aldrich_20_outlinedark"
+			quadTextureSprite = "GFX_tno_button_123x34" 
+			buttonFont = "aldrich_16_outline"
 			buttonText = "[GET_CLOSEBUTTON_TEXT]"
 			pdx_tooltip = "ANM_COUNTRY_INFO_BUTTON_TT"
-			position = { x = 782 y = 453 }
+			position = { x = 782 y = 512 }
 			shortcut = "ESCAPE"
 		}
 
@@ -253,31 +262,17 @@ guiTypes = {
 	# Belonging to `top_tabs`
 	containerWindowType = {
 		name = "CountryInfo_top_tabs_entry"
-		size = { width = 188 height = 45 }
 		buttonType = {
 			name = "tab_button"
 			spriteType = "GFX_CountryInfo_top_tabs"
 			clicksound = "open_sub_window"
 		}
-		containerWindowType = {
-			name = "clipper"
-			position = { x = 9 y = 0 }
-			size = { width = 100%% height = 41 }
-			clipping = yes
-			iconType = {
-				name = "tab_icon"
-				position = { x = 0 y = 9 }
-				alwaystransparent = yes
-			}
-		}
 		instantTextBoxType = {
 			name = "tab_text"
-			position = { x = 42 y = 9 }
+			position = { x = -37 y = 5 }
 			text = [CountryInfo_GET_tab_name]
-			font = "aldrich_14_outline"
-			maxwidth = 137
-			maxheight = 32
-			vertical_alignment = center
+			font = "aldrich_12_outline"
+			format = center
 			alwaystransparent = yes
 		}
 	}
@@ -296,7 +291,7 @@ guiTypes = {
 			name = "folder_text"
 			position = { x = 5 y = 0 }
 			text = [CountryInfo_GET_Folder_Country]
-			font = "aldrich_18_outline"
+			font = "aldrich_16_outline"
 			maxwidth = 150
 			maxheight = 30
 			vertical_alignment = center

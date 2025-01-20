@@ -20,6 +20,19 @@ ideas = {
 				resistance_activity = 0.15
 			}
 		}
+		IRE_only_in_for_the_money = {
+			allowed = { always = no }
+			picture = IRE_only_in_for_the_money
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.2
+				national_socialism_acceptance = -5
+			}
+			targeted_modifier = {
+				tag = GER
+				trade_opinion_factor = 0.25
+			}
+		}
 		IRE_pakts_middleman = { 
 			allowed = { always = no }
 			picture = IRE_pakts_middleman
@@ -49,6 +62,16 @@ ideas = {
 				supply_consumption_factor = 0.20
 				command_power_gain = -0.10
 				base_fuel_gain_factor = -0.20
+			}
+		}
+		ULS_home_away_from_home = { 
+			allowed = { always = no }
+			picture = ULS_home_away_from_home
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.075
+				war_support_factor = 0.10
+				stability_factor = -0.15
 			}
 		}
 	}

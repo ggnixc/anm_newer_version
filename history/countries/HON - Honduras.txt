@@ -3,10 +3,10 @@
 set_oob = "HON_1962"
 
 set_politics = {	
-	ruling_party = despotism
-	last_election = "1961.1.20"
+	ruling_party = conservatism
+	last_election = "1991.11.26"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 
 }
 
@@ -21,32 +21,20 @@ add_ideas = {
 	HON_Jose_Manuel_Zelaya_Rosales_sec
 	}
 	
-HON = { add_opinion_modifier = { target = JAP modifier = TNO_japanese_influenced } }
-GUA = { add_opinion_modifier = { target = JAP modifier = TNO_japanese_influenced } }
-NIC = { add_opinion_modifier = { target = JAP modifier = TNO_japanese_influenced } }
 TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 0
-    progressivism = 30
-    liberalism = 20
-    liberal_conservatism = 20
-    conservatism = 0
+    socialist = 5
+    progressivism = 10
+    liberalism = 35
+    liberal_conservatism = 10
+    conservatism = 40
     paternalism = 0
-    despotism = 30
+    despotism = 0
     fascism = 0
      
 }
-create_country_leader = {
-	
-	name = "Romeo Vasquez Velaquez"
-	desc = "POLITICS_Romeo_Velasquez_DESC"
-	picture = "Portrait_HON_Ramon_Morales.dds"
-	expire = "2090.1.1"
-	ideology = despotism_interim_government_subtype
-	traits = {
-		
-	}
-}
+
+recruit_character = HON_Rafael_Callejas

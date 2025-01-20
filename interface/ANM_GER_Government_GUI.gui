@@ -1,4 +1,5 @@
 guiTypes = {
+	
 	containerWindowType = {
 		name = "ANM_reichsstability_Button_GUI"
 		size = { width = 50 height = 50 }
@@ -11,290 +12,792 @@ guiTypes = {
 			pdx_tooltip = "scripted_gui_open_reischsstability_button"
 		}
 	}
+
 	containerWindowType = {
 		name = "ANM_reichsstabilitat_GUI"
-		size = { width = 1410 height = 1010 }
-		position = { x = 250 y = 50 }
-		show_position = { x= 250 y= 50 }
-		moveable = yes
+		size = { width = 1002 height = 752 }
+		position = { x= 545 y= 80 }
 		
 		background = {
 			name = "reichsstabilitat_background"
 			spriteType = "GFX_reichsstabilitat_background"
 		}
+
+		instantTextboxType = {
+			name = "reichstabilitat_title"
+			position = { x = 37 y = 13 }
+			font = "aldrich_white_22_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Regierung des Deutschen Reiches"
+			maxWidth = 500
+			maxHeight = 30
+			fixedsize = yes
+		}
 		
 		buttonType = {
 			name = "reichsstabilitat_close"
 			spriteType = "GFX_reichsstability_close_button"
-			position = { x = 1300 y = 10 }
+			shortcut = "ESCAPE"
+			position = { x = 961 y = 13 }
 		}
 
+		#Tab buttons
+		buttonType = {
+			name = "Tab_1_Title"
+			position = { x = 20 y = 61 }
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "Reichsleitung"
+		}
+		buttonType = {
+			name = "Tab_2_Title"
+			position = { x = 242 y = 61 }
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "NSDAP Institutions"
+		}
+		buttonType = {
+			name = "Tab_3_Title"
+			position = { x = 464 y = 61 }
+			spriteType = "GFX_Government_Tab_Button"
+			buttonFont = "aldrich_18_outline"
+			buttonText = "Reich Senate"
+		}
+
+	} 
+	
+	containerWindowType = {
+		name = "ANM_reichsstabilitat_GUI_tab1"
+		size = { width = 1002 height = 752 }
+		position = { x= 545 y= 80 }
+
+		iconType = {
+			name = "reichsstabilitat_tab_1"
+			spriteType = "GFX_reichsstabilitat_tab_1"
+			position = { x= 0 y= 0 } 
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "Tab_1_Reichsleiters"
+			position = { x = 68 y = 378 }
+			font = "aldrich_16_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Reichsleiters"
+			maxWidth = 500
+			maxHeight = 30
+			fixedsize = yes
+		}
+
+		### Tab 1 - Persons ### 
+		## Large (70%) ## 
+		iconType = {
+			name = "government_albert_speer_jr"
+			pdx_tooltip = "government_albert_speer_jr"
+			pdx_tooltip_delayed = "government_albert_speer_jr_long"
+			spriteType = "GFX_government_albert_speer_jr"
+			position = { x = 446 y = 173 }
+			scale = 0.7
+		}
 		iconType = {
 			name = "government_martin_mussgnug"
 			pdx_tooltip = "government_martin_mussgnug"
 			pdx_tooltip_delayed= "government_martin_mussgnug_long"
 			spriteType = "GFX_government_martin_mussgnug"
-			position = { x = 897 y = 173 }
-			scale = 0.9
+			position = { x = 58 y = 196 }
+			scale = 0.7
 		}
-		iconType = {
-			name = "government_gunther_deckert"
-			pdx_tooltip = "government_gunther_deckert"
-			pdx_tooltip_delayed= "government_gunther_deckert_long"
-			spriteType = "GFX_government_gunther_deckert"
-			position = { x = 371 y = 223 }
-			scale = 0.9
-		}
-		iconType = {
-			name = "government_joseph_fischer"
-			pdx_tooltip = "government_joseph_fischer"
-			pdx_tooltip_delayed= "government_joseph_fischer_long"
-			spriteType = "GFX_government_joseph_fischer"
-			position = { x = 210 y = 223 }
-			scale = 0.9
+		iconType = { 
+			name = "government_olaf_rose"
+			pdx_tooltip = "government_olaf_rose"
+			pdx_tooltip_delayed= "government_olaf_rose_long"
+			spriteType = "GFX_government_olaf_rose"
+			position = { x = 213 y = 196 }
+			scale = 0.7
 		}
 		iconType = {
 			name = "government_gerhard_frey"
 			pdx_tooltip = "government_gerhard_frey"
 			pdx_tooltip_delayed= "government_gerhard_frey_long"
 			spriteType = "GFX_government_gerhard_frey"
-			position = { x = 49 y = 223 }
-			scale = 0.9
+			position = { x = 676 y = 196 }
+			scale = 0.7
+		}
+		iconType = {
+			name = "government_rudiger_lucassen"
+			pdx_tooltip = "government_rudiger_lucassen"
+			pdx_tooltip_delayed= "government_rudiger_lucassen_long"
+			spriteType = "GFX_government_rudiger_lucassen"
+			position = { x = 831 y = 196 }
+			scale = 0.7
 		}
 
+		## Small (45%) ##
 		iconType = {
-			name = "government_walter_bachmann"
-			pdx_tooltip = "government_walter_bachmann"
-			pdx_tooltip_delayed= "government_walter_bachmann_long"
-			spriteType = "GFX_government_walter_bachmann"
-			position = { x = 90 y = 501 }
-			scale = 0.8
+			name = "government_albrecht_glaser"
+			pdx_tooltip = "government_albrecht_glaser"
+			pdx_tooltip_delayed= "government_albrecht_glaser_long"
+			spriteType = "GFX_government_albrecht_glaser"
+			position = { x = 70 y = 414 }
+			scale = 0.45
 		}
 		iconType = {
 			name = "government_alexander_gauland"
 			pdx_tooltip = "government_alexander_gauland"
 			pdx_tooltip_delayed= "government_alexander_gauland_long"
 			spriteType = "GFX_government_alexander_gauland"
-			position = { x = 248 y = 501 }
-			scale = 0.8
+			position = { x = 169 y = 414 }
+			scale = 0.45
+		}
+		iconType = {
+			name = "government_hans_helmuth_knutter"
+			pdx_tooltip = "government_hans_helmuth_knutter"
+			pdx_tooltip_delayed= "government_hans_helmuth_knutter_long"
+			spriteType = "GFX_government_hans_helmuth_knutter"
+			position = { x = 268 y = 414 }
+			scale = 0.45
 		}
 		iconType = {
 			name = "government_franz_schonhuber"
 			pdx_tooltip = "government_franz_schonhuber"
 			pdx_tooltip_delayed= "government_franz_schonhuber_long"
 			spriteType = "GFX_government_franz_schonhuber"
-			position = { x = 406 y = 501 }
-			scale = 0.8
-		}
-		iconType = {
-			name = "government_christian_worch"
-			pdx_tooltip = "government_christian_worch"
-			pdx_tooltip_delayed= "government_christian_worch_long"
-			spriteType = "GFX_government_christian_worch"
-			position = { x = 564 y = 501 }
-			scale = 0.8
-		}
-		iconType = {
-			name = "government_jorg_haider"
-			pdx_tooltip = "government_jorg_haider"
-			pdx_tooltip_delayed= "government_jorg_haider_long"
-			spriteType = "GFX_government_jorg_haider"
-			position = { x = 722 y = 501 }
-			scale = 0.8
+			position = { x = 367 y = 414 }
+			scale = 0.45
 		}
 		iconType = {
 			name = "government_otto_riehs"
 			pdx_tooltip = "government_otto_riehs"
 			pdx_tooltip_delayed= "government_otto_riehs_long"
 			spriteType = "GFX_government_otto_riehs"
-			position = { x = 880 y = 501 }
-			scale = 0.8
+			position = { x = 467 y = 414 }
+			scale = 0.45
 		}
 		iconType = {
-			name = "government_horst_ubelacker"
-			pdx_tooltip = "government_horst_ubelacker"
-			pdx_tooltip_delayed= "government_horst_ubelacker_long"
-			spriteType = "GFX_government_horst_ubelacker"
-			position = { x = 1038 y = 501 }
-			scale = 0.8
+			name = "government_wolfgang_vaerst"
+			pdx_tooltip = "government_wolfgang_vaerst"
+			pdx_tooltip_delayed= "government_wolfgang_vaerst_long"
+			spriteType = "GFX_government_wolfgang_vaerst"
+			position = { x = 566 y = 414 }
+			scale = 0.45
+		}
+		iconType = {
+			name = "government_christian_worch"
+			pdx_tooltip = "government_christian_worch"
+			pdx_tooltip_delayed= "government_christian_worch_long"
+			spriteType = "GFX_government_christian_worch"
+			position = { x = 665 y = 414 }
+			scale = 0.45
 		}
 		iconType = {
 			name = "government_henryk_kroll" 
 			pdx_tooltip = "government_henryk_kroll"
 			pdx_tooltip_delayed= "government_henryk_kroll_long"
 			spriteType = "GFX_government_henryk_kroll"
-			position = { x = 1196 y = 501 }
-			scale = 0.8
+			position = { x = 764 y = 414 }
+			scale = 0.45
 		}
-
 		iconType = {
-			name = "government_raoul_nahrath"
-			pdx_tooltip = "government_raoul_nahrath"
-			pdx_tooltip_delayed= "government_raoul_nahrath_long"
-			spriteType = "GFX_government_raoul_nahrath"
-			position = { x = 36 y = 771 }
-			scale = 0.7
+			name = "government_karl_albrecht" 
+			pdx_tooltip = "government_karl_albrecht"
+			pdx_tooltip_delayed= "government_karl_albrecht_long"
+			spriteType = "GFX_government_karl_albrecht"
+			position = { x = 863 y = 414 }
+			scale = 0.45
+		}
+		iconType = {
+			name = "government_horst_ubelacker"
+			pdx_tooltip = "government_horst_ubelacker"
+			pdx_tooltip_delayed= "government_horst_ubelacker_long"
+			spriteType = "GFX_government_horst_ubelacker"
+			position = { x = 70 y = 537 }
+			scale = 0.45
+		}
+		iconType = {
+			name = "government_jorg_haider"
+			pdx_tooltip = "government_jorg_haider"
+			pdx_tooltip_delayed= "government_jorg_haider_long"
+			spriteType = "GFX_government_jorg_haider"
+			position = { x = 169 y = 537 }
+			scale = 0.45
+		}
+		iconType = {
+			name = "government_walter_bachmann"
+			pdx_tooltip = "government_walter_bachmann"
+			pdx_tooltip_delayed= "government_walter_bachmann_long"
+			spriteType = "GFX_government_walter_bachmann"
+			position = { x = 268 y = 537 }
+			scale = 0.45
+		}
+		iconType = {
+			name = "government_gunther_deckert"
+			pdx_tooltip = "government_gunther_deckert"
+			pdx_tooltip_delayed= "government_gunther_deckert_long"
+			spriteType = "GFX_government_gunther_deckert"
+			position = { x = 367 y = 537 }
+			scale = 0.45
 		}
 		iconType = {
 			name = "government_joachim_starbatty"
 			pdx_tooltip = "government_joachim_starbatty"
 			pdx_tooltip_delayed= "government_joachim_starbatty_long"
 			spriteType = "GFX_government_joachim_starbatty"
-			position = { x = 171 y = 771 }
-			scale = 0.7
+			position = { x = 467 y = 537 }
+			scale = 0.45
 		}
 		iconType = {
-			name = "government_jurgen_rieger" 
-			pdx_tooltip = "government_jurgen_rieger"
-			pdx_tooltip_delayed= "government_jurgen_rieger_long"
-			spriteType = "GFX_government_jurgen_rieger"
-			position = { x = 308 y = 771 }
-			scale = 0.7
-		}
-		iconType = {
-			name = "government_heinz_kessler"
-			pdx_tooltip = "government_heinz_kessler"
-			pdx_tooltip_delayed= "government_heinz_kessler_long"
-			spriteType = "GFX_government_heinz_kessler"
-			position = { x = 444 y = 771 }
-			scale = 0.7
-		}
-		iconType = {
-			name = "government_theodore_hoffmann"
-			pdx_tooltip = "government_theodore_hoffmann"
-			pdx_tooltip_delayed= "government_theodore_hoffmann_long"
-			spriteType = "GFX_government_theodore_hoffmann"
-			position = { x = 582 y = 771 }
-			scale = 0.7
-		}
-		iconType = {
-			name = "government_wolfgang_reinhold" 
-			pdx_tooltip = "government_wolfgang_reinhold"
-			pdx_tooltip_delayed= "government_wolfgang_reinhold_long"
-			spriteType = "GFX_government_wolfgang_reinhold"
-			position = { x = 718 y = 771 }
-			scale = 0.7
+			name = "government_gerd_schultze_rhonhof"
+			pdx_tooltip = "government_gerd_schultze_rhonhof"
+			pdx_tooltip_delayed= "government_gerd_schultze_rhonhof_long"
+			spriteType = "GFX_government_gerd_schultze_rhonhof"
+			position = { x = 566 y = 537 }
+			scale = 0.45
 		}
 		iconType = {
 			name = "government_frank_schwerdt"  
 			pdx_tooltip = "government_frank_schwerdt"
 			pdx_tooltip_delayed= "government_frank_schwerdt_long"
 			spriteType = "GFX_government_frank_schwerdt"
-			position = { x = 855 y = 771 }
-			scale = 0.7
+			position = { x = 665 y = 537 }
+			scale = 0.45
 		}
 		iconType = {
 			name = "government_alexander_siech" 
 			pdx_tooltip = "government_alexander_siech"
 			pdx_tooltip_delayed= "government_alexander_siech_long"
 			spriteType = "GFX_government_alexander_siech"
-			position = { x = 992 y = 771 }
-			scale = 0.7
+			position = { x = 764 y = 537 }
+			scale = 0.45
 		}
 		iconType = {
 			name = "government_jonas_paschnek" 
 			pdx_tooltip = "government_jonas_paschnek"
 			pdx_tooltip_delayed= "government_jonas_paschnek_long"
 			spriteType = "GFX_government_jonas_paschnek"
-			position = { x = 1129 y = 771 } 
-			scale = 0.7
+			position = { x = 863 y = 537 } 
+			scale = 0.45
+		}
+
+		## Tab 1 - Overlays ## 
+		iconType = {
+			name = "Tab_1_Overlay_70_Slot1" 
+			spriteType = "GFX_Tab_1_Overlay_70"
+			position = { x = 438 y = 165 } 
+			alwaystransparent = yes
 		}
 		iconType = {
-			name = "government_norman_kempken"
-			pdx_tooltip = "government_norman_kempken"
-			pdx_tooltip_delayed= "government_norman_kempken_long"
-			spriteType = "GFX_government_norman_kempken"
-			position = { x = 1266 y = 771 }
-			scale = 0.7
+			name = "Tab_1_Overlay_70_Slot2" 
+			spriteType = "GFX_Tab_1_Overlay_70"
+			position = { x = 50 y = 188 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_70_Slot3" 
+			spriteType = "GFX_Tab_1_Overlay_70"
+			position = { x = 205 y = 188 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_70_Slot4" 
+			spriteType = "GFX_Tab_1_Overlay_70"
+			position = { x = 668 y = 188 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_70_Slot5" 
+			spriteType = "GFX_Tab_1_Overlay_70"
+			position = { x = 823 y = 188 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot6" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 62 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot7" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 161 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot8" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 260 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot9" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 359 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot10" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 459 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot11" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 558 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot12" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 657 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot13" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 756 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot14" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 855 y = 405 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot15" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 62 y = 528 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot16" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 161 y = 528 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot17" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 260 y = 528 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot18" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 359 y = 528 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot19" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 459 y = 528 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot20" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 558 y = 528 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot21" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 657 y = 528 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot22" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 756 y = 528 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Overlay_45_Slot23" 
+			spriteType = "GFX_Tab_1_Overlay_45"
+			position = { x = 855 y = 528 } 
+			alwaystransparent = yes
 		}
 
-		instantTextboxType = {
-			name = "government_reichsministers"
-			position = { x = 88 y = 445 }
-			textureFile = ""
-			font = "aldrich_22_outline"
-			borderSize = {x = 0 y = 0}
-			text = "Reichsministers"
-			maxWidth = 500
-			maxHeight = 30
-			fixedsize = yes
+		## Tab 1 - Notifications ## 
+		iconType = {
+			name = "Tab_1_Notification_Slot5" 
+			spriteType = "GFX_Tab_1_Notification"
+			position = { x = 819 y = 184 } 
+			alwaystransparent = yes
 		}
-		instantTextboxType = {
-			name = "government_cabinet_rank_authority"
-			position = { x = 34 y = 719 }
-			textureFile = ""
-			font = "aldrich_22_outline"
-			borderSize = {x = 0 y = 0}
-			text = "Cabinet Rank and Authority"
-			maxWidth = 500
-			maxHeight = 30
-			fixedsize = yes
+		iconType = {
+			name = "Tab_1_Notification_Slot7" 
+			spriteType = "GFX_Tab_1_Notification"
+			position = { x = 159 y = 401 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Notification_Slot8" 
+			spriteType = "GFX_Tab_1_Notification"
+			position = { x = 258 y = 401 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Notification_Slot15" 
+			spriteType = "GFX_Tab_1_Notification"
+			position = { x = 60 y = 524 } 
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "Tab_1_Notification_Slot22" 
+			spriteType = "GFX_Tab_1_Notification"
+			position = { x = 754 y = 524 } 
+			alwaystransparent = yes
+		}
+	
+
+		buttonType = {
+			name = "Button_1_Tab_1"
+			position = { x = 662 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button"
+			clicksound = click_close
+			buttonText = "Faction Info"
+			buttonFont =  "aldrich_16_outline"
+		}
+		buttonType = {
+			name = "Button_1_Tab_1_Pressed"
+			position = { x = 662 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button"
+			clicksound = click_close
+			buttonText = "Faction Info"
+			buttonFont = "aldrich_16_outline"
+			alwaystransparent = yes
+			frame = 2
 		}
 
 		iconType = {
-			name = "reichsstabilitat_background_2"
-			spriteType = "GFX_reichsstabilitat_background_2"
-			position = { x = 0 y = 0 } 
+			name = "Additional_Faction_Info_Box"
+			spriteType = "GFX_Additional_Faction_Info_Box"
+			position = { x = 17 y = 695 }
+		}
+		instantTextboxType = {
+			name = "Additional_Faction_Info_Text"
+			position = { x = 22 y = 700 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Additional_Faction_Info_Text"
+			maxWidth = 624
+			maxHeight = 32
+		}
+
+		buttonType = {
+			name = "Button_2_Tab_1"
+			position = { x = 829 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button"
+			buttonFont = "aldrich_16_outline"
+			buttonText = "Interact"
+			clicksound = click_close
+		}
+		iconType = {
+			name = "Button_2_Tab_1_disabled"
+			position = { x = 829 y = 691 }
+			quadTextureSprite ="GFX_reichsstabilitat_button_unable"
+		}
+	
+	} #Closing bracket Tab 1
+
+	containerWindowType = {
+		name = "ANM_reichsstabilitat_GUI_tab2"
+		size = { width = 1002 height = 752 }
+		position = { x= 545 y= 80 }
+
+		iconType = {
+			name = "reichsstabilitat_tab_2"
+			spriteType = "GFX_reichsstabilitat_tab_2"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+
+		#Institutions
+		buttonType = {
+			name = "Button_Institution_1"
+			position = { x = 48 y = 140 }
+			spriteType = "GFX_Button_Institution_1"
+		}
+		buttonType = {
+			name = "Button_Institution_2"
+			position = { x = 199 y = 140 }
+			spriteType = "GFX_Button_Institution_2"
+		}
+		buttonType = {
+			name = "Button_Institution_3"
+			position = { x = 350 y = 140 }
+			spriteType = "GFX_Button_Institution_3"
+		}
+		buttonType = {
+			name = "Button_Institution_4"
+			position = { x = 501 y = 140 }
+			spriteType = "GFX_Button_Institution_4"
+		}
+		buttonType = {
+			name = "Button_Institution_5"
+			position = { x = 48 y = 338 }
+			spriteType = "GFX_Button_Institution_5"
+		}
+		buttonType = {
+			name = "Button_Institution_6"
+			position = { x = 199 y = 338 }
+			spriteType = "GFX_Button_Institution_6"
+		}
+		buttonType = {
+			name = "Button_Institution_7"
+			position = { x = 350 y = 338 }
+			spriteType = "GFX_Button_Institution_7"
+		}
+		buttonType = {
+			name = "Button_Institution_8"
+			position = { x = 501 y = 338 }
+			spriteType = "GFX_Button_Institution_8"
+		}
+
+		#Institution Loadingbar
+		iconType = {
+			name = "Progressbar_Institution_1"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 51 y = 280 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_2"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 202 y = 280 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_3"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 353 y = 280 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_4"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 504 y = 280 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_5"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 51 y = 478 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_6"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 202 y = 478 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_7"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 353 y = 478 }
+		}
+		iconType = {
+			name = "Progressbar_Institution_8"
+			spriteType = "GFX_Progressbar_Institutions"
+			position = { x = 504 y = 478 }
+		}
+
+		#Institution Leaders
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Header_title"
+			position =  { x = 668 y = 131 }
+			font = "aldrich_16_outline"
+			maxWidth = 300
+			maxHeight = 40
+			text = "Information:"
+		}
+		iconType = {
+			name = "Institution_Leader_ARMBAND"
+			spriteType = "GFX_Institution_Leader_ARMBAND"
+			position = { x = 830 y = 181 }
+		}
+		iconType = {
+			name = "Institution_Leader_Tooltip"
+			spriteType = "GFX_Institution_Leader_Tooltip"
+			position = { x = 696 y = 170 }
+			pdx_tooltip = "Institution_Leader_Tooltip"
+			pdx_tooltip_delayed = "Institution_Leader_Tooltip_desc"
+		}
+		iconType = {
+			name = "Institution_Leader_NAME"
+			spriteType = "GFX_Institution_Leader_NAME"
+			position = { x = 696 y = 170 }
+			alwaystransparent = yes
+			scale = 0.7
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Institution_title"
+			position =  { x = 652 y = 328 }
+			font = "aldrich_bold_16_outline"
+			text = "[getGERgovernmentinstitutionname]"
+			maxWidth = 300
+			format = center
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Institution_desc"
+			position = { x = 676 y = 357 }
+			maxWidth = 238
+			maxHeight = 257
+			scrollbarType = standardtext_slider
+			font = "aldrich_12_outline"
+			text = "[getGERgovernmentinstitutiondesc]"
+		}
+
+		#Agenda's 
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Header_agendas"
+			position =  { x = 64 y = 532 }
+			font = "aldrich_16_outline"
+			text = "Agenda(s):"
+		}
+		checkBoxType = {
+			name = "Government_GUI_Tab2_Agendabox1"
+			position = { x = 66 y = 559 }
+			quadTextureSprite = "GFX_Government_GUI_Agendabox"
+			clicksound = decisions_ui_button
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Agendatext1"
+			position =  { x = 96 y = 564 }
+			font = "aldrich_14_outline"
+			maxWidth = 220
+			maxHeight = 25
+			text = "Government_GUI_Tab2_Agendatext1"
+		}
+		checkBoxType = {
+			name = "Government_GUI_Tab2_Agendabox2"
+			position = { x = 66 y = 592 }
+			quadTextureSprite = "GFX_Government_GUI_Agendabox"
+			clicksound = decisions_ui_button
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Agendatext2"
+			position =  { x = 96 y = 597 }
+			font = "aldrich_14_outline"
+			maxWidth = 220
+			maxHeight = 25
+			text = "Government_GUI_Tab2_Agendatext2"
+		}
+		checkBoxType = {
+			name = "Government_GUI_Tab2_Agendabox3"
+			position = { x = 368 y = 559 }
+			quadTextureSprite = "GFX_Government_GUI_Agendabox"
+			clicksound = decisions_ui_button
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Agendatext3"
+			position =  { x = 398 y = 564 }
+			font = "aldrich_14_outline"
+			maxWidth = 220
+			maxHeight = 25
+			text = "Government_GUI_Tab2_Agendatext3"
+		}
+		checkBoxType = {
+			name = "Government_GUI_Tab2_Agendabox4"
+			position = { x = 368 y = 592 }
+			quadTextureSprite = "GFX_Government_GUI_Agendabox"
+			clicksound = decisions_ui_button
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab2_Agendatext4"
+			position =  { x = 398 y = 597 }
+			font = "aldrich_14_outline"
+			maxWidth = 220
+			maxHeight = 25
+			text = "Government_GUI_Tab2_Agendatext4"
+		}
+
+
+	} #Closing bracket Tab 2
+
+	containerWindowType = {
+		name = "ANM_reichsstabilitat_GUI_tab3"
+		size = { width = 1002 height = 752 }
+		position = { x= 545 y= 80 }
+
+		iconType = {
+			name = "reichsstabilitat_tab_3"
+			spriteType = "GFX_reichsstabilitat_tab_3"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Senate_Title"
+			position =  { x = 304 y = 127 }
+			font = "aldrich_16_outline"
+			text = "Senator's Hall"
 		}
 
 		instantTextboxType = {
-			name = "government_title_text"
-			position = { x = 42 y = 12 }
-			textureFile = ""
-			font = "aldrich_white_28_outline"
-			borderSize = {x = 0 y = 0}
-			text = "Regierung des Deutschen Reiches"
-			maxWidth = 750
-			maxHeight = 30
-			fixedsize = yes
+			name = "Government_GUI_Tab3_Current_Topic"
+			position =  { x = 55 y = 130 }
+			font = "aldrich_bold_16_outline"
+			format = center
+			text = "Government_GUI_Tab3_Current_Topic"
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Current_Topicdesc"
+			position =  { x = 53 y = 161 }
+			font = "aldrich_12_outline"
+			format = left
+			maxWidth = 192
+			maxHeight = 254
+			scrollbarType = standardtext_slider
+			text = "Government_GUI_Tab3_Current_Topicdesc"
+		}
+
+		buttonType = {
+			name = "Button_Senate_Big1"
+			position = { x = 47 y = 443 }
+			spriteType = "GFX_Button_Senate_Big"
+			buttonFont = "aldrich_16_outline"
+			buttontext = "Preventive Action"
 		}
 		buttonType = {
-			name = "government_tab_1_unclicked"
-			quadTextureSprite = "GFX_reichsstabilitat_category_1"
-			position = { x = 12 y = 57 }
+			name = "Button_Senate_Big2"
+			position = { x = 47 y = 499 }
+			spriteType = "GFX_Button_Senate_Big"
+			buttonFont = "aldrich_16_outline"
+			buttontext = "Diplomacy"
 		}
 		buttonType = {
-			name = "government_tab_1_clicked"
-			quadTextureSprite = "GFX_reichsstabilitat_category_1"
-			position = { x = 12 y = 57 }
-			frame = 3
+			name = "Button_Senate_Big3"
+			position = { x = 47 y = 555 }
+			spriteType = "GFX_Button_Senate_Big_Pressed"
+			buttonFont = "aldrich_16_outline"
+			buttontext = "Covert Infiltration"
 		}
-		buttonType = {
-			name = "government_tab_2_unclicked"
-			quadTextureSprite = "GFX_reichsstabilitat_category_2"
-			position = { x = 234 y = 57 }
+
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Vote1"
+			position =  { x = 62 y = 621 }
+			font = "aldrich_bold_16_outline"
+			format = left
+			text = "Government_GUI_Tab3_Vote1"
+			maxWidth = 40
+			maxHeight = 40
 		}
-		buttonType = {
-			name = "government_tab_2_clicked"
-			quadTextureSprite = "GFX_reichsstabilitat_category_2"
-			position = { x = 234 y = 57 }
-			frame = 3
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Vote2"
+			position =  { x = 148 y = 621 }
+			font = "aldrich_bold_16_outline"
+			format = left
+			text = "Government_GUI_Tab3_Vote2"
+			maxWidth = 40
+			maxHeight = 40
 		}
-		buttonType = {
-			name = "government_tab_3_unclicked"
-			quadTextureSprite = "GFX_reichsstabilitat_category_3"
-			position = { x = 403 y = 57 }
+		instantTextboxType = {
+			name = "Government_GUI_Tab3_Vote3"
+			position =  { x = 234 y = 621 }
+			font = "aldrich_bold_16_outline"
+			format = left
+			text = "Government_GUI_Tab3_Vote3"
+			maxWidth = 40
+			maxHeight = 40
 		}
-		buttonType = {
-			name = "government_tab_3_clicked"
-			quadTextureSprite = "GFX_reichsstabilitat_category_3"
-			position = { x = 403 y = 57 }
-			frame = 3
-		}
-		
-		containerWindowType = {
-			name = "ANM_GdDR_Fuhrer"
-			size = { width = 1410 height = 1010 }
-	
-			iconType = {
-				name = "government_albert_speer_jr"
-				pdx_tooltip = "government_albert_speer_jr"
-				pdx_tooltip_delayed= "government_albert_speer_jr_long"
-				spriteType = "GFX_government_albert_speer_jr"
-				position = { x = 635 y = 127 }
-				scale = 0.9
-			}
-		}
-	}
-	
+
+
+
+	} #Closing bracket Tab 3
+
 }

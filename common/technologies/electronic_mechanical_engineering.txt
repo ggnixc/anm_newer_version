@@ -1862,26 +1862,17 @@ technologies = {
 		}
 	}
 
-	missile_silos = {
-		allow = { always = no }
-		research_cost = 1
-
-		enable_building = {
-			building = missile_silo
-			level = 1
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
 	nuclear_weapons = {
 		allow = { always = no }
 		research_cost = 1
 
 		enable_building = {
 			building = enrichment_plant
+			level = 1
+		}
+
+		enable_building = {
+			building = missile_silo
 			level = 1
 		}
 

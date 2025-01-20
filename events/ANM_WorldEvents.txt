@@ -1427,4 +1427,124 @@ news_event = {
 		name = WORLD.18198.a
 	}
 }
+news_event = {
+	id = WORLD.18199 #Cod War goes hot
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WORLD.18199"}
+	title = WORLD.18199.t
+	desc = WORLD.18199.desc
+	picture = GFX_news_event_codwars
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18199.a
+	}
+}
+
+news_event = {
+	id = WORLD.18200 #West Thrace Rises
+	title = WORLD.18200.t
+	desc = WORLD.18200.desc
+	picture = GFX_news_event_west_thrace
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18200.a
+		trigger = {
+			NOT = { tag = GER }
+			NOT = { tag = SOV }
+			NOT = {  is_in_faction_with = GER }
+			NOT = {  is_in_faction_with = SOV }
+		}
+	}
+	option = {
+		name = WORLD.18200.b
+		trigger = {
+			OR = { 
+				tag = SOV
+				is_in_faction_with = SOV
+			} 
+		}
+	}
+	option = {
+		name = WORLD.18200.c
+		trigger = {
+			OR = {
+				tag = GER
+				is_in_faction_with = GER
+			} 
+		}
+	}
+}
+
+news_event = {
+	id = WORLD.18201 #Kampuchea launches Operation Chenla
+	title = WORLD.18201.t
+	desc = WORLD.18201.desc
+	picture = GFX_news_event_operation_chenla
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18201.a
+	}
+
+}
+
+news_event = {
+	id = WORLD.18202 #Kampuchea wins the Chenla War
+	title = WORLD.18202.t
+	desc = WORLD.18202.desc
+	picture = GFX_news_event_CAM_victory_chenla_war
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18202.a
+	}
+
+}
+
+news_event = {
+	id = WORLD.18203 #Kampuchean Government Overthrown
+	title = WORLD.18203.t
+	desc = WORLD.18203.desc
+	picture = GFX_news_event_CAM_government_overthrown
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18203.a
+	}
+
+}
+
+news_event = {
+	id = WORLD.18204 #Joint Invasion of Kampuchea
+	title = WORLD.18204.t
+	desc = WORLD.18204.desc
+	picture = GFX_news_event_joint_invasion_CAM
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18204.a
+	}
+
+}
+
+news_event = {
+	id = WORLD.18205 #Khem Veasna Inaugurated as Kampuchean President
+	title = WORLD.18205.t
+	desc = WORLD.18205.desc
+	picture = GFX_news_event_CAM_Khem_Veasna_president
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = WORLD.18205.a
+	}
+
+}
 

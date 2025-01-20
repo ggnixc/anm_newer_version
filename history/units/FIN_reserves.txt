@@ -1,4 +1,16 @@
 ﻿division_template = {
+	name = "Erillinen Pataljoona"
+	division_names_group = FIN_SEPARATE
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
 	name = "Reservidivisioona"
 	division_names_group = FIN_INFANTRY
 	regiments = {
@@ -82,7 +94,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 27
 		}
-		location = 9206 # Viipuri
+		location = 9206 # ViipuriFGN
 		division_template = "Reservidivisioona"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.9

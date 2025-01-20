@@ -14,7 +14,7 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_frontend_bg"
+			quadTextureSprite ="GFX_frontend_bg_test"
 		}
 
 	}
@@ -65,6 +65,8 @@ guiTypes = {
 			name ="frontend_tno_logo"
 			spriteType = "GFX_frontend_tno_logo"
 			position = { x = -300 y = 10 }
+			pdx_tooltip = ANM_icon_tt
+			pdx_tooltip_delayed = ANM_icon_tt_delayed
 		}
 		
 		ButtonType = {
@@ -229,9 +231,30 @@ guiTypes = {
 			position = { x= 83 y = -84 }
 		}
 
+		iconType = {
+			name = "GFX_fronticons_tooltip_1"
+			position = { x = 91 y = 4 }
+			spriteType = "GFX_fronticons_tooltip"
+			pdx_tooltip = ANM_menupic_tooltip_1
+		}
+		
+		iconType = {
+			name = "GFX_fronticons_tooltip_2"
+			position = { x = 403 y = 4 }
+			spriteType = "GFX_fronticons_tooltip"
+			pdx_tooltip = ANM_menupic_tooltip_2
+		}
+		
+		iconType = {
+			name = "GFX_fronticons_tooltip_3"
+			position = { x = 714 y = 4 }
+			spriteType = "GFX_fronticons_tooltip"
+			pdx_tooltip = ANM_menupic_tooltip_3
+		}
+
 		instantTextBoxType = {
 			name ="version_label"
-			position = { x = 721 y = -24 }
+			position = { x = 723 y = -24 }
 			textureFile = ""
 			font = "aldrich_14_outline"
 			borderSize = {x = 0 y = 0}
@@ -287,6 +310,13 @@ guiTypes = {
 			text = "FE_MULTI_PLAYER"
 			clicksound = click_default
 			oversound = ui_menu_over
+		}
+
+		iconType = {
+			name = "multi_player_button_overlay"
+			position = { x = 430 y = 382 }
+			quadTextureSprite ="GFX_main_lobby_multi_player_button_overlay"
+			pdx_tooltip = FE_MULTI_PLAYER_OVERLAY_TEXT
 		}
 		
 		@warn_icon_x = 378

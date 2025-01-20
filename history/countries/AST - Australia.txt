@@ -1,6 +1,15 @@
 ﻿capital = 1215
 load_focus_tree = ZZZ_national_focus
 
+recruit_character = AST_Joh_Bjelke_Petersen
+recruit_character = AST_Andrew_Peacock
+recruit_character = AST_Ray_Braithwaite
+recruit_character = AST_Bruce_Scott
+recruit_character = AST_Alexander_Downer
+recruit_character = AST_Robin_Gray
+recruit_character = AST_Graeme_Campbell
+recruit_character = AST_Parliament_of_Australia
+
 set_oob = "AST_1962"
 
 set_research_slots = 3
@@ -27,179 +36,7 @@ set_popularities = {
     despotism = 65
     fascism = 0
     national_socialism = 0
-	ultranationalism = 0
-     
-}
-
-recruit_character = AST_Joh_Bjelke_Petersen
-recruit_character = AST_Philip_Flood
-recruit_character = AST_Andrew_Peacock
-recruit_character = AST_Peter_Costello
-recruit_character = AST_Michael_Jeffery
-recruit_character = AST_Alexander_Downer
-recruit_character = AST_Robin_Gray
-recruit_character = AST_Graeme_Campbell
-recruit_character = AST_Parliament_of_Australia
-
-create_field_marshal = {
-	name = "Reginald Pollard"
-	desc = "POLITICS_REGINALD_POLLARD_DESC"
-	picture = "Portrait_AST_Reginald_Pollard.dds"
-	#expire = "1978.3.9"
-	traits = {
-		career_officer
-		logistics_wizard
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "John Wilton"
-	desc = "POLITICS_JOHN_WILTON_DESC"
-	picture = "Portrait_AST_John_Wilton.dds"
-	#expire = "1981.5.10"
-	traits = {
-		career_officer
-		bearer_of_artillery
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Francis Hassett"
-	desc = "POLITICS_FRANCIS_HASSETT_DESC"
-	picture = "Portrait_AST_Francis_Hassett.dds"
-	#expire = "2008.6.11"
-	traits = {
-		war_hero
-		infantry_officer
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Arthur MacDonald"
-	desc = "POLITICS_ARTHUR_MACDONALD_DESC"
-	picture = "Portrait_AST_Arthur_MacDonald.dds"
-	#expire = "1995.1.20"
-	traits = {
-		trait_cautious
-		inflexible_strategist
-	}
-	skill = 2
-	attack_skill = 1
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Mervyn Brogan"
-	desc = "POLITICS_MERVYN_BROGAN_DESC"
-	picture = "Portrait_AST_Mervyn_Brogan.dds"
-	#expire = "1994.3.8"
-	traits = {
-		brilliant_strategist
-		career_officer
-		logistics_wizard
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Sandy Pearson"
-	desc = "POLITICS_SANDY_PEARSON_DESC"
-	picture = "Portrait_AST_Sandy_Pearson.dds"
-	#expire = "2012.11.7"
-	traits = {
-		brilliant_strategist
-		armor_officer
-	}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Thomas Daly"
-	desc = "POLITICS_THOMAS_DALY_DESC"
-	picture = "Portrait_AST_Thomas_Daly.dds"
-	#expire = "2004.2.5"
-	traits = {
-		war_hero
-		desert_fox
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_navy_leader = {
-	name = "Henry Burrell"
-	desc = "POLITICS_HENRY_BURRELL_DESC"
-	picture = "Portrait_AST_Henry_Burrell.dds"
-	#expire = "1988.2.9"
-	traits = {
-		aviation_enthusiast
-		flight_deck_manager
-	}
-	skill = 3
-}
-
-create_navy_leader = {
-	name = "Alan McNicoll"
-	desc = "POLITICS_ALAN_MCNICOLL_DESC"
-	picture = "Portrait_AST_Alan_McNicoll.dds"
-	#expire = "1988.2.9"
-	traits = {
-		seawolf
-		fleet_protector
-	}
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "Victor Smith"
-	desc = "POLITICS_VICTOR_SMITH_DESC"
-	picture = "Portrait_AST_Victor_Smith.dds"
-	#expire = "1998.7.10"
-	traits = {
-		dive_bomber
-		flight_deck_manager
-	}
-	skill = 4
-}
-
-create_navy_leader = {
-	name = "Hastings Harrington"
-	desc = "POLITICS_HASTINGS_HARRINGTON_DESC"
-	picture = "Portrait_AST_Hastings_Harrington.dds"
-	#expire = "1992.9.5"
-	traits = {
-		navy_career_officer
-		search_pattern_expert
-	}
-	skill = 2
+	ultranationalism = 0     
 }
 
 add_ideas = {
@@ -210,10 +47,10 @@ add_ideas = {
 	#FACTION STATUS
 	OFN_Independent_Member
 	#Ministers
-	AST_Andrew_Peacock_hog
-	AST_Michael_Jeffery_sec
-	AST_Philip_Flood_for
-	AST_Peter_Costello_eco
+	AST_Joh_Bjelke_Petersen_hog
+	AST_Bruce_Scott_sec
+	AST_Andrew_Peacock_for
+	AST_Ray_Braithwaite_eco
 	#laws
 	tno_academic_base_secondary_schooling
 	tno_research_facilities_modern
@@ -266,23 +103,6 @@ add_ideas = {
 	tno_poverty_rate_5
 }
 
-set_variable = { liberal_seats = 55 }
-set_variable = { country_seats = 19 }
-set_variable = { labor_seats = 48 }
-set_variable = { coalitions_seats = 74 }
-				add_to_variable = { 
-					var = coalitions_seats_majority
-					value = coalitions_seats
-				}
-				subtract_from_variable = {
-					var = coalitions_seats_majority
-					value = labor_seats
-				}
-				add_to_variable = {
-					var = labor_seats_majority
-					value = labor_seats
-				}
-				subtract_from_variable = {
-					var = labor_seats_majority
-					value = coalitions_seats
-				}
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }

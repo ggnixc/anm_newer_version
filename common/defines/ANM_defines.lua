@@ -60,6 +60,9 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.25
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 48
 NDefines.NCountry.BASE_SURRENDER_LIMIT = 0.75
 
+NDefines.NMilitary.STARTING_COMMAND_POWER = 0.0					-- starting command power for every country
+NDefines.NMilitary.BASE_MAX_COMMAND_POWER = 200.0					-- base value for maximum command power
+
 NDefines.NMilitary.LAND_COMBAT_COLLATERAL_FACTOR = 0.001
 NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 1
 NDefines.NMilitary.MAX_NUM_TRAITS = 6

@@ -1,21 +1,18 @@
-
-state={
-	id=477
-	name="STATE_477"
-	manpower = 2727899
-	
-	resources={
-		oil=22
-		steel=8
-		tungsten=2
+state = {
+	id = 477
+	name = "STATE_477"
+	resources = {
+		oil = 22.000
+		steel = 8.000
+		tungsten = 2.000
 	}
-	state_category = large_town
 
-	history={
+	history = {
 		owner = MEX
 		buildings = {
  			arms_factory = 1
 			infrastructure = 3
+			dockyard = 1
 			air_base = 1
 			14496 = {
 				naval_base = 3
@@ -25,16 +22,40 @@ state={
 			}
 		}
 		add_core_of = MEX
-		victory_points = { # Veracruz
-			14496 20 
+		victory_points = {
+			14496 10
 		}
-		victory_points = { # Xalapa
-			14499 3 
+		victory_points = {
+			14499 6
+		}
+		victory_points = {
+			16895 6
+		}
+		victory_points = {
+			17311 3
+		}
+		victory_points = {
+			8079 2
+		}
+		victory_points = {
+			10889 2
+		}
+		victory_points = {
+			16961 1
+		}
+		victory_points = {
+			12810 1
+		}
+		victory_points = {
+			10732 1
 		}
 	}
 
-	provinces={
-		8079 10732 12810 10889 14496 14499 14513
+	provinces = {
+		443 8079 10732 10889 12810 14496 14499 14513 16895 16961 17311
 	}
-	
+	manpower = 3233678
+	buildings_max_level_factor = 1.000
+	state_category = large_town
+	local_supplies = 0.000
 }

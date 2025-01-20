@@ -1,12 +1,14 @@
 ﻿capital = 1616
 
+recruit_character = PAR_Lino_Oviedo
+
 set_oob = "PAR_1962"
 
 set_politics = {	
-	ruling_party = paternalism
+	ruling_party = fascism
 	last_election = "1961.1.20"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 TNO_startup_nation = yes
@@ -14,34 +16,17 @@ TNO_startup_nation = yes
 set_popularities = {
 	communist = 0
 	socialist = 0
-	progressivism = 14
-	liberalism = 18
-	liberal_conservatism = 8
+	progressivism = 0
+	liberalism = 0
+	liberal_conservatism = 0
 	conservatism = 7
-	paternalism = 42
-	despotism = 7
-	fascism = 3
+	paternalism = 17
+	despotism = 15
+	fascism = 60
 	national_socialism = 1
 	ultranationalism = 0
-	 
-}
-create_country_leader = {
-	name = "Luis Gonzalez Macchi"
-	picture = "Portrait_PAR_Gonzalez_Macchi.dds"
-	expire = "2090.1.1"
-	ideology = conservatism_subtype
-	traits = { 
-	}
 }
 
-create_country_leader = {
-	name = "Lino Oviendo"
-	picture = "Portrait_PAR_Lino_Oviendo.dds"
-	expire = "2090.1.1"
-	ideology = paternalism_anocracy_subtype
-	traits = { 
-	}
-}
 add_ideas = {
 	##Spirits
 	##Ministers
@@ -92,14 +77,4 @@ add_ideas = {
 	tno_army_professionalism_cronyism
 	tno_nuclear_stockpile_none
 	tno_poverty_rate_50
-}
-
-
-create_country_leader = {
-	name = "Juan Carlos Wasmosy"
-	picture = "Portrait_PAR_Juan_Wasmosy.dds"
-	expire = "2090.1.1"
-	ideology = Conservatism_subtype
-	traits = { 
-	}
 }

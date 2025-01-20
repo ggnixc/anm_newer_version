@@ -2174,21 +2174,12 @@ scripted_gui = {
 		effects = {
 			reichsstability_open_click = {
 				if = {
-					limit = { NOT = { 
-						has_country_flag = GER_show_reichsstability_window 
-						has_country_flag = GER_GdDR_Fuhrer
-						} 
-					} 
-					set_country_flag = GER_show_reichsstability_window
-					set_country_flag = GER_GdDR_Fuhrer
+					limit = { NOT = { has_country_flag = GER_show_reichsstability_window } } 
+					set_country_flag = GER_show_reichsstability_window 
 				}
 				else_if = {
-					limit = { 
-						has_country_flag = GER_show_reichsstability_window
-						has_country_flag = GER_GdDR_Fuhrer
-					}
+					limit = { has_country_flag = GER_show_reichsstability_window }
 					clr_country_flag = GER_show_reichsstability_window
-					clr_country_flag = GER_GdDR_Fuhrer
 				}
 			}
 		}
@@ -2204,57 +2195,773 @@ scripted_gui = {
 			has_country_flag = GER_show_reichsstability_window
 		}
 
-		triggers = { 
-			government_tab_1_unclicked_visible = { 
-				has_country_flag = GER_show_reichsstability_window
-			}
-			government_tab_1_clicked_visible = { 
-				has_country_flag = government_tab_1_click
-			}
-			government_tab_2_unclicked_visible = { 
-				has_country_flag = GER_show_reichsstability_window
-			}
-			government_tab_2_clicked_visible = { 
-				has_country_flag = government_tab_2_click
-			}
-			government_tab_3_unclicked_visible = { 
-				has_country_flag = GER_show_reichsstability_window
-			}
-			government_tab_3_clicked_visible = { 
-				has_country_flag = government_tab_3_click
-			}
-			reichsstabilitat_background_2_visible = { 
-				has_country_flag = government_tab_2_click
-			}
-		} 
+		triggers = { } 
+
 		effects = {
+			#Closing the UI
 			reichsstabilitat_close_click = {
 				clr_country_flag = GER_show_reichsstability_window
-				clr_country_flag = GER_GdDR_Fuhrer
 			}
-			government_tab_1_unclicked_click = { 
-				set_country_flag = government_tab_1_click
-				clr_country_flag = government_tab_2_click
-				clr_country_flag = government_tab_3_click
+			#Switching tabs
+			Tab_1_Title_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 1
+				} 
 			}
-			government_tab_2_unclicked_click = { 
-				clr_country_flag = government_tab_1_click
-				set_country_flag = government_tab_2_click
-				clr_country_flag = government_tab_3_click
+			Tab_2_Title_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 2
+				} 
 			}
-			government_tab_3_unclicked_click = { 
-				clr_country_flag = government_tab_1_click
-				clr_country_flag = government_tab_2_click
-				set_country_flag = government_tab_3_click
-			}
+			Tab_3_Title_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 3
+				} 
+			}	
 		} 
 	}
-	ANM_GdDR_Fuhrer = {
+
+	ANM_reichsstabilitat_GUI_Tab1 = {
 		context_type = player_context
-		window_name = "ANM_GdDR_Fuhrer"
-		parent_window_name = "ANM_reichsstabilitat_GUI"
+		window_name = "ANM_reichsstabilitat_GUI_tab1"
+		parent_window_token = "ANM_reichsstabilitat_GUI"
 		visible = {
-			has_country_flag = GER_GdDR_Fuhrer
+			AND = { 
+				has_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 1
+				} 
+				has_country_flag = GER_show_reichsstability_window
+			} 
 		}
+		
+		triggers = { 
+			#Interact system
+			Button_2_Tab_1_disabled_visible = { 
+				has_country_flag = GER_Government_Tab_1_Interactions_Unavailable
+			}
+			Tab_1_Notification_Slot5_visible = { 
+				has_country_flag = GER_Government_Tab_1_Notification_5
+			}
+			Tab_1_Notification_Slot7_visible = { 
+				has_country_flag = GER_Government_Tab_1_Notification_7
+			} 
+			Tab_1_Notification_Slot8_visible = { 
+				has_country_flag = GER_Government_Tab_1_Notification_8
+			}
+			Tab_1_Notification_Slot15_visible = { 
+				has_country_flag = GER_Government_Tab_1_Notification_15
+			}
+			Tab_1_Notification_Slot22_visible = { 
+				has_country_flag = GER_Government_Tab_1_Notification_22	
+			}
+			#Additional Faction Info
+			Additional_Faction_Info_Box_visible = {
+				has_country_flag = GER_Government_Tab_1_Additional_Faction_Information 
+			}
+			Additional_Faction_Info_Text_visible = { 
+				has_country_flag = GER_Government_Tab_1_Additional_Faction_Information 
+			}
+			Button_1_Tab_1_Pressed_visible = { 
+				has_country_flag = GER_Government_Tab_1_Additional_Faction_Information
+			}
+			#Selection Overlays
+			Tab_1_Overlay_70_Slot1_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 1
+				}
+			}
+			Tab_1_Overlay_70_Slot2_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 2
+				}
+			}
+			Tab_1_Overlay_70_Slot3_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 3
+				}
+			}
+			Tab_1_Overlay_70_Slot4_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 4
+				}
+			}
+			Tab_1_Overlay_70_Slot5_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 5
+				}
+			}
+			Tab_1_Overlay_45_Slot6_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 6
+				}
+			}
+			Tab_1_Overlay_45_Slot7_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 7
+				}
+			}
+			Tab_1_Overlay_45_Slot8_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 8
+				}
+			}
+			Tab_1_Overlay_45_Slot9_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 9
+				}
+			}
+			Tab_1_Overlay_45_Slot10_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 10
+				}
+			}
+			Tab_1_Overlay_45_Slot11_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 11
+				}
+			}
+			Tab_1_Overlay_45_Slot12_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 12
+				}
+			}
+			Tab_1_Overlay_45_Slot13_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 13
+				}
+			}
+			Tab_1_Overlay_45_Slot14_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 14
+				}
+			}
+			Tab_1_Overlay_45_Slot15_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 15
+				}
+			}
+			Tab_1_Overlay_45_Slot16_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 16
+				}
+			}
+			Tab_1_Overlay_45_Slot17_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 17
+				}
+			}
+			Tab_1_Overlay_45_Slot18_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 18
+				}
+			}
+			Tab_1_Overlay_45_Slot19_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 19
+				}
+			}
+			Tab_1_Overlay_45_Slot20_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 20
+				}
+			}
+			Tab_1_Overlay_45_Slot21_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 21
+				}
+			}
+			Tab_1_Overlay_45_Slot22_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 22
+				}
+			}
+			Tab_1_Overlay_45_Slot23_visible = { 
+				has_country_flag = {
+					flag = GER_Government_Tab_1_Click
+					value = 23
+				}
+			}
+		} 
+
+		effects = {
+			#Selection frames
+			government_albert_speer_jr_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 1
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_1
+				}
+			}
+			government_martin_mussgnug_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 2
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_2
+				}
+			}
+			government_olaf_rose_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 3
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_3
+				}
+			}
+			government_gerhard_frey_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 4
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_4
+				}
+			}
+			government_rudiger_lucassen_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 5
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_5
+				}
+			}
+			government_albrecht_glaser_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 6
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_6
+				}
+			}
+			government_alexander_gauland_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 7
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_7
+				}
+			}
+			government_hans_helmuth_knutter_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 8
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_8
+				}
+			}
+			government_franz_schonhuber_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 9
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_9
+				}
+			}
+			government_otto_riehs_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 10
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_10
+				}
+			}
+			government_wolfgang_vaerst_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 11
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_11
+				}
+			}
+			government_christian_worch_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 12
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_12
+				}
+			}
+			government_henryk_kroll_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 13
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_13
+				}
+			}
+			government_karl_albrecht_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 14
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_14
+				}
+			}
+			government_horst_ubelacker_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 15
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_15
+				}
+			}
+			government_jorg_haider_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 16
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_16
+				}
+			}
+			government_walter_bachmann_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 17
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_17
+				}
+			}
+			government_gunther_deckert_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 18
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_18
+				}
+			}
+			government_joachim_starbatty_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 19
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_19
+				}
+			}
+			government_gerd_schultze_rhonhof_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 20
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_20
+				}
+			}
+			government_frank_schwerdt_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 21
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_21
+				}
+			}
+			government_alexander_siech_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 22
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_22
+				}
+			}
+			government_jonas_paschnek_click = { 
+				set_country_flag = { 
+					flag = GER_Government_Tab_1_Click
+					value = 23
+				} 
+				set_variable = { 
+					var = GER_Government_Tab_1_Faction
+					value = GER_ANM_government_loyaly_slot_23
+				}
+			}
+			#Notification interaction
+			Button_2_Tab_1_click = { 
+				if = {
+					limit = { 
+						AND = { 
+							has_country_flag = GER_Government_Tab_1_Notification_5
+							has_country_flag = {
+								flag = GER_Government_Tab_1_Click
+								value = 5
+							} 
+						} 
+					} 
+					country_event = GER_government_loyalty_event.1
+					clr_country_flag = GER_Government_Tab_1_Notification_5
+				}
+				else_if = {
+					limit = { 
+						AND = { 
+							has_country_flag = GER_Government_Tab_1_Notification_7
+							has_country_flag = {
+								flag = GER_Government_Tab_1_Click
+								value = 7
+							} 
+						} 
+					} 
+					country_event = GER_government_loyalty_event.2
+					clr_country_flag = GER_Government_Tab_1_Notification_7 
+				}
+				else_if = {
+					limit = { 
+						AND = { 
+							has_country_flag = GER_Government_Tab_1_Notification_8
+							has_country_flag = {
+								flag = GER_Government_Tab_1_Click
+								value = 8
+							} 
+						} 
+					} 
+					country_event = GER_government_loyalty_event.3
+					clr_country_flag = GER_Government_Tab_1_Notification_8
+				}
+				else_if = {
+					limit = { 
+						AND = { 
+							has_country_flag = GER_Government_Tab_1_Notification_15
+							has_country_flag = {
+								flag = GER_Government_Tab_1_Click
+								value = 15
+							} 
+						} 
+					} 
+					country_event = GER_government_loyalty_event.4
+					clr_country_flag = GER_Government_Tab_1_Notification_15
+				}
+				else_if = {
+					limit = { 
+						AND = { 
+							has_country_flag = GER_Government_Tab_1_Notification_22
+							has_country_flag = {
+								flag = GER_Government_Tab_1_Click
+								value = 22
+							} 
+						} 
+					} 
+					country_event = GER_government_loyalty_event.5
+					clr_country_flag = GER_Government_Tab_1_Notification_22
+				}
+				else_if = {
+					set_country_flag = GER_Government_Tab_1_Interactions_Unavailable 
+				}
+			}
+			#Displaying additional faction information
+			Button_1_Tab_1_click = { 
+				if = {
+					limit = { 
+						NOT = { has_country_flag = GER_Government_Tab_1_Additional_Faction_Information } } 
+					set_country_flag = GER_Government_Tab_1_Additional_Faction_Information
+				}
+				else_if = {
+					limit = { has_country_flag = GER_Government_Tab_1_Additional_Faction_Information }
+					clr_country_flag = GER_Government_Tab_1_Additional_Faction_Information
+				}
+			}
+		} 
+	} 
+	
+	ANM_reichsstabilitat_GUI_Tab2 = {
+		context_type = player_context
+		window_name = "ANM_reichsstabilitat_GUI_tab2"
+		parent_window_token = "ANM_reichsstabilitat_GUI"
+		visible = {
+			AND = { 
+				has_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 2
+				} 
+				has_country_flag = GER_show_reichsstability_window
+			} 
+		}
+		
+		triggers = {
+
+		}
+		
+		effects = {
+			Button_Institution_1_click = { 
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution
+					value = 1
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Leader_Rank
+					value = 6
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution_1_Pressed
+					value = 2
+				}
+				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
+			}
+			Button_Institution_2_click = { 
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution
+					value = 2
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Leader_Rank
+					value = 4
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution_2_Pressed
+					value = 2
+				}
+				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
+			}
+			Button_Institution_3_click = { 
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution
+					value = 3
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Leader_Rank
+					value = 5
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution_3_Pressed
+					value = 2
+				}
+				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
+			}
+			Button_Institution_4_click = { 
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution
+					value = 4
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Leader_Rank
+					value = 1
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution_4_Pressed
+					value = 2
+				}
+				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
+			}
+			Button_Institution_5_click = { 
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution
+					value = 5
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Leader_Rank
+					value = 1
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution_5_Pressed
+					value = 2
+				}
+				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
+			}
+			Button_Institution_6_click = { 
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution
+					value = 6
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Leader_Rank
+					value = 2
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution_6_Pressed
+					value = 2
+				}
+				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
+			}
+			Button_Institution_7_click = { 
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution
+					value = 7
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Leader_Rank
+					value = 5
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution_7_Pressed
+					value = 2
+				}
+				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
+			}
+			Button_Institution_8_click = { 
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution
+					value = 8
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Leader_Rank
+					value = 3
+				}
+				set_variable = { 
+					var = GER_Government_Tab_2_Instution_8_Pressed
+					value = 2
+				}
+				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
+				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
+			}
+		}
+		properties = {
+			Progressbar_Institution_1 = { frame = Institution_1_Progress }
+			Progressbar_Institution_2 = { frame = Institution_2_Progress }
+			Progressbar_Institution_3 = { frame = Institution_3_Progress }
+			Progressbar_Institution_4 = { frame = Institution_4_Progress }
+			Progressbar_Institution_5 = { frame = Institution_5_Progress }
+			Progressbar_Institution_6 = { frame = Institution_6_Progress }
+			Progressbar_Institution_7 = { frame = Institution_7_Progress }
+			Progressbar_Institution_8 = { frame = Institution_8_Progress }
+
+			Institution_Leader_NAME = { frame = GER_Government_Tab_2_Instution }
+			Institution_Leader_ARMBAND = { frame = GER_Government_Tab_2_Leader_Rank }
+			Button_Institution_1 = { frame = GER_Government_Tab_2_Instution_1_Pressed }	
+			Button_Institution_2 = { frame = GER_Government_Tab_2_Instution_2_Pressed }
+			Button_Institution_3 = { frame = GER_Government_Tab_2_Instution_3_Pressed }
+			Button_Institution_4 = { frame = GER_Government_Tab_2_Instution_4_Pressed }
+			Button_Institution_5 = { frame = GER_Government_Tab_2_Instution_5_Pressed }
+			Button_Institution_6 = { frame = GER_Government_Tab_2_Instution_6_Pressed }
+			Button_Institution_7 = { frame = GER_Government_Tab_2_Instution_7_Pressed }
+			Button_Institution_8 = { frame = GER_Government_Tab_2_Instution_8_Pressed }		
+		} 
 	}
+
+	ANM_reichsstabilitat_GUI_Tab3 = {
+		context_type = player_context
+		window_name = "ANM_reichsstabilitat_GUI_tab3"
+		parent_window_token = "ANM_reichsstabilitat_GUI"
+		visible = {
+			AND = { 
+				has_country_flag = { 
+					flag = GER_Government_Tab_Visible
+					value = 3
+				} 
+				has_country_flag = GER_show_reichsstability_window
+			} 
+		}
+		
+		triggers = {
+
+		}
+		
+		effects = {
+			
+		}
+		properties = {
+				
+		} 
+	}
+
 } 

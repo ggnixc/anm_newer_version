@@ -1,26 +1,33 @@
+state = {
+	id = 420
+	name = "STATE_420"
 
-state={
-	id=420
-	name="STATE_420"
-	manpower = 1314948
-	
-	state_category = rural
-	
-	history={
-		set_demilitarized_zone = yes
+	history = {
 		owner = PER
 		buildings = {
-			infrastructure = 3
-			#4609 = {
-			#	naval_base = 2
-			#}
+			infrastructure = 6
+			air_base = 1
 		}
 		add_core_of = PER
-		victory_points = { 4609 10 }
-		
-	}
+		victory_points = {
+			18804 10
+		}
+		victory_points = {
+			4609 4
+		}
+		victory_points = {
+			4637 2
+		}
+		victory_points = {
+			15144 1
+		}
+ 	}
 
-	provinces={
-		4609 4637 15144
+	provinces = {
+		4609 4637 15144 18738 18744 18752 18759 18804 18812
 	}
+	manpower = 686701
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
 }

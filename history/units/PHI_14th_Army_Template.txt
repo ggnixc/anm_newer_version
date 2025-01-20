@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Dai Shidan"
+	name = "Hohei Shidan"
 	division_names_group = FGB_INF_01
 	is_locked = yes
 	regiments = {
@@ -45,24 +45,23 @@ division_template = {
 division_template = {
 	name = "Sensha Shidan"
 	division_names_group = FGB_INF_01
-	is_locked = yes
 	regiments = {
 		MBT = { x = 0 y = 0 }
 		MBT = { x = 0 y = 1 }
-		IFV = { x = 1 y = 0 }
-		IFV = { x = 1 y = 1 }
+		MBT = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
 		motorized = { x = 2 y = 0 }
 		motorized = { x = 2 y = 1 }
-		motorized = { x = 2 y = 2 }
 	}
 	support = {
-		IFV_recon = { x = 0 y = 0 }
-		artillery = { x = 0 y = 1 }
+		MBT_recon = { x = 0 y = 0 }
+		MBT_engineer = { x = 0 y = 1 }
 	}
 }
 
 division_template = {
-	name = "Tokubetsu Rikusentai"
+	name = "Rengou Tokubetsu Rikusentai"
 	division_names_group = FGB_INF_01
 	is_locked = yes
 	regiments = {
@@ -105,3 +104,4 @@ division_template = {
 		attack_helicopter_company = { x = 0 y = 4 }
 	}
 }
+#KD's Notes - Lord have mercy on whichever poor fool ends up on the receiving end of these templates
