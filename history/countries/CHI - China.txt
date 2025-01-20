@@ -4,11 +4,11 @@ set_major = yes
 oob = "CHI_1962"
 
 set_country_flag = CHI_Modernization
-recruit_character = CHI_Wang_Jianxuan
-recruit_character = CHI_Wen_Jiabao
-recruit_character = CHI_Zhou_Tienong
-recruit_character = CHI_Zhang_Qingwei
-recruit_character = CHI_Qian_Qichen
+recruit_character = CHI_Wang_Zhaoming
+recruit_character = CHI_Zhao_Yaodong
+recruit_character = CHI_Zhou_Shufu
+recruit_character = CHI_Xu_Lide
+recruit_character =  CHI_Qiu_Jinyi
 
 set_war_support = 1.00
 set_stability = 1.00
@@ -41,18 +41,20 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 4
+    communist = 0
     socialist = 0
-    progressivism = 16
+    progressivism = 0
     liberalism = 0
     conservatism = 0
-    liberal_conservatism = 32
+    liberal_conservatism = 0
     fascism = 0
-    despotism = 0
-    paternalism = 48
+    despotism = 26
+	despotism_1 = 12
+    paternalism = 28
+	paternalism_1 = 14
+	paternalism_2 = 20
     national_socialism = 0
     ultranationalism = 0
-     
 }
 
 if = {
@@ -78,14 +80,18 @@ if = {
 add_ideas = {
 	Sphere_Core_Member
 	
-    CHI_Fracturing_Dangguo
-	CHI_visions
+	add_ideas CHI_a_party_of_nation_and_revolution
+	add_ideas CHI_The_Seven_Rectifications_Campaign
+	add_ideas CHI_a_miracle_in_the_midddle_kingdom
+	add_ideas CHI_two_suns_one_sky
+	add_ideas CHI_the_dagger_and_the_saber
+	add_ideas CHI_bamboo_passage
 	
 	#Country
-	CHI_minister_Wen_Jiabao_hog
-    CHI_minister_Zhang_Qingwei_eco
-    CHI_minister_Qian_Qichen_for
-    CHI_minister_Zhou_Tienong_sec
+	CHI_minister_Zhao_Yaodong_hog
+	CHI_minister_Xu_Lide_eco
+	CHI_minister_Qiu_Jinyi_for
+	CHI_minister_Zhou_Shufu_sec
 	
 	#Political
 	tno_political_parties_controlled_opposition

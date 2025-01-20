@@ -1,33 +1,113 @@
 ideas = {
 	country = {
-		CHI_Fracturing_Dangguo = {
+		CHI_a_party_of_nation_and_revolution = {
 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_Fracturing_Dangguo
+			picture = GFX_idea_CHI_a_party_of_nation_and_revolution
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.05
-				drift_defence_factor = -0.5
-				political_power_gain = -0.15
-				party_popularity_stability_factor = -0.65
+				political_power_gain = 0.25
+				stability_factor = 0.075
+				party_popularity_stability_factor = 0.125
+				drift_defence_factor = 0.25
+				recruitable_population_factor = 0.1
+				mobilization_speed = 0.175
+				paternalism_drift = 0.01
 			}
 		}
-		CHI_visions = {
+		CHI_The_Seven_Rectifications_Campaign = {
 
 			allowed = { always = yes }
 			allowed_civil_war = { always = yes }
-			picture = GFX_idea_CHI_visions
+			picture = GFX_idea_CHI_The_Seven_Rectifications_Campaign
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = 0.25
-				war_support_factor = 0.2
-				paternalism_drift = 0.0001
-				drift_defence_factor = 0.25
-				production_factory_efficiency_gain_factor = 0.15
-				industrial_capacity_factory = 0.25
+				political_power_gain = 0.03
+				monthly_population = 0.075
+				production_factory_efficiency_gain_factor = -0.05
+				consumer_goods_factor = 0.09
+				production_speed_buildings_factor = 0.10
+				recruitable_population_factor = 0.015
+				war_support_weekly = 0.05
+				
+			}
+		}
+		CHI_a_miracle_in_the_midddle_kingdom = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_a_miracle_in_the_midddle_kingdom
+			removal_cost = -1
+
+			modifier = {
+				production_factory_start_efficiency_factor = 0.115
+				production_factory_max_efficiency_factor = 0.1375
+				production_factory_efficiency_gain_factor = 0.1150
+				production_speed_buildings_factor = 0.1825
+				consumer_goods_factor = 0.225
+				research_speed_factor = 0.145
+				local_resources_factor = 0.21
+				fuel_gain_factor = 0.0975
+				industrial_capacity_factory = 0.175
+			}
+		}
+		CHI_two_suns_one_sky = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_two_suns_one_sky
+			removal_cost = -1
+
+			modifier = {
+				war_support = 0.25
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.10
+				command_power_gain = 0.20
+			}
+			targeted_modifier = {
+				target = JAP
+				extra_trade_to_target_factor = -0.15
+			}
+		}
+		CHI_the_dagger_and_the_saber = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_the_dagger_and_the_saber
+			removal_cost = -1
+
+			modifier = {
+				war_support = 0.15
+				army_org_factor = 0.10
+				army_morale_factor = 0.20
+				army_attack_factor = 0.075
+				army_defence_factor = 0.125
+				army_experience_gain_factor = 0.175
+				land_doctrine_cost_factor = -0.10
+				planning_speed = 0.025
+				decryption = -0.125
+				encryption = -0.15
+				civilian_intel_to_others = 0.225
+				army_intel_to_others = 0.185
+			}
+		}
+		CHI_bamboo_passage = {
+
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = GFX_idea_CHI_the_dagger_and_the_saber
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.075
+				trade_opinion_factor = 0.35
+				resources_to_market = -0.20
+				fuel_gain_factor = 0.20
+				improve_relations_gain = 0.15
+				improve_relations_cost = -0.125	
 			}
 		}
 	}
