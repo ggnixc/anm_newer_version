@@ -1,0 +1,70 @@
+﻿load_focus_tree = ZZZ_national_focus #If you touch this the bookmark gets fucked
+capital = 2071
+
+### Characters ###
+recruit_character = AAC_Miguel_Angel_Vergara_Villalobos
+
+# Vacant
+
+oob = ""
+
+CHL = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_autonomy = {
+			target = AAC
+			autonomy_state = autonomy_antarctic_territory
+		}
+		else = {
+			puppet = AAC
+		}
+	}
+}
+
+add_ideas = Antarctica_Territory_Generic_Idea
+
+
+CHL = { add_to_tech_sharing_group = aac_tech_group }
+add_to_tech_sharing_group = aac_tech_group
+
+set_research_slots = 0
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+country_lock_all_division_template = yes
+
+add_equipment_to_stockpile = {
+	type = convoy
+	amount = 10
+}
+
+set_popularities = {
+	despotism = 100
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_None }
+
+add_ideas = {
+	## Societal Development
+	tno_army_professionalism_spartan_discipline
+	tno_industrial_expertise_innovative
+	tno_industrial_equipment_cutting_edge
+	tno_agriculture_modern
+	tno_research_facilities_advanced
+	tno_academic_base_golden_age
+	tno_admin_efficiency_functional_administrative_systems
+}
+
+TNO_startup_nation = yes
