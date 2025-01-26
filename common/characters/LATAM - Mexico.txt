@@ -11,16 +11,84 @@ characters = {
 			id = -1
 		}
 	}
-	MEX_Ernesto_Zedillo = {
-		name = MEX_Ernesto_Zedillo
-		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Ernesto_Zedillo.dds" } }
+	MEX_Luis_Donaldo_Colosio = {
+		name = MEX_Luis_Donaldo_Colosio
+		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Luis_Donaldo_Colosio.dds" } }
 		country_leader = {
-			desc = ""
+			desc = "POLITICS_LUIS_DONALDO_COLOSIO"
 			expire = "2090.4.20"
 			ideology = despotism_institutional_despotism_subtype
 			traits = { 
 			}
 			id = -1
+		}
+	}
+	MEX_Cuauhtemoc_Cardenas_Solorzano = {
+		name = MEX_Cuauhtemoc_Cardenas_Solorzano
+		portraits = { 
+			civilian = { small = GFX_idea_MEX_Cuauhtemoc_Cardenas_Solorzano } 
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MEX_Cuauhtemoc_Cardenas_Solorzano_hog
+			allowed = { original_tag = MEX }
+			traits = {
+            }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MEX_Jesus_Zambrano_Grijalva = { 
+		name = MEX_Jesus_Zambrano_Grijalva
+		portraits = { 
+			civilian = { small = GFX_idea_MEX_Jesus_Zambrano_Grijalva } 
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = MEX_Jesus_Zambrano_Grijalva_for
+			allowed = { original_tag = MEX }
+			traits = {
+            }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MEX_Carlos_Rojas_Gutierrez = { 
+		name = MEX_Carlos_Rojas_Gutierrez
+		portraits = { 
+			civilian = { small = GFX_idea_MEX_Carlos_Rojas_Gutierrez } 
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MEX_Carlos_Rojas_Gutierrez_eco
+			allowed = { original_tag = MEX }
+			traits = {
+            }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MEX_Antonio_Riviello_Bazan= { 
+		name = MEX_Antonio_Riviello_Bazan
+		portraits = { 
+			civilian = { small = GFX_idea_MEX_Antonio_Riviello_Bazan } 
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = MEX_Antonio_Riviello_Bazan_sec
+			allowed = { original_tag = MEX }
+			traits = {
+            }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
 		}
 	}
 }
