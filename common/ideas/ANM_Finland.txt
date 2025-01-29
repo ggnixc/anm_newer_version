@@ -44,8 +44,8 @@ ideas = {
 		}
 		FIN_civil_war = {  
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FIN_civil_war" }
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
 
 			picture = FIN_civil_war
 			removal_cost = -1
@@ -57,6 +57,7 @@ ideas = {
 				training_time_army_factor = -0.30
  					ai_join_ally_desire_factor = -1000
 					ai_call_ally_desire_factor = -1000
+					ai_focus_aggressive_factor = 1
 				} 
 			}
 		}
