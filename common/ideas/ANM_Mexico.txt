@@ -1,21 +1,28 @@
 ideas = {
 	country = {
-        MEX_Breaking_the_Shackles_of_the_People = {
+        MEX_The_New_Popular_Revolution = {
 		
 			allowed = { always = no }
-			picture = MEX_Breaking_the_Shackles_of_the_People
+			picture = MEX_The_New_Popular_Revolution
 			removal_cost = -1
 			
 		   	modifier = {
+				political_power_gain = 0.25
+				party_popularity_stability_factor = 0.05
+				drift_defence_factor = 0.1
 		    }
 		}
-		MEX_Cartels_All_Over_Mexico = {
+		MEX_Those_In_The_Shadows = {
 			   
 			allowed = { always = no }
-			picture = MEX_Cartels_All_Over_Mexico
+			picture = MEX_Those_In_The_Shadows
 			removal_cost = -1
 			
 		    modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				monthly_population = -0.03
+				consumer_goods_factor = 0.1
 		    }
 		}
 		MEX_Here_Comes_the_Money = {
@@ -25,15 +32,23 @@ ideas = {
 			removal_cost = -1
 			
 		    modifier = {
+				trade_opinion_factor = 0.1
+				monthly_population = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_factory_donations = 2
 		    }
 		}
-		MEX_Shadow_of_Bucareli_No_More = {
+		MEX_The_Rusting_Sword = {
 			   
 			allowed = { always = no }
-			picture = MEX_Shadow_of_Bucareli_No_More
+			picture = MEX_The_Rusting_Sword
 			removal_cost = -1
 			
 		    modifier = {
+				army_attack_factor = 0.1
+				army_morale = 0.2
+				dig_in_speed = 5
+				recon_factor = 0.3
 		    }
 		}
 		MEX_Sweeping_Corruption = {
@@ -43,6 +58,9 @@ ideas = {
 			removal_cost = -1
 			
 		    modifier = {
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.15
+				intel_network_gain = -1
 		    }
 		}
 	}

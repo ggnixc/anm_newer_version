@@ -1,0 +1,95 @@
+add_namespace = MEX.flavour
+
+country_event = {
+	id = MEX.flavour.1 # 2000 elections
+	immediate = { log = "[GetDateText]: [Root.GetName]: event MEX.flavour.1" }
+	title = MEX.flavour.1.t
+	desc = MEX.flavour.1.desc
+	picture = GFX_anm_events
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = MEX.flavour.1.a
+		ai_chance = { factor = 25 }
+		MEX_Vicente_Fox = {
+			promote_character = liberal_conservatism_christian_democracy_subtype
+		}
+		set_politics = { 
+			ruling_party = liberal_conservatism
+			last_election = "2000.7.2"
+			election_frequency = 72
+			elections_allowed = yes
+		}
+		set_popularities = {
+			liberal_conservatism = 40
+			fascism = 5
+			socialist = 5
+			conservatism = 10
+			liberalism = 16
+			despotism = 24
+		}
+  	}
+	option = {
+		name = MEX.flavour.1.b
+		ai_chance = { factor = 25 }
+		MEX_Cuauhtemoc_Cardenas_Solorzano = {
+			promote_character = paternalism_right_wing_populism_subtype
+		}
+		set_politics = { 
+			ruling_party = paternalism
+			last_election = "2000.7.2"
+			election_frequency = 72
+			elections_allowed = yes
+		}
+		set_popularities = {
+			fascism = 5
+			socialist = 5
+			conservatism = 6
+			liberalism = 23
+			paternalism = 51
+			despotism = 10
+		}
+  	}
+	option = {
+		name = MEX.flavour.1.c
+		ai_chance = { factor = 25 }
+		MEX_Francisco_Labastida = {
+			promote_character = conservatism_liberal_corporatism_subtype
+		}
+		set_politics = { 
+			ruling_party = conservatism
+			last_election = "2000.7.2"
+			election_frequency = 72
+			elections_allowed = yes
+		}
+		set_popularities = {
+			fascism = 5
+			socialist = 4
+			conservatism = 51
+			liberalism = 25
+			despotism = 15
+		}
+  	}
+	option = {
+		name = MEX.flavour.1.d
+		ai_chance = { factor = 25 }
+		MEX_Humberto_Roque_Villanueva = {
+			promote_character = conservatism_liberal_corporatism_subtype
+		}
+		set_politics = { 
+			ruling_party = conservatism
+			last_election = "2000.7.2"
+			election_frequency = 72
+			elections_allowed = yes
+		}
+		set_popularities = {
+			fascism = 5
+			socialist = 4
+			conservatism = 56
+			liberalism = 19
+			despotism = 16
+		}
+  	}
+}

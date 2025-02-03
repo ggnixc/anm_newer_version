@@ -1,16 +1,4 @@
 characters = {
-	MEX_Vicente_Fox = {
-		name = MEX_Vicente_Fox
-		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Vicente_Fox.dds" } }
-		country_leader = {
-			desc = ""
-			expire = "2090.4.20"
-			ideology = conservatism_subtype
-			traits = { 
-			}
-			id = -1
-		}
-	}
 	MEX_Luis_Donaldo_Colosio = {
 		name = MEX_Luis_Donaldo_Colosio
 		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Luis_Donaldo_Colosio.dds" } }
@@ -26,7 +14,18 @@ characters = {
 	MEX_Cuauhtemoc_Cardenas_Solorzano = {
 		name = MEX_Cuauhtemoc_Cardenas_Solorzano
 		portraits = { 
-			civilian = { small = GFX_idea_MEX_Cuauhtemoc_Cardenas_Solorzano } 
+			civilian = { 
+				small = GFX_idea_MEX_Cuauhtemoc_Cardenas_Solorzano
+				large = "gfx/leaders/MEX/Portrait_MEX_Cuauhtemoc_Cardenas.dds"
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_CUAUHTEMOC_CARDENAS"
+			expire = "2090.4.20"
+			ideology = paternalism_right_wing_populism_subtype
+			traits = { 
+			}
+			id = -1
 		}
 		advisor = {
 			slot = head_of_government
@@ -40,14 +39,14 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	MEX_Jesus_Zambrano_Grijalva = { 
-		name = MEX_Jesus_Zambrano_Grijalva
+	MEX_Javier_Trevino_Cantu = { 
+		name = MEX_Javier_Trevino_Cantu
 		portraits = { 
-			civilian = { small = GFX_idea_MEX_Jesus_Zambrano_Grijalva } 
+			civilian = { small = GFX_idea_MEX_Javier_Trevino_Cantu } 
 		}
 		advisor = {
 			slot = foreign_minister
-			idea_token = MEX_Jesus_Zambrano_Grijalva_for
+			idea_token = MEX_Javier_Trevino_Cantu_for
 			allowed = { original_tag = MEX }
 			traits = {
             }
@@ -74,14 +73,14 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	MEX_Antonio_Riviello_Bazan= { 
-		name = MEX_Antonio_Riviello_Bazan
+	MEX_Enrique_Cervantes_Aguirre = { 
+		name = MEX_Enrique_Cervantes_Aguirre
 		portraits = { 
-			civilian = { small = GFX_idea_MEX_Antonio_Riviello_Bazan } 
+			civilian = { small = GFX_idea_MEX_Enrique_Cervantes_Aguirre } 
 		}
 		advisor = {
 			slot = security_minister
-			idea_token = MEX_Antonio_Riviello_Bazan_sec
+			idea_token = MEX_Enrique_Cervantes_Aguirre_sec
 			allowed = { original_tag = MEX }
 			traits = {
             }
@@ -89,6 +88,42 @@ characters = {
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
+		}
+	}
+	MEX_Vicente_Fox = {
+		name = MEX_Vicente_Fox
+		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Vicente_Fox.dds" } }
+		country_leader = {
+			desc = "POLITICS_VICENTE_FOX"
+			expire = "2090.4.20"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = { 
+			}
+			id = -1
+		}
+	}
+	MEX_Francisco_Labastida = {
+		name = MEX_Francisco_Labastida
+		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Francisco_Labastida.dds" } }
+		country_leader = {
+			desc = "POLITICS_FRANCISCO_LABASTIDA"
+			expire = "2090.4.20"
+			ideology = conservatism_liberal_corporatism_subtype
+			traits = { 
+			}
+			id = -1
+		}
+	}
+	MEX_Humberto_Roque_Villanueva = {
+		name = MEX_Humberto_Roque_Villanueva
+		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Humberto_Roque_Villanueva.dds" } }
+		country_leader = {
+			desc = "POLITICS_HUMBERTO_ROQUE"
+			expire = "2090.4.20"
+			ideology = conservatism_liberal_corporatism_subtype
+			traits = { 
+			}
+			id = -1
 		}
 	}
 }
