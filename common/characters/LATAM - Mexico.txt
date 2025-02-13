@@ -1,21 +1,124 @@
 characters = {
-	MEX_Vicente_Fox = {
-		name = MEX_Vicente_Fox
-		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Vicente_Fox.dds" } }
+	MEX_Luis_Donaldo_Colosio = {
+		name = MEX_Luis_Donaldo_Colosio
+		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Luis_Donaldo_Colosio.dds" } }
 		country_leader = {
-			desc = ""
+			desc = "POLITICS_LUIS_DONALDO_COLOSIO"
 			expire = "2090.4.20"
-			ideology = conservatism_subtype
+			ideology = despotism_institutional_despotism_subtype
 			traits = { 
 			}
 			id = -1
 		}
 	}
-	MEX_Ernesto_Zedillo = {
-		name = MEX_Ernesto_Zedillo
-		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Ernesto_Zedillo.dds" } }
+	MEX_Cuauhtemoc_Cardenas_Solorzano = {
+		name = MEX_Cuauhtemoc_Cardenas_Solorzano
+		portraits = { 
+			civilian = { 
+				small = GFX_idea_MEX_Cuauhtemoc_Cardenas_Solorzano
+				large = "gfx/leaders/MEX/Portrait_MEX_Cuauhtemoc_Cardenas.dds"
+			} 
+		}
 		country_leader = {
-			desc = ""
+			desc = "POLITICS_CUAUHTEMOC_CARDENAS"
+			expire = "2090.4.20"
+			ideology = despotism_institutional_despotism_subtype
+			traits = { 
+			}
+			id = -1
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = MEX_Cuauhtemoc_Cardenas_Solorzano_hog
+			allowed = { original_tag = MEX }
+			traits = {
+            }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MEX_Javier_Trevino_Cantu = { 
+		name = MEX_Javier_Trevino_Cantu
+		portraits = { 
+			civilian = { small = GFX_idea_MEX_Javier_Trevino_Cantu } 
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = MEX_Javier_Trevino_Cantu_for
+			allowed = { original_tag = MEX }
+			traits = {
+            }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MEX_Carlos_Rojas_Gutierrez = { 
+		name = MEX_Carlos_Rojas_Gutierrez
+		portraits = { 
+			civilian = { small = GFX_idea_MEX_Carlos_Rojas_Gutierrez } 
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = MEX_Carlos_Rojas_Gutierrez_eco
+			allowed = { original_tag = MEX }
+			traits = {
+            }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MEX_Enrique_Cervantes_Aguirre = { 
+		name = MEX_Enrique_Cervantes_Aguirre
+		portraits = { 
+			civilian = { small = GFX_idea_MEX_Enrique_Cervantes_Aguirre } 
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = MEX_Enrique_Cervantes_Aguirre_sec
+			allowed = { original_tag = MEX }
+			traits = {
+            }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	MEX_Vicente_Fox = {
+		name = MEX_Vicente_Fox
+		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Vicente_Fox.dds" } }
+		country_leader = {
+			desc = "POLITICS_VICENTE_FOX"
+			expire = "2090.4.20"
+			ideology = liberal_conservatism_christian_democracy_subtype
+			traits = { 
+			}
+			id = -1
+		}
+	}
+	MEX_Francisco_Labastida = {
+		name = MEX_Francisco_Labastida
+		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Francisco_Labastida.dds" } }
+		country_leader = {
+			desc = "POLITICS_FRANCISCO_LABASTIDA"
+			expire = "2090.4.20"
+			ideology = despotism_institutional_despotism_subtype
+			traits = { 
+			}
+			id = -1
+		}
+	}
+	MEX_Humberto_Roque_Villanueva = {
+		name = MEX_Humberto_Roque_Villanueva
+		portraits = { civilian = { large = "gfx/leaders/MEX/Portrait_MEX_Humberto_Roque_Villanueva.dds" } }
+		country_leader = {
+			desc = "POLITICS_HUMBERTO_ROQUE"
 			expire = "2090.4.20"
 			ideology = despotism_institutional_despotism_subtype
 			traits = { 

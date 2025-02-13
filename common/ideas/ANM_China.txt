@@ -45,7 +45,7 @@ ideas = {
 			modifier = {
 				production_factory_start_efficiency_factor = 0.115
 				production_factory_max_efficiency_factor = 0.1375
-				production_factory_efficiency_gain_factor = 0.1150
+				production_factory_efficiency_gain_factor = 0.1250
 				production_speed_buildings_factor = 0.1825
 				consumer_goods_factor = 0.225
 				research_speed_factor = 0.145
@@ -68,7 +68,7 @@ ideas = {
 				command_power_gain = 0.20
 			}
 			targeted_modifier = {
-				target = JAP
+				tag = JAP
 				extra_trade_to_target_factor = -0.15
 			}
 		}
@@ -104,10 +104,10 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.075
 				trade_opinion_factor = 0.35
-				resources_to_market = -0.20
+				min_export = -0.20
 				fuel_gain_factor = 0.20
-				improve_relations_gain = 0.15
-				improve_relations_cost = -0.125	
+				opinion_gain_monthly_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.125	
 			}
 		}
 	}

@@ -226,20 +226,6 @@ scripted_gui = {
 			}
 		}
 	}
-	TNO_SG_politics_bop_cover = {
-		context_type = player_context
-		parent_window_token = politics_tab
-		window_name = "TNO_SG_politics_bop_cover"
-		visible = {
-			NOT = { has_country_flag = ANM_disable_bop_cover }
-			has_any_power_balance = yes
-		}
-		effects = {
-			cover_button_click = {
-				set_country_flag = ANM_disable_bop_cover
-			}
-		}
-	}
 
 	TNO_SG_politics_law_emergency_close = {
 		context_type = player_context

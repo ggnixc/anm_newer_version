@@ -1,8 +1,14 @@
 ﻿capital = 277
 
 set_oob = "MEX_1962"
+recruit_character = MEX_Luis_Donaldo_Colosio
+recruit_character = MEX_Cuauhtemoc_Cardenas_Solorzano
+recruit_character = MEX_Enrique_Cervantes_Aguirre
+recruit_character = MEX_Carlos_Rojas_Gutierrez
+recruit_character = MEX_Javier_Trevino_Cantu
+recruit_character = MEX_Francisco_Labastida
+recruit_character = MEX_Humberto_Roque_Villanueva
 recruit_character = MEX_Vicente_Fox
-recruit_character = MEX_Ernesto_Zedillo
 
 # econtype
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Stabilizing_Development }
@@ -10,7 +16,7 @@ set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
 
 set_politics = {
 	ruling_party = despotism
-	last_election = "1994.8.21"
+	last_election = "1994.7.2"
 	election_frequency = 72
 	elections_allowed = yes
 }
@@ -18,36 +24,36 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    fascism = 4
-	despotism = 60
-	despotism_1 = 8
-	despotism_2 = 5
-	conservatism = 10
-	conservatism_1 = 4
-	liberalism = 4
-	communist = 3
-	communist_1 = 2
+    fascism = 5
+	socialist = 5
+	conservatism = 6
+	liberal_conservatism = 16
+	despotism = 44
+	despotism_1 = 17
+	despotism_2 = 7
 }
 
-set_stability = 0.8
+country_event = { id = MEX.flavour.1 days = 1644 } # 2000 elections
 
-set_variable = { MEX_ANM_legitmacy = 52 }
+set_stability = 0.8
 
 add_ideas = {
 
 	## General
 
-	MEX_Manufacturing_Giant
-	MEX_Crime_Drugs
+	MEX_The_New_Popular_Revolution
+	MEX_Those_In_The_Shadows
+	MEX_The_Gilded_Rot
+	MEX_The_Rusting_Sword
 
 	## Faction
 
 	### Ministers
 
-	MEX_Carlos_Alcoer_hog
-	MEX_Francisco_Diaz_eco
-	MEX_Gerardo_Garcia_sec
-	MEX_Jorge_Castaneda_for
+	MEX_Cuauhtemoc_Cardenas_Solorzano_hog
+	MEX_Carlos_Rojas_Gutierrez_eco
+	MEX_Enrique_Cervantes_Aguirre_sec
+	MEX_Javier_Trevino_Cantu_for
 
 	### Laws
 

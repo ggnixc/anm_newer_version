@@ -1,27 +1,53 @@
 ideas = {
 	country = {
-        MEX_manufacturing_giant = {
+        MEX_The_New_Popular_Revolution = {
 		
 			allowed = { always = no }
-			picture = MEX_manufacturing_giant
+			picture = MEX_The_New_Popular_Revolution
 			removal_cost = -1
 			
 		   	modifier = {
-				production_factory_efficiency_gain_factor = 0.15
-				production_speed_buildings_factor = 0.10
-				global_building_slots_factor = 0.10
+				political_power_gain = 0.25
+				party_popularity_stability_factor = 0.15
+				war_support_factor = 0.05
 		    }
 		}
-		MEX_Crime_Drugs = {
+		MEX_Those_In_The_Shadows = {
 			   
 			allowed = { always = no }
-			picture = MEX_Crime_Drugs
+			picture = MEX_Those_In_The_Shadows
 			removal_cost = -1
 			
 		    modifier = {
-				stability_factor = -0.10
-				resistance_target = 0.10
-				political_power_gain = -0.15
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				monthly_population = -0.03
+				consumer_goods_factor = 0.1
+		    }
+		}
+		MEX_The_Gilded_Rot = {
+			   
+			allowed = { always = no }
+			picture = MEX_The_Gilded_Rot
+			removal_cost = -1
+			
+		    modifier = {
+				production_speed_buildings_factor = -0.1
+				political_power_cost = 0.2
+				production_factory_efficiency_gain_factor = 0.12
+				industrial_factory_donations = 2
+		    }
+		}
+		MEX_The_Rusting_Sword = {
+			   
+			allowed = { always = no }
+			picture = MEX_The_Rusting_Sword
+			removal_cost = -1
+			
+		    modifier = {
+				army_attack_factor = -0.05
+				army_morale = -0.1
+				dig_in_speed = -5
 		    }
 		}
 	}
