@@ -42,6 +42,24 @@ country_event = { #Germany can intervene
 			TNO_increase_volunteer_cap_1 = yes
 		}
 		ANM_fopo_add_finland_civil_war_tab = yes
+			FIN = {
+			set_variable = { ECON_SPHERE_LEADER = GER }
+			set_popularities = {
+				conservatism = 23
+				conservatism_2 = 13
+				fascism = 23
+				paternalism = 23
+				liberalism = 4
+				national_socialism = 2
+			}
+
+			set_politics = {	
+				ruling_party = fascism
+				last_election = "1995.7.1"
+				election_frequency = 36
+				elections_allowed = yes
+			}
+		}
 	}
 }
 
@@ -86,10 +104,10 @@ country_event = {
 		FDR = {
 			set_variable = { ECON_SPHERE_LEADER = SOV }
 			set_popularities = {
-				communist = 50
-				socialist = 30
-				progressivism = 15
-				liberalism = 5
+				communist = 44
+				communist_2 = 39
+				socialist = 12
+				paternalism = 5
 			}
 		}
   	}
