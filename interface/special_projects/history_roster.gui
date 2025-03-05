@@ -66,12 +66,14 @@ guiTypes = {
 				position = { x = @history_entry_width y = @history_entry_height }
 			}
 
-			smoothListBoxType = {
+			gridBoxType = {
 				# contains history_list_item
 				name = "history_list"
 				position = { x = 22 y = 29 }
-				size = { x = 403 y = 480 }
-				scrollbartype = "standardlistbox_slider"
+				size = { width = 403 height = 480 }
+				slotsize = { width = @history_entry_width height = @history_entry_height}
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
 			}
 		}
 

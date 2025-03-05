@@ -50,12 +50,14 @@ guiTypes = {
 				spriteType = "GFX_tiled_window_transparent"
 			}
 
-			smoothListBoxType = {
+			gridBoxType = {
 				# contains project_simple_list_item
 				name = "projects_list"
 				position = { x = 12 y = 10 }
-				size = { x = 402 y = 558 }
-				scrollbartype = "standardlistbox_slider"
+				size = { width = 402 height = 558 }
+				slotsize = { width = 400 height = 100}
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
 			}
 		}
 
