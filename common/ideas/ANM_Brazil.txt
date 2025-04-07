@@ -8,7 +8,7 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.05
 				stability_weekly = 0.001
-				stability_factor = 0.15
+				party_popularity_stability_factor = 0.15
 			}
 		}
 		BRA_Status_Of_Corruption_1 = {
@@ -17,8 +17,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_gain = -0.05
-				stability_factor = -0.05
+				stability_factor = -0.1
+				local_resources_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.15
 				custom_modifier_tooltip = BRA_Corruption_Status_tt
 			}
 		}
@@ -28,8 +29,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.05
-				drift_defence_factor = -0.07
+				stability_factor = -0.15
+				research_speed_factor = -0.1
+				political_power_gain = -0.1
 			}
 		}
 		BRA_The_Fall_From_Grace = {
@@ -38,8 +40,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.05
-				drift_defence_factor = -0.07
+				research_sharing_per_country_bonus = -0.05
+				war_support_factor = 0.1
+				trade_opinion_factor = -0.07
+				justify_war_goal_time = -0.2
 			}
 		}
 		BRA_No_Mans_Land = {
@@ -48,8 +52,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.05
-				drift_defence_factor = -0.07
+				stability_factor = -0.1
+				production_factory_start_efficiency_factor = -0.05
 			}
 		}
 	}
