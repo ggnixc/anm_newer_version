@@ -1,4 +1,21 @@
 defined_text = {
+	name = TNO_GetLawSocdevCategoryTitle
+	text = { localization_key = "tno_laws_category_[?tno_opened_laws_category]" }
+}
+defined_text = {
+	name = TNO_GetLawSocdevCategoryDesc
+	text = { localization_key = "tno_laws_category_[?tno_opened_laws_category]_d" }
+}
+defined_text = {
+	name = TNO_GetLawSocdevModifierText_1
+	text = { localization_key = "[?law_v.GetTokenKey]_MODIFIER" }
+}
+defined_text = {
+	name = TNO_GetLawSocdevModifierText_2
+	text = { localization_key = "[?law_v.GetTokenKey]_MODIFIER_2" }
+}
+
+defined_text = {
 	name = GetCategory2Lawtno_conscription
 	text = {
 		trigger = {
@@ -3107,25 +3124,5 @@ defined_text = {
 	}
 	text = {
 		localization_key = TNO_Category_expand_tt
-	}
-}
-
-# Misc Laws container
-defined_text = {
-	name = GetMiscLawsContainer
-	text = { # Britain System
-		trigger = {
-			tag = ENG
-		}
-		localization_key = TNO_ENG_assorted_laws
-	}
-	text = { # German System
-		trigger = {
-		tag = GER
-		}
-		localization_key = ANM_GER_assorted_laws
-	}
-	text = {
-		localization_key = TNO_assorted_law_[?v]
 	}
 }

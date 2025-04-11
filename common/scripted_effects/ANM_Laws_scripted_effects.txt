@@ -45,80 +45,26 @@
 #
 
 misc_law_array_startup = {
-	clear_array = TNO_assorted_laws_display
-
-	add_to_array = { TNO_assorted_laws_display = 1 }
-	add_to_array = { TNO_assorted_laws_display = 2 }
-	add_to_array = { TNO_assorted_laws_display = 3 }
-	add_to_array = { TNO_assorted_laws_display = 4 }
-	add_to_array = { TNO_assorted_laws_display = 5 }
-	add_to_array = { TNO_assorted_laws_display = 6 }
-	add_to_array = { TNO_assorted_laws_display = 7 }
-	add_to_array = { TNO_assorted_laws_display = 8 }
-}
-
-misc_law_array_fix_scrollbar = {
-	while_loop_effect = {
-		limit = {
-			is_in_array = { TNO_assorted_laws_display = -1 }
-		}
-		remove_from_array = { TNO_assorted_laws_display = -1 }
-	}
-	
-	set_temp_variable = { temp_modulo = TNO_assorted_laws_display^num }
-	modulo_temp_variable = { temp_modulo = 2 }
-
-	if = {
-		limit = { check_variable = { temp_modulo = 1 } }
-		add_to_array = { TNO_assorted_laws_display = -1 }
-	}
-	add_to_array = { TNO_assorted_laws_display = -1 }
-	add_to_array = { TNO_assorted_laws_display = -1 }
-}
-
-#For Tags that have special misc laws only
-
-misc_law_array_startup_special = {
 	if = {
 		limit = {
 			tag = ENG
 		}
-		clear_array = TNO_assorted_laws_display
-		set_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 1 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 2 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 3 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 4 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 5 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 6 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 7 }
+		add_to_array = { TNO_assorted_laws = token:ENG_Abolished_Parliament_Act_law }
+		add_to_array = { TNO_assorted_laws = token:ENG_Renounced_War_law }
+		add_to_array = { TNO_assorted_laws = token:ENG_BPP_Constitution_law }
+		add_to_array = { TNO_assorted_laws = token:ENG_Conlcuded_Deportations_law }
+		add_to_array = { TNO_assorted_laws = token:ENG_Speculation_Ban_law }
+		add_to_array = { TNO_assorted_laws = token:ENG_Monopoly_Ban_law }
+		add_to_array = { TNO_assorted_laws = token:ENG_Partified_Civil_Service_law }
 	}
-	else_if = {
-		limit = {
-			tag = GER
-		}
-		clear_array = TNO_assorted_laws_display
-		set_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 1 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 2 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 3 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 4 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 5 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 6 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 7 }
-		add_to_temp_variable = { v = 1 }
-		add_to_array = { TNO_assorted_laws_display = 8 }
-	}
+}
+
+TNO_add_assorted_law = {
+	add_to_array = { TNO_assorted_laws = temp_law }
+	custom_effect_tooltip = TNO_add_assorted_law_tt
+}
+
+TNO_remove_assorted_law = {
+	remove_from_array = { TNO_assorted_laws = temp_law }
+	custom_effect_tooltip = TNO_remove_assorted_law_tt
 }
