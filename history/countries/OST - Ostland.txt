@@ -26,20 +26,11 @@ set_politics = {
 		set_cosmetic_tag = OST_BLT2
 		
 		set_party_name = {
-			ideology = fascism
-			long_name = OST_fascism_party_long
-			name = OST_fascism_party
-		}
-		set_party_name = {
 			ideology = national_socialism
 			long_name = OST_national_socialism_party_long
 			name = OST_national_socialism_party 
 		}
-		set_party_name = {
-			ideology = paternalism
-			long_name = OST_paternalism_party_long
-			name = OST_paternalism_party
-		}
+
 		
 add_ideas = {
 	#Faction
@@ -47,6 +38,8 @@ add_ideas = {
 	#National
 	OST_favorite_son
 	OST_the_ostwall
+	OST_economical_aristocracy
+	OST_price_of_peace
 	#Ministers
 	OST_Imants_Paradnieks_hog
 	OST_Jorg_Hanel_sec
@@ -166,8 +159,8 @@ if = {
 }
 
 set_popularities = {
-	national_socialism = 67
-	paternalism = 15
-	ultranationalism = 10
-	fascism = 8
+	national_socialism = 56
+	national_socialism_2 = 11
+	despotism = 24
+	despotism_1 = 9
 }

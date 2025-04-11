@@ -12,7 +12,7 @@ recruit_character = BLR_dietmar_munier
 set_oob = "BLR_2000"
 
 add_ideas = {
-	Pakt_Reichsprotektorat
+	Pakt_Nebenland
 	#ministers
 	BLR_Andrei_Sawoniuk_hog
 	BLR_Vital_Ciarpicki_sec
@@ -21,6 +21,8 @@ add_ideas = {
 	#ideas
 	BLR_green_heart_project
 	BLR_deindustrialisation
+	BLR_kryvians
+	BLR_hotbed_of_nationalities
 	#political
 	tno_political_parties_one_party_state
 	tno_religious_rights_secularism
@@ -73,28 +75,10 @@ set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft }
 
 set_popularities = {
-	fascism = 9
-	national_socialism = 61
-	paternalism = 12
-	conservatism = 6
-	despotism = 12
+	national_socialism = 94
+	national_socialism_2 = 6
 }
 set_cosmetic_tag = BLR_SGR2
-set_party_name = {
-	ideology = paternalism
-	long_name = BLR_collab_paternalism_long
-	name = BLR_collab_paternalism
-}
-set_party_name = {
-	ideology = conservatism
-	long_name = BLR_collab_conservatism_long
-	name = BLR_collab_conservatism
-}
-set_party_name = {
-	ideology = fascism
-	long_name = BLR_collab_fascism_long
-	name = BLR_collab_fascism
-}
 set_party_name = {
 	ideology = national_socialism
 	long_name = BLR_collab_national_socialism_long

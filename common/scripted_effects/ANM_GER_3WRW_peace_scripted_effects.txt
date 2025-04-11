@@ -2,9 +2,11 @@ ANM_SOV_to_FIN = {
 	FIN = { 
 		transfer_state = 215
 		transfer_state = 1359
+		transfer_state = 1887
 	
 		add_state_core = 215
 		add_state_core = 1359
+		add_state_core = 1887
 	} 
 }
 
@@ -12,26 +14,34 @@ ANM_SOV_to_MOS_small = {
 	MOS = { 
 		transfer_state = 210
 		transfer_state = 217
+		transfer_state = 219
 		transfer_state = 222
 		transfer_state = 224
 		transfer_state = 242
 		transfer_state = 243
 		transfer_state = 247
+		transfer_state = 264
 		transfer_state = 401
 		transfer_state = 1434
 		transfer_state = 1435
+		transfer_state = 1441
+		transfer_state = 1443
 
 		add_state_core = 210
 		add_state_core = 217
+		add_state_core = 219
 		add_state_core = 222
 		add_state_core = 224
 		add_state_core = 242
 		add_state_core = 243
 		add_state_core = 247
-		add_state_core = 260
+		add_state_core = 264
 		add_state_core = 401
 		add_state_core = 1434
 		add_state_core = 1435
+		add_state_core = 1441
+		add_state_core = 1443
+		
 	}
 	GER = { 
 		transfer_state = 195
@@ -39,9 +49,9 @@ ANM_SOV_to_MOS_small = {
 		add_state_core = 195
 	}
 	CAU = {
-		transfer_state = 244
+		transfer_state = 237
 
-		add_state_core = 244
+		add_state_core = 237
 	}
 }
 
@@ -77,12 +87,10 @@ ANM_SOV_to_MOS_big = {
 		transfer_state = 859
 		transfer_state = 861
 		transfer_state = 1434
-		transfer_state = 1435
 		transfer_state = 1436
 		transfer_state = 1441
 		transfer_state = 1442
 		transfer_state = 1443
-		transfer_state = 1887
 
 		add_state_core = 210
 		add_state_core = 214
@@ -92,6 +100,7 @@ ANM_SOV_to_MOS_big = {
 		add_state_core = 224
 		add_state_core = 238
 		add_state_core = 242
+		add_state_core = 243
 		add_state_core = 245
 		add_state_core = 246
 		add_state_core = 247
@@ -109,12 +118,10 @@ ANM_SOV_to_MOS_big = {
 		add_state_core = 859
 		add_state_core = 861
 		add_state_core = 1434
-		add_state_core = 1435
 		add_state_core = 1436
 		add_state_core = 1441
 		add_state_core = 1442
 		add_state_core = 1443
-		add_state_core = 1887
 	}
 	GER = { 
 		transfer_state = 195
@@ -122,9 +129,34 @@ ANM_SOV_to_MOS_big = {
 		add_state_core = 195
 	}
 	CAU = {
-		transfer_state = 244
+		transfer_state = 237
 
-		add_state_core = 244
+		add_state_core = 237
+	}
+	if = { 
+		limit = { 
+			FIN = { is_in_faction_with = GER }
+		}
+		FIN = { 
+			transfer_state = 215
+			transfer_state = 1359
+			transfer_state = 1887
+		
+			add_state_core = 215
+			add_state_core = 1359
+			add_state_core = 1887
+		} 
+	}
+	else = { 
+		MOS = { 
+			transfer_state = 215
+			transfer_state = 1359
+			transfer_state = 1887
+		
+			add_state_core = 215
+			add_state_core = 1359
+			add_state_core = 1887
+		} 
 	}
 }
 
