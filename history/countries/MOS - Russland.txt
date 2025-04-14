@@ -3,16 +3,21 @@
 #German endo/exo
 set_country_flag = german_names
 
-recruit_character = MOS_horst_stechbarth
-recruit_character = MOS_mikhail_gorbachev
-recruit_character = MOS_militaramt
-recruit_character = MOS_mikhail_nazarov
-recruit_character = MOS_mikhail_nazarov 
-recruit_character = MOS_dmitriy_vasilyev
-recruit_character = MOS_alexander_barkashov
-recruit_character = MOS_rostislav_polchaninov
-recruit_character = MOS_herman_gref
-recruit_character = MOS_klaus_naumann
+recruit_character = MOS_Helge_Hansen
+recruit_character = MOS_Konstantin_Petrov
+recruit_character = MOS_Dmitriy_Vasilyev
+recruit_character = MOS_Unknown
+recruit_character = MOS_Alexey_Dobrovolsky
+recruit_character = MOS_Klaus_Naumann 
+recruit_character = MOS_Alexey_Shiropayev 
+recruit_character = MOS_Alexander_Barkashov 
+recruit_character = MOS_Rostislav_Polchaninov
+recruit_character = MOS_Viktor_Vodolatsky
+recruit_character = MOS_Herman_Gref
+recruit_character = MOS_Vidar_Kleppe
+recruit_character = MOS_None
+recruit_character = MOS_Mikhail_Nazarov
+
 
 set_oob = "MOS_1962"
 
@@ -20,13 +25,10 @@ add_ideas = {
 	##FACTION##
 	Pakt_Military_Authority
 	### IDEAS ###
-	MOS_anti_soviet_fanatiscism
 	MOS_refugee_conscripts
+	MOS_Meatgrinders_Sweatshops
 	### MINISTERS ###
-	MOS_Militaramt_hog
-	MOS_Militaramt_sec
-	MOS_Militaramt_for
-	MOS_Militaramt_eco
+
 	### POLITICAL LAWS ###
 
 	### MILITARY LAWS ###
@@ -71,7 +73,7 @@ add_ideas = {
 	tno_academic_base_basic_literacy
 }
 
-set_research_slots = 3
+set_research_slots = 1
 
 set_stability = 0.74
 
@@ -88,18 +90,10 @@ set_variable = { TNO_economy_type = token:Econ_Type_Planned }
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Military_Directed }
 
 set_popularities = {
-    communist = 5
-    ultranationalism = 0
-    socialist = 0
-    progressivism = 0
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
-    despotism = 60
-    fascism = 15
-	national_socialism = 20
-     
+    despotism = 54
+	national_socialism = 24
+	national_socialism_2 = 14
+	national_socialism_3 = 8
 }
 
-set_cosmetic_tag = MOS_MB
+set_cosmetic_tag = MOS_Brjansk

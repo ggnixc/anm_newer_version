@@ -73,10 +73,9 @@ ANM_ger_debug_category = {
 		visible = {
 			NOT = { has_country_flag = hide_german_debug_decisions }
 		}
-		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_homel_gouvernement_russland"
-			ANM_Gouvernement_Russland = yes
+			country_event = { id = GER_debug_event.10 } 
 		}
 		ai_will_do = {
 			factor = 0
@@ -92,7 +91,6 @@ ANM_ger_debug_category = {
 		visible = {
 			NOT = { has_country_flag = hide_german_debug_decisions }
 		}
-		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_gouvernement_russland_victory_war"
 			country_event = { id = GER_debug_event.9 }
@@ -111,10 +109,9 @@ ANM_ger_debug_category = {
 		visible = {
 			NOT = { has_country_flag = hide_german_debug_decisions }
 		}
-		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_gouvernement_russland_defeat_war"
-			ANM_MOS_Grenzland = yes
+			
 		}
 		ai_will_do = {
 			factor = 0

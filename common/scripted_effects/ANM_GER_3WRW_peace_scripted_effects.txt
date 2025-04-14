@@ -185,57 +185,5 @@ ANM_MOS_Grenzland = {
 	}
 }
 
-ANM_MOS_Russia_Nazi = { 
-	MOS = { 
-		set_capital = {
-			state = 1442
-			remember_old_capital = no
-		}
-		set_cosmetic_tag = MOS_Russia
-		set_party_name = { 
-			ideology = despotism
-			long_name = MOS_Russia_despotism_party_long
-			name = MOS_Russia_despotism_party
-		}
-		set_popularities = {
-			fascism = 23
-			national_socialism = 68
-			paternalism = 3
-			despotism = 6
-		}
-		remove_ideas = Pakt_Nebenland 
-		add_ideas = Pakt_Schutzstaat
-	}
-}
-ANM_MOS_Russia_Despotism = { 
-	MOS = { 
-		set_capital = {
-			state = 1442
-			remember_old_capital = no
-		}
-		set_cosmetic_tag = MOS_Russia
-		set_party_name = { 
-			ideology = despotism
-			long_name = MOS_Russia_despotism_party_long
-			name = MOS_Russia_despotism_party
-		}
-		set_politics = {
-			ruling_party = despotism
-			elections_allowed = no
-			last_election = "1935.12.17"
-			election_frequency = 48
-		}
-		set_popularities = {
-			fascism = 28
-			national_socialism = 9
-			paternalism = 5
-			despotism = 58
-		}
-		remove_ideas = Pakt_Nebenland 
-		add_ideas = Pakt_Schutzstaat
-		retire_country_leader = yes
-	}
-}
-
 
 
