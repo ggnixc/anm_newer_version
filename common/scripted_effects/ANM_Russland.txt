@@ -1,0 +1,234 @@
+ANM_Russland_Regierung = { 
+	MOS = { 
+		set_cosmetic_tag = MOS_Regierung 
+		MOS_Konstantin_Petrov = {
+			promote_character = despotism_military_junta_subtype
+		}
+		MOS_Alexey_Dobrovolsky = { 
+			promote_character = national_socialism_2_subtype
+		}
+		set_politics = {	
+			ruling_party = despotism
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			despotism = 38
+			national_socialism = 33
+			national_socialism_2 = 19
+			national_socialism_3 = 10
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = MOS_Regierung_despotism_party_long
+			name = MOS_Regierung_despotism_party 
+		}
+		add_ideas = MOS_anti_soviet_fanatiscism
+	} 
+}
+
+ANM_Russland_Monarchist = { 
+	MOS = { 
+		set_cosmetic_tag = MOS_Russia_Monarchy 
+		MOS_Alexander_Barkashov = {
+			promote_character = national_socialism_2_subtype
+		}
+		MOS_Rostislav_Polchaninov = {
+			promote_character = despotism_aristocratic_conservatism_subtype
+		}
+		MOS_Herman_Gref = {
+			promote_character = national_socialism_3_subtype
+		}
+		set_politics = {	
+			ruling_party = national_socialism
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			despotism = 15
+			paternalism = 7
+			fascism = 2
+			national_socialism = 52
+			national_socialism_2 = 19
+			national_socialism_3 = 4
+			national_socialism_4 = 1
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name =  MOS_Russia_Monarchy_despotism_party_long
+			name = MOS_Russia_Monarchy_despotism_party 
+		}
+		set_party_name = {
+			ideology = national_socialism_2
+			long_name =  MOS_Russia_Monarchy_national_socialism_2_party_long
+			name = MOS_Russia_Monarchy_national_socialism_2_party 
+		}
+		set_party_name = {
+			ideology = national_socialism_3
+			long_name =  MOS_Russia_Monarchy_national_socialism_3_party_long
+			name = MOS_Russia_Monarchy_national_socialism_3_party
+		}
+		remove_ideas = { 
+			MOS_anti_soviet_fanatiscism 
+			MOS_refugee_conscripts 
+			MOS_Meatgrinders_Sweatshops
+
+			#debug
+			MOS_Harbringers_of_Rod 
+			MOS_Anarchy_to_Anarchy 
+			MOS_Liberation_of_Russia_Rod
+			MOS_New_Frontier
+			MOS_Bandit_Administration
+		}
+		add_ideas = { 
+			MOS_Mikhail_II 
+			MOS_Orthodoxy_Autocracy 
+			MOS_Liberation_of_Russia_God
+		}
+	}
+}
+ANM_Russland_Rod = { 
+	MOS = { 
+		set_cosmetic_tag = MOS_Russia_Rod 
+		MOS_Alexey_Dobrovolsky = {
+			promote_character = national_socialism_palingenetic_nazism_subtype
+		}
+		MOS_Mikhail_Nazarov = {
+			promote_character = national_socialism_2_subtype
+		}
+		MOS_Herman_Gref = {
+			promote_character = national_socialism_3_subtype
+		}
+		set_politics = {	
+			ruling_party = national_socialism
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			paternalism = 8
+			fascism = 2
+			national_socialism = 48
+			national_socialism_2 = 12
+			national_socialism_3 = 16
+			national_socialism_4 = 4
+		}
+		set_party_name = {
+			ideology = national_socialism
+			long_name =  MOS_national_socialism_2_party_long
+			name = MOS_national_socialism_2_party 
+		}
+		set_party_name = {
+			ideology = national_socialism_2
+			long_name =  MOS_national_socialism_party_long
+			name = MOS_national_socialism_party 
+		}
+		set_party_name = {
+			ideology = national_socialism_3
+			long_name =  MOS_Russia_Monarchy_national_socialism_3_party_long
+			name = MOS_Russia_Monarchy_national_socialism_3_party 
+		}
+		remove_ideas = { 
+			MOS_anti_soviet_fanatiscism 
+			MOS_refugee_conscripts 
+			MOS_Meatgrinders_Sweatshops
+
+			#debug
+			MOS_Mikhail_II 
+			MOS_Orthodoxy_Autocracy 
+			MOS_Liberation_of_Russia_God
+			MOS_New_Frontier
+			MOS_Bandit_Administration
+		}
+		add_ideas = { 
+			MOS_Harbringers_of_Rod 
+			MOS_Anarchy_to_Anarchy 
+			MOS_Liberation_of_Russia_Rod
+		}
+	}
+}
+ANM_Russland_Defeated = { 
+	MOS = { 
+		set_cosmetic_tag = MOS_Grenzland 
+		MOS_Klaus_Naumann = {
+			promote_character = despotism_military_junta_subtype
+		}
+		MOS_Alexander_Barkashov = {
+			promote_character = national_socialism_naturalised_nazism_subtype
+		}
+		set_politics = {	
+			ruling_party = despotism
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_popularities = {
+			despotism = 79
+			national_socialism = 21
+		}
+		set_party_name = {
+			ideology = despotism
+			long_name = MOS_despotism_party_long
+			name = MOS_despotism_party 
+		}
+		set_party_name = {
+			ideology = national_socialism
+			long_name = MOS_Regierung_despotism_party_long
+			name = MOS_Regierung_despotism_party 
+		}
+		remove_ideas = { 
+			MOS_anti_soviet_fanatiscism 
+			MOS_refugee_conscripts 
+			MOS_Meatgrinders_Sweatshops
+
+			#debug
+			MOS_Harbringers_of_Rod 
+			MOS_Anarchy_to_Anarchy 
+			MOS_Liberation_of_Russia_Rod
+			MOS_Mikhail_II 
+			MOS_Orthodoxy_Autocracy 
+			MOS_Liberation_of_Russia_God
+		}
+		add_ideas = { 
+			MOS_New_Frontier
+			MOS_Bandit_Administration
+		}
+	}
+}
+
+
+
+
+ANM_Gouvernement_Russland = { 
+	MOS = { 
+		set_cosmetic_tag = MOS_Regierung 
+
+		set_politics = {	
+			ruling_party = national_socialism
+			last_election = "1933.3.5"
+			election_frequency = 48
+			elections_allowed = no
+		}
+
+		set_popularities = {
+			fascism = 28
+			national_socialism = 58
+			paternalism = 5
+			despotism = 9
+		}
+
+		deactivate_advisor = MOS_Militaramt_hog
+		activate_advisor = MOS_Dmitriy_Vasilyev_hog
+		deactivate_advisor = MOS_Militaramt_sec
+		activate_advisor = MOS_Alexander_Barkashov_sec
+		deactivate_advisor = MOS_Militaramt_for
+		activate_advisor = MOS_Rostislav_Polchaninov_for
+		deactivate_advisor = MOS_Militaramt_eco
+		activate_advisor = MOS_Herman_Gref_eco
+
+		remove_ideas = Pakt_Military_Authority
+		add_ideas = Pakt_Nebenland
+	}	
+}

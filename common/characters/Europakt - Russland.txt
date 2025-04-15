@@ -1,107 +1,30 @@
 characters = {
-	MOS_horst_stechbarth = {  
-		name = MOS_horst_stechbarth
+	MOS_Helge_Hansen = { 
+		name = MOS_Helge_Hansen
 		portraits = { 
-			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Horst_Stechbarth.dds" } 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Helge_Hansen.dds" } 
 		}
 		country_leader = {
-			desc = "POLITICS_HORST_STECHBARTH_DESC"
+			desc = "POLITICS_HELGE_HANSEN_DESC"
 			ideology = despotism_military_junta_subtype
-			traits = { old_hero }
-			expire = "2999.1.1.1"
-		}
-	}
-	MOS_mikhail_gorbachev = {
-		name = MOS_mikhail_gorbachev
-		portraits = { 
-			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Mikhail_Gorbachev.dds" } 
-		}
-		country_leader = {
-			desc = "POLITICS_MIKHAIL_GORBACHEV_DESC"
-			ideology = progressivism_subtype
 			traits = { }
 			expire = "2999.1.1.1"
 		}
 	}
-	MOS_mikhail_nazarov = { 
-		name = MOS_mikhail_nazarov
+	MOS_Konstantin_Petrov = {  
+		name = MOS_Konstantin_Petrov
 		portraits = { 
-			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Mikhail_Nazarov.dds" } 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Konstantin_Petrov.dds" } 
 		}
 		country_leader = {
-			desc = "POLITICS_MIKHAIL_NAZAROV_DESC"
-			ideology = national_socialism_naturalised_nazism_subtype
+			desc = "POLITICS_KONSTANTIN_PETROV_DESC"
+			ideology = despotism_military_junta_subtype
 			traits = { }
 			expire = "2999.1.1.1"
 		}
 	}
-	MOS_klaus_naumann = { 
-		name = MOS_klaus_naumann
-		portraits = { 
-			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Klaus_Naumann.dds" } 
-		}
-		country_leader = {
-			desc = "POLITICS_KLAUS_NAUMANN_DESC"
-			ideology = national_socialism_reformed_national_socialism_subtype
-			traits = { }
-			expire = "2999.1.1.1"
-		}
-	}
-	MOS_militaramt = {  
-		name = MOS_militaramt
-		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/MOS/Portrait_MOS_Militaramt.dds"
-				small = "GFX_idea_MOS_Militaramt" 
-			} 	
-		} 
-		advisor = {
-			slot = head_of_government
-			idea_token = MOS_Militaramt_hog
-			traits = {
-				head_of_government
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-		advisor = {
-			slot = security_minister
-			idea_token = MOS_Militaramt_sec
-			traits = {
-				security_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-		advisor = {
-			slot = foreign_minister
-			idea_token = MOS_Militaramt_for
-			traits = {
-				foreign_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-		advisor = {
-			slot = economy_minister
-			idea_token = MOS_Militaramt_eco
-			traits = {
-				economy_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-	}
-	MOS_dmitriy_vasilyev = {  
-		name = MOS_dmitriy_vasilyev
+	MOS_Dmitriy_Vasilyev = {  
+		name = MOS_Dmitriy_Vasilyev
 		portraits = { 
 			civilian = { 
 				large = "gfx/leaders/MOS/Portrait_MOS_Dmitriy_Vasilyev.dds"
@@ -110,80 +33,119 @@ characters = {
 		} 
 		country_leader = {
 			desc = "POLITICS_DMITRIY_VASILYEV_DESC"
-			ideology = despotism_aristocratic_conservatism_subtype
+			ideology = national_socialism_clerical_fascism_subtype
 			traits = {  }
 			expire = "2999.1.1.1"
 		}
-		advisor = {
-			slot = head_of_government
-			idea_token = MOS_Dmitriy_Vasilyev_hog
-			traits = {
-				head_of_government
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
+	}
+	MOS_Unknown = {  
+		name = MOS_Unknown 
+		country_leader = {
+			ideology = national_socialism_2_subtype
+			expire = "2999.1.1.1"
 		}
 	}
-	MOS_alexander_barkashov = {  
-		name = MOS_alexander_barkashov
+	MOS_Alexey_Dobrovolsky = {  
+		name = MOS_Alexey_Dobrovolsky
 		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/MOS/Portrait_MOS_Alexander_Barkashov.dds"
-				small = "GFX_idea_MOS_Alexander_Barkashov" 
-			} 	
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Alexey_Dobrovolsky.dds" } 	
 		} 
-		advisor = {
-			slot = security_minister
-			idea_token = MOS_Alexander_Barkashov_sec
-			traits = {
-				security_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
+		country_leader = {
+			desc = "POLITICS_ALEXEY_DOBROVOLSKY_DESC"
+			ideology = national_socialism_palingenetic_nazism_subtype
+			traits = {  }
+			expire = "2999.1.1.1"
+		}
+		country_leader = {
+			ideology = national_socialism_2_subtype
+			expire = "2999.1.1.1"
 		}
 	}
-	MOS_rostislav_polchaninov = {  
-		name = MOS_rostislav_polchaninov
+	MOS_Klaus_Naumann = { 
+		name = MOS_Klaus_Naumann
 		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/MOS/Portrait_MOS_Rostislav_Polchaninov.dds"
-				small = "GFX_idea_MOS_Rostislav_Polchaninov" 
-			} 	
-		} 
-		advisor = {
-			slot = foreign_minister
-			idea_token = MOS_Rostislav_Polchaninov_for
-			traits = {
-				foreign_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Klaus_Naumann.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_KLAUS_NAUMANN_DESC"
+			ideology = despotism_military_junta_subtype
+			traits = { }
+			expire = "2999.1.1.1"
 		}
 	}
-	MOS_herman_gref = {  
-		name = MOS_herman_gref
+	MOS_Alexey_Shiropayev = {  
+		name = MOS_Alexey_Shiropayev
 		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/MOS/Portrait_MOS_Herman_Gref.dds"
-				small = "GFX_idea_MOS_Herman_Gref" 
-			} 	
-		} 
-		advisor = {
-			slot = economy_minister
-			idea_token = MOS_Herman_Gref_eco
-			traits = {
-				economy_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Alexey_Shiropayev.dds" } 
+		}
+		country_leader = {
+			ideology = national_socialism_3_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_Alexander_Barkashov = {  
+		name = MOS_Alexander_Barkashov 
+		portraits = { 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Alexander_Barkashov.dds" } 
+		}
+		country_leader = {
+			ideology = national_socialism_2_subtype
+			expire = "2999.1.1.1"
+		}
+		country_leader = {
+			ideology = national_socialism_naturalised_nazism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_Rostislav_Polchaninov = {  
+		name = MOS_Rostislav_Polchaninov 
+		portraits = { 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Rostislav_Polchaninov.dds" } 
+		}
+		country_leader = {
+			ideology = despotism_aristocratic_conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_Viktor_Vodolatsky = {  
+		name = MOS_Viktor_Vodolatsky 
+		country_leader = {
+			ideology = paternalism_social_nationalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_Herman_Gref = {  
+		name = MOS_Herman_Gref 
+		portraits = { 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Herman_Gref.dds" } 
+		}
+		country_leader = {
+			ideology = national_socialism_3_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_Vidar_Kleppe = {  
+		name = MOS_Vidar_Kleppe 
+		country_leader = {
+			ideology = fascism_clerical_fascism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_None = {  
+		name = MOS_None 
+		country_leader = {
+			ideology = national_socialism_4_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+	MOS_Mikhail_Nazarov = {  
+		name = MOS_Mikhail_Nazarov 
+		portraits = { 
+			civilian = { large = "gfx/leaders/MOS/Portrait_MOS_Mikhail_Nazarov.dds" } 
+		}
+		country_leader = {
+			ideology = national_socialism_2_subtype
+			expire = "2999.1.1.1"
 		}
 	}
 	
