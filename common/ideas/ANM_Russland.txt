@@ -12,9 +12,9 @@ ideas = {
 			}
  
 			modifier = {
-				war_support_factor = 0.40
+				war_support_factor = 0.10
 				autonomy_gain_warscore_factor = 0.20
-				stability_weekly = -0.01
+				army_core_attack_factor = 0.08				
 			}
 		}
 		MOS_refugee_conscripts = {
@@ -27,9 +27,11 @@ ideas = {
 			}
             
 			modifier = {
-				weekly_manpower = 280
-				local_manpower = 0.20
-				resistance_damage_to_garrison = -0.20
+				experience_gain_army = 0.5
+				command_power_gain = -0.50
+				resistance_growth = 0.10
+				minimum_training_level = -0.3 
+				max_training = -0.3
 			}
 		}
 		MOS_Meatgrinders_Sweatshops = {
@@ -42,7 +44,8 @@ ideas = {
 			}
           
 			modifier = {
-				
+				recruitable_population_factor = -0.05
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -56,7 +59,9 @@ ideas = {
 			}
           
 			modifier = {
-				
+				stability_factor = -0.20
+				war_support_factor = -0.10
+				drift_defence_factor = 0.05
 			}
 		}
 		MOS_Anarchy_to_Anarchy = { 
@@ -69,7 +74,10 @@ ideas = {
 			}
           
 			modifier = {
-				
+				stability_factor = -0.35
+				war_support_factor = -0.25
+				political_power_gain = -0.02
+				local_resources_factor = -0.3
 			}
 		}
 		MOS_Liberation_of_Russia_Rod = { 
@@ -82,7 +90,10 @@ ideas = {
 			}
           
 			modifier = {
-				
+				political_power_gain = -0.15
+				war_support_factor = -0.20
+				stability_factor = -0.10
+				GER = { trade_cost_for_target_factor = -1.00 }
 			}
 		}
 
@@ -96,7 +107,10 @@ ideas = {
 			}
           
 			modifier = {
-				
+				political_power_gain = -0.15
+				war_support_factor = -0.20
+				stability_factor = -0.10
+				GER = { trade_cost_for_target_factor = -1.00 }
 			}
 		}
 		MOS_Orthodoxy_Autocracy = { 
@@ -109,7 +123,9 @@ ideas = {
 			}
           
 			modifier = {
-				
+				stability_factor = -0.20
+				political_power_gain = -0.10
+				monthly_population = -0.05
 			}
 		}
 		MOS_Mikhail_II = { 
@@ -122,7 +138,10 @@ ideas = {
 			}
           
 			modifier = {
-				
+				war_support_factor = 0.10
+				stability_factor = -0.05
+				drift_defence_factor = 0.05
+				GER = { extra_trade_to_target_factor = 0.50 } 	
 			}
 		}
 
@@ -136,7 +155,9 @@ ideas = {
 			}
           
 			modifier = {
-				
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = -0.20
 			}
 		}
 		MOS_Bandit_Administration = { 
@@ -149,7 +170,9 @@ ideas = {
 			}
           
 			modifier = {
-				
+				stability_factor = -0.50
+				war_support_factor = -0.50
+				local_resources_factor = -0.50
 			}
 		}
 		
