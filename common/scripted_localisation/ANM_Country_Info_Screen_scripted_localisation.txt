@@ -35,10 +35,14 @@ defined_text = {
 defined_text = {
 	name = GET_POSTER
 	
-	##Reich and Pakt
 	text = {
-		trigger = { tag = GER }
-		localization_key = "GFX_ANM_OpeningScreen_Poster_Germany"
+		trigger = { ANM_has_content = yes }
+		localization_key = "GFX_ANM_OpeningScreen_Poster_[THIS.GetTag]"
+	}
+
+	## Default
+	text = {
+		localization_key = "GFX_ANM_OpeningScreen_Poster_NoContent"
 	}
 }
 
