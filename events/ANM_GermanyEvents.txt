@@ -4,7 +4,7 @@ add_namespace = GER_misc_main_event
 add_namespace = GER_debug_event
 add_namespace = GER_government_loyalty_event
 
-### Flavour Events ###
+### Flavour Events (next: 30) ###
 country_event = { #January ‘96: Kids These Days
 	id = GER_flavour_event.1 
 	title = GER_flavour_event.1.t
@@ -16,6 +16,24 @@ country_event = { #January ‘96: Kids These Days
 
 	option = { 
 		name = GER_flavour_event.1.a
+	}
+}
+country_event = { #February ‘96: The Last Bastion of Anti-Communism
+	id = GER_flavour_event.29
+	title = GER_flavour_event.29.t
+	desc = GER_flavour_event.29.desc
+	picture = GFX_anm_GER_bryansk_startup
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.29.a
+		custom_effect_tooltip = GER_last_bastion_remain_tt
+	}
+	option = { 
+		name = GER_flavour_event.29.b
+		custom_effect_tooltip = GER_last_bastion_remove_tt
 	}
 }
 country_event = { #March ‘96: The Burgunders
