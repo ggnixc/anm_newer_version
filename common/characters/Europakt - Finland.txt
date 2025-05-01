@@ -115,8 +115,13 @@ characters = {
 	}
 	FIN_timo_soini = {  
 		name = FIN_timo_soini
+		portraits = { 
+			civilian = { large = "gfx/leaders/FIN/Portrait_FIN_Timo_Soini.dds" } 
+		}
 		country_leader = {
-			ideology = paternalism_subtype
+			desc = "POLITICS_TIMO_SOINI_DESC"
+			ideology = paternalism_right_wing_populism_subtype
+			traits = { }
 			expire = "2999.1.1.1"
 		}
 	}
