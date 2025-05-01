@@ -4,7 +4,7 @@ add_namespace = GER_misc_main_event
 add_namespace = GER_debug_event
 add_namespace = GER_government_loyalty_event
 
-### Flavour Events ###
+### Flavour Events (next: 30) ###
 country_event = { #January ‘96: Kids These Days
 	id = GER_flavour_event.1 
 	title = GER_flavour_event.1.t
@@ -16,6 +16,24 @@ country_event = { #January ‘96: Kids These Days
 
 	option = { 
 		name = GER_flavour_event.1.a
+	}
+}
+country_event = { #February ‘96: The Last Bastion of Anti-Communism
+	id = GER_flavour_event.29
+	title = GER_flavour_event.29.t
+	desc = GER_flavour_event.29.desc
+	picture = GFX_anm_GER_bryansk_startup
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_flavour_event.29.a
+		custom_effect_tooltip = GER_last_bastion_remain_tt
+	}
+	option = { 
+		name = GER_flavour_event.29.b
+		custom_effect_tooltip = GER_last_bastion_remove_tt
 	}
 }
 country_event = { #March ‘96: The Burgunders
@@ -1397,7 +1415,7 @@ country_event = { #Load Phase 3 Ending Demo
 		load_focus_tree = { tree = GER_focus_phase_3_end_of_demo }
 	}
 }
-country_event = { #Brjansk Transformation Events
+country_event = { #VACANT
 	id = GER_debug_event.8
 	title = GER_debug_event.8.t
 	desc = GER_debug_event.8.desc
@@ -1417,7 +1435,6 @@ country_event = { #3WRW endings
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {  #3WRW Decisive Victory
 		name = GER_debug_event.9.a
@@ -1439,7 +1456,6 @@ country_event = { #Transformation of Brjansk
 	picture = GFX_anm_GER_speer_martin_talks
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
 	option = {  #Petrov takes over
 		name = GER_debug_event.10.a
