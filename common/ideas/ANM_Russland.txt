@@ -93,7 +93,10 @@ ideas = {
 				political_power_gain = -0.15
 				war_support_factor = -0.20
 				stability_factor = -0.10
-				GER = { trade_cost_for_target_factor = -1.00 }
+			}
+			targeted_modifier = {
+				tag = GER   
+				trade_cost_for_target_factor = -1.00
 			}
 		}
 
@@ -110,7 +113,10 @@ ideas = {
 				political_power_gain = -0.15
 				war_support_factor = -0.20
 				stability_factor = -0.10
-				GER = { trade_cost_for_target_factor = -1.00 }
+			}
+			targeted_modifier = {
+				tag = GER   
+				trade_cost_for_target_factor = -1.00
 			}
 		}
 		MOS_Orthodoxy_Autocracy = { 
@@ -140,8 +146,11 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.10
 				stability_factor = -0.05
-				drift_defence_factor = 0.05
-				GER = { extra_trade_to_target_factor = 0.50 } 	
+				drift_defence_factor = 0.05 	
+			}
+			targeted_modifier = {
+				tag = GER   
+				extra_trade_to_target_factor = 0.50 
 			}
 		}
 
