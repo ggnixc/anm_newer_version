@@ -1,0 +1,45 @@
+ideas = {
+
+    country = {
+        	COS_the_dominant_liberation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_puppet_fuehrer"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_COS_The_Dominant_Liberation
+
+			removal_cost = -1
+			
+			modifier = {
+				add_stability = 15.00
+				political_power_gain = 0.2
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+            COS_the_creeping_shadow = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_puppet_fuehrer"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_COS_The_Creeping_Shadow
+
+			removal_cost = -1
+			
+			modifier = {
+				add_war_support = 20
+				offence = -0.1
+                defence = -0.0075
+                army_morale = -10
+                training_time_factor = 0.3
+				industrial_capacity_factory = 0.1
+			}
+		}
+    }
+}
