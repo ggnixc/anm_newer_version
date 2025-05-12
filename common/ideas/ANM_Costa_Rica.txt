@@ -2,7 +2,7 @@ ideas = {
 
     country = {
         	COS_the_dominant_liberation = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_puppet_fuehrer"}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COS_The_Dominant_liberation"}
 			allowed = {
 				always = no
 			}
@@ -14,31 +14,30 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				add_stability = 15.00
+				stability_factor = 0.15
 				political_power_gain = 0.2
 				industrial_capacity_factory = 0.1
 			}
 		}
 
             COS_the_creeping_shadow = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GER_the_puppet_fuehrer"}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea COS_the_creeping_shadow"}
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = GFX_idea_COS_The_Creeping_Shadow
+			picture = GFX_idea_COS_The_Creeping_Shadow 
 
 			removal_cost = -1
 			
 			modifier = {
-				add_war_support = 20
+				war_support_factor = 0.2
 				offence = -0.1
                 defence = -0.0075
                 army_morale = -10
                 training_time_factor = 0.3
-				industrial_capacity_factory = 0.1
 			}
 		}
     }
