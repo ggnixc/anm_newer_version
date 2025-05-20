@@ -38,14 +38,28 @@ scripted_gui = {
 		properties = { }
 	} 
 
-	ANM_GER_EP_Economy_Decisions_GUI = { 
-		window_name = "ANM_GER_EP_Economy_Decisions_GUI"
+	ANM_GER_EW_Decisions_GUI = { 
+		window_name = "ANM_GER_EW_Decisions_GUI"
 		context_type = decision_category
 		parent_window_token = decision_tab
-			
 		visible = { always = yes } 
+		
+		ANM_GER_EW_Decisions_GUI_Worldview = {
+			context_type = decision_category
+			window_name = "ANM_GER_EW_Decisions_GUI_Worldview"
+			parent_window_token = "ANM_GER_EW_Decisions_GUI"
+			visible = {
+				has_country_flag = { 
+					flag = GER_EW_Decisions_GUI_Tab
+					value = 1
+				} 
+			} 
+		}
+
 		triggers = { 
-			#Country/Overseas view
+			#Europe/World view
+			GER_EW_Decisions_GUI_Worldview_
+
 			ep_economy_background_oversees_visible = { has_country_flag = GER_ANM_Economy_View_Oversees }
 			ep_economy_country_china_visible = { has_country_flag = GER_ANM_Economy_View_Oversees }
 			ep_economy_country_DR_visible = { has_country_flag = GER_ANM_Economy_View_Oversees }
