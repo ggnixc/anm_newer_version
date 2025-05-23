@@ -28,3 +28,281 @@ ANM_dissolve_pakt = { #Total German Loss in 3WRW
 		dismantle_faction = yes
 	}
 }
+
+### EW Decisions GUI ###
+## General ##
+EW_Button_Large_click = { 
+	if = { 
+		limit = { NOT = { has_country_flag = GER_EW_Decisions_GUI_Tab1 } }
+		set_country_flag = GER_EW_Decisions_GUI_Tab1
+		clr_country_flag = GER_EW_Decisions_GUI_Tab2
+		clr_country_flag = GER_EW_Continent
+		}
+	else_if = { 
+		limit = { has_country_flag = GER_EW_Decisions_GUI_Tab1 }
+		clr_country_flag = GER_EW_Decisions_GUI_Tab1
+		clr_country_flag = GER_EW_Country
+		set_country_flag = GER_EW_Decisions_GUI_Tab2
+
+	}
+}
+EW_Button_Small_1_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Decisions_GUI_Subtab1	
+		value = 1 
+	} 
+	set_variable = { 
+		var = GER_EW_Button_Small_Variable1
+		value = 2
+	}
+	clear_variable = GER_EW_Button_Small_Variable3
+	clear_variable = GER_EW_Button_Small_Variable3
+	
+}
+EW_Button_Small_2_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Decisions_GUI_Subtab1	
+		value = 2
+	} 
+	set_variable = { 
+		var = GER_EW_Button_Small_Variable2
+		value = 2
+	}
+	clear_variable = GER_EW_Button_Small_Variable1
+	clear_variable = GER_EW_Button_Small_Variable3
+}
+EW_Button_Small_3_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Decisions_GUI_Subtab1	
+		value = 3
+	} 
+	set_variable = { 
+		var = GER_EW_Button_Small_Variable3
+		value = 2
+	}
+	clear_variable = GER_EW_Button_Small_Variable1
+	clear_variable = GER_EW_Button_Small_Variable2
+}
+## Europe ##
+## Worldview ##
+Worldview_Russia_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 1
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable1
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_Antarctica_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 2
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable2
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  	
+}
+Worldview_Oceania_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 3
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable3
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_Africa_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 4
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable4
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_SA_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 5
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable5
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_NA_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 6
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable6
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_CA_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 7
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable7
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_Middle_East_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 8
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable8
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_Europe_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 9
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable9
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable10
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_East_Asia_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 10
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable10
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable11  
+}
+Worldview_Indochina_click = { 
+	set_country_flag = { 
+		flag = GER_EW_Continent
+		value = 11
+	}
+	set_variable = { 
+		var = GER_EW_Continent_Variable11
+		value = 2
+	}
+	clear_variable = GER_EW_Continent_Variable1
+	clear_variable = GER_EW_Continent_Variable2
+	clear_variable = GER_EW_Continent_Variable3
+	clear_variable = GER_EW_Continent_Variable4
+	clear_variable = GER_EW_Continent_Variable5
+	clear_variable = GER_EW_Continent_Variable6
+	clear_variable = GER_EW_Continent_Variable7
+	clear_variable = GER_EW_Continent_Variable8
+	clear_variable = GER_EW_Continent_Variable9
+	clear_variable = GER_EW_Continent_Variable10  
+}
+

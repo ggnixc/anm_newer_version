@@ -1,5 +1,95 @@
 on_actions = {
-	
+
+	on_startup = { 
+		effect = { 
+			GER = { 
+				### EW Decisions GUI ###
+				## Assigning starting eonomic weight based on factories ##
+				set_variable = { GER_EW_Economy_Size_1 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_2 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_3 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_4 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_5 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_6 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_7 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_8 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_9 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_10 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_11 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_12 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_13 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_14 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_15 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_16 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_17 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_18 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_19 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_20 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_21 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_22 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_23 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_24 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_25 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_26 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_27 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_28 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_29 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_30 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_31 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_32 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_33 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_34 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_35 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_36 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_37 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_38 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_39 = GER.num_of_factories }
+				set_variable = { GER_EW_Economy_Size_40 = GER.num_of_factories }
+				## Assigning starting economic rating based on reasonables values ##
+				set_variable = { GER_EW_Economy_Status_1 = 5 }
+				set_variable = { GER_EW_Economy_Status_2 = 5 }
+				set_variable = { GER_EW_Economy_Status_3 = 5 }
+				set_variable = { GER_EW_Economy_Status_4 = 5 }
+				set_variable = { GER_EW_Economy_Status_5 = 5 }
+				set_variable = { GER_EW_Economy_Status_6 = 5 }
+				set_variable = { GER_EW_Economy_Status_7 = 5 }
+				set_variable = { GER_EW_Economy_Status_8 = 5 }
+				set_variable = { GER_EW_Economy_Status_9 = 5 }
+				set_variable = { GER_EW_Economy_Status_10 = 5 }
+				set_variable = { GER_EW_Economy_Status_11 = 5 }
+				set_variable = { GER_EW_Economy_Status_12 = 5 }
+				set_variable = { GER_EW_Economy_Status_13 = 5 }
+				set_variable = { GER_EW_Economy_Status_14 = 5 }
+				set_variable = { GER_EW_Economy_Status_15 = 5 }
+				set_variable = { GER_EW_Economy_Status_16 = 5 }
+				set_variable = { GER_EW_Economy_Status_17 = 5 }
+				set_variable = { GER_EW_Economy_Status_18 = 5 }
+				set_variable = { GER_EW_Economy_Status_19 = 5 }
+				set_variable = { GER_EW_Economy_Status_20 = 5 }
+				set_variable = { GER_EW_Economy_Status_21 = 5 }
+				set_variable = { GER_EW_Economy_Status_22 = 5 }
+				set_variable = { GER_EW_Economy_Status_23 = 5 }
+				set_variable = { GER_EW_Economy_Status_24 = 5 }
+				set_variable = { GER_EW_Economy_Status_25 = 5 }
+				set_variable = { GER_EW_Economy_Status_26 = 5 }
+				set_variable = { GER_EW_Economy_Status_27 = 5 }
+				set_variable = { GER_EW_Economy_Status_28 = 5 }
+				set_variable = { GER_EW_Economy_Status_29 = 5 }
+				set_variable = { GER_EW_Economy_Status_30 = 5 }
+				set_variable = { GER_EW_Economy_Status_31 = 5 }
+				set_variable = { GER_EW_Economy_Status_32 = 5 }
+				set_variable = { GER_EW_Economy_Status_33 = 5 }
+				set_variable = { GER_EW_Economy_Status_34 = 5 }
+				set_variable = { GER_EW_Economy_Status_35 = 5 }
+				set_variable = { GER_EW_Economy_Status_36 = 5 }
+				set_variable = { GER_EW_Economy_Status_37 = 5 }
+				set_variable = { GER_EW_Economy_Status_38 = 5 }
+				set_variable = { GER_EW_Economy_Status_39 = 5 }
+				set_variable = { GER_EW_Economy_Status_40 = 5 }
+			}
+		}
+	}
+
 	on_weekly_GER = { 
 		### Calculating the Variables for the NSDAP Pyramid
 		effect = {
@@ -20,71 +110,90 @@ on_actions = {
 			}
 		}
 
-		### Calculating EP Economic Stability
+		### EW Decisions GUI ###
+		## Calculating countries individual economic stability ##
 		effect = {
-			#Actual country values (Rating * Size)
-			set_temp_variable = { tempEPeconomy1 = GER_ANM_economy_status_1 } 
-				multiply_temp_variable = { tempEPeconomy1 = GER_ANM_economy_status_1_size } 
-			set_temp_variable = { tempEPeconomy2 = GER_ANM_economy_status_2 } 
-				multiply_temp_variable = { tempEPeconomy2 = GER_ANM_economy_status_2_size } 
-			set_temp_variable = { tempEPeconomy3 = GER_ANM_economy_status_3 } 
-				multiply_temp_variable = { tempEPeconomy3 = GER_ANM_economy_status_3_size } 
-			set_temp_variable = { tempEPeconomy4 = GER_ANM_economy_status_4 } 
-				multiply_temp_variable = { tempEPeconomy4 = GER_ANM_economy_status_4_size } 
-			set_temp_variable = { tempEPeconomy5 = GER_ANM_economy_status_5 } 
-				multiply_temp_variable = { tempEPeconomy5 = GER_ANM_economy_status_5_size } 
-			set_temp_variable = { tempEPeconomy6 = GER_ANM_economy_status_6 } 
-				multiply_temp_variable = { tempEPeconomy6 = GER_ANM_economy_status_6_size } 
-			set_temp_variable = { tempEPeconomy7 = GER_ANM_economy_status_7 } 
-				multiply_temp_variable = { tempEPeconomy7 = GER_ANM_economy_status_7_size } 
-			set_temp_variable = { tempEPeconomy8 = GER_ANM_economy_status_8 } 
-				multiply_temp_variable = { tempEPeconomy8 = GER_ANM_economy_status_8_size } 
-			set_temp_variable = { tempEPeconomy9 = GER_ANM_economy_status_9 } 
-				multiply_temp_variable = { tempEPeconomy9 = GER_ANM_economy_status_9_size } 
-			set_temp_variable = { tempEPeconomy10 = GER_ANM_economy_status_10 } 
-				multiply_temp_variable = { tempEPeconomy10 = GER_ANM_economy_status_10_size } 
-			set_temp_variable = { tempEPeconomy11 = GER_ANM_economy_status_11 } 
-				multiply_temp_variable = { tempEPeconomy11 = GER_ANM_economy_status_11_size } 
-			set_temp_variable = { tempEPeconomy12 = GER_ANM_economy_status_12 } 
-				multiply_temp_variable = { tempEPeconomy12 = GER_ANM_economy_status_12_size } 
-			set_temp_variable = { tempEPeconomy13 = GER_ANM_economy_status_13 } 
-				multiply_temp_variable = { tempEPeconomy13 = GER_ANM_economy_status_13_size } 
-			set_temp_variable = { tempEPeconomy14 = GER_ANM_economy_status_14 } 
-				multiply_temp_variable = { tempEPeconomy14 = GER_ANM_economy_status_14_size } 
-			set_temp_variable = { tempEPeconomy15 = GER_ANM_economy_status_15 } 
-				multiply_temp_variable = { tempEPeconomy15 = GER_ANM_economy_status_15_size } 
-			set_temp_variable = { tempEPeconomy16 = GER_ANM_economy_status_16 } 
-				multiply_temp_variable = { tempEPeconomy16 = GER_ANM_economy_status_16_size } 
-			set_temp_variable = { tempEPeconomy17 = GER_ANM_economy_status_17 } 
-				multiply_temp_variable = { tempEPeconomy17 = GER_ANM_economy_status_17_size } 
-			set_temp_variable = { tempEPeconomy18 = GER_ANM_economy_status_18 } 
-				multiply_temp_variable = { tempEPeconomy18 = GER_ANM_economy_status_18_size } 
-			set_temp_variable = { tempEPeconomy19 = GER_ANM_economy_status_19 } 
-				multiply_temp_variable = { tempEPeconomy19 = GER_ANM_economy_status_19_size } 
-			set_temp_variable = { tempEPeconomy20 = GER_ANM_economy_status_20 } 
-				multiply_temp_variable = { tempEPeconomy20 = GER_ANM_economy_status_20_size } 
-			set_temp_variable = { tempEPeconomy21 = GER_ANM_economy_status_21 } 
-				multiply_temp_variable = { tempEPeconomy21 = GER_ANM_economy_status_21_size } 
-			set_temp_variable = { tempEPeconomy22 = GER_ANM_economy_status_22 } 
-				multiply_temp_variable = { tempEPeconomy22 = GER_ANM_economy_status_22_size } 
-			set_temp_variable = { tempEPeconomy23 = GER_ANM_economy_status_23 } 
-				multiply_temp_variable = { tempEPeconomy23 = GER_ANM_economy_status_23_size } 
-			set_temp_variable = { tempEPeconomy24 = GER_ANM_economy_status_24 } 
-				multiply_temp_variable = { tempEPeconomy24 = GER_ANM_economy_status_24_size } 
-			set_temp_variable = { tempEPeconomy25 = GER_ANM_economy_status_25 } 
-				multiply_temp_variable = { tempEPeconomy25 = GER_ANM_economy_status_25_size } 
-			set_temp_variable = { tempEPeconomy26 = GER_ANM_economy_status_26 } 
-				multiply_temp_variable = { tempEPeconomy26 = GER_ANM_economy_status_26_size } 
-			set_temp_variable = { tempEPeconomy27 = GER_ANM_economy_status_27 } 
-				multiply_temp_variable = { tempEPeconomy27 = GER_ANM_economy_status_27_size } 
-			set_temp_variable = { tempEPeconomy28 = GER_ANM_economy_status_28 } 
-				multiply_temp_variable = { tempEPeconomy28 = GER_ANM_economy_status_28_size } 
-			set_temp_variable = { tempEPeconomy29 = GER_ANM_economy_status_29 } 
-				multiply_temp_variable = { tempEPeconomy29 = GER_ANM_economy_status_29_size } 
-			set_temp_variable = { tempEPeconomy30 = GER_ANM_economy_status_30 } 
-				multiply_temp_variable = { tempEPeconomy30 = GER_ANM_economy_status_30_size } 
-			set_temp_variable = { tempEPeconomy31 = GER_ANM_economy_status_31 } 
-				multiply_temp_variable = { tempEPeconomy31 = GER_ANM_economy_status_31_size } 
+			#Actual country values (Rating [1-10] * Size [Industry base])
+			set_temp_variable = { tempEWeconomy1 = GER_EW_Economy_Status_1 } 
+				multiply_temp_variable = { tempEWeconomy1 = GER_EW_Economy_Size_1 } 
+			set_temp_variable = { tempEWeconomy2 = GER_EW_Economy_Status_2 }	
+				multiply_temp_variable = { tempEWeconomy2 = GER_EW_Economy_Size_2 }
+			set_temp_variable = { tempEWeconomy3 = GER_EW_Economy_Status_3 }
+				multiply_temp_variable = { tempEWeconomy3 = GER_EW_Economy_Size_3 }
+			set_temp_variable = { tempEWeconomy4 = GER_EW_Economy_Status_4 }
+				multiply_temp_variable = { tempEWeconomy4 = GER_EW_Economy_Size_4 }
+			set_temp_variable = { tempEWeconomy5 = GER_EW_Economy_Status_5 }
+				multiply_temp_variable = { tempEWeconomy5 = GER_EW_Economy_Size_5 }	
+			set_temp_variable = { tempEWeconomy6 = GER_EW_Economy_Status_6 }
+				multiply_temp_variable = { tempEWeconomy6 = GER_EW_Economy_Size_6 }
+			set_temp_variable = { tempEWeconomy7 = GER_EW_Economy_Status_7 }
+				multiply_temp_variable = { tempEWeconomy7 = GER_EW_Economy_Size_7 }
+			set_temp_variable = { tempEWeconomy8 = GER_EW_Economy_Status_8 }
+				multiply_temp_variable = { tempEWeconomy8 = GER_EW_Economy_Size_8 }
+			set_temp_variable = { tempEWeconomy9 = GER_EW_Economy_Status_9 }
+				multiply_temp_variable = { tempEWeconomy9 = GER_EW_Economy_Size_9 }
+			set_temp_variable = { tempEWeconomy10 = GER_EW_Economy_Status_10 }
+				multiply_temp_variable = { tempEWeconomy10 = GER_EW_Economy_Size_10 }
+			set_temp_variable = { tempEWeconomy11 = GER_EW_Economy_Status_11 }
+				multiply_temp_variable = { tempEWeconomy11 = GER_EW_Economy_Size_11 }
+			set_temp_variable = { tempEWeconomy12 = GER_EW_Economy_Status_12 }
+				multiply_temp_variable = { tempEWeconomy12 = GER_EW_Economy_Size_12 }
+			set_temp_variable = { tempEWeconomy13 = GER_EW_Economy_Status_13 }
+				multiply_temp_variable = { tempEWeconomy13 = GER_EW_Economy_Size_13 }
+			set_temp_variable = { tempEWeconomy14 = GER_EW_Economy_Status_14 }
+				multiply_temp_variable = { tempEWeconomy14 = GER_EW_Economy_Size_14 }
+			set_temp_variable = { tempEWeconomy15 = GER_EW_Economy_Status_15 }
+				multiply_temp_variable = { tempEWeconomy15 = GER_EW_Economy_Size_15 }
+			set_temp_variable = { tempEWeconomy16 = GER_EW_Economy_Status_16 }
+				multiply_temp_variable = { tempEWeconomy16 = GER_EW_Economy_Size_16 }
+			set_temp_variable = { tempEWeconomy17 = GER_EW_Economy_Status_17 }
+				multiply_temp_variable = { tempEWeconomy17 = GER_EW_Economy_Size_17 }
+			set_temp_variable = { tempEWeconomy18 = GER_EW_Economy_Status_18 }
+				multiply_temp_variable = { tempEWeconomy18 = GER_EW_Economy_Size_18 }
+			set_temp_variable = { tempEWeconomy19 = GER_EW_Economy_Status_19 }
+				multiply_temp_variable = { tempEWeconomy19 = GER_EW_Economy_Size_19 }
+			set_temp_variable = { tempEWeconomy20 = GER_EW_Economy_Status_20 }
+				multiply_temp_variable = { tempEWeconomy20 = GER_EW_Economy_Size_20 }
+			set_temp_variable = { tempEWeconomy21 = GER_EW_Economy_Status_21 }
+				multiply_temp_variable = { tempEWeconomy21 = GER_EW_Economy_Size_21 }
+			set_temp_variable = { tempEWeconomy22 = GER_EW_Economy_Status_22 }
+				multiply_temp_variable = { tempEWeconomy22 = GER_EW_Economy_Size_22 }
+			set_temp_variable = { tempEWeconomy23 = GER_EW_Economy_Status_23 }
+				multiply_temp_variable = { tempEWeconomy23 = GER_EW_Economy_Size_23 }
+			set_temp_variable = { tempEWeconomy24 = GER_EW_Economy_Status_24 }
+				multiply_temp_variable = { tempEWeconomy24 = GER_EW_Economy_Size_24 }
+			set_temp_variable = { tempEWeconomy25 = GER_EW_Economy_Status_25 }	
+				multiply_temp_variable = { tempEWeconomy25 = GER_EW_Economy_Size_25 }
+			set_temp_variable = { tempEWeconomy26 = GER_EW_Economy_Status_26 }
+				multiply_temp_variable = { tempEWeconomy26 = GER_EW_Economy_Size_26 }
+			set_temp_variable = { tempEWeconomy27 = GER_EW_Economy_Status_27 }
+				multiply_temp_variable = { tempEWeconomy27 = GER_EW_Economy_Size_27 }
+			set_temp_variable = { tempEWeconomy28 = GER_EW_Economy_Status_28 }
+				multiply_temp_variable = { tempEWeconomy28 = GER_EW_Economy_Size_28 }
+			set_temp_variable = { tempEWeconomy29 = GER_EW_Economy_Status_29 }
+				multiply_temp_variable = { tempEWeconomy29 = GER_EW_Economy_Size_29 }
+			set_temp_variable = { tempEWeconomy30 = GER_EW_Economy_Status_30 }
+				multiply_temp_variable = { tempEWeconomy30 = GER_EW_Economy_Size_30 }
+			set_temp_variable = { tempEWeconomy31 = GER_EW_Economy_Status_31 }
+				multiply_temp_variable = { tempEWeconomy31 = GER_EW_Economy_Size_31 }
+			set_temp_variable = { tempEWeconomy32 = GER_EW_Economy_Status_32 }
+				multiply_temp_variable = { tempEWeconomy32 = GER_EW_Economy_Size_32 }
+			set_temp_variable = { tempEWeconomy33 = GER_EW_Economy_Status_33 }
+				multiply_temp_variable = { tempEWeconomy33 = GER_EW_Economy_Size_33 }
+			set_temp_variable = { tempEWeconomy34 = GER_EW_Economy_Status_34 }
+				multiply_temp_variable = { tempEWeconomy34 = GER_EW_Economy_Size_34 }
+			set_temp_variable = { tempEWeconomy35 = GER_EW_Economy_Status_35 }
+				multiply_temp_variable = { tempEWeconomy35 = GER_EW_Economy_Size_35 }
+			set_temp_variable = { tempEWeconomy36 = GER_EW_Economy_Status_36 }
+				multiply_temp_variable = { tempEWeconomy36 = GER_EW_Economy_Size_36 }
+			set_temp_variable = { tempEWeconomy37 = GER_EW_Economy_Status_37 }
+				multiply_temp_variable = { tempEWeconomy37 = GER_EW_Economy_Size_37 }
+			set_temp_variable = { tempEWeconomy38 = GER_EW_Economy_Status_38 }
+				multiply_temp_variable = { tempEWeconomy38 = GER_EW_Economy_Size_38 }
+			set_temp_variable = { tempEWeconomy39 = GER_EW_Economy_Status_39 }
+				multiply_temp_variable = { tempEWeconomy39 = GER_EW_Economy_Size_39 }
+			set_temp_variable = { tempEWeconomy40 = GER_EW_Economy_Status_40 }
+				multiply_temp_variable = { tempEWeconomy40 = GER_EW_Economy_Size_40 } 
 
 			#Actual country total value
 			set_temp_variable = { tempEPeconomyoverall = tempEPeconomy1 }
