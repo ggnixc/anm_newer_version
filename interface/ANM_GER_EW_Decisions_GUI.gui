@@ -251,7 +251,26 @@ guiTypes = {
 			position = { x = 239 y = 295 }
 			pdx_tooltip = GER_EW_Decisions_GUI_Europe_40
 		}
-
+		instantTextboxType = {
+			name = "EW_Decisions_GUI_Europe_Texttitle"
+			position = { x = 167 y = 407 }
+			font = "aldrich_14_outline"
+			text = GER_EW_Decisions_GUI_Europe_Texttitle
+			maxWidth = 300
+			maxHeight = 25
+			format = left
+			vertical_alignment = center
+		}
+		instantTextboxType = {
+			name = "EW_Decisions_GUI_Europe_Textdesc"
+			position = { x = 403 y = 407 }
+			font = "aldrich_14_outline"
+			text = GER_EW_Decisions_GUI_Europe_Textdesc
+			maxWidth = 50
+			maxHeight = 25
+			format = center
+			vertical_alignment = center
+		}
 	
 		### WORLDVIEW ###
 		iconType = {
@@ -341,7 +360,6 @@ guiTypes = {
 			buttonText = GER_EW_Decisions_GUI_Button_Large
 			buttonFont = "aldrich_16_outline"
 		}
-	
 		buttonType = {
 			name = "EW_Decisions_GUI_Button_Small_1"
 			quadTextureSprite = "GFX_EW_Decisions_GUI_Button_Small"

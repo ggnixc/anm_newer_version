@@ -55,9 +55,73 @@ EW_Button_Small_1_click = {
 		var = GER_EW_Button_Small_Variable1
 		value = 2
 	}
+	clear_variable = GER_EW_Button_Small_Variable2
 	clear_variable = GER_EW_Button_Small_Variable3
-	clear_variable = GER_EW_Button_Small_Variable3
-	
+
+	set_variable = { GER_EW_Country_Variable1 = 1 } 
+	set_variable = { GER_EW_Country_Variable2 = 1 } 
+	set_variable = { GER_EW_Country_Variable3 = 1 }
+	if = {
+		limit = { SWE = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable4 = 1 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable4 = 3 } }
+	if = {
+		limit = { FIN = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable5 = 1 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable5 = 3 } }
+	set_variable = { GER_EW_Country_Variable6 = 1 }
+	set_variable = { GER_EW_Country_Variable7 = 1 }
+	if = {
+		limit = { IRE = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable8 = 1 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable8 = 3 } }
+	if = {
+		limit = { ULS = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable9 = 1 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable9 = 3 } }
+	set_variable = { GER_EW_Country_Variable10 = 1 }
+	set_variable = { GER_EW_Country_Variable11 = 1 }
+	set_variable = { GER_EW_Country_Variable12 = 1 }
+	if = {
+		limit = { IBR = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable13 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable13 = 1 } }
+	set_variable = { GER_EW_Country_Variable14 = 1 }
+	set_variable = { GER_EW_Country_Variable15 = 1 }
+	set_variable = { GER_EW_Country_Variable16 = 1 }
+	set_variable = { GER_EW_Country_Variable17 = 1 }
+	set_variable = { GER_EW_Country_Variable18 = 1 }
+	set_variable = { GER_EW_Country_Variable19 = 1 }
+	set_variable = { GER_EW_Country_Variable20 = 1 }
+	set_variable = { GER_EW_Country_Variable21 = 1 }
+	set_variable = { GER_EW_Country_Variable22 = 1 }
+	set_variable = { GER_EW_Country_Variable23 = 1 }
+	set_variable = { GER_EW_Country_Variable24 = 1 }
+	set_variable = { GER_EW_Country_Variable25 = 1 }
+	set_variable = { GER_EW_Country_Variable26 = 1 }
+	set_variable = { GER_EW_Country_Variable27 = 1 }
+	set_variable = { GER_EW_Country_Variable28 = 1 }
+	if = {
+		limit = { PER = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable29 = 1 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable29 = 3 } }
+	set_variable = { GER_EW_Country_Variable30 = 1 }
+	set_variable = { GER_EW_Country_Variable31 = 1 }
+	set_variable = { GER_EW_Country_Variable32 = 1 }
+	set_variable = { GER_EW_Country_Variable33 = 1 }
+	set_variable = { GER_EW_Country_Variable34 = 1 }
+	set_variable = { GER_EW_Country_Variable35 = 1 }
+	set_variable = { GER_EW_Country_Variable36 = 1 }
+	set_variable = { GER_EW_Country_Variable37 = 1 }
+	set_variable = { GER_EW_Country_Variable38 = 1 }
+	set_variable = { GER_EW_Country_Variable39 = 1 }
+	set_variable = { GER_EW_Country_Variable40 = 1 }
 }
 EW_Button_Small_2_click = { 
 	set_country_flag = { 
@@ -70,6 +134,325 @@ EW_Button_Small_2_click = {
 	}
 	clear_variable = GER_EW_Button_Small_Variable1
 	clear_variable = GER_EW_Button_Small_Variable3
+
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_1 > 7 } } 
+		set_variable = { GER_EW_Country_Variable1 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_1 > 5 } } 
+		set_variable = { GER_EW_Country_Variable1 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_1 > 3 } } 
+		set_variable = { GER_EW_Country_Variable1 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_1 > 1 } } 
+		set_variable = { GER_EW_Country_Variable1 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable1 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_3 > 7 } } 
+		set_variable = { GER_EW_Country_Variable3 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_3 > 5 } } 
+		set_variable = { GER_EW_Country_Variable3 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_3 > 3 } } 
+		set_variable = { GER_EW_Country_Variable3 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_3 > 1 } } 
+		set_variable = { GER_EW_Country_Variable3 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable3 = 6 } }
+	if = {
+		limit = { SWE = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable4 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable4 = 3 } }
+	if = {
+		limit = { FIN = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable5 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_5 > 7 } } 
+		set_variable = { GER_EW_Country_Variable5 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_5 > 5 } } 
+		set_variable = { GER_EW_Country_Variable5 = 5 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_5 > 3 } } 
+		set_variable = { GER_EW_Country_Variable5 = 6 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_5 > 1 } } 
+		set_variable = { GER_EW_Country_Variable5 = 7 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable5 = 8 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_6 > 7 } } 
+		set_variable = { GER_EW_Country_Variable6 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_6 > 5 } } 
+		set_variable = { GER_EW_Country_Variable6 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_6 > 3 } } 
+		set_variable = { GER_EW_Country_Variable6 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_6 > 1 } } 
+		set_variable = { GER_EW_Country_Variable6 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable6 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_7 > 7 } } 
+		set_variable = { GER_EW_Country_Variable7 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_7 > 5 } } 
+		set_variable = { GER_EW_Country_Variable7 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_7 > 3 } } 
+		set_variable = { GER_EW_Country_Variable7 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_7 > 1 } } 
+		set_variable = { GER_EW_Country_Variable7 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable7 = 6 } }
+	if = {
+		limit = { IRE = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable8 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable8 = 3 } }
+	if = {
+		limit = { ULS = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable9 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable9 = 3 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_12 > 7 } } 
+		set_variable = { GER_EW_Country_Variable12 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_12 > 5 } } 
+		set_variable = { GER_EW_Country_Variable12 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_12 > 3 } } 
+		set_variable = { GER_EW_Country_Variable12 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_12 > 1 } } 
+		set_variable = { GER_EW_Country_Variable12 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable12 = 6 } }
+	if = {
+		limit = { IBR = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable13 = 3 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable13 = 1 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_28 > 7 } } 
+		set_variable = { GER_EW_Country_Variable28 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_28 > 5 } } 
+		set_variable = { GER_EW_Country_Variable28 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_28 > 3 } } 
+		set_variable = { GER_EW_Country_Variable28 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_28 > 1 } } 
+		set_variable = { GER_EW_Country_Variable28 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable28 = 6 } }
+	if = {
+		limit = { PER = { has_idea = Pakt_Observer } } 
+		set_variable = { GER_EW_Country_Variable29 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_29 > 7 } } 
+		set_variable = { GER_EW_Country_Variable29 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_29 > 5 } } 
+		set_variable = { GER_EW_Country_Variable29 = 5 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_29 > 3 } } 
+		set_variable = { GER_EW_Country_Variable29 = 6 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_29 > 1 } } 
+		set_variable = { GER_EW_Country_Variable29 = 7 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable29 = 8 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_31 > 7 } } 
+		set_variable = { GER_EW_Country_Variable31 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_31 > 5 } } 
+		set_variable = { GER_EW_Country_Variable31 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_31 > 3 } } 
+		set_variable = { GER_EW_Country_Variable31 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_31 > 1 } } 
+		set_variable = { GER_EW_Country_Variable31 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable31 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_32 > 7 } } 
+		set_variable = { GER_EW_Country_Variable32 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_32 > 5 } } 
+		set_variable = { GER_EW_Country_Variable32 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_32 > 3 } } 
+		set_variable = { GER_EW_Country_Variable32 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_32 > 1 } } 
+		set_variable = { GER_EW_Country_Variable32 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable32 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_33 > 7 } } 
+		set_variable = { GER_EW_Country_Variable33 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_33 > 5 } } 
+		set_variable = { GER_EW_Country_Variable33 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_33 > 3 } } 
+		set_variable = { GER_EW_Country_Variable33 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_33 > 1 } } 
+		set_variable = { GER_EW_Country_Variable33 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable33 = 6 } }
+	set_variable = { GER_EW_Country_Variable34 = 2 } 
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_35 > 7 } } 
+		set_variable = { GER_EW_Country_Variable35 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_35 > 5 } } 
+		set_variable = { GER_EW_Country_Variable35 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_35 > 3 } } 
+		set_variable = { GER_EW_Country_Variable35 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_35 > 1 } } 
+		set_variable = { GER_EW_Country_Variable35 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable35 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_36 > 7 } } 
+		set_variable = { GER_EW_Country_Variable36 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_36 > 5 } } 
+		set_variable = { GER_EW_Country_Variable36 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_36 > 3 } } 
+		set_variable = { GER_EW_Country_Variable36 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_36 > 1 } } 
+		set_variable = { GER_EW_Country_Variable36 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable36 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_37 > 7 } } 
+		set_variable = { GER_EW_Country_Variable37 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_37 > 5 } } 
+		set_variable = { GER_EW_Country_Variable37 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_37 > 3 } } 
+		set_variable = { GER_EW_Country_Variable37 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_37 > 1 } } 
+		set_variable = { GER_EW_Country_Variable37 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable37 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_38 > 7 } } 
+		set_variable = { GER_EW_Country_Variable38 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_38 > 5 } } 
+		set_variable = { GER_EW_Country_Variable38 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_38 > 3 } } 
+		set_variable = { GER_EW_Country_Variable38 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_38 > 1 } } 
+		set_variable = { GER_EW_Country_Variable38 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable38 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_39 > 7 } } 
+		set_variable = { GER_EW_Country_Variable39 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_39 > 5 } } 
+		set_variable = { GER_EW_Country_Variable39 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_39 > 3 } } 
+		set_variable = { GER_EW_Country_Variable39 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_39 > 1 } } 
+		set_variable = { GER_EW_Country_Variable39 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable39 = 6 } }
+	if = {
+		limit = { check_variable = { GER_EW_Economy_Rate_40 > 7 } } 
+		set_variable = { GER_EW_Country_Variable40 = 2 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_40 > 5 } } 
+		set_variable = { GER_EW_Country_Variable40 = 3 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_40 > 3 } } 
+		set_variable = { GER_EW_Country_Variable40 = 4 }
+	}
+	else_if = { 
+		limit = { check_variable = { GER_EW_Economy_Rate_40 > 1 } } 
+		set_variable = { GER_EW_Country_Variable40 = 5 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable40 = 6 } }
 }
 EW_Button_Small_3_click = { 
 	set_country_flag = { 
