@@ -50,6 +50,12 @@ on_actions = {
 				set_variable = { GER_EW_Economy_Rate_38 = 3 } #TNS
 				set_variable = { GER_EW_Economy_Rate_39 = 4 } #BUL
 				set_variable = { GER_EW_Economy_Rate_40 = 3 } #SER
+				set_variable = { GER_EW_Economy_Rate_60 = 4 } #PAK
+				set_variable = { GER_EW_Economy_Rate_61 = 7 } #CHI
+				set_variable = { GER_EW_Economy_Rate_62 = 2 } #DOM
+				set_variable = { GER_EW_Economy_Rate_63 = 4 } #MAD
+				set_variable = { GER_EW_Economy_Rate_64 = 2 } #GAB
+				set_variable = { GER_EW_Economy_Rate_65 = 5 } #RHO? (Rhodesia)
 
 				## Assigning starting economic weights (read, factionstatus) ##
 				set_variable = { GER_EW_Economy_Weight_1 = 1 } #GER
@@ -92,6 +98,12 @@ on_actions = {
 				set_variable = { GER_EW_Economy_Weight_38 = 1 } #TNS
 				set_variable = { GER_EW_Economy_Weight_39 = 1 } #BUL
 				set_variable = { GER_EW_Economy_Weight_40 = 1 } #SER
+				set_variable = { GER_EW_Economy_Weight_60 = 1 } #PAK
+				set_variable = { GER_EW_Economy_Weight_61 = 0.15 } #CHI
+				set_variable = { GER_EW_Economy_Weight_62 = 0.15 } #DOM
+				set_variable = { GER_EW_Economy_Weight_63 = 0.45 } #MAD
+				set_variable = { GER_EW_Economy_Weight_64 = 0.15 } #GAB
+				set_variable = { GER_EW_Economy_Weight_65 = 0.15 } #RHO? (Rhodesia)
 			} 
 		}
 	}
@@ -242,6 +254,24 @@ on_actions = {
 			set_temp_variable = { tempEWeconomy40 = GER_EW_Economy_Rate_40 }
 				multiply_temp_variable = { tempEWeconomy40 = SER.num_of_factories } 
 				multiply_temp_variable = { tempEWeconomy40 = GER_EW_Economy_Weight_40 }
+			set_temp_variable = { tempEWeconomy60 = GER_EW_Economy_Rate_60 }
+				multiply_temp_variable = { tempEWeconomy60 = PAK.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy60 = GER_EW_Economy_Weight_60 }
+			set_temp_variable = { tempEWeconomy61 = GER_EW_Economy_Rate_61 }
+				multiply_temp_variable = { tempEWeconomy61 = CHI.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy61 = GER_EW_Economy_Weight_61 }
+			set_temp_variable = { tempEWeconomy62 = GER_EW_Economy_Rate_62 }
+				multiply_temp_variable = { tempEWeconomy62 = DOM.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy62 = GER_EW_Economy_Weight_62 }
+			set_temp_variable = { tempEWeconomy63 = GER_EW_Economy_Rate_63 }
+				multiply_temp_variable = { tempEWeconomy63 = MAD.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy63 = GER_EW_Economy_Weight_63 }
+			set_temp_variable = { tempEWeconomy64 = GER_EW_Economy_Rate_64 }
+				multiply_temp_variable = { tempEWeconomy64 = GAB.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy64 = GER_EW_Economy_Weight_64 }
+			set_temp_variable = { tempEWeconomy65 = GER_EW_Economy_Rate_65 }
+				multiply_temp_variable = { tempEWeconomy65 = RHO.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy65 = GER_EW_Economy_Weight_65 }
 
 			# Actual country values added up to one total
 			set_temp_variable = { tempEWeconomyoverall = tempEWeconomy1 }
@@ -284,6 +314,12 @@ on_actions = {
 				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy38 }
 				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy39 }
 				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy40 }
+				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy60 }
+				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy61 }
+				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy62 }
+				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy63 }
+				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy64 }
+				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy65 }
 
 			# Maximum country values (10 * Size [Industry base] * Status [0-1]), as base for overall rating 
 			set_temp_variable = { tempEWeconomymax1 = 10 } 
@@ -406,6 +442,24 @@ on_actions = {
 			set_temp_variable = { tempEWeconomymax40 = 10 }
 				multiply_temp_variable = { tempEWeconomymax40 = SER.num_of_factories } 
 				multiply_temp_variable = { tempEWeconomymax40 = GER_EW_Economy_Weight_40 }
+			set_temp_variable = { tempEWeconomymax60 = 10 }	
+				multiply_temp_variable = { tempEWeconomymax60 = PAK.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax60 = GER_EW_Economy_Weight_60 }
+			set_temp_variable = { tempEWeconomymax61 = 10 }	
+				multiply_temp_variable = { tempEWeconomymax61 = CHI.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax61 = GER_EW_Economy_Weight_61 }
+			set_temp_variable = { tempEWeconomymax62 = 10 }
+				multiply_temp_variable = { tempEWeconomymax62 = DOM.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax62 = GER_EW_Economy_Weight_62 }
+			set_temp_variable = { tempEWeconomymax63 = 10 }
+				multiply_temp_variable = { tempEWeconomymax63 = MAD.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax63 = GER_EW_Economy_Weight_63 }
+			set_temp_variable = { tempEWeconomymax64 = 10 }	
+				multiply_temp_variable = { tempEWeconomymax64 = GAB.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax64 = GER_EW_Economy_Weight_64 }
+			set_temp_variable = { tempEWeconomymax65 = 10 }	
+				multiply_temp_variable = { tempEWeconomymax65 = RHO.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax65 = GER_EW_Economy_Weight_65 }
 
 			# Maximum country values added up to one total
 			set_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax1 }
@@ -448,6 +502,12 @@ on_actions = {
 				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax38 }
 				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax39 }
 				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax40 }
+				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax60 }
+				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax61 }
+				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax62 }
+				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax63 }
+				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax64 }
+				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax65 }
 	
 		# Overall rating (Overall value / Maximum value * 10)
 			divide_temp_variable = { tempEWeconomyoverall = tempEWeconomymaxoverall }
