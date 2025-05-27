@@ -49,7 +49,18 @@ scripted_gui = {
 			EW_Decisions_GUI_Button_bg_visible = { has_country_flag = GER_EW_Decisions_GUI_Tab1 }
 			EW_Decisions_GUI_Button_Small_1_visible = { has_country_flag = GER_EW_Decisions_GUI_Tab1 }
 			EW_Decisions_GUI_Button_Small_2_visible = { has_country_flag = GER_EW_Decisions_GUI_Tab1 }
-			EW_Decisions_GUI_Button_Small_3_visible = { has_country_flag = GER_EW_Decisions_GUI_Tab1 }
+			EW_Decisions_GUI_Button_Small_3_visible = { 
+				AND = { 
+					has_country_flag = GER_EW_Decisions_GUI_Tab1 
+					year > 1996 
+				} 
+			}
+			EW_Decisions_GUI_Button_Small_3_Unavailable_visible = {
+				AND = { 
+					has_country_flag = GER_EW_Decisions_GUI_Tab1 
+					year < 1997 
+				} 
+			}
 
 			# Worldview #
 			EW_Decisions_GUI_Worldview_bg_visible = { has_country_flag = GER_EW_Decisions_GUI_Tab2 }
@@ -74,247 +85,47 @@ scripted_gui = {
 			EW_Decisions_GUI_Button_Small_3_click = { EW_Button_Small_3_click = yes }
 				
 			# Europe #
-			EW_Decisions_GUI_Europe_1_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 1
-				}
-			}
-			EW_Decisions_GUI_Europe_2_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 2
-				}
-			}
-			EW_Decisions_GUI_Europe_3_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 3
-				}
-			}
-			EW_Decisions_GUI_Europe_4_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 4
-				}
-			}
-			EW_Decisions_GUI_Europe_5_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 5
-				}
-			}
-			EW_Decisions_GUI_Europe_6_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 6
-				}
-			}
-			EW_Decisions_GUI_Europe_7_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 7
-				}
-			}
-			EW_Decisions_GUI_Europe_8_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 8
-				}
-			}
-			EW_Decisions_GUI_Europe_9_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 9
-				}
-			}
-			EW_Decisions_GUI_Europe_10_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 10
-				}
-			}
-			EW_Decisions_GUI_Europe_11_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 11
-				}
-			}
-			EW_Decisions_GUI_Europe_12_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 12
-				}
-			}
-			EW_Decisions_GUI_Europe_13_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 13
-				}
-			}
-			EW_Decisions_GUI_Europe_14_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 14
-				}
-			}
-			EW_Decisions_GUI_Europe_15_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 15
-				}
-			}
-			EW_Decisions_GUI_Europe_16_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 16
-				}
-			}
-			EW_Decisions_GUI_Europe_17_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 17
-				}
-			}
-			EW_Decisions_GUI_Europe_18_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 18
-				}
-			}
-			EW_Decisions_GUI_Europe_19_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 19
-				}
-			}
-			EW_Decisions_GUI_Europe_20_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 20
-				}
-			}
-			EW_Decisions_GUI_Europe_21_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 21
-				}
-			}
-			EW_Decisions_GUI_Europe_22_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 22
-				}
-			}
-			EW_Decisions_GUI_Europe_23_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 23
-				}
-			}
-			EW_Decisions_GUI_Europe_24_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 24
-				}
-			}
-			EW_Decisions_GUI_Europe_25_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 25
-				}
-			}
-			EW_Decisions_GUI_Europe_26_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 26
-				}
-			}
-			EW_Decisions_GUI_Europe_27_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 27
-				}
-			}
-			EW_Decisions_GUI_Europe_28_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 28
-				}
-			}
-			EW_Decisions_GUI_Europe_29_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 29
-				}
-			}
-			EW_Decisions_GUI_Europe_30_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 30
-				}
-			}
-			EW_Decisions_GUI_Europe_31_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 31
-				}
-			}
-			EW_Decisions_GUI_Europe_32_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 32
-				}
-			}
-			EW_Decisions_GUI_Europe_33_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 33
-				}
-			}
-			EW_Decisions_GUI_Europe_34_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 34
-				}
-			}
-			EW_Decisions_GUI_Europe_35_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 35
-				}
-			}
-			EW_Decisions_GUI_Europe_36_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 36
-				}
-			}
-			EW_Decisions_GUI_Europe_37_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 37
-				}
-			}
-			EW_Decisions_GUI_Europe_38_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 38
-				}
-			}
-			EW_Decisions_GUI_Europe_39_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 39
-				}
-			}
-			EW_Decisions_GUI_Europe_40_click = { 
-				set_country_flag = { 
-					flag = GER_EW_Country
-					value = 40
-				}
-			}
-	
+			EW_Decisions_GUI_Europe_1_click = { set_country_flag = { flag = GER_EW_Country value = 1 } }
+			EW_Decisions_GUI_Europe_2_click = { set_country_flag = { flag = GER_EW_Country value = 2 } }
+			EW_Decisions_GUI_Europe_3_click = { set_country_flag = { flag = GER_EW_Country value = 3 } }
+			EW_Decisions_GUI_Europe_4_click = { set_country_flag = { flag = GER_EW_Country value = 4 } }
+			EW_Decisions_GUI_Europe_5_click = { set_country_flag = { flag = GER_EW_Country value = 5 } }
+			EW_Decisions_GUI_Europe_6_click = { set_country_flag = { flag = GER_EW_Country value = 6 } }
+			EW_Decisions_GUI_Europe_7_click = { set_country_flag = { flag = GER_EW_Country value = 7 } }
+			EW_Decisions_GUI_Europe_8_click = { set_country_flag = { flag = GER_EW_Country value = 8 } }
+			EW_Decisions_GUI_Europe_9_click = { set_country_flag = { flag = GER_EW_Country value = 9 } }
+			EW_Decisions_GUI_Europe_10_click = { set_country_flag = { flag = GER_EW_Country value = 10 } }
+			EW_Decisions_GUI_Europe_11_click = { set_country_flag = { flag = GER_EW_Country value = 11 } }
+			EW_Decisions_GUI_Europe_12_click = { set_country_flag = { flag = GER_EW_Country value = 12 } }
+			EW_Decisions_GUI_Europe_13_click = { set_country_flag = { flag = GER_EW_Country value = 13 } }
+			EW_Decisions_GUI_Europe_14_click = { set_country_flag = { flag = GER_EW_Country value = 14 } }
+			EW_Decisions_GUI_Europe_15_click = { set_country_flag = { flag = GER_EW_Country value = 15 } }
+			EW_Decisions_GUI_Europe_16_click = { set_country_flag = { flag = GER_EW_Country value = 16 } }
+			EW_Decisions_GUI_Europe_17_click = { set_country_flag = { flag = GER_EW_Country value = 17 } }
+			EW_Decisions_GUI_Europe_18_click = { set_country_flag = { flag = GER_EW_Country value = 18 } }
+			EW_Decisions_GUI_Europe_19_click = { set_country_flag = { flag = GER_EW_Country value = 19 } }
+			EW_Decisions_GUI_Europe_20_click = { set_country_flag = { flag = GER_EW_Country value = 20 } }
+			EW_Decisions_GUI_Europe_21_click = { set_country_flag = { flag = GER_EW_Country value = 21 } }
+			EW_Decisions_GUI_Europe_22_click = { set_country_flag = { flag = GER_EW_Country value = 22 } }
+			EW_Decisions_GUI_Europe_23_click = { set_country_flag = { flag = GER_EW_Country value = 23 } }
+			EW_Decisions_GUI_Europe_24_click = { set_country_flag = { flag = GER_EW_Country value = 24 } }
+			EW_Decisions_GUI_Europe_25_click = { set_country_flag = { flag = GER_EW_Country value = 25 } }
+			EW_Decisions_GUI_Europe_26_click = { set_country_flag = { flag = GER_EW_Country value = 26 } }
+			EW_Decisions_GUI_Europe_27_click = { set_country_flag = { flag = GER_EW_Country value = 27 } }
+			EW_Decisions_GUI_Europe_28_click = { set_country_flag = { flag = GER_EW_Country value = 28 } }
+			EW_Decisions_GUI_Europe_29_click = { set_country_flag = { flag = GER_EW_Country value = 29 } }
+			EW_Decisions_GUI_Europe_30_click = { set_country_flag = { flag = GER_EW_Country value = 30 } }
+			EW_Decisions_GUI_Europe_31_click = { set_country_flag = { flag = GER_EW_Country value = 31 } }
+			EW_Decisions_GUI_Europe_32_click = { set_country_flag = { flag = GER_EW_Country value = 32 } }
+			EW_Decisions_GUI_Europe_33_click = { set_country_flag = { flag = GER_EW_Country value = 33 } }
+			EW_Decisions_GUI_Europe_34_click = { set_country_flag = { flag = GER_EW_Country value = 34 } }
+			EW_Decisions_GUI_Europe_35_click = { set_country_flag = { flag = GER_EW_Country value = 35 } }
+			EW_Decisions_GUI_Europe_36_click = { set_country_flag = { flag = GER_EW_Country value = 36 } }
+			EW_Decisions_GUI_Europe_37_click = { set_country_flag = { flag = GER_EW_Country value = 37 } }
+			EW_Decisions_GUI_Europe_38_click = { set_country_flag = { flag = GER_EW_Country value = 38 } }
+			EW_Decisions_GUI_Europe_39_click = { set_country_flag = { flag = GER_EW_Country value = 39 } }
+			EW_Decisions_GUI_Europe_40_click = { set_country_flag = { flag = GER_EW_Country value = 40 } }
+
 			# Worldview #
 			EW_Decisions_GUI_Worldview_Russia_click = { Worldview_Russia_click = yes }
 			EW_Decisions_GUI_Worldview_Antarctica_click = { Worldview_Antarctica_click = yes } 
@@ -334,6 +145,7 @@ scripted_gui = {
 			EW_Decisions_GUI_Button_Small_1 = { frame = GER_EW_Button_Small_Variable1 }
 			EW_Decisions_GUI_Button_Small_2 = { frame = GER_EW_Button_Small_Variable2 }
 			EW_Decisions_GUI_Button_Small_3 = { frame = GER_EW_Button_Small_Variable3 }
+			EW_Decisions_GUI_Progressbar = { frame = GER_EW_Economy_Rating_Overall }
 
 			# Europe #
 			EW_Decisions_GUI_Europe_1 = { frame = GER_EW_Country_Variable1 }  

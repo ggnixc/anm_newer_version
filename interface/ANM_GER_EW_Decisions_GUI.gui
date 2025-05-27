@@ -9,7 +9,6 @@ guiTypes = {
 			name = "EW_Decisions_GUI_Europe_bg"
 			spriteType = "GFX_EW_Decisions_GUI_Europe_bg"
 			position = { x = 0 y = 0 }
-			alwaystransparent = yes
 		} 
 		buttonType = {
 			name = "EW_Decisions_GUI_Europe_2"
@@ -251,33 +250,12 @@ guiTypes = {
 			position = { x = 239 y = 295 }
 			pdx_tooltip = GER_EW_Decisions_GUI_Europe_40
 		}
-		instantTextboxType = {
-			name = "EW_Decisions_GUI_Europe_Texttitle"
-			position = { x = 167 y = 407 }
-			font = "aldrich_14_outline"
-			text = GER_EW_Decisions_GUI_Europe_Texttitle
-			maxWidth = 300
-			maxHeight = 25
-			format = left
-			vertical_alignment = center
-		}
-		instantTextboxType = {
-			name = "EW_Decisions_GUI_Europe_Textdesc"
-			position = { x = 403 y = 407 }
-			font = "aldrich_14_outline"
-			text = GER_EW_Decisions_GUI_Europe_Textdesc
-			maxWidth = 50
-			maxHeight = 25
-			format = center
-			vertical_alignment = center
-		}
 	
 		### WORLDVIEW ###
 		iconType = {
 			name = "EW_Decisions_GUI_Worldview_bg"
 			spriteType = "GFX_EW_Decisions_GUI_Worldview_bg"
 			position = { x = 0 y = 0 }
-			alwaystransparent = yes
 		}
 		buttonType = {
 			name = "EW_Decisions_GUI_Worldview_Russia"
@@ -362,21 +340,32 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "EW_Decisions_GUI_Button_Small_1"
-			quadTextureSprite = "GFX_EW_Decisions_GUI_Button_Small"
+			quadTextureSprite = "GFX_EW_Decisions_GUI_Button_Small_1"
 			position = { x = 418 y = 8 }
 			pdx_tooltip = GER_EW_Decisions_GUI_Button_Small_1
 		}
 		buttonType = {
 			name = "EW_Decisions_GUI_Button_Small_2"
-			quadTextureSprite = "GFX_EW_Decisions_GUI_Button_Small"
+			quadTextureSprite = "GFX_EW_Decisions_GUI_Button_Small_2"
 			position = { x = 444 y = 8 }
 			pdx_tooltip = GER_EW_Decisions_GUI_Button_Small_2
 		}
 		buttonType = {
 			name = "EW_Decisions_GUI_Button_Small_3"
-			quadTextureSprite = "GFX_EW_Decisions_GUI_Button_Small"
+			quadTextureSprite = "GFX_EW_Decisions_GUI_Button_Small_3"
 			position = { x = 470 y = 8 }
 			pdx_tooltip = GER_EW_Decisions_GUI_Button_Small_3
+		}
+		buttonType = {
+			name = "EW_Decisions_GUI_Button_Small_3_Unavailable"
+			quadTextureSprite = "GFX_EW_Decisions_GUI_Button_Small_3_Unavailable"
+			position = { x = 470 y = 8 }
+		}
+		iconType = {
+			name = "EW_Decisions_GUI_Progressbar"
+			spriteType = "GFX_EW_Decisions_GUI_Progressbar"
+			position = { x = 167 y = 405 }
+			pdx_tooltip = GER_EW_Decisions_GUI_Europe_Text
 		}
 	
 	} 

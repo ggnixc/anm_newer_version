@@ -6,8 +6,9 @@ on_actions = {
 				### EW Decisions GUI ###
 				## Interface variables ##
 				set_variable = { GER_EW_Button_Small_Variable1 = 2 } 
+
 				## Overall EW Economic rating, this variable is overridden monthly ##
-				set_variable = { GER_EW_Economy_Rating_Overall = 0.55 } 
+				set_variable = { GER_EW_Economy_Rating_Overall = 65 } 
 
 				## Assigning starting economic rating based on reasonables values ##
 				set_variable = { GER_EW_Economy_Rate_1 = 8 } #GER
@@ -509,10 +510,12 @@ on_actions = {
 				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax64 }
 				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax65 }
 	
-		# Overall rating (Overall value / Maximum value * 10)
+		# Overall rating (Overall value / Maximum value * 100)
 			divide_temp_variable = { tempEWeconomyoverall = tempEWeconomymaxoverall }
+			multiply_temp_variable = { tempEWeconomyoverall = 100 }
+			round_temp_variable = tempEWeconomyoverall
 			set_variable = { GER_EW_Economy_Rating_Overall = tempEWeconomyoverall }
-		
+	
 		}
 	}
 } 
