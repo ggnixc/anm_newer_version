@@ -1,0 +1,24 @@
+guiTypes = {
+	containerwindowtype = {
+		name = "TNO_state_admin_name_display"
+		position = { x = 83 y = -24 }
+		size = { width=100%% height=100%% }
+
+		icontype  = {
+			name = "admin_name_bg"
+			spritetype = "GFX_TNO_state_admin_name_bg"
+		}
+
+		instantTextboxType = {
+			name = "admin_name"
+			position = { x = 0 y = 6 }
+			font = "aldrich_22_outline"
+			text = "[StateAdmin_Get_Name]"
+			pdx_tooltip = TNO_state_admin_name_description_tt
+			maxWidth = 304
+			maxHeight = 24
+			format = center
+			fixedsize = yes
+		}
+	}
+}

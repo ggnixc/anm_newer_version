@@ -1,0 +1,12 @@
+scripted_gui = {
+	TNO_state_admin_name_display = {
+		window_name = "TNO_state_admin_name_display"
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		#dirty = TNO_state_admin_gui_refresh
+		visible = {
+			has_variable = TNO_state_admin_type
+			NOT = { has_global_flag = TNO_my_world_is_on_fire_how_about_yours }
+		}
+	}
+}

@@ -1,0 +1,44 @@
+defined_text = {
+	name = StateAdmin_Get_Name
+	text = { localization_key = "TNO_state_admin_type_name_[?TNO_state_admin_type][StateAdmin_Get_Type]" }
+}
+
+defined_text = {
+	name = get_temp_state_admin_type_name
+	text = { localization_key = "TNO_state_admin_type_name_[?state_admin_type][StateAdmin_Get_Type]" }
+}
+
+defined_text = {
+	name = StateAdmin_Get_Type
+	text = {
+		trigger = {
+			is_in_array = { global.TNO_state_admin_has_endonym = TNO_state_admin_type }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_endo"
+	}
+	text = {
+		trigger = {
+			is_in_array = { global.TNO_state_admin_has_exonym = TNO_state_admin_type }
+			has_global_flag = TNO_exonym_mode
+		}
+		localization_key = "_exo"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = StateAdmin_Get_Flavor
+	text = {
+		trigger = {
+			check_variable = { TNO_state_admin_type = 34 }
+			ITA = { has_government = fascism }
+		}
+		localization_key = "TNO_state_admin_type_desc_34_ITA_fash"
+	}
+	text = {
+		localization_key = " "
+	}
+}
