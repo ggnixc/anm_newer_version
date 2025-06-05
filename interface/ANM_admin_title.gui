@@ -1,0 +1,25 @@
+guiTypes = {
+	containerwindowtype = {
+		name = "TNO_admin_title_display"
+		position = { x = 100 y = -29 }
+		size = { width=100%% height=100%% }
+
+		icontype  = {
+			name = "admin_title_bg"
+			spritetype = "GFX_TNO_admin_title_bg"
+		}
+
+		instantTextboxType = {
+			name = "admin_name"
+			position = { x = 30 y = 8 }
+			maxHeight = 26
+			maxWidth = 230
+			text = "[AdminTitle_Get_Name]"
+			font = "aldrich_20_outline"
+			vertical_alignment = center
+			format = center
+			fixedsize = yes
+			pdx_tooltip = TNO_admin_title_tt
+		}
+	}
+}

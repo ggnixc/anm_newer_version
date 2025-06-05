@@ -1,0 +1,89 @@
+defined_text = {
+	name = AdminTitle_Get_Name
+	text = { localization_key = "TNO_admin_title_[?TNO_admin_title][AdminTitle_Get_Mode]" }
+}
+
+defined_text = {
+	name = get_temp_admin_title_name
+	text = { localization_key = "TNO_admin_title_[?admin_title][AdminTitle_Get_Mode]" }
+}
+
+defined_text = {
+	name = AdminTitle_Get_Mode
+	text = {
+		trigger = {
+			is_in_array = { global.TNO_admin_title_has_endonym = TNO_admin_title }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_endo"
+	}
+	text = {
+		trigger = {
+			is_in_array = { global.TNO_admin_title_has_exonym = TNO_admin_title }
+			has_global_flag = TNO_exonym_mode
+		}
+		localization_key = "_exo"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = AdminTitle_Get_Desc_Filter 
+	text = {
+		trigger = {
+			is_in_array = { global.TNO_admin_title_has_desc = TNO_admin_title }
+		}
+		localization_key = "TNO_admin_title_description_tt"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = AdminTitle_Get_Desc_Real
+	text = { localization_key = "TNO_admin_title_desc_[?TNO_admin_title][AdminTitleDesc_Get_Condition]" }
+}
+
+defined_text = {
+	name = AdminTitleDesc_Get_Condition
+	text = {
+		trigger = {
+			check_variable = { TNO_admin_title = 34 }
+			ITA = { has_government = fascism }
+			NOT = { has_global_flag = TNO_endonym_mode }
+		}
+		localization_key = "_fash"
+	}
+	text = {
+		trigger = {
+			check_variable = { TNO_admin_title = 34 }
+			ITA = { has_government = fascism }
+			has_global_flag = TNO_endonym_mode
+		}
+		localization_key = "_fash_endo"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = AdminTitle_Get_SubAdmin_Filter
+	text = {
+		trigger = {
+			has_variable = TNO_sub_admin_title
+		}
+		localization_key = "TNO_sub_admin_title_tt"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = AdminTitle_Get_SubAdmin_Real
+	text = { localization_key = "TNO_sub_admin_title_[?TNO_sub_admin_title][AdminTitle_Get_Mode]" }
+}
