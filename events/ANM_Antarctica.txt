@@ -51,3 +51,24 @@ country_event = {
 	}	
 }
 
+country_event = {
+	id = AAF_flavour_event.1 
+	immediate = { log = "[GetDateText]: [Root.GetName]: event AAF_flavour_event.1" }
+	title = AAF_flavour_event.1.t
+	desc = AAF_flavour_event.1.desc
+	picture = GFX_anm_AAG_badfax
+
+	is_triggered_only = yes
+    fire_only_once = yes
+ 
+	option = {
+		name = AAF_flavour_event.1.a
+		hidden_effect = { 
+			AAF = { 
+				remove_ideas = AAF_German_Presence_1 
+				add_ideas = AAF_German_Presence_2 
+			}
+		}
+	}	
+} 
+
