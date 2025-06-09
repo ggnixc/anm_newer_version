@@ -1,20 +1,22 @@
-state = {
-	id = 1204
-	name = "STATE_1204"
-
+state={
+	id=1204
+	name="STATE_1204"
+	resources = {
+		oil = 4
+	}
 	history = {
-		owner = KNM
-		add_core_of = KNM
+		owner = CHD
+		add_core_of = CHD
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
-		set_state_flag = state_renamings
+		victory_points = { 3181 1 }
 	}
-
-	provinces = {
-		1473 14105 14119 14135
+	provinces={
+		1883 3181 7919 14105 14119 
 	}
-	manpower = 119000
-	buildings_max_level_factor = 1.000
-	state_category = wasteland
+	manpower=92445
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
 }

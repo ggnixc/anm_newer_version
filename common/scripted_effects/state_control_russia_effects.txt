@@ -70,16 +70,24 @@ state_control_effect_215 = {
 		limit = {
 			controller = { is_russian_nation = yes }
 		}
-		set_state_name = STATE_215_rus
+		reset_state_name = yes
 		set_province_name = { id = 9195 name = VICTORY_POINTS_9195_rus }
 		set_province_name = { id = 9045 name = VICTORY_POINTS_9045_rus }
 		set_province_name = { id = 3121 name = VICTORY_POINTS_3121_rus }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_215_rus
+		}
 	}
 	else = {
-		reset_state_name = yes
+		reset_state_name = yes 
 		reset_province_name = 9195
 		reset_province_name = 9045
 		reset_province_name = 3121
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_215_fin
+		}
 	}
 }
 state_control_effect_1359 = {
@@ -102,14 +110,20 @@ state_control_effect_1887 = {
 		limit = {
 			controller = { is_russian_nation = yes }
 		}
-		1887 = {
+		reset_state_name = yes
+		set_province_name = { id = 6109 name = VICTORY_POINTS_6109_rus }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
 			set_state_name = STATE_1887_rus
 		}
-		set_province_name = { id = 6109 name = VICTORY_POINTS_6109_rus }
 	}
 	else = {
 		reset_state_name = yes
 		reset_province_name = 6109
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1887_fin
+		}
 	}
 }
 #GOR
@@ -234,6 +248,15 @@ state_control_effect_575 = {
 	else = {
 		reset_state_name = yes
 		reset_province_name = 4812
+	}
+}
+state_control_effect_576 = {
+	if = {
+		limit = { controller = { has_cosmetic_tag = OMO_Anarchy } }
+		set_province_name = { id = 12615 name = VICTORY_POINTS_nrl }
+	}
+	else = { 
+		reset_province_name = 12615 
 	}
 }
 state_control_effect_761 = {
@@ -570,7 +593,10 @@ state_control_effect_403 = {
 	if = {
 		limit = {
 			controller = {
-				RUS_consider_stalinist_regime = yes
+				has_country_leader = {
+					character = TYM_Lazar_Kaganovich
+					ruling_only = yes
+				}
 			}
 		}
 		set_province_name = { id = 12521 name = VICTORY_POINTS_12521_kag }
@@ -622,17 +648,5 @@ state_control_effect_214 = {
 		else = {
 			set_province_name = { id = 312 name = VICTORY_POINTS_312_rus }
 		}
-	}
-}
-
-state_control_effect_1887 = {
-	if = {
-		limit = {
-			is_controlled_by = KRL
-		}
-		set_state_name = STATE_1887_krl
-	}
-	else = {
-		reset_state_name = yes
 	}
 }

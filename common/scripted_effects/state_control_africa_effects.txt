@@ -1,45 +1,97 @@
 ##SORTED BY STARTING TAG, AND THEN STATE ID NUMBER
 #ANG
+state_control_effect_778 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = ANG
+					Angola_is_rk = yes
+				}
+			}
+		}
+		set_state_name = STATE_778_ger
+		set_province_name = { id = 4879 name = VICTORY_POINTS_4879_ger }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 4879
+	}
+}
 state_control_effect_1037 = {
 	if = {
 		limit = {
 			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
+				controller = { has_country_flag = german_names }
 				AND = {
 					is_controlled_by = ANG
-					ANG = {
-						Angola_is_rk = yes
-					}
+					Angola_is_rk = yes
 				}
 			}
 		}
-		reset_province_name = 13803
-		reset_state_name = yes
+		set_state_name = STATE_1037_ger
+		set_province_name = { id = 13803 name = VICTORY_POINTS_13803_ger }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = ANG
+					Angola_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+			}
+		}
+		set_state_name = STATE_1037_colonial
+		set_province_name = { id = 13803 name = VICTORY_POINTS_13803_colonial }
 	}
 	else = {
-		set_state_name = STATE_1037_nat
-		set_province_name = { id = 13803 name = VICTORY_POINTS_13803_nat }
+		reset_state_name = yes
+		reset_province_name = 13803
 	}
 }
 state_control_effect_1735 = {
 	if = {
 		limit = {
 			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
+				controller = { has_country_flag = german_names }
 				AND = {
 					is_controlled_by = ANG
-					ANG = {
-						Angola_is_rk = yes
-					}
+					Angola_is_rk = yes
 				}
 			}
 		}
-		reset_province_name = 14414
+		set_province_name = { id = 14414 name = VICTORY_POINTS_14414_ger }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = ANG
+					Angola_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+			}
+		}
+		set_province_name = { id = 14414 name = VICTORY_POINTS_14414_colonial }
 	}
 	else = {
-		set_province_name = { id = 14414 name = VICTORY_POINTS_14414_nat }
+		reset_state_name = yes
+		reset_province_name = 14414
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1735_ang
+			set_province_name = { id = 14414 name = VICTORY_POINTS_14414_ang }
+		}
 	}
 }
 #BKF
@@ -198,7 +250,10 @@ state_control_effect_1206 = {
 		}
 		set_province_name = { id = 2081 name = VICTORY_POINTS_2081_fra }
 	}
-	else = { reset_province_name = 2081 }
+	else = { 
+		reset_state_name = yes
+		reset_province_name = 2081 
+	}
 }
 state_control_effect_1207 = {
 	if = {
@@ -210,308 +265,1074 @@ state_control_effect_1207 = {
 	}
 	else = { reset_state_name = yes }
 }
-#COG
-#state_control_effect_1057 = {
-#	if = {
-#		limit = {
-#			OR = {
-#				is_controlled_by = GER
-#				is_controlled_by = GRO
-#				AND = {
-#					is_controlled_by = COG
-#					COG = {
-#						Congo_is_rk = yes
-#					}
-#				}
-#			}
-#		}
-#		reset_province_name = 13816
-#		reset_state_name = yes
-#	}
-#	else = {
-#		set_state_name = STATE_1057_nat
-#		set_province_name = { id = 13816 name = VICTORY_POINTS_13816_nat }
-#	}
-#}
-state_control_effect_1162 = {
+#COG/GAB/CAF/Congo
+state_control_effect_295 = {
 	if = {
 		limit = {
 			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
 			}
+			NOT = { controller = { has_country_leader = { character = GRO_Hans_Huttig ruling_only = yes } } }
+		}
+		set_state_name =  STATE_295_colonial
+		set_province_name = { id = 5117 name = VICTORY_POINTS_5117_colonial }
+		reset_province_name = 8193
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_295_ger
+			set_province_name = { id = 5117 name = VICTORY_POINTS_5117_ger }
+			set_province_name = { id = 8193 name =  VICTORY_POINTS_8193_ger }
+		}
+	}
+	else_if = {
+		limit = {
+			controller = { has_country_flag = german_names }
+			controller = { has_country_leader = { character = GRO_Hans_Huttig ruling_only = yes } }
+		}
+		set_state_name = STATE_295_huttig
+		set_province_name = { id = 5117 name = VICTORY_POINTS_5117_huttig }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 8193 name =  VICTORY_POINTS_8193_ger }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}	
+		}
+		set_state_name =  STATE_295_colonial
+		set_province_name = { id = 5117 name = VICTORY_POINTS_5117_colonial }
+		reset_province_name = 8193
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5117
+		reset_province_name = 8193
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 8193 name =  VICTORY_POINTS_8193_cog }
+		}
+	}
+}
+state_control_effect_297 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_297_ger
+		set_province_name = { id = 13976 name = VICTORY_POINTS_13976_ger }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5139
+	}
+}
+state_control_effect_538 = {
+	if = {
+		limit = { is_controlled_by = CAF }
+		set_state_name = STATE_538_caf
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_province_name = { id = 14003 name = VICTORY_POINTS_14003_caf }
+		}
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5139
+	}
+}
+state_control_effect_539 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_539_ger
+		set_province_name = { id = 5139 name = VICTORY_POINTS_5139_ger }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 5139
+	}
+}
+state_control_effect_718 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+		}
+		set_state_name = STATE_718_colonial
+		set_province_name = { id = 13386 name = VICTORY_POINTS_13386_colonial }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_718_ger
+			set_province_name = { id = 13386 name = VICTORY_POINTS_13386_ger }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}	
+		}
+		set_state_name = STATE_718_colonial
+		set_province_name = { id = 13386 name = VICTORY_POINTS_13386_colonial }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 13386
+	}
+}
+state_control_effect_1057 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+		}
+		set_state_name = STATE_1057_colonial
+		set_province_name = { id = 13816 name = VICTORY_POINTS_13816_colonial }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1057_ger
+			set_province_name = { id = 13816 name = VICTORY_POINTS_13816_ger }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}	
+		}
+		set_state_name = STATE_1057_colonial
+		set_province_name = { id = 13816 name = VICTORY_POINTS_13816_colonial }
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		set_state_name = STATE_1057_colonial
+		reset_province_name = 13386
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1057_cog
 		}
 		if = {
 			limit = { has_global_flag = TNO_exonym_mode }
 			reset_state_name = yes
 		}
-		else = { set_state_name = STATE_1162_ger }
+	}
+}
+state_control_effect_1162 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+		}
+		set_state_name = STATE_1162_colonial
+		reset_province_name = 2115
+		if = { 
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1162_ger
+		}
 	}
 	else_if = {
 		limit = {
-			is_controlled_by = CPR
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
 		}
-		set_state_name = STATE_1162_nat
+		set_state_name = STATE_1162_colonial
+		reset_province_name = 2115
 		if = {
 			limit = { has_global_flag = TNO_exonym_mode }
-			reset_province_name = 2115
+			reset_state_name = yes
 		}
-		else = { set_province_name = { id = 2115 name = VICTORY_POINTS_2115_nat } }
 	}
 	else_if = {
 		limit = {
 			is_controlled_by = AZD
 		}
 		set_state_name = STATE_1162_azd
-		set_province_name = { id = 2115 name = VICTORY_POINTS_2115_nat }
+		reset_province_name = 2115
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1162_azd_cog
+			set_province_name = { id = 2115 name = VICTORY_POINTS_2115_cog }
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			set_state_name = STATE_1162_azd_eng
+		}
 	}
 	else = {
-		reset_state_name = yes
-		reset_province_name = 2115
+		set_state_name = STATE_1162_cog_eng	
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1162_cog
+			set_province_name = { id = 2115 name = VICTORY_POINTS_2115_cog }
+		}
 	}
 }
 state_control_effect_1163 = {
 	if = {
 		limit = {
 			OR = {
-				is_controlled_by = CPR
-				is_controlled_by = AZD
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
 			}
+			has_global_flag = TNO_endonym_mode
 		}
-		set_state_name = STATE_1163_nat
-		set_province_name = { id = 12975 name = VICTORY_POINTS_12975_nat }
+		set_state_name = STATE_1163_ger
+		set_province_name = { id = 12975 name = VICTORY_POINTS_12975_ger }
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name =  STATE_1163_cog
+		set_province_name = { id = 12975 name = VICTORY_POINTS_12975_cog }
 	}
 	else = {
 		reset_state_name = yes
 		reset_province_name = 12975
 	}
 }
+state_control_effect_1165 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+		}
+		set_state_name = STATE_1165_colonial
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1165_ger
+		}
+	}
+	else_if = {
+		limit = {
+			is_controlled_by = SAF
+			AND = {
+				is_controlled_by = COG
+				Congo_is_mandate = yes
+			}
+			AND = {
+				is_controlled_by = USC
+				CAR_is_mandate = yes
+			}
+			is_controlled_by = KTG
+		}
+		set_state_name = STATE_1165_colonial
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		set_state_name = STATE_1165_colonial
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1165_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+}
+state_control_effect_1166 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
+		}
+		set_province_name = { id = 13872 name = VICTORY_POINTS_13872_colonial }
+	}
+	else = { reset_province_name = 13872 }
+}
+state_control_effect_1168 = {
+	if = {
+		limit = { 
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+		}
+		set_state_name =  STATE_1168_ger
+		set_province_name = { id = 8016 name = VICTORY_POINTS_8016_ger }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 8016
+	}
+}
+state_control_effect_1169 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+		}
+		set_state_name = STATE_1169_colonial
+		set_province_name = { id = 7716 name = VICTORY_POINTS_7716_colonial }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1169_ger
+			set_province_name = { id = 7716 name = VICTORY_POINTS_7716_ger }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				} 
+				is_controlled_by = KTG
+			}
+		}
+		set_state_name = STATE_1169_colonial
+		set_province_name = { id = 7716 name = VICTORY_POINTS_7716_colonial }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 7716
+	}
+}
 state_control_effect_1171 = {
 	if = {
 		limit = {
 			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
+				controller = { has_country_flag = german_names }
 				AND = {
 					is_controlled_by = COG
-					COG = {
-						Congo_is_rk = yes
-					}
+					Congo_is_rk = yes
 				}
 			}
-		}
-		reset_state_name = yes
-		reset_province_name = 13963
-	}
-	else_if = {
-		limit = {
-			is_controlled_by = CAF
-		}
-		if = {
-			limit = { has_global_flag = TNO_exonym_mode }
-			set_province_name = { id = 13963 name = VICTORY_POINTS_13963_nat }
-			set_state_name = STATE_1171_caf
-		}
-		else = {
-			set_province_name = { id = 13963 name = VICTORY_POINTS_13963_caf }
-			set_state_name = STATE_1171_caf
-		}
+		 }
+		set_state_name =  STATE_1171_ger
+		set_province_name = { id = 13963 name = VICTORY_POINTS_13963_ger }
 	}
 	else = {
 		reset_state_name = yes
-		set_province_name = { id = 13963 name = VICTORY_POINTS_13963_nat }
+		reset_province_name = 13963
+	}
+}
+state_control_effect_1172 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+		}
+		set_province_name = { id = 13376 name = VICTORY_POINTS_13376_ger }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG  
+			}
+		}
+		set_province_name = { id = 13376 name = VICTORY_POINTS_13376_colonial }
+	}
+	else = { reset_province_name = 13376 }
+}
+state_control_effect_1173 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+			}
+		}
+		set_state_name =  STATE_1173_colonial
+		set_province_name = { id = 13884 name = VICTORY_POINTS_13884_colonial }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1173_ger
+			set_province_name = { id = 13884 name = VICTORY_POINTS_13884_ger }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
+		}
+		set_state_name =  STATE_1173_colonial
+		set_province_name = { id = 13884 name = VICTORY_POINTS_13884_colonial }
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		set_state_name =  STATE_1173_colonial
+		reset_province_name = 13884
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1173_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 }
 state_control_effect_1174 = {
 	if = {
 		limit = {
-			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
-				AND = {
-					is_controlled_by = COG
-					COG = {
-						Congo_is_rk = yes
-					}
-				}
+			controller = { has_country_flag = german_names }
+			AND = {
+				is_controlled_by = COG
+				Congo_is_rk = yes
 			}
 		}
-		reset_state_name = yes
+		set_state_name =  STATE_1174_colonial
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1174_ger
+		}
 	}
 	else_if = {
 		limit = {
-			is_controlled_by = CPR
-			is_controlled_by = AZD
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
 		}
-		set_state_name = STATE_1174_nat
+		set_state_name =  STATE_1174_colonial
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
-	else = {
-		set_state_name = STATE_1174_ofn
+	else = { 
+		set_state_name =  STATE_1174_colonial
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1174_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 }
 state_control_effect_1175 = {
 	if = {
 		limit = {
-			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
-				AND = {
-					is_controlled_by = COG
-					COG = {
-						Congo_is_rk = yes
-					}
-				}
+			controller = { has_country_flag = german_names }
+			AND = {
+				is_controlled_by = COG
+				Congo_is_rk = yes
 			}
 		}
-		reset_province_name = 13378
+		set_province_name = { id = 13378 name = VICTORY_POINTS_13378_ger }
 	}
-	else = {
-		set_province_name = { id = 13378 name = VICTORY_POINTS_13378_nat }
-	}
+	else = { reset_province_name = 13378 }
 }
 state_control_effect_1176 = {
 	if = {
 		limit = {
-			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
-				AND = {
-					is_controlled_by = COG
-					COG = {
-						Congo_is_rk = yes
-					}
-				}
+			controller = { has_country_flag = german_names }
+			AND = {
+				is_controlled_by = COG
+				Congo_is_rk = yes
 			}
 		}
+		set_state_name =  STATE_1176_colonial
+		set_province_name = { id = 13911 name = VICTORY_POINTS_13911_colonial }
 		if = {
-			limit = { has_global_flag = TNO_exonym_mode }
-			reset_state_name = yes
-			reset_province_name = 13911
-		}
-		else_if = {
 			limit = { has_global_flag = TNO_endonym_mode }
 			set_state_name = STATE_1176_ger
-			set_province_name = { id = 13911 name = VICTORY_POINTS_13911_ger }
-		}
-		else = {
-			reset_state_name = yes
 			set_province_name = { id = 13911 name = VICTORY_POINTS_13911_ger }
 		}
 	}
 	else_if = {
 		limit = {
-			is_controlled_by = CPR
-			is_controlled_by = AZD
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
 		}
-		set_state_name = STATE_1176_nat
-		set_province_name = { id = 13911 name = VICTORY_POINTS_13911_nat }
+		set_state_name =  STATE_1176_colonial
+		set_province_name = { id = 13911 name = VICTORY_POINTS_13911_colonial }
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 	else = {
-		reset_state_name = yes
+		set_state_name =  STATE_1176_colonial
 		reset_province_name = 13911
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name =  STATE_1176_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 }
 state_control_effect_1177 = {
 	if = {
 		limit = {
-			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
-				AND = {
-					is_controlled_by = COG
-					COG = {
-						Congo_is_rk = yes
-					}
-				}
+			controller = { has_country_flag = german_names }
+			AND = {
+				is_controlled_by = COG
+				Congo_is_rk = yes
 			}
 		}
+		set_state_name =  STATE_1177_colonial
+		set_province_name = { id = 13384 name = VICTORY_POINTS_13384_ger }
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
 			set_state_name = STATE_1177_ger
-			reset_province_name = 13384
-		}
-		else = {
-			reset_state_name = yes
-			reset_province_name = 13384
 		}
 	}
 	else_if = {
 		limit = {
-			is_controlled_by = CPR
-			is_controlled_by = AZD
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
 		}
-		set_state_name = STATE_1177_nat
-		set_province_name = { id = 13384 name = VICTORY_POINTS_13384_nat }
+		set_state_name =  STATE_1177_colonial
+		reset_province_name = 13384
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 	else = {
-		reset_state_name = yes
-		#reset_province_name = 13384
+		set_state_name =  STATE_1177_colonial
+		reset_province_name = 13384
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name =  STATE_1177_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 }
 state_control_effect_1178 = {
 	if = {
 		limit = {
-			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
-				AND = {
-					is_controlled_by = COG
-					COG = {
-						Congo_is_rk = yes
-					}
-				}
+			controller = { has_country_flag = german_names }
+			AND = {
+				is_controlled_by = COG
+				Congo_is_rk = yes
 			}
 		}
-		reset_state_name = yes
-		reset_province_name = 6027
+		set_state_name =  STATE_1178_colonial
+		set_province_name = { id = 6027 name = VICTORY_POINTS_6027_ger }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1178_ger
+		}
 	}
 	else_if = {
 		limit = {
 			OR = {
-				is_controlled_by = CPR
-				is_controlled_by = AZD
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
 			}
 		}
-		set_state_name = STATE_1178_nat
-		set_province_name = { id = 6027 name = VICTORY_POINTS_6027_nat }
+		set_state_name =  STATE_1178_colonial
+		reset_province_name = 6027
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 	else = {
-		reset_state_name = yes
-		#reset_province_name = 6027
+		set_state_name =  STATE_1178_colonial
+		reset_province_name = 13384
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name =  STATE_1178_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 }
 state_control_effect_1180 = {
 	if = {
 		limit = {
-			OR = {
-				is_controlled_by = CPR
-				is_controlled_by = AZD
+			controller = { has_country_flag = german_names }
+			AND = {
+				is_controlled_by = COG
+				Congo_is_rk = yes
 			}
 		}
-		set_state_name = STATE_1180_nat
+		set_state_name =  STATE_1180_colonial
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1180_ger
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
+		}
+		set_state_name =  STATE_1180_colonial
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 	else = {
+		set_state_name =  STATE_1180_colonial
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name =  STATE_1180_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+}
+state_control_effect_1181 = {
+	if = {
+		limit = {
+			controller = { has_country_flag = german_names }
+			AND = {
+				is_controlled_by = COG
+				Congo_is_rk = yes
+			}
+		}
 		reset_state_name = yes
+		reset_province_name = 10071
+	}
+	else_if = {
+		limit = { is_controlled_by = KTG }
+		set_state_name =  STATE_1181_ktg
+		set_province_name = { id = 10071 name = VICTORY_POINTS_10071_ktg }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+					COG = { NOT = { has_country_flag = COG_mandate_renaming } }
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+			}
+		}
+		set_state_name =  STATE_1181_ofn
+		set_province_name = { id = 10071 name = VICTORY_POINTS_10071_ofn }
+	}
+	else_if = {
+		limit = {
+			is_controlled_by = COG
+			Congo_is_mandate = yes
+			COG = { has_country_flag = COG_mandate_renaming }
+		}
+		set_state_name = STATE_1181_colonial
+		set_province_name = { id = 10071 name = VICTORY_POINTS_10071_colonial }
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			set_state_name = STATE_1181_colonial_eng
+			set_province_name = { id = 10071 name = VICTORY_POINTS_10071_colonial_eng }
+		} 
+	}
+	else_if = {
+		limit = { is_controlled_by = CAF }
+		set_state_name = STATE_1181_colonial_eng
+		set_province_name = { id = 10071 name = VICTORY_POINTS_10071_colonial_eng }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1181_caf
+			set_province_name = { id = 10071 name = VICTORY_POINTS_10071_caf }
+		}
+	}
+	else = {
+		set_state_name = STATE_1181_cog
+		set_province_name = { id = 10071 name = VICTORY_POINTS_10071_cog }
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			set_state_name = STATE_1181_colonial_eng
+			set_province_name = { id = 10071 name = VICTORY_POINTS_10071_colonial_eng }
+		}
 	}
 }
 state_control_effect_1182 = {
 	if = {
 		limit = {
+			controller = { has_country_flag = german_names }
+			AND = {
+				is_controlled_by = COG
+				Congo_is_rk = yes
+			}
+		}
+		set_state_name =  STATE_1182_colonial
+		set_province_name = { id = 3165 name = VICTORY_POINTS_3165_ger }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1182_ger
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = CAF }
+		set_state_name =  STATE_1182_colonial
+		reset_province_name = 3165
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1182_caf
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		set_state_name =  STATE_1182_colonial
+		reset_province_name = 3165
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name =  STATE_1182_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+}
+state_control_effect_1183 = {
+	if = {
+		limit = {
 			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
+				controller = { has_country_flag = german_names }
 				AND = {
 					is_controlled_by = COG
-					COG = {
+					Congo_is_rk = yes
+				}
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
+		}
+		set_state_name =  STATE_1183_colonial
+		if = {
+			limit = {
+				NOT = {
+					controller = { has_country_flag = german_names }
+					AND = {
+						is_controlled_by = COG
 						Congo_is_rk = yes
 					}
 				}
+				has_global_flag = TNO_exonym_mode 
 			}
+			reset_state_name = yes
 		}
-		reset_province_name = 3165
+	}
+	else_if = {
+		limit = { is_controlled_by = CAF }
+		reset_state_name = yes
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1183_caf
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 	else = {
-		set_province_name = { id = 3165 name = VICTORY_POINTS_3165_nat }
+		reset_state_name = yes
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name =  STATE_1183_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+}
+state_control_effect_1185 = {
+	if = {
+		limit = {
+			OR = {
+				controller = { has_country_flag = german_names }
+				AND = {
+					is_controlled_by = COG
+					Congo_is_rk = yes
+				}
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = COG
+					Congo_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+				is_controlled_by = KTG
+			}
+		}
+		set_state_name =  STATE_1185_colonial
+		if = {
+			limit = {
+				NOT = {
+					controller = { has_country_flag = german_names }
+					AND = {
+						is_controlled_by = COG
+						Congo_is_rk = yes
+					}
+				}
+				has_global_flag = TNO_exonym_mode 
+			}
+			reset_state_name = yes
+		}
+	}
+	else_if = {
+		limit = { is_controlled_by = CAF }
+		reset_state_name = yes
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1185_caf
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+	else = {
+		reset_state_name = yes
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name =  STATE_1185_cog
+		}
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
+	}
+}
+state_control_effect_1186 = {
+	if = {
+		limit = {
+			controller = { has_country_flag = german_names }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1186_ger
+		set_province_name = { id = 8244 name = VICTORY_POINTS_8244_ger }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 8244
 	}
 }
 #EWE/CPP
@@ -613,172 +1434,199 @@ state_control_effect_883 = {
 		reset_province_name = 13415
 	}
 }	
-#GRO
+#GRO/MZB/Mozambique
 state_control_effect_544 = { #Bouhlerstadt
 	if = {
 		limit = {
-			OR = {
-				is_controlled_by = GRO
-				is_controlled_by = RSQ
-			}
-			has_global_flag = TNO_endonym_mode
+			controller = { has_country_flag = german_names }
 		}
+		set_state_name = STATE_544_ger
+		set_province_name = { id = 13729 name = VICTORY_POINTS_13729_ger }
+	}
+	else = {
 		reset_state_name = yes
 		reset_province_name = 13729
 	}
-	else_if = {
-		limit = {
-			OR = {
-				has_global_flag = SAF_OFN_Victory
-				has_global_flag = TNO_endonym_mode
-			}
-		}
-		set_province_name = { id = 13729 name = VICTORY_POINTS_13729_nat }
-		set_state_name = STATE_544_nat
-	}
 }
-state_control_effect_545 = {
+state_control_effect_546 = { 
 	if = {
 		limit = {
-			is_controlled_by = GRO
-			has_global_flag = TNO_endonym_mode
+			OR = {
+				controller = { has_country_flag = german_names }
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = MZB
+					Mozambique_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+			}
 		}
-		reset_state_name = yes
-		reset_province_name = 13666
+		set_state_name = STATE_546_colonial
 	}
-	else = {
-		set_province_name = { id = 13666 name = VICTORY_POINTS_13666_nat }
-		set_state_name = STATE_545_nat
-	}
+	else = { reset_state_name = yes }
 }
 state_control_effect_548 = {
 	if = {
 		limit = {
-			is_controlled_by = GRO
-			has_global_flag = TNO_endonym_mode
+			controller = { has_country_flag = german_names }
 		}
-		if = {
-			limit = { NOT = { has_global_flag = TNO_exonym_mode } }
-			set_state_name = STATE_548_ger
-		}
-		else = { reset_state_name = yes }
+		set_state_name = STATE_548_ger
+		set_province_name = { id = 12989 name = VICTORY_POINTS_12989_ger }
+	}
+	else = {
+		reset_state_name = yes
 		reset_province_name = 12989
 	}
-	else = {
-		set_province_name = { id = 12989 name = VICTORY_POINTS_12989_nat }
-		reset_state_name = yes
-	}
 }
-state_control_effect_748 = {
+state_control_effect_1054 = {
 	if = {
 		limit = {
-			OR = {
-				is_controlled_by = GRO
-				is_controlled_by = USA
-				is_controlled_by = SAF
-				is_controlled_by = MZB
-			}
+			controller = { has_country_flag = german_names }
 			has_global_flag = TNO_endonym_mode
 		}
-		reset_province_name = 13828
+		set_state_name = STATE_1054_ger
 	}
-	else = {
-		set_province_name = { id = 13828 name = VICTORY_POINTS_13828_nat }
+	else = { 
+		reset_state_name = yes
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = ZAM
+					is_controlled_by = ZBO
+				}
+			}
+			set_province_name = { id = 13735 name = VICTORY_POINTS_13735_zam_zbo }
+		}
 	}
 }
 state_control_effect_1059 = {
 	if = {
-		limit = {
-			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
-			}
-		}
-		reset_state_name = yes
-		if = {
-			limit = { has_global_flag = TNO_exonym_mode }
-			reset_province_name = 13717
-		}
-		else = { set_province_name = { id = 13717 name = VICTORY_POINTS_13717_ger } }
+		limit = { controller = { has_country_flag = german_names } }
+		set_state_name = STATE_1059_ger
+		set_province_name = { id = 17855 name = VICTORY_POINTS_17855_ger }
 	}
 	else_if = {
 		limit = {
 			OR = {
-				is_controlled_by = USA
 				is_controlled_by = SAF
-				is_controlled_by = MZB
-			}
+				AND = {
+					is_controlled_by = MZB
+					Mozambique_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+			}	
 		}
-		set_state_name = STATE_1059_nat
-		reset_province_name = 13717
+		reset_state_name = yes
+		set_province_name = { id = 17855 name = VICTORY_POINTS_17855_colonial }
 	}
 	else = {
-		set_state_name = STATE_1059_nat
-		set_province_name = { id = 13717 name = VICTORY_POINTS_13717_nat }
+		reset_state_name = yes
+		reset_province_name = 17855
 	}
 }
 state_control_effect_1061 = {
 	if = {
 		limit = {
 			OR = {
-				is_controlled_by = ZIM
-				is_controlled_by = ZMO
+				controller = { has_country_flag = german_names }
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = MZB
+					Mozambique_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
 			}
 		}
-		set_province_name = { id = 13730 name = VICTORY_POINTS_13730_nat }
+		set_province_name = { id = 13730 name = VICTORY_POINTS_13730_colonial }
 	}
-	else = {
-		reset_province_name = 13730
+	else = { reset_province_name = 13730 }
+}
+state_control_effect_1068 = {
+	if = {
+		limit = {
+			controller = { has_country_flag = german_names }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_1068_ger
 	}
+	else = { reset_state_name = yes }
 }
 state_control_effect_1072 = {
 	if = {
-		limit = {
-			OR = {
-				is_controlled_by = GER
-				is_controlled_by = GRO
-			}
-		}
+		limit = { controller = { has_country_flag = german_names } }
+		set_state_name = STATE_1072_colonial
+		set_province_name = { id = 13796 name = VICTORY_POINTS_13796_ger }
+		set_province_name = { id = 2217 name = VICTORY_POINTS_2217_ger }
 		if = {
-			limit = { has_global_flag = TNO_exonym_mode }
-			reset_state_name = yes
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1072_ger
 		}
-		else = { set_state_name = STATE_1072_ger }
-		reset_province_name = 13796
 	}
 	else_if = {
 		limit = {
 			OR = {
-				is_controlled_by = USA
 				is_controlled_by = SAF
-				is_controlled_by = MZB
+				AND = {
+					is_controlled_by = MZB
+					Mozambique_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
 			}
 		}
-		reset_province_name = 13796
-		reset_state_name = yes
-	}
-	else = {
+		set_state_name = STATE_1072_colonial
+		set_province_name = { id = 13796 name = VICTORY_POINTS_13796_colonial }
+		reset_province_name = 2217
 		if = {
 			limit = { has_global_flag = TNO_exonym_mode }
 			reset_state_name = yes
 		}
-		else = { set_state_name = STATE_1072_nat }
-		set_province_name = { id = 13796 name = VICTORY_POINTS_13796_nat }
+	}
+	else = { 
+		set_state_name = STATE_1072_colonial
+		reset_province_name = 13796
+		reset_province_name = 2217
+		if = {
+			limit = { has_global_flag = TNO_exonym_mode }
+			reset_state_name = yes
+		}
 	}
 }
 state_control_effect_1073 = {
 	if = {
-		limit = {
-			OR = {
-				is_controlled_by = GRO
-				is_controlled_by = USA
-				is_controlled_by = SAF
-				is_controlled_by = MZB
-			}
-		}
+		limit = { controller = { has_country_flag = german_names } }
+		set_state_name = STATE_1073_ger
 		set_province_name = { id = 13792 name = VICTORY_POINTS_13792_ger }
 		set_province_name = { id = 2159 name = VICTORY_POINTS_2159_ger }
-		set_state_name = STATE_1073_ger
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = SAF
+				AND = {
+					is_controlled_by = MZB
+					Mozambique_is_mandate = yes
+				}
+				AND = {
+					is_controlled_by = USC
+					CAR_is_mandate = yes
+				}
+			}
+		}
+		reset_state_name = yes
+		set_province_name = { id = 13792 name = VICTORY_POINTS_13792_colonial }
+		reset_province_name = 2159
 	}
 	else = {
 		reset_state_name = yes
@@ -786,17 +1634,63 @@ state_control_effect_1073 = {
 		reset_province_name = 2159
 	}
 }
+state_control_effect_1078 = {
+		if = {
+			limit = { controller = { has_country_flag = german_names } }
+			set_state_name = STATE_1078_ger
+			set_province_name = { id = 2196 name = VICTORY_POINTS_2196_ger }
+		}
+		else = {
+			reset_province_name = 2196
+			reset_state_name = yes
+		}
+	}
+state_control_effect_1082 = {
+	if = {
+		limit = { controller = { has_country_flag = german_names } }
+		set_province_name = { id = 12911 name = VICTORY_POINTS_12911_ger }
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_1082_ger
+		}
+	}
+	else = { 
+		reset_state_name = yes
+		reset_province_name = 12911
+	}
+}
 state_control_effect_1088 = {
 	if = {
-		limit = {
-			is_controlled_by = GRO
-		}
-		set_province_name = { id = 13383 name = VICTORY_POINTS_13383_ger }
+		limit = { controller = { has_country_flag = german_names } }
 		set_state_name = STATE_1088_ger
+		set_province_name = { id = 13383 name = VICTORY_POINTS_13383_ger }
 	}
 	else = {
-		reset_province_name = 13383
 		reset_state_name = yes
+		reset_province_name = 13383
+	}
+}
+state_control_effect_1118 = {
+	if = {
+		limit = { controller = { has_country_flag = german_names } }
+		set_state_name = STATE_1118_ger
+		set_province_name = { id = 13879 name = VICTORY_POINTS_13879_ger }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 13879
+		if = {
+			limit = {
+				OR = {
+					is_controlled_by = ZZB
+					is_controlled_by = ZZS
+				}
+				has_global_flag = TNO_endonym_mode 
+			}
+			set_state_name = STATE_1118_zzb_zzs
+			set_province_name = { id = 13879 name = VICTORY_POINTS_13879_zzb_zzs }
+			set_province_name = { id = 13888 name = VICTORY_POINTS_13888_zzb_zzs }
+		}
 	}
 }
 #HAU
@@ -820,7 +1714,7 @@ state_controL_effect_832 = {
 			is_controlled_by = NGR
 			has_global_flag = TNO_endonym_mode
 		}
-		set_state_name = STATE_832_ngr		
+		set_state_name = STATE_832_ngr_swb		
 	}
 	else_if = {
 		limit = {
@@ -1049,8 +1943,8 @@ state_control_effect_543 = {
 			OR = {
 				AND = {
 					is_controlled_by = MAD
-					NOT = {
-						OR = {
+					MAD = {
+						NOT = {
 							has_cosmetic_tag = MAD_insurgent
 							has_cosmetic_tag = MAD_tafama
 							has_cosmetic_tag = MAD_padesm
@@ -1078,8 +1972,8 @@ state_control_effect_706 = {
 		limit = {
 			AND = {
 				is_controlled_by = MAD
-				NOT = {
-					OR = {
+				MAD = {
+					NOT = {
 						has_cosmetic_tag = MAD_insurgent
 						has_cosmetic_tag = MAD_tafama
 						has_cosmetic_tag = MAD_padesm
@@ -1103,8 +1997,8 @@ state_control_effect_707 = {
 		limit = {
 			AND = {
 				is_controlled_by = MAD
-				NOT = {
-					OR = {
+				MAD = {
+					NOT = {
 						has_cosmetic_tag = MAD_insurgent
 						has_cosmetic_tag = MAD_tafama
 						has_cosmetic_tag = MAD_padesm
@@ -1133,13 +2027,11 @@ state_control_effect_944 = {
 					is_controlled_by = MAD
 					MAD = {
 						NOT = {
-							OR = {
-								has_cosmetic_tag = MAD_insurgent
-								has_cosmetic_tag = MAD_tafama
-								has_cosmetic_tag = MAD_padesm
-								has_cosmetic_tag = MAD_akfm
-								has_cosmetic_tag = MAD_arema
-							}
+							has_cosmetic_tag = MAD_insurgent
+							has_cosmetic_tag = MAD_tafama
+							has_cosmetic_tag = MAD_padesm
+							has_cosmetic_tag = MAD_akfm
+							has_cosmetic_tag = MAD_arema
 						}
 					}
 				}
@@ -1165,13 +2057,11 @@ state_control_effect_945 = {
 					is_controlled_by = MAD
 					MAD = {
 						NOT = {
-							OR = {
-								has_cosmetic_tag = MAD_insurgent
-								has_cosmetic_tag = MAD_tafama
-								has_cosmetic_tag = MAD_padesm
-								has_cosmetic_tag = MAD_akfm
-								has_cosmetic_tag = MAD_arema
-							}
+							has_cosmetic_tag = MAD_insurgent
+							has_cosmetic_tag = MAD_tafama
+							has_cosmetic_tag = MAD_padesm
+							has_cosmetic_tag = MAD_akfm
+							has_cosmetic_tag = MAD_arema
 						}
 					}
 				}
@@ -1197,13 +2087,11 @@ state_control_effect_946 = {
 					is_controlled_by = MAD
 					MAD = {
 						NOT = {
-							OR = {
-								has_cosmetic_tag = MAD_insurgent
-								has_cosmetic_tag = MAD_tafama
-								has_cosmetic_tag = MAD_padesm
-								has_cosmetic_tag = MAD_akfm
-								has_cosmetic_tag = MAD_arema
-							}
+							has_cosmetic_tag = MAD_insurgent
+							has_cosmetic_tag = MAD_tafama
+							has_cosmetic_tag = MAD_padesm
+							has_cosmetic_tag = MAD_akfm
+							has_cosmetic_tag = MAD_arema
 						}
 					}
 				}
@@ -1259,13 +2147,11 @@ state_control_effect_1857 = {
 					is_controlled_by = MAD
 					MAD = {
 						NOT = {
-							OR = {
-								has_cosmetic_tag = MAD_insurgent
-								has_cosmetic_tag = MAD_tafama
-								has_cosmetic_tag = MAD_padesm
-								has_cosmetic_tag = MAD_akfm
-								has_cosmetic_tag = MAD_arema
-							}
+							has_cosmetic_tag = MAD_insurgent
+							has_cosmetic_tag = MAD_tafama
+							has_cosmetic_tag = MAD_padesm
+							has_cosmetic_tag = MAD_akfm
+							has_cosmetic_tag = MAD_arema
 						}
 					}
 				}
@@ -1293,14 +2179,12 @@ state_control_effect_1858 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1355,14 +2239,12 @@ state_control_effect_1859 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1417,14 +2299,12 @@ state_control_effect_1866 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1479,14 +2359,12 @@ state_control_effect_1867 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1541,14 +2419,12 @@ state_control_effect_1868 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1603,14 +2479,12 @@ state_control_effect_1869 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1665,14 +2539,12 @@ state_control_effect_1871 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1727,14 +2599,12 @@ state_control_effect_1872 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1789,14 +2659,12 @@ state_control_effect_1874 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1851,14 +2719,12 @@ state_control_effect_1875 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1913,14 +2779,12 @@ state_control_effect_1876 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -1975,14 +2839,12 @@ state_control_effect_1968 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -2037,14 +2899,12 @@ state_control_effect_1971 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -2099,14 +2959,12 @@ state_control_effect_1973 = {
 			limit = {
 				MAD = {
 					NOT = {
-						OR = {
-							has_cosmetic_tag = MAD_insurgent
-							has_cosmetic_tag = MAD_tafama
-							has_cosmetic_tag = MAD_padesm
-							has_cosmetic_tag = MAD_akfm
-							has_cosmetic_tag = MAD_arema
-							has_cosmetic_tag = MAD_GERMAN
-						}
+						has_cosmetic_tag = MAD_insurgent
+						has_cosmetic_tag = MAD_tafama
+						has_cosmetic_tag = MAD_padesm
+						has_cosmetic_tag = MAD_akfm
+						has_cosmetic_tag = MAD_arema
+						has_cosmetic_tag = MAD_GERMAN
 					}
 				}
 			}
@@ -2201,7 +3059,7 @@ state_control_effect_1225 = {
 	}
 }
 state_control_effect_1230 = {
-	if = {	
+	if = {
 		limit = {
 			OR = {
 				is_controlled_by = MLI
@@ -2218,7 +3076,7 @@ state_control_effect_1230 = {
 	}
 }
 state_control_effect_1604 = {
-	if = {	
+	if = {
 		limit = {
 			OR = {
 				is_controlled_by = MLI
@@ -2269,6 +3127,19 @@ state_control_effect_275 = {
 	}
 	else = {
 		reset_state_name = yes
+	}
+}
+state_control_effect_545 = {
+	if = {
+		limit = {
+			controller = { has_country_flag = german_names }
+		}
+		set_state_name = STATE_545_ger
+		set_province_name = { id = 13666 name = VICTORY_POINTS_13666_ger }
+	}
+	else = {
+		reset_state_name = yes
+		reset_province_name = 13666
 	}
 }
 state_control_effect_681 = { #Western Cape

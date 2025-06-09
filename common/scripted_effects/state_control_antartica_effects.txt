@@ -1,0 +1,49 @@
+##SORTED BY STARTING TAG, AND THEN STATE ID NUMBER
+#AAG
+state_control_effect_2030 = { 
+	if = {
+		limit = { is_controlled_by = AAG }
+		set_state_name = STATE_2030_aag_eng
+		reset_province_name = 17785
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2030_aag
+		}
+	}
+	else = {
+		reset_state_name = yes
+		set_province_name = { id = 17785 name = VICTORY_POINTS_17785_aao }
+	}
+}
+state_control_effect_2056 = { 
+	if = {
+		limit = { is_controlled_by = AAG }
+		set_state_name = STATE_2056_aag_eng
+		reset_province_name = 17792
+		reset_province_name = 17799
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2056_aag
+		}
+	}
+	else = {
+		reset_state_name = yes
+		set_province_name = { id = 17792 name = VICTORY_POINTS_17792_aao }
+		set_province_name = { id = 17799 name = VICTORY_POINTS_17799_aao }
+	}
+}
+state_control_effect_2057 = { 
+	if = {
+		limit = { is_controlled_by = AAG }
+		set_state_name = STATE_2057_aag_eng
+		reset_province_name = 17804
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_2057_aag
+		}
+	}
+	else = {
+		reset_state_name = yes
+		set_province_name = { id = 17804 name = VICTORY_POINTS_17804_aao }
+	}
+}

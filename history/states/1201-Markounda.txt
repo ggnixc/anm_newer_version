@@ -1,19 +1,25 @@
-state = {
-	id = 1201
-	name = "STATE_1201"
-
+state={
+	id=1201
+	name="STATE_1201"
+	resources = {
+		oil = 12
+	}
 	history = {
-		owner = KNM
-		add_core_of = KNM
+		owner = CAF
+		add_core_of = CAF
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 		}
+		victory_points = { 14055 4 }
+		victory_points = { 14075 2 }
+		victory_points = { 5758 1 }
+		victory_points = { 5541 1 }
 	}
-
-	provinces = {
-		8078 14037 14055 14075
+	provinces={
+		5541 5758 13650 14055 14075 
 	}
-	manpower = 290800
-	buildings_max_level_factor = 1.000
-	state_category = pastoral
+	manpower=663910
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
 }

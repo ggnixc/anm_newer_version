@@ -1,32 +1,35 @@
-state = {
-	id = 828
-	name = "STATE_828"
-
+state={
+	id=828
+	name="STATE_828"
+	resources = {
+		steel = 8
+	}
 	history = {
-		add_core_of = SUS
-		owner = SUS
+		add_core_of = ZZZ
+		owner = ZZZ
+        add_core_of = GUI
 		victory_points = {
-			12858 1
+			15389 20
 		}
 		victory_points = {
-			14428 5
+			8362 3
+		}
+		victory_points = {
+			4263 1
 		}
 		buildings = {
 			infrastructure = 2
-			air_base = 1
-			arms_factory = 1
- 			12858 = {
-				naval_base = 1
+			air_base = 2
+			15389 = {
+				naval_base = 3
 			}
 		}
-		set_state_flag = state_renamings
 	}
-
-	provinces = {
-		12858 14109 14138 14305 14428 15389 15390 15391
+	provinces={
+		4263 8362 15389 
 	}
-	manpower = 1637947
-	buildings_max_level_factor = 1.000
-	state_category = rural
-	local_supplies = 0.000
+	manpower=829045
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
 }

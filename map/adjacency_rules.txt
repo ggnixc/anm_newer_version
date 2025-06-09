@@ -528,3 +528,83 @@ adjacency_rule =
 	icon = 5159
 	offset = { 5 0 -6 }
 }
+
+#blocks off the ice-bound Northwest Passage
+adjacency_rule =
+{
+	name = "NORTHWEST_PASSAGE"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	
+	required_provinces = { 16853 16865 }
+		
+	icon = 17120
+	offset = { 0 0 0 }
+}
+
+#blocks off the ice-bound Northern Sea Route over Russia
+adjacency_rule =
+{
+	name = "NORTHERN_SEA_ROUTE"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	
+	required_provinces = { 8461 16820 16870 16871 16866 16868 }
+		
+	icon = 17099
+	offset = { 0 0 0 }
+}
