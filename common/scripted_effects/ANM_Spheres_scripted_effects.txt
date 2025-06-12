@@ -42,9 +42,11 @@ TNO_Spheres_init = {
 				tag = FLA
 				tag = ULS
 				tag = PAK
+				tag = TOG
+				tag = ZIM
+				tag = MLW
 				tag = AAG
 				tag = AAF
-				tag = AAU
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = GER }
@@ -95,7 +97,6 @@ TNO_Spheres_init = {
 				tag = SHL
 				tag = NAM
 				tag = MZB
-				tag = ANG
 				tag = QUE
 				tag = EAF
 				tag = CYL
@@ -103,13 +104,18 @@ TNO_Spheres_init = {
 				tag = PAN
 				tag = FIJ
 				tag = GAB
-				tag = MLW
-				tag = ZAM
-				tag = ZIM
 				tag = MZB
+				tag = SEN
+				tag = SLE
+				tag = LIB
+				tag = GBE
+				tag = NIG
+				tag = COG
+				tag = BTS
 				tag = AAC
 				tag = AAS
 				tag = AAZ
+				tag = AAU
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = USA }
@@ -143,6 +149,12 @@ TNO_Spheres_init = {
 				tag = SBH
 				tag = LAO
 				tag = GNG
+				tag = ZAM
+				tag = TNZ
+				tag = KEN
+				tag = UGD
+				tag = BRD
+				tag = RWA
 				tag = AAJ
 			}
 		}
@@ -178,7 +190,6 @@ TNO_Spheres_init = {
 				tag = ETH
 				tag = ERT
 				tag = SML
-				tag = KEN
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = ITA }
@@ -191,6 +202,7 @@ TNO_Spheres_init = {
 			OR = {
 				tag = BRA
 				tag = BOL
+				tag = ANG
 				tag = AAR
 			}
 		}
@@ -225,6 +237,13 @@ TNO_Spheres_init = {
 				tag = PRC
 				tag = FDR
 				tag = NIC
+				tag = GHA
+				tag = CAO
+				tag = CHD
+				tag = NGR
+				tag = CAF
+				tag = MCG
+				tag = BFR
 				tag = AAK
 			}
 		}
@@ -256,42 +275,31 @@ TNO_Spheres_init = {
 		set_variable = { ECON_SPHERE_LEADER = AZH }
 	}
 	
-	### West African Sphere
-	SEN = { set_country_flag = HAS_ECON_SPHERE }
+	### Ghana African Federation Sphere
+	GHA = { set_country_flag = HAS_ECON_SPHERE }
 	every_country = {
 		limit = {
 			OR = {
-				tag = SEN
-				tag = JOL
-				tag = SUS
-				tag = SLE
-				tag = IVO
-				tag = MLI
-				tag = BKF
-				tag = NGR
 				tag = GHA
-				tag = GBE
-				tag = NIG
-				tag = GNB
-				tag = LIB
+				tag = MLI
+				tag = SUS
+				tag = BKF
+				tag = IVO
 			}
 		}
-		set_variable = { ECON_SPHERE_LEADER = SEN }
+		set_variable = { ECON_SPHERE_LEADER = GHA }
 	}
 	
 	### Pan African Sphere
-	CAO = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = CAO
-				tag = CAF
-				tag = COG
-				tag = SAO
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = CAO }
-	}
+	#CAO = { set_country_flag = HAS_ECON_SPHERE }
+	#every_country = {
+	#	limit = {
+	#		OR = {
+	#			tag = CAO
+	#		}
+	#	}
+	#	set_variable = { ECON_SPHERE_LEADER = CAO }
+	#}
 
 	### Iberia
 	IBR = { set_country_flag = HAS_ECON_SPHERE }
@@ -301,6 +309,7 @@ TNO_Spheres_init = {
 				tag = IBR
 				tag = PAD
 				tag = MOR
+				tag = MAR
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = IBR }
