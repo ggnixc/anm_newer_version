@@ -37,12 +37,14 @@ if = {
 	set_autonomy = { target = BKF autonomy_state = autonomy_satellite }
 	set_autonomy = { target = SUS autonomy_state = autonomy_satellite }
 	set_autonomy = { target = MLI autonomy_state = autonomy_satellite }
+    set_autonomy = { target = TOG autonomy_state = autonomy_satellite }
 
 	else = {
 		puppet = IVO
 		puppet = BKF
 		puppet = SUS
 		puppet = MLI
+        puppet = TOG
 	}
 }
 
@@ -51,3 +53,4 @@ create_faction = Community_of_Western_Africa
     add_to_faction = BKF
     add_to_faction = SUS
     add_to_faction = MLI
+    add_to_faction = TOG

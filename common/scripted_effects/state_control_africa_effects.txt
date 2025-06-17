@@ -1560,49 +1560,6 @@ state_control_effect_1068 = {
 	}
 	else = { reset_state_name = yes }
 }
-state_control_effect_1072 = {
-	if = {
-		limit = { controller = { has_country_flag = german_names } }
-		set_state_name = STATE_1072_colonial
-		set_province_name = { id = 13796 name = VICTORY_POINTS_13796_ger }
-		set_province_name = { id = 2217 name = VICTORY_POINTS_2217_ger }
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_state_name = STATE_1072_ger
-		}
-	}
-	else_if = {
-		limit = {
-			OR = {
-				is_controlled_by = SAF
-				AND = {
-					is_controlled_by = MZB
-					Mozambique_is_mandate = yes
-				}
-				AND = {
-					is_controlled_by = USC
-					CAR_is_mandate = yes
-				}
-			}
-		}
-		set_state_name = STATE_1072_colonial
-		set_province_name = { id = 13796 name = VICTORY_POINTS_13796_colonial }
-		reset_province_name = 2217
-		if = {
-			limit = { has_global_flag = TNO_exonym_mode }
-			reset_state_name = yes
-		}
-	}
-	else = { 
-		set_state_name = STATE_1072_colonial
-		reset_province_name = 13796
-		reset_province_name = 2217
-		if = {
-			limit = { has_global_flag = TNO_exonym_mode }
-			reset_state_name = yes
-		}
-	}
-}
 state_control_effect_1073 = {
 	if = {
 		limit = { controller = { has_country_flag = german_names } }
