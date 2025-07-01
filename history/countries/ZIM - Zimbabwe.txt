@@ -1,35 +1,40 @@
 ﻿capital = 1061
 
-set_oob = "BFR_1962"
+set_oob = "ZIM_1962"
+
+recruit_character = ZIM_Denis_Walker
+recruit_character = ZIM_Robert_Mugabe
 
 set_cosmetic_tag = ZIM_SRO
 
 set_politics = {	
-	ruling_party = despotism
-	last_election = "1933.3.5"
+	ruling_party = fascism
+	last_election = "1993.3.5"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
 
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-	national_socialism = 0
-    socialist = 35
-    progressivism = 0
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 14
-    paternalism = 0
-    despotism = 51
-    fascism = 0
-     
+    communist = 3
+    socialist = 8
+    socialist_1 = 4
+    progressivism = 5
+    liberalism = 5
+    liberal_conservatism = 3
+    conservatism = 7
+    conservatism_1 = 4
+    paternalism = 14
+    paternalism_1 = 14
+    despotism = 8
+    fascism = 25
 }
-
-recruit_character = ZIM_Robert_Mugabe
 
 add_ideas = {
 	Pakt_Schutzstaat
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Free_Market }

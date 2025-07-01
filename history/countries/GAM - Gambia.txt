@@ -2,6 +2,10 @@ capital = 701
 
 set_oob = ""
 
+set_province_name = { id = 4989 name = VICTORY_POINTS_4989_ENG }
+
+recruit_character = GAM_Peter_Penfold
+
 set_cosmetic_tag = GAM_ENG
 
 set_politics = {	
@@ -14,20 +18,13 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-	communist = 0
-	socialist = 0
-	progressivism = 0
-	liberalism = 0
-	liberal_conservatism = 0
-	conservatism = 0
-	paternalism = 20
-	despotism = 80
-	fascism = 0
-	national_socialism = 0
-	ultranationalism = 0
-	 
+	despotism = 100
 }
 
 add_ideas = {
 	Pakt_Schutzstaat
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }

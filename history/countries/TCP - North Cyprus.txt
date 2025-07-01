@@ -229,21 +229,6 @@ set_technology = {
 	##INDUSTRY TECHS ARE WIP##
 }
 
-TUR = {
-    if = {
-        limit = { 
-            OR = { 
-                has_dlc = "Together for Victory" 
-                has_dlc = "Man the Guns" 
-            }
-        }
-        set_autonomy = { target = TCP autonomy_state = autonomy_puppet }
-        else = {
-            puppet = TCP
-        }
-    }
-}
-
 set_politics = {
 	ruling_party = paternalism
 	last_election = "1998.12.6"
