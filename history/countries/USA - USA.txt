@@ -1,15 +1,15 @@
 ﻿capital = 992
 
 set_oob = "USA_1962"
-set_war_support = 0.42
-set_stability = .91 #fuck you
-add_political_power = 3 #allows you to start campaigning instantly
 
 set_country_flag = gui_alert_visible
 set_country_flag = country_has_gui
 
 recruit_character = USA_Bob_Dole
-
+recruit_character = USA_Peter_Wilson
+recruit_character = USA_Donald_Rumsfeld
+recruit_character = USA_James_Baker
+recruit_character = USA_Dick_Cheney
 
 #set_variable = { USA_mil_research_speed_factor = 0.10 }
 #add_dynamic_modifier = {
@@ -27,7 +27,6 @@ add_to_faction = WIN
 add_to_faction = GUY
 add_to_faction = BLZ
 add_to_faction = SAF
-add_to_faction = URG
 add_to_faction = HAI
 add_to_faction = FAR
 add_to_faction = LIB
@@ -119,11 +118,10 @@ set_politics = {
 	last_election = "1992.11.3"
 	election_frequency = 48
 	elections_allowed = yes
-
 }
 
 #econtype
-set_variable = { TNO_economy_subtype = token:Econ_Subtype_American_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_American_Corporatism }
 set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
 
 set_popularities = {
@@ -138,7 +136,6 @@ set_popularities = {
     conservatism_1 = 15
     paternalism = 11
     fascism = 0
-     
 	national_socialism = 0
 }
 
@@ -146,17 +143,17 @@ add_ideas = {
 		#Faction Status
 		OFN_Leader_of_The_Free_World
 		#Spirits
-		USA_bearer_of_liberty
-		USA_OFN_unity_high
-		USA_economy_booming
-		USA_legacy_URI
-		USA_shining_city
+		USA_The_Decaying_Establishment
+		USA_Frankensteinian_Federalism
+		USA_A_More_Perfect_Union
+		USA_Corporate_Titans_Domestic_Leviathans
+
 		#LEAVE FOR NOW: USA_OFN_Buffs_6
 		#Ministers
-		USA_Joe_Biden_hog
-		USA_Wesley_Clark_sec
-		USA_Robert_F_Kennedy_for
-		USA_Micheal_Dukkais_eco
+		USA_Peter_Wilson_hog
+		USA_Dick_Cheney_sec
+		USA_Donald_Rumsfeld_for
+		USA_James_Baker_eco
 		#POLITICAL
 	tno_political_parties_multiparty_system
 	tno_religious_rights_secularism

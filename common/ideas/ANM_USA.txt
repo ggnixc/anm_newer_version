@@ -1,56 +1,49 @@
 ###AMERICA IDEAS###
 ideas = {
 	country = {
-		USA_bearer_of_liberty = {
+		USA_The_Decaying_Establishment = {
 			allowed = { always = no }
-			picture = GFX_idea_USA_bearer_of_liberty
+			picture = GFX_idea_USA_The_Decaying_Establishment
 			removal_cost = -1
 
 			modifier = {
-			stability_factor = 0.1
+				stability_factor = -0.1
+				party_popularity_stability_factor = -0.15
+				drift_defence_factor = -0.2
 			}
 		}
-		USA_OFN_unity_high = {
+		USA_Frankensteinian_Federalism = {
 			allowed = { always = no }
-			picture = GFX_idea_USA_OFN_unity_high
+			picture = GFX_idea_USA_Frankensteinian_Federalism
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0.07
-				war_support_factor = 0.105
-				trade_opinion_factor = 0.21
+				political_power_gain = -0.05
+				war_support_factor = -0.105
+				consumer_goods_factor = 0.1
  			}
 		}
-		USA_economy_booming = {
+		USA_A_More_Perfect_Union = {
 			allowed = { always = no }
-			picture = GFX_idea_USA_economy_booming
+			picture = GFX_idea_USA_A_More_Perfect_Union
 			removal_cost = -1
 
 			modifier = {
- 				industrial_capacity_factory = 0.05
 				production_speed_buildings_factor = 0.1
 				political_power_gain = 0.08
 				stability_factor = 0.15
 			}
 		}
-		USA_legacy_URI = {
+		USA_Corporate_Titans_Domestic_Leviathans = {
 			allowed = { always = no }
-			picture = GFX_idea_USA_legacy_URI
+			picture = GFX_idea_USA_Corporate_Titans_Domestic_Leviathans
 			removal_cost = -1
 
 			modifier = {
 				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.1
   			}
-		}
-		USA_shining_city = {
-			allowed = { always = no }
-			picture = GFX_idea_USA_shining_city
-			removal_cost = -1
-
-			modifier = {
-				research_speed_factor = 0.1
-				political_power_gain = 0.10
-			}
 		}
 	}
 }
