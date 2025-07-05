@@ -167,3 +167,25 @@ country_event = {
 		} 
 	}
 }
+country_event = {
+	id = USA_successor.1
+	title = USA_successor.1.t
+	desc = USA_successor.1.desc
+	picture = GFX_anm_internet8
+
+	
+	trigger = {
+		tag = USA
+		date > 1996.1.20
+	}
+    
+	option = { 
+		name = USA_successor.1.a
+		trigger = {
+			tag = USA
+		}
+	}
+
+	is_triggered_only = no
+	fire_only_once = yes
+}
