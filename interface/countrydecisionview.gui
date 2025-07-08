@@ -2,8 +2,8 @@ guiTypes = {
 
 	extendedScrollbarType = {
 		name = "right_vertical_slider_decisions"
-		position = { x = -8 y = 0 }
-		size = { width = 18 height = 18 }
+		position = { x = -1 y = 3 }
+		size = { width = 15 height = 18 }
 		startValue = 0
 		orientation = upper_right
 		origo = upper_right
@@ -17,33 +17,33 @@ guiTypes = {
 		slider = {
 			name = "Slider"
 			quadTextureSprite = "GFX_scroll_drager"
-			position = { x = -2 y = -2 }
+			position = { x = 0 y = 0 }
 		}
 
 		track = {
 			name = "Track"
 			quadTextureSprite = "GFX_scroll_track"
-			position = { x = 3 y = 0 }
+			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
 
 		decreaseButton = {
 			name = "Decrease"
 			quadTextureSprite = "GFX_scroll_up"
-			position = { x = 1 y = 3 }
+			position = { x = 0 y = 0 }
 		}
 
 		increaseButton = {
 			name = "Increase"
 			quadTextureSprite = "GFX_scroll_down"
-			position = { x=-17 y = -19}
+			position = { x = -15 y = -19 }
 		}
 	}
 
 	containerWindowType = {
 		name = "countrydecisionview"
 		position = { x = -606 y = 80 }
-		show_position = { x = -8 y = 80 }
+		show_position = { x = -9 y = 80 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -90,7 +90,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "decisionview_title"
-			position = { x = 45 y = 2 }
+			position = { x = 55 y = 9 }
 			textureFile = ""
 			font = "aldrich_white_28_outline"
 			borderSize = {x = 0 y = 0}
@@ -102,7 +102,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "close_button"
-			position = { x = -33 y = 5 }
+			position = { x = -32 y = 14 }
 			quadTextureSprite ="GFX_closebutton_small"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
