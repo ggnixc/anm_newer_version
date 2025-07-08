@@ -17,7 +17,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "top_Window"
 			position = { x=0 y=0 }
-			size = { width = 563 height =193 }
+			size = { width = 563 height = 92 }
 			moveable = yes
 			Orientation = UPPER_LEFT
 
@@ -28,7 +28,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "Title"
-				position = { x = 103 y = 40 }
+				position = { x = 107 y = 64 }
 				font = "aldrich_14_outlinedark"
 				borderSize = {x = 0 y = 0}
 				text = "Title text here!"
@@ -37,9 +37,31 @@ guiTypes = {
 				format = left
 			}
 
+			instantTextBoxType = {
+				name = "MailFrom"
+				position = { x = 107 y = 43 }
+				font = "aldrich_14_outlinedark"
+				borderSize = {x = 0 y = 0}
+				text = MAILFROM_COUNTRY
+				maxWidth = 484
+				maxHeight = 32
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "MailTitle"
+				position = { x = 44 y = 12 }
+				font = "aldrich_white_20_outline"
+				borderSize = {x = 0 y = 0}
+				text = "Digital Mail Exchange"
+				maxWidth = 400
+				maxHeight = 32
+				format = left
+			}
+
 			buttonType = {
 				name = "btn_minimize"
-				position = {x=532 y=4}
+				position = {x= 523 y= 12}
 				spriteType = "GFX_event_button_minimize"
 				clicksound = click_default
 			}
@@ -48,7 +70,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "midsection"
-			position = { x=0 y= 64 }
+			position = { x=0 y= 92 }
 			size = { width = 563 height = 111 }
 			moveable = yes
 			Orientation = UPPER_LEFT
@@ -60,11 +82,11 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "Description"
-				position = { x = 18 y = 12 } 
+				position = { x = 14 y = 2 } 
 				font = "aldrich_14_outline"
 				borderSize = {x = 0 y = 0}
 				text = "Long text here!"
-				maxWidth = 530
+				maxWidth = 536
 				maxHeight = 230
 				format = left
 			}
@@ -72,8 +94,8 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "bottom_Window"
-			position = { x=1 y=1054 } 
-			size = { width = 563 height = 244 } 
+			position = { x=0 y=1054 } 
+			size = { width = 563 height = 164 } 
 			moveable = yes
 			Orientation = UPPER_LEFT
 			clipping = no
