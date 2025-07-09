@@ -38,17 +38,6 @@ guiTypes = {
 			}
 
 			instantTextBoxType = {
-				name = "MailFrom"
-				position = { x = 107 y = 43 }
-				font = "aldrich_14_outlinedark"
-				borderSize = {x = 0 y = 0}
-				text = MAILFROM_COUNTRY
-				maxWidth = 484
-				maxHeight = 32
-				format = left
-			}
-
-			instantTextBoxType = {
 				name = "MailTitle"
 				position = { x = 44 y = 12 }
 				font = "aldrich_white_20_outline"
@@ -95,7 +84,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "bottom_Window"
 			position = { x=0 y=1054 } 
-			size = { width = 563 height = 164 } 
+			size = { width = 563 height = 165 } 
 			moveable = yes
 			Orientation = UPPER_LEFT
 			clipping = no
@@ -108,7 +97,7 @@ guiTypes = {
 			iconType = {
 				name ="event_picture"
 				spriteType = "GFX_report_event_001"
-				position = { x = 12 y = -11				}
+				position = { x = 15 y = -11				}
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
@@ -122,9 +111,9 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "options_grid"
-				position = { x = 205 y = -10 } #215 -10
-				size = { width = 300 height = 30 }
-				slotsize = { width = 300 height = 52 }
+				position = { x = 216 y = -11 } #215 -10
+				size = { width = 329 height = 47 }
+				slotsize = { width = 329 height = 47 }
 				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
 			}
@@ -345,7 +334,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "event_option_entry"
-		size = { width = 300 height = 52 }
+		size = { width = 329 height = 52 }
 		position = { x = -10 y = 10 }
 		clipping = no
 
@@ -356,7 +345,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "Name"
-			position = { x = 23 y = 4 }
+			position = { x = 3 y = 2 }
 			font = "aldrich_14_outline"
 			maxWidth = 320
 			maxHeight = 40
