@@ -1120,6 +1120,17 @@ ANM_GER_Europakt_category = {
 			add_to_variable = { GER_EW_Economy_Rate_1 = 0.05 }
 		}
 	}
+	EW_Decisions_GUI_World_2_10 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 2 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.05 }
+		}
+	}
 	EW_Decisions_GUI_World_4_1 = { 
 		visible = { has_country_flag = { flag = GER_EW_Continent value = 4 } }
 		available = { tag = GER }
@@ -1173,6 +1184,17 @@ ANM_GER_Europakt_category = {
 		
 		complete_effect = { 
 			add_to_variable = { GER_EW_Economy_Rate_65 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_4_30 = {
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 4 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_66 = 0.25 }
 		}
 	}
 	EW_Decisions_GUI_World_7_1 = { 

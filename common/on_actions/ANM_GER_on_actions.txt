@@ -10,6 +10,9 @@ on_actions = {
 				## Overall EW Economic rating, this variable is overridden monthly ##
 				set_variable = { GER_EW_Economy_Rating_Overall = 65 } 
 
+				## Eurmark Currency Rating, this variable is overriden monthly ## 
+				set_variable = { GER_EW_Decisions_GUI_Euromark_Rating = 49 } 
+
 				## Assigning starting economic rating based on reasonables values ##
 				set_variable = { GER_EW_Economy_Rate_1 = 8 } #GER
 				set_variable = { GER_EW_Economy_Rate_2 = 0 } #SOV
@@ -55,8 +58,9 @@ on_actions = {
 				set_variable = { GER_EW_Economy_Rate_61 = 7 } #CHI
 				set_variable = { GER_EW_Economy_Rate_62 = 2 } #DOM
 				set_variable = { GER_EW_Economy_Rate_63 = 4 } #MAD
-				set_variable = { GER_EW_Economy_Rate_64 = 2 } #GAB
-				set_variable = { GER_EW_Economy_Rate_65 = 5 } #RHO? (Rhodesia)
+				set_variable = { GER_EW_Economy_Rate_64 = 2 } #GAM
+				set_variable = { GER_EW_Economy_Rate_65 = 1 } #MLW
+				set_variable = { GER_EW_Economy_Rate_66 = 5 } #ZIM 
 
 				## Assigning starting economic weights (read, factionstatus) ##
 				set_variable = { GER_EW_Economy_Weight_1 = 1 } #GER
@@ -103,8 +107,9 @@ on_actions = {
 				set_variable = { GER_EW_Economy_Weight_61 = 0.15 } #CHI
 				set_variable = { GER_EW_Economy_Weight_62 = 0.15 } #DOM
 				set_variable = { GER_EW_Economy_Weight_63 = 0.45 } #MAD
-				set_variable = { GER_EW_Economy_Weight_64 = 0.15 } #GAB
-				set_variable = { GER_EW_Economy_Weight_65 = 0.15 } #RHO? (Rhodesia)
+				set_variable = { GER_EW_Economy_Weight_64 = 0.15 } #GAM
+				set_variable = { GER_EW_Economy_Weight_65 = 0.15 } #MLW
+				set_variable = { GER_EW_Economy_Weight_66 = 0.15 } #ZIM 
 			} 
 		}
 	}
@@ -268,11 +273,14 @@ on_actions = {
 				multiply_temp_variable = { tempEWeconomy63 = MAD.num_of_factories } 
 				multiply_temp_variable = { tempEWeconomy63 = GER_EW_Economy_Weight_63 }
 			set_temp_variable = { tempEWeconomy64 = GER_EW_Economy_Rate_64 }
-				multiply_temp_variable = { tempEWeconomy64 = GAB.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy64 = GAM.num_of_factories } 
 				multiply_temp_variable = { tempEWeconomy64 = GER_EW_Economy_Weight_64 }
 			set_temp_variable = { tempEWeconomy65 = GER_EW_Economy_Rate_65 }
-				multiply_temp_variable = { tempEWeconomy65 = RHO.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy65 = MLW.num_of_factories } 
 				multiply_temp_variable = { tempEWeconomy65 = GER_EW_Economy_Weight_65 }
+			set_temp_variable = { tempEWeconomy66 = GER_EW_Economy_Rate_66 }
+				multiply_temp_variable = { tempEWeconomy66 = ZIM.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomy66 = GER_EW_Economy_Weight_66 }
 
 			# Actual country values added up to one total
 			set_temp_variable = { tempEWeconomyoverall = tempEWeconomy1 }
@@ -321,6 +329,7 @@ on_actions = {
 				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy63 }
 				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy64 }
 				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy65 }
+				add_to_temp_variable = { tempEWeconomyoverall = tempEWeconomy66 }
 
 			# Maximum country values (10 * Size [Industry base] * Status [0-1]), as base for overall rating 
 			set_temp_variable = { tempEWeconomymax1 = 10 } 
@@ -456,11 +465,14 @@ on_actions = {
 				multiply_temp_variable = { tempEWeconomymax63 = MAD.num_of_factories } 
 				multiply_temp_variable = { tempEWeconomymax63 = GER_EW_Economy_Weight_63 }
 			set_temp_variable = { tempEWeconomymax64 = 10 }	
-				multiply_temp_variable = { tempEWeconomymax64 = GAB.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax64 = GAM.num_of_factories } 
 				multiply_temp_variable = { tempEWeconomymax64 = GER_EW_Economy_Weight_64 }
 			set_temp_variable = { tempEWeconomymax65 = 10 }	
-				multiply_temp_variable = { tempEWeconomymax65 = RHO.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax65 = MLW.num_of_factories } 
 				multiply_temp_variable = { tempEWeconomymax65 = GER_EW_Economy_Weight_65 }
+			set_temp_variable = { tempEWeconomymax66 = 10 }
+				multiply_temp_variable = { tempEWeconomymax66 = ZIM.num_of_factories } 
+				multiply_temp_variable = { tempEWeconomymax66 = GER_EW_Economy_Weight_66 }
 
 			# Maximum country values added up to one total
 			set_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax1 }
@@ -509,6 +521,7 @@ on_actions = {
 				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax63 }
 				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax64 }
 				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax65 }
+				add_to_temp_variable = { tempEWeconomymaxoverall = tempEWeconomymax66 }
 	
 		# Overall rating (Overall value / Maximum value * 100)
 			divide_temp_variable = { tempEWeconomyoverall = tempEWeconomymaxoverall }

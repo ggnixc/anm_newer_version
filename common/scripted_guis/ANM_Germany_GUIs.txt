@@ -52,13 +52,13 @@ scripted_gui = {
 			EW_Decisions_GUI_Button_Small_3_visible = { 
 				AND = { 
 					has_country_flag = GER_EW_Decisions_GUI_Tab1 
-					year > 1996 
+					date > 1997.01.01
 				} 
 			}
 			EW_Decisions_GUI_Button_Small_3_Unavailable_visible = {
 				AND = { 
 					has_country_flag = GER_EW_Decisions_GUI_Tab1 
-					year < 1997 
+					date < 1997.01.01
 				} 
 			}
 
@@ -75,6 +75,15 @@ scripted_gui = {
 			EW_Decisions_GUI_Worldview_Europe_visible = { has_country_flag = GER_EW_Decisions_GUI_Tab2 }
 			EW_Decisions_GUI_Worldview_East_Asia_visible = { has_country_flag = GER_EW_Decisions_GUI_Tab2 }
 			EW_Decisions_GUI_Worldview_Indochina_visible = { has_country_flag = GER_EW_Decisions_GUI_Tab2 }
+
+			# Currency View #
+			EW_Decisions_GUI_Euromark_visible = {
+				AND = { 
+					has_country_flag = GER_EW_Decisions_GUI_Tab1 
+					has_country_flag = { flag = GER_EW_Decisions_GUI_Subtab1 value = 3 } 
+					date > 1997.01.01 
+				} 
+			}
 		}
 
 		effects = {
@@ -83,6 +92,7 @@ scripted_gui = {
 			EW_Decisions_GUI_Button_Small_1_click = { EW_Button_Small_1_click = yes }
 			EW_Decisions_GUI_Button_Small_2_click = { EW_Button_Small_2_click = yes }
 			EW_Decisions_GUI_Button_Small_3_click = { EW_Button_Small_3_click = yes }
+			EW_Decisions_GUI_Button_Small_3_Unavailable_click = { EW_Button_Small_3_click = yes }
 				
 			# Europe #
 			EW_Decisions_GUI_Europe_1_click = { set_country_flag = { flag = GER_EW_Country value = 1 } }
@@ -148,46 +158,145 @@ scripted_gui = {
 			EW_Decisions_GUI_Progressbar = { frame = GER_EW_Economy_Rating_Overall }
 
 			# Europe #
-			EW_Decisions_GUI_Europe_1 = { frame = GER_EW_Country_Variable1 }  
-			EW_Decisions_GUI_Europe_2 = { frame = GER_EW_Country_Variable2 }
-			EW_Decisions_GUI_Europe_3 = { frame = GER_EW_Country_Variable3 }
-			EW_Decisions_GUI_Europe_4 = { frame = GER_EW_Country_Variable4 }
-			EW_Decisions_GUI_Europe_5 = { frame = GER_EW_Country_Variable5 }
-			EW_Decisions_GUI_Europe_6 = { frame = GER_EW_Country_Variable6 }
-			EW_Decisions_GUI_Europe_7 = { frame = GER_EW_Country_Variable7 }
-			EW_Decisions_GUI_Europe_8 = { frame = GER_EW_Country_Variable8 }
-			EW_Decisions_GUI_Europe_9 = { frame = GER_EW_Country_Variable9 }
+			EW_Decisions_GUI_Europe_1 = { 
+				frame = GER_EW_Country_Variable1 
+				image = "[GetGFXEurope1]"
+			}  
+			EW_Decisions_GUI_Europe_2 = { 
+				frame = GER_EW_Country_Variable2 
+				image = "[GetGFXEurope2]"
+			}
+			EW_Decisions_GUI_Europe_3 = { 
+				frame = GER_EW_Country_Variable3 
+				image = "[GetGFXEurope3]"
+			}
+			EW_Decisions_GUI_Europe_4 = { 
+				frame = GER_EW_Country_Variable4 
+				image = "[GetGFXEurope4]"
+			}
+			EW_Decisions_GUI_Europe_5 = { 
+				frame = GER_EW_Country_Variable5 
+				image = "[GetGFXEurope5]"
+			}
+			EW_Decisions_GUI_Europe_6 = { 
+				frame = GER_EW_Country_Variable6 
+				image = "[GetGFXEurope6]"
+			}
+			EW_Decisions_GUI_Europe_7 = { 
+				frame = GER_EW_Country_Variable7 
+				image = "[GetGFXEurope7]"
+			}
+			EW_Decisions_GUI_Europe_8 = { 
+				frame = GER_EW_Country_Variable8 
+				image = "[GetGFXEurope8]"
+			}
+			EW_Decisions_GUI_Europe_9 = { 
+				frame = GER_EW_Country_Variable9 
+				image = "[GetGFXEurope9]"
+			}
 			EW_Decisions_GUI_Europe_10 = { frame = GER_EW_Country_Variable10 }
 			EW_Decisions_GUI_Europe_11 = { frame = GER_EW_Country_Variable11 }
-			EW_Decisions_GUI_Europe_12 = { frame = GER_EW_Country_Variable12 }
-			EW_Decisions_GUI_Europe_13 = { frame = GER_EW_Country_Variable13 }
-			EW_Decisions_GUI_Europe_14 = { frame = GER_EW_Country_Variable14 }
-			EW_Decisions_GUI_Europe_15 = { frame = GER_EW_Country_Variable15 }
-			EW_Decisions_GUI_Europe_16 = { frame = GER_EW_Country_Variable16 }
-			EW_Decisions_GUI_Europe_17 = { frame = GER_EW_Country_Variable17 }
+			EW_Decisions_GUI_Europe_12 = { 
+				frame = GER_EW_Country_Variable12 
+				image = "[GetGFXEurope12]"
+			}
+			EW_Decisions_GUI_Europe_13 = { 
+				frame = GER_EW_Country_Variable13
+				image = "[GetGFXEurope13]"
+			}
+			EW_Decisions_GUI_Europe_14 = { 
+				frame = GER_EW_Country_Variable14 
+				image = "[GetGFXEurope14]"
+			}
+			EW_Decisions_GUI_Europe_15 = { 
+				frame = GER_EW_Country_Variable15 
+				image = "[GetGFXEurope15]"
+			}
+			EW_Decisions_GUI_Europe_16 = { 
+				frame = GER_EW_Country_Variable16 
+				image = "[GetGFXEurope16]"
+			}
+			EW_Decisions_GUI_Europe_17 = { 
+				frame = GER_EW_Country_Variable17 
+				image = "[GetGFXEurope17]"
+			}
 			EW_Decisions_GUI_Europe_18 = { frame = GER_EW_Country_Variable18 }
 			EW_Decisions_GUI_Europe_19 = { frame = GER_EW_Country_Variable19 }
 			EW_Decisions_GUI_Europe_20 = { frame = GER_EW_Country_Variable20 }
-			EW_Decisions_GUI_Europe_21 = { frame = GER_EW_Country_Variable21 }
-			EW_Decisions_GUI_Europe_22 = { frame = GER_EW_Country_Variable22 }
-			EW_Decisions_GUI_Europe_23 = { frame = GER_EW_Country_Variable23 }
+			EW_Decisions_GUI_Europe_21 = { 
+				frame = GER_EW_Country_Variable21 
+				image = "[GetGFXEurope21]"
+			}
+			EW_Decisions_GUI_Europe_22 = { 
+				frame = GER_EW_Country_Variable22 
+				image = "[GetGFXEurope22]"
+			}
+			EW_Decisions_GUI_Europe_23 = { 
+				frame = GER_EW_Country_Variable23 
+				image = "[GetGFXEurope23]"
+			}
 			EW_Decisions_GUI_Europe_24 = { frame = GER_EW_Country_Variable24 }
-			EW_Decisions_GUI_Europe_25 = { frame = GER_EW_Country_Variable25 }
+			EW_Decisions_GUI_Europe_25 = { 
+				frame = GER_EW_Country_Variable25 
+				image = "[GetGFXEurope25]"
+			}
 			EW_Decisions_GUI_Europe_26 = { frame = GER_EW_Country_Variable26 }
-			EW_Decisions_GUI_Europe_27 = { frame = GER_EW_Country_Variable27 }
-			EW_Decisions_GUI_Europe_28 = { frame = GER_EW_Country_Variable28 }
-			EW_Decisions_GUI_Europe_29 = { frame = GER_EW_Country_Variable29 }
-			EW_Decisions_GUI_Europe_30 = { frame = GER_EW_Country_Variable30 }
-			EW_Decisions_GUI_Europe_31 = { frame = GER_EW_Country_Variable31 }
-			EW_Decisions_GUI_Europe_32 = { frame = GER_EW_Country_Variable32 }
-			EW_Decisions_GUI_Europe_33 = { frame = GER_EW_Country_Variable33 }
-			EW_Decisions_GUI_Europe_34 = { frame = GER_EW_Country_Variable34 }
-			EW_Decisions_GUI_Europe_35 = { frame = GER_EW_Country_Variable35 }
-			EW_Decisions_GUI_Europe_36 = { frame = GER_EW_Country_Variable36 }
-			EW_Decisions_GUI_Europe_37 = { frame = GER_EW_Country_Variable37 }
-			EW_Decisions_GUI_Europe_38 = { frame = GER_EW_Country_Variable38 }
-			EW_Decisions_GUI_Europe_39 = { frame = GER_EW_Country_Variable39 }
-			EW_Decisions_GUI_Europe_40 = { frame = GER_EW_Country_Variable40 }
+			EW_Decisions_GUI_Europe_27 = { 
+				frame = GER_EW_Country_Variable27 
+				image = "[GetGFXEurope27]"
+			}
+			EW_Decisions_GUI_Europe_28 = { 
+				frame = GER_EW_Country_Variable28 
+				image = "[GetGFXEurope28]"
+			}
+			EW_Decisions_GUI_Europe_29 = { 
+				frame = GER_EW_Country_Variable29 
+				image = "[GetGFXEurope29]"
+			}
+			EW_Decisions_GUI_Europe_30 = { 
+				frame = GER_EW_Country_Variable30 
+				image = "[GetGFXEurope30]"
+			}
+			EW_Decisions_GUI_Europe_31 = { 
+				frame = GER_EW_Country_Variable31 
+				image = "[GetGFXEurope31]"
+			}
+			EW_Decisions_GUI_Europe_32 = { 
+				frame = GER_EW_Country_Variable32 
+				image = "[GetGFXEurope32]"
+			}
+			EW_Decisions_GUI_Europe_33 = { 
+				frame = GER_EW_Country_Variable33 
+				image = "[GetGFXEurope33]"
+			}
+			EW_Decisions_GUI_Europe_34 = { 
+				frame = GER_EW_Country_Variable34 
+				image = "[GetGFXEurope34]"
+			}
+			EW_Decisions_GUI_Europe_35 = { 
+				frame = GER_EW_Country_Variable35 
+				image = "[GetGFXEurope35]"
+			}
+			EW_Decisions_GUI_Europe_36 = { 
+				frame = GER_EW_Country_Variable36 
+				image = "[GetGFXEurope36]"
+			}
+			EW_Decisions_GUI_Europe_37 = { 
+				frame = GER_EW_Country_Variable37 
+				image = "[GetGFXEurope37]"
+			}
+			EW_Decisions_GUI_Europe_38 = { 
+				frame = GER_EW_Country_Variable38 
+				image = "[GetGFXEurope38]"
+			}
+			EW_Decisions_GUI_Europe_39 = { 
+				frame = GER_EW_Country_Variable39 
+				image = "[GetGFXEurope39]"
+			}
+			EW_Decisions_GUI_Europe_40 = { 
+				frame = GER_EW_Country_Variable40 
+				image = "[GetGFXEurope40]"
+			}
 		
 			# Worldview #
 			EW_Decisions_GUI_Worldview_Russia = { frame = GER_EW_Continent_Variable1} 
@@ -201,6 +310,9 @@ scripted_gui = {
 			EW_Decisions_GUI_Worldview_Europe = { frame = GER_EW_Continent_Variable9 } 
 			EW_Decisions_GUI_Worldview_East_Asia = { frame = GER_EW_Continent_Variable10 } 
 			EW_Decisions_GUI_Worldview_Indochina = { frame = GER_EW_Continent_Variable11 } 
+
+			# Currency view #
+			EW_Decisions_GUI_Euromark = { frame = GER_EW_Decisions_GUI_Euromark_Rating }
 		} 
 
 

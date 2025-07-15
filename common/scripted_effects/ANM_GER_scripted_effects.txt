@@ -465,6 +465,143 @@ EW_Button_Small_3_click = {
 	}
 	clear_variable = GER_EW_Button_Small_Variable1
 	clear_variable = GER_EW_Button_Small_Variable2
+
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable1 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable1 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable3 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable3 = 1 } }
+	if = {
+		limit = { 
+			AND = { 
+				date > 1997.01.01
+				SWE = { has_idea = Pakt_Observer } 
+			}  
+		}
+		set_variable = { GER_EW_Country_Variable4 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable4 = 1 } }
+	if = {
+		limit = { 
+			AND = { 
+				date > 1997.01.01
+				FIN = { has_idea = Pakt_Observer } 
+			}  
+		} 
+		set_variable = { GER_EW_Country_Variable5 = 2 }
+	}
+	else_if = { 
+		limit = { FIN = { is_in_faction_with = GER } }   
+		set_variable = { GER_EW_Country_Variable5 = 3 }
+	}
+	else_if = { 
+		limit = { FIN = { has_country_flag = Adopted_Euromark } } 
+		set_variable = { GER_EW_Country_Variable5 = 4 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable5 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable6 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable6 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable7 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable7 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable8 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable8 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable9 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable9 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable12 = 2 }
+	}
+	else_if = { 
+		limit = { FRA = { has_country_flag = Adopted_Euromark } } 
+		set_variable = { GER_EW_Country_Variable12 = 3 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable12 = 1 } }
+	if = {
+		limit = { IBR = { has_idea = Pakt_Observer } }  
+		set_variable = { GER_EW_Country_Variable13 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable13 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable28 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable28 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable29 = 2 }
+	}
+	else_if = { 
+		limit = { PER = { has_country_flag = Adopted_Euromark } } 
+		set_variable = { GER_EW_Country_Variable29 = 3 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable29 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable31 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable31 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable32 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable32 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable33 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable33 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable34 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable34 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable35 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable35 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable36 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable36 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable37 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable37 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable38 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable38 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable39 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable39 = 1 } }
+	if = {
+		limit = { date > 1997.01.01 }  
+		set_variable = { GER_EW_Country_Variable40 = 2 }
+	}
+	else = { set_variable = { GER_EW_Country_Variable40 = 1 } }
 }
 ## Europe ##
 ## Worldview ##
