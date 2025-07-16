@@ -1,0 +1,88 @@
+guiTypes = {
+	containerwindowtype = {
+		name = "ANM_Help_GUI"
+		position = { x = 1000 y = 300 }
+		size = { height = 308 width = 240 }
+		moveable = yes
+
+		background = {
+			name = "ANM_Help_GUI_Clippy"
+			spritetype = "GFX_ANM_Help_GUI_Clippy"
+		}
+		buttonType = {
+			name = "ANM_Help_GUI_Button_Close"
+			quadTextureSprite = "GFX_ANM_Help_GUI_Button_Close"
+			position = { x = 90 y = 180 }
+		}
+		instantTextboxType = {
+			name = "ClippyTextBox"
+			position = { x = 8 y = 8 }
+			maxHeight = 196
+			maxWidth = 224
+			text = GetText_ClippyTextBox
+			font = "aldrich_16_outlinedark"
+			vertical_alignment = top
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "ANM_Help_GUI_Option_1"
+			quadTextureSprite = "GFX_ANM_Help_GUI_Option_1"
+			position = { x = 10 y = 125 }
+		}
+		buttonType = {
+			name = "ANM_Help_GUI_Option_2"
+			quadTextureSprite = "GFX_ANM_Help_GUI_Option_2"
+			position = { x = 10 y = 145 }
+		}
+		buttonType = {
+			name = "ANM_Help_GUI_Option_3"
+			quadTextureSprite = "GFX_ANM_Help_GUI_Option_3"
+			position = { x = 10 y = 165 }
+		}
+	}
+
+	containerwindowtype = {
+		name = "ANM_Detailed_Help_GUI"
+		position = { x = 1000 y = 300 }
+		size = { height = 504 width = 750 }
+		moveable = yes
+
+		background  = {
+			name = "ANM_Help_GUI_Details_bg"
+			spritetype = "GFX_ANM_Help_GUI_Details_bg"
+		}
+		instantTextboxType = {
+			name = "HelpDetailsTitle"
+			position = { x = 8 y = 8 }
+			maxHeight = 45
+			maxWidth = 500
+			text = "A New Millennium - Help Tab"
+			font = "aldrich_white_22_outline"
+			vertical_alignment = top
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "HelpDetailsTextBox"
+			position = { x = 10 y = 40 }
+			maxHeight = 196
+			maxWidth = 224
+			text = GetText_HelpDetailsTextBox
+			font = "aldrich_16_outline"
+			vertical_alignment = top
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "ANM_Help_GUI_Details_Button_Close"
+			quadTextureSprite = "GFX_ANM_Help_GUI_Details_Button_Close"
+			position = { x = 709 y = 13 }
+		}
+	} 
+
+}
