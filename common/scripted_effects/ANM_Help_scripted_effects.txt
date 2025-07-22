@@ -1,0 +1,28 @@
+### Scripted Effects for ANM Help GUI ###
+
+## Foreign Effects (These will open the ANM Help GUI with the right variables set) ##
+ANM_Help_EW_Decisions_GUI = { 
+	set_variable = { ANM_Help_GUI = 1 } 
+	clear_array = ANM_Help_GUI_Option_Array
+	if = {
+		limit = { date > 1997.01.01 }  
+		add_to_array = { ANM_Help_GUI_Option_Array = 1 }
+		add_to_array = { ANM_Help_GUI_Option_Array = 1 }
+		add_to_array = { ANM_Help_GUI_Option_Array = 1 }
+	}
+	else = { 
+		add_to_array = { ANM_Help_GUI_Option_Array = 1 }
+		add_to_array = { ANM_Help_GUI_Option_Array = 1 }
+	}
+}
+
+## Native Effects (These will be used by the ANM Help GUI itself) ##
+ANM_Help_GUI_Button_Option_click = { 
+	set_variable = { ANM_Help_GUI_Theme = t } 
+	set_variable = { ANM_Help_GUI_Option = o } 
+}
+
+ANM_Help_GUI_Details_Button_Close_click = { 
+	clear_variable = ANM_Help_GUI_Theme
+	clear_variable = ANM_Help_GUI_Option
+}

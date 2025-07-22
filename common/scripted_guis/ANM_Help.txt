@@ -9,16 +9,26 @@ scripted_gui = {
 			check_variable = { ANM_Help_GUI > 0 }
 		} 
 
+		dynamic_lists = {
+			ANM_Help_GUI_Option_Gridbox = {
+				array = ANM_Help_GUI_Option_Array
+				value = t #theme
+				index = o #option
+				
+				change_scope = no
+				entry_container = "ANM_Help_GUI_Array"
+			}
+		}	
+
 		triggers = { }
 		
 		effects = { 
 			ANM_Help_GUI_Button_Close_click = { set_variable = { ANM_Help_GUI = 0 } }
-			ANM_Help_GUI_Option_1_click = { set_country_flag = GER_ANM_Help_GUI_Option1 }
-			ANM_Help_GUI_Option_2_click = { set_country_flag = GER_ANM_Help_GUI_Option1 }
-			ANM_Help_GUI_Option_3_click = { set_country_flag = GER_ANM_Help_GUI_Option1 }
+			ANM_Help_GUI_Button_Option_click = { ANM_Help_GUI_Button_Option_click = yes } 
 		} 
 		
 		properties = { }
+	
 	}
 
 	ANM_Detailed_Help_GUI = {
@@ -27,13 +37,13 @@ scripted_gui = {
 		parent_window_token = "ANM_Help_GUI"
 
 		visible = {	
-			has_country_flag = GER_ANM_Help_GUI_Option1
+			check_variable = { ANM_Help_GUI_Theme > 0 }
 		} 
 
 		triggers = { }
 		
 		effects = { 
-			ANM_Help_GUI_Details_Button_Close_click = { clr_country_flag = GER_ANM_Help_GUI_Option1 }
+			ANM_Help_GUI_Details_Button_Close_click = { ANM_Help_GUI_Details_Button_Close_click = yes }
 		} 
 		
 		properties = { }
