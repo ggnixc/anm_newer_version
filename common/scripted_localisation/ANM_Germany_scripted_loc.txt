@@ -1387,6 +1387,30 @@ defined_text = {
 		localization_key = GER_EW_Decisions_GUI_View_World
 	}
 }
+
+defined_text = {
+	name = GetText_EW_Decisions_GUI_Progressbar
+	text = {
+		trigger = { check_variable = { GER_EW_Economy_Rating_Overall > 79 } } 
+		localization_key = GER_EW_Decisions_GUI_Progressbar_5
+	}
+	text = {
+		trigger = { check_variable = { GER_EW_Economy_Rating_Overall > 59 } } 
+		localization_key = GER_EW_Decisions_GUI_Progressbar_4
+	}
+	text = {
+		trigger = { check_variable = { GER_EW_Economy_Rating_Overall > 39 } } 
+		localization_key = GER_EW_Decisions_GUI_Progressbar_3
+	}
+	text = {
+		trigger = { check_variable = { GER_EW_Economy_Rating_Overall > 19 } } 
+		localization_key = GER_EW_Decisions_GUI_Progressbar_2
+	}
+	text = { 
+		localization_key = GER_EW_Decisions_GUI_Progressbar_1
+	}
+}
+
 defined_text = {
 	name = GetGFXEurope1
 	text = {

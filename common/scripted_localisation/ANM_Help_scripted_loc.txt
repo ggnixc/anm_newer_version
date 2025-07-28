@@ -1,12 +1,38 @@
 ### Scripted Localization for ANM Help GUI ###
 
 defined_text = {
+	name = GetText_ClippyTextBoxDesc
+	text = {
+		trigger = {
+			check_variable = { ANM_Help_GUI > 899 }
+		}
+		localization_key = ANM_Help_GUI_Flavourtext
+	} 
+	text = { 
+		trigger = {
+			check_variable = { ANM_Help_GUI > 0 }
+		}
+		localization_key = ANM_Help_GUI_Topictext
+	}
+}
+
+defined_text = {
 	name = GetText_HelpTopic
 	text = {
 		trigger = {
 			check_variable = { ANM_Help_GUI = 1 }
 		}
 		localization_key = ANM_Help_GUI_Topic_1
+	}
+}
+
+defined_text = {
+	name = GetText_FlavourTopic
+	text = {
+		trigger = {
+			check_variable = { ANM_Help_GUI = 900 }
+		}
+		localization_key = ANM_Help_GUI_Topic_900
 	}
 }
 
@@ -32,6 +58,13 @@ defined_text = {
 			check_variable = { o = 2 } 
 		}
 		localization_key = ANM_Help_GUI_Topic_1c
+	}
+	text = {
+		trigger = {
+			check_variable = { t = 900 }
+			check_variable = { o = 0 } 
+		}
+		localization_key = ANM_Help_GUI_Topic_900a
 	}
 }
 
