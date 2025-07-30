@@ -1,15 +1,5 @@
 characters = {
-	USA_Gary_Hart = {   
-		name = USA_Gary_Hart  
-		portraits = { 
-			civilian = { large = "gfx/leaders/USA/Portrait_USA_Gary_Hart.dds" } 
-		}
-		country_leader = {
-			desc = "POLITICS_GARY_HART_DESC"
-			ideology = liberalism_atari_liberalism_subtype
-			expire = "2999.1.1.1"
-		}
-	}
+	### Starting Situation ###
 	USA_Bob_Dole = {   
 		name = USA_Bob_Dole  
 		portraits = { 
@@ -26,8 +16,11 @@ characters = {
 			id = -1
 		}
 	}
-	USA_Peter_Wilson = {
-		name = USA_Peter_Wilson
+	USA_Peter_Wilson = { 
+		name = USA_Peter_Wilson  
+	}
+	USA_Peter_Wilson_min = {
+		name = USA_Peter_Wilson_min
 		portraits = { 
 			civilian = { 
 				small = GFX_idea_USA_Peter_Wilson
@@ -36,6 +29,44 @@ characters = {
 		advisor = {
 			slot = head_of_government
 			idea_token = USA_Peter_Wilson_hog
+			allowed = { original_tag = USA }
+			traits = { }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_James_Baker = { 
+		name = USA_James_Baker  
+	}
+	USA_James_Baker_min = { 
+		name = USA_James_Baker_min
+		portraits = { 
+			civilian = { small = GFX_idea_USA_James_Baker } 
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = USA_James_Baker_eco
+			allowed = { original_tag = USA }
+			traits = { }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_Dick_Cheney = { 
+		name = USA_Dick_Cheney  
+	}
+	USA_Dick_Cheney_min = { 
+		name = USA_Dick_Cheney_min
+		portraits = { 
+			civilian = { small = GFX_idea_USA_Dick_Cheney } 
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = USA_Dick_Cheney_sec
 			allowed = { original_tag = USA }
 			traits = {
             }
@@ -46,7 +77,10 @@ characters = {
 		}
 	}
 	USA_Donald_Rumsfeld = { 
-		name = USA_Donald_Rumsfeld
+		name = USA_Donald_Rumsfeld  
+	}
+	USA_Donald_Rumsfeld_min = { 
+		name = USA_Donald_Rumsfeld_min
 		portraits = { 
 			civilian = { small = GFX_idea_USA_Donald_Rumsfeld } 
 		}
@@ -62,38 +96,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	USA_James_Baker = { 
-		name = USA_James_Baker
+
+	### Unlabeled ###
+	USA_Gary_Hart = {   
+		name = USA_Gary_Hart  
 		portraits = { 
-			civilian = { small = GFX_idea_USA_James_Baker } 
+			civilian = { large = "gfx/leaders/USA/Portrait_USA_Gary_Hart.dds" } 
 		}
-		advisor = {
-			slot = economy_minister
-			idea_token = USA_James_Baker_eco
-			allowed = { original_tag = USA }
-			traits = {
-            }
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-	}
-	USA_Dick_Cheney = { 
-		name = USA_Dick_Cheney
-		portraits = { 
-			civilian = { small = GFX_idea_USA_Dick_Cheney } 
-		}
-		advisor = {
-			slot = security_minister
-			idea_token = USA_Dick_Cheney_sec
-			allowed = { original_tag = USA }
-			traits = {
-            }
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
+		country_leader = {
+			desc = "POLITICS_GARY_HART_DESC"
+			ideology = liberalism_atari_liberalism_subtype
+			expire = "2999.1.1.1"
 		}
 	}
 }
