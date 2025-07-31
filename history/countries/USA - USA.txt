@@ -128,19 +128,21 @@ set_politics = {
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_American_Corporatism }
 set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
 
+### USA Piechart ###
+set_variable = { USA_Party_Dem_Labour = 19 }
+set_variable = { USA_Party_Dem_Center = 21 }
+set_variable = { USA_Party_Dem_Innovation = 13 }
+set_variable = { USA_Party_Rep_Responsible = 15 }
+set_variable = { USA_Party_Rep_Consensus = 21 }
+set_variable = { USA_Party_Rep_Freedom = 11 }
+
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 0
-    progressivism = 0
-    liberalism = 21
-	liberalism_1 = 19
-    liberal_conservatism = 13
-    conservatism = 21
-    conservatism_1 = 15
-    paternalism = 11
-    fascism = 0
-	national_socialism = 0
+    liberalism = USA_Party_Dem_Center
+	liberalism_1 = USA_Party_Dem_Labour
+	liberalism_2 = USA_Party_Dem_Innovation
+    conservatism = USA_Party_Rep_Consensus
+    conservatism_1 = USA_Party_Rep_Responsible
+	conservatism_2 = USA_Party_Rep_Freedom 
 }
 
 add_ideas = {

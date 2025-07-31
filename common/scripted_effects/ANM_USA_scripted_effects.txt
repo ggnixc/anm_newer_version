@@ -1,0 +1,134 @@
+ANM_USA_Calculate_Party_Balance = {
+	set_temp_variable = { USA_Party_Dem_Total = USA_Party_Dem_Labour }
+		add_to_temp_variable = { USA_Party_Dem_Total = USA_Party_Dem_Center }
+		add_to_temp_variable = { USA_Party_Dem_Total = USA_Party_Dem_Innovation }
+	set_temp_variable = { USA_Party_Rep_Total = USA_Party_Rep_Responsible }
+		add_to_temp_variable = { USA_Party_Rep_Total = USA_Party_Rep_Consensus }
+		add_to_temp_variable = { USA_Party_Rep_Total = USA_Party_Rep_Freedom }
+
+	set_temp_variable = { USA_Party_Balance = USA_Party_Dem_Total }
+		subtract_from_temp_variable = { USA_Party_Balance = USA_Party_Rep_Total } 
+	# Negative = Republican Dominance, Positive = Democrat Dominance
+}
+
+ANM_USA_Debug_Piechart_1996 = {
+	set_variable = { USA_Party_Dem_Labour = 19 }
+	set_variable = { USA_Party_Dem_Center = 21 }
+	set_variable = { USA_Party_Dem_Innovation = 13 }
+	set_variable = { USA_Party_Rep_Responsible = 15 }
+	set_variable = { USA_Party_Rep_Consensus = 21 }
+	set_variable = { USA_Party_Rep_Freedom = 11 }
+	set_popularities = {
+		liberalism = USA_Party_Dem_Center
+		liberalism_1 = USA_Party_Dem_Labour
+		liberalism_2 = USA_Party_Dem_Innovation
+		conservatism = USA_Party_Rep_Consensus
+		conservatism_1 = USA_Party_Rep_Responsible
+		conservatism_2 = USA_Party_Rep_Freedom 
+	}
+}
+
+ANM_USA_Election_Center_Democrat_Win = { 
+	if = { 
+		limit = { 
+			check_variable = { USA_Party_Balance > 5}
+		}
+		add_to_variable = { USA_Party_Dem_Center = 2 }
+		subtract_from_variable = { USA_Party_Dem_Labour = 1 }
+		subtract_from_variable = { USA_Party_Dem_Innovation = 1 }
+	}
+	else = { 
+		add_to_variable = { USA_Party_Dem_Center = 5 }
+		subtract_from_variable = { USA_Party_Dem_Labour = 1 }
+		subtract_from_variable = { USA_Party_Dem_Innovation = 1 }
+		subtract_from_variable = { USA_Party_Rep_Responsible = 1 }
+		subtract_from_variable = { USA_Party_Rep_Consensus = 1 }
+		subtract_from_variable = { USA_Party_Rep_Freedom = 1 }
+	}
+	set_popularities = {
+		liberalism = USA_Party_Dem_Center
+		liberalism_1 = USA_Party_Dem_Labour
+		liberalism_2 = USA_Party_Dem_Innovation
+		conservatism = USA_Party_Rep_Consensus
+		conservatism_1 = USA_Party_Rep_Responsible
+		conservatism_2 = USA_Party_Rep_Freedom 
+	}
+}
+ANM_USA_Election_Labour_Democrat_Win = { 
+	if = { 
+		limit = { 
+			check_variable = { USA_Party_Balance > 5}
+		}
+		add_to_variable = { USA_Party_Dem_Labour = 2 }
+		subtract_from_variable = { USA_Party_Dem_Center = 1 }
+		subtract_from_variable = { USA_Party_Dem_Innovation = 1 }
+	}
+	else = { 
+		add_to_variable = { USA_Party_Dem_Labour = 5 }
+		subtract_from_variable = { USA_Party_Dem_Center = 1 }
+		subtract_from_variable = { USA_Party_Dem_Innovation = 1 }
+		subtract_from_variable = { USA_Party_Rep_Responsible = 1 }
+		subtract_from_variable = { USA_Party_Rep_Consensus = 1 }
+		subtract_from_variable = { USA_Party_Rep_Freedom = 1 }
+	}
+	set_popularities = {
+		liberalism = USA_Party_Dem_Center
+		liberalism_1 = USA_Party_Dem_Labour
+		liberalism_2 = USA_Party_Dem_Innovation
+		conservatism = USA_Party_Rep_Consensus
+		conservatism_1 = USA_Party_Rep_Responsible
+		conservatism_2 = USA_Party_Rep_Freedom 
+	}
+}
+ANM_USA_Election_Consensus_Republican_Win = { 
+	if = { 
+		limit = { 
+			check_variable = { USA_Party_Balance < -5 }
+		}
+		add_to_variable = { USA_Party_Rep_Consensus = 2 }
+		subtract_from_variable = { USA_Party_Rep_Responsible = 1 }
+		subtract_from_variable = { USA_Party_Rep_Freedom = 1 }
+	}
+	else = { 
+		add_to_variable = { USA_Party_Rep_Consensus = 5 }
+		subtract_from_variable = { USA_Party_Dem_Center = 1 }
+		subtract_from_variable = { USA_Party_Dem_Innovation = 1 }
+		subtract_from_variable = { USA_Party_Dem_Labour = 1 }
+		subtract_from_variable = { USA_Party_Rep_Responsible = 1 }
+		subtract_from_variable = { USA_Party_Rep_Freedom = 1 }
+	}
+	set_popularities = {
+		liberalism = USA_Party_Dem_Center
+		liberalism_1 = USA_Party_Dem_Labour
+		liberalism_2 = USA_Party_Dem_Innovation
+		conservatism = USA_Party_Rep_Consensus
+		conservatism_1 = USA_Party_Rep_Responsible
+		conservatism_2 = USA_Party_Rep_Freedom 
+	}
+}
+ANM_USA_Election_Freedom_Republican_Win = { 
+	if = { 
+		limit = { 
+			check_variable = { USA_Party_Balance < -5 }
+		}
+		add_to_variable = { USA_Party_Rep_Freedom = 2 }
+		subtract_from_variable = { USA_Party_Rep_Responsible = 1 }
+		subtract_from_variable = { USA_Party_Rep_Consensus = 1 }
+	}
+	else = { 
+		add_to_variable = { USA_Party_Rep_Freedom = 5 }
+		subtract_from_variable = { USA_Party_Dem_Center = 1 }
+		subtract_from_variable = { USA_Party_Dem_Innovation = 1 }
+		subtract_from_variable = { USA_Party_Dem_Labour = 1 }
+		subtract_from_variable = { USA_Party_Rep_Responsible = 1 }
+		subtract_from_variable = { USA_Party_Rep_Consensus = 1 }
+	}
+	set_popularities = {
+		liberalism = USA_Party_Dem_Center
+		liberalism_1 = USA_Party_Dem_Labour
+		liberalism_2 = USA_Party_Dem_Innovation
+		conservatism = USA_Party_Rep_Consensus
+		conservatism_1 = USA_Party_Rep_Responsible
+		conservatism_2 = USA_Party_Rep_Freedom 
+	}
+}

@@ -1,30 +1,24 @@
 ﻿ l_english:
- ### Names ###
+### Names ###
  USA: "United States of America"
  USA_DEF: "the United States of America"
  USA_ADJ: "American"
   
- ### Parties ###
- USA_progressivism_party: "Democratic Party"
- USA_progressivism_party_long: "Democratic Party"
+### Parties ###
  USA_liberalism_party: "Democratic Party"
  USA_liberalism_party_long: "Democratic Party - Center Caucus"
  USA_liberalism_1_party: "Democratic Party"
  USA_liberalism_1_party_long: "Democratic Party - Labor Caucus"
- USA_liberal_conservatism_party: "Democratic Party"
- USA_liberal_conservatism_party_long: "Democratic Party - Innovation Caucus"
+ USA_liberalism_2_party: "Democratic Party"
+ USA_liberalism_2_party_long: "Democratic Party - Innovation Caucus"
  USA_conservatism_party: "Republican Party"
  USA_conservatism_party_long: "Republican Party - Consensus Caucus"
  USA_conservatism_1_party: "Republican Party"
  USA_conservatism_1_party_long: "Republican Party - Responsible Caucus"
- USA_paternalism_party: "Republican Party"
- USA_paternalism_party_long: "Republican Party - Freedom Caucus"
- 
- ### Focuses ###
- 
- ###Starting Tree
- 
- ### Characters ###
+ USA_conservatism_2_party: "Republican Party"
+ USA_conservatism_2_party_long: "Republican Party - Freedom Caucus"
+
+### Characters ###
  ## Names ##
  # Dole Cabinet #
  USA_Bob_Dole: "Bob Dole"
@@ -36,11 +30,10 @@
  USA_Dick_Cheney_min: "Dick Cheney\n§QSecretary of Defense§!"
  USA_Donald_Rumsfeld: "Donald Rumsfeld"
  USA_Donald_Rumsfeld_min: "Donald Rumsfeld\n§QSecretary of State§!"
-
  # Unlabeled # 
  USA_Gary_Hart: "Gary Hart"
-
-
+ ## Titles ## 
+ The_President: "§QThe President§!"
  ## Descriptions ##
  # Dole Cabinet #
  POLITICS_BOB_DOLE_DESC: "A Kansas native and World War II veteran, Robert Dole was gravely injured in the field, returning to the United States in critical condition. Against all odds, he would recover with permanent but manageable damage and a changed outlook on life. Dole would rise from local politics to the U.S. Senate, earning a reputation as a tough, pragmatic Republican with a dry wit and deep party loyalty.\n\nRobert Dole’s breed of Responsible Republicanism is an endangered species, to put it generously. Some might even say it’s more accurate to describe Robert Dole as an endling. Dole, however, is no stranger to presidential runs, having failed to secure the nomination thrice in past elections.\n\nBy 1992, after making every reasonable compromise and fusing Reaganite flair with Nixonian pragmatism into a distinct strain of Doleism, his moment had finally—if only narrowly—arrived. His grip on the executive office is anything but secure. His previous running mate, having sunk under the weight of sexual allegations, was replaced by Peter Wilson. His tax agenda has stalled into a deadlock within Congress, and he faces intense opposition from Mitchell and Gerphardt.\n\nDole’s political career is a porous raft, held together with duct tape and kept afloat by grit and prayer, tossed between ice and storm. Yet Dole presses on, determined to succeed by any means necessary. He is far too stubborn to consider failure."
@@ -50,7 +43,7 @@
  USA_Donald_Rumsfeld_for_desc: "Donald Rumsfeld is an unconventional figure in American politics, being the quintessential military hawk. In the 1950s, he served as a naval aviator in the U.S. Navy. In the 1960s, he represented Illinois in the U.S. House of Representatives and served on the Joint Economic Committee as well as on the Subcommittee on military and foreign operations in Congress.\n\nPart of the Republican Party’s so-called “Young Turks,” a group of rising politicians who encouraged Ronald Reagan to run for president,  Rumsfeld was appointed White House Chief of Staff during Reagan’s administration.\n\nRumsfeld embodies a blend of pre-Reagan “imperialist” American ideals and modern neoconservatism. Now holding the Secretary of State position in the current government, he is widely seen as a driving force behind U.S. military expansion and the formulation of neoconservative foreign policy."
  # Unlabeled #
  
- ###IDEAS
+### IDEAS ### 
  USA_The_Decaying_Establishment: "The Decaying Establishment"
  USA_The_Decaying_Establishment_desc: "Ever since the Reagan presidency and the inception of the sixth party system, the political duopoly of the United States has been slowly but steadily crumbling. Ideological orthodoxy in both parties has become a mere mirage, as activists and new trends gain more prominence. Within the Democratic Party, the old Farmer-Labor creed and the reformed New Left seek to take back power from a seemingly-apathetic technocratic elite, more focused on the preservation of their position in the pecking order than progress. \n\n On the right, religious crusaders and fusionist demagogues chant the mantra of small government and moral reconstruction, against an establishment solely concentrated on the expansion of foreign prowess at all cost, while also leaving behind the wretched in their quest for stability. As the donkey and the elephant repeatedly clash for dominance, it will ultimately be the malaise from within, not the threat from without, that brings down either titan."
  USA_Frankensteinian_Federalism: "Frankensteinian Federalism"
@@ -62,8 +55,22 @@
  USA_OFN_Unity_Somewhat_High: "OFN Unity: Somewhat High"
  USA_OFN_Unity_Somewhat_High_desc: "The Organization of Free Nations stands ready—the fiery torch of freedom burns forever bright, carried forward not just by rhetoric but by resolve. Decades of trial have seasoned the alliance and its members; the squabbles of the past remain, and under the right pressure in the right place could still prove destructive, but are tempered by a shared understanding of what disunity truly costs. Arguments over budgets, missions, and national politics persist behind closed doors, yet when a crisis knocks, the Free World answers.\n\nTime and again, the OFN has shown that its strength lies not in perfect harmony but in the determination to act in spite of difference. For now, the OFN is more than just a treaty or a talking shop: it is a working system. One might even call it a habit,  a good one, born not of blind faith, but of necessity, pragmatism, and the everlasting ideals of freedom."
 
- ###EVENTS
-
+ ### EVENTS ###
+ ## Election Events ## 
+ # Mechanical Events # 
+ USA_election_events.1.t: "1996 Election"
+ USA_election_events.1.desc: "Oh boy who will win?"
+ USA_election_events.1.a: "George Mitchell - Center Democrat"
+ USA_election_events.1.b: "Tom Harkin - Labour Democrat"
+ USA_election_events.1.c: "Bob Dole - Consensus Republican"
+ USA_election_events.1.d: "Pat Buchanan - Freedom Republican"
+ USA_election_events.2.t: "2000 Election"
+ USA_election_events.2.desc: "Oh boy this is exciting!"
+ USA_election_events.2.a: "Evan Bayh - Center Democrat"
+ USA_election_events.2.b: "Tom Hayden - Labour Democrat"
+ USA_election_events.2.c: "Tommy Thompson - Consensus Republican"
+ USA_election_events.2.d: "David McIntosh - Freedom Republican"
+ # Narrative Events #
  USA_successor.1.t: "A Message to his Successor"
  USA_successor.1.desc: "Mr. Harkin, \n\nAs a fellow American, you have my most sincere and honest congratulations on winning the presidential race. In this day and age, the United States of America needs a humble and compromising leader who has the ability to guide our nation and wash away the tragedies that lie before us. Personally, I think the previous guy in charge tried his best, even if many may disagree. \n\nThe best tip that I could ever give you is to never walk alone. I had the fortune of meeting many agreeable Republicans and Democrats alike while serving in Congress, and even if we did not share the same stances, I was privileged enough to work alongside them on a daily basis. Always look across the aisle for aid, even if your pride might stray you away from your goals. \n\nWhile I would lie if I were to say that being president is not a demanding job, you have the responsibility to stir America forward, ever so slightly. Never forget the hopes and aspirations millions of people have entrusted you with, and never forget who we are in service of. \n\nBetween the two of us, though, I must admit that when I first got the job, I would have personally paid millions just to make the place look more like Kansas. \n\nAll the best wishes,"
  USA_successor.1.a: "£dole_signature"

@@ -1,5 +1,6 @@
 ﻿add_namespace = USA_anm_events
 add_namespace = USA_election_events
+add_namespace = USA_debug_events
 add_namespace = USA_successor
 add_namespace = CIA.reports
 #### INTRO EVENTS ###
@@ -92,9 +93,23 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 }
-
 country_event = {
-	id = USA_election_events.1
+	id = USA_debug_events.1 #Reset Piechart
+	title = USA_debug_events.1.t
+	desc = USA_debug_events.1.desc
+	picture = GFX_anm_internet9
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = USA_debug_events.1.a 
+		ANM_USA_Debug_Piechart_1996 = yes
+		ANM_USA_Calculate_Party_Balance = yes
+	}
+}
+country_event = {
+	id = USA_election_events.1 #Election of 1996
 	title = USA_election_events.1.t
 	desc = USA_election_events.1.desc
 	picture = GFX_anm_internet9
@@ -103,71 +118,58 @@ country_event = {
 	fire_only_once = yes
 
 	option = { 
-		name = USA_election_events.1.a
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Joe Biden"
-			desc = "POLITICS_JOE_BIDEN_DESC"
-			picture = "Portrait_USA_Joe_Biden.dds"
-			expire = "2989.1.1"
-			ideology = liberalism_dynastic_liberalism_subtype
-			traits = {
-				
-			}
-		}
-		set_politics = {
-			ruling_party = liberalism
-			last_election = "1933.4.26"
-			election_frequency = 48
-			elections_allowed = no
-		}
-		remove_ideas = { 
-			USA_Joe_Biden_hog
-			USA_Wesley_Clark_sec
-			USA_Robert_F_Kennedy_for
-			USA_Micheal_Dukkais_eco
-		}
-		add_ideas = {
-			USA_Wesley_Clark_Biden_sec
-			USA_Andrew_Cuomo_eco
-			USA_Susan_Rice_for
-			USA_Dick_Gephardt_hog
-		} 
+		name = USA_election_events.1.a #George Mitchell - Center Democrat
+		ANM_USA_Calculate_Party_Balance = yes
+		ANM_USA_Election_Center_Democrat_Win = yes
 	}
-	
 	option = { 
-		name = USA_election_events.1.b
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Tom Harkin"
-			desc = "POLITICS_TOM_HARKIN_DESC"
-			picture = "Portrait_USA_Tom_Harkin.dds"
-			expire = "2989.1.1"
-			ideology = progressivism_western_progressivism_harkin_subtype
-			traits = {
-				
-			}
-		}
-		set_politics = {
-			ruling_party = progressivism
-			last_election = "1933.4.26"
-			election_frequency = 48
-			elections_allowed = no
-		}
-		remove_ideas = { 
-			USA_Joe_Biden_hog
-			USA_Wesley_Clark_sec
-			USA_Robert_F_Kennedy_for
-			USA_Micheal_Dukkais_eco
-		}
-		add_ideas = {
-			USA_Dianne_Feinstein_hog
-			USA_Susan_Rice_Harkin_for
-			USA_Robert_Reich_eco
-			USA_Anthony_Zinni_sec
-		} 
+		name = USA_election_events.1.b #Tom Harkin - Labour Democrat
+		ANM_USA_Calculate_Party_Balance = yes
+  		ANM_USA_Election_Labour_Democrat_Win = yes
+	}
+	option = { 
+		name = USA_election_events.1.c #Bob Dole - Consensus Republican
+		ANM_USA_Calculate_Party_Balance = yes
+		ANM_USA_Election_Consensus_Republican_Win = yes 
+	}
+	option = { 
+		name = USA_election_events.1.d #Pat Buchanan - Freedom Republican
+		ANM_USA_Calculate_Party_Balance = yes
+		ANM_USA_Election_Freedom_Republican_Win = yes
 	}
 }
+country_event = {
+	id = USA_election_events.2 #Election of 2000
+	title = USA_election_events.2.t
+	desc = USA_election_events.2.desc
+	picture = GFX_anm_internet9
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = USA_election_events.2.a #Evan Bayh - Center Democrat
+		ANM_USA_Calculate_Party_Balance = yes
+		ANM_USA_Election_Center_Democrat_Win = yes
+	}
+	option = { 
+		name = USA_election_events.2.b #Tom Hayden - Labour Democrat
+		ANM_USA_Calculate_Party_Balance = yes
+  		ANM_USA_Election_Labour_Democrat_Win = yes
+	}
+	option = { 
+		name = USA_election_events.2.c #Tommy Thompson - Consensus Republican
+		ANM_USA_Calculate_Party_Balance = yes
+		ANM_USA_Election_Consensus_Republican_Win = yes 
+	} 
+	option = { 
+		name = USA_election_events.2.d #David McIntosh - Freedom Republican
+		ANM_USA_Calculate_Party_Balance = yes
+		ANM_USA_Election_Freedom_Republican_Win = yes
+	}
+}
+
+
 country_event = {
 	id = USA_successor.1
 	title = USA_successor.1.t
