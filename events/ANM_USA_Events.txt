@@ -119,23 +119,30 @@ country_event = {
 
 	option = { 
 		name = USA_election_events.1.a #George Mitchell - Center Democrat
+		ai_chance = { factor = 25 }
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Center_Democrat_Win = yes
+		ANM_USA_George_Mitchell_96 = yes 
 	}
 	option = { 
 		name = USA_election_events.1.b #Tom Harkin - Labour Democrat
+		ai_chance = { factor = 25 }
 		ANM_USA_Calculate_Party_Balance = yes
   		ANM_USA_Election_Labour_Democrat_Win = yes
+		ANM_USA_Tom_Harkin_96 = yes
 	}
 	option = { 
 		name = USA_election_events.1.c #Bob Dole - Consensus Republican
+		ai_chance = { factor = 25 }
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Consensus_Republican_Win = yes 
 	}
 	option = { 
 		name = USA_election_events.1.d #Pat Buchanan - Freedom Republican
+		ai_chance = { factor = 25 }
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Freedom_Republican_Win = yes
+		ANM_USA_Pat_Buchanan_96 = yes
 	}
 }
 country_event = {
@@ -151,21 +158,33 @@ country_event = {
 		name = USA_election_events.2.a #Evan Bayh - Center Democrat
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Center_Democrat_Win = yes
+		USA_Evan_Bayh = {
+			promote_character = liberalism_dynastic_liberalism_subtype
+		}
 	}
 	option = { 
 		name = USA_election_events.2.b #Tom Hayden - Labour Democrat
 		ANM_USA_Calculate_Party_Balance = yes
   		ANM_USA_Election_Labour_Democrat_Win = yes
+		USA_Tom_Hayden = {
+			promote_character = liberalism_bleeding_heart_liberalism_subtype
+		}
 	}
 	option = { 
 		name = USA_election_events.2.c #Tommy Thompson - Consensus Republican
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Consensus_Republican_Win = yes 
+		USA_Tommy_Thompson = {
+			promote_character = conservatism_modern_conservatism_subtype
+		}
 	} 
 	option = { 
 		name = USA_election_events.2.d #David McIntosh - Freedom Republican
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Freedom_Republican_Win = yes
+		USA_David_McIntosh = {
+			promote_character = conservatism_natural_conservatism_subtype
+		}
 	}
 }
 

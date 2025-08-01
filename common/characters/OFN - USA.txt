@@ -1,5 +1,6 @@
 characters = {
 	### Starting Situation ###
+	### Bob Dole Cabinet ###
 	USA_Bob_Dole = {   
 		name = USA_Bob_Dole  
 		portraits = { 
@@ -15,10 +16,7 @@ characters = {
 			id = -1
 		}
 	}
-	USA_Peter_Wilson = { 
-		name = USA_Peter_Wilson  
-	}
-	USA_Peter_Wilson_min = {
+	USA_Peter_Wilson = {
 		name = USA_Peter_Wilson_min
 		portraits = { 
 			civilian = { 
@@ -29,7 +27,7 @@ characters = {
 			slot = head_of_government
 			idea_token = USA_Peter_Wilson_hog
 			allowed = { original_tag = USA }
-			traits = { }
+			traits = { head_of_government }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
@@ -37,9 +35,6 @@ characters = {
 		}
 	}
 	USA_James_Baker = { 
-		name = USA_James_Baker  
-	}
-	USA_James_Baker_min = { 
 		name = USA_James_Baker_min
 		portraits = { 
 			civilian = { small = GFX_idea_USA_James_Baker } 
@@ -48,7 +43,7 @@ characters = {
 			slot = economy_minister
 			idea_token = USA_James_Baker_eco
 			allowed = { original_tag = USA }
-			traits = { }
+			traits = { economy_minister }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
@@ -56,9 +51,6 @@ characters = {
 		}
 	}
 	USA_Dick_Cheney = { 
-		name = USA_Dick_Cheney  
-	}
-	USA_Dick_Cheney_min = { 
 		name = USA_Dick_Cheney_min
 		portraits = { 
 			civilian = { small = GFX_idea_USA_Dick_Cheney } 
@@ -67,8 +59,7 @@ characters = {
 			slot = security_minister
 			idea_token = USA_Dick_Cheney_sec
 			allowed = { original_tag = USA }
-			traits = {
-            }
+			traits = { security_minister }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
@@ -76,9 +67,6 @@ characters = {
 		}
 	}
 	USA_Donald_Rumsfeld = { 
-		name = USA_Donald_Rumsfeld  
-	}
-	USA_Donald_Rumsfeld_min = { 
 		name = USA_Donald_Rumsfeld_min
 		portraits = { 
 			civilian = { small = GFX_idea_USA_Donald_Rumsfeld } 
@@ -87,12 +75,358 @@ characters = {
 			slot = foreign_minister
 			idea_token = USA_Donald_Rumsfeld_for
 			allowed = { original_tag = USA }
-			traits = {
-            }
+			traits = { foreign_minister }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
+		}
+	}
+
+	### George Mitchell Cabinet ### 
+	USA_George_Mitchell = { 
+		name = USA_George_Mitchell  
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_George_Mitchell.dds" 
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_GEORGE_MITCHELL_DESC"
+			ideology = liberalism_dynastic_liberalism_subtype
+			expire = "2999.1.1.1"
+			traits = { The_President }
+			id = -1
+		}
+	}
+	USA_Howell_Heflin = {
+		name = USA_Howell_Heflin_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Howell_Heflin.dds" 
+				small = GFX_idea_USA_Howell_Heflin
+			} 
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = USA_Howell_Heflin_hog
+			allowed = { original_tag = USA }
+			traits = { head_of_government }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_John_Kerry = { 
+		name = USA_John_Kerry_min
+		portraits = { 
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_John_Kerry.dds"
+				small = GFX_idea_USA_John_Kerry 
+			} 
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = USA_John_Kerry_eco
+			allowed = { original_tag = USA }
+			traits = { economy_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_Anita_Miller = { 
+		name = USA_Anita_Miller_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Anita_Miller.dds"
+				small = GFX_idea_USA_Anita_Miller
+			} 
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = USA_Anita_Miller_sec
+			allowed = { original_tag = USA }
+			traits = { security_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_Michael_Dukakis = { 
+		name = USA_Michael_Dukakis_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Michael_Dukakis.dds"
+				small = GFX_idea_USA_Michael_Dukakis
+			} 
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = USA_Michael_Dukakis_for
+			allowed = { original_tag = USA }
+			traits = { foreign_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	### Tom Harkin Cabinet ###
+	USA_Tom_Harkin = { 
+		name = USA_Tom_Harkin  
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Tom_Harkin.dds" 
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_TOM_HARKIN_DESC"
+			ideology = liberalism_bleeding_heart_liberalism_subtype
+			expire = "2999.1.1.1"
+			traits = { The_President }
+			id = -1
+		}
+	}
+	USA_Sam_Nunn = {
+		name = USA_Sam_Nunn_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Sam_Nunn.dds" 
+				small = GFX_idea_USA_Sam_Nunn
+			} 
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = USA_Sam_Nunn_hog
+			allowed = { original_tag = USA }
+			traits = { head_of_government }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_Robert_Reich = { 
+		name = USA_Robert_Reich_min
+		portraits = { 
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Robert_Reich.dds"
+				small = GFX_idea_USA_Robert_Reich 
+			} 
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = USA_Robert_Reich_eco
+			allowed = { original_tag = USA }
+			traits = { economy_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_Bill_Clinton = { 
+		name = USA_Bill_Clinton_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Bill_Clinton.dds"
+				small = GFX_idea_USA_Bill_Clinton
+			} 
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = USA_Bill_Clinton_sec
+			allowed = { original_tag = USA }
+			traits = { security_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_Jim_Hightower = { 
+		name = USA_Jim_Hightower_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Jim_Hightower.dds"
+				small = GFX_idea_USA_Jim_Hightower
+			} 
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = USA_Jim_Hightower_for
+			allowed = { original_tag = USA }
+			traits = { foreign_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	
+	### Pat Buchanan Cabinet ###
+	USA_Pat_Buchanan = { 
+		name = USA_Pat_Buchanan  
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Pat_Buchanan.dds" 
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_PAT_BUCHANAN_DESC"
+			ideology = conservatism_natural_conservatism_subtype
+			expire = "2999.1.1.1"
+			traits = { The_President }
+			id = -1
+		}
+	}
+	USA_Jim_Jeffords = {
+		name = USA_Jim_Jeffords_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Jim_Jeffords.dds" 
+				small = GFX_idea_USA_Jim_Jeffords
+			} 
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = USA_Jim_Jeffords_hog
+			allowed = { original_tag = USA }
+			traits = { head_of_government }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_Rudy_Giuliani = { 
+		name = USA_Rudy_Giuliani_min
+		portraits = { 
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Rudy_Giuliani.dds"
+				small = GFX_idea_USA_Rudy_Giuliani
+			} 
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = USA_Rudy_Giuliani_eco
+			allowed = { original_tag = USA }
+			traits = { economy_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_Herman_Cain = { 
+		name = USA_Herman_Cain_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Herman_Cain.dds"
+				small = GFX_idea_USA_Herman_Cain
+			} 
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = USA_Herman_Cain_sec
+			allowed = { original_tag = USA }
+			traits = { security_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	USA_James_Hoffa = { 
+		name = USA_James_Hoffa_min
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_James_Hoffa.dds"
+				small = GFX_idea_USA_James_Hoffa
+			} 
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = USA_James_Hoffa_for
+			allowed = { original_tag = USA }
+			traits = { foreign_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	### Evan Bayh Cabinet ###
+	USA_Evan_Bayh = { 
+		name = USA_Evan_Bayh  
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Evan_Bayh.dds" 
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_EVAN_BAYH_DESC"
+			ideology = liberalism_dynastic_liberalism_subtype
+			expire = "2999.1.1.1"
+			traits = { The_President }
+			id = -1
+		}
+	}
+
+	### Tom Hayden Cabinet ###
+	USA_Tom_Hayden = { 
+		name = USA_Tom_Hayden  
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Tom_Hayden.dds" 
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_TOM_HAYDEN_DESC"
+			ideology = liberalism_bleeding_heart_liberalism_subtype
+			expire = "2999.1.1.1"
+			traits = { The_President }
+			id = -1
+		}
+	}
+
+	### Tommy Thompson Cabinet ###
+	USA_Tommy_Thompson = {   
+		name = USA_Tommy_Thompson  
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_Tommy_Thompson.dds" 
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_TOMMY_THOMPSON_DESC"
+			ideology = conservatism_modern_conservatism_subtype
+			expire = "2999.1.1.1"
+			traits = { The_President }
+			id = -1
+		}
+	}
+
+	### David McIntosh Cabinet ###
+	USA_David_McIntosh = { 
+		name = USA_David_McIntosh  
+		portraits = { 
+			civilian = { 
+				large = "gfx/leaders/USA/Portrait_USA_David_McIntosh.dds" 
+			} 
+		}
+		country_leader = {
+			desc = "POLITICS_DAVID_MCINTOSH_DESC"
+			ideology = conservatism_natural_conservatism_subtype
+			expire = "2999.1.1.1"
+			traits = { The_President }
+			id = -1
 		}
 	}
 
