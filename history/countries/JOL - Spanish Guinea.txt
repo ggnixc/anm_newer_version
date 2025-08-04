@@ -2,6 +2,21 @@
 
 recruit_character = JOL_Andres_Cassinello
 
+IBR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = JOL autonomy_state = autonomy_colony }
+        else = {
+            puppet = JOL
+        }
+    }
+}
+
 add_ideas = {
 	
 }

@@ -5,6 +5,21 @@ set_oob = "ZIM_1962"
 recruit_character = ZIM_Denis_Walker
 recruit_character = ZIM_Robert_Mugabe
 
+ENG = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = ZIM autonomy_state = autonomy_colony }
+        else = {
+            puppet = ZIM
+        }
+    }
+}
+
 set_cosmetic_tag = ZIM_SRO
 
 set_politics = {	

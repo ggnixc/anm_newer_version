@@ -1,5 +1,22 @@
 ﻿capital = 1225
 
+recruit_character = SUS_Louis_Lansana_Beavogui
+
+GHA = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = SUS autonomy_state = autonomy_satellite }
+        else = {
+            puppet = SUS
+        }
+    }
+}
+
 #set_oob = "GIN_2000"
 
 add_ideas = {
@@ -14,8 +31,6 @@ set_politics = {
 }
 
 TNO_startup_nation = yes
-
-recruit_character = SUS_Louis_Lansana_Beavogui
 
 set_popularities = {
     communist = 0
@@ -32,14 +47,4 @@ set_popularities = {
      
 }
 
-create_country_leader = {
-	name = "Lansana Conte"
-	desc = "POLITICS_LASANACONTE_DESC"
-	picture = "Portrait_lasana_conte.dds"
-	expire = "2999.1.1"
-	ideology = despotism_personalistic_dictatorship_subtype
-	traits = {
-		#
-	}
-}
 

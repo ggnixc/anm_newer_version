@@ -1,5 +1,22 @@
 ﻿capital = 1050
 
+
+
+SAF = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = BTS autonomy_state = autonomy_satellite }
+        else = {
+            puppet = BTS
+        }
+    }
+}
+
 set_oob = "BTS_1962"
 
 set_politics = {	

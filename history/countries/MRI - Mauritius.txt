@@ -1,10 +1,18 @@
 capital = 707
 
 ENG = {
-	set_autonomy = {
-		target = MRI
-		autonomy_state = autonomy_colony
-	}
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = MRI autonomy_state = autonomy_colony }
+        else = {
+            puppet = MRI
+        }
+    }
 }
 
 # Vacant

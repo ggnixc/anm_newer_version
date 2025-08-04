@@ -123,18 +123,6 @@ set_popularities = {
 }
 
 if = {
-	limit = { has_dlc = "Together for Victory" }
-	set_autonomy = { target = GAM autonomy_state = autonomy_colony }
-	set_autonomy = { target = ZIM autonomy_state = autonomy_colony }
-
-	else = {
-		puppet = GAM
-		puppet = ZIM
-	}
-}
-
-
-if = {
 	limit = { has_dlc = "Man the Guns" }
 	create_equipment_variant = {
 		name = "Implacable Class"

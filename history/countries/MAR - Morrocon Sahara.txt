@@ -2,6 +2,21 @@
 
 recruit_character = MAR_Abdelaziz_Bennani
 
+MOR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = MAR autonomy_state = autonomy_colony }
+        else = {
+            puppet = MAR
+        }
+    }
+}
+
 set_oob = ""
 
 add_ideas = {

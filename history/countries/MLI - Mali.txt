@@ -2,6 +2,21 @@
 
 recruit_character = MLI_Seydou_Badian_Kouyate
 
+GHA = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = MLI autonomy_state = autonomy_satellite }
+        else = {
+            puppet = MLI
+        }
+    }
+}
+
 #set_oob = "MLN_2000"
 
 add_ideas = {

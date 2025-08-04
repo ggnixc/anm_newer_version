@@ -6,6 +6,21 @@ set_province_name = { id = 4989 name = VICTORY_POINTS_4989_ENG }
 
 recruit_character = GAM_Peter_Penfold
 
+ENG = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = GAM autonomy_state = autonomy_colony }
+        else = {
+            puppet = GAM
+        }
+    }
+}
+
 set_cosmetic_tag = GAM_ENG
 
 set_politics = {	

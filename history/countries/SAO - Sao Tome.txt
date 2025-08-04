@@ -2,6 +2,21 @@
 
 recruit_character = SAO_Fernando_dOliveira_Neves
 
+IBR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = SAO autonomy_state = autonomy_colony }
+        else = {
+            puppet = SAO
+        }
+    }
+}
+
 set_oob = "SAO_1962"
 
 set_politics = {	

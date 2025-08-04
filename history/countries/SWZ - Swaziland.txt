@@ -1,5 +1,20 @@
 ﻿capital = 936
 
+SAF = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = SWZ autonomy_state = autonomy_satellite }
+        else = {
+            puppet = SWZ
+        }
+    }
+}
+
 set_politics = {	
 	ruling_party = despotism
 	last_election = "1933.3.5"

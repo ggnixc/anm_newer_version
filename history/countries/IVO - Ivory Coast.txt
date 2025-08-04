@@ -1,5 +1,22 @@
 ﻿capital = 779
 
+recruit_character = IVO_Henri_Tohou
+
+GHA = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = IVO autonomy_state = autonomy_satellite }
+        else = {
+            puppet = IVO
+        }
+    }
+}
+
 set_oob = "FFR_1962"
 
 set_research_slots = 3
@@ -12,9 +29,6 @@ set_politics = {
 	election_frequency = 60
 	elections_allowed = yes
 }
-
-recruit_character = IVO_Henri_Tohou
-
 
 TNO_startup_nation = yes
 
