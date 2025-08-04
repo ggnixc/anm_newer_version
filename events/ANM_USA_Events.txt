@@ -1,43 +1,50 @@
-﻿add_namespace = USA_anm_events
-add_namespace = USA_election_events
-add_namespace = USA_debug_events
+﻿add_namespace = USA_narrative_event
+add_namespace = USA_skeleton_event
+add_namespace = USA_debug_event
 add_namespace = USA_successor
 add_namespace = CIA.reports
-#### INTRO EVENTS ###
-## ANGELS AND DEMONS
-country_event = {
-	id = USA_anm_events.1
-	title = USA_anm_events.1.t
-	desc = USA_anm_events.1.desc
-	picture = GFX_anm_events
-	trigger = {
-		tag = USA
-		date > 2000.5.1
-	}
 
+
+### Narrative Events ###
+country_event = {
+	id = USA_narrative_event.1
+	title = USA_narrative_event.1.t
+	desc = USA_narrative_event.1.desc
+	picture = GFX_USA_Primary_Dole_Buchanan_1
+
+	is_triggered_only = yes
 	fire_only_once = yes
 
-	option = { #
-		name = USA_anm_events.1.a
+	option = { 
+		name = USA_narrative_event.1.a
+		ai_chance = { factor = 1 }
+	}
+	option = { 
+		name = USA_narrative_event.1.b
 		ai_chance = { factor = 1 }
 	}
 }
-
 country_event = {
-	id = USA_anm_events.2
-	title = USA_anm_events.2.t
-	desc = USA_anm_events.2.desc
-	picture = GFX_anm_internet8
+	id = USA_narrative_event.2
+	title = USA_narrative_event.2.t
+	desc = USA_narrative_event.2.desc
+	picture = GFX_USA_Primary_Dole_Buchanan_2
 
 	
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { #
-		name = USA_anm_events.2.a
+		name = USA_narrative_event.2.a
+		ai_chance = { factor = 1 }
+	}
+	option = { #
+		name = USA_narrative_event.2.b
 		ai_chance = { factor = 1 }
 	}
 }
+
+### CIA Events ###
 country_event = {
 	    id = CIA.reports.1
 	    immediate = { log = "[GetDateText]: [Root.GetName]: event CIA.reports.1" }
@@ -56,89 +63,55 @@ country_event = {
 	}
 }
 
+### Debug Events ###
 country_event = {
-	id = USA_anm_events.3
-	title = USA_anm_events.3.t
-	desc = USA_anm_events.3.desc
-	picture = GFX_anm_internet8
-
-	
-	trigger = {
-		tag = USA
-		date > 2000.3.1
-	}
-
-	fire_only_once = yes
-
-	option = { #
-		name = USA_anm_events.3.a
-		ai_chance = { factor = 1 }
-	}
-}
-
-country_event = {
-	id = USA_anm_events.4
-	title = USA_anm_events.4.t
-	desc = USA_anm_events.4.desc
-	picture = GFX_anm_internet9
-	trigger = {
-		tag = USA
-		date > 2000.2.1
-	}
-
-	fire_only_once = yes
-
-	option = { #
-		name = USA_anm_events.4.a
-		ai_chance = { factor = 1 }
-	}
-}
-country_event = {
-	id = USA_debug_events.1 #Reset Piechart
-	title = USA_debug_events.1.t
-	desc = USA_debug_events.1.desc
+	id = USA_debug_event.1 #Reset Piechart
+	title = USA_debug_event.1.t
+	desc = USA_debug_event.1.desc
 	picture = GFX_anm_internet9
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
-		name = USA_debug_events.1.a 
+		name = USA_debug_event.1.a 
 		ANM_USA_Debug_Piechart_1996 = yes
 		ANM_USA_Calculate_Party_Balance = yes
 	}
 }
+
+### Skeleton Events ###
 country_event = {
-	id = USA_election_events.1 #Election of 1996
-	title = USA_election_events.1.t
-	desc = USA_election_events.1.desc
+	id = USA_skeleton_event.1 #Election of 1996
+	title = USA_skeleton_event.1.t
+	desc = USA_skeleton_event.1.desc
 	picture = GFX_anm_internet9
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
-		name = USA_election_events.1.a #George Mitchell - Center Democrat
+		name = USA_skeleton_event.1.a #George Mitchell - Center Democrat
 		ai_chance = { factor = 25 }
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Center_Democrat_Win = yes
 		ANM_USA_George_Mitchell_96 = yes 
 	}
 	option = { 
-		name = USA_election_events.1.b #Tom Harkin - Labour Democrat
+		name = USA_skeleton_event.1.b #Tom Harkin - Labour Democrat
 		ai_chance = { factor = 25 }
 		ANM_USA_Calculate_Party_Balance = yes
   		ANM_USA_Election_Labour_Democrat_Win = yes
 		ANM_USA_Tom_Harkin_96 = yes
 	}
 	option = { 
-		name = USA_election_events.1.c #Bob Dole - Consensus Republican
+		name = USA_skeleton_event.1.c #Bob Dole - Consensus Republican
 		ai_chance = { factor = 25 }
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Consensus_Republican_Win = yes 
 	}
 	option = { 
-		name = USA_election_events.1.d #Pat Buchanan - Freedom Republican
+		name = USA_skeleton_event.1.d #Pat Buchanan - Freedom Republican
 		ai_chance = { factor = 25 }
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Freedom_Republican_Win = yes
@@ -146,16 +119,16 @@ country_event = {
 	}
 }
 country_event = {
-	id = USA_election_events.2 #Election of 2000
-	title = USA_election_events.2.t
-	desc = USA_election_events.2.desc
+	id = USA_skeleton_event.2 #Election of 2000
+	title = USA_skeleton_event.2.t
+	desc = USA_skeleton_event.2.desc
 	picture = GFX_anm_internet9
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
-		name = USA_election_events.2.a #Evan Bayh - Center Democrat
+		name = USA_skeleton_event.2.a #Evan Bayh - Center Democrat
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Center_Democrat_Win = yes
 		USA_Evan_Bayh = {
@@ -163,7 +136,7 @@ country_event = {
 		}
 	}
 	option = { 
-		name = USA_election_events.2.b #Tom Hayden - Labour Democrat
+		name = USA_skeleton_event.2.b #Tom Hayden - Labour Democrat
 		ANM_USA_Calculate_Party_Balance = yes
   		ANM_USA_Election_Labour_Democrat_Win = yes
 		USA_Tom_Hayden = {
@@ -171,7 +144,7 @@ country_event = {
 		}
 	}
 	option = { 
-		name = USA_election_events.2.c #Tommy Thompson - Consensus Republican
+		name = USA_skeleton_event.2.c #Tommy Thompson - Consensus Republican
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Consensus_Republican_Win = yes 
 		USA_Tommy_Thompson = {
@@ -179,7 +152,7 @@ country_event = {
 		}
 	} 
 	option = { 
-		name = USA_election_events.2.d #David McIntosh - Freedom Republican
+		name = USA_skeleton_event.2.d #David McIntosh - Freedom Republican
 		ANM_USA_Calculate_Party_Balance = yes
 		ANM_USA_Election_Freedom_Republican_Win = yes
 		USA_David_McIntosh = {
@@ -188,7 +161,7 @@ country_event = {
 	}
 }
 
-
+### Letter to Successor Events ###
 country_event = {
 	id = USA_successor.1
 	title = USA_successor.1.t

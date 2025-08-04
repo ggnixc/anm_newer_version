@@ -6,7 +6,7 @@ add_ideas = {
     CWA_Faction
 }
 
-recruit_character = GHA_Joseph_Kokou_Koffigoh
+recruit_character = GHA_Kojo_Tsikata
 
 set_politics = {	
 	ruling_party = paternalism
@@ -31,20 +31,7 @@ set_popularities = {
     paternalism_1 = 20
 }
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
-	set_autonomy = { target = IVO autonomy_state = autonomy_satellite }
-	set_autonomy = { target = BKF autonomy_state = autonomy_satellite }
-	set_autonomy = { target = SUS autonomy_state = autonomy_satellite }
-	set_autonomy = { target = MLI autonomy_state = autonomy_satellite }
-
-	else = {
-		puppet = IVO
-		puppet = BKF
-		puppet = SUS
-		puppet = MLI
-	}
-}
+#country_event = { id = GHA_skeleton_event.1 days = 0 } 
 
 create_faction = Community_of_Western_Africa
     add_to_faction = IVO

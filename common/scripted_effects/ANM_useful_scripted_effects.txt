@@ -238,6 +238,33 @@ apply_party_popularities = { # Use this after puppeting
 	}
 }
 
+get_current_government_type = {
+	set_temp_variable = { current_gov = current_party_ideology_group }
+	if = {
+		limit = { has_elections = yes }
+		set_country_flag = current_gov_had_elections
+	}
+}
+
+restore_previous_government_type = {
+	hidden_effect = {
+		if = {
+			limit = { has_country_flag = current_gov_had_elections }
+			clr_country_flag = current_gov_had_elections
+			meta_effect = {
+				text = { set_politics = { ruling_party = [PARTY] elections_allowed = yes } }
+				PARTY = "[?current_gov.GetTokenKey]"
+			}
+		}
+		else = {
+			meta_effect = {
+				text = { set_politics = { ruling_party = [PARTY] elections_allowed = no } }
+				PARTY = "[?current_gov.GetTokenKey]"
+			}
+		}
+	}
+}
+
 ### LEGACY FIRST UPDATE BEFORE USING FOR ANM -Emhyr ###
 remove_faction_status = {
 	hidden_effect = {

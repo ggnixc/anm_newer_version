@@ -1,4 +1,54 @@
 ﻿add_namespace = IBR_discontent
+add_namespace = IBR_skeleton_event
+
+country_event = {
+	id = IBR_skeleton_event.1
+	title = IBR_skeleton_event.1.t
+	desc = IBR_skeleton_event.1.desc
+
+	fire_only_once = yes
+
+	option = { 
+		name = IBR_skeleton_event.1.a
+		if = {
+			limit = { has_dlc = "Together for Victory" }
+			JOL = { 
+				save_party_popularities = yes
+				IBR = { set_autonomy = { target = JOL autonomy_state = autonomy_colony } } 
+				apply_party_popularities = yes 
+			}
+			SAO = { 
+				save_party_popularities = yes
+				IBR = { set_autonomy = { target = SAO autonomy_state = autonomy_colony } } 
+				apply_party_popularities = yes 
+			}
+			CAP = { 
+				save_party_popularities = yes
+				IBR = { set_autonomy = { target = CAP autonomy_state = autonomy_colony } } 
+				apply_party_popularities = yes 
+			}
+
+			else = {
+				JOL = { 
+					save_party_popularities = yes
+					IBR = { puppet = JOL } 
+					apply_party_popularities = yes 
+				}
+				SAO = { 
+					save_party_popularities = yes
+					IBR = { puppet = SAO } 
+					apply_party_popularities = yes 
+				}
+				CAP = { 
+					save_party_popularities = yes
+					IBR = { puppet = CAP } 
+					apply_party_popularities = yes 
+				}
+			}
+		}
+	}
+}
+
 
 country_event = {
 	id = IBR_discontent.1

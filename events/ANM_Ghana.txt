@@ -1,0 +1,111 @@
+﻿add_namespace = GHA_skeleton_event
+
+country_event = {
+	id = GHA_skeleton_event.1
+	title = GHA_skeleton_event.1.t
+	desc = GHA_skeleton_event.1.desc
+
+	fire_only_once = yes
+
+	option = { 
+		name = GHA_skeleton_event.1.a
+		if = { 
+			limit = { has_dlc = "Together for Victory" }
+			IVO = { 
+				get_current_government_type = yes
+				save_party_popularities = yes	
+			}
+			GHA = { 
+				set_autonomy = { 
+					target = IVO 
+					autonomy_state = autonomy_satellite
+				} 
+			} 
+			IVO = {
+				restore_previous_government_type = yes
+				apply_party_popularities = yes
+			}
+			BKF = { 
+				get_current_government_type = yes
+				save_party_popularities = yes	
+			}
+			GHA = { 
+				set_autonomy = { 
+					target = BKF 
+					autonomy_state = autonomy_satellite
+				} 
+			} 
+			BKF = {
+				restore_previous_government_type = yes
+				apply_party_popularities = yes
+			}
+			SUS = { 
+				get_current_government_type = yes
+				save_party_popularities = yes	
+			}
+			GHA = { 
+				set_autonomy = { 
+					target = SUS 
+					autonomy_state = autonomy_satellite
+				} 
+			} 
+			SUS = {
+				restore_previous_government_type = yes
+				apply_party_popularities = yes
+			}
+			MLI = { 
+				get_current_government_type = yes
+				save_party_popularities = yes	
+			}
+			GHA = { 
+				set_autonomy = { 
+					target = MLI 
+					autonomy_state = autonomy_satellite
+				} 
+			}
+			MLI = {
+				restore_previous_government_type = yes
+				apply_party_popularities = yes
+			}
+
+			else = {
+				IVO = { 
+					get_current_government_type = yes
+					save_party_popularities = yes	
+				}
+				GHA = { puppet = IVO } 
+				IVO = {
+					restore_previous_government_type = yes
+					apply_party_popularities = yes
+				}
+				BKF = { 
+					get_current_government_type = yes
+					save_party_popularities = yes	
+				}
+				GHA = { puppet = BKF } 
+				BKF = {
+					restore_previous_government_type = yes
+					apply_party_popularities = yes
+				}
+				SUS = { 
+					get_current_government_type = yes
+					save_party_popularities = yes	
+				}
+				GHA = { puppet = SUS }
+				SUS = {
+					restore_previous_government_type = yes
+					apply_party_popularities = yes
+				}
+				MLI = { 
+					get_current_government_type = yes
+					save_party_popularities = yes	
+				}
+				GHA = { puppet = MLI }
+				MLI = {
+					restore_previous_government_type = yes
+					apply_party_popularities = yes
+				}
+			}
+		} 
+	}
+}
