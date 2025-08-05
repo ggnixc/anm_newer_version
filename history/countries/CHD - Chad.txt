@@ -1,9 +1,11 @@
 ﻿capital = 1206
 
+recruit_character = CHD_Fidele_Moungar
+
 set_oob = "CAF_1962"
 
 set_politics = {	
-	ruling_party = paternalism
+	ruling_party = socialist
 	last_election = "1933.5.17"
 	election_frequency = 60
 	elections_allowed = no
@@ -14,24 +16,12 @@ TNO_startup_nation = yes
 set_popularities = {
     communist = 10
     ultranationalism = 0
-    socialist = 20
-    progressivism = 10
+    socialist = 65
+    progressivism = 25
     liberalism = 0
     liberal_conservatism = 0
     conservatism = 0
-    paternalism = 45
+    paternalism = 0
     despotism = 0
-    fascism = 15
-     
-}
-
-create_country_leader = {
-	name = "Félix Malloum"
-	desc = "POLITICS_FELIX_MALLOUM_DESC"
-	picture = "Portrait_Saraland_Felix_Malloum.dds"
-	expire = "1999.1.23"
-	ideology = paternalism_subtype
-	traits = {
-		
-	}
+    fascism = 0
 }

@@ -1,5 +1,7 @@
 ﻿capital = 778
 
+recruit_character = ANG_Marcolino_Moco
+
 set_oob = ""
 
 
@@ -61,7 +63,7 @@ set_war_support = 0.9
 add_manpower = 88743
 
 set_politics = {
-	ruling_party = despotism
+	ruling_party = socialist
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
@@ -73,28 +75,18 @@ TNO_startup_nation = yes
 set_popularities = {
     communist = 26
     ultranationalism = 0
-    socialist = 0
+    socialist = 54
     progressivism = 0
     liberalism = 0
     liberal_conservatism = 20
     conservatism = 0
     paternalism = 0
-    despotism = 54
+    despotism = 0
     fascism = 0
     national_socialism = 0
      
 }
 
-create_country_leader = {
-	name = "Jonas Malheiro Savimbi"
-	desc = "POLITICS_JONAS_SAVIMBI_DESC"
-	picture = "Portrait_Jonas_Savimbi.dds"
-	expire = "2999.1.1"
-	ideology = despotism_civilian_dictatorship_subtype
-	traits = { 
-		#
-	}
-}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
