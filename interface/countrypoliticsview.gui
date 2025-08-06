@@ -2,9 +2,9 @@ guiTypes = {
 
 	extendedScrollbarType = {
 		name = "nat_spirit_bottom_slider_pol"
-		position = { x = 0 y = 0 }
-		size = { width = 18 height = 28 }
-		tileSize = { width = 12 height = 12}
+		position = { x = 0 y = -3 }
+		size = { width = 18 height = 11 }
+		tileSize = { width = 11 height = 11 }
 		maxValue = 1
 		minValue = 0
 		stepSize = 0.01
@@ -20,27 +20,27 @@ guiTypes = {
 
 		slider = {
 			name = "Slider"
-			quadTextureSprite = "GFX_scroll_drager"
-			position = { x = 0 y = -1 }
+			quadTextureSprite = "GFX_scroll_drager_pol"
+			position = { x = 0 y = 0 }
 		}
 
 		track = {
 			name = "Track"
-			quadTextureSprite = "GFX_scroll_track_horisontal"
-			position = { x = 0 y = 11 }
+			quadTextureSprite = "GFX_scroll_track_horisontal_pol"
+			position = { x = -5 y = 0 }
 			alwaystransparent = yes
 		}
 
 		decreaseButton = {
 			name = "Decrease"
-			quadTextureSprite = "GFX_scroll_left"
-			position = { x = 6 y = 10 }
+			quadTextureSprite = "GFX_scroll_left_pol"
+			position = { x = -5 y = 0 }
 		}
 
 		increaseButton = {
 			name = "Increase"
-			quadTextureSprite = "GFX_scroll_right"
-			position = { x = -22 y = -18 }
+			quadTextureSprite = "GFX_scroll_right_pol"
+			position = { x = -7 y = -11 }
 		}
 	}
 	
@@ -87,23 +87,14 @@ guiTypes = {
 	containerWindowType = {
 		name = "countrypoliticsview"
 		position = { x = -606 y = 78 }
-		show_position = { x=-5 y = 78 }
+		show_position = { x=-4 y = 78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
-		size = { width=550 height=100%% }
+		size = { width=548 height=100%% }
 
 		#hide_sound = menu_close_window
 		show_sound = menu_open_window
-
-		containerWindowType = {
-			name = "test"
-			size = { width=549 height=100%% }
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_plain_grey"
-			}
-		}
 
 		#containerWindowType = {
 		#	name = "ideas_bg"
@@ -118,16 +109,16 @@ guiTypes = {
 
 		iconType = {
 			name ="production_header_bg"
-			spriteType = "GFX_header_bg"
+			spriteType = "GFX_countrypoliticsview_header_bg"
 			position = { x= 5 y = 3 }
 			Orientation = "UPPER_LEFT"
 		}
 
 		instantTextboxType = {
 			name = "political_title"
-			position = { x = 45 y = 6 }
+			position = { x = 50 y = 12 }
 			textureFile = ""
-			font = "aldrich_white_28_outline"
+			font = "aldrich_white_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = "POLITICAL_POLITICAL"
 			maxWidth = 400
@@ -138,7 +129,7 @@ guiTypes = {
 		iconType ={
 			name ="pol_view_bg"
 			spriteType = "GFX_pol_view_bg"
-			position = { x= 0 y = 44 }
+			position = { x= 5 y = 45 }
 			Orientation = "UPPER_LEFT"
 		}
 
@@ -315,7 +306,7 @@ guiTypes = {
 			# Putting this here because it's throwing errors
 			containerWindowType = {
 				name = "power_balance_button"
-				position = { x = 347 y = 103 }
+				position = { x = 339 y = 103 }
 				clipping = no
 
 				iconType = {
@@ -327,7 +318,7 @@ guiTypes = {
 				buttonType = {
 					name = "show_power_balance"
 					position = { x = 7 y = 4 }
-					quadTextureSprite = "GFX_tno_button_148x34"
+					quadTextureSprite = "GFX_ANM_button_148x34"
 					buttonFont = "aldrich_14_outline"
 					Orientation = "UPPER_LEFT"
 					text = "BOP_BUTTON"
@@ -465,13 +456,13 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "national_spirit"
-			position = { x = 180 y = 149 }
-			size = { width = 360 height = 104 }
+			position = { x = 184 y = 149 }
+			size = { width = 352 height = 110 }
 			clipping = no
 
 			instantTextboxType = {
 				name = "title"
-				position = { x = 0 y = 2 }
+				position = { x = 0 y = -5 }
 				font = "aldrich_14_outline"
 				text = "POLITICS_NATIONAL_SPIRIT"
 				maxWidth = 200
@@ -481,8 +472,8 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "national_spirit_container"
-				position = { x = 1 y = 24 }
-				size = { width = 356 height = 80 }
+				position = { x = 1 y = 17 }
+				size = { width = 352 height = 80 }
 				horizontalScrollbar = "nat_spirit_bottom_slider_pol"
 				
 				background = {
@@ -492,16 +483,16 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "spirit_grid"
-					position = { x = 0 y = -4 }
-					size = { width = 355 height = 100%% }
+					position = { x = 0 y = 0 }
+					size = { width = 352 height = 100%% }
 					slotsize = { width = 63 height = 68 }
 					max_slots = { x = 6 y = 1 }
 					format = "UPPER_LEFT"
 				}
 				gridboxtype = {
 					name = "spirit_grid_over_defined"
-					position = { x = 0 y = -4 }
-					size = { width = 355 height = 100%% }
+					position = { x = 0 y = 0 }
+					size = { width = 352 height = 100%% }
 					slotsize = { width = 60 height = 68 }
 					max_slots_horizontal = 100
 					format = "UPPER_LEFT"
@@ -511,7 +502,7 @@ guiTypes = {
 
 		iconType = {
 			name = "leader"
-			position = { x = 9 y = 55 }
+			position = { x = 17 y = 53 }
 			spriteType = "GFX_leader_unknown"
 		}
 
@@ -524,8 +515,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "leader_name"
-			position = { x = 10 y = 273 }
-			font = "aldrich_16_outline"
+			position = { x = 17 y = 275 }
+			font = "aldrich_bold_16_outline"
 			text = "leader_name"
 			maxWidth = 155
 			maxHeight = 20
@@ -546,14 +537,14 @@ guiTypes = {
 
 			buttonType = {
 				name = "add_national_goal_button"
-				position = { x = 100 y = 7 }
+				position = { x = 105 y = -1 }
 				spriteType = "GFX_add_national_goal_button"
 				clicksound = click_default
 			}
 
 			iconType = {
 				name = "nat_spirit_glow_overlay"
-				position = { x = 105 y = 10 }
+				position = { x = 105 y = -1 }
 				spriteType = "GFX_nat_spirit_glow_overlay"
 				alwaystransparent = yes
 			}
@@ -584,7 +575,7 @@ guiTypes = {
 
 			iconType = {
 				name = "goal_icon"
-				position = { x = 43 y = 48 }
+				position = { x = 53 y = 47 }
 				centerposition = yes
 				spriteType = "GFX_goal_unknown"
 			}
@@ -613,7 +604,7 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "title"
-				position = { x = 85 y = 38 }
+				position = { x = 85 y = 30 }
 				font = "aldrich_bold_16_outline"
 				text = "POLITICS_ACTIVE_GOAL"
 				maxWidth = 280
@@ -626,12 +617,12 @@ guiTypes = {
 			iconType = {
 				name = "progress"
 				spriteType = "GFX_activegoal_progress"
-				position = { x=112 y = 72 }
+				position = { x=114 y = 68 }
 			}
 
 			iconType = {
 				name = "progress_frame"
-				position = { x = 110 y = 72 }
+				position = { x = 114 y = 68 }
 				spriteType = "GFX_pol_goal_progress_frame"
 				alwaystransparent = yes
 			}
@@ -647,7 +638,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "close_button"
-			position = { x = -34 y = 11 }
+			position = { x = -42 y = 15 }
 			quadTextureSprite ="GFX_closebutton_small"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
@@ -666,8 +657,7 @@ guiTypes = {
 		iconType = {
 			name = "rules"
 			spriteType = "GFX_rules_sum_icon"
-			position = { x = 460 y = 9 }
-			scale = .90
+			position = { x = 476 y = 15 }
 		}
 
 		iconType = {
@@ -679,14 +669,14 @@ guiTypes = {
 		buttonType = {
 			name = "manage_occupied_button"
 			position = { x = 37 y = 487 }
-			quadTextureSprite = "GFX_tno_button_148x34"
+			quadTextureSprite = "GFX_ANM_button_148x34"
 			buttonFont = "aldrich_16_outline"
 			Orientation = "UPPER_LEFT"
 		}
 
 		instantTextboxType = {
 			name = "manage_occupied_button_text"
-			position = { x = 48 y = 493 }
+			position = { x = 44 y = 493 }
 			font = "aldrich_14_outline"
 			text = "MANAGE_OCCUPIED_TERRITORIES"
 			maxWidth = 200
@@ -703,7 +693,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "subjects_button_container"
-			position = { x = -160 y = 483 }
+			position = { x = -165 y = 483 }
 			
 			iconType = {
 				name = "show_subjects_button_underlay"
@@ -714,7 +704,7 @@ guiTypes = {
 			buttonType = {
 				name = "show_subjects_button"
 				position = { x = 367 y = 4 }
-				quadTextureSprite = "GFX_tno_button_148x34"
+				quadTextureSprite = "GFX_ANM_button_148x34"
 				buttonFont = "aldrich_16_outline"
 				Orientation = "UPPER_LEFT"
 			}
@@ -749,21 +739,21 @@ guiTypes = {
 		iconType ={
 			name ="category_header"
 			spriteType = "GFX_category_header_longer"
-			position = { x=-44 y=12 }
+			position = { x=-10000 y=12 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.5
 		}
 		iconType ={
 			name ="category_icon"
 			spriteType = "GFX_idea_categories_metal"
-			position = { x=-29 y=15 }
+			position = { x=-43 y=20 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.5
 		}
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 0 y = 13 }
+			position = { x = -14 y = 18 }
 			font = "aldrich_14_outline"
 			text = "Government"
 			maxWidth = 300

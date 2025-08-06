@@ -2,7 +2,7 @@ guiTypes = {
 	extendedScrollbarType = {
 		name = "right_vertical_slider_tno_laws"
 		position = { x = 0 y = 0 }
-		size = { width = 18 height = 18 }
+		size = { width = 15 height = 18 }
 		startValue = 0
 		orientation = upper_right
 		origo = upper_right
@@ -15,35 +15,33 @@ guiTypes = {
 
 		slider = {
 			name = "Slider"
-			quadTextureSprite = "yearslider_slider2"
-			position = { x = -2 y = -2 }
+			quadTextureSprite = "GFX_scroll_drager"
+			position = { x = 0 y = 0 }
 		}
 
 		track = {
 			name = "Track"
-			quadTextureSprite = "GFX_blank"
-			position = { x = 3 y = 0 }
+			quadTextureSprite = "GFX_scroll_track"
+			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
 
 		decreaseButton = {
 			name = "Decrease"
 			quadTextureSprite = "GFX_scroll_up"
-			position = { x = 2 y = 3 }
-			scale = 0.9
+			position = { x = 0 y = 0 }
 		}
 
 		increaseButton = {
 			name = "Increase"
 			quadTextureSprite = "GFX_scroll_down"
-			position = { x=-17 y = -19 }
-			scale = 0.9
+			position = { x= -15 y = -18 }
 		}
 	}
 	extendedScrollbarType = {
-		name = "right_vertical_slider_tno_laws_2"
+		name = "right_vertical_slider_tno_laws_2" #Small slider used next the buttons
 		position = { x =-9 y = 0 }
-		size = { width = 18 height = 18 }
+		size = { width = 15 height = 18 }
 		startValue = 0
 		orientation = upper_right
 		origo = upper_right
@@ -56,35 +54,33 @@ guiTypes = {
 
 		slider = {
 			name = "Slider"
-			quadTextureSprite = "yearslider_slider2"
-			position = { x = -2 y = -2 }
+			quadTextureSprite = "GFX_scroll_drager"
+			position = { x = 0 y = 0 }
 		}
 
 		track = {
 			name = "Track"
-			quadTextureSprite = "GFX_blank"
-			position = { x = 3 y = 0 }
+			quadTextureSprite = "GFX_scroll_track"
+			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
 
 		decreaseButton = {
 			name = "Decrease"
 			quadTextureSprite = "GFX_scroll_up"
-			position = { x = 2 y = 4 }
-			scale = 0.9
+			position = { x = 0 y = 0 }
 		}
 
 		increaseButton = {
 			name = "Increase"
 			quadTextureSprite = "GFX_scroll_down"
-			position = { x=-16 y = -18}
-			scale = 0.9
+			position = { x= 0 y = 0 }
 		}
 	}
 	extendedScrollbarType = {
-		name = "right_vertical_slider_tno_laws_3"
-		position = { x =-10 y = 0 }
-		size = { width = 18 height = 18 }
+		name = "right_vertical_slider_tno_laws_3" #Largest slider, furthermost right
+		position = { x = -12 y = 0 }
+		size = { width = 15 height = 18 }
 		startValue = 0
 		orientation = upper_right
 		origo = upper_right
@@ -97,29 +93,27 @@ guiTypes = {
 
 		slider = {
 			name = "Slider"
-			quadTextureSprite = "yearslider_slider2"
-			position = { x = -2 y = -2 }
+			quadTextureSprite = "GFX_scroll_drager"
+			position = { x = 0 y = 0 }
 		}
 
 		track = {
 			name = "Track"
 			quadTextureSprite = "GFX_blank"
-			position = { x = 3 y = 0 }
+			position = { x = 0 y = 0 }
 			alwaystransparent = yes
 		}
 
 		decreaseButton = {
 			name = "Decrease"
 			quadTextureSprite = "GFX_scroll_up"
-			position = { x = 2 y = 4 }
-			scale = 0.9
+			position = { x = 0 y = -1 }
 		}
 
 		increaseButton = {
 			name = "Increase"
 			quadTextureSprite = "GFX_scroll_down"
-			position = { x=-16 y = -18}
-			scale = 0.9
+			position = { x= -15 y = -16 }
 		}
 	}
 	containerWindowType = {
@@ -162,7 +156,7 @@ guiTypes = {
 		iconType = {
 			name = "current_faction_status"
 			spriteType = "GFX_idea_unknown"
-			position = { x = 45 y = -25 }
+			position = { x = 35 y = -25 }
 			scale = 0.70
 			alwaystransparent = no
 			pdx_tooltip = "CURRENT_FACTION_STATUS_SHORT_TT"
@@ -186,76 +180,76 @@ guiTypes = {
 
 		iconType = {
 			name = "faction_icon_unity_pakt"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_unity_pakt"
 			scale = 0.61334
 			pdx_tooltip = Unity_Pakt
 		}
 		iconType = {
 			name = "faction_icon_as"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_afrika_schild"
 			scale = 0.61334
 			pdx_tooltip = afrika_schild
 		}
 		iconType = {
 			name = "faction_icon_cdp"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_Patto_di_Roma"
 			scale = 0.61334
 			pdx_tooltip = Patto_di_Roma
 		}
 		iconType = {
 			name = "faction_icon_coprosperity"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_coprosperity"
 			scale = 0.61334
 			pdx_tooltip = Japanese_Co_Prosperity_Sphere
 		}
 		iconType = {
 			name = "faction_icon_generic"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_generic_faction"
 			scale = 0.61334
 		}
 		iconType = {
 			name = "faction_icon_OFN"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_OFN"
 			scale = 0.58334
 			pdx_tooltip = Organization_of_Free_Nations
 		}
 		iconType = {
 			name = "faction_icon_triumvirate"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_triumvirate"
 			scale = 0.61334
 			pdx_tooltip = Triumvirate
 		}
 		iconType = {
 			name = "faction_icon_ROC"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_ROC"
 			scale = 0.61334
 			pdx_tooltip = CHI_REPUBLIC_OF_CHINA
 		}
 		iconType = {
 			name = "faction_icon_ARC"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_ARC"
 			scale = 0.61334
 			pdx_tooltip = all_russian_congress
 		}
 		iconType = {
 			name = "faction_icon_FI"
-			position = {x=-45 y=-26}
+			position = {x=-40 y=-26}
 			quadTextureSprite = "GFX_FI"
 			scale = 0.61334
 			pdx_tooltip = Fourth_International
 		}
 		iconType = {
 			name = "faction_icon_UA"
-			position = {x=-45 y=-25}
+			position = {x=-40 y=-25}
 			quadTextureSprite = "GFX_UA"
 			scale = 0.61334
 			pdx_tooltip = ural_alliance
@@ -279,14 +273,14 @@ guiTypes = {
 			position = { x = 158 y = 0 }
 			font = "aldrich_14_outline"
 			text = [GetSubIdeologyLoc]
-			maxWidth = 150
+			maxWidth = 148
 			maxHeight = 20
 		}	
 	}
 
 	containerWindowType = {
 		name = "TNO_SG_politics_laws"
-		position = { x = 0 y = 520 }
+		position = { x = 5 y = 523 }
 		size = { width=100%% height=100%% }
 		verticalScrollbar = "right_vertical_slider_tno_laws_3"
 		margin = { top = 13 bottom = 10 }
@@ -296,7 +290,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "TNO_category_1"
-			position = { x = 12 y = 5 }
+			position = { x = 11 y = -2 }
 			size = { width=260 height=284 }
 			iconType ={
 				name ="category_header_1"
@@ -632,7 +626,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "TNO_category_2"
-			position = { x = 269 y = 5 }
+			position = { x = 261 y = -2 }
 			size = { width=260 height=284 }
 			iconType ={
 				name ="category_header_2"
@@ -869,7 +863,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "TNO_category_3"
-			position = { x = 13 y = 329 }
+			position = { x = 11 y = 322 }
 			size = { width=260 height=284 }
 			iconType ={
 				name ="category_header_3"
@@ -1205,7 +1199,7 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "TNO_category_4"
-			position = { x = 269 y = 329 }
+			position = { x = 261 y = 322 }
 			size = { width=260 height=334 }
 			iconType ={
 				name ="category_header_4"
@@ -1576,7 +1570,7 @@ guiTypes = {
 		#Societal Development Category
 		containerWindowType = {
 			name = "TNO_category_5"
-			position = { x = 13 y = 753 }
+			position = { x = 11 y = 725 }
 			size = { width=500 height=300 }
 			iconType ={
 				name ="category_header_5"
@@ -1602,7 +1596,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "TNO_category_5_slider"
 				position = { x = 10 y = 44 }
-				size = { width=100%% height=270 }
+				size = { width=100%% height=260 }
 				verticalScrollbar = "right_vertical_slider_tno_laws"
 				margin = { top = 4 bottom = 5 }
 				background = {
@@ -1645,7 +1639,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_academic_base_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -1697,7 +1691,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_research_facilities_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -1749,7 +1743,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_agriculture_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -1801,7 +1795,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_poverty_rate_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -1853,7 +1847,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_industrial_equipment_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -1905,7 +1899,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_industrial_expertise_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -1957,7 +1951,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_army_professionalism_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -2009,7 +2003,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_nuclear_stockpile_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -2061,7 +2055,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_birthrate_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -2113,7 +2107,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "category_5_sd_tno_immigration_trend_text"
 						position = { x = 365 y = 6 }
-						font = "aldrich_16_outline"
+						font = "aldrich_14_outline"
 						text = "TNO_SD_Trend"
 						maxWidth = 50
 						maxHeight = 15
@@ -2134,7 +2128,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "TNO_category_6"
-			position = { x = 20 y = 683 }
+			position = { x = 17 y = 649 }
 			size = { width=500 height=200 }
 			iconType = {
 				name = "category_header_6"
@@ -2152,8 +2146,8 @@ guiTypes = {
 			instantTextboxType = {
 				name = "category_6_name"
 				alwaystransparent = yes
-				position = { x = -3 y = 15 }
-				font = "aldrich_20_outline"
+				position = { x = -20 y = 20 }
+				font = "aldrich_bold_20_outline"
 				text = "tno_assorted_laws"
 				format = center
 				maxWidth = 498

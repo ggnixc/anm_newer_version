@@ -7,14 +7,27 @@ spriteTypes = {
 		texturefile = "gfx/interface/scroll_drager.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+	spriteType = {
+		name = "GFX_scroll_drager_pol"
+		texturefile = "gfx/interface/scroll_drager_pol.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 
 	spriteType = {
 		name = "GFX_scroll_left"
 		texturefile = "gfx/interface/scroll_left.dds"
 	}
 	spriteType = {
+		name = "GFX_scroll_left_pol"
+		texturefile = "gfx/interface/scroll_left_pol.dds"
+	}
+	spriteType = {
 		name = "GFX_scroll_right"
 		texturefile = "gfx/interface/scroll_right.dds"
+	}
+	spriteType = {
+		name = "GFX_scroll_right_pol"
+		texturefile = "gfx/interface/scroll_right_pol.dds"
 	}
 
 	spriteType = {
@@ -55,6 +68,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/scroll_track_horisontal.dds"
 		borderSize = { x=4 y=4 }
 	}
+	corneredTileSpriteType = {
+		name = "GFX_scroll_track_horisontal_pol"
+		size= {x =11 y = 11 }
+		texturefile = "gfx/interface/scroll_track_horisontal_pol.dds"
+		borderSize = { x=4 y=4 }
+	}
 
 	corneredTileSpriteType = {
 		name = "GFX_scrollbar_horisontal_bg"
@@ -63,10 +82,9 @@ spriteTypes = {
 		borderSize = { x=52 y=0 }
 		tilingCenter = yes
 	}
-
 	corneredTileSpriteType = {
 		name = "GFX_scrollbar_horisontal_pol_bg"
-		size= { x=166 y=28 }
+		size= { x=166 y=11 }
 		textureFile = "gfx/interface/scrollbar_horisontal_pol_bg.dds"
 		borderSize = { x=52 y=0 }
 		tilingCenter = yes

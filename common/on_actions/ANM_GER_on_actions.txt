@@ -137,9 +137,18 @@ on_actions = {
 	} 
 
 	on_monthly_GER = { 
-		### EW Decisions GUI ###
 		effect = {
+			### EW Decisions GUI ###
 			## Updating E.W. Economic Stability Idea ##
+			GER = { 
+				remove_ideas = { 
+					GER_Europakt_Stability_1 
+					GER_Europakt_Stability_2 
+					GER_Europakt_Stability_3 
+					GER_Europakt_Stability_4 
+					GER_Europakt_Stability_5 
+				}
+			}
 			if = {
 				limit = { 
 					check_variable = { GER_EW_Economy_Rating_Overall > 79 } 
