@@ -1,6 +1,6 @@
 ﻿capital = 1050
 
-
+recruit_character = BTS_Festus_Mogae
 
 SAF = {
     if = {
@@ -20,7 +20,7 @@ SAF = {
 set_oob = "BTS_1962"
 
 set_politics = {	
-	ruling_party = liberalism
+	ruling_party = paternalism
 	last_election = "1993.8.5"
 	election_frequency = 48
 	elections_allowed = yes
@@ -35,11 +35,11 @@ set_popularities = {
     communist = 0
     ultranationalism = 0
     socialist = 0
-    progressivism = 20
-    liberalism = 60
-    liberal_conservatism = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 20
     conservatism = 20
-    paternalism = 0
+    paternalism = 60
     despotism = 0
     fascism = 0
      
@@ -47,15 +47,4 @@ set_popularities = {
 
 add_ideas = { 
 	OFN_Independent_Member
-}
-
-create_country_leader = {
-	name = "Festus Mogae"
-	desc = ""
-	picture = "Portrait_BTS_Festus_Mogae.dds"
-	expire = "1999.1.23"
-	ideology = liberalism_subtype
-	traits = {
-		
-	}
 }

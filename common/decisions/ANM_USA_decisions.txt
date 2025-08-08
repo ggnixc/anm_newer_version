@@ -1,0 +1,67 @@
+ANM_USA_debug_category = { 
+
+    debug_trigger_elections_1996 = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_elections_1996"
+            USA = {
+                country_event = {
+                    id = USA_skeleton_event.1
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_trigger_elections_2000 = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_elections_2000"
+            USA = {
+                country_event = {
+                    id = USA_skeleton_event.2
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_reset_piechart = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_reset_piechart"
+            USA = {
+                country_event = {
+                    id = USA_debug_event.1
+                }
+            }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}
