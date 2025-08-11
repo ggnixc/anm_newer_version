@@ -66,9 +66,9 @@ ideas = {
 			}
 		}
 
-		#Paktkommission
-		Pakt_Paktkommission = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Paktkommission" }
+		#Kolonialverwaltung
+		Pakt_Kolonialverwaltung = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Kolonialverwaltung" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 
@@ -88,6 +88,21 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GER
+				extra_trade_to_target_factor = 0.20
+				cic_to_target_factor = 0.15
+				mic_to_target_factor = 0.25
+			}
+		}
+
+		#French Protectorate
+		Pakt_Protectorate = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Protectorate" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			targeted_modifier = {
+				tag = FRA
+				#The French Protectorate is a special case, as it is not connected to Germany directly
 				extra_trade_to_target_factor = 0.20
 				cic_to_target_factor = 0.15
 				mic_to_target_factor = 0.25
@@ -147,6 +162,11 @@ ideas = {
 		}
 		Pakt_Observer_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Observer_2" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+		}
+		Pakt_Observer_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pakt_Observer_3" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 		}

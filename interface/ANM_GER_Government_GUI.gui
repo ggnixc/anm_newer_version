@@ -17,7 +17,7 @@ guiTypes = {
 		name = "ANM_reichsstabilitat_GUI"
 		size = { width = 1002 height = 752 }
 		position = { x= 545 y= 80 }
-		
+
 		background = {
 			name = "reichsstabilitat_background"
 			spriteType = "GFX_reichsstabilitat_background"
@@ -36,7 +36,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "reichsstabilitat_close"
-			spriteType = "GFX_reichsstability_close_button"
+			spriteType = "GFX_closebutton_small"
 			shortcut = "ESCAPE"
 			position = { x = 961 y = 13 }
 		}
@@ -71,20 +71,19 @@ guiTypes = {
 		size = { width = 1002 height = 752 }
 		position = { x= 545 y= 80 }
 
-		iconType = {
+		background = {
 			name = "reichsstabilitat_tab_1"
 			spriteType = "GFX_reichsstabilitat_tab_1"
 			position = { x= 0 y= 0 } 
 			alwaystransparent = yes
 		}
-
 		instantTextboxType = {
 			name = "Tab_1_Reichsleiters"
 			position = { x = 68 y = 378 }
 			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Reichsleiters"
-			maxWidth = 500
+			maxWidth = 125
 			maxHeight = 30
 			fixedsize = yes
 		}
@@ -450,7 +449,88 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	
+		## Tab 1 - Fuhrer History ##
+		buttonType = {
+			name = "Government_GUI_Fuhrer_Openbutton"
+			spriteType = "GFX_exclamationbutton_small"
+			position = { x = 603 y = 322 }
+		}
+		iconType = {
+			name = "Government_GUI_Fuhrerhistory"
+			spriteType = "GFX_Government_GUI_Fuhrerhistory"
+			position = { x = 224 y = 125 } 
+		}
+		iconType = {
+			name = "Government_GUI_Fuhrerhistory_1"
+			pdx_tooltip = "Government_GUI_Fuhrerhistory_1"
+			spriteType = "GFX_Government_GUI_Fuhrerhistory_1"
+			position = { x = 259 y = 173 }
+			scale = 0.7
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Fuhrerhistory_1_TL"
+			position = { x = 272 y = 330 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "1934 - 1964"
+			maxWidth = 100
+			maxHeight = 25
+		}
+		iconType = {
+			name = "Government_GUI_Fuhrerhistory_2"
+			pdx_tooltip = "Government_GUI_Fuhrerhistory_2"
+			spriteType = "GFX_Government_GUI_Fuhrerhistory_2"
+			position = { x = 384 y = 173 }
+			scale = 0.7
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Fuhrerhistory_2_TL"
+			position = { x = 397 y = 330 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "1964 - 1979"
+			maxWidth = 100
+			maxHeight = 25
+		}
+		iconType = {
+			name = "Government_GUI_Fuhrerhistory_3"
+			pdx_tooltip = "Government_GUI_Fuhrerhistory_3"
+			spriteType = "GFX_Government_GUI_Fuhrerhistory_3"
+			position = { x = 509 y = 173 }
+			scale = 0.7
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Fuhrerhistory_3_TL"
+			position = { x = 523 y = 330 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "1979 - 1988"
+			maxWidth = 100
+			maxHeight = 25
+		}
+		iconType = {
+			name = "Government_GUI_Fuhrerhistory_4"
+			pdx_tooltip = "Government_GUI_Fuhrerhistory_4"
+			spriteType = "GFX_Government_GUI_Fuhrerhistory_4"
+			position = { x = 634 y = 173 }
+			scale = 0.7
+		}
+		instantTextboxType = {
+			name = "Government_GUI_Fuhrerhistory_4_TL"
+			position = { x = 640 y = 330 }
+			font = "aldrich_12_outline"
+			borderSize = {x = 0 y = 0}
+			text = "1988 - Interm."
+			maxWidth = 100
+			maxHeight = 25
+		}
+		buttonType = {
+			name = "Government_GUI_Fuhrer_Closebutton"
+			spriteType = "GFX_closebutton_small"
+			position = { x = 742 y = 133 }
+		}
 
+		## Tab 1 - Buttons ##
 		buttonType = {
 			name = "Button_1_Tab_1"
 			position = { x = 662 y = 691 }

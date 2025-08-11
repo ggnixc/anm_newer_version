@@ -399,6 +399,37 @@ scripted_gui = {
 		}
 		
 		triggers = { 
+			#Fuhrer History Subview #
+			Government_GUI_Fuhrerhistory_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrerhistory_1_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrerhistory_1_TL_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrerhistory_2_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrerhistory_2_TL_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrerhistory_3_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrerhistory_3_TL_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrerhistory_4_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrerhistory_4_TL_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
+			Government_GUI_Fuhrer_Closebutton_visible = { 
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 999 }
+			}
 			#Interact system
 			Button_2_Tab_1_disabled_visible = { 
 				has_country_flag = GER_Government_Tab_1_Interactions_Unavailable
@@ -570,6 +601,13 @@ scripted_gui = {
 		} 
 
 		effects = {
+			#Fuhrer History Subview #
+			Government_GUI_Fuhrer_Openbutton_click = { 
+				set_country_flag = { flag = GER_Government_Tab_1_Click value = 999 } 
+			}
+			Government_GUI_Fuhrer_Closebutton_click = { 
+				set_country_flag = { flag = GER_Government_Tab_1_Click value = 0 } 
+			}
 			#Selection frames
 			government_albert_speer_jr_click = { 
 				set_country_flag = { 
