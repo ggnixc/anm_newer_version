@@ -1,0 +1,41 @@
+﻿add_namespace = AFG_skeleton_event
+
+country_event = {
+	id = AFG_skeleton_event.1 #Proxy War - unrest
+ 	title = AFG_skeleton_event.1.t
+ 	desc = AFG_skeleton_event.1.desc
+ 	picture = GFX_anm_veniceopera
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+ 	option = { 
+ 		name = AFG_skeleton_event.1.a
+		1469 = { set_demilitarized_zone = yes }
+		1473 = { set_demilitarized_zone = yes }
+		1883 = { set_demilitarized_zone = yes }
+		2193 = { set_demilitarized_zone = yes }
+	}
+	option = { 
+ 		name = AFG_skeleton_event.1.a
+		1469 = { set_demilitarized_zone = no }
+		1473 = { 
+			add_core_of = AFD 
+			transfer_state_to = AFD
+			set_demilitarized_zone = no
+		}
+		1883 = { set_demilitarized_zone = no }
+		2193 = {
+			add_core_of = AFD 
+			transfer_state_to = AFD
+			set_demilitarized_zone = no
+		}
+		AFD = { 
+			declare_war_on = { 
+				target = AFG
+   				type = annex_everything
+			} 
+			set_variable = { ECON_SPHERE_LEADER = GER }
+		}
+	}
+}

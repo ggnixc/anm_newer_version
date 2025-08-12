@@ -1,10 +1,12 @@
-﻿capital = 415
+﻿capital = 1473
 
-set_oob = "AFD_2000"
-recruit_character = AFD_Council_Of_Generals
+recruit_character = AFD_Mohammed_Khalis
+recruit_character = AFD_Ahmed_Gailani
+
+set_oob = " "
 
 set_politics = {
-	ruling_party = paternalism
+	ruling_party = despotism
 	last_election = "1960.8.29"
 	election_frequency = 48
 	elections_allowed = no
@@ -13,26 +15,26 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 10
-    socialist = 2
-    progressivism = 2
-    liberalism = 2
+    communist = 0
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
     liberal_conservatism = 0
-    conservatism = 4
-    paternalism = 40
-    despotism = 20
-    fascism = 5
+    conservatism = 0
+    paternalism = 0
+    despotism = 65
+	despotism_1 = 35
+    fascism = 0
     national_socialism = 0
-    ultranationalism = 15
+    ultranationalism = 0
 }
 
 
 add_ideas = {
 	#STARTING#
-	AFG_defeat_in_the_great_asian_war
-	AFG_afghan_civil_war
-	AFG_uae_influence
-	AFG_corrupt_generals
+	AFD_Spirit_1
+	AFD_Spirit_2
+	AFD_Spirit_3
 	#MINISTERS
 	#POLITICAL
 	tno_political_parties_controlled_opposition
