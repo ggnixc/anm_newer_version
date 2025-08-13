@@ -113,10 +113,40 @@ on_actions = {
 				set_variable = { GER_EW_Economy_Weight_66 = 0.15 } #ZIM 
 
 				### Government GUI ###
-				## Debug ##
+				## Tab 1 Slots - Allignment ##
+				# -4 Nonkonformisten, -3 Identitären, -2 Cyberkraten, -1 Regime, 0 Uberparteilich, #
+				# 1 Kritiker, 2 Traditionalisten, 3 Religiös, 4 Puristen, 100 Unbekannt #
+				set_variable = { GER_ANM_government_loyaly_slot_1 = -1 } 
+				set_variable = { GER_ANM_government_loyaly_slot_2 = 1 } 
+				set_variable = { GER_ANM_government_loyaly_slot_3 = -1 } 
+				set_variable = { GER_ANM_government_loyaly_slot_4 = 0 } 
+				set_variable = { GER_ANM_government_loyaly_slot_5 = 100 } 
+				set_variable = { GER_ANM_government_loyaly_slot_6 = 1 }
+				set_variable = { GER_ANM_government_loyaly_slot_7 = 100 }
+				set_variable = { GER_ANM_government_loyaly_slot_8 = 100 }
+				set_variable = { GER_ANM_government_loyaly_slot_9 = 1 }
+				set_variable = { GER_ANM_government_loyaly_slot_10 = -1 }
+				set_variable = { GER_ANM_government_loyaly_slot_11 = 0 }
+				set_variable = { GER_ANM_government_loyaly_slot_12 = 1 }
+				set_variable = { GER_ANM_government_loyaly_slot_13 = 1 }
+				set_variable = { GER_ANM_government_loyaly_slot_14 = 1 } 
+				set_variable = { GER_ANM_government_loyaly_slot_15 = 100 }
+				set_variable = { GER_ANM_government_loyaly_slot_16 = -1 }
+				set_variable = { GER_ANM_government_loyaly_slot_17 = -4 }
+				set_variable = { GER_ANM_government_loyaly_slot_18 = -1 }
+				set_variable = { GER_ANM_government_loyaly_slot_19 = -4 }
+				set_variable = { GER_ANM_government_loyaly_slot_20 = -1 }
+				set_variable = { GER_ANM_government_loyaly_slot_21 = 1 }
+				set_variable = { GER_ANM_government_loyaly_slot_22 = 100 }
+				set_variable = { GER_ANM_government_loyaly_slot_23 = -1 }
+				## Tab 1 Slots - Characters ##
 				set_variable = { GER_ANM_government_person_slot_2 = 1 } 
 				set_variable = { GER_ANM_government_person_slot_9 = 1 } 
 				set_variable = { GER_ANM_government_person_slot_10 = 1 }
+
+				## Events ##
+				country_event = { id = GER_government_event.8 days = 829 }
+				country_event = { id = GER_government_event.9 days = 99 }
 			} 
 		}
 	}

@@ -937,9 +937,21 @@ Button_2_Tab_1_click = {
 			AND = { 
 				has_country_flag = GER_Government_Tab_1_Notification_5
 				has_country_flag = { flag = GER_Government_Tab_1_Click value = 5 } 
+				#Completed focus Lucassen Regime
 			} 
 		} 
-		country_event = GER_government_loyalty_event.1
+		country_event = GER_government_event.1
+		clr_country_flag = GER_Government_Tab_1_Notification_5
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				has_country_flag = GER_Government_Tab_1_Notification_5
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 5 } 
+				#Completed focus Lucassen Kritiker
+			} 
+		} 
+		country_event = GER_government_event.2
 		clr_country_flag = GER_Government_Tab_1_Notification_5
 	}
 	else_if = {
@@ -949,7 +961,7 @@ Button_2_Tab_1_click = {
 				has_country_flag = { flag = GER_Government_Tab_1_Click value = 7 } 
 			} 
 		} 
-		country_event = GER_government_loyalty_event.2
+		country_event = GER_government_event.3
 		clr_country_flag = GER_Government_Tab_1_Notification_7 
 	}
 	else_if = {
@@ -959,7 +971,7 @@ Button_2_Tab_1_click = {
 				has_country_flag = { flag = GER_Government_Tab_1_Click value = 8 } 
 			} 
 		} 
-		country_event = GER_government_loyalty_event.3
+		country_event = GER_government_event.4 
 		clr_country_flag = GER_Government_Tab_1_Notification_8
 	}
 	else_if = {
@@ -969,17 +981,29 @@ Button_2_Tab_1_click = {
 				has_country_flag = { flag = GER_Government_Tab_1_Click value = 15 } 
 			} 
 		} 
-		country_event = GER_government_loyalty_event.4
+		country_event = GER_government_event.5
 		clr_country_flag = GER_Government_Tab_1_Notification_15
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				has_country_flag = GER_Government_Tab_1_Notification_22
+				has_country_flag = { flag = GER_Government_Tab_1_Click value = 22 } 
+				# Completed focus Sych Regime
+			} 
+		} 
+		country_event = GGER_government_event.6
+		clr_country_flag = GER_Government_Tab_1_Notification_22
 	}
 	else = {
 		limit = { 
 			AND = { 
 				has_country_flag = GER_Government_Tab_1_Notification_22
 				has_country_flag = { flag = GER_Government_Tab_1_Click value = 22 } 
+				# Completed focus Sych Kritiker
 			} 
 		} 
-		country_event = GER_government_loyalty_event.5
+		country_event = GER_government_event.7
 		clr_country_flag = GER_Government_Tab_1_Notification_22
 	}
 }

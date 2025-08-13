@@ -2,7 +2,7 @@
 add_namespace = GER_focus_event
 add_namespace = GER_misc_main_event
 add_namespace = GER_debug_event
-add_namespace = GER_government_loyalty_event
+add_namespace = GER_government_event
 
 ### Flavour Events (next: 30) ###
 country_event = { #January ‘96: Kids These Days
@@ -1277,72 +1277,207 @@ country_event = { #German-Irish relationship: Status Quo
 }
 
 
-### Government GUI Loyalty Events ###
-country_event = { #
-	id = GER_government_loyalty_event.1 
-	title = GER_government_loyalty_event.1.t
-	desc = GER_government_loyalty_event.1.desc
+### Government GUI Events ###
+country_event = { #Rudiger Lucassen - Regime
+	id = GER_government_event.1 
+	title = GER_government_event.1.t
+	desc = GER_government_event.1.desc
 	picture = GFX_anm_GER_tv_quiz
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
-		name = GER_government_loyalty_event.1.a
+		name = GER_government_event.1.a
+		custom_effect_tooltip = GER_popularity_filbinger_increase
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_loyaly_slot_5 = -1 }
+		}
 	}
 }
-country_event = { #
-	id = GER_government_loyalty_event.2 
-	title = GER_government_loyalty_event.2.t
-	desc = GER_government_loyalty_event.2.desc
+country_event = { #Rudiger Lucassen - Kritiker
+	id = GER_government_event.2 
+	title = GER_government_event.2.t
+	desc = GER_government_event.2.desc
 	picture = GFX_anm_GER_tv_quiz
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
-		name = GER_government_loyalty_event.2.a
+		name = GER_government_event.2.a
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_small
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_loyaly_slot_5 = 1 }
+		}
 	}
 }
-country_event = { #
-	id = GER_government_loyalty_event.3 
-	title = GER_government_loyalty_event.3.t
-	desc = GER_government_loyalty_event.3.desc
+country_event = { #Alexander Gauland - Kritiker
+	id = GER_government_event.3 
+	title = GER_government_event.3.t
+	desc = GER_government_event.3.desc
 	picture = GFX_anm_GER_tv_quiz
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
-		name = GER_government_loyalty_event.3.a
+		name = GER_government_event.3.a
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_small
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_loyaly_slot_7 = 1 }
+		}
 	}
 }
-country_event = { #
-	id = GER_government_loyalty_event.4 
-	title = GER_government_loyalty_event.4.t
-	desc = GER_government_loyalty_event.4.desc
+country_event = { #Dr. Hans-Helmuth Knütter - Regime
+	id = GER_government_event.4 
+	title = GER_government_event.4.t
+	desc = GER_government_event.4.desc
 	picture = GFX_anm_GER_tv_quiz
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
-		name = GER_government_loyalty_event.4.a
+		name = GER_government_event.4.a
+		custom_effect_tooltip = GER_popularity_filbinger_increase
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_loyaly_slot_8 = -1 }
+		}
 	}
 }
-country_event = { #
-	id = GER_government_loyalty_event.5 
-	title = GER_government_loyalty_event.5.t
-	desc = GER_government_loyalty_event.5.desc
+country_event = { #Horst Rudolf Übelacker - Kritiker
+	id = GER_government_event.5 
+	title = GER_government_event.5.t
+	desc = GER_government_event.5.desc
 	picture = GFX_anm_GER_tv_quiz
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = { 
-		name = GER_government_loyalty_event.5.a
+		name = GER_government_event.5.a
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_small
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_loyaly_slot_15 = 1 }
+		}
 	}
 }
+country_event = { #Oleksander Maksymovych Sych - Regime
+	id = GER_government_event.6 
+	title = GER_government_event.6.t
+	desc = GER_government_event.6.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_event.6.a
+		custom_effect_tooltip = GER_popularity_filbinger_increase
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_loyaly_slot_22 = -1 }
+		}
+	}
+}
+country_event = { #Oleksander Maksymovych Sych - Kritiker
+	id = GER_government_event.7 
+	title = GER_government_event.7.t
+	desc = GER_government_event.7.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_event.7.a
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_small
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_loyaly_slot_22 = 1 }
+		}
+	}
+}
+country_event = { #Franz Xaver Schönhuber - Retires
+	id = GER_government_event.8 
+	title = GER_government_event.8.t
+	desc = GER_government_event.8.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_event.8.a
+		custom_effect_tooltip = GER_government_schonhuber_retires_tt
+		custom_effect_tooltip = GER_government_nordbruch_tt
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_person_slot_9 = 2 }
+			set_variable = { GER_ANM_government_loyaly_slot_9 = 1 }
+		}
+	}
+}
+country_event = { #Otto Riehs - Retires 1/3
+	id = GER_government_event.9 
+	title = GER_government_event.9.t
+	desc = GER_government_event.9.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_event.9.a
+		custom_effect_tooltip = GER_government_riehs_retires_tt
+		custom_effect_tooltip = GER_government_thienemann_tt
+		hidden_effect = { 
+			country_event = { id = GER_government_event.10 days = 1 }
+			set_variable = { GER_ANM_government_person_slot_10 = 2 }
+			set_variable = { GER_ANM_government_loyaly_slot_10 = 0 }
+		}
+	}
+	option = { 
+		name = GER_government_event.9.b
+		custom_effect_tooltip = GER_government_event_9b_tt
+		hidden_effect = { 
+			country_event = { id = GER_government_event.11 days = 1 }
+		}
+	}
+}
+country_event = { #Otto Riehs - Retires 2/3
+	id = GER_government_event.10 
+	title = GER_government_event.10.t
+	desc = GER_government_event.10.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_event.10.a
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_small
+	}
+}
+country_event = { #Otto Riehs - Retires 3/3
+	id = GER_government_event.11 
+	title = GER_government_event.11.t
+	desc = GER_government_event.11.desc
+	picture = GFX_anm_GER_tv_quiz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = GER_government_event.11.a
+		custom_effect_tooltip = GER_popularity_mussgnug_increase_large
+		custom_effect_tooltip = GER_government_riehs_retires_tt
+		custom_effect_tooltip = GER_government_thienemann_tt
+		hidden_effect = { 
+			set_variable = { GER_ANM_government_person_slot_10 = 2 }
+			set_variable = { GER_ANM_government_loyaly_slot_10 = 0 }
+		}
+	}
+}
+
 
 ### Debug Events ###
 country_event = { #Load Phase 2
