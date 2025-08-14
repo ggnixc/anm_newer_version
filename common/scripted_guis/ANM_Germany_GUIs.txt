@@ -361,29 +361,35 @@ scripted_gui = {
 
 		effects = {
 			#Closing the UI
-			reichsstabilitat_close_click = {
-				clr_country_flag = GER_show_reichsstability_window
+			reichsstabilitat_close_click = { 
+				clr_country_flag = GER_show_reichsstability_window 
 			}
 			#Switching tabs
 			Tab_1_Title_click = { 
-				set_country_flag = { 
-					flag = GER_Government_Tab_Visible
-					value = 1
-				} 
+				set_variable = { GER_Tab_1_Title_y = 58 }
+				set_variable = { GER_Tab_2_Title_y = 62 }
+				set_variable = { GER_Tab_3_Title_y = 62 }
+				set_country_flag = { flag = GER_Government_Tab_Visible value = 1 } 
 			}
 			Tab_2_Title_click = { 
-				set_country_flag = { 
-					flag = GER_Government_Tab_Visible
-					value = 2
-				} 
+				set_variable = { GER_Tab_1_Title_y = 62 }
+				set_variable = { GER_Tab_2_Title_y = 58 }
+				set_variable = { GER_Tab_3_Title_y = 62 }
+				set_country_flag = { flag = GER_Government_Tab_Visible value = 2 } 
 			}
 			Tab_3_Title_click = { 
-				set_country_flag = { 
-					flag = GER_Government_Tab_Visible
-					value = 3
-				} 
+				set_variable = { GER_Tab_1_Title_y = 62 }
+				set_variable = { GER_Tab_2_Title_y = 62 }
+				set_variable = { GER_Tab_3_Title_y = 58 }
+				set_country_flag = { flag = GER_Government_Tab_Visible value = 3 } 
 			}	
 		} 
+
+		properties = { 
+			Tab_1_Title = { y = GER_Tab_1_Title_y }
+			Tab_2_Title = { y = GER_Tab_2_Title_y }
+			Tab_3_Title = { y = GER_Tab_3_Title_y }
+		}
 	}
 
 	ANM_reichsstabilitat_GUI_Tab1 = {
@@ -595,175 +601,16 @@ scripted_gui = {
 		}
 		
 		effects = {
-			Button_Institution_1_click = { 
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution
-					value = 1
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Leader_Rank
-					value = 6
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution_1_Pressed
-					value = 2
-				}
-				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
-			}
-			Button_Institution_2_click = { 
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution
-					value = 2
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Leader_Rank
-					value = 4
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution_2_Pressed
-					value = 2
-				}
-				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
-			}
-			Button_Institution_3_click = { 
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution
-					value = 3
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Leader_Rank
-					value = 5
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution_3_Pressed
-					value = 2
-				}
-				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
-			}
-			Button_Institution_4_click = { 
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution
-					value = 4
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Leader_Rank
-					value = 1
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution_4_Pressed
-					value = 2
-				}
-				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
-			}
-			Button_Institution_5_click = { 
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution
-					value = 5
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Leader_Rank
-					value = 1
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution_5_Pressed
-					value = 2
-				}
-				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
-			}
-			Button_Institution_6_click = { 
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution
-					value = 6
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Leader_Rank
-					value = 2
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution_6_Pressed
-					value = 2
-				}
-				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
-			}
-			Button_Institution_7_click = { 
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution
-					value = 7
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Leader_Rank
-					value = 5
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution_7_Pressed
-					value = 2
-				}
-				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_8_Pressed
-			}
-			Button_Institution_8_click = { 
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution
-					value = 8
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Leader_Rank
-					value = 3
-				}
-				set_variable = { 
-					var = GER_Government_Tab_2_Instution_8_Pressed
-					value = 2
-				}
-				clear_variable = GER_Government_Tab_2_Instution_1_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_2_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_3_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_4_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_5_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_6_Pressed
-				clear_variable = GER_Government_Tab_2_Instution_7_Pressed
-			}
+			Button_Institution_1_click = { Button_Institution_1_click = yes } 
+			Button_Institution_2_click = { Button_Institution_2_click = yes }
+			Button_Institution_3_click = { Button_Institution_3_click = yes }
+			Button_Institution_4_click = { Button_Institution_4_click = yes }
+			Button_Institution_5_click = { Button_Institution_5_click = yes }
+			Button_Institution_6_click = { Button_Institution_6_click = yes }
+			Button_Institution_7_click = { Button_Institution_7_click = yes }
+			Button_Institution_8_click = { Button_Institution_8_click = yes }
 		}
+
 		properties = {
 			Progressbar_Institution_1 = { frame = Institution_1_Progress }
 			Progressbar_Institution_2 = { frame = Institution_2_Progress }
