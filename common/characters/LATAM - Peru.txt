@@ -1,27 +1,27 @@
 characters = {
-	PRU_Mario_Vargas_Llosa = {
-		name = PRU_Mario_Vargas_Llosa
-		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Mario_Vargas_Llosa.dds" } }
+	PRU_Enrique_Chacon = {
+		name = PRU_Enrique_Chacon
+		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Enrique_Chacon.dds" } }
 		country_leader = {
-			desc = ""
+			desc = "POLITICS_ENRIQUE_CHACON_DESC"
 			expire = "2090.4.20"
-			ideology = despotism_civilian_dictatorship_subtype
+			ideology = communist_marxism_leninism_subtype
 			traits = { 
 			}
 			id = -1
 		}
 	}
-	PRU_Ricardo_Marquez_Flores = {
-		name = PRU_Ricardo_Marquez_Flores
+	PRU_Genaro_Ledesma = { 
+		name = PRU_Genaro_Ledesma
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/PRU/Portrait_PRU_Ricardo_Marquez_Flores.dds"
-				small = "GFX_idea_PRU_Ricardo_Marquez_Flores" 
+				large = "gfx/leaders/PRU/Portrait_PRU_Genaro_Ledesma.dds"
+				small = "GFX_idea_PRU_Genaro_Ledesma" 
 			} 	
 		} 
 		advisor = {
 			slot = head_of_government
-			idea_token = PRU_Ricardo_Marquez_Flores_hog
+			idea_token = PRU_Genaro_Ledesma_hog
 			traits = {
 				head_of_government
 			}
@@ -31,17 +31,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	PRU_Victor_Malca_Villanueva = {
-		name = PRU_Victor_Malca_Villanueva
+	PRU_Hugo_Galdos = { 
+		name = PRU_Hugo_Galdos
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/PRU/Portrait_PRU_Victor_Malca_Villanueva.dds"
-				small = "GFX_idea_PRU_Victor_Malca_Villanueva" 
+				large = "gfx/leaders/PRU/Portrait_PRU_Hugo_Galdos.dds"
+				small = "GFX_idea_PRU_Hugo_Galdos" 
 			} 	
 		} 
 		advisor = {
 			slot = security_minister
-			idea_token = PRU_Victor_Malca_Villanueva_sec
+			idea_token = PRU_Hugo_Galdos_sec
 			traits = {
 				security_minister
 			}
@@ -51,17 +51,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	PRU_Efrain_Goldenberg = {
-		name = PRU_Efrain_Goldenberg
+	PRU_Emeterio_Huarcaya = {  
+		name = PRU_Emeterio_Huarcaya
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/PRU/Portrait_PRU_Efrain_Goldenberg.dds"
-				small = "GFX_idea_PRU_Efrain_Goldenberg" 
+				large = "gfx/leaders/PRU/Portrait_PRU_Emeterio_Huarcaya.dds"
+				small = "GFX_idea_PRU_Emeterio_Huarcaya" 
 			} 	
 		} 
 		advisor = {
 			slot = foreign_minister
-			idea_token = PRU_Efrain_Goldenberg_for
+			idea_token = PRU_Emeterio_Huarcaya_for
 			traits = {
 				foreign_minister
 			}
@@ -71,17 +71,17 @@ characters = {
 			ai_will_do = { factor = 0 }
 		}
 	}
-	PRU_Jorge_Camet = {
-		name = PRU_Jorge_Camet
+	PRU_Justiniano_Apaza = { 
+		name = PRU_Justiniano_Apaza
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/PRU/Portrait_PRU_Jorge_Camet.dds"
-				small = "GFX_idea_PRU_Jorge_Camet" 
+				large = "gfx/leaders/PRU/Portrait_PRU_Justiniano_Apaza.dds"
+				small = "GFX_idea_PRU_Justiniano_Apaza" 
 			} 	
 		} 
 		advisor = {
 			slot = economy_minister
-			idea_token = PRU_Jorge_Camet_eco
+			idea_token = PRU_Justiniano_Apaza_eco
 			traits = {
 				economy_minister
 			}
@@ -89,49 +89,6 @@ characters = {
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
-		}
-	}
-	PRU_Cesar_Saucedo_Sanchez = {
-		name = PRU_Cesar_Saucedo_Sanchez
-		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Cesar_Sanchez.dds" } }
-		country_leader = {
-			desc = ""
-			expire = "2060.4.20"
-			ideology = despotism_military_junta_subtype
-			traits = { }
-			id = -1
-		}
-		field_marshal = {
-			traits = { infantry_officer organizer infantry_leader infantry_expert }
-			skill = 5
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 4
-			logistics_skill = 4
-		}
-	}
-	PRU_Keiko_Fujimori = {
-		name = PRU_Keiko_Fujimori
-		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Keiko_Fujimori.dds" } }
-		country_leader = {
-			desc = ""
-			expire = "2090.4.20"
-			ideology = paternalism_right_wing_populism_subtype
-			traits = { 
-			}
-			id = -1
-		}
-	}
-	PRU_Alan_Garcia = {
-		name = PRU_Alan_Garcia
-		portraits = { civilian = { large = "gfx/leaders/PRU/Portrait_PRU_Alan_Garcia.dds" } }
-		country_leader = {
-			desc = ""
-			expire = "2090.4.20"
-			ideology = paternalism_social_nationalism_subtype
-			traits = { 
-			}
-			id = -1
 		}
 	}
 }

@@ -1,46 +1,42 @@
 ideas = {
 	country = {
-		PRU_Armed_Socialists = {
+		PRU_Vanguard_Eternal_Revolution = {
 			allowed = { always = no }
-			picture = PRU_Armed_Socialists
+			picture = PRU_Vanguard_Eternal_Revolution
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = -0.3
-				stability_weekly = -0.01
-				resistance_target = 0.1
-				political_power_gain = -0.15
-				communist_drift = 0.020
-				socialist_drift = 0.020
-			}
+				party_popularity_stability_factor = 0.50
+				army_core_defence_factor = 0.20
+				communist_drift = 0.01
+				production_factory_max_efficiency_factor = 0.10
+			} 
 		}
-		PRU_Fujishocked = {
+		PRU_Smoldering_Flame = { 
 			allowed = { always = no }
-			picture = PRU_Fujishocked
+			picture = PRU_Smoldering_Flame
 			removal_cost = -1
 
 			modifier = {
-				
+				war_support = 0.25
+				army_speed_factor = 0.10
+				breakthrough_factor = 0.20
+				recruitable_population_factor = 0.30
 			}
 		}
-		PRU_Aristocratic_Alliance = {
+		PRU_Hammers_Sickles = { 
 			allowed = { always = no }
-			picture = PRU_Aristocratic_Alliance
+			picture = PRU_Hammers_Sickles
 			removal_cost = -1
 
 			modifier = {
-				
+				stability_factor = -0.10
+				political_power_gain = -0.25
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				monthly_population = 0.08
 			}
 		}
-		PRU_Peruvian_Civil_War = {
-			allowed = { always = no }
-			picture = PRU_Peruvian_Civil_War
-			removal_cost = -1
 
-			modifier = {
-			stability_factor = -0.30
-			stability_weekly = -0.005
-			}
-		}
 	}
 }
