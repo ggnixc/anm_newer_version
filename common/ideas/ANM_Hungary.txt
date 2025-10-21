@@ -32,8 +32,8 @@ ideas = {
 				political_power_factor = 0.15
 			}
 		}
-		HUN_perpetual_coalition = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_perpetual_coalition"}
+		HUN_the_second_consolidation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_the_second_consolidation"}
 			picture = HUN_perpetual_coalition
 			allowed = {
 				original_tag = "HUN"
@@ -47,6 +47,19 @@ ideas = {
 				political_power_cost = 0.20
 				drift_defence_factor = -0.25
 				research_speed_factor = -0.20
+			}
+		}
+		HUN_beginning_of_a_new_period = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_beginning_of_a_new_period"}
+			allowed = {
+				original_tag = "HUN"
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				
 			}
 		}
 		
