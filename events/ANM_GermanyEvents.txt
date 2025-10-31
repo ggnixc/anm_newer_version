@@ -1609,6 +1609,140 @@ country_event = { #Transformation of Brjansk
 		ANM_Russland_Defeated = yes
 	}
 }
+
+country_event = { # Invade Slovakian Junta after winning the 3WRW
+	id = GER_debug_event.11
+	title = GER_debug_event.11.t
+	desc = GER_debug_event.11.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	trigger = {
+		tag = GER
+		SLO = {
+			has_country_flag = SLO_junta_takeover
+		}
+		if = {
+			limit = { 
+				NOT = {
+					has_global_flag = WRW_SOV_VICTORY
+				} 
+			}
+			has_global_flag = WRW_STALEMATE
+		}
+		has_global_flag = WRW_GER_SMALL_VICTORY
+		has_global_flag = WRW_GER_TOTAL_VICTORY
+	}
+
+	option = {
+		name = GER_debug_event.11.a
+
+		hidden_effect = {
+			SLO = {
+				country_event = {
+					id = SLO_skeleton_event.6
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Germans Invade Slovakia
+	id = GER_debug_event.12
+	title = GER_debug_event.12.t
+	desc = GER_debug_event.12.desc
+	picture = GFX_anm_GER_speer_martin_talks
+	is_triggered_only = yes
+
+	option = {
+		name = GER_debug_event.12.a
+
+		GER = {
+			declare_war_on = {
+				type = annex_everything
+				target = SLO
+			}
+		}
+	}
+}
+
+country_event = { # slovakia peace treaty
+	id = GER_debug_event.13
+	title = GER_debug_event.13.t
+	desc = GER_debug_event.13.desc
+	picture = GFX_anm_GER_speer_martin_talks
+	hidden = yes
+	timeout_days = 0
+
+	trigger = {
+		GER = {
+			owns_state = 1762
+		}
+	}
+
+	option = {
+		name = GER_debug_event.13.a
+
+		hidden_effect = {
+			
+			SLO = {
+				transfer_state = 71
+				transfer_state = 1762
+				transfer_state = 1763
+				transfer_state = 2212
+				transfer_state = 2211
+				transfer_state = 70
+
+
+				SLO_Robert_Fico = {
+					promote_character = despotism_interim_government_subtype
+				}
+				set_politics = {
+					ruling_party = despotism
+					last_election = "[GetDateText]"
+					election_frequency = 0
+					elections_allowed = no	
+				}
+
+				set_popularities = {
+					communist = 0
+					socialist = 0
+					progressivism = 0
+					liberalism = 0
+					liberal_conservatism = 0
+					conservatism = 3
+					paternalism = 8
+					despotism = 41
+					fascism = 0
+					national_socialism = 5
+					national_socialism_1 = 22
+					national_socialism_2 = 10
+					national_socialism_3 = 11
+					ultranationalism = 0
+				}
+			}
+
+			add_to_faction = SLO
+
+			GER = {
+				white_peace = SLO
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GER_debug_event.14
+	title = GER_debug_event.14.t
+	desc = GER_debug_event.14.desc
+	picture = GFX_anm_GER_speer_martin_talks
+	is_triggered_only = yes
+
+	option = {
+		name = GER_debug_event.14.a
+	}
+}
+
 country_event = { #TEMP Economy
 	id = GER_debug_event.100
 	title = GER_debug_event.100.t

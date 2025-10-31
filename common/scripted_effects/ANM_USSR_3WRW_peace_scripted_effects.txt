@@ -214,6 +214,10 @@ ANM_belarus_to_SOV = {
 }
 
 ANM_homel_to_SOV = {
+	
+	set_global_flag = WRW_STALEMATE
+	
+
 	every_state = {
 		limit = {
 			is_owned_by = MOS
@@ -366,6 +370,9 @@ ANM_donetsk_to_RSFSR = {
 }
 
 ANM_baltics_to_SOV = {
+
+	set_global_flag = WRW_SOV_VICTORY
+
 	every_state = {
 		limit = {
 			is_core_of = OST
