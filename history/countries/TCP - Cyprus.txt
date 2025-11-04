@@ -1,6 +1,11 @@
-﻿set_cosmetic_tag = TCP_split
+﻿capital = 2322
 
-capital = 1328
+TUR = {
+	set_autonomy = {
+		target = TCP
+		autonomy_state = autonomy_italy_reliant
+	}
+}
 
 recruit_character = TCP_Rauf_Denktas
 
@@ -247,7 +252,6 @@ set_popularities = {
 
 
 add_ideas = {
-	Pakt_Observer
 	#POLITICAL
 	tno_political_parties_multiparty_system
 	tno_religious_rights_secularism
