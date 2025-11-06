@@ -3,44 +3,33 @@
 set_oob = "COL_1962"
 
 set_politics = {	
-	ruling_party = fascism
-	last_election = "1995.1.20"
+	ruling_party = paternalism
+	last_election = "1994.5.20"
 	election_frequency = 48
-	elections_allowed = no
-
+	elections_allowed = yes
 }
 
-recruit_character = COL_Eladio_Acosta_Arteaga
-recruit_character = COL_Rodrigo_Arango_Velasquez
+recruit_character = COL_Alvaro_Uribe_Rueda
 
 TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
-    ultranationalism = 11
-    socialist = 0
+    socialist = 11
     progressivism = 0
-    liberalism = 0
+    liberalism = 18
     liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
-    despotism = 20
-	despotism_1 = 18
-    fascism = 27
-	national_socialism = 24
+    conservatism = 20
+    paternalism = 27
+	paternalism = 24
+    despotism = 0
+    fascism = 0
+	national_socialism = 0
 }
 
-create_country_leader = {
-	name = "Álvaro Uribe Vélez"
-	picture = "Portrait_COL_Alvaro_Velez.dds"
-	expire = "2095.1.1"
-	ideology = conservatism_populist_conservatism_subtype
-}
 add_ideas = {
 
 	### Nat. Spirits
-	
-	COL_Widespread_Poverty
 	
 	### Ministers
 }
