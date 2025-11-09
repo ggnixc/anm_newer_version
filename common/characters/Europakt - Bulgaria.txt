@@ -25,7 +25,8 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
-	BUL_Ongyan_Gerdzhikov = {  
+
+	BUL_Ongyan_Gerdzhikov = {
 		name = BUL_Ongyan_Gerdzhikov
 		portraits = { 
 			civilian = { 
@@ -42,7 +43,13 @@ characters = {
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
 		}
+		country_leader = {
+			desc = "POLITICS_ONGYAN_GERDZHIKOV_DESC"
+			ideology = paternalism_anocracy_subtype
+			expire = "2999.1.1.1"
+		}
 	}
+
 	BUL_Stoyan_Stalev = { 
 		name = BUL_Stoyan_Stalev
 		portraits = { 
@@ -84,7 +91,7 @@ characters = {
 		portraits = { 
 			civilian = { 
 				large = "gfx/leaders/BUL/Portrait_BUL_Boyko_Borisov.dds"
-				small = "GFX_idea_BUL_Boyko_Borisov" 
+				small = "GFX_idea_BUL_Boyko_Borisov"
 			} 	
 		} 
 		advisor = {
@@ -100,7 +107,13 @@ characters = {
 
 	BUL_Milan_Drenchev = { 
 		name = BUL_Milan_Drenchev
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BUL/Portrait_BUL_Milan_Drenchev.dds"
+			}
+		}
 		country_leader = {
+			desc = "POLITICS_MILAN_DRENCHEV_DESC"
 			ideology = liberalism_liberal_agrarianism_subtype
 			expire = "2999.1.1.1"
 		}
@@ -119,6 +132,89 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
+
+	BUL_Kostadin_Chakarov = {
+		name = BUL_Kostadin_Chakarov
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BUL/Portrait_BUL_Kostadin_Chakarov.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOSTADIN_CHAKAROV_DESC"
+			ideology = communist_marxism_leninism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+	BUL_Stefan_Sofiyanski = {
+		name = BUL_Stefan_Sofiyanski
+		portraits = {
+			civilian = {
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_STEFAN_SOFIYANSKI_DESC"
+			ideology = paternalism_national_conservatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+	BUL_Prince_Kardam = {
+		name = BUL_Prince_Kardam
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BUL/Portrait_BUL_Prince_Kardam.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PRINCE_KARDAM_DESC"
+			ideology = paternalism_transitioning_democracy_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+	BUL_Ivan_Kostov = {
+		name = BUL_Ivan_Kostov
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BUL/Portrait_BUL_Ivan_Kostov.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_IVAN_KOSTOV_DESC"
+			ideology = conservatism_liberal_corporatism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
+	BUL_Georgi_Anastasov = {
+		name = BUL_Georgi_Anastasov
+		portraits = {
+			civilian = {
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_GEORGI_ANASTASOV_DESC"
+			ideology = progressivism_reformist_socialism_subtype
+			expire = "2999.1.1.1"
+		}		
+	}
+
+	BUL_Volen_Siderov = {
+		name = BUL_Volen_Siderov
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BUL/Portrait_BUL_Volen_Siderov.dds"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_VOLEN_SIDEROV_DESC"
+			ideology = fascism_national_syndicalism_subtype
+			expire = "2999.1.1.1"
+		}
+	}
+
 
 
 	### West Thracian Rebellion ###
@@ -155,6 +251,4 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
-
-
 }
