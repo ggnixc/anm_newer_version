@@ -51,11 +51,7 @@ country_event = {
 	id = SLO_skeleton_event.2 # elections go on without any issue
 	title = SLO_skeleton_event.2.t
 	desc = SLO_skeleton_event.2.desc
-	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = SLO
-	}
 
 	option = {
 		name = SLO_skeleton_event.2.a # Peter Dubček
@@ -134,11 +130,7 @@ country_event = {
 	id = SLO_skeleton_event.3 #elections delayed to summer 2000
 	title = SLO_skeleton_event.3.t
 	desc = SLO_skeleton_event.3.desc
-	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = SLO
-	}
 
 	option = {
 		name = SLO_skeleton_event.3.a
@@ -172,11 +164,7 @@ country_event = {
 	id = SLO_skeleton_event.4 # summer 2000, 3WRW ended, elections go on
 	title = SLO_skeleton_event.4.t
 	desc = SLO_skeleton_event.4.desc
-	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = SLO
-	}
 
 	option = {
 		name = SLO_skeleton_event.4.a # Dubček
@@ -257,11 +245,7 @@ country_event = {
 	id = SLO_skeleton_event.5 # summer 2000, 3WRW did NOT end, slovakia goes in a crisis state
 	title = SLO_skeleton_event.5.t
 	desc = SLO_skeleton_event.5.desc
-	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = SLO
-	}
 
 	option = {
 		name = SLO_skeleton_event.5.a # junta takes over
@@ -308,11 +292,8 @@ country_event = {
 	id = SLO_skeleton_event.6 # summer 2000, 3WRW did NOT end, slovakia goes in a crisis state (GER WIN/STALEMATE)
 	title = SLO_skeleton_event.6.t
 	desc = SLO_skeleton_event.6.desc
-	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = SLO
-	}
+
 
 	option = { 
 		name = SLO_skeleton_event.6.a # We fumble (yes, we switch)
@@ -359,7 +340,11 @@ country_event = {
 
 			has_country_flag = SLO_junta_takeover
 		}
-		has_global_flag = WRW_SOV_VICTORY
+
+		or = {
+			has_global_flag = WRW_SOV_LIMITED_WIN
+			has_global_flag = WRW_SOV_FULL_WIN
+		}
 	}
 
 	option = {
@@ -385,9 +370,12 @@ country_event = {
 		tag = SLO
 		has_country_flag = SLO_elections_not_delayed
 		has_country_flag = SLO_peter_wins_non_delayed_elections
-		has_global_flag = WRW_GER_SMALL_VICTORY
-		has_global_flag = WRW_GER_TOTAL_VICTORY
-		has_global_flag = WRW_STALEMATE
+
+		or = {
+			has_global_flag = WRW_GER_SMALL_VICTORY
+			has_global_flag = WRW_TOTAL_GERMAN_VICTORY
+			has_global_flag = WRW_STALEMATE
+		}
 
 		date = 2006.1.1
 	}
@@ -465,11 +453,7 @@ country_event = {
 	id = SLO_skeleton_event.9 # Germans lost 3WRW, The First Democratic Election In Slovakian History
 	title = SLO_skeleton_event.9.t
 	desc = SLO_skeleton_event.9.desc
-	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = SLO
-	}
 
 	option = {
 		name = SLO_skeleton_event.9.a # The Reactionary Nationalists Secure The Slovak Election
@@ -590,11 +574,7 @@ country_event = {
 	id = SLO_skeleton_event.10 # Slovakia fumbles to germany and has elections
 	title = SLO_skeleton_event.10.t
 	desc = SLO_skeleton_event.10.desc
-	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = SLO
-	}
 
 	option = {
 		name = SLO_skeleton_event.10.a # Jozef Sásik
@@ -687,7 +667,6 @@ country_event = {
 	id = SLO_skeleton_event.11 # elections not delayed, peter re-elected, germans lost 3WRW, elections trigger
 	title = SLO_skeleton_event.11.t
 	desc = SLO_skeleton_event.11.desc
-	fire_only_once = yes
 	is_triggered_only = yes
 	hidden = yes
 
@@ -708,14 +687,13 @@ country_event = {
 	id = SLO_skeleton_event.12 # elections not delayed, peter re-elected, germans lost 3WRW, junta takeover trigger
 	title = SLO_skeleton_event.12.t
 	desc = SLO_skeleton_event.12.desc
-	fire_only_once = yes
 	hidden = yes
 	timeout_days = 5
 
 	trigger = {
 		tag = SLO
 		has_country_flag = SLO_peter_wins_non_delayed_elections
-		has_global_flag = WRW_SOV_VICTORY
+		has_global_flag = WRW_SOV_FULL_WIN
 	}
 
 	option = {

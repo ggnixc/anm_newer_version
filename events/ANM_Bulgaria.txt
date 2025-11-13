@@ -6,7 +6,6 @@ country_event = {
  	title = BUL_skeleton_event.1.t
  	desc = BUL_skeleton_event.1.desc
  	picture = GFX_anm_veniceopera
-
 	fire_only_once = yes
 
 	trigger = {
@@ -31,9 +30,7 @@ country_event = {
  	title = BUL_skeleton_event.2.t
  	desc = BUL_skeleton_event.2.desc
  	picture = GFX_anm_veniceopera
-
 	is_triggered_only = yes
-	fire_only_once = yes
 
  	option = { 
  		name = BUL_skeleton_event.2.a
@@ -53,9 +50,7 @@ country_event = {
  	title = BUL_skeleton_event.3.t
  	desc = BUL_skeleton_event.3.desc
  	picture = GFX_anm_veniceopera
-
 	is_triggered_only = yes
-	fire_only_once = yes
 
  	option = {
  		name = BUL_skeleton_event.3.a # thrace splits off
@@ -91,9 +86,7 @@ country_event = {
  	title = BUL_skeleton_event.4.t
  	desc = BUL_skeleton_event.4.desc
  	picture = GFX_anm_veniceopera
-
 	is_triggered_only = yes
-	fire_only_once = yes
 
  	option = {
 		name = BUL_skeleton_event.4.a
@@ -127,9 +120,7 @@ country_event = {
  	title = BUL_skeleton_event.5.t
  	desc = BUL_skeleton_event.5.desc
  	picture = GFX_anm_veniceopera
-
 	is_triggered_only = yes
-	fire_only_once = yes
 
  	option = {
 		name = BUL_skeleton_event.5.a # keep the same system
@@ -189,9 +180,8 @@ country_event = {
  	title = BUL_skeleton_event.6.t
  	desc = BUL_skeleton_event.6.desc
  	picture = GFX_anm_veniceopera
-
 	is_triggered_only = yes
-	fire_only_once = yes
+
 
  	option = {
 		name = BUL_skeleton_event.6.a # failed crisis
@@ -225,19 +215,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		has_global_flag = WRW_SOV_VICTORY
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = BUL_system_maintained_failed_crisis
-				} 
-
-				has_country_flag = BUL_system_maintained_successful_crisis
-
-				else = {
-					has_country_flag = BUL_system_maintained_failed_crisis
-				}
-			}
+		has_global_flag = WRW_SOV_FULL_WIN
+		or = {
+			has_country_flag = BUL_system_maintained_failed_crisis
+			has_country_flag = BUL_system_maintained_successful_crisis
 		}
 	}
 
@@ -289,7 +270,7 @@ country_event = {
 
 	trigger = {
 		NOT = {
-			has_global_flag = WRW_SOV_VICTORY
+			has_global_flag = WRW_SOV_FULL_WIN
 		}
 		has_country_flag = BUL_system_maintained_successful_crisis
 		date = 2001.1.1
@@ -368,9 +349,8 @@ country_event = {
  	title = BUL_skeleton_event.9.t
  	desc = BUL_skeleton_event.9.desc
  	picture = GFX_anm_veniceopera
-
 	is_triggered_only = yes
-	fire_only_once = yes
+
 
  	option = {
 		name = BUL_skeleton_event.9.a
@@ -425,9 +405,8 @@ country_event = {
  	title = BUL_skeleton_event.11.t
  	desc = BUL_skeleton_event.11.desc
  	picture = GFX_anm_veniceopera
-
 	is_triggered_only = yes
-	fire_only_once = yes
+
 
  	option = {
 		name = BUL_skeleton_event.11.a # Ivan Kostov
@@ -503,9 +482,8 @@ country_event = {
  	title = BUL_skeleton_event.12.t
  	desc = BUL_skeleton_event.12.desc
  	picture = GFX_anm_veniceopera
-
 	is_triggered_only = yes
-	fire_only_once = yes
+
 
  	option = {
 		name = BUL_skeleton_event.12.a # Milan Drenchev
@@ -584,7 +562,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		has_global_flag = WRW_SOV_VICTORY
+		has_global_flag = WRW_SOV_FULL_WIN
 		has_country_flag = BUL_full_democratization_italy_align
 	}
 
