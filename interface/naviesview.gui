@@ -1,5 +1,139 @@
 guiTypes = {
 
+	# Target bar
+	containerWindowType = {
+		name = "target_bar_window"
+		position = {x=-300 y=0}
+		show_position = {x=-300 y=-230}
+		size = { width=435 height=60 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		Orientation = center_down
+		clipping = no
+
+		background = {
+			name = "Background"
+			spriteType = "GFX_tiled_window_transparent"
+		}
+
+		iconType = {
+			name = "navy_box_background"
+			spriteType = "GFX_theatre_naval_control_panel"
+			position = { x = 75 y = 104 }
+			frame = 1
+		}
+		buttonType = {
+			name = "btn_target_submarine"
+			position = {x=86 y=75}
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "button_1_bg"
+			spriteType = "GFX_navalcombat_ship_icon_submarine"
+			position = { x=116 y=80 }
+			alwaysTransparent = yes
+		}				
+		buttonType = {
+			name = "btn_target_destroyer"
+			position = {x=200 y=75}
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}						
+		iconType = {
+			name = "button_2_bg"
+			spriteType = "GFX_navalcombat_ship_icon_destroyer"
+			position = { x=230 y=80 }
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "btn_target_light_cruiser"
+			position = {x=314 y=75 }
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "button_3_bg"
+			spriteType = "GFX_navalcombat_ship_icon_light_cruiser"
+			position = { x=344 y=80 }
+			alwaysTransparent = yes
+		}		
+		buttonType = {
+			name = "btn_target_heavy_cruiser"
+			position = {x=428 y=75}
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "button_4_bg"
+			spriteType = "GFX_navalcombat_ship_icon_heavy_cruiser"
+			position = { x=448 y=80 }
+			alwaysTransparent = yes
+		}		
+		buttonType = {
+			name = "btn_target_convoy"
+			position = {x=542 y=75 }
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "button_5_bg"
+			spriteType = "GFX_navalcombat_ship_icon_convoy"
+			position = { x=572 y=80 }
+			alwaysTransparent = yes
+		}		
+		buttonType = {
+			name = "btn_target_battle_cruiser"
+			position = {x=86 y=104}
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "button_6_bg"
+			spriteType = "GFX_navalcombat_ship_icon_battle_cruiser"
+			position = { x=96 y=107 }
+			alwaysTransparent = yes
+		}		
+		buttonType = {
+			name = "btn_target_battleship"
+			position = {x=200 y=104}
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "button_7_bg"
+			spriteType = "GFX_navalcombat_ship_icon_battleship"
+			position = { x=210 y=109 }
+			alwaysTransparent = yes
+		}		
+		buttonType = {
+			name = "btn_target_sh_battleship"
+			position = {x=314 y=104}
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "button_8_bg"
+			spriteType = "GFX_navalcombat_ship_icon_sh_battleship"
+			position = { x=324 y=109 }
+			alwaysTransparent = yes
+		}		
+		buttonType = {
+			name = "btn_target_carrier"
+			position = {x=428 y=104}
+			spriteType = "GFX_naval_target_btn"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "button_9_bg"
+			spriteType = "GFX_navalcombat_ship_icon_carrier"
+			position = { x=448 y=109 }
+			alwaysTransparent = yes
+		}		
+
+	}
+
 	# Action/Mission bar
 	containerWindowType = {
 		name = "action_bar_window"
@@ -397,6 +531,135 @@ guiTypes = {
 				clicksound = click_default
 				pdx_tooltip = "NAVY_REPAIR_NOW"
 			}
+			
+			dropDownBoxType = {
+				name = "defensive_stance_dropdown"
+				position = { x = 334 y = @nv_tb_btn_y }
+				size = { width = 37 height = 37 }
+				
+				expandButton = {
+					name = "defensive_stance_expand_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_NV_btn_base_partial_toggle"
+					frame = 1
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+					pdx_tooltip = "NAVY_CARRIER_DEFENSIVE_STANCE"
+				}
+
+				expandedWindow = {
+					name = "defensive_stance_expanded_window"
+					position = { x=10 y= 0 }
+					show_position = { x = 10 y = 25 }
+					show_animation_type = decelerated
+					hide_animation_type = accelerated
+					animation_time = 150
+					size = { width=224 height=180 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 15 bottom = 0 left = 0 }
+
+					background = {
+						name = "Background"
+						quadTextureSprite ="GFX_tiled_bg_uniform"
+						position = { x = 0 y = 0 }
+					}
+
+					# contains defensive_stand_item
+					gridBoxType = {
+						name = "button_grid"
+						position = { x = 12 y = 0 }
+						size = { width = 200 height = 100%% }
+						slotsize = { width = 26 height = 30 }
+						max_slots_horizontal = 1
+						format = "UPPER_LEFT"
+					}
+				}
+			}
+
+			dropDownBoxType = {
+				name = "repair_priority_dropdown"
+				position = { x = 424 y = @nv_tb_btn_y }
+				
+				expandButton = {
+					name = "repair_priority_expand_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_NV_btn_base_partial_toggle"
+					frame = 1
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+				}
+
+				expandedWindow = {
+					name = "repair_priority_expanded_window"
+					position = { x=10 y= 0 }
+					show_position = { x = 10 y = 25 }
+					show_animation_type = decelerated
+					hide_animation_type = accelerated
+					animation_time = 150
+					size = { width=272 height=150 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 15 bottom = 0 left = 0 }
+
+					background = {
+						name = "Background"
+						quadTextureSprite ="GFX_tiled_window_1b_border"
+						position = { x = 0 y = 0 }
+					}						
+
+					gridBoxType = {
+						name = "button_grid"
+						position = { x = 12 y = 0 }
+						size = { width = 160 height = 100%% }
+						slotsize = { width = 26 height = 30 }
+						max_slots_horizontal = 1
+						format = "UPPER_LEFT"
+					}
+				}
+			}
+
+			dropDownBoxType = {
+				name = "aggressiveness_dropdown"
+				position = { x = 454 y = @nv_tb_btn_y }
+				
+				expandButton = {
+					name = "aggressiveness_expand_button"
+					position = { x = 0 y = 0 }
+					quadTextureSprite ="GFX_NV_btn_base_partial_toggle"
+					buttonFont = "Main_14_black"
+					Orientation = "UPPER_LEFT"
+					clicksound = click_default
+					pdx_tooltip = "NAVY_AGGRESSIVENESS"
+				}
+
+				expandedWindow = {
+					name = "aggressiveness_expanded_window"
+					position = { x=10 y= 0 }
+					show_position = { x = 10 y = 25 }
+					show_animation_type = decelerated
+					hide_animation_type = accelerated
+					animation_time = 150
+					size = { width=272 height=172 }
+					verticalScrollbar = "right_vertical_slider"
+					margin = { top = 15 bottom = 0 left = 0 }
+
+					background = {
+						name = "Background"
+						quadTextureSprite ="GFX_tiled_window_1b_border"
+						position = { x = 0 y = 0 }
+					}					
+
+					gridBoxType = {
+						name = "button_grid"
+						position = { x = 12 y = 0 }
+						size = { width = 160 height = 100%% }
+						slotsize = { width = 26 height = 30 }
+						max_slots_horizontal = 1
+						format = "UPPER_LEFT"
+					}
+				}
+			}
 
 			buttonType = {
 				position = { x=360 y=@nv_tb_btn_y }
@@ -426,25 +689,12 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 
-			buttonType = {
-				position = { x=420 y=@nv_tb_btn_y }
-				name = "btn_base_toggle_repair_priority"
-				spriteType = "GFX_NV_btn_base_partial_toggle"
-				clicksound = click_default
-			}
-
 			iconType = {
-				name = "btn_toggle_repair_priority"
-				position = {x=420 y=@nv_tb_btn_y}
+				name = "repair_priority_icon"
+				frame = 2
+				position = {x=424 y=@nv_tb_btn_y}
 				spriteType = "GFX_NV_btn_repair_priority"
 				alwaystransparent = yes
-			}
-
-			buttonType = {
-				position = { x=450 y=@nv_tb_btn_y }
-				name = "btn_base_aggressiveness"
-				spriteType = "GFX_NV_btn_base_partial_toggle"
-				clicksound = click_default
 			}
 
 			iconType = {
@@ -453,7 +703,14 @@ guiTypes = {
 				spriteType = "GFX_NV_btn_aggressiveness_small"
 				alwaystransparent = yes
 			}
-
+			
+			iconType = {
+				name = "icon_defensive_stance"
+				position = {x = 334 y = @nv_tb_btn_y}
+				spriteType = "GFX_defensive_stance_strip"
+				frame = 1
+				alwaystransparent = yes
+			}
 		}
 
 		# Entries are entered here in code...
@@ -489,6 +746,95 @@ guiTypes = {
 				quadTextureSprite = "GFX_scroll_down"
 				position = { x=-17 y = -19}
 			}
+		}
+	}
+
+	containerWindowType = {
+		name = "defensive_stand_item"
+		position = {x=0 y=0}
+		size = { width=200 height=30 }
+		Orientation = upper_left
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_header_1"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_defensive_stance_strip"
+			position = { x=2 y=0 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "name"
+			position = {x=30 y=5}
+			font = "aldrich_18_outline"
+			maxWidth = 160
+			maxHeight = 30
+			format = left
+		}
+	}
+
+	containerWindowType = {
+		name = "repair_priority_item"
+		position = {x=0 y=0}
+		size = { width=240 height=30 }
+		Orientation = upper_left
+		clipping = no
+
+		background = {
+			name = "background"
+			spriteType = "GFX_mini_tooltip"
+			position = {x=0 y=0}
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_NV_btn_repair_priority"
+			position = { x=0 y=0 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "name"
+			position = {x=30 y=5}
+			font = "hoi_18mbs"
+			format = left
+		}
+	}
+
+	containerWindowType = {
+		name = "aggressiveness_item"
+		position = {x=0 y=0}
+		size = { width=240 height=30 }
+		Orientation = upper_left
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_mini_tooltip"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_NV_btn_aggressiveness_small"
+			position = { x=5 y=0 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "name"
+			position = {x=35 y=5}
+			font = "hoi_18mbs"
+			maxWidth = 200
+			maxHeight = 30
+			fixedsize = yes
+			format = left
 		}
 	}
 
@@ -1969,24 +2315,104 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_tiled_plain_bg"
+			quadTextureSprite ="GFX_tiled_bg"
+		}
+
+		instantTextboxType = {
+			name = "homebase_title"
+			position = { x = -240 y = 20 }
+			textureFile = ""
+			font = "aldrich_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = "HOMEBASE_WINDOW_TITLE"
+			maxWidth = 200
+			maxHeight = 20
+			format = left
+			fixedsize = yes
+			Orientation = "UPPER_RIGHT"
+		}
+
+		checkboxType = {
+			name = "show_subject_bases"
+			position = { x = -350 y = 45 }
+			quadTextureSprite ="GFX_generic_checkbox"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_checkbox
+		}
+
+		instantTextboxType = {
+			name = "subject_title"
+			position = { x = -310 y = 50 }
+			textureFile = ""
+			font = "aldrich_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = "SUBJECT_NAVAL_BASES"
+			maxWidth = 200
+			maxHeight = 20
+			format = left
+			fixedsize = yes
+			Orientation = "UPPER_RIGHT"
+		}
+
+		checkboxType = {
+			name = "show_faction_bases"
+			position = { x = -350 y = 81 }
+			quadTextureSprite ="GFX_generic_checkbox"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_checkbox
+		}
+
+		instantTextboxType = {
+			name = "faction_title"
+			position = { x = -310 y = 86 }
+			textureFile = ""
+			font = "aldrich_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = "FACTION_NAVAL_BASES"
+			maxWidth = 200
+			maxHeight = 20
+			format = left
+			fixedsize = yes
+			Orientation = "UPPER_RIGHT"
+		}
+
+		checkboxType = {
+			name = "show_accessible_bases"
+			position = { x = -350 y = 117 }
+			quadTextureSprite ="GFX_generic_checkbox"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_checkbox
+		}
+
+		instantTextboxType = {
+			name = "accessible_title"
+			position = { x = -310 y = 122 }
+			textureFile = ""
+			font = "aldrich_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = "ACCESSIBLE_NAVAL_BASES"
+			maxWidth = 200
+			maxHeight = 20
+			format = left
+			fixedsize = yes
+			Orientation = "UPPER_RIGHT"
 		}
 
 		containerWindowType = {
-			name = "deployments"
-			position = { x=0 y=50 }
-			size = { width=100%% height=100%% }
+			name = "home_base_selection"
+			position = { x=0 y=140 }
+			size = { width=99%% height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			smooth_scrolling = yes
 			margin = { top = 14 bottom = 12}
 
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
+				quadTextureSprite ="GFX_tiled_window_transparent"
 			}
 
 			gridboxtype = {
-				name = "deployments_grid"
+				name = "home_base_selection_grid"
 				position = { x = 12 y = 15 }
 				size = { width = 100%% height = 100%% }
 				slotsize = { width = 335 height = 36 }
@@ -1997,7 +2423,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "close"
-			position = { x = -50 y = 5 }
+			position = { x = -45 y = 15 }
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"

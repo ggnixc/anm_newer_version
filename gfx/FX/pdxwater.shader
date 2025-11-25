@@ -137,6 +137,15 @@ PixelShader =
 			MipFilter = "Linear"
 			AddressU = "Clamp"
 			AddressV = "Clamp"
+		}		
+		GradientBorderChannel3 =
+		{
+			Index = 14
+			MagFilter = "Point"
+			MinFilter = "Point"
+			MipFilter = "Point"
+			AddressU = "Clamp"
+			AddressV = "Clamp"
 		}
 		ShadowMap =
 		{
@@ -344,6 +353,8 @@ PixelShader =
 				GradientBorderChannel1, GradientBorderChannel2, 0.0f, 
 				vGBCamDistOverride_GBOutlineCutoff.zw * GB_OUTLINE_CUTOFF_SEA,
 				vGBCamDistOverride_GBOutlineCutoff.xy, vBloomAlpha );
+			
+			
 			secondary_color_mask( refractiveColor, normal, 
 				Input.uv - vRefractionDistortion * 0.001, 
 				ProvinceSecondaryColorMap, 
@@ -384,7 +395,12 @@ PixelShader =
 		#endif
 
 			vOut = DayNightWithBlend( vOut, CalcGlobeNormal( Input.pos.xz ), lerp(BORDER_NIGHT_DESATURATION_MAX, 1.0f, vBloomAlpha) );
-		
+			
+			// dominance_fx_apply(vOut, normal, 
+			//	Input.uv, 
+			//	GradientBorderChannel1,GradientBorderChannel2,GradientBorderChannel3,
+			//	vGBCamDistOverride_GBOutlineCutoff.zw * GB_OUTLINE_CUTOFF_SEA,vGBCamDistOverride_GBOutlineCutoff.xy, 0.0f);
+				
 		#ifdef LOW_END_GFX
 			DebugReturn(vOut, lightingProperties, 0.0f);
 		#else

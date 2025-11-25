@@ -640,6 +640,29 @@ guiTypes = { #Settings Menu#
 				text = ""
 				orientation = "UPPER_LEFT"
 			}
+
+			instantTextBoxType = {
+				name = "accessibility_ingameclock_label"
+				position = { x = 65 y = 340 }
+				textureFile = ""
+				font = "aldrich_24_outline"
+				borderSize = {x = 0 y =0}
+				text = "SETTINGS_ACCESSIBILITY_IN_GAME_CLOCK"
+				maxWidth = 258
+				maxHeight = 20
+				fixedsize = yes
+				format = left
+				vertical_alignment = center
+			}
+
+			checkboxType = {
+				name = "accessibility_ingameclock"
+				position = { x = 21 y = 336}
+				quadTextureSprite ="GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+
 		}
 
 		#Subwindow Video Settings#
@@ -1495,6 +1518,28 @@ guiTypes = { #Settings Menu#
 				}
 			}
 
+			instantTextBoxType = {
+				name = "corner_scrolling_enabled"
+				position = { x = 65 y = 52 }
+				textureFile = ""
+				font = "aldrich_24_outline"
+				borderSize = {x = 0 y =0}
+				text = "SM_CORNER_SCROLL"
+				maxWidth = 258
+				maxHeight = 20
+				fixedsize = yes
+				format = left
+				vertical_alignment = center	
+			}
+
+			checkboxType = {
+				name = "corner_scrolling_checkbox"
+				position = { x = 21 y = 48}
+				quadTextureSprite ="GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			
 			iconType = {
 				name = "zoomspeed_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
