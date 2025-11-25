@@ -3,6 +3,7 @@ add_namespace = GER_focus_event
 add_namespace = GER_misc_main_event
 add_namespace = GER_debug_event
 add_namespace = GER_government_event
+add_namespace = GER_promotion_event
 
 ### Flavour Events (next: 30) ###
 country_event = { #January ‘96: Kids These Days
@@ -1479,6 +1480,528 @@ country_event = { #Otto Riehs - Retires 3/3
 }
 
 
+### Annual General/Field Marshal Promotions ###
+country_event = { # 1996
+	id = GER_promotion_event.1
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 1996.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		custom_effect_tooltip = GER_1996_promotion_event
+
+		hidden_effect = {
+			recruit_character = GER_volker_wieker
+		}
+	}
+}
+
+country_event = { # 1997
+	id = GER_promotion_event.2
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 1997.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		custom_effect_tooltip = GER_1997_promotion_event
+
+		hidden_effect = {
+			recruit_character = GER_werner_freers
+		}
+	}
+}
+
+country_event = { # 1998
+	id = GER_promotion_event.3
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 1998.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		custom_effect_tooltip = GER_1998_promotion_event
+
+		hidden_effect = {
+			recruit_character = GER_othmar_commenda
+			recruit_character = GER_josef_blotz
+		}
+	}
+}
+
+country_event = { # 1999
+	id = GER_promotion_event.4
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 1999.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+			}
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_1999_promotion_event.a
+
+			else = {
+				custom_effect_tooltip = GER_1999_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_richard_rossmanith
+		}
+	}
+}
+
+country_event = { # 2000
+	id = GER_promotion_event.5
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2000.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2000_promotion_event.a
+
+			else = {
+				custom_effect_tooltip = GER_2000_promotion_event.b
+			}
+		}
+		
+		hidden_effect = {
+			recruit_character = GER_jorg_vollmer
+		}
+	}
+}
+
+country_event = { # 2001
+	id = GER_promotion_event.6
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2001.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2001_promotion_event.a
+
+			else = {
+				custom_effect_tooltip = GER_2001_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_hans_werner_wiermann
+		}
+	}
+}
+
+country_event = { # 2002
+	id = GER_promotion_event.7
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2002.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2002_promotion_event.a
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			else = {
+				custom_effect_tooltip = GER_2002_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_erich_pfeffer
+		}
+	}
+}
+
+country_event = { # 2003
+	id = GER_promotion_event.8
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2003.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2003_promotion_event.a
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			else = {
+				custom_effect_tooltip = GER_2003_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_gert_gawellek
+			recruit_character = GER_jurgen_joachim_von_sandrart
+
+			retire_character = GER_Hans_Speidel
+			retire_character = GER_Hartmut_Bagger	
+		}
+	}
+}
+
+country_event = { # 2004
+	id = GER_promotion_event.9
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2004.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2004_promotion_event.a
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			else = {
+				custom_effect_tooltip = GER_2004_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_rudolf_striedinger
+
+			retire_character = GER_Klaus_Naumann
+		}
+	}
+}
+
+country_event = { # 2005
+	id = GER_promotion_event.10
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2005.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2005_promotion_event.a
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			else = {
+				custom_effect_tooltip = GER_2005_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_stephan_thomas
+			recruit_character = GER_eberhard_zorn
+
+			retire_character = GER_Helmut_Willmann
+		}
+	}
+}
+
+country_event = { # 2006
+	id = GER_promotion_event.11
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2006.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2006_promotion_event.a
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			else = {
+				custom_effect_tooltip = GER_2006_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_robert_brieger
+			recruit_character = GER_bernd_shutt
+
+			retire_character = GER_Horst_Pleiner
+		}
+	}
+}
+
+country_event = { # 2007
+	id = GER_promotion_event.12
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2007.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2007_promotion_event.a
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			else = {
+				custom_effect_tooltip = GER_2007_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_jurgen_setzer
+		}
+	}
+}
+
+country_event = { # 2008
+	id = GER_promotion_event.13
+	title = GER_promotion_event.1.t
+	desc = GER_promotion_event.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		date = 2008.6.1
+	}
+
+	option = {
+		name = GER_promotion_event.1.a
+
+		if = {
+			limit = { 
+				NOT = {
+					GER = {
+						has_war_with = SOV
+					}
+				}
+				has_character = GER_Berthold_von_Stauffenberg
+				has_character = GER_Karl_Majcen
+			}
+
+			custom_effect_tooltip = GER_2008_promotion_event.a
+
+			hidden_effect = {
+				retire_character = GER_Berthold_von_Stauffenberg
+				retire_character = GER_Karl_Majcen
+			}
+
+			else = {
+				custom_effect_tooltip = GER_2008_promotion_event.b
+			}
+		}
+
+		hidden_effect = {
+			recruit_character = GER_carsten_breuer
+		}
+	}
+}
+
+
 ### Debug Events ###
 country_event = { #Load Phase 2
 	id = GER_debug_event.3
@@ -1622,16 +2145,11 @@ country_event = { # Invade Slovakian Junta after winning the 3WRW
 		SLO = {
 			has_country_flag = SLO_junta_takeover
 		}
-		if = {
-			limit = { 
-				NOT = {
-					has_global_flag = WRW_SOV_VICTORY
-				} 
-			}
+		or = {
+			has_global_flag = WRW_GER_SMALL_VICTORY
+			has_global_flag = WRW_TOTAL_GERMAN_VICTORY
 			has_global_flag = WRW_STALEMATE
 		}
-		has_global_flag = WRW_GER_SMALL_VICTORY
-		has_global_flag = WRW_GER_TOTAL_VICTORY
 	}
 
 	option = {
