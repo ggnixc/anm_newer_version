@@ -2,6 +2,22 @@
 
 recruit_character = MLW_John_Tembo
 
+EAF = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = MLW autonomy_state = autonomy_italy_reliant }
+        else = {
+            puppet = MLW
+        }
+    }
+}
+
+
 set_politics = {	
 	ruling_party = despotism
 	last_election = "1931.1.1"
@@ -48,5 +64,5 @@ create_corps_commander = {
 }
 
 add_ideas = {
-	Pakt_Observer_2
+	Sphere_Observer
 }

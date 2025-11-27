@@ -1,12 +1,27 @@
 ﻿capital = 296
 
+IBR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = GNB autonomy_state = autonomy_colony }
+        else = {
+            puppet = GNB
+        }
+    }
+}
+
 add_ideas = {
 }
 
 set_oob = "GNB_1962"
 
 set_politics = {	
-	ruling_party = conservatism
+	ruling_party = despotism
 	last_election = "1991.7.1"
 	election_frequency = 96
 	elections_allowed = yes
@@ -15,15 +30,15 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 19
+    communist = 0
     ultranationalism = 0
-    socialist = 16
+    socialist = 0
     progressivism = 0
-    liberalism = 12
+    liberalism = 0
     liberal_conservatism = 0
-    conservatism = 53
+    conservatism = 0
     paternalism = 0
-    despotism = 0
+    despotism = 100
     fascism = 0
      
 }

@@ -1,5 +1,20 @@
 ﻿capital = 826
 
+GHA = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = NGR autonomy_state = autonomy_satellite }
+        else = {
+            puppet = NGR
+        }
+    }
+}
+
 set_politics = {	
 	ruling_party = communist
 	last_election = "1931.1.1"
