@@ -1,15 +1,29 @@
 ideas = {
 	country = {
-		HAI_Jewel_Hispaniola = {
+		HAI_Haitian_System = {
 			allowed = { always = no }
-			picture = HAI_Jewel_Hispaniola
+			picture = HAI_Haitian_System
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.20
-				political_power_gain = 0.05
-				industrial_capacity_factory = 0.05
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.075
+				industrial_capacity_factory = 0.10
+				trade_opinion_factor = 0.20
+			}
+		}
+		HAI_Frontline = {
+			allowed = { always = no }
+			picture = HAI_Frontline
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.45
+				army_core_defence_factor = 0.30
+				army_core_attack_factor = 0.25
+				army_morale_factor = 0.20
+				army_speed_factor = 0.15
+				conscription_factor = 0.50	
 			}
 		}
 	}

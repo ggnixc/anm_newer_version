@@ -4,6 +4,10 @@ recruit_character = HAI_Edgard_Leblanc_Fils
 
 set_oob = "HAI_1962"
 
+# econtype
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Stabilizing_Development }
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+
 set_politics = {	
 	ruling_party = progressivism
 	last_election = "1961.1.20"
@@ -25,14 +29,12 @@ set_popularities = {
     paternalism = 56
     despotism = 0
     fascism = 0
-     
 }
 
 add_ideas = {
 	#IDEAS
-	HAI_Jewel_Hispaniola
-	OFN_Dependent_Member
-	
+	HAI_Haitian_System
+	HAI_Frontline
 	#POLITICAL 
 	tno_political_parties_one_party_state 
 	tno_religious_rights_state_atheism 
@@ -75,11 +77,3 @@ add_ideas = {
 }
 set_stability = 0.72
 set_war_support = 0.78
-create_country_leader = {
-	name = "Rene Preval"
-	picture = "Portrait_HAI_Rene_Preval.dds"
-	expire = "2000.1.1"
-	ideology = progressivism_subtype
-	traits = {
-	}
-}
