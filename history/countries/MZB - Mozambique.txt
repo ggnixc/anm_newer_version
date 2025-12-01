@@ -1,21 +1,6 @@
 ﻿capital = 544
 
-recruit_character = MZB_George_Meiring
-
-EAF = {
-    if = {
-        limit = { 
-            OR = { 
-                has_dlc = "Together for Victory" 
-                has_dlc = "Man the Guns" 
-            }
-        }
-        set_autonomy = { target = MZB autonomy_state = autonomy_italy_reliant }
-        else = {
-            puppet = MZB
-        }
-    }
-}
+recruit_character = MZB_Adelino_Gwambe
 
 set_oob = ""
 
