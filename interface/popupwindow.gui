@@ -1571,7 +1571,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "default_confirmation_popup"
-		size = { width = 480 height = 382 }
+		size = { width = 480 height = 260 }
 		orientation = center
 		origo = center
 		moveable = yes
@@ -1586,47 +1586,47 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 10 y = 14 }
+			position = { x = 12 y = 0 }
 			textureFile = ""
-			font = "Bomb_36"
+			font = "aldrich_white_22_outline"
 			borderSize = {x = 0 y = 10}
 			text = "Title"
 			maxWidth = 450
 			maxHeight = 40
 			fixedsize = yes
 			vertical_alignment = center
-			format = centre
+			format = left
 		}
 
 		instantTextBoxType = {
 			name = "description"
-			position = { x = 26 y = 90 }
+			position = { x = 24 y = 80 }
 			textureFile = ""
-			font = "Bomb_24"
+			font = "aldrich_16_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Long text here!"
 			maxWidth = 430
 			maxHeight = 225
-			format = centre
+			format = left
 			scrollbartype = "standardtext_slider"
 		}
 
 		buttonType = {
 			name = "decline_button"
-			position = { x = 81 y = 329}
+			position = { x = 77 y = 200 }
 			quadTextureSprite = "GFX_tno_button_148x34"
 			buttonText = "BACK"
-			buttonFont = "Bomb_16"
+			buttonFont = "aldrich_16_outline"
 			shortcut = "ESCAPE"
 			clicksound = click_close
 		}
 
 		buttonType = {
 			name = "accept_button"
-			position = { x = 251 y = 329}
+			position = { x = 247 y = 200}
 			quadTextureSprite = "GFX_tno_button_148x34"
 			buttonText = "OK"
-			buttonFont = "Bomb_16"
+			buttonFont = "aldrich_16_outline"
 			shortcut = "RETURN"
 			clicksound = click_default
 		}
