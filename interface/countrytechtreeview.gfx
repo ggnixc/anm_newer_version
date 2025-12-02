@@ -110,15 +110,6 @@ spriteTypes = {
 	}
 
 	corneredTileSpriteType = {
-		name = "GFX_tiled_cyan_bg"
-		size= { x=192 y=192 }
-		textureFile = "gfx/interface/tiles/tiled_cyan_bg.dds"
-		borderSize = { x=64 y=64 }
-		tilingCenter = yes
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
-
-	corneredTileSpriteType = {
 		name = "GFX_tiled_paper_bg3"
 		size= { x=192 y=192 }
 		textureFile = "gfx/interface/tiles/tiled_paper_bg3.dds"
@@ -203,6 +194,30 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_landdoctrine_tab_large"
+		textureFile = "gfx/interface/techtree/techtree_landdoctrine_tab_large.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_airdoctrine_tab_large"
+		textureFile = "gfx/interface/techtree/techtree_airdoctrine_tab_large.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_navaldoctrine_tab_large"
+		textureFile = "gfx/interface/techtree/techtree_navaldoctrine_tab_large.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_specialforcesdoctrine_tab_large"
+		textureFile = "gfx/interface/techtree/techtree_specialforcesdoctrine_tab_large.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
 		name = "GFX_naval_folder_tab"
 		textureFile = "gfx/interface/techtree/techtree_naval_tab.dds"
 		noOfFrames = 2
@@ -281,6 +296,15 @@ spriteTypes = {
 		name = "GFX_tiled_plain_bg"
 		size= { x=192 y=192 }
 		textureFile = "gfx/interface/tiles/tiled_plain_bg.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiled_plain_bg_header"
+		size= { x=192 y=192 }
+		textureFile = "gfx/interface/tiles/tiled_plain_bg_header.dds"
 		borderSize = { x=64 y=64 }
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
@@ -827,71 +851,23 @@ spriteTypes = {
 		textureFile = "gfx/interface/techtree/tech_naval_researched_item_bg.dds"
 	}
 
-
 	spriteType = {
-		name = "GFX_technology_mtgnavalfolder_small_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_mtgnavalfolder_small_available_item_bg"
+		name = "GFX_technology_naval_support_folder_available_item_bg"
 		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
 	}
 
 	spriteType = {
-		name = "GFX_technology_mtgnavalfolder_small_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_landdoctrine_researched_item_bg.dds"
-	}
-
-	frameAnimatedSpriteType = {
-		name = "GFX_technology_mtgnavalfolder_small_currently_researching_item_bg"
-		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
-		noOfFrames = 6
-		loadType = "INGAME"
-		transparencecheck = no
-		animation_rate_fps = 15
-		looping = yes
-		play_on_show = yes
-		pause_on_loop = 0.0
-	}
-
-	spriteType = {
-		name = "GFX_technology_mtgnavalfolder_currently_researching_item_bg"
-		textureFile = "gfx/interface/techtree/tech_naval_currently_researching_item.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_mtgnavalfolder_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_naval_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_mtgnavalfolder_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_naval_unavailable_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_mtgnavalfolder_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_naval_researched_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_mtgnavalsupportfolder_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_mtgnavalsupportfolder_unavailable_item_bg"
+		name = "GFX_technology_naval_support_folder_unavailable_item_bg"
 		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
 	}
 
 	spriteType = {
-		name = "GFX_technology_mtgnavalsupportfolder_researched_item_bg"
+		name = "GFX_technology_naval_support_folder_researched_item_bg"
 		textureFile = "gfx/interface/techtree/tech_landdoctrine_researched_item_bg.dds"
 	}
 
 	frameAnimatedSpriteType = {
-		name = "GFX_technology_mtgnavalsupportfolder_currently_researching_item_bg"
+		name = "GFX_technology_naval_support_folder_currently_researching_item_bg"
 		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
 		noOfFrames = 6
 		loadType = "INGAME"
@@ -1573,90 +1549,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/techtree/tech_bonus.dds"
 		noOfFrames = 6
 	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Heli_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Heli_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Airdoctrine_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Airdoctrine_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Armor_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Armor_bg.png" # .dds file size is too large for HOI4 to handle
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Navydoctrine_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Navydoctrine_bg.png" # .dds file size is too large for HOI4 to handle
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Infantry_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Infantry_bg.png" # .dds file size is too large for HOI4 to handle
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Support_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Support_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Artillery_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Artillery_bg.png" # .dds file size is too large for HOI4 to handle
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Armydoctrine_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Armydoctrine_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_NavyMtG_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_NavyMtG_bg.dds" # .dds file size is too large for HOI4 to handle
-	}
 
 	spriteType = {
-		name = "GFX_Tech_Tree_NavyMtGSupport_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_NavySupportMtG_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Lightair_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Lightair_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_HeavyAir_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_HeavyAir_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Engineering_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Engineering_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Production_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Production_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Naval_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Naval_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_Tech_Tree_Horse_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Horse_bg.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_Tech_Tree_Hidden_bg"
-		textureFile = "gfx/interface/techtree/Tech_Tree_Hidden_bg.dds"
+		name = "GFX_Tech_Tree_bg_new"
+		textureFile = "gfx/interface/techtree/Tech_Tree_bg_new.dds"
 	}
 
 	# April Fools Stuff #

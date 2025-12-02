@@ -326,7 +326,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_ENG_SPAA_1945_medium"
-		texturefile = "gfx/interface/technologies/ENG_Heavy_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/ENG_Heavy_AntiAir_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_ENG_SPAA_1950_medium"
@@ -601,6 +601,16 @@ spriteTypes = {
 		name = "GFX_ENG_Superheavy_1960_medium"
 		texturefile = "gfx/interface/technologies/Generic_Superheavy_Tank_60.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_ENG_Superheavy_Artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/ENG_Superheavy_Artillery_45.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_Superheavy_Antiair_1945_medium"
+		texturefile = "gfx/interface/technologies/ENG_Superheavy_Antiair_45.dds"
+	}
 
 	# NSB
 
@@ -615,6 +625,16 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ENG_NSB_superheavy_1960_medium"
 		texturefile = "gfx/interface/technologies/Generic_Superheavy_Tank_60.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_NSB_superheavy_artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/ENG_Superheavy_Artillery_45.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ENG_NSB_superheavy_antiair_1945_medium"
+		texturefile = "gfx/interface/technologies/ENG_Superheavy_AntiAir_45.dds"
 	}
 
 	SpriteType = {
@@ -830,33 +850,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ENG_Transport_90.dds"
 	}
 
-	## ENG Stealth Air ##
-
-	SpriteType = {
-		name = "GFX_ENG_strat_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Strategic_Bomber_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_strat_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Strategic_Bomber_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_tac_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Tactical_Bomber_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_tac_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Tactical_Bomber_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_light_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Fighter_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_light_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Fighter_90.dds"
-	}
-
 	## ENG Helicopters ##
 
 	SpriteType = {
@@ -953,170 +946,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ENG_scout_plane_1970_medium"
 		texturefile = "gfx/interface/technologies/ENG_Scout_Plane_70.dds"
-	}
-	
-	# Navy - Non-MtG
-	
-	###ENG DESTROYERS###
-
-	SpriteType = {
-		name = "GFX_ENG_modern_destroyer_medium"
-		texturefile = "gfx/interface/technologies/ENG_Destroyer_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_early_modern_destroyer_medium"
-		texturefile = "gfx/interface/technologies/ENG_Destroyer_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_advanced_destroyer_medium"
-		texturefile = "gfx/interface/technologies/ENG_Destroyer_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_improved_destroyer_medium"
-		texturefile = "gfx/interface/technologies/ENG_Destroyer_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_basic_destroyer_medium"
-		texturefile = "gfx/interface/technologies/ENG_Destroyer_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_ww2_destroyer_medium"
-		texturefile = "gfx/interface/technologies/ENG_Destroyer_45.dds"
-	}
-
-	###ENG CRUISERS###
-
-	SpriteType = {
-		name = "GFX_ENG_modern_cruiser_medium"
-		texturefile = "gfx/interface/technologies/ENG_Cruiser_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_early_modern_cruiser_medium"
-		texturefile = "gfx/interface/technologies/ENG_Cruiser_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_advanced_cruiser_medium"
-		texturefile = "gfx/interface/technologies/ENG_Cruiser_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_improved_cruiser_medium"
-		texturefile = "gfx/interface/technologies/ENG_Cruiser_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_basic_cruiser_medium"
-		texturefile = "gfx/interface/technologies/ENG_Cruiser_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_ww2_cruiser_medium"
-		texturefile = "gfx/interface/technologies/ENG_Cruiser_45.dds"
-	}
-
-	###ENG SUBMARINES###
-
-	SpriteType = {
-		name = "GFX_ENG_modern_submarine_medium"
-		texturefile = "gfx/interface/technologies/ENG_Submarine_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_early_modern_submarine_medium"
-		texturefile = "gfx/interface/technologies/ENG_Submarine_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_advanced_submarine_medium"
-		texturefile = "gfx/interface/technologies/ENG_Submarine_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_improved_submarine_medium"
-		texturefile = "gfx/interface/technologies/ENG_Submarine_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_basic_submarine_medium"
-		texturefile = "gfx/interface/technologies/ENG_Submarine_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_ww2_submarine_medium"
-		texturefile = "gfx/interface/technologies/ENG_Submarine_45.dds"
-	}
-
-	###ENG CARRIERS###
-
-	SpriteType = {
-		name = "GFX_ENG_modern_carrier_medium"
-		texturefile = "gfx/interface/technologies/ENG_Carrier_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_early_modern_carrier_medium"
-		texturefile = "gfx/interface/technologies/ENG_Carrier_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_advanced_carrier_medium"
-		texturefile = "gfx/interface/technologies/ENG_Carrier_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_improved_carrier_medium"
-		texturefile = "gfx/interface/technologies/ENG_Carrier_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_early_carrier_medium"
-		texturefile = "gfx/interface/technologies/ENG_Carrier_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_ww2_carrier_medium"
-		texturefile = "gfx/interface/technologies/ENG_Carrier_45.dds"
-	}
-
-	###ENG BATTLESHIPS###
-
-	SpriteType = {
-		name = "GFX_ENG_modern_battleship_medium"
-		texturefile = "gfx/interface/technologies/ENG_Battleship_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_early_modern_battleship_medium"
-		texturefile = "gfx/interface/technologies/ENG_Battleship_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_advanced_battleship_medium"
-		texturefile = "gfx/interface/technologies/ENG_Battleship_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_improved_battleship_medium"
-		texturefile = "gfx/interface/technologies/ENG_Battleship_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_basic_battleship_medium"
-		texturefile = "gfx/interface/technologies/ENG_Battleship_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_ww2_battleship_medium"
-		texturefile = "gfx/interface/technologies/ENG_Battleship_45.dds"
-	}
-
-	###ENG FRIGATES###
-
-	SpriteType = {
-		name = "GFX_ENG_modern_frigate_medium"
-		texturefile = "gfx/interface/technologies/ENG_Frigate_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_early_modern_frigate_medium"
-		texturefile = "gfx/interface/technologies/ENG_Frigate_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_advanced_frigate_medium"
-		texturefile = "gfx/interface/technologies/ENG_Frigate_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_improved_frigate_medium"
-		texturefile = "gfx/interface/technologies/ENG_Frigate_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_basic_frigate_medium"
-		texturefile = "gfx/interface/technologies/ENG_Frigate_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_ENG_ww2_frigate_medium"
-		texturefile = "gfx/interface/technologies/ENG_Frigate_45.dds"
 	}
 	
 	# Navy - MtG

@@ -84,20 +84,20 @@ spriteTypes = {
 
 ## Icons: Specialty ##
 	spriteType = {
-		name = "GFX_specialization_nuclear"
-		texturefile = "gfx/interface/special_project/specialization_nuclear.dds"
+		name = "GFX_specialization_theory"
+		texturefile = "gfx/interface/special_project/specialization_theory.dds"
 	}
 	spriteType = {
-		name = "GFX_specialization_land"
-		texturefile = "gfx/interface/special_project/specialization_land.dds"
+		name = "GFX_specialization_materiel"
+		texturefile = "gfx/interface/special_project/specialization_materiel.dds"
 	}
 	spriteType = {
-		name = "GFX_specialization_naval"
-		texturefile = "gfx/interface/special_project/specialization_naval.dds"
+		name = "GFX_specialization_electronics"
+		texturefile = "gfx/interface/special_project/specialization_electronics.dds"
 	}
 	spriteType = {
-		name = "GFX_specialization_air"
-		texturefile = "gfx/interface/special_project/specialization_air.dds"
+		name = "GFX_specialization_aerospace"
+		texturefile = "gfx/interface/special_project/specialization_aerospace.dds"
 	}
 
 ## Icons ##	
@@ -106,23 +106,28 @@ spriteTypes = {
 		texturefile = "gfx/interface/special_project/prototype_reward_decision_to_make.dds"
 	}
 	spriteType = {
-		name = "GFX_mapicon_facility_specialization_land"
-		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_land.dds"
+		name = "GFX_mapicon_facility_specialization_materiel"
+		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_materiel.dds"
 		noOfFrames = 3
 	}
 	spriteType = {
-		name = "GFX_mapicon_facility_specialization_air"
-		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_air.dds"
+		name = "GFX_mapicon_facility_specialization_aerospace"
+		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_aerospace.dds"
 		noOfFrames = 3
 	}
 	spriteType = {
-		name = "GFX_mapicon_facility_specialization_naval"
-		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_naval.dds"
+		name = "GFX_mapicon_facility_specialization_electronics"
+		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_electronics.dds"
 		noOfFrames = 3
 	}
 	spriteType = {
-		name = "GFX_mapicon_facility_specialization_nuclear"
-		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_nuclear.dds"
+		name = "GFX_mapicon_facility_specialization_theory"
+		texturefile = "gfx/interface/special_project/mapicon_facility_specialization_theory.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_mapicon_naval_headquarter"
+		texturefile = "gfx/interface/special_project/mapicon_naval_headquarter.dds"
 		noOfFrames = 3
 	}
 	spriteType = {
@@ -143,6 +148,24 @@ spriteTypes = {
 		name = "GFX_technology_specialization_tag_secondary"
 		texturefile = "gfx/interface/special_project/technology_specialization_tag_secondary.dds"
 	}
+		### Technology Specialization Icon Tags ###
+	spriteType = {
+		name = "GFX_technology_specialization_materiel"
+		texturefile = "gfx/interface/special_project/technology_specialization_materiel.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_specialization_aerospace"
+		texturefile = "gfx/interface/special_project/technology_specialization_aerospace.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_specialization_electronics"
+		texturefile = "gfx/interface/special_project/technology_specialization_electronics.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_specialization_theory"
+		texturefile = "gfx/interface/special_project/technology_specialization_theory.dds"
+	}
+
 
 ### Popup ###
 	spriteType = {
@@ -336,14 +359,6 @@ spriteTypes = {
 ## NAVAL ##
 
 	spriteType = {
-		name = "GFX_sp_naval_rocket_submarine"
-		texturefile = "gfx/interface/special_project/project_icons/sp_naval_rocket_submarine.dds"
-	}
-	spriteType = {
-		name = "GFX_sp_naval_aa_cruiser"
-		texturefile = "gfx/interface/special_project/project_icons/sp_naval_aa_cruiser.dds"
-	}
-	spriteType = {
 		name = "GFX_sp_naval_super_heavy_battleship"
 		texturefile = "gfx/interface/special_project/project_icons/sp_naval_super_heavy_battleship.dds"
 	}		
@@ -396,10 +411,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/special_project/project_icons/sp_naval_nuclear_torpedo.dds"
 	}
 	spriteType = {
-		name = "GFX_sp_naval_pneumatic_mortar"
-		texturefile = "gfx/interface/special_project/project_icons/sp_naval_pneumatic_mortar.dds"
-	}
-	spriteType = {
 		name = "GFX_sp_naval_proximity_fuze"
 		texturefile = "gfx/interface/special_project/project_icons/sp_naval_proximity_fuze.dds"
 	}
@@ -418,6 +429,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_sp_naval_underway_replenishment"
 		texturefile = "gfx/interface/special_project/project_icons/sp_naval_underway_replenishment.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_naval_support_ships"
+		texturefile = "gfx/interface/special_project/project_icons/sp_naval_support_ships.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_naval_escort_carrier"
+		texturefile = "gfx/interface/special_project/project_icons/sp_naval_escort_carrier.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_naval_submarine_carrier"
+		texturefile = "gfx/interface/special_project/project_icons/sp_naval_submarine_carrier.dds"
 	}
 
 

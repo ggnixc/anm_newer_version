@@ -4,27 +4,28 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_VYT_infantry_kit_1_medium"
-		texturefile = "gfx/interface/technologies/RUS_36_KitA.dds"
+		texturefile = "gfx/interface/technologies/SAM_36_Kit.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_infantry_kit_2_medium"
-		texturefile = "gfx/interface/technologies/SAM_45_Kit.dds"
+		texturefile = "gfx/interface/technologies/GER_45_Kit.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_infantry_kit_3_medium"
 		texturefile = "gfx/interface/technologies/GER_52_Kit.dds"
 	}
+	SpriteType = {
+		name = "GFX_VYT_infantry_kit_6_medium"
+		texturefile = "gfx/interface/technologies/RUS_70_Kit.dds"
+	}
 
 	### NSB FIXES ###
 	
 	## Artillery ##
+
 	SpriteType = {
 		name = "GFX_VYT_artillery_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_artillery_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Artillery_45.dds"
 	}
 
 	## VYT Infantry Equipment ##
@@ -35,23 +36,12 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_VYT_infantry_weapons_2_medium"
-		texturefile = "gfx/interface/technologies/VYT_Infantry_45.dds"
+		texturefile = "gfx/interface/technologies/SAM_Infantry_45.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_VYT_infantry_weapons_3_medium"
-		texturefile = "gfx/interface/technologies/RUS_Infantry_58.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_infantry_weapons_4_medium"
-		texturefile = "gfx/interface/technologies/RUS_Infantry_68.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_infantry_weapons_5_medium"
-		texturefile = "gfx/interface/technologies/RUS_Infantry_78.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_infantry_weapons_6_medium"
-		texturefile = "gfx/interface/technologies/RUS_Infantry_88.dds"
+		name = "GFX_VYT_infantry_weapons_improvements_mine_1_medium"
+		texturefile = "gfx/interface/technologies/GER_mine1.dds"
 	}
 	
 	SpriteType = {
@@ -63,15 +53,29 @@ spriteTypes = {
 		name = "GFX_VYT_support_weapons_hmg_1_medium"
 		texturefile = "gfx/interface/technologies/GER_mg1.dds"
 	}
+	SpriteType = {
+		name = "GFX_VYT_support_weapons_hmg_2_medium"
+		texturefile = "gfx/interface/technologies/GER_mg2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_VYT_support_weapons_arty_2_medium"
+		texturefile = "gfx/interface/technologies/GER_arty2.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_VYT_infantry_at_medium"
-		texturefile = "gfx/interface/technologies/VYT_Infantry_AT_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_Infantry_AT_45.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_VYT_infantry_aa1_medium"
+		texturefile = "gfx/interface/technologies/GER_Infantry_AA_48.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_motorized_infantry_medium"
-		texturefile = "gfx/interface/technologies/GER_Motorized_36.dds"
+		texturefile = "gfx/interface/technologies/ARK_Motorized_36.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_motorized_infantry_1_medium"
@@ -82,168 +86,142 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_VYT_artillery_1945_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_artillery_1950_medium"
-		texturefile = "gfx/interface/technologies/RUS_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Artillery_45.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_NSB_artillery_1945_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_NSB_artillery_1950_medium"
-		texturefile = "gfx/interface/technologies/RUS_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Artillery_45.dds"
 	}
 
+	
+	SpriteType = {
+		name = "GFX_VYT_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Heavy_Artillery_45.dds"
+	}
 	SpriteType = {
 		name = "GFX_VYT_SPART_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/GER_Heavy_Artillery_50.dds"
 	}
 
 	SpriteType = {
+		name = "GFX_VYT_light_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Light_Artillery_45.dds"
+	}
+	SpriteType = {
 		name = "GFX_VYT_light_SPART_1950_medium"
-		texturefile = "gfx/interface/technologies/WRS_Light_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/GER_Light_Artillery_50.dds"
 	}
 
 	## VYT Anti-Air ##
 
 	SpriteType = {
 		name = "GFX_VYT_antiair_1945_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_antiair_1950_medium"
-		texturefile = "gfx/interface/technologies/FST_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_AntiAir_45.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_NSB_antiair_1945_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_NSB_antiair_1950_medium"
-		texturefile = "gfx/interface/technologies/FST_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_AntiAir_45.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_anti_air_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_anti_air_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/FST_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_AntiAir_45.dds"
 	}
 
 	SpriteType = {
+		name = "GFX_VYT_SPAA_1945_medium"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_AntiAir_45.dds"
+	}
+	SpriteType = {
 		name = "GFX_VYT_SPAA_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_AntiAir_50.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_VYT_light_SPAA_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Light_AntiAir_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_light_SPAA_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_Light_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/GER_Light_AntiAir_50.dds"
 	}
 
 	## VYT Armored (or Armoured for the anglos smh) ##
 
 	SpriteType = {
 		name = "GFX_VYT_MBT_1945_medium"
-		texturefile = "gfx/interface/technologies/VYT_MBT_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_MBT_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_MBT_1950_medium"
-		texturefile = "gfx/interface/technologies/VYT_MBT_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_MBT_1970_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_MBT_1980_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_MBT_1990_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_90.dds"
+		texturefile = "gfx/interface/technologies/ERK_MBT_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_IFV_1945_medium"
-		texturefile = "gfx/interface/technologies/VYT_IFV_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_IFV_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_IFV_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_IFV_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_NSB_MBT_1970_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_NSB_MBT_1980_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_NSB_MBT_1990_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_90.dds"
+		texturefile = "gfx/interface/technologies/ERK_IFV_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_NSB_MBT_1945_medium"
-		texturefile = "gfx/interface/technologies/VYT_MBT_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_MBT_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_NSB_MBT_1950_medium"
-		texturefile = "gfx/interface/technologies/VYT_MBT_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_MBT_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_NSB_IFV_1945_medium"
-		texturefile = "gfx/interface/technologies/VYT_IFV_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_IFV_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_NSB_IFV_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_IFV_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_IFV_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_APC_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_APC_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_APC_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_APC_1950_medium"
-		texturefile = "gfx/interface/technologies/VYT_APC_50.dds"
+		texturefile = "gfx/interface/technologies/GER_APC_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_NSB_APC_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_APC_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_APC_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_NSB_APC_1950_medium"
-		texturefile = "gfx/interface/technologies/VYT_APC_50.dds"
+		texturefile = "gfx/interface/technologies/GER_APC_50.dds"
 	}
 	
 		## ARMORED CAR ##
 
 	SpriteType = {
 		name = "GFX_VYT_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/VYT_AC_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_AC_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_AC_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_AC_50.dds"
+		texturefile = "gfx/interface/technologies/GER_AC_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_NSB_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/VYT_AC_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_AC_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_NSB_AC_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_AC_50.dds"
+		texturefile = "gfx/interface/technologies/GER_AC_50.dds"
 	}
 
 	## HEAVY ##
@@ -252,30 +230,31 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_VYT_Heavy_1945_medium"
-		texturefile = "gfx/interface/technologies/VYT_Heavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_Heavy_1950_medium"
-		texturefile = "gfx/interface/technologies/VYT_Heavy_Tank_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_Tank_50.dds"
 	}
 
 	# NSB
 
 	SpriteType = {
 		name = "GFX_VYT_NSB_heavy_1945_medium"
-		texturefile = "gfx/interface/technologies/VYT_Heavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_NSB_heavy_1950_medium"
-		texturefile = "gfx/interface/technologies/VYT_Heavy_Tank_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_Tank_50.dds"
 	}
+	
 	SpriteType = {
 		name = "GFX_VYT_heavy_tank_chassis_0_medium"
-		texturefile = "gfx/interface/technologies/VYT_Heavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_heavy_tank_chassis_1_medium"
-		texturefile = "gfx/interface/technologies/VYT_Heavy_Tank_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_Tank_50.dds"
 	}
 
 	## SUPERHEAVY ##
@@ -284,30 +263,32 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_VYT_Superheavy_1945_medium"
-		texturefile = "gfx/interface/technologies/OMO_Superheavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/SAM_Superheavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_Superheavy_1950_medium"
 		texturefile = "gfx/interface/technologies/WSB_Superheavy_Tank_50.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_VYT_Superheavy_1960_medium"
-		texturefile = "gfx/interface/technologies/VYT_Superheavy_Tank_60.dds"
+		name = "GFX_VYT_Superheavy_Artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/ERK_Superheavy_Artillery_45.dds"
 	}
 
 	# NSB
 
 	SpriteType = {
 		name = "GFX_VYT_NSB_superheavy_1945_medium"
-		texturefile = "gfx/interface/technologies/OMO_Superheavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/SAM_Superheavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_NSB_superheavy_1950_medium"
 		texturefile = "gfx/interface/technologies/WSB_Superheavy_Tank_50.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_VYT_NSB_superheavy_1960_medium"
-		texturefile = "gfx/interface/technologies/VYT_Superheavy_Tank_60.dds"
+		name = "GFX_VYT_NSB_Superheavy_Artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/ERK_Superheavy_Artillery_45.dds"
 	}
 
 	## VYT Light Air ##
@@ -320,38 +301,26 @@ spriteTypes = {
 		name = "GFX_VYT_fighter_1945_medium"
 		texturefile = "gfx/interface/technologies/GER_Fighter_45.dds"
 	}
-	SpriteType = {
-		name = "GFX_VYT_fighter_1950_medium"
-		texturefile = "gfx/interface/technologies/GER_Fighter_50.dds"
-	}
 
 	SpriteType = {
 		name = "GFX_VYT_CAS_1945_medium"
 		texturefile = "gfx/interface/technologies/GER_CAS_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_CAS_1950_medium"
-		texturefile = "gfx/interface/technologies/GER_CAS_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_VYT_interceptor_1945_medium"
 		texturefile = "gfx/interface/technologies/GER_Interceptor_45.dds"
 	}
-	SpriteType = {
-		name = "GFX_VYT_interceptor_1950_medium"
-		texturefile = "gfx/interface/technologies/GER_Interceptor_50.dds"
-	}
 
 	## VYT Heavy Air ##
 
 	SpriteType = {
 		name = "GFX_VYT_strategic_bomber1_medium"
-		texturefile = "gfx/interface/technologies/RUS_Strategic_Bomber_36.dds"
+		texturefile = "gfx/interface/technologies/GER_Strategic_Bomber_36.dds"
 	}
 	SpriteType = {
 		name = "GFX_VYT_heavy_air_1945_medium"
-		texturefile = "gfx/interface/technologies/RUS_Strategic_Bomber_45.dds"
+		texturefile = "gfx/interface/technologies/GER_Strategic_Bomber_45.dds"
 	}
 
 	SpriteType = {
@@ -403,172 +372,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_VYT_scout_plane_1945_medium"
 		texturefile = "gfx/interface/technologies/GER_Scout_Plane_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_scout_plane_1950_medium"
-		texturefile = "gfx/interface/technologies/GER_Scout_Plane_50.dds"
-	}
-	
-	###WRS NON-MTG DESTROYERS###
-
-	SpriteType = {
-		name = "GFX_VYT_modern_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_early_modern_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_advanced_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_improved_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_basic_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_ww2_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_45.dds"
-	}
-
-	###WRS NON-MTG CRUISERS###
-
-	SpriteType = {
-		name = "GFX_VYT_modern_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Cruiser_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_early_modern_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Cruiser_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_advanced_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Cruiser_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_improved_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Cruiser_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_basic_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Cruiser_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_ww2_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Cruiser_45.dds"
-	}
-
-	###WRS NON-MTG SUBMARINES###
-
-	SpriteType = {
-		name = "GFX_VYT_modern_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Submarine_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_early_modern_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Submarine_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_advanced_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Submarine_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_improved_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Submarine_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_basic_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Submarine_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_ww2_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Submarine_45.dds"
-	}
-
-	###WRS NON-MTG CARRIERS###
-
-	SpriteType = {
-		name = "GFX_VYT_modern_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_early_modern_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_advanced_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_improved_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Carrier_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_early_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_ww2_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_45.dds"
-	}
-
-	###WRS NON-MTG BATTLESHIPS###
-
-	SpriteType = {
-		name = "GFX_VYT_modern_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Battleship_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_early_modern_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Battleship_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_advanced_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Battleship_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_improved_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Battleship_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_basic_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Battleship_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_ww2_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Battleship_45.dds"
-	}
-
-	###WRS NON-MTG FRIGATES###
-
-	SpriteType = {
-		name = "GFX_VYT_modern_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Frigate_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_early_modern_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Frigate_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_advanced_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Frigate_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_improved_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Monarchist_Frigate_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_basic_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Frigate_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_VYT_ww2_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Frigate_45.dds"
 	}
 	
 	###WRS MTG CORVETTES###

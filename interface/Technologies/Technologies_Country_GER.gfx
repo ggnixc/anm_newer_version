@@ -40,15 +40,31 @@ spriteTypes = {
 	}
 
 		###RIFLE IMPROVEMENT ICONS###
-
+	
+	SpriteType = {
+		name = "GFX_GER_infantry_weapons_improvements_mine_1_medium"
+		texturefile = "gfx/interface/technologies/GER_mine1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_infantry_weapons_improvements_mine_2_medium"
+		texturefile = "gfx/interface/technologies/GER_mine2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_GER_infantry_weapons_improvements_grenade_1_medium"
+		texturefile = "gfx/interface/technologies/SWE_Infantry_56.dds"
+	}
 	SpriteType = {
 		name = "GFX_GER_infantry_weapons_improvements_grenade_2_medium"
 		texturefile = "gfx/interface/technologies/GER_grenade2.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_GER_infantry_weapons_improvements_grenade_3_medium"
 		texturefile = "gfx/interface/technologies/GER_grenade3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_infantry_weapons_improvements_grenade_4_medium"
+		texturefile = "gfx/interface/technologies/GER_grenade4.dds"
 	}
 
 	###SUPPORT WEAPONS ICONS###
@@ -225,6 +241,10 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_GER_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Heavy_Artillery_45.dds"
+	}
+	SpriteType = {
 		name = "GFX_GER_SPART_1950_medium"
 		texturefile = "gfx/interface/technologies/GER_Heavy_Artillery_50.dds"
 	}
@@ -245,6 +265,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/GER_Heavy_Artillery_90.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_GER_light_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Light_Artillery_45.dds"
+	}
 	SpriteType = {
 		name = "GFX_GER_light_SPART_1950_medium"
 		texturefile = "gfx/interface/technologies/GER_Light_Artillery_50.dds"
@@ -340,6 +364,10 @@ spriteTypes = {
 		name = "GFX_GER_SPAA_1950_medium"
 		texturefile = "gfx/interface/technologies/GER_Heavy_AntiAir_50.dds"
 	}
+	SpriteType = {
+		name = "GFX_GER_SPAA_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Heavy_AntiAir_45.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_GER_light_SPAA_1990_medium"
@@ -360,6 +388,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_GER_light_SPAA_1950_medium"
 		texturefile = "gfx/interface/technologies/GER_Light_AntiAir_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_GER_light_SPAA_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Light_AntiAir_45.dds"
 	}
 
 	## GER TANKS ##
@@ -589,6 +621,11 @@ spriteTypes = {
 		name = "GFX_GER_Superheavy_1960_medium"
 		texturefile = "gfx/interface/technologies/GER_Superheavy_Tank_60.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_GER_Superheavy_Antiair_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_MBT_Flakmaus_45.dds"
+	}
 
 	# NSB
 
@@ -766,31 +803,6 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_GER_strat_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Strategic_Bomber_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_strat_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Strategic_Bomber_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_tac_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Tactical_Bomber_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_tac_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Tactical_Bomber_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_light_stealth_1980_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Fighter_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_light_stealth_1990_medium"
-		texturefile = "gfx/interface/technologies/GER_Stealth_Fighter_90.dds"
-	}
-
-	SpriteType = {
 		name = "GFX_GER_tac_bomber1_medium"
 		texturefile = "gfx/interface/technologies/GER_Tactical_Bomber_36.dds"
 	}
@@ -955,170 +967,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_GER_scout_plane_1970_medium"
 		texturefile = "gfx/interface/technologies/GER_Scout_Plane_70.dds"
-	}
-
-	# Navy - Non-MtG
-
-	###GER DESTROYERS###
-
-	SpriteType = {
-		name = "GFX_GER_modern_destroyer_medium"
-		texturefile = "gfx/interface/technologies/GER_Destroyer_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_early_modern_destroyer_medium"
-		texturefile = "gfx/interface/technologies/GER_Destroyer_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_advanced_destroyer_medium"
-		texturefile = "gfx/interface/technologies/GER_Destroyer_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_improved_destroyer_medium"
-		texturefile = "gfx/interface/technologies/GER_Destroyer_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_basic_destroyer_medium"
-		texturefile = "gfx/interface/technologies/GER_Destroyer_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_ww2_destroyer_medium"
-		texturefile = "gfx/interface/technologies/GER_Destroyer_45.dds"
-	}
-
-	###GER CRUISERS###
-
-	SpriteType = {
-		name = "GFX_GER_modern_cruiser_medium"
-		texturefile = "gfx/interface/technologies/GER_Cruiser_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_early_modern_cruiser_medium"
-		texturefile = "gfx/interface/technologies/GER_Cruiser_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_advanced_cruiser_medium"
-		texturefile = "gfx/interface/technologies/GER_Cruiser_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_improved_cruiser_medium"
-		texturefile = "gfx/interface/technologies/GER_Cruiser_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_basic_cruiser_medium"
-		texturefile = "gfx/interface/technologies/GER_Cruiser_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_ww2_cruiser_medium"
-		texturefile = "gfx/interface/technologies/GER_Cruiser_45.dds"
-	}
-
-	###GER SUBMARINES###
-
-	SpriteType = {
-		name = "GFX_GER_modern_submarine_medium"
-		texturefile = "gfx/interface/technologies/GER_Submarine_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_early_modern_submarine_medium"
-		texturefile = "gfx/interface/technologies/GER_Submarine_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_advanced_submarine_medium"
-		texturefile = "gfx/interface/technologies/GER_Submarine_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_improved_submarine_medium"
-		texturefile = "gfx/interface/technologies/GER_Submarine_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_basic_submarine_medium"
-		texturefile = "gfx/interface/technologies/GER_Submarine_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_ww2_submarine_medium"
-		texturefile = "gfx/interface/technologies/GER_Submarine_45.dds"
-	}
-
-	###GER CARRIERS###
-
-	SpriteType = {
-		name = "GFX_GER_modern_carrier_medium"
-		texturefile = "gfx/interface/technologies/GER_Carrier_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_early_modern_carrier_medium"
-		texturefile = "gfx/interface/technologies/GER_Carrier_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_advanced_carrier_medium"
-		texturefile = "gfx/interface/technologies/GER_Carrier_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_improved_carrier_medium"
-		texturefile = "gfx/interface/technologies/GER_Carrier_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_early_carrier_medium"
-		texturefile = "gfx/interface/technologies/GER_Carrier_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_ww2_carrier_medium"
-		texturefile = "gfx/interface/technologies/GER_Carrier_45.dds"
-	}
-
-	###GER BATTLESHIPS###
-
-	SpriteType = {
-		name = "GFX_GER_modern_battleship_medium"
-		texturefile = "gfx/interface/technologies/GER_Battleship_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_early_modern_battleship_medium"
-		texturefile = "gfx/interface/technologies/GER_Battleship_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_advanced_battleship_medium"
-		texturefile = "gfx/interface/technologies/GER_Battleship_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_improved_battleship_medium"
-		texturefile = "gfx/interface/technologies/GER_Battleship_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_basic_battleship_medium"
-		texturefile = "gfx/interface/technologies/GER_Battleship_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_ww2_battleship_medium"
-		texturefile = "gfx/interface/technologies/GER_Battleship_45.dds"
-	}
-
-	###GER FRIGATES###
-
-	SpriteType = {
-		name = "GFX_GER_modern_frigate_medium"
-		texturefile = "gfx/interface/technologies/GER_Frigate_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_early_modern_frigate_medium"
-		texturefile = "gfx/interface/technologies/GER_Frigate_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_advanced_frigate_medium"
-		texturefile = "gfx/interface/technologies/GER_Frigate_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_improved_frigate_medium"
-		texturefile = "gfx/interface/technologies/GER_Frigate_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_basic_frigate_medium"
-		texturefile = "gfx/interface/technologies/GER_Frigate_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_GER_ww2_frigate_medium"
-		texturefile = "gfx/interface/technologies/GER_Frigate_45.dds"
 	}
 
 	# Navy - MtG
@@ -1554,44 +1402,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/GER_AntiAir_90.dds"
 	}
 
-	###RNW###
-
-	## Artillery ##
-	SpriteType = {
-		name = "GFX_RNW_artillery_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_RNW_artillery_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_RNW_artillery_equipment_4_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_RNW_artillery_equipment_5_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_90.dds"
-	}
-
-	## Anti-Air ##
-	SpriteType = {
-		name = "GFX_RNW_anti_air_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_RNW_anti_air_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_RNW_anti_air_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_RNW_anti_air_equipment_4_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_90.dds"
-	}
-
 	###Crimea###
 
 	## Artillery ##
@@ -1668,7 +1478,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/GER_AntiAir_90.dds"
 	}
 
-	###Paktkomission Frankreich###
+	###Paktkommission Frankreich###
 
 	## Artillery ##
 	SpriteType = {

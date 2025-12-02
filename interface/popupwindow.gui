@@ -808,6 +808,7 @@ guiTypes = {
 		iconType = {
 			name = "design_team_icon"
 			position = { x = 400 y = 130 }
+			quadTextureSprite ="GFX_adjuster_forest_bg" # No font with name Error when missing sprite, adding does nothing since no one has design teams
 			centerposition = yes
 			hide = yes
 		}
@@ -1022,21 +1023,21 @@ guiTypes = {
 			quadTextureSprite = "GFX_tiled_bg"
 		}
 
-		iconType = {
-			name = "diplo_popup_header_bg"
-			spriteType = "GFX_diplo_popup_header_bg"
-			position = { x = 3 y = 8 }
-			alwaystransparent = yes
-		}
+		# iconType = {
+		# 	name = "diplo_popup_header_bg"
+		# 	spriteType = "GFX_diplo_popup_header_bg"
+		# 	position = { x = 3 y = 8 }
+		# 	alwaystransparent = yes
+		# }
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 110 y = 36 }
+			position = { x = 60 y = 36 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_28_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Title"
-			maxWidth = 280
+			maxWidth = 380
 			maxHeight = 24
 			fixedsize = yes
 			format = centre
@@ -1088,7 +1089,7 @@ guiTypes = {
 			name = "message"
 			position = { x = 27 y = 90 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Long text here!"
 			maxWidth = 438
@@ -1106,9 +1107,9 @@ guiTypes = {
 		buttonType = {
 			name = "ok_button"
 			position = { x = 180 y = 265}
-			quadTextureSprite = "GFX_button_123x34"
+			quadTextureSprite = "button_type_1"
 			buttonText = "OK"
-			buttonFont = "hoi_18mbs"
+			buttonFont = "aldrich_18_outline"
 			shortcut = "RETURN"
 		}
 	}
@@ -1393,7 +1394,7 @@ guiTypes = {
 			name = "title"
 			position = { x = 123 y = 32 }
 			textureFile = ""
-			font = "hoi_24header"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Title"
 			maxWidth = 280
@@ -1432,7 +1433,7 @@ guiTypes = {
 			name = "message"
 			position = { x = 68 y = 90 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Long text here!"
 			maxWidth = 377
@@ -1570,7 +1571,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "default_confirmation_popup"
-		size = { width = 480 height = 260 }
+		size = { width = 480 height = 382 }
 		orientation = center
 		origo = center
 		moveable = yes
@@ -1585,47 +1586,47 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 12 y = 0 }
+			position = { x = 10 y = 14 }
 			textureFile = ""
-			font = "aldrich_white_22_outline"
+			font = "Bomb_36"
 			borderSize = {x = 0 y = 10}
 			text = "Title"
 			maxWidth = 450
 			maxHeight = 40
 			fixedsize = yes
 			vertical_alignment = center
-			format = left
+			format = centre
 		}
 
 		instantTextBoxType = {
 			name = "description"
-			position = { x = 24 y = 80 }
+			position = { x = 26 y = 90 }
 			textureFile = ""
-			font = "aldrich_16_outline"
+			font = "Bomb_24"
 			borderSize = {x = 0 y = 0}
 			text = "Long text here!"
 			maxWidth = 430
 			maxHeight = 225
-			format = left
+			format = centre
 			scrollbartype = "standardtext_slider"
 		}
 
 		buttonType = {
 			name = "decline_button"
-			position = { x = 77 y = 200}
+			position = { x = 81 y = 329}
 			quadTextureSprite = "GFX_tno_button_148x34"
 			buttonText = "BACK"
-			buttonFont = "aldrich_16_outline"
+			buttonFont = "Bomb_16"
 			shortcut = "ESCAPE"
 			clicksound = click_close
 		}
 
 		buttonType = {
 			name = "accept_button"
-			position = { x = 247 y = 200}
+			position = { x = 251 y = 329}
 			quadTextureSprite = "GFX_tno_button_148x34"
 			buttonText = "OK"
-			buttonFont = "aldrich_16_outline"
+			buttonFont = "Bomb_16"
 			shortcut = "RETURN"
 			clicksound = click_default
 		}

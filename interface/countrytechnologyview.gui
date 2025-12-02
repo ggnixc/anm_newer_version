@@ -21,6 +21,16 @@ guiTypes = {
 		}
 	}
 
+	positionType = { #X is icon scale with 100 being 1 Y is a position offset
+		name = "technology_sharing_offset"
+		position = { x = 100 y = 0 }
+	}
+
+	positionType = { #X is icon scale with 100 being 1 Y is a position offset
+		name = "technology_sharing_faction_offset"
+		position = { x = 75 y = 0 }
+	}
+
 	containerWindowType = {
 		name = "technology_sharing_entry"
 		size = { width = 64 height = 64 }
@@ -352,24 +362,52 @@ guiTypes = {
 		iconType = {
 			name = "Antarctica_Image"
 			spriteType = GFX_Antarctica
-			position = { x = 19 y = 144 }
-			pdx_tooltip = ANTARCTICA_RESEARCH_PANEL_TT
+			position = { x = 19 y = 164 }
 		}
 
 		iconType = {
 			name = "Antarctica_Researchers_Busy_Banner"
 			spriteType = desk_of_the_president_banner
-			position = { x = 34 y = 664 }
-			pdx_tooltip = ANTARCTICA_RESEARCH_PANEL_TT
+			position = { x = 34 y = 724 }
 		}
 
 		instantTextBoxType = {
 			name = "Antarctica_Researchers_Busy_Text"
-			position = { x = 50 y = 692 }
+			position = { x = 50 y = 752 }
 			text = ANTARCTICA_RESEARCH_PANEL_QUOTE
 			font = "aldrich_24_outline"
 			format = centre
 			maxWidth = 450
+		}
+
+		iconType = {
+			name = "icicles_1"
+			spriteType = GFX_icicles
+			position = { x = 0 y = 40 }
+		}
+
+		iconType = {
+			name = "icicles_2"
+			spriteType = GFX_icicles_flipped
+			position = { x = 58 y = 40 }
+		}
+
+		iconType = {
+			name = "icicles_3"
+			spriteType = GFX_icicles
+			position = { x = 283 y = 40 }
+		}
+
+		iconType = {
+			name = "icicles_4"
+			spriteType = GFX_icicles_flipped
+			position = { x = 336 y = 40 }
+		}
+
+		iconType = {
+			name = "Background"
+			spriteType = GFX_frozen_research_screen
+			position = { x = 4 y = 38 }
 			pdx_tooltip = ANTARCTICA_RESEARCH_PANEL_TT
 		}
 	}

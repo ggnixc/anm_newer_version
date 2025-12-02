@@ -1072,4 +1072,39 @@ guiTypes = {
 			format = center
 		}
 	}
+
+	containerWindowType = {
+		name = "focus_tree_shortcut_item"
+		position = { x=8 y=0 }
+		size = { width = 190 height = 72 }
+
+		background = {
+			name = "Background"
+			SpriteType = "GFX_tiled_window_thin_border2"
+		}
+		
+		instantTextboxType = {
+			name = "name"
+			position = { x = -32 y = -30 }
+			font = "aldrich_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = "blep blep blep blep"
+			maxWidth = 112
+			maxHeight = 60
+			multiline = yes
+			format = center
+			vertical_alignment = center
+			fixedsize = yes
+			orientation = center
+		}
+		
+		buttonType = {
+			name = "focus_button"
+			position = { x = 37 y = 37 }
+			quadTextureSprite = "GFX_goal_unknown"
+			centerposition = yes
+			Orientation = left
+			scale = 0.5
+		}
+	}
 }

@@ -123,6 +123,11 @@ NDefines.NProduction.PRODUCTION_RESOURCE_LACK_PENALTY = 0.0 -- For the new trade
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_VALUE = 0
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.0
 
+NDefines.NGame.ENERGY_RESOURCE = "power"
+NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 10000.0		-- How much energy per coal produces
+NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.001 -- Scales energy cost based on the total number of factories
+NDefines.NProduction.BASE_ENERGY_COST = 0.001						-- How much energy per factory consumes
+
 NDefines.NResistance.INITIAL_HISTORY_RESISTANCE = 0.0
 NDefines.NResistance.INITIAL_HISTORY_COMPLIANCE = 85.0
 NDefines.NResistance.INITIAL_GARRISON_STRENGTH = 1

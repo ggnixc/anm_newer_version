@@ -55,12 +55,7 @@ spriteTypes = {
 		name = "GFX_new_expedionary_forces_group_button"
 		texturefile = "gfx/interface/expedionary_forces_army_button.dds"
 	}
-	
-	spriteType = {
-		name = "GFX_division_list_column_button"
-		textureFile = "gfx/interface/unitcontrol/unitcontrol_sort_buttons_strip.dds"
-		noOfFrames = 12
-	}
+
 
 	spriteType = {
 		name = "GFX_expedionary_forces_icon"
@@ -160,6 +155,24 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_railway_gun_toggle_btn"
+		texturefile = "gfx/interface/unitcontrol/army_railway_gun_toggles_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_motorization_level_toggle_btn"
+		texturefile = "gfx/interface/unitcontrol/motorization_level_toggle_button.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
+		name = "GFX_motorization_level_toggle_strip"
+		texturefile = "gfx/interface/unitcontrol/motorization_level_toggle_strip.dds"
+		noOfFrames = 3
+	}
+
+	textSpriteType = {
 		name = "GFX_army_select_wings_btn"
 		texturefile = "gfx/interface/army_select_wings_btn.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -380,16 +393,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/unitlist_priority_icon_strip.dds"
 		noOfFrames = 3
 	}
-
-	spriteType = {
-		name = "GFX_multi_group_bg"
-		texturefile = "gfx/interface/unitcontrol/multi_group_bg.dds"
-	}
-
+	
 	spriteType = {
 		name = "GFX_unitcounter_supply_status_strip"
 		textureFile = "gfx/interface/unitcontrol/supply_strip.dds"
 		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_multi_group_bg"
+		texturefile = "gfx/interface/unitcontrol/multi_group_bg.dds"
 	}
 
 	SpriteType = {
@@ -401,7 +414,13 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_unit_level"
 		texturefile = "gfx/interface/unit_level.dds"
-		noOfFrames = 5
+		noOfFrames = 13
+	}
+	
+	SpriteType = {
+		name = "GFX_chevrons"
+		texturefile = "gfx/interface/ideas/divisional_commander_chevron.dds"
+		noOfFrames = 1
 	}
 
 	spriteType = {
@@ -510,7 +529,7 @@ spriteTypes = {
 			animationtype = "pulsing"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
 			animationtexturescale = { x = 1.0 y = 1.0 }
-			#			animationframes = {1 2 3}
+			#			animationframes = { 1 2 3}
 		}
 		legacy_lazy_load = no
 	}
@@ -531,7 +550,7 @@ spriteTypes = {
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
 			animationtexturescale = { x = 1.0 y = 1.0 }
-			#			animationframes = {1 2 3 }
+			#			animationframes = { 1 2 3 }
 		}
 		legacy_lazy_load = no
 	}
@@ -665,6 +684,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_equipmeny_stats_list_entry"
+		textureFile = "gfx/interface/division_equipment/equipmeny_stats_list_entry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_equipmeny_stats_list_entry_small"
+		textureFile = "gfx/interface/division_equipment/equipmeny_stats_list_entry_small.dds"
+	}
+
+	spriteType = {
 		name = "GFX_unit_stats_list_entry_bg"
 		textureFile = "gfx/interface/unit_stats_list_entry.dds"
 	}
@@ -777,6 +806,41 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_commander_sort_blue"
+		textureFile = "gfx/interface/unitcontrol/commander_sort_blue.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_commander_sort_green"
+		textureFile = "gfx/interface/unitcontrol/commander_sort_green.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_commander_filter_FM"
+		textureFile = "gfx/interface/unitcontrol/commander_filter_FM.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_commander_filter_admiral"
+		textureFile = "gfx/interface/unitcontrol/commander_filter_admiral.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_commander_filter_all"
+		textureFile = "gfx/interface/unitcontrol/commander_filter_all.dds"
+		noOfFrames = 3
+	}
+	
+	spriteType = {
+		name = "GFX_medal_collection"
+		textureFile = "gfx/interface/medals/ENG_medal_1.dds"
+	}
+
+	spriteType = {
 		name = "GFX_trait_maneuvering"
 		textureFile = "gfx/interface/unitcontrol/trait_maneuvering.dds"
 	}
@@ -823,6 +887,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_sort_adviser"
+		textureFile = "gfx/interface/unitcontrol/sort_adviser.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_sort_skill"
+		textureFile = "gfx/interface/unitcontrol/sort_skill.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
 		name = "GFX_attached_air_bg"
 		textureFile = "gfx/interface/attached_air_bg.dds"
 	}
@@ -852,15 +928,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/navalcombat/critical_damage_icons.dds"
 		noOfFrames = 7
 	}
-	
+
 	spriteType = {
-		name = "GFX_obsolete_template_warning"
-		textureFile = "gfx/interface/obsolete_template_warning.dds"
+		name = "GFX_division_list_column_button"
+		textureFile = "gfx/interface/unitcontrol/unitcontrol_sort_buttons_strip.dds"
+		noOfFrames = 12
 	}
 
 	spriteType = {
-		name = "GFX_obsolete_template_overlay"
-		textureFile = "gfx/interface/obsolete_template_overlay.dds"
+		name = "GFX_army_badge_division_summary_item_selected"
+		textureFile = "gfx/interface/army_badge_division_summary_item_selected.dds"
 	}
 	
 	spriteType = {
@@ -921,15 +998,14 @@ spriteTypes = {
 		name = "GFX_army_badge_bar_str_median"
 		textureFile = "gfx/interface/army_badge_bar_str_median.dds"
 	}
-	
+
 	spriteType = {
-		name = "GFX_army_badge_division_summary_item_selected"
-		textureFile = "gfx/interface/army_badge_division_summary_item_selected.dds"
+		name = "GFX_obsolete_template_warning"
+		textureFile = "gfx/interface/obsolete_template_warning.dds"
 	}
 
-	SpriteType = {
-		name = "GFX_chevrons"
-		texturefile = "gfx/interface/ideas/divisional_commander_chevron.dds"
-		noOfFrames = 1
+	spriteType = {
+		name = "GFX_obsolete_template_overlay"
+		textureFile = "gfx/interface/obsolete_template_overlay.dds"
 	}
 }

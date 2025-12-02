@@ -4,29 +4,32 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_SAM_infantry_kit_1_medium"
-		texturefile = "gfx/interface/technologies/RUS_36_KitB.dds"
+		texturefile = "gfx/interface/technologies/SAM_36_Kit.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_infantry_kit_2_medium"
-		texturefile = "gfx/interface/technologies/SAM_45_Kit.dds"
+		texturefile = "gfx/interface/technologies/GER_45_Kit.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_infantry_kit_3_medium"
 		texturefile = "gfx/interface/technologies/GER_52_Kit.dds"
 	}
+	SpriteType = {
+		name = "GFX_SAM_infantry_kit_6_medium"
+		texturefile = "gfx/interface/technologies/RUS_70_Kit.dds"
+	}
 	
-	
-
 	### NSB FIXES ###
 	
 	## Artillery ##
+	
 	SpriteType = {
 		name = "GFX_SAM_artillery_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_Artillery_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_artillery_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/WRS_Artillery_50.dds"
 	}
 
 	## SAM Infantry Equipment ##
@@ -39,23 +42,16 @@ spriteTypes = {
 		name = "GFX_SAM_infantry_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/SAM_Infantry_45.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_SAM_infantry_weapons_3_medium"
-		texturefile = "gfx/interface/technologies/RUS_Infantry_58.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_infantry_weapons_4_medium"
-		texturefile = "gfx/interface/technologies/RUS_Infantry_68.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_infantry_weapons_5_medium"
-		texturefile = "gfx/interface/technologies/RUS_Infantry_78.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_infantry_weapons_6_medium"
-		texturefile = "gfx/interface/technologies/RUS_Infantry_88.dds"
+		name = "GFX_SAM_infantry_weapons_improvements_mine_1_medium"
+		texturefile = "gfx/interface/technologies/GER_mine1.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_SAM_infantry_weapons_improvements_grenade_2_medium"
+		texturefile = "gfx/interface/technologies/CSB_grenade2.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_SAM_support_weapons_hmg_1_medium"
@@ -66,14 +62,19 @@ spriteTypes = {
 		name = "GFX_SAM_infantry_at_medium"
 		texturefile = "gfx/interface/technologies/ERK_Infantry_AT_45.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_SAM_infantry_aa1_medium"
+		texturefile = "gfx/interface/technologies/GER_Infantry_AA_48.dds"
+	}
 
 	SpriteType = {
 		name = "GFX_SAM_motorized_infantry_medium"
-		texturefile = "gfx/interface/technologies/GER_Motorized_36.dds"
+		texturefile = "gfx/interface/technologies/ERK_Motorized_36.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_motorized_infantry_1_medium"
-		texturefile = "gfx/interface/technologies/URL_Motorized_50.dds"
+		texturefile = "gfx/interface/technologies/GER_Motorized_50.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_motorized_infantry_2_medium"
@@ -84,177 +85,141 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_SAM_artillery_1945_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_artillery_1950_medium"
-		texturefile = "gfx/interface/technologies/FST_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Artillery_45.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_NSB_artillery_1945_medium"
-		texturefile = "gfx/interface/technologies/GER_Artillery_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_NSB_artillery_1950_medium"
-		texturefile = "gfx/interface/technologies/FST_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_Artillery_45.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_SAM_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Heavy_Artillery_45.dds"
+	}
 	SpriteType = {
 		name = "GFX_SAM_SPART_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_Artillery_50.dds"
+		texturefile = "gfx/interface/technologies/GER_Heavy_Artillery_50.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_SAM_light_SPART_1950_medium"
-		texturefile = "gfx/interface/technologies/CSB_Light_Artillery_50.dds"
+		name = "GFX_SAM_light_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/GER_Light_Artillery_45.dds"
 	}
 	SpriteType = {
-		name = "GFX_SAM_light_SPART_1960_medium"
-		texturefile = "gfx/interface/technologies/SAM_Light_Artillery_60.dds"
+		name = "GFX_SAM_light_SPART_1950_medium"
+		texturefile = "gfx/interface/technologies/GER_Light_Artillery_50.dds"
 	}
 
 	## SAM Anti-Air ##
 
 	SpriteType = {
 		name = "GFX_SAM_antiair_1945_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_antiair_1950_medium"
-		texturefile = "gfx/interface/technologies/FST_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_AntiAir_45.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_NSB_antiair_1945_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_NSB_antiair_1950_medium"
-		texturefile = "gfx/interface/technologies/FST_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_AntiAir_45.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_anti_air_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/GER_AntiAir_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_anti_air_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/FST_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/ARK_AntiAir_45.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_SAM_SPAA_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_AntiAir_50.dds"
+		name = "GFX_SAM_SPAA_1945_medium"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_AntiAir_45.dds"
 	}
 	SpriteType = {
-		name = "GFX_SAM_SPAA_1960_medium"
-		texturefile = "gfx/interface/technologies/WRS_Heavy_AntiAir_60.dds"
+		name = "GFX_SAM_SPAA_1950_medium"
+		texturefile = "gfx/interface/technologies/ARK_Heavy_AntiAir_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_light_SPAA_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_Light_AntiAir_50.dds"
+		texturefile = "gfx/interface/technologies/GER_Light_AntiAir_45.dds"
+	}
+	SpriteType = {
+		name = "GFX_SAM_light_SPAA_1950_medium"
+		texturefile = "gfx/interface/technologies/GER_Light_AntiAir_50.dds"
 	}
 
 	## SAM Armored (or Armoured for the anglos smh) ##
 
 	SpriteType = {
 		name = "GFX_SAM_MBT_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_MBT_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_MBT_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_MBT_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_MBT_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_MBT_1970_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_MBT_1980_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_MBT_1990_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_90.dds"
+		texturefile = "gfx/interface/technologies/ERK_MBT_50.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_SAM_IFV_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_IFV_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_IFV_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_IFV_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_IFV_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_IFV_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_NSB_MBT_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_MBT_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_MBT_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_NSB_MBT_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_MBT_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_NSB_MBT_1970_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_NSB_MBT_1980_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_NSB_MBT_1990_medium"
-		texturefile = "gfx/interface/technologies/URL_MBT_90.dds"
+		texturefile = "gfx/interface/technologies/ERK_MBT_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_NSB_IFV_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_IFV_45.dds"
+		texturefile = "gfx/interface/technologies/ARK_IFV_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_NSB_IFV_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_IFV_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_IFV_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_APC_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_APC_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_APC_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_APC_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_APC_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_APC_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_NSB_APC_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_APC_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_APC_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_NSB_APC_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_APC_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_APC_50.dds"
 	}
 	
 		## ARMORED CAR ##
 
 	SpriteType = {
 		name = "GFX_SAM_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_AC_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_AC_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_AC_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_AC_50.dds"
+		texturefile = "gfx/interface/technologies/GER_AC_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_NSB_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_AC_45.dds"
+		texturefile = "gfx/interface/technologies/ERK_AC_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_NSB_AC_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_AC_50.dds"
+		texturefile = "gfx/interface/technologies/GER_AC_50.dds"
 	}
 
 	## HEAVY ##
@@ -263,31 +228,31 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_SAM_Heavy_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/GER_Heavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_Heavy_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_Tank_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_Heavy_Tank_50.dds"
 	}
 
 	# NSB
 
 	SpriteType = {
 		name = "GFX_SAM_NSB_heavy_1945_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/GER_Heavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_NSB_heavy_1950_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_Tank_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_Heavy_Tank_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_heavy_tank_chassis_0_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/GER_Heavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_heavy_tank_chassis_1_medium"
-		texturefile = "gfx/interface/technologies/SAM_Heavy_Tank_50.dds"
+		texturefile = "gfx/interface/technologies/ERK_Heavy_Tank_50.dds"
 	}
 
 	## SUPERHEAVY ##
@@ -296,21 +261,31 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_SAM_Superheavy_1945_medium"
-		texturefile = "gfx/interface/technologies/OMO_Superheavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/SAM_Superheavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_Superheavy_1950_medium"
 		texturefile = "gfx/interface/technologies/WSB_Superheavy_Tank_50.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_SAM_Superheavy_Artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/ERK_Superheavy_Artillery_45.dds"
+	}
 	# NSB
 
 	SpriteType = {
 		name = "GFX_SAM_NSB_superheavy_1945_medium"
-		texturefile = "gfx/interface/technologies/OMO_Superheavy_Tank_45.dds"
+		texturefile = "gfx/interface/technologies/SAM_Superheavy_Tank_45.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_NSB_superheavy_1950_medium"
 		texturefile = "gfx/interface/technologies/WSB_Superheavy_Tank_50.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SAM_NSB_Superheavy_Artillery_1945_medium"
+		texturefile = "gfx/interface/technologies/ERK_Superheavy_Artillery_45.dds"
 	}
 
 	## SAM Light Air ##
@@ -323,38 +298,26 @@ spriteTypes = {
 		name = "GFX_SAM_fighter_1945_medium"
 		texturefile = "gfx/interface/technologies/GER_Fighter_45.dds"
 	}
-	SpriteType = {
-		name = "GFX_SAM_fighter_1950_medium"
-		texturefile = "gfx/interface/technologies/GER_Fighter_50.dds"
-	}
 
 	SpriteType = {
 		name = "GFX_SAM_CAS_1945_medium"
 		texturefile = "gfx/interface/technologies/GER_CAS_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_CAS_1950_medium"
-		texturefile = "gfx/interface/technologies/GER_CAS_50.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_SAM_interceptor_1945_medium"
 		texturefile = "gfx/interface/technologies/GER_Interceptor_45.dds"
 	}
-	SpriteType = {
-		name = "GFX_SAM_interceptor_1950_medium"
-		texturefile = "gfx/interface/technologies/GER_Interceptor_50.dds"
-	}
 
 	## SAM Heavy Air ##
 
 	SpriteType = {
 		name = "GFX_SAM_strategic_bomber1_medium"
-		texturefile = "gfx/interface/technologies/RUS_Strategic_Bomber_36.dds"
+		texturefile = "gfx/interface/technologies/GER_Strategic_Bomber_36.dds"
 	}
 	SpriteType = {
 		name = "GFX_SAM_heavy_air_1945_medium"
-		texturefile = "gfx/interface/technologies/RUS_Strategic_Bomber_45.dds"
+		texturefile = "gfx/interface/technologies/GER_Strategic_Bomber_45.dds"
 	}
 	
 	SpriteType = {
@@ -389,172 +352,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_SAM_scout_plane_1945_medium"
 		texturefile = "gfx/interface/technologies/GER_Scout_Plane_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_scout_plane_1950_medium"
-		texturefile = "gfx/interface/technologies/GER_Scout_Plane_50.dds"
-	}
-	
-	###WRS NON-MTG DESTROYERS###
-
-	SpriteType = {
-		name = "GFX_SAM_modern_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_early_modern_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_advanced_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_improved_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_basic_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_ww2_destroyer_medium"
-		texturefile = "gfx/interface/technologies/RUS_Destroyer_45.dds"
-	}
-
-	###WRS NON-MTG CRUISERS###
-
-	SpriteType = {
-		name = "GFX_SAM_modern_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Cruiser_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_early_modern_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Cruiser_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_advanced_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Cruiser_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_improved_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Cruiser_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_basic_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Cruiser_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_ww2_cruiser_medium"
-		texturefile = "gfx/interface/technologies/RUS_Cruiser_45.dds"
-	}
-
-	###WRS NON-MTG SUBMARINES###
-
-	SpriteType = {
-		name = "GFX_SAM_modern_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Submarine_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_early_modern_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Submarine_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_advanced_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Submarine_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_improved_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Submarine_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_basic_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Submarine_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_ww2_submarine_medium"
-		texturefile = "gfx/interface/technologies/RUS_Submarine_45.dds"
-	}
-
-	###WRS NON-MTG CARRIERS###
-
-	SpriteType = {
-		name = "GFX_SAM_modern_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_early_modern_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_advanced_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_improved_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Carrier_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_early_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_ww2_carrier_medium"
-		texturefile = "gfx/interface/technologies/RUS_Carrier_45.dds"
-	}
-
-	###WRS NON-MTG BATTLESHIPS###
-
-	SpriteType = {
-		name = "GFX_SAM_modern_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Battleship_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_early_modern_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Battleship_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_advanced_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Battleship_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_improved_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Battleship_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_basic_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Battleship_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_ww2_battleship_medium"
-		texturefile = "gfx/interface/technologies/RUS_Battleship_45.dds"
-	}
-
-	###WRS NON-MTG FRIGATES###
-
-	SpriteType = {
-		name = "GFX_SAM_modern_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Frigate_90.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_early_modern_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Frigate_80.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_advanced_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Frigate_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_improved_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Fascist_Frigate_60.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_basic_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Frigate_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_SAM_ww2_frigate_medium"
-		texturefile = "gfx/interface/technologies/RUS_Frigate_45.dds"
 	}
 	
 	###WRS MTG CORVETTES###

@@ -22,11 +22,7 @@ spriteTypes = {
 		alwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
-	spriteType = {
-		name = "GFX_pie_chart_segment"
-		texturefile = "gfx/interface/pie_chart_segment.dds"
-		noOfFrames = 4 # change to how many frames you have, index starts at 1
-	}
+
 	spriteType = {
 		name = "GFX_cancel_conversion_button"
 		textureFile = "gfx/interface/cancel_conversion_button.dds"
@@ -35,11 +31,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_victorypoint_stateview_bg"
 		textureFile = "gfx/interface/victorypoint_stateview_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_stateview_scorched_earth"
-		textureFile = "gfx/interface/stateview_scorched_earth.dds"
 	}
 
 	spriteType = {
@@ -63,6 +54,32 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_gdp_icon"
+		textureFile = "gfx/interface/gdp_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_gdp_growth_state_icon"
+		textureFile = "gfx/interface/gdp_growth_state_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_state_gdp_growth_icon"
+		textureFile = "gfx/interface/state_gdp_growth_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_state_gdp_contribution_icon"
+		textureFile = "gfx/interface/state_gdp_contribution_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_power_toggle"
+		textureFile = "gfx/interface/power_toggle.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
 		name = "GFX_province_header"
 		textureFile = "gfx/interface/province_header.dds"
 	}
@@ -77,13 +94,13 @@ spriteTypes = {
 		name = "GFX_modifiers_mud_icon"
 		textureFile = "gfx/interface/modifiers_mud_icon.dds"
 	}
-
+	
 	spriteType = {
 		name = "GFX_modifiers_snow_icons"
 		textureFile = "gfx/interface/modifiers_snow_icons.dds"
 		noOfFrames = 2
 	}
-
+	
 	spriteType = {
 		name = "GFX_impassable_icon"
 		textureFile = "gfx/interface/modifiers_impassable_icon.dds"
@@ -122,6 +139,17 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_stateview_scorched_earth"
+		textureFile = "gfx/interface/stateview_scorched_earth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ww_stateview_bg"
+		textureFile = "gfx/interface/stateview/ww_stateview_bg.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
 		name = "GFX_stateview_resource_transp_bg"
 		textureFile = "gfx/interface/stateview_resource_transp_bg.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
@@ -130,6 +158,24 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_building_entry_stateview"
 		textureFile = "gfx/interface/building_entry_stateview.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_building_standing_entry_stateview"
+		textureFile = "gfx/interface/stateview/building_standing_entry_stateview.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_ww_building_standing_entry_stateview"
+		textureFile = "gfx/interface/stateview/ww_building_standing_entry_stateview.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_province_landmark_bg"
+		textureFile = "gfx/interface/stateview/province_landmark_bg.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
@@ -152,21 +198,39 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_building_cover"
+		textureFile = "gfx/interface/buildings/building_cover.dds"
+	}
+	spriteType = {
+		name = "GFX_building_cover_bottom"
+		textureFile = "gfx/interface/buildings/building_cover_bottom.dds"
+	}
+	spriteType = {
 		name = "GFX_buildings_strip_crt"
 		textureFile = "gfx/interface/buildings/building_icon_strip_crt.dds"
-		noOfFrames = 16
+		noOfFrames = 31
 	}
 
 	spriteType = {
 		name = "GFX_buildings_strip_metal"
 		textureFile = "gfx/interface/buildings/building_icon_strip_metal.dds"
-		noOfFrames = 16
+		noOfFrames = 31
 	}
 
 	spriteType = {
 		name = "GFX_buildings_strip"
 		textureFile = "gfx/interface/buildings/building_icon_strip_metal.dds"
-		noOfFrames = 16
+		noOfFrames = 31
+	}
+	
+	spriteType = {
+		name = "GFX_buildings_railway_gun"
+		textureFile = "gfx/interface/buildings/building_railway_gun.dds"
+	}
+
+	spriteType = {
+		name = "GFX_building_fort_icon"
+		textureFile = "gfx/interface/buildings/building_fort_icon.dds"
 	}
 
 	spriteType = {
@@ -207,7 +271,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/occupation_policy_selected.dds"
 		noOfFrames = 4
 	}
-
 
 	# TERRAIN
 	spriteType = {
@@ -312,6 +375,17 @@ spriteTypes = {
 		effectFile = "gfx/FX/progress_startend.lua"
 	}
 
+	progressbartype = {
+		name = "GFX_damage_bar_v"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/building_damage_bar.dds"
+		textureFile2 = "gfx/interface/building_damage_bar_bg.dds"
+		size = { x = 5 y = 38 }
+		effectFile = "gfx/FX/progress_startend.lua"
+		horizontal = no
+	}
+
 	spriteType = {
 		name = "GFX_nuke_button"
 		textureFile = "gfx/interface/stateview_nuke_button.dds"
@@ -324,15 +398,23 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_flag_overlay_stateview_2"
+		textureFile = "gfx/interface/flag_overlay_stateview_2.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
 		name = "GFX_flag_overlay_stateview_selectable"
 		textureFile = "gfx/interface/flag_overlay_stateview_selectable.dds"
 		alwaystransparent = yes
 		noOfFrames = 2
 	}
+
 	spriteType = {
 		name = "GFX_flag_overlay_stateview_large"
 		textureFile = "gfx/interface/flag_overlay_stateview_large.dds"
 	}
+
 	### Water Terrain
 
 	# Water
@@ -550,65 +632,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/terrains/terrain_archipelago_night_snow_storm.dds"
 	}
 	
-	spriteType = {
-		name = "GFX_modifiers_sabotaged_resource"
-		textureFile = "gfx/interface/occupation/sabotaged_resource.dds"
-	}
 	
-	spriteType = {
-		name = "GFX_gdp_icon"
-		textureFile = "gfx/interface/gdp_icon.dds"
-	}
-
-	spriteType = {
-		name = "GFX_gdp_growth_state_icon"
-		textureFile = "gfx/interface/gdp_growth_state_icon.dds"
-	}
-
-	spriteType = {
-		name = "GFX_state_gdp_growth_icon"
-		textureFile = "gfx/interface/state_gdp_growth_icon.dds"
-	}
-
-	spriteType = {
-		name = "GFX_state_gdp_contribution_icon"
-		textureFile = "gfx/interface/state_gdp_contribution_icon.dds"
-	}
-
-	spriteType = {
-		name = "GFX_ww_stateview_bg"
-		textureFile = "gfx/interface/stateview/ww_stateview_bg.dds"
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
-
-	spriteType = {
-		name = "GFX_building_standing_entry_stateview"
-		textureFile = "gfx/interface/stateview/building_standing_entry_stateview.dds"
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
-
-	spriteType = {
-		name = "GFX_ww_building_standing_entry_stateview"
-		textureFile = "gfx/interface/stateview/ww_building_standing_entry_stateview.dds"
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
-
-	spriteType = {
-		name = "GFX_province_landmark_bg"
-		textureFile = "gfx/interface/stateview/province_landmark_bg.dds"
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
-
-	spriteType = {
-		name = "GFX_buildings_railway_gun"
-		textureFile = "gfx/interface/buildings/building_railway_gun.dds"
-	}
-
-	spriteType = {
-		name = "GFX_building_fort_icon"
-		textureFile = "gfx/interface/buildings/building_fort_icon.dds"
-	}
-
 	###
 	
 	progressbartype = {
@@ -636,11 +660,22 @@ spriteTypes = {
 		textureFile = "gfx/interface/stateview_nuke_button.dds"
 	}
 
+	spriteType = {
+		name = "GFX_modifiers_sabotaged_resource"
+		textureFile = "gfx/interface/occupation/sabotaged_resource.dds"
+	}
+
 	SpriteType = {
 		name = "GFX_scorched_earth_state"
 		texturefile = "gfx/interface/stateview/destroy_railway.dds"
 	}
-
+	
+	### STATE MODIFIERS ###
+	
+	spriteType = {
+		name = "GFX_modifiers_mano_scorched_earth"
+		textureFile = "gfx/interface/state_modifiers/modifier_mano_scorched_earth.dds"
+	}
 	spriteType = {
 		name = "GFX_modifiers_radiation"
 		textureFile = "gfx/interface/ideas/national_spirits/Generic/idea_generic_nuclear_explosion.dds"

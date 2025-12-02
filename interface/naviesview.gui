@@ -138,8 +138,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "action_bar_window"
 		position = {x=-300 y=0}
-		show_position = {x=-300 y=-230}
-		size = { width=435 height=60 }
+		show_position = {x=-300 y=-245}
+		size = { width=532 height=100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -148,14 +148,8 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			spriteType = "GFX_tiled_window_transparent"
-		}
-
-		iconType = {
-			name = "background_button"
-			spriteType = "GFX_BPT_bg"
-			position = {x=0 y=-4}
-			alwaystransparent = yes
+			quadTextureSprite = "GFX_air_priorities_tiled_bg"
+			position = { x = 0 y = 0 }
 		}
 
 		instantTextboxType = {
@@ -186,13 +180,29 @@ guiTypes = {
 
 		@nv_mission_btn_training_x=10
 		@nv_mission_btn_y=26
+		@nv_dominance_ico_y=30
 
 		buttonType = {
 			name = "btn_mission7"
 			position = {x=@nv_mission_btn_training_x y=@nv_mission_btn_y}
 			spriteType = "GFX_NV_btn_training"
 			shortcut = "k"
+			shortcut = "shift+k"
 			clicksound = click_default
+		}
+
+		buttonType = {
+			name = "btn_target"
+			position = {x=-27 y=2}
+			spriteType = "GFX_air_target_icon"
+			clicksound = click_default
+		}
+
+		iconType = {
+			name = "training_will_stop_at_max_icon"
+			spriteType = "GFX_exercise_stop_at_max"
+			position = {x=15 y=48 }
+			alwaystransparent = yes
 		}
 
 		#iconType = {
@@ -208,6 +218,14 @@ guiTypes = {
 			spriteType = "GFX_btn_yellow_glow"
 			position = {x=@nv_mission_btn_training_x y=@nv_mission_btn_y}
 			alwaystransparent = yes
+		}
+
+		# Patrol
+
+		iconType = {
+			name = "naval_dominance_texticon1"
+			spriteType = "GFX_naval_dominance_increase_texticon"
+			position = { x= 20 y =@nv_dominance_ico_y}
 		}
 
 		buttonType = {
@@ -231,6 +249,14 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		# Strike Force
+
+		iconType = {
+			name = "naval_dominance_texticon2"
+			spriteType = "GFX_naval_dominance_multiplication_texticon"
+			position = { x= 70 y =@nv_dominance_ico_y}
+		}
+
 		buttonType = {
 			name = "btn_mission2"
 			position = {x=110 y=@nv_mission_btn_y}
@@ -250,6 +276,14 @@ guiTypes = {
 			spriteType = "GFX_btn_yellow_glow"
 			position = {x=110 y=@nv_mission_btn_y}
 			alwaystransparent = yes
+		}
+
+		# Convoy Raiding
+
+		iconType = {
+			name = "naval_dominance_texticon3"
+			spriteType = "GFX_naval_dominance_reduction_texticon"
+			position = { x= 120 y = @nv_dominance_ico_y}
 		}
 
 		buttonType = {
@@ -273,6 +307,8 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		# Convoy Escort
+
 		buttonType = {
 			name = "btn_mission4"
 			position = {x=210 y=@nv_mission_btn_y}
@@ -293,6 +329,8 @@ guiTypes = {
 			position = {x=210 y=@nv_mission_btn_y}
 			alwaystransparent = yes
 		}
+
+		# Mine Laying
 
 		buttonType = {
 			name = "btn_mission5"
@@ -315,6 +353,8 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		# Mine Sweeping
+
 		buttonType = {
 			name = "btn_mission6"
 			position = {x=310 y=@nv_mission_btn_y}
@@ -335,6 +375,8 @@ guiTypes = {
 			position = {x=310 y=@nv_mission_btn_y}
 			alwaystransparent = yes
 		}
+
+		# Naval Invasion Support
 
 		buttonType = {
 			name = "btn_mission9"
@@ -357,6 +399,7 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		# Hold
 
 		buttonType = {
 			name = "btn_mission0"
@@ -381,7 +424,6 @@ guiTypes = {
 			shortcut = "ctrl+h"
 			clicksound = click_default
 		}
-
 	}
 
 	containerWindowType = {
@@ -748,7 +790,7 @@ guiTypes = {
 			}
 		}
 	}
-
+	
 	containerWindowType = {
 		name = "defensive_stand_item"
 		position = {x=0 y=0}
@@ -875,7 +917,7 @@ guiTypes = {
 			name = "fleet_name"
 			position = {x=46 y=12}
 			font = "Bomb_16"
-			size = { x=212 y=23 }
+			size = { x=252 y=23 }
 			text = "FLEET_NAME_HERE"
 		}
 
@@ -936,7 +978,7 @@ guiTypes = {
 		#instantTextboxType = {
 		#	name = "home_base"
 		#	position = {x=108 y=135}
-		#	font = "hoi_18b"
+		#	font = "aldrich_18_outline"
 		#	maxWidth = 181
 		#	maxHeight = 23
 		#	format = left
@@ -963,13 +1005,53 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "active_in_regions"
-			position = {x=16 y=135}
-			font = "aldrich_24_outline"
+			position = {x=16 y=138}
+			font = "aldrich_22_outline"
 			maxWidth = 290
 			maxHeight = 23
 			format = left
 			text = "Active in Regions: 4"
 		}
+
+		containerWindowType = {
+		    name = "home_base_view"
+		    position = { x=225 y=138 }
+			
+			buttonType = {
+				position = { x=0 y=-5 }
+				name = "automate_home_base_button"
+				spriteType = "GFX_naval_automation_base"
+				clicksound = click_default
+				shortcut = "shift+s"
+			}
+			
+            buttonType = {
+                name = "home_base_button"
+                position = { x=30 y=-5	 }
+                quadTextureSprite = "GFX_naval_deploy_button"
+                buttonFont = "aldrich_16_outline"
+                clicksound = click_default
+            }
+
+            iconType = {
+                name = "home_base_icon"
+                position = { x=30 y=-6 }
+                spriteType = "GFX_deploy_port_fleet_icons"
+                alwaystransparent = yes
+            }
+
+            instantTextboxType = {
+                name = "home_base_name"
+                position = { x = 60 y = 0 }
+                font = "aldrich_18_outline"
+                borderSize = {x = 0 y = 0}
+                text = "Home base"
+                maxWidth = 90
+                maxHeight = 25
+                fixedsize = yes
+                alwaystransparent = yes
+            }
+        }
 
 		buttonType = {
 			name = "leader_button"
@@ -1004,6 +1086,7 @@ guiTypes = {
 			maxHeight = 32
 			format = center
 			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
 		}
 
 		iconType = {
@@ -1019,7 +1102,7 @@ guiTypes = {
 			spriteType = "GFX_leader_details_icon"
 			pdx_tooltip = "CLICK_TO_ASSIGN_TRAITS"
 		}
-		
+
 		buttonType = {
 			name = "btn_advisor_tree"
 			position = { x=38 y = 110}
@@ -1027,6 +1110,24 @@ guiTypes = {
 			buttonFont = "aldrich_18_outline"
 			clicksound = click_default
 			frame = 1
+		}
+
+		iconType = {
+			name = "skill_icon"
+			spriteType = "GFX_land_battle_leader_skill_bg"
+			centerposition = yes
+			position = { x=211 y=65 }
+			scale = 0.7
+		}
+
+		instantTextboxType = {
+			name = "skill_text"
+			position = {x=196 y=51}
+			font = "hoi_18mbs"
+			maxWidth = 30
+			maxHeight = 23
+			format = center
+			text = "3"
 		}
 
 		instantTextboxType = {
@@ -1139,6 +1240,7 @@ guiTypes = {
 				position = {x=0 y=1}
 				spriteType = "GFX_tiled_window_transparent"
 			}
+
 			# Code inserts ship_entry_compact here next to each other
 		}
 	}
@@ -1214,8 +1316,16 @@ guiTypes = {
 			name = "unit_name"
 			position = {x=46 y=10}
 			font = "Bomb_16"
-			size = { x=212 y=23 }
+			size = { x=252 y=23 }
 			orientation = left
+		}
+
+		iconType = {
+			name ="naval_headquarter_icon"
+			quadTextureSprite = "GFX_buildings_strip"
+			frame = 29
+			scale = 0.6
+			position = { x = 40 y = 5 }
 		}
 
 		buttonType ={
@@ -1231,6 +1341,49 @@ guiTypes = {
 			position = {x=451 y=84}
 			pdx_tooltip = "OPEN_TASK_FORCE_COMPOSITION_EDITOR"
 			pdx_tooltip_delayed = "TASK_FORCE_COMPOSITION_EDITOR_DESC"
+		}
+
+		buttonType = {
+			name = "toggle_btn_split_for_repair_indiv"
+			position = {x=389 y=43}
+			spriteType = "GFX_NV_btn_base_partial_toggle"
+			clicksound = click_default
+		}
+
+		iconType = {
+			name = "toggle_btn_split_for_repair_indiv_icon"
+			position = {x=389 y=43}
+			spriteType = "GFX_NV_btn_toggle_split_for_repair"
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			position = {x=419 y=43}
+			name = "toggle_btn_for_repair_priority_indiv"
+			spriteType = "GFX_NV_btn_base_partial_toggle"
+			clicksound = click_default
+		}
+
+		iconType = {
+			position = {x=419 y=43}
+			name = "toggle_btn_repair_priority_indiv_icon"
+			spriteType = "GFX_NV_btn_repair_priority"
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			position = {x=449 y=43}
+			name = "toggle_btn_aggressiveness_indiv"
+			spriteType = "GFX_NV_btn_base_partial_toggle"
+			clicksound = click_default
+			frame = 1
+		}
+
+		iconType = {
+			name = "toggle_btn_aggressiveness_indiv_icon"
+			position = {x=449 y=43}
+			spriteType = "GFX_NV_btn_aggressiveness_small"
+			alwaystransparent = yes
 		}
 
 		buttonType = {
@@ -1290,7 +1443,7 @@ guiTypes = {
 			position = { x=60 y=38 }
 			text = "I DO THAT"
 			font = "aldrich_24_outline"
-			maxWidth = 299
+			maxWidth = 269
 			maxHeight = 40
 			format = left
 			fixedsize = yes
@@ -1325,6 +1478,12 @@ guiTypes = {
 		}
 
 		iconType = {
+			name = "dominance"
+			position = {x=325 y=51}
+			spriteType = "GFX_naval_dominance_support_strip"
+		}
+
+		iconType = {
 			name = "fuel_stocks_icon"
 			position = {x=355 y=47}
 			spriteType = "GFX_fuel_extended_strip"
@@ -1335,25 +1494,6 @@ guiTypes = {
 			name = "fuel_efficiency_warning_icon"
 			spriteType = "GFX_mapicon_unit_invalid_orders"
 			position = { x=350 y=47 }
-		}
-
-		iconType = {
-			name = "split_for_repair_icon"
-			position = {x=385 y=45}
-			spriteType = "GFX_NV_icon_split_for_repair"
-		}
-
-		iconType = {
-			name = "repair_priority_icon"
-			position = {x=418 y=45}
-			spriteType = "GFX_NV_btn_repair_priority"
-		}
-
-		iconType = {
-			name = "aggressiveness_icon"
-			position = {x=449 y=45}
-			spriteType = "GFX_NV_btn_aggressiveness_small"
-			frame = 1
 		}
 
 		# Code toggles visibility on ships_detailed
@@ -1537,6 +1677,7 @@ guiTypes = {
 		}
 
 		# NOTE: moved back in code to the role_icon x position if MTG is absent
+		#       also, maxWidth is shrinked in code when necessary (e.g. buttons are shown)
 		instantTextboxType = {
 			name = "ship_type"
 			position = {x=210 y=23}
@@ -1589,6 +1730,7 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 			frame = 6
 		}
+
 	}
 
 	containerWindowType = {
@@ -1672,6 +1814,7 @@ guiTypes = {
 			text = 99
 			alwaystransparent = yes
 		}
+
 	}
 
 	containerWindowType = {
@@ -1720,6 +1863,8 @@ guiTypes = {
 			position = { x = -1 y = 45 }
 			size = { width = 530 height = 340 }
 			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 47
+			smooth_scrolling = yes
 			margin = {top=-4 left=0 bottom=0 right=0}
 
 			background = {
@@ -1747,11 +1892,6 @@ guiTypes = {
 		fade_type = linear
 		clipping = no
 
-		background = {
-			name = "Background"
-			spriteType = "GFX_tiled_bg"
-		}
-
 		positionType = {
 			name = "sub_unit_selection_window_default_pos"
 			position = { x = 516 y = 1 }
@@ -1762,12 +1902,15 @@ guiTypes = {
 			position = { x = 220 y = 44 }
 		}
 
+		background = {
+			name = "Background"
+			spriteType = "GFX_tiled_bg"
+		}
+
 		iconType = {
 			name = "header_bg"
-			#spriteType = "GFX_frontend_task_force_composition_editor_upper_bar"
 			spriteType = "GFX_crt_closebutton"
-			#position = { x=9 y=10 }
-			position = { x=-4000 y=10 }
+			position = { x=-4000 y=10 } #position = { x=9 y=10 }
 			alwaystransparent = yes
 		}
 
@@ -2016,6 +2159,7 @@ guiTypes = {
 				max_slots_horizontal = 1
 				slotsize = { width=250 height=43 }
 			}
+
 		}
 	}
 
@@ -2058,6 +2202,7 @@ guiTypes = {
 			format = left
 			alwaystransparent = yes
 		}
+
 	}
 
 	containerWindowType = {
@@ -2077,6 +2222,7 @@ guiTypes = {
 			position = {x=5 y=9}
 			spriteType = "GFX_NV_icon_pride"
 		}
+
 
 		instantTextboxType = {
 			name = "ship_name"
@@ -2432,6 +2578,53 @@ guiTypes = {
 			pdx_tooltip = "CLOSE"
 		}
 
+	}
+
+	containerWindowType = {
+		name = "naval_base_selection_item"
+		position = { x=0 y=0 }
+		size = { width=272 height=35 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			spriteType ="GFX_deploy_port_fleet_bg"
+			clicksound = click_default
+		}
+
+		iconType = {
+			name = "icon"
+			position = { x=0 y=4 }
+			spriteType = "GFX_deploy_port_fleet_icons"
+		}
+
+		iconType = {
+			name = "naval_headquarter_icon"
+			position = { x= 35 y = 4 }
+			scale = 0.6
+			quadTextureSprite ="GFX_buildings_strip"
+			hide = yes
+		}
+
+		iconType = {
+			name = "naval_supply_icon"
+			position = { x= 60 y = 4 }
+			scale = 0.6
+			quadTextureSprite ="GFX_buildings_strip"
+			hide = yes
+		}
+
+		instantTextboxType = {
+			name = "name"
+			position = { x = 120 y = 9 }
+			font = "aldrich_18_outline"
+			borderSize = {x = 0 y = 0}
+			text = "somewhere"
+			maxWidth = 272
+			maxHeight = 25
+			format = left
+			alwaystransparent = yes
+		}
 	}
 
 	containerWindowType = {
