@@ -1,1 +1,36 @@
 ﻿capital = 694
+
+FRA = {
+    set_autonomy = { target = GUD autonomy_state = autonomy_overseasdepartment }
+}
+
+recruit_character = GUD_Louis_Constant_Fleming
+
+set_oob = "GUD_1962"
+
+set_politics = {	
+	ruling_party = paternalism
+	last_election = "1994.5.11"
+	election_frequency = 60
+	elections_allowed = yes
+
+}
+
+TNO_startup_nation = yes
+
+set_popularities = {
+    paternalism = 31
+	conservatism = 16
+	liberalism = 15
+	progressivism = 29
+    socialist = 9
+}
+
+
+add_ideas = {
+    Pakt_Schutzstaat
+}
+
+# econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }

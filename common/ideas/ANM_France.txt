@@ -2,19 +2,17 @@ ideas = {
 
     country = {
         
-		FRA_rrn_infighting = {  
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_rrn_infighting" }
+		FRA_liberation_in_name = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_liberation_in_name" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 
-			picture = FRA_rrn_infighting
+			picture = FRA_liberation_in_name
 			removal_cost = -1
 
 			modifier = {
 				political_power_factor = -0.05
-				stability_weekly = -0.01
 				stability_factor = -0.10
-				fascism_drift = -0.03
 			}
 		}
         FRA_the_sol = {  

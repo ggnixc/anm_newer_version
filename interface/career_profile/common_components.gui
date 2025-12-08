@@ -4872,8 +4872,8 @@ guiTypes = {
 			### Middle Container ###
 
 			containerWindowType = {
-				name = "column_dlc043"
-				position = { x = @MiddleColumnPosX y = @ColumnPosY }
+				name = "column_dlc049"
+				position = { x = @LeftColumnPosX y = @ColumnPosY }
 				size = { width = @ColumnWidth height = @ColumnHeight }
 				orientation = center_up
 				origo = center_up
@@ -4885,24 +4885,24 @@ guiTypes = {
 
 					background = {
 						name = "background"
-						quadTextureSprite = "GFX_bg_dlc043_owned"
+						quadTextureSprite = "GFX_bg_dlc049_owned"
 					}
 
 					instantTextboxType = {
 						name = "dlc_title"
 						position = { x = @DlcTitleX y = @DlcTitleY }
-						font = "hoi_36header"
+						font = "aldrich_36_outline"
 						borderSize = { x = 0 y = 0 }
 						maxWidth = @DlcTitleW
 						maxHeight = @DlcTitleH
 						format = center
 						vertical_alignment = bottom
-						text = "GOTTERDAMMERUNG"
+						text = "NO_COMPROMISE_NO_SURRENDER"
 						Orientation = center_up
 					}
 
 					containerWindowType = {
-						name = "special_projects_completed"
+						name = "faction_goals_completed"
 						position = { x = @StatContainerCenterX y = @DlcStatsRow1Y }
 						size = { width = @StatContainerCenterW height = @StatContainerH }
 						Orientation = center_up
@@ -4917,8 +4917,8 @@ guiTypes = {
 						instantTextboxType = {
 							name = "value"
 							position = { x = @StatTextCenterX y = @StatNumberTextY }
-							font = "hoi_30"
-							text = SPECIAL_PROJECTS_COMPLETED
+							font = "aldrich_32_outline"
+							text = FACTION_GOALS_COMPLETED
 							format = center
 							maxWidth = @StatTextCenterW
 							multiline = no
@@ -4929,8 +4929,8 @@ guiTypes = {
 						instantTextboxType = {
 							name = "label"
 							position = { x = @StatTextCenterX y = @StatLabelTextY }
-							font = "hoi_18"
-							text = CAREER_PROFILE_SPECIAL_PROJECTS_COMPLETED_LABEL
+							font = "aldrich_18_outline"
+							text = CAREER_PROFILE_FACTION_GOALS_COMPLETED_LABEL
 							format = center
 							maxWidth = @StatTextCenterW
 							text_color_code = L
@@ -4958,7 +4958,7 @@ guiTypes = {
 					}
 
 					containerWindowType = {
-						name = "launched_raids"
+						name = "mastery_gained"
 						position = { x = @StatContainerCenterX y = @DlcStatsRow2Y }
 						size = { width = @StatContainerCenterW height = @StatContainerH }
 						Orientation = center_up
@@ -4973,8 +4973,8 @@ guiTypes = {
 						instantTextboxType = {
 							name = "value"
 							position = { x = @StatTextCenterX y = @StatNumberTextY }
-							font = "hoi_30"
-							text = LAUNCHED_RAIDS
+							font = "aldrich_32_outline"
+							text = MASTERY_GAINED
 							format = center
 							maxWidth = @StatTextCenterW
 							multiline = no
@@ -4985,8 +4985,8 @@ guiTypes = {
 						instantTextboxType = {
 							name = "label"
 							position = { x = @StatTextCenterX y = @StatLabelTextY }
-							font = "hoi_18"
-							text =  CAREER_PROFILE_LAUNCHED_RAIDS_LABEL
+							font = "aldrich_18_outline"
+							text =  CAREER_PROFILE_MASTERY_GAINED_LABEL
 							format = center
 							maxWidth = @StatTextCenterW
 							text_color_code = L
@@ -5015,7 +5015,7 @@ guiTypes = {
 					}
 
 					containerWindowType = {
-						name = "scientist_level_ups"
+						name = "naval_headquarters_built"
 						position = { x = @StatContainerCenterX y = @DlcStatsRow3Y }
 						size = { width = @StatContainerCenterW height = @StatContainerH }
 						Orientation = center_up
@@ -5030,8 +5030,8 @@ guiTypes = {
 						instantTextboxType = {
 							name = "value"
 							position = { x = @StatTextCenterX y = @StatNumberTextY }
-							font = "hoi_30"
-							text = SCIENTIST_LEVEL_UPS
+							font = "aldrich_32_outline"
+							text = NAVAL_HEADQUARTERS_BUILT
 							format = center
 							maxWidth = @StatTextCenterW
 							multiline = no
@@ -5042,8 +5042,8 @@ guiTypes = {
 						instantTextboxType = {
 							name = "label"
 							position = { x = @StatTextCenterX y = @StatLabelTextY }
-							font = "hoi_18"
-							text =  CAREER_PROFILE_SCIENTIST_LEVEL_UPS_LABEL
+							font = "aldrich_18_outline"
+							text =  CAREER_PROFILE_NAVAL_HEADQUARTERS_BUILT_LABEL
 							format = center
 							maxWidth = @StatTextCenterW
 							text_color_code = L

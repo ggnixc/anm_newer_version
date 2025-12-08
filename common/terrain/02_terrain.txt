@@ -43,6 +43,10 @@ categories = {
 		supply_flow_penalty_factor = 0.18
 		
 		truck_attrition_factor = 0.7
+
+		buildings_max_level = {
+			bunker = 5
+		}
 	}
 	desert_plateau = {
 		color = { 255 127 0 }
@@ -53,12 +57,16 @@ categories = {
 		ai_terrain_importance_factor = 5.0
 		match_value = 8
 		sound_type = desert
-		
 		sickness_chance = 1.0
 		
 		supply_flow_penalty_factor = 0.1
 		
 		truck_attrition_factor = 0.5
+
+		buildings_max_level = {
+			supply_node = 0
+			bunker = 0
+		}
 	}
 	steppe = {
 		color = { 255 127 0 }
@@ -73,6 +81,9 @@ categories = {
 		supply_flow_penalty_factor = 0.04
 		
 		truck_attrition_factor = 0.1
+		buildings_max_level = {
+			bunker = 5
+		}
 
 	}
 	savanna = {
@@ -90,6 +101,9 @@ categories = {
 		supply_flow_penalty_factor = 0.04
 		
 		truck_attrition_factor = 0.1
+		buildings_max_level = {
+			bunker = 3
+		}
 	}
 	water_southern_sea = {
 		naval_terrain = yes
@@ -124,5 +138,12 @@ categories = {
 		supply_flow_penalty_factor = 0.2
 		
 		truck_attrition_factor = 0.25
+
+		buildings_max_level = {
+			supply_node = 0
+			bunker = 0
+			coastal_bunker = 0
+			naval_base = 1
+		}
 	}
 }

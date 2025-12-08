@@ -1,5 +1,6 @@
 ﻿capital = 786
 
+recruit_character = FRA_jean_louis_debre
 recruit_character = FRA_francois_mitterrand
 recruit_character = FRA_jean_jacques_susini
 recruit_character = FRA_jean_marie_le_pen
@@ -18,8 +19,7 @@ country_lock_all_division_template = yes
 
 add_ideas = {
 	#NATIONAL SPIRITS
-	FRA_rrn_infighting
-	FRA_legacy_of_marechal
+	FRA_liberation_in_name
 
 	#FACTION
 	Pakt_Bundnispartner
@@ -62,10 +62,10 @@ add_ideas = {
 }
 
 set_politics = {	
-	ruling_party = despotism
-	last_election = "1936.5.3"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = paternalism
+	last_election = "1994.5.3"
+	election_frequency = 60
+	elections_allowed = yes
 }
 
 #econtype
@@ -73,13 +73,12 @@ set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }
 
 set_popularities = {
-    ultranationalism = 10
-    paternalism = 11
-    despotism = 34
-	despotism_1 = 15
-	despotism_2 = 8
-    fascism = 17
-    national_socialism = 5
+    paternalism = 31
+	paternalism_1 = 16
+	paternalism_2 = 15
+	progressivism = 31
+	national_socialism = 4
+	fascism = 3
 }
 
 if = {
