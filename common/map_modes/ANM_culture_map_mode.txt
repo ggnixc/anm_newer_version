@@ -1248,16 +1248,25 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.247 }
 					set_temp_variable = { blue = 0.247 }
 				}
-				### There is no 128 ###
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 129 } #Welsh
+							check_variable = { nationality = 128 } #Flämisch
 						}
-					}
-					set_temp_variable = { red = 0.551 }
-					set_temp_variable = { green = 0.651 }
-					set_temp_variable = { blue = 0.551 }
+					} 
+					set_temp_variable = { red = 0.512 }
+					set_temp_variable = { green = 0.471 }
+					set_temp_variable = { blue = 0.401 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 129 } #Wallonisch, formerly Welsh
+						}
+					} 
+					set_temp_variable = { red = 0.31 } 
+					set_temp_variable = { green = 0.45 }
+					set_temp_variable = { blue = 0.50 }
 				}
 				else_if = {
 					limit = {
@@ -1362,12 +1371,12 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 140 } #Burgundian
+							check_variable = { nationality = 140 } #Französisch, formerly Burgundian Culture
 						}
 					}
-					set_temp_variable = { red = 0.311 }
-					set_temp_variable = { green = 0.05 }
-					set_temp_variable = { blue = 0.210 }
+					set_temp_variable = { red = 0.29 }
+					set_temp_variable = { green = 0.38 }
+					set_temp_variable = { blue = 0.44 }
 				}
 				else_if = {
 					limit = {
@@ -3123,12 +3132,12 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 316 } #Russian w Kalmyk, Tatar and Kazakh minorities
+							check_variable = { nationality = 316 } #Bulgarian-Serbian, Formerly Russian-Kamlyk
 						}
 					}
-					set_temp_variable = { red = 0.247 }
-					set_temp_variable = { green = 0.478 }
-					set_temp_variable = { blue = 0.255 }
+					set_temp_variable = { red = 0.21 }
+					set_temp_variable = { green = 0.38 }
+					set_temp_variable = { blue = 0.36 }
 				}
 				else_if = {
 					limit = {
@@ -5871,12 +5880,12 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 592 } #Swedish Sami minority
+							check_variable = { nationality = 592 } #Jämtlandsk, former Swedish w Sami minority
 						}
 					}
-					set_temp_variable = { red = 0.451 }
-					set_temp_variable = { green = 0.431 }
-					set_temp_variable = { blue = 0.486 }
+					set_temp_variable = { red = 0.251 }
+					set_temp_variable = { green = 0.251 }
+					set_temp_variable = { blue = 0.577 }
 				}
 				else_if = {
 					limit = {
@@ -8967,6 +8976,16 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.38 }
 					set_temp_variable = { green = 0.09 }
 					set_temp_variable = { blue = 0.92 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 972 } #Swedish, with Sami minority
+						}
+					}
+					set_temp_variable = { red = 0.451 }
+					set_temp_variable = { green = 0.355 }
+					set_temp_variable = { blue = 0.461 }
 				}
 				else = {
 					set_temp_variable = { red = 0.001 }
