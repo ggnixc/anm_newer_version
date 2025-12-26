@@ -8987,6 +8987,26 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.355 }
 					set_temp_variable = { blue = 0.461 }
 				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 973 } #Uzbek, with Kazakh minority
+						}
+					}
+					set_temp_variable = { red = 0.451 }
+					set_temp_variable = { green = 0.355 }
+					set_temp_variable = { blue = 0.461 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 974 } #Uzbek, with Korean minority
+						}
+					}
+					set_temp_variable = { red = 0.451 }
+					set_temp_variable = { green = 0.355 }
+					set_temp_variable = { blue = 0.461 }
+				}
 				else = {
 					set_temp_variable = { red = 0.001 }
 					set_temp_variable = { green = 0.001 }
