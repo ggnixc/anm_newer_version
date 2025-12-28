@@ -4076,12 +4076,12 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 412 } # Croat-Serb
+							check_variable = { nationality = 412 } # Macedonian (Serbian)
 						}
 					}
-					set_temp_variable = { red = 0.482 }
-					set_temp_variable = { green = 0.204 }
-					set_temp_variable = { blue = 0.471 }
+					set_temp_variable = { red = 0.578 }
+					set_temp_variable = { green = 0.554 }
+					set_temp_variable = { blue = 0.402 }
 				}
 				else_if = {
 					limit = {
@@ -9006,6 +9006,16 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.306 }
 					set_temp_variable = { green = 0.261 }
 					set_temp_variable = { blue = 0.492 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 975 } #Lithuanian, with Baltendeutch minority
+						}
+					}
+					set_temp_variable = { red = 0.469 }
+					set_temp_variable = { green = 0.468 }
+					set_temp_variable = { blue = 0.305 }
 				}
 				else = {
 					set_temp_variable = { red = 0.001 }
