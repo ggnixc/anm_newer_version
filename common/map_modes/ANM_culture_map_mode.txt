@@ -4509,12 +4509,12 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 456 } #Russian (Tver-Karelian)
+							check_variable = { nationality = 456 } #Slovak (Rusyn), formerly Russian (Tver-Karelian)
 						}
 					}
-					set_temp_variable = { red = 0.06 }
-					set_temp_variable = { green = 0.425 }
-					set_temp_variable = { blue = 0.225 }
+					set_temp_variable = { red = 0.717 }
+					set_temp_variable = { green = 0.685 }
+					set_temp_variable = { blue = 0.700 }
 				}
 				else_if = {
 					limit = {
@@ -5930,12 +5930,12 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 597 } #Russian (Tver Karelian)
+							check_variable = { nationality = 597 } #Slovak (German, Hungarian), formerly Russian (Tver Karelian)
 						}
 					}
-					set_temp_variable = { red = 0.227 }
-					set_temp_variable = { green = 0.502 }
-					set_temp_variable = { blue = 0.310 }
+					set_temp_variable = { red = 0.704 }
+					set_temp_variable = { green = 0.644 }
+					set_temp_variable = { blue = 0.640 }
 				}
 				else_if = {
 					limit = {
@@ -9016,6 +9016,36 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.469 }
 					set_temp_variable = { green = 0.468 }
 					set_temp_variable = { blue = 0.305 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 976 } #Black Sea German
+						}
+					}
+					set_temp_variable = { red = 0.214 }
+					set_temp_variable = { green = 0.294 }
+					set_temp_variable = { blue = 0.336 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 977 } #Vistula German
+						}
+					}
+					set_temp_variable = { red = 0.279 }
+					set_temp_variable = { green = 0.448 }
+					set_temp_variable = { blue = 0.415 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 978 } #Kiewer
+						}
+					}
+					set_temp_variable = { red = 0.461 }
+					set_temp_variable = { green = 0.452 }
+					set_temp_variable = { blue = 0.452 }
 				}
 				else = {
 					set_temp_variable = { red = 0.001 }
