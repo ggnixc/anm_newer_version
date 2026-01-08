@@ -9047,6 +9047,16 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.452 }
 					set_temp_variable = { blue = 0.452 }
 				}
+				else_if = {
+					limit = {
+						FROM = {
+							check_variable = { nationality = 979 } #Tibetan (Han)
+						}
+					}
+					set_temp_variable = { red = 0.080 }
+					set_temp_variable = { green = 0.000 }
+					set_temp_variable = { blue = 0.000 }
+				}
 				else = {
 					set_temp_variable = { red = 0.001 }
 					set_temp_variable = { green = 0.001 }
