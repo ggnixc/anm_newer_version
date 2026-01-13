@@ -6,14 +6,14 @@ VEN = {
 
 set_oob = "VEN_1962"
 
-recruit_character = VEN_Andres_Velasquez
+recruit_character = VEN_Jose_Rangel
 
 # econtype
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Stabilizing_Development }
 set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
 
 set_politics = {	
-	ruling_party = progressivism
+	ruling_party = despotism
 	last_election = "1993.12.6"
 	election_frequency = 60
 	elections_allowed = yes
@@ -25,29 +25,17 @@ TNO_startup_nation = yes
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 17
-    progressivism = 26
-	progressivism_1 = 14
-    liberalism = 16
-    liberal_conservatism = 15
-    conservatism = 12
-    paternalism = 0
-    despotism = 0
+    socialist = 0
+    progressivism = 0
+    liberalism = 0
+    liberal_conservatism = 0
+    conservatism = 
+    paternalism = 24
+    despotism = 66
+	despotism_1 = 10
     fascism = 0
-     
 	national_socialism = 0
 }
-
-create_country_leader = {
-	name = "Hugo Chvez"
-	picture = "Portrait_Venezuela_Chavez.dds"
-	expire = "2965.1.1"
-	ideology = socialist_left_wing_nationalism_subtype
-	traits = {
-		#
-	}
-}
-
 
 add_ideas = {
 	VEN_Oil_Baron
