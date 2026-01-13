@@ -24,14 +24,17 @@ set_popularities = {
     conservatism = 45
     paternalism = 0
     despotism = 0
-    fascism = 0
-     
+    fascism = 0 
 }
 
 add_ideas = {
     #Factionstatus
-	OFN_Independent_Member
+
     #National Spirit
     COS_the_creeping_shadow
     COS_the_dominant_liberation
 }
+
+# econtype
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Stabilizing_Development }
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
