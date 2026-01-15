@@ -1618,7 +1618,7 @@ guiTypes = {
 		position = { x = -554 y = -456 }
 		show_position = { x = -150 y = -300 }
 		hide_position = { x = -150 y = 10 }
-		size = { width = 1098 height = 800 }
+		size = { width = 1100 height = 800 }
 		Orientation = center
 		moveable = yes
 		fade_time = 500
@@ -1628,28 +1628,28 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			quadTextureSprite = "GFX_tiled_bg"
+			spriteType = "GFX_gamesetup_custom_gameplay_bg"
 		}
 
 		containerWindowType = {
 			name = "window_title_bar"
-			position = { x = 15 y = 15 }
+			position = { x = 45 y = 10 }
 			size = { width = 1066 height = 40 }
 
 			instantTextboxType = {
 				name = "window_title"
 				position = { x = 0 y = 3 }
-				font = "aldrich_32_outline"
+				font = "aldrich_white_22_outline"
 				text = "CUSTOM_GAME_RULES_TITLE"
 				maxWidth = 1066
 				maxHeight = 24
-				format = center
+				format = left
 			}
 		}
 
 		containerWindowType = {
 			name = "scrollable_container"
-			position = { x = -7 y = 56 }
+			position = { x = -2 y = 56 }
 			size = { width = 100%% height = 684 }
 			margin = { top = 0 bottom = 0 right = 26 left = 15 }
 			verticalScrollbar = "right_vertical_slider_diff"
@@ -1671,7 +1671,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "button_bar"
-			position = { x = 15 y = 745 }
+			position = { x = 15 y = 757 }
 			size = { width = 636 height = 40 }
 
 			buttonType = {
@@ -1680,7 +1680,7 @@ guiTypes = {
 				quadTextureSprite ="GFX_division_designer_button"
 				orientation = "LOWER_LEFT"
 				buttonText = "CUSTOM_GAME_SETTINGS_BACK"
-				buttonFont = "aldrich_22_outline"
+				buttonFont = "aldrich_16_outline"
 				clicksound = click_default
 			}
 
@@ -1691,7 +1691,7 @@ guiTypes = {
 				frame = 1
 				orientation = "LOWER_RIGHT"
 				buttonText = "CUSTOM_GAME_SETTINGS_REVERT"
-				buttonFont = "aldrich_22_outline"
+				buttonFont = "aldrich_16_outline"
 				clicksound = click_default
 			}
 
@@ -1702,7 +1702,7 @@ guiTypes = {
 				frame = 1
 				orientation = "LOWER_RIGHT"
 				buttonText = "CUSTOM_GAME_SETTINGS_LOAD"
-				buttonFont = "aldrich_22_outline"
+				buttonFont = "aldrich_16_outline"
 				clicksound = click_default
 			}
 
@@ -1713,7 +1713,7 @@ guiTypes = {
 				frame = 1
 				orientation = "LOWER_RIGHT"
 				buttonText = "CUSTOM_GAME_SETTINGS_SAVE"
-				buttonFont = "aldrich_22_outline"
+				buttonFont = "aldrich_16_outline"
 				clicksound = click_default
 			}
 		}
