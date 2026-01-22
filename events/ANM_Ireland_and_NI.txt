@@ -1,4 +1,5 @@
 add_namespace = IRE_skeleton_event
+add_namespace = ULS_skeleton_event
 
 country_event = {
 	id = IRE_skeleton_event.1 # 1999 Elections
@@ -31,7 +32,7 @@ country_event = {
 				elections_allowed = no
 			}
 
-			news_event = { id = WORLD.18241}
+			news_event = { id = WORLD.18241 }
 
 			set_popularities = {
 				communist = 1
@@ -69,7 +70,7 @@ country_event = {
 				elections_allowed = no
 			}
 
-			news_event = { id = WORLD.18240}
+			news_event = { id = WORLD.18240 }
 
 			set_popularities = {
 				communist = 1
@@ -107,7 +108,7 @@ country_event = {
 				elections_allowed = no
 			}
 
-			news_event = { id = WORLD.18239}
+			news_event = { id = WORLD.18239 }
 
 			set_popularities = {
 				communist = 1
@@ -667,6 +668,51 @@ country_event = {
 
 			set_variable = {
 				ECON_SPHERE_LEADER = USA
+			}
+		}
+	}
+}
+
+### Ulster / Northern Counties ###
+country_event = {
+	id = ULS_skeleton_event.1 #Ulster Collapse
+ 	title = ULS_skeleton_event.1.t
+ 	desc = ULS_skeleton_event.1.desc
+ 	picture = GFX_anm_veniceopera
+
+	fire_only_once = yes
+
+	#trigger = {
+	#	tag = ULS
+	#	date = 1999.1.1
+	#}
+
+ 	option = { 
+ 		name = ULS_skeleton_event.1.a # Welcome Gerry! 
+
+		hidden_effect = {
+			ULS_Gerry_Loughran = {
+				promote_character = despotism_interim_government_subtype
+			}
+
+			set_politics = {
+				ruling_party = despotism
+				last_election = "[GetDateText]"
+				election_frequency = 0
+				elections_allowed = no
+			}
+
+			news_event = { id = WORLD.18238 }
+
+			set_popularities = {
+				ultranationalism = 5
+				paternalism = 22
+				conservatism = 35
+				liberalism = 19
+				liberalism_1 = 7
+				progressivism =2
+				socialist = 9
+				communist = 1
 			}
 		}
 	}
