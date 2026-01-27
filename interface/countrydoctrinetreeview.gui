@@ -43,14 +43,11 @@ guiTypes = {
 		name = "bottom_horizontal_slider_tech_tree"
 		position = { x = 0 y = -8 }
 		size = { width = 18 height = 18 }
-		tileSize = { width = 12 height = 12}
-		maxValue = 1
-		minValue = 0
-		stepSize = 0.01
 		startValue = 0
 		horizontal = yes
 		orientation = lower_left
 		origo = lower_left
+		smooth_scrolling = 0.25
 
 		background = {
 			name = "Background"
@@ -59,14 +56,14 @@ guiTypes = {
 
 		slider = {
 			name = "Slider"
-			quadTextureSprite = "GFX_scroll_drager"
-			position = { x = 0 y = -2 }
+			quadTextureSprite = "GFX_scroll_drager_horisontal"
+			position = { x = -2 y = -2 }
 		}
 
 		track = {
 			name = "Track"
-			quadTextureSprite = "GFX_scroll_track_horisontal"
-			position = { x = 0 y = 3 }
+			quadTextureSprite = "GFX_scroll_track"
+			position = { x = 3 y = 0 }
 			alwaystransparent = yes
 		}
 

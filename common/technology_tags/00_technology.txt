@@ -49,7 +49,7 @@ technology_categories = {
 	tactical_bomber
 	scout_plane
 	jet_tac_bomber
-	stealth #Stealth research and aircraft
+	stealth #Stealth research
 	cas #Any CAS
 	jet_cas #Jet CAS only
 	gunship #US Gunship Techs
@@ -129,6 +129,7 @@ technology_categories = {
 	ss_tech
 	tp_tech
 	ff_tech
+	fs_tech
 	ssn_tech
 
 	###Industry
@@ -189,21 +190,9 @@ technology_folders = {
 		ledger = air
 	}
 	naval_folder = {
-		available = {
-			NOT = { has_dlc = "Man the Guns" }
-		}
 		ledger = navy
 	}
-	mtgnavalfolder = {
-		available = {
-			has_dlc = "Man the Guns"
-		}
-		ledger = navy
-	}
-	mtgnavalsupportfolder = {
-		available = {
-			has_dlc = "Man the Guns"
-		}
+	naval_support_folder = {
 		ledger = navy
 	}
 	industry_folder = {

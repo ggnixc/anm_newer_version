@@ -1,6 +1,11 @@
 technologies = {
 	early_fighter = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Basic_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			fighter_equipment_0
 		}
@@ -53,7 +58,12 @@ technologies = {
 		}
 	}
 	fighter_1945 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			fighter_equipment_1
 		}
@@ -103,7 +113,12 @@ technologies = {
 	}
 
 	cv_1945_fighter = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_fighter_equipment_1
 		}
@@ -137,7 +152,12 @@ technologies = {
 	}
 
 	fighter_1950 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_fighter_equipment_1
 		}
@@ -192,7 +212,12 @@ technologies = {
 	}
 
 	cv_1950_fighter = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_jet_fighter_equipment_1
 		}
@@ -227,7 +252,12 @@ technologies = {
 	}
 
 	fighter_1960 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_fighter_equipment_2
 		}
@@ -260,12 +290,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
+			factor = 0 #Fighters are Trash, Interceptors are Meta
 
 			modifier = {
 				factor = 0
@@ -278,7 +303,12 @@ technologies = {
 	}
 
 	cv_1960_fighter = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_jet_fighter_equipment_2
 		}
@@ -295,7 +325,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
+			factor = 0
 
 			modifier = {
 				factor = 0
@@ -313,7 +343,12 @@ technologies = {
 	}
 
 	fighter_1970 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_fighter_equipment_3
 		}
@@ -345,7 +380,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
+			factor = 0
 
 			modifier = {
 				factor = 2
@@ -355,7 +390,12 @@ technologies = {
 	}
 
 	cv_1970_fighter = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_jet_fighter_equipment_3
 		}
@@ -372,7 +412,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
+			factor = 0
 
 			modifier = {
 				factor = 0
@@ -383,7 +423,12 @@ technologies = {
 
 ###INTERCEPTORS###
 	interceptor_1945 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			interceptor_equipment_1
 		}
@@ -428,7 +473,12 @@ technologies = {
 	}
 
 	interceptor_1950 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_interceptor_equipment_1
 		}
@@ -461,25 +511,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
-
+			factor = 1
 			modifier = {
-				factor = 2
-				is_major = yes
+				factor = -100
+				num_of_military_factories < 30
 			}
-
 			modifier = {
-				factor = 0
-				OR = {
-					has_tech = interceptor_1960
-					is_researching_technology = interceptor_1960
-				}
+				factor = 50
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 70
 			}
 		}
 	}
 
 	interceptor_1960 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_interceptor_equipment_2
 		}
@@ -507,25 +561,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
-
+			factor = 1
 			modifier = {
-				factor = 2
-				is_major = yes
+				factor = -100
+				num_of_military_factories < 30
 			}
-
 			modifier = {
-				factor = 0
-				OR = {
-					has_tech = interceptor_1970
-					is_researching_technology = interceptor_1970
-				}
+				factor = 50
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 70
 			}
 		}
 	}
 
 	interceptor_1970 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_interceptor_equipment_3
 		}
@@ -554,7 +612,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
+			factor = 30
 
 			modifier = {
 				factor = 2
@@ -571,7 +629,12 @@ technologies = {
 		}
 	}
 	interceptor_1980 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_interceptor_equipment_4
 		}
@@ -613,7 +676,12 @@ technologies = {
 		}
 	}
 	interceptor_1990 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_interceptor_equipment_5
 		}
@@ -641,103 +709,14 @@ technologies = {
 			}
 		}
 	}
-###STEALTH FIGHTERS###
-	stealth_research = {
 
-		research_cost = 4
-		start_year = 1970
-		folder = {
-			name = light_air_techs_folder
-			position = { x = 0 y = 0 }
-		}
-
-		path = {
-			leads_to_tech = light_stealth_1980
-			research_cost_coeff = 1
-		}
-
-		enable_equipments = {
-			jet_stealth_research
-		}
-
-		dependencies = {
-			jet_engines = 1
-		}
-
-		categories = {
-			stealth
-		}
-
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
-	light_stealth_1980 = { # Yes, the name is off. It's more work than it's worth to fix
-
-		enable_equipments = {
-			light_stealth_equipment_1
-		}
-		path = {
-			leads_to_tech = light_stealth_1990
-			research_cost_coeff = 1
-		}
-		research_cost = 4
-		start_year = 1972
-		folder = {
-			name = light_air_techs_folder
-			position = { x = 4 y = 0 }
-		}
-
-		categories = {
-			air_equipment
-			stealth
-			light_air
-		}
-
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
-	light_stealth_1990 = { # Yes, the name is off. It's more work than it's worth to fix
-
-		enable_equipments = {
-			light_stealth_equipment_2
-		}
-
-		research_cost = 4
-		start_year = 1976
-		folder = {
-			name = light_air_techs_folder
-			position = { x = 8 y = 0 }
-		}
-
-		categories = {
-			air_equipment
-			stealth
-			light_air
-		}
-
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
 	CAS_1945 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			CAS_equipment_1
 		}
@@ -783,7 +762,12 @@ technologies = {
 	}
 
 	cv_1945_CAS = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_CAS_equipment_1
 		}
@@ -817,7 +801,12 @@ technologies = {
 	}
 
 	CAS_1950 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_CAS_equipment_1
 		}
@@ -868,7 +857,12 @@ technologies = {
 	}
 
 	cv_1950_CAS = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_jet_CAS_equipment_1
 		}
@@ -903,7 +897,12 @@ technologies = {
 	}
 
 	CAS_1960 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_CAS_equipment_2
 		}
@@ -932,25 +931,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
-
+			factor = 1
 			modifier = {
-				factor = 2
-				is_major = yes
+				factor = -100
+				num_of_military_factories < 30
 			}
-
 			modifier = {
-				factor = 0
-				OR = {
-					has_tech = CAS_1970
-					is_researching_technology = CAS_1970
-				}
+				factor = 50
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 70
 			}
 		}
 	}
 
 	cv_1960_CAS = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_jet_CAS_equipment_2
 		}
@@ -985,7 +988,12 @@ technologies = {
 	}
 
 	CAS_1970 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			jet_CAS_equipment_3
 		}
@@ -1024,7 +1032,12 @@ technologies = {
 	}
 
 	cv_1970_CAS = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_jet_CAS_equipment_3
 		}
@@ -1051,7 +1064,12 @@ technologies = {
 	}
 
 	MCA_1980 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			mca_equipment_1
 		}
@@ -1089,7 +1107,12 @@ technologies = {
 	}
 
 	cv_1980_MCA = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_mca_equipment_1
 		}
@@ -1115,7 +1138,12 @@ technologies = {
 	}
 
 	MCA_1990 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			mca_equipment_2
 		}
@@ -1148,7 +1176,12 @@ technologies = {
 	}
 
 	cv_1990_MCA = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			cv_mca_equipment_2
 		}
@@ -1174,7 +1207,12 @@ technologies = {
 	}
 ###BOMBER SECTION###
 	strategic_bomber1 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Basic_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			strat_bomber_equipment_0
 		}
@@ -1209,7 +1247,12 @@ technologies = {
 		}
 	}
 	heavy_air_1945 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			strat_bomber_equipment_1
 		}
@@ -1244,13 +1287,18 @@ technologies = {
 	}
 
 	heavy_air_1950 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_1
 		}
 
 		dependencies = {
-			jet_engines_bombers = 1
+			jet_engines = 1
 		}
 
 		path = {
@@ -1285,7 +1333,12 @@ technologies = {
 	}
 
 	heavy_air_1960 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_2
 		}
@@ -1322,7 +1375,12 @@ technologies = {
 	}
 
 	heavy_air_1970 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_3
 		}
@@ -1359,7 +1417,12 @@ technologies = {
 	}
 
 	heavy_air_1980 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_4
 		}
@@ -1396,7 +1459,12 @@ technologies = {
 	}
 
 	heavy_air_1990 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_strat_bomber_equipment_5
 		}
@@ -1426,112 +1494,16 @@ technologies = {
 			}
 		}
 	}
-	heavy_stealth_research = {
-
-		research_cost = 4
-		start_year = 1970
-		folder = {
-			name = air_techs_folder
-			position = { x = -1 y = 0 }
-		}
-
-		dependencies = {
-			jet_engines_bombers = 1
-		}
-
-		path = {
-			leads_to_tech = strat_stealth_1980
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tac_stealth_1980
-			research_cost_coeff = 1
-		}
-
-		enable_equipments = {
-			bomber_stealth_research
-		}
-
-		categories = {
-			stealth
-		}
-
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
-	strat_stealth_1980 = { # Yes, the name is off. It's more work than it's worth to fix
-
-		enable_equipments = {
-			strat_stealth_equipment_1
-		}
-		path = {
-			leads_to_tech = strat_stealth_1990
-			research_cost_coeff = 1
-		}
-		research_cost = 4
-		start_year = 1972
-		folder = {
-			name = air_techs_folder
-			position = { x = 3 y = 0 }
-		}
-
-		categories = {
-			air_equipment
-			jet_strat_bomber
-			strategic_bomber
-			heavy_air
-			stealth
-		}
-
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
-	strat_stealth_1990 = { # Yes, the name is off. It's more work than it's worth to fix
-
-		enable_equipments = {
-			strat_stealth_equipment_2
-		}
-
-		research_cost = 4
-		start_year = 1976
-		folder = {
-			name = air_techs_folder
-			position = { x = 7 y = 0 }
-		}
-
-		categories = {
-			air_equipment
-			jet_strat_bomber
-			strategic_bomber
-			heavy_air
-			stealth
-		}
-
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
+	
 
 ###TACTICAL BOMBERS###
 	tac_bomber1 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			tac_bomber_equipment_0
 		}
@@ -1566,7 +1538,12 @@ technologies = {
 		}
 	}
 	tac_air_1945 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			tac_bomber_equipment_1
 		}
@@ -1602,7 +1579,12 @@ technologies = {
 	}
 
 	tac_air_1950 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_tac_bomber_equipment_1
 		}
@@ -1613,7 +1595,7 @@ technologies = {
 		}
 
 		dependencies = {
-			jet_engines_bombers = 1
+			jet_engines = 1
 		}
 
 		research_cost = 2
@@ -1643,7 +1625,12 @@ technologies = {
 	}
 
 	tac_air_1960 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_tac_bomber_equipment_2
 		}
@@ -1680,7 +1667,12 @@ technologies = {
 	}
 
 	tac_air_1970 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_tac_bomber_equipment_3
 		}
@@ -1717,7 +1709,12 @@ technologies = {
 	}
 
 	tac_air_1980 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_tac_bomber_equipment_4
 		}
@@ -1754,7 +1751,12 @@ technologies = {
 	}
 
 	tac_air_1990 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			jet_tac_bomber_equipment_5
 		}
@@ -1784,73 +1786,15 @@ technologies = {
 			}
 		}
 	}
-	tac_stealth_1980 = { # Yes, the name is off. It's more work than it's worth to fix
-
-		enable_equipments = {
-			tac_stealth_equipment_1
-		}
-		path = {
-			leads_to_tech = tac_stealth_1990
-			research_cost_coeff = 1
-		}
-		research_cost = 4
-		start_year = 1972
-		folder = {
-			name = air_techs_folder
-			position = { x = 3 y = -2 }
-		}
-
-		categories = {
-			air_equipment
-			jet_tac_bomber
-			heavy_air
-			stealth
-			tactical_bomber
-		}
-
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
-	tac_stealth_1990 = { # Yes, the name is off. It's more work than it's worth to fix
-
-		enable_equipments = {
-			tac_stealth_equipment_2
-		}
-
-		research_cost = 4
-		start_year = 1976
-		folder = {
-			name = air_techs_folder
-			position = { x = 7 y = -2 }
-		}
-
-		categories = {
-			air_equipment
-			jet_tac_bomber
-			heavy_air
-			stealth
-			tactical_bomber
-		}
-
-		ai_will_do = {
-			factor = 25
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-		}
-	}
 
 ###TRANSPORT###
 	transport_air1 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			transport_plane_equipment_1
 		}
@@ -1887,7 +1831,12 @@ technologies = {
 		}
 	}
 	transport_air_1945 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			transport_plane_equipment_2
 		}
@@ -1922,7 +1871,12 @@ technologies = {
 	}
 
 	transport_air_1950 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			transport_plane_equipment_3
 		}
@@ -1935,7 +1889,7 @@ technologies = {
 		}
 
 		dependencies = {
-			jet_engines_bombers = 1
+			jet_engines = 1
 		}
 
 		research_cost = 2
@@ -1962,7 +1916,12 @@ technologies = {
 	}
 
 	transport_air_1960 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			transport_plane_equipment_4
 		}
@@ -1998,7 +1957,12 @@ technologies = {
 	}
 
 	transport_air_1970 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			transport_plane_equipment_5
 		}
@@ -2034,7 +1998,12 @@ technologies = {
 	}
 
 	transport_air_1980 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			transport_plane_equipment_6
 		}
@@ -2066,7 +2035,12 @@ technologies = {
 	}
 
 	transport_air_1990 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Advanced_Tech = yes
+				TNO_KD_Can_Research_Advanced_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			transport_plane_equipment_7
 		}
@@ -2094,7 +2068,12 @@ technologies = {
 
 ###SPY PLANE###
 	scout_plane_1945 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Basic_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			scout_plane_equipment_1
 		}
@@ -2124,7 +2103,12 @@ technologies = {
 	}
 
 	scout_plane_1950 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			scout_plane_equipment_2
 		}
@@ -2135,7 +2119,7 @@ technologies = {
 		}
 
 		dependencies = {
-			jet_engines_bombers = 1
+			jet_engines = 1
 		}
 
 		research_cost = 2
@@ -2157,7 +2141,12 @@ technologies = {
 	}
 
 	scout_plane_1960 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			scout_plane_equipment_3
 		}
@@ -2186,7 +2175,12 @@ technologies = {
 	}
 
 	scout_plane_1970 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Tech = yes
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			scout_plane_equipment_4
 		}

@@ -2,10 +2,6 @@ technologies = {
 	### MtG NAVY SHIT ###
 	basic_fire_control_system = {
 
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-
 		enable_equipment_modules = {
 			ship_fire_control_system_1
 		}
@@ -50,9 +46,6 @@ technologies = {
 		}
 
 		research_cost = 1
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 15 }
@@ -89,9 +82,6 @@ technologies = {
 		enable_equipment_modules = {
 			ship_fire_control_system_3
 		}
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
 
 		research_cost = 1
 
@@ -120,7 +110,9 @@ technologies = {
 		}
 	}
 	electronic_mechanical_engineering = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		# small boost to research speed
 		research_speed_factor = 0.01
 
@@ -160,7 +152,9 @@ technologies = {
 	}
 
 	radio = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		# units with radios can more efficiently join combats when there is room
 		land_reinforce_rate = 0.05
 		enable_building = {
@@ -202,8 +196,10 @@ technologies = {
 	}
 
 	radio_detection = {
-
-		# 
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
+		#
 		enable_building = {
 			building = radar_station
 			level = 2
@@ -232,7 +228,9 @@ technologies = {
 	}
 
 	decimetric_radar = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		# can build radars/radar boost in air/sea combat depends on radar level
 
 		path = {
@@ -264,7 +262,9 @@ technologies = {
 	}
 
 	centimetric_radar = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		# radar boost in air/sea combat depends on radar level
 		enable_building = {
 			building = radar_station
@@ -298,6 +298,9 @@ technologies = {
 		}
 	}
 	radar_1950 = {
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		path = {
 			leads_to_tech = flight_radar_1950
 			research_cost_coeff = 1
@@ -326,7 +329,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -335,7 +338,9 @@ technologies = {
 		}
 	}
 	flight_radar_1950 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		air_accidents_factor = -0.05
 		air_night_penalty = -0.05
 		air_weather_penalty = -0.05
@@ -349,7 +354,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -359,7 +364,9 @@ technologies = {
 		}
 	}
 	naval_radar_1950 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		naval_strike_targetting_factor = 0.05
 		navy_anti_air_attack_factor = 0.1
 
@@ -372,7 +379,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -382,6 +389,9 @@ technologies = {
 		}
 	}
 	radar_1960 = {
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		path = {
 			leads_to_tech = flight_radar_1960
 			research_cost_coeff = 1
@@ -410,7 +420,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 25
 		}
 
 		categories = {
@@ -423,7 +433,9 @@ technologies = {
 		}
 	}
 	flight_radar_1960 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		air_accidents_factor = -0.05
 		air_night_penalty = -0.05
 		air_weather_penalty = -0.05
@@ -437,7 +449,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -447,7 +459,9 @@ technologies = {
 		}
 	}
 	naval_radar_1960 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		naval_strike_targetting_factor = 0.05
 		navy_anti_air_attack_factor = 0.1
 
@@ -464,7 +478,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -474,6 +488,9 @@ technologies = {
 		}
 	}
 	radar_1970 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+		}
 		path = {
 			leads_to_tech = flight_radar_1970
 			research_cost_coeff = 1
@@ -499,7 +516,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 10
 		}
 
 		categories = {
@@ -512,7 +529,9 @@ technologies = {
 		}
 	}
 	flight_radar_1970 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+		}
 		air_accidents_factor = -0.05
 		air_night_penalty = -0.05
 		air_weather_penalty = -0.05
@@ -526,7 +545,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -536,7 +555,9 @@ technologies = {
 		}
 	}
 	naval_radar_1970 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+		}
 		naval_strike_targetting_factor = 0.05
 		navy_anti_air_attack_factor = 0.1
 
@@ -553,7 +574,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -563,7 +584,9 @@ technologies = {
 		}
 	}
 	radar_1980 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		# radar boost in air/sea combat depends on radar level
 		air_detection = 0.05
 
@@ -588,7 +611,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -597,7 +620,9 @@ technologies = {
 		}
 	}
 	flight_radar_1980 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		air_accidents_factor = -0.05
 		air_night_penalty = -0.05
 		air_weather_penalty = -0.05
@@ -611,7 +636,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -621,7 +646,9 @@ technologies = {
 		}
 	}
 	naval_radar_1980 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		naval_strike_targetting_factor = 0.05
 		navy_anti_air_attack_factor = 0.1
 
@@ -638,7 +665,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -648,6 +675,9 @@ technologies = {
 		}
 	}
 	radar_1990 = {
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		path = {
 			leads_to_tech = flight_radar_1990
 			research_cost_coeff = 1
@@ -668,7 +698,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -677,7 +707,9 @@ technologies = {
 		}
 	}
 	flight_radar_1990 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 
 		air_accidents_factor = -0.05
 		air_night_penalty = -0.05
@@ -692,7 +724,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -702,7 +734,9 @@ technologies = {
 		}
 	}
 	naval_radar_1990 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		naval_strike_targetting_factor = 0.05
 		navy_anti_air_attack_factor = 0.1
 
@@ -715,7 +749,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -730,7 +764,9 @@ technologies = {
 ##################################
 
 	mechanical_computing = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		# small boost to research speed
 		research_speed_factor = 0.01
 
@@ -747,7 +783,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 60
+			factor = 1000
 		}
 
 		categories = {
@@ -757,9 +793,11 @@ technologies = {
 	}
 
 	computing_machine = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		# small boost to research speed
-		research_speed_factor = 0.02
+		research_speed_factor = 0.01
 
 		path = {
 			leads_to_tech = improved_computing_machine
@@ -783,7 +821,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 60
+			factor = 1000
 		}
 
 		categories = {
@@ -795,9 +833,11 @@ technologies = {
 	}
 
 	improved_computing_machine = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		# small boost to research speed
-		research_speed_factor = 0.02
+		research_speed_factor = 0.015
 
 		path = {
 			leads_to_tech = advanced_computing_machine
@@ -821,7 +861,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 45
+			factor = 1000
 		}
 
 		categories = {
@@ -833,9 +873,11 @@ technologies = {
 	}
 
 	advanced_computing_machine = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.02
 
 		path = {
 			leads_to_tech = advanced_encryption
@@ -863,7 +905,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 45
+			factor = 1000
 		}
 
 		categories = {
@@ -874,9 +916,11 @@ technologies = {
 		}
 	}
 	computing_machine_1950 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.02
 
 		path = {
 			leads_to_tech = encryption_1950
@@ -900,7 +944,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 45
+			factor = 1000
 		}
 
 		categories = {
@@ -911,9 +955,11 @@ technologies = {
 		}
 	}
 	computing_machine_1960 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.02
 
 		path = {
 			leads_to_tech = encryption_1960
@@ -941,7 +987,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 45
+			factor = 1000
 		}
 
 		categories = {
@@ -950,9 +996,18 @@ technologies = {
 			decryption_tech
 			computing_tech
 		}
+		
+		on_research_complete_limit = {
+			tag = BRA
+		}
+		on_research_complete = {
+			hidden_effect = { country_event = brazil.599 } #rip masterbobli
+		}
 	}
 	computing_machine_1970 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+		}
 		# small boost to research speed
 		research_speed_factor = 0.03
 
@@ -978,7 +1033,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 45
+			factor = 1000
 		}
 
 		categories = {
@@ -989,9 +1044,11 @@ technologies = {
 		}
 	}
 	computing_machine_1980 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.04
 
 		path = {
 			leads_to_tech = encryption_1980
@@ -1019,7 +1076,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 45
+			factor = 1000
 		}
 
 		categories = {
@@ -1030,9 +1087,11 @@ technologies = {
 		}
 	}
 	computing_machine_1990 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.05
 
 		path = {
 			leads_to_tech = encryption_1990
@@ -1052,7 +1111,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 45
+			factor = 1000
 		}
 
 		categories = {
@@ -1084,7 +1143,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1110,7 +1169,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1136,7 +1195,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1161,7 +1220,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1186,7 +1245,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1211,7 +1270,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1236,7 +1295,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1261,7 +1320,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1287,7 +1346,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1313,7 +1372,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1339,7 +1398,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1364,7 +1423,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1389,7 +1448,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1414,7 +1473,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1439,7 +1498,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1464,7 +1523,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 0
 		}
 
 		categories = {
@@ -1478,6 +1537,10 @@ technologies = {
 #######################################	
 
 	helicopter_engines = {
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+			TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+		}
 		folder = {
 			name = helicopter_techs_folder
 			position = { x = -1 y = 0 }
@@ -1498,8 +1561,21 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+
 		ai_will_do = {
-			factor = 30
+			factor = 1
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 40
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 50
+			}
 		}
 
 		categories = {
@@ -1509,46 +1585,23 @@ technologies = {
 	}
 
 	jet_engines = {
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+			TNO_KD_Can_Research_Developed_Manufactoring = yes
+		}
 		path = {
 			leads_to_tech = improved_jet_engines_1
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = improved_jet_engines_bombers_1
+			research_cost_coeff = 1
+		}
 		airforce_cost_modifier = 0.75
 
 		folder = {
 			name = light_air_techs_folder
 			position = { x = 0 y = 0 }
-		}
-		start_year = 1950
-
-		research_cost = 2
-
-		enable_equipments = {
-			jet_equipment_engines
-		}
-		on_research_complete = {
-			custom_effect_tooltip = jet_engines_tt
-		}
-		
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		categories = {
-			jet_technology
-		}
-
-		enable_equipment_modules = {
-			tank_gas_turbine_engine
-		}
-	}
-	jet_engines_bombers = {
-
-		path = {
-			leads_to_tech = improved_jet_engines_bombers_1
-			research_cost_coeff = 1
 		}
 		folder = {
 			name = air_techs_folder
@@ -1559,19 +1612,44 @@ technologies = {
 		research_cost = 2
 
 		enable_equipments = {
+			jet_equipment_engines
 			jet_bomber_equipment_engines
 		}
+		on_research_complete = {
+			custom_effect_tooltip = jet_engines_tt
+		}
+		
+
 
 		ai_will_do = {
-			factor = 60
+			factor = 1
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 70
+			}
 		}
 
 		categories = {
 			jet_technology
 		}
+
+		enable_equipment_modules = {
+			tank_gas_turbine_engine
+		}
 	}
 
 	improved_jet_engines_1 = {
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+		}
 		fighter = {
 			air_range = 0.05
 		}
@@ -1591,9 +1669,6 @@ technologies = {
 			air_range = 0.05
 		}
 		interceptor = {
-			air_range = 0.05
-		}
-		light_stealth = {
 			air_range = 0.05
 		}
 		path = {
@@ -1614,7 +1689,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 0
 		}
 
 		categories = {
@@ -1623,6 +1698,9 @@ technologies = {
 	}
 
 	improved_jet_engines_2 = {
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		fighter = {
 			air_range = 0.05
 		}
@@ -1644,9 +1722,6 @@ technologies = {
 		interceptor = {
 			air_range = 0.05
 		}
-		light_stealth = {
-			air_range = 0.05
-		}
 		enable_equipments = {
 			improved_jet_range_2
 		}
@@ -1661,7 +1736,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 0
 		}
 
 		categories = {
@@ -1670,17 +1745,13 @@ technologies = {
 	}
 
 	improved_jet_engines_bombers_1 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+		}
 		strat_bomber = {
 			air_range = 0.05
 		}
 		tac_bomber = {
-			air_range = 0.05
-		}
-		heavy_stealth_strat = {
-			air_range = 0.05
-		}
-		heavy_stealth_tac = {
 			air_range = 0.05
 		}
 		transport_plane = {
@@ -1713,7 +1784,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 0
 		}
 
 		categories = {
@@ -1722,17 +1793,13 @@ technologies = {
 	}
 
 	improved_jet_engines_bombers_2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		strat_bomber = {
 			air_range = 0.05
 		}
 		tac_bomber = {
-			air_range = 0.05
-		}
-		heavy_stealth_strat = {
-			air_range = 0.05
-		}
-		heavy_stealth_tac = {
 			air_range = 0.05
 		}
 		transport_plane = {
@@ -1761,7 +1828,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 0
 		}
 
 		categories = {
