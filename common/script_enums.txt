@@ -92,6 +92,9 @@ script_enum_equipment_stat = {
 	fuel_consumption_factor
 	strategic_attack
 	carrier_size
+	submarine_carrier_size
+	carrier_surface_detection
+	carrier_sub_detection
 	acclimatization_hot_climate_gain_factor			#Cannot be used with MIOS
 	acclimatization_cold_climate_gain_factor		#Cannot be used with MIOS
 	night_penalty				#Cannot be used with MIOS
@@ -133,6 +136,7 @@ script_enum_equipment_category = {
 	ballistic_missile
 	nuclear_missile
 	sam_missile
+	support_ship
 	suicide
 	scout_plane
 	maritime_patrol_plane
@@ -189,6 +193,7 @@ script_enum_equipment_bonus_type = {
 	air_transport
 	carrier
 	missile_launcher
+	support_ship
 	support
 	amphibious
 	anti_air
@@ -265,25 +270,12 @@ script_enum_equipment_bonus_type = {
 	ship_hull_carrier_3
 	ship_hull_carrier_conversion_bb
 	ship_hull_carrier_conversion_ca
-	carrier_1
-	carrier_2
-	carrier_3
-	carrier_4
 	ship_hull_cruiser
 	light_cruiser
 	ship_hull_cruiser_1
 	ship_hull_cruiser_2
 	ship_hull_cruiser_3
 	ship_hull_cruiser_4
-	light_cruiser_1
-	light_cruiser_2
-	light_cruiser_3
-	light_cruiser_4
-	heavy_cruiser_1
-	heavy_cruiser_2
-	heavy_cruiser_3
-	heavy_cruiser_4
-	torpedo_cruiser
 	ship_hull_torpedo_cruiser
 	ship_hull_cruiser_panzerschiff
 	ship_hull_cruiser_coastal_defense_ship
@@ -293,32 +285,16 @@ script_enum_equipment_bonus_type = {
 	ship_hull_heavy_2
 	ship_hull_heavy_3
 	ship_hull_heavy_4
-	battleship_1
-	battleship_2
-	battleship_3
-	battleship_4
-	SH_battleship_1
-	SH_battleship_2
-	battle_cruiser_1
-	battle_cruiser_2
 	ship_hull_light
 	ship_hull_light_1
 	ship_hull_light_2
 	ship_hull_light_3
 	ship_hull_light_4
-	destroyer_1
-	destroyer_2
-	destroyer_3
-	destroyer_4
 	ship_hull_submarine
 	ship_hull_submarine_1
 	ship_hull_submarine_2
 	ship_hull_submarine_3
 	ship_hull_submarine_4
-	submarine_1
-	submarine_2
-	submarine_3
-	submarine_4
 	support_equipment
 	support_equipment_1
 	train_equipment
@@ -418,8 +394,6 @@ script_enum_equipment_bonus_type = {
 	# jet_interceptor_equipment
 	interceptor_equipment
 	strategic_bomber
-	light_stealth_equipment
-	strat_stealth_equipment
 
 	attack_helicopter_equipment
 	scout_helicopter_equipment
@@ -454,7 +428,7 @@ script_enum_equipment_bonus_type = {
 	light_cruiser
 	# battleship
 
-	## jesus hell
+	##
 	anti_air_equipment_4
 	anti_air_shoulder_equipment_0
 	anti_air_shoulder_equipment_1
@@ -521,35 +495,20 @@ script_enum_equipment_bonus_type = {
 	ship_hull_carrier_4
 	ship_hull_carrier_5
 	ship_hull_carrier_6
-	carrier_5
-	carrier_6
 	ship_hull_cruiser_5
 	ship_hull_cruiser_6
-	heavy_cruiser_5
-	heavy_cruiser_6
 	ship_hull_heavy_5
 	ship_hull_heavy_6
 	ship_hull_super_heavy_1
 	ship_hull_heavy_custom_jellicoe
-	battleship_5
-	battleship_6
-	battleship_custom_jellicoe
 	ship_hull_light_5
 	ship_hull_light_6
-	destroyer_5
-	destroyer_6
 	ship_hull_more_light_1
 	ship_hull_more_light_2
 	ship_hull_more_light_3
 	ship_hull_more_light_4
 	ship_hull_more_light_5
 	ship_hull_more_light_6
-	frigate_1
-	frigate_2
-	frigate_3
-	frigate_4
-	frigate_5
-	frigate_6
 	ship_hull_submarine_japan_special
 	ship_hull_submarine_5
 	ship_hull_submarine_6
@@ -558,20 +517,12 @@ script_enum_equipment_bonus_type = {
 	ship_hull_ballistic_submarine_3
 	ship_hull_ballistic_submarine_4
 	ship_hull_ballistic_submarine_5
-	submarine_5
-	submarine_6
 	ship_hull_very_light_1
 	ship_hull_very_light_2
 	ship_hull_very_light_3
 	ship_hull_very_light_4
 	ship_hull_very_light_5
 	ship_hull_very_light_6
-	corvette_1
-	corvette_2
-	corvette_3
-	corvette_4
-	corvette_5
-	corvette_6
 	amphibious_tank_equipment
 	kugelpanzer_chassis
 	kugelpanzer_chassis_1
@@ -630,7 +581,6 @@ script_enum_equipment_bonus_type = {
 	transport_plane_equipment_5
 	transport_plane_equipment_6
 	transport_plane_equipment_7
-	tac_stealth_equipment
 	scout_plane_equipment
 	gunship_equipment
 	jet_fighter_equipment_3
@@ -650,8 +600,6 @@ script_enum_equipment_bonus_type = {
 	cv_jet_fighter_equipment_1
 	cv_jet_fighter_equipment_2
 	cv_jet_fighter_equipment_3
-	light_stealth_equipment_1
-	light_stealth_equipment_2
 	jet_CAS_equipment_1
 	jet_CAS_equipment_2
 	jet_CAS_equipment_3
@@ -666,8 +614,6 @@ script_enum_equipment_bonus_type = {
 	jet_tac_bomber_equipment_4
 	jet_tac_bomber_equipment_5
 	jet_tac_bomber_equipment_6
-	tac_stealth_equipment_1
-	tac_stealth_equipment_2
 	scout_plane_equipment_3
 	scout_plane_equipment_4
 	strat_bomber_equipment_0
@@ -675,8 +621,6 @@ script_enum_equipment_bonus_type = {
 	jet_strat_bomber_equipment_3
 	jet_strat_bomber_equipment_4
 	jet_strat_bomber_equipment_5
-	strat_stealth_equipment_1
-	strat_stealth_equipment_2
 	APC_aa_chassis
 	APC_artillery_chassis
 	APC_destroyer_chassis

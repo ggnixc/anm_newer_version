@@ -1,4 +1,7 @@
 run_generic_operation = {
+	abort = {
+		always = no
+	}
 	enable = {
 		NOT = { check_variable = { generic_operation_target = 0 } }
 		NOT = { check_variable = { generic_operation_type_to_run = 0 } }
@@ -27,12 +30,15 @@ run_generic_operation = {
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
-		value = 800
+		value = 0
 		mission_target = var:generic_operation_target
 	}
 }
 
 run_generic_operation_add_more_operatives = {
+	abort = {
+		always = no
+	}
 	enable = {
 		NOT = { check_variable = { generic_operation_target = 0 } }
 		NOT = { check_variable = { generic_operation_type_to_run = 0 } }
@@ -51,7 +57,7 @@ run_generic_operation_add_more_operatives = {
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
-		value = 800
+		value = 0
 		mission_target = var:generic_operation_target
 		num_operatives = 2
 	}
@@ -59,6 +65,9 @@ run_generic_operation_add_more_operatives = {
 
 
 run_generic_rescue_operation = {
+	abort = {
+		always = no
+	}
 	enable = {
 		NOT = { check_variable = { rescue_operative_from = 0 } }
 	}
@@ -80,7 +89,7 @@ run_generic_rescue_operation = {
 	ai_strategy = {
 		type = operative_mission
 		mission = build_intel_network
-		value = 900
+		value = 0
 		mission_target = var:rescue_operative_from
 	}
 }

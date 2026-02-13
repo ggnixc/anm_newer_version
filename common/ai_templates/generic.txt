@@ -30,7 +30,7 @@ Equalizers = { #Because some people actually do want some challenging gameplay
 
 		target_template = {
 			support = {
-				engineer = 1
+				mbt_engineer = 1
 				recon = 1
 				signal_company = 1
 				air_assault = 1
@@ -45,9 +45,44 @@ Equalizers = { #Because some people actually do want some challenging gameplay
 			}
 		}
 	}
+
+	equalizer_japan = {
+		upgrade_prio = {
+			factor = 5
+			modifier = {
+				factor = 10
+				tag = JAP
+			}
+
+		}
+
+		can_upgrade_in_field = {
+			AND = {
+				has_equipment = { MBT_chassis < 200 }
+				has_equipment = { attack_helicopter_equipment < 200 }
+			}
+		}
+
+		target_template = {
+			support = {
+				mbt_engineer = 1
+				recon = 1
+				signal_company = 1
+				air_assault = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				MBT = 2
+				elite_infantry = 6
+				mountaineers = 1
+				marine = 1
+			}
+		}
+	}
 	equalizer_lategame = {
 		upgrade_prio = {
-			factor = 10
+			factor = 20
 			modifier = {
 				factor = 0
 				NOT = {
@@ -65,8 +100,8 @@ Equalizers = { #Because some people actually do want some challenging gameplay
 
 		target_template = {
 			support = {
-				engineer = 1
-				recon = 1
+				mbt_engineer = 1
+				mbt_recon = 1
 				signal_company = 1
 				air_assault = 1
 				attack_helicopter_company = 1
@@ -77,257 +112,6 @@ Equalizers = { #Because some people actually do want some challenging gameplay
 				elite_infantry = 6
 				mountaineers = 2
 				marine = 2
-			}
-		}
-	}
-}
-MBT_generic = { #Listen, tank divisions are shit
-
-	role = armor
-
-	upgrade_prio = {
-		factor = 2.17
-		modifier = {
-			factor = 0
-			NOT = {
-				has_tech = MBT_1950
-				has_tech = IFV_1950
-				has_tech = APC_1950
-			}
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_tech = MBT_1950
-				has_tech = IFV_1950
-				has_tech = APC_1950
-			}
-		}
-		modifier = {
-			factor = 0
-			is_major = no
-		}
-	}
-
-	MBT_med_default = {
-		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 0.25
-				OR = {
-					num_of_factories > 25
-					num_of_factories < 15
-				}
-			}
-
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = MBT_1945
-					has_tech = motorized_infantry
-				}
-			}
-		}
-
-		can_upgrade_in_field = {
-			has_equipment = { MBT_chassis < 200 }
-		}
-
-		target_template = {
-			support = {
-				engineer = 1
-				recon = 1
-			}
-
-			regiments = {
-				MBT = 2
-				motorized = 6
-			}
-		}
-
-		replace_at_match = 0.6
-		replace_with = MBT_good_default
-		target_min_match = 0.7
-	}
-
-	MBT_good_default = {
-		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 0.5
-				num_of_factories < 25
-			}
-
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = MBT_1945
-					has_tech = APC_1945
-				}
-			}
-		}
-
-		can_upgrade_in_field = {
-			has_equipment = { MBT_chassis < 200 }
-		}
-
-		target_template = {
-			support = {
-				engineer = 1
-				recon = 1
-				maintenance_company = 1
-			}
-
-			regiments = {
-				MBT = 4
-				motorized = 6
-				sp_artillery_brigade = 2
-			}
-		}
-	}
-}
-
-IFV_generic = {
-
-	role = armor
-
-	upgrade_prio = {
-		factor = 2.17
-		modifier = {
-			factor = 0
-			NOT = {
-				has_tech = IFV_1950
-				has_tech = APC_1950
-			}
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_tech = IFV_1950
-				has_tech = APC_1950
-			}
-		}
-		modifier = {
-			factor = 0
-			is_major = yes
-		}
-	}
-
-
-	IFV_poor_default = {
-		upgrade_prio = {
-			factor = 2
-			modifier = {
-				factor = 0.5
-				num_of_factories > 15
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = IFV_1945
-				}
-			}
-		}
-
-		can_upgrade_in_field = {
-			has_equipment = { IFV_chassis < 200 }
-		}
-
-		target_template = {
-			support = {
-				engineer = 1
-				recon = 1
-			}
-
-			regiments = {
-				IFV = 2
-				motorized = 3
-			}
-		}
-
-		replace_at_match = 0.6
-		replace_with = IFV_med_default
-		target_min_match = 0.7
-	}
-
-	IFV_med_default = {
-		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 0.25
-				OR = {
-					num_of_factories > 25
-					num_of_factories < 15
-				}
-			}
-
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = IFV_1945
-					has_tech = motorized_infantry
-				}
-			}
-		}
-
-		can_upgrade_in_field = {
-			has_equipment = { IFV_chassis < 200 }
-		}
-
-		target_template = {
-			support = {
-				engineer = 1
-				recon = 1
-			}
-
-			regiments = {
-				motorized = 5
-				IFV = 5
-			}
-		}
-
-		replace_at_match = 0.6
-		replace_with = IFV_good_default
-		target_min_match = 0.7
-	}
-
-	IFV_good_default = {
-		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 0.5
-				num_of_factories < 25
-			}
-
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = IFV_1945
-					has_tech = APC_1945
-				}
-			}
-		}
-
-		can_upgrade_in_field = {
-			has_equipment = { IFV_chassis < 200 }
-		}
-
-		target_template = {
-			support = {
-				engineer = 1
-				recon = 1
-				maintenance_company = 1
-			}
-
-			regiments = {
-				IFV = 8
-				APC = 6
-				light_sp_artillery_brigade = 3
-				light_sp_anti_air_brigade = 1
 			}
 		}
 	}
@@ -391,12 +175,32 @@ armor_AI = {
 		upgrade_prio = {
 			factor = 10
 			modifier = {
+				factor = 35
+				OR = {
+					AND = {
+						tag = KOM
+						NOT = { has_government = communist }
+						NOT = { has_government = national_socialism }
+						NOT = { has_government = ultranationalism }
+					}
+					tag = IRK
+					tag = BRY
+					tag = CHI
+					tag = IBR
+					tag = MEX
+					tag = FIN
+				} 
+			}
+			modifier = {
 				factor = 0
 				num_of_factories < 15
 			}
 			modifier = {
 				factor = 0
-				num_of_factories > 30
+				AND = {
+					num_of_factories > 30
+					has_tech = MBT_1960
+				}
 			}
 		}
 
@@ -404,13 +208,14 @@ armor_AI = {
 			support = {
 				engineer = 1
 				recon = 1
-				artillery = 1
+				military_police = 1
+				logistics_company = 1
 			}
 
 			regiments = {
 				elite_infantry = 6
 				artillery_brigade = 2
-				IFV = 2
+				IFV = 3
 			}
 		}
 	}
@@ -422,19 +227,24 @@ armor_AI = {
 				factor = 0
 				num_of_factories < 30
 			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = MBT_1960 }
+			}
 		}
 
 		target_template = {
 			support = {
-				engineer = 1
+				mbt_engineer = 1
 				recon = 1
-				artillery = 1
+				military_police = 1
+				logistics_company = 1
 			}
 
 			regiments = {
 				elite_infantry = 6
 				artillery_brigade = 2
-				MBT = 2
+				MBT = 3
 			}
 		}
 	}
@@ -451,34 +261,59 @@ armor_AI = {
 
 		target_template = {
 			support = {
-				engineer = 1
+				mbt_engineer = 1
 				recon = 1
-				artillery = 1
+				military_police = 1
+				logistics_company = 1
 				attack_helicopter_company = 1
 			}
 
 			regiments = {
 				elite_infantry = 6
 				artillery_brigade = 2
-				MBT = 2
+				MBT = 3
 			}
 		}
 	}
-	infantry_killer = {
+	infantry_killer_heavy = {
 
 		upgrade_prio = {
 			factor = 10
 
 			modifier = {
-				factor = 10
+				factor = 0
+				OR = {
+					AND = {
+						OR = {
+							has_tech = MBT_1960
+							has_tech = NSB_MBT_1960
+						}
+						NOT = { has_tech = NSB_heavy_1950 }
+					}
+					AND = {
+						OR = {
+							has_tech = MBT_1970
+							has_tech = NSB_MBT_1970
+						}
+						NOT = { has_tech = NSB_heavy_1960 }
+					}
+				}
 			}
+
+			#modifier = { #KD's Notes - I want the larp so badly but DAMN, that's 25% more expensive to make than Infantry Killed
+			#	factor = 10
+			#	OR = {
+			#		tag = OMS
+			#		tag = SAM
+			#	}
+			#}
 		}
 
 		target_template = {
 			support = {
 				engineer = 1
 				recon = 1
-				artillery = 1
+				military_police = 1
 				air_assault = 1
 				attack_helicopter_company = 1
 			}
@@ -486,7 +321,7 @@ armor_AI = {
 			regiments = {
 				elite_infantry = 6
 				artillery_brigade = 2
-				MBT = 2
+				heavy_tank = 2
 			}
 		}
 	}
@@ -550,7 +385,35 @@ infantry_generic = {
 	#			infantry = 10
 	#		}
 	#	}
-	#}
+	#} is_far_eastern_nation = yes
+
+	infantry_default = {
+
+		upgrade_prio = {
+			factor = 1
+
+			modifier = {
+				factor = 100
+				AND = {
+					is_far_eastern_nation = yes
+					has_country_flag = is_warlord
+				}
+			}
+		}
+
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				logistics_company = 1
+			}
+
+			regiments = {
+				ligh_infantry = 7
+				artillery_brigade = 2
+			}
+		}
+	}
 
 	infantry_default = {
 
@@ -566,8 +429,7 @@ infantry_generic = {
 			support = {
 				engineer = 1
 				recon = 1
-				anti_tank = 1
-				artillery = 1
+				logistics_company = 1
 			}
 
 			regiments = {
@@ -584,6 +446,7 @@ infantry_generic = {
 
 			modifier = {
 				factor = 10
+				
 			}
 		}
 
@@ -591,7 +454,8 @@ infantry_generic = {
 			support = {
 				engineer = 1
 				recon = 1
-				anti_tank = 1
+				military_police = 1
+				logistics_company = 1
 				artillery = 1
 			}
 
@@ -616,6 +480,7 @@ infantry_generic = {
 			support = {
 				engineer = 1
 				recon = 1
+				logistics_company = 1
 				artillery = 1
 				attack_helicopter_company = 1
 			}
@@ -661,8 +526,8 @@ mountaineers_generic = {
 		target_template = {
 			support = {
 				engineer = 1
-				artillery = 1
-				anti_tank = 1
+				military_police = 1
+				recon = 1
 				logistics_company = 1
 			}
 
@@ -709,12 +574,14 @@ marines_generic = {
 
 		target_template = {
 			support = {
+				military_police = 1
 				recon = 1
-				engineer = 1
+				logistics_company = 1
 			}
 
 			regiments = {
 				marine = 9
+				artillery_brigade = 2
 			}
 		}
 	}
@@ -723,12 +590,10 @@ marines_generic = {
 
 # REGIMENTS:
 #infantry
-#light_armor
 #super_heavy_armor
-#modern_armor
-#heavy_armor
-#medium_armor
-#light_armor
+#heavy_tank
+#MBT
+#IFV
 #anti_tank
 #cavalry
 #motorized

@@ -203,41 +203,4 @@ scripted_gui = {
 	##======================| |====================##
 	#################################################
 
-	#################################################
-	#           Finnish Civil War GUI               #
-	#################################################
-	ANM_Finnish_Civil_War_GUI = {
-		window_name = "ANM_Finnish_Civil_War_GUI"
-		context_type = player_context
-		parent_window_name = powerbalanceview
-
-		visible = {
-			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
-			check_variable = { selected_conflict_id = token:GC_FinlandCW }
-		}
-
-		effects = {
-			discontent_effect_box_click = {
-				effect_tooltip = {
-					INS_ICW_discontent_effect = yes
-				}
-			}
-		}
-
-		properties = {
-			escalation_bar = {
-				frame = global.ICW_escalation
-			}
-			discontent_bar = {
-				frame = ICW_discontent
-			}
-			sidebar = {
-				image = "[Get_fopo_sidebar]"
-			}
-			seal = {
-				image = "[Get_fopo_seal]"
-			}
-		}
-	}
-
 }

@@ -1,6 +1,7 @@
 # Written by Henrik "Groogy" Hansson
 # Modified by Daniel "Da9L" Sjöberg
 # Revamped for TNO by Pacifica
+# Facelifted by KD
 
 # befriend
 # conquer
@@ -16,7 +17,158 @@
 # contain
 # area_priority
 
+
+default_air_production = { #Disables plane production for tags that won't need them
+	abort = {
+		check_variable = { num_of_factories > 30 }
+	}
+	enable = {
+		NOT = {
+			tag = USA
+			tag = GER
+			tag = JAP
+			tag = ITA
+			check_variable = { num_of_factories > 30 }
+		}
+	}
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 0
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = interceptor
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 0
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = interceptor
+		value = 0
+	}
+}
+superpower_air_production = {
+	abort = {
+		check_variable = { num_of_factories < 30 }
+	}
+	enable = {
+		NOT = {
+			has_country_flag = TNO_DIVISIONS_CAPPED
+		}
+		OR = {
+			tag = USA
+			tag = GER
+			tag = JAP
+			tag = ITA
+			check_variable = { num_of_factories > 30 } #KD's Notes - Reenables it for tags with a big amount of factories - Should be only Italy, Iberia, France, Canada and China though
+		}
+	}
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 0
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = interceptor
+		value = 100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 35
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 00 #Fighters are shitty
+	}
+	ai_strategy = { #We live in an Interceptor Meta
+		type = equipment_production_factor
+		id = interceptor
+		value = 20
+	}
+	ai_strategy = { #We live in an Interceptor Meta
+		type = equipment_production_factor
+		id = cas
+		value = 35
+	}
+}
+
+strong_tag_tank_production = {
+	abort = {
+		check_variable = { num_of_factories < 15 }
+	}
+	enable = {
+		NOT = {
+			has_country_flag = TNO_DIVISIONS_CAPPED
+		}
+		OR = {
+			check_variable = { num_of_factories > 15 } #KD's Notes - Reenables it for tags with enough
+		}
+	}
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = armor
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 30
+	}
+}
+
+russian_ifv_production = {
+	abort = {
+		check_variable = { num_of_factories > 30 }
+	}
+	enable = {
+		NOT = {
+			has_country_flag = TNO_DIVISIONS_CAPPED
+		}
+		OR = {
+			check_variable = { num_of_factories > 6 } #KD's Notes - Reenables it for tags with enough
+			is_russian_nation = yes
+		}
+	}
+	#Air unit factors
+	ai_strategy = {
+		type = role_ratio
+			id = land_light_tank
+			value = 30
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 10
+	}
+}
+
 default_unit_production = {
+	abort = {
+		always = no
+	}
 	enable = {
 		NOT = {
 			has_country_flag = TNO_DIVISIONS_CAPPED
@@ -26,13 +178,13 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = mobile
-		value = 30
+		value = 1
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
-		value = 4
+		value = 10
 	}
 
 	ai_strategy = {
@@ -41,41 +193,11 @@ default_unit_production = {
 		value = 2
 	}
 
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 30
-	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
 		value = 40
-	}
-
-	#Air unit factors
-	ai_strategy = {
-		type = unit_ratio
-		id = fighter
-		value = 20
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = cas
-		value = 10
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = tactical_bomber
-		value = 5
-	}
-
-	ai_strategy = {
-		type = unit_ratio
-		id = strategic_bomber
-		value = 5
 	}
 
 	# Naval unit factors
@@ -105,26 +227,14 @@ default_unit_production = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = fighter
-		value = 35
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
 		id = infantry
 		value = 40
 	}
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = armor
-		value = 30
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
 		id = motorized
-		value = 30
+		value = 10
 	}
 
 	ai_strategy = {
@@ -134,41 +244,12 @@ default_unit_production = {
 	}
 }
 
-default_role_ratios_no_mtg = {
-	enable = {
-		not = {
-			has_dlc = "Man the Guns"
-		}
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_capital
-		value = 100
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_carrier
-		value = 100
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_sub
-		value = 100
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_screen
-		value = 100
-	}
-}
-
 default_role_ratios = {
+	abort = {
+		always = no
+	}
 	enable = {
-		has_dlc = "Man the Guns"
+		always = yes
 	}
 
 	ai_strategy = {
@@ -233,8 +314,10 @@ default_role_ratios = {
 }
 
 convoy_voy_voy_voy = {
+	abort = {
+		always = no
+	}
 	enable = {
-		has_dlc = "Man the Guns"
 		convoy_threat > 0.2
 	}
 	abort = {
@@ -278,8 +361,10 @@ convoy_voy_voy_voy = {
 }
 
 ill_show_you_mine = {
+	abort = {
+		always = no
+	}
 	enable = {
-		has_dlc = "Man the Guns"
 		mine_threat > 0.2
 	}
 	abort = {
@@ -306,8 +391,10 @@ ill_show_you_mine = {
 }
 
 ill_show_you_mine_2 = {
+	abort = {
+		always = no
+	}
 	enable = {
-		has_dlc = "Man the Guns"
 		mine_threat > 0.5
 	}
 	abort = {
@@ -334,6 +421,9 @@ ill_show_you_mine_2 = {
 }
 
 default_pp_spend_amount = {
+	abort = {
+		always = no
+	}
 	enable = {
 		always = yes
 	}
@@ -364,6 +454,9 @@ default_pp_spend_amount = {
 }
 
 default_civ_industry = {
+	abort = {
+		always = no
+	}
 	enable = {
 		has_war = no
 	}
@@ -374,6 +467,9 @@ default_civ_industry = {
 }
 
 default_war_industry = {
+	abort = {
+		always = no
+	}
 	enable = {
 		has_war = yes
 	}
@@ -392,6 +488,9 @@ default_garrison_production = {
 			original_tag = JAP
 			original_tag = ITA
 		}
+	}
+	abort = {
+		always = no
 	}
 	enable = {
 		ai_wants_divisions > 12 #Massively decreasing the amount of garrison the AI wants
@@ -413,6 +512,9 @@ default_garrison_production = {
 }
 
 default_mountaineers_production = {
+	abort = {
+		always = no
+	}
 	enable = {
 		NOT = { original_tag = GER }
 		ai_wants_divisions > 11 #Decreasing the amount of mountaineers the AI wants
@@ -432,6 +534,9 @@ default_mountaineers_production = {
 }
 
 default_marines_production = {
+	abort = {
+		always = no
+	}
 	enable = {
 		ai_wants_divisions > 19
 	}
@@ -456,9 +561,13 @@ default_marines_production = {
 }
 
 default_mobile_production = {
+	abort = {
+		always = no
+	}
 	enable = {
 		ai_wants_divisions > 19
 		has_tech = motorized_infantry
+		always = no #Motorized is garbage
 	}
 	abort = {
 		OR = {
@@ -474,41 +583,10 @@ default_mobile_production = {
 	}
 }
 
-default_armored_production = {
-	enable = {
-		ai_wants_divisions > 19
-	}
-	abort = {
-		OR = {
-			ai_wants_divisions < 20
-			has_country_flag = TNO_DIVISIONS_CAPPED
-		}
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 2
-	}
-}
-
-highered_armored_production = {
-	enable = {
-		num_of_military_factories > 39
-	}
-	abort = {
-		num_of_military_factories < 40
-		has_country_flag = TNO_DIVISIONS_CAPPED
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = armor
-		value = 5
-	}
-}
-
 slightly_naval_focused_nation = {
+	abort = {
+		always = no
+	}
 	enable = {
 		OR = {
 			tag = JAP
@@ -545,6 +623,9 @@ slightly_naval_focused_nation = {
 }
 
 more_naval_focused_nation = {
+	abort = {
+		always = no
+	}
 	enable = {
 		OR = {
 			tag = JAP
@@ -556,7 +637,7 @@ more_naval_focused_nation = {
 	ai_strategy = {
 		type = unit_ratio
 		id = capital_ship
-		value = 2		 #1 to 2
+		value = 2		#1 to 2
 	}
 
 	ai_strategy = {
@@ -580,6 +661,9 @@ more_naval_focused_nation = {
 
 
 default_area_priority = {
+	abort = {
+		always = no
+	}
 	enable = {
 		always = yes
 	}
@@ -635,6 +719,9 @@ default_area_priority = {
 }
 
 DEFAULT_template_design = {
+	abort = {
+		always = no
+	}
 	enable = {
 		date > 1962.1.1
 		NOT = {
@@ -648,7 +735,7 @@ DEFAULT_template_design = {
 	ai_strategy = {
 		type = template_prio
 		id = cavalry
-		value = 25
+		value = -25
 	}
 
 	ai_strategy = {
@@ -666,7 +753,7 @@ DEFAULT_template_design = {
 	ai_strategy = {
 		type = template_prio
 		id = APC
-		value = 125
+		value = -125
 	}
 
 	ai_strategy = {
@@ -684,7 +771,7 @@ DEFAULT_template_design = {
 	ai_strategy = {
 		type = template_prio
 		id = light_infantry
-		value = 125
+		value = -10
 	}
 
 	ai_strategy = {
@@ -702,6 +789,9 @@ DEFAULT_template_design = {
 
 ###UNIT LIMITER###
 division_limiter = {
+	abort = {
+		always = no
+	}
 	enable = {
 		is_exempt_from_division_limit = no
 		has_country_flag = TNO_DIVISIONS_CAPPED
@@ -751,10 +841,13 @@ division_limiter = {
 	}
 }
 
-save_admiral_pp_for_later = { 
+save_admiral_pp_for_later = {
+	abort = {
+		always = no
+	}
 	enable = {
 		has_war = no
-		has_political_power < 450		
+		has_political_power < 450
 	}
 	abort = {
 		OR = {
@@ -777,8 +870,11 @@ save_admiral_pp_for_later = {
 }
 
 build_intelligence_agency = {
+	abort = {
+		always = no
+	}
 	enable = {
-		has_war = no
+		always = no
 		check_variable = { GDP > 50 }
 	}
 	abort_when_not_enabled = yes
@@ -791,6 +887,9 @@ build_intelligence_agency = {
 }
 
 upgrade_intelligence_agency = {
+	abort = {
+		always = no
+	}
 	enable = {
 		check_variable = { GDP > 75 }
 	}
@@ -805,6 +904,9 @@ upgrade_intelligence_agency = {
 }
 
 upgrade_intelligence_agency_as_spy_master = {
+	abort = {
+		always = no
+	}
 	enable = {
 		is_spymaster = yes
 		OR = {
@@ -824,6 +926,9 @@ upgrade_intelligence_agency_as_spy_master = {
 }
 
 addintelligence_agency_normal_upgrade_prio = {
+	abort = {
+		always = no
+	}
 	enable = {
 		always = yes
 	}
@@ -857,6 +962,9 @@ addintelligence_agency_normal_upgrade_prio = {
 
 more_upgrades_as_spymaster = {
 
+	abort = {
+		always = no
+	}
 	enable = {
 		is_spymaster = yes
 	}
@@ -877,6 +985,9 @@ more_upgrades_as_spymaster = {
 }
 
 put_garrisons_on_high_prio = {
+	abort = {
+		always = no
+	}
 	enable = {
 		always = yes
 	}
@@ -890,6 +1001,9 @@ put_garrisons_on_high_prio = {
 
 
 default_spyplanes_production = {
+	abort = {
+		always = no
+	}
 	enable = {
 		has_tech = scout_plane_1945
 		OR = {
@@ -920,7 +1034,7 @@ default_spyplanes_production = {
 
 	#ai_strategy = {
 	#	type = equipment_production_factor
-	#	id = scout_helicopter_equipment  
+	#	id = scout_helicopter_equipment
 	#	value = -99
 	#}
 
@@ -938,25 +1052,24 @@ default_spyplanes_production = {
 }
 
 minors_dont_spy = {
+	abort = {
+		always = no
+	}
 	enable = {
 		OR = {
-
-			has_tech = scout_plane_1945 
-			#has_tech = very_early_helicopter 
+			has_tech = scout_plane_1945
+			#has_tech = very_early_helicopter
 		}
 		NOT = {
-			OR = {
-				tag = GER
-				tag = JAP
-				tag = USA
-				tag = ITA
-				AND = { #post civil war only
-					tag = ENG
-					date > 1965.1.1
-				}
+			tag = GER
+			tag = JAP
+			tag = USA
+			tag = ITA
+			AND = { #post civil war only
+				tag = ENG
+				date > 1965.1.1
 			}
 		}
-
 	}
 
 	abort_when_not_enabled = yes
@@ -970,11 +1083,14 @@ minors_dont_spy = {
 }
 
 default_railway_gun_management = {
+	abort = {
+		always = no
+	}
 	enable = {
 		check_variable = { GDP > 50 }
 	}
 	abort_when_not_enabled = yes
-	
+
 	ai_strategy = {
 		type = railway_gun_divisions_ratio
 		value = 4
@@ -982,6 +1098,9 @@ default_railway_gun_management = {
 }
 
 default_produce_floating_harbors = {
+	abort = {
+		always = no
+	}
 	enable = {
 		check_variable = { GDP > 50 }
 		has_war = yes
@@ -990,27 +1109,137 @@ default_produce_floating_harbors = {
 
 	ai_strategy = {
 		type = unit_ratio
-		id = floating_harbor 
-		value = 10
+		id = floating_harbor
+		value = 0
 	}
 }
 
-default_build_schools = {
+default_do_not_make_worthless_buildings = {
+	abort = {
+		always = no
+	}
 	enable = {
-		check_variable = { TNO_school_coverage_percent_gui < 100 }
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = unit_ratio
+		id = floating_harbor
+		value = -100
+	}
+	ai_strategy = {
+		type = building_target
+		id = radar_station
+		value = -100
+	}
+	ai_strategy = {
+		type = building_target
+		id = anti_air_building
+		value = -100
+	}
+	ai_strategy = {
+		type = building_target
+		id = bunker
+		value = -100
+	}
+	ai_strategy = {
+		type = building_target
+		id = coastal_bunker
+		value = -100
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = -100
+	}
+}
+
+default_build_powerplant = {
+	abort = {
+		always = no
+	}
+	enable = {
+		OR = {
+			check_variable = { resource@power < production_units }
+			check_variable = { resource@power = production_units }
+
+			check_variable = { resource@power < PU_civilian_factories_desired }
+			check_variable = { resource@power = PU_civilian_factories_desired }
+			check_variable = { resource@power < PU_military_factories_desired }
+			check_variable = { resource@power = PU_military_factories_desired }
+		}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = building_target
-		id = schools
-		value = 10
+		id = thermoelectric_plant
+		value = 1000
+	}
+}
+
+default_build_powerplant = {
+	abort = {
+		always = no
+	}
+	enable = {
+		AND = {
+			OR = {
+				tag = USA
+				tag = GER
+				tag = JAP
+				tag = ITA
+				AND = {
+					tag = ENG
+					date > 1964.1.1
+				}
+				check_variable = { PU_civilian_factories_desired > 40 }
+			}
+			OR = {
+				any_owned_state = { thermoelectric_plant < 1 }
+				any_owned_state = { nuclear_reactor < 1 }
+			}
+			NOT = { any_owned_state = { infrastructure < 8 } }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = thermoelectric_plant
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = nuclear_reactor
+		value = 25
+	}
+}
+
+default_build_infrastructure = { #For some reason makes them build Railways instead, fix after patch
+	abort = {
+		always = no
+	}
+	enable = {
+		any_owned_state = { infrastructure < 8 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = infrastructure
+		value = 500
 	}
 }
 
 default_build_offices = {
+	abort = {
+		always = no
+	}
 	enable = {
 		check_variable = { TNO_office_coverage_percent_gui < 100 }
+		NOT = { any_owned_state = { infrastructure < 8 } }
 	}
 	abort_when_not_enabled = yes
 
@@ -1021,9 +1250,39 @@ default_build_offices = {
 	}
 }
 
-default_build_hospitals = {
+
+default_build_schools = {
+	abort = {
+		always = no
+	}
 	enable = {
-		check_variable = { TNO_hospital_coverage_percent_gui < 100 }
+		AND = {
+			check_variable = { TNO_school_coverage_percent_gui < 100 }
+
+			check_variable = { TNO_office_coverage_percent_gui > 70 }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = schools
+		value = 10
+	}
+}
+
+default_build_hospitals = {
+	abort = {
+		always = no
+	}
+	enable = {
+		AND = {
+			check_variable = { TNO_hospital_coverage_percent_gui < 100 }
+
+			check_variable = { TNO_office_coverage_percent_gui > 70 }
+			check_variable = { TNO_school_coverage_percent_gui > 70 }
+			check_variable = { TNO_barrack_coverage_percent_gui > 70 }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1035,8 +1294,16 @@ default_build_hospitals = {
 }
 
 default_build_barracks = {
+	abort = {
+		always = no
+	}
 	enable = {
-		check_variable = { TNO_barrack_coverage_percent_gui < 100 }
+		AND = {
+			check_variable = { TNO_barrack_coverage_percent_gui < 100 }
+
+			check_variable = { TNO_office_coverage_percent_gui > 70 }
+			check_variable = { TNO_school_coverage_percent_gui > 70 }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1048,8 +1315,18 @@ default_build_barracks = {
 }
 
 default_build_prisons = {
+	abort = {
+		always = no
+	}
 	enable = {
-		check_variable = { TNO_prison_coverage_percent_gui < 100 }
+		AND = {
+			check_variable = { TNO_prison_coverage_percent_gui < 100 }
+
+			check_variable = { TNO_office_coverage_percent_gui > 70 }
+			check_variable = { TNO_hospital_coverage_percent_gui > 70 }
+			check_variable = { TNO_barrack_coverage_percent_gui > 70 }
+			check_variable = { TNO_school_coverage_percent_gui > 70 }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1057,5 +1334,70 @@ default_build_prisons = {
 		type = building_target
 		id = prisons
 		value = 10
+	}
+}
+
+default_never_build_silos = {
+	abort = {
+		always = no
+	}
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = fuel_silo
+		value = -99
+	}
+}
+
+
+default_recruit_materiel_scientist = {
+	enable = {
+		land_facility > 0
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = recruit_scientist
+		id = specialization_materiel
+		value = 100
+	}
+}
+
+default_recruit_theory_scientist = {
+	enable = {
+		nuclear_facility > 0
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = recruit_scientist
+		id = specialization_theory
+		value = 100
+	}
+}
+
+default_recruit_electronics_scientist = {
+	enable = {
+		naval_facility > 0
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = recruit_scientist
+		id = specialization_electronics
+		value = 100
+	}
+}
+
+default_recruit_aerospace_scientist = {
+	enable = {
+		air_facility > 0
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = recruit_scientist
+		id = specialization_aerospace
+		value = 100
 	}
 }

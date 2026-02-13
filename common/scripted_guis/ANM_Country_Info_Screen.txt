@@ -392,22 +392,4 @@ scripted_gui = {
 		}
 	}
 	
-	ANM_Country_Info_Screen_Opening_Logo = {
-		window_name = ANM_Country_Info_Screen_Opening_Logo
-		context_type = player_context
-		parent_window_name = ANM_Country_Info_Screen
-		visible = {
-			NOT = { has_variable = CountryInfo_Selected }
-		}
-	}
-	
-	ANM_Country_Info_Screen_Economic_Data = {
-		parent_window_name = ANM_Country_Info_Screen
-		window_name = "ANM_Country_Info_Screen_Economic_Data"
-		context_type = player_context
-		visible = {
-			check_variable = { CountryInfo_Selected = 1 }
-			check_variable = { CountryInfo_tab = 2 }
-		}
-	}
 }
