@@ -232,9 +232,6 @@ if = {
 		NSB_AC_1950 = 1
 		NSB_AC_1960 = 1
 
-		NSB_Heavy_1945 = 1
-		NSB_Heavy_1950 = 1
-		NSB_Superheavy_1945 = 1
 
 		NSB_artillery_1945 = 1
 		NSB_artillery_1950 = 1
@@ -268,50 +265,42 @@ add_ideas = {
 	CAU_Artyom_Tarasov_eco
 	#POLITICAL
 	tno_political_parties_one_party_state
-	tno_religious_rights_supression_of_churches
+	tno_religious_rights_secularism
 	tno_trade_unions_illegal
 	tno_immigration_closed_borders
-	tno_slavery_institutionalized
+	tno_slavery_outlawed
 	tno_public_meetings_outlawed
 	tno_press_rights_state_press_only
 	tno_vote_franchise_no_voting
+	tno_refugees_banned
 	#MILITARY
-	tno_conscription_service_by_requirement
-	tno_military_supervision_kill_em_all
+	tno_conscription_volunteer_only
+	tno_women_banned
+	tno_military_supervision_military_policing
+	tno_military_spending_large_spending
 	tno_training_basic_training
+	tno_racial_integration_none
 	tno_draft_exemptions_none
 	#SOCIAL
-	tno_health_care_support_for_emergencies
-	tno_education_stratified_education
-	tno_penal_system_overt_oppression
+	tno_safety_acceptable_regulations
+	tno_health_care_public_health_care
+	tno_pollution_some_regulations
+	tno_education_public_education
+	tno_penal_system_capital_punishment
+	tno_lgbt_rights_lgbt_outlawed
 	tno_gender_rights_women_in_the_workplace
-	tno_security_oppressive_police
-	tno_regulations_utterly_unregulated
+	tno_minorities_segregation
+	tno_security_police
 	#ECONOMIC
 	tno_trade_laws_export_focus
-	tno_income_taxation_elite_tax_exemptions
-	tno_minimum_wage_no_minimum_wage
-	tno_max_workhours_unlimited_work_day
-	tno_pensions_no_pensions
-	tno_unemployment_no_subsidies
-	#MISC
-	tno_refugees_banned
-	tno_women_banned
-	tno_racial_integration_none
-	tno_safety_minimal_regulations
-	tno_pollution_no_controls
-	tno_lgbt_rights_lgbt_outlawed
-	tno_minorities_segregation
-	tno_child_labor_legal
-	#SOCDEV
-	tno_army_professionalism_political_interference
-	tno_industrial_expertise_experienced
-	tno_industrial_equipment_modern
-	tno_agriculture_mass_mechanized
-	tno_healthcare_rudimentary
-	tno_research_facilities_outdated
-	tno_academic_base_basic_literacy
-	tno_admin_efficiency_deficient_administrative_systems
+	tno_economic_focus_civilian_economy
+	tno_tax_rate_medium_taxation
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
+	tno_pensions_acceptable_pensions
+	tno_unemployment_trinket_subsidies
 }
 
 set_politics = {

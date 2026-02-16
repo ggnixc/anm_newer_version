@@ -36,15 +36,7 @@ set_popularities = {
 
 add_ideas = {
 	#Standard#
-	SLG_Legion_Presence
-	SLG_Retornados
-	SLG_Native_Unrest
 	
-	#Cabinet#
-	SLG_Jorge_Jardim_hog
-	SLG_Federico_Gomez_mil
-	SLG_Cirilo_Canovas_Garcia_eco
-	SLG_Baltasar_Rebelo_de_Sousa_for
 	
 	#Political#
 	tno_political_parties_controlled_opposition
@@ -87,82 +79,4 @@ add_ideas = {
 	tno_gender_rights_women_in_the_workplace
 	tno_minorities_segregation
 	tno_security_security_service
-}
-
-create_country_leader = {
-	name = "Federico Gómez de Salazar"
-	desc = "POLITICS_FEDERICO_GOMEZ_DESC"
-	picture = "Portrait_SLG_Federico_Gomez_Salazar.dds"
-	expire = "1990.10.20"
-	ideology = despotism_subtype
-	traits = {
-		# 
-	}
-}
-
-create_country_leader = {
-	name = "Jorge Pereira Jardim"
-	desc = "POLITICS_JORGE_JARDIM_DESC"
-	picture = "Portrait_SLG_Jorge_Pereira_Jardim.dds"
-	expire = "1990.10.20"
-	ideology = paternalism_subtype
-	traits = {
-		# 
-	}
-}
-
-create_country_leader = {
-	name = "Yves Guérin-Sérac"
-	desc = "POLITICS_YVES_GUERIN_SERAC_DESC"
-	picture = "Portrait_SLG_Yves_Guerin_Serac.dds"
-	expire = "1990.10.20"
-	ideology = fascism_subtype
-	traits = {
-		# 
-	}
-}
-
-
-create_field_marshal = { 
-	name = "Federico Gómez de Salazar"
-	portrait_path = "gfx/leaders/SLG/Portrait_SLG_Federico_Gomez_Salazar.dds"
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-	traits = { 
-	    thorough_planner
-	}
-	id = 1401
-}
-
-create_corps_commander = { 
-	name = "Kaúlza de Arriaga"
-	portrait_path = "gfx/leaders/SLG/Portrait_SLG_Kaulza_de_Arriaga.dds"
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-	traits = {
-	    harsh_leader
-	    infantry_officer
-	}
-	id = 1402
-}
-
-create_corps_commander = { 
-	name = "Yves Guérin-Sérac"
-	portrait_path = "gfx/leaders/SLG/Portrait_SLG_Yves_Guerin_Serac.dds"
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-	traits = {
-	    foreign_mercenary
-	    desert_fox
-	}
-	id = 1403
 }

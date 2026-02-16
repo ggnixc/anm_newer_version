@@ -3,21 +3,10 @@
 set_war_support = 0.5
 set_stability = 0.5
 
-#load_focus_tree = TRK_tree
-
 set_oob = "TRK_1962"
 
 add_ideas = {
 	### Standard ###
-	TRK_Fragmented_Tribes
-	TRK_Question_Of_Identity
-	TRK_A_Modern_Silk_Road
-
-	### Ministers ###
-	TRK_Poda_Annaorazov_hog
-	TRK_Annamukhamed_Klychev_for
-	TRK_Oraz_Orazmukhamedov_eco
-	TRK_Anna_Kareyev_sec
 
 	### Political ###
 	tno_political_parties_controlled_opposition
@@ -95,26 +84,4 @@ set_popularities = {
 	national_socialism = 0
 	ultranationalism = 0
 	 
-}
-
-### Country Leaders ###
-create_country_leader = {
-	name = "Poda Annaorazov"
-	desc = "POLITICS_PODA_ANNAORAZOV_DESC"
-	picture = "Portrait_Turkmenistan_Poda_Annaorazov.dds"
-	expire = "1999.1.1"
-	ideology = despotism_subtype
-}
-
-### Commanders ###
-create_corps_commander = {
-	name = "Anna Kareyev"
-	picture = "Protrait_Turkmenistan_Anna_Kareyev.dds"
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-	traits = { politically_connected skilled_staffer }
-	id = 15104
 }

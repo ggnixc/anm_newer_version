@@ -11,13 +11,6 @@ set_politics = {
 
 add_ideas = {
 	#Standard#
-	KYR_Stabilization_Regime
-
-	#Ministers#
-	KYR_Ivan_Grishin_hog
-	KYR_Zurakan_Imankalykova_for
-	KYR_Sultan_Ibraimov_eco
-	KYR_Kaliynur_Usenbekov_sec
 
 	#Political#
 	tno_political_parties_controlled_opposition
@@ -77,46 +70,4 @@ set_popularities = {
 	national_socialism = 0
 	ultranationalism = 0
 	 
-}
-
-### Country Leaders ###
-create_country_leader = {
-	name = "Ivan Grishin"
-	desc = "POLITICS_IVAN_GRISHIN_DESC"
-	picture = "Portrait_Kyrgyzstan_Ivan_Grishin.dds"
-	expire = "1999.1.1"
-	ideology = despotism_subtype
-}
-
-create_country_leader = {
-	name = "Sultan Ibraimov"
-	#desc = ""
-	picture = "Portrait_Kyrgyzstan_Sultan_Ibraimov.dds"
-	expire = "1999.1.1"
-	ideology = communist_subtype
-}
-
-### Generals ###
-create_corps_commander = {
-	name = "Kaliynur Usenbekov"
-	picture = "Portrait_Kyrgyzstan_Kaliynur_Usenbekov.dds"
-	traits = { politically_connected organizer }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-	id = 15101
-}
-
-create_corps_commander = {
-	name = "Andrei Grebnev"
-	picture = "Portrait_Kyrgyzstan_Andrei_Grebnev.dds"
-	traits = { career_officer trickster }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-	id = 15102
 }

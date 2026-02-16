@@ -30,21 +30,11 @@ set_popularities = {
 #GENERAL TRIGGERS
 set_research_slots = 3
 set_convoys = 100	
-country_lock_all_division_template = no
 
 add_ideas = {
 	#FACTION
 	
-	#NATIONAL SPIRITS
-	KHA_unemployed_by_choice
-	KHA_mercenary_presence
-	KHA_nevelskoy_airport
-	KHA_counterfeit_coalition
-	#MINISTERS
-	KHA_minister_Sokolov_Alexander_Nikolaevich_hog 
-	KHA_minister_Kravchenko_Vladimir_Viktorovich_sec
-	KHA_minister_Lee_Seung_yeon_for
-	KHA_minister_Efim_Isaakovich_Zelmanov_eco
+
 	#COUNTRY
 	#CABINET
 	tno_political_parties_one_party_state
@@ -84,48 +74,6 @@ add_ideas = {
 	tno_child_labor_illegal
 	tno_pensions_acceptable_pensions
 	tno_unemployment_trinket_subsidies
- }
 
-create_country_leader = {
-	name = "Gorodskoy Sovet"
-	desc = "KHA_Gorodskoy_Sovet_desc"
-	picture = "Portrait_KHA_Gorodskoy_Sovet.dds"
-	expire = "2100.1.1"
-	ideology = despotism_civilian_dictatorship_subtype
-	traits = {
-	
-	}
-}
-create_country_leader = { 
-	name = "Vikentiy Semenov"
-	desc = "KHA_Gorodskoy_Sovet_desc"
-	picture = "Portrait_KHA_Gorodskoy_Sovet.dds"
-	expire = "2100.1.1"
-	ideology = fascism_subtype
-	traits = {
-	
-	}
-}
-create_country_leader = {
-	name = "Ludmil Zakharov"
-	desc = "KHA_Gorodskoy_Sovet_desc"
-	picture = "Portrait_KHA_Gorodskoy_Sovet.dds"
-	expire = "2100.1.1"
-	ideology = communist_subtype
-	traits = {
-	
-	}
-}
-create_country_leader = {
-	name = "Sone Yosai"
-	desc = "KHA_Gorodskoy_Sovet_desc"
-	picture = "Portrait_KHA_Gorodskoy_Sovet.dds"
-	expire = "2100.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	
-	}
 }
 
-set_country_flag = econ_view_visible
-set_country_flag = economy_production_units_open

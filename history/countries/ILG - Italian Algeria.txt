@@ -8,23 +8,9 @@ set_stability = 0.6
 set_war_support = 0.3
 
 add_ideas = {
-	ILG_Wild_Frontier
-	ILG_Unofficial_Italian_Settlement
-	ILG_Saharan_Bandits_Prevalent
-	ILG_Giuseppe_Castellano_dep
-	ILG_Giuseppe_Castellano_for
-	ILG_Giuseppe_Castellano_eco
-	ILG_Giuseppe_Castellano_sec
-	IEA_idea_colonial_government
+	
 }
 
-set_variable = {
-	var = ILG_bandit_status
-	value = 4
-}
-
-# Starting tech
-# Starting tech
 set_politics = {
 	ruling_party = fascism
 	last_election = "1934.3.26"
@@ -47,79 +33,6 @@ set_popularities = {
 	fascism = 70
 	national_socialism = 10
 	 
-}
-
-create_country_leader = {
-	name = "Giuseppe Castellano"
-	desc = "POLITICS_GIUSEPPE_CASTELLANO_DESC"
-	picture = "Giuseppe_Castellano_2_DDS.dds"
-	expire = "1993.1.1"
-	ideology = fascism_subtype
-	traits = {
-	}
-}
-
-create_field_marshal = {
-	name = "Giuseppe Castellano"
-	desc = "POLITICS_GIUSEPPE_CASTELLANO_DESC"
-	picture = "Portrait_ILG_Giuseppe_Castellano.dds"
-	#expire = "1993.1.1"
-	traits = {
-		desert_fox
-		organisational_leader
-	}
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Fernando Tanucci Nannini"
-	desc = "POLITICS_FERNANDO_TANUCCI_NANNINI_DESC"
-	picture = "Portrait_ILG_Fernando_Tanucci_Nannini.dds"
-	#expire = "1993.1.1"
-	traits = {
-		old_guard
-		war_hero
-	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Salvatore Castagna"
-	desc = "POLITICS_SALVATORE_CASTAGNA_DESC"
-	picture = "Portrait_ILG_Salvatore_Castagna.dds"
-	#expire = "1993.1.1"
-	traits = {
-		career_officer
-		brilliant_strategist
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Pierre Guillaume"
-	desc = "POLITICS_PIERRE_GUILLAUME_DESC"
-	picture = "Portrait_ILG_Pierre_Guillaume.dds"
-	#expire = "1993.1.1"
-	traits = {
-		trait_reckless
-	}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
 }
 
 add_ideas = {

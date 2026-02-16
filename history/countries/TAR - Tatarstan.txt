@@ -4,14 +4,7 @@ set_oob = "TAR_1962"
 
 add_ideas = {
 	### STANDARD ###
-	RUS_warlord_manpower
-	RUS_terror_bombing
-	TAR_free_tatars
-	### MINISTERS ###
-	TAR_Abdurrakhman_Absalyamov_hog
-	TAR_Rostam_Yaxin_for
-	TAR_Gabbas_Gimatdinov_eco
-	TAR_Mansur_Abdullin_sec
+	
 	### POLITICAL ###
 	tno_political_parties_controlled_opposition
 	tno_religious_rights_secularism
@@ -61,9 +54,6 @@ add_ideas = {
 	tno_academic_base_basic_literacy
 }
 
-add_offsite_building = { type = arms_factory level = 1 }
-add_offsite_building = { type = industrial_complex level = 1 }
-
 set_politics = {
 	ruling_party = paternalism
 	last_election = "1933.3.5"
@@ -86,40 +76,4 @@ set_popularities = {
 	despotism = 0
 	fascism = 0
 	 
-}
-
-create_country_leader = {
-	name = "Abdulla Aliş"
-	desc = "POLITICS_ABDULA_ALIS_DESC"
-	picture = "Portrait_Tatarstan_Abdulla_Alis.dds"
-	expire = "1999.1.1"
-	ideology = paternalism_subtype
-	traits = {
-
-	}
-}
-
-### Generals ###
-create_field_marshal = {
-	name = "Farakh Kamaldinov"
-	picture = "Portrait_Tatarstan_Farakh_Kamaldinov.dds"
-	traits = { war_hero inflexible_strategist defensive_doctrine organizer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 1
-	id = 3341
-}
-
-create_corps_commander = {
-	name = "Mansur Abdullin"
-	picture = "Portrait_Tatarstan_Mansur_Abdullin.dds"
-	traits = { trait_reckless commando }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-	id = 3342
 }

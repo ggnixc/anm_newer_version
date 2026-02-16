@@ -30,172 +30,49 @@ set_popularities = {
      
 }
 
-create_country_leader = {
-	name = "Tandin Tshering"
-	desc = "POLITICS_DASHO_KESANG_DESC"
-	picture = "Portrait_Bhutan_Dasho_Kesang.dds"
-	expire = "2090.1.1"
-	ideology = socialist_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Sherub Gyeltshen"
-	desc = "POLITICS_DASHO_KESANG_DESC"
-	picture = "Portrait_Bhutan_Dasho_Kesang.dds"
-	expire = "2090.1.1"
-	ideology = progressivism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Sangay Ngedup"
-	desc = "POLITICS_DASHO_KESANG_DESC"
-	picture = "Portrait_Bhutan_Dasho_Kesang.dds"
-	expire = "2090.1.1"
-	ideology = liberalism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Jigme Thinley"
-	desc = "POLITICS_LHENDUP_DORJI_DESC"
-	picture = "Portrait_Bhutan_Lhendup_Dorji.dds"
-	expire = "2090.1.1"
-	ideology = conservatism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Jigme Singye Wangchuck"
-	desc = "POLITICS_JIGME_DORJI_WANGCHUCK_DESC"
-	picture = "Portrait_BHU_Jigme_Singye_Wangchuck.dds"
-	expire = "2090.1.1"
-	ideology = paternalism_semi_constitutional_monarchy_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Jigme Singye Wangchuck"
-	desc = "POLITICS_KANWAL_SINGH_DESC"
-	picture = "Portrait_BHU_Jigme_Singye_Wangchuck.dds"
-	expire = "2090.1.1"
-	ideology = despotism_subtype
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Jigme Chhoeda"
-	desc = "POLITICS_KANWAL_SINGH_DESC"
-	picture = "Portrait_Bhutan_Kanwal_Singh.dds"
-	expire = "2090.1.1"
-	ideology = ultranationalism_subtype
-	traits = {
-	}
-}
-
-####################
-##Military Leaders##
-####################
-
-create_field_marshal = {
-	name = "Kanwal Singh"
-	picture = "Portrait_Bhutan_Kanwal_Singh.dds"
-	traits = { harsh_leader unyielding_defender }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 1
-	logistics_skill = 1
-	id = 3120
-}
-
-create_corps_commander = {
-	name = "Khaled Mosharraf"
-	picture = "Portrait_Bhutan_Khaled_Mosharraf.dds"
-	traits = { fortress_buster organizer }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-	id = 3121
-}
-
-create_corps_commander = {
-	name = "Hussain Muhammad Ershad"
-	picture = "Portrait_Bhutan_Hussain_Muhammad_Ershad.dds"
-	traits = { fortress_buster organizer }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 3122
-}
-
 add_ideas = {
 	#DIPLO
 	
 	#STARTING
 	Sphere_Economic_Dependent
 	#MINISTERS
-	BHU_Kanwal_Singh_hog
-	BHU_Ian_Cardozo_eco
-	BHU_Piru_Singh_for
-	BHU_Hussain_Muhammad_Ershad_sec
+	
 	#POLITICAL
 	tno_political_parties_one_party_state
-	tno_religious_rights_state_religion
+	tno_religious_rights_secularism
 	tno_trade_unions_illegal
-	tno_immigration_quota_immigration
+	tno_immigration_closed_borders
 	tno_slavery_outlawed
-	tno_public_meetings_regulated
+	tno_public_meetings_outlawed
 	tno_press_rights_state_press_only
 	tno_vote_franchise_no_voting
-	tno_refugees_skilled
+	tno_refugees_banned
 	#MILITARY
-	tno_conscription_disarmed_nation
+	tno_conscription_volunteer_only
 	tno_women_banned
-	tno_military_supervision_rules_of_engagement
-	tno_military_spending_demilitarized
-	tno_training_minimal_training
+	tno_military_supervision_military_policing
+	tno_military_spending_large_spending
+	tno_training_basic_training
 	tno_racial_integration_none
 	tno_draft_exemptions_none
 	#SOCIAL
-	tno_safety_minimal_regulations
-	tno_health_care_no_health_care
-	tno_pollution_strict_regulations
-	tno_education_elite_only
-	tno_penal_system_penal_slavery
+	tno_safety_acceptable_regulations
+	tno_health_care_public_health_care
+	tno_pollution_some_regulations
+	tno_education_public_education
+	tno_penal_system_capital_punishment
 	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
-	tno_minorities_oppression
-	tno_drugs_weedreestricted
-	tno_security_security_service
+	tno_gender_rights_women_in_the_workplace
+	tno_minorities_segregation
+	tno_security_police
 	#ECONOMIC
-	tno_trade_laws_closed_economy
+	tno_trade_laws_export_focus
 	tno_economic_focus_civilian_economy
 	tno_tax_rate_medium_taxation
-	tno_income_taxation_elite_tax_exemption
-	tno_minimum_wage_no_minimum_wage
-	tno_max_workhours_unlimited_work_day
-	tno_child_labor_legal
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_child_labor_illegal
 	tno_pensions_acceptable_pensions
-	tno_unemployment_no_subsidies
-	#DEVELOPMENT#
-	tno_nuclear_stockpile_none
-	tno_poverty_rate_50
-	tno_industrial_expertise_incompetent
-	tno_industrial_equipment_power_tools
-	tno_agriculture_centralized
-	tno_research_facilities_makeshift
-	tno_academic_base_basic_literacy
-	tno_army_professionalism_professional
+	tno_unemployment_trinket_subsidies
 }

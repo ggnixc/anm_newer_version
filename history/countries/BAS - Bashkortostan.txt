@@ -2,24 +2,8 @@
 
 set_oob = "BAS_1962"
 
-add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 3000
-    producer = BAS
-}
-add_equipment_to_stockpile = {
-    type = artillery_equipment_2
-    amount = 50
-    producer = BAS
-}
-
-add_manpower = 6000
 add_ideas = {
- 	RUS_terror_bombing
-	RUS_warlord_manpower
-	BAS_mad_scientist
-	BAS_SANITY_HIGH
-	BAS_Lysenko_Influence_Very_Low
+
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_atheism
@@ -68,25 +52,7 @@ add_ideas = {
 	tno_research_facilities_modern
 	tno_academic_base_primary_schooling
 	##MINISTERS##
-	BAS_Isaak_Prezent_hog
-	BAS_Stepan_Bunkov_sec
-	BAS_Donat_Dolgushin_for
-	BAS_Alexander_Oparin_eco
 }
-
-set_variable = { lysenko_nkvd_disloyalty = 0 }
-set_variable = { lysenko_nkvd_disloyalty_counter = 0 }
-set_variable = { global.lysenko_testing = 0}
-set_variable = {
-	var = lysenko_nkvd_influence
-	value = 12
-}
-lysenko_influence_assign = yes
-set_variable = {
-	var = lysenko_sanity
-	value = 100
-}
-set_country_flag = high_sanity
 
 set_politics = {
 	ruling_party = despotism
@@ -110,50 +76,4 @@ set_popularities = {
 	national_socialism = 0
 	ultranationalism = 0
 	 
-}
-
-### Country Leader ###
-create_country_leader = {
-	name = "Trofim Lysenko"
-	desc = "POLITICS_TROFIM_LYSENKO_DESC"
-	picture = "Portrait_Magnitogorsk_Trofim_Lysenko.dds"
-	expire = "1999.1.1"
-	ideology = despotism_subtype
-}
-
-### Generals ###
-create_field_marshal = {
-	name = "Andrei Golovko"
-	picture = "Portrait_Magnitogorsk_Andrei_Golovko.dds"
-	traits = { old_guard organisational_leader panzer_leader combined_arms_expert }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 3511
-}
-
-create_corps_commander = {
-	name = "Nikolai Vasiliev"
-	picture = "Portrait_Magnitogorsk_Nikolai_Vasilev.dds"
-	traits = { trickster guerilla_fighter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-	id = 3512
-}
-
-create_corps_commander = {
-	name = "Stepan Bunkov"
-	picture = "Portrait_Magnitogorsk_Stepan_Bunkov.dds"
-	traits = { trait_cautious trait_engineer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-	id = 3513
 }
