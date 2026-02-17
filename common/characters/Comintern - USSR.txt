@@ -43,7 +43,7 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_ANATOLY_LUKYANOV_DESC"
-			ideology = communist_1_subtype
+			ideology = paternalism_paternalistic_developmentalism_subtype
 			traits = { 
                 eco_reformer
             }
@@ -73,7 +73,7 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_VLADIMIR_KRYUCHKOV_DESC"
-			ideology = communist_2_subtype
+			ideology = communist_marxism_leninism_subtype
 			traits = { 
                 sec_secret_police_chief
             }
@@ -111,6 +111,19 @@ characters = {
 			cost = -1
 			can_be_fired = no
 			ai_will_do = { factor = 0 }
+		}
+	}
+	SOV_Alexander_Baygushev = { 
+		name = SOV_Alexander_Baygushev
+		portraits = { 
+			civilian = { large = "gfx/leaders/SOV/Portrait_SOV_Alexander_Baygushev.dds" } 
+		}
+		country_leader = {
+			desc = "POLITICS_ALEXANDER_BAYGUSHEV_DESC"
+			ideology = communist_soviet_patriotism_subtype
+			traits = {
+            }
+			expire = "2999.1.1.1"
 		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿add_namespace = SOV
 add_namespace = SOV_flavour
+add_namespace = SOV_power_struggle
 add_namespace = SOV_space
 add_namespace = SOV_victory
 add_namespace = SOV_antarctica
@@ -35,6 +36,121 @@ news_event = {
 		trigger = {
 			NOT = { tag = SOV }
 			NOT = { tag = GER }
+		}
+	}
+}
+
+#### VICTORY SCENARIO PREMIERS ###
+
+country_event = {
+	id = SOV_power_struggle.1 
+ 	title = SOV_power_struggle.1.t
+ 	desc = SOV_power_struggle.1.desc
+ 	picture = GFX_anm_GER_broken_nazi_eagle
+
+	fire_only_once = yes
+
+ 	option = { 
+ 		name = SOV_power_struggle.1.a # Lukyanov
+		ai_chance = { base = 40 }
+
+		hidden_effect = {
+			SOV_Anatoly_Lukyanov = {
+				promote_character = paternalism_paternalistic_developmentalism_subtype
+			}
+
+			set_politics = {
+				ruling_party = paternalism
+				last_election = "[GetDateText]"
+				election_frequency = 0
+				elections_allowed = no
+			}
+
+			set_party_name = {
+				ideology = paternalism
+				name = SOV_paternalism_party_lukyanov
+				long_name = SOV_paternalism_party_lukyanov_long
+			}
+
+			set_popularities = {
+				communist_1 = 18
+				communist = 22
+				communist_2 = 21
+				paternalism = 39
+			}
+		}
+	}
+
+	option = { 
+ 		name = SOV_power_struggle.1.b # Kryuchkov
+		ai_chance = { base = 40 }
+
+		hidden_effect = {
+			SOV_Vladimir_Kryuchkov = {
+				promote_character = communist_marxism_leninism_subtype
+			}
+
+			set_politics = {
+				ruling_party = communist
+				last_election = "[GetDateText]"
+				election_frequency = 0
+				elections_allowed = no
+			}
+
+			set_party_name = {
+				ideology = communist
+				name = SOV_communist_party_KGB
+				long_name = SOV_communist_party_KGB_long
+			}
+
+			set_popularities = {
+				communist_1 = 18
+				communist_2 = 10
+				communist = 57
+				communist_3 = 15
+			}
+		}
+	}
+
+	option = { 
+ 		name = SOV_power_struggle.1.c # Baygushev
+		ai_chance = { base = 20 }
+
+		hidden_effect = {
+			SOV_Alexander_Baygushev = {
+				promote_character = communist_soviet_patriotism_subtype
+			}
+
+			set_politics = {
+				ruling_party = communist
+				last_election = "[GetDateText]"
+				election_frequency = 0
+				elections_allowed = no
+			}
+
+			set_party_name = {
+				ideology = communist
+				name = SOV_communist_party_RP
+				long_name = SOV_communist_party_RP_long
+			}
+
+			set_party_name = {
+				ideology = despotism
+				name = SOV_despotism_party_RP
+				long_name = SOV_despotism_party_RP
+			}
+
+			set_popularities = {
+				communist_1 = 11
+				communist_2 = 6
+				communist = 46
+				communist_3 = 9
+				fascism = 12
+				ultranationalism = 9
+				despotism = 7
+			}
+
+			set_cosmetic_tag = SOV_RP
 		}
 	}
 }

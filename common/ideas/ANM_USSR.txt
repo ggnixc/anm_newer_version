@@ -128,5 +128,47 @@ ideas = {
 				industry_repair_factor = 0.2
 			}
 		}
+		SOV_Lukyanov_Economic_Reform_4 = {
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_Lukyanov_Economic_Reform_4
+			removal_cost = -1
+
+			modifier = {
+				line_change_production_efficiency_factor = 0.1
+				local_building_slots = 4
+				consumer_goods_factor = 0.24
+				industry_repair_factor = 0.2
+				industrial_capacity_factory = 0.4
+			}
+		}
+		SOV_A_New_European_Master = {
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_A_New_European_Master
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 0.1
+				war_support_factor = 0.2
+				send_volunteer_size = 2
+				party_popularity_stability_factor = 0.1
+				resistance_growth_on_our_occupied_states = -0.05
+			}
+		}
+		SOV_A_Self_Focused_Union = {
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			picture = SOV_A_Self_Focused_Union
+			removal_cost = -1
+
+			modifier = {
+				conservatism_acceptance = 50
+				liberalism_acceptance = 50
+				progressivism_acceptance = 50
+				send_volunteer_size = -1
+				industrial_factory_donations = 5
+			}
+		}
 	}
 }	
