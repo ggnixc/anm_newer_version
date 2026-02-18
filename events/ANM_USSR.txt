@@ -55,8 +55,16 @@ country_event = {
 		ai_chance = { base = 40 }
 
 		hidden_effect = {
-			SOV_Anatoly_Lukyanov = {
-				promote_character = paternalism_paternalistic_developmentalism_subtype
+			add_country_leader_role = {
+				character = SOV_Anatoly_Lukyanov
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_ANATOLY_LUKYANOV_DESC"
+					expire = "1994.4.20"
+					ideology = paternalism_paternalistic_developmentalism_subtype
+					traits = eco_reformer
+					id = -1
+				}
 			}
 
 			set_politics = {
@@ -86,8 +94,16 @@ country_event = {
 		ai_chance = { base = 40 }
 
 		hidden_effect = {
-			SOV_Vladimir_Kryuchkov = {
-				promote_character = communist_marxism_leninism_subtype
+			add_country_leader_role = {
+				character = SOV_Vladimir_Kryuchkov
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_VLADIMIR_KRYUCHKOV_DESC"
+					expire = "1994.4.20"
+					ideology = communist_marxism_leninism_subtype
+					traits = sec_secret_police_chief
+					id = -1
+				}
 			}
 
 			set_politics = {
@@ -117,37 +133,45 @@ country_event = {
 		ai_chance = { base = 20 }
 
 		hidden_effect = {
-			SOV_Alexander_Baygushev = {
-				promote_character = communist_soviet_patriotism_subtype
+			add_country_leader_role = {
+				character = SOV_Alexander_Baygushev
+				promote_leader = yes
+				country_leader = {
+					desc = "POLITICS_ALEXANDER_BAYGUSHEV_DESC"
+					expire = "1994.4.20"
+					ideology = despotism_soviet_patriotism_subtype
+					traits = 
+					id = -1
+				}
 			}
 
 			set_politics = {
-				ruling_party = communist
+				ruling_party = despotism
 				last_election = "[GetDateText]"
 				election_frequency = 0
 				elections_allowed = no
 			}
 
 			set_party_name = {
-				ideology = communist
-				name = SOV_communist_party_RP
-				long_name = SOV_communist_party_RP_long
+				ideology = despotism
+				name = SOV_despotism_party_RP
+				long_name = SOV_despotism_party_RP_long
 			}
 
 			set_party_name = {
-				ideology = despotism
-				name = SOV_despotism_party_RP
-				long_name = SOV_despotism_party_RP
+				ideology = despotism_1
+				name = SOV_despotism_party_RP_other
+				long_name = SOV_despotism_party_RP_other
 			}
 
 			set_popularities = {
-				communist_1 = 11
+				communist_1 = 9
 				communist_2 = 6
-				communist = 46
-				communist_3 = 9
+				communist = 11
 				fascism = 12
 				ultranationalism = 9
-				despotism = 7
+				despotism = 46
+				despotism_1 = 7
 			}
 
 			set_cosmetic_tag = SOV_RP
