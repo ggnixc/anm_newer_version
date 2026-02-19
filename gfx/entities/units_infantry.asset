@@ -17,15 +17,15 @@ entity = {
 	state = { name = "attack"			animation = "charge_rifle_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
 	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
 	state = { name = "support_attack"	animation = "support_attack" 	animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "move"				animation = "move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
-	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
 	state = { name = "retreat"			animation = "retreat" 	 		animation_blend_time = 0.3 animation_speed = 1.0 }
 	state = { name = "death"			animation = "death" 			animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "idle"				animation = "idle"	   		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
 	state = { name = "idle"				animation = "long_idle02" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
 	state = { name = "idle"				animation = "long_idle03" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
 		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
@@ -62,14 +62,14 @@ entity = {
 	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
 	state = { name = "support_attack"	animation = "support_attack" 	animation_blend_time = 0.3 animation_speed = 1.0 }
 	state = { name = "move"				animation = "move" 				animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
 	state = { name = "move"				animation = "march_move" 				animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
 	state = { name = "retreat"			animation = "retreat" 			animation_blend_time = 0.3 animation_speed = 1.0 }
 	state = { name = "death"			animation = "death" 			animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "idle"				animation = "idle"	   		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
 	state = { name = "idle"				animation = "long_idle02"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
 	state = { name = "idle"				animation = "long_idle03"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
 		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
@@ -220,6 +220,145 @@ entity = {
 	scale = 1.0
 }
 
+###generic bicycles
+
+# RIFLE
+
+	entity = {
+		name = "bicycle_entity"
+		pdxmesh = "bicycle_frame_mesh"
+
+		default_state = "idle"
+		state = { name = "idle" 			animation = "idle" }
+		state = { name = "move" 			animation = "move" }
+		state = { name = "retreat" 			animation = "move" }
+		state = { name = "attack" 			animation = "attack" }
+		state = { name = "support_attack" 	animation = "attack" }
+		state = { name = "defend" 			animation = "attack" }
+		state = { name = "training" 		animation = "attack" }
+
+		attach = { 	name = "infantry"		infantry = "generic_bicycle_rider_rifle_entity" }
+		attach = { 	name = "combined"		combined = "generic_bicycle_rifle_combined_entity" }
+		attach = { 	name = "bicycle"		bike = "generic_bicycle_vehicle_entity" }
+	}
+
+	entity = {
+		name = "generic_bicycle_rifle_combined_entity"
+		pdxmesh = "bicycle_vehicle_mesh"
+
+		default_state = "idle"
+		state = { name = "idle" 	animation = "idle" chance = 5 next_state = "idle" looping = no propagate_state = { rider = "idle" } }
+		state = { name = "idle" 	animation = "idle_2" chance = 1 next_state = "idle" looping = no propagate_state = { rider = "idle_2" } }
+		state = { name = "move" 	animation = "move" chance = 5 next_state = "move" looping = no propagate_state = { rider = "move" } }
+		state = { name = "move" 	animation = "move_2" chance = 1 next_state = "move" looping = no propagate_state = { rider = "move_2" } }
+		state = { name = "retreat" 	animation = "retreat" chance = 10 next_state = "retreat" looping = no propagate_state = { rider = "retreat" } }
+		state = { name = "retreat" 	animation = "retreat_2" chance = 1 next_state = "retreat" looping = no propagate_state = { rider = "retreat_2" } }
+
+		attach = { 	name = "rider"	bike_center = "generic_bicycle_rider_rifle_entity" }
+
+		scale = 0.8
+	}
+
+	entity = {
+		name = "generic_bicycle_rider_rifle_entity"
+		pdxmesh = "generic_western_european_rifle_infantry_mesh"
+
+		state = { name = "attack"			animation = "charge_rifle" 		animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle2 = "idle" } }
+		state = { name = "attack"			animation = "charge_rifle_shoot" 	animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+		state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+		state = { name = "support_attack"	animation = "support_attack" 	animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "move"				animation = "bicycle_move"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "move_2"			animation = "bicycle_move_2"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "retreat"			animation = "bicycle_retreat" 	 			animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "retreat_2"			animation = "bicycle_retreat_2" 	 			animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "idle"				animation = "bicycle_idle"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "idle_2"			animation = "bicycle_idle_2"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+		state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+		state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+		state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+		state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+		attach = { 	name = "rifle1"	Right_Hand_node = "ENG_infantry_weapon_rifle_right_entity" }
+		attach = { 	name = "rifle2"	Left_Hand_node = "ENG_infantry_weapon_rifle_left_entity" }
+		attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
+
+		scale = 1
+	}
+
+	entity = {
+		name = "generic_bicycle_vehicle_entity"
+		pdxmesh = "bicycle_vehicle_mesh"
+
+		default_state = "idle"
+		state = { name = "idle" animation = "still" }
+
+		scale = 0.8
+	}
+
+# MACHINE GUN
+
+	entity = {
+		name = "generic_bicycle_2_entity"
+		pdxmesh = "bicycle_frame_mesh"
+
+		default_state = "idle"
+		state = { name = "idle" 			animation = "idle" }
+		state = { name = "move" 			animation = "move" }
+		state = { name = "retreat" 			animation = "move" }
+		state = { name = "attack" 			animation = "attack" }
+		state = { name = "support_attack" 	animation = "attack" }
+		state = { name = "defend" 			animation = "attack" }
+		state = { name = "training" 		animation = "attack" }
+
+		attach = { 	name = "infantry"		infantry = "generic_infantry_mg_rider_entity" }
+		attach = { 	name = "combined"		combined = "generic_bicycle_mg_combined_entity" }
+		attach = { 	name = "bicycle"		bike = "generic_bicycle_vehicle_entity" }
+	}
+
+	entity = {
+		name = "generic_bicycle_mg_combined_entity"
+		pdxmesh = "bicycle_vehicle_mesh"
+
+		default_state = "idle"
+		state = { name = "idle" 	animation = "idle" chance = 5 next_state = "idle" looping = no propagate_state = { rider = "idle" } }
+		state = { name = "idle" 	animation = "idle_2" chance = 1 next_state = "idle" looping = no propagate_state = { rider = "idle_2" } }
+		state = { name = "move" 	animation = "move" chance = 5 next_state = "move" looping = no propagate_state = { rider = "move" } }
+		state = { name = "move" 	animation = "move_2" chance = 1 next_state = "move" looping = no propagate_state = { rider = "move_2" } }
+		state = { name = "retreat" 	animation = "retreat" chance = 10 next_state = "retreat" looping = no propagate_state = { rider = "retreat" } }
+		state = { name = "retreat" 	animation = "retreat_2" chance = 1 next_state = "retreat" looping = no propagate_state = { rider = "retreat_2" } }
+
+		attach = { 	name = "rider"	bike_center = "generic_infantry_mg_rider_entity" }
+
+		scale = 0.8
+	}
+
+	entity = {
+		name = "generic_bicycle_rider_mg_entity"
+		pdxmesh = "generic_western_european_mg_infantry_mesh"
+
+		state = { name = "attack"			animation = "charge_mg" 		animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle1 = "idle" } }
+		state = { name = "attack"			animation = "charge_mg_shoot" 	animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+		state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+		state = { name = "support_attack"	animation = "support_attack" 	animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "move"				animation = "bicycle_move"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "move_2"			animation = "bicycle_move_2"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "retreat"			animation = "bicycle_retreat" 	 			animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "retreat_2"			animation = "bicycle_retreat_2" 	 			animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "idle"				animation = "bicycle_idle"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "idle_2"			animation = "bicycle_idle_2"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+		state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+		state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+		state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+		state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+		attach = { 	name = "rifle1"	Right_Hand_node = "western_european_infantry_weapon_mg_right_entity" }
+		attach = { 	name = "rifle2"	Left_Hand_node = "western_european_infantry_weapon_mg_left_entity" }
+
+
+		scale = 1
+	}
+
 entity = {
 	name = "ROM_infantry_entity"
 	pdxmesh = "generic_eastern_european_infantry_rifle_mesh"
@@ -229,15 +368,15 @@ entity = {
 	state = { name = "attack"			animation = "charge_rifle_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
 	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
 	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "move"				animation = "move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
 		event =  { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
 	}
-	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
 	state = { name = "retreat"			animation = "retreat" animation_blend_time = 0.3 animation_speed = 1.0 }
 	state = { name = "death"			animation = "death" animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "idle"				animation = "idle"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "idle"        animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
 	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
 	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
 		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
@@ -273,15 +412,15 @@ entity = {
 	state = { name = "attack"			animation = "charge_mg_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
 	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
 	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "move"				animation = "move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
-	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
 	state = { name = "retreat"			animation = "retreat" animation_blend_time = 0.3 animation_speed = 1.0 }
 	state = { name = "death"			animation = "death" animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "idle"				animation = "idle"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "idle"        animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
 	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
 	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
 		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
@@ -356,198 +495,23 @@ entity = {
 
 
 entity = {
-	clone = "infantry_rifle_entity"
 	name = "asian_gfx_infantry_entity"
-	pdxmesh = "asian_infantry_yank_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "T4_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "T4_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "T4_weapon_long_idle_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-}
-
-entity = {
-	clone = "asian_gfx_infantry_entity"
-	name = "asian_gfx_light_infantry_entity"
-}
-
-entity = {
-	clone = "asian_gfx_infantry_entity"
-	name = "asian_gfx_elite_infantry_entity"
-}
-
-entity = {
-	clone = "asian_gfx_elite_infantry_entity"
-	name = "asian_gfx_marine_entity"
-}
-
-entity = {
-	clone = "asian_gfx_elite_infantry_entity"
-	name = "asian_gfx_mountaineers_entity"
-}
-
-entity = {
-	clone = "infantry_2_entity"
-	name = "asian_gfx_infantry_2_entity"
-	pdxmesh = "asian_infantry_mg_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "ArisakaType15_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ArisakaType15_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "ArisakaType15_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "ArisakaType15_weapon_long_idle_entity" }
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-}
-
-entity = {
-	clone = "asian_gfx_infantry_2_entity"
-	name = "asian_gfx_light_infantry_2_entity"
-}
-
-entity = {
-	clone = "asian_gfx_infantry_2_entity"
-	name = "asian_gfx_elite_infantry_2_entity"
-}
-
-entity = {
-	clone = "asian_gfx_elite_infantry_2_entity"
-	name = "asian_gfx_marine_2_entity"
-}
-
-entity = {
-	clone = "asian_gfx_elite_infantry_2_entity"
-	name = "asian_gfx_mountaineers_2_entity"
-}
-
-
-entity = {
-	clone = "infantry_2_entity"
-	name = "asian_gfx_infantry_3_entity"
-	pdxmesh = "asian_infantry_mg_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "ArisakaType24_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ArisakaType24_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "ArisakaType24_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "ArisakaType24_weapon_long_idle_entity" }
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-}
-
-entity = {
-	clone = "asian_gfx_infantry_3_entity"
-	name = "asian_gfx_light_infantry_3_entity"
-}
-
-entity = {
-	clone = "asian_gfx_infantry_3_entity"
-	name = "asian_gfx_elite_infantry_3_entity"
-}
-
-entity = {
-	clone = "asian_gfx_elite_infantry_3_entity"
-	name = "asian_gfx_marine_3_entity"
-}
-
-entity = {
-	clone = "asian_gfx_elite_infantry_3_entity"
-	name = "asian_gfx_mountaineers_3_entity"
-}
-entity = {
-	name = "southamerican_gfx_infantry_entity"	#Placeholder pending a proper generic SA model
-	clone = "infantry_2_entity"					#or, hell, pending all SA nations getting their own.
-}
-
-entity = {
-	name = "IBR_infantry_1_entity"
-	pdxmesh = "SPA_infantry_mg_mesh"
-
-	default_state = "idle"
-	state = { name = "attack"			animation = "charge_mg" 					animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle1 = "idle" } }
-	state = { name = "attack"			animation = "charge_mg_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
-	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
-	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "move"				animation = "move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
-	}
-	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
-	}
-	state = { name = "retreat"			animation = "retreat"	animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "death"			animation = "death"	animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "idle"				animation = "idle"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
-	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
-	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
-		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
-	}
-	state = { name = "idle"				animation = "long_idle04" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
-	state = { name = "idle"				animation = "long_idle05" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
-	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
-	state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
-	state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
-	#state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
-	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "Z45_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "Z45_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "Z45_weapon_long_idle_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-
-	scale = 0.8
-}
-
-entity = {
-	name = "IBR_light_infantry_1_entity"
-	clone = "IBR_infantry_1_entity"
-}
-entity = {
-	name = "IBR_elite_infantry_1_entity"
-	clone = "IBR_infantry_1_entity"
-}
-entity = {
-	name = "IBR_mountaineer_1_entity"
-	clone = "IBR_infantry_1_entity"
-}
-entity = {
-	name = "IBR_marine_1_entity"
-	clone = "IBR_infantry_1_entity"
-}
-
-entity = {
-	name = "IBR_infantry_2_entity"
-	pdxmesh = "SPA_infantry_semi_mesh"
+	pdxmesh = "asian_infantry_rifle_mesh"
 
 	default_state = "idle"
 	state = { name = "attack"			animation = "charge_rifle" 					animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle2 = "idle" } }
 	state = { name = "attack"			animation = "charge_rifle_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
 	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
 	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "move"				animation = "move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
-	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
 	state = { name = "retreat"			animation = "retreat" animation_blend_time = 0.3 animation_speed = 1.0 }
 	state = { name = "death"			animation = "death" animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "idle"				animation = "idle"		animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "idle"        animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
 	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
 	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
 		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
@@ -560,10 +524,10 @@ entity = {
 	state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
 	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "CETMEB_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "CETMEB_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "CETMEB_weapon_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "JAP_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "JAP_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "JAP_infantry_weapon_rifle_long_idle_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
@@ -575,35 +539,91 @@ entity = {
 }
 
 entity = {
-	name = "IBR_light_infantry_2_entity"
-	clone = "IBR_infantry_2_entity"
-}
-entity = {
-	name = "IBR_elite_infantry_2_entity"
-	clone = "IBR_infantry_2_entity"
-}
-entity = {
-	name = "IBR_mountaineer_2_entity"
-	clone = "IBR_infantry_2_entity"
-}
-entity = {
-	name = "IBR_marine_2_entity"
-	clone = "IBR_infantry_2_entity"
+	name = "asian_gfx_infantry_2_entity"
+	pdxmesh = "asian_infantry_mg_mesh"
+
+	default_state = "idle"
+	state = { name = "attack"			animation = "charge_mg" 					animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle1 = "idle" } }
+	state = { name = "attack"			animation = "charge_mg_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "retreat"			animation = "retreat" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "death" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"        animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
+		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
+	}
+	state = { name = "idle"				animation = "long_idle04" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle05" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+	state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	#state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "JAP_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "JAP_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "JAP_infantry_weapon_mg_long_idle_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+	scale = 0.8
 }
 
+
 entity = {
-	name = "IBR_infantry_entity"
-	clone = "IBR_infantry_2_entity"
+	clone = "asian_gfx_infantry_2_entity"
+	name = "asian_gfx_infantry_3_entity"
 }
 
-entity = {
-	clone = "IBR_infantry_2_entity"
-	name = "IBR_infantry_3_entity"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "CETMEC_weapon_right_entity" }
+
+entity = {
+	name = "southamerican_gfx_infantry_entity"
+	pdxmesh = "SPA_infantry_rifle_mesh"
+
+	default_state = "idle"
+	state = { name = "attack"			animation = "charge_rifle" 					animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle2 = "idle" } }
+	state = { name = "attack"			animation = "charge_rifle_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "retreat"			animation = "retreat" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "death" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"        animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
+		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
+	}
+	state = { name = "idle"				animation = "long_idle04" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle05" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+	state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "CETMEC_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "CETMEC_weapon_long_idle_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
@@ -615,21 +635,54 @@ entity = {
 }
 
 entity = {
-	name = "IBR_light_infantry_3_entity"
-	clone = "IBR_infantry_3_entity"
+	name = "southamerican_gfx_infantry_2_entity"
+	pdxmesh = "SPA_infantry_mg_mesh"
+
+	default_state = "idle"
+	state = { name = "attack"			animation = "charge_mg" 					animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle1 = "idle" } }
+	state = { name = "attack"			animation = "charge_mg_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "retreat"			animation = "retreat" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "death" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"        animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
+		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
+	}
+	state = { name = "idle"				animation = "long_idle04" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle05" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+	state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	#state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "southamerican_gfx_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "southamerican_gfx_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "southamerican_gfx_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+	scale = 0.8
 }
+
 entity = {
-	name = "IBR_elite_infantry_3_entity"
-	clone = "IBR_infantry_3_entity"
+	clone = "southamerican_gfx_infantry_2_entity"
+	name = "southamerican_gfx_infantry_3_entity"
 }
-entity = {
-	name = "IBR_mountaineer_3_entity"
-	clone = "IBR_infantry_3_entity"
-}
-entity = {
-	name = "IBR_marine_3_entity"
-	clone = "IBR_infantry_3_entity"
-}
+
 
 entity = {
 	name = "southamerican_gfx_infantry_weapon_mg_right_entity"
@@ -679,112 +732,16 @@ entity = {
 #####					Country Specific						#####
 #####															#####
 #####################################################################
-entity = {
-		name = "ENG_infantry_0_entity"
-		pdxmesh = "ENG_infantry_rifle_mesh"
-		clone = "infantry_rifle_entity"
-
-		attach = { 	name = "rifle1"	Right_Hand_node = "ENG_infantry_weapon_rifle_right_entity" }
-		attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-		attach = { 	name = "rifle2"	Left_Hand_node = "ENG_infantry_weapon_rifle_left_entity" }
-		attach = { 	name = "rifle3"	mid_back_node = "ENG_infantry_weapon_rifle_long_idle_entity" }
-
-		attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-		attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-		attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-		attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-		attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-		state = {
-		name = "death"	animation = "death"
-		event = { time = 0 node="head" particle = "blood_particle"  keep_particle = yes }
-		}
-}
-
-entity = {
-	clone = "ENG_infantry_0_entity"
-	name = "ENG_light_infantry_0_entity"
-	pdxmesh = "ENG_light_infantry_rifle_mesh"
-}
-
-entity = {
-	clone = "ENG_infantry_0_entity"
-	name = "ENG_elite_infantry_0_entity"
-}
-
-entity = {
-	clone = "ENG_elite_infantry_0_entity"
-	name = "ENG_mountaineer_0_entity"
-}
-
-entity = {
-	clone = "ENG_elite_infantry_0_entity"
-	name = "ENG_marine_0_entity"
-	pdxmesh = "ENG_marine_rifle_mesh"
-}
-
-
-entity = {
-	clone = "infantry_2_entity"
-	name = "ENG_infantry_entity"
-	pdxmesh = "ENG_infantry_bullpup_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "Thorpe_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "Thorpe_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "Thorpe_weapon_long_idle_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-
-}
-entity = {
-	clone = "infantry_2_entity"
-	name = "commonwealth_gfx_infantry_entity"
-	pdxmesh = "ENG_infantry_bullpup_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "Thorpe_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "Thorpe_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "Thorpe_weapon_long_idle_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-
-}
-
-entity = {
-	clone = "infantry_2_entity"
-	name = "ENG_infantry_2_entity"
-	pdxmesh = "ENG_infantry_bullpup_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "EM2_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "EM2_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "EM2_weapon_long_idle_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-
-}
 
 entity = {
 	clone = "infantry_rifle_entity"
-	name = "ENG_infantry_3_entity"
-	pdxmesh = "ENG_infantry_semi_mesh"
+	name = "commonwealth_gfx_infantry_entity"
+	pdxmesh = "ENG_infantry_rifle_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "SterlingSLR_weapon_right_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "ENG_infantry_weapon_rifle_right_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "SterlingSLR_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "SterlingSLR_weapon_long_idle_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ENG_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ENG_infantry_weapon_rifle_long_idle_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
@@ -793,6 +750,170 @@ entity = {
 	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
 
 }
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "commonwealth_gfx_infantry_2_entity"
+	pdxmesh = "ENG_infantry_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "ENG_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ENG_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ENG_infantry_weapon_mg_long_idle_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+}
+
+
+entity = {
+	clone = "commonwealth_gfx_infantry_2_entity"
+	name = "commonwealth_gfx_infantry_3_entity"
+}
+
+####################################################### BELGIUM ###########################################################
+
+
+######################
+## BELGIAN WEAPONS ###
+######################
+
+######### Belgian Mauser Model 1935 ########
+
+entity = {
+	name = "BEL_infantry_weapon_rifle_right_entity"
+	pdxmesh = "BEL_infantry_weapon_rifle_mesh"
+	scale = 0.9
+}
+
+entity = {
+	name = "BEL_infantry_weapon_rifle_left_entity"
+	pdxmesh = "BEL_infantry_weapon_rifle_mesh"
+	scale = 0.9
+
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+
+	state = {
+	name = "attack"	animation = "attack"
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	event = { time = 2.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+
+	state = {
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+
+	state = {
+	name = "support_attack"	animation = "support_attack"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+}
+
+
+entity = {
+	name = "BEL_infantry_weapon_rifle_long_idle_entity"
+	pdxmesh = "BEL_infantry_weapon_rifle_mesh"
+}
+
+
+######### M1918 Browning Automatic Rifle ########
+entity = {
+	name = "BEL_infantry_weapon_mg_left_entity"
+	pdxmesh = "BEL_infantry_weapon_mg_mesh"
+	scale = 0.9
+}
+
+entity = {
+	name = "BEL_infantry_weapon_mg_long_idle_entity"
+	pdxmesh = "BEL_infantry_weapon_mg_mesh"
+	scale = 0.9
+}
+
+entity = {
+	name = "BEL_infantry_weapon_mg_right_entity"
+	pdxmesh = "BEL_infantry_weapon_mg_mesh"
+	scale = 0.9
+
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move" }
+
+	state = { name = "attack"	animation = "attack"
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = {
+	name = "support_attack"	animation = "support_attack"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+
+######## FAL - Belgian Light Automatic Rifle ########
+entity = {
+	name = "BEL_infantry_weapon_mg_2_left_entity"
+	pdxmesh = "BEL_infantry_weapon_mg_2_mesh"
+	scale = 0.9
+}
+
+entity = {
+	name = "BEL_infantry_weapon_mg_2_long_idle_entity"
+	pdxmesh = "BEL_infantry_weapon_mg_2_mesh"
+	scale = 0.9
+}
+
+entity = {
+	name = "BEL_infantry_weapon_mg_2_right_entity"
+	pdxmesh = "BEL_infantry_weapon_mg_2_mesh"
+	scale = 0.9
+
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move" }
+
+	state = { name = "attack"	animation = "attack"
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = {
+	name = "support_attack"	animation = "support_attack"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+####################################################### ENGLAND ###########################################################
 
 entity = {
 	name = "ENG_infantry_weapon_rifle_right_entity"
@@ -877,9 +998,805 @@ entity = {
 	scale = 1.0
 }
 
+####################################################### FINLAND ###########################################################
+
+#################################################
+### DEFAULT INFANTRY - M36 Tunic + M40 Helmet ###
+#################################################
+
 entity = {
 	clone = "infantry_rifle_entity"
-	name = "FRS_infantry_0_entity"
+	name = "FIN_infantry_entity"
+	pdxmesh = "FIN_infantry_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_entity"
+	pdxmesh = "FIN_infantry_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	clone = "FIN_infantry_2_entity"
+	name = "FIN_infantry_3_entity"
+}
+
+
+#################################################
+### SNOW DEFAULT - M36 Greatcoat + M40 Helmet ###
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_entity_snow"
+	pdxmesh = "FIN_infantry_snow_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_entity_snow"
+	pdxmesh = "FIN_infantry_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_entity_snow"
+	name = "FIN_infantry_3_entity_snow"
+}
+
+#################################################
+#### DESERT DEFAULT - M36 Tunic + M40 Helmet ####
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_entity_desert"
+	pdxmesh = "FIN_infantry_desert_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_entity_desert"
+	pdxmesh = "FIN_infantry_desert_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_entity_desert"
+	name = "FIN_infantry_3_entity_desert"
+}
+
+
+##############################################
+##############################################
+##### FINNISH ALT 0 INFANTRY (USHANKA) #######
+##############################################
+##############################################
+
+#################################################
+##### ALT 0 INFANTRY - M36 Tunic + Ushanka ######
+#################################################
+
+### ALT 0 INFANTRY - M36 Tunic + ushanka
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_alt_0_entity"
+	pdxmesh = "FIN_infantry_alt_0_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_alt_0_entity"
+	pdxmesh = "FIN_infantry_alt_0_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_alt_0_entity"
+	name = "FIN_infantry_3_alt_0_entity"
+}
+
+
+#################################################
+#### SNOW ALT 0 - M36 Greatcoat + M40 Helmet ####
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_alt_0_entity_snow" 					
+	pdxmesh = "FIN_infantry_snow_alt_0_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_alt_0_entity_snow"
+	pdxmesh = "FIN_infantry_snow_alt_0_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_alt_0_entity_snow"
+	name = "FIN_infantry_3_alt_0_entity_snow"
+}
+
+
+#################################################
+##### DESERT ALT 0 - M36 Tunic + M40 Helmet #####
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_alt_0_entity_desert"
+	pdxmesh = "FIN_infantry_desert_alt_0_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_alt_0_entity_desert"
+	pdxmesh = "FIN_infantry_desert_alt_0_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_alt_0_entity_desert"
+	name = "FIN_infantry_3_alt_0_entity_desert"
+}
+
+
+##############################################
+##############################################
+######## FINNISH ALT 1 INFANTRY (CAP) ########
+##############################################
+##############################################
+
+#################################################
+##### ALT 1 INFANTRY - M36 Tunic + M36 Cap  #####
+#################################################
+
+### ALT 1 INFANTRY - M36 Tunic + M36 Field Cap
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_alt_1_entity"
+	pdxmesh = "FIN_infantry_alt_1_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_alt_1_entity"
+	pdxmesh = "FIN_infantry_alt_1_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_alt_1_entity"
+	name = "FIN_infantry_3_alt_1_entity"
+}
+
+
+#################################################
+#### SNOW ALT 1 - M36 Greatcoat + M40 Helmet ####
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_alt_1_entity_snow"
+	pdxmesh = "FIN_infantry_snow_alt_1_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_alt_1_entity_snow"
+	pdxmesh = "FIN_infantry_snow_alt_1_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_alt_1_entity_snow"
+	name = "FIN_infantry_3_alt_1_entity_snow"
+}
+
+
+#################################################
+##### DESERT ALT 1 - M36 Tunic + M40 Helmet #####
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_alt_1_entity_desert"
+	pdxmesh = "FIN_infantry_desert_alt_1_rifle_mesh"																
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_alt_1_entity_desert"
+	pdxmesh = "FIN_infantry_desert_alt_1_mg_mesh"																						
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_alt_1_entity_desert"
+	name = "FIN_infantry_3_alt_1_entity_desert"
+}
+
+#################################################
+###       	INFANTRY ALT 2 - SKI UNIT         ###
+#################################################
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_snowman_entity" 				#Old name was "FIN_infantry_alt_2_entity" now used for deer companion entity.
+	pdxmesh = "FIN_infantry_alt_2_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_snowman_2_entity"				#Old name was "FIN_infantry_2_alt_2_entity" now used for deer companion entity.
+	pdxmesh = "FIN_infantry_alt_2_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_snowman_2_entity"
+	name = "FIN_snowman_3_entity"				#Old name was "FIN_infantry_3_alt_2_entity" now used for deer companion entity.
+}
+
+#################################################
+###       	SNOW ALT 2 - SKI UNIT      		  ###
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_alt_2_entity_snow"
+	pdxmesh = "FIN_infantry_snow_alt_2_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_alt_2_entity_snow"
+	pdxmesh = "FIN_infantry_snow_alt_2_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_alt_2_entity_snow"
+	name = "FIN_infantry_3_alt_2_entity_snow"
+}
+
+#################################################
+###       	DESERT ALT 2 - SKI UNIT      	  ###
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_infantry_alt_2_entity_desert"
+	pdxmesh = "FIN_infantry_desert_alt_2_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_infantry_2_alt_2_entity_desert"
+	pdxmesh = "FIN_infantry_desert_alt_2_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_infantry_2_alt_2_entity_desert"
+	name = "FIN_infantry_3_alt_2_entity_desert"
+}
+
+#################################################
+#####			 Deer Companion	 			#####
+#################################################
+entity = {
+	name = "FIN_infantry_alt_2_entity"
+	pdxmesh = "frame_artillery_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "idle" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "idle" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "support_attack" } }
+	state = { name = "attack"			animation = "move" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "attack" } }
+	state = { name = "defend"			animation = "move" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "defend" } }
+	state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	
+	scale = 1
+	
+	attach = { name = artillery			artillery = "FIN_deer_entity" }
+	attach = { name = infantry			infantry = "FIN_snowman_entity" }
+}
+
+entity = {
+	name = "FIN_infantry_2_alt_2_entity"
+	pdxmesh = "frame_artillery_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "idle" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "idle" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "support_attack" } }
+	state = { name = "attack"			animation = "move" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "attack" } }
+	state = { name = "defend"			animation = "move" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "defend" } }
+	state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	
+	scale = 1
+	
+	attach = { name = artillery			artillery = "FIN_deer_entity" }
+	attach = { name = infantry			infantry = "FIN_snowman_2_entity" }
+}
+
+entity = {
+	name = "FIN_infantry_3_alt_2_entity"
+	pdxmesh = "frame_artillery_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "idle" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "idle" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "support_attack" } }
+	state = { name = "attack"			animation = "move" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "attack" } }
+	state = { name = "defend"			animation = "move" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "defend" } }
+	state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	
+	scale = 1
+	
+	attach = { name = artillery			artillery = "FIN_deer_entity" }
+	attach = { name = infantry			infantry = "FIN_snowman_3_entity" }
+}
+
+#################################################
+#####			 Finnish Marine 			#####
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FIN_marine_entity"
+	pdxmesh = "FIN_marine_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "FIN_marine_2_entity"
+	pdxmesh = "FIN_marine_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "SOV_infantry_weapon_rifle_right_entity" } #THIS NEEDS TO BE SET TO RIFLE. IF NOT, SMOKE WILL APPEAR WHEN ATTACK ANIMATION PLAYS!
+
+}
+
+entity = {
+	clone = "FIN_marine_2_entity"
+	name = "FIN_marine_3_entity"
+}
+
+####################################
+####################################
+##### DEFAULT FINNISH BICYCLE ######
+####################################
+####################################
+
+
+######### DEFAULT BICYCLE RIFLE #########
+
+entity = {
+	name = "FIN_bicycle_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" 			animation = "idle" }
+	state = { name = "move" 			animation = "move" }
+	state = { name = "retreat" 			animation = "move" }
+	state = { name = "attack" 			animation = "attack" }
+	state = { name = "support_attack" 	animation = "attack" }
+	state = { name = "defend" 			animation = "attack" }
+	state = { name = "training" 		animation = "attack" }
+
+	attach = { 	name = "infantry"		infantry = "FIN_bicycle_rider_rifle_entity" }
+	attach = { 	name = "combined"		combined = "FIN_bicycle_rifle_combined_entity" }
+	attach = { 	name = "bicycle"		bike = "FIN_bicycle_vehicle_entity" }
+}
+
+entity = {
+	name = "FIN_bicycle_vehicle_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "still" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "FIN_bicycle_rifle_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" 	animation = "idle" chance = 5 next_state = "idle" looping = no propagate_state = { rider = "idle" } }
+	state = { name = "idle" 	animation = "idle_2" chance = 1 next_state = "idle" looping = no propagate_state = { rider = "idle_2" } }
+	state = { name = "move" 	animation = "move" chance = 5 next_state = "move" looping = no propagate_state = { rider = "move" } }
+	state = { name = "move" 	animation = "move_2" chance = 1 next_state = "move" looping = no propagate_state = { rider = "move_2" } }
+	state = { name = "retreat" 	animation = "retreat" chance = 10 next_state = "retreat" looping = no propagate_state = { rider = "retreat" } }
+	state = { name = "retreat" 	animation = "retreat_2" chance = 1 next_state = "retreat" looping = no propagate_state = { rider = "retreat_2" } }
+
+	attach = { 	name = "rider"	bike_center = "FIN_bicycle_rider_rifle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "FIN_bicycle_rider_rifle_entity"
+	pdxmesh = "FIN_infantry_rifle_mesh"
+
+	state = { name = "attack"			animation = "charge_rifle" 		animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle2 = "idle" } }
+	state = { name = "attack"			animation = "charge_rifle_shoot" 	animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "support_attack" 	animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "bicycle_move"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "move_2"			animation = "bicycle_move_2"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "bicycle_retreat" 	 			animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "retreat_2"			animation = "bicycle_retreat_2" 	 			animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "bicycle_idle"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "idle_2"			animation = "bicycle_idle_2"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+	state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+	scale = 1
+}
+
+
+######### DEFAULT BICYCLE MG #########
+
+entity = {
+	name = "FIN_bicycle_2_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" 			animation = "idle" }
+	state = { name = "move" 			animation = "move" }
+	state = { name = "retreat" 			animation = "move" }
+	state = { name = "attack" 			animation = "attack" }
+	state = { name = "support_attack" 	animation = "attack" }
+	state = { name = "defend" 			animation = "attack" }
+	state = { name = "training" 		animation = "attack" }
+
+	attach = { 	name = "infantry"		infantry = "FIN_bicycle_rider_mg_entity" }
+	attach = { 	name = "combined"		combined = "FIN_bicycle_mg_combined_entity" }
+	attach = { 	name = "bicycle"		bike = "FIN_bicycle_vehicle_entity" }
+}
+
+entity = {
+	name = "FIN_bicycle_mg_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" 	animation = "idle" chance = 5 next_state = "idle" looping = no propagate_state = { rider = "idle" } }
+	state = { name = "idle" 	animation = "idle_2" chance = 1 next_state = "idle" looping = no propagate_state = { rider = "idle_2" } }
+	state = { name = "move" 	animation = "move" chance = 5 next_state = "move" looping = no propagate_state = { rider = "move" } }
+	state = { name = "move" 	animation = "move_2" chance = 1 next_state = "move" looping = no propagate_state = { rider = "move_2" } }
+	state = { name = "retreat" 	animation = "retreat" chance = 10 next_state = "retreat" looping = no propagate_state = { rider = "retreat" } }
+	state = { name = "retreat" 	animation = "retreat_2" chance = 1 next_state = "retreat" looping = no propagate_state = { rider = "retreat_2" } }
+
+	attach = { 	name = "rider"	bike_center = "FIN_bicycle_rider_mg_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	name = "FIN_bicycle_rider_mg_entity"
+	pdxmesh = "FIN_infantry_mg_mesh"
+
+	state = { name = "attack"			animation = "charge_mg" 		animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle1 = "idle" } }
+	state = { name = "attack"			animation = "charge_mg_shoot" 	animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "support_attack" 	animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "bicycle_move"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "move_2"			animation = "bicycle_move_2"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "bicycle_retreat" 	 			animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "retreat_2"			animation = "bicycle_retreat_2" 	 			animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "bicycle_idle"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "idle_2"			animation = "bicycle_idle_2"       		animation_blend_time = 0.0 animation_speed = 1.0 }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+	state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_mg_left_entity" }
+
+	scale = 1
+}
+
+
+# Snow versions not working (as FIN_bicycle_entity_snow)
+
+######### DEFAULT SNOW BICYCLE RIFLE #########
+
+
+######### DEFAULT SNOW BICYCLE MG #########
+
+
+
+####################################
+####################################
+########### ALT 0 BICYCLE ##########
+####################################
+####################################
+
+
+######### ALT 0 BICYCLE RIFLE #########
+
+entity = {
+	clone = "FIN_bicycle_entity"
+	name = "FIN_bicycle_alt_0_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	attach = { 	name = "infantry"		infantry = "FIN_bicycle_rider_rifle_alt_0_entity" }
+	attach = { 	name = "combined"		combined = "FIN_bicycle_rifle_alt_0_combined_entity" }
+	#attach = { name = "bicycle"		bike = "FIN_bicycle_vehicle_entity" }
+}
+
+entity = {
+	clone = "FIN_bicycle_rifle_combined_entity"
+	name = "FIN_bicycle_rifle_alt_0_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	attach = { 	name = "rider"	bike_center = "FIN_bicycle_rider_rifle_alt_0_entity" }
+}
+
+entity = {
+	clone = "FIN_bicycle_rider_rifle_entity"
+	name = "FIN_bicycle_rider_rifle_alt_0_entity"
+	pdxmesh = "FIN_infantry_alt_0_rifle_mesh"
+}
+
+
+######### ALT 0 BICYCLE MG #########
+
+entity = {
+	clone = "FIN_bicycle_2_entity"
+	name = "FIN_bicycle_2_alt_0_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	attach = { 	name = "infantry"		infantry = "FIN_bicycle_rider_mg_alt_0_entity" }
+	attach = { 	name = "combined"		combined = "FIN_bicycle_mg_alt_0_combined_entity" }
+	#attach = { 	name = "bicycle"		bike = "FIN_bicycle_vehicle_entity" }
+}
+
+entity = {
+	clone = "FIN_bicycle_mg_combined_entity"
+	name = "FIN_bicycle_mg_alt_0_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	attach = { 	name = "rider"	bike_center = "FIN_bicycle_rider_mg_alt_0_entity" }
+}
+
+entity = {
+	clone = "FIN_bicycle_rider_mg_entity"
+	name = "FIN_bicycle_rider_mg_alt_0_entity"
+	pdxmesh = "FIN_infantry_alt_0_mg_mesh"
+}
+
+####################################
+####################################
+######### ALT 1 BICYCLE ############
+####################################
+####################################
+
+
+######### ALT 1 BICYCLE RIFLE #########
+
+entity = {
+	clone = "FIN_bicycle_entity"
+	name = "FIN_bicycle_alt_1_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	attach = { 	name = "infantry"		infantry = "FIN_bicycle_rider_rifle_alt_1_entity" }
+	attach = { 	name = "combined"		combined = "FIN_bicycle_rifle_alt_1_combined_entity" }
+	#attach = { name = "bicycle"		bike = "FIN_bicycle_vehicle_entity" }
+}
+
+entity = {
+	clone = "FIN_bicycle_rifle_combined_entity"
+	name = "FIN_bicycle_rifle_alt_1_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	attach = { 	name = "rider"	bike_center = "FIN_bicycle_rider_rifle_alt_1_entity" }
+}
+
+entity = {
+	clone = "FIN_bicycle_rider_rifle_entity"
+	name = "FIN_bicycle_rider_rifle_alt_1_entity"
+	pdxmesh = "FIN_infantry_alt_1_rifle_mesh"
+}
+
+
+######### ALT 1 BICYCLE MG #########
+
+entity = {
+	clone = "FIN_bicycle_2_entity"
+	name = "FIN_bicycle_2_alt_1_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	attach = { 	name = "infantry"		infantry = "FIN_bicycle_rider_mg_alt_1_entity" }
+	attach = { 	name = "combined"		combined = "FIN_bicycle_mg_alt_1_combined_entity" }
+	#attach = { 	name = "bicycle"		bike = "FIN_bicycle_vehicle_entity" }
+}
+
+entity = {
+	clone = "FIN_bicycle_mg_combined_entity"
+	name = "FIN_bicycle_mg_alt_1_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	attach = { 	name = "rider"	bike_center = "FIN_bicycle_rider_mg_alt_1_entity" }
+}
+
+entity = {
+	clone = "FIN_bicycle_rider_mg_entity"
+	name = "FIN_bicycle_rider_mg_alt_1_entity"
+	pdxmesh = "FIN_infantry_alt_1_mg_mesh"
+}
+
+####################################################### FRANCE ###########################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "FRA_infantry_entity"
 	pdxmesh = "FRA_infantry_rifle_mesh"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "FRA_infantry_weapon_rifle_right_entity" }
@@ -896,32 +1813,14 @@ entity = {
 }
 
 entity = {
-	clone = "infantry_rifle_entity"
-	name = "FRS_infantry_entity"
-	pdxmesh = "FRA_infantry_rifle_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "MAS49_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "MAS49_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "MAS49_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "MAS49_weapon_long_idle_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-
-}
-
-entity = {
 	clone = "infantry_2_entity"
-	name = "FRS_infantry_2_entity"
+	name = "FRA_infantry_2_entity"
 	pdxmesh = "FRA_infantry_mg_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "FAMAS54_weapon_right_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "FRA_infantry_weapon_mg_right_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "FRA_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "FAMAS54_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "FAMAS54_weapon_long_idle_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "FRA_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "FRA_infantry_weapon_mg_long_idle_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
@@ -931,74 +1830,8 @@ entity = {
 }
 
 entity = {
-	clone = "infantry_2_entity"
-	name = "FRS_infantry_3_entity"
-	pdxmesh = "FRA_infantry_mg_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "FAMAS62_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "FRA_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "FAMAS62_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "FAMAS62_weapon_long_idle_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-}
-
-entity = {
-	clone = "FRS_infantry_entity"
-	name = "FRA_infantry_entity" #don't remove or game throws error
-}
-
-entity = {
-	clone = "FRS_infantry_0_entity"
-	name = "FRS_light_infantry_0_entity"
-}
-entity = {
-	clone = "FRS_infantry_entity"
-	name = "FRS_light_infantry_entity"
-}
-entity = {
-	clone = "FRS_infantry_2_entity"
-	name = "FRS_light_infantry_2_entity"
-}
-entity = {
-	clone = "FRS_infantry_3_entity"
-	name = "FRS_light_infantry_3_entity"
-}
-entity = {
-	clone = "FRS_infantry_0_entity"
-	name = "FRS_marine_0_entity"
-}
-entity = {
-	clone = "FRS_infantry_entity"
-	name = "FRS_marine_entity"
-}
-entity = {
-	clone = "FRS_infantry_2_entity"
-	name = "FRS_marine_2_entity"
-}
-entity = {
-	clone = "FRS_infantry_3_entity"
-	name = "FRS_marine_3_entity"
-}
-entity = {
-	clone = "FRS_infantry_0_entity"
-	name = "FRS_elite_infantry_0_entity"
-}
-entity = {
-	clone = "FRS_infantry_entity"
-	name = "FRS_elite_infantry_entity"
-}
-entity = {
-	clone = "FRS_infantry_2_entity"
-	name = "FRS_elite_infantry_2_entity"
-}
-entity = {
-	clone = "FRS_infantry_3_entity"
-	name = "FRS_elite_infantry_3_entity"
+	clone = "FRA_infantry_2_entity"
+	name = "FRA_infantry_3_entity"
 }
 
 entity = {
@@ -1084,9 +1917,16 @@ entity = {
 	scale = 1.0
 }
 
+
+####################################################### GERMANY ###########################################################
+
+#################################################
+### 		GERMANY DEFAULT INFANTRY 		  ###
+#################################################
+
 entity = {
 	clone = "infantry_rifle_entity"
-	name = "GER_infantry_0_entity"
+	name = "GER_infantry_entity"
 	pdxmesh = "GER_infantry_rifle_mesh"
 
 	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
@@ -1108,34 +1948,54 @@ entity = {
 }
 
 entity = {
-	clone = "GER_infantry_0_entity"
-	name = "GER_light_infantry_0_entity"
-}
+	clone = "infantry_2_entity"
+	name = "GER_infantry_2_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
 
-entity = {
-	clone = "GER_infantry_0_entity"
-	name = "GER_elite_infantry_0_entity"
-}
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_mg_long_idle_entity" }
 
-entity = {
-	clone = "GER_elite_infantry_0_entity"
-	name = "GER_marine_0_entity"
-}
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
 
-entity = {
-	clone = "GER_elite_infantry_0_entity"
-	name = "GER_mountaineers_0_entity"
 }
 
 entity = {
 	clone = "infantry_2_entity"
-	name = "GER_infantry_1_entity"
-	pdxmesh = "GER_infantry_mg_mesh"
+	name = "GER_infantry_3_entity"
+	pdxmesh = "GER_infantry_mg_2_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "STG_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "STG_weapon_left_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_2_left_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "STG_weapon_long_idle_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_mg_2_long_idle_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+}
+
+#################################################
+### 	GERMANY DEFAULT INFANTRY - DESERT	  ###
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "GER_infantry_entity_desert"
+	pdxmesh = "GER_infantry_desert_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
@@ -1151,173 +2011,675 @@ entity = {
 }
 
 entity = {
-	clone = "GER_infantry_1_entity"
-	name = "GER_light_infantry_1_entity"
-}
+	clone = "infantry_2_entity"
+	name = "GER_infantry_2_entity_desert"
+	pdxmesh = "GER_infantry_desert_mg_mesh"
 
-entity = {
-	clone = "GER_infantry_1_entity"
-	name = "GER_elite_infantry_1_entity"
-}
-
-entity = {
-	clone = "GER_elite_infantry_1_entity"
-	name = "GER_marine_1_entity"
-}
-
-entity = {
-	clone = "GER_elite_infantry_1_entity"
-	name = "GER_mountaineers_1_entity"
-}
-
-entity = {
-	clone = "infantry_rifle_entity"
-	name = "GER_infantry_entity"
-	pdxmesh = "GER_infantry_semi_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "LAGG1_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "LAGG1_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "LAGG1_weapon_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_mg_long_idle_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
 	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
 }
 
 entity = {
-	clone = "GER_infantry_entity"
-	name = "GER_light_infantry_entity"
-}
+	clone = "infantry_2_entity"
+	name = "GER_infantry_3_entity_desert"
+	pdxmesh = "GER_infantry_desert_mg_mesh"
 
-entity = {
-	clone = "GER_infantry_entity"
-	name = "GER_elite_infantry_entity"
-}
-
-entity = {
-	clone = "GER_elite_infantry_entity"
-	name = "GER_marine_entity"
-}
-
-entity = {
-	clone = "GER_elite_infantry_entity"
-	name = "GER_mountaineers_entity"
-}
-
-entity = {
-	clone = "infantry_rifle_entity"
-	name = "GER_infantry_2_entity"
-	pdxmesh = "GER_infantry_semi_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "LAGG1_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "LAGG1_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "LAGG1_weapon_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_mg_2_long_idle_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
 	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+}
+
+#################################################
+###      GERMANY DEFAULT INFANTRY - SNOW      ###
+#################################################
+
+entity = {
+	clone = "infantry_rifle_entity"
+	name = "GER_infantry_entity_snow"
+	pdxmesh = "GER_infantry_snow_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+	#attach = { 	name = "sandbag"			Root_node_1 = "sandbag_entity" }
+
+	state = {
+	name = "death"	animation = "death"
+	event = { time = 0 node="head" particle = "blood_particle"  keep_particle = yes }
+	}
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "GER_infantry_2_entity_snow"
+	pdxmesh = "GER_infantry_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_mg_long_idle_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "GER_infantry_3_entity_snow"
+	pdxmesh = "GER_infantry_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_mg_2_long_idle_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+}
+
+####################################
+####################################
+######### GERMAN BICYCLE ###########
+####################################
+####################################
+
+
+######### GERMANY BICYCLE RIFLE #########
+
+######### BICYCLE RIFLE #########
+entity = {
+	clone = "bicycle_entity"
+	name = "GER_bicycle_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	attach = { 	name = "infantry"		infantry = "GER_bicycle_rider_rifle_entity" }
+	attach = { 	name = "combined"		combined = "GER_bicycle_rifle_combined_entity" }
+	attach = { 	name = "bicycle"		bike = "GER_bicycle_vehicle_entity" }
+}
+
+entity = {
+	clone = "generic_bicycle_vehicle_entity"
+	name = "GER_bicycle_vehicle_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	scale = 0.8
+}
+
+entity = {
+	clone = "generic_bicycle_rifle_combined_entity"
+	name = "GER_bicycle_rifle_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	attach = { 	name = "rider"	bike_center = "GER_bicycle_rider_rifle_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	clone = "generic_bicycle_rider_rifle_entity"
+	name = "GER_bicycle_rider_rifle_entity"
+	pdxmesh = "GER_infantry_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" } 
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+	scale = 1
+}
+
+
+######### DEFAULT BICYCLE MG #########
+
+entity = {
+	clone = "generic_bicycle_2_entity"
+	name = "GER_bicycle_2_entity"
+	pdxmesh = "bicycle_frame_mesh"
+
+	attach = { 	name = "infantry"		infantry = "GER_bicycle_rider_mg_entity" }
+	attach = { 	name = "combined"		combined = "GER_bicycle_mg_combined_entity" }
+	attach = { 	name = "bicycle"		bike = "GER_bicycle_vehicle_entity" }
+}
+
+entity = {
+	clone = "generic_bicycle_mg_combined_entity"
+	name = "GER_bicycle_mg_combined_entity"
+	pdxmesh = "bicycle_vehicle_mesh"
+
+	attach = { 	name = "rider"	bike_center = "GER_bicycle_rider_mg_entity" }
+
+	scale = 0.8
+}
+
+entity = {
+	clone = "generic_bicycle_rider_mg_entity"
+	name = "GER_bicycle_rider_mg_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+
+	scale = 1
+}
+
+##############################################
+#####      GERMANY INFANTRY ALT 0        #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_infantry_alt_0_entity"
+	pdxmesh = "GER_infantry_alt_0_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
 	clone = "GER_infantry_2_entity"
-	name = "GER_light_infantry_2_entity"
+	name = "GER_infantry_2_alt_0_entity"
+	pdxmesh = "GER_infantry_alt_0_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
 	clone = "GER_infantry_2_entity"
-	name = "GER_elite_infantry_2_entity"
+	name = "GER_infantry_3_alt_0_entity"
+	pdxmesh = "GER_infantry_alt_0_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+##############################################
+#####  GERMANY INFANTRY ALT 0 - DESERT   #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_infantry_alt_0_entity_desert"
+	pdxmesh = "GER_infantry_alt_0_desert_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_elite_infantry_2_entity"
-	name = "GER_marine_2_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_2_alt_0_entity_desert"
+	pdxmesh = "GER_infantry_alt_0_desert_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_elite_infantry_2_entity"
-	name = "GER_mountaineers_2_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_3_alt_0_entity_desert"
+	pdxmesh = "GER_infantry_alt_0_desert_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+##############################################
+#####  GERMANY INFANTRY ALT 0 - SNOW     #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_infantry_alt_0_entity_snow"
+	pdxmesh = "GER_infantry_alt_0_snow_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "infantry_rifle_entity"
-	name = "GER_infantry_3_entity"
-	pdxmesh = "GER_infantry_semi_mesh"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_2_alt_0_entity_snow"
+	pdxmesh = "GER_infantry_alt_0_snow_mg_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "G3_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "G3_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "G3_weapon_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
 
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
 }
 
 entity = {
-	clone = "GER_infantry_3_entity"
-	name = "GER_light_infantry_3_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_3_alt_0_entity_snow"
+	pdxmesh = "GER_infantry_alt_0_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+##############################################
+#####      GERMANY INFANTRY ALT 1        #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_infantry_alt_1_entity"
+	pdxmesh = "GER_infantry_alt_1_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_infantry_3_entity"
-	name = "GER_elite_infantry_3_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_2_alt_1_entity"
+	pdxmesh = "GER_infantry_alt_1_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_elite_infantry_3_entity"
-	name = "GER_marine_3_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_3_alt_1_entity"
+	pdxmesh = "GER_infantry_alt_1_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+##############################################
+#####      GERMANY INFANTRY ALT 2        #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_infantry_alt_2_entity"
+	pdxmesh = "GER_infantry_alt_2_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_elite_infantry_3_entity"
-	name = "GER_mountaineers_3_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_2_alt_2_entity"
+	pdxmesh = "GER_infantry_alt_2_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "infantry_rifle_entity"
-	name = "GER_infantry_4_entity"
-	pdxmesh = "GER_infantry_semi_late_mesh"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_3_alt_2_entity"
+	pdxmesh = "GER_infantry_alt_2_mg_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "G3_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "G3_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "G3_weapon_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
 
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+}
+
+##############################################
+#####      GERMANY INFANTRY ALT 3        #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_infantry_alt_3_entity"
+	pdxmesh = "GER_infantry_alt_3_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_infantry_4_entity"
-	name = "GER_light_infantry_4_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_2_alt_3_entity"
+	pdxmesh = "GER_infantry_alt_3_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_infantry_4_entity"
-	name = "GER_elite_infantry_4_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_infantry_3_alt_3_entity"
+	pdxmesh = "GER_infantry_alt_3_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+##############################################
+#####    	  GERMANY MILITIA      		 #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_militia_entity"
+	pdxmesh = "GER_militia_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_elite_infantry_4_entity"
-	name = "GER_marine_4_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_militia_2_entity"
+	pdxmesh = "GER_militia_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
 entity = {
-	clone = "GER_elite_infantry_4_entity"
-	name = "GER_mountaineers_4_entity"
+	clone = "GER_infantry_2_entity"
+	name = "GER_militia_3_entity"
+	pdxmesh = "GER_militia_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
 }
 
+
+##############################################
+##### 	 GERMANY MILITIA  - DESERT 	     #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_militia_entity_desert"
+	pdxmesh = "GER_militia_desert_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_militia_2_entity_desert"
+	pdxmesh = "GER_militia_desert_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_militia_3_entity_desert"
+	pdxmesh = "GER_militia_desert_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+
+##############################################
+##### 	 GERMANY MILITIA  - SNOW 	     #####
+##############################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_militia_entity_snow"
+	pdxmesh = "GER_militia_snow_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_militia_2_entity_snow"
+	pdxmesh = "GER_militia_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_militia_3_entity_snow"
+	pdxmesh = "GER_militia_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+#################################################
+###        GERMAN PARATROOPER  - DEFAULT      ###
+#################################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_paratrooper_entity"
+	pdxmesh = "GER_paratrooper_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_paratrooper_2_entity"
+	pdxmesh = "GER_paratrooper_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_paratrooper_3_entity"
+	pdxmesh = "GER_paratrooper_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+#################################################
+###        GERMAN PARATROOPER  - SNOW      	  ###
+#################################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_paratrooper_entity_snow"
+	pdxmesh = "GER_paratrooper_snow_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_paratrooper_2_entity_snow"
+	pdxmesh = "GER_paratrooper_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_paratrooper_3_entity_snow"
+	pdxmesh = "GER_paratrooper_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+#################################################
+###        GERMAN PARATROOPER  - DESERT       ###
+#################################################
+
+entity = {
+	clone = "GER_infantry_entity"
+	name = "GER_paratrooper_entity_desert"
+	pdxmesh = "GER_paratrooper_desert_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_paratrooper_2_entity_desert"
+	pdxmesh = "GER_paratrooper_desert_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+entity = {
+	clone = "GER_infantry_2_entity"
+	name = "GER_paratrooper_3_entity_desert"
+	pdxmesh = "GER_paratrooper_desert_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_2_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "GER_infantry_weapon_mg_2_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node 	= "GER_infantry_weapon_mg_2_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 	= "GER_infantry_weapon_rifle_right_entity" }
+
+}
+
+######################
+### GERMAN WEAPONS ###
+######################
+
+#kar98
 entity = {
 	name = "GER_infantry_weapon_rifle_left_entity"
 	pdxmesh = "GER_infantry_weapon_rifle_mesh"
@@ -1365,6 +2727,7 @@ entity = {
 	scale = 1
 }
 
+#mp40
 entity = {
 	name = "GER_infantry_weapon_mg_right_entity"
 	pdxmesh = "GER_infantry_weapon_mg_mesh"
@@ -1406,9 +2769,51 @@ entity = {
 	scale = 1
 }
 
+#mp43
+entity = {
+	name = "GER_infantry_weapon_mg_2_right_entity"
+	pdxmesh = "GER_infantry_weapon_mg_2_mesh"
+	scale = 1
 
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
 
+	state = { name = "attack"	animation = "attack"
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
 
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = { name = "support_attack"	animation = "support_attack"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+	entity = {
+	name = "GER_infantry_weapon_mg_2_long_idle_entity"
+	pdxmesh = "GER_infantry_weapon_mg_2_mesh"
+	scale = 1
+}
+
+entity = {
+	name = "GER_infantry_weapon_mg_2_left_entity"
+	pdxmesh = "GER_infantry_weapon_mg_2_mesh"
+	scale = 1
+}
+
+###############################################
+########### ITALIAN INFANTRY MODELS ###########
+###############################################
 
 entity = {
 	clone = "infantry_rifle_entity"
@@ -1429,70 +2834,13 @@ entity = {
 }
 
 entity = {
-	clone = "ITA_infantry_entity"
-	name = "ITA_light_infantry_entity"
-}
-
-entity = {
-	clone = "ITA_infantry_entity"
-	name = "ITA_elite_infantry_entity"
-}
-
-entity = {
-	clone = "ITA_elite_infantry_entity"
-	name = "ITA_marine_entity"
-}
-
-entity = {
-	clone = "ITA_elite_infantry_entity"
-	name = "ITA_mountaineers_entity"
-}
-
-entity = {
-	clone = "infantry_rifle_entity"
-	name = "ITA_infantry_2_entity"
-	pdxmesh = "ITA_infantry_semi_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "LF59_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "LF59_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "LF59_weapon_long_idle_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ITA_infantry_weapon_rifle_right_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-}
-
-entity = {
-	clone = "ITA_infantry_2_entity"
-	name = "ITA_light_infantry_2_entity"
-}
-
-entity = {
-	clone = "ITA_infantry_2_entity"
-	name = "ITA_elite_infantry_2_entity"
-}
-
-entity = {
-	clone = "ITA_elite_infantry_2_entity"
-	name = "ITA_marine_2_entity"
-}
-
-entity = {
-	clone = "ITA_elite_infantry_2_entity"
-	name = "ITA_mountaineers_2_entity"
-}
-
-entity = {
 	clone = "infantry_2_entity"
-	name = "ITA_infantry_3_entity"
+	name = "ITA_infantry_2_entity"
 	pdxmesh = "ITA_infantry_mg_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "B223_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "B223_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "B223_weapon_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "ITA_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "ITA_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "ITA_infantry_weapon_mg_long_idle_entity" }
 	attach = { 	name = "rifle4"	Root_node_2 = "ITA_infantry_weapon_rifle_right_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
@@ -1503,25 +2851,14 @@ entity = {
 }
 
 entity = {
-	clone = "ITA_infantry_3_entity"
-	name = "ITA_light_infantry_3_entity"
+	clone = "ITA_infantry_2_entity"
+	name = "ITA_infantry_3_entity"
 }
 
-entity = {
-	clone = "ITA_infantry_3_entity"
-	name = "ITA_elite_infantry_3_entity"
-}
 
-entity = {
-	clone = "ITA_elite_infantry_3_entity"
-	name = "ITA_marine_3_entity"
-}
-
-entity = {
-	clone = "ITA_elite_infantry_3_entity"
-	name = "ITA_mountaineers_3_entity"
-}
-
+######################
+## ITALIAN WEAPONS ###
+######################
 
 entity = {
 	name = "ITA_infantry_weapon_rifle_right_entity"
@@ -1613,14 +2950,8 @@ entity = {
 #  #   # #  #
  ##  ##  #  #
 
-###############################################################################################################################################################################################################################################
-###############################################################################################################################################################################################################################################
-#EDITED SECTION STARTS HERE EDITED SECTION STARTS HERE EDITED SECTION STARTS HERE EDITED SECTION STARTS HERE EDITED SECTION STARTS HERE EDITED SECTION STARTS HERE EDITED SECTION STARTS HERE EDITED SECTION STARTS HERE EDITED SECTION STARTS HERE
-###############################################################################################################################################################################################################################################
-###############################################################################################################################################################################################################################################
-
 entity = {
-	name = "USA_infantry_1_entity"
+	name = "USA_infantry_entity"
 	pdxmesh = "USA_infantry_mesh"
 
 	default_state = "idle"
@@ -1628,11 +2959,11 @@ entity = {
 	state = { name = "attack"			animation = "charge_rifle_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
 	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
 	state = { name = "support_attack"	animation = "support_attack" 	animation_blend_time = 0.3 animation_speed = 1.0 }
-	state = { name = "move"				animation = "move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
-	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 0.0 animation_speed = 1.0 chance = 1
-		event = { trigger_once = yes sound = { soundeffect = "infantry_move_animation" } }
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
 	}
 	state = { name = "retreat"			animation = "retreat"		 	animation_blend_time = 0.3 animation_speed = 1.0 }
 	state = { name = "death"			animation = "death"				animation_blend_time = 0.3 animation_speed = 1.0 }
@@ -1662,122 +2993,28 @@ entity = {
 
 	scale = 0.8
 }
-entity = {
-	name = "USA_infantry_0_entity"
-	clone = "USA_infantry_1_entity"
-}
-entity = {
-	clone = "USA_infantry_0_entity"
-	name = "USA_light_infantry_0_entity"
-	pdxmesh = "USA_light_infantry_mesh"
-}
-entity = {
-	clone = "USA_infantry_0_entity"
-	name = "USA_elite_infantry_0_entity"
-	pdxmesh = "USA_elite_infantry_mesh"
-}
-entity = {
-	clone = "USA_elite_infantry_0_entity"
-	name = "USA_marines_0_entity"
-}
-entity = {
-	clone = "USA_elite_infantry_0_entity"
-	name = "USA_mountaineers_0_entity"
-}
-entity = {
-	clone = "USA_infantry_1_entity"
-	name = "USA_infantry_2_entity"
-	pdxmesh = "USA_infantry_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "M14_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "M14_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "M14_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "M14_weapon_long_idle_entity" }
-
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-}
-entity = {
-	clone = "USA_infantry_2_entity"
-	name = "USA_infantry_entity"
-}
 entity = {
 	clone = "infantry_2_entity"
-	name = "USA_infantry_3_entity"
+	name = "USA_infantry_2_entity"
 	pdxmesh = "USA_infantry_mg_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "M16_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "M16_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "M16_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "M16_weapon_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "USA_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "USA_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "USA_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "USA_infantry_weapon_mg_long_idle_entity" }
+
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
 	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
 }
-entity = {
-	clone = "USA_infantry_entity"
-	name = "USA_light_infantry_entity"
-	pdxmesh = "USA_light_infantry_mesh"
-}
+
 entity = {
 	clone = "USA_infantry_2_entity"
-	name = "USA_light_infantry_2_entity"
-	pdxmesh = "USA_light_infantry_mesh"
+	name = "USA_infantry_3_entity"
 }
-entity = {
-	clone = "USA_infantry_3_entity"
-	name = "USA_light_infantry_3_entity"
-	pdxmesh = "USA_light_infantry_mg_mesh"
-}
-entity = {
-	clone = "USA_infantry_1_entity"
-	name = "USA_elite_infantry_entity"
-	pdxmesh = "USA_elite_infantry_mesh"
-}
-entity = {
-	clone = "USA_infantry_2_entity"
-	name = "USA_elite_infantry_2_entity"
-	pdxmesh = "USA_elite_infantry_mesh"
-}
-entity = {
-	clone = "USA_infantry_3_entity"
-	name = "USA_elite_infantry_3_entity"
-	pdxmesh = "USA_1968_elite_infantry_mg_mesh"
-}
-entity = {
-	clone = "USA_elite_infantry_entity"
-	name = "USA_marine_entity"
-}
-entity = {
-	clone = "USA_elite_infantry_2_entity"
-	name = "USA_marine_2_entity"
-}
-entity = {
-	clone = "USA_elite_infantry_3_entity"
-	name = "USA_marine_3_entity"
-}
-entity = {
-	clone = "USA_elite_infantry_entity"
-	name = "USA_mountaineers_entity"
-}
-entity = {
-	clone = "USA_elite_infantry_2_entity"
-	name = "USA_mountaineers_2_entity"
-}
-entity = {
-	clone = "USA_elite_infantry_3_entity"
-	name = "USA_mountaineers_3_entity"
-}
-###############################################################################################################################################################################################################################################
-###############################################################################################################################################################################################################################################
-#EDITED SECTION ENDS HERE EDITED SECTION ENDS HERE EDITED SECTION ENDS HERE EDITED SECTION ENDS HERE EDITED SECTION ENDS HERE EDITED SECTION ENDS HERE EDITED SECTION ENDS HERE EDITED SECTION ENDS HERE EDITED SECTION ENDS HERE
-###############################################################################################################################################################################################################################################
-###############################################################################################################################################################################################################################################
 
 entity = {
 	name = "USA_infantry_weapon_rifle_right_entity"
@@ -1913,7 +3150,48 @@ entity = {
 	name = "SOV_infantry_3_entity"
 }
 
+##############SNOW
+entity = {
+	clone = "USA_infantry_entity"
+	name = "SOV_infantry_entity_snow"
+	pdxmesh = "SOV_infantry_snow_rifle_mesh"
 
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+}
+
+entity = {
+	clone = "infantry_2_entity"
+	name = "SOV_infantry_2_entity_snow"
+	pdxmesh = "SOV_infantry_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "SOV_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "SOV_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "SOV_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "SOV_infantry_weapon_rifle_right_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+}
+
+entity = {
+	clone = "SOV_infantry_2_entity_snow"
+	name = "SOV_infantry_3_entity_snow"
+}
+
+##############END###############
 entity = {
 	name = "SOV_infantry_weapon_rifle_right_entity"
 	pdxmesh = "SOV_infantry_weapon_rifle_mesh"
@@ -2004,113 +3282,96 @@ entity = {
 
 
 entity = {
-	clone = "infantry_rifle_entity"
 	name = "JAP_infantry_entity"
-	pdxmesh = "JAP_infantry_yank_mesh"
+	pdxmesh = "JAP_infantry_rifle_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "T4_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "T4_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "T4_weapon_long_idle_entity" }
+	default_state = "idle"
+	state = { name = "attack"			animation = "charge_rifle" 					animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle2 = "idle" } }
+	state = { name = "attack"			animation = "charge_rifle_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "retreat"			animation = "retreat" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "death" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"        animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
+		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
+	}
+	state = { name = "idle"				animation = "long_idle04" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle05" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+	state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "JAP_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "JAP_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "JAP_infantry_weapon_rifle_right_entity" }
 
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
 	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+	scale = 0.8
 }
 
 entity = {
-	clone = "JAP_infantry_entity"
-	name = "JAP_light_infantry_entity"
-}
-
-entity = {
-	clone = "JAP_infantry_entity"
-	name = "JAP_elite_infantry_entity"
-}
-
-entity = {
-	clone = "JAP_elite_infantry_entity"
-	name = "JAP_marine_entity"
-}
-
-entity = {
-	clone = "JAP_elite_infantry_entity"
-	name = "JAP_mountaineers_entity"
-}
-
-entity = {
-	clone = "infantry_2_entity"
 	name = "JAP_infantry_2_entity"
 	pdxmesh = "JAP_infantry_mg_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "ArisakaType15_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ArisakaType15_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "ArisakaType15_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "ArisakaType15_weapon_long_idle_entity" }
+	default_state = "idle"
+	state = { name = "attack"			animation = "charge_mg" 					animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 2 propagate_state = { rifle1 = "idle" } }
+	state = { name = "attack"			animation = "charge_mg_shoot" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation = "attack" 			animation_blend_time = 0.3  animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "support_attack" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "move"				animation = "move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "move"				animation = "march_move" 		 		animation_blend_time = 1.0 animation_speed = 1.0 chance = 1
+		event = { sound = { soundeffect = "infantry_move_animation" } }
+	}
+	state = { name = "retreat"			animation = "retreat" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "death" animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "idle"				animation = "idle"        animation_blend_time = 0.3 animation_speed = 1.0 chance = 15 looping = no }
+	state = { name = "idle"				animation = "long_idle02" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle03" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no propagate_state = { lighter = "smoke" }
+		event = { time = 0 node="head" particle = "cigarette_smoke_particle"  keep_particle = yes }
+	}
+	state = { name = "idle"				animation = "long_idle04" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "idle"				animation = "long_idle05" animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "training" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 2 looping = no }
+	state = { name = "training"				animation = "jumping_jacks" 	animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "pushup" 			animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	#state = { name = "training"				animation = "guard_rifle" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+	state = { name = "training"				animation = "aim_exercise" 		animation_blend_time = 0.3 animation_speed = 1.0 chance = 1 looping = no }
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "JAP_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "JAP_infantry_weapon_mg_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "JAP_infantry_weapon_rifle_right_entity" }
+
 	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
 	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
 	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
 	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+	scale = 0.8
 }
 
 entity = {
 	clone = "JAP_infantry_2_entity"
-	name = "JAP_light_infantry_2_entity"
-}
-
-entity = {
-	clone = "JAP_infantry_2_entity"
-	name = "JAP_elite_infantry_2_entity"
-}
-
-entity = {
-	clone = "JAP_elite_infantry_2_entity"
-	name = "JAP_marine_2_entity"
-}
-
-entity = {
-	clone = "JAP_elite_infantry_2_entity"
-	name = "JAP_mountaineers_2_entity"
-}
-
-
-entity = {
-	clone = "infantry_2_entity"
 	name = "JAP_infantry_3_entity"
-	pdxmesh = "JAP_infantry_mg_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "ArisakaType24_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ArisakaType24_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "ArisakaType24_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "ArisakaType24_weapon_long_idle_entity" }
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-}
-
-entity = {
-	clone = "JAP_infantry_3_entity"
-	name = "JAP_light_infantry_3_entity"
-}
-
-entity = {
-	clone = "JAP_infantry_3_entity"
-	name = "JAP_elite_infantry_3_entity"
-}
-
-entity = {
-	clone = "JAP_elite_infantry_3_entity"
-	name = "JAP_marine_3_entity"
-}
-
-entity = {
-	clone = "JAP_elite_infantry_3_entity"
-	name = "JAP_mountaineers_3_entity"
 }
 
 entity = {
@@ -2196,149 +3457,69 @@ entity = {
 	scale = 1.0
 }
 
+
+##############################################
+####    JAPAN DEFAULT INFANTRY - DESERT   ####
+##############################################
+
 entity = {
-	clone = "infantry_rifle_entity"
-	name = "asian_gfx_alt_infantry_entity"
-	pdxmesh = "JAP_infantry_yank_mesh"
+	clone = "JAP_infantry_entity"
+	name = "JAP_infantry_entity_desert"
+	pdxmesh = "JAP_infantry_desert_rifle_mesh"
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "T4_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ENG_infantry_weapon_rifle_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "T4_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "T4_weapon_long_idle_entity" }
+	attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "JAP_infantry_weapon_rifle_left_entity" }			
+	attach = { 	name = "rifle3"	mid_back_node = "JAP_infantry_weapon_rifle_long_idle_entity" }		
+	attach = { 	name = "rifle4"	Root_node_2 = "JAP_infantry_weapon_rifle_right_entity" }			
 
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
 }
 
 entity = {
-	clone = "asian_gfx_alt_infantry_entity"
-	name = "asian_gfx_alt_light_infantry_entity"
+	clone = "JAP_infantry_2_entity"
+	name = "JAP_infantry_2_entity_desert"
+	pdxmesh = "JAP_infantry_desert_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "JAP_infantry_weapon_mg_left_entity" }			
+	attach = { 	name = "rifle3"	mid_back_node 	= "JAP_infantry_weapon_mg_long_idle_entity" }		
+	attach = { 	name = "rifle4"	Root_node_2 	= "JAP_infantry_weapon_rifle_right_entity" }			
+
 }
 
 entity = {
-	clone = "infantry_2_entity"
-	name = "asian_gfx_alt_infantry_2_entity"
-	pdxmesh = "JAP_infantry_mg_mesh"
+	clone = "JAP_infantry_2_entity_desert"
+	name = "JAP_infantry_3_entity_desert"
+}
 
-	attach = { 	name = "rifle1"	Right_Hand_node = "ArisakaType15_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ArisakaType15_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "ArisakaType15_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "ArisakaType15_weapon_long_idle_entity" }
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+##############################################
+####    JAPAN DEFAULT INFANTRY - SNOW     ####
+##############################################
+
+entity = {
+	clone = "JAP_infantry_entity"
+	name = "JAP_infantry_entity_snow"
+	pdxmesh = "JAP_infantry_snow_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "JAP_infantry_weapon_rifle_left_entity" }			
+	attach = { 	name = "rifle3"	mid_back_node = "JAP_infantry_weapon_rifle_long_idle_entity" }		
+	attach = { 	name = "rifle4"	Root_node_2 = "JAP_infantry_weapon_rifle_right_entity" }			
+
 }
 
 entity = {
-	clone = "asian_gfx_alt_infantry_2_entity"
-	name = "asian_gfx_alt_light_infantry_2_entity"
+	clone = "JAP_infantry_2_entity"
+	name = "JAP_infantry_2_entity_snow"
+	pdxmesh = "JAP_infantry_snow_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "JAP_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node 	= "JAP_infantry_weapon_mg_left_entity" }			
+	attach = { 	name = "rifle3"	mid_back_node 	= "JAP_infantry_weapon_mg_long_idle_entity" }		
+	attach = { 	name = "rifle4"	Root_node_2 	= "JAP_infantry_weapon_rifle_right_entity" }			
+
 }
 
 entity = {
-	clone = "infantry_2_entity"
-	name = "asian_gfx_alt_infantry_3_entity"
-	pdxmesh = "JAP_infantry_mg_mesh"
-
-	attach = { 	name = "rifle1"	Right_Hand_node = "ArisakaType24_weapon_right_entity" }
-	attach = { 	name = "rifle4"	Root_node_2 = "ArisakaType24_weapon_right_entity" }
-	attach = { 	name = "rifle2"	Left_Hand_node = "ArisakaType24_weapon_left_entity" }
-	attach = { 	name = "rifle3"	mid_back_node = "ArisakaType24_weapon_long_idle_entity" }
-	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
-	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
-	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
-	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
-}
-
-entity = {
-	clone = "asian_gfx_alt_infantry_3_entity"
-	name = "asian_gfx_alt_light_infantry_3_entity"
-}
-
-entity = {
-	name = "asian_gfx_alt_infantry_weapon_mg_left_entity"
-	pdxmesh = "JAP_infantry_weapon_mg_mesh"
-	scale = 1.0
-}
-
-entity = {
-	name = "asian_gfx_alt_infantry_weapon_mg_right_entity"
-	pdxmesh = "JAP_infantry_weapon_mg_mesh"
-	scale = 1.0
-
-	get_state_from_parent = yes
-	default_state = "idle"
-	state = { name = "idle" }
-	state = { name = "move"	}
-
-	state = { name = "attack"	animation = "attack"
-		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
-		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
-		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
-	}
-
-	state = { name = "defend"
-		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
-		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
-		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
-	}
-
-	state = {
-	name = "support_attack"	animation = "support_attack"
-	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
-	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
-	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
-	}
-}
-
-entity = {
-	name = "asian_gfx_alt_infantry_weapon_mg_long_idle_entity"
-	pdxmesh = "JAP_infantry_weapon_mg_mesh"
-	scale = 1.0
-}
-
-entity = {
-	name = "asian_gfx_alt_infantry_weapon_rifle_right_entity"
-	pdxmesh = "JAP_infantry_weapon_rifle_mesh"
-	scale = 1.0
-}
-
-entity = {
-	name = "asian_gfx_alt_infantry_weapon_rifle_left_entity"
-	pdxmesh = "JAP_infantry_weapon_rifle_mesh"
-	scale = 1.0
-
-	get_state_from_parent = yes
-	default_state = "idle"
-	state = { name = "idle" }
-	state = { name = "move"	}
-
-	state = {
-	name = "attack"	animation = "attack"
-	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
-	event = { time = 2.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
-	}
-
-	state = {
-	name = "defend"
-	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
-	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
-	}
-
-	state = {
-	name = "support_attack"	animation = "support_attack"
-	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
-	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
-	}
-}
-
-entity = {
-	name = "asian_gfx_alt_infantry_weapon_rifle_long_idle_entity"
-	pdxmesh = "JAP_infantry_weapon_rifle_mesh"
-	scale = 1.0
+	clone = "JAP_infantry_2_entity_snow"
+	name = "JAP_infantry_3_entity_snow"
 }
