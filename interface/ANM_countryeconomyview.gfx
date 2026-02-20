@@ -411,38 +411,6 @@ spriteTypes = {
 	
 	# Credit to Flaxbeard for the Line Graph Framework
 
-	# Deprecated
-	# spriteType = {
-	# 	name = "GFX_Econ_Line_Graph_Background"
-	# 	textureFile = "gfx/interface/line_graph/line_graph_background.dds"
-	# }
-	spriteType = {
-		name = "GFX_Econ_Line_Graph_Chart"
-		textureFile = "gfx/interface/line_graph/line_graph_chart.dds"
-	}
-	progressbartype = {   
-		name = "GFX_Econ_Line_Segment_GDP"
-		textureFile1 = "gfx/interface/line_graph/graph_line_full_green.dds"
-		textureFile2 = "gfx/interface/line_graph/graph_line_empty.dds"
-		size = {
-			x = 10
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph.lua"
-		horizontal = yes
-	}
-	progressbartype = {
-		name = "GFX_Econ_Line_Segment_Debt"
-		textureFile1 = "gfx/interface/line_graph/graph_line_full_red.dds"
-		textureFile2 = "gfx/interface/line_graph/graph_line_empty.dds"
-		size = {
-			x = 10
-			y = 200   
-		}
-		effectFile = "gfx/FX/line_graph.lua"
-		horizontal = yes
-	}
-
 	progressbartype = {
 		name = "GFX_pie_chart_income_revenue"
 		textureFile1 = "gfx/interface/economy_gui/pie_chart/income_revenue.dds"
@@ -740,40 +708,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/economy_gui/econ_scrollbar_background.dds"
 	}
 
-	
-	spriteType = {
-		name = "GFX_econ_line_graph_bg"
-		texturefile = "gfx/interface/economy_gui/econ_panel/line_graph/line_graph_chart.dds"
-	}
-	spriteType = {
-		name = "GFX_econ_graph_horizontal_bar"
-		texturefile = "gfx/interface/economy_gui/econ_panel/line_graph/graph_horizontal_bar.dds"
-	}
-
-	progressbartype = {
-		name = GFX_econ_line_graph_segment_green
-		steps = 1000000
-		color = { 0.010 0.100 0.25 0.0 }
-		colortwo = { 0.52 0.92 0.56 1 }
-		# Image has width 10, height 100, line width 2.5px
-		size = { 
-			x = 10
-			y = 100
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_econ_line_graph_segment_red
-		steps = 1000000
-		color = { 0.010 0.100 0.25 0.0 }
-		colortwo = { 0.88 0.51 0.51 1 }
-		# Image has width 10, height 100, line width 2.5px
-		size = { 
-			x = 10
-			y = 100
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
 
 	spriteType = {
 		name = "GFX_econ_increase_central_bank_rate"
@@ -864,20 +798,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/economy_gui/econ_panel/social_tab/econ_social_bg_cross.dds"
 	}
 
-	# Top Right
-	progressbartype = {
-		name = GFX_social_trade_graphs_linegraph_actual
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.955 0.955 0.345 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 20
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-
 	# Bottom Left
 	spriteType = {
 		name = "GFX_social_bomb"
@@ -888,31 +808,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/economy_gui/econ_panel/social_tab/social_dove.dds"
 	}
 
-	# Bottom right
-	progressbartype = {
-		name = GFX_social_gdpc_graphs_linegraph_actual
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.52 0.92 0.56 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 20
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_social_poverty_graphs_linegraph_actual
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.88 0.51 0.51 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 20
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
 
 	spriteType = {
 		name = "GFX_social_gdpc_graphs_back"
@@ -1160,13 +1055,13 @@ spriteTypes = {
 		noOfFrames = 10 
 	}
 	
-	progressbartype = {
-		name = "GFX_econ_freedom_index"
-		textureFile1 = "gfx/interface/economy_gui/econ_freedom_index_red.dds"
-		textureFile2 = "gfx/interface/economy_gui/econ_freedom_index_green.dds"
-		size = { x = 279 y = 9 }
-		effectFile = "gfx/FX/progress_reverse.lua"
-	}
+	#progressbartype = {
+	#	name = "GFX_econ_freedom_index"
+	#	textureFile1 = "gfx/interface/economy_gui/econ_freedom_index_red.dds"
+	#	textureFile2 = "gfx/interface/economy_gui/econ_freedom_index_green.dds"
+	#	size = { x = 279 y = 9 }
+	#	effectFile = "gfx/FX/progress_reverse.lua"
+	#}
 	spriteType = {
 		name = "GFX_econ_freedom_bg"
 		textureFile = "gfx/interface/economy_gui/econ_freedom_bg.dds"
@@ -1332,163 +1227,5 @@ spriteTypes = {
 		texturefile = "gfx/interface/economy_gui/help/page_prev.dds"
 	}
 
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Actual
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.88 0.85 0.31 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_America
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.34 0.77 0.75 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Japan
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.87 0.50 0.50 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Potential
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.95 0.95 0.95 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Potential_2
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.95 0.95 0.95 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Potential_3
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.95 0.95 0.95 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Potential_4
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.95 0.95 0.95 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Zollverein
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.88 0.85 0.31 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-
-
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_IGFarben
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.76 0.63 0.56 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_DaimlerBenz
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.57 0.15 0.34 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Reichswerke
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.53 0.53 0.53 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Siemens
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.18 0.53 0.52 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
-	progressbartype = {
-		name = GFX_Zollverein_Graphs_Econ_Linegraph_Volkswagen
-		steps = 1000000
-		color = { 0.015 0.200 0.250 0.0 }
-		colortwo = { 0.5 0.34 0.21 1 }
-		# Image has width 20, height 200, 2.2 pixel line width
-		size = { 
-			x = 15
-			y = 200
-		}
-		effectFile = "gfx/FX/line_graph_2.lua"
-	}
 }
 
