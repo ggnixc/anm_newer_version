@@ -1,0 +1,20 @@
+add_namespace = FRA_debug
+
+country_event = { #Just a test to see if this works
+	id = FRA_debug.1 
+	title = FRA_debug.1.t
+	desc = FRA_debug.1.desc
+	picture = X #pick out something funny for this
+
+	is_triggered_only = yes
+	fire_only_once = no 
+
+	option = { 
+		name = FRA_debug.1.a
+		FRA = {
+			add_political_power = 150
+			add_stability = 0.05
+		} 
+		custom_effect_tooltip = FRA_debug.1.tooltip
+	}
+}

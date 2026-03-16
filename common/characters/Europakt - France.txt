@@ -5,7 +5,7 @@ characters = {
 			civilian = { large = "gfx/leaders/FRA/Portrait_FRA_Jean_Louis_Debre.dds" } 
 		}
 		country_leader = {
-			desc = "POLITICS_JEAN_LOUIS_DEBRE_DESC"
+			desc = "jean_louis_debre_desc"
 			ideology = paternalism_national_conservatism_subtype
 			traits = {  }
 			expire = "2999.1.1.1"
@@ -42,19 +42,14 @@ characters = {
 				large = "gfx/leaders/FRA/Portrait_FRA_Jean_Marie_le_Pen.dds"
 				small = "GFX_idea_FRA_Jean_Marie_le_Pen" 
 			} 	
-		} 
-		advisor = {
-			slot = head_of_government
-			traits = { head_of_government }
-			idea_token = FRA_Jean_Marie_le_Pen_hog
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			allowed = { original_tag = FRA }
-			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			desc = ""
+			ideology = despotism_national_catholicism_subtype
+			traits = {}
+			expire = "2999.1.1.1"
 		}
 	}
-	
 
 	FRA_gerard_longuet = { 
 		name = FRA_gerard_longuet
@@ -64,17 +59,6 @@ characters = {
 				small = "GFX_idea_FRA_Gerard_Longuet" 
 			} 	
 		} 
-		advisor = {
-			slot = security_minister
-			idea_token = FRA_Gerard_Longuet_sec
-			traits = {
-				security_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
 	}
 	FRA_bruno_megret = {  
 		name = FRA_bruno_megret
@@ -84,17 +68,6 @@ characters = {
 				small = "GFX_idea_FRA_Bruno_Megret" 
 			} 	
 		} 
-		advisor = {
-			slot = foreign_minister
-			idea_token = FRA_Bruno_Megret_for
-			traits = {
-				foreign_minister
-			}
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
 	}
 	FRA_georges_paul_wagner = { 
 		name = FRA_georges_paul_wagner
@@ -104,12 +77,45 @@ characters = {
 				small = "GFX_idea_FRA_Georges_Paul_Wagner" 
 			} 	
 		} 
+	}
+	FRA_maurice_papon = {  
+		name = FRA_maurice_papon
+		portraits = { 
+			civilian = { 
+				large = ""
+				small = "GFX_idea_FRA_Generic_Minister" 
+			} 	
+		} 
 		advisor = {
-			slot = economy_minister
-			idea_token = FRA_Georges_Paul_Wagner_eco
-			traits = {
-				economy_minister
-			}
+			desc = "maurice_papon_desc"
+			slot = head_of_government
+			idea_token = FRA_Maurice_Papon_hog
+			traits = { head_of_government }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FRA_charles_pasqua= {  
+		name = FRA_charles_pasqua
+		portraits = { 
+			civilian = { 
+				large = ""
+				small = "GFX_idea_FRA_Generic_Minister" 
+			} 	
+		} 
+		country_leader = {
+			desc = ""
+			ideology = paternalism_national_conservatism_subtype
+			traits = {}
+			expire = "2999.1.1.1"
+		}
+		advisor = {
+			desc = "charles_pasqua_desc"
+			slot = security_minister
+			idea_token = FRA_Charles_Pasqua_sec
+			traits = { security_minister }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
