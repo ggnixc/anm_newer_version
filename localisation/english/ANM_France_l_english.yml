@@ -40,11 +40,11 @@ FRA_maurice_papon: "Maurice Papon"
  ## Descriptions ##
  POLITICS_FRANCOIS_MITTERRAND_DESC: "President\n\n -------------- \n\nDisastrous times are often said to create strong men. People willing to push aside their individual beliefs in order to protect what is dear and close to their hearts. Is François Mitterrand not the perfect exemplar of this proverb? \n\nThe legacy that the French Prime Minister will leave behind will be a difficult one to overshadow. While steered forward by his inner hunger for power, Mitterrand genuinely wanted to establish a respectable democracy, one which, in his eyes, would serve in the broad interest of the population. That was his wish, until he came to the realization that if a radical, rabidly anti-German candidate were to ever win the national ticket, France would undoubtedly suffer a somber fate under the German yoke. During the turbulent times of the 70s, seeing that reactionary elements were becoming increasingly less stable, François Mitterrand purged the conservative bureaucracy and consolidated power within the party around his position. To many, this was the death of the young dream of democratization, but to others, this was a much more preferable alternative to what could have been. Calling the prime minister unpathetic would also be an all-out lie, since his progressive reforms are what led to the booming French economy. \n\nBut all things must reach their eventual end, including the life of this dictator. Unknown to the populace, Mitterrand was diagnosed with cancer years ago, a secret that has been eating at his soul since the discovery. Defined by his contradictions, the aged prime minister looks fondly at his political career, and while he was unable to introduce his vision of a respectable democracy, he was capable of protecting his glorious homeland. But will his chosen successor do as much of a fine job?"
 
-jean_louis_debre_desc: "President\n --------------\nPlaceholder"
+jean_louis_debre_desc: "President\n\n -------------- \n\nPlaceholder"
 
-maurice_papon_desc: "Prime Minister\n --------------\nPlaceholder"
+maurice_papon_desc: "Prime Minister\n\n -------------- \n\nPlaceholder"
 
-charles_pasqua_desc: "Minister of the Interior\n --------------\nPlaceholder"
+charles_pasqua_desc: "Minister of the Interior\n\n -------------- \n\nPlaceholder"
 
 
 
@@ -54,13 +54,23 @@ charles_pasqua_desc: "Minister of the Interior\n --------------\nPlaceholder"
 
 
 
+### decisions ###
+
+## debug decisions ##
+ANM_fra_debug_category: "France debug decisions"
+fra_1998_elections: "Trigger 1998 Elections"
+
+
 ### events ### 
 
 ## debug events ##
-
 FRA_debug.1.t: "France 1998 Elections Debug"
 FRA_debug.1.desc: "Parliamentary elections in France, pick who wins"
 FRA_debug.1.a: "RGR wins elections"
-FRA_debug.1.b: "UN wins elections with technocrats"
-FRA_debug.1.c: "UN wins with the sovereignists"
-FRA_debug.1.d: "Reset to starting politics"
+FRA_debug.1.b: "UN wins elections"
+FRA_debug.1.c: "Hung Parliament"
+
+FRA_debug.2.t: "UN Cabinet choice"
+FRA_debug.2.desc: "Choose which kind of UN Cabinet you want"
+FRA_debug.2.a: "Sovereignist Cabinet"
+FRA_debug.2.b: "Technocratic Cabinet"

@@ -1,6 +1,6 @@
 add_namespace = FRA_debug
 
-country_event = { #Just a test to see if this works
+country_event = {
 	id = FRA_debug.1 
 	title = FRA_debug.1.t
 	desc = FRA_debug.1.desc
@@ -9,7 +9,7 @@ country_event = { #Just a test to see if this works
 	is_triggered_only = yes
 	fire_only_once = no 
 
-	option = {   #Remember to set up the rest of the party names too
+	option = {   #RGR Victory
 		name = FRA_debug.1.a
 
 		set_politics = {
@@ -19,14 +19,14 @@ country_event = { #Just a test to see if this works
 			last_election = "[GetDateText]"
 		}	
 		set_popularities = {
-			despotism_2 = 13
-			paternalism_1 = 15
-			paternalism = 29
+			paternalism_1 = 17
+			paternalism = 26
 			progressivism_1 = 7
 			progressivism = 18
 			progressivism_2 = 11
 			ultranationalism = 3
-			despotism = 4
+			despotism = 6
+			despotism_2 = 12
 		}
 		set_party_name = {
 			ideology = paternalism_1
@@ -43,11 +43,17 @@ country_event = { #Just a test to see if this works
 			name = FRA_un_technocrats_party
 			long_name = FRA_un_technocrats_party_long
 		}		
+		set_party_name = {
+			ideology = despotism_2
+			name = FRA_un_technocrats_party
+			long_name = FRA_un_technocrats_party_long			
+		}
 
 		FRA_jean_louis_debre = {
 			remove_country_leader_role = {
                 	ideology = paternalism_technocratic_corporatism_subtype
 					ideology = paternalism_national_conservatism_subtype
+					ideology = paternalism_right_wing_populism_subtype
                 }
 			add_country_leader_role = {
                 character = FRA_jean_louis_debre
@@ -59,52 +65,14 @@ country_event = { #Just a test to see if this works
 			}
 		}
 	}
-	option = {
+	option = {	#UN Victory
 		name = FRA_debug.1.b
 
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
-		}	
-		set_popularities = {
-			paternalism = 33
-			paternalism_1 = 25
-			progressivism_1 = 9
-			progressivism = 16
-			progressivism_2 = 11
-			ultranationalism = 2
-			despotism = 4
-		}		
-		set_party_name = {
-			ideology = paternalism
-			name = FRA_un_technocrats_party
-			long_name = FRA_un_technocrats_party_long
+		country_event = {
+			id = FRA_debug.2
+			days = 1
+			mean_time_to_happen = 5
 		}
-		set_party_name = {
-			ideology = paternalism_1
-			name = FRA_un_sovereignists_party
-			long_name = FRA_un_sovereignists_party_long
-		}
-		FRA_jean_louis_debre = {
-			remove_country_leader_role = {
-                	ideology = paternalism_left_wing_corporatism_subtype
-					ideology = paternalism_national_conservatism_subtype
-                }
-			add_country_leader_role = {
-                character = FRA_jean_louis_debre
-                promote_leader = yes
-                country_leader = {
-                    ideology = paternalism_technocratic_corporatism_subtype
-                    expire = "2999.1.1.1"
-         		}
-			}
-		}
-	}
-	option = {
-		name = FRA_debug.1.c
-
 		set_politics = {
 			ruling_party = paternalism
 			elections_allowed = yes
@@ -134,6 +102,7 @@ country_event = { #Just a test to see if this works
 			remove_country_leader_role = {
                 	ideology = paternalism_left_wing_corporatism_subtype
 					ideology = paternalism_technocratic_corporatism_subtype
+					ideology = paternalism_right_wing_populism_subtype
                 }
 			add_country_leader_role = {
                 character = FRA_jean_louis_debre
@@ -144,9 +113,67 @@ country_event = { #Just a test to see if this works
             	}
 			}
 		}
+		
 	}
-	option = {
-		name = FRA_debug.1.d
+	option = {	#Hung Parliament
+		name = FRA_debug.1.c
+
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			election_frequency = 60
+			last_election = "[GetDateText]"
+		}	
+		set_popularities = {
+			paternalism_1 = 16
+			paternalism = 22
+			conservatism = 9
+			progressivism_1 = 7
+			progressivism = 17
+			progressivism_2 = 11
+			ultranationalism = 5
+			despotism = 13
+		}
+		set_party_name = {
+			ideology = paternalism_2
+			name = FRA_un_sovereignists_party
+			long_name = FRA_un_sovereignists_party_long
+		}
+		set_party_name = {
+			ideology = paternalism_2
+			name = FRA_un_technocrats_party
+			long_name = FRA_un_technocrats_party_long
+		}
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+                	ideology = paternalism_left_wing_corporatism_subtype
+					ideology = paternalism_technocratic_corporatism_subtype
+					ideology = paternalism_national_conservatism_subtype
+                }
+			add_country_leader_role = {
+                character = FRA_jean_louis_debre
+                promote_leader = yes
+                country_leader = {
+                    ideology = paternalism_right_wing_populism_subtype
+                    expire = "2999.1.1.1"
+            	}
+			}
+		}
+	}	
+	
+}
+
+country_event = {
+	id = FRA_debug.2
+	title = FRA_debug.2.t
+	desc = FRA_debug.2.desc
+	picture = X #pick out something funny for this
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {	#UN Sovereignist Cabinet
+		name = FRA_debug.2.a
 
 		set_politics = {
 			ruling_party = paternalism
@@ -177,6 +204,7 @@ country_event = { #Just a test to see if this works
 			remove_country_leader_role = {
                 	ideology = paternalism_left_wing_corporatism_subtype
 					ideology = paternalism_technocratic_corporatism_subtype
+					ideology = paternalism_right_wing_populism_subtype
                 }
 			add_country_leader_role = {
                 character = FRA_jean_louis_debre
@@ -185,6 +213,51 @@ country_event = { #Just a test to see if this works
                     ideology = paternalism_national_conservatism_subtype
                     expire = "2999.1.1.1"
             	}
+			}
+		}
+	}
+
+	option = {	#UN Technocratic Cabinet
+		name = FRA_debug.2.b
+
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			election_frequency = 60
+			last_election = "[GetDateText]"
+		}	
+		set_popularities = {
+			paternalism = 33
+			paternalism_1 = 25
+			progressivism_1 = 9
+			progressivism = 16
+			progressivism_2 = 11
+			ultranationalism = 2
+			despotism = 4
+		}		
+		set_party_name = {
+			ideology = paternalism
+			name = FRA_un_technocrats_party
+			long_name = FRA_un_technocrats_party_long
+		}
+		set_party_name = {
+			ideology = paternalism_1
+			name = FRA_un_sovereignists_party
+			long_name = FRA_un_sovereignists_party_long
+		}
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+                	ideology = paternalism_left_wing_corporatism_subtype
+					ideology = paternalism_national_conservatism_subtype
+					ideology = paternalism_right_wing_populism_subtype
+                }
+			add_country_leader_role = {
+                character = FRA_jean_louis_debre
+                promote_leader = yes
+                country_leader = {
+                    ideology = paternalism_technocratic_corporatism_subtype
+                    expire = "2999.1.1.1"
+         		}
 			}
 		}
 	}
