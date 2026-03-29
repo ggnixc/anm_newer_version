@@ -11,42 +11,6 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
-	FRA_jean_louis_debre = {
-		name = FRA_jean_louis_debre
-		portraits = { 
-			civilian = { large = "gfx/leaders/FRA/Portrait_FRA_Jean_Louis_Debre.dds" } 
-		}
-		country_leader = {
-			desc = "jean_louis_debre_desc"
-			ideology = paternalism_left_wing_corporatism_subtype 
-			traits = {  }
-			expire = "2999.1.1.1"
-		}
-	}
-	FRA_jean_louis_debre = {
-		name = FRA_jean_louis_debre
-		portraits = { 
-			civilian = { large = "gfx/leaders/FRA/Portrait_FRA_Jean_Louis_Debre.dds" } 
-		}
-		country_leader = {
-			desc = "jean_louis_debre_desc"
-			ideology = paternalism_technocratic_corporatism_subtype
-			traits = {  }
-			expire = "2999.1.1.1"
-		}
-	}
-	FRA_jean_louis_debre = {
-		name = FRA_jean_louis_debre
-		portraits = { 
-			civilian = { large = "gfx/leaders/FRA/Portrait_FRA_Jean_Louis_Debre.dds" } 
-		}
-		country_leader = {
-			desc = "jean_louis_debre_desc"
-			ideology = paternalism_right_wing_populism_subtype
-			traits = {  }
-			expire = "2999.1.1.1"
-		}
-	}
 	FRA_jean_jacques_susini = {  
 		name = FRA_jean_jacques_susini 
 		portraits = { 
@@ -59,30 +23,39 @@ characters = {
 			expire = "2999.1.1.1"
 		}
 	}
-	FRA_jean_marie_le_pen = {  
-		name = FRA_jean_marie_le_pen
-		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/FRA/Portrait_FRA_Jean_Marie_le_Pen.dds"
-				small = "GFX_idea_FRA_Jean_Marie_le_Pen" 
-			} 	
-		}
-		country_leader = {
-			desc = ""
-			ideology = despotism_national_catholicism_subtype
-			traits = {}
-			expire = "2999.1.1.1"
-		}
-	}
-
 	FRA_gerard_longuet = { 
 		name = FRA_gerard_longuet
 		portraits = { 
 			civilian = { 
-				large = "gfx/leaders/FRA/Portrait_FRA_Gerard_Longuet.dds"
 				small = "GFX_idea_FRA_Gerard_Longuet" 
 			} 	
-		} 
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = FRA_Gerard_Longuet_sec
+			traits = { security_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+	FRA_alain_etchegoyen = { 
+		name = FRA_alain_etchegoyen
+		portraits = { 
+			civilian = { 
+				small = "GFX_idea_FRA_Alain_Etchegoyen" 
+			} 	
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = FRA_Alain_Etchegoyen_eco
+			traits = { economy_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
 	}
 	FRA_bruno_megret = {  
 		name = FRA_bruno_megret
