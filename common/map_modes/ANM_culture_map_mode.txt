@@ -1264,9 +1264,9 @@ scripted_map_modes = {
 							check_variable = { nationality = 128 } #Flämisch
 						}
 					} 
-					set_temp_variable = { red = 0.512 }
-					set_temp_variable = { green = 0.471 }
-					set_temp_variable = { blue = 0.401 }
+					set_temp_variable = { red = 0.575 }
+					set_temp_variable = { green = 0.540 }
+					set_temp_variable = { blue = 0.370 }
 				}
 				else_if = {
 					limit = {
@@ -1274,9 +1274,9 @@ scripted_map_modes = {
 							check_variable = { nationality = 129 } #Wallonisch, formerly Welsh
 						}
 					} 
-					set_temp_variable = { red = 0.31 } 
-					set_temp_variable = { green = 0.45 }
-					set_temp_variable = { blue = 0.50 }
+					set_temp_variable = { red = 0.29 }
+					set_temp_variable = { green = 0.38 }
+					set_temp_variable = { blue = 0.44 }
 				}
 				else_if = {
 					limit = {
@@ -2270,7 +2270,6 @@ scripted_map_modes = {
 						FROM = {
 							OR = {
 								check_variable = { nationality = 229 } #Oromo
-								check_variable = { nationality = 969 } #Oromo w/ Somali and Harari
 							}
 						}
 					}
@@ -8990,6 +8989,18 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
+							OR = {
+								check_variable = { nationality = 969 } #Oromo w/ Somali and Harari
+							}
+						}
+					}
+					set_temp_variable = { red = 0.441 }
+					set_temp_variable = { green = 0.700 }
+					set_temp_variable = { blue = 0.257 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
 							check_variable = { nationality = 972 } #Swedish, with Sami minority
 						}
 					}
@@ -9010,12 +9021,14 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							check_variable = { nationality = 974 } #Uzbek, with Korean minority
+							OR = {
+								check_variable = { nationality = 974 } #Oromo w/ Amhara
+							}
 						}
 					}
-					set_temp_variable = { red = 0.306 }
-					set_temp_variable = { green = 0.261 }
-					set_temp_variable = { blue = 0.492 }
+					set_temp_variable = { red = 0.441 }
+					set_temp_variable = { green = 0.700 }
+					set_temp_variable = { blue = 0.257 }
 				}
 				else_if = {
 					limit = {
