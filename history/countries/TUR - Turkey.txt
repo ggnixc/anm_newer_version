@@ -1,25 +1,15 @@
 ﻿capital = 49
 
 set_oob = "TUR_2000"
+set_naval_oob = "TUR_navy_2000"
+set_air_oob = "TUR_2000_air"
 
 set_convoys = 200
 add_stability = 0.40
 add_war_support = 0.10
 set_research_slots = 3
 
-recruit_character = TUR_Erdal_Inonu
-recruit_character = TUR_Bulent_Ecevit
-recruit_character = TUR_Ismail_Cem
-recruit_character = TUR_Alparslan_Turkes
-recruit_character = TUR_Kemal_Nebioglu
-recruit_character = TUR_Riza_Yurukoglu
-recruit_character = TUR_Nurettin_Erbakan
-recruit_character = TUR_Osman_Pamukoglu
-
-recruit_character = TUR_Murat_Karayalcin
-recruit_character = TUR_Hikmet_Cetin
-recruit_character = TUR_Yilmaz_Ates
-recruit_character = TUR_Husamettin_Cindoruk
+set_autonomy = { target = SYR autonomy_state = autonomy_puppet }
 
 set_politics = {	
 	ruling_party = paternalism
@@ -45,52 +35,66 @@ set_popularities = {
 }
 
 ##LEADERS##
+recruit_character = TUR_Erdal_Inonu
+recruit_character = TUR_Bulent_Ecevit
+recruit_character = TUR_Ismail_Cem
+recruit_character = TUR_Alparslan_Turkes
+recruit_character = TUR_Kemal_Nebioglu
+recruit_character = TUR_Riza_Yurukoglu
+recruit_character = TUR_Nurettin_Erbakan
+recruit_character = TUR_Osman_Pamukoglu
+
+recruit_character = TUR_Murat_Karayalcin
+recruit_character = TUR_Hikmet_Cetin
+recruit_character = TUR_Yilmaz_Ates
+recruit_character = TUR_Husamettin_Cindoruk
 
 add_ideas = {
 	#STARTING
 	
+
 	#MINISTERS
+	TUR_Murat_Karayalcin_hog
+	TUR_Hikmet_Cetin_for
+	TUR_Yilmaz_Ates_eco
+	TUR_Husamettin_Cindoruk_sec
 	
 	#POLITICAL
-	tno_political_parties_one_party_state
-	tno_religious_rights_state_religion
-	tno_trade_unions_illegal
-	tno_immigration_closed_borders
+	tno_political_parties_multiparty_system
+	tno_religious_rights_laicism
+	tno_trade_unions_all_allowed
+	tno_immigration_open_immigration
 	tno_slavery_outlawed
-	tno_public_meetings_regulated
-	tno_press_rights_state_press_only
-	tno_vote_franchise_no_voting
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
 	tno_refugees_banned
 	#SOCIAL
 	tno_safety_limited_regulations
-	tno_health_care_private_health_care
-	tno_pollution_few_regulations
+	tno_health_care_universal_health_care
+	tno_pollution_some_regulations
 	tno_education_public_education
-	tno_penal_system_capital_punishment
-	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
-	tno_minorities_segregation
-	tno_security_data_cohesion
+	tno_penal_system_incarceration
+	tno_lgbt_rights_lgbt_allowed
+	tno_gender_rights_promoted_equality
+	tno_minorities_equal_rights
+	tno_security_preemptive_security
 	#MILITARY
 	tno_conscription_service_by_requirement
 	tno_women_banned
-	tno_military_supervision_kill_em_all
+	tno_military_supervision_rules_of_engagement
 	tno_military_spending_large_spending
 	tno_training_combat_schooling
-	tno_racial_integration_none
-	tno_draft_exemptions_none
+	tno_racial_integration_integrated_military
+	tno_draft_exemptions_educational_deferment
 	#ECONOMIC
-	tno_trade_laws_limited_exports
+	tno_trade_laws_free_trade
 	tno_economic_focus_partial_mobilization
 	tno_tax_rate_low_taxation
 	tno_income_taxation_low_income_weighted
-	tno_minimum_wage_no_minimum_wage
+	tno_minimum_wage_good_minimum_wage
 	tno_max_workhours_14_hour_work_day
 	tno_child_labor_restricted
-	tno_pensions_no_pensions
-	tno_unemployment_no_subsidies
+	tno_pensions_low_pensions
+	tno_unemployment_low_subsidies
 }
-
-set_oob = "TUR_2000"
-set_naval_oob = "TUR_navy_2000"
-set_air_oob = "TUR_2000_air"
