@@ -5,6 +5,10 @@ set_oob = "SYR_1962"
 set_cosmetic_tag = SYR_TUR
 
 recruit_character = SYR_Muhammad_al-Imadi
+recruit_character = SYR_Muhammad_al-Atrash
+recruit_character = SYR_Abdurrahman_Mustafa
+recruit_character = SYR_Abdullah_Dardari
+recruit_character = SYR_Khalid_Khoja
 recruit_character = SYR_Abdul_Karim_Al_Nahlawi
 
 set_stability = 0.65
@@ -22,22 +26,33 @@ set_politics = {
 TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 10
+    communist_2 = 1
+	communist = 5
+	communist_3 = 3
+    socialist = 5
     progressivism = 9
-    liberalism = 7
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 56
-    despotism = 6
-    fascism = 12
+    liberalism = 0
+    liberal_conservatism = 5
+	conservatism_1 = 10
+    conservatism = 13
+	conservatism_2 = 5
+	paternalism_1 = 15
+    paternalism = 20
+	paternalism_2 = 5
+    despotism = 8
+	ultranationalism = 5
+    fascism = 0
     national_socialism = 0
      
 }
 
 add_ideas = {
 	##Ministers 
+	SYR_Muhammad_al-Atrash_hog
+	SYR_Abdurrahman_Mustafa_for
+	SYR_Abdullah_Dardari_eco
+	SYR_Khalid_Khoja_sec
+
 	#political#
 	tno_political_parties_one_party_state
 	tno_religious_rights_secularism
