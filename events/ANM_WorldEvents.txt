@@ -2035,5 +2035,50 @@ news_event = {
 
     option = {
         name = WORLD.18242.a
+		trigger = {
+			tag = TUR
+		} 
+	}
+	option = {
+        name = WORLD.18242.b
+		trigger = {
+			OR = { 
+				tag = USA
+				is_in_faction_with = USA
+			}
+		} 
+	} 
+	option = {
+        name = WORLD.18242.c
+		trigger = {
+			OR = { 
+				tag = ITA
+				tag = SOV
+				tag = AZH
+				tag = GER
+				is_in_faction_with = GER
+			} 
+		}
+    }
+	option = {
+        name = WORLD.18242.d
+		trigger = {
+			tag = SYR
+		} 
+    }
+	option = {
+        name = WORLD.18242.e
+	 	trigger = {	
+			NOT = { tag = TUR }
+			NOT = { tag = USA }
+			NOT = {  is_in_faction_with = USA }
+			NOT = { tag = ITA }
+			NOT = { tag = SOV }
+			NOT = { tag = AZH }
+			NOT = { tag = GER }
+			NOT = {  is_in_faction_with = GER }
+			NOT = { tag = SYR } 
+		}
     }
 }
+
