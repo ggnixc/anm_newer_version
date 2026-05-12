@@ -22,7 +22,10 @@ ideas = {
 		# actual ideas #
 		################
 		TUR_the_military_furnace = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea TUR_the_military_furnace" }
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea TUR_the_military_furnace"
+				country_lock_all_division_template = yes
+			}
 			allowed = {
 				always = no
 			}
@@ -56,6 +59,7 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.10
 				inflation_rate_modifier = 0.55
+				trade_law_policy_effectiveness_monthly_rate = -0.02
 				production_factory_max_efficiency_factor = -0.10
 				production_factory_efficiency_gain_factor = -0.10
 				stability_factor = -0.05
@@ -94,6 +98,8 @@ ideas = {
 			modifier = {
 				fuel_gain_factor = 0.15
 				gdp_growth_modifier = 2.5
+				custom_modifier_tooltip = TUR_Oil_Decisions_TT
+				custom_modifier_tooltip = TUR_Opinion_Rival_Italy_TT
 			}
 		}
 		TUR_the_sword_of_kizagan_khan = {
@@ -111,7 +117,7 @@ ideas = {
 			modifier = {
 				war_support_weekly = 0.0005
 				army_core_defence_factor = 0.10
-				political_power_gain = -0.30
+				political_power_gain = -0.30 
 			}
 		}
 		TUR_kurdish_issue_0_level = {
@@ -120,8 +126,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			
-			name = TUR_kurdish_issue
 
 			picture = TUR_kurdish_issue_0_level
 			
@@ -138,8 +142,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			
-			name = TUR_kurdish_issue
 
 			picture = TUR_kurdish_issue_1_level
 			
@@ -159,8 +161,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			
-			name = TUR_kurdish_issue
 
 			picture = TUR_kurdish_issue_2_level
 			
@@ -180,8 +180,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			
-			name = TUR_kurdish_issue
 
 			picture = TUR_kurdish_issue_3_level
 			
