@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+		SYR_a_mosaic_of_sects = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_a_mosaic_of_sects" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_a_mosaic_of_sects
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+			    stability_factor = -0.10
+			}
+		}
+	}
+}
