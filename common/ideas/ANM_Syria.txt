@@ -1,0 +1,116 @@
+ideas = {
+	country = {
+		SYR_a_mosaic_of_sects = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_a_mosaic_of_sects" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_a_mosaic_of_sects
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+			    stability_factor = -0.10
+			}
+		}
+		SYR_but_the_cheikh_said = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_but_the_cheikh_said" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_but_the_cheikh_said
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		SYR_a_return_to_1842 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_a_return_to_1842" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_a_return_to_1842
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				resources_to_overlord_factor = 0.50
+				free_production_units_modifier = -5
+				cic_to_overlord_factor = 0.15
+				mic_to_overlord_factor = 0.10
+				extra_trade_to_overlord_factor = 0.50
+				overlord_trade_cost_factor = -0.50
+				custom_modifier_tooltip = SYR_a_return_to_1842_tt
+			}
+		}
+		SYR_the_traitors_miracle = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_traitors_miracle" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_the_traitors_miracle
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				gdp_growth_modifier = 3
+				inflation_rate_modifier = -1
+				free_production_units_modifier = 10
+				local_resources_factor = 0.20
+				industrial_expertise_monthly_rate = 2
+			}
+		}
+		SYR_the_kindness_of_the_shadow = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_kindness_of_the_shadow" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_the_kindness_of_the_shadow
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.05
+				poverty_monthly_rate = 0.1
+				academic_base_monthly_rate = 1
+			}
+		}
+		SYR_second_turkish_occupation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_second_turkish_occupation" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_second_turkish_occupation
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.20
+				political_power_factor = -0.10
+				resources_to_overlord_factor = 0.50
+				local_resources_factor = 0.05
+				custom_modifier_tooltip = SYR_second_turkish_occupation_tt
+			}
+		}
+	}
+}
