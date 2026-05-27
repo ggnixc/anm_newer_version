@@ -1,4 +1,4 @@
-version="1.17.*"
+version="1.18.*"
 tags={
 	"Alternative History"
 }
@@ -76,5 +76,5 @@ replace_path="map/strategicregions"
 replace_path="tests"
 replace_path="tutorial"
 name="A New Millennium DEV VERSION"
-supported_version="1.17.*"
+supported_version="1.18.*"
 picture="thumbnail.png"
