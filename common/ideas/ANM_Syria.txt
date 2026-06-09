@@ -92,6 +92,26 @@ ideas = {
 				academic_base_monthly_rate = 1
 			}
 		}
+		SYR_second_turkish_occupation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_second_turkish_occupation" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_second_turkish_occupation
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.20
+				political_power_factor = -0.10
+				security_policy_resource_extraction_monthly_rate = 0.50
+				penal_system_over_oppression_monthly_rate = -0.50
+				political_parties_non_partisan_system_monthly_rate = -0.50
+			}
+		}
 		SYR_the_national_guard = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_national_guard" }
 			allowed = {
@@ -105,13 +125,10 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = -0.20
-				political_power_factor = -0.10
-				resources_to_overlord_factor = 0.50
-				local_resources_factor = 0.05
-				security_policy_resource_extraction_monthly_rate = 0.50
-				penal_system_policy_monthly_rate = -0.50
-				political_parties_policy_monthly_rate = -0.50
+				stability_factor = -0.10
+				security_policy_monthly_rate = 0.50
+				army_professionalism_monthly_rate = -2
+				political_parties_policy_monthly_rate = 1
 			}
 		}
 		SYR_the_bloodied_papers_of_the_99 = {

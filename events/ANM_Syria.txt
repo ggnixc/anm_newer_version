@@ -11,6 +11,12 @@ country_event = { #The Jasmine Revolution
 
 	option = { 
 		name = SYR_flavour_event.1.a	
+		SYR = {
+			swap_ideas = {
+				remove_idea = SYR_second_turkish_occupation
+				add_idea = SYR_the_national_guard
+			}
+		}
 	}
 }
 
@@ -26,7 +32,13 @@ country_event = { #SNS Report Turkey
 	fire_only_once = yes
 
 	option = { 
-		name = SYR_report_situation.1.a	
+		name = SYR_report_situation.1.a
+		SYR = {
+			swap_ideas = {
+				remove_idea = SYR_the_national_guard
+				add_idea = SYR_the_bloodied_papers_of_the_99
+			}
+		}
 	}
 }
 
