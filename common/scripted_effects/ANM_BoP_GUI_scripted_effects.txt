@@ -1,6 +1,17 @@
 ## Enables a tag in the BoP GUI
 # Arguments: TabName (token)
 TNO_BoP_AddTab = {
+	# If this is the first time a tab is added to th GUI (that is, the interface has been enabled for a tag), activate the relevant tag's BoP
+	if = {
+		limit = { check_variable = { TNO_BoP_Tabs^num = 0 } }
+		hidden_effect = {
+			meta_effect = {
+				text = { set_power_balance = { id = BoP_Decisions_[TAG] } }
+				TAG = "[THIS.GetTag]"
+			}
+		}
+	}
+
 	custom_effect_tooltip = TNO_BoP_AddTab_tt
 	add_to_array = { TNO_BoP_Tabs = TabName }
 	resize_array = { TNO_BoP_Tabs_Frames = TNO_BoP_Tabs^num }
@@ -10,14 +21,6 @@ TNO_BoP_AddTab = {
 		limit = { check_variable = { TNO_BoP_Tabs^num = 1 } }
 		set_variable = { TNO_BoP_Tabs_Frames^0 = 2 }
 		set_variable = { TNO_BoP_SelectedTab = TNO_BoP_Tabs^0 }
-		
-		hidden_effect = {
-			meta_effect = {
-				text = { set_power_balance = { id = [TAB_TYPE]_[TAG] } }
-				TAG = "[THIS.GetTag]"
-				TAB_TYPE = "[?TNO_BoP_Tabs^0.GetTokenKey]"
-			}
-		}
 	}
 }
 
@@ -27,12 +30,12 @@ TNO_BoP_RemoveTab = {
 	remove_from_array = { TNO_BoP_Tabs = TabName }
 	resize_array = { TNO_BoP_Tabs_Frames = TNO_BoP_Tabs^num }
 
+	# If this happened to be the last BoP tab, then disable the BoP category for the target tag
 	if = {
-		limit = { check_variable = { TNO_BoP_SelectedTab = TabName } }
+		limit = { check_variable = { TNO_BoP_Tabs^num = 0 } }
 		meta_effect = {
-			text = { remove_power_balance = { id = [TAB_TYPE]_[TAG] } }
+			text = { remove_power_balance = { id = BoP_Decisions_[TAG] } }
 			TAG = "[THIS.GetTag]"
-			TAB_TYPE = "[?TabName.GetTokenKey]"
 		}
 	}
 }
@@ -50,12 +53,5 @@ Global_Conflicts_Initalize = {
 		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
 		TNO_BoP_AddTab = yes
 	}
-	BRA = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
-	IBR = {
-		set_temp_variable = { TabName = token:BoP_Tab_GlobalConflicts }
-		TNO_BoP_AddTab = yes
-	}
+
 }
