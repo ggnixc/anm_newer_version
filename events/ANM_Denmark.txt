@@ -1,0 +1,67 @@
+add_namespace = DEN_skeleton_event
+
+
+country_event = { #1997 Election event
+	id = DEN_skeleton_event.1
+	title = DEN_skeleton_event.1.t
+	desc = DEN_skeleton_event.1.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Conservatives
+		name = DEN_skeleton_event.1.a
+		ai_chance = { factor = 0.3 }
+		hidden_effect = {
+			set_politics = {
+				ruling_party = conservatism
+				last_election = "1997.5.03"
+				election_frequency = 48
+				elections_allowed = yes
+			
+			}
+			set_popularities = {
+			communist = 0
+			socialist = 0
+			progressivism = 23
+    			liberalism = 16
+    			liberal_conservatism = 16
+   			conservatism = 25
+			conservatism_1 = 0
+			paternalism = 0
+			paternalism_1 = 0
+			despotism = 0
+			fascism = 0
+			national_socialism = 20
+			ultranationalism = 0
+			}
+		}
+	}
+	option = { #Socdems
+		name = DEN_skeleton_event.1.b
+		ai_chance = { factor = 0.7 }
+		hidden_effect = {
+			set_politics = {
+				ruling_party = progressivism
+				last_election = "1997.5.03"
+				election_frequency = 48
+				elections_allowed = yes
+			
+			}
+			set_popularities = {
+			communist = 0
+			socialist = 0
+			progressivism = 28
+			liberalism = 16
+			liberal_conservatism = 15
+			conservatism = 22
+			paternalism = 0
+			despotism = 0
+			fascism = 0
+			national_socialism = 19
+			ultranationalism = 0
+			}
+		}
+	}	
+}
