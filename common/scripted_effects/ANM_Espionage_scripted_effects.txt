@@ -200,7 +200,7 @@ Espionage_Initialize_USA_Vars = {
 
 ## Initialize German-side variables
 Espionage_Initialize_GER_Vars = {
-	set_variable = { TNO_Espionage_Agency = token:Espionage_RSHA }
+	set_temp_variable = { Agency = token:Espionage_RND }
 	set_variable = { TNO_Espionage_AgencyLeader = token:Espionage_Gehlen }
 
 	# Regional Network Strenght variables
@@ -226,6 +226,9 @@ Espionage_Initialize_GER_Vars = {
 	resize_array = { TNO_Espionage_MissionSuccess = 10 }
 	add_to_array = { TNO_Espionage_MissionFailure = 0 }
 	resize_array = { TNO_Espionage_MissionFailure = 10 }
+
+	# Other
+	Espionage_Enable = yes # RND is active from the start
 }
 
 #################################################
