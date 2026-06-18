@@ -2288,4 +2288,21 @@ country_event = { #TEMP Economy
 	}
 }
 
+country_event = { #TEMP ForPol
+	id = GER_debug_event.200
+	title = GER_debug_event.200.t
+	desc = GER_debug_event.200.desc
+	picture = GFX_anm_GER_speer_martin_talks
+
+	is_triggered_only = yes
+
+	option = {
+		name = GER_debug_event.200.a
+		ANM_fopo_add_iberian_swing_tab = yes 
+	}
+	option = {
+		name = GER_debug_event.200.b
+		ANM_fopo_remove_iberian_swing_tab = yes 
+	}
+}
 

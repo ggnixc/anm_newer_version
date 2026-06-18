@@ -44,21 +44,21 @@ guiTypes = {
 	}
 
 	containerWindowType = {
-		name = "ANM_fopo_container"
+		name = "TNO_fopo_container"
 		position = { x = 25 y = 19 }
 		size = { height = 618 width = 500 }
 
 		### Top Bar ###
 		containerWindowType = {
-			name = "ANM_GlobalConflicts_GUI_TopBar"
+			name = "TNO_GlobalConflicts_GUI_TopBar"
 			position = { x = 41 y = -24 }
 			
 			# Title
 			instantTextBoxType = {
 				name = "GlobalConflicts_GUI_Title"
 				position = { x = 0 y = 0 }
-				font = "aldrich_72_outline"
-				text = ANM_GlobalConflicts_GUI_Title
+				font = "vt323_72_WT_outline"
+				text = TNO_GlobalConflicts_GUI_Title
 				maxWidth = 857
 				maxHeight = 58
 				format = center
@@ -69,10 +69,10 @@ guiTypes = {
 			# Info Button
 			iconType = {
 				name = "GlobalConflicts_GUI_InfoBtn"
-				spriteType = "GFX_BoP_Infobutton"
+				spriteType = "GFX_ParliamentMechanic_InfoButton"
 				position = { x = 901 y = 29 }
-				pdx_tooltip = "ANM_fopo_into_icon_tt"
-				pdx_tooltip_delayed = "ANM_fopo_into_icon_tt_delayed"
+				pdx_tooltip = "TNO_fopo_into_icon_tt"
+				pdx_tooltip_delayed = "TNO_fopo_into_icon_tt_delayed"
 			}
 		}
 		# Vertical Divider
@@ -156,7 +156,7 @@ guiTypes = {
 	}
 	
 	containerWindowType = {
-		name = "ANM_fopo_conflict_tab"
+		name = "TNO_fopo_conflict_tab"
 		position = { x = -40 y = 0 }
 
 		
@@ -180,7 +180,7 @@ guiTypes = {
 	}
 	
 	containerWindowType = {
-		name = "ANM_fopo_no_conflict"
+		name = "TNO_fopo_no_conflict"
 		position = { x = 29 y = 131 }
 		
 		iconType = {
@@ -223,12 +223,12 @@ guiTypes = {
 			text = GC_no_current_involvement_poem
 			font = "aldrich_22_outline"
 			maxwidth = 500
-			text_color_code = b
+			text_color_code = L
 		}
 	}
 	
 	containerWindowType = {
-		name = "ANM_fopo_generic_conflict"
+		name = "TNO_fopo_generic_conflict"
 		position = { x = 29 y = 131 }
 		size = { width = 496 height = 506 }
 
@@ -255,7 +255,7 @@ guiTypes = {
 	}
 
 	containerWindowType = {
-		name = "ANM_fopo_generic_conflict_topbar"
+		name = "TNO_fopo_generic_conflict_topbar"
 		position = { x = 29 y = 131 }
 		size = { width = 496 height = 506 }
 
@@ -284,12 +284,12 @@ guiTypes = {
 			name = "info_tab"
 			spriteType = "GFX_fopo_info_tab"
 			position = { x = 175 y = 468 }
-			pdx_tooltip = "ANM_fopo_into_tab_tt"
+			pdx_tooltip = "TNO_fopo_into_tab_tt"
 		}
 	}
 
 	containerWindowType = {
-		name = "ANM_fopo_generic_conflict_noimage"
+		name = "TNO_fopo_generic_conflict_noimage"
 		position = { x = 0 y = 0 }
 		size = { width = 496 height = 506 }
 
@@ -310,7 +310,7 @@ guiTypes = {
 
 	
 	containerWindowType = {
-		name = "ANM_fopo_USA_saw_conflict"
+		name = "TNO_fopo_USA_saw_conflict"
 		position = { x = 0 y = 0 }
 
 		iconType = {
@@ -320,7 +320,7 @@ guiTypes = {
 		}
 			
 		buttonType = {
-			name = "ANM_fopo_USA_saw_away_btn"
+			name = "TNO_fopo_USA_saw_away_btn"
 			quadTextureSprite = "GFX_TNO_BFI_GUI_Action_Button"
 			position = { x = 20 y = 170 }
 			font = "aldrich_16_outline"
@@ -330,13 +330,13 @@ guiTypes = {
 		}
 			
 		buttonType = {
-			name = "ANM_fopo_USA_saw_home_btn"
+			name = "TNO_fopo_USA_saw_home_btn"
 			quadTextureSprite = "GFX_TNO_BFI_GUI_Action_Button"
 			position = { x = 20 y = 240 }
 			font = "aldrich_16_outline"
-			buttonText = ANM_fopo_USA_saw_home_btn
+			buttonText = TNO_fopo_USA_saw_home_btn
 			multiline = yes
-			pdx_tooltip = ANM_fopo_USA_saw_home_btn_tt
+			pdx_tooltip = TNO_fopo_USA_saw_home_btn_tt
 		}
 
 		instantTextBoxType = {
@@ -348,5 +348,4 @@ guiTypes = {
 			maxHeight = 500
 		}
 	}
-
 }

@@ -1,9 +1,9 @@
 # ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗          ██████╗ ██████╗ ███╗   ██╗███████╗██╗     ██╗ ██████╗████████╗███████╗#
-#██╔════╝ ██║     ██╔═══██╗██╔══██╗██╔══██╗██║         ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║     ██║██╔════╝╚══██╔══╝██╔════╝#
+#██╔╝╝╝╝╝ ██║     ██╔╝╝╝██╗██╔╝╝██╗██╔╝╝██╗██║         ██╔╝╝╝╝╝██╔╝╝╝██╗████╗  ██║██╔╝╝╝╝╝██║     ██║██╔╝╝╝╝╝╚╝╝██╔╝╝╝██╔╝╝╝╝╝#
 #██║  ███╗██║     ██║   ██║██████╔╝███████║██║         ██║     ██║   ██║██╔██╗ ██║█████╗  ██║     ██║██║        ██║   ███████╗#
-#██║   ██║██║     ██║   ██║██╔══██╗██╔══██║██║         ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║     ██║██║        ██║   ╚════██║#
+#██║   ██║██║     ██║   ██║██╔╝╝██╗██╔╝╝██║██║         ██║     ██║   ██║██║╚██╗██║██╔╝╝╝  ██║     ██║██║        ██║   ╚╝╝╝╝██║#
 #╚██████╔╝███████╗╚██████╔╝██████╔╝██║  ██║███████╗    ╚██████╗╚██████╔╝██║ ╚████║██║     ███████╗██║╚██████╗   ██║   ███████║#
-# ╚═════╝ ╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚══════╝╚═╝ ╚═════╝   ╚═╝   ╚══════╝#
+# ╚╝╝╝╝╝╝ ╚╝╝╝╝╝╝╝ ╚╝╝╝╝╝╝ ╚╝╝╝╝╝╝ ╚╝╝  ╚╝╝╚╝╝╝╝╝╝╝     ╚╝╝╝╝╝╝ ╚╝╝╝╝╝╝ ╚╝╝  ╚╝╝╝╝╚╝╝     ╚╝╝╝╝╝╝╝╚╝╝ ╚╝╝╝╝╝╝   ╚╝╝   ╚╝╝╝╝╝╝╝#
 #Scripted GUIs
 
 #Index; Search for these names using ctrl+f and you'll find the section they entitle.
@@ -14,14 +14,13 @@
 #
 #	Conflict-Specific GUIs
 #		Indonesian Civil War GUI
-#		Jamaican Referendum GUI
-#		Jamaican Crisis GUI
 #		Trinidad BPR GUI
 #		Turkes Kenes GUI
 #		Philippines War GUI
 #		Philippines Reconstruction GUI
 #		South Africa US Reconstruction GUI
 #		South Africa Withdrawal GUI
+#		West African Conflict GUI
 #		West Africa Reconstruction GUI
 #		Puerto Plata Invasion GUI
 #		French Reclamation GUI
@@ -29,33 +28,32 @@
 #		Haitian Civil War GUI
 #		Madagaskar War GUI
 #		Channel Crisis GUI
+#		Iberian Wars GUI
+#		French West Indies Referendum GUI
+#		Salvadoran Coup GUI
+#		Indian Civil War GUI
+#		Kingston Riots GUI
 
 scripted_gui = {
 	#################################################
 	##=|        Base Global Conflicts GUI        |=##
 	##======================| |====================##
 	#################################################
-	ANM_fopo_container = {
-		window_name = "ANM_fopo_container"
+	TNO_fopo_container = {
+		window_name = "TNO_fopo_container"
 		context_type = player_context
 		parent_window_name = powerbalanceview
 
-		visible = { check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts } }
+		visible = { check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts } }
 		ai_enabled = { always = no }
 
 		dynamic_lists = {
 			conflict_tabs = {
-				array = ANM_active_conflicts
+				array = TNO_active_conflicts
 				index = conflict_idx
 				value = conflict_id
-				entry_container = ANM_fopo_conflict_tab
+				entry_container = TNO_fopo_conflict_tab
 			}
-			# conflict_guis = {
-			# 	array = world_conflict_guis
-			# 	index = conflict_idx
-			# 	value = conflict_id
-			# 	entry_container = [Get_ANM_fopo_conflict_guis]
-			# }
 		}
 
 		effects = {
@@ -71,10 +69,10 @@ scripted_gui = {
 			}
 
 			frontlines_btn_click = {
-				set_variable = { ANM_fopo_selected_front = 1 }
+				set_variable = { TNO_fopo_selected_front = 1 }
 			}
 			homefront_btn_click = {
-				set_variable = { ANM_fopo_selected_front = 2 }
+				set_variable = { TNO_fopo_selected_front = 2 }
 			}
 		}
 
@@ -92,26 +90,41 @@ scripted_gui = {
 			}
 
 			frontlines_btn_visible = {
-				ANM_fopo_should_display_homefront = yes
+				TNO_fopo_should_display_homefront = yes
 			}
 			homefront_btn_visible = {
-				ANM_fopo_should_display_homefront = yes
+				TNO_fopo_should_display_homefront = yes
 			}
 			conflict_status_visible = {
-				ANM_fopo_should_display_homefront = no
+				TNO_fopo_should_display_homefront = no
 			}
 			conflict_title_visible = {
-				ANM_fopo_should_display_homefront = no
+				OR = {
+					TNO_fopo_should_display_homefront = no
+					NOT = {
+						check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+						check_variable = { selected_conflict_id = token:GC_BoliviaTreatyNegotiation }
+					}
+				}
+			}
+			conflict_title_visible = {
+				OR = {
+					TNO_fopo_should_display_homefront = no
+					NOT = {
+						check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+						check_variable = { selected_conflict_id = token:GC_CayenneReferendum }
+					}
+				}
 			}
 			info_tab_visible = {
-				ANM_fopo_show_info_tab = yes
+				TNO_fopo_show_info_tab = yes
 			}
 
 			frontlines_btn_click_enabled = {
-				check_variable = { ANM_fopo_selected_front = 2 }
+				check_variable = { TNO_fopo_selected_front = 2 }
 			}
 			homefront_btn_click_enabled = {
-				check_variable = { ANM_fopo_selected_front = 1 }
+				check_variable = { TNO_fopo_selected_front = 1 }
 			}
 		}
 
@@ -131,30 +144,36 @@ scripted_gui = {
 	#################################################
 	#               No Conflicts GUI                #
 	#################################################
-	ANM_fopo_no_conflict = {
-		window_name = "ANM_fopo_no_conflict"
+	TNO_fopo_no_conflict = {
+		window_name = "TNO_fopo_no_conflict"
 		context_type = player_context
 		parent_window_name = powerbalanceview
 
 		visible = {
-			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
-			check_variable = { ANM_active_conflicts^num = 0 }
+			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+			check_variable = { TNO_active_conflicts^num = 0 }
 		}
 	}
 
 	#################################################
 	#             Generic Conflicts GUI             #
 	#################################################
-	ANM_fopo_generic_conflict = {
-		window_name = "ANM_fopo_generic_conflict"
+	TNO_fopo_generic_conflict = {
+		window_name = "TNO_fopo_generic_conflict"
 		context_type = player_context
 		parent_window_name = powerbalanceview
 
-		visible = { # pain
-			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+		visible = { # all conflicts must be manually excluded
+			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
 			NOT = {
-				check_variable = { selected_conflict_id = token:GC_FinlandCW }
-				check_variable = { ANM_active_conflicts^num = 0 }
+				check_variable = { selected_conflict_id = token:GC_IndonesiaCW }
+				check_variable = { TNO_active_conflicts^num = 0 }
+			}
+		}
+
+		triggers = {
+			seal_visible = {
+				NOT = { check_variable = { selected_conflict_id = token:GC_SouthAtlanticWar } }
 			}
 		}
 
@@ -171,36 +190,64 @@ scripted_gui = {
 	#################################################
 	#          Generic Conflict Topbar GUI          #
 	#################################################
-	ANM_fopo_generic_conflict_topbar = {
-		window_name = "ANM_fopo_generic_conflict_topbar"
+	TNO_fopo_generic_conflict_topbar = {
+		window_name = "TNO_fopo_generic_conflict_topbar"
 		context_type = player_context
 		parent_window_name = powerbalanceview
 
 		visible = {
-			check_variable = { ANM_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+			OR = {
+				check_variable = { selected_conflict_id = token:GC_WAC }
+				check_variable = { selected_conflict_id = token:GC_SAW }
+			}
 			tag = USA
 		}
 
 		triggers = {
 			info_tab_visible = {
-				ANM_fopo_show_info_tab = yes
+				TNO_fopo_show_info_tab = yes
 			}
 		}
 
 		properties = {
 			topbar = {
 				image = "[Get_fopo_topbar]"
-				frame = ANM_fopo_selected_front
+				frame = TNO_fopo_selected_front
 			}
 			seal = {
 				image = "[Get_fopo_seal]"
 			}
 		}
 	}
-	
+
 	#################################################
 	##=|          Conflict-Specific GUIs         |=##
 	##======================| |====================##
 	#################################################
+
+	#################################################
+	#                Trinidad BPR GUI               #
+	#################################################
+	TNO_Trinidad_BPR_GUI = {
+		window_name = "TNO_Trinidad_BPR_GUI"
+		context_type = player_context
+		parent_window_name = powerbalanceview
+
+		visible = {
+			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+			check_variable = { selected_conflict_id = token:GC_TrinidadRev }
+		}
+
+		properties = {
+			sidebar = {
+				image = "[Get_fopo_sidebar]"
+			}
+			seal = {
+				image = "[Get_fopo_seal]"
+			}
+		}
+	}
+
 
 }

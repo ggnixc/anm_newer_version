@@ -1,19 +1,19 @@
 
 # Adds 'conflict_id' to the list of active conflicts
-ANM_add_fopo_conflict_tab = {
-	custom_effect_tooltip = ANM_add_fopo_conflict_tab_tt
+TNO_add_fopo_conflict_tab = {
+	custom_effect_tooltip = TNO_add_fopo_conflict_tab_tt
 	if = {
-		limit = { NOT = { is_in_array = { ANM_active_conflicts = conflict_id } } }
-		add_to_array = { ANM_active_conflicts = conflict_id }
+		limit = { NOT = { is_in_array = { TNO_active_conflicts = conflict_id } } }
+		add_to_array = { TNO_active_conflicts = conflict_id }
 
 		set_variable = { selected_conflict_id = conflict_id }
 		clear_array = world_conflict_guis
 		add_to_array = { world_conflict_guis = selected_conflict_id }
 
-		set_variable = { ANM_fopo_selected_front = 1 }
+		set_variable = { TNO_fopo_selected_front = 1 }
 	}
 	set_temp_variable = { alert_id = token:Alert_Proxy_War_Active }
-	add_ANM_alert_unless_exists = yes
+	add_TNO_alert_unless_exists = yes
 	hidden_effect = {
 		if = {
 			limit = {
@@ -26,11 +26,11 @@ ANM_add_fopo_conflict_tab = {
 }
 
 # Removes `conflict_id` from the list of active conflicts
-ANM_remove_fopo_conflict_tab = {
-	custom_effect_tooltip = ANM_remove_fopo_conflict_tab_tt
+TNO_remove_fopo_conflict_tab = {
+	custom_effect_tooltip = TNO_remove_fopo_conflict_tab_tt
 	if = {
-		limit = { is_in_array = { ANM_active_conflicts = conflict_id } }
-		remove_from_array = { array = ANM_active_conflicts value = conflict_id }
+		limit = { is_in_array = { TNO_active_conflicts = conflict_id } }
+		remove_from_array = { array = TNO_active_conflicts value = conflict_id }
 	}
 
 	if = {
@@ -39,11 +39,11 @@ ANM_remove_fopo_conflict_tab = {
 		set_variable = { selected_conflict_id = -1 }
 
 		if = {
-			limit = { check_variable = { ANM_active_conflicts^num > 0 } }
+			limit = { check_variable = { TNO_active_conflicts^num > 0 } }
 
-			set_temp_variable = { next_conflict_idx = ANM_active_conflicts^num }
+			set_temp_variable = { next_conflict_idx = TNO_active_conflicts^num }
 			subtract_from_temp_variable = { next_conflict_idx = 1 }
-			set_variable = { selected_conflict_id = ANM_active_conflicts^next_conflict_idx }
+			set_variable = { selected_conflict_id = TNO_active_conflicts^next_conflict_idx }
 
 			clear_array = world_conflict_guis
 			add_to_array = { world_conflict_guis = selected_conflict_id }
@@ -52,10 +52,10 @@ ANM_remove_fopo_conflict_tab = {
 
 	if = {
 		limit = {
-			check_variable = { ANM_active_conflicts^num = 0 }
+			check_variable = { TNO_active_conflicts^num = 0 }
 		}
 		set_temp_variable = { alert_id = token:Alert_Proxy_War_Active }
-		remove_ANM_alert = yes
+		remove_TNO_alert = yes
 	}
 
 	hidden_effect = {
@@ -69,13 +69,13 @@ ANM_remove_fopo_conflict_tab = {
 	}
 }
 
-# Add/remove Malayan Civil War
-
-ANM_fopo_add_finland_civil_war_tab = {
-	set_temp_variable = { conflict_id = token:GC_FinlandCW }
-	ANM_add_fopo_conflict_tab = yes
+### Scripted effects to add/remove specific conflict tabs go here ###
+# Add/Remove Iberian Swing 
+ANM_fopo_add_iberian_swing_tab = {
+	set_temp_variable = { conflict_id = token:GC_Iberian_Swing }
+	TNO_add_fopo_conflict_tab = yes
 }
-ANM_fopo_remove_finland_civil_war_tab = {
-	set_temp_variable = { conflict_id = token:GC_FinlandCW }
-	ANM_remove_fopo_conflict_tab = yes
+ANM_fopo_remove_iberian_swing_tab = {
+	set_temp_variable = { conflict_id = token:GC_Iberian_Swing }
+	TNO_remove_fopo_conflict_tab = yes
 }

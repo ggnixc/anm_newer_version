@@ -1,5 +1,17 @@
 
 defined_text = {
+	name = Get_fopo_tab_name
+
+	### DYNAMIC TITLES ###
+	# Vacant #
+
+	### NORMAL TITLES ###
+	text = {
+		localization_key = "[?conflict_id.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
 	name = Get_fopo_tab_name_title
 	text = {
 		trigger = {
@@ -14,3 +26,146 @@ defined_text = {
 		localization_key = "[Get_fopo_tab_name]"
 	}
 }
+
+defined_text = {
+	name = Get_TNO_fopo_conflict_guis
+	text = {
+		trigger = {
+			OR = {
+				check_variable = { selected_conflict_id = token:GC_WAC }
+				check_variable = { selected_conflict_id = token:GC_SAW }
+			}
+			tag = USA
+		}
+		localization_key = "TNO_fopo_generic_conflict_topbar"
+	}
+	text = {
+		trigger = {
+			check_variable = { TNO_active_conflicts^num = 0 }
+		}
+		localization_key = "TNO_fopo_no_conflict"
+	}
+	text = {
+		localization_key = "TNO_fopo_generic_conflict"
+	}
+}
+
+defined_text = {
+	name = Get_fopo_desc
+	text = {
+		trigger = { check_variable = { conflict_id = token:GC_Iberian_Swing } tag = GER }
+		localization_key = GER_Iberian_Swing_desc
+	}
+	
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Get_fopo_sidebar
+	text = { # Iberian Swing
+		trigger = { check_variable = { selected_conflict_id = token:GC_Iberian_Swing } tag = GER }
+		localization_key = "GFX_fopo_iberian_swing_sidebar"
+	}
+
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Get_fopo_topbar
+	text = { # SAW for the USA
+		trigger = { check_variable = { selected_conflict_id = token:GC_SAW } tag = USA }
+		localization_key = "GFX_fopo_south_africa_topbar"
+	}
+	text = { # WAC for the USA
+		trigger = { check_variable = { selected_conflict_id = token:GC_WAC } tag = USA }
+		localization_key = "GFX_fopo_wac_topbar_USA"
+	}
+}
+
+defined_text = {
+	name = Get_fopo_icon
+	text = { # Iberian Swing, GER
+		trigger = { check_variable = { conflict_id = token:GC_Iberian_Swing } tag = GER }
+		localization_key = "GFX_fopo_iberian_swing_icon_ger"
+	}
+	text = {
+		localization_key = "GFX_fopo_blank_icon"
+	}
+}
+
+defined_text = {
+	name = Get_fopo_header
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_SAW } }
+		localization_key = "GFX_decision_image_SAF_war"
+	}
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_IndonesiaCW } }
+		localization_key = ""
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+
+defined_text = {
+	name = Get_fopo_seal
+	text = {
+		trigger = { tag = JAP }
+		localization_key = "GFX_fopo_gaimusho_seal"
+	}
+	text = {
+		trigger = { tag = GER }
+		localization_key = "GFX_fopo_reichsadler_seal"
+	}
+	text = {
+		trigger = { tag = USA }
+		localization_key = "GFX_fopo_dept_of_state_seal"
+	}
+	text = {
+		trigger = { tag = BRA }
+		localization_key = "GFX_fopo_brazil_seal"
+	}
+	text = {
+		trigger = { tag = IBR }
+		localization_key = "GFX_fopo_iberia_seal"
+	}
+	text = {
+		trigger = { tag = ENG }
+		localization_key = "GFX_fopo_britain_seal"
+	}
+	text = {
+		trigger = { tag = MEX }
+		localization_key = "GFX_fopo_mexico_seal"
+	}
+	text = {
+		trigger = { tag = ITA }
+		localization_key = "GFX_fopo_italy_seal"
+	}
+	text = {
+		trigger = { tag = TUR }
+		localization_key = "GFX_fopo_turkey_seal"
+	}
+	text = {
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = Get_fopo_info_tooltip
+	text = {
+		trigger = {
+			tag = USA
+			check_variable = { selected_conflict_id = token:GC_WAC }
+		}
+		localization_key = "USA_WAC_info_tooltip"
+	}
+}
+
+### ForPol scenario specific locs ###
+# Vacant #

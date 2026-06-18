@@ -1,0 +1,44 @@
+# Decisions for ForPol GUI per category, tag based 
+
+GER_BoP_category = {
+
+	GER_Bomb_Moskau = {
+		allowed = { original_tag = GER }
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			always = yes
+		}
+
+		cost = 50
+		days_re_enable = 21
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_Bomb_Moskau"
+			add_command_power = 25
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	### Iberian Swing ###
+	GER_Build_Gibraltar_Dam = {
+		allowed = { original_tag = GER }
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			TNO_fopo_iberia_selected = yes
+		}
+
+		cost = 50
+		days_re_enable = 21
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_Build_Gibraltar_Dam"
+			add_command_power = 25
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+}
