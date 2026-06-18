@@ -24,11 +24,14 @@ TNO_fopo_show_info_tab = {
 }
 
 ### ANM Territory ###
-ANM_fopo_finland_selected = {
+TNO_fopo_iberia_selected = {
 	OR = {
-		check_variable = { selected_conflict_id = token:GC_FinlandCW }
 		AND = {
-			is_in_array = { TNO_active_conflicts = token:GC_FinlandCW }
+			check_variable = { selected_conflict_id = token:GC_Iberian_Swing }
+			TNO_BoP_Viewing_GlobalConflicts = yes
+		}
+		AND = {
+			is_in_array = { TNO_active_conflicts = token:GC_Iberian_Swing }
 			is_ai = yes
 		}
 	}
