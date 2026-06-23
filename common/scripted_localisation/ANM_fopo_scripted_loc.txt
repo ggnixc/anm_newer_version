@@ -57,13 +57,17 @@ defined_text = {
 		localization_key = GER_Iberian_Swing_desc
 	}
 	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_FinlandCW } tag = GER }
+		localization_key = GER_FinlandCW_desc
+	}
+	text = {
 		localization_key = ""
 	}
 }
 
 defined_text = {
 	name = Get_fopo_sidebar
-	text = { # Iberian Swing
+	text = { # Iberian Swing - obsolete
 		trigger = { check_variable = { selected_conflict_id = token:GC_Iberian_Swing } tag = GER }
 		localization_key = "GFX_fopo_iberian_swing_sidebar"
 	}
@@ -90,6 +94,10 @@ defined_text = {
 	text = { # Iberian Swing, GER
 		trigger = { check_variable = { conflict_id = token:GC_Iberian_Swing } tag = GER }
 		localization_key = "GFX_fopo_iberian_swing_icon_ger"
+	}
+	text = { # Finnisch Civil War, GER
+		trigger = { check_variable = { conflict_id = token:GC_FinlandCW } tag = GER }
+		localization_key = "GFX_fopo_finlandCW_icon_ger"
 	}
 	text = {
 		localization_key = "GFX_fopo_blank_icon"

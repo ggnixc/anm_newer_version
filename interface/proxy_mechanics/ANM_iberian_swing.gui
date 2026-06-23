@@ -1,0 +1,28 @@
+guiTypes = {
+	containerWindowType = {
+		name = "ANM_Iberian_Swing_GUI"
+		size = { width = 525 height = 450 }
+		position = { x = 29 y = 131 }
+		size = { width = 496 height = 506 }
+	
+		containerWindowType = {
+			name = "inner"
+			position = { x = 0 y = 0 }
+			
+			iconType = {
+				name = "Iberian_Swing_Seesaw"
+				position = { x = 46 y = 20 }
+				spriteType = "GFX_Iberian_Swing_Seesaw"
+			}
+	
+			instantTextboxType = {
+				name = "desc"
+				position = { x = 5 y = 320 }
+				font = "aldrich_16_outline"
+				text = fopo_desc_text
+				maxWidth = 480
+				format = left
+			}
+		}
+	}
+}

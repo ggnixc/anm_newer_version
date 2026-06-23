@@ -26,7 +26,7 @@ GER_BoP_category = {
 		allowed = { original_tag = GER }
 		icon = GFX_decision_generic_prepare_civil_war
 		visible = {
-			TNO_fopo_iberia_selected = yes
+			ANM_fopo_iberia_selected = yes
 		}
 
 		cost = 50
@@ -34,6 +34,26 @@ GER_BoP_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GER_Build_Gibraltar_Dam"
+			add_command_power = 25
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	### The Finnish Civil War ###
+	GER_Mock_Soviet_Soldiers = {
+		allowed = { original_tag = GER }
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			ANM_fopo_finland_selected = yes
+		}
+
+		cost = 50
+		days_re_enable = 21
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_Mock_Soviet_Soldiers"
 			add_command_power = 25
 		}
 		ai_will_do = {

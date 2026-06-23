@@ -1,10 +1,3 @@
-# ██████╗ ██╗      ██████╗ ██████╗  █████╗ ██╗          ██████╗ ██████╗ ███╗   ██╗███████╗██╗     ██╗ ██████╗████████╗███████╗#
-#██╔╝╝╝╝╝ ██║     ██╔╝╝╝██╗██╔╝╝██╗██╔╝╝██╗██║         ██╔╝╝╝╝╝██╔╝╝╝██╗████╗  ██║██╔╝╝╝╝╝██║     ██║██╔╝╝╝╝╝╚╝╝██╔╝╝╝██╔╝╝╝╝╝#
-#██║  ███╗██║     ██║   ██║██████╔╝███████║██║         ██║     ██║   ██║██╔██╗ ██║█████╗  ██║     ██║██║        ██║   ███████╗#
-#██║   ██║██║     ██║   ██║██╔╝╝██╗██╔╝╝██║██║         ██║     ██║   ██║██║╚██╗██║██╔╝╝╝  ██║     ██║██║        ██║   ╚╝╝╝╝██║#
-#╚██████╔╝███████╗╚██████╔╝██████╔╝██║  ██║███████╗    ╚██████╗╚██████╔╝██║ ╚████║██║     ███████╗██║╚██████╗   ██║   ███████║#
-# ╚╝╝╝╝╝╝ ╚╝╝╝╝╝╝╝ ╚╝╝╝╝╝╝ ╚╝╝╝╝╝╝ ╚╝╝  ╚╝╝╚╝╝╝╝╝╝╝     ╚╝╝╝╝╝╝ ╚╝╝╝╝╝╝ ╚╝╝  ╚╝╝╝╝╚╝╝     ╚╝╝╝╝╝╝╝╚╝╝ ╚╝╝╝╝╝╝   ╚╝╝   ╚╝╝╝╝╝╝╝#
-#Scripted GUIs
 
 #Index; Search for these names using ctrl+f and you'll find the section they entitle.
 #	Base Global Conflicts GUI
@@ -13,26 +6,9 @@
 #		Generic Conflict Topbar GUI
 #
 #	Conflict-Specific GUIs
-#		Indonesian Civil War GUI
-#		Trinidad BPR GUI
-#		Turkes Kenes GUI
-#		Philippines War GUI
-#		Philippines Reconstruction GUI
-#		South Africa US Reconstruction GUI
-#		South Africa Withdrawal GUI
-#		West African Conflict GUI
-#		West Africa Reconstruction GUI
-#		Puerto Plata Invasion GUI
-#		French Reclamation GUI
-#		Iceland Elections GUI
-#		Haitian Civil War GUI
-#		Madagaskar War GUI
-#		Channel Crisis GUI
-#		Iberian Wars GUI
-#		French West Indies Referendum GUI
-#		Salvadoran Coup GUI
-#		Indian Civil War GUI
-#		Kingston Riots GUI
+#		Iberian Swing
+
+
 
 scripted_gui = {
 	#################################################
@@ -166,7 +142,7 @@ scripted_gui = {
 		visible = { # all conflicts must be manually excluded
 			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
 			NOT = {
-				check_variable = { selected_conflict_id = token:GC_IndonesiaCW }
+				check_variable = { selected_conflict_id = token:GC_Iberian_Swing }
 				check_variable = { TNO_active_conflicts^num = 0 }
 			}
 		}
@@ -227,25 +203,20 @@ scripted_gui = {
 	#################################################
 
 	#################################################
-	#                Trinidad BPR GUI               #
+	#                Iberian Swing	                #
 	#################################################
-	TNO_Trinidad_BPR_GUI = {
-		window_name = "TNO_Trinidad_BPR_GUI"
+	ANM_Iberian_Swing_GUI = {
+		window_name = "ANM_Iberian_Swing_GUI"
 		context_type = player_context
 		parent_window_name = powerbalanceview
 
 		visible = {
 			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
-			check_variable = { selected_conflict_id = token:GC_TrinidadRev }
+			check_variable = { selected_conflict_id = token:GC_Iberian_Swing }
 		}
 
 		properties = {
-			sidebar = {
-				image = "[Get_fopo_sidebar]"
-			}
-			seal = {
-				image = "[Get_fopo_seal]"
-			}
+			#Iberian_Swing_Seesaw = { frame = 1 }
 		}
 	}
 
