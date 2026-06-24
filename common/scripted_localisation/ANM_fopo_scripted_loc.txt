@@ -175,4 +175,23 @@ defined_text = {
 }
 
 ### ForPol scenario specific locs ###
-# Vacant #
+# Iberian Swing # 
+defined_text = {
+	name = Get_Iberian_Swing_Player
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_Iberian_Swing } tag = GER }
+		localization_key = Iberian_Swing_Playing
+	}
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_Iberian_Swing } tag = GER }
+		localization_key = Iberian_Swing_GER_Waiting
+	}
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_Iberian_Swing } tag = USA }
+		localization_key = Iberian_Swing_Playing
+	}
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_Iberian_Swing } tag = USA }
+		localization_key = Iberian_Swing_USA_Waiting
+	}
+} 
