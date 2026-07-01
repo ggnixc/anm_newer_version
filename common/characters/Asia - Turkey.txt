@@ -1,4 +1,84 @@
 characters = {
+    # STARTING ADVISORS
+	TUR_Murat_Karayalcin = {
+		name = TUR_Murat_Karayalcin
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/ministers/TUR_minister_Murat_Karayalcin.dds"
+			}
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = TUR_Murat_Karayalcin_hog
+			traits = { head_of_government }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	TUR_Hikmet_Cetin = {
+		name = TUR_Hikmet_Cetin
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/ministers/TUR_minister_Hikmet_Cetin.dds"
+			}
+		}
+		advisor = {
+			slot = foreign_minister
+			idea_token = TUR_Hikmet_Cetin_for
+			traits = {  }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	TUR_Yilmaz_Ates = {
+		name = TUR_Yilmaz_Ates
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/ministers/TUR_minister_Yilmaz_Ates.dds"
+			}
+		}
+		advisor = {
+			slot = economy_minister
+			idea_token = TUR_Yilmaz_Ates_eco
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+	}
+
+	TUR_Husamettin_Cindoruk = {
+		name = TUR_Husamettin_Cindoruk
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/TUR/ministers/TUR_minister_Husamettin_Cindoruk.dds"
+			}
+		}
+		advisor = {
+			slot = security_minister
+			idea_token = TUR_Husamettin_Cindoruk_sec
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_NECMETTIN_ERBAKAN_DESC"
+			ideology = conservatism_right_kemalism_subtype
+			traits = {
+			}
+			id = -1
+		}
+	}
+
+	# LEADERS
     TUR_Erdal_Inonu = {
 		name = TUR_Erdal_Inonu
 		portraits = {
@@ -113,6 +193,14 @@ characters = {
 		country_leader = {
 			expire = "2999.1.1"
 			desc = "POLITICS_NECMETTIN_ERBAKAN_DESC"
+			ideology = conservatism_2_subtype
+			traits = {
+			}
+			id = -1
+		}
+		country_leader = {
+			expire = "2999.1.1"
+			desc = "POLITICS_NECMETTIN_ERBAKAN_DESC"
 			ideology = conservatism_islamic_conservatism_subtype
 			traits = {
 			}
@@ -133,76 +221,6 @@ characters = {
 			traits = {
 			}
 			id = -1
-		}
-	}
-
-	TUR_Murat_Karayalcin = {
-		name = TUR_Murat_Karayalcin
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ideas/TUR/ministers/TUR_minister_Murat_Karayalcin.dds"
-			}
-		}
-		advisor = {
-			slot = head_of_government
-			idea_token = TUR_Murat_Karayalcin_hog
-			traits = { head_of_government }
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-	}
-
-	TUR_Hikmet_Cetin = {
-		name = TUR_Hikmet_Cetin
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ideas/TUR/ministers/TUR_minister_Hikmet_Cetin.dds"
-			}
-		}
-		advisor = {
-			slot = foreign_minister
-			idea_token = TUR_Hikmet_Cetin_for
-			traits = {  }
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-	}
-
-	TUR_Yilmaz_Ates = {
-		name = TUR_Yilmaz_Ates
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ideas/TUR/ministers/TUR_minister_Yilmaz_Ates.dds"
-			}
-		}
-		advisor = {
-			slot = economy_minister
-			idea_token = TUR_Yilmaz_Ates_eco
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
-		}
-	}
-
-	TUR_Husamettin_Cindoruk = {
-		name = TUR_Husamettin_Cindoruk
-		portraits = {
-			civilian = {
-				small = "gfx/interface/ideas/TUR/ministers/TUR_minister_Husamettin_Cindoruk.dds"
-			}
-		}
-		advisor = {
-			slot = security_minister
-			idea_token = TUR_Husamettin_Cindoruk_sec
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
 		}
 	}
 }
