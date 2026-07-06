@@ -177,6 +177,13 @@ defined_text = {
 ### ForPol scenario specific locs ###
 # Iberian Swing # 
 defined_text = {
+	name = Get_Iberian_Swing_Allignment
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_Iberian_Swing } }
+		localization_key = Iberian_Swing_Allignment_Neutral
+	}
+} 
+defined_text = {
 	name = Get_Iberian_Swing_Player
 	text = {
 		trigger = { check_variable = { selected_conflict_id = token:GC_Iberian_Swing } tag = GER }

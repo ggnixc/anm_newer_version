@@ -22,7 +22,7 @@ GER_BoP_category = {
 	}
 
 	### Iberian Swing ###
-	GER_Build_Gibraltar_Dam = {
+	GER_Trade_Deal = {
 		allowed = { original_tag = GER }
 		icon = GFX_decision_generic_prepare_civil_war
 		visible = {
@@ -30,11 +30,83 @@ GER_BoP_category = {
 		}
 
 		cost = 50
-		days_re_enable = 21
+		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision GER_Build_Gibraltar_Dam"
-			add_command_power = 25
+			log = "[GetDateText]: [Root.GetName]: Decision GER_Trade_Deal"
+			set_variable = { ANM_Seesaw_Frame = 2 }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	GER_Exchange_Advisors = {
+		allowed = { original_tag = GER }
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			ANM_fopo_iberia_selected = yes
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_Exchange_Advisors"
+			set_variable = { ANM_Seesaw_Frame = 2 }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	GER_Bribe_Cultural_Institutes = {
+		allowed = { original_tag = GER }
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			ANM_fopo_iberia_selected = yes
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_Bribe_Cultural_Institutes"
+			set_variable = { ANM_Seesaw_Frame = 2 }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	GER_Fund_Political_Campaign = {
+		allowed = { original_tag = GER }
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			ANM_fopo_iberia_selected = yes
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_Fund_Political_Campaign"
+			set_variable = { ANM_Seesaw_Frame = 2 }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	GER_Support_Territorial_Dispute = {
+		allowed = { original_tag = GER }
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			ANM_fopo_iberia_selected = yes
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GER_Support_Territorial_Dispute"
+			set_variable = { ANM_Seesaw_Frame = 2 }
 		}
 		ai_will_do = {
 			factor = 20
