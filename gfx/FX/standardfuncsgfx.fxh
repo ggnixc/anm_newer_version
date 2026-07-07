@@ -320,14 +320,14 @@ PixelShader =
 
 	//#define NO_NIGHT
 
-	static const float GMT_OFFSET = 2793.0f; // X position on map, of Greenwitch GMT+0
+	static const float GMT_OFFSET = 2560.0f; // X position on map, of Greenwitch GMT+0
 	static const float FEATHER_MIN = -0.01f;
 	static const float FEATHER_MAX = 0.01f;
 	static const float MOON_FEATHER_MIN = -0.01f;
 	static const float MOON_FEATHER_MAX = 0.01;
 	static const float NIGHT_OPACITY = 0.85f;
 	static const float NIGHT_DARKNESS = 0.5f;
-	static const float SOUTH_POLE_OFFSET = 0.17f; // Our map is missing big parts of globe on north and south
+	static const float SOUTH_POLE_OFFSET = 0.07f; // Our map is missing big parts of globe on north and south
 	static const float NORTH_POLE_OFFSET = 0.93f;
 	static const float GLOBE_NORMAL_LIMIT = 0.8f;
 
@@ -732,6 +732,67 @@ PixelShader =
 
 		return diffuse + specular;
 	}
+	float getZoom()
+	{
+		float y = 0;
+		y = saturate((log(vCamLookAtDir.z) + 3.912)/1.609);
+		return y;
+	}
+	float4 checkForChange(float4 inColour)
+	{
+		float4 outColour = inColour;
+		/////////////////
+		//Guizhou
+		if(inColour.r > 0.18 && inColour.r < 0.19 && inColour.g > 0.11 && inColour.g < 0.12 && inColour.b > 0.14 && inColour.b < 0.15)
+		{
+			float4 changeColour = float4(0.1816, 0.061, 0.1093, 1);
+			float4 baseColour = float4(0.1875, 0.1142, 0.1445, 1);
+			
+			inColour.rgb = lerp(changeColour.rgb, baseColour.rgb, getZoom());
+		}
+		//Guangxi
+		else if(inColour.r > 0.15 && inColour.r < 0.16 && inColour.g > 0.07 && inColour.g < 0.08 && inColour.b > 0.08 && inColour.b < 0.09)
+		{
+			float4 changeColour = float4(0.1816, 0.061, 0.1093, 1);
+			float4 baseColour = float4(0.1533, 0.0781, 0.0864, 1);
+			
+			inColour.rgb = lerp(changeColour.rgb, baseColour.rgb, getZoom());
+		}
+		//Yunnan
+		else if(inColour.r > 0.13 && inColour.r < 0.14 && inColour.g > 0.06 && inColour.g < 0.07 && inColour.b > 0.07 && inColour.b < 0.08)
+		{
+			float4 changeColour = float4(0.1816, 0.061, 0.1093, 1);
+			float4 baseColour = float4(0.1328, 0.0610, 0.0781, 1);
+			
+			inColour.rgb = lerp(changeColour.rgb, baseColour.rgb, getZoom());
+		}
+		//Shanxxi
+		else if(inColour.r > 0.21 && inColour.r < 0.22 && inColour.g > 0.12 && inColour.g < 0.13 && inColour.b > 0.15 && inColour.b < 0.16)
+		{
+			float4 changeColour = float4(0.1816, 0.061, 0.1093, 1);
+			float4 baseColour = float4(0.2119, 0.1220, 0.1591, 1);
+			
+			inColour.rgb = lerp(changeColour.rgb, baseColour.rgb, getZoom());
+		}
+		//Mengjiang
+		else if(inColour.r > 0.19 && inColour.r < 0.20 && inColour.g > 0.07 && inColour.g < 0.08 && inColour.b > 0.1 && inColour.b < 0.11)
+		{
+			float4 changeColour = float4(0.1816, 0.061, 0.1093, 1);
+			float4 baseColour = float4(0.1943, 0.0781, 0.1000, 1);
+			
+			inColour.rgb = lerp(changeColour.rgb, baseColour.rgb, getZoom());
+		}
+		//NSC
+		else if(inColour.r > 0.16 && inColour.r < 0.17 && inColour.g > 0.07 && inColour.g < 0.08 && inColour.b > 0.07 && inColour.b < 0.08)
+		{
+			float4 changeColour = float4(0.1816, 0.061, 0.1093, 1);
+			float4 baseColour = float4(0.1650, 0.0722, 0.0722, 1);
+			
+			inColour.rgb = lerp(changeColour.rgb, baseColour.rgb, getZoom());
+		}
+		outColour = inColour;
+		return outColour;
+	}
 
 
 	//-------------------------------
@@ -795,15 +856,16 @@ PixelShader =
 	#else
 		float vOffsetX = -0.5f / MAP_SIZE_X;
 		float vOffsetY = -0.5f / MAP_SIZE_Y;
+		vCh = checkForChange(vCh);
 		float4 vResult = vCh;
-		vResult += tex2D( TexCh, vUV + float2( -vOffsetX, 0 ) );
-		vResult += tex2D( TexCh, vUV + float2( 0, -vOffsetY ) );
-		vResult += tex2D( TexCh, vUV + float2( vOffsetX, 0 ) );
-		vResult += tex2D( TexCh, vUV + float2( 0, vOffsetY ) );
-		vResult += tex2D( TexCh, vUV + float2( -vOffsetX, -vOffsetY ) );
-		vResult += tex2D( TexCh, vUV + float2(  vOffsetX, -vOffsetY ) );
-		vResult += tex2D( TexCh, vUV + float2(  vOffsetX,  vOffsetY ) );
-		vResult += tex2D( TexCh, vUV + float2( -vOffsetX,  vOffsetY ) );
+		vResult += checkForChange(tex2D( TexCh, vUV + float2( -vOffsetX, 0 ) ));
+		vResult += checkForChange(tex2D( TexCh, vUV + float2( 0, -vOffsetY ) ));
+		vResult += checkForChange(tex2D( TexCh, vUV + float2( vOffsetX, 0 ) ));
+		vResult += checkForChange(tex2D( TexCh, vUV + float2( 0, vOffsetY ) ));
+		vResult += checkForChange(tex2D( TexCh, vUV + float2( -vOffsetX, -vOffsetY ) ));
+		vResult += checkForChange(tex2D( TexCh, vUV + float2(  vOffsetX, -vOffsetY ) ));
+		vResult += checkForChange(tex2D( TexCh, vUV + float2(  vOffsetX,  vOffsetY ) ));
+		vResult += checkForChange(tex2D( TexCh, vUV + float2( -vOffsetX,  vOffsetY ) ));
 		vResult /= 9;
 		return vResult;
 		//return vCh;
@@ -862,7 +924,7 @@ PixelShader =
 
 			
 		// Convert "heightmap" to "fill" regarding camera distance (the whole magic in this function)
-		vColorOpacity = gradient_border_distance_to_alpha( vColorOpacity, vCamDist );
+		vColorOpacity = gradient_border_distance_to_alpha( vColorOpacity, vCamDist ) - 0.1f;
 
 		// Now when vOutline > 0 then vColorOpacity = 0, and other way around.
 		// Never both values will be > 0.
@@ -876,6 +938,10 @@ PixelShader =
 		float vMaxGradient = max( vColorOpacity, vOutline );
 
 		vCh = lerp( vCh, vGBDist.rgb, max( vMaxGradient, vThick )* vStrength);
+
+		// Compensate the brightness since the 2nd layer is now black (not white) although it's alpha is 0
+		vCh *= 0.75f;
+		vCh = min( vCh, float3( 1, 1, 1 ) );
 
 		// Make the outline edge darker
 		vCh = lerp( vCh, vCh * .5, vThick );

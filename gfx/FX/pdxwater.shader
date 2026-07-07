@@ -358,7 +358,7 @@ PixelShader =
 			// when we fixed an old bug in the gradient border code, it made most mapmodes brighter. Players don't like that.
 			// Therefore we offset the water a bit to make it more like what they're used to.
 			float3 Darkness = float3(0,0,0); 
-			refractiveColor = lerp(refractiveColor, Darkness, 0.2f);
+			refractiveColor = lerp(refractiveColor, Darkness, 0.8f);
 			
 			secondary_color_mask( refractiveColor, normal, 
 				Input.uv - vRefractionDistortion * 0.001, 
@@ -401,10 +401,10 @@ PixelShader =
 
 			vOut = DayNightWithBlend( vOut, CalcGlobeNormal( Input.pos.xz ), lerp(BORDER_NIGHT_DESATURATION_MAX, 1.0f, vBloomAlpha) );
 			
-			dominance_fx_apply(vOut, normal, 
-				Input.uv, 
-				GradientBorderChannel1,GradientBorderChannel2,GradientBorderChannel3,
-				vGBCamDistOverride_GBOutlineCutoff.zw * GB_OUTLINE_CUTOFF_SEA,vGBCamDistOverride_GBOutlineCutoff.xy, 0.0f);
+			// dominance_fx_apply(vOut, normal, 
+			//	Input.uv, 
+			//	GradientBorderChannel1,GradientBorderChannel2,GradientBorderChannel3,
+			//	vGBCamDistOverride_GBOutlineCutoff.zw * GB_OUTLINE_CUTOFF_SEA,vGBCamDistOverride_GBOutlineCutoff.xy, 0.0f);
 				
 		#ifdef LOW_END_GFX
 			DebugReturn(vOut, lightingProperties, 0.0f);
