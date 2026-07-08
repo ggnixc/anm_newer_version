@@ -55,3 +55,31 @@ country_event = { #RND Report Germany
 		name = SYR_report_situation.2.a	
 	}
 }
+
+country_event = { # The Nahlawi Military Coup (Al-Jaych al-Souri) edit idpop can be seen on the syria doc
+	id = SYR_flavour_event.3
+	title = SYR_flavour_event.3.t
+	desc = SYR_flavour_event.3.desc
+	picture = GFX_anm_GER_RND_report
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "SYR_flavour_event.3"
+		SYR = {
+			swap_ideas = {
+				remove_idea = SYR_a_return_to_1842
+				add_idea = SYR_god_and_the_army
+			}
+			add_ideas = {
+				SYR_the_sublime_portes_gaze
+			}
+			set_politics = { 
+				ruling_party = despotism 
+			}
+			promote_character = { SYR_Abdul_Karim_Al_Nahlawi 
+			}
+		}
+	}
+}
