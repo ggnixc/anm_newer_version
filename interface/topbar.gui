@@ -275,7 +275,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "command_power_value"
 				position = { x = 27 y = 3 }
-				font = "aldrich_14_outline"
+				font = "aldrich_16_outline"
 				text = "999"
 				format = center
 				maxWidth = 40
@@ -294,21 +294,21 @@ guiTypes = {
 
 			background = {
 				name = "land_xp_bg"
-				quadTextureSprite = "GFX_generic_box_125"
+				quadTextureSprite = "GFX_topbar_box_xp"
 			}
 
 			iconType = {
 				name = "experience_icon"
 				spriteType = "GFX_army_experience"
-				position = { x = 3 y = 6 }
+				position = { x = 7 y = 6 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 			
 			instantTextBoxType = {
 				name = "experience_value"
-				position = { x = 8 y = 1 }
-				font = "aldrich_18_outline"
+				position = { x = 12 y = 3 }
+				font = "aldrich_16_outline"
 				text = "999"
 				format = center
 				maxWidth = 45
@@ -320,15 +320,10 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "navy"
-			position = { x = 799 y = 5 }
+			position = { x = 809 y = 5 }
 			clipping = no
 			size = { width=56 height=30 }
 			Orientation = UPPER_LEFT
-				
-			background = {
-				name = "navy_xp_bg"
-				quadTextureSprite = "GFX_generic_box_125"
-			}
 
 			iconType = {
 				name = "navy_experience_icon"
@@ -340,8 +335,8 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "navy_experience_value"
-				position = { x = 8 y = 1 }
-				font = "aldrich_18_outline"
+				position = { x = 8 y = 3 }
+				font = "aldrich_16_outline"
 				text = "999"
 				format = center
 				maxWidth = 45
@@ -353,15 +348,10 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "air"
-			position = { x = 846 y = 5 }
+			position = { x = 855 y = 5 }
 			clipping = no
 			size = { width=56 height=30 }
 			Orientation = UPPER_LEFT
-			
-			background = {
-				name = "air_xp_bg"
-				quadTextureSprite = "GFX_generic_box_125"
-			}
 
 			iconType = {
 				name = "air_experience_icon"
@@ -373,8 +363,8 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "air_experience_value"
-				position = { x = 8 y = 1 }
-				font = "aldrich_18_outline"
+				position = { x = 8 y = 3 }
+				font = "aldrich_16_outline"
 				text = "999"
 				format = center
 				maxWidth = 45
@@ -769,7 +759,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name ="decisionview_amount_timeout_items"
 				position = { x = -92 y = 9 }
-				font = "aldrich_14_outline"
+				font = "aldrich_16_outline"
 				text = "999"
 				format = right
 				maxWidth = 50
@@ -788,7 +778,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name ="decisionview_amount_to_take_items"
 				position = { x = -92 y = -5 }
-				font = "aldrich_14_outline"
+				font = "aldrich_16_outline"
 				text = "999"
 				format = right
 				maxWidth = 50
@@ -1043,7 +1033,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="pol_power_positive"
 			position = { x = 129 y = 8 }
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			text = "[?political_power|0]"
 			format = center
 			maxWidth = 52
@@ -1054,7 +1044,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="pol_power_negative"
 			position = { x = 129 y = 8 }
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			text = "[?political_power|0R]"
 			format = center
 			maxWidth = 52
