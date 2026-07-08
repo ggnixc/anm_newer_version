@@ -186,6 +186,119 @@ ideas = {
 				free_production_units_modifier = -7
 			}
 		}
+		SYR_the_second_national_emergency = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_second_national_emergency" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_the_second_national_emergency
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.20
+				conscription_factor = -0.15
+				monthly_population = -0.01
+				political_power_factor = -0.15
+			}
+		}
+		SYR_the_stolen_north = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_second_national_emergency" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_the_stolen_north
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.20
+				max_production_efficiency_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = TUR 
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+		}
+		SYR_alone_in_the_desert = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_alone_in_the_desert" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_alone_in_the_desert
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+				drift_defence_factor = 0.15
+			}
+		}
+		SYR_resurrection_in_name_only = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_resurrection_in_name_only" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_resurrection_in_name_only
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.10
+			}
+		}	
+		SYR_the_triumph_of_the_guardsmen = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_triumph_of_the_guardsmen" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_the_triumph_of_the_guardsmen
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = -0.20
+				training_time_factor = 0.99
+			}
+		}
+		SYR_a_nation_of_multitudes = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_a_nation_of_multitudes" }
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = SYR_a_nation_of_multitudes
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = -0.50
+				production_speed_industrial_factor = -0.20
+			}
+		}			
 	}
 }
 
