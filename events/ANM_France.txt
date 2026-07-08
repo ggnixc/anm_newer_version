@@ -263,3 +263,172 @@ country_event = {
 		}
 	}
 }
+
+add_namespace = FRA_politics
+
+country_event = { #Financial Crisis
+	id = FRA_politics.1
+	title = FRA_politics.1.t
+	desc = FRA_politics.1.desc
+	picture = X #pick out something funny for this
+
+	is_triggered_only = yes
+	fire_only_once = no 
+
+	option = { #My God... (in French)
+		name = FRA_politics.1.a
+		country_event = { id = FRA_politics.2 days = 9 }
+		#later effects
+	}
+}
+
+country_event = { #Status of French PM
+	id = FRA_politics.2
+	title = FRA_politics.2.t
+	desc = FRA_politics.2.desc
+	picture = X #pick out something funny for this
+
+	is_triggered_only = yes
+	fire_only_once = no 
+
+	option = { 
+		name = FRA_politics.2.a
+		country_event = { id = FRA_politics.3 days = 7 }
+		#retire Seguin
+	}
+	option = { 
+		name = FRA_politics.2.b
+		country_event = { id = FRA_politics.4 }
+		#make Seguin stay
+	}
+}
+
+country_event = { #UN-R government
+	id = FRA_politics.3
+	title = FRA_politics.3.t
+	desc = FRA_politics.3.desc
+	picture = X #pick out something funny for this
+
+	is_triggered_only = yes
+	fire_only_once = no 
+
+	option = { 
+		name = FRA_politics.3.a
+		country_event = { 
+			id = FRA_politics.5 
+			trigger = { tag = FRA date > 1998.5.2 date < 1998.5.4 }
+			mean_time_to_happen = { days = 1 }
+		}
+		#the 1998 elections
+	}
+}
+
+country_event = { #WOULD YOU LOOK AT THE TIME AHH GOVT
+	id = FRA_politics.4
+	title = FRA_politics.4.t
+	desc = FRA_politics.4.desc
+	picture = X #pick out something funny for this
+
+	is_triggered_only = yes
+	fire_only_once = no 
+
+	option = { 
+		name = FRA_politics.4.a
+		country_event = { 
+			id = FRA_politics.5 
+			trigger = { tag = FRA date > 1998.5.2 date < 1998.5.4 }
+			mean_time_to_happen = { days = 1 }
+		}
+		#the 1998 elections
+	}
+}
+
+country_event = { #PARLIAMENTARY Elections
+	id = FRA_politics.5
+	title = FRA_politics.5.t
+	desc = FRA_politics.5.desc
+	picture = X #pick out something funny for this
+
+	is_triggered_only = yes
+	fire_only_once = no 
+
+	option = { #UN-R win
+		name = FRA_politics.5.a
+
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			election_frequency = 60
+			last_election = "[GetDateText]"
+		}
+		set_popularities = {
+			progressivism_1 = 6
+			progressivism = 13
+			progressivism_2 = 12
+			paternalism = 28
+			paternalism_2 = 31
+			despotism = 6
+			ultranationalism = 4
+		}
+	}
+
+	option = { #UN-S win (under condition that Seguin didn't retire)
+		name = FRA_politics.5.b
+
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			election_frequency = 60
+			last_election = "[GetDateText]"
+		}
+		set_popularities = {
+			progressivism_1 = 6
+			progressivism = 15
+			progressivism_2 = 12
+			paternalism = 33
+			paternalism_2 = 24
+			despotism = 6
+			ultranationalism = 4
+		}
+	}
+
+	option = { #RGR win
+		name = FRA_politics.5.c
+
+		set_politics = {
+			ruling_party = progressivism
+			elections_allowed = yes
+			election_frequency = 60
+			last_election = "[GetDateText]"
+		}
+		set_popularities = {
+			progressivism_1 = 7
+			progressivism = 27
+			progressivism_2 = 22
+			paternalism = 14
+			paternalism_2 = 19
+			despotism = 5
+			ultranationalism = 6
+		}
+	}
+
+	option = { #uh oh, HUNG parliament
+		name = FRA_politics.5.d
+
+		set_politics = {
+			ruling_party = paternalism
+			elections_allowed = yes
+			election_frequency = 60
+			last_election = "[GetDateText]"
+		}
+		set_popularities = {
+			progressivism_1 = 6
+			progressivism = 17
+			progressivism_2 = 19
+			paternalism = 24
+			paternalism_2 = 20
+			despotism = 9
+			ultranationalism = 5
+		}
+	}
+}
