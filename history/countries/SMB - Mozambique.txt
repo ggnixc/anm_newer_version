@@ -2,6 +2,26 @@
 
 recruit_character = SMB_Afonso_Dhlakama
 
+SAF = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = SMB autonomy_state = autonomy_satellite }
+        else = {
+            puppet = SMB
+        }
+    }
+}
+
+add_ideas = { 
+	Pakt_Observer_2
+}
+
+
 set_oob = ""
 
 add_ideas = {
