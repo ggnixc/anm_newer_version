@@ -8,6 +8,21 @@ oob = ""
 
 set_research_slots = 3
 
+TUR = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = CYP autonomy_state = autonomy_puppet }
+        else = {
+            puppet = CYP
+        }
+    }
+}
+
 
 set_politics = {
 	ruling_party = paternalism
