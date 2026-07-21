@@ -8,8 +8,23 @@ add_ideas = {
 	
 }
 
+ITA = { 
+    if = {
+	    limit = { 
+		    OR = { 
+		    	has_dlc = "Together for Victory" 
+			    has_dlc = "Man the Guns" 
+		    }
+	    }
+    }
+	set_autonomy = { target = MOC autonomy_state = autonomy_italy_reliant }
+	else = {
+		puppet = MOC
+	}
+}
+
 set_politics = {
-	ruling_party = paternalism
+	ruling_party = despotism
 	last_election = "1993.5.1"
 	election_frequency = 48
 	elections_allowed = yes
@@ -26,8 +41,7 @@ set_popularities = {
     liberalism = 0
     liberal_conservatism = 0
     conservatism = 10
-    paternalism = 80
-    despotism = 10
+    paternalism = 25
+    despotism = 65
     fascism = 0
-     
 }
