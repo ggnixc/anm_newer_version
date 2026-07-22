@@ -42,3 +42,21 @@
  GDPpC_country_level_button_tt: "Click to view §bNational GDP per Capita§!"
  GDPpC_state_level_button_tt: "Click to view §bLocal GDP per Capita§!"
  GDpC_empty_tt: "§RAlready viewing this mode§!"
+
+ # Regional Organizations map mode
+ MAPMODE_TNO_REGIONAL_ORGANIZATIONS_MAP_MODE: "§YRegional Organizations§!"
+ MAPMODE_TNO_REGIONAL_ORGANIZATIONS_MAP_MODE_NAME: "Regional Orgs"
+ MAPMODE_TNO_REGIONAL_ORGANIZATIONS_MAP_MODE_DESCRIPTION: "Shows the regional organizations that the countries on the map belong to."
+ 
+ tno_regional_organizations_map_mode_tooltip: "[TNO_RegionalOrganization_GetMapmodeTooltip]"
+ tno_regional_organizations_map_mode_tooltip_country: "§Y[FROM.Controller.GetNameWithFlag]§!"
+ tno_regional_organizations_map_mode_tooltip_delayed: "§F[TNO_RegionalOrganization_GetMapmodeTooltip_Delayed]§!"
+ tno_regional_organizations_map_mode_tooltip_delayed_1: "§Y[FROM.Controller.GetNameWithFlag]§! is part of the [TNO_RegionalOrganization_GetNameMapmodeTooltip]."
+ tno_regional_organizations_map_mode_tooltip_delayed_2: "§Y[FROM.Controller.GetNameWithFlag]§! is not part of the [TNO_RegionalOrganization_GetNameMapmodeTooltip]."
+
+ regional_organizations_map_mode_mapicon_tooltip: "§F[!regional_organization_leader_icon_click]§!"
+ regional_organizations_map_mode_mapicon_tooltip_filled: "§Y[FROM.GetNameWithFlag]§! is the leader of the [TNO_RegionalOrganization_GetNameColored], a [TNO_RegionalOrganization_GetAlignment] §g[TNO_RegionalOrganization_GetType]§!, which consists of:§!"
+ regional_organizations_map_mode_mapicon_tooltip_alone: "§Y[FROM.GetNameWithFlag]§! is the leader of the [TNO_RegionalOrganization_GetNameColored], a [TNO_RegionalOrganization_GetAlignment] §g[TNO_RegionalOrganization_GetType]§!, which currently only consists of itself.§!"
+ regional_organizations_map_mode_mapicon_tooltip_delayed: "§GClick§! to display this §WRegional Organization's§! members on the map."
+
+ regional_organizations_map_mode_mapicon_tooltip_entry: "  - §Y[?global.RegionalOrganization_Members@var:reg_org^temp_org_idx.GetNameWithFlag]§!"

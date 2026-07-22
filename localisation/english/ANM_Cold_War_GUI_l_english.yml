@@ -25,7 +25,7 @@ threat_button_tt: "Open Cold War GUI"
 
 Cold_War_GUI_Rankings_Button_tt: "Rankings"
 Cold_War_GUI_Tension_Button_tt: "Tensions"
-Cold_War_GUI_Spheres_Button_tt: "Spheres"
+Cold_War_GUI_Spheres_Button_tt: "Spheres & Orgs"
 Cold_War_GUI_Nukes_Button_tt: "Nukes"
 
 ## Power Projection
@@ -269,6 +269,18 @@ Cold_War_GUI_ScoreRanking_Sufix_st: "[?super_ranking]st"
 Cold_War_GUI_ScoreRanking_Sufix_nd: "[?super_ranking]nd"
 Cold_War_GUI_ScoreRanking_Sufix_rd: "[?super_ranking]rd"
 Cold_War_GUI_ScoreRanking_Sufix_th: "[?super_ranking]th"
+
+TNO_Cold_War_GUI_Spheres_Tab_SideButton_tt: "§F§YClick§! to switch to the §WRegional Organizations§! screen.§!"
+
+# Orgs
+TNO_Cold_War_GUI_Orgs_Tab_Title_tt: "REGIONAL ORGANIZATIONS"
+TNO_Cold_War_GUI_Orgs_Tab_Org_Name_tt: "[TNO_RegionalOrganization_GetNameColored]"
+TNO_Cold_War_GUI_Orgs_Tab_Org_Icon_tt: "§F- Leader: §Y[TNO_RegionalOrganization_GetLeader]§!\n- Alignment: [TNO_RegionalOrganization_GetAlignment]\n- Type: §g[TNO_RegionalOrganization_GetType]§!\n- Num. of Members: [?global.RegionalOrganization_Members@var:reg_org^num|0L][TNO_RegionalOrganization_GetGDP]§!"
+TNO_Cold_War_GUI_Orgs_Tab_Org_Icon_tt_delayed: "§L[TNO_RegionalOrganization_GetDesc]§!"
+TNO_Cold_War_GUI_Orgs_Tab_Org_AlignmentLeader_tt: "Leader: [?global.RegionalOrganization_Leader@var:reg_org.GetFlag] §Y[?global.RegionalOrganization_Leader@var:reg_org.GetName]§!\nAlignment: [TNO_RegionalOrganization_GetAlignment]"
+TNO_Cold_War_GUI_Orgs_Tab_Org_Info_tt: "Type: §g[TNO_RegionalOrganization_GetType]§!\nNum. of Members: [?global.RegionalOrganization_Members@var:reg_org^num|0L]"
+
+TNO_Cold_War_GUI_Orgs_Tab_SideButton_tt: "§F§YClick§! to switch to the §WEconomic Spheres§! screen.§!"
 
 ## Nukes Tab
 Cold_War_GUI_NuclearPowers_Title_tt: "NUCLEAR POWERS"
