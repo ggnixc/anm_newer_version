@@ -48,3 +48,27 @@ ANM_fopo_finland_selected = {
 		}
 	}
 }
+ANM_fopo_west_thrace_selected = {
+	OR = {
+		AND = {
+			check_variable = { selected_conflict_id = token:GC_West_Thrace }
+			TNO_BoP_Viewing_GlobalConflicts = yes
+		}
+		AND = {
+			is_in_array = { TNO_active_conflicts = token:GC_West_Thrace }
+			is_ai = yes
+		}
+	}
+}
+ANM_fopo_bahrain_selected = {
+	OR = {
+		AND = {
+			check_variable = { selected_conflict_id = token:GC_Bahrain_Troubles }
+			TNO_BoP_Viewing_GlobalConflicts = yes
+		}
+		AND = {
+			is_in_array = { TNO_active_conflicts = token:GC_Bahrain_Troubles }
+			is_ai = yes
+		}
+	}
+}

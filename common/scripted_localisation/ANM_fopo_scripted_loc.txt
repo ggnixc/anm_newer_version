@@ -61,6 +61,14 @@ defined_text = {
 		localization_key = GER_FinlandCW_desc
 	}
 	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_West_Thrace } tag = GER }
+		localization_key = GER_West_Thrace_desc
+	}
+	text = {
+		trigger = { check_variable = { selected_conflict_id = token:GC_Bahrain_Troubles } tag = GER }
+		localization_key = GER_Bahrain_Troubles_desc
+	}
+	text = {
 		localization_key = ""
 	}
 }
@@ -98,6 +106,14 @@ defined_text = {
 	text = { # Finnisch Civil War, GER
 		trigger = { check_variable = { conflict_id = token:GC_FinlandCW } tag = GER }
 		localization_key = "GFX_fopo_finlandCW_icon_ger"
+	}
+	text = { # West Thrace, GER
+		trigger = { check_variable = { conflict_id = token:GC_West_Thrace } tag = GER }
+		localization_key = "GFX_fopo_west_thrace_icon_ger"
+	}
+	text = { # Bahrain Troubles, GER
+		trigger = { check_variable = { conflict_id = token:GC_Bahrain_Troubles } tag = GER }
+		localization_key = "GFX_fopo_bahrain_troubles_icon_ger"
 	}
 	text = {
 		localization_key = "GFX_fopo_blank_icon"

@@ -182,3 +182,145 @@ global_debug_decisions = {
 		}
     }
 }
+
+forpol_debug_decisions = {
+   
+	forpol_debug_add_iberian_swing = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_add_iberian_swing"
+            ANM_fopo_add_iberian_swing_tab = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	forpol_debug_remove_iberian_swing = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_remove_iberian_swing"
+            ANM_fopo_remove_iberian_swing_tab = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	forpol_debug_add_finlandcw = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_add_finlandcw"
+            ANM_fopo_add_finland_cw_tab = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	forpol_debug_remove_finlandcw = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_remove_finlandcw"
+            ANM_fopo_remove_finland_cw_tab = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	forpol_debug_add_west_thrace = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_add_west_thrace"
+            ANM_fopo_add_west_thrace_tab = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	forpol_debug_remove_west_thrace = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_remove_west_thrace"
+            ANM_fopo_remove_west_thrace_tab = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	forpol_debug_add_bahrain_troubles = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_add_bahrain_troubles"
+            ANM_fopo_add_bahrain_troubles_tab = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	forpol_debug_remove_bahrain_troubles = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_remove_bahrain_troubles"
+            ANM_fopo_remove_bahrain_troubles_tab = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+}
