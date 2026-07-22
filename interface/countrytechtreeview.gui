@@ -62,7 +62,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "subunit_label"
 			position = { x = 0 y = 5 }
-			font = "aldrich_30_outline"
+			font = "hoi_30header"
 			borderSize = { x = 0 y = 0}
 			maxWidth = 200
 			maxHeight = 62
@@ -73,7 +73,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "countrytechtreeview"
-		position = { x = 0 y = 78 }
+		position = { x = -3 y = 78 }
 		size = { width = 100%% height = 100%% }
 		fade_time = 400
 		fade_type = linear
@@ -115,7 +115,7 @@ guiTypes = {
 			name = "naval_folder"
 			position = { x = 0 y = 47 }
 			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 29 right = 29 }
+			margin = { top = 13 left = 13 bottom = 26 right = 27 }
 			drag_scroll = { left middle }
 			verticalScrollbar = "right_vertical_slider_tech_tree"
 			horizontalScrollbar = "bottom_horizontal_slider_tech_tree"
@@ -3937,7 +3937,8 @@ guiTypes = {
 		buttonType = {
 			name = "close_button"
 			position = { x = -49 y = 11 }
-			SpriteType = "GFX_tno_close_button"
+			quadTextureSprite = "GFX_crt_closebutton_large"
+			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
@@ -4135,7 +4136,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tno_button_148x34"
 			text = "RESEARCH"
 			buttonFont = "Bomb_16"
-			position = { x = 390 y = 55 }
+			position = { x = 390 y = 40 }
 			shortcut = "RETURN"
 		}
 
@@ -4167,9 +4168,9 @@ guiTypes = {
 			name = "research_with_xp"
 			quadTextureSprite = "GFX_tno_button_148x34"
 			text = "RESEARCH_WITH_XP"
-			buttonFont = "aldrich_24_outline"
-			position = { x = -3000 y = 80 }
-			shortcut = "RETURN"
+			buttonFont = "Bomb_16"
+			position = { x = 390 y = 72 }
+			shortcut = "shift+RETURN"
 		}
 
 		iconType = {
@@ -6061,7 +6062,7 @@ guiTypes = {
 			position = { x = -34 y = -1 }
 			font = "aldrich_18_outline"
 			text = "name"
-			maxWidth = 310
+			maxWidth = 315
 			maxHeight = 20
 			format = left
 		}

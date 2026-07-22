@@ -142,7 +142,7 @@ guiTypes = {
 			name = "national_focus_title"
 			position = { x = 45 y = 6 }
 			textureFile = ""
-			font = "aldrich_white_28_outline"
+			font = "Bomb_36"
 			borderSize = {x = 0 y = 0}
 			text = "NATIONAL_FOCUS_TITLE"
 			maxWidth = 1500
@@ -178,8 +178,7 @@ guiTypes = {
 				name = "to_find_text"
 				position = { x=41 y=12 }
 				size = { x=150 y=25 }
-				font = "aldrich_16_outline"
-				text_color_code = W
+				font = "Bomb_16"
 				text = ""
 				tooltip = "FOCUS_SEARCH_TOOLTIP"
 			}
@@ -187,7 +186,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "found_text"
 				position = { x = -155 y = 12 }
-				font = "aldrich_20_outlinedark"
+				font = "Bomb_16"
 				borderSize = {x = 0 y = 0}
 				text = ""
 				maxWidth = 150
@@ -198,8 +197,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "type_to_search_text"
 				position = { x = 40 y = 12 }
-				font = "aldrich_16_outline"
-				text_color_code = W
+				font = "Bomb_16"
 				borderSize = {x = 0 y = 0}
 				text = "FOCUS_SEARCH_TYPE_TEXT"
 				maxWidth = 160
@@ -256,15 +254,15 @@ guiTypes = {
 			verticalScrollbar = "right_vertical_slider_natfocus"
 			horizontalScrollbar = "bottom_horizontal_slider_natfocus"
 
-			#background = {
-			#	name = "Background"
-			#	quadTextureSprite ="GFX_tiled_bg"
-			#}
-
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_focus_bg"
 			}
+
+			#background = {
+			#	name = "Background"
+			#	quadTextureSprite ="GFX_tiled_focus_bg"
+			#}
 
 			containerWindowType = {
 				name = "techtree_stripes"
@@ -451,7 +449,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "tooltip_text"
 					position = { x = 13 y = 13 }
-					font = "cg_16b"
+					font = "aldrich_16_outline"
 					text = "Hello world!"
 					maxWidth = 345
 					maxHeight = 20
@@ -536,9 +534,10 @@ guiTypes = {
 			clicksound = click_close
 			pdx_tooltip = "CLOSE"
 		}
+		
 		containerWindowType = {
 			name = "shortcut_grid_container"
-			position = { x=4 y=-56 }
+			position = { x=0 y=-65 }
 			orientation = lower_left
 			
 			gridboxtype = {
@@ -555,12 +554,13 @@ guiTypes = {
 		
 		buttonType = {
 			name = "toggle_shortcuts"
-			position = { x = 17 y = -5600 }
+			position = { x = 11 y = -60 }
 			quadTextureSprite ="GFX_production_line_arrow_left"
 			buttonFont = "Main_14_black"
 			orientation = lower_left
 			pdx_tooltip = "CONSTRUCTION_MINIMIZE"
 		}
+		
 	}
 
 	containerWindowType = {
@@ -569,7 +569,7 @@ guiTypes = {
 		size = { width = 165 height = 128 }
 		clipping = no
 		
-		#background =  {
+		#background = {
 		#	name = "test_bg"
 		#	spriteType ="GFX_tiled_window_thin_border2"
 		#}
@@ -594,12 +594,18 @@ guiTypes = {
 
 		buttonType = {
 			name = "symbol"
-			position = { x = 5 y = -50 }
+			position = { x = 5 y = -44 }
 			quadTextureSprite = "GFX_goal_unknown"
 			centerposition = yes
 			Orientation = CENTER
 		}
 
+		iconType = {
+		    name = "overlay"
+		    position = { x = -9 y = -28 }
+		    alwaystransparent = yes
+		}
+		
 		iconType = {
 			name = "historical"
 			position = { x = 140 y = 71 }
@@ -610,14 +616,15 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 10 y = 61 }
-			font = "aldrich_white_14_outline"
-			text = "focus_name"
+			font = "aldrich_16_outline"
+			text = ""
 			maxWidth = 155
 			maxHeight = 20
 			format = center
 			vertical_alignment = center
 			alwaystransparent = yes
 		}
+
 		iconType = {
 			name = "viewing_flag"
 			quadTextureSprite ="GFX_flag_small2"
@@ -632,7 +639,7 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 	}
-
+	
 	containerWindowType = {
 		name = "progress_focus_item"
 		position = { x= 0 y= 0 }
@@ -745,7 +752,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "national_focus_detail_view"
 		position = { x=500 y=100 }
-		size = { width = 550 height = 800 }
+		size = { width = 550 height = 850 }
 		Orientation = UPPER_LEFT
 		moveable = yes
 		clipping = no
@@ -782,7 +789,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 49 y = 14 }
 			textureFile = ""
-			font = "aldrich_bold_18_outline"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 450
@@ -792,7 +799,7 @@ guiTypes = {
 
 		iconType = {
 			name = "symbol"
-			position = { x = 106 y = 130 }
+			position = { x = 106 y = 125 }
 			spriteType = "GFX_goal_unknown"
 			alwaystransparent = yes
 			centerposition = yes
@@ -809,7 +816,7 @@ guiTypes = {
 			name = "prerequisites"
 			position = { x = 215 y = 98 }
 			textureFile = ""
-			font = "aldrich_bold_14_outline"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 287
@@ -828,34 +835,34 @@ guiTypes = {
 
 			background = {
 				name = "Background"
-				quadTextureSprite ="GFX_tiled_cyan_bg"
+				quadTextureSprite ="GFX_tiled_paper_bg2"
 			}
 		}
 
 		instantTextboxType = {
 			name = "desc"
-			position = { x = 27 y = 230 }
+			position = { x = 37 y = 230 }
 			textureFile = ""
-			font = "aldrich_16_outline"
+			font = "aldrich_22_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Description"
-			maxWidth = 496
+			maxWidth = 476
 			maxHeight = 425
-			format = left
+			format = center
 			scrollbarType = standardtext_slider_focus_desc
 		}
 
 		iconType = {
 			name = "reward_bg"
-			position = { x = 84 y = 653 }
+			position = { x = 84 y = 663 }
 			spriteType = "GFX_unit_list_header"
 		}
 
 		instantTextboxType = {
 			name = "reward_label"
-			position = { x = 34 y = 658 }
+			position = { x = 34 y = 668 }
 			textureFile = ""
-			font = "aldrich_18_outline"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
 			text = "FOCUS_REWARD"
 			maxWidth = 485
@@ -865,13 +872,13 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "reward"
-			position = { x = 27 y = 687 }
+			position = { x = 50 y = 697 }
 			textureFile = ""
-			font = "aldrich_14_outline"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
-			maxWidth = 496
-			maxHeight = 105
+			maxWidth = 455
+			maxHeight = 125
 			scrollbarType = standardtext_slider
 		}
 
@@ -879,7 +886,7 @@ guiTypes = {
 			name = "start"
 			quadTextureSprite = "GFX_tno_button_148x34"
 			buttonText = "START_FOCUS"
-			buttonFont = "aldrich_20_outlinedark"
+			buttonFont = "Bomb_16"
 			position = { x=390 y=46 }
 			clicksound = select_focus
 			shortcut = "RETURN"
@@ -900,7 +907,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "status"
 			position = { x = 208 y = 57 }
-			font = "aldrich_bold_14_outline"
+			font = "Bomb_16"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 170
@@ -974,7 +981,7 @@ guiTypes = {
 			name = "prerequisites"
 			position = { x = 215 y = 100 }
 			textureFile = ""
-			font = "aldrich_16_outline"
+			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 287
