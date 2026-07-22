@@ -207,7 +207,7 @@ ideas = {
 			}
 		}
 		SYR_the_stolen_north = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_second_national_emergency" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_stolen_north" }
 			allowed = {
 				always = no
 			}
@@ -313,9 +313,9 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				stability_factor = -0.10
+				political_power_gain = -0.10
+				administrative_efficiency_gain = -0.50
 			}
 		}
 		SYR_sectarian_fears = {
@@ -331,9 +331,8 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				stability_factor = -0.20
+				political_power_gain = -0.10
 			}
 		}
 		SYR_an_equal_partnership = {
@@ -367,9 +366,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				administrative_efficiency_gain = -0.50
 			}
 		}	
 		SYR_islamic_democracy = {
@@ -386,8 +383,8 @@ ideas = {
 			}
 			modifier = {
 				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				political_power_factor = 0.10
+				Universal_suffrage_monthly_rate = 0.50
 			}
 		}
 		SYR_republican_nobility = {
@@ -403,9 +400,8 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				stability_factor = 0.20
+				political_power_factor = -0.20
 			}
 		}
 		SYR_the_federal_unitary_model = {
@@ -421,9 +417,8 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				stability_factor = 0.20
+				ideology_defense_factor = 0.90
 			}
 		}
 		SYR_memories_of_the_republic = {
@@ -439,9 +434,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				war_support_factor = 0.10
 			}
 		}
 		SYR_the_italian_connection = {
@@ -457,45 +450,9 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
-			}
-		}
-		SYR_the_national_guard = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_national_guard" }
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
+				production_speed_buildings_factor = 0.01
+				local_resources_factor = 0.70
 
-			picture = SYR_the_national_guard
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
-			}
-		}
-		SYR_the_triumph_of_the_guardsmen = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_the_triumph_of_the_guardsmen" }
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-
-			picture = SYR_the_triumph_of_the_guardsmen
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
 			}
 		}
 		SYR_a_nation_of_multitudes = {
@@ -529,9 +486,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				political_power_gain = 0.30
 			}
 		}
 		SYR_the_palestinian_tumour = {
@@ -547,45 +502,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
-			}
-		}
-		SYR_god_and_the_army = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_god_and_the_army" }
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-
-			picture = SYR_god_and_the_army
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
-			}
-		}
-		SYR_the_stolen_north = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SYR_god_and_the_army" }
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-
-			picture = SYR_god_and_the_army
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			modifier = {
-				stability_factor = 0.10
-				political_power_gain = -0.50
-				production_speed_industrial_factor = -0.20
+				stability_factor = -0.10
 			}
 		}			
 	}
