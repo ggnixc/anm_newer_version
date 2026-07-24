@@ -4,21 +4,6 @@ recruit_character = MZB_Adelino_Gwambe
 
 set_oob = ""
 
-EAF = {
-    if = {
-        limit = { 
-            OR = { 
-                has_dlc = "Together for Victory" 
-                has_dlc = "Man the Guns" 
-            }
-        }
-        set_autonomy = { target = MZB autonomy_state = autonomy_italy_reliant }
-        else = {
-            puppet = MZB
-        }
-    }
-}
-
 add_ideas = {
 	Sphere_Observer
 	#POLITICS

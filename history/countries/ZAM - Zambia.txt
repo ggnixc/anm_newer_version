@@ -2,21 +2,6 @@
 
 recruit_character = ZAM_Mainza_Chona
 
-EAF = {
-    if = {
-        limit = { 
-            OR = { 
-                has_dlc = "Together for Victory" 
-                has_dlc = "Man the Guns" 
-            }
-        }
-        set_autonomy = { target = ZAM autonomy_state = autonomy_italy_reliant }
-        else = {
-            puppet = ZAM
-        }
-    }
-}
-
 
 set_oob = "BFR_1962"
 
