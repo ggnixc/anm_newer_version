@@ -220,5 +220,23 @@ scripted_gui = {
 		}
 	}
 
+	#################################################
+	#                Gulf Crisis	                #
+	#################################################
+	ANM_Gulf_Crisis_GUI = {
+		window_name = "ANM_Gulf_Crisis_GUI"
+		context_type = player_context
+		parent_window_name = powerbalanceview
+
+		visible = {
+			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
+			check_variable = { selected_conflict_id = token:GC_Bahrain_Troubles }
+		}
+
+		properties = {
+			
+		}
+	}
+
 
 }

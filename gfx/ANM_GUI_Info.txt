@@ -28,18 +28,21 @@
  # green yellow:            d3dd7f
  # brownred:                7b4241
 
+## ANM Logo stuff, don't use these colours unless absolutely necessary ##
+ # Broken white:            F8F7F3
+ # Broken black:            292827
+ # Millennium Blue:         65658F
 
 ## When making pixelated icons ##
  # Single colour elements with black single pixel lines around it even 'jagged' lines, don't overdo the black.
- # Light (full white) from north and west, dark (full black) from south and east.
- # 25% opacity (or 55/255) full black/white block over original colour to get shade/brighter tone from colour below it!.
+ # Light (full white) from north and west, dark (shaded 25% opacity) from south and east, white (25% opacity) next to pure white.
+ # Use 25% opacity (or 55/255) full black/white block over original colour to get shade/brighter tone from colour below it!.
 
 ## GUI General Guidelines ## 
  # Double pixels (in pairs of 2) unless area is small (like the flag frame at startup or the details in the country selection screen)
  # Standard panel: Top bar (blue banner 34px, with 4px gap) height
  # Standard panel: bottom bar 30 (42)px (55px with bottons) height
  # Standard panel: AT LEAST 4px frame between outside and inside depth elements, halved when single size px is used
- # Try to keep 1px transparant around all UI elements edging the side of the screen, if possible, for clearity
  # Bright objects should have the 2% opacity (5/255) ANM LCD filter layer over it to simulate being a 'display within a display'
 
 ## Windows 9X Designbook relevant chapters ##
@@ -47,7 +50,7 @@
  # p. 142 Loading bar (Square size: 11:20 ration, 11px width, 20px height)
  # p. 156 Tab layout full (distance from topbar 12x13, visa-versa bottom unless buttons)
 
-
+ 
 ### A New Millennium - Event Coding ### 
  #5 spaces, 45 spaces
  #     TEXT
