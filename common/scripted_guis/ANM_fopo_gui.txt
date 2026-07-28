@@ -7,6 +7,7 @@
 #
 #	Conflict-Specific GUIs
 #		Iberian Swing
+# 		Gulf Crisis
 
 
 
@@ -142,7 +143,8 @@ scripted_gui = {
 		visible = { # all conflicts must be manually excluded
 			check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_GlobalConflicts }
 			NOT = {
-				check_variable = { selected_conflict_id = token:GC_Iberian_Swing }
+				check_variable = { selected_conflict_id = token:GC_Iberian_Swing } 
+				check_variable = { selected_conflict_id = token:GC_Bahrain_Troubles }
 				check_variable = { TNO_active_conflicts^num = 0 }
 			}
 		}
@@ -233,8 +235,33 @@ scripted_gui = {
 			check_variable = { selected_conflict_id = token:GC_Bahrain_Troubles }
 		}
 
+		triggers = { 
+			Gulf_Crisis_Progressbar_Intelligence_GER_visible = { tag = GER }
+			Gulf_Crisis_Bahrain_GER_visible = { tag = GER }
+			Gulf_Crisis_Progressbar_Intelligence_ITA_visible = { tag = ITA }
+			Gulf_Crisis_Bahrain_ITA_visible = { tag = ITA }
+		}
+
+		dynamic_lists = {
+			Gulf_Crisis_Allies_A_Gridbox = { 
+				array = gulf_crisis_allies_A
+				change_scope = yes 
+				entry_container = "A_gulf_crisis_allies_list_entry"
+			}
+		}
+		
 		properties = {
-			
+			A_member_country_flag = { image = [This.GetFlag] }
+
+			Gulf_Crisis_Progressbar_Intelligence_GER = { frame = 2 } 
+			Gulf_Crisis_Progressbar_NavalStrength_GER = { frame = 20 }
+			Gulf_Crisis_Progressbar_AirSupiority_GER = { frame = 40 }
+
+			Gulf_Crisis_Progressbar_Intelligence_ITA = { frame = 4 }
+			Gulf_Crisis_Progressbar_NavalStrength_ITA = { frame = 50 }
+			Gulf_Crisis_Progressbar_AirSupiority_ITA = { frame = 70 }
+
+			Gulf_Crisis_Progressbar_BoP = { frame = 20 } 
 		}
 	}
 

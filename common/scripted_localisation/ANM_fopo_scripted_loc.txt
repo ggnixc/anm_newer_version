@@ -3,7 +3,13 @@ defined_text = {
 	name = Get_fopo_tab_name
 
 	### DYNAMIC TITLES ###
-	# Vacant #
+	text = { # Gulf Crisis, just Crisis
+		trigger = {
+			check_variable = { conflict_id = token:GC_Bahrain_Troubles }
+			has_global_flag = Gulf_Crisis_Escalated
+		}
+		localization_key = GC_Bahrain_Troubles_Escalated
+	} 
 
 	### NORMAL TITLES ###
 	text = {
@@ -63,10 +69,6 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { selected_conflict_id = token:GC_West_Thrace } tag = GER }
 		localization_key = GER_West_Thrace_desc
-	}
-	text = {
-		trigger = { check_variable = { selected_conflict_id = token:GC_Bahrain_Troubles } tag = GER }
-		localization_key = GER_Bahrain_Troubles_desc
 	}
 	text = {
 		localization_key = ""

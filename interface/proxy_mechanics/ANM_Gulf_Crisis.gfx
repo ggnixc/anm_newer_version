@@ -1,9 +1,28 @@
 spriteTypes = {
 
 	spriteType = {
-		name = "GFX_Gulf_Crisis_Bahrain"
-		texturefile = "gfx/interface/proxy_wars/gulf_crisis/Bahrain.dds"
+		name = "GFX_Gulf_Crisis_Background"
+		texturefile = "gfx/interface/proxy_wars/gulf_crisis/Background.dds"
 	}
+
+	spriteType = {
+		name = "GFX_Gulf_Crisis_Bahrain_bg"
+		texturefile = "gfx/interface/proxy_wars/gulf_crisis/Bahrain_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_Gulf_Crisis_Bahrain_GER"
+		texturefile = "gfx/interface/proxy_wars/gulf_crisis/Bahrain_GER.dds"
+	}
+	spriteType = {
+		name = "GFX_Gulf_Crisis_Bahrain_ITA"
+		texturefile = "gfx/interface/proxy_wars/gulf_crisis/Bahrain_ITA.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Gulf_Crisis_CountryBlock_bg"
+		texturefile = "gfx/interface/proxy_wars/gulf_crisis/CountryBlock_bg.dds"
+	}
+
 
 	progressbartype = {
 		name = "GFX_Progressbar_Intelligence"
@@ -11,10 +30,43 @@ spriteTypes = {
 		colortwo = { 0.0 0.0 0.0 }
 		textureFile1 = "gfx/interface/proxy_wars/gulf_crisis/Progressbar_Intelligence_Full.dds"
 		textureFile2 = "gfx/interface/proxy_wars/gulf_crisis/Progressbar_Intelligence_Empty.dds"
-		size = { x = 116 y = 26 }
+		size = { x = 252 y = 36 }
 		effectFile = "gfx/FX/progress.lua"
 		horizontal = yes
 		steps = 6
+	} 
+	progressbartype = {
+		name = "GFX_Gulf_Crisis_Progressbar_NavalStrength"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/proxy_wars/gulf_crisis/Progressbar_NavalStrength_Full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/gulf_crisis/Progressbar_NavalStrength_Empty.dds"
+		size = { x = 26 y = 160 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+		steps = 100
+	} 
+	progressbartype = {
+		name = "GFX_Gulf_Crisis_Progressbar_AirSupiority"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/proxy_wars/gulf_crisis/Progressbar_AirSupiority_Full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/gulf_crisis/Progressbar_AirSupiority_Empty.dds"
+		size = { x = 26 y = 160 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = no
+		steps = 100
+	} 
+	progressbartype = {
+		name = "GFX_Gulf_Crisis_Progressbar_BoP"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/proxy_wars/gulf_crisis/Progressbar_BoP_Full.dds"
+		textureFile2 = "gfx/interface/proxy_wars/gulf_crisis/Progressbar_BoP_Empty.dds"
+		size = { x = 286 y = 52 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+		steps = 100
 	} 
 	
 }

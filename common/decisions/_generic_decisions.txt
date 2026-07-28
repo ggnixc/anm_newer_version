@@ -304,6 +304,26 @@ forpol_debug_decisions = {
 			factor = 0
 		}
 	}
+	forpol_debug_add_countries_team_A = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision forpol_debug_add_countries_team_A"
+			add_to_array = { gulf_crisis_allies_A = GER } 
+			add_to_array = { gulf_crisis_allies_A = FRA }
+			add_to_array = { gulf_crisis_allies_A = ENG } 	
+
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	forpol_debug_remove_bahrain_troubles = {
 		icon = GFX_decision_generic_visibility
 
