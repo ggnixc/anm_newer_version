@@ -1,39 +1,46 @@
-ideas = {
+ideas = {  
+
 	country = {
-		GNG_Our_Identity = {
 
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_GNG_Our_Identity
+		GNG_the_race_of_the_two_suns = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GNG_the_race_of_the_two_suns" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = GNG_the_race_of_the_two_suns
 			removal_cost = -1
 
 			modifier = {
-				political_power_cost = 0.20
-				stability_factor = -0.05
+    			production_factory_max_efficiency_factor = 0.15
+    			stability_factor = -0.05
+				production_speed_buildings_factor = 0.05 
 			}
 		}
-		GNG_Sony_Empire  = {
+		GNG_oh_how_life_differs = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GNG_oh_how_life_differs" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
 
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_GNG_Sony_Empire
+			picture = GNG_oh_how_life_differs
 			removal_cost = -1
 
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.2
-				consumer_goods_factor = -0.10
+    			stability_factor = -0.10
+    			war_support_factor = -0.10
+				conscription_factor = 0.03 
 			}
 		}
-		GNG_Across_The_Pearl_River  = {
+		GNG_a_fracturing_condominium = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GNG_a_fracturing_condominium" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
 
-			allowed = { always = yes }
-			allowed_civil_war = { always = yes }
-			picture = GFX_idea_GNG_Across_The_Pearl_River
+			picture = GNG_a_fracturing_condominium
 			removal_cost = -1
 
 			modifier = {
-				experience_gain_army_factor = -1
-				custom_modifier_tooltip = GNG_gone_over_tt
+    			stability_factor = -0.10
+				political_power_factor = 0.10 
 			}
 		}
 	}	
