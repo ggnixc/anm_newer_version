@@ -30,10 +30,9 @@ country_event = {
 					AST_Ray_Braithwaite_eco
 				}
 				set_popularities = {
-					socialist = 3
+					socialist = 7
 					progressivism = 15
 					liberalism = 11
-					liberal_conservatism = 4
 					conservatism = 12
 					paternalism = 41
 					despotism = 14
@@ -47,7 +46,7 @@ country_event = {
 		}
 	}
 }
-country_event = { #1998 federal election
+country_event = { #1997 Coalition Leadership Contest
 	id = AST_scripted.2 
 	title = AST_scripted.2.t
 	desc = AST_scripted.2.d
@@ -63,11 +62,7 @@ country_event = { #1998 federal election
 		}
 		add_popularity = {
 			ideology = liberalism
-			popularity = 0.01
-		}
-		add_popularity = {
-			ideology = liberal_conservatism
-			popularity = 0.01
+			popularity = 0.02
 		}
 		add_popularity = {
 			ideology = conservatism
@@ -95,16 +90,12 @@ country_event = { #1998 federal election
 			factor = 20
 		}
 		set_politics = {
-			ruling_party = liberal_conservatism
+			ruling_party = liberalism
 			last_election = "1998.5.6"
 			elections_allowed = yes
 		}
 		add_popularity = {
 			ideology = liberalism
-			popularity = 0.02
-		}
-		add_popularity = {
-			ideology = liberal_conservatism
 			popularity = 0.04
 		}
 		add_popularity = {
@@ -130,15 +121,11 @@ country_event = { #1998 federal election
 		}
 		add_popularity = {
 			ideology = liberalism
-			popularity = 0.02
-		}
-		add_popularity = {
-			ideology = liberal_conservatism
-			popularity = 0.01
+			popularity = 0.025
 		}
 		add_popularity = {
 			ideology = conservatism
-			popularity = 0.02
+			popularity = 0.025
 		}
 		add_popularity = {
 			ideology = paternalism
@@ -190,13 +177,18 @@ country_event = { #Canberra Riots
 			last_election = "1998.5.6"
 			elections_allowed = no
 		}
-		add_popularity = {
-			ideology = despotism
-			popularity = 0.50
-		}
-		add_popularity = {
-			ideology = paternalism
-			popularity = 0.20
+		set_popularities = {
+			communist = 0
+			socialist = 0
+			progressivism = 0
+			liberalism = 0
+			liberal_conservatism = 0
+			conservatism = 20
+			paternalism = 18
+			despotism = 62
+			fascism = 0
+			national_socialism = 0
+			ultranationalism = 0
 		}
 		news_event = { id = WORLD.18197 }
 	}	
@@ -213,13 +205,12 @@ country_event = { #Canberra Riots
 		}
 		promote_character = AST_Parliament_of_Australia
 		set_popularities = {
-			communist = 25
-			socialist = 20
-			progressivism_1 = 20
-			progressivism = 35
-			liberalism = 0
+			communist = 15
+			socialist = 25
+			progressivism = 42
+			liberalism = 15
 			liberal_conservatism = 0
-			conservatism = 0
+			conservatism = 3
 			paternalism = 0
 			despotism = 0
 			fascism = 0
