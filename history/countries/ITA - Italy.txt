@@ -26,23 +26,17 @@ if = {
 		}
 	}
 	set_autonomy = { target = ALB autonomy_state = autonomy_italy_reliant }
+	set_autonomy = { target = MNT autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = SNM autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = CRO autonomy_state = autonomy_italy_associate }
 	set_autonomy = { target = GRE autonomy_state = autonomy_italy_associate }
-	set_autonomy = { target = ETH autonomy_state = autonomy_italy_reliant }
-	set_autonomy = { target = SML autonomy_state = autonomy_italy_reliant }
-	set_autonomy = { target = KEN autonomy_state = autonomy_italy_reliant }
-	set_autonomy = { target = ERT autonomy_state = autonomy_italy_reliant }
 	set_autonomy = { target = TUN autonomy_state = autonomy_italy_reliant }
 	else = {
 		puppet = ALB
+		puppet = MNT
 		puppet = CRO
 		puppet = SNM
 		puppet = GRE
-		puppet = ETH
-		puppet = SML
-		puppet = KEN
-		puppet = ERT
 		puppet = TUN
 	}
 }
