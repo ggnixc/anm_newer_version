@@ -77,15 +77,15 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.270 }
 					set_temp_variable = { blue = 0.298 }
 				}
-				# else_if = {
-				# 	limit = { # Union of Soviet Socialist Republics
-				# 		ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_USSR } }
-				# 		FROM = { has_idea = RegionalOrganization_USSR }
-				# 	}
-				# 	set_temp_variable = { red = 0.568 }
-				# 	set_temp_variable = { green = 0.168 }
-				# 	set_temp_variable = { blue = 0.250 }
-				# }
+				else_if = {
+				 	limit = { # Union of Soviet Socialist Republics
+				 		ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_USSR } }
+				 		FROM = { has_idea = RegionalOrganization_USSR }
+				 	}
+				 	set_temp_variable = { red = 0.568 }
+				 	set_temp_variable = { green = 0.168 }
+				 	set_temp_variable = { blue = 0.250 }
+				}
 				else_if = {
 					limit = { # Helsinki Treaty
 						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_HelsinkiTreaty } }
