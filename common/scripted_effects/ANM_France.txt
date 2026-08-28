@@ -1,0 +1,132 @@
+
+FRA_Startup = {
+    set_variable = { FRA_Econ_Var = 3 }
+    set_variable = { FRA_Gov_Stab = 4 }
+    set_variable = { FRA_UN_Pop = 5 }
+    set_variable = { FRA_RGR_Pop = 4 }
+    set_variable = { FRA_Other_Pop = 1 }
+    FRA_Econ_Check = yes
+    set_country_flag = Seguin_PM
+}
+
+
+FRA_Econ_Check = {
+    hidden_effect = {
+        remove_ideas = {
+            FRA_l_Economie_Francaise_1
+            FRA_l_Economie_Francaise_2
+            FRA_l_Economie_Francaise_3
+            FRA_l_Economie_Francaise_4
+            FRA_l_Economie_Francaise_5
+        }
+        clamp_variable = {
+            var = FRA_Econ_Var
+            min = 1
+            max = 5
+        }
+        if = {
+            limit = { check_variable = { FRA_Econ_Var = 1 } }
+            add_ideas = {
+                FRA_l_Economie_Francaise_1
+            }
+        }
+        else_if = {
+            limit = { check_variable = { FRA_Econ_Var = 2 } }
+            add_ideas = {
+                FRA_l_Economie_Francaise_2
+            }
+        }
+        else_if = {
+            limit = { check_variable = { FRA_Econ_Var = 3 } }
+            add_ideas = {
+                FRA_l_Economie_Francaise_3
+            }
+        }
+        else_if = {
+            limit = { check_variable = { FRA_Econ_Var = 4 } }
+            add_ideas = {
+                FRA_l_Economie_Francaise_4
+            }
+        }
+        else_if = {
+            limit = { check_variable = { FRA_Econ_Var = 5 } }
+            add_ideas = {
+                FRA_l_Economie_Francaise_5
+            }
+        }
+    }
+}
+
+FRA_Econ_Worsen = {
+    subtract_from_variable = { FRA_Econ_Var = 1 }
+    clamp_variable = {
+        var = FRA_Econ_Var
+        min = 1
+        max = 5
+    }
+    FRA_Econ_Check = yes
+    custom_effect_tooltip = "FRA_Econ_Worsen_TT"
+}
+
+FRA_Econ_Improve = {
+    add_to_variable = { FRA_Econ_Var = 1 }
+    clamp_variable = {
+        var = FRA_Econ_Var
+        min = 1
+        max = 5
+    }
+    FRA_Econ_Check = yes
+    custom_effect_tooltip = "FRA_Econ_Improve_TT"
+}
+
+FRA_Boost_UN_Pop = {
+    custom_effect_tooltip = "FRA_UN_Pop_Improve_TT"
+    add_to_variable = { FRA_UN_Pop = 1 }
+    random_list = {
+        50 = {
+            subtract_from_variable = { FRA_RGR_Pop = 1 }
+        }
+        50 = {
+            subtract_from_variable = { FRA_Other_Pop = 1 }
+        }
+    }
+}
+
+FRA_Worsen_UN_Pop = {
+    custom_effect_tooltip = "FRA_UN_Pop_Worsen_TT"
+    subtract_from_variable = { FRA_UN_Pop = 1 }
+    random_list = {
+        50 = {
+            add_to_variable = { FRA_Other_Pop = 1 }
+        }
+        50 = {
+            add_to_variable = { FRA_RGR_Pop = 1 }
+        }
+    }
+}
+
+FRA_Boost_RGR_Pop = {
+    custom_effect_tooltip = "FRA_RGR_Pop_Improve_TT"
+    add_to_variable = { FRA_RGR_Pop = 1 }
+    random_list = {
+        50 = {
+            subtract_from_variable = { FRA_UN_Pop = 1 }
+        }
+        50 = {
+            subtract_from_variable = { FRA_Other_Pop = 1 }
+        }
+    }
+}
+
+FRA_Worsen_RGR_Pop = {
+    custom_effect_tooltip = "FRA_RGR_Pop_Worsen_TT"
+    subtract_from_variable = { FRA_RGR_Pop = 1 }
+    random_list = {
+        50 = {
+            add_to_variable = { FRA_UN_Pop = 1 }
+        }
+        50 = {
+            add_to_variable = { FRA_Other_Pop = 1 }
+        }
+    }
+}

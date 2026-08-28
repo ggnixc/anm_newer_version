@@ -2,49 +2,247 @@ ideas = {
 
     country = {
         
-		FRA_liberation_in_name = {  
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_liberation_in_name" }
+		FRA_l_Economie_Francaise_1 = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_l_Economie_Francaise_1" }
+			on_remove = { log = "[GetDateText]: [Root.GetName]: remove idea FRA_l_Economie_Francaise_1" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 
-			picture = FRA_liberation_in_name
+			picture = X
 			removal_cost = -1
 
 			modifier = {
-				political_power_factor = -0.05
-				stability_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.1
 			}
 		}
-        FRA_the_sol = {  
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_the_sol" }
+		FRA_l_Economie_Francaise_2 = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_l_Economie_Francaise_2" }
+			on_remove = { log = "[GetDateText]: [Root.GetName]: remove idea FRA_l_Economie_Francaise_2" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 
-			picture = FRA_the_sol
+			picture = X
 			removal_cost = -1
 
 			modifier = {
-				offence = 0.05
-				defence = 0.05
-				encryption = 10
-				party_popularity_stability_factor = -0.30
-				drift_defence_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.05
 			}
 		}
-        FRA_legacy_of_marechal = {  
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_legacy_of_marechal" }
+		FRA_l_Economie_Francaise_3 = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_l_Economie_Francaise_3" }
+			on_remove = { log = "[GetDateText]: [Root.GetName]: remove idea FRA_l_Economie_Francaise_3" }
 			allowed = { always = no }
 			allowed_civil_war = { always = no }
 
-			picture = FRA_legacy_of_marechal
+			picture = X
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = 0.10
-				war_support_factor = -0.05
-				recruitable_population_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.02
+			}
+		}
+		FRA_l_Economie_Francaise_4 = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_l_Economie_Francaise_4" }
+			on_remove = { log = "[GetDateText]: [Root.GetName]: remove idea FRA_l_Economie_Francaise_4" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		FRA_l_Economie_Francaise_5 = {  
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_l_Economie_Francaise_5" }
+			on_remove = { log = "[GetDateText]: [Root.GetName]: remove idea FRA_l_Economie_Francaise_5" }
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 
+		FRA_Republic_At_Gunpoint = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Republic_At_Gunpoint" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		FRA_Remnants_of_Empire = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Remnants_of_Empire" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.1
+			}
+		}
+		FRA_Mantle_of_Sovereignty = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Mantle_of_Sovereignty" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		FRA_Rule_of_Technocrats_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Rule_of_Technocrats_1" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		FRA_Rule_of_Technocrats_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Rule_of_Technocrats_2" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.2
+			}
+		}
+		FRA_Rule_of_Technocrats_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Rule_of_Technocrats_3" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.3
+			}
+		}
+		FRA_Le_Seule_France = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Le_Seule_France" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = 0.05
+			}
+		}
+		FRA_Pou_Dieu_Et_la_Patrie_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Pou_Dieu_Et_la_Patrie_1" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = 0.05
+			}
+		}
+		FRA_Pou_Dieu_Et_la_Patrie_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Pou_Dieu_Et_la_Patrie_2" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = 0.05
+			}
+		}
+		FRA_Round_And_Round_Goes = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Round_And_Round_Goes" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = -0.05
+			}
+		}
+		FRA_Return_To_Reason = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Return_To_Reason" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = -0.05
+			}
+		}
+		FRA_Memories_Of_1936_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Memories_Of_1936_1" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = 0.05
+			}
+		}
+		FRA_Memories_Of_1936_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_Memories_Of_1936_2" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = -0.05
+			}
+		}
+		Pain_Paix_Liberte = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Pain_Paix_Liberte" }			
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+
+			picture = X
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = 0.05
+			}
+		}
 	}
 }

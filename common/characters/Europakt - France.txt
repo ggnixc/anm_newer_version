@@ -45,7 +45,7 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_ALAIN_ETCHEGOYEN_DESC"
-			ideology = paternalism_technocratic_corporatism_subtype
+			ideology = paternalism_2_subtype
 			traits = {  }
 			expire = "2999.1.1.1"
 		}
@@ -53,6 +53,15 @@ characters = {
 			slot = economy_minister
 			idea_token = FRA_Alain_Etchegoyen_eco
 			traits = { economy_minister }
+			ledger = civilian
+			cost = -1
+			can_be_fired = no
+			ai_will_do = { factor = 0 }
+		}
+		advisor = {
+			slot = head_of_government
+			idea_token = FRA_Alain_Etchegoyen_hog
+			traits = { head_of_government }
 			ledger = civilian
 			cost = -1
 			can_be_fired = no
@@ -93,7 +102,7 @@ characters = {
 		}
 		country_leader = {
 			desc = ""
-			ideology = paternalism_technocratic_corporatism_subtype
+			ideology = paternalism_paternalistic_developmentalism_subtype
 			traits = {  }
 			expire = "2999.1.1.1"
 		}
@@ -114,42 +123,33 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_MICHEL_ROCARD_DESC"
-			ideology = progressivism_neocorporatism_subtype
+			ideology = progressivism_reformist_socialism_subtype
 			traits = {  }
 			expire = "2999.1.1.1"
 		}
 	}
-	FRA_michel_barnier = { 
-		name = FRA_michel_barnier
+	FRA_jean_chevenement = {
+		name = FRA_jean_chevenement
 		portraits = { 
-			civilian = { 
-				large = "gfx/leaders/FRA/FRA_Michel_Barnier.dds"
-				small = "GFX_idea_FRA_Michel_Barnier" 
-			} 	
+			civilian = { large = "gfx/leaders/FRA/Portrait_FRA_Jean_Chevenement.dds" } 
 		}
 		country_leader = {
-			desc = ""
-			ideology = paternalism_national_conservatism_subtype
+			desc = "X"
+			ideology = progressivism_left_wing_populism_subtype
 			traits = {  }
 			expire = "2999.1.1.1"
 		}
-		advisor = {
-			slot = foreign_minister
-			idea_token = FRA_Michel_Barnier_for
-			traits = { foreign_minister }
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
+	}
+	FRA_edouard_balladur = {
+		name = FRA_edouard_balladur
+		portraits = { 
+			civilian = { large = "gfx/leaders/FRA/Portrait_FRA_Edouard_Balladur.dds" } 
 		}
-		advisor = {
-			slot = head_of_government
-			idea_token = FRA_Michel_Barnier_hog
-			traits = { head_of_government }
-			ledger = civilian
-			cost = -1
-			can_be_fired = no
-			ai_will_do = { factor = 0 }
+		country_leader = {
+			desc = "X"
+			ideology = paternalism_paternalistic_developmentalism_subtype
+			traits = {  }
+			expire = "2999.1.1.1"
 		}
 	}
 } 

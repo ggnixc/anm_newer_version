@@ -1,434 +1,1013 @@
-add_namespace = FRA_debug
-
-country_event = {
-	id = FRA_debug.1 
-	title = FRA_debug.1.t
-	desc = FRA_debug.1.desc
-	picture = X #pick out something funny for this
-
-	is_triggered_only = yes
-	fire_only_once = no 
-
-	option = {   #RGR Victory
-		name = FRA_debug.1.a
-
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
-		}	
-		set_popularities = {
-			paternalism_1 = 17
-			paternalism = 26
-			progressivism_1 = 7
-			progressivism = 18
-			progressivism_2 = 11
-			ultranationalism = 3
-			despotism = 6
-			despotism_2 = 12
-		}
-		set_party_name = {
-			ideology = paternalism_1
-			name = FRA_un_sovereignists_party
-			long_name = FRA_un_sovereignists_party_long
-		}
-		set_party_name = {
-			ideology = paternalism
-			name = FRA_cohabitation_government
-			long_name = FRA_cohabitation_government_long
-		}
-		set_party_name = {
-			ideology = despotism_2
-			name = FRA_un_technocrats_party
-			long_name = FRA_un_technocrats_party_long
-		}		
-		set_party_name = {
-			ideology = despotism_2
-			name = FRA_un_technocrats_party
-			long_name = FRA_un_technocrats_party_long			
-		}
-
-		FRA_jean_louis_debre = {
-			remove_country_leader_role = {
-                	ideology = paternalism_technocratic_corporatism_subtype
-					ideology = paternalism_national_conservatism_subtype
-					ideology = paternalism_right_wing_populism_subtype
-                }
-			add_country_leader_role = {
-                character = FRA_jean_louis_debre
-                promote_leader = yes
-                country_leader = {
-                    ideology = paternalism_left_wing_corporatism_subtype 
-                    expire = "2999.1.1.1"
-         		}
-			}
-		}
-	}
-	option = {	#UN Victory
-		name = FRA_debug.1.b
-
-		country_event = {
-			id = FRA_debug.2
-			days = 1
-			mean_time_to_happen = 5
-		}
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
-		}	
-		set_popularities = {
-			paternalism = 30
-			paternalism_2 = 28
-			progressivism_1 = 9
-			progressivism = 16
-			progressivism_2 = 11
-			ultranationalism = 2
-			despotism = 4
-		}
-		set_party_name = {
-			ideology = paternalism
-			name = FRA_un_sovereignists_party
-			long_name = FRA_un_sovereignists_party_long
-		}
-		set_party_name = {
-			ideology = paternalism_2
-			name = FRA_un_technocrats_party
-			long_name = FRA_un_technocrats_party_long
-		}
-		FRA_jean_louis_debre = {
-			remove_country_leader_role = {
-                	ideology = paternalism_left_wing_corporatism_subtype
-					ideology = paternalism_technocratic_corporatism_subtype
-					ideology = paternalism_right_wing_populism_subtype
-                }
-			add_country_leader_role = {
-                character = FRA_jean_louis_debre
-                promote_leader = yes
-                country_leader = {
-                    ideology = paternalism_national_conservatism_subtype
-                    expire = "2999.1.1.1"
-            	}
-			}
-		}
-		
-	}
-	option = {	#Hung Parliament
-		name = FRA_debug.1.c
-
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
-		}	
-		set_popularities = {
-			paternalism_1 = 16
-			paternalism = 22
-			liberal_conservatism = 5
-			conservatism = 4
-			progressivism_1 = 7
-			progressivism = 17
-			progressivism_2 = 11
-			ultranationalism = 5
-			despotism = 13
-		}
-		set_party_name = {
-			ideology = paternalism_2
-			name = FRA_un_sovereignists_party
-			long_name = FRA_un_sovereignists_party_long
-		}
-		set_party_name = {
-			ideology = paternalism_2
-			name = FRA_un_technocrats_party
-			long_name = FRA_un_technocrats_party_long
-		}
-		FRA_jean_louis_debre = {
-			remove_country_leader_role = {
-                	ideology = paternalism_left_wing_corporatism_subtype
-					ideology = paternalism_technocratic_corporatism_subtype
-					ideology = paternalism_national_conservatism_subtype
-                }
-			add_country_leader_role = {
-                character = FRA_jean_louis_debre
-                promote_leader = yes
-                country_leader = {
-                    ideology = paternalism_right_wing_populism_subtype
-                    expire = "2999.1.1.1"
-            	}
-			}
-		}
-	}	
-	
-}
-
-country_event = {
-	id = FRA_debug.2
-	title = FRA_debug.2.t
-	desc = FRA_debug.2.desc
-	picture = X #pick out something funny for this
-
-	is_triggered_only = yes
-	fire_only_once = no
-
-	option = {	#UN Sovereignist Cabinet
-		name = FRA_debug.2.a
-
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
-		}	
-		set_popularities = {
-			paternalism = 31
-			paternalism_2 = 22
-			progressivism_1 = 9
-			progressivism = 18
-			progressivism_2 = 12
-			ultranationalism = 3
-			despotism = 5
-		}
-		set_party_name = {
-			ideology = paternalism
-			name = FRA_un_sovereignists_party
-			long_name = FRA_un_sovereignists_party_long
-		}
-		set_party_name = {
-			ideology = paternalism_2
-			name = FRA_un_technocrats_party
-			long_name = FRA_un_technocrats_party_long
-		}
-		FRA_jean_louis_debre = {
-			remove_country_leader_role = {
-                	ideology = paternalism_left_wing_corporatism_subtype
-					ideology = paternalism_technocratic_corporatism_subtype
-					ideology = paternalism_right_wing_populism_subtype
-                }
-			add_country_leader_role = {
-                character = FRA_jean_louis_debre
-                promote_leader = yes
-                country_leader = {
-                    ideology = paternalism_national_conservatism_subtype
-                    expire = "2999.1.1.1"
-            	}
-			}
-		}
-	}
-
-	option = {	#UN Technocratic Cabinet
-		name = FRA_debug.2.b
-
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
-		}	
-		set_popularities = {
-			paternalism = 33
-			paternalism_1 = 25
-			progressivism_1 = 9
-			progressivism = 16
-			progressivism_2 = 11
-			ultranationalism = 2
-			despotism = 4
-		}		
-		set_party_name = {
-			ideology = paternalism
-			name = FRA_un_technocrats_party
-			long_name = FRA_un_technocrats_party_long
-		}
-		set_party_name = {
-			ideology = paternalism_1
-			name = FRA_un_sovereignists_party
-			long_name = FRA_un_sovereignists_party_long
-		}
-		FRA_jean_louis_debre = {
-			remove_country_leader_role = {
-                	ideology = paternalism_left_wing_corporatism_subtype
-					ideology = paternalism_national_conservatism_subtype
-					ideology = paternalism_right_wing_populism_subtype
-                }
-			add_country_leader_role = {
-                character = FRA_jean_louis_debre
-                promote_leader = yes
-                country_leader = {
-                    ideology = paternalism_technocratic_corporatism_subtype
-                    expire = "2999.1.1.1"
-         		}
-			}
-		}
-	}
-}
-
 add_namespace = FRA_politics
+add_namespace = FRA_news
 
 country_event = { #Financial Crisis
 	id = FRA_politics.1
 	title = FRA_politics.1.t
 	desc = FRA_politics.1.desc
-	picture = X #pick out something funny for this
+	picture = X
 
 	is_triggered_only = yes
-	fire_only_once = no 
+	fire_only_once = yes
 
-	option = { #My God... (in French)
+	option = { #Seguin Resigns
 		name = FRA_politics.1.a
-		country_event = { id = FRA_politics.2 days = 9 }
-		#later effects
+		ai_chance = { base = 10 }
+		remove_ideas = { FRA_Philippe_Segiun_hog }
+		add_ideas = { FRA_Alain_Etchegoyen_hog }
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+				ideology = paternalism_national_conservatism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_jean_louis_debre
+			promote_leader = yes
+			country_leader = {
+				ideology = paternalism_paternalistic_developmentalism_subtype
+				expire = "2999.1.1.1"
+			}
+		}
+		clr_country_flag = Seguin_PM
+		set_country_flag = Etchegoyen_PM 
+		country_event = { 
+			id = FRA_politics.2
+			days = 10
+		}
+		swap_ideas = {
+			remove_idea = FRA_Mantle_of_Sovereignty
+			add_idea = FRA_Rule_of_Technocrats_1
+		}
+		news_event = {
+			id = FRA_News.1
+			days = 1			
+		}
+	}
+	option = {
+		name = FRA_politics.1.b
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.3
+			days = 10
+		}
+		news_event = {
+			id = FRA_News.2
+			days = 1			
+		}
 	}
 }
 
-country_event = { #Status of French PM
+country_event = { #Technocrat Reform Spree
 	id = FRA_politics.2
 	title = FRA_politics.2.t
 	desc = FRA_politics.2.desc
-	picture = X #pick out something funny for this
+	picture = X
 
 	is_triggered_only = yes
-	fire_only_once = no 
+	fire_only_once = yes
 
-	option = { 
+	option = { #Good Outcome
 		name = FRA_politics.2.a
-		country_event = { id = FRA_politics.3 days = 7 }
-		#retire Seguin
+		ai_chance = { base = 10 }
+		FRA_Econ_Improve = yes
+		FRA_Boost_UN_Pop = yes
+		country_event = { 
+			id = FRA_politics.4
+			days = 10
+		}
 	}
-	option = { 
+	option = { #Meh Outcome
 		name = FRA_politics.2.b
-		country_event = { id = FRA_politics.4 }
-		#make Seguin stay
+		ai_chance = { base = 10 }
+		FRA_Econ_Improve = yes
+		country_event = { 
+			id = FRA_politics.4
+			days = 10
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.2.c
+		ai_chance = { base = 10 }
+		FRA_Econ_Worsen = yes
+		FRA_Worsen_UN_Pop = yes
+		country_event = { 
+			id = FRA_politics.4
+			days = 10
+		}
 	}
 }
 
-country_event = { #UN-R government
+country_event = { #Seguin's Social Reforms
 	id = FRA_politics.3
 	title = FRA_politics.3.t
 	desc = FRA_politics.3.desc
-	picture = X #pick out something funny for this
+	picture = X
 
 	is_triggered_only = yes
-	fire_only_once = no 
+	fire_only_once = yes
 
-	option = { 
+	option = { #Good Outcome
 		name = FRA_politics.3.a
+		ai_chance = { base = 10 }
+		FRA_Boost_UN_Pop = yes
+		FRA_Econ_Improve = yes
 		country_event = { 
-			id = FRA_politics.5 
-			trigger = { tag = FRA date > 1998.5.2 date < 1998.5.4 }
-			mean_time_to_happen = { days = 1 }
+			id = FRA_politics.4
+			days = 10
 		}
-		#the 1998 elections
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.3.b
+		ai_chance = { base = 10 }
+		FRA_Boost_UN_Pop = yes
+		country_event = { 
+			id = FRA_politics.4
+			days = 10
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.3.c
+		ai_chance = { base = 10 }
+		FRA_Worsen_UN_Pop = yes
+		FRA_Econ_Worsen = yes
+		country_event = { 
+			id = FRA_politics.4
+			days = 10
+		}
 	}
 }
 
-country_event = { #WOULD YOU LOOK AT THE TIME AHH GOVT
+country_event = { #1998 National Assembly Elections
 	id = FRA_politics.4
 	title = FRA_politics.4.t
 	desc = FRA_politics.4.desc
-	picture = X #pick out something funny for this
+	picture = X
 
 	is_triggered_only = yes
-	fire_only_once = no 
+	fire_only_once = yes
 
-	option = { 
+	option = { #UN Victory
 		name = FRA_politics.4.a
-		country_event = { 
-			id = FRA_politics.5 
-			trigger = { tag = FRA date > 1998.5.2 date < 1998.5.4 }
-			mean_time_to_happen = { days = 1 }
+		ai_chance = { base = 10 }
+		trigger = { check_variable = { var:FRA_UN_Pop > 4 } }
+		if = {
+			limit = { has_country_flag = Seguin_PM }
+			country_event = { 
+				id = FRA_politics.5
+				days = 10
+			}
 		}
-		#the 1998 elections
+		else_if = {
+			limit = { has_country_flag = Etchegoyen_PM }
+			country_event = { 
+				id = FRA_politics.9
+				days = 10
+			}
+		}
+	}
+	option = { #RGR Victory
+		name = FRA_politics.4.a
+		ai_chance = { base = 10 }
+		trigger = { check_variable = { var:FRA_RGR_Pop > 4 } }
+		remove_ideas = { 
+			FRA_Philippe_Segiun_hog 
+			FRA_Alain_Etchegoyen_hog
+		}
+		set_politics = {
+			ruling_party = progressivism
+		}
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+				ideology = paternalism_national_conservatism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_jean_louis_debre
+			promote_leader = yes
+			country_leader = {
+				ideology = progressivism_reformist_socialism_subtype
+				expire = "2999.1.1.1"
+			}
+		}
+		clr_country_flag = Seguin_PM
+		set_country_flag = Rocard_PM 
+		country_event = { 
+			id = FRA_politics.2
+			days = 10
+		}
+		swap_ideas = {
+			remove_idea = FRA_Mantle_of_Sovereignty
+			add_idea = FRA_Memories_Of_1936_1
+		}		
+		country_event = { 
+			id = FRA_politics.13
+			days = 10
+		}
+		
+	}
+	option = { #Hung Parliament
+		name = FRA_politics.4.a
+		ai_chance = { base = 10 }
+		trigger = {
+			check_variable = { var:FRA_RGR_Pop < 5 }
+			check_variable = { var:FRA_UN_Pop < 5 }
+		}
+		country_event = { 
+			id = FRA_politics.Y
+			days = 10
+		}
 	}
 }
 
-country_event = { #PARLIAMENTARY Elections
+country_event = { #Seguin's Policies: (Against the Notables)
 	id = FRA_politics.5
 	title = FRA_politics.5.t
 	desc = FRA_politics.5.desc
-	picture = X #pick out something funny for this
+	picture = X
 
 	is_triggered_only = yes
-	fire_only_once = no 
+	fire_only_once = yes
 
-	option = { #UN-R win
+	option = { #Good Outcome
 		name = FRA_politics.5.a
-
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
-		}
-		set_popularities = {
-			progressivism_1 = 6
-			progressivism = 13
-			progressivism_2 = 12
-			paternalism = 28
-			paternalism_2 = 31
-			despotism = 6
-			ultranationalism = 4
+		ai_chance = { base = 10 }
+		add_to_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.6
+			days = 10
 		}
 	}
-
-	option = { #UN-S win (under condition that Seguin didn't retire)
+	option = { #Meh Outcome
 		name = FRA_politics.5.b
-
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
-		}
-		set_popularities = {
-			progressivism_1 = 6
-			progressivism = 15
-			progressivism_2 = 12
-			paternalism = 33
-			paternalism_2 = 24
-			despotism = 6
-			ultranationalism = 4
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.6
+			days = 10
 		}
 	}
-
-	option = { #RGR win
+	option = { #Bad Outcome
 		name = FRA_politics.5.c
+		ai_chance = { base = 10 }
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		FRA_Worsen_UN_Pop = yes
+		country_event = { 
+			id = FRA_politics.6
+			days = 10
+		}
+	}
+}
 
+country_event = { #Seguin's Policies: (National Champions)
+	id = FRA_politics.6
+	title = FRA_politics.6.t
+	desc = FRA_politics.6.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Good Outcome
+		name = FRA_politics.6.a
+		ai_chance = { base = 10 }
+		FRA_Econ_Improve = yes
+		FRA_Boost_UN_Pop = yes
+		country_event = { 
+			id = FRA_politics.7
+			days = 10
+		}
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.6.b
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.7
+			days = 10
+		}
+		FRA_Econ_Worsen = yes
+		FRA_Boost_UN_Pop = yes
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.6.c
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.7
+			days = 10
+		}
+		FRA_Econ_Worsen = yes
+		FRA_Worsen_UN_Pop = yes
+	}
+}
+
+country_event = { #Seguin's Policies: (The Sovereignist State)
+	id = FRA_politics.7
+	title = FRA_politics.7.t
+	desc = FRA_politics.7.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Good Outcome
+		name = FRA_politics.7.a
+		ai_chance = { base = 10 }
+		add_to_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.8
+			days = 10
+		}
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.7.b
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.8
+			days = 10
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.7.c
+		ai_chance = { base = 10 }
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.8
+			days = 10
+		}
+	}
+}
+
+country_event = { #Seguin's Policies: (Union Resistance Explodes)
+	id = FRA_politics.8
+	title = FRA_politics.8.t
+	desc = FRA_politics.8.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Seguin Pulls Through
+		name = FRA_politics.8.a
+		ai_chance = { base = 10 }
+		trigger = {
+			Or = {
+				AND = {
+					check_variable = { var:FRA_UN_Pop > 4 }
+					check_variable = { var:FRA_Gov_Stab > 2 }
+				}
+				AND = {
+					check_variable = { var:FRA_UN_Pop > 4 }
+					check_variable = { var:FRA_Gov_Stab > 2 }
+				}
+				AND = {
+					check_variable = { var:FRA_Gov_Stab > 2 }
+					check_variable = { var:FRA_Gov_Stab > 2 }
+				}
+			}
+		}
+		add_to_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.X
+			days = 10
+		}
+	}
+	option = { #Seguin Resigns
+		name = FRA_politics.8.b
+		ai_chance = { base = 10 }
+		trigger = {
+			Or = {
+				AND = {
+					check_variable = { var:FRA_UN_Pop < 5 }
+					check_variable = { var:FRA_Gov_Stab < 3 }
+				}
+				AND = {
+					check_variable = { var:FRA_UN_Pop < 5 }
+					check_variable = { var:FRA_Gov_Stab < 3 }
+				}
+				AND = {
+					check_variable = { var:FRA_Gov_Stab < 3 }
+					check_variable = { var:FRA_Gov_Stab < 3 }
+				}
+			}
+		}
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		remove_ideas = { FRA_Philippe_Segiun_hog }
+		clr_country_flag = Seguin_PM
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+				ideology = paternalism_national_conservatism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_jean_louis_debre
+			promote_leader = yes
+			country_leader = {
+				ideology = paternalism_paternalistic_developmentalism_subtype
+				expire = "2999.1.1.1"
+			}
+		}
+		swap_ideas = {
+			remove_idea = FRA_Mantle_of_Sovereignty
+			add_idea = FRA_Return_To_Reason
+		}
+		country_event = { 
+			id = FRA_politics.X
+			days = 10
+		}
+	}
+}
+
+country_event = { #Etchegoyen's Policies: (Corporate Development)
+	id = FRA_politics.9
+	title = FRA_politics.9.t
+	desc = FRA_politics.9.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Good Outcome
+		name = FRA_politics.9.a
+		ai_chance = { base = 10 }
+		FRA_Econ_Improve = yes
+		FRA_Boost_UN_Pop = yes
+		country_event = { 
+			id = FRA_politics.10
+			days = 10
+		}
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.9.b
+		ai_chance = { base = 10 }
+		FRA_Econ_Improve = yes
+		FRA_Worsen_UN_Pop = yes
+		country_event = { 
+			id = FRA_politics.10
+			days = 10
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.9.c
+		ai_chance = { base = 10 }
+		FRA_Econ_Improve = yes
+		FRA_Worsen_UN_Pop = yes
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.10
+			days = 10
+		}
+	}
+}
+
+country_event = { #Etchegoyen's Policies: (Councils of Experts)
+	id = FRA_politics.10
+	title = FRA_politics.10.t
+	desc = FRA_politics.10.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Good Outcome
+		name = FRA_politics.10.a
+		ai_chance = { base = 10 }
+		add_to_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.11
+			days = 10
+		}
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.10.b
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.11
+			days = 10
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.10.c
+		ai_chance = { base = 10 }
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.11
+			days = 10
+		}
+	}
+}
+
+country_event = { #Etchegoyen's Policies: (Centralisation)
+	id = FRA_politics.11
+	title = FRA_politics.11.t
+	desc = FRA_politics.11.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Good Outcome
+		name = FRA_politics.11.a
+		ai_chance = { base = 10 }
+		add_to_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.12
+			days = 10
+		}
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.11.b
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.12
+			days = 10
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.11.c
+		ai_chance = { base = 10 }
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.12
+			days = 10
+		}
+	}
+}
+
+country_event = { #Etchegoyen's Policies: (The Party's Anger)
+	id = FRA_politics.12
+	title = FRA_politics.12.t
+	desc = FRA_politics.12.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Party is against Etchegoyen
+		name = FRA_politics.12.a
+		ai_chance = { base = 10 }
+		trigger = {
+			Or = {
+				AND = {
+					check_variable = { var:FRA_UN_Pop < 5 }
+					check_variable = { var:FRA_Gov_Stab < 3 }
+				}
+				AND = {
+					check_variable = { var:FRA_UN_Pop < 5 }
+					check_variable = { var:FRA_Gov_Stab < 3 }
+				}
+				AND = {
+					check_variable = { var:FRA_Gov_Stab < 3 }
+					check_variable = { var:FRA_Gov_Stab < 3 }
+				}
+			}
+		}
+		remove_ideas = { 
+			FRA_Alain_Etchegoyen_hog 
+			FRA_Rule_of_Technocrats_1
+		}
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+				ideology = paternalism_paternalistic_developmentalism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_jean_louis_debre
+			promote_leader = yes
+			country_leader = {
+				ideology = paternalism_national_conservatism_subtype
+				expire = "2999.1.1.1"
+			}
+		}	
+		country_event = { 
+			id = FRA_politics.X
+			days = 10
+		}
+	}
+	option = { #Party supports Etchegoyen
+		name = FRA_politics.12.b
+		ai_chance = { base = 10 }
+		trigger = {
+			Or = {
+				AND = {
+					check_variable = { var:FRA_UN_Pop > 4 }
+					check_variable = { var:FRA_Gov_Stab > 2 }
+				}
+				AND = {
+					check_variable = { var:FRA_UN_Pop > 4 }
+					check_variable = { var:FRA_Gov_Stab > 2 }
+				}
+				AND = {
+					check_variable = { var:FRA_Gov_Stab > 2 }
+					check_variable = { var:FRA_Gov_Stab > 2 }
+				}
+			}
+		}
+		country_event = { 
+			id = FRA_politics.X
+			days = 10
+		}
+	}
+}
+
+country_event = { #RGR Policies: (Organised Labour)
+	id = FRA_politics.13
+	title = FRA_politics.13.t
+	desc = FRA_politics.13.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Good Outcome
+		name = FRA_politics.13.a
+		ai_chance = { base = 10 }
+		add_to_variable = { FRA_Gov_Stab = 1 }
+		FRA_Boost_RGR_Pop = yes
+		country_event = { 
+			id = FRA_politics.14
+			days = 13
+		}
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.13.b
+		ai_chance = { base = 10 }
+		FRA_Worsen_RGR_Pop = yes
+		country_event = { 
+			id = FRA_politics.14
+			days = 13
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.13.c
+		ai_chance = { base = 10 }
+		FRA_Worsen_RGR_Pop = yes
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		country_event = { 
+			id = FRA_politics.14
+			days = 13
+		}
+	}
+}
+
+country_event = { #RGR Policies: (The Welfare State)
+	id = FRA_politics.14
+	title = FRA_politics.14.t
+	desc = FRA_politics.14.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Good Outcome
+		name = FRA_politics.14.a
+		ai_chance = { base = 10 }
+		add_to_variable = { FRA_Gov_Stab = 1 }
+		FRA_Boost_RGR_Pop = yes
+		country_event = { 
+			id = FRA_politics.15
+			days = 13
+		}
+		random_list = {
+			30 = { #Debt Crisis
+				FRA_Worsen_RGR_Pop = yes
+				FRA_Econ_Worsen = yes
+			}
+			70 = {
+				#Nothing happens
+			}
+		}
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.14.b
+		ai_chance = { base = 10 }
+		FRA_Boost_RGR_Pop = yes
+		country_event = { 
+			id = FRA_politics.15
+			days = 13
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.14.c
+		ai_chance = { base = 10 }
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		FRA_Worsen_RGR_Pop = yes
+		country_event = { 
+			id = FRA_politics.15
+			days = 13
+		}
+	}
+}
+
+country_event = { #RGR Policies: (The Red Peasants)
+	id = FRA_politics.15
+	title = FRA_politics.15.t
+	desc = FRA_politics.15.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Good Outcome
+		name = FRA_politics.15.a
+		ai_chance = { base = 10 }
+		FRA_Boost_RGR_Pop = yes
+		country_event = { 
+			id = FRA_politics.16
+			days = 13
+		}
+	}
+	option = { #Meh Outcome
+		name = FRA_politics.15.b
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.16
+			days = 13
+		}
+	}
+	option = { #Bad Outcome
+		name = FRA_politics.15.c
+		ai_chance = { base = 10 }
+		FRA_Worsen_RGR_Pop = yes
+		country_event = { 
+			id = FRA_politics.16
+			days = 13
+		}
+	}
+}
+
+country_event = { #RGR Policies: (Privatisation)
+	id = FRA_politics.16
+	title = FRA_politics.16.t
+	desc = FRA_politics.16.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Privatisation Pursued
+		name = FRA_politics.16.a
+		ai_chance = {
+			base = 10
+			modifier = { 
+				check_variable = { var:FRA_Econ_Var > 2 } 
+				factor = 2
+			}
+		}
+		FRA_Boost_RGR_Pop = yes
+		country_event = { 
+			id = FRA_politics.17
+			days = 13
+		}
+	}
+	option = { #Privatisation Abandoned
+		name = FRA_politics.16.b
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.18
+			days = 13
+		}
+	}
+}
+
+country_event = { #Privatisation Pursued: Government Crisis
+	id = FRA_politics.17
+	title = FRA_politics.17.t
+	desc = FRA_politics.17.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Compromise Reached
+		name = FRA_politics.17.a
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.X
+			days = 13
+		}
+	}
+	option = { #Government Collapse
+		name = FRA_politics.17.b
+		ai_chance = { base = 10 }
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		clr_country_flag = Rocard_PM
+		set_politics = {
+			ruling_party = paternalism
+		}
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+				ideology = progressivism_reformist_socialism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_jean_louis_debre
+			promote_leader = yes
+			country_leader = {
+				ideology = paternalism_paternalistic_developmentalism_subtype
+				expire = "2999.1.1.1"
+			}
+		}
+		swap_ideas = {
+			remove_idea = FRA_Memories_Of_1936_1
+			add_idea = FRA_Return_To_Reason
+		}
+		country_event = { 
+			id = FRA_politics.19
+			days = 13
+		}
+	}
+}
+
+country_event = { #Privatisation Abandoned: Cabinet Reshuffle
+	id = FRA_politics.18
+	title = FRA_politics.18.t
+	desc = FRA_politics.18.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Cabinet Dismissed
+		name = FRA_politics.18.a
+		ai_chance = { base = 10 }
+		subtract_from_variable = { FRA_Gov_Stab = 1 }
+		clr_country_flag = Rocard_PM
+		set_country_flag = FRA_Leftist_Unity
+		set_politics = {
+			ruling_party = paternalism
+		}
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+				ideology = progressivism_reformist_socialism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_jean_louis_debre
+			promote_leader = yes
+			country_leader = {
+				ideology = paternalism_paternalistic_developmentalism_subtype
+				expire = "2999.1.1.1"
+			}
+		}
+		swap_ideas = {
+			remove_idea = FRA_Memories_Of_1936_1
+			add_idea = FRA_Return_To_Reason
+		}
+		country_event = { 
+			id = FRA_politics.19
+			days = 13
+		}
+	}
+	option = { #Cabinet Appointed
+		name = FRA_politics.18.b
+		ai_chance = { base = 10 }
+		swap_ideas = {
+			remove_idea = FRA_Memories_Of_1936_1
+			add_idea = FRA_Memories_Of_1936_2
+		}
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+				ideology = progressivism_reformist_socialism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_jean_louis_debre
+			promote_leader = yes
+			country_leader = {
+				ideology = progressivism_left_wing_populism_subtype
+				expire = "2999.1.1.1"
+			}
+		}
+		country_event = { 
+			id = FRA_politics.X
+			days = 13
+		}
+	}
+}
+
+
+country_event = { #RGR Cabinet Collapse: Snap Election
+	id = FRA_politics.19
+	title = FRA_politics.19.t
+	desc = FRA_politics.19.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #RGR Wins
+		name = FRA_politics.19.a
+		ai_chance = { base = 10 }
+		trigger = { has_country_flag = { FRA_Leftist_Unity } }
 		set_politics = {
 			ruling_party = progressivism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
 		}
-		set_popularities = {
-			progressivism_1 = 7
-			progressivism = 27
-			progressivism_2 = 22
-			paternalism = 14
-			paternalism_2 = 19
-			despotism = 5
-			ultranationalism = 6
+		promote_character = { FRA_michel_rocard }
+		news_event = { 
+			id = FRA_politics.Z
+			days = 13
 		}
 	}
-
-	option = { #uh oh, HUNG parliament
-		name = FRA_politics.5.d
-
-		set_politics = {
-			ruling_party = paternalism
-			elections_allowed = yes
-			election_frequency = 60
-			last_election = "[GetDateText]"
+	option = { #UN Victory
+		name = FRA_politics.19.b
+		ai_chance = { base = 10 }
+		country_event = { 
+			id = FRA_politics.X
+			days = 13
 		}
-		set_popularities = {
-			progressivism_1 = 6
-			progressivism = 17
-			progressivism_2 = 19
-			paternalism = 24
-			paternalism_2 = 20
-			despotism = 9
-			ultranationalism = 5
-		}
+	}
+}
+
+country_event = { #2000 Presidential Elections
+	id = FRA_politics.X
+	title = FRA_politics.X.t
+	desc = FRA_politics.X.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes	
+}
+
+## NEWS EVENTS ##
+
+news_event = { #Seguin Resigns
+	id = FRA_News.1
+	title = FRA_News.1.t
+	desc = FRA_News.1.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.1.a
+	}
+}
+
+news_event = { #Seguin Survives
+	id = FRA_News.2
+	title = FRA_News.2.t
+	desc = FRA_News.2.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.2.a
+	}
+}
+
+news_event = { #UN Wins 1998 Elections (Seguin)
+	id = FRA_News.3
+	title = FRA_News.3.t
+	desc = FRA_News.3.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.3.a
+	}
+}
+
+news_event = { #UN Wins 1998 Elections (Etchegoyen)
+	id = FRA_News.4
+	title = FRA_News.4.t
+	desc = FRA_News.4.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.4.a
+	}
+}
+
+news_event = { #RGR Wins 1998 Elections
+	id = FRA_News.5
+	title = FRA_News.5.t
+	desc = FRA_News.5.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.5.a
+	}
+}
+
+news_event = { #Hung Parliament 1998 Elections
+	id = FRA_News.6
+	title = FRA_News.6.t
+	desc = FRA_News.6.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.6.a
 	}
 }
