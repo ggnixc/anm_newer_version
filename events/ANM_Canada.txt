@@ -1,0 +1,64 @@
+add_namespace = CAN_election
+
+country_event = { #1997 election 
+	id = CAN_election.1
+	title = CAN_election.1.t
+	desc = CAN_election.1.desc
+	picture = GFX_anm_GER_RND_report
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = CAN_election.1.a	
+		CAN = {
+			set_politics = { 
+				ruling_party = conservatism
+			}
+			set_popularities = {
+				conservatism = 50
+				conservatism_2 = 50
+			}
+			country_event = { id = CAN_election.2 days = 1460 }
+		}
+	}
+		option = { 
+		name = CAN_election.1.b	
+		CAN = {
+			set_politics = { 
+				ruling_party = conservatism_2
+			}
+			set_popularities = {
+				conservatism = 20
+				conservatism_2 = 75
+			}
+			country_event = { id = CAN_election.2 days = 1460 }
+		}
+	}
+		option = { 
+		name = CAN_election.1.c	
+		CAN = {
+			set_politics = { 
+				ruling_party = liberalism
+			}
+			set_popularities = {
+				liberalism = 75
+				conservatism_2 = 25
+			}
+			country_event = { id = CAN_election.2 days = 1460 }
+		}
+	}
+		option = { 
+		name = CAN_election.1.d	
+		CAN = {
+			set_politics = { 
+				ruling_party = progressivism
+			}
+			set_popularities = {
+				progressivism = 75
+				conservatism_2 = 25
+			}
+			country_event = { id = CAN_election.2 days = 1460 }
+		}
+	}
+}
