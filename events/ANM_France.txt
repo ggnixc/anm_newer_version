@@ -1,5 +1,5 @@
 add_namespace = FRA_politics
-add_namespace = FRA_news
+add_namespace = FRA_News
 
 country_event = { #Financial Crisis
 	id = FRA_politics.1
@@ -146,6 +146,19 @@ country_event = { #1998 National Assembly Elections
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		clr_country_flag = Seguin_PM
+		clr_country_flag = Etchegoyen_PM
+
+		remove_ideas = { 
+			FRA_Philippe_Segiun_hog 
+			FRA_Alain_Etchegoyen_hog
+			FRA_Gerard_Longuet_sec
+			FRA_Alain_Etchegoyen_eco
+			FRA_Jean_Bernard_Raimond_for
+		}
+	}
+
 	option = { #UN Victory
 		name = FRA_politics.4.a
 		ai_chance = { base = 10 }
@@ -156,6 +169,10 @@ country_event = { #1998 National Assembly Elections
 				id = FRA_politics.5
 				days = 10
 			}
+			news_event = {
+				id = FRA_News.3
+				days = 1
+			}
 		}
 		else_if = {
 			limit = { has_country_flag = Etchegoyen_PM }
@@ -163,22 +180,23 @@ country_event = { #1998 National Assembly Elections
 				id = FRA_politics.9
 				days = 10
 			}
+			news_event = {
+				id = FRA_News.4
+				days = 1
+			}
 		}
 	}
 	option = { #RGR Victory
 		name = FRA_politics.4.a
 		ai_chance = { base = 10 }
 		trigger = { check_variable = { var:FRA_RGR_Pop > 4 } }
-		remove_ideas = { 
-			FRA_Philippe_Segiun_hog 
-			FRA_Alain_Etchegoyen_hog
-		}
 		set_politics = {
 			ruling_party = progressivism
 		}
 		FRA_jean_louis_debre = {
 			remove_country_leader_role = {
 				ideology = paternalism_national_conservatism_subtype
+				ideology = paternalism_paternalistic_developmentalism_subtype
 			}
 		}
 		add_country_leader_role = {
@@ -189,12 +207,7 @@ country_event = { #1998 National Assembly Elections
 				expire = "2999.1.1.1"
 			}
 		}
-		clr_country_flag = Seguin_PM
 		set_country_flag = Rocard_PM 
-		country_event = { 
-			id = FRA_politics.2
-			days = 10
-		}
 		swap_ideas = {
 			remove_idea = FRA_Mantle_of_Sovereignty
 			add_idea = FRA_Memories_Of_1936_1
@@ -202,6 +215,10 @@ country_event = { #1998 National Assembly Elections
 		country_event = { 
 			id = FRA_politics.13
 			days = 10
+		}
+		news_event = {
+			id = FRA_News.5
+			days = 1
 		}
 		
 	}
@@ -212,9 +229,28 @@ country_event = { #1998 National Assembly Elections
 			check_variable = { var:FRA_RGR_Pop < 5 }
 			check_variable = { var:FRA_UN_Pop < 5 }
 		}
+		FRA_jean_louis_debre = {
+			remove_country_leader_role = {
+				ideology = paternalism_national_conservatism_subtype
+				ideology = paternalism_paternalistic_developmentalism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_jean_louis_debre
+			promote_leader = yes
+			country_leader = {
+				ideology = paternalism_right_wing_populism_subtype
+				expire = "2999.1.1.1"
+			}
+		}
+		set_country_flag = Longuet_PM
 		country_event = { 
 			id = FRA_politics.Y
 			days = 10
+		}
+		news_event = {
+			id = FRA_News.6
+			days = 1
 		}
 	}
 }
@@ -389,8 +425,8 @@ country_event = { #Seguin's Policies: (Union Resistance Explodes)
 			}
 		}
 		subtract_from_variable = { FRA_Gov_Stab = 1 }
-		remove_ideas = { FRA_Philippe_Segiun_hog }
 		clr_country_flag = Seguin_PM
+		set_country_flag = Balladur_PM
 		FRA_jean_louis_debre = {
 			remove_country_leader_role = {
 				ideology = paternalism_national_conservatism_subtype
@@ -411,6 +447,10 @@ country_event = { #Seguin's Policies: (Union Resistance Explodes)
 		country_event = { 
 			id = FRA_politics.X
 			days = 10
+		}
+		news_event = { 
+			id = FRA_News.7
+			days = 1
 		}
 	}
 }
@@ -560,7 +600,6 @@ country_event = { #Etchegoyen's Policies: (The Party's Anger)
 			}
 		}
 		remove_ideas = { 
-			FRA_Alain_Etchegoyen_hog 
 			FRA_Rule_of_Technocrats_1
 		}
 		FRA_jean_louis_debre = {
@@ -579,6 +618,10 @@ country_event = { #Etchegoyen's Policies: (The Party's Anger)
 		country_event = { 
 			id = FRA_politics.X
 			days = 10
+		}
+		news_event = { 
+			id = FRA_News.8
+			days = 1
 		}
 	}
 	option = { #Party supports Etchegoyen
@@ -789,6 +832,7 @@ country_event = { #Privatisation Pursued: Government Crisis
 		ai_chance = { base = 10 }
 		subtract_from_variable = { FRA_Gov_Stab = 1 }
 		clr_country_flag = Rocard_PM
+		set_country_flag = Balladur_PM
 		set_politics = {
 			ruling_party = paternalism
 		}
@@ -813,6 +857,10 @@ country_event = { #Privatisation Pursued: Government Crisis
 			id = FRA_politics.19
 			days = 13
 		}
+		news_event = { 
+			id = FRA_News.9
+			days = 1
+		}
 	}
 }
 
@@ -830,6 +878,7 @@ country_event = { #Privatisation Abandoned: Cabinet Reshuffle
 		ai_chance = { base = 10 }
 		subtract_from_variable = { FRA_Gov_Stab = 1 }
 		clr_country_flag = Rocard_PM
+		set_country_flag = Balladur_PM
 		set_country_flag = FRA_Leftist_Unity
 		set_politics = {
 			ruling_party = paternalism
@@ -854,6 +903,10 @@ country_event = { #Privatisation Abandoned: Cabinet Reshuffle
 		country_event = { 
 			id = FRA_politics.19
 			days = 13
+		}
+		news_event = {
+			id = FRA_News.10
+			days = 1
 		}
 	}
 	option = { #Cabinet Appointed
@@ -896,14 +949,26 @@ country_event = { #RGR Cabinet Collapse: Snap Election
 	option = { #RGR Wins
 		name = FRA_politics.19.a
 		ai_chance = { base = 10 }
-		trigger = { has_country_flag = { FRA_Leftist_Unity } }
+		trigger = { FRA = { has_country_flag = FRA_Leftist_Unity } }
 		set_politics = {
 			ruling_party = progressivism
 		}
-		promote_character = { FRA_michel_rocard }
+		FRA_michel_rocard = {
+			remove_country_leader_role = {
+				ideology = progressivism_reformist_socialism_subtype
+			}
+		}
+		add_country_leader_role = {
+			character = FRA_michel_rocard
+			promote_leader = yes
+			country_leader = {
+				ideology = progressivism_popular_front_subtype
+				expire = "2999.1.1.1"
+			}
+		}
 		news_event = { 
-			id = FRA_politics.Z
-			days = 13
+			id = FRA_News.11
+			days = 1
 		}
 	}
 	option = { #UN Victory
@@ -912,6 +977,10 @@ country_event = { #RGR Cabinet Collapse: Snap Election
 		country_event = { 
 			id = FRA_politics.X
 			days = 13
+		}
+		news_event = { 
+			id = FRA_News.12
+			days = 1
 		}
 	}
 }
@@ -1009,5 +1078,89 @@ news_event = { #Hung Parliament 1998 Elections
 
 	option = {
 		name = FRA_News.6.a
+	}
+}
+
+news_event = { #Seguin Resigns because of Strikes
+	id = FRA_News.7
+	title = FRA_News.7.t
+	desc = FRA_News.7.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.7.a
+	}
+}
+
+news_event = { #Etchegoyen Resigns
+	id = FRA_News.8
+	title = FRA_News.8.t
+	desc = FRA_News.8.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.8.a
+	}
+}
+
+news_event = { #Privatisation Crisis: RGR Government Resigns
+	id = FRA_News.9
+	title = FRA_News.9.t
+	desc = FRA_News.9.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.9.a
+	}
+}
+
+news_event = { #Cabinet Reshuffle: RGR Cabinet Dismissed
+	id = FRA_News.10
+	title = FRA_News.10.t
+	desc = FRA_News.10.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.10.a
+	}
+}
+
+news_event = { #RGR Wins Snap Election: Debre Resigns
+	id = FRA_News.11
+	title = FRA_News.11.t
+	desc = FRA_News.11.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.11.a
+	}
+}
+
+news_event = { #UN Wins Snap Election
+	id = FRA_News.12
+	title = FRA_News.12.t
+	desc = FRA_News.12.desc
+	picture = X
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = FRA_News.12.a
 	}
 }
