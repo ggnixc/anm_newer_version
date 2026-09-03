@@ -230,6 +230,15 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.514 }
 					set_temp_variable = { blue = 0.561 }
 				}
+				else_if = {
+					limit = { # Gulf Cooperation Council
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_GCC } }
+						FROM = { has_idea = RegionalOrganization_GCC }
+					}
+					set_temp_variable = { red = 0.1 }
+					set_temp_variable = { green = 0.5 }
+					set_temp_variable = { blue = 0.1 }
+				}
 				else = { # Default
 					set_temp_variable = { red = 0.5 }
 					set_temp_variable = { green = 0.5 }

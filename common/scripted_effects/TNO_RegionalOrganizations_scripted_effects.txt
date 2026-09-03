@@ -316,15 +316,6 @@ RegionalOrganizations_Startup = {
 	}
 	# CRO = { RegionalOrganizations_Add = yes }
 	# MNT = { RegionalOrganizations_Add = yes }
-	
-	## Ibero-American Conference
-	set_temp_variable = { reg_org = token:RegionalOrganization_IberoAmericanConference }
-	IBR = {
-		set_temp_variable = { org_alignment = 0 }
-		set_temp_variable = { org_type = 10 } # Informal System
-		RegionalOrganizations_Initialize = yes
-	}
-	DOM = { RegionalOrganizations_Add = yes }
 
 	## Iberian Empire
 	set_temp_variable = { reg_org = token:RegionalOrganization_SpanishEmpire }
@@ -430,6 +421,8 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	BOL = { RegionalOrganizations_Add = yes }
+	URG = { RegionalOrganizations_Add = yes }
+	CHL = { RegionalOrganizations_Add = yes }
 	# GUC = { RegionalOrganizations_Add = yes }
 
 	## Córdoba Forum
@@ -465,6 +458,7 @@ RegionalOrganizations_Startup = {
 	LTH = { RegionalOrganizations_Add = yes }
 	# NAM = { RegionalOrganizations_Add = yes }
 	SWZ = { RegionalOrganizations_Add = yes }
+	ZIM = { RegionalOrganizations_Add = yes }
 	SMB = { RegionalOrganizations_Add = yes }
 
 	## Ostministerium
@@ -521,6 +515,15 @@ RegionalOrganizations_Startup = {
 	LTH = { RegionalOrganizations_Add = yes }
 	SWZ = { RegionalOrganizations_Add = yes }
 	ETH = { RegionalOrganizations_Add = yes }
+	
+	## Central African Federation
+	set_temp_variable = { reg_org = token:RegionalOrganization_CentralAfricanFed }
+	ZIM = {
+		set_temp_variable = { org_alignment = GER }
+		set_temp_variable = { org_leader = ENG }
+		set_temp_variable = { org_type = 4 } # Federation
+		RegionalOrganizations_Initialize = yes
+	}
 
 	## Monrovia Conference
 	set_temp_variable = { reg_org = token:RegionalOrganization_MonroviaConference }
@@ -535,6 +538,7 @@ RegionalOrganizations_Startup = {
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
+	SLE = { RegionalOrganizations_Add = yes }
 	TOG = { RegionalOrganizations_Add = yes }
 	GBE = { RegionalOrganizations_Add = yes }
 	NIG = { RegionalOrganizations_Add = yes }
@@ -565,8 +569,22 @@ RegionalOrganizations_Startup = {
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
-	RWA = { RegionalOrganizations_Add = yes }
-	BRD = { RegionalOrganizations_Add = yes }
+	# RWA = { RegionalOrganizations_Add = yes }
+	# BRD = { RegionalOrganizations_Add = yes }
+	ANG = { RegionalOrganizations_Add = yes }
+	
+	## GCC - Gulf Cooperation Council
+	set_temp_variable = { reg_org = token:RegionalOrganization_GCC }
+	SAU = {
+		set_temp_variable = { org_alignment = 0 } # Unaligned
+		set_temp_variable = { org_leader = SAU }
+		set_temp_variable = { org_type = 1 } # International Association
+		RegionalOrganizations_Initialize = yes
+	}
+	UAE = { RegionalOrganizations_Add = yes }
+	IRQ = { RegionalOrganizations_Add = yes }
+	OMA = { RegionalOrganizations_Add = yes }
+	YEM = { RegionalOrganizations_Add = yes }
 
 	log = "[GetDateText]: [THIS.GetName]: RegionalOrganizations_Startup; Completed execution."
 }
