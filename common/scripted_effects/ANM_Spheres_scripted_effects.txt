@@ -1,7 +1,7 @@
 ### Economic Spheres
 TNO_Spheres_init = {
 	### GERMAN SPHERE
-	GER = { set_country_flag = HAS_ECON_SPHERE }
+	GER = { set_variable = { ECON_SPHERE_LEADER = GER } }
 	for_each_scope_loop = {
 		array = GER.faction_members
 		set_variable = { ECON_SPHERE_LEADER = GER }
@@ -57,7 +57,6 @@ TNO_Spheres_init = {
 	}
 
 	### AMERICAN SPHERE
-	USA = { set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = USA.faction_members
 		set_variable = { ECON_SPHERE_LEADER = USA }
@@ -71,6 +70,8 @@ TNO_Spheres_init = {
 		limit = {
 			OR = {
 				tag = USA
+				tag = BRA
+				tag = BOL
 				tag = FEN
 				tag = ECU
 				tag = ELS
@@ -116,6 +117,7 @@ TNO_Spheres_init = {
 				tag = PNG
 				tag = AAC
 				tag = AAS
+				tag = AAR
 				tag = AAZ
 				tag = AAU
 			}
@@ -124,7 +126,6 @@ TNO_Spheres_init = {
 	}
 	
 	### JAPANESE SPHERE
-	JAP = { set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = JAP.faction_members
 		set_variable = { ECON_SPHERE_LEADER = JAP }
@@ -138,6 +139,9 @@ TNO_Spheres_init = {
 		limit = {
 			OR = {
 				tag = JAP
+				tag = CHI
+				tag = MEN
+				tag = AZH
 				tag = BUR
 				tag = KOR
 				tag = MLY
@@ -163,7 +167,6 @@ TNO_Spheres_init = {
 	}
 	
 	### ITALIAN SPHERE
-	ITA = { set_country_flag = HAS_ECON_SPHERE }
 	for_each_scope_loop = {
 		array = ITA.subjects
 		set_variable = { ECON_SPHERE_LEADER = ITA }
@@ -189,7 +192,6 @@ TNO_Spheres_init = {
 				tag = ALB
 				tag = LBA
 				tag = ERT
-				tag = SML
 				tag = CHD
 				tag = SAU
 				tag = OMA
@@ -197,159 +199,6 @@ TNO_Spheres_init = {
 			}
 		}
 		set_variable = { ECON_SPHERE_LEADER = ITA }
-	}
-
-	### BRAZILIAN SPHERE
-	BRA = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = BRA
-				tag = BOL
-				tag = AAR
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = BRA }
-	}
-
-	### Argie sphere
-	ARG = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = ARG
-				tag = PAR
-				tag = STC
-				tag = AAA
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = ARG }
-	}
-
-	### Soviet sphere
-	SOV = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = SOV
-				tag = FER
-				tag = BZZ
-				tag = IVO
-				tag = PRU
-				tag = GZO
-				tag = PRC
-				tag = FDR
-				tag = NIC
-				tag = AAK
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = SOV }
-	}
-	### Chinese Sphere
-	CHI = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = CHI
-				tag = MEN
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = CHI }
-	}
-
-	### Indian Sphere
-	AZH = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = AZH
-				tag = NEP
-				tag = BHU
-				tag = ALG
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = AZH }
-	}
-	
-	### Ghana African Federation Sphere
-	GHA = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = GHA
-				tag = MLI
-				tag = SUS
-				tag = BKF
-				tag = IVO
-				tag = NGR
-				tag = CAO
-				tag = MRT
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = GHA }
-	}
-	
-	### Pan African Sphere
-	#CAO = { set_country_flag = HAS_ECON_SPHERE }
-	#every_country = {
-	#	limit = {
-	#		OR = {
-	#			tag = CAO
-	#		}
-	#	}
-	#	set_variable = { ECON_SPHERE_LEADER = CAO }
-	#}
-
-	### Iberia
-	IBR = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = IBR
-				tag = PAD
-				tag = MOR
-				tag = MAR
-				tag = DOM
-				tag = CAP
-				tag = JOL
-				tag = SAO
-				tag = GNB
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = IBR }
-	}
-
-	### Turkey
-	TUR = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = TUR
-				tag = ARM
-				tag = SYR
-				tag = PAL
-				tag = KUR
-				tag = CYP
-				tag = LEB
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = TUR }
-	}
-
-	### Mexican Sphere
-	MEX = { set_country_flag = HAS_ECON_SPHERE }
-	every_country = {
-		limit = {
-			OR = {
-				tag = MEX
-				tag = CUB
-				tag = GUA
-				tag = HAI
-				tag = COS
-				tag = VEN
-			}
-		}
-		set_variable = { ECON_SPHERE_LEADER = MEX }
 	}
 }
 

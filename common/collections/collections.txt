@@ -1,12 +1,12 @@
 ########################################
 
- ##   ##  #  # #  # ### ###  ### ###  ##     
-#  # #  # #  # ## #  #  #  #  #  #   #       
-#    #  # #  # # ##  #  ###   #  ##   #      
-#  # #  # #  # #  #  #  #  #  #  #     #     
- ##   ##   ##  #  #  #  #  # ### ### ## 
+ ##   ##  #  # #  # ### ###  ### ###  ##
+#  # #  # #  # ## #  #  #  #  #  #   #
+#    #  # #  # # ##  #  ###   #  ##   #
+#  # #  # #  # #  #  #  #  #  #  #     #
+ ##   ##   ##  #  #  #  #  # ### ### ##
 
-########################################     
+########################################
 
 faction_manifest_never = {
 	input = game:all_countries
@@ -22,7 +22,7 @@ world_at_peace_countries = {
 	input = game:all_countries
 	operators = {
 		limit = {
-			has_war = no 
+			has_war = no
 		}
 	}
 	name = COLLECTION_COUNTRIES_AT_PEACE
@@ -33,18 +33,23 @@ countries_asia = {
 	name = COLLECTION_COUNTRIES_ASIA
 	operators = {
 		limit = {
-			capital_scope = { is_on_continent = asia }
+			OR = {
+				capital_scope = { is_on_continent = asia }
+				capital_scope = { is_on_continent = india }
+				capital_scope = { is_on_continent = gangetic_plain }
+				capital_scope = { is_on_continent = pakistan }
+			}
 		}
 	}
 }
 
 #########################
 
- ## ###  ##  ### ###  ## 
-#    #  #  #  #  #   #   
- #   #  ####  #  ##   #  
-  #  #  #  #  #  #     # 
-##   #  #  #  #  ### ##  
+ ## ###  ##  ### ###  ##
+#    #  #  #  #  #   #
+ #   #  ####  #  ##   #
+  #  #  #  #  #  #     #
+##   #  #  #  #  ### ##
 
 ########################
 
@@ -55,7 +60,7 @@ faction_owned_core_states = {
 		faction_members
 		owned_states
 		limit = {
-			is_core_of = PREV 
+			is_core_of = PREV
 		}
 	}
 	name = COLLECTION_FACTION_OWNED_CORE_STATES
@@ -140,7 +145,10 @@ states_in_europe = {
 	input = game:all_states
 	operators = {
 		limit = {
-			is_on_continent = europe			
+			OR = {
+				is_on_continent = europe
+				is_on_continent = eastern_europe
+			}
 		}
 	}
 	name = COLLECTION_STATES_IN_EUROPE
@@ -152,7 +160,10 @@ faction_states_in_europe = {
 		faction_members
 		controlled_states
 		limit = {
-			is_on_continent = europe			
+			OR = {
+				is_on_continent = europe
+				is_on_continent = eastern_europe
+			}
 		}
 	}
 	name = COLLECTION_FACTION_CONTROLLED_STATES_IN_EUROPE
@@ -162,7 +173,12 @@ states_in_asia = {
 	input = game:all_states
 	operators = {
 		limit = {
-			is_on_continent = asia
+			OR = {
+				is_on_continent = asia
+				is_on_continent = india
+				is_on_continent = gangetic_plain
+				is_on_continent = pakistan
+			}
 		}
 	}
 	name = COLLECTION_STATES_IN_ASIA
@@ -174,7 +190,12 @@ faction_states_in_asia = {
 		faction_members
 		controlled_states
 		limit = {
-			is_on_continent = asia			
+			OR = {
+				is_on_continent = asia
+				is_on_continent = india
+				is_on_continent = gangetic_plain
+				is_on_continent = pakistan
+			}
 		}
 	}
 	name = COLLECTION_FACTION_CONTROLLED_STATES_IN_ASIA
@@ -196,7 +217,7 @@ faction_states_in_middle_east = {
 		faction_members
 		controlled_states
 		limit = {
-			is_on_continent = middle_east			
+			is_on_continent = middle_east
 		}
 	}
 	name = COLLECTION_FACTION_CONTROLLED_STATES_IN_MIDDLE_EAST
@@ -218,6 +239,9 @@ states_in_asia_and_oceania = {
 		limit = {
 			OR = {
 				is_on_continent = asia
+				is_on_continent = india
+				is_on_continent = gangetic_plain
+				is_on_continent = pakistan
 				is_on_continent = australia
 			}
 		}
@@ -229,7 +253,7 @@ faction_states_on_my_continent = {
 	operators = {
 		limit = {
 			is_on_same_continent_as = ROOT
-			is_controlled_by_ROOT_or_ally = yes 
+			is_controlled_by_ROOT_or_ally = yes
 		}
 	}
 	name = COLLECTION_FACTION_STATES_MY_CONTINENT
@@ -260,7 +284,7 @@ african_states = {
 	input = game:all_states
 	operators = {
 		limit = {
-			is_on_continent = africa 
+			is_on_continent = africa
 		}
 	}
 }

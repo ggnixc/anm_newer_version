@@ -371,15 +371,14 @@ RegionalOrganizations_Startup = {
 	SLE = { RegionalOrganizations_Add = yes }
 	SHL = { RegionalOrganizations_Add = yes }
 	
-	## ComIntern
+	## Comecon
 	set_temp_variable = { reg_org = token:RegionalOrganization_USSR }
 	SOV = {
 		set_temp_variable = { org_alignment = 0 }
-		set_temp_variable = { org_type = 1 } # International Association
+		set_temp_variable = { org_type = 6 } # Economic Association
 		RegionalOrganizations_Initialize = yes
 	}
 	GHA = { RegionalOrganizations_Add = yes }
-	CAO = { RegionalOrganizations_Add = yes }
 	PRU = { RegionalOrganizations_Add = yes }
 	NIC = { RegionalOrganizations_Add = yes }
 	AFG = { RegionalOrganizations_Add = yes }
