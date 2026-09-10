@@ -13,17 +13,6 @@ set_stability = 0.6
 
 # Starting tech
 
-CAN = {
-	if = {
-		limit = { has_dlc = "Together for Victory" }
-		set_autonomy = { target = SHL autonomy_state = autonomy_dominion }
-
-		else = {
-			puppet = SHL
-		}
-	}
-}
-
 set_politics = {	
 	ruling_party = liberalism
 	last_election = "1993.4.16"
