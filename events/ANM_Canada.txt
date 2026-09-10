@@ -16,10 +16,14 @@ country_event = { #1997 election
 				ruling_party = conservatism
 			}
 			set_popularities = {
-				conservatism = 50
-				conservatism_2 = 50
+				conservatism = 25
+				conservatism_2 = 22
+				liberalism = 19
+				progressivism = 27
+				socialism = 7
 			}
-			country_event = { id = CAN_election.2 days = 1460 }
+			promote_character = CAN_Jean_Charest
+			country_event = { id = CAN_election.21 days = 1460 }
 		}
 	}
 		option = { 
@@ -29,10 +33,14 @@ country_event = { #1997 election
 				ruling_party = conservatism_2
 			}
 			set_popularities = {
-				conservatism = 20
-				conservatism_2 = 75
+				conservatism = 22
+				conservatism_2 = 25
+				liberalism = 19
+				progressivism = 27
+				socialism = 7
 			}
-			country_event = { id = CAN_election.2 days = 1460 }
+			promote_character = CAN_Peter_MacKay
+			country_event = { id = CAN_election.22 days = 1460 }
 		}
 	}
 		option = { 
@@ -42,10 +50,14 @@ country_event = { #1997 election
 				ruling_party = liberalism
 			}
 			set_popularities = {
-				liberalism = 75
-				conservatism_2 = 25
+				conservatism = 19
+				conservatism_2 = 18
+				liberalism = 35
+				progressivism = 21
+				socialism = 7
 			}
-			country_event = { id = CAN_election.2 days = 1460 }
+			promote_character = CAN_Paul_Martin
+			country_event = { id = CAN_election.23 days = 1460 }
 		}
 	}
 		option = { 
@@ -54,11 +66,314 @@ country_event = { #1997 election
 			set_politics = { 
 				ruling_party = progressivism
 			}
-			set_popularities = {
-				progressivism = 75
-				conservatism_2 = 25
-			}
-			country_event = { id = CAN_election.2 days = 1460 }
+			country_event = { id = CAN_election.24 days = 1460 }
 		}
+	}
+}
+
+country_event = { #2001 election, Charest wins 
+	id = CAN_election.21
+	title = CAN_election.21.t
+	desc = CAN_election.21.desc
+	picture = GFX_anm_GER_RND_report
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = CAN_election.1.a	
+		CAN = {
+			set_politics = { 
+				ruling_party = conservatism
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.1.b	
+		CAN = {
+			set_politics = { 
+				ruling_party = liberalism
+			}
+			promote_character = CAN_John_Manley
+			set_popularities = {
+				conservatism = 19
+				conservatism_2 = 18
+				liberalism = 35
+				progressivism = 21
+				socialism = 7
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.1.c	
+		CAN = {
+			set_politics = { 
+				ruling_party = progressivism
+			}
+			promote_character = CAN_Bob_Rae
+			set_popularities = {
+				socialist = 8
+    			progressivism = 34
+    			liberalism = 20
+    			conservatism_2 = 22
+    			conservatism = 16
+			}
+		}
+		
+		name = CAN_election.1.d	
+		CAN = {
+			set_politics = { 
+				ruling_party = socialism
+			}
+			promote_character = CAN_Peter_Kormos
+			set_popularities = {
+				socialist = 28
+    			progressivism = 19
+    			liberalism = 18
+    			conservatism_2 = 20
+    			conservatism = 15
+			}
+		}	
+	}
+}
+
+country_event = { #2001 election, McKay wins 
+	id = CAN_election.22
+	title = CAN_election.22.t
+	desc = CAN_election.22.desc
+	picture = GFX_anm_GER_RND_report
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		name = CAN_election.22.a	
+		CAN = {
+			set_politics = { 
+				ruling_party = conservatism_2
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.22.b	
+		CAN = {
+			set_politics = { 
+				ruling_party = liberalism
+			}
+			promote_character = CAN_John_Manley
+			set_popularities = {
+				conservatism = 19
+				conservatism_2 = 18
+				liberalism = 35
+				progressivism = 21
+				socialism = 7
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.22.c	
+		CAN = {
+			set_politics = { 
+				ruling_party = progressivism
+			}
+			promote_character = CAN_Bob_Rae
+			set_popularities = {
+				socialist = 8
+    			progressivism = 34
+    			liberalism = 20
+    			conservatism_2 = 22
+    			conservatism = 16
+			}
+		}
+	}	
+		option = {
+		name = CAN_election.22.d	
+		CAN = {
+			set_politics = { 
+				ruling_party = socialism
+			}
+			promote_character = CAN_Peter_Kormos
+			set_popularities = {
+				socialist = 28
+    			progressivism = 19
+    			liberalism = 18
+    			conservatism_2 = 20
+    			conservatism = 15
+			}
+		}	
+	}
+}
+
+country_event = { #2001 election, Martin wins 
+	id = CAN_election.23
+	title = CAN_election.23.t
+	desc = CAN_election.23.desc
+	picture = GFX_anm_GER_RND_report
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+		option = { 
+		name = CAN_election.23.a	
+		CAN = {
+			set_politics = { 
+				ruling_party = conservatism
+			}
+			promote_character = CAN_Stephen_Harper
+			set_popularities = {
+				conservatism = 25
+				conservatism_2 = 22
+				liberalism = 19
+				progressivism = 27
+				socialism = 7
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.23.b	
+		CAN = {
+			set_politics = { 
+				ruling_party = conservatism_2
+			}
+			promote_character = CAN_Brian_Pallister
+			set_popularities = {
+				conservatism = 22
+				conservatism_2 = 25
+				liberalism = 19
+				progressivism = 27
+				socialism = 7
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.23.c	
+		CAN = {
+			set_politics = { 
+				ruling_party = liberalism
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.23.d	
+		CAN = {
+			set_politics = { 
+				ruling_party = progressivism
+			}
+			promote_character = CAN_Bob_Rae
+			set_popularities = {
+				socialist = 8
+    			progressivism = 34
+    			liberalism = 20
+    			conservatism_2 = 22
+    			conservatism = 16
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.23.e	
+		CAN = {
+			set_politics = { 
+				ruling_party = socialism
+			}
+			promote_character = CAN_Peter_Kormos
+			set_popularities = {
+				socialist = 28
+    			progressivism = 19
+    			liberalism = 18
+    			conservatism_2 = 20
+    			conservatism = 15
+			}
+		}	
+	}
+}
+
+country_event = { #2001 election, Barret wins 
+	id = CAN_election.24
+	title = CAN_election.24.t
+	desc = CAN_election.24.desc
+	picture = GFX_anm_GER_RND_report
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+		option = { 
+		name = CAN_election.24.a	
+		CAN = {
+			set_politics = { 
+				ruling_party = conservatism
+			}
+			promote_character = CAN_Stephen_Harper
+			set_popularities = {
+				conservatism = 25
+				conservatism_2 = 22
+				liberalism = 19
+				progressivism = 27
+				socialism = 7
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.24.b	
+		CAN = {
+			set_politics = { 
+				ruling_party = conservatism_2
+			}
+			promote_character = CAN_Brian_Pallister
+			set_popularities = {
+				conservatism = 22
+				conservatism_2 = 25
+				liberalism = 19
+				progressivism = 27
+				socialism = 7
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.24.c	
+		CAN = {
+			set_politics = { 
+				ruling_party = liberalism
+			}
+			promote_character = CAN_John_Manley
+			set_popularities = {
+				conservatism = 19
+				conservatism_2 = 18
+				liberalism = 35
+				progressivism = 21
+				socialism = 7
+			}
+		}
+	}
+		option = { 
+		name = CAN_election.24.d	
+		CAN = {
+			set_politics = { 
+				ruling_party = progressivism
+			}
+			promote_character = CAN_Bob_Rae
+			set_popularities = {
+				socialist = 8
+    			progressivism = 34
+    			liberalism = 20
+    			conservatism_2 = 22
+    			conservatism = 16
+			}
+		}
+	}		
+	option = {	
+		name = CAN_election.24.e	
+		CAN = {
+			set_politics = { 
+				ruling_party = socialism
+			}
+			promote_character = CAN_Peter_Kormos
+			set_popularities = {
+				socialist = 28
+    			progressivism = 19
+    			liberalism = 18
+    			conservatism_2 = 20
+    			conservatism = 15
+			}
+		}	
 	}
 }
