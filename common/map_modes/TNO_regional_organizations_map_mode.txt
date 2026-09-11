@@ -231,6 +231,15 @@ scripted_map_modes = {
 					set_temp_variable = { blue = 0.561 }
 				}
 				else_if = {
+					limit = { # Organization of African Unity
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_OAU } }
+						FROM = { has_idea = RegionalOrganization_OAU }
+					}
+					set_temp_variable = { red = 0.839 }
+					set_temp_variable = { green = 0.294 }
+					set_temp_variable = { blue = 0.169 }
+				}
+				else_if = {
 					limit = { # Gulf Cooperation Council
 						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_GCC } }
 						FROM = { has_idea = RegionalOrganization_GCC }

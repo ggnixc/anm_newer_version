@@ -260,6 +260,7 @@ RegionalOrganizations_Startup = {
 	BRA = { RegionalOrganizations_Add = yes }
 	URG = { RegionalOrganizations_Add = yes }
 	CUR = { RegionalOrganizations_Add = yes }
+	GUD = { RegionalOrganizations_Add = yes }
 
 	## Veracuz Pact
 	set_temp_variable = { reg_org = token:RegionalOrganization_VeracruzPact }
@@ -302,7 +303,6 @@ RegionalOrganizations_Startup = {
 		set_temp_variable = { org_type = 1 } # International Association
 		RegionalOrganizations_Initialize = yes
 	}
-	GUD = { RegionalOrganizations_Add = yes }
 	AAF = { RegionalOrganizations_Add = yes }
 	MAD = { RegionalOrganizations_Add = yes }
 
@@ -369,6 +369,8 @@ RegionalOrganizations_Startup = {
 	# GHA = { RegionalOrganizations_Add = yes }
 	PAP = { RegionalOrganizations_Add = yes }
 	SLE = { RegionalOrganizations_Add = yes }
+	TON = { RegionalOrganizations_Add = yes }
+	WSA = { RegionalOrganizations_Add = yes }
 	
 	## Comecon
 	set_temp_variable = { reg_org = token:RegionalOrganization_USSR }
@@ -468,6 +470,7 @@ RegionalOrganizations_Startup = {
 	UKR = { RegionalOrganizations_Add = yes }
 	BLR = { RegionalOrganizations_Add = yes }
 	CAU = { RegionalOrganizations_Add = yes }
+	MOS = { RegionalOrganizations_Add = yes }
 
 	## African Labour Board
 	set_temp_variable = { reg_org = token:RegionalOrganization_AfricanLabourBoard }
@@ -582,6 +585,16 @@ RegionalOrganizations_Startup = {
 	IRQ = { RegionalOrganizations_Add = yes }
 	OMA = { RegionalOrganizations_Add = yes }
 	YEM = { RegionalOrganizations_Add = yes }
+
+	## OAU
+	set_temp_variable = { reg_org = token:RegionalOrganization_OAU }
+	GHA = {
+		set_temp_variable = { org_alignment = 0 } # Unaligned
+		set_temp_variable = { org_leader = GHA }
+		set_temp_variable = { org_type = 1 } # International Association
+		RegionalOrganizations_Initialize = yes
+	}
+	ALG = { RegionalOrganizations_Add = yes }
 
 	log = "[GetDateText]: [THIS.GetName]: RegionalOrganizations_Startup; Completed execution."
 }
