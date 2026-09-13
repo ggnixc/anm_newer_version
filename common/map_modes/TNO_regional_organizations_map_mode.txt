@@ -240,6 +240,15 @@ scripted_map_modes = {
 					set_temp_variable = { blue = 0.169 }
 				}
 				else_if = {
+					limit = { # New Canadian Confederation
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_NCC } }
+						FROM = { has_idea = RegionalOrganization_NCC }
+					}
+					set_temp_variable = { red = 0.839 }
+					set_temp_variable = { green = 0.437 }
+					set_temp_variable = { blue = 0.428 }
+				}
+				else_if = {
 					limit = { # Gulf Cooperation Council
 						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_GCC } }
 						FROM = { has_idea = RegionalOrganization_GCC }

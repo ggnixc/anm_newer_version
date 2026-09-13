@@ -596,6 +596,16 @@ RegionalOrganizations_Startup = {
 	}
 	ALG = { RegionalOrganizations_Add = yes }
 
+	# NCC
+	set_temp_variable = { reg_org = token:RegionalOrganization_NCC }
+	CAN = {
+		set_temp_variable = { org_alignment = USA }
+		set_temp_variable = { org_leader = CAN }
+		set_temp_variable = { org_type = 5 } # Confederation
+		RegionalOrganizations_Initialize = yes
+	}
+	QUE = { RegionalOrganizations_Add = yes }
+
 	log = "[GetDateText]: [THIS.GetName]: RegionalOrganizations_Startup; Completed execution."
 }
 
