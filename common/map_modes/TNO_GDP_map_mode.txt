@@ -17,13 +17,13 @@ scripted_map_modes = {
 					set_temp_variable = { gdpcc_st_calc = FROM.state_GDPPC }
 					if = {
 						limit = {
-							check_variable = { gdpcc_st_calc < 125 }
+							check_variable = { gdpcc_st_calc < 250 }
 						}
 						set_temp_variable = { r_clc = 27 }
 						set_temp_variable = { g_clc = 114 }
 						set_temp_variable = { b_clc = 32 }
 
-						divide_temp_variable = { gdpcc_st_calc = 125 }
+						divide_temp_variable = { gdpcc_st_calc = 250 }
 
 						multiply_temp_variable = { r_clc = gdpcc_st_calc }
 						multiply_temp_variable = { g_clc = gdpcc_st_calc }
@@ -35,14 +35,14 @@ scripted_map_modes = {
 					}
 					else_if = {
 						limit = {
-							check_variable = { gdpcc_st_calc < 250 }
+							check_variable = { gdpcc_st_calc < 500 }
 						}
 						set_temp_variable = { r_clc = 2 }
 						set_temp_variable = { g_clc = 77 }
 						set_temp_variable = { b_clc = 58 }
 
-						subtract_from_temp_variable = { gdpcc_st_calc = 125 }
-						divide_temp_variable = { gdpcc_st_calc = 125 }
+						subtract_from_temp_variable = { gdpcc_st_calc = 250 }
+						divide_temp_variable = { gdpcc_st_calc = 250 }
 
 						multiply_temp_variable = { r_clc = gdpcc_st_calc }
 						multiply_temp_variable = { g_clc = gdpcc_st_calc }
@@ -54,14 +54,14 @@ scripted_map_modes = {
 					}
 					else_if = {
 						limit = {
-							check_variable = { gdpcc_st_calc < 500 }
+							check_variable = { gdpcc_st_calc < 1000 }
 						}
 						set_temp_variable = { r_clc = -108 }
 						set_temp_variable = { g_clc = -20 }
 						set_temp_variable = { b_clc = 104 }
 
-						subtract_from_temp_variable = { gdpcc_st_calc = 250 }
-						divide_temp_variable = { gdpcc_st_calc = 250 }
+						subtract_from_temp_variable = { gdpcc_st_calc = 500 }
+						divide_temp_variable = { gdpcc_st_calc = 500 }
 
 						multiply_temp_variable = { r_clc = gdpcc_st_calc }
 						multiply_temp_variable = { g_clc = gdpcc_st_calc }
@@ -73,14 +73,14 @@ scripted_map_modes = {
 					}
 					else_if = {
 						limit = {
-							check_variable = { gdpcc_st_calc < 1000 }
+							check_variable = { gdpcc_st_calc < 2000 }
 						}
 						set_temp_variable = { r_clc = -193 }
 						set_temp_variable = { g_clc = -52 }
 						set_temp_variable = { b_clc = -30 }
 
-						subtract_from_temp_variable = { gdpcc_st_calc = 500 }
-						divide_temp_variable = { gdpcc_st_calc = 500 }
+						subtract_from_temp_variable = { gdpcc_st_calc = 1000 }
+						divide_temp_variable = { gdpcc_st_calc = 1000 }
 
 						multiply_temp_variable = { r_clc = gdpcc_st_calc }
 						multiply_temp_variable = { g_clc = gdpcc_st_calc }
@@ -92,14 +92,14 @@ scripted_map_modes = {
 					}
 					else_if = {
 						limit = {
-							check_variable = { gdpcc_st_calc < 1500 }
+							check_variable = { gdpcc_st_calc < 3000 }
 						}
 						set_temp_variable = { r_clc = -50 }
 						set_temp_variable = { g_clc = -55 }
 						set_temp_variable = { b_clc = -41 }
 
-						subtract_from_temp_variable = { gdpcc_st_calc = 1000 }
-						divide_temp_variable = { gdpcc_st_calc = 500 }
+						subtract_from_temp_variable = { gdpcc_st_calc = 2000 }
+						divide_temp_variable = { gdpcc_st_calc = 1000 }
 
 						multiply_temp_variable = { r_clc = gdpcc_st_calc }
 						multiply_temp_variable = { g_clc = gdpcc_st_calc }
@@ -114,8 +114,8 @@ scripted_map_modes = {
 						set_temp_variable = { g_clc = -33 }
 						set_temp_variable = { b_clc = -53 }
 
-						subtract_from_temp_variable = { gdpcc_st_calc = 1500 }
-						divide_temp_variable = { gdpcc_st_calc = 1000 }
+						subtract_from_temp_variable = { gdpcc_st_calc = 3000 }
+						divide_temp_variable = { gdpcc_st_calc = 2000 }
 
 						multiply_temp_variable = { r_clc = gdpcc_st_calc }
 						multiply_temp_variable = { g_clc = gdpcc_st_calc }
@@ -144,13 +144,13 @@ scripted_map_modes = {
 					set_temp_variable = { gdpcc_nat_calc = FROM.controller:gdpc_display }
 					if = {
 						limit = {
-							check_variable = { gdpcc_nat_calc < 125 }
+							check_variable = { gdpcc_nat_calc < 250 }
 						}
 						set_temp_variable = { r_clc = 27 }
 						set_temp_variable = { g_clc = 114 }
 						set_temp_variable = { b_clc = 32 }
 						
-						divide_temp_variable = { gdpcc_nat_calc = 125 }
+						divide_temp_variable = { gdpcc_nat_calc = 250 }
 
 						multiply_temp_variable = { r_clc = gdpcc_nat_calc }
 						multiply_temp_variable = { g_clc = gdpcc_nat_calc }
@@ -162,14 +162,14 @@ scripted_map_modes = {
 					}
 					else_if = {
 						limit = {
-							check_variable = { gdpcc_nat_calc < 250 }
+							check_variable = { gdpcc_nat_calc < 500 }
 						}
 						set_temp_variable = { r_clc = 2 }
 						set_temp_variable = { g_clc = 77 }
 						set_temp_variable = { b_clc = 58 }
 
-						subtract_from_temp_variable = { gdpcc_nat_calc = 125 }
-						divide_temp_variable = { gdpcc_nat_calc = 125 }
+						subtract_from_temp_variable = { gdpcc_nat_calc = 250 }
+						divide_temp_variable = { gdpcc_nat_calc = 250 }
 
 						multiply_temp_variable = { r_clc = gdpcc_nat_calc }
 						multiply_temp_variable = { g_clc = gdpcc_nat_calc }
@@ -181,14 +181,14 @@ scripted_map_modes = {
 					}
 					else_if = {
 						limit = {
-							check_variable = { gdpcc_nat_calc < 500 }
+							check_variable = { gdpcc_nat_calc < 1000 }
 						}
 						set_temp_variable = { r_clc = -108 }
 						set_temp_variable = { g_clc = -20 }
 						set_temp_variable = { b_clc = 104 }
 
-						subtract_from_temp_variable = { gdpcc_nat_calc = 250 }
-						divide_temp_variable = { gdpcc_nat_calc = 250 }
+						subtract_from_temp_variable = { gdpcc_nat_calc = 500 }
+						divide_temp_variable = { gdpcc_nat_calc = 500 }
 
 						multiply_temp_variable = { r_clc = gdpcc_nat_calc }
 						multiply_temp_variable = { g_clc = gdpcc_nat_calc }
@@ -200,14 +200,14 @@ scripted_map_modes = {
 					}
 					else_if = {
 						limit = {
-							check_variable = { gdpcc_nat_calc < 1000 }
+							check_variable = { gdpcc_nat_calc < 2000 }
 						}
 						set_temp_variable = { r_clc = -193 }
 						set_temp_variable = { g_clc = -52 }
 						set_temp_variable = { b_clc = -30 }
 
-						subtract_from_temp_variable = { gdpcc_nat_calc = 500 }
-						divide_temp_variable = { gdpcc_nat_calc = 500 }
+						subtract_from_temp_variable = { gdpcc_nat_calc = 1000 }
+						divide_temp_variable = { gdpcc_nat_calc = 1000 }
 
 						multiply_temp_variable = { r_clc = gdpcc_nat_calc }
 						multiply_temp_variable = { g_clc = gdpcc_nat_calc }
@@ -219,14 +219,14 @@ scripted_map_modes = {
 					}
 					else_if = {
 						limit = {
-							check_variable = { gdpcc_nat_calc < 1500 }
+							check_variable = { gdpcc_nat_calc < 3000 }
 						}
 						set_temp_variable = { r_clc = -50 }
 						set_temp_variable = { g_clc = -55 }
 						set_temp_variable = { b_clc = -41 }
 
-						subtract_from_temp_variable = { gdpcc_nat_calc = 1000 }
-						divide_temp_variable = { gdpcc_nat_calc = 500 }
+						subtract_from_temp_variable = { gdpcc_nat_calc = 2000 }
+						divide_temp_variable = { gdpcc_nat_calc = 1000 }
 
 						multiply_temp_variable = { r_clc = gdpcc_nat_calc }
 						multiply_temp_variable = { g_clc = gdpcc_nat_calc }
@@ -241,8 +241,8 @@ scripted_map_modes = {
 						set_temp_variable = { g_clc = -33 }
 						set_temp_variable = { b_clc = -53 }
 
-						subtract_from_temp_variable = { gdpcc_nat_calc = 1500 }
-						divide_temp_variable = { gdpcc_nat_calc = 1000 }
+						subtract_from_temp_variable = { gdpcc_nat_calc = 3000 }
+						divide_temp_variable = { gdpcc_nat_calc = 2000 }
 
 						multiply_temp_variable = { r_clc = gdpcc_nat_calc }
 						multiply_temp_variable = { g_clc = gdpcc_nat_calc }
@@ -266,5 +266,6 @@ scripted_map_modes = {
 		}
 		far_text = none
 		near_text = state
+		update_daily = no
 	}
 }

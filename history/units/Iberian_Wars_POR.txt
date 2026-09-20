@@ -1,0 +1,153 @@
+﻿division_template = {
+	name = "Milícia de Reserva Nacional"
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Divisao Blindada"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		IFV = { x = 1 y = 0 }
+		IFV = { x = 1 y = 1 }
+		IFV = { x = 1 y = 2 }
+	}
+	support = {
+		maintenance_company = { x = 0 y = 0 }
+		mot_recon = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Divisao de Infantaria"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1a Divisão de Infantaria"
+		location = 3798
+		division_template = "Divisao de Infantaria"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "2a Divisão de Infantaria"
+		location = 6996
+		division_template = "Divisao de Infantaria"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "3a Divisão de Infantaria"
+		location = 9817
+		division_template = "Divisao de Infantaria"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "1a Brigada de Reserva"
+		location = 9817
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "2a Brigada de Reserva"
+		location = 799
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "3a Brigada de Reserva"
+		location = 3798
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "4a Brigada de Reserva"
+		location = 11885
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "5a Brigada de Reserva"
+		location = 3969
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "6a Brigada de Reserva"
+		location = 6818
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "7a Brigada de Reserva"
+		location = 9787
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "8a Brigada de Reserva"
+		location = 9787
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "9a Brigada de Reserva"
+		location = 11673
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "10a Brigada de Reserva"
+		location = 11673
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "11a Brigada de Reserva"
+		location = 9817
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "12a Brigada de Reserva"
+		location = 6924
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "13a Brigada de Reserva"
+		location = 6924
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "14a Brigada de Reserva"
+		location = 11673
+		division_template = "Milícia de Reserva Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "1a Divisão Blindada"
+		location = 9817
+		division_template = "Divisao Blindada"
+		start_experience_factor = 1
+	}
+}

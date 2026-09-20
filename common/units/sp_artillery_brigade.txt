@@ -13,13 +13,13 @@ sub_units = {
 			artillery
 		}
 
-		group = armor
+		group = armor_combat_support
 
 		categories = {
 			category_all_armor
 			category_army
-			category_APC_art
-			category_line_artillery
+			category_IFV_art
+			category_sp_artillery
 			category_artillery
 		}
 
@@ -35,7 +35,7 @@ sub_units = {
 		training_time = 180
 		weight = 1
 		supply_consumption = 0.42
-
+		equipment_capture_factor = -0.03
 		breakthrough = -0.42
 
 		suppression = 1.25
@@ -84,13 +84,13 @@ sub_units = {
 			artillery
 		}
 
-		group = armor
+		group = mobile_combat_support
 
 		categories = {
 			category_all_armor
 			category_army
 			category_APC_art
-			category_line_artillery
+			category_sp_artillery
 			category_artillery
 		}
 
@@ -106,6 +106,7 @@ sub_units = {
 		training_time = 180
 		weight = 1
 		supply_consumption = 0.42
+		equipment_capture_factor = -0.03
 
 		breakthrough = -0.42
 
@@ -156,11 +157,14 @@ sub_units = {
 			artillery
 		}
 
-		group = armor
+		group = armor_combat_support
 
 		categories = {
 			category_all_armor
 			category_army
+			category_APC_art
+			category_sp_artillery
+			category_artillery
 		}
 
 		combat_width = 3
@@ -175,6 +179,7 @@ sub_units = {
 		training_time = 180
 		weight = 1.5
 		supply_consumption = 0.5
+		equipment_capture_factor = -0.03
 
 		breakthrough = -0.25
 
@@ -233,11 +238,14 @@ sub_units = {
 			artillery
 		}
 
-		group = armor
+		group = armor_combat_support
 
 		categories = {
 			category_all_armor
 			category_army
+			category_APC_art
+			category_sp_artillery
+			category_artillery
 		}
 
 		combat_width = 3
@@ -252,6 +260,7 @@ sub_units = {
 		training_time = 180
 		weight = 1.5
 		supply_consumption = 0.5
+		equipment_capture_factor = -0.03
 
 		breakthrough = -0.25
 

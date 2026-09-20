@@ -1,15 +1,23 @@
 equipments = {
-
 	guided_missile_equipment = {
+		can_be_produced = {
+			NOT = {
+				has_idea = ENG_Across_The_Channel
+			}
+		}
+
+		allow_mission_type = {
+			strategic_bomber
+		}
 
 		year = 1959
-		priority = 5
-		visual_level = 1
+		priority = 200
+		visual_level = 0
 
 		is_archetype = yes
 		is_buildable = no
 		can_license = no
-		type = missile
+		type = suicide
 		group_by = archetype
 		sprite = missile_default
 		air_map_icon_frame = 9
@@ -33,14 +41,14 @@ equipments = {
 			chromium = 1
 			#oil = 1
 		}
-		manpower = 0
+		manpower = 10
 		fuel_consumption = 2
 	}
 
 	ICBM_equipment = {
 		year = 1960
-		priority = 10
-		visual_level = 4
+		priority = 200
+		visual_level = 0
 
 		archetype = guided_missile_equipment
 		is_buildable = yes
@@ -50,7 +58,7 @@ equipments = {
 		air_range = 100000
 		maximum_speed = 6500
 		air_agility = 500
-		air_bombing = 300
+		air_bombing = 1000
 
 		upgrades = {
 			plane_range_upgrade
@@ -69,8 +77,8 @@ equipments = {
 
 	MRBM_equipment = {
 		year = 1962
-		priority = 10
-		visual_level = 4
+		priority = 210
+		visual_level = 0
 
 		archetype = guided_missile_equipment
 		is_buildable = yes
@@ -80,7 +88,7 @@ equipments = {
 		air_range = 35000
 		maximum_speed = 6200
 		air_agility = 440
-		air_bombing = 280
+		air_bombing = 860
 
 		upgrades = {
 			plane_range_upgrade
@@ -99,8 +107,8 @@ equipments = {
 
 	SRBM_equipment = {
 		year = 1964
-		priority = 10
-		visual_level = 4
+		priority = 220
+		visual_level = 0
 
 		archetype = guided_missile_equipment
 		is_buildable = yes
@@ -110,7 +118,7 @@ equipments = {
 		air_range = 11000
 		maximum_speed = 6000
 		air_agility = 400
-		air_bombing = 260
+		air_bombing = 720
 
 		upgrades = {
 			plane_range_upgrade

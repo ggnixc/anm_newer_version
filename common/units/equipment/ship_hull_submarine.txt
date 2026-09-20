@@ -1,8 +1,12 @@
 equipments = {
-
+	# Archetype
 	ship_hull_submarine = {
 
-		
+		can_be_produced = {
+			NOT = {
+				has_idea = ENG_Across_The_Channel
+			}
+		}
 
 		year = 1945
 
@@ -82,8 +86,10 @@ equipments = {
 		manpower = 95
 	}
 
+	# MtG Ship Hulls
 	ship_hull_submarine_1 = {
 		year = 1945
+		visual_level = 0
 
 		archetype = ship_hull_submarine
 		priority = 2500
@@ -93,6 +99,7 @@ equipments = {
 
 	ship_hull_submarine_japan_special = {
 		year = 1950
+		visual_level = 1
 
 		archetype = ship_hull_carrier
 		priority = 2500
@@ -142,6 +149,7 @@ equipments = {
 
 	ship_hull_submarine_2 = {
 		year = 1950
+		visual_level = 1
 
 		archetype = ship_hull_submarine
 		priority = 2500
@@ -181,6 +189,7 @@ equipments = {
 
 	ship_hull_submarine_3 = {
 		year = 1960
+		visual_level = 2
 
 		archetype = ship_hull_submarine
 		priority = 2500
@@ -225,8 +234,10 @@ equipments = {
 			submarine
 		}
 	}
+
 	ship_hull_submarine_4 = {
 		year = 1970
+		visual_level = 3
 
 		archetype = ship_hull_submarine
 		priority = 2500
@@ -272,8 +283,10 @@ equipments = {
 			submarine
 		}
 	}
+
 	ship_hull_submarine_5 = {
 		year = 1980
+		visual_level = 4
 
 		archetype = ship_hull_submarine
 		priority = 2500
@@ -319,8 +332,10 @@ equipments = {
 			submarine
 		}
 	}
+
 	ship_hull_submarine_6 = {
 		year = 1990
+		visual_level = 5
 
 		archetype = ship_hull_submarine
 		priority = 2500
@@ -366,8 +381,11 @@ equipments = {
 			submarine
 		}
 	}
+
+	# Deprecated Tech - Currently Inaccessible
 	ship_hull_ballistic_submarine = {
 		year = 1950
+		visual_level = 1
 
 		archetype = ship_hull_submarine
 		priority = 2600
@@ -393,8 +411,10 @@ equipments = {
 			submarine
 		}
 	}
+
 	ship_hull_ballistic_submarine_2 = {
 		year = 1960
+		visual_level = 2
 
 		archetype = ship_hull_submarine
 		priority = 2600
@@ -421,8 +441,10 @@ equipments = {
 			submarine
 		}
 	}
+
 	ship_hull_ballistic_submarine_3 = {
 		year = 1970
+		visual_level = 3
 
 		archetype = ship_hull_submarine
 		priority = 2600
@@ -449,8 +471,10 @@ equipments = {
 			submarine
 		}
 	}
+
 	ship_hull_ballistic_submarine_4 = {
 		year = 1980
+		visual_level = 4
 
 		archetype = ship_hull_submarine
 		priority = 2600
@@ -477,8 +501,10 @@ equipments = {
 			submarine
 		}
 	}
+
 	ship_hull_ballistic_submarine_5 = {
 		year = 1990
+		visual_level = 5
 
 		archetype = ship_hull_submarine
 		priority = 2600
@@ -500,253 +526,6 @@ equipments = {
 		resources = {
 			steel = 4
 			chromium = 3
-		}
-		type = {
-			submarine
-		}
-	}
-	submarine_1 = {
-		year = 1945
-
-		archetype = ship_hull_submarine
-		priority = 2500
-
-		module_slots = inherit
-
-		default_modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-
-		lg_armor_piercing = 0
-		lg_attack = 0 # Their main weapon is torpedo_attack.
-		torpedo_attack = 4
-		anti_air_attack = 0
-		armor_value = 0
-
-		surface_detection = 30
-		sub_detection = 0
-		surface_visibility = 1
-		sub_visibility = 30
-		naval_speed = 9
-		reliability = 0.60
-
-		naval_range = 18000
-
-		max_strength = 10
-
-
-		fuel_consumption = 1
-
-		build_cost_ic = 250
-		resources = {
-			#oil = 1
-			steel = 1
-		}
-	}
-
-	submarine_2 = {
-		year = 1950
-
-		archetype = ship_hull_submarine
-		priority = 2500
-		parent = submarine_1
-		module_slots = inherit
-
-		default_modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_sub_1
-		}
-		lg_armor_piercing = 0
-		lg_attack = 0
-		torpedo_attack = 10
-		anti_air_attack = 0
-		armor_value = 0
-
-		surface_detection = 40
-		sub_detection = 0
-		surface_visibility = 1
-		sub_visibility = 25
-		naval_speed = 14
-		reliability = 0.70
-
-		naval_range = 23000
-		max_strength = 20
-
-		build_cost_ic = 250
-		resources = {
-			#oil = 1
-			steel = 2
-		}
-		type = {
-			submarine
-		}
-	}
-
-	submarine_3 = {
-		year = 1960
-
-		archetype = ship_hull_submarine
-		priority = 2500
-		parent = submarine_2
-		module_slots = inherit
-
-		default_modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_sub_1
-		}
-		lg_armor_piercing = 0
-		lg_attack = 0
-		torpedo_attack = 16
-
-		anti_air_attack = 0
-		armor_value = 0
-
-		surface_detection = 50
-		sub_detection = 0
-		surface_visibility = 1
-		sub_visibility = 15
-		naval_speed = 16
-		reliability = 0.75
-
-		naval_range = 28000
-
-		max_strength = 30
-
-		build_cost_ic = 350
-		resources = {
-			#oil = 2
-			steel = 2
-		}
-		type = {
-			submarine
-		}
-	}
-
-	submarine_4 = {
-		year = 1970
-
-		archetype = ship_hull_submarine
-		priority = 2500
-		parent = submarine_3
-		module_slots = inherit
-
-		default_modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_sub_2
-		}
-		lg_armor_piercing = 0
-		lg_attack = 0
-		torpedo_attack = 20
-
-		anti_air_attack = 0
-		armor_value = 0
-
-		surface_detection = 70
-		sub_detection = 0
-		surface_visibility = 1
-		sub_visibility = 10
-		naval_speed = 18
-		reliability = 0.80
-
-		naval_range = 33000
-
-		max_strength = 35
-
-		build_cost_ic = 400
-		resources = {
-			#oil = 2
-			steel = 2
-			chromium = 1
-		}
-		type = {
-			submarine
-		}
-	}
-
-	submarine_5 = {
-		year = 1980
-
-		archetype = ship_hull_submarine
-		priority = 2500
-		parent = submarine_4
-		module_slots = inherit
-
-		default_modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_sub_2
-		}
-		lg_armor_piercing = 0
-		lg_attack = 0
-		torpedo_attack = 24
-
-		anti_air_attack = 0
-
-		armor_value = 0
-
-		surface_detection = 80
-		sub_detection = 0
-		surface_visibility = 1
-		sub_visibility = 6
-		naval_speed = 20
-		reliability = 0.85
-
-		naval_range = 38000
-
-		max_strength = 40
-
-		build_cost_ic = 450
-		resources = {
-			#oil = 2
-			steel = 3
-			chromium = 1
-		}
-		type = {
-			submarine
-		}
-	}
-
-	submarine_6 = {
-		year = 1990
-
-		archetype = ship_hull_submarine
-		priority = 2500
-		parent = submarine_5
-		module_slots = inherit
-
-		default_modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = ship_torpedo_sub_2
-		}
-		lg_armor_piercing = 0
-		lg_attack = 0
-		torpedo_attack = 28
-
-		anti_air_attack = 0
-		armor_value = 0
-
-		surface_detection = 90
-		sub_detection = 0
-		surface_visibility = 1
-		sub_visibility = 2
-		naval_speed = 22
-		reliability = 0.9
-
-		naval_range = 38030
-
-		max_strength = 45
-
-		build_cost_ic = 550
-		resources = {
-			#oil = 2
-			steel = 4
-			chromium = 1
 		}
 		type = {
 			submarine

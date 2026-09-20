@@ -1,0 +1,124 @@
+﻿division_template = {
+	name = "División de Infantería"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } # Full howitzer regiment
+		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Gardia Nacional"
+	is_locked = yes
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "División Motorizada"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "División Blindada"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		IFV = { x = 1 y = 0 }
+		IFV = { x = 1 y = 1 }
+		IFV = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "1a Divisão de Infantaria"
+		location = 11805 #Portugal
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "2a División de Infantería"
+		location = 3931	# Zaragoza
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "3a Divisão de Infantaria"
+		location = 11838 # Portugal
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "4a División de Infantería"
+		location = 915
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "5a Divisão de Infantaria"
+		location = 11885	# Portugal
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "6a División de Infantería"
+		location = 11779
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "7a Divisão de Infantaria"
+		location = 9824
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "8a División de Infantería"
+		location = 3938
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "1a Divisão Blindada"
+		location = 6880
+		division_template = "División de Armadura"
+	}
+		division = {
+		name = "2a División de Armadura"
+		location = 915
+		division_template = "División de Armadura"
+	}
+	division = {
+		name = "Guarnición de Guinea"
+		location = 12891
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "Guarnición de Africano"
+		location = 5036
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "Guarnición de Gabon"
+		location = 13391
+		division_template = "División de Infantería"
+	}
+	division = {
+		name = "Armadura Media de Africa"
+		location = 5012
+		division_template = "División de Armadura Media"
+	}
+}

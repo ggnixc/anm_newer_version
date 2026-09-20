@@ -1,0 +1,102 @@
+﻿division_template = {
+	name = "División de Infantería"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } # Full howitzer regiment
+		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Gardia Nacional"
+	is_locked = yes
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "División Motorizada"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "División Blindada"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		IFV = { x = 1 y = 0 }
+		IFV = { x = 1 y = 1 }
+		IFV = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "1a Agrupación de Gardia Nacional"
+		location = 6734
+		division_template = "Gardia Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "2a Agrupación de Gardia Nacional"
+		location = 9686
+		division_template = "Gardia Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "3a Agrupación de Gardia Nacional"
+		location = 11675
+		division_template = "Gardia Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "4a Agrupación de Gardia Nacional"
+		location = 11840
+		division_template = "Gardia Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "5a Agrupación de Gardia Nacional"
+		location = 729
+		division_template = "Gardia Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "6a Agrupación de Gardia Nacional"
+		location = 6764
+		division_template = "Gardia Nacional"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "1a División de Infantería"
+		location = 758
+		division_template = "División de Infantería"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "2a División de Infantería"
+		location = 6955
+		division_template = "División de Infantería"
+		start_experience_factor = 1
+	}
+}
