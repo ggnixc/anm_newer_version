@@ -71,9 +71,9 @@ my_project_token = {
 		# The localization key is localized with the following localization scope objects:
 		#    * Country: The country that owns the project.
 		name = name_loc_key
-		# if name provided, use TAG_name_loc_key if it exists. if not use name_loc_key (where TAG is the tag of the project owner)
-		# if localization key TAG_my_project_token exists, use it
-		# else use loc key my_project_token
+    	# if name provided, use TAG_name_loc_key if it exists. if not use name_loc_key (where TAG is the tag of the project owner)
+    	# if localization key TAG_my_project_token exists, use it
+    	# else use loc key my_project_token
 	
 		# Optional
 		# Localization key used for the long description of the Project
@@ -81,18 +81,18 @@ my_project_token = {
 		#    * SpecialProjet: The project.
 		#    * Country: The country that owns the project
 		desc = desc_loc_key
-		# if name provided, use TAG_desc_loc_key if it exists. if not use desc_loc_key (where TAG is the tag of the project owner)
-		# if localization key TAG_my_project_token_desc exists, use it (!! Note the _desc suffix)
-		# else use loc key my_project_token_desc
+    	# if name provided, use TAG_desc_loc_key if it exists. if not use desc_loc_key (where TAG is the tag of the project owner)
+    	# if localization key TAG_my_project_token_desc exists, use it (!! Note the _desc suffix)
+    	# else use loc key my_project_token_desc
 	}
 	
 	# Optional
 	# GFX key of the icon used to illustrate the Project
 	icon = GFX_icon
-	# if icon provided, use GFX_icon
-	# if gfx key GFX_TAG_my_project_token exists, use it
-	# if gfx key GFX_my_project_token exists, use it
-	# else use GFX_PLACEHOLDER_sp_project_icon
+    # if icon provided, use GFX_icon
+    # if gfx key GFX_TAG_my_project_token exists, use it
+    # if gfx key GFX_my_project_token exists, use it
+    # else use GFX_PLACEHOLDER_sp_project_icon
 	
 	# Optional
 	# GFX key of the background texture of the project when it is being researched
@@ -142,7 +142,7 @@ my_project_token = {
 	# AI weight modifier for this project
 	# Default value is 1
 	# current Project scope - FROM = country
-	# For documentation, see examples of ai_will_do throughout the content
+    # For documentation, see examples of ai_will_do throughout the content
 	ai_will_do = {
 		...
 	}
@@ -207,7 +207,7 @@ project_output/iteration_output = {
 	# scope: state. FROM: project
 	# var:facility_province_id : temporary variable with the province ID of the facility
 	facility_state_effects = {
-		add_province_modifier = {
+		add_province_modifier  = {
 			static_modifiers = { my_modifier }
 			province = var:facility_province_id
 		}

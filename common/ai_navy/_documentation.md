@@ -55,16 +55,16 @@ As illustrated, this results in a priority order where objectives from different
 
 ```
 goal_name = {
-	objective_type = [type] # See *Objective Types* below
-	available_for = {
-		ENG # If present, the goal will be disabled for all countries by default, and only available for the countries within this block
-	}
-	blocked_for = {
-		GER # If present, the goal will be disabled for the countries within this block
-	}
-	
-	min_priority = 5 # The minimum priority for this goal, see *Goal/Objective Scoring* above
-	max_priority = 10 # The maximum priority for this goal, see *Goal/Objective Scoring* above
+    objective_type = [type] # See *Objective Types* below
+    available_for = {
+        ENG # If present, the goal will be disabled for all countries by default, and only available for the countries within this block
+    }
+    blocked_for = {
+        GER # If present, the goal will be disabled for the countries within this block
+    }
+    
+    min_priority = 5 # The minimum priority for this goal, see *Goal/Objective Scoring* above
+    max_priority = 10 # The maximum priority for this goal, see *Goal/Objective Scoring* above
 }
 ```
 

@@ -23,7 +23,7 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_artillery
-			category_antiair
+			category_anti_air
 		}
 
 
@@ -41,15 +41,17 @@ sub_units = {
 		manpower = 300
 		weight = 0.1
 
-		supply_consumption = 0.12
-		entrenchment = 2
+		supply_consumption = 0.1
+
 		# Support nerfs to combat abilities
+		defense = -0.4
 		breakthrough = -0.4
-		soft_attack = -0.1
-		hard_attack = -0.1
-		equipment_capture_factor = -0.02
-		same_support_type = anti_air # blocks adding other anti_air types to template
-		entrenchment = 5
+		soft_attack = -0.4
+		hard_attack = -0.4
+		air_attack = -0.2
+
+		same_support_type = anti_air # blocks adding other recon types to template
+
 	}
 
 	laser_anti_air = {
@@ -72,8 +74,7 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_all_armor
-			category_antiair
-			category_artillery
+			category_anti_air
 		}
 
 
@@ -97,9 +98,10 @@ sub_units = {
 		# Support nerfs to combat abilities
 		defense = -0.4
 		breakthrough = -0.4
-		soft_attack = -0.1
-		hard_attack = -0.1
+		soft_attack = -0.4
+		hard_attack = -0.4
+		air_attack = -0.2
 
-		same_support_type = anti_air # blocks adding other anti_air types to template
+		same_support_type = anti_air # blocks adding other recon types to template
 	}
 }

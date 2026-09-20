@@ -1,9 +1,9 @@
-carrier_task_force = {
+blue_water_navy = {
 	folder = naval
 
-	name = GRAND_DOCTRINE_CARRIER_TASK_FORCE
-	description = GRAND_DOCTRINE_CARRIER_TASK_FORCE_DESC
-	icon = GFX_battle_groups_medium
+	name = GRAND_DOCTRINE_BLUE_WATER_NAVY
+	description = GRAND_DOCTRINE_BLUE_WATER_NAVY_DESC
+	icon = GFX_blue_water_navy_medium
 	available = {
 		always = yes
 	}
@@ -16,22 +16,33 @@ carrier_task_force = {
 	}
 
 	tracks = {
-		naval_aviation
-		fleet
-		strategic
-		operational
+		capital_ships
+		screens
+		submarines
+		operations_naval
 	}
 
 	# EFFECTS
-	sortie_efficiency = 0.08
-	convoy_escort_efficiency = 0.04
-	convoy_raiding_efficiency_factor = 0.04
+	carrier = {
+		max_organisation = 10
+	}
+	battleship = {
+		max_organisation = 10
+	}
+	cruiser = {
+		max_organisation = 10
+	}
+	destroyer = {
+		max_organisation = 10
+	}
+	navy_capital_ship_defence_factor = 0.1
 
 	milestones = {
 		{
-			#Naval Aviation
-			max_command_power = 5
-
+			#Capital Ships
+			sortie_efficiency = 0.30
+			navy_carrier_air_agility_factor = 0.10
+			navy_capital_ship_attack_factor = 0.1
 			effect = {
 				if = {
 					limit = {
@@ -47,8 +58,9 @@ carrier_task_force = {
 			}
 		}
 		{
-			#Fleet
-			coordination_bonus = 0.05
+			#Screens
+			navy_anti_air_attack_factor = 0.10
+			mines_planting_by_fleets_factor = 0.2
 
 			effect = {
 				if = {
@@ -65,8 +77,9 @@ carrier_task_force = {
 			}
 		}
 		{
-			#Strategic
-			research_facilities_monthly_rate = 0.5
+			#Submarines
+			naval_torpedo_reveal_chance_factor = -0.05
+			strike_force_movement_org_loss = -0.2
 
 			effect = {
 				if = {
@@ -84,7 +97,8 @@ carrier_task_force = {
 		}
 		{
 			#Operations
-			industrial_capacity_dockyard = 0.05
+			convoy_escort_efficiency = 0.10
+			naval_strike_targetting_factor = 0.1
 
 			effect = {
 				if = {
@@ -103,12 +117,12 @@ carrier_task_force = {
 	}
 }
 
-carrier_strike_force = {
+green_water_navy = {
 	folder = naval
 
-	name = GRAND_DOCTRINE_CARRIER_STRIKE_FORCE
-	description = GRAND_DOCTRINE_CARRIER_STRIKE_FORCE_DESC
-	icon = GFX_blue_water_navy_medium
+	name = GRAND_DOCTRINE_GREEN_WATER_NAVY
+	description = GRAND_DOCTRINE_GREEN_WATER_NAVY_DESC
+	icon = GFX_green_water_navy_medium
 	available = {
 		always = yes
 	}
@@ -126,21 +140,34 @@ carrier_strike_force = {
 	}
 
 	tracks = {
-		naval_aviation
-		fleet
-		strategic
-		operational
+		capital_ships
+		screens
+		submarines
+		operations_naval
 	}
 
 	# EFFECTS
 
-	naval_strike_targetting_factor = 0.08
-	port_strike = 0.08
+	destroyer = {
+		max_organisation = 10
+	}
+	submarine = {
+		max_organisation = 10
+	}
+	frigate = {
+		max_organisation = 10
+	}
+	corvette = {
+		max_organisation = 10
+	}
+
+	navy_max_range_factor = -0.2
 
 	milestones = {
 		{
-			#Naval Aviation
-			command_power_gain_mult = 0.05
+			#Capital Ships
+			sortie_efficiency = 0.30
+			naval_strike_targetting_factor = 0.1
 
 			effect = {
 				if = {
@@ -157,8 +184,9 @@ carrier_strike_force = {
 			}
 		}
 		{
-			#Fleet
-			naval_critical_score_chance_factor = 0.05
+			#Screens
+			convoy_escort_efficiency = 0.15
+			naval_detection = 0.1
 
 			effect = {
 				if = {
@@ -175,8 +203,9 @@ carrier_strike_force = {
 			}
 		}
 		{
-			#Strategic
-			research_facilities_monthly_rate = 0.5
+			#Submarines
+			submarine_attack = 0.10
+			convoy_raiding_efficiency_factor = 0.1
 
 			effect = {
 				if = {
@@ -193,115 +222,9 @@ carrier_strike_force = {
 			}
 		}
 		{
-			#Operational
-			war_support_factor = 0.05
-
-			effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_variable = operations_naval_milestone_var
-						}
-					}
-					set_variable = { operations_naval_milestone_var = 1 }
-				}
-				else = {
-					add_to_variable = { operations_naval_milestone_var = 1 }
-				}
-			}
-		}
-	}
-}
-
-naval_bastion_doctrine = {
-	folder = naval
-
-	name = GRAND_DOCTRINE_NAVAL_BASTION_DOCTRINE
-	description = GRAND_DOCTRINE_NAVAL_BASTION_DOCTRINE_DESC
-	icon = GFX_green_water_navy_medium
-	available = {
-		always = yes
-	}
-
-	xp_cost = 100
-	xp_type = navy
-
-	ai_will_do = {
-		base = 10
-		modifier = {
-			factor = 0
-			any_owned_state = { is_coastal = yes }
-		}
-	}
-
-	tracks = {
-		naval_aviation
-		fleet
-		strategic
-		operational
-	}
-
-	amphibious_invasion_defence = 0.2
-	navy_fuel_consumption_factor = -0.10
-
-	milestones = {
-		{
-			#Naval Aviation
-			naval_strike_targetting_factor = 0.05
-
-			effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_variable = capital_ships_milestone_var
-						}
-					}
-					set_variable = { capital_ships_milestone_var = 1 }
-				}
-				else = {
-					add_to_variable = { capital_ships_milestone_var = 1 }
-				}
-			}
-		}
-		{
-			#Fleet
-			naval_industry_cost_modifier = -0.05
-
-			effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_variable = screens_milestone_var
-						}
-					}
-					set_variable = { screens_milestone_var = 1 }
-				}
-				else = {
-					add_to_variable = { screens_milestone_var = 1 }
-				}
-			}
-		}
-		{
-			#Strategic
-			research_facilities_monthly_rate = 0.5
-
-			effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_variable = submarines_milestone_var
-						}
-					}
-					set_variable = { submarines_milestone_var = 1 }
-				}
-				else = {
-					add_to_variable = { submarines_milestone_var = 1 }
-				}
-			}
-		}
-		{
-			#Operational
-			naval_cost_modifier = -0.05
+			#Operations
+			strike_force_movement_org_loss = -0.15
+			naval_torpedo_reveal_chance_factor = -0.10
 
 			effect = {
 				if = {

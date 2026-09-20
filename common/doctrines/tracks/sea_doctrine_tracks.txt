@@ -1,18 +1,19 @@
-naval_aviation = {
-	name = DOCTRINE_NAVAL_AVIATION
+capital_ships = {
+	name = DOCTRINE_TRACK_CAPITAL_SHIPS
 	background = "GFX_base_strike_bg"
 	icon = "GFX_doctrine_milestone_carriers_naval"
 	icon_frame = "GFX_doctrine_decor_naval"
 	mastery = {
-		multiplier = 1.0 # TODO - balance this number
+		multiplier = 5.0 # TODO - balance this number
 		equipment = {
+			capital_ship
 			carrier
 		}
 	}
 }
 
-fleet = {
-	name = DOCTRINE_FLEET
+screens = {
+	name = DOCTRINE_TRACK_SCREENS
 	background = "GFX_screens_bg"
 	icon = "GFX_doctrine_milestone_screens_naval"
 	icon_frame = "GFX_doctrine_decor_naval"
@@ -24,8 +25,8 @@ fleet = {
 	}
 }
 
-strategic = {
-	name = DOCTRINE_STRATEGIC
+submarines = {
+	name = DOCTRINE_TRACK_SUBMARINES
 	background = "GFX_trade_interdiction_bg"
 	icon = "GFX_doctrine_milestone_submarine_naval"
 	icon_frame = "GFX_doctrine_decor_naval"
@@ -37,13 +38,13 @@ strategic = {
 	}
 }
 
-operational = {
-	name = DOCTRINE_TRACK_OPERATIONAL
+operations_naval = {
+	name = DOCTRINE_TRACK_OPERATIONS
 	background = "GFX_fleet_in_being_bg"
 	icon = "GFX_doctrine_milestone_ships_naval"
 	icon_frame = "GFX_doctrine_decor_naval"
 	mastery = {
-		multiplier = 0.3 # TODO - balance this number
+		multiplier = 0.7 # TODO - balance this number
 		equipment = {
 			capital_ship
 			carrier

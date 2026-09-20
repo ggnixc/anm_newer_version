@@ -1,25 +1,23 @@
 autonomy_state = {
 	id = autonomy_client_state
-
+	
 	min_freedom_level = 0.75
-	manpower_influence = 0
-
+	
 	rule = {
-		desc = "RULE_DESC_IS_A_SUBJECT"
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
 	}
-
+	
 	modifier = {
-		hidden_modifier = {
-			autonomy_manpower_share = 0.0
-			extra_trade_to_overlord_factor = 0.25
-			overlord_trade_cost_factor = -0.25
-		}
+		autonomy_manpower_share = 0.0
+		extra_trade_to_overlord_factor = 0.25
+		overlord_trade_cost_factor = -0.25
 	}
-
+	
 	ai_subject_wants_higher = {
 		factor = 1.0
 	}
-
+	
 	ai_overlord_wants_lower = {
 		factor = 1.0
 	}
@@ -27,11 +25,15 @@ autonomy_state = {
 	ai_overlord_wants_garrison = {
 		always = no
 	}
-
+  
 	allowed = {
-		always = yes
+		OR = {
+			is_subject_of = USA
+			is_subject_of = UDM
+			is_subject_of = TUR
+		}	
 	}
-
+	
 	can_take_level = {
 		always = no
 	}

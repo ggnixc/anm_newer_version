@@ -3,7 +3,7 @@ maneuver_warfare = {
 
 	name = GRAND_DOCTRINE_MANEUVER_WARFARE
 	description = GRAND_DOCTRINE_MANEUVER_WARFARE_DESC
-	icon = GFX_overwhelming_force_medium
+	icon = GFX_maneuver_warfare_medium
 	available = {
 		always = yes
 	}
@@ -12,20 +12,11 @@ maneuver_warfare = {
 	xp_type = army
 
 	ai_will_do = {
-		base = 10
+		base = 1
 
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
-					tag = OMS
-					tag = WRS
-					tag = GER
-					tag = CLC
-					tag = SPH
-					tag = GOR
-				}
-			}
+			is_major = no
 		}
 	}
 
@@ -37,26 +28,18 @@ maneuver_warfare = {
 	}
 
 	# EFFECTS
-	max_planning = -0.3
-	planning_speed = 0.35
-	max_dig_in = -5
-	org_loss_when_moving = -0.2
-	category_army = {
-		breakthrough = 0.1
-		defense = -0.1
-		default_morale = 0.15
-		max_organisation = -0.1
-	}
-	army_attack_speed_factor = 0.25
-	ai_focus_aggressive_factor = 0.25
-	army_fuel_consumption_factor = 0.1
+	planning_speed = 0.20
+	army_speed_factor = 0.10
 	enable_tactic = tactic_unexpected_thrust
-	enable_tactic = tactic_backhand_blow
+	org_loss_when_moving = -0.1
 
 	milestones = {
 		{
 			#Infantry
-			military_expenditures_factor = -0.1
+			org_loss_when_moving = -0.15
+			land_reinforce_rate = 0.02
+			enable_tactic = tactic_delay
+
 			effect = {
 				if = {
 					limit = {
@@ -73,7 +56,9 @@ maneuver_warfare = {
 		}
 		{
 			#Artillery/Support
-			research_facilities_monthly_rate = 2
+			planning_speed = 0.1
+			org_loss_at_low_org_factor = -0.1
+			enable_tactic = tactic_overwhelming_fire
 			effect = {
 				if = {
 					limit = {
@@ -90,7 +75,9 @@ maneuver_warfare = {
 		}
 		{
 			#Armor
-			command_power_gain_mult = 0.1
+			additional_brigade_column_size = 1
+			enable_tactic = tactic_blitz
+
 			effect = {
 				if = {
 					limit = {
@@ -107,7 +94,9 @@ maneuver_warfare = {
 		}
 		{
 			#Operations
-			army_professionalism_monthly_rate = 2
+			planning_speed = 0.2
+			enable_tactic = tactic_backhand_blow   
+
 			effect = {
 				if = {
 					limit = {
@@ -125,12 +114,12 @@ maneuver_warfare = {
 	}
 }
 
-strategic_warfare = {
+combined_operations = {
 	folder = land
 
-	name = GRAND_DOCTRINE_STRATEGIC_WARFARE
-	description = GRAND_DOCTRINE_STRATEGIC_WARFARE_DESC
-	icon = GFX_comprehensive_strategic_analysis_medium
+	name = GRAND_DOCTRINE_COMBINED_OPERATIONS
+	description = GRAND_DOCTRINE_COMBINED_OPERATIONS_DESC
+	icon = GFX_combined_operations_medium
 	available = {
 		always = yes
 	}
@@ -139,7 +128,12 @@ strategic_warfare = {
 	xp_type = army
 
 	ai_will_do = {
-		base = 5
+		base = 1
+
+		modifier = {
+			factor = 0
+			is_major = no
+		}
 	}
 
 	tracks = {
@@ -150,21 +144,19 @@ strategic_warfare = {
 	}
 
 	# EFFECTS
-	max_planning = 0.3
-	planning_speed = 0.1
-	max_dig_in = 5
+	air_cas_present_factor = 0.3
 	category_army = {
-		max_organisation = 15
-		default_morale = -0.15
+		soft_attack = 0.1
+		defense = 0.1
 	}
-	ai_focus_defense_factor = 0.15
-	command_power_gain_mult = 0.1
-	supply_consumption_factor = -0.1
+	enable_tactic = tactic_preemptive_strike
 
 	milestones = {
 		{
-			#Infantry 
-			training_time_factor = -0.1
+			#Infantry
+			enable_tactic = tactic_elastic_defense
+			supply_consumption_factor = -0.1
+
 			effect = {
 				if = {
 					limit = {
@@ -181,7 +173,13 @@ strategic_warfare = {
 		}
 		{
 			#Artillery/Support
-			industrial_equipment_monthly_rate = 2
+			additional_brigade_column_size = 1
+			category_support_battalions = {
+				max_organisation = 10
+			}
+			planning_decay_rate_factor = -0.1
+			enable_tactic = tactic_barrage
+
 			effect = {
 				if = {
 					limit = {
@@ -195,10 +193,15 @@ strategic_warfare = {
 					add_to_variable = { support_milestone_var = 1 }
 				}
 			}
+
 		}
 		{
 			#Armor
-			max_command_power = 10
+			enable_tactic = tactic_delay
+			category_army = {
+				default_morale = 0.2
+			}
+
 			effect = {
 				if = {
 					limit = {
@@ -212,11 +215,15 @@ strategic_warfare = {
 					add_to_variable = { armor_milestone_var = 1 }
 				}
 			}
-			
 		}
 		{
 			#Operations
-			army_professionalism_monthly_rate = 2
+			enable_tactic = tactic_tactical_withdrawal
+			category_army = {
+				default_morale = 0.4
+			}
+			planning_decay_rate_factor = -0.1
+
 			effect = {
 				if = {
 					limit = {
@@ -231,77 +238,27 @@ strategic_warfare = {
 				}
 			}
 		}
+
 	}
 }
 
-defensive_warfare = {
+strategic_theorem = {
 	folder = land
 
-	name = GRAND_DOCTRINE_DEFENSIVE_WARFARE
-	description = GRAND_DOCTRINE_DEFENSIVE_WARFARE_DESC
-	icon = GFX_prepared_defense_medium
+	name = GRAND_DOCTRINE_STRATEGIC_THEOREM
+	description = GRAND_DOCTRINE_STRATEGIC_THEOREM_DESC
+	icon = GFX_strategic_theorem_medium
 	available = {
 		always = yes
 	}
 
-	xp_cost = 75
+	xp_cost = 100
 	xp_type = army
 
 	ai_will_do = {
 		base = 2
 	}
 
-	ai_will_do = {
-		base = 10
-
-		modifier = {
-			factor = 0
-			NOT = {
-				OR = {
-					tag = TAR
-					tag = YAK
-					tag = URL
-					tag = MGN
-					tag = BKR
-					tag = FAR
-					tag = GRN
-					tag = DEN
-					tag = ULS
-					tag = NOR
-					tag = CRI
-					tag = TAJ
-					tag = KYR
-					tag = CAM
-					tag = PHI
-					tag = ONG
-					tag = FIN
-					tag = SWE
-					tag = GAL
-					tag = ADL
-					tag = BSQ
-					tag = CTL
-					tag = MAC
-					tag = MNT
-					tag = ALB
-					tag = IRE
-					tag = GNB
-					tag = URG
-					tag = MEN
-					tag = TAN
-					tag = ZLT
-					tag = FAN
-					tag = VOL
-					tag = JOR
-					tag = PAL
-					tag = ISR
-					tag = LEB
-					tag = GUL
-					tag = BOL
-				}
-			}
-		}
-	}
-
 	tracks = {
 		infantry
 		combat_support
@@ -310,167 +267,19 @@ defensive_warfare = {
 	}
 
 	# EFFECTS
-	max_dig_in = 10
-	max_planning = 0.15
-	planning_speed = 0.1
-	category_army = {
-		max_organisation = 10
-		defense = 0.2
-		breakthrough = -0.2
-		soft_attack = -0.05
-		hard_attack = -0.05
-		default_morale = 0.1
-	}
-	army_speed_factor = -0.15
-	ai_focus_defense_factor = 0.35
-	command_power_gain_mult = -0.15
-	enable_tactic = tactic_elastic_defense
-	enable_tactic = tactic_delay
-
-	milestones = {
-		{
-			#Infantry 
-			weekly_casualties_war_support = 0.003
-			effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_variable = infantry_milestone_var
-						}
-					}
-					set_variable = { infantry_milestone_var = 1 }
-				}
-				else = {
-					add_to_variable = { infantry_milestone_var = 1 }
-				}
-			}
-		}
-		{
-			#Artillery/Support
-			healthcare_monthly_rate = 2
-			effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_variable = support_milestone_var
-						}
-					}
-					set_variable = { support_milestone_var = 1 }
-				}
-				else = {
-					add_to_variable = { support_milestone_var = 1 }
-				}
-			}
-		}
-		{
-			#Armor
-			max_command_power = 10
-			effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_variable = armor_milestone_var
-						}
-					}
-					set_variable = { armor_milestone_var = 1 }
-				}
-				else = {
-					add_to_variable = { armor_milestone_var = 1 }
-				}
-			}
-			
-		}
-		{
-			#Operations
-			army_professionalism_monthly_rate = 2
-			effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_variable = operations_army_milestone_var
-						}
-					}
-					set_variable = { operations_army_milestone_var = 1 }
-				}
-				else = {
-					add_to_variable = { operations_army_milestone_var = 1 }
-				}
-			}
-		}
-	}
-}
-
-unconventional_warfare = {
-	folder = land
-
-	name = GRAND_DOCTRINE_UNCONVENTIONAL_WARFARE
-	description = GRAND_DOCTRINE_UNCONVENTIONAL_WARFARE_DESC
-	icon = GFX_military_deception_medium
-	available = {
-		always = yes
-	}
-
-	xp_cost = 50
-	xp_type = army
-
-	ai_will_do = {
-		base = 10
-		modifier = {
-			factor = 0
-			NOT = {
-				OR = {
-					tag = VIC
-					tag = GAY
-					tag = YGR
-					tag = YKT
-					tag = OMO
-					tag = VIC
-					tag = MLY
-					tag = CLL
-					tag = VNC
-					tag = FEN
-					tag = MAU
-					AND = {
-						has_country_flag = is_west_african_nation
-						NOT = { tag = WOL }
-						NOT = { tag = FFR }
-						NOT = { tag = MLI }
-						NOT = { tag = GUI }
-					}
-				}
-			}
-		}
-	}
-
-	tracks = {
-		infantry
-		combat_support
-		armor
-		operations_army
-	}
-
-	# EFFECTS
-	max_dig_in = 5
-	category_army = {
-		max_organisation = -15
-		equipment_capture_factor = 0.02
-		default_morale = 0.15
-	}
-	land_reinforce_rate = 0.01
-	supply_consumption_factor = -0.15
-	org_loss_when_moving = -0.2
-	max_planning = -0.3
+	enable_tactic = tactic_overwhelming_attack
+	
+	max_planning = 0.25
 	planning_speed = 0.2
-	terrain_penalty_reduction = 0.1
-	max_command_power = -15
-	command_power_gain_mult = 0.5
-	ai_focus_defense_factor = 0.2
-	enable_tactic = tactic_backhand_blow
+	max_dig_in = 7.5
 
 	milestones = {
 		{
 			#Infantry 
-			army_morale_factor = 0.1
+			additional_brigade_column_size = 1
+			enable_tactic = tactic_elastic_defense
+			max_dig_in_factor = 0.05
+
 			effect = {
 				if = {
 					limit = {
@@ -487,7 +296,9 @@ unconventional_warfare = {
 		}
 		{
 			#Artillery/Support
-			industrial_expertise_monthly_rate = 2
+			coordination_bonus = 0.1
+			enable_tactic = tactic_overwhelming_fire
+
 			effect = {
 				if = {
 					limit = {
@@ -504,7 +315,8 @@ unconventional_warfare = {
 		}
 		{
 			#Armor
-			command_power_gain_mult = 0.1
+			land_reinforce_rate = 0.02
+			enable_tactic = tactic_breakthrough
 			effect = {
 				if = {
 					limit = {
@@ -522,7 +334,9 @@ unconventional_warfare = {
 		}
 		{
 			#Operations
-			army_professionalism_monthly_rate = 2
+			coordination_bonus = 0.1
+			max_command_power = 30
+
 			effect = {
 				if = {
 					limit = {
@@ -539,9 +353,3 @@ unconventional_warfare = {
 		}
 	}
 }
-
-	#enable_tactic = tactic_preemptive_strike
-	#enable_tactic = tactic_delay
-	#enable_tactic = tactic_overwhelming_fire
-	#enable_tactic = tactic_guerrilla_tactics
-	#enable_tactic = tactic_overwhelming_attack

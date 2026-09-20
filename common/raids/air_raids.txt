@@ -65,8 +65,11 @@ types = {
 		custom_map_icon = GFX_raid_type_icon_facility_raid
 
 		arrow = {
-			type = air
+		    type = air
 		}
+        unit_model = {
+            type = equipment
+        }
 
 		unit_requirements = {
 			equipment = {
@@ -82,7 +85,7 @@ types = {
 		}
 
 		starting_point = {
-			types = { air_base }
+		    types = { air_base }
 		}
 
 		success_factors = {
@@ -167,7 +170,7 @@ types = {
 					}
 			}
 			limited_success = {
-				victim_effects = {
+			    victim_effects = {
 					var:target_state = {
 						custom_effect_tooltip = {
 							localization_key = raid_facility_damage_tt
@@ -184,7 +187,7 @@ types = {
 						raid_reduce_project_progress_ratio = 0.05
 					}
 
-				}
+			    }
 				actor_effects = {
 					raid_damage_units = {
 						plane_loss = 40
@@ -229,7 +232,7 @@ types = {
 				}
 			}
 			critical_success = {
-				victim_effects = {
+			    victim_effects = {
 					var:target_state = {
 						custom_effect_tooltip = {
 							localization_key = raid_facility_damage_tt
@@ -245,7 +248,7 @@ types = {
 						}
 						raid_reduce_project_progress_ratio = 0.25
 					}
-				}
+			    }
 				actor_effects = {
 					raid_damage_units = {
 						plane_loss = 10
@@ -316,8 +319,11 @@ types = {
 		launch_sound = raid_launch_air
 
 		arrow = {
-			type = air
+		    type = air
 		}
+        unit_model = {
+            type = equipment
+        }
 
 		unit_requirements = {
 			equipment = {
@@ -327,7 +333,7 @@ types = {
 		}
 
 		starting_point = {
-			types = { air_base }
+		    types = { air_base }
 		}
 
 		success_factors = {
@@ -410,7 +416,7 @@ types = {
 					}
 			}
 			limited_success = {
-				victim_effects = {
+			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
 						damage_building = {
@@ -423,7 +429,7 @@ types = {
 							days = 60
 						}
 					}
-				}
+			    }
 				actor_effects = {
 					# Damage to raiding units
 					raid_damage_units = {
@@ -453,7 +459,7 @@ types = {
 				}
 			}
 			success = {
-				victim_effects = {
+			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
 						damage_building = {
@@ -467,7 +473,7 @@ types = {
 							days = 180
 						}
 					}
-				}
+			    }
 				actor_effects = {
 					# Damage to raiding units
 					raid_damage_units = {
@@ -498,7 +504,7 @@ types = {
 				}
 			}
 			critical_success = {
-				victim_effects = {
+			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
 						damage_building = {
@@ -512,7 +518,7 @@ types = {
 							days = 360
 						}
 					}
-				}
+			    }
 				actor_effects = {
 					# Damage to raiding units
 					raid_damage_units = {
@@ -635,8 +641,11 @@ types = {
 		target_icon = GFX_oilfield_target_icon
 		target_loc_key = raid_target_name_oil_field
 		arrow = {
-			type = air
+		    type = air
 		}
+        unit_model = {
+            type = equipment
+        }
 		launch_sound = raid_launch_air
 
 		unit_requirements = {
@@ -647,7 +656,7 @@ types = {
 		}
 
 		starting_point = {
-			types = { air_base }
+		    types = { air_base }
 		}
 
 		success_factors = {
@@ -703,9 +712,9 @@ types = {
 
 		success_levels = {
 			failure = {
-				victim_effects = {
+			    victim_effects = {
 
-				}
+			    }
 				actor_effects = {
 					# Damage to raiding units
 					raid_damage_units = {
@@ -724,7 +733,7 @@ types = {
 					}
 			}
 			limited_success = {
-				victim_effects = {
+			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
 						add_dynamic_modifier = {
@@ -732,7 +741,7 @@ types = {
 							days = 90
 						}
 					}
-				}
+			    }
 				actor_effects = {
 					# Damage to raiding units
 					raid_damage_units = {
@@ -749,7 +758,7 @@ types = {
 				}
 			}
 			success = {
-				victim_effects = {
+			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
 						add_dynamic_modifier = {
@@ -757,7 +766,7 @@ types = {
 							days = 180
 						}
 					}
-				}
+			    }
 				actor_effects = {
 					# Damage to raiding units
 					raid_damage_units = {
@@ -778,7 +787,7 @@ types = {
 				}
 			}
 			critical_success = {
-				victim_effects = {
+			    victim_effects = {
 					# Damage to Target
 					var:target_state = {
 						add_dynamic_modifier = {
@@ -786,7 +795,7 @@ types = {
 							days = 360
 						}
 					}
-				}
+			    }
 				actor_effects = {
 					# Damage to raiding units
 					raid_damage_units = {

@@ -1,6 +1,5 @@
 sub_units = {
-	recon = { #mounted cav
-		abbreviation = "C-REC"
+	recon = {
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -19,8 +18,6 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_recon
-			category_light_infantry
-			category_special_forces
 		}
 
 
@@ -28,21 +25,22 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 60
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
 
 		#Misc Abilities
 		weight = 0.1
-		supply_consumption = 0.01
+		supply_consumption = 0.02
 		recon = 1
-		equipment_capture_factor = 0.02
 
 		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
 		soft_attack = -0.9
 		hard_attack = -0.9
-		initiative = 0.05
+		maximum_speed = 1.0 # move at cav speeds
 
 		essential = {
 			infantry_equipment
@@ -99,7 +97,6 @@ sub_units = {
 
 
 	mot_recon = { #trucks, motorcyles, as needed
-		abbreviation = "M-REC"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -118,7 +115,6 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_recon
-			category_light_infantry
 		}
 
 
@@ -126,7 +122,7 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 65
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
@@ -136,11 +132,13 @@ sub_units = {
 		supply_consumption = 0.02
 		recon = 1.5
 		fuel_consumption = -0.27		#less units in brigade = less fuel consumed
-		equipment_capture_factor = 0.04
+
 		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
 		soft_attack = -0.9
 		hard_attack = -0.9
-		initiative = 0.06
+
 		essential = {
 			infantry_equipment
 			support_equipment
@@ -198,7 +196,6 @@ sub_units = {
 	}
 
 	IFV_recon = { #IFV
-		abbreviation = "I-REC"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -217,7 +214,6 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_recon
-			category_all_armor
 		}
 
 
@@ -225,7 +221,7 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 50
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
@@ -235,11 +231,13 @@ sub_units = {
 		supply_consumption = 0.02
 		recon = 2
 		fuel_consumption = -0.27		#less units in brigade = less fuel consumed
-		equipment_capture_factor = 0.04
+
 		# Support nerfs to combat abilities
+		breakthrough = -0.5
+		defense = -0.5
 		soft_attack = -0.9
 		hard_attack = -0.9
-		initiative = 0.06
+
 		essential = {
 			IFV_equipment
 		}
@@ -293,7 +291,6 @@ sub_units = {
 	}
 
 	AC_recon = { #Armored Car
-		abbreviation = "A-REC"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -312,8 +309,6 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_recon
-			category_armored_car
-			category_all_armor
 		}
 
 
@@ -321,7 +316,7 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 65
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
@@ -329,11 +324,15 @@ sub_units = {
 		#Misc Abilities
 		weight = 0.1
 		supply_consumption = 0.02
-		recon = 4
+		recon = 2.5
 		fuel_consumption = -0.27		#less units in brigade = less fuel consumed
-		initiative = 0.07
+
 		# Support nerfs to combat abilities
-		equipment_capture_factor = 0.03
+		breakthrough = -0.5
+		defense = -0.5
+		soft_attack = -0.9
+		hard_attack = -0.9
+
 		essential = {
 			armored_car_equipment
 		}
@@ -387,7 +386,6 @@ sub_units = {
 	}
 
 	MBT_recon = { #MBT
-		abbreviation = "T-REC"
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -414,7 +412,7 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 50
+		max_organisation = 20
 		default_morale = 0.3
 		manpower = 500
 		training_time = 120
@@ -424,11 +422,13 @@ sub_units = {
 		supply_consumption = 0.02
 		recon = 1.5
 		fuel_consumption = -0.39		#less units in brigade = less fuel consumed
-		equipment_capture_factor = 0.04
+
 		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
 		soft_attack = -0.9
 		hard_attack = -0.9
-		initiative = 0.05
+
 		essential = {
 			MBT_equipment
 		}
@@ -482,7 +482,6 @@ sub_units = {
 	}
 
 	scout_helicopter_company = {
-		abbreviation = "H-REC"
 		sprite = scout_helicopter
 		map_icon_category = infantry
 		priority = 0
@@ -510,7 +509,7 @@ sub_units = {
 
 		#Size Definitions
 		max_strength = 2
-		max_organisation = 40
+		max_organisation = 25
 		default_morale = 0.3
 		manpower = 500
 		training_time = 150
@@ -522,9 +521,11 @@ sub_units = {
 		fuel_consumption = -0.75
 
 		# Support nerfs to combat abilities
+		defense = -0.5
+		breakthrough = -0.5
 		soft_attack = -0.9
 		hard_attack = -0.9
-		initiative = 0.1
+
 		essential = {
 			scout_helicopter_equipment
 		}

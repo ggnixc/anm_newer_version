@@ -4,13 +4,6 @@ equipments = {
 
 	infantry_equipment = {
 
-		can_be_produced = {
-			OR = {
-				has_country_flag = demand_more_guns_prod
-				NOT = { has_idea = ENG_Across_The_Channel }
-			}
-		}
-
 		is_archetype = yes
 		picture = archetype_infantry_equipment
 		is_buildable = no
@@ -40,7 +33,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 
-		build_cost_ic = 0.2
+		build_cost_ic = 0.3
 		resources = {
 			steel = 1
 		}
@@ -72,7 +65,7 @@ equipments = {
 		ap_attack = 5
 		air_attack = 0
 
-		build_cost_ic = 0.3
+		build_cost_ic = 0.45
 		resources = {
 			steel = 2
 		}
@@ -95,7 +88,7 @@ equipments = {
 		ap_attack = 10
 		air_attack = 0.5
 
-		build_cost_ic = 0.45
+		build_cost_ic = 0.7
 		resources = {
 			steel = 3
 		}
@@ -118,7 +111,7 @@ equipments = {
 		ap_attack = 20
 		air_attack = 0.75
 
-		build_cost_ic = 0.55
+		build_cost_ic = 0.85
 		resources = {
 			steel = 3
 		}
@@ -165,7 +158,7 @@ equipments = {
 		ap_attack = 40
 		air_attack = 1.5
 
-		build_cost_ic = 0.75
+		build_cost_ic = 1.2
 		resources = {
 			steel = 4
 			aluminium = 1
@@ -196,63 +189,54 @@ equipments = {
 			always = no
 		}
 		year = 1936
-		build_cost_ic = 0.1
 	}
 	infantry_kit_eq_45 = {
 		can_be_produced = {
 			always = no
 		}
 		year = 1945
-		build_cost_ic = 0.15
 	}
 	infantry_kit_eq_52 = {
 		can_be_produced = {
 			always = no
 		}
 		year = 1952
-		build_cost_ic = 0.2
 	}
 	infantry_kit_eq_58 = {
 		can_be_produced = {
 			always = no
 		}
 		year = 1958
-		build_cost_ic = 0.25
 	}
 	infantry_kit_eq_64 = {
 		can_be_produced = {
 			always = no
 		}
 		year = 1964
-		build_cost_ic = 0.25
 	}
 	infantry_kit_eq_70 = {
 		can_be_produced = {
 			always = no
 		}
 		year = 1970
-		build_cost_ic = 0.3
 	}
 	infantry_kit_eq_76 = {
 		can_be_produced = {
 			always = no
 		}
 		year = 1976
-		build_cost_ic = 0.4
 	}
 	infantry_kit_eq_82 = {
 		can_be_produced = {
 			always = no
 		}
 		year = 1982
-		build_cost_ic = 0.45
 	}
 	infantry_kit_eq_88 = {
 		can_be_produced = {
 			always = no
 		}
 		year = 1988
-		build_cost_ic = 0.5
 	}
 
 
@@ -291,7 +275,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 0.35
+		build_cost_ic = 0.4
 		resources = {
 			steel = 1
 		}
@@ -332,7 +316,7 @@ equipments = {
 		air_attack = 1
 		
 		reliability = 0.7
-		build_cost_ic = 0.45
+		build_cost_ic = 0.7
 	}
 
 	experimental_infantry_equipment_sony_1 = {
@@ -351,7 +335,7 @@ equipments = {
 		air_attack = 1
 		
 		reliability = 0.6
-		build_cost_ic = 0.35
+		build_cost_ic = 0.7
 	}
 
 	experimental_infantry_equipment_matsushita_1 = {
@@ -370,7 +354,7 @@ equipments = {
 		air_attack = 1
 		
 		reliability = 0.6
-		build_cost_ic = 0.3
+		build_cost_ic = 0.7
 	}
 
 	experimental_infantry_equipment_chimera = {
@@ -389,6 +373,6 @@ equipments = {
 		air_attack = 1
 		
 		reliability = 0.7
-		build_cost_ic = 0.4
+		build_cost_ic = 0.7
 	}
 }
