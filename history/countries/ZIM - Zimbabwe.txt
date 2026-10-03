@@ -5,8 +5,25 @@ set_oob = "ZIM_1962"
 recruit_character = ZIM_Denis_Walker
 recruit_character = ZIM_Robert_Mugabe
 
+ENG = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = ZIM autonomy_state = autonomy_colony }
+        else = {
+            puppet = ZIM
+        }
+    }
+}
+
+set_cosmetic_tag = ZIM_SRO
+
 set_politics = {	
-	ruling_party = socialism
+	ruling_party = fascism
 	last_election = "1993.3.5"
 	election_frequency = 48
 	elections_allowed = yes
@@ -16,7 +33,7 @@ TNO_startup_nation = yes
 
 set_popularities = {
     communist = 0
-    socialist = 68
+    socialist = 0
     socialist_1 = 0
     progressivism = 0
     liberalism = 0
@@ -26,7 +43,7 @@ set_popularities = {
     paternalism = 32
     paternalism_1 = 0
     despotism = 0
-    fascism = 0
+    fascism = 68
 }
 
 add_ideas = {
