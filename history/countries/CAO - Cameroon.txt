@@ -1,5 +1,6 @@
 ﻿capital = 793
 
+recruit_character = CAO_Luc_Ayang
 recruit_character = CAO_Paul_Bernard_Kemayou
 
 set_research_slots = 3
@@ -10,7 +11,7 @@ add_manpower = 88743
 
 
 set_politics = {
-	ruling_party = socialist
+	ruling_party = liberal_conservatism
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
@@ -22,22 +23,21 @@ TNO_startup_nation = yes
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 51
+    socialist = 22
     progressivism = 12
     liberalism = 0
-    liberal_conservatism = 0
+    liberal_conservatism = 51
     conservatism = 0
     paternalism = 15
     despotism = 0
-    fascism = 22
+    fascism = 0
     national_socialism = 0
      
 }
 
 add_ideas = {
-	CWA_Faction
 	#POLITICS
-	tno_political_parties_one_party_state
+	tno_political_parties_multiparty_system
 	tno_religious_rights_secularism
 	tno_trade_unions_illegal
 	tno_immigration_closed_borders
