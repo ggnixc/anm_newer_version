@@ -511,6 +511,9 @@ RegionalOrganizations_Startup = {
 	LTH = { RegionalOrganizations_Add = yes }
 	SWZ = { RegionalOrganizations_Add = yes }
 	ETH = { RegionalOrganizations_Add = yes }
+		# Rwanda/Burundi
+	BRD = { RegionalOrganizations_Add = yes }
+	# RWA = { RegionalOrganizations_Add = yes }
 	
 	## Central African Federation
 	set_temp_variable = { reg_org = token:RegionalOrganization_CentralAfricanFed }
@@ -539,6 +542,7 @@ RegionalOrganizations_Startup = {
 	TOG = { RegionalOrganizations_Add = yes }
 	GBE = { RegionalOrganizations_Add = yes }
 	NIG = { RegionalOrganizations_Add = yes }
+	BRD = { RegionalOrganizations_Add = yes }
 
 	## United States of Latin Africa
 	set_temp_variable = { reg_org = token:RegionalOrganization_UnitedStatesOfLatinAfrica }
@@ -553,7 +557,6 @@ RegionalOrganizations_Startup = {
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
-	BRD = { RegionalOrganizations_Add = yes }
 	ANG = { RegionalOrganizations_Add = yes }
 
 	## Central Africa Development and Assistance Treaty
@@ -565,6 +568,7 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	CAF = { RegionalOrganizations_Add = yes }
+	CAO = { RegionalOrganizations_Add = yes }
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
@@ -604,6 +608,18 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	QUE = { RegionalOrganizations_Add = yes }
+
+	# Pan African Freedom Community
+	set_temp_variable = { reg_org = token:RegionalOrganization_PanAfricanFreedomCommunity  }
+	EAF = {
+		set_temp_variable = { org_alignment = JAP }
+		set_temp_variable = { org_leader = EAF }
+		set_temp_variable = { org_type = 1 } # International Association
+		RegionalOrganizations_Initialize = yes
+	}
+	ZAM = { RegionalOrganizations_Add = yes }
+	MLW = { RegionalOrganizations_Add = yes }
+	MZB = { RegionalOrganizations_Add = yes }
 
 	log = "[GetDateText]: [THIS.GetName]: RegionalOrganizations_Startup; Completed execution."
 }

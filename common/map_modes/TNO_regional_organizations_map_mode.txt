@@ -257,6 +257,15 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.5 }
 					set_temp_variable = { blue = 0.1 }
 				}
+				else_if = {
+					limit = { # Pan-African Freedom Community
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_PanAfricanFreedomCommunity } }
+						FROM = { has_idea = RegionalOrganization_PanAfricanFreedomCommunity }
+					}
+					set_temp_variable = { red = 0.325 }
+					set_temp_variable = { green = 0.537 }
+					set_temp_variable = { blue = 0.416 }
+				}
 				else = { # Default
 					set_temp_variable = { red = 0.5 }
 					set_temp_variable = { green = 0.5 }
