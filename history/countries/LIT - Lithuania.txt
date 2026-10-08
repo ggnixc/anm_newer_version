@@ -1,4 +1,5 @@
 ﻿recruit_character = LIT_Mykolas_Burokevicius
+recruit_character = LIT_Lithuanian_Man
 
 capital = 79
 
@@ -17,10 +18,12 @@ set_popularities = {
 
 add_ideas = {
 	###FACTION###
+	Pakt_Reichsprotektorat
 	
 	###MINISTERS###
 	
 	###IDEAS###
+	LIT_dummy_idea
 	
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state
@@ -75,3 +78,7 @@ add_ideas = {
 	tno_academic_base_secondary_schooling
 	tno_birthrate_many
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft }
