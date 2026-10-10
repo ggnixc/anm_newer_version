@@ -1,4 +1,5 @@
 ﻿recruit_character = EST_Karl_Vaino
+recruit_character = EST_Estonian_Man
 
 capital = 13
 
@@ -17,10 +18,12 @@ set_popularities = {
 
 add_ideas = {
 	###FACTION###
+	Pakt_Reichsprotektorat
 	
 	###MINISTERS###
 	
 	###IDEAS###
+	LAT_dummy_idea
 	
 	##POLITICAL LAWS##
 	tno_political_parties_one_party_state
@@ -121,3 +124,7 @@ set_technology = {
 	ww2_submarine = 1
 	ww2_carrier = 1
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft }
