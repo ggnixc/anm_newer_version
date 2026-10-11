@@ -223,9 +223,9 @@ RegionalOrganizations_Startup = {
 	# UKR = { RegionalOrganizations_Add = yes }
 	# MCW = { RegionalOrganizations_Add = yes }
 	# CAU = { RegionalOrganizations_Add = yes }
-	LIT = { RegionalOrganizations_Add = yes }
-	LAT = { RegionalOrganizations_Add = yes }
-	EST = { RegionalOrganizations_Add = yes }
+	# LIT = { RegionalOrganizations_Add = yes }
+	# LAT = { RegionalOrganizations_Add = yes }
+	# EST = { RegionalOrganizations_Add = yes }
 	SLO = { RegionalOrganizations_Add = yes }
 	HUN = { RegionalOrganizations_Add = yes }
 	ROM = { RegionalOrganizations_Add = yes }
@@ -305,8 +305,8 @@ RegionalOrganizations_Startup = {
 		set_temp_variable = { org_type = 1 } # International Association
 		RegionalOrganizations_Initialize = yes
 	}
-	AAF = { RegionalOrganizations_Add = yes }
 	MAD = { RegionalOrganizations_Add = yes }
+	AAF = { RegionalOrganizations_Add = yes }
 
 	## Italian Empire
 	set_temp_variable = { reg_org = token:RegionalOrganization_ItalianEmpire }
@@ -457,19 +457,21 @@ RegionalOrganizations_Startup = {
 	LTH = { RegionalOrganizations_Add = yes }
 	# NAM = { RegionalOrganizations_Add = yes }
 	SWZ = { RegionalOrganizations_Add = yes }
-	ZIM = { RegionalOrganizations_Add = yes }
+	# ZIM = { RegionalOrganizations_Add = yes }
 	SMB = { RegionalOrganizations_Add = yes }
 
 	## Ostministerium
 	set_temp_variable = { reg_org = token:RegionalOrganization_Ostministerium }
-	OST = {
+	LIT = {
 		set_temp_variable = { org_alignment = GER }
 		set_temp_variable = { org_leader = GER }
 		set_temp_variable = { org_type = 8 } # Occupational Authority
 		RegionalOrganizations_Initialize = yes
 	}
-	UKR = { RegionalOrganizations_Add = yes }
+	LAT = { RegionalOrganizations_Add = yes }
+	EST = { RegionalOrganizations_Add = yes }
 	BLR = { RegionalOrganizations_Add = yes }
+	UKR = { RegionalOrganizations_Add = yes }
 	CAU = { RegionalOrganizations_Add = yes }
 	MOS = { RegionalOrganizations_Add = yes }
 
@@ -495,6 +497,7 @@ RegionalOrganizations_Startup = {
 	MRI = { RegionalOrganizations_Add = yes }
 		# French Colonies
 	# AOF = { RegionalOrganizations_Add = yes }
+	CAO = { RegionalOrganizations_Add = yes }
 	MAD = { RegionalOrganizations_Add = yes }
 	# REU = { RegionalOrganizations_Add = yes }
 	AAF = { RegionalOrganizations_Add = yes }
@@ -537,7 +540,6 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	COG = { RegionalOrganizations_Add = yes }
-	CAO = { RegionalOrganizations_Add = yes }
 	CAF = { RegionalOrganizations_Add = yes }
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
@@ -545,7 +547,6 @@ RegionalOrganizations_Startup = {
 	SLE = { RegionalOrganizations_Add = yes }
 	TOG = { RegionalOrganizations_Add = yes }
 	GBE = { RegionalOrganizations_Add = yes }
-	NIG = { RegionalOrganizations_Add = yes }
 	BRD = { RegionalOrganizations_Add = yes }
 
 	## United States of Latin Africa
@@ -557,7 +558,6 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	CAF = { RegionalOrganizations_Add = yes }
-	CAO = { RegionalOrganizations_Add = yes }
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
@@ -572,7 +572,6 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	CAF = { RegionalOrganizations_Add = yes }
-	CAO = { RegionalOrganizations_Add = yes }
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
