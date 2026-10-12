@@ -220,7 +220,7 @@ RegionalOrganizations_Startup = {
 	FIN = { RegionalOrganizations_Add = yes }
 	NOR = { RegionalOrganizations_Add = yes }
 	# OST = { RegionalOrganizations_Add = yes }
-	# UKR = { RegionalOrganizations_Add = yes }
+	UKR = { RegionalOrganizations_Add = yes }
 	# MCW = { RegionalOrganizations_Add = yes }
 	# CAU = { RegionalOrganizations_Add = yes }
 	# LIT = { RegionalOrganizations_Add = yes }
@@ -332,19 +332,20 @@ RegionalOrganizations_Startup = {
 	# CPV = { RegionalOrganizations_Add = yes }
 	# SAO = { RegionalOrganizations_Add = yes }
 
-	## Espacao Economico Portuguese
-	set_temp_variable = { reg_org = token:RegionalOrganization_PortugueseEmpire }
+	## Lusophone Community
+	set_temp_variable = { reg_org = token:RegionalOrganization_LusophoneCommunity }
 	IBR = {
 		set_temp_variable = { org_alignment = 0 }
-		set_temp_variable = { org_type = 9 } # Colonial Empire
+		set_temp_variable = { org_type = 1 } # International Association
 		RegionalOrganizations_Initialize = yes
 	}
 	# ANG = { RegionalOrganizations_Add = yes }
-	# MZB = { RegionalOrganizations_Add = yes }
+	SMB = { RegionalOrganizations_Add = yes }
 	GNB = { RegionalOrganizations_Add = yes }
-	CAP = { RegionalOrganizations_Add = yes }
+	# CPV = { RegionalOrganizations_Add = yes }
 	SAO = { RegionalOrganizations_Add = yes }
-	# BRA = { RegionalOrganizations_Add = yes }
+	# CAB = { RegionalOrganizations_Add = yes }
+	BRA = { RegionalOrganizations_Add = yes }
 
 	## The Commonwealth (Ottawa)
 	set_temp_variable = { reg_org = token:RegionalOrganization_ExileCommonwealth }
@@ -600,7 +601,6 @@ RegionalOrganizations_Startup = {
 		set_temp_variable = { org_type = 1 } # International Association
 		RegionalOrganizations_Initialize = yes
 	}
-	ALG = { RegionalOrganizations_Add = yes }
 
 	# NCC
 	set_temp_variable = { reg_org = token:RegionalOrganization_NCC }

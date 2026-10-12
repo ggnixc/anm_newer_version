@@ -393,12 +393,10 @@ ANM_baltics_to_SOV = {
 
 	every_state = {
 		limit = {
-			is_core_of = OST
 			is_core_of = LIT
 			is_core_of = EST
 			is_core_of = LAT
 		}
-		OST = { remove_state_core = PREV }
 		LIT = { remove_state_core = PREV }
 		EST = { remove_state_core = PREV }
 		LAT = { remove_state_core = PREV }

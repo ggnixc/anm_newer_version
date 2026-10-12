@@ -267,7 +267,6 @@ add_to_faction = ROM
 add_to_faction = FRA
 add_to_faction = SLO
 add_to_faction = UKR
-add_to_faction = OST
 add_to_faction = LIT
 add_to_faction = LAT
 add_to_faction = EST
@@ -290,21 +289,19 @@ add_to_faction = PER
 
 if = {
 	limit = { has_dlc = "Together for Victory" }
-	set_autonomy = { target = OST autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = LIT autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = LAT autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = EST autonomy_state = autonomy_reichsprotektorat }
-	set_autonomy = { target = BLR autonomy_state = autonomy_nebenland }
-	set_autonomy = { target = UKR autonomy_state = autonomy_nebenland }
+	set_autonomy = { target = BLR autonomy_state = autonomy_reichskommissariat }
+	set_autonomy = { target = UKR autonomy_state = autonomy_reichsprotektorat }
 	set_autonomy = { target = MOS autonomy_state = autonomy_miltarbehorde }
-	set_autonomy = { target = CAU autonomy_state = autonomy_subsidiaritat }
+	set_autonomy = { target = CAU autonomy_state = autonomy_reichskommissariat }
 
 	else = {
 		puppet = UKR
 		puppet = LIT
 		puppet = LAT
 		puppet = EST
-		puppet = OST
 		puppet = BLR
 		puppet = MOS
 		puppet = CAU
