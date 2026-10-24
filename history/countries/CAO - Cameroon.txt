@@ -3,6 +3,21 @@
 recruit_character = CAO_Luc_Ayang
 recruit_character = CAO_Paul_Bernard_Kemayou
 
+ENG = {
+    if = {
+        limit = { 
+            OR = { 
+                has_dlc = "Together for Victory" 
+                has_dlc = "Man the Guns" 
+            }
+        }
+        set_autonomy = { target = CAO autonomy_state = autonomy_colony }
+        else = {
+            puppet = CAO
+        }
+    }
+}
+
 set_research_slots = 3
 set_convoys = 200
 set_stability = 0.9
@@ -11,7 +26,7 @@ add_manpower = 88743
 
 
 set_politics = {
-	ruling_party = liberal_conservatism
+	ruling_party = despotism
 	last_election = "1992.10.5"
 	election_frequency = 84
 	elections_allowed = yes
@@ -23,20 +38,20 @@ TNO_startup_nation = yes
 set_popularities = {
     communist = 0
     ultranationalism = 0
-    socialist = 22
-    progressivism = 12
+    socialist = 0
+    progressivism = 0
     liberalism = 0
-    liberal_conservatism = 51
+    liberal_conservatism = 0
     conservatism = 0
-    paternalism = 15
-    despotism = 0
+    paternalism = 0
+    despotism = 100
     fascism = 0
     national_socialism = 0
      
 }
 
 add_ideas = {
-	OFN_Partners
+	Pakt_Kolonialverwaltung
 	#POLITICS
 	tno_political_parties_multiparty_system
 	tno_religious_rights_secularism
@@ -83,5 +98,10 @@ add_ideas = {
 	tno_agriculture_centralized
 	tno_research_facilities_basic
 	tno_academic_base_mass_illiteracy
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Free_Market }
+
      ### MINISTERS ###
 }
