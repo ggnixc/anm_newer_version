@@ -1,0 +1,66 @@
+division_template = {
+	name = "Tanganyika Rifles"
+	division_names_group = ZIM_infantry
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+        light_infantry = { x = 0 y = 1 }
+        light_infantry = { x = 1 y = 0 }
+        light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "Infantry Brigade"
+	division_names_group = ZIM_infantry
+	regiments = {
+        infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+        infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+	}
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+units = {
+    #Tanganyika Rifles
+    division = {
+        name = "1st Tanganyika Rifles Battalion"
+        division_template = "Tanganyika Rifles" 
+        location = "2196" # Dar-es-Salaam
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "2nd Tanganyika Rifles Battalion"
+        division_template = "Tanganyika Rifles" 
+        location = "13880" # Tabora
+        start_experience_factor = 0.20
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    
+    #Infantry Brigades
+    division = {
+        name = "1st Infantry Brigade"
+        division_template = "Infantry Brigade" 
+        location = "2196" # Dar-es-Salaam
+        start_experience_factor = 0.20
+        start_equipment_factor = 0.80
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "2nd Infantry Brigade"
+        division_template = "Infantry Brigade" 
+        location = "12944" # Lindi
+        start_experience_factor = 0.20
+        start_equipment_factor = 0.80
+        start_manpower_factor = 1
+    }
+    
+} 

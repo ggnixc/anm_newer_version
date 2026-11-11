@@ -1,46 +1,99 @@
-capital = 784
-set_oob = " "
-
+capital = 459
+# Vacant
+recruit_character = ALG_Benyoucef_Benkhedda
+recruit_character = ALG_Messali_Hadj
+recruit_character = ALG_Houari_Boumediene
+recruit_character = ALG_Ferhat_Abbas
 recruit_character = ALG_Mohamed_Boudiaf
-recruit_character = ALG_Kasdi_Merbah
-recruit_character = ALG_Mohamed_Yahiaoui
-recruit_character = ALG_Mohammed_Benyahia
-recruit_character = ALG_Ali_Laskri
+recruit_character = ALG_Jamilah_Buhayrad
+recruit_character = ALG_Krim_Belkacem
+recruit_character = ALG_Ahmed_Ben_Bella
+recruit_character = ALG_Said_Mohammedi
+recruit_character = ALG_Abane_Ramdane
+recruit_character = ALG_Mohamed_Khider
+recruit_character = ALG_Malek_Bennabi
+recruit_character = ALG_Abbassi_Madani
+recruit_character = ALG_Mouloud_Mammeri
+recruit_character = ALG_Hocine_Ait_Ahmed
 
-set_politics = {	
-	ruling_party = paternalism
+oob = "ALG_1962"
+
+add_ideas = {
+	ALG_from_our_mountains
+	ALG_newborm_army
+	ALG_a_friend_in_need
+	#ALG_surrender_idea
+	#ministers#
+	ALG_Ferhat_Abbas_hog
+	#political#
+	tno_political_parties_one_party_state
+	tno_religious_rights_pluralism
+	tno_trade_unions_state_controlled
+	tno_immigration_open_immigration
+	tno_slavery_penal_labor
+	tno_public_meetings_outlawed
+	tno_press_rights_propaganda_press
+	tno_vote_franchise_no_voting
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_trinket_pensions
+	tno_unemployment_no_subsidies
+	#social#
+	tno_health_care_support_for_emergencies
+	tno_education_public_education
+	tno_penal_system_military_justice
+	tno_gender_rights_traditional_roles
+	tno_security_community_police
+	tno_regulations_token_regulations
+	#misc
+	tno_refugees_open
+	tno_women_noncombat_only
+	tno_racial_integration_segregated_regiments
+	tno_child_labor_illegal
+	tno_safety_limited_regulations
+	tno_pollution_no_controls
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_institutional_discrimination
+	#social development
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_admin_efficiency_deficient_administrative_systems
+	tno_healthcare_developed
+	tno_agriculture_centralized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+promote_character = ALG_Abane_Ramdane
+
+set_politics = {
+	ruling_party = despotism
 	last_election = "1962.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
+set_popularities = {
+	communist = 0
+	ultranationalism = 0
+	socialist = 25
+	progressivism = 11
+	liberalism = 0
+	conservatism = 28
+	paternalism = 29
+	despotism = 7
+	fascism = 0
+	
+}
+
 #econtype
 set_variable = { TNO_economy_type = token:Econ_Type_Planned }
-
-set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 27
-    socialist_1 = 11
-    progressivism = 0
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 40
-    despotism = 22
-}
-
-add_ideas = {
-	#NAT SPIRITS
-	ALG_Little_Brother
-    ALG_Gateway
-    ALG_Enlightened_Ummah
-	#FACTION STATUS
-	
-	#MINISTERS
-	ALG_Kasdi_Merbah_hog
-    ALG_Mohamed_Yahiaoui_sec
-    ALG_Mohammed_Benyahia_for
-    ALG_Ali_Laskri_eco
-	#LAWS
-}

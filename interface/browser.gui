@@ -2,7 +2,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "browser_window"
-		position = { x=150 y=100 }
+		position = { x = 150 y = 100 }
 		size = { width = 1108 height = 720 }
 		moveable = yes
 		Orientation = UPPER_LEFT
@@ -33,8 +33,7 @@ guiTypes = {
 			pdx_tooltip = "BROWSER_BACK"
 		}
 
-		buttonType =
-		{
+		buttonType = {
 			name = "forward"
 			quadTextureSprite = "GFX_browser_forward"
 			position = { x = 60 y = 11 }
@@ -49,17 +48,27 @@ guiTypes = {
 		}
 
 		buttonType = {
-			name = "forum"
-			quadTextureSprite = "forum"
+			name = "tvtropes"
+			quadTextureSprite = "GFX_browser_tvtropes"
 			position = { x = 140 y = 11 }
-			pdx_tooltip = "BROWSER_FORUM"
+			pdx_tooltip = "BROWSER_TVTROPES"
+			web_link = "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/TheNewOrderLastDaysOfEurope"
 		}
 
 		buttonType = {
-			name = "home"
-			quadTextureSprite = "homepage"
+			name = "reddit"
+			quadTextureSprite = "GFX_browser_reddit"
 			position = { x = 180 y = 11 }
-			pdx_tooltip = "BROWSER_HOME"
+			pdx_tooltip = "BROWSER_REDDIT"
+			web_link = "https://www.reddit.com/r/TNOmod/"
+		}
+
+		buttonType = {
+			name = "discord"
+			quadTextureSprite = "GFX_browser_discord"
+			position = { x = 220 y = 11 }
+			pdx_tooltip = "BROWSER_DISCORD"
+			web_link = "https://discord.gg/theneworder"
 		}
 
 		#buttonType = {
@@ -83,12 +92,11 @@ guiTypes = {
 		#	name = "address"
 		#	instantTextBoxType = no
 		#	textureFile = "GFX_input_long"
-		#	cursor = { x=-5 y =4 }
+		#	cursor = { x = -5 y = 4 }
 		#	font = "standard_font"
-		#	size = { x=700 y=29 }
+		#	size = { x = 700 y = 29 }
 		#	text = "https://www.reddit.com/r/TNOmod/"
 		#	orientation = "UPPER_LEFT"
 		#}
 	}
-
 }

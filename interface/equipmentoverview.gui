@@ -22,12 +22,12 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "template_title"
-			position = { x = 0 y = 8 }
+			position = { x = 8 y = 16 }
 			textureFile = ""
-			font = "aldrich_28_outline"
+			font = "aldrich_36_outline"
 			borderSize = {x = 0 y = 0}
 			text = "EQUIPMENT_IN_USE_HEADER"
-			maxWidth = 320
+			maxWidth = 300
 			maxHeight = 20
 			format = centre
 		}
@@ -35,7 +35,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "template_title_garrison"
 			position = { x = 0 y = 15 }
-			font = "aldrich_28_outline"
+			font = "aldrich_30_outline"
 			text = "EQUIPMENT_IN_GARRISON_HEADER"
 			maxWidth = 320
 			format = centre	
@@ -50,7 +50,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "current_manpower"
 			position = { x = 70 y = 66 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "Stuff"
 			maxWidth = 120
 			maxHeight = 20
@@ -66,7 +66,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_ratio"
 			position = { x = 231 y = 66 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "Stuff"
 			maxWidth = 60
 			maxHeight = 20
@@ -105,12 +105,13 @@ guiTypes = {
 		Background = {
 			name = "unit_stats_list_entry_bg"
 			quadTextureSprite = "GFX_unit_stats_list_entry_bg2"
+			clicksound = "click_default"
 		}
 
 		instantTextBoxType = {
 			name = "archetype_name"
 			position = { x = 10 y = 7 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 165
@@ -122,7 +123,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "archetype_amount"
 			position = { x = 177 y = 7 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 85
@@ -135,7 +136,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "overview_equipment_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 270 height = 55 }
+		size = { width = 270 height = 165 }
 
 		Background = {
 			name = "unit_stats_list_entry_bg"
@@ -145,26 +146,27 @@ guiTypes = {
 		iconType = {
 			name ="equipment_icon"
 			spriteType = "GFX_equipment_item"
-			position = { x = 59 y = 28 }
+			position = { x = 0 y = 40 }
 			Orientation = "UPPER_LEFT"
-			scale = 0.48
-			centerposition = yes
+			scale = 1
+			#centerposition = yes
 		}
 
 		instantTextBoxType = {
 			name = "equipment_name"
-			position = { x = 120 y = 0 }
-			font = "aldrich_18_outline"
+			position = { x = 0 y = 3 }
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
-			maxWidth = 150
+			maxWidth = 270
 			maxHeight = 20
+			fixedsize = yes
 		}
 
 		instantTextBoxType = {
 			name = "equipment_amount"
-			position = { x = 120 y = 40 }
-			font = "aldrich_16_outline"
+			position = { x = 0 y = 23 }
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 70

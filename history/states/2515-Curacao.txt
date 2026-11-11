@@ -7,20 +7,25 @@ state = { #Population Done
 		oil = 12
 	}
 	
-	state_category = tiny_island
+	state_category = small_island
 
 	history = {
 		owner = CUR
 		victory_points = { 19991 1 }
+		add_extra_state_shared_building_slots = 1
 		buildings = {
 			infrastructure = 3
-			radar_station = 1
+			thermoelectric_plant = 2
+			radar_station = 3
+			offices = 2
+			barracks = 1
 			air_base = 2
 			19991 = {
 				naval_base = 2
 				coastal_bunker = 2
 			}
 		}
+		set_state_flag = GDP_category_metropolis
 		add_core_of = CUR
 	}
 

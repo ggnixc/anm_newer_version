@@ -1,75 +1,160 @@
-﻿capital = 1150
+capital = 1150
 
+# Vacant
+recruit_character = MOR_Generic_Vacant
+
+###Playable
 set_war_support = 0.8
 set_stability = 0.5
 
-set_oob = "MOR_1962"
-set_politics = {	
+oob = "Iberian_Wars_MOR"
+set_politics = {
 	ruling_party = despotism
-	last_election = "1994.3.1"
+	last_election = "1962.1.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
-
-TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 4
-    ultranationalism = 0
-    socialist = 0
-    progressivism = 0
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 17
-	paternalism_1 = 6
-    despotism = 43
-	despotism_1 = 30
-    fascism = 0
-     
+	paternalism = 23
+	paternalism_2 = 16
+	despotism = 39
+	despotism_2 = 22
+}
+recruit_character = MOR_Hassan_II
+MOR_Hassan_II = {
+	promote_character = despotism_absolute_monarchy_subtype
+}
+recruit_character = MOR_Abbas_Messadi
+recruit_character = MOR_Abdallah_Ibrahim
+
+recruit_character = MOR_Ahmed_Guedira
+recruit_character = MOR_Mohamed_Oufkir
+recruit_character = MOR_Ahmed_Balafrej
+recruit_character = MOR_Driss_Slaoui
+
+recruit_character = MOR_Ahmed_Dlimi
+recruit_character = MOR_Driss_Omar
+recruit_character = MOR_Mohamed_Bouhali
+recruit_character = MOR_Benhammou_Kettani
+recruit_character = MOR_Abdeslam_Amar
+recruit_character = MOR_Ben_Qassem_Moha
+
+set_research_slots = 3
+set_convoys = 50
+inherit_technology = IBR
+
+set_grand_doctrine = defensive_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 50
 }
 
-recruit_character = MOR_Hassan_II
+add_state_claim = 699
+add_state_claim = 839
+add_state_claim = 1010
+add_state_claim = 1011
+add_state_claim = 1155
+add_state_claim = 1156
+add_state_claim = 1157
+add_state_claim = 1158
+add_state_claim = 1159
+add_state_claim = 2115
+add_state_claim = 2116
+
+country_event = { id = MOR_skeleton.1 days = 400 }
 
 add_ideas = {
+	TRI_Member_Client
+	#National
+	MOR_Lyautey_Kingdom
+	MOR_Makhenz_Istiqlal
+	MOR_Nation_Long_Shadow
 	#political#
-	tno_political_parties_one_party_state
-	tno_religious_rights_state_religion
-	tno_trade_unions_state_controlled
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
+	tno_trade_unions_nonsocialist_allowed
 	tno_immigration_quota_immigration
-	tno_slavery_outlawed
-	tno_public_meetings_outlawed
-	tno_press_rights_state_press_only
+	tno_slavery_work_programs
+	tno_press_rights_censored_press
+	tno_public_meetings_regulated
 	tno_vote_franchise_no_voting
-	tno_refugees_skilled
 	#military#
-	tno_conscription_two_year_draft
-	tno_women_banned
-	tno_military_supervision_military_policing
-	tno_military_spending_medium_spending
+	tno_conscription_limited_conscription
+	tno_military_supervision_rules_of_engagement
 	tno_training_basic_training
-	tno_racial_integration_segregated_regiments
-	tno_draft_exemptions_none
+	tno_draft_exemptions_civil_service_deferment
 	#economic#
 	tno_trade_laws_export_focus
-	tno_economic_focus_partial_mobilization
-	tno_tax_rate_low_taxation
-	tno_income_taxation_tax_havens
+	tno_income_taxation_no_income_taxation
 	tno_minimum_wage_low_minimum_wage
-	tno_max_workhours_12_hour_work_day
-	tno_child_labor_restricted
-	tno_pensions_trinket_pensions
-	tno_unemployment_low_subsidies
+	tno_max_workhours_8_hour_work_day
+	tno_unemployment_moderate_subsidies
+	tno_pensions_acceptable_pensions
 	#social#
-	tno_safety_limited_regulations
-	tno_health_care_public_health_care
-	tno_pollution_few_regulations
+	tno_health_care_universal_health_care
 	tno_education_public_education
-	tno_penal_system_penal_labor
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_women_in_the_workplace
+	tno_security_political_control
+	tno_regulations_moderate_regulations
+	#misc#
+	tno_refugees_skilled
+	tno_women_banned
+	tno_racial_integration_segregated_regiments
+	tno_child_labor_restricted
+	tno_safety_limited_regulations
+	tno_pollution_few_regulations
 	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
 	tno_minorities_oppression
-	tno_security_police 
-	#cabinet 
+	#socdev
+	tno_academic_base_primary_schooling
+	tno_research_facilities_outdated
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_industrial_expertise_nascent
+	tno_army_professionalism_political_interference
+	tno_admin_efficiency_deficient_administrative_systems
+	#cabinet
+	MOR_Ahmed_Guedira_hog
+	MOR_Mohamed_Oufkir_sec
+	MOR_Ahmed_Balafrej_for
+	MOR_Driss_Slaoui_eco
 }
- 
+
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_political_parties_effectiveness = 55 }
+set_variable = { tno_religious_rights_effectiveness = 29 }
+set_variable = { tno_trade_unions_effectiveness = 56 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 53 }
+set_variable = { tno_public_meetings_effectiveness = 79 }
+set_variable = { tno_press_rights_effectiveness = 63 }
+set_variable = { tno_vote_franchise_effectiveness = 100 }
+
+set_variable = { tno_conscription_effectiveness = 59 }
+set_variable = { tno_military_supervision_effectiveness = 46 }
+set_variable = { tno_training_effectiveness = 59 }
+set_variable = { tno_draft_exemptions_effectiveness = 67 }
+
+set_variable = { tno_health_care_effectiveness = 42 }
+set_variable = { tno_education_effectiveness = 43 }
+set_variable = { tno_penal_system_effectiveness = 72 }
+set_variable = { tno_gender_rights_effectiveness = 38 }
+set_variable = { tno_security_effectiveness = 71 }
+
+set_variable = { tno_trade_laws_effectiveness = 49 }
+set_variable = { tno_income_taxation_effectiveness = 59 }
+set_variable = { tno_minimum_wage_effectiveness = 47 }
+set_variable = { tno_max_workhours_effectiveness = 57 }
+set_variable = { tno_pensions_effectiveness = 44 }
+set_variable = { tno_unemployment_effectiveness = 48 }
+set_variable = { tno_regulations_effectiveness = 48 }
+
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Planned }

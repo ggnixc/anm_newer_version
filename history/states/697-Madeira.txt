@@ -9,6 +9,7 @@ state = { #Population Done
 		owner = IBR
 		victory_points = { 3118 10 }
 		buildings = {
+			prisons = 1
 			infrastructure = 2
 			radar_station = 1
 			air_base = 1
@@ -17,7 +18,9 @@ state = { #Population Done
 			}
 		}
 		add_core_of = IBR
- 	}
+		set_state_flag = GDP_regions_portugal
+		set_state_flag = GDP_category_town
+	}
 
 	provinces = {
 		3118

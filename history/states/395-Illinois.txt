@@ -8,11 +8,14 @@ state = {
 	history = {
 		owner = USA
 		buildings = {
-			arms_factory = 1
-			industrial_complex = 1
-			infrastructure = 5
+			prisons = 1
+			barracks = 1
+			offices = 2
+			infrastructure = 6
 			radar_station = 2
 			air_base = 3
+			thermoelectric_plant = 4
+			nuclear_reactor = 1
 		}
 		add_core_of = USA
 		victory_points = { # Chicago
@@ -39,6 +42,9 @@ state = {
 		victory_points = { # East St. Louis
 			12305 1
 		}
+		victory_points = { # Aurora
+			12368 3
+		}
 	}
 
 	provinces = {
@@ -46,6 +52,6 @@ state = {
 	}
 	manpower = 10150900
 	buildings_max_level_factor = 1.000
-	state_category = megalopolis
+	state_category = metropolis
 	local_supplies = 0.000
 }

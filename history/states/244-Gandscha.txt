@@ -29,10 +29,18 @@ state = {
 		}
 		buildings = {
 			infrastructure = 4
- 		}
+			hydroelectric_plant = 1 #Would it get built TNO timeline? I hope so, it is cool
+			thermoelectric_plant = 1
+			schools = 1
+			offices = 1
+			barracks = 1
+		}
+		set_state_flag = GDP_category_large_town
+		add_core_of = AZR
 		add_core_of = CAU
 		set_state_flag = universal_renamings
- 		set_state_flag = universal_renamings
+		set_state_flag = GDP_regions_azerbaijan
+		set_state_flag = universal_renamings
 	}
 
 	provinces = {
@@ -40,6 +48,6 @@ state = {
 	}
 	manpower = 1583019
 	buildings_max_level_factor = 1.000
-	state_category = large_town
+	state_category = town
 	local_supplies = 0.000
 }

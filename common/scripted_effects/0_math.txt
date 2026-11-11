@@ -1,0 +1,62 @@
+# Absolute Value
+# In:
+# | x, temp var of any value
+# Out:
+# | xp, x' the absolute value relative to x.
+math_abs = {
+	set_temp_variable = { xp = x }
+
+	if = {
+		limit = { check_variable = { xp < 0 } }
+		multiply_temp_variable = { xp = -1 }
+	}
+}
+
+# Integer Floor
+# In:
+# | x, temp var of any value
+# Out:
+# | xp, x' the floored value relative to x.
+math_floor = {
+	set_temp_variable = { xp = x }
+	round_temp_variable = xp
+	
+	# Correction if we rounded up
+	if = {
+		limit = { check_variable = { xp > x } }
+		subtract_from_temp_variable = { xp = 1 }
+	}
+}
+
+# Integer Ceiling
+# In:
+# | x, temp var of any value
+# Out:
+# | xp, x' the ceil'ed value relative to x.
+math_ceil = {
+	set_temp_variable = { xp = x }
+	round_temp_variable = xp
+	
+	# Correction if we rounded up
+	if = {
+		limit = { check_variable = { xp < x } }
+		add_to_temp_variable = { xp = 1 }
+	}
+}
+
+# Integer Truncate
+# In:
+# | x, temp var of any value
+# Out:
+# | xp, x' the truncated value relative to x.
+math_truncate = {
+	set_temp_variable = { xp = x }
+
+	if = {
+		limit = { check_variable = { xp > 0 } }
+		math_floor = yes
+	}
+	else = {
+		math_ceil = yes
+	}
+}

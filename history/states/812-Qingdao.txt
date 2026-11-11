@@ -7,9 +7,12 @@ state = {
 		add_core_of = CHI
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 1
- 			10000 = {
-				naval_base = 5
+			prisons = 1
+			offices = 1
+			hospitals = 1
+			thermoelectric_plant = 2
+			10000 = {
+				naval_base = 4
 				coastal_bunker = 1
 			}
 		}
@@ -19,7 +22,10 @@ state = {
 		victory_points = {
 			19845 5
 		}
-  	}
+		set_variable = { china_state_ref = 9 }
+		set_variable = { china_region_ref = 1 }
+		set_variable = { china_city_ref = 1 }
+	}
 
 	provinces = {
 		10000 19845 19857

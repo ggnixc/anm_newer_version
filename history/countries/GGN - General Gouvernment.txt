@@ -1,0 +1,93 @@
+load_focus_tree = ZZZ_national_focus #If you touch this the bookmark gets fucked
+capital = 88
+
+# Vacant
+recruit_character = GGN_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+
+#Country leaders
+recruit_character = GGN_martin_berg
+
+#Generals
+recruit_character = GGN_georg_von_kuchler
+recruit_character = GGN_eccard_freiherr_von_gablenz
+recruit_character = GGN_walter_fries
+recruit_character = GGN_walter_lichel
+recruit_character = GGN_leo_geyr_von_schweppenburg
+
+set_grand_doctrine = maneuver_warfare
+set_sub_doctrine = motorized_infantry_primacy
+set_sub_doctrine = sp_artillery_firepower
+set_sub_doctrine = medium_armor_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 300
+}
+
+add_ideas = {
+	#FACTION
+	Pakt_Military_Authority
+	#POLITICAL
+	tno_political_parties_one_party_state
+	tno_religious_rights_suppression_of_churches
+	tno_trade_unions_illegal
+	tno_immigration_quota_immigration
+	tno_slavery_penal_labor
+	tno_public_meetings_outlawed
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	#MILITARY
+	tno_conscription_service_by_requirement
+	tno_military_supervision_kill_em_all
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#SOCIAL
+	tno_health_care_support_for_emergencies
+	tno_education_stratified_education
+	tno_penal_system_overt_oppression
+	tno_gender_rights_women_in_the_workplace
+	tno_security_maintenance_of_order
+	tno_regulations_token_regulations
+	#ECONOMIC
+	tno_trade_laws_export_focus
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+	#MISC
+	tno_refugees_banned
+	tno_women_banned
+	tno_racial_integration_none
+	tno_safety_minimal_regulations
+	tno_pollution_no_controls
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_segregation
+	tno_child_labor_legal
+	#SOCDEV
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_agriculture_mass_mechanized
+	tno_healthcare_nascent
+	tno_research_facilities_outdated
+	tno_academic_base_primary_schooling
+	tno_admin_efficiency_deficient_administrative_systems
+}
+
+set_research_slots = 4
+set_stability = 0.62
+
+set_politics = {
+	ruling_party = national_socialism
+	last_election = "1939.10.6"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = { national_socialism = 100 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Gelenkte_Wirtschaft }
+inherit_technology = GER

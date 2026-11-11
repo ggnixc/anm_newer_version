@@ -1,87 +1,178 @@
-﻿capital = 687
+capital = 687
 
-recruit_character = GUY_Manzoor_Nadir
+# Vacant
+recruit_character = GUY_Generic_Vacant
+#fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
+recruit_character = GUY_Cheddi_Jagan
+recruit_character = GUY_Peter_Aguiar
+recruit_character = GUY_Forbes_Burnham
 
-set_oob = "GUY_1962"
-set_stability = 0.7
+recruit_character = GUY_Lionel_Luckhoo
+recruit_character = GUY_Hugh_Desmond_Hoyte
+recruit_character = GUY_Brindley_Benn
+recruit_character = GUY_Richard_Luyt
+recruit_character = GUY_Clarence_Price
 
-set_politics = {	
-	ruling_party = conservatism
+recruit_character = GUY_Occupation_Authority
+recruit_character = VEN_Averrel_John_Melville
+recruit_character = VEN_Alberto_Paoli_Chalbaud
+recruit_character = VEN_Pedro_Medina_Silva
+
+recruit_character = GUY_John_Carter
+recruit_character = GUY_Plotemy_Reid
+recruit_character = GUY_Cecil_Clyde
+
+GUY_Cheddi_Jagan = {
+	promote_character = progressivism_reformist_socialism_subtype
+	promote_character = socialist_1_subtype
+}
+GUY_Brindley_Benn = {
+	promote_character = socialist_revolutionary_frontism_subtype
+}
+GUY_Richard_Luyt = {
+	promote_character = despotism_interim_government_subtype
+}
+GUY_Clarence_Price = {
+	promote_character = despotism_1_subtype
+}
+GUY_Lionel_Luckhoo = {
+	promote_character = conservatism_populist_conservatism_subtype
+}
+promote_character = GUY_Peter_Aguiar
+promote_character = GUY_Forbes_Burnham
+promote_character = GUY_Richard_Luyt
+
+add_opinion_modifier = { target = VEN modifier = VEN_essequibo_is_venezuelan }
+
+inherit_technology = CAN
+set_research_slots = 3
+
+oob = "GUY_1962"
+set_convoys = 50
+set_air_oob = "GUY_1962_air"
+set_stability = 0.3
+
+set_grand_doctrine = defensive_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+set_sub_doctrine = defense_operational_doctrine
+
+set_cosmetic_tag = GUY_col
+
+set_politics = {
+	ruling_party = progressivism
 	last_election = "1961.1.20"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 24
-    progressivism = 15
-    liberalism = 20
-    liberal_conservatism = 0
-    conservatism = 30
-    paternalism = 11
-    despotism = 0
-    fascism = 0
-    national_socialism = 0
-     
+	socialist_2 = 6
+	socialist = 3
+	socialist_1 = 18
+	liberal_conservatism = 9
+	progressivism = 29
+	paternalism_3 = 7
+	paternalism = 28
 }
 
 add_ideas = {
-	#Faction Status
+	#Faction Status and national spirits
 	OFN_Security_Council_Member
+	GUY_Essequibo_Dispute
+	GUY_Democracy_Under_the_Thumb
+	GUY_Racial_Polarization
+	GUY_Anglo_American_Consortiums
 
-	tno_political_parties_controlled_opposition
+	#Ministers
+	GUY_Forbes_Burnham_hog
+	GUY_John_Carter_for
+	GUY_Lionel_Luckhoo_eco
+	GUY_Plotemy_Reid_sec
+
+	#POLITICAL
+	tno_political_parties_multiparty_system
 	tno_religious_rights_secularism
-	tno_trade_unions_state_controlled
-	tno_immigration_quota_immigration
+	tno_trade_unions_all_allowed
+	tno_immigration_open_immigration
 	tno_slavery_outlawed
 	tno_public_meetings_allowed
-	tno_press_rights_censored_press
-	tno_vote_franchise_elite_voting
-	tno_refugees_open
-		#MILITARY
-	tno_conscription_two_year_draft
-	tno_women_military_assistance
-	tno_military_supervision_military_policing
-	tno_military_spending_large_spending
-	tno_training_minimal_training
-	tno_racial_integration_segregated_regiments
-	tno_draft_exemptions_none
-		#SOCIAL
-	tno_safety_minimal_regulations
-	tno_health_care_private_health_care
-	tno_pollution_few_regulations
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	
+	#MILITARY
+	tno_conscription_volunteer_only
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_not_applicable
+	
+	#SOCIAL
+	tno_health_care_low_income_protections
 	tno_education_public_education
-	tno_penal_system_capital_punishment
-	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
-	tno_minorities_segregation
-	tno_security_police
-		#ECONOMIC
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_maintenance_of_order
+	tno_regulations_token_regulations
+	
+	#ECONOMIC
 	tno_trade_laws_free_trade
-	tno_economic_focus_civilian_economy
-	tno_tax_rate_medium_taxation
-	tno_income_taxation_tax_havens
-	tno_minimum_wage_low_minimum_wage
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_trinket_minimum_wage
 	tno_max_workhours_8_hour_work_day
-	tno_child_labor_illegal
 	tno_pensions_trinket_pensions
 	tno_unemployment_trinket_subsidies
 
-		#SOCIETAL DEVELOPMENT
-	tno_nuclear_stockpile_none
-	tno_poverty_rate_50
-	tno_army_professionalism_reluctant_conscripts
-	tno_industrial_expertise_incompetent
-	tno_industrial_equipment_power_tools
-	tno_agriculture_basic_mechanized
-	tno_research_facilities_basic
-	tno_academic_base_basic_literacy
+	#MISC
+	tno_refugees_open
+	tno_women_noncombat_only
+	tno_racial_integration_integrated_military
+	tno_safety_limited_regulations
+	tno_pollution_no_controls
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_equal_rights
+	tno_child_labor_illegal
 
+	#SOCIETAL DEVELOPMENT
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_research_facilities_basic
+	tno_academic_base_primary_schooling
+	tno_admin_efficiency_deficient_administrative_systems
 }
 
+##Starting Equipment##
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 2000
+	producer = GUY
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_2
+	amount = 500
+	producer = GUY
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_0
+	amount = 250
+	producer = GUY
+}
+
+add_equipment_to_stockpile = {
+	type = MBT_equipment_1
+	amount = 200
+	producer = GUY
+}
+
+set_country_flag = TNO_eliminate_military_spending
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Free_Market }

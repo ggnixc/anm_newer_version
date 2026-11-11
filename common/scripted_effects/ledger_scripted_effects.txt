@@ -1,0 +1,483 @@
+create_sorted_array_ideology = {
+	clear_array = array_to_sort
+	for_each_scope_loop = {
+		array = ledger_countries
+		add_to_array = {
+			ROOT.array_to_sort = THIS
+		}
+	}
+	clear_array = ledger_countries
+	while_loop_effect = {
+		limit = { check_variable = { array_to_sort^num > 0 } }
+		for_each_scope_loop = {
+			array = array_to_sort
+			if = {
+				limit = {
+					NOT = {
+						is_in_array = {
+							array = ROOT.ledger_countries
+							value = THIS
+						}
+					}
+				}
+				set_variable = { ROOT.current_country = THIS }
+			}
+		}
+		var:current_country = {
+			remove_from_array = { ROOT.array_to_sort = THIS }
+			country_event = ledger.1 #fires get_same_ideology
+		}
+		clear_variable = ROOT.current_country
+	}
+	clear_variable = last_sort_var
+}
+
+ledger_cache_sort_value = {
+	set_variable = { ledger_sort_value = 0 }
+	if = {
+		limit = { check_variable = { ledger_sort_mode = 0 } }
+		set_variable = { ledger_sort_value = ledger_country_sort_order }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 1 } }
+		set_variable = { ledger_sort_value = stability }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 2 } }
+		set_variable = { ledger_sort_value = has_war_support }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 3 } }
+		set_variable = { ledger_sort_value = has_political_power }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 4 } }
+		set_variable = { ledger_sort_value = num_of_factories }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 5 } }
+		set_variable = { ledger_sort_value = max_manpower_k }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 6 } }
+		set_variable = { ledger_sort_value = amount_research_slots }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 7 } }
+		set_variable = { ledger_sort_value = num_battalions }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 8 } }
+		set_variable = { ledger_sort_value = num_divisions }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 9 } }
+		set_variable = { ledger_sort_value = manpower_k }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 10 } }
+		set_variable = { ledger_sort_value = army_experience }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 11 } }
+		set_variable = { ledger_sort_value = command_power }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 12 } }
+		set_variable = { ledger_sort_value = casualties_k }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 13 } }
+		set_variable = { ledger_sort_value = land_doctrine_level }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 14 } }
+		set_variable = { ledger_sort_value = num_ships }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 15 } }
+		set_variable = { ledger_sort_value = deployed_air_force_size }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 16 } }
+		set_variable = { ledger_sort_value = navy_experience }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 17 } }
+		set_variable = { ledger_sort_value = air_experience }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 18 } }
+		set_variable = { ledger_sort_value = nuclear_stockpile }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 19 } }
+		set_variable = { ledger_sort_value = nuclear_reactors }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 20 } }
+		set_variable = { ledger_sort_value = rocket_sites }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 22 } }
+		set_variable = { ledger_sort_value = num_of_civilian_factories }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 23 } }
+		set_variable = { ledger_sort_value = consumer_goods_monthly_use }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 24 } }
+		set_variable = { ledger_sort_value = num_of_military_factories }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 25 } }
+		set_variable = { ledger_sort_value = num_of_naval_factories }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 26 } }
+		set_variable = { ledger_sort_value = fuel_k }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 27 } }
+		set_variable = { ledger_sort_value = num_owned_states }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 28 } }
+		set_variable = { ledger_sort_value = num_of_controlled_states }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 29 } }
+		set_variable = { ledger_sort_value = num_owned_controlled_states }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 30 } }
+		set_variable = { ledger_sort_value = num_occupied_states }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 31 } }
+		set_variable = { ledger_sort_value = num_core_states }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 32 } }
+		set_variable = { ledger_sort_value = num_controlled_states_including_subjects }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 33 } }
+		set_variable = { ledger_sort_value = faction_members^num }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 34 } }
+		set_variable = { ledger_sort_value = faction_battalions }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 35 } }
+		set_variable = { ledger_sort_value = faction_ships }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 36 } }
+		set_variable = { ledger_sort_value = faction_air }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 37 } }
+		set_variable = { ledger_sort_value = faction_industry }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 38 } }
+		set_variable = { ledger_sort_value = faction_controlled_states }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 39 } }
+		set_variable = { ledger_sort_value = gdp }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 40 } }
+		set_variable = { ledger_sort_value = GDP_growth_real }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 41 } }
+		set_variable = { ledger_sort_value = national_debt }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 42 } }
+		set_variable = { ledger_sort_value = civilian_expenditures }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 43 } }
+		set_variable = { ledger_sort_value = military_expenditures }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 44 } }
+		set_variable = { ledger_sort_value = misc_income }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 45 } }
+		set_variable = { ledger_sort_value = misc_costs }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 46 } }
+		set_variable = { ledger_sort_value = 0 }
+		if = { limit = { has_government = communist } set_variable = { ledger_sort_value = 11 } }
+		else_if = { limit = { has_government = socialist } set_variable = { ledger_sort_value = 10 } }
+		else_if = { limit = { has_government = progressivism } set_variable = { ledger_sort_value = 9 } }
+		else_if = { limit = { has_government = liberalism } set_variable = { ledger_sort_value = 8 } }
+		else_if = { limit = { has_government = liberal_conservatism } set_variable = { ledger_sort_value = 7 } }
+		else_if = { limit = { has_government = conservatism } set_variable = { ledger_sort_value = 6 } }
+		else_if = { limit = { has_government = paternalism } set_variable = { ledger_sort_value = 5 } }
+		else_if = { limit = { has_government = despotism } set_variable = { ledger_sort_value = 4 } }
+		else_if = { limit = { has_government = ultranationalism } set_variable = { ledger_sort_value = 3 } }
+		else_if = { limit = { has_government = fascism } set_variable = { ledger_sort_value = 2 } }
+		else_if = { limit = { has_government = national_socialism } set_variable = { ledger_sort_value = 1 } }
+		multiply_variable = { ledger_sort_value = 1000 }
+		subtract_from_variable = { ledger_sort_value = ledger_country_sort_order }
+	}
+	else_if = {
+		limit = { check_variable = { ledger_sort_mode = 47 } }
+		if = {
+			limit = { is_in_faction = yes }
+			var:faction_leader = {
+				set_variable = { PREV.ledger_sort_value = ledger_country_sort_order }
+			}
+			multiply_variable = { ledger_sort_value = -1000 }
+			add_to_variable = { ledger_sort_value = 1000000 }
+			subtract_from_variable = { ledger_sort_value = ledger_country_sort_order }
+		}
+		else = {
+			set_variable = { ledger_sort_value = -1000000 }
+			subtract_from_variable = { ledger_sort_value = ledger_country_sort_order }
+		}
+	}
+}
+
+ledger_cache_ideology_sort_value = {
+	set_variable = { ledger_sort_value = 0 }
+	if = { limit = { has_government = communist } set_variable = { ledger_sort_value = 11 } }
+	else_if = { limit = { has_government = socialist } set_variable = { ledger_sort_value = 10 } }
+	else_if = { limit = { has_government = progressivism } set_variable = { ledger_sort_value = 9 } }
+	else_if = { limit = { has_government = liberalism } set_variable = { ledger_sort_value = 8 } }
+	else_if = { limit = { has_government = liberal_conservatism } set_variable = { ledger_sort_value = 7 } }
+	else_if = { limit = { has_government = conservatism } set_variable = { ledger_sort_value = 6 } }
+	else_if = { limit = { has_government = paternalism } set_variable = { ledger_sort_value = 5 } }
+	else_if = { limit = { has_government = despotism } set_variable = { ledger_sort_value = 4 } }
+	else_if = { limit = { has_government = ultranationalism } set_variable = { ledger_sort_value = 3 } }
+	else_if = { limit = { has_government = fascism } set_variable = { ledger_sort_value = 2 } }
+	else_if = { limit = { has_government = national_socialism } set_variable = { ledger_sort_value = 1 } }
+	multiply_variable = { ledger_sort_value = 1000 }
+	subtract_from_variable = { ledger_sort_value = ledger_country_sort_order }
+}
+
+ledger_cache_faction_sort_value = {
+	if = {
+		limit = { is_in_faction = yes }
+		var:faction_leader = {
+			set_variable = { PREV.ledger_sort_value = ledger_country_sort_order }
+		}
+		multiply_variable = { ledger_sort_value = -1000 }
+		add_to_variable = { ledger_sort_value = 1000000 }
+		subtract_from_variable = { ledger_sort_value = ledger_country_sort_order }
+	}
+	else = {
+		set_variable = { ledger_sort_value = -1000000 }
+		subtract_from_variable = { ledger_sort_value = ledger_country_sort_order }
+	}
+}
+
+get_same_ideology = {
+	every_country = {
+		limit = {
+			has_government = ROOT
+			NOT = { tag = ZZZ }
+			NOT = {
+				is_in_array = {
+					array = FROM.ledger_countries
+					value = THIS
+				}
+			}
+		}
+		add_to_array = { FROM.ledger_countries = THIS }
+		remove_from_array = { FROM.array_to_sort = THIS }
+	}
+}
+
+create_sorted_array = {
+	set_variable = { ledger_sort_mode = sort_var }
+	if = {
+		limit = {
+			check_variable = { last_sort_var = ledger_sort_mode }
+		}
+		set_variable = { middle = ledger_countries^num }
+		set_temp_variable = { len = ledger_countries^num }
+		subtract_from_temp_variable = { len = 1 }
+		divide_variable = { middle = 2 }
+		round_variable = middle
+		for_loop_effect = {
+			start = 0
+			end = middle
+
+			set_temp_variable = { reverse = len }
+			subtract_from_temp_variable = { reverse = v }
+			set_temp_variable = { swap = ledger_countries^v }
+			set_variable = { ledger_countries^v = ledger_countries^reverse }
+			set_variable = { ledger_countries^reverse = swap }
+		}
+		clear_variable = middle
+	}
+	else = {
+		ledger_selection_sort = yes
+		set_variable = { last_sort_var = ledger_sort_mode }
+	}
+}
+
+get_deployed_air_force_size = {
+	set_variable = { deployed_air_force_size = num_deployed_planes }
+	
+}
+
+get_strategic_building_levels = {
+	set_variable = { nuclear_reactors = 0 }
+	set_variable = { rocket_sites = 0 }
+	every_owned_state = {
+		limit = { is_controlled_by = PREV }
+		add_to_variable = { PREV.nuclear_reactors = building_level@nuclear_reactor }
+		add_to_variable = { PREV.rocket_sites = building_level@rocket_site }
+	}
+}
+
+update_misc_vars = {
+	set_variable = {
+		consumer_goods_factories = PU_consumer_goods
+	}
+	set_variable = {
+		effective_civilian_factories = num_of_civilian_factories
+	}
+	set_temp_variable = {
+		civ_factories_multiplier = modifier@production_speed_buildings_factor
+	}
+	multiply_temp_variable = {
+		civ_factories_multiplier = effective_civilian_factories
+	}
+	add_to_variable = {
+		effective_civilian_factories = civ_factories_multiplier
+	}
+	set_variable = {
+		effective_military_factories = num_of_military_factories
+	}
+	set_temp_variable = {
+		mil_factories_multiplier = modifier@industrial_capacity_factory
+	}
+	multiply_temp_variable = {
+		mil_factories_multiplier = effective_military_factories
+	}
+	add_to_variable = {
+		effective_military_factories = mil_factories_multiplier
+	}
+	set_variable = {
+		effective_naval_factories = num_of_naval_factories
+	}
+	set_temp_variable = {
+		nav_factories_multiplier = modifier@industrial_capacity_dockyard
+	}
+	multiply_temp_variable = {
+		nav_factories_multiplier = effective_naval_factories
+	}
+	add_to_variable = {
+		effective_naval_factories = nav_factories_multiplier
+	}
+	set_variable = {
+		num_controlled_states_including_subjects = num_controlled_states
+	}
+	for_each_scope_loop = {
+		array = subjects
+		add_to_variable = {
+			PREV.num_controlled_states_including_subjects = num_controlled_states
+		}
+	}
+	if = {
+		limit = { is_faction_leader = yes }
+		set_variable = { faction_battalions = num_battalions }
+		set_variable = { faction_ships = num_ships }
+		set_variable = { faction_air = deployed_air_force_size }
+		set_variable = { faction_industry = num_of_factories }
+		set_variable = { faction_controlled_states = num_of_controlled_states }
+		for_each_scope_loop = {
+			array = allies
+			add_to_variable = { PREV.faction_battalions = num_battalions }
+			add_to_variable = { PREV.faction_ships = num_ships }
+			add_to_variable = { PREV.faction_air = deployed_air_force_size }
+			add_to_variable = { PREV.faction_industry = num_of_factories }
+			add_to_variable = { PREV.faction_controlled_states = num_of_controlled_states }
+		}
+	}
+	else = {
+		clear_variable = faction_battalions
+		clear_variable = faction_ships
+		clear_variable = faction_air
+		clear_variable = faction_industry
+		clear_variable = faction_controlled_states
+	}
+}
+
+open_ledger = {
+	update_ledger_country_array = yes
+	every_country = {
+		limit = {
+			econ_can_use_economy_system = yes
+		}
+		update_economy_tab = yes
+	}
+	set_variable = { ledger_open = 1 }
+}
+
+update_ledger_country_array = {
+	set_variable = { last_sort_var = -1 }
+	clear_array = ledger_countries
+	set_temp_variable = { ledger_country_sort_index = 0 }
+	every_country = {
+		limit = {
+			is_major = yes
+			NOT = { tag = ZZZ }
+		}
+		get_deployed_air_force_size = yes
+		update_misc_vars = yes
+		get_strategic_building_levels = yes
+		set_variable = { ledger_country_sort_order = PREV.ledger_country_sort_index }
+		add_to_temp_variable = { PREV.ledger_country_sort_index = 1 }
+		add_to_array = {
+			PREV.ledger_countries = THIS
+		}
+	}
+	every_country = {
+		limit = {
+			is_major = no
+			NOT = { tag = ZZZ }
+		}
+		get_deployed_air_force_size = yes
+		update_misc_vars = yes
+		get_strategic_building_levels = yes
+		set_variable = { ledger_country_sort_order = PREV.ledger_country_sort_index }
+		add_to_temp_variable = { PREV.ledger_country_sort_index = 1 }
+		add_to_array = {
+			PREV.ledger_countries = THIS
+		}
+	}
+}
+
+update_ledger_faction_array = {
+	set_variable = { last_sort_var = -1 }
+	clear_array = ledger_countries
+	set_temp_variable = { ledger_country_sort_index = 0 }
+	every_country = {
+		limit = {
+			is_faction_leader = yes
+			NOT = { tag = ZZZ }
+		}
+		get_deployed_air_force_size = yes
+		update_misc_vars = yes
+		get_strategic_building_levels = yes
+		set_variable = { ledger_country_sort_order = PREV.ledger_country_sort_index }
+		add_to_temp_variable = { PREV.ledger_country_sort_index = 1 }
+		add_to_array = {
+			PREV.ledger_countries = THIS
+		}
+	}
+}

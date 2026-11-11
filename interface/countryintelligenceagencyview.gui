@@ -9,7 +9,7 @@ guiTypes = {
 		animation_time = 300
 		size = { width = 550 height = 100%% }
 
-		hide_sound = menu_close_window
+		#hide_sound = menu_close_window
 		show_sound = menu_open_window
 
 		background = {
@@ -77,7 +77,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "agency_name"
 				position = { x = 114 y = -12 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				format = left
 				maxWidth = 350
 				maxHeight = 100
@@ -96,7 +96,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "agency_defense_level"
 				position = { x = 136 y = 73 }
-				font = "aldrich_14_outlinedark"
+				font = "aldrich_18_outline"
 				text = "tees"
 				maxWidth = 155
 				format = left
@@ -115,7 +115,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "spymaster_title"
 					position = { x = -5 y = 62 }
-					font = "aldrich_16_outline"
+					font = "aldrich_18_outline"
 					format = right
 					text = ""
 				}
@@ -124,7 +124,16 @@ guiTypes = {
 					name = "spymaster_button"
 					position = { x = -18 y = 54 }
 					quadTextureSprite ="GFX_spymaster_button"
-					buttonFont = "aldrich_16_outline"
+					buttonFont = "aldrich_18_outline"
+					Orientation = "LOWER_LEFT"
+					clicksound = click_default
+				}
+
+				buttonType = {
+					name = "faction_button"
+					position = { x = 150 y = 54 }
+					quadTextureSprite ="GFX_spymaster_button"
+					buttonFont = "aldrich_18_outline"
 					Orientation = "LOWER_LEFT"
 					clicksound = click_default
 				}
@@ -132,7 +141,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "spymaster_button_name"
 					position = { x = -5 y = 59 }
-					font = "aldrich_14_outline"
+					font = "aldrich_18_outline"
 					text = "BECOME_SPY_MASTER_BUTTON"
 					maxWidth = 160
 					maxHeight = 29
@@ -145,13 +154,12 @@ guiTypes = {
 				instantTextboxType = {
 					name = "spymaster_button_cost"
 					position = { x = 85 y = 59 }
-					font = "aldrich_16_outline"
+					font = "aldrich_18_outline"
 					text = "122"
 					maxWidth = 100
 					maxHeight = 20
 					format = right
 					alwaystransparent = yes
-					text_color_code = b
 				}
 
 				iconType = {
@@ -170,7 +178,7 @@ guiTypes = {
 				name = "creation_button"
 				position = { x = 10 y = 42 }
 				quadTextureSprite ="GFX_create_agency_bg"
-				buttonFont = "aldrich_white_32_outline"
+				buttonFont = "aldrich_36_outline"
 				Orientation = "LOWER_LEFT"
 				buttonText = "CREATE_AGENCY_BUTTON"
 				clicksound = click_default
@@ -219,7 +227,7 @@ guiTypes = {
 					name = "creation_progressbar_factories"
 					#position = { x = -255 y = 40 }
 					position = { x = -6000 y = 40 }
-					font = "aldrich_16_outline"
+					font = "aldrich_18_outline"
 					maxWidth = 117
 					format = left
 					text = "15"
@@ -229,7 +237,7 @@ guiTypes = {
 					name = "creation_progressbar_days"
 					#position = { x = -60 y = 40 }
 					position = { x = -6000 y = 40 }
-					font = "aldrich_white_16_outline"
+					font = "aldrich_18_outline"
 					maxWidth = 155
 					format = right
 					text = "180 days"
@@ -252,7 +260,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "agency_branches_title"
 				position = { x = 35 y = 10 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				text = "AGENCY_BRANCHES"
 				format = left
 			}
@@ -305,7 +313,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "agency_agents_title"
 				position = { x = 35 y = 9 }
-				font = "aldrich_20_outline"
+				font = "aldrich_24_outline"
 				text = "OPERATIVES"
 				format = left
 			}
@@ -325,7 +333,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "total_operative_text"
 				position = { x = 30 y = 86 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				text = "10 (-1)"
 				maxWidth = 60
 				maxHeight = 20
@@ -342,7 +350,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "arrested_operative_text"
 				position = { x = 117 y = 86 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				text = "0"
 				maxWidth = 40
 				maxHeight = 20
@@ -360,7 +368,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "dead_operative_text"
 				position = { x = 184 y = 86 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				text = "0"
 				maxWidth = 40
 				maxHeight = 20
@@ -388,7 +396,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "progressbar_desc"
 					position = { x = 8 y = 6 }
-					font = "aldrich_14_outline"
+					font = "aldrich_16_outline"
 					maxWidth = 160
 					maxHeight = 20
 					multiline = no
@@ -399,7 +407,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "progressbar_days"
 					position = { x = 12 y = 6 }
-					font = "aldrich_white_14_outline"
+					font = "aldrich_16_outline"
 					maxWidth = 205
 					format = right
 					text = "60 days"
@@ -435,7 +443,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "progressbar_desc"
 					position = { x = 8 y = 6 }
-					font = "aldrich_14_outline"
+					font = "aldrich_16_outline"
 					maxWidth = 205
 					format = left
 					alwaystransparent = yes
@@ -444,7 +452,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "progressbar_days"
 					position = { x = 12 y = 6 }
-					font = "aldrich_white_14_outline"
+					font = "aldrich_16_outline"
 					maxWidth = 205
 					format = right
 					text = "180 days"
@@ -467,7 +475,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "progressbar_days"
 					position = { x = 4 y = 5 }
-					font = "aldrich_white_20_outline"
+					font = "aldrich_24_outline"
 					maxWidth = 550
 					format = left
 					text = "STATUS_NO_AGENCY_NO_OPERATIVE"
@@ -522,7 +530,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "operations_not_active"
 					position = { x = 135 y = 95 }
-					font = "aldrich_22_outline"
+					font = "aldrich_24_outline"
 					text = "OPERATIONS_NOT_ACTIVE"
 					tooltip = "OPERATIONS_NOT_ACTIVE_DESC"
 
@@ -569,14 +577,14 @@ guiTypes = {
 			instantTextboxType = {
 				name = "agency_crypto_defense_level"
 				position = { x = 43 y = 15 }
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				text = "Defense Level: 10"
 			}
 
 			instantTextboxType = {
 				name = "agency_decrypt_strength"
 				position = { x = 400 y = 15 }
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				text = "500"
 				maxWidth = 100
 				format = right
@@ -585,7 +593,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "crypto_not_active"
 				position = { x = 135 y = 95 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				text = "CRYPTO_NOT_ACTIVE"
 				tooltip = "CRYPTO_NOT_ACTIVE_DESC"
 				maxWidth = 280
@@ -612,7 +620,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "add_new_text"
 						position = { x = 242 y = 3 }
-						font = "aldrich_14_outline"
+						font = "aldrich_16_outline"
 						text = "CLICK_TO_ADD_NEW"
 						maxWidth = 196
 						alwaystransparent = yes
@@ -651,7 +659,7 @@ guiTypes = {
 			position = { x = 17 y = 402 }
 			buttonText = "OPERATIONS"
 			borderSize = {x = 0 y = 0}
-			font = "aldrich_20_outline"
+			font = "aldrich_24_outline"
 		}
 
 		buttonType = {
@@ -659,7 +667,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_operations_tab_large"
 			position = { x = 273 y = 401 }
 			buttonText = "CRYPTOLOGY"
-			font = "aldrich_20_outline"
+			font = "aldrich_24_outline"
 			#frame = 2
 		}
 	}
@@ -689,11 +697,22 @@ guiTypes = {
 		instantTextboxType = {
 			name = "agency_branches_title"
 			position = { x = 4 y = 11 }
-			font = "aldrich_14_outline"
+			font = "aldrich_18_outline"
 			text = "AGENCY_BRANCHES"
 			format = center
 			maxWidth = 94
 			alwaystransparent = yes
+		}
+		
+		instantTextboxType = {
+			name = "opportunities"
+			position = { x = 0 y = 50 }
+			font = "hoi4_typewriter16"
+			text = "AGENCY_BRANCHES"
+			format = center
+			maxWidth = 94
+			alwaystransparent = yes	
+			hide = yes
 		}
 	}
 
@@ -702,7 +721,7 @@ guiTypes = {
 		position = { x = -4 y = 6 }
 		size = { width = 21 height = 21 }
 
-		iconType = {
+		buttonType = {
 			name = "upgrade_icon"
 			spriteType = "GFX_agency_upgrade_researched_icon"
 			frame = 1
@@ -745,7 +764,7 @@ guiTypes = {
 			name = "header_text"
 			position = { x = 18 y = 5 }
 			textureFile = ""
-			font = "aldrich_24_outline"
+			font = "aldrich_36_outline"
 			borderSize = {x = 0 y = 0}
 			text = "CHOOSE_INSIGNIA"
 			maxWidth = 320
@@ -770,7 +789,7 @@ guiTypes = {
 				name = "agency_name_entry"
 				position = { x = 62 y = 6 }
 				size = { x = 258 y = 23 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = ""
 			}
 		}
@@ -802,7 +821,7 @@ guiTypes = {
 			name = "create_button"
 			position = { x = 108 y = -49 }
 			quadTextureSprite ="GFX_division_designer_button"
-			buttonFont = "aldrich_18_outline"
+			buttonFont = "aldrich_24_outline"
 			Orientation = "LOWER_LEFT"
 			clicksound = Spy_Agency_Build_Agency_Confirm
 			shortcut = "RETURN"
@@ -926,7 +945,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "upgrade_branch_name"
 			position = { x = 10 y = 3 }
-			font = "aldrich_20_outline"
+			font = "aldrich_24_outline"
 			text = ""
 			format = left
 			maxWidth = 900
@@ -980,17 +999,24 @@ guiTypes = {
 			position = { x = 10 y = 24 }
 		}
 
-		iconType = {
+		buttonType = {
 			name = "upgrade_icon_frame"
 			spriteType = "GFX_upgrade_frame_1_unavailable"
 			position = { x = -5000 y = -26 }
 			#position = { x = 23 y = -26 }
 			alwaystransparent = yes
 		}
-		iconType = {
+		buttonType = {
 			name = "upgrade_icon"
 			spriteType = "GFX_agency_upgrade_icon_ph1"
 			position = { x = 12 y = -21 }
+		}
+		
+		iconType = {
+			name = "faction_icon"
+			spriteType = "GFX_faction_logo_generic_democratic"
+			position = { x = 5 y = 5}
+			hide = yes
 		}
 
 		iconType = {
@@ -1004,7 +1030,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "num_factories"
 			position = { x = 165 y = 55 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "12"
 			maxWidth = 40
 			maxHeight = 20
@@ -1033,7 +1059,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "upgrade_name"
 			position = { x = 11 y = 31 }
-			font = "aldrich_white_14_outline"
+			font = "aldrich_18_outline"
 			text = ""
 			format = center
 			maxWidth = 160
@@ -1080,7 +1106,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "operation_name_text"
 				position = { x = 85 y = 8 }
-				font = "aldrich_20_outline"
+				font = "aldrich_22_outline"
 				maxWidth = 365
 				maxHeight = 20
 				fixedsize = yes
@@ -1089,7 +1115,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "operation_ai_score"
 				position = { x = 350 y = 5 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				maxWidth = 100
 				maxHeight = 20
 				text = "xxxxx"
@@ -1099,7 +1125,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "operation_prepared_remaining_days_text"
 				position = { x = 376 y = 10	}
-				font = "aldrich_14_outline"
+				font = "aldrich_16_outline"
 				maxWidth = 100
 				maxHeight = 20
 				format = right
@@ -1172,7 +1198,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "operatives_required_text"
 				position = { x = 36 y = 6 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				maxWidth = 20
 				maxHeight = 20
 			}
@@ -1191,7 +1217,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "network_strength_text"
 				position = { x = 36 y = 6 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				maxWidth = 39
 				maxHeight = 20
 			}
@@ -1216,7 +1242,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "operation_duration_text"
 			position = { x = 290 y = 50	}
-			font = "aldrich_18_outline"
+			font = "aldrich_20_outline"
 			maxWidth = 100
 			maxHeight = 20
 			format = right
@@ -1230,7 +1256,7 @@ guiTypes = {
 			buttonType = {
 				name = "btn_select_button"
 				spriteType = "GFX_launch_operation_button_anim"
-				buttonFont = "aldrich_16_outline"
+				buttonFont = "aldrich_18_outline"
 			}
 		}
 	}
@@ -1284,7 +1310,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 60 y = 4 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "Country Name"
 			maxWidth = 200
 			multiline = no
@@ -1318,7 +1344,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "cryptology_state"
 				position = { x = 5 y = 26 }
-				font = "aldrich_20_outline"
+				font = "aldrich_22_outline"
 				text = "50%"
 				format = center
 				maxWidth = 230
@@ -1362,7 +1388,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "activate_button_text"
 			position = { x = 344 y = 22 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "Hello World!"
 			maxWidth = 146
 			multiline = yes
@@ -1416,6 +1442,18 @@ guiTypes = {
 			name = "Increase"
 			quadTextureSprite = "GFX_scroll_down"
 			position = { x=-17 y = -19}
+		}
+	}
+
+	containerWindowType = {
+		name = "Antarctica_Intel_Panel"
+		size = { width = 550 height = 100% }
+		position = { x = 0 y = 0 }
+		iconType = {
+			name = "Background"
+			spriteType = GFX_frozen_intel_screen
+			position = { x = 4 y = 6 }
+			pdx_tooltip = ANTARCTICA_INTEL_PANEL_TT
 		}
 	}
 }

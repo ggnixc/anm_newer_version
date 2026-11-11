@@ -6,15 +6,22 @@ state = {
 	resources = {
 		aluminium = 76
 		oil = 183
- 	}
+		uranium = 6
+	}
 	history = {
 		owner = USA
 		add_core_of = USA
 		buildings = {
-			arms_factory = 4
-			industrial_complex = 3
+			schools = 2
+			prisons = 3
+			barracks = 3
+			offices = 3
 			infrastructure = 5
 			radar_station = 3
+			nuclear_reactor = 2
+			hydroelectric_plant = 1
+			thermoelectric_plant = 4
+			missile_silo = 1
 			air_base = 4
 			6785 = {
 				naval_base = 1
@@ -29,7 +36,7 @@ state = {
 		victory_points = { # El Paso
 			10740 15
 		}
-		victory_points = { # Kingsville
+		victory_points = { # Corpus Christi
 			6785 10
 		}
 		victory_points = { # Midland
@@ -47,7 +54,7 @@ state = {
 		victory_points = { # Brownsville
 			12369 3
 		}
-		victory_points = { # Corpus Christi
+		victory_points = { # Victoria
 			2042 1
 		}
 		victory_points = { # Del Rio
@@ -92,6 +99,9 @@ state = {
 		victory_points = { # College Station
 			10504 1
 		}
+		victory_points = { # Denton
+			2082 1
+		}
 	}
 
 	provinces = {
@@ -99,5 +109,5 @@ state = {
 	}
 	manpower = 9436142
 	buildings_max_level_factor = 1.000
-	state_category = megalopolis
+	state_category = metropolis #Megalopolis is for Big Cities only
 }

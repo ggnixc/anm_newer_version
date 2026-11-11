@@ -5,19 +5,22 @@ state = {
 		steel = 64.000
 		aluminium = 7.000
 		oil = 18.000
-		
 	}
 
 	history = {
 		owner = MAN
 		add_core_of = MAN
 		buildings = {
-			infrastructure = 5
+			infrastructure = 6
 			radar_station = 2
 			air_base = 5
- 			industrial_complex = 1
-			arms_factory = 1
- 			11764 = {
+			schools = 1
+			offices = 2
+			hospitals = 1
+			barracks = 1
+			prisons = 1
+			thermoelectric_plant = 4
+			11764 = {
 				naval_base = 1
 				coastal_bunker = 1
 			}
@@ -46,19 +49,22 @@ state = {
 		victory_points = {
 			892 10
 		}
-		victory_points = {
-			3783 29
-		}
+		#victory_points = {
+		#	3783 29
+		#}
 		victory_points = {
 			19804 17
 		}
-  	}
+		set_state_flag = GDP_category_metropolis
+		set_variable = { china_state_ref = 48 }
+		set_variable = { china_region_ref = 6 }
+	}
 
 	provinces = {
 		846 892 964 987 3783 3849 3895 6804 6868 6951 8771 8910 9781 9885 11764 11808 19804 19883
 	}
-	manpower = 17983736
+	manpower = 13876329
 	buildings_max_level_factor = 1.000
-	state_category = metropolis
+	state_category = large_city
 	local_supplies = 0.000
 }

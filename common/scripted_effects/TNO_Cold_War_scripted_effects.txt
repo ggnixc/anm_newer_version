@@ -1,0 +1,1027 @@
+#  ██████╗ ██████╗ ██╗     ██████╗     ██╗    ██╗ █████╗ ██████╗      ██████╗ ██╗   ██╗██╗ #
+# ██╔════╝██╔═══██╗██║     ██╔══██╗    ██║    ██║██╔══██╗██╔══██╗    ██╔════╝ ██║   ██║██║ #
+# ██║     ██║   ██║██║     ██║  ██║    ██║ █╗ ██║███████║██████╔╝    ██║  ███╗██║   ██║██║ #
+# ██║     ██║   ██║██║     ██║  ██║    ██║███╗██║██╔══██║██╔══██╗    ██║   ██║██║   ██║██║ #
+# ╚██████╗╚██████╔╝███████╗██████╔╝    ╚███╔███╔╝██║  ██║██║  ██║    ╚██████╔╝╚██████╔╝██║ #
+#  ╚═════╝ ╚═════╝ ╚══════╝╚═════╝      ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝ #
+# Scripted effects
+
+# Use this effect to denote a tag as a superpower, add it to the supers array and set it up for all super-related calcs
+# Specific seazone access for power projection will need to be setup separately!!!
+# Will need to defien access to each seazone separately, then add tag to the global.PowerProjection_Tags array
+# Icon definitions will also need to be done
+set_superpower = {
+	log = "[GetDateText]: [THIS.GetName]: set_superpower; Executing"
+
+	add_to_array = { global.TNO_Superpowers = THIS }
+
+	# Clearing non-super scoring vars
+	clear_variable = Score_Military
+
+	# Set up scoring modifier and effects
+	add_to_array = { score_effects_array = 0 }
+	resize_array = { score_effects_array = 6 }
+	set_variable = { power_projection_pp_effect = 0 }
+	add_dynamic_modifier = { modifier = superpower_scoring_effects_modifier	}
+	add_dynamic_modifier = { modifier = superpower_power_projection_modifier }
+
+	# Score calc + ranking definition
+	add_to_array = { Score_Achievements = 0 }
+	resize_array = { Score_Achievements = 3 }
+	Cold_War_GUI_PowerProjection_CalculateBonuses = yes
+	Cold_War_GUI_Score_Calculation = yes
+	if = {
+		limit = { NOT = { has_global_flag = skip_super_sorting } } # Flag used to skip individually sorting each super on game startup
+		Cold_War_GUI_Sort_Superpowers = yes
+	}
+
+	set_variable = { TNO_Cold_War_GUI_Rankings_Tab_Superpower_Entries_Array_Frame = 1 }
+
+	log = "[GetDateText]: [THIS.GetName]: set_superpower; Completed execution."
+}
+
+# Use this effect once Germany gets what's coming for them
+remove_superpower = {
+	log = "[GetDateText]: [THIS.GetName]: remove_superpower; Executing"
+
+	# Clear from array and re-sort
+	remove_from_array = { global.TNO_Superpowers = THIS }
+	Cold_War_GUI_Sort_Superpowers = yes
+
+	# Remove super scoring vars
+	clear_array = Score_Military
+	clear_array = Score_Economy
+	clear_array = Score_Diplomacy
+	clear_array = Score_Achievements
+	clear_variable = TotalScore
+	if = {
+		limit = { has_country_flag = remove_seazones } # Flag used to optionally remove the seazone array if wished
+		clear_array = CW_SeaZone_Status
+		clear_variable = power_projection_pp_effect
+		remove_dynamic_modifier = { modifier = superpower_scoring_effects_modifier }
+
+		# Remove from the global arrays
+		for_each_scope_loop = {
+			array = global.PowerProjection_Tags
+			if = {
+				limit = { check_variable = { global.PowerProjection_Tags^i = THIS.id } }
+				remove_from_array = { array = global.PowerProjection_Tags   index = i }
+				remove_from_array = { array = global.PowerProjection_Tags_X index = i }
+				remove_from_array = { array = global.PowerProjection_Tags_Y index = i }
+			}
+		}
+	}
+
+	# Remove scoring effects
+	clear_array = score_effects_array
+	remove_dynamic_modifier = { modifier = superpower_scoring_effects_modifier }
+
+	log = "[GetDateText]: [THIS.GetName]: remove_superpower; Completed execution."
+}
+
+# Used to fully recalculate scores for all supers every month
+Cold_War_GUI_Fully_Calculate_Scores = {
+	for_each_scope_loop = {
+		array = global.TNO_Superpowers
+		Cold_War_GUI_Score_Calculation = yes
+	}
+	Cold_War_GUI_Sort_Superpowers = yes
+}
+
+#############################
+## SCORE VALUE DEFINITIONS ##
+#############################
+# These values determine how many points are given for each category
+# Can be freely edited to change the score calculations
+
+### MILITARY ###
+## Army Score ##
+@score_per_battalion      = 0.15  # Num. of points given by each fielded battalion
+
+## Air Force Score ##
+@score_per_heavy_plane 	  = 0.1   # Num. of points given by each heavy plane
+@score_per_small_plane 	  = 0.05  # Num. of points given by each small plane
+
+## Naval Score ##
+@score_per_submarine      = 0.4   # Num. of points given by each submarine
+@score_per_corvette       = 0.5   # Num. of points given by each corvette
+@score_per_frigate        = 0.75  # Num. of points given by each frigate
+@score_per_destroyer      = 1     # Num. of points given by each destroyer
+@score_per_cruiser        = 1.5   # Num. of points given by each cruiser
+@score_per_battleship     = 1.75  # Num. of points given by each battleship
+@score_per_carrier        = 2     # Num. of points given by each carrier
+
+@score_per_nuke           = 0.02  # Num. of points given by each nuclear warhead in the stockpile
+
+### ECONOMY ###
+## Economic Factor Score ##
+@score_per_gdpc			  = 1     # Num. of points given by each K in GDP/Capita
+@score_per_stability      = 2     # Num. of points given by each % in stability
+
+### DIPLOMACY ###
+@score_per_observer       = 10    # Num. of points given by each faction observer
+@sphere_perc_modifier     = 10    # Num. of points given by each % of total world GDP on the econ sphere
+@faction_mil_modifier     = 0.75  # Modifier for the faction total military score
+@score_per_seazone        = 50    # Num. of points given by each accessible seazone
+
+calculate_army_power = {
+	set_temp_variable = { army_power = num_battalions }
+	multiply_temp_variable = { army_power = @score_per_battalion }
+}
+
+calculate_air_power = {
+	set_temp_variable = { GunshipsScore = { value = num_deployed_planes_with_type@gunship_equipment multiply = @score_per_heavy_plane } }
+	set_temp_variable = { StratBombersScore = { value = num_deployed_planes_with_type@strat_bomber_equipment multiply = @score_per_heavy_plane } }
+	set_temp_variable = { TacBombersScore = { value = num_deployed_planes_with_type@tac_bomber_equipment multiply = @score_per_heavy_plane } }
+	set_temp_variable = { CASScore = { value = num_deployed_planes_with_type@CAS_equipment multiply = @score_per_small_plane } }
+	set_temp_variable = { CV_CASScore = { value = num_deployed_planes_with_type@cv_CAS_equipment multiply = @score_per_small_plane } }
+	set_temp_variable = { InterceptorsScore = { value = num_deployed_planes_with_type@interceptor_equipment multiply = @score_per_small_plane } }
+	set_temp_variable = { FightersScore = { value = num_deployed_planes_with_type@fighter_equipment multiply = @score_per_small_plane } }
+	set_temp_variable = { CV_FightersScore = { value = num_deployed_planes_with_type@cv_fighter_equipment multiply = @score_per_small_plane } }
+	set_temp_variable = { MCAScore = { value = num_deployed_planes_with_type@mca_equipment multiply = @score_per_small_plane } }
+	set_temp_variable = { CV_MCAScore = { value = num_deployed_planes_with_type@cv_mca_equipment multiply = @score_per_small_plane } }
+	set_temp_variable = { ASWHelicoptersScore = { value = num_deployed_planes_with_type@asw_helicopter_equipment multiply = @score_per_small_plane } }
+	set_temp_variable = { ScoutPlanesScore = { value = num_deployed_planes_with_type@scout_plane_equipment multiply = @score_per_heavy_plane } }
+	set_temp_variable = { TransportPlanesScore = { value = num_deployed_planes_with_type@transport_plane_equipment multiply = @score_per_heavy_plane } }
+
+	set_temp_variable = {
+		air_force_power = {
+			value = GunshipsScore
+			add = StratBombersScore
+			add = TacBombersScore
+			add = CASScore
+			add = CV_CASScore
+			add = InterceptorsScore
+			add = FightersScore
+			add = CV_FightersScore
+			add = LightStealthAircraftScore
+			add = MCAScore
+			add = CV_MCAScore
+			add = ASWHelicoptersScore
+			add = ScoutPlanesScore
+			add = TacStealthAircraftScore
+			add = StratStealthAircraftScore
+			add = TransportPlanesScore
+		}
+	}
+}
+
+calculate_naval_power = {
+	set_temp_variable = { SubmarineScore = { value = num_ships_with_type@submarine multiply = @score_per_submarine } }
+	set_temp_variable = { CorvetteScore = { value = num_ships_with_type@corvette multiply = @score_per_corvette } }
+	set_temp_variable = { FrigateScore = { value = num_ships_with_type@frigate multiply = @score_per_frigate } }
+	set_temp_variable = { DestroyerScore = { value = num_ships_with_type@destroyer multiply = @score_per_destroyer } }
+	set_temp_variable = { CruiserScore = { value = num_ships_with_type@cruiser add = num_ships_with_type@light_cruiser add = num_ships_with_type@heavy_cruiser multiply = @score_per_cruiser } }
+	set_temp_variable = { BattleshipScore = { value = num_ships_with_type@battleship multiply = @score_per_battleship } }
+	set_temp_variable = { CarrierScore = { value = num_ships_with_type@carrier multiply = @score_per_carrier } }
+
+	set_temp_variable = {
+		naval_power = {
+			value = SubmarineScore
+			add = CorvetteScore
+			add = FrigateScore
+			add = DestroyerScore
+			add = CruiserScore
+			add = BattleshipScore
+			add = CarrierScore
+		}
+	}
+}
+
+# To update the score of a cerain country, fire this command on its scope
+# Eg. GER = { Cold_War_GUI_Score_Calculation = yes } updates Germany's score
+Cold_War_GUI_Score_Calculation = {
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Score_Calculation; Executing"
+
+	hidden_effect = {
+		# Update econ values
+		# update_economy_tab = yes # If this section is uncommented it breaks the sorting algorithm bellow :funny: :funny: :funny:
+
+		### MILITARY ###
+		## Base array
+		clear_array = Score_Military
+		add_to_array = { Score_Military = 0 } # 0; Total
+		add_to_array = { Score_Military = 0 } # 1; Army Size
+		add_to_array = { Score_Military = 0 } # 2; Air Force Size
+		add_to_array = { Score_Military = 0 } # 3; Navy Size
+		add_to_array = { Score_Military = 0 } # 4; Nuclear Stockpile
+
+		## Military size
+		# Army Size score
+		calculate_army_power = yes
+		set_variable = { Score_Military^1 = army_power }
+
+		# Air Force Size score
+		calculate_air_power = yes
+		set_variable = { Score_Military^2 = air_force_power }
+
+		# Naval Size score
+		calculate_naval_power = yes
+		set_variable = { Score_Military^3 = naval_power }
+
+		# Nuclear Stockpile
+		set_variable = { Score_Military^4 = { value = nuclear_stockpile multiply = @score_per_nuke multiply = nuclear_strike_capability } }
+		multiply_variable = { Score_Military^4 = { value = nuclear_global_coverage add = 1 } }
+
+		# Rounding up all variables
+		for_each_loop = {
+			array = Score_Military
+			round_variable = Score_Military^i
+		}
+
+		### ECONOMY ###
+		# Base array
+		clear_array = Score_Economy
+		add_to_array = { Score_Economy = 0 } # 0; Total
+		add_to_array = { Score_Economy = 0 } # 1; GDP/Capita
+		add_to_array = { Score_Economy = 0 } # 2; Stability
+		add_to_array = { Score_Economy = 0 } # 3; Economic Sphere GDP
+
+		# GDP/Capita
+		set_variable = { Score_Economy^1 = { value = GDP divide = max_manpower_k divide = 100000 multiply = @score_per_gdpc } }
+
+		# Stability
+		set_variable = { Score_Economy^2 = { value = stability multiply = 100 multiply = @score_per_stability } }
+
+		# Economic Sphere GDP
+		set_variable = { Score_Economy^3 = { value = econ_sphere_world_percent multiply = @sphere_perc_modifier } }
+
+		# Rounding up all variables
+		for_each_loop = {
+			array = Score_Economy
+			round_variable = Score_Economy^i
+		}
+
+		### DIPLOMACY ###
+		clear_array = Score_Diplomacy
+		add_to_array = { Score_Diplomacy = 0 } # 0; Total
+		add_to_array = { Score_Diplomacy = 0 } # 1; Faction Size (Display-only)
+		add_to_array = { Score_Diplomacy = 0 } # 2; Faction Military Score
+		add_to_array = { Score_Diplomacy = 0 } # 3; Faction Observers
+		add_to_array = { Score_Diplomacy = 0 } # 4; Power Projection
+
+		# Faction total scores
+		for_each_scope_loop = {
+			array = faction_members
+			Cold_War_GUI_MemberMilitaryScore_Calculation = yes
+			add_to_variable = { PREV.Score_Diplomacy^2 = MemberScore_Military } # Military
+		}
+		subtract_from_variable = { Score_Diplomacy^2 = MemberScore_Military } # Subtracting the super's own value from this
+		clear_variable = MemberScore_Military
+		multiply_variable = { Score_Diplomacy^2 = @faction_mil_modifier }
+
+		# Faction Observers
+		if = {
+			limit = { tag = GER }
+			every_other_country = {
+				limit = { has_idea = Pakt_Bundnispartner }
+				add_to_variable = { PREV.Score_Diplomacy^3 = @score_per_observer }
+			}
+		}
+		else_if = {
+			limit = { tag = USA }
+			every_other_country = {
+				limit = { has_idea = OFN_Partners }
+				add_to_variable = { PREV.Score_Diplomacy^3 = @score_per_observer }
+			}
+		}
+		else_if = {
+			limit = { tag = JAP }
+			every_other_country = {
+				limit = { has_idea = Sphere_Observer }
+				add_to_variable = { PREV.Score_Diplomacy^3 = @score_per_observer }
+			}
+		}
+
+		# Power Projection
+		set_variable = { Score_Diplomacy^4 = 0 }
+		for_each_loop = {
+			array = CW_SeaZone_Status
+			add_to_variable = { Score_Diplomacy^4 = v }
+		}
+		multiply_variable = { Score_Diplomacy^4 = @score_per_seazone }
+
+		# Rounding up all variables
+		for_each_loop = {
+			array = Score_Diplomacy
+			round_variable = Score_Diplomacy^i
+		}
+
+		### ACHIEVEMENTS ###
+		set_variable = { Score_Achievements^0 = 0 } # 0; Total
+		set_variable = { Score_Achievements^2 = 0 } # 2; Victories
+
+		# Victories
+		for_each_loop = {
+			array = TNO_Cold_War_GUI_Victory_Points
+			add_to_variable = { Score_Achievements^2 = v }
+		}
+
+		# Rounding up all variables
+		for_each_loop = {
+			array = Score_Achievements
+			round_variable = Score_Achievements^i
+		}
+
+		### TOTAL ###
+		for_each_loop = {
+			array = Score_Military
+			add_to_variable = { Score_Military^0 = v }
+		}
+		for_each_loop = {
+			array = Score_Economy
+			add_to_variable = { Score_Economy^0 = v }
+		}
+		for_each_loop = {
+			array = Score_Diplomacy
+			add_to_variable = { Score_Diplomacy^0 = v }
+		}
+		for_each_loop = {
+			array = Score_Achievements
+			add_to_variable = { Score_Achievements^0 = v }
+		}
+
+		clear_variable = TotalScore
+		add_to_variable = { TotalScore = Score_Military^0 }
+		add_to_variable = { TotalScore = Score_Economy^0 }
+		add_to_variable = { TotalScore = Score_Diplomacy^0 }
+		add_to_variable = { TotalScore = Score_Achievements^0 }
+	}
+
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Score_Calculation; [THIS.GetName] Military Score: [?Score_Military^0]"
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Score_Calculation; [THIS.GetName] Economic Score: [?Score_Economy^0]"
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Score_Calculation; [THIS.GetName] Faction Score: [?Score_Diplomacy^0]"
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Score_Calculation; [THIS.GetName] Achievements Score: [?Score_Achievements^0]"
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Score_Calculation; [THIS.GetName] Total Score: [?TotalScore]"
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Score_Calculation; Completed execution."
+}
+
+# Calculates the military score of each faction member
+Cold_War_GUI_MemberMilitaryScore_Calculation = {
+	# log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_MemberMilitaryScore_Calculation; Executing"
+	### MILITARY ###
+	calculate_army_power  = yes # Army Size score
+	calculate_air_power   = yes # Air Force Size score
+	calculate_naval_power = yes # Naval Size score
+
+	# Adding up
+	set_variable    = { MemberScore_Military = army_power }
+	add_to_variable = { MemberScore_Military = air_force_power }
+	add_to_variable = { MemberScore_Military = naval_power }
+	round_variable = MemberScore_Military
+
+	# log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_MemberMilitaryScore_Calculation; [THIS.GetName] Military Score: [?MemberScore_Military]"
+	# log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_MemberMilitaryScore_Calculation; Completed execution."
+}
+
+# Sorts the superpowers array, setting up the new ranking positions based on their total score
+Cold_War_GUI_Sort_Superpowers = {
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Sort_Superpowers; Executing"
+
+	ZZZ = {
+		get_sorted_scored_countries = {
+			scorer = superpower_rank_scorer
+			array = global.TNO_Superpowers
+		}
+
+		set_temp_variable = { supers_index = 0 }
+		for_each_scope_loop = {
+			array = global.TNO_Superpowers
+			add_to_temp_variable = { supers_index = 1 }
+			set_variable = { super_ranking = supers_index }
+			log = "[GetDateText]: [PREV.PREV.GetName]: Cold_War_GUI_Sort_Superpowers; Place [?supers_index]: [THIS.GetName] ([?TotalScore])"
+			Cold_War_GUI_Calculate_Score_Effects = yes
+		}
+	}
+
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Sort_Superpowers; Completed execution."
+}
+
+Cold_War_GUI_Calculate_Score_Effects = {
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Calculate_Score_Effects; Executing"
+
+	# Set base values
+	# These are also the max values, should the nation be 1st in score
+	set_variable = { score_effects_array^0 = 30   } # 0 - Max Command Power
+	set_variable = { score_effects_array^1 = 0.3  } # 1 - Daily PP Gain
+	set_variable = { score_effects_array^2 = 0.06 } # 2 - War Support
+	set_variable = { score_effects_array^3 = 0.12 } # 3 - Research Speed
+	set_variable = { score_effects_array^4 = 0.12 } # 4 - Consumer Goods Production
+	set_variable = { score_effects_array^5 = 30   } # 5 - Debt to GDP Ceilling
+
+	# Divide by randking num
+	for_each_loop = {
+		array = score_effects_array
+		divide_variable = { score_effects_array^i = super_ranking }
+	}
+
+	force_update_dynamic_modifier = yes
+
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_Calculate_Score_Effects; Completed execution."
+}
+
+## Adds a specific victory to the target superpower's victory list
+# Arguments: Victory_ID
+# Optional Arguments: Victory_Outcome, Victory_Points
+Cold_War_GUI_AddVictory = {
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Executing"
+
+	if = {
+		limit = { is_superpower = no }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Handed non-superpower tag. Breaking."
+	}
+	else_if = {
+		limit = { NOT = { has_variable = Victory_ID } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Handed unset ID. Breaking."
+	}
+	else = {
+		# Checking to ensure that our array is the right size
+		set_temp_variable = { x = Victory_ID }
+		add_to_temp_variable = { x = 1 }
+		if = {
+			limit = { check_variable = { TNO_Cold_War_GUI_Victory_Entry^num < x } }
+			resize_array = { TNO_Cold_War_GUI_Victory_Entry = x }
+			resize_array = { TNO_Cold_War_GUI_Victory_Outcome = x }
+			resize_array = { TNO_Cold_War_GUI_Victory_Points = x }
+		}
+
+		# Conflicts in this array are stored in a way so that their specific index corresponds to their actual victory ID
+		# E.g. the The Aleutians Crisis' victory ID is 1, so it is stored in the array index 1
+		# The German Civil War's victory ID is 14, so it is stored in the array index 14
+		# And so on
+		# This is done so that we can know for sure where a specific conflict is stored if we want to manipulate it later
+		set_variable = { TNO_Cold_War_GUI_Victory_Entry^Victory_ID = 1 }
+		set_variable = { TNO_Cold_War_GUI_Victory_Outcome^Victory_ID = Victory_Outcome }
+		set_variable = { TNO_Cold_War_GUI_Victory_Points^Victory_ID = Victory_Points }
+
+		Cold_War_GUI_CalculateDisplayArrays = yes
+		Cold_War_GUI_Score_Calculation = yes
+	}
+
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Completed execution."
+}
+
+## Edits a specific victory on the target superpower's victory list
+# Arguments: Victory_ID, Victory_Outcome, Victory_Points
+Cold_War_GUI_ManipulateVictory = {
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_ManipulateVictory; Executing"
+
+	if = {
+		limit = { is_superpower = no }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Handed non-superpower tag. Breaking."
+	}
+	else_if = {
+		limit = { NOT = { has_variable = Victory_ID } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Handed unset ID. Breaking."
+	}
+	else_if = {
+		limit = { NOT = { has_variable = Victory_Outcome } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Handed unset Outcome. Breaking."
+	}
+	else_if = {
+		limit = { NOT = { has_variable = Victory_Points } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Handed unset Points. Breaking."
+	}
+	else_if = {
+		limit = { check_variable = { TNO_Cold_War_GUI_Victory_Entry^Victory_ID = 0 } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Handed ID does not exist in the target scope."
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_AddVictory; Executing Cold_War_GUI_AddVictory instead"
+		Cold_War_GUI_AddVictory = yes
+	}
+	else = {
+		set_variable = { TNO_Cold_War_GUI_Victory_Outcome^Victory_ID = Victory_Outcome }
+		set_variable = { TNO_Cold_War_GUI_Victory_Points^Victory_ID = Victory_Points }
+
+		Cold_War_GUI_CalculateDisplayArrays = yes
+		Cold_War_GUI_Score_Calculation = yes
+	}
+
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_ManipulateVictory; Completed execution."
+}
+
+## This command creates a new, display-only array used to populate the gridbox in the GUI, which are based on the ones defined beforehand
+Cold_War_GUI_CalculateDisplayArrays = {
+	clear_array = TNO_Cold_War_GUI_Victory_Entry_Display
+	clear_array = TNO_Cold_War_GUI_Victory_Outcome_Display
+	clear_array = TNO_Cold_War_GUI_Victory_Points_Display
+
+	for_each_loop = {
+		array = TNO_Cold_War_GUI_Victory_Entry
+		if = {
+			limit = { check_variable = { v = 1 } }
+			add_to_array = { TNO_Cold_War_GUI_Victory_Entry_Display = i }
+			add_to_array = { TNO_Cold_War_GUI_Victory_Outcome_Display = TNO_Cold_War_GUI_Victory_Outcome^i }
+			add_to_array = { TNO_Cold_War_GUI_Victory_Points_Display = TNO_Cold_War_GUI_Victory_Points^i }
+		}
+	}
+}
+
+## Generically adds Cold War Score to a given superpower
+# Arguments: ColdWarScoreAdd (Default: 25)
+Cold_War_GUI_AddScore_GER = {
+	custom_effect_tooltip = TNO_Cold_War_Score_add_GER_tt
+	add_to_variable = { GER.Score_Achievements^1 = ColdWarScoreAdd?25 }
+	GER = {
+		Cold_War_GUI_Score_Calculation = yes
+		Cold_War_GUI_Sort_Superpowers = yes
+	}
+}
+Cold_War_GUI_AddScore_USA = {
+	custom_effect_tooltip = TNO_Cold_War_Score_add_USA_tt
+	add_to_variable = { USA.Score_Achievements^1 = ColdWarScoreAdd?25 }
+	USA = {
+		Cold_War_GUI_Score_Calculation = yes
+		Cold_War_GUI_Sort_Superpowers = yes
+	}
+}
+Cold_War_GUI_AddScore_JAP = {
+	custom_effect_tooltip = TNO_Cold_War_Score_add_JAP_tt
+	add_to_variable = { JAP.Score_Achievements^1 = ColdWarScoreAdd?25 }
+	JAP = {
+		Cold_War_GUI_Score_Calculation = yes
+		Cold_War_GUI_Sort_Superpowers = yes
+	}
+}
+
+## Sets up superpower access to a single seazone
+# Arguments: SeaZone_ID
+# Accepted IDs:
+#   0; East Pacific
+#   1; West Pacific
+#   2; South Atlantic
+#   3; North Atlantic
+#   4; North Sea
+#   5; Mediterranean
+#   6; Indian Ocean
+Cold_War_GUI_PowerProjection_AddSeaZone = {
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_AddSeaZone; Executing"
+
+	if = {
+		limit = { NOT = { is_in_array = { global.PowerProjection_Tags = THIS.id } } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_AddSeaZone; Handed invalid tag. Breaking."
+	}
+	else_if = {
+		limit = { NOT = { has_variable = SeaZone_ID } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_AddSeaZone; Handed unset ID. Breaking."
+	}
+	else_if = {
+		limit = { OR = { check_variable = { SeaZone_ID < 0 } check_variable = { SeaZone_ID > 6 } } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_AddSeaZone; Handed invalid ID. Breaking."
+	}
+	else_if = {
+		limit = { check_variable = { CW_SeaZone_Status^SeaZone_ID = 1 } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_AddSeaZone; Target is already set. Breaking."
+	}
+	else = {
+		log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_AddSeaZone; Adding [THIS.GetAdjective] Power Projection to [Cold_War_GUI_GetSeaZone_Name]."
+		custom_effect_tooltip = Cold_War_GUI_PowerProjection_AddSeaZone_tt
+		set_variable = { CW_SeaZone_Status^SeaZone_ID = 1 }
+		Cold_War_GUI_PowerProjection_CalculateBonuses = yes
+	}
+
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_AddSeaZone; Completed execution."
+}
+
+## Removes superpower access to a single seazone
+# Arguments: SeaZone_ID
+# Accepted IDs:
+#   0; East Pacific
+#   1; West Pacific
+#   2; South Atlantic
+#   3; North Atlantic
+#   4; North Sea
+#   5; Mediterranean
+#   6; Indian Ocean
+Cold_War_GUI_PowerProjection_RemoveSeaZone = {
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_RemoveSeaZone; Executing"
+
+	if = {
+		limit = { NOT = { is_in_array = { global.PowerProjection_Tags = THIS.id } } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_RemoveSeaZone; Handed invalid tag. Breaking."
+	}
+	else_if = {
+		limit = { NOT = { has_variable = SeaZone_ID } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_RemoveSeaZone; Handed unset ID. Breaking."
+	}
+	else_if = {
+		limit = { OR = { check_variable = { SeaZone_ID < 0 } check_variable = { SeaZone_ID > 6 } } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_RemoveSeaZone; Handed invalid ID. Breaking."
+	}
+	else_if = {
+		limit = { check_variable = { CW_SeaZone_Status^SeaZone_ID = 0 } }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_RemoveSeaZone; Target is already set. Breaking."
+	}
+	else = {
+		log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_RemoveSeaZone; Removing [THIS.GetAdjective] Power Projection to [Cold_War_GUI_GetSeaZone_Name]."
+		custom_effect_tooltip = Cold_War_GUI_PowerProjection_RemoveSeaZone_tt
+		set_variable = { CW_SeaZone_Status^SeaZone_ID = 0 }
+		Cold_War_GUI_PowerProjection_CalculateBonuses = yes
+	}
+
+	log = "[GetDateText]: [THIS.GetName]: Cold_War_GUI_PowerProjection_RemoveSeaZone; Completed execution."
+}
+
+## Used to calculate bonuses from seazone power projection
+Cold_War_GUI_PowerProjection_CalculateBonuses = {
+	set_variable = { power_projection_pp_effect = 0 }
+	for_each_loop = {
+		array = CW_SeaZone_Status
+		add_to_variable = { power_projection_pp_effect = v }
+	}
+	multiply_variable = { power_projection_pp_effect = 0.025 }
+}
+
+## Changes German-American relations
+# Arguments: RelationsChange (Default value: 1)
+Cold_War_GUI_ChangeRelations_GER_USA = {
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_GER_USA; Executing."
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_GER_USA; Given RelationsChange: [?RelationsChange?1]"
+
+	# Setting post-operation value for the tooltip
+	set_temp_variable = { NewOpinion = { value = global.ColdWarRelations_GER_USA add = RelationsChange?1 clamp = { min = -10 max = 10 } } }
+	if = { # Germany scope tooltip
+		limit = { tag = GER }
+		if = {
+			limit = { check_variable = { RelationsChange?1 > 0 } }
+			set_variable = { global.ColdWarRelations_GER_USA = NewOpinion tooltip = Cold_War_GUI_RelationChange_USA_add_tt }
+		}
+		else = {
+			set_variable = { global.ColdWarRelations_GER_USA = NewOpinion tooltip = Cold_War_GUI_RelationChange_USA_sub_tt }
+		}
+	}
+	else_if = { # America scope tooltip
+		limit = { tag = USA }
+		if = {
+			limit = { check_variable = { RelationsChange?1 > 0 } }
+			set_variable = { global.ColdWarRelations_GER_USA = NewOpinion tooltip = Cold_War_GUI_RelationChange_GER_add_tt }
+		}
+		else = {
+			set_variable = { global.ColdWarRelations_GER_USA = NewOpinion tooltip = Cold_War_GUI_RelationChange_GER_sub_tt }
+		}
+	}
+	hidden_effect = { TNO_tension_calc = yes }
+
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_GER_USA; Completed execution."
+}
+
+## Changes German-Japanese relations
+# Arguments: RelationsChange (Default value: 1)
+Cold_War_GUI_ChangeRelations_GER_JAP = {
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_GER_JAP; Executing."
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_GER_JAP; Given RelationsChange: [?RelationsChange?1]"
+
+	# Setting post-operation value for the tooltip
+	set_temp_variable = { NewOpinion = { value = global.ColdWarRelations_GER_JAP add = RelationsChange?1 clamp = { min = -10 max = 10 } } }
+	if = { # Germany scope tooltip
+		limit = { tag = GER }
+		if = {
+			limit = { check_variable = { RelationsChange?1 > 0 } }
+			set_variable = { global.ColdWarRelations_GER_JAP = NewOpinion tooltip = Cold_War_GUI_RelationChange_JAP_add_tt }
+		}
+		else = {
+			set_variable = { global.ColdWarRelations_GER_JAP = NewOpinion tooltip = Cold_War_GUI_RelationChange_JAP_sub_tt }
+		}
+	}
+	else_if = { # Japan scope tooltip
+		limit = { tag = JAP }
+		if = {
+			limit = { check_variable = { RelationsChange?1 > 0 } }
+			set_variable = { global.ColdWarRelations_GER_JAP = NewOpinion tooltip = Cold_War_GUI_RelationChange_GER_add_tt }
+		}
+		else = {
+			set_variable = { global.ColdWarRelations_GER_JAP = NewOpinion tooltip = Cold_War_GUI_RelationChange_GER_sub_tt }
+		}
+	}
+	hidden_effect = { TNO_tension_calc = yes }
+
+	# Bormann sphere trade category
+	hidden_effect = {
+		GER = {
+			if = {
+				limit = { has_idea = GER_BOR_sphere_trade }
+				GER_Bormann_Sphere_Trade_check_for_failure = yes
+			}
+		}
+	}
+
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_GER_JAP; Completed execution."
+}
+
+## Changes Japanese-American relations
+# Arguments: RelationsChange (Default value: 1)
+Cold_War_GUI_ChangeRelations_JAP_USA = {
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_JAP_USA; Executing."
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_JAP_USA; Given RelationsChange: [?RelationsChange?1]"
+
+	# Setting post-operation value for the tooltip
+	set_temp_variable = { NewOpinion = { value = global.ColdWarRelations_JAP_USA add = RelationsChange?1 clamp = { min = -10 max = 10 } } }
+	if = { # Japan scope tooltip
+		limit = { tag = JAP }
+		if = {
+			limit = { check_variable = { RelationsChange?1 > 0 } }
+			set_variable = { global.ColdWarRelations_JAP_USA = NewOpinion tooltip = Cold_War_GUI_RelationChange_USA_add_tt }
+		}
+		else = {
+			set_variable = { global.ColdWarRelations_JAP_USA = NewOpinion tooltip = Cold_War_GUI_RelationChange_USA_sub_tt }
+		}
+	}
+	else_if = { # America scope tooltip
+		limit = { tag = USA }
+		if = {
+			limit = { check_variable = { RelationsChange?1 > 0 } }
+			set_variable = { global.ColdWarRelations_JAP_USA = NewOpinion tooltip = Cold_War_GUI_RelationChange_JAP_add_tt }
+		}
+		else = {
+			set_variable = { global.ColdWarRelations_JAP_USA = NewOpinion tooltip = Cold_War_GUI_RelationChange_JAP_sub_tt }
+		}
+	}
+	hidden_effect = { TNO_tension_calc = yes }
+
+	log = "[GetDateText]: [Root.GetName]: Cold_War_GUI_ChangeRelations_JAP_USA; Completed execution."
+}
+
+## Relations trend effects
+Cold_War_GUI_ImproveRelationsTrend_GER_USA = {
+	add_to_variable = { global.ColdWarRelationTrendGain_GER_USA = 3 }
+	if 		= { limit = { tag = GER } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_USA_add_tt } # Germany scope tooltip
+	else_if = { limit = { tag = USA } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_GER_add_tt } # America scope tooltip
+}
+Cold_War_GUI_ImproveRelationsTrend_GER_JAP = {
+	add_to_variable = { global.ColdWarRelationTrendGain_GER_JAP = 3 }
+	if 		= { limit = { tag = GER } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_JAP_add_tt } # Germany scope tooltip
+	else_if = { limit = { tag = JAP } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_GER_add_tt } # Japan scope tooltip
+}
+Cold_War_GUI_ImproveRelationsTrend_JAP_USA = {
+	add_to_variable = { global.ColdWarRelationTrendGain_JAP_USA = 3 }
+	if 		= { limit = { tag = JAP } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_USA_add_tt } # Japan scope tooltip
+	else_if = { limit = { tag = USA } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_JAP_add_tt } # America scope tooltip
+}
+Cold_War_GUI_ImproveRelationsTrend_Small_GER_USA = {
+	add_to_variable = { global.ColdWarRelationTrendGain_GER_USA = 1 }
+	if 		= { limit = { tag = GER } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_USA_add_tt } # Germany scope tooltip
+	else_if = { limit = { tag = USA } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_GER_add_tt } # America scope tooltip
+}
+Cold_War_GUI_ImproveRelationsTrend_Small_GER_JAP = {
+	add_to_variable = { global.ColdWarRelationTrendGain_GER_JAP = 1 }
+	if 		= { limit = { tag = GER } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_JAP_add_tt } # Germany scope tooltip
+	else_if = { limit = { tag = JAP } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_GER_add_tt } # Japan scope tooltip
+}
+Cold_War_GUI_ImproveRelationsTrend_Small_JAP_USA = {
+	add_to_variable = { global.ColdWarRelationTrendGain_JAP_USA = 1 }
+	if 		= { limit = { tag = JAP } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_USA_add_tt } # Japan scope tooltip
+	else_if = { limit = { tag = USA } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_JAP_add_tt } # America scope tooltip
+}
+
+Cold_War_GUI_WorsenRelationsTrend_GER_USA = {
+	add_to_variable = { global.ColdWarRelationTrendGain_GER_USA = -3 }
+	if 		= { limit = { tag = GER } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_USA_sub_tt } # Germany scope tooltip
+	else_if = { limit = { tag = USA } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_GER_sub_tt } # America scope tooltip
+}
+Cold_War_GUI_WorsenRelationsTrend_GER_JAP = {
+	add_to_variable = { global.ColdWarRelationTrendGain_GER_JAP = -3 }
+	if 		= { limit = { tag = GER } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_JAP_sub_tt } # Germany scope tooltip
+	else_if = { limit = { tag = JAP } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_GER_sub_tt } # Japan scope tooltip
+}
+Cold_War_GUI_WorsenRelationsTrend_JAP_USA = {
+	add_to_variable = { global.ColdWarRelationTrendGain_JAP_USA = -3 }
+	if 		= { limit = { tag = JAP } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_USA_sub_tt } # Japan scope tooltip
+	else_if = { limit = { tag = USA } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_JAP_sub_tt } # America scope tooltip
+}
+Cold_War_GUI_WorsenRelationsTrend_Small_GER_USA = {
+	add_to_variable = { global.ColdWarRelationTrendGain_GER_USA = -1 }
+	if 		= { limit = { tag = GER } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_USA_sub_tt } # Germany scope tooltip
+	else_if = { limit = { tag = USA } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_GER_sub_tt } # America scope tooltip
+}
+Cold_War_GUI_WorsenRelationsTrend_Small_GER_JAP = {
+	add_to_variable = { global.ColdWarRelationTrendGain_GER_JAP = -1 }
+	if 		= { limit = { tag = GER } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_JAP_sub_tt } # Germany scope tooltip
+	else_if = { limit = { tag = JAP } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_GER_sub_tt } # Japan scope tooltip
+}
+Cold_War_GUI_WorsenRelationsTrend_Small_JAP_USA = {
+	add_to_variable = { global.ColdWarRelationTrendGain_JAP_USA = -1 }
+	if 		= { limit = { tag = JAP } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_USA_sub_tt } # Japan scope tooltip
+	else_if = { limit = { tag = USA } custom_effect_tooltip = Cold_War_GUI_RelationTrendChange_JAP_sub_tt } # America scope tooltip
+}
+
+## Monthly update on relations based on trends
+Cold_War_GUI_RelationsPulse = {
+	# Trend value update with monthly addition var
+	add_to_variable = {
+		global.ColdWarRelationTrend_GER_USA = {
+			value = global.ColdWarRelationTrendGain_GER_USA
+			add = GER.modifier@GER_USA_relation_trend
+			add = USA.modifier@GER_USA_relation_trend
+		}
+	}
+	add_to_variable = {
+		global.ColdWarRelationTrend_GER_JAP = {
+			value = global.ColdWarRelationTrendGain_GER_JAP
+			add = GER.modifier@GER_JAP_relation_trend
+			add = JAP.modifier@GER_JAP_relation_trend
+		}
+	}
+	add_to_variable = {
+		global.ColdWarRelationTrend_JAP_USA = {
+			value = global.ColdWarRelationTrendGain_JAP_USA
+			add = JAP.modifier@JAP_USA_relation_trend
+			add = USA.modifier@JAP_USA_relation_trend
+		}
+	}
+
+	## Threshold checks
+	# Germany-America
+	if = { # Positive increment (upper threshold)
+		limit = { check_variable = { global.ColdWarRelationTrend_GER_USA > 239.99 } }
+		set_variable = { global.ColdWarRelationTrend_GER_USA = 0 }
+		divide_variable = { global.ColdWarRelationTrendGain_GER_USA = 2 }
+		set_temp_variable = { RelationsChange = 1 } Cold_War_GUI_ChangeRelations_GER_USA = yes
+	}
+	else_if = { # Negative increment (lower threshold)
+		limit = { check_variable = { global.ColdWarRelationTrend_GER_USA < -239.99 } }
+		set_variable = { global.ColdWarRelationTrend_GER_USA = 0 }
+		divide_variable = { global.ColdWarRelationTrendGain_GER_USA = 2 }
+		set_temp_variable = { RelationsChange = -1 } Cold_War_GUI_ChangeRelations_GER_USA = yes
+	}
+
+	# Germany-Japan
+	if = { # Positive increment (upper threshold)
+		limit = { check_variable = { global.ColdWarRelationTrend_GER_JAP > 239.99 } }
+		set_variable = { global.ColdWarRelationTrend_GER_JAP = 0 }
+		divide_variable = { global.ColdWarRelationTrendGain_GER_USA = 2 }
+		set_temp_variable = { RelationsChange = 1 } Cold_War_GUI_ChangeRelations_GER_JAP = yes
+	}
+	else_if = { # Negative increment (lower threshold)
+		limit = { check_variable = { global.ColdWarRelationTrend_GER_JAP < -239.99 } }
+		set_variable = { global.ColdWarRelationTrend_GER_JAP = 0 }
+		divide_variable = { global.ColdWarRelationTrendGain_GER_USA = 2 }
+		set_temp_variable = { RelationsChange = -1 } Cold_War_GUI_ChangeRelations_GER_JAP = yes
+	}
+
+	# Japan-America
+	if = { # Positive increment (upper threshold)
+		limit = { check_variable = { global.ColdWarRelationTrend_JAP_USA > 239.99 } }
+		set_variable = { global.ColdWarRelationTrend_JAP_USA = 0 }
+		divide_variable = { global.ColdWarRelationTrendGain_GER_USA = 2 }
+		set_temp_variable = { RelationsChange = 1 } Cold_War_GUI_ChangeRelations_JAP_USA = yes
+	}
+	else_if = { # Negative increment (lower threshold)
+		limit = { check_variable = { global.ColdWarRelationTrend_JAP_USA < -239.99 } }
+		set_variable = { global.ColdWarRelationTrend_JAP_USA = 0 }
+		divide_variable = { global.ColdWarRelationTrendGain_GER_USA = 2 }
+		set_temp_variable = { RelationsChange = -1 } Cold_War_GUI_ChangeRelations_JAP_USA = yes
+	}
+}
+
+#All the things you need to change TNO's World Tension, hopefully
+TNO_tension_animation_check = {
+	while_loop_effect = {
+		limit = { check_variable = { old_threat > 20 } }
+		subtract_from_temp_variable = { old_threat = 20 }
+		add_to_temp_variable = { old_threat_20s = 1 }
+	}
+	while_loop_effect = {
+		limit = { check_variable = { new_threat > 20 } }
+		subtract_from_temp_variable = { new_threat = 20 }
+		add_to_temp_variable = { new_threat_20s = 1 }
+	}
+
+	if = {
+		limit = { check_variable = { var = old_threat_20s value = new_threat_20s compare = not_equals } }
+		add_to_array = { global.TNO_WT_static_controller = 1 }
+	}
+}
+
+TNO_tension_calc = {
+	if = {
+		limit = {
+			OR = {
+				has_global_flag = TNO_world_tension_heydrich
+				has_global_flag = TNO_world_tension_WW3
+			}
+		}
+		set_variable = { global.TNO_World_Tension = 100 }
+	}
+	else = {
+		set_variable = {
+			global.TNO_World_Tension = {
+				value = -30
+				add = global.ColdWarRelations_GER_USA
+				add = global.ColdWarRelations_GER_JAP
+				add = global.ColdWarRelations_JAP_USA
+				divide = -60
+				multiply = 100
+				round = yes
+			}
+		}
+	}
+
+	set_temp_variable = { old_threat = { value = global.threat multiply = 100 } }
+	set_temp_variable = { threat_negative = { value = global.threat multiply = -100 } }
+	add_threat = var:threat_negative
+	add_threat = var:global.TNO_World_Tension
+	set_temp_variable = { new_threat = { value = global.threat multiply = 100 } }
+
+	TNO_calc_alerts_and_ww3 = yes
+	TNO_tension_animation_check = yes
+}
+
+TNO_calc_alerts_and_ww3 = {
+	if = {
+		limit = { check_variable = { global.ColdWarRelations_GER_USA = -10 } }
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = TENSION_DISABLED_GAME_RULE
+					AND = {
+						GER = { is_ai = yes }
+						USA = { is_ai = yes }
+						NOT = { has_global_flag = TENSION_ENABLED_GAME_RULE }
+					}
+				}
+			}
+			USA = { country_event = tension_diplo_crisis.1 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.ColdWarRelations_GER_USA = -9 } }
+		USA = { set_temp_variable = { alert_id = token:Alert_HighTension } add_TNO_alert_unless_exists = yes }
+		GER = { set_temp_variable = { alert_id = token:Alert_HighTension } add_TNO_alert_unless_exists = yes }
+	}
+	else = {
+		USA = { set_temp_variable = { alert_id = token:Alert_HighTension } remove_TNO_alert = yes }
+		GER = { set_temp_variable = { alert_id = token:Alert_HighTension } remove_TNO_alert = yes }
+	}
+
+	if = {
+		limit = { check_variable = { global.ColdWarRelations_GER_JAP = -10 } }
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = TENSION_DISABLED_GAME_RULE
+					AND = {
+						GER = { is_ai = yes }
+						JAP = { is_ai = yes }
+						NOT = { has_global_flag = TENSION_ENABLED_GAME_RULE }
+					}
+				}
+			}
+			JAP = { country_event = tension_diplo_crisis.11 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.ColdWarRelations_GER_JAP = -9 } }
+		JAP = { set_temp_variable = { alert_id = token:Alert_HighTension } add_TNO_alert_unless_exists = yes }
+		GER = { set_temp_variable = { alert_id = token:Alert_HighTension } add_TNO_alert_unless_exists = yes }
+	}
+	else = {
+		JAP = { set_temp_variable = { alert_id = token:Alert_HighTension } remove_TNO_alert = yes }
+		GER = { set_temp_variable = { alert_id = token:Alert_HighTension } remove_TNO_alert = yes }
+	}
+
+	if = {
+		limit = { check_variable = { global.ColdWarRelations_JAP_USA = -10 } }
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = TENSION_DISABLED_GAME_RULE
+					AND = {
+						JAP = { is_ai = yes }
+						USA = { is_ai = yes }
+						NOT = { has_global_flag = TENSION_ENABLED_GAME_RULE }
+					}
+				}
+			}
+			USA = { country_event = tension_diplo_crisis.21 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.ColdWarRelations_JAP_USA = -9 } }
+		USA = { set_temp_variable = { alert_id = token:Alert_HighTension } add_TNO_alert_unless_exists = yes }
+		JAP = { set_temp_variable = { alert_id = token:Alert_HighTension } add_TNO_alert_unless_exists = yes }
+	}
+	else = {
+		USA = { set_temp_variable = { alert_id = token:Alert_HighTension } remove_TNO_alert = yes }
+		JAP = { set_temp_variable = { alert_id = token:Alert_HighTension } remove_TNO_alert = yes }
+	}
+}
+
+Cold_War_GUI_setup_starting_map_positions = { # so you don't have to go to the main menu and back 
+	clear_array = global.PowerProjection_Tags
+	clear_array = global.PowerProjection_X
+	clear_array = global.PowerProjection_Y
+	GER = {
+		add_to_array = { global.PowerProjection_Tags = THIS.id }
+		add_to_array = { global.PowerProjection_X = 245 }
+		add_to_array = { global.PowerProjection_Y = 10 }
+	}
+	USA = {
+		add_to_array = { global.PowerProjection_Tags = THIS.id }
+		add_to_array = { global.PowerProjection_X = 8 }
+		add_to_array = { global.PowerProjection_Y = 19 }
+	}
+	JAP = {
+		add_to_array = { global.PowerProjection_Tags = THIS.id }
+		add_to_array = { global.PowerProjection_X = 51 }
+		add_to_array = { global.PowerProjection_Y = 54 }
+	}
+}

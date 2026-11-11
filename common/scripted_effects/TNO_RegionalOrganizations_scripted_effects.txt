@@ -77,10 +77,12 @@ RegionalOrganizations_Add = {
 				REG_ORG = "[?reg_org.GetTokenKey]"
 			}
 
-			# Joining a regorg increases trade influence with the leader
-			var:global.RegionalOrganization_Leader@var:reg_org = {
-				set_temp_variable = { temp_modifier = 20 }
-				add_to_trade_modifier_PREV = yes 
+			if = { # Joining a regorg increases trade influence with the leader
+				limit = { check_variable = { global.RegionalOrganization_Members@var:reg_org^num > 1 } }
+				var:global.RegionalOrganization_Leader@var:reg_org = {
+					set_temp_variable = { temp_modifier = 20 }
+					add_to_trade_modifier_PREV = yes 
+				}
 			}
 		}
 		force_update_map_mode = { mapmode = tno_regional_organizations_map_mode }
@@ -170,7 +172,6 @@ RegionalOrganizations_Disband = {
 	else = {
 		custom_effect_tooltip = TNO_RegionalOrganizations_Disband_tt
 		remove_from_array = { global.TNO_RegionalOrganizations = reg_org }
-		clear_variable = global.RegionalOrganization_Leader@var:reg_org
 		clear_variable = global.RegionalOrganization_Alignment@var:reg_org
 		if = { # For econ-oriented orgs
 			limit = { has_variable = global.RegionalOrganization_TotalGDP@var:reg_org }
@@ -196,6 +197,7 @@ RegionalOrganizations_Disband = {
 		}
 
 		var:global.RegionalOrganization_Leader@var:reg_org = { remove_from_array = { TNO_RegionalOrganizations_Led = reg_org } }
+		clear_variable = global.RegionalOrganization_Leader@var:reg_org
 	}
 
 	log = "[GetDateText]: [THIS.GetName]: RegionalOrganizations_Disband; Completed execution."
@@ -206,29 +208,25 @@ RegionalOrganizations_Startup = {
 	log = "[GetDateText]: [THIS.GetName]: RegionalOrganizations_Startup; Executing"
 
 	## Europäischer Staatenbund/European Confederation
-	set_temp_variable = { reg_org = token:RegionalOrganization_EU }
-	GER = {
-		# set_temp_variable = { org_alignment = GER }
-		set_temp_variable = { org_type = 3 } # Political Union
-		RegionalOrganizations_Initialize = yes
-	}
-	DEN = { RegionalOrganizations_Add = yes }
-	SLO = { RegionalOrganizations_Add = yes }
-	NOR = { RegionalOrganizations_Add = yes }
-	# OST = { RegionalOrganizations_Add = yes }
-	# UKR = { RegionalOrganizations_Add = yes }
-	# MCW = { RegionalOrganizations_Add = yes }
-	# CAU = { RegionalOrganizations_Add = yes }
-	HUN = { RegionalOrganizations_Add = yes }
-	ROM = { RegionalOrganizations_Add = yes }
-	TNS = { RegionalOrganizations_Add = yes }
-	BUL = { RegionalOrganizations_Add = yes }
-	SER = { RegionalOrganizations_Add = yes }
-	FRA = { RegionalOrganizations_Add = yes }
-	ENG = { RegionalOrganizations_Add = yes }
-	IRE = { RegionalOrganizations_Add = yes }
-	ULS = { RegionalOrganizations_Add = yes }
-	FIN = { RegionalOrganizations_Add = yes }
+	# set_temp_variable = { reg_org = token:RegionalOrganization_EU }
+	# GER = {
+	# 	# set_temp_variable = { org_alignment = GER }
+	# 	set_temp_variable = { org_type = 3 } # Political Union
+	# 	RegionalOrganizations_Initialize = yes
+	# }
+	# DEN = { RegionalOrganizations_Add = yes }
+	# SLO = { RegionalOrganizations_Add = yes }
+	# NOR = { RegionalOrganizations_Add = yes }
+	# HUN = { RegionalOrganizations_Add = yes }
+	# ROM = { RegionalOrganizations_Add = yes }
+	# TNS = { RegionalOrganizations_Add = yes }
+	# BUL = { RegionalOrganizations_Add = yes }
+	# SER = { RegionalOrganizations_Add = yes }
+	# FRA = { RegionalOrganizations_Add = yes }
+	# ENG = { RegionalOrganizations_Add = yes }
+	# IRE = { RegionalOrganizations_Add = yes }
+	# ULS = { RegionalOrganizations_Add = yes }
+	# FIN = { RegionalOrganizations_Add = yes }
 
 	## OAS - Organization of American States
 	set_temp_variable = { reg_org = token:RegionalOrganization_OAS }
@@ -238,7 +236,6 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	CAN = { RegionalOrganizations_Add = yes }
-	QUE = { RegionalOrganizations_Add = yes }
 	MEX = { RegionalOrganizations_Add = yes }
 	CUB = { RegionalOrganizations_Add = yes }
 	WIN = { RegionalOrganizations_Add = yes }
@@ -247,33 +244,27 @@ RegionalOrganizations_Startup = {
 	GUA = { RegionalOrganizations_Add = yes }
 	HON = { RegionalOrganizations_Add = yes }
 	ELS = { RegionalOrganizations_Add = yes }
-	# NIC = { RegionalOrganizations_Add = yes }
+	NIC = { RegionalOrganizations_Add = yes }
 	COS = { RegionalOrganizations_Add = yes }
 	PAN = { RegionalOrganizations_Add = yes }
-	COL = { RegionalOrganizations_Add = yes }
 	VEN = { RegionalOrganizations_Add = yes }
 	GUY = { RegionalOrganizations_Add = yes }
 	ECU = { RegionalOrganizations_Add = yes }
-	# PRU = { RegionalOrganizations_Add = yes }
+	PRU = { RegionalOrganizations_Add = yes }
 	BOL = { RegionalOrganizations_Add = yes }
 	CHL = { RegionalOrganizations_Add = yes }
 	BRA = { RegionalOrganizations_Add = yes }
 	URG = { RegionalOrganizations_Add = yes }
-	CUR = { RegionalOrganizations_Add = yes }
-	GUD = { RegionalOrganizations_Add = yes }
 
-	## Veracuz Pact
+	## Veracruz Pact
 	set_temp_variable = { reg_org = token:RegionalOrganization_VeracruzPact }
 	MEX = {
 		set_temp_variable = { org_alignment = 0 }
 		set_temp_variable = { org_type = 1 } # International Association
 		RegionalOrganizations_Initialize = yes
 	}
-	VEN = { RegionalOrganizations_Add = yes }
 	CUB = { RegionalOrganizations_Add = yes }
-	GUA = { RegionalOrganizations_Add = yes }
-	HAI = { RegionalOrganizations_Add = yes }
-	COS = { RegionalOrganizations_Add = yes }
+	VEN = { RegionalOrganizations_Add = yes }
 
 	## The Commonwealth (London)
 	set_temp_variable = { reg_org = token:RegionalOrganization_CollabCommonwealth }
@@ -283,28 +274,30 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	GAM = { RegionalOrganizations_Add = yes }
-	# SIE = { RegionalOrganizations_Add = yes }
-	NIG = { RegionalOrganizations_Add = yes }
-	# KEN = { RegionalOrganizations_Add = yes }
-	# UGD = { RegionalOrganizations_Add = yes }
-	# TNZ = { RegionalOrganizations_Add = yes }
-	# ZZB = { RegionalOrganizations_Add = yes }
-	# MLW = { RegionalOrganizations_Add = yes }
-	# ZAM = { RegionalOrganizations_Add = yes }
+	SIE = { RegionalOrganizations_Add = yes }
+	NGA = { RegionalOrganizations_Add = yes }
+	KEN = { RegionalOrganizations_Add = yes }
+	UGD = { RegionalOrganizations_Add = yes }
+	TNZ = { RegionalOrganizations_Add = yes }
+	ZZB = { RegionalOrganizations_Add = yes }
+	MLW = { RegionalOrganizations_Add = yes }
+	ZAM = { RegionalOrganizations_Add = yes }
 	ZIM = { RegionalOrganizations_Add = yes }
 	MRI = { RegionalOrganizations_Add = yes }
-	PAK = { RegionalOrganizations_Add = yes }
-	ETH = { RegionalOrganizations_Add = yes }
 
 	## French Empire
 	set_temp_variable = { reg_org = token:RegionalOrganization_FrenchEmpire }
-	FRA = {
+	FRS = {
 		set_temp_variable = { org_alignment = GER }
-		set_temp_variable = { org_type = 1 } # International Association
+		set_temp_variable = { org_type = 9 } # Colonial Empire
 		RegionalOrganizations_Initialize = yes
 	}
-	AAF = { RegionalOrganizations_Add = yes }
+	AOF = { RegionalOrganizations_Add = yes }
 	MAD = { RegionalOrganizations_Add = yes }
+	REU = { RegionalOrganizations_Add = yes }
+	AAF = { RegionalOrganizations_Add = yes }
+	FLA = { RegionalOrganizations_Add = yes }
+	CMR = { RegionalOrganizations_Add = yes }
 
 	## Italian Empire
 	set_temp_variable = { reg_org = token:RegionalOrganization_ItalianEmpire }
@@ -313,36 +306,55 @@ RegionalOrganizations_Startup = {
 		set_temp_variable = { org_type = 9 } # Colonial Empire
 		RegionalOrganizations_Initialize = yes
 	}
-	# CRO = { RegionalOrganizations_Add = yes }
-	# MNT = { RegionalOrganizations_Add = yes }
+	IEA = { RegionalOrganizations_Add = yes }
+	GUL = { RegionalOrganizations_Add = yes }
+	TUN = { RegionalOrganizations_Add = yes }
+	IME = { RegionalOrganizations_Add = yes }
+	JOR = { RegionalOrganizations_Add = yes }
+	ALB = { RegionalOrganizations_Add = yes }
+	OMA = { RegionalOrganizations_Add = yes }
 
 	## Iberian Empire
-	set_temp_variable = { reg_org = token:RegionalOrganization_SpanishEmpire }
+	set_temp_variable = { reg_org = token:RegionalOrganization_IberianEmpire }
 	IBR = {
 		set_temp_variable = { org_alignment = 0 }
 		set_temp_variable = { org_type = 9 } # Colonial Empire
 		RegionalOrganizations_Initialize = yes
 	}
 	MOR = { RegionalOrganizations_Add = yes }
-	MAR = { RegionalOrganizations_Add = yes }
-	JOL = { RegionalOrganizations_Add = yes }
-	# GNB = { RegionalOrganizations_Add = yes }
-	# CPV = { RegionalOrganizations_Add = yes }
-	# SAO = { RegionalOrganizations_Add = yes }
-
-	## Espacao Economico Portuguese
-	set_temp_variable = { reg_org = token:RegionalOrganization_PortugueseEmpire }
+	AES = { RegionalOrganizations_Add = yes }
+	EQG = { RegionalOrganizations_Add = yes }
+	ANG = { RegionalOrganizations_Add = yes }
+	MZB = { RegionalOrganizations_Add = yes }
+	GNB = { RegionalOrganizations_Add = yes }
+	CPV = { RegionalOrganizations_Add = yes }
+	SAO = { RegionalOrganizations_Add = yes }
+	CAB = { RegionalOrganizations_Add = yes }
+	
+	## Ibero-American Conference
+	set_temp_variable = { reg_org = token:RegionalOrganization_IberoAmericanConference }
 	IBR = {
 		set_temp_variable = { org_alignment = 0 }
-		set_temp_variable = { org_type = 9 } # Colonial Empire
+		set_temp_variable = { org_type = 10 } # Informal System
 		RegionalOrganizations_Initialize = yes
 	}
-	# ANG = { RegionalOrganizations_Add = yes }
-	# MZB = { RegionalOrganizations_Add = yes }
+	DOM = { RegionalOrganizations_Add = yes }
+	COL = { RegionalOrganizations_Add = yes }
+
+	## Lusophone Community
+	set_temp_variable = { reg_org = token:RegionalOrganization_LusophoneCommunity }
+	IBR = {
+		set_temp_variable = { org_alignment = 0 }
+		set_temp_variable = { org_type = 1 } # International Association
+		RegionalOrganizations_Initialize = yes
+	}
+	ANG = { RegionalOrganizations_Add = yes }
+	MZB = { RegionalOrganizations_Add = yes }
 	GNB = { RegionalOrganizations_Add = yes }
-	CAP = { RegionalOrganizations_Add = yes }
+	CPV = { RegionalOrganizations_Add = yes }
 	SAO = { RegionalOrganizations_Add = yes }
-	# BRA = { RegionalOrganizations_Add = yes }
+	CAB = { RegionalOrganizations_Add = yes }
+	BRA = { RegionalOrganizations_Add = yes }
 
 	## The Commonwealth (Ottawa)
 	set_temp_variable = { reg_org = token:RegionalOrganization_ExileCommonwealth }
@@ -351,51 +363,33 @@ RegionalOrganizations_Startup = {
 		set_temp_variable = { org_type = 1 } # International Association
 		RegionalOrganizations_Initialize = yes
 	}
-	QUE = { RegionalOrganizations_Add = yes }
 	AST = { RegionalOrganizations_Add = yes }
 	NZL = { RegionalOrganizations_Add = yes }
-	FIJ = { RegionalOrganizations_Add = yes }
 	BLZ = { RegionalOrganizations_Add = yes }
-	WIN = { RegionalOrganizations_Add = yes }
-	# BAH = { RegionalOrganizations_Add = yes }
-	# JAM = { RegionalOrganizations_Add = yes }
-	# SKN = { RegionalOrganizations_Add = yes }
-	# BRB = { RegionalOrganizations_Add = yes }
-	# SVI = { RegionalOrganizations_Add = yes }
-	# TRI = { RegionalOrganizations_Add = yes }
+	BRM = { RegionalOrganizations_Add = yes }
+	BAH = { RegionalOrganizations_Add = yes }
+	JAM = { RegionalOrganizations_Add = yes }
+	SKN = { RegionalOrganizations_Add = yes }
+	BRB = { RegionalOrganizations_Add = yes }
+	SVI = { RegionalOrganizations_Add = yes }
+	TRI = { RegionalOrganizations_Add = yes }
 	GUY = { RegionalOrganizations_Add = yes }
-	# IND = { RegionalOrganizations_Add = yes }
+	IND = { RegionalOrganizations_Add = yes }
 	CYL = { RegionalOrganizations_Add = yes }
-	# GHA = { RegionalOrganizations_Add = yes }
-	PAP = { RegionalOrganizations_Add = yes }
-	SLE = { RegionalOrganizations_Add = yes }
+	FIJ = { RegionalOrganizations_Add = yes }
 	TON = { RegionalOrganizations_Add = yes }
 	WSA = { RegionalOrganizations_Add = yes }
-	
-	## Comecon
-	set_temp_variable = { reg_org = token:RegionalOrganization_USSR }
-	SOV = {
-		set_temp_variable = { org_alignment = 0 }
-		set_temp_variable = { org_type = 6 } # Economic Association
-		RegionalOrganizations_Initialize = yes
-	}
 	GHA = { RegionalOrganizations_Add = yes }
-	PRU = { RegionalOrganizations_Add = yes }
-	NIC = { RegionalOrganizations_Add = yes }
-	AFG = { RegionalOrganizations_Add = yes }
+	PAP = { RegionalOrganizations_Add = yes }
 
 	## Helsinki Treaty
 	set_temp_variable = { reg_org = token:RegionalOrganization_HelsinkiTreaty }
 	SWE = {
 		set_temp_variable = { org_alignment = 0 }
-		set_temp_variable = { org_type = 6 } # Economic Association
+		set_temp_variable = { org_type = 7 } # Defensive Treaty
 		RegionalOrganizations_Initialize = yes
 	}
-	# FIN = { RegionalOrganizations_Add = yes }
-	SWI = { RegionalOrganizations_Add = yes }
-	TUR = { RegionalOrganizations_Add = yes }
-	CYP = { RegionalOrganizations_Add = yes }
-	ARM = { RegionalOrganizations_Add = yes }
+	FIN = { RegionalOrganizations_Add = yes }
 
 	## Adana Treaty Organization
 	set_temp_variable = { reg_org = token:RegionalOrganization_ATO }
@@ -404,12 +398,9 @@ RegionalOrganizations_Startup = {
 		set_temp_variable = { org_type = 3 } # Political Union
 		RegionalOrganizations_Initialize = yes
 	}
-	SYR = { RegionalOrganizations_Add = yes }
+	SNS = { RegionalOrganizations_Add = yes }
 	ARM = { RegionalOrganizations_Add = yes }
-	# BKU = { RegionalOrganizations_Add = yes }
-	CYP = { RegionalOrganizations_Add = yes }
-	LEB = { RegionalOrganizations_Add = yes }
-	PAL = { RegionalOrganizations_Add = yes }
+	BKU = { RegionalOrganizations_Add = yes }
 
 	## Roboré Accords
 	set_temp_variable = { reg_org = token:RegionalOrganization_RoboreAccords }
@@ -419,30 +410,28 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	BOL = { RegionalOrganizations_Add = yes }
-	URG = { RegionalOrganizations_Add = yes }
-	CHL = { RegionalOrganizations_Add = yes }
-	# GUC = { RegionalOrganizations_Add = yes }
-
-	## Córdoba Forum
-	set_temp_variable = { reg_org = token:RegionalOrganization_CordobaForum }
-	ARG = {
-		set_temp_variable = { org_alignment = 0 }
-		set_temp_variable = { org_type = 2 } # International Forum
-		RegionalOrganizations_Initialize = yes
-	}
-	DOM = { RegionalOrganizations_Add = yes }
-	PAR = { RegionalOrganizations_Add = yes }
-	# CLC = { RegionalOrganizations_Add = yes }
+	GUC = { RegionalOrganizations_Add = yes }
 
 	## Pact of San Lorenzo
 	set_temp_variable = { reg_org = token:RegionalOrganization_SanLorenzoPact }
 	ARG = {
-		set_temp_variable = { org_alignment = GER }
+		set_temp_variable = { org_alignment = 0 }
 		set_temp_variable = { org_type = 7 } # Defensive Treaty
 		RegionalOrganizations_Initialize = yes
 	}
+	DOM = { RegionalOrganizations_Add = yes }
 	PAR = { RegionalOrganizations_Add = yes }
-	# STC = { RegionalOrganizations_Add = yes }
+	STC = { RegionalOrganizations_Add = yes }
+	CLC = { RegionalOrganizations_Add = yes }
+
+	## Hispanic Economic Community
+	set_temp_variable = { reg_org = token:RegionalOrganization_HispanicEconomicCommunity }
+	ARG = {
+		set_temp_variable = { org_alignment = GER }
+		set_temp_variable = { org_type = 6 } # Economic Association
+		RegionalOrganizations_Initialize = yes
+	}
+	DOM = { RegionalOrganizations_Add = yes }
 
 	## Southern African Customs Union
 	set_temp_variable = { reg_org = token:RegionalOrganization_SACU }
@@ -452,12 +441,10 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	AAP = { RegionalOrganizations_Add = yes }
-	# BTS = { RegionalOrganizations_Add = yes }
+	BTS = { RegionalOrganizations_Add = yes }
 	LTH = { RegionalOrganizations_Add = yes }
-	# NAM = { RegionalOrganizations_Add = yes }
+	NAM = { RegionalOrganizations_Add = yes }
 	SWZ = { RegionalOrganizations_Add = yes }
-	ZIM = { RegionalOrganizations_Add = yes }
-	SMB = { RegionalOrganizations_Add = yes }
 
 	## Ostministerium
 	set_temp_variable = { reg_org = token:RegionalOrganization_Ostministerium }
@@ -468,9 +455,12 @@ RegionalOrganizations_Startup = {
 		RegionalOrganizations_Initialize = yes
 	}
 	UKR = { RegionalOrganizations_Add = yes }
-	BLR = { RegionalOrganizations_Add = yes }
+	MCW = { RegionalOrganizations_Add = yes }
 	CAU = { RegionalOrganizations_Add = yes }
-	MOS = { RegionalOrganizations_Add = yes }
+	BLR = { RegionalOrganizations_Add = yes }
+	EST = { RegionalOrganizations_Add = yes }
+	LAT = { RegionalOrganizations_Add = yes }
+	LIT = { RegionalOrganizations_Add = yes }
 
 	## African Labour Board
 	set_temp_variable = { reg_org = token:RegionalOrganization_AfricanLabourBoard }
@@ -482,39 +472,43 @@ RegionalOrganizations_Startup = {
 	}
 		# British Colonies
 	GAM = { RegionalOrganizations_Add = yes }
-	# SIE = { RegionalOrganizations_Add = yes }
-	NIG = { RegionalOrganizations_Add = yes }
-	# KEN = { RegionalOrganizations_Add = yes }
-	# UGD = { RegionalOrganizations_Add = yes }
-	# TNZ = { RegionalOrganizations_Add = yes }
-	# ZZB = { RegionalOrganizations_Add = yes }
-	# MLW = { RegionalOrganizations_Add = yes }
-	# ZAM = { RegionalOrganizations_Add = yes }
+	SIE = { RegionalOrganizations_Add = yes }
+	NGA = { RegionalOrganizations_Add = yes }
+	KEN = { RegionalOrganizations_Add = yes }
+	UGD = { RegionalOrganizations_Add = yes }
+	TNZ = { RegionalOrganizations_Add = yes }
+	ZZB = { RegionalOrganizations_Add = yes }
+	MLW = { RegionalOrganizations_Add = yes }
+	ZAM = { RegionalOrganizations_Add = yes }
 	ZIM = { RegionalOrganizations_Add = yes }
 	MRI = { RegionalOrganizations_Add = yes }
 		# French Colonies
-	# AOF = { RegionalOrganizations_Add = yes }
+	AOF = { RegionalOrganizations_Add = yes }
 	MAD = { RegionalOrganizations_Add = yes }
-	# REU = { RegionalOrganizations_Add = yes }
+	REU = { RegionalOrganizations_Add = yes }
 	AAF = { RegionalOrganizations_Add = yes }
-	# FLA = { RegionalOrganizations_Add = yes }
+	FLA = { RegionalOrganizations_Add = yes }
+	CMR = { RegionalOrganizations_Add = yes }
 		# Portuguese Colonies
-	# ANG = { RegionalOrganizations_Add = yes }
-	# MZB = { RegionalOrganizations_Add = yes }
-	SMB = { RegionalOrganizations_Add = yes }
+	ANG = { RegionalOrganizations_Add = yes }
+	MZB = { RegionalOrganizations_Add = yes }
 	GNB = { RegionalOrganizations_Add = yes }
-	CAP = { RegionalOrganizations_Add = yes }
+	CPV = { RegionalOrganizations_Add = yes }
 	SAO = { RegionalOrganizations_Add = yes }
+	CAB = { RegionalOrganizations_Add = yes }
 		# Spanish Colonies
 	MOR = { RegionalOrganizations_Add = yes }
-	MAR = { RegionalOrganizations_Add = yes }
-	JOL = { RegionalOrganizations_Add = yes }
+	AES = { RegionalOrganizations_Add = yes }
+	EQG = { RegionalOrganizations_Add = yes }
 		# South African Associates
 	NAM = { RegionalOrganizations_Add = yes }
 	LTH = { RegionalOrganizations_Add = yes }
 	SWZ = { RegionalOrganizations_Add = yes }
-	ETH = { RegionalOrganizations_Add = yes }
-	
+	BTS = { RegionalOrganizations_Add = yes }
+		# Rwanda/Burundi
+	BRD = { RegionalOrganizations_Add = yes }
+	RWA = { RegionalOrganizations_Add = yes }
+
 	## Central African Federation
 	set_temp_variable = { reg_org = token:RegionalOrganization_CentralAfricanFed }
 	ZIM = {
@@ -523,6 +517,8 @@ RegionalOrganizations_Startup = {
 		set_temp_variable = { org_type = 4 } # Federation
 		RegionalOrganizations_Initialize = yes
 	}
+	MLW = { RegionalOrganizations_Add = yes }
+	ZAM = { RegionalOrganizations_Add = yes }
 
 	## Monrovia Conference
 	set_temp_variable = { reg_org = token:RegionalOrganization_MonroviaConference }
@@ -537,30 +533,27 @@ RegionalOrganizations_Startup = {
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
-	SLE = { RegionalOrganizations_Add = yes }
-	TOG = { RegionalOrganizations_Add = yes }
-	GBE = { RegionalOrganizations_Add = yes }
-	NIG = { RegionalOrganizations_Add = yes }
+	CHD = { RegionalOrganizations_Add = yes }
+	BRD = { RegionalOrganizations_Add = yes }
+	RWA = { RegionalOrganizations_Add = yes }
 
 	## United States of Latin Africa
 	set_temp_variable = { reg_org = token:RegionalOrganization_UnitedStatesOfLatinAfrica }
-	COG = {
+	CAF = {
 		set_temp_variable = { org_alignment = USA }
-		set_temp_variable = { org_leader = COG }
+		set_temp_variable = { org_leader = CAF }
 		set_temp_variable = { org_type = 4 } # Federation
 		RegionalOrganizations_Initialize = yes
 	}
-	CAF = { RegionalOrganizations_Add = yes }
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
-	BRD = { RegionalOrganizations_Add = yes }
-	ANG = { RegionalOrganizations_Add = yes }
+	CHD = { RegionalOrganizations_Add = yes }
 
 	## Central Africa Development and Assistance Treaty
 	set_temp_variable = { reg_org = token:RegionalOrganization_CADAT }
 	COG = {
-		set_temp_variable = { org_alignment = 0 } # Unaligned
+		set_temp_variable = { org_alignment = USA }
 		set_temp_variable = { org_leader = COG }
 		set_temp_variable = { org_type = 7 } # Defensive Treaty
 		RegionalOrganizations_Initialize = yes
@@ -569,42 +562,26 @@ RegionalOrganizations_Startup = {
 	GAB = { RegionalOrganizations_Add = yes }
 	MCG = { RegionalOrganizations_Add = yes }
 	FRC = { RegionalOrganizations_Add = yes }
-	# RWA = { RegionalOrganizations_Add = yes }
+	CHD = { RegionalOrganizations_Add = yes }
+	RWA = { RegionalOrganizations_Add = yes }
 	BRD = { RegionalOrganizations_Add = yes }
-	ANG = { RegionalOrganizations_Add = yes }
-	
-	## GCC - Gulf Cooperation Council
-	set_temp_variable = { reg_org = token:RegionalOrganization_GCC }
-	SAU = {
-		set_temp_variable = { org_alignment = 0 } # Unaligned
-		set_temp_variable = { org_leader = SAU }
-		set_temp_variable = { org_type = 1 } # International Association
-		RegionalOrganizations_Initialize = yes
-	}
-	UAE = { RegionalOrganizations_Add = yes }
-	IRQ = { RegionalOrganizations_Add = yes }
-	OMA = { RegionalOrganizations_Add = yes }
-	YEM = { RegionalOrganizations_Add = yes }
 
-	## OAU
-	set_temp_variable = { reg_org = token:RegionalOrganization_OAU }
-	GHA = {
-		set_temp_variable = { org_alignment = 0 } # Unaligned
-		set_temp_variable = { org_leader = GHA }
-		set_temp_variable = { org_type = 1 } # International Association
+	## Greater East Asia Resource Council
+	set_temp_variable = { reg_org = token:RegionalOrganization_GEARC }
+	JAP = {
+		set_temp_variable = { org_alignment = JAP }
+		set_temp_variable = { org_leader = JAP }
+		set_temp_variable = { org_type = 6 } # Economic Association
 		RegionalOrganizations_Initialize = yes
 	}
-	ALG = { RegionalOrganizations_Add = yes }
-
-	# NCC
-	set_temp_variable = { reg_org = token:RegionalOrganization_NCC }
-	CAN = {
-		set_temp_variable = { org_alignment = USA }
-		set_temp_variable = { org_leader = CAN }
-		set_temp_variable = { org_type = 5 } # Confederation
-		RegionalOrganizations_Initialize = yes
-	}
-	QUE = { RegionalOrganizations_Add = yes }
+	CHI = { RegionalOrganizations_Add = yes }
+	MAN = { RegionalOrganizations_Add = yes }
+	MEN = { RegionalOrganizations_Add = yes }
+	SHX = { RegionalOrganizations_Add = yes }
+	GAN = { RegionalOrganizations_Add = yes }
+	GUX = { RegionalOrganizations_Add = yes }
+	GUZ = { RegionalOrganizations_Add = yes }
+	YUN = { RegionalOrganizations_Add = yes }
 
 	log = "[GetDateText]: [THIS.GetName]: RegionalOrganizations_Startup; Completed execution."
 }
@@ -623,7 +600,7 @@ RegionalOrganizations_MonthlyPulse = {
 RegionalOrganizations_TotalGDPRefresh = {
 	set_variable = { global.RegionalOrganization_TotalGDP@var:reg_org = 0 }
 	for_each_scope_loop = {
-		array = global.TNO_RegionalOrganizations_Members@var:reg_org
+		array = global.RegionalOrganization_Members@var:reg_org
 		add_to_variable = { global.RegionalOrganization_TotalGDP@var:reg_org = THIS.GDP }
 	}
 }

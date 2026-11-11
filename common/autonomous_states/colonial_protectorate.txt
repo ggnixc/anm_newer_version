@@ -1,0 +1,35 @@
+autonomy_state = {
+	id = autonomy_colonial_protectorate
+
+    is_puppet = yes
+
+	min_freedom_level = 0.0
+
+	modifier = {
+        custom_modifier_tooltip = autonomy_colonial_protectorate_tt
+	}
+
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = yes
+	}
+
+	allowed = {
+		always = yes
+	}
+
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}

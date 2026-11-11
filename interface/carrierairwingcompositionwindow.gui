@@ -12,28 +12,11 @@ guiTypes = {
 			name = "Background"
 			quadTextureSprite ="GFX_tiled_window_thin_border2"
 		}
-
-		iconType = {
-			name ="generic_header1"
-			spriteType = "GFX_generic_header"
-			#position = { x=8 y=10 }
-			position = { x=-8000 y=10 }
-			alwaystransparent = yes
-		}		
-
-		iconType = {
-			name ="generic_header2"
-			spriteType = "GFX_generic_header"
-			#position = { x=8 y=247 }
-			position = { x=-8000 y=247 }
-			alwaystransparent = yes
-			#orientation = bottom_left
-		}	
 		
 		instantTextboxType = {
 			name = "title"
 			position = {x=50 y=18}
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = CARRIER_AIR_WING_COMPOSITION_TITLE
 			maxWidth = 250
 			maxHeight = 25
@@ -52,7 +35,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "entries"
 			position = {x=15 y=60}
-			size = {width=310 height=180}
+			size = {width=330 height=180}
 			verticalScrollbar = "right_vertical_slider"
 			
 			background = {
@@ -87,7 +70,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "summary"
 			position = {x=135 y=243}
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			text = "0/100"
 			maxWidth = 100
 			maxHeight = 25
@@ -99,7 +82,7 @@ guiTypes = {
 			position = { x = 93 y = 265}
 			quadTextureSprite ="GFX_division_designer_button"
 			buttonText = "OK"
-			buttonFont = "aldrich_22_outline"
+			buttonFont = "aldrich_24_outline"
 			shortcut = "RETURN"
 			clicksound = click_default
 		}
@@ -130,7 +113,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_name"
 			position = {x=6 y=14}
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			maxWidth = 190
 			maxHeight = 23
 			format = left
@@ -149,7 +132,7 @@ guiTypes = {
 		editBoxType = {
 			position = {x=225 y=15}
 			name = "number_box"
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			borderSize = {x=0 y=0}	
 			size = {x=40 y=40}
 			text = "0"

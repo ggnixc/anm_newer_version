@@ -1,0 +1,30 @@
+###############################
+# Superpower dynamic modifier #
+###############################
+
+superpower_scoring_effects_modifier = {
+	enable = { always = yes }
+	# icon = "GFX_idea_BRG_iron_fist"
+	max_command_power = score_effects_array^0
+	political_power_gain = score_effects_array^1
+	war_support_factor = score_effects_array^2
+	research_speed_factor = score_effects_array^3
+	consumer_goods_production_factor = score_effects_array^4
+	debt_to_GDP_ceiling_modifier = score_effects_array^5
+}
+
+superpower_power_projection_modifier = {
+	enable = { always = yes }
+	# icon = "GFX_idea_BRG_iron_fist"
+	political_power_gain = power_projection_pp_effect
+}
+
+## This is in here because there's not really a better place to put it and I'm not creating a whole new file for just a single dynmod
+TNO_Espionage_dynamic_modifier = {
+	enable = { has_country_flag = TNO_Espionage_Mech_Active }
+	political_power_factor	= TNO_Espionage_political_power_factor
+	army_org_factor			= TNO_Espionage_army_org_factor
+	compliance_gain			= TNO_Espionage_compliance_gain
+	misc_costs_modifier		= TNO_Espionage_Investment
+	max_command_power		= TNO_Espionage_max_command_power
+}

@@ -3,10 +3,9 @@ state = {
 	name = "STATE_1618"
 	manpower = 212253
 	resources = {
-		 
 	}
 
-	state_category = rural
+	state_category = town
 
 	history = {
 		owner = PAR
@@ -14,9 +13,13 @@ state = {
 		victory_points = { 2194 10 }
 		buildings = {
 			infrastructure = 3
-			arms_factory = 1
-			industrial_complex = 1
+			barracks = 1
+			schools = 1
+			prisons = 1
 		}
+		set_state_flag = GDP_category_large_town
+
+		set_state_flag = PAR_bush_war_state
 	}
 
 	provinces = {

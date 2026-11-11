@@ -1,0 +1,74 @@
+ideas = {
+	country = {
+		#################################################
+		#                Starting Ideas                 #
+		#################################################
+		## Der Neubau des Reiches - starting constitutional and institutional setup
+
+		## Endsieg - German position in the cold war
+		GER_endsieg = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_endsieg" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GER_endsieg
+			modifier = {  }
+		}
+
+		## Economic ideas series - general economic health of Germany and how well it's doing there
+		GER_econ_idea_1 = { # Economic boom
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_econ_idea_1" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GER_economic_health_1
+			modifier = {  }
+		}
+		GER_econ_idea_2 = { # Full recovery
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_econ_idea_2" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GER_economic_health_2
+			modifier = {  }
+		}
+		GER_econ_idea_3 = { # Partial recovery
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_econ_idea_3" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GER_economic_health_3
+			modifier = {  }
+		}
+		GER_econ_idea_4 = { # Meh econ, stagnation
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_econ_idea_4" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GER_economic_health_4
+			modifier = {  }
+		}
+		GER_econ_idea_5 = { # Reeling from the previous recession
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_econ_idea_5" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GER_economic_health_5
+			modifier = {  }
+		}
+		GER_econ_idea_6 = { # Worse
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_econ_idea_6" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GER_economic_health_6
+			modifier = {  }
+		}
+		GER_econ_idea_7 = { # Depression
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_econ_idea_7" }
+			allowed = { always = no }
+			removal_cost = -1
+			picture = GER_economic_health_7
+			modifier = {  }
+		}
+
+
+		#################################################
+		#                Foreign Policy                 #
+		#################################################
+		## All of these are for other tags
+
+}

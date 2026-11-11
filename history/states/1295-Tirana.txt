@@ -1,9 +1,6 @@
 state = {
 	id = 1295
 	name = "STATE_1295"
-	resources = {
-		 
-	}
 
 	history = {
 		owner = ALB
@@ -16,20 +13,23 @@ state = {
 		buildings = {
 			infrastructure = 5
 			radar_station = 1
- 			16194 = {
+			thermoelectric_plant = 1
+			16194 = {
 				naval_base = 1
 			}
 			air_base = 3
 			radar_station = 1
-			industrial_complex = 1
+			offices = 1
 		}
 		add_core_of = ALB
- 	}
+		set_state_flag = GDP_regions_albania
+		set_state_flag = GDP_category_town
+	}
 
 	provinces = {
 		14448 16194
 	}
 	manpower = 383613
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = large_town
 }

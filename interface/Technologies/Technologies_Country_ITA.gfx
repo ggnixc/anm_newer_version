@@ -34,7 +34,25 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ITA_artillery_equipment_5_medium"
 		texturefile = "gfx/interface/technologies/ITA_Artillery_90.dds"
-	}	
+	}
+	
+	## ITA KIT ##
+	SpriteType = {
+		name = "GFX_ITA_infantry_kit_1_medium"
+		texturefile = "gfx/interface/technologies/ITA_36_kit.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_infantry_kit_2_medium"
+		texturefile = "gfx/interface/technologies/ITA_45_kit.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_infantry_kit_4_medium"
+		texturefile = "gfx/interface/technologies/ITA_58_kit.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_infantry_kit_7_medium"
+		texturefile = "gfx/interface/technologies/ITA_76_kit.dds"
+	}
 
 	## ITA INFANTRY ##
 
@@ -84,6 +102,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ITA_Infantry_AT_88.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_ITA_infantry_aa1_medium"
+		texturefile = "gfx/interface/technologies/GER_Infantry_AA_48.dds"
+	}
 	SpriteType = {
 		name = "GFX_ITA_infantry_aa2_medium"
 		texturefile = "gfx/interface/technologies/ITA_Infantry_AA_62.dds"
@@ -160,6 +182,10 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_ITA_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/ITA_Heavy_Artillery_45.dds"
+	}
+	SpriteType = {
 		name = "GFX_ITA_SPART_1950_medium"
 		texturefile = "gfx/interface/technologies/ITA_Heavy_Artillery_50.dds"
 	}
@@ -180,6 +206,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/ITA_Heavy_Artillery_90.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_ITA_light_SPART_1945_medium"
+		texturefile = "gfx/interface/technologies/ITA_Light_Artillery_45.dds"
+	}
 	SpriteType = {
 		name = "GFX_ITA_light_SPART_1950_medium"
 		texturefile = "gfx/interface/technologies/ITA_Light_Artillery_50.dds"
@@ -207,7 +237,6 @@ spriteTypes = {
 		name = "GFX_ITA_antiair_1945_medium"
 		texturefile = "gfx/interface/technologies/ITA_AntiAir_45.dds"
 	}
-
 	SpriteType = {
 		name = "GFX_ITA_antiair_1950_medium"
 		texturefile = "gfx/interface/technologies/ITA_AntiAir_50.dds"
@@ -274,6 +303,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ITA_SPAA_1950_medium"
 		texturefile = "gfx/interface/technologies/ITA_Heavy_AntiAir_50.dds"
+	}
+	SpriteType = {
+		name = "GFX_ITA_SPAA_1945_medium"
+		texturefile = "gfx/interface/technologies/ITA_Heavy_Antiair_45.dds"
 	}
 
 	SpriteType = {
@@ -494,7 +527,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_ITA_NSB_AC_1970_medium"
-		texturefile = "gfx/interface/technologies/Generic_AC_70.dds"
+		texturefile = "gfx/interface/technologies/ITA_AC_70.dds"
 	}
 	SpriteType = {
 		name = "GFX_ITA_NSB_AC_1980_medium"
@@ -1114,44 +1147,6 @@ spriteTypes = {
 
 	#### Fix for Graphical Culture Bug (or the "I hate Paradox" zone)
 
-	### Argentina ###
-
-	## Artillery ##
-	SpriteType = {
-		name = "GFX_ARG_artillery_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/ITA_Artillery_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_ARG_artillery_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/ITA_Artillery_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_ARG_artillery_equipment_4_medium"
-		texturefile = "gfx/interface/technologies/ITA_Artillery_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_ARG_artillery_equipment_5_medium"
-		texturefile = "gfx/interface/technologies/ITA_Artillery_90.dds"
-	}
-
-	## Anti-Air ##
-	SpriteType = {
-		name = "GFX_ARG_anti_air_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/ITA_AntiAir_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_ARG_anti_air_equipment_2_medium"
-		texturefile = "gfx/interface/technologies/ITA_AntiAir_50.dds"
-	}
-	SpriteType = {
-		name = "GFX_ARG_anti_air_equipment_3_medium"
-		texturefile = "gfx/interface/technologies/ITA_AntiAir_70.dds"
-	}
-	SpriteType = {
-		name = "GFX_ARG_anti_air_equipment_4_medium"
-		texturefile = "gfx/interface/technologies/ITA_AntiAir_90.dds"
-	}
-
 	### Colombian Conservatives ###
 
 	## Artillery ##
@@ -1227,17 +1222,6 @@ spriteTypes = {
 		name = "GFX_ILG_anti_air_equipment_4_medium"
 		texturefile = "gfx/interface/technologies/ITA_AntiAir_90.dds"
 	}
-	
-		## Armored Car ##
-
-	SpriteType = {
-		name = "GFX_ILG_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/IEA_AC_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_ILG_NSB_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/IEA_AC_45.dds"
-	}	
 
 	### Italian Middle East ###
 
@@ -1275,17 +1259,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_IME_anti_air_equipment_4_medium"
 		texturefile = "gfx/interface/technologies/ITA_AntiAir_90.dds"
-	}
-	
-		## Armored Car ##
-
-	SpriteType = {
-		name = "GFX_IME_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/IME_AC_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_IME_NSB_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/IME_AC_45.dds"
 	}
 
 	### Jerusalem ###
@@ -1400,17 +1373,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_IEA_anti_air_equipment_4_medium"
 		texturefile = "gfx/interface/technologies/ITA_AntiAir_90.dds"
-	}
-	
-	## Armored Car ##
-
-	SpriteType = {
-		name = "GFX_IEA_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/IEA_AC_45.dds"
-	}
-	SpriteType = {
-		name = "GFX_IEA_NSB_AC_1945_medium"
-		texturefile = "gfx/interface/technologies/IEA_AC_45.dds"
 	}
 
 	### Correntia ###

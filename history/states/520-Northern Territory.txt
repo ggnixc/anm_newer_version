@@ -3,14 +3,17 @@ state = {
 	name = "STATE_520"
 	resources = {
 		steel = 23.000
- 	}
+		uranium = 6.000
+	}
 
 	history = {
 		owner = AST
+		set_state_flag = has_offshore_island
 		buildings = {
 			infrastructure = 3
 			air_base = 4
 			radar_station = 5
+			barracks = 1
 			7669 = {
 				naval_base = 6
 				coastal_bunker = 5
@@ -37,12 +40,13 @@ state = {
 				coastal_bunker = 5
 			}
 		}
-		victory_points = {
+		victory_points = { # Darwin
 			7669 2
 		}
-		victory_points = {
+		victory_points = { # Katherine
 			1454 1
 		}
+		set_state_flag = GDP_category_town
 		add_core_of = AST
 	}
 

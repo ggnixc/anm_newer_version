@@ -1,0 +1,50 @@
+ledger_selection_sort = {
+	set_temp_variable = { ledger_sort_count = ledger_countries^num }
+	set_temp_variable = { ledger_sort_outer_end = ledger_sort_count }
+	subtract_from_temp_variable = { ledger_sort_outer_end = 1 }
+
+	for_loop_effect = {
+		start = 0
+		end = ledger_sort_outer_end
+		value = ledger_sort_i
+
+		set_temp_variable = { ledger_sort_best_index = ledger_sort_i }
+		var:ledger_countries^ledger_sort_best_index = {
+			set_temp_variable = { PREV.ledger_sort_best_value = ledger_sort_value }
+		}
+
+		set_temp_variable = { ledger_sort_scan_start = ledger_sort_i }
+		add_to_temp_variable = { ledger_sort_scan_start = 1 }
+		for_loop_effect = {
+			start = ledger_sort_scan_start
+			end = ledger_sort_count
+			value = ledger_sort_j
+
+			var:ledger_countries^ledger_sort_j = {
+				set_temp_variable = { PREV.ledger_sort_candidate_value = ledger_sort_value }
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = ledger_sort_candidate_value
+						value = ledger_sort_best_value
+						compare = greater_than
+					}
+				}
+				set_temp_variable = { ledger_sort_best_index = ledger_sort_j }
+				set_temp_variable = { ledger_sort_best_value = ledger_sort_candidate_value }
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = { ledger_sort_best_index = ledger_sort_i }
+				}
+			}
+			set_temp_variable = { ledger_sort_swap = ledger_countries^ledger_sort_i }
+			set_variable = { ledger_countries^ledger_sort_i = ledger_countries^ledger_sort_best_index }
+			set_variable = { ledger_countries^ledger_sort_best_index = ledger_sort_swap }
+		}
+	}
+}

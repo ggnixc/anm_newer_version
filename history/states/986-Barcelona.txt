@@ -20,9 +20,14 @@ state = {
 			9824 1
 		}
 		buildings = {
- 			arms_factory = 1
-			industrial_complex = 1
- 			infrastructure = 5
+			schools = 2
+			barracks = 2
+			hospitals = 2
+			offices = 2
+			prisons = 2
+			dockyard = 2
+			thermoelectric_plant = 2
+			infrastructure = 5
 			radar_station = 1
 			9764 = {
 				naval_base = 6
@@ -30,7 +35,8 @@ state = {
 		}
 		add_core_of = IBR
 		set_state_flag = state_renamings
- 	}
+		set_state_flag = GDP_category_metropolis
+	}
 
 	provinces = {
 		854 6927 9764 9809 9824 11779

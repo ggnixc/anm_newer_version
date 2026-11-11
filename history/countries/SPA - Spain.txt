@@ -1,9 +1,24 @@
-﻿capital = 1013
+capital = 1013
+
+# Vacant
+recruit_character = SPA_Generic_Vacant
+
+set_country_flag = is_iberian_nation
+
+###Playable
+set_country_flag = tno_playable_country
 
 set_war_support = 0.6
 set_stability = 0.4
 
-set_oob = "SPA_1962"
+oob = "SPA_1962"
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+add_mastery = {
+	amount = 300
+}
 
 set_politics = {
 	ruling_party = despotism
@@ -12,69 +27,108 @@ set_politics = {
 	elections_allowed = no
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 3
-    ultranationalism = 0
-    socialist = 5
-    progressivism = 7
-    liberalism = 9
-    liberal_conservatism = 6
-    conservatism = 11
-    paternalism = 27
-    despotism = 32
-    fascism = 0
-     
+	communist = 10
+	socialist = 4
+	progressivism = 3
+	liberalism = 4
+	liberal_conservatism = 7
+	conservatism = 3
+	conservatism_1 = 3
+	paternalism = 11
+	despotism = 0
+	despotism_1 = 25
+	despotism_2 = 17
+	fascism = 10
+	fascism_1 = 3
+	
 }
+recruit_character = SPA_Francisco_Franco
+recruit_character = SPA_Alejandro_Valcarcel
+recruit_character = SPA_Pedro_Cortina
+recruit_character = SPA_Agustin_Munoz
+recruit_character = SPA_Mariano_Rubio
+
+recruit_character = SPA_Santiago_Carrillo
+recruit_character = SPA_Rodolfo_Llopis
+recruit_character = SPA_Joaquin_Ruiz_Gimenez
+recruit_character = SPA_Jose_Gil_Robles
+recruit_character = SPA_non_centralized
+
+recruit_character = SPA_Enrique_Tierno_Galvan
+recruit_character = SPA_Dionisio_Ridruejo
+recruit_character = SPA_Cruz_Martinez_Esteruelas
+recruit_character = SPA_Federico_Silva_Munoz
+recruit_character = SPA_Gonzalo_Fernandez_Mora
+recruit_character = SPA_Juan_Saenz_Diez
+recruit_character = SPA_Antonio_Carro_Martinez
+recruit_character = SPA_Jose_Solis_Ruiz
+recruit_character = SPA_Laureano_Lopez_Rodo
+recruit_character = SPA_Raimundo_Fernandez_Cuesta
+recruit_character = SPA_Emilio_Romero_Gomez
+recruit_character = SPA_Blas_Pinar
+recruit_character = SPA_Carlos_Arias_Navarro
 
 add_ideas = {
-	#political#
+	# Political # - direct copy from Iberia
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_religion
 	tno_trade_unions_state_controlled
-	tno_immigration_quota_immigration
-	tno_slavery_outlawed
+	tno_immigration_skilled_labor_only
+	tno_slavery_penal_labor
 	tno_public_meetings_regulated
 	tno_press_rights_censored_press
-	tno_vote_franchise_no_voting
-	tno_refugees_skilled
-	#military#
-	tno_conscription_one_year_draft
-	tno_women_banned
-	tno_military_supervision_military_policing
-	tno_military_spending_large_spending
-	tno_training_combat_schooling
-	tno_racial_integration_integrated_military
-	tno_draft_exemptions_none
-	#economic#
+	tno_vote_franchise_registered_voting
+
+	# Military #
+	tno_conscription_broadened_conscription
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_civil_service_deferment
+
+	# Economic #
 	tno_trade_laws_limited_exports
-	tno_economic_focus_partial_mobilization
-	tno_tax_rate_medium_taxation
-	tno_income_taxation_elite_tax_exemptions
-	tno_minimum_wage_acceptable_minimum
-	tno_max_workhours_8_hour_work_day
-	tno_child_labor_illegal
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_unlimited_work_day
 	tno_pensions_low_pensions
-	tno_unemployment_low_subsidies
-	#social#
-	tno_safety_acceptable_regulations
-	tno_health_care_public_health_care
-	tno_pollution_few_regulations
+	tno_unemployment_moderate_subsidies
+
+	# Social #
+	tno_health_care_universal_health_care
 	tno_education_public_education
-	tno_penal_system_capital_punishment
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_women_in_the_workplace
+	tno_security_political_control
+	tno_regulations_moderate_regulations
+
+	# Misc #
+	tno_refugees_skilled
+	tno_women_military_assistance
+	tno_racial_integration_integrated_military
+	tno_safety_acceptable_regulations
+	tno_pollution_some_regulations
 	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
 	tno_minorities_equal_rights
-	tno_security_police 
-	#societal development 
-	tno_academic_base_primary_schooling 
-	tno_research_facilities_outdated 
-	tno_agriculture_basic_mechanized 
-	tno_industrial_equipment_factory_complexes 
-	tno_industrial_expertise_experienced 
-	tno_army_professionalism_political_interference 
-	tno_nuclear_stockpile_none 
-	tno_poverty_rate_15
+	tno_child_labor_illegal
+
+	# SocDevs
+	tno_academic_base_primary_schooling
+	tno_research_facilities_outdated
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_industrial_expertise_nascent
+	tno_army_professionalism_political_interference
+	tno_admin_efficiency_deficient_administrative_systems
+	#cabinet
+	SPA_Alejandro_Valcarcel_hog
+	SPA_Agustin_Munoz_sec
+	SPA_Pedro_Cortina_for
+	SPA_Mariano_Rubio_eco
 }
 
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }
+
+TNO_startup_nation = yes

@@ -3,16 +3,18 @@ state = {
 	name = "STATE_929"
 	resources = {
 		chromium = 4.000
- 	}
+		uranium = 4.000
+	}
 
 	history = {
 		owner = PAK
-		add_claim_by = AZH
 		add_core_of = PAK
- 		add_claim_by = AFG
- 		buildings = {
+		add_claim_by = AZH
+		add_claim_by = AFG
+		add_claim_by = IND
+		buildings = {
 			infrastructure = 4
-			arms_factory = 1
+			barracks = 1
 		}
 		victory_points = {
 			15993 10
@@ -20,6 +22,7 @@ state = {
 		victory_points = {
 			5105 1
 		}
+		set_state_flag = state_renamings
 	}
 
 	provinces = {
@@ -27,6 +30,6 @@ state = {
 	}
 	manpower = 393622
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = pastoral
 	local_supplies = 0.000
 }

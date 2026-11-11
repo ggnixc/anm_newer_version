@@ -1,0 +1,512 @@
+# ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗#
+#██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║╚██╗ ██╔╝#
+#██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║ ╚████╔╝ #
+#██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ╚██╔╝  #
+#╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   #
+# ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   #
+#Scripted Localization
+
+#Index; Search for these names using ctrl+f and you'll find the section they entitle.
+#	General Stuff
+#		GER_GetMonth
+#		GER_GetMonthShort
+#		GER_GetOilCrisisModifier
+#		GER_GetEuropeanUnityVar
+#		GER_GetEconIdeaTitle
+#		GER_ForeignMinister_Name
+#		GER_RecursionLinebreak
+#
+#	Misc Laws
+#		get_GER_AssortedLaw_GeneralplanOst
+#		get_GER_AssortedLaw_Partification
+#		get_GER_AssortedLaw_Agriculture
+#		get_GER_AssortedLaw_GeneralplanOst_desc
+#		get_GER_AssortedLaw_Partification_desc
+#		get_GER_AssortedLaw_Agriculture_desc
+#		GetGelenkteWirtschaftDesc
+#
+#	SAW Stuff
+#		GetGERSAWStrategy
+#		GetGERSAWInvolvement
+#		GetGERSAWProtest
+#		GetGERWithdrawalColor
+#
+#	Oil Crisis
+#		BOR_OC_Get_Participation
+#		BOR_OC_Get_Country_Status
+#		BOR_OC_Get_War_Status_Egypt
+#		BOR_OC_Get_War_Status_Sudan
+#		BOR_OC_Get_War_Status_Iraq
+#		BOR_OC_Get_War_Status_Oman
+#		BOR_OC_Get_War_Status_Yemen
+#		BOR_OC_Oman_string
+#		BOR_OC_Iraq_string
+#		BOR_OC_Egypt_string
+#		BOR_OC_Sudan_string
+#
+#	!OLD STUFF
+
+#################################################
+#                 General Stuff                 #
+#################################################
+
+# Returns the name of a month
+defined_text = {
+	name = GER_GetMonth
+	text = { localization_key = "GER_Month_[?month_counter]" }
+}
+
+# Returns the name of a month, shortened
+defined_text = {
+	name = GER_GetMonthShort
+	text = { localization_key = "GER_MonthShort_[?month_counter]" }
+}
+
+# Returns Führer-specific OC modifiers
+defined_text = {
+	name = GER_GetOilCrisisModifier
+	text = { # Bormann
+		trigger = { GER_Bormann_Path_Active = yes }
+		localization_key = "GER_OilCrisisEffects_Bormann"
+	}
+	text = { # Speer
+		trigger = { GER_Speer_Path_Active = yes }
+		localization_key = "GER_OilCrisisEffects_Speer"
+	}
+}
+
+# Returns desc for the European/EEC unity level for the Endsieg natspirit
+defined_text = {
+	name = GER_GetEuropeanUnityVar
+	text = { localization_key = "GER_EuropeanUnity_[?GER_EuropeanUnity]" }
+}
+
+# Returns the title of Germany's current econ idea level
+defined_text = {
+	name = GER_GetEconIdeaTitle
+	text = { trigger = { has_idea = GER_econ_idea_1 } localization_key = "GER_econ_idea_1" } # Boom
+	text = { trigger = { has_idea = GER_econ_idea_2 } localization_key = "GER_econ_idea_2" } # Recovery
+	text = { trigger = { has_idea = GER_econ_idea_3 } localization_key = "GER_econ_idea_3" } # Growth
+	text = { trigger = { has_idea = GER_econ_idea_4 } localization_key = "GER_econ_idea_4" } # Status Quo
+	text = { trigger = { has_idea = GER_econ_idea_5 } localization_key = "GER_econ_idea_5" } # Stagnation
+	text = { trigger = { has_idea = GER_econ_idea_6 } localization_key = "GER_econ_idea_6" } # Downturn
+	text = { trigger = { has_idea = GER_econ_idea_7 } localization_key = "GER_econ_idea_7" } # Recession
+}
+
+# Returns who the ForMin is
+defined_text = {
+	name = GER_ForeignMinister_Name
+	text = {
+		trigger = { set_temp_variable = { ForMin = GER_LeadersMinistersArray^1 } }
+		localization_key = "[?ForMin.GetTokenLocalizedKey]"
+	}
+}
+
+defined_text = {
+	name = GER_RecursionLinebreak
+	text = {
+		trigger = { check_variable = { Recursion_i > 0 } }
+		localization_key = "GER_Recursion_Linebreak"
+	}
+}
+
+#################################################
+#                   Misc Laws                   #
+#################################################
+
+defined_text = {
+	name = get_GER_AssortedLaw_GeneralplanOst
+	text = { # Generalplan Ost (Third Phase, 1958-1963)
+		trigger = { check_variable = { GER_GPO_var = 0 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_1"
+	}
+	text = { # Generalplan Ost (Fourth Phase, 1963-1968)
+		trigger = { check_variable = { GER_GPO_var = 1 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_2"
+	}
+	text = { # Revitalized Generalplan Ost (Fourth Phase, 1963-1968)
+		trigger = { check_variable = { GER_GPO_var = 1.1 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_2_1"
+	}
+	text = { # Generalplan Ost (Fifth Phase, 1968-1973)
+		trigger = { check_variable = { GER_GPO_var = 2 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_3"
+	}
+	text = { # Generalplan Ost (Sixth Phase, 1973-1978)
+		trigger = { check_variable = { GER_GPO_var = 3 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_4"
+	}
+}
+
+defined_text = {
+	name = get_GER_AssortedLaw_Partification
+	text = { localization_key = "GER_AssortedLaw_Partification_[?GER_Partification_var]" }
+}
+defined_text = {
+	name = get_GER_AssortedLaw_Agriculture
+	text = { localization_key = "GER_AssortedLaw_AgrarianSector_[?GER_AgrarianSector_var]" }
+}
+
+defined_text = {
+	name = get_GER_AssortedLaw_GeneralplanOst_desc
+	text = { # Generalplan Ost (Third Phase, 1958-1963)
+		trigger = { check_variable = { GER_GPO_var = 0 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_1_desc"
+	}
+	text = { # Generalplan Ost (Fourth Phase, 1963-1968)
+		trigger = { check_variable = { GER_GPO_var = 1 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_2_desc"
+	}
+	text = { # Revitalized Generalplan Ost (Fourth Phase, 1963-1968)
+		trigger = { check_variable = { GER_GPO_var = 1.1 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_2_1_desc"
+	}
+	text = { # Generalplan Ost (Fifth Phase, 1968-1973)
+		trigger = { check_variable = { GER_GPO_var = 2 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_3_desc"
+	}
+	text = { # Generalplan Ost (Sixth Phase, 1973-1978)
+		trigger = { check_variable = { GER_GPO_var = 3 } }
+		localization_key = "GER_AssortedLaw_GeneralplanOst_4_desc"
+	}
+}
+
+defined_text = {
+	name = get_GER_AssortedLaw_Partification_desc
+	text = { localization_key = "GER_AssortedLaw_Partification_[?GER_Partification_var]_desc" }
+}
+defined_text = {
+	name = get_GER_AssortedLaw_Agriculture_desc
+	text = { localization_key = "GER_AssortedLaw_AgrarianSector_[?GER_AgrarianSector_var]_desc" }
+}
+
+# Grabs the Gelenkte Wirtschaft econtype desc appropriate to the tag in question
+defined_text = {
+	name = GetGelenkteWirtschaftDesc
+	text = { # Germany
+		trigger = { tag = GER }
+		localization_key = "Econ_Subtype_Gelenkte_Wirtschaft_desc_GER"
+	}
+	text = { # RKs/East
+		trigger = { capital_scope = { is_on_continent = eastern_europe } }
+		localization_key = "Econ_Subtype_Gelenkte_Wirtschaft_desc_RK"
+	}
+	text = { # Others
+		localization_key = "Econ_Subtype_Gelenkte_Wirtschaft_desc_other"
+	}
+}
+
+#################################################
+#                   SAW Stuff                   #
+#################################################
+
+defined_text = {
+	name = GetGERSAWStrategy
+	text = {
+		trigger = { has_country_flag = GER_SAW_strat_rob }
+		localization_key = GER_SAW_strategy_robbery
+	}
+	text = {
+		trigger = { has_country_flag = GER_SAW_strat_win }
+		localization_key = GER_SAW_strategy_victory
+	}
+	text = { localization_key = GER_SAW_strategy_undecided }
+}
+
+defined_text = {
+	name = GetGERSAWInvolvement
+	text = {
+		trigger = { check_variable = { GER_SAW_involvement = 0 } }
+		localization_key = GER_SAW_involvement_none
+	}
+	text = {
+		trigger = { check_variable = { GER_SAW_involvement < 25 } }
+		localization_key = GER_SAW_involvement_small
+	}
+	text = {
+		trigger = { check_variable = { GER_SAW_involvement < 50 } }
+		localization_key = GER_SAW_involvement_med
+	}
+	text = {
+		trigger = { check_variable = { GER_SAW_involvement < 75 } }
+		localization_key = GER_SAW_involvement_big
+	}
+	text = {
+		localization_key = GER_SAW_involvement_huge
+	}
+}
+
+defined_text = {
+	name = GetGERSAWProtest
+	text = {
+		trigger = { check_variable = { GER_SAW_civilian_protest = 0 } }
+		localization_key = GER_SAW_protest_none
+	}
+	text = {
+		trigger = { check_variable = { GER_SAW_civilian_protest < 25 } }
+		localization_key = GER_SAW_protest_small
+	}
+	text = {
+		trigger = { check_variable = { GER_SAW_civilian_protest < 50 } }
+		localization_key = GER_SAW_protest_med
+	}
+	text = {
+		trigger = { check_variable = { GER_SAW_civilian_protest < 75 } }
+		localization_key = GER_SAW_protest_big
+	}
+	text = {
+		localization_key = GER_SAW_protest_huge
+	}
+}
+
+defined_text = {
+	name = GetGERWithdrawalColor
+	text = {
+		trigger = {
+			check_variable = { GER_withdrawal_var = 100 }
+		}
+		localization_key = PHI_Reconstruction_color_blue
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_withdrawal_var < 100 }
+			check_variable = { GER_withdrawal_var > 66 }
+		}
+		localization_key = PHI_Reconstruction_color_green
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_withdrawal_var < 67 }
+			check_variable = { GER_withdrawal_var > 33 }
+		}
+		localization_key = PHI_Reconstruction_color_orange
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_withdrawal_var < 34 }
+		}
+		localization_key = PHI_Reconstruction_color_red
+	}
+}
+
+#################################################
+#                  Oil Crisis                   #
+#################################################
+
+defined_text = { 
+	name = BOR_OC_Get_Participation
+	text = {
+		trigger = { check_variable = { BOR_OC_participation < 1 } }
+		localization_key = BOR_OC_participation_1
+	}
+	text = {
+		trigger = { check_variable = { BOR_OC_participation < 20 } }
+		localization_key = BOR_OC_participation_2
+	}
+	text = {
+		trigger = { check_variable = { BOR_OC_participation < 40 } }
+		localization_key = BOR_OC_participation_3
+	}
+	text = {
+		trigger = { check_variable = { BOR_OC_participation < 60 } }
+		localization_key = BOR_OC_participation_4
+	}
+	text = {
+		trigger = { check_variable = { BOR_OC_participation < 80 } }
+		localization_key = BOR_OC_participation_5
+	}
+	text = {
+		trigger = { check_variable = { BOR_OC_participation < 100 } }
+		localization_key = BOR_OC_participation_6
+	}
+	text = { localization_key = BOR_OC_participation_7 }
+}
+
+defined_text = { 
+	name = BOR_OC_Get_Country_Status
+	text = {
+		trigger = {
+			tag = NYM
+			exists = yes
+			has_war = no
+			SAU = { exists = yes }
+		}
+		localization_key = BOR_OC_country_is_gonna_invade_the_saudis
+	}
+	text = {
+		trigger = {
+			exists = yes
+			has_war = yes
+		}
+		localization_key = BOR_OC_country_still_at_war
+	}
+	text = {
+		trigger = {
+			OR = { 
+				exists = yes
+				AND = {
+					has_global_flag = OC_Yemen_CW_over
+					has_global_flag = OC_Yemen_NYM_won
+				}
+			}
+		}
+		localization_key = BOR_OC_country_victory
+	}
+	text = {
+		trigger = { 
+			OR = { 
+				exists = no 
+				AND = {
+					has_global_flag = OC_Yemen_CW_over
+					has_global_flag = OC_Yemen_SAU_won
+				}
+			}
+		}
+		localization_key = BOR_OC_country_defeat
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Get_War_Status_Egypt
+	text = {
+		trigger = {
+			OR = {
+				EGY = { has_war = yes }
+				EGB = { has_war = yes }
+				EGQ = { has_war = yes }
+			}
+		}
+		localization_key = BOR_OC_war_ongoing
+	}
+	text = {
+		trigger = {
+			EGY = { has_war = no }
+			EGB = { has_war = no }
+			EGQ = { has_war = no }
+		}
+		localization_key = BOR_OC_war_finished
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Get_War_Status_Sudan
+	text = {
+		trigger = {
+			OR = {
+				RPS = { has_war = yes }
+				SDS = { has_war = yes }
+				SDF = { has_war = yes }
+			}
+		}
+		localization_key = BOR_OC_war_ongoing
+	}
+	text = {
+		trigger = {
+			RPS = { has_war = no }
+			SDS = { has_war = no }
+			SDF = { has_war = no }
+		}
+		localization_key = BOR_OC_war_finished
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Get_War_Status_Iraq
+	text = {
+		trigger = {
+			OR = {
+				IRQ = { has_war = yes }
+				BIR = { has_war = yes }
+				IRP = { has_war = yes }
+				SNI = { has_war = yes }
+				KUR = { has_war = yes }
+			}
+		}
+		localization_key = BOR_OC_war_ongoing
+	}
+	text = {
+		trigger = {
+			IRQ = { has_war = no }
+			BIR = { has_war = no }
+			IRP = { has_war = no }
+			SNI = { has_war = no }
+			KUR = { has_war = no }
+		}
+		localization_key = BOR_OC_war_finished
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Get_War_Status_Oman
+	text = {
+		trigger = {
+			OR = {
+				OMA = { has_war = yes }
+				OMB = { has_war = yes }
+				OMI = { has_war = yes }
+			}
+		}
+		localization_key = BOR_OC_war_ongoing
+	}
+	text = {
+		trigger = {
+			OMA = { has_war = no }
+			OMB = { has_war = no }
+			OMI = { has_war = no }
+		}
+		localization_key = BOR_OC_war_finished
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Get_War_Status_Yemen
+	text = {
+		trigger = {
+			NYM = { has_war = yes } #with either YEM or SAU
+		}
+		localization_key = BOR_OC_war_ongoing
+	}
+	text = {
+		localization_key = BOR_OC_war_finished
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Oman_string
+	text = {
+		trigger = { has_global_flag = OC_Oman_CW }
+		localization_key = GER_Bormann_oil_crisis_oman
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Yemen_string
+	text = {
+		trigger = { has_global_flag = OC_Yemen_CW }
+		localization_key = GER_Bormann_oil_crisis_yemen
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Iraq_string
+	text = {
+		trigger = { has_global_flag = OC_Iraq_CW }
+		localization_key = GER_Bormann_oil_crisis_iraq
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Egypt_string
+	text = {
+		trigger = { has_global_flag = OC_Egypt_CW }
+		localization_key = GER_Bormann_oil_crisis_egypt
+	}
+}
+
+defined_text = { 
+	name = BOR_OC_Sudan_string
+	text = {
+		trigger = { has_global_flag = OC_Sudan_CW }
+		localization_key = GER_Bormann_oil_crisis_sudan
+	}
+}

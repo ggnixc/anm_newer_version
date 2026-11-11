@@ -1,0 +1,104 @@
+﻿division_template = {
+	name = "Dywizja Strzelców"
+	division_names_group = KZP_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Dywizja Pancerna"
+	division_names_group = KZP_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+units = {
+	division = {
+		#name = ""
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "11482"
+		division_template = "Dywizja Strzelców"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		#name = ""
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "11552"
+		division_template = "Dywizja Strzelców"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		#name = ""
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "576"
+		division_template = "Dywizja Strzelców"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		#name = ""
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "4351"
+		division_template = "Dywizja Pancerna"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		#name = ""
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "6525"
+		division_template = "Dywizja Pancerna"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		#name = ""
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "11537"
+		division_template = "Dywizja Pancerna"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+}

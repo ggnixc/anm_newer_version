@@ -9,6 +9,7 @@ state = {
 
 	history = {
 		owner = AZH
+		add_extra_state_shared_building_slots = 4
 		victory_points = {
 			9991 20
 		}
@@ -25,20 +26,28 @@ state = {
 			16141 1
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
+			thermoelectric_plant = 2
+			barracks = 1
+			prisons = 1
+			offices = 2
+			schools = 1
 			9991 = {
 				naval_base = 2
 			}
 			dockyard = 1
 		}
 		add_core_of = AZH
-  	}
+		add_claim_by = IND
+		set_state_flag = GDP_regions_bengal
+		set_state_flag = state_renamings
+	}
 
 	provinces = {
 		7179 9991 11968 12010 16140 16141 18847 18882
 	}
 	manpower = 13525725
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = pastoral
 	local_supplies = 0.000
 }

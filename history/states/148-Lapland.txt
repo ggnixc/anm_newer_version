@@ -1,21 +1,18 @@
-state = {
-	id = 148
-	name = "STATE_148"
-	resources = {
-		steel = 8.000
-		chromium = 2.000
-		
-	}
-
+state={
+	id=148
+	name="STATE_148"
+	
 	history = {
 		owner = FIN
 		buildings = {
 			infrastructure = 2
 			radar_station = 2
 			air_base = 2
-			industrial_complex = 1
+			offices = 1
+			barracks = 1
 			anti_air_building = 1
- 			9140 = {
+			hydroelectric_plant = 2
+			9140 = {
 				naval_base = 1
 			}
 		}
@@ -39,12 +36,15 @@ state = {
 			9140 1
 		}
 	}
-
-	provinces = {
-		30 124 162 197 3156 3193 6087 6137 6179 9112 9223 11030 11085 11115 11125 11164 103 167 203 2992 3055 3069 3097 3107 3158 6061 6076 6128 6142 9189 11130 11167 11204 18428 18429 18442 18448 6012 6183 9140 11142
+	resources={
+		steel=8
+		chromium=2
 	}
-	manpower = 206311
-	buildings_max_level_factor = 1.000
-	state_category = rural
-	local_supplies = 0.000
+	provinces={
+		30 124 162 197 203 3055 3107 3156 3193 6012 6076 6087 6128 6137 6179 6183 9112 9140 9189 9223 11030 11085 11115 11125 11130 11142 11164 11167 11204 18428 18429 18448 
+	}
+	manpower=199420
+	buildings_max_level_factor=1
+	state_category=rural
+	local_supplies=0
 }

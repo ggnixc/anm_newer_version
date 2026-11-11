@@ -3,10 +3,12 @@ state = {
 	name = "STATE_2298"
 
 	history = {
-		owner = MLY
+		owner = SRK
 		buildings = {
-			infrastructure = 3
-			air_base = 1
+			infrastructure = 1
+			air_base = 2
+			barracks = 1
+			radar_station = 3
 			19250 = {
 				naval_base = 1
 			}
@@ -14,14 +16,15 @@ state = {
 				naval_base = 1
 			}
 		}
-		add_core_of = MLY
- 	}
+		add_core_of = SRK
+		set_state_flag = GDP_regions_sarawak
+	}
 
 	provinces = {
 		19250 19268
 	}
 	manpower = 39162
 	buildings_max_level_factor = 1.000
-	state_category = small_island
+	state_category = tiny_island
 	local_supplies = 0.000
 }

@@ -1914,8 +1914,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "strategic_priorities_label"
-			position = { x = 15 y = 7 }
-			font = "aldrich_18_outline"
+			position = { x = 15 y = 9 }
+			font = "aldrich_20_outline"
 			maxWidth = 380
 			maxHeight = 23
 			text = "AIR_STRATEGIC_PRIORITIES"
@@ -2121,8 +2121,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "strategic_priorities_label"
-			position = { x = 15 y = 7 }
-			font = "aldrich_18_outline"
+			position = { x = 15 y = 9 }
+			font = "aldrich_20_outline"
 			maxWidth = 380
 			maxHeight = 23
 			text = "AIR_STRATEGIC_PRIORITIES"
@@ -2635,24 +2635,23 @@ guiTypes = {
 			containerWindowType = {
 				name = "strategic_air_priorities_window"
 				position = {x=4 y=-75}
-				size = { width=600 height=280 }
+				size = { width = 635 height = 84 }
 				#animation_time = 300
 				#Orientation = center_down
-				#clipping = yes
-				fade_time = 300
-				fade_type = linear
+				#fade_time = 300
+				#fade_type = linear
 				clipping = no
 
 				background = {
 					name = "Background"
-					spriteType = "GFX_air_priorities_bg"
+					spriteType = "GFX_air_priorities_tiled_bg"
 					position = { x = 4 y = 2 }
 				}
 
 				instantTextboxType = {
 					name = "strategic_priorities_label"
-					position = { x = 15 y = 7 }
-					font = "aldrich_18_outline"
+					position = { x = 15 y = 9 }
+					font = "aldrich_20_outline"
 					maxWidth = 380
 					maxHeight = 23
 					text = "AIR_STRATEGIC_PRIORITIES"
@@ -2660,12 +2659,12 @@ guiTypes = {
 					fixedsize = yes
 				}
 
-				iconType = {
-					name = "selected_mission_overlay"
-					position = { x = 222 y = 65 }
-					spriteType = "GFX_selected_air_priorities_overlay"
-					alwaystransparent = yes
-				}
+				#iconType = {
+				#	name = "selected_mission_overlay"
+				#	position = { x = 222 y = 65 }
+				#	spriteType = "GFX_selected_air_priorities_overlay"
+				#	alwaystransparent = yes
+				#}
 
 				gridBoxType = {
 					name = "bombing_priorities_grid"

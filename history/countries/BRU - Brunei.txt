@@ -1,31 +1,104 @@
-﻿capital = 807
+capital = 807
 
-set_oob = "BRU_1962"
+set_country_flag = BRU_skeleton_initialized
+set_variable = { BRU_cooperation = 0 }
 
-set_politics = {	
+# Vacant
+recruit_character = BRU_Generic_Vacant
+fill_empty_minister_nochecks = yes
+
+recruit_character = BRU_Omar_Ali_Saifuddien_III
+recruit_character = BRU_Ahmad_Azahari
+recruit_character = BRU_Abdul_Hapidz
+recruit_character = BRU_Hasbollah_Daud
+recruit_character = BRU_Salleh_Masri
+recruit_character = BRU_Pengiran_Muhammad_Yusuf
+promote_character = BRU_Omar_Ali_Saifuddien_III
+activate_advisor = BRU_Ahmad_Azahari_hog
+
+#oob = "BRU_army"
+
+add_ideas = {
+	Sphere_Fully_Dependent
+	BRU_Virulent_Nationalism
+	BRU_Brunei_Teikoku_Oil
+	BRU_The_Governor_and_the_Sultan
+	BRU_Missing_the_Moment
+
+	### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_penal_labor
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+
+	### MILITARY LAWS ###
+	tno_conscription_broadened_conscription
+	tno_military_supervision_no_supervision
+	tno_training_basic_training
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_health_care_support_for_emergencies
+	tno_education_stratified_education
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_traditional_roles
+	tno_security_resource_extraction
+	tno_regulations_token_regulations
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### MISC LAWS ###
+	tno_pollution_few_regulations
+	tno_safety_minimal_regulations
+	tno_child_labor_illegal
+	tno_refugees_vetted_entry
+	tno_racial_integration_segregated_regiments
+	tno_women_banned
+	tno_minorities_segregation
+	tno_lgbt_rights_lgbt_outlawed
+
+	### SOCIETAL DEVELOPMENT ###
+	tno_army_professionalism_disgruntled_veterans
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_healthcare_rudimentary
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_makeshift
+	tno_academic_base_basic_literacy
+	tno_admin_efficiency_deficient_administrative_systems
+}
+
+set_politics = {
 	ruling_party = despotism
-	last_election = "1991.3.5"
+	last_election = "1962.6.5"
 	election_frequency = 48
 	elections_allowed = no
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 13
-    progressivism = 0
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
-    despotism = 87
-    fascism = 0
-     
+	communist = 0
+	ultranationalism = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+
+	conservatism = 0
+	paternalism = 0
+	despotism = 100
+	fascism = 0
+
 }
 
-add_ideas = {
-    #Country#
-	Sphere_Economic_Dependent
-}
+#econtype
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }

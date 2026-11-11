@@ -1,0 +1,62 @@
+﻿division_template = {
+	name = "Gendarmerie Nationale"
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Brigade d'Infanterie"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Brigade d'Infanterie"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+}
+units = {
+	#Infantry
+	division = {
+		name = "1. Brigade d'Infanterie"
+		location = 2081 #Fort-Lamy
+		division_template = "Brigade d'Infanterie"
+		start_experience_factor = 0.6
+	}
+	
+	#Gendarmerie
+	division = {
+		name = "1. Gendarmerie Nationale"
+		location = 14155 #Abeche
+		division_template = "Gendarmerie Nationale"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Gendarmerie Nationale"
+		location = 14020 #Moundou
+		division_template = "Gendarmerie Nationale"
+		start_experience_factor = 0.3
+	}
+}	

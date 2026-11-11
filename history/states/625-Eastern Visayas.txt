@@ -1,22 +1,25 @@
 state = { #Population Done
 	id = 625
 	name = "STATE_625"
-	manpower = 2167212
+	manpower = 1235848
 
-	state_category = rural
+	state_category = small_island
 	history = {
 		owner = PHI
+		add_extra_state_shared_building_slots = 2
 		buildings = {
 			infrastructure = 2
- 		}
-		victory_points = { 1224 5 }
+			thermoelectric_plant = 1
+			hospitals = 1
+		}
+		
 		victory_points = { 4373 3 }
+		add_core_of = FPF
 		add_core_of = PHI
-		add_core_of = PHI
-		add_core_of = PHI
+		add_core_of = HUK
 		set_state_flag = state_renamings
 	}
 	provinces = {
-		1224 1311 1340 4269 4373 14728
+		1311 1340 4373
 	}
 }

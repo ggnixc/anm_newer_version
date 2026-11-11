@@ -27,7 +27,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "tab_buttons"
-			position = { x = 2 y = 0 }
+			position = { x = 0 y = 11 }
 			size = { width = 1160 height = 50 }
 			orientation = center_up
 			origo = center_up
@@ -38,7 +38,7 @@ guiTypes = {
 				position = { x = 0 y = 0 }
 				buttonText = "PLAYTHROUGH_STATS_TITLE"
 				borderSize = {x = 0 y = 0 }
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 			}
 
 			buttonType = {
@@ -46,7 +46,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_profile_button_tab"
 				position = { x = 250 y = 0 }
 				buttonText = "CAREER_PROFILE_AWARD_TAB_LABEL"
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 			}
 
 			iconType = {
@@ -62,7 +62,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_profile_button_tab"
 				position = { x = 500 y = 0 }
 				buttonText = "CAREER_PROFILE_END_GAME_TAB_LABEL"
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 			}
 		}
 
@@ -113,7 +113,7 @@ guiTypes = {
 						maxWidth = 560
 						maxHeight = 300
 						text = "CAREER_PROFILE_AWARDS_NOT_AVAILABLE_IN_MULTIPLAYER"
-						font = "hoi_36header"
+						font = "aldrich_36_outline"
 						format = center
 						vertical_alignment = center
 					}
@@ -125,24 +125,22 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "continue_button"
-			position = { x = 260 y = -40 }
+			position = { x = 135 y = -35 }
 			orientation = center_down
-			quadTextureSprite ="GFX_button_148x34"
-
-
+			quadTextureSprite ="button_type_4_bg"
 
 			buttonText = "CONTINUE"
-			buttonFont = "hoi_18mbs"
+			buttonFont = "aldrich_18_outline"
 			pdx_tooltip = "ENDGAME_CONTINUE"
 		}
 
 		ButtonType = {
 			name = "quit_button"
-			position = { x = 420 y = -40 }
+			position = { x = 345 y = -35 }
 			orientation = center_down
-			quadTextureSprite = "GFX_button_148x34_light"
+			quadTextureSprite = "button_type_4_bg"
 			buttonText = "QUIT"
-			buttonFont = "hoi_18mbs"
+			buttonFont = "aldrich_18_outline"
 		}
 	}
 }

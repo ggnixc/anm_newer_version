@@ -97,6 +97,45 @@ guiTypes = {
 			format = left
 		}
 
+		iconType = {
+			name = "viewing_flag"
+			quadTextureSprite ="GFX_flag_small2"
+			position = {  x= 450 y = 10 }
+			Orientation = "UPPER_LEFT"
+		}	
+
+		iconType ={
+			name ="viewing_flag_border"
+			quadTextureSprite = "GFX_flag_overlay_stateview"
+			position = { x= 449 y = 11 }
+			alwaystransparent = yes
+			scale = 1.07
+		}
+
+		containerWindowType = {
+			name = "resource_strip_container"
+			position = { x = 20 y = -9000 }
+			size = { width = -20 height = 25 }
+
+			# iconType ={
+			# 	name = "resources_bg"
+			# 	quadTextureSprite = "GFX_trade_filter_bg"
+			# 	position = { x= 0 y = 0 }
+			# 	Orientation = "UPPER_LEFT"
+			# }
+
+			gridBoxType = {
+				orientation = "CENTER_UP"
+				name = "resources_grid"
+				position = { x = -250 y = 4 }
+				size = { width = 100% height = 100% }
+				slotsize = { width = 70 height = 31 }
+				max_slots = { x = 7 y = 1 }
+				add_horizontal = no
+				format = "UPPER_LEFT"
+			}
+		}
+
 		containerWindowType = {
 			name = "headers"
 			position = { x = 18 y = 53 }
@@ -112,7 +151,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "equipment_type_label"
 				position = { x = 15 y = -9 }
-				font = "aldrich_18_outline"
+				font = "aldrich_24_outline"
 				text = "LOGISTICS_EQUIPMENT_TYPE_LABEL"
 				maxWidth = 200
 				maxHeight = 20
@@ -129,7 +168,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "status_label"
 				position = { x = 265 y = -4 }
-				font = "aldrich_18_outline"
+				font = "aldrich_20_outline"
 				text = "LOGISTICS_STATUS_LABEL"
 				maxWidth = 70
 				maxHeight = 20
@@ -161,7 +200,7 @@ guiTypes = {
 			#instantTextboxType = {
 			#	name = "resources_label"
 			#	position = { x = 409 y = -11 }
-			#	font = "aldrich_22_outline"
+			#	font = "aldrich_24_outline"
 			#	text = "LOGISTICS_RESOURCES_LABEL"
 			#	maxWidth = 100
 			#	maxHeight = 20
@@ -194,7 +233,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "label"
 				position = { x = 60 y = 0 }
-				font = "aldrich_30_outline"
+				font = "aldrich_32_outline"
 				text = "LOGISTICS_FUEL_PRIORITIZATION"
 				maxWidth = 500
 				maxHeight = 20
@@ -216,7 +255,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "type_text"
 					position = { x=8 y=5 }
-					font = "aldrich_16_outline"
+					font = "aldrich_24_outline"
 					text = "TOPBAR_ARMY"
 					maxWidth = 80
 					maxHeight = 20
@@ -282,7 +321,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "type_text"
 					position = { x=8 y=5 }
-					font = "aldrich_16_outline"
+					font = "aldrich_24_outline"
 					text = "TOPBAR_NAVY"
 					maxWidth = 80
 					maxHeight = 20
@@ -349,7 +388,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "type_text"
 					position = { x=8 y=5 }
-					font = "aldrich_16_outline"
+					font = "aldrich_24_outline"
 					text = "TOPBAR_AIR"
 					maxWidth = 80
 					maxHeight = 20
@@ -426,7 +465,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "type_text"
 					position = { x=-2 y=6 }
-					font = "aldrich_16_outline"
+					font = "aldrich_20_outline"
 					text = "PRODUCTION_OUTPUT"
 					maxWidth = 95
 					maxHeight = 20
@@ -436,7 +475,7 @@ guiTypes = {
 
 				iconType = {
 					name = "details_button"
-					position = { x=81 y=11 }
+					position = { x=83 y=11 }
 					spriteType ="GFX_fuel_types_icon"
 					frame=4
 				}
@@ -478,7 +517,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "military_factories_label"
 				position = { x=11 y=8 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = "LOGISTICS_MILITARY_FACTORIES_LABEL"
 				maxWidth = 80
 				maxHeight = 20
@@ -517,7 +556,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "naval_factories_label"
 				position = { x=11 y=8 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = "LOGISTICS_NAVAL_FACTORIES_LABEL"
 				maxWidth = 90
 				maxHeight = 20
@@ -563,7 +602,7 @@ guiTypes = {
 				format = "UPPER_LEFT"
 			}
 		}
-
+		
 		containerWindowType = {
 			name = "nuke"
 			position = { x = 391 y = -9400 }
@@ -651,7 +690,7 @@ guiTypes = {
 			position = {x=230 y=39}
 			quadTextureSprite ="GFX_chart_history_level_button"
 			buttonText = "LINECHART_DETAILS_YEARS"
-			buttonFont = "aldrich_16_outline"
+			buttonFont = "aldrich_18_outline"
 			clicksound = click_default
 		}
 
@@ -660,7 +699,7 @@ guiTypes = {
 			position = {x=154 y=39}
 			quadTextureSprite ="GFX_chart_history_level_button"
 			buttonText = "LINECHART_DETAILS_MONTHS"
-			buttonFont = "aldrich_16_outline"
+			buttonFont = "aldrich_18_outline"
 			clicksound = click_default
 		}
 
@@ -669,7 +708,7 @@ guiTypes = {
 			position = {x=77 y=39}
 			quadTextureSprite ="GFX_chart_history_level_button"
 			buttonText = "LINECHART_DETAILS_DAYS"
-			buttonFont = "aldrich_16_outline"
+			buttonFont = "aldrich_18_outline"
 			clicksound = click_default
 		}
 
@@ -700,7 +739,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_variant"
 			position = { x = 89 y = 10 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "PRODUCTION_OUTPUT"
 			maxWidth = 200
 			maxHeight = 20
@@ -711,7 +750,7 @@ guiTypes = {
 			name = "close_button"
 			position = { x = -32 y = 14 }
 			quadTextureSprite ="GFX_crt_closebutton"
-			buttonFont = "aldrich_16_outline"
+			buttonFont = "aldrich_18_outline"
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"
 			clicksound = click_close
@@ -721,7 +760,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "max_value"
 			position = { x = 316 y = 78 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "0.0"
 			maxWidth = 60
 			maxHeight = 30
@@ -731,7 +770,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "avg_value"
 			position = { x = 316 y = 142 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "0.0"
 			maxWidth = 60
 			maxHeight = 30
@@ -741,7 +780,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "min_value"
 			position = { x = 316 y = 210 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "0.0"
 			maxWidth = 60
 			maxHeight = 30
@@ -751,7 +790,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "min_x_value"
 			position = { x = 79 y = 233 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "0"
 			maxWidth = 30
 			maxHeight = 30
@@ -760,7 +799,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "max_x_value"
 			position = { x = 278 y = 233 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "30"
 			maxWidth = 30
 			maxHeight = 30
@@ -770,50 +809,11 @@ guiTypes = {
 		instantTextboxType = {
 			name = "x_axis_type"
 			position = { x = 104 y = 233 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "LINECHART_DETAILS_DAYS"
 			maxWidth = 180
 			maxHeight = 30
 			format = center
-		}
-
-		iconType = {
-			name = "viewing_flag"
-			quadTextureSprite ="GFX_flag_small2"
-			position = {  x= 450 y = 10 }
-			Orientation = "UPPER_LEFT"
-		}	
-
-		iconType ={
-			name ="viewing_flag_border"
-			quadTextureSprite = "GFX_flag_overlay_stateview"
-			position = { x= 449 y = 11 }
-			alwaystransparent = yes
-			scale = 1.07
-		}
-
-		containerWindowType = {
-			name = "resource_strip_container"
-			position = { x = 20 y = -9000 }
-			size = { width = -20 height = 25 }
-
-			# iconType ={
-			# 	name = "resources_bg"
-			# 	quadTextureSprite = "GFX_trade_filter_bg"
-			# 	position = { x= 0 y = 0 }
-			# 	Orientation = "UPPER_LEFT"
-			# }
-
-			gridBoxType = {
-				orientation = "CENTER_UP"
-				name = "resources_grid"
-				position = { x = -250 y = 4 }
-				size = { width = 100% height = 100% }
-				slotsize = { width = 70 height = 31 }
-				max_slots = { x = 7 y = 1 }
-				add_horizontal = no
-				format = "UPPER_LEFT"
-			}
 		}
 
 		containerWindowType = {
@@ -830,7 +830,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "equipment_variant"
 				position = { x = 28 y = 9 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = "LOGISTICS_EQUIPMENT_VARIANT_LABEL"
 				maxWidth = 200
 				maxHeight = 20
@@ -840,7 +840,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "in_stock"
 				position = { x = 208 y = 9 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = "LOGISTICS_IN_STOCK_LABEL"
 				maxWidth = 55
 				maxHeight = 20
@@ -850,7 +850,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "in_need"
 				position = { x = 140 y = 9 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = "LOGISTICS_NEEDS_LABEL"
 				maxWidth = 50
 				maxHeight = 20
@@ -860,7 +860,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "weekly_production"
 				position = { x = 260 y = 9 }
-				font = "aldrich_14_outline"
+				font = "aldrich_16_outline"
 				text = "LOGISTICS_WEEKLY_PRODUCTION_LABEL"
 				maxWidth = 140
 				maxHeight = 20
@@ -1106,7 +1106,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_type"
 			position = { x = 355 y = 56 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_18_outline"
 			text = "name"
 			maxWidth = 170
 			maxHeight = 20
@@ -1137,7 +1137,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "needs"
 			position = { x = 335 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 30
 			maxHeight = 20
@@ -1148,7 +1148,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "produced"
 			position = { x = 242 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 30
 			maxHeight = 20
@@ -1159,7 +1159,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "balance"
 			position = { x = 405 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 50
 			maxHeight = 20
@@ -1170,7 +1170,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "in_stock"
 			position = { x = 458 y = 25 }
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 50
 			maxHeight = 20
@@ -1210,7 +1210,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_type"
 			position = { x = 355 y = 56 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_18_outline"
 			text = "name"
 			maxWidth = 170
 			maxHeight = 20
@@ -1242,7 +1242,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "needs"
 			position = { x = 335 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 30
 			maxHeight = 20
@@ -1253,7 +1253,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "produced"
 			position = { x = 242 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 30
 			maxHeight = 20
@@ -1264,7 +1264,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "balance"
 			position = { x = 405 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 50
 			maxHeight = 20
@@ -1275,7 +1275,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "in_stock"
 			position = { x = 458 y = 25 }
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 50
 			maxHeight = 20
@@ -1315,7 +1315,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_type"
 			position = { x = 355 y = 56 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_18_outline"
 			text = "name"
 			maxWidth = 170
 			maxHeight = 20
@@ -1346,7 +1346,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "needs"
 			position = { x = 335 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 30
 			maxHeight = 20
@@ -1357,7 +1357,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "produced"
 			position = { x = 242 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 30
 			maxHeight = 20
@@ -1368,7 +1368,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "balance"
 			position = { x = 405 y = 25 }
-			font = "aldrich_14_outlinedark"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 50
 			maxHeight = 20
@@ -1379,7 +1379,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "in_stock"
 			position = { x = 458 y = 25 }
-			font = "aldrich_14_outline"
+			font = "aldrich_16_outline"
 			text = "amount"
 			maxWidth = 50
 			maxHeight = 20
@@ -1499,13 +1499,13 @@ guiTypes = {
 		iconType = {
 			name = "icon"
 			position = { x=5 y=11 }
-			spriteType = "GFX_resources_strip_crt"
+			spriteType = "GFX_resources_strip"
 		}
 
 		instantTextboxType = {
 			name = "value"
 			position = { x=0 y=16 }
-			font = "aldrich_12_outline"
+			font = "aldrich_16_outline"
 			text = "15"
 			maxWidth = 50
 			maxHeight = 20
@@ -1522,7 +1522,7 @@ guiTypes = {
 		iconType = {
 			name = "icon"
 			position = { x=0 y=0 }
-			spriteType = "GFX_resources_strip_crt"
+			spriteType = "GFX_resources_strip"
 		}
 	}
 
@@ -1537,8 +1537,8 @@ guiTypes = {
 			spriteType ="GFX_fuel_logisctics_graph_entry_bg"
 		}
 
-		iconType = {
-			name = "icon"
+		buttonType = {
+			name = "icon_checkbox"
 			position = { x=7 y=7 }
 			spriteType = "GFX_fuel_logisctics_graph_entry_color"
 		}
@@ -1577,7 +1577,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_variant"
 			position = { x = 22 y = 6 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "name"
 			maxWidth = 154
 			maxHeight = 20
@@ -1588,7 +1588,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "in_stock"
 			position = { x = 192 y = 9 }
-			font = "aldrich_18_outline"
+			font = "aldrich_20_outline"
 			text = "amount"
 			maxWidth = 63
 			maxHeight = 20
@@ -1598,7 +1598,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "weekly_production"
 			position = { x = 260 y = 9 }
-			font = "aldrich_18_outline"
+			font = "aldrich_20_outline"
 			text = "amount"
 			maxWidth = 56
 			maxHeight = 20
@@ -1609,7 +1609,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "request"
 			position = { x = 130 y = 6 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "amount"
 			maxWidth = 50
 			maxHeight = 20

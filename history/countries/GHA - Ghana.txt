@@ -1,34 +1,291 @@
-﻿capital = 827
+capital = 827 
 
-set_oob = "MSS_1962"
+# Vacant
+recruit_character = GHA_Generic_Vacant
 
-add_ideas = {
-    CWA_Faction
-}
+recruit_character = GHA_kwame_nkrumah
+recruit_character = GHA_ebenezer_ako_adjei
+recruit_character = GHA_komla_agbeli_gbedemah
+recruit_character = GHA_Kofi_Baako
+recruit_character = GHA_Presidium
+recruit_character = GHA_krobo_edusei
+recruit_character = GHA_tawia_adamafio
+recruit_character = GHA_joseph_arthur_ankrah
+recruit_character = GHA_ignatius_kutu_acheampong
+recruit_character = GHA_kofi_abrefa_busia
+recruit_character = GHA_john_willie_kofi_harley
+recruit_character = GHA_bala_bredin
+recruit_character = GHA_tsibu_darku
 
-recruit_character = GHA_Kojo_Tsikata
+#Who are you people
+recruit_character = GHA_Gerald_Creasy
+recruit_character = GHA_edward_akufo_addo
+recruit_character = GHA_emmanuel_obetsebi_lamptey
+recruit_character = GHA_sylvanus_olympio
+recruit_character = GHA_nicolas_grunitzky
+recruit_character = GHA_fred_akuffo
+recruit_character = GHA_gnassingbe_eyadema
+recruit_character = GHA_emmanuel_bodjolle
+recruit_character = GHA_kleber_dadjo
+recruit_character = GHA_akwasi_afrifa
+recruit_character = GHA_albert_kwesi_ocran
+recruit_character = GHA_emmanuel_kwasi_kotoka
+recruit_character = GHA_joy_k_amedume
+recruit_character = GHA_chemogoh_kevin_dzang
+recruit_character = GHA_david_animle_hansen
 
-set_politics = {	
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }
+
+econ_join_sphere_USA = yes
+
+add_to_array = { GHA_SpeakOfFreedomEffects = 0 }
+resize_array = { GHA_SpeakOfFreedomEffects = 7 }
+set_variable = { GHA_foreign_influence = 45 } #-33 or less is JAP alligned, -32-32 is Independent, 33 or more is American alligned
+set_variable = { GHA_state_building = 2 }
+set_variable = { GHA_idealism = 20 }
+
+add_dynamic_modifier = { modifier = GHA_speak_of_freedom_dynamic_modifier }
+
+GHA_update_dynmod_effects = yes
+
+set_politics = {
 	ruling_party = socialist
-	last_election = "1990.1.1"
+	last_election = "1956.1.1"
 	election_frequency = 96
 	elections_allowed = no
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 25
-    communist_1 = 22
-    ultranationalism = 0
-    socialist = 19
-    socialist_1 = 16
-    socialist_2 = 9
-    progressivism = 0
-    liberalism = 3
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
-    despotism = 6
-    fascism = 0
+	socialist_2 = 18
+	socialist = 42
+	paternalism = 26
+	paternalism_2 = 10
+	despotism = 4
+}
+
+add_ideas = {
+    GHA_black_star_of_africa
+    GHA_osagyefo
+    GHA_second_development_plan
+    GHA_speak_of_freedom
+
+	# Ministers
+	GHA_kwame_nkrumah_hog
+	GHA_Ebenezer_Ako_Adjei_for
+	GHA_komla_agbeli_gbedemah_eco
+	GHA_Kofi_Baako_sec
+
+    #political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_regulated_police
+	#misc#
+	tno_pollution_some_regulations
+	tno_safety_acceptable_regulations
+	tno_child_labor_illegal
+	tno_refugees_skilled
+	tno_racial_integration_integrated_military
+	tno_women_military_assistance
+	tno_minorities_equal_rights
+	tno_lgbt_rights_lgbt_outlawed
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+set_technology = {
+	basic_train = 1
+
+	# Infantry
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+	
+	infantry_kit_1 = 1
+	infantry_weapons_2 = 1
+	night_vision_2 = 1
+	infantry_kit_2 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_kit_3 = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	infantry_weapons_improvements_grenade_1 = 1
+	#
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	infantry_at = 1
+	infantry_at_upgrade_1 = 1
+	motorized_infantry = 1
+	#infantry_aa = 1
+	#infantry_aa2 = 1
+
+	# Support
+	tech_support = 1
+	tech_engineers = 1
+	assault_weapons_1 = 1
+	tech_recon = 1
+	tech_recon2 = 1
+
+	# Aircraft
+	early_fighter = 1
+	fighter_1945 = 1
+	interceptor_1945 = 1
+	CAS_1945 = 1
+
+	# Heavy Aircraft
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+
+	# Engineering
+	electronic_mechanical_engineering = 1
+	radio = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+
+	# Industry
+	ww2_line_production = 1
+	building_construction_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	administration_construction_1 = 1
+	military_construction_1 = 1
+	resource_extraction_methods = 1
+
+	# Doctrine
+	strategic_theorem = 1
+
+	air_superiority = 1
+
+	green_water_navy = 1
+}
+
+#NSB tech#
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		artillery_1945 = 1
+		artillery_1950 = 1
+		
+		IFV_1945 = 1
+		MBT_1945 = 1
+		APC_1945 = 1
+
+		APC_1950 = 1
+		APC_1950_basic_turret = 1
+		APC_1950_basic_armor = 1
+
+		IFV_1950 = 1
+		IFV_1950_basic_turret = 1
+		IFV_1950_basic_armor = 1
+		
+		MBT_1950 = 1
+		MBT_1950_basic_turret = 1
+		MBT_1950_basic_armor = 1
+
+		AC_1945 = 1
+		AC_1950 = 1
+
+		
+		antiair_1945 = 1
+		antiair_1950 = 1
+		light_SPAA_1950 = 1
+		SPAA_1950 = 1
+		artillery_1945 = 1
+		artillery_1950 = 1
+		artillery_1950_soft_attack = 1
+		light_SPART_1950 = 1
+		SPART_1950 = 1
+		SPART_1950_soft_attack = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		NSB_artillery_1945 = 1
+		NSB_artillery_1950 = 1
+		
+		NSB_APC_1945 = 1
+		NSB_APC_1950 = 1
+		NSB_IFV_1945 = 1
+		NSB_IFV_1945_modules_1 = 1
+		NSB_IFV_1945_modules_2 = 1
+		NSB_IFV_1950 = 1
+		NSB_IFV_1950_modules_1 = 1
+		NSB_IFV_1950_modules_2 = 1
+		NSB_MBT_1945 = 1
+		NSB_MBT_1945_modules_1 = 1
+		NSB_MBT_1945_modules_2 = 1
+		NSB_MBT_1950 = 1
+		NSB_MBT_1950_modules_2 = 1
+		NSB_AC_1945 = 1
+		NSB_AC_1950 = 1
+		NSB_Armour_1 = 1
+		NSB_Engine_1 = 1
+
+		NSB_heavy_1945 = 1
+		NSB_heavy_1950 = 1
+		NSB_superheavy_1945 = 1
+
+		NSB_artillery_1945 = 1
+		NSB_artillery_1950 = 1
+		NSB_artillery_1950_SA = 1
+
+		NSB_antiair_1945 = 1
+		NSB_antiair_1950 = 1
+	}
+}
+set_major = yes
+
+oob = "GHA_1962"
+set_air_oob = "GHA_1962_air"
+
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = armored_car_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 250
 }

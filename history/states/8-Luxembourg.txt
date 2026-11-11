@@ -2,7 +2,7 @@ state = { #Population Done
 	id = 8
 	name = "STATE_8"
 
-	state_category = town
+	state_category = large_town
 
 	manpower = 328113
 	resources = {
@@ -12,12 +12,15 @@ state = { #Population Done
 	history = {
 		owner = GER
 		buildings = {
-			arms_factory = 1
+			barracks = 1
+			prisons = 2
 			infrastructure = 5
- 		}
+			hydroelectric_plant = 1
+		}
 		victory_points = { 6583 7 }
 		add_core_of = GER
- 	}
+		set_state_flag = GDP_category_large_city
+	}
 
 	provinces = {
 		6583 15851

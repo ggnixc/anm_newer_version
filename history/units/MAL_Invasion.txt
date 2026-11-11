@@ -1,0 +1,234 @@
+#MNLA Melter 9000, credit to KD for templates - Pixel
+
+division_template = {
+	name = "Konoe Shidan"
+	division_names_group = FGB_INF_01
+	is_locked = yes
+	regiments = {
+		elite_infantry = { x = 0 y = 0 }
+		elite_infantry = { x = 0 y = 1 }
+		elite_infantry = { x = 0 y = 2 }
+		elite_infantry = { x = 1 y = 0 }
+		elite_infantry = { x = 1 y = 1 }
+		elite_infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+		engineer = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Sensha Shidan"
+	division_names_group = FGB_INF_01
+	regiments = {
+		MBT = { x = 0 y = 0 }
+		MBT = { x = 0 y = 1 }
+		MBT = { x = 0 y = 2 }
+		MBT = { x = 0 y = 3 }
+		APC = { x = 1 y = 0 }
+		APC = { x = 1 y = 1 }
+		APC = { x = 1 y = 2 }
+		APC = { x = 2 y = 0 }
+		APC = { x = 2 y = 1 }
+		APC = { x = 2 y = 2 }
+	}
+	support = {
+		MBT_recon = { x = 0 y = 0 }
+		MBT_engineer = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+		signal_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Rengou Tokubetsu Rikusentai"
+	division_names_group = FGB_INF_01
+	is_locked = yes
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 2 }
+		artillery_brigade = { x = 2 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	##Malacca Landing Force
+
+	#Marines
+	division = { 
+		location = 4424
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 4424
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 4424
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	#Elite Infantry
+	division = { 
+		location = 4424
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+
+
+	##Johor Invasion Force
+
+	#Marines
+	division = { 
+		location = 14693
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 19031
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 19031
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 19031
+		division_template = "Rengou Tokubetsu Rikusentai"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+
+	#Elite Infantry
+	division = { 
+		location = 14693
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 19031
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 19031
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 19031
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 19031
+		division_template = "Konoe Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+
+	#MBTs for just in case this isn't overkill yet
+	division = { 
+		location = 14693
+		division_template = "Sensha Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Sensha Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Sensha Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 14693
+		division_template = "Sensha Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 4424
+		division_template = "Sensha Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+	division = { 
+		location = 4424
+		division_template = "Sensha Shidan"
+		start_experience_factor = 0.9
+		start_equipment_factor = 1
+	}
+}

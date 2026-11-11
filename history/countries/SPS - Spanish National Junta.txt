@@ -1,0 +1,506 @@
+capital = 995
+
+# Vacant
+recruit_character = SPS_Generic_Vacant
+
+set_country_flag = is_iberian_nation
+
+###Playable
+set_country_flag = tno_playable_country
+
+set_war_support = 0.8
+set_stability = 0.5
+
+oob = "SPS_1962"
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+add_mastery = {
+	amount = 350
+}
+
+load_focus_tree = SPS_War_Tree
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.2.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 5
+	socialist = 4
+	liberal_conservatism = 3
+	fascism = 15
+	fascism_2 = 45
+	fascism_3 = 28
+}
+recruit_character = SPS_Carlos_Iniesta
+recruit_character = SPS_Jose_Maria_Valiente
+recruit_character = SPS_Raimundo_Fernandez_Cuesta
+recruit_character = SPS_Unorganized
+
+recruit_character = SPS_Tomas_Rebull
+recruit_character = SPS_Jose_Codon
+recruit_character = SPS_Manuel_Valdes_Larranaga
+recruit_character = SPS_Alfonso_Perez
+
+recruit_character = SPS_Agustin_Aznar
+recruit_character = SPS_Angel_Ramirez_Cartagena
+recruit_character = SPS_Luis_Torres
+recruit_character = SPS_Jaime_Bofill
+recruit_character = SPS_Juan_Atares
+recruit_character = SPS_Camilo_Menendez
+
+SPS_Carlos_Iniesta = {
+	promote_character = fascism_subtype
+	promote_character = national_socialism_subtype
+	promote_character = ultranationalism_subtype
+}
+promote_character = SPS_Jose_Maria_Valiente
+SPS_Unorganized = {
+	promote_character = communist_subtype
+	promote_character = socialist_subtype
+	promote_character = liberal_conservatism_subtype
+}
+
+add_ideas = {
+	#cabinet#
+	SPS_Tomas_Rebull_hog
+	SPS_Alfonso_Perez_sec
+	SPS_Manuel_Valdes_Larranaga_eco
+	SPS_Jose_Codon_for
+	#political#
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_penal_labor
+	tno_public_meetings_outlawed
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	#military#
+	tno_conscription_limited_conscription
+	tno_military_supervision_no_supervision
+	tno_training_basic_training
+	tno_draft_exemptions_civil_service_deferment
+	#economic#
+	tno_trade_laws_limited_exports
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_low_pensions
+	tno_unemployment_low_subsidies
+	#social#
+	tno_health_care_universal_health_care
+	tno_education_public_education
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_traditional_roles
+	tno_security_political_control
+	tno_regulations_moderate_regulations
+	#misc#
+	tno_refugees_skilled
+	tno_women_banned
+	tno_racial_integration_segregated_regiments
+	tno_child_labor_restricted
+	tno_safety_limited_regulations
+	tno_pollution_few_regulations
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_oppression
+	#socdev
+	tno_academic_base_primary_schooling
+	tno_research_facilities_outdated
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_industrial_expertise_nascent
+	tno_army_professionalism_political_interference
+	tno_admin_efficiency_deficient_administrative_systems
+}
+
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_political_parties_effectiveness = 65 }
+set_variable = { tno_religious_rights_effectiveness = 22 }
+set_variable = { tno_trade_unions_effectiveness = 77 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 64 }
+set_variable = { tno_public_meetings_effectiveness = 89 }
+set_variable = { tno_press_rights_effectiveness = 67 }
+set_variable = { tno_vote_franchise_effectiveness = 100 }
+
+
+set_variable = { tno_conscription_effectiveness = 59 }
+set_variable = { tno_military_supervision_effectiveness = 76 }
+set_variable = { tno_training_effectiveness = 69 }
+set_variable = { tno_draft_exemptions_effectiveness = 58 }
+
+set_variable = { tno_trade_laws_effectiveness = 65 }
+set_variable = { tno_income_taxation_effectiveness = 65 }
+set_variable = { tno_minimum_wage_effectiveness = 40 }
+set_variable = { tno_max_workhours_effectiveness = 73 }
+set_variable = { tno_pensions_effectiveness = 42 }
+set_variable = { tno_unemployment_effectiveness = 44 }
+set_variable = { tno_regulations_effectiveness = 47 }
+
+set_variable = { tno_health_care_effectiveness = 41 }
+set_variable = { tno_education_effectiveness = 49 }
+set_variable = { tno_penal_system_effectiveness = 69 }
+set_variable = { tno_gender_rights_effectiveness = 77 }
+set_variable = { tno_security_effectiveness = 78 }
+set_technology = {
+	basic_train = 1
+
+	##INFANTRY##
+	# infantry_equipment_0 = 1
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+
+	infantry_kit_1 = 1
+	infantry_weapons_2 = 1
+	night_vision_2 = 1
+	infantry_kit_2 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_kit_3 = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	infantry_weapons_improvements_grenade_1 = 1
+	#
+	infantry_weapons_3 = 1
+	night_vision_3 = 1
+	infantry_kit_4 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons_hmg_1 = 1
+	combat_support_equipment_1 = 1
+
+	support_weapons_arty_1 = 1
+	infantry_at = 1
+	infantry_at_upgrade_1 = 1
+	#
+	motorized_infantry = 1
+	motorized_infantry_1 = 1
+	marines = 1
+	#
+	tech_special_forces = 1
+	marines2 = 1
+	tech_mountaineers = 1
+	#
+	tech_mountaineers2 = 1
+
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+
+	##NAVAL##
+	#Corvettes
+	early_ship_hull_very_light = 1
+	basic_ship_hull_very_light = 1
+	improved_ship_hull_very_light = 1
+	#Frigates
+	early_ship_hull_more_light = 1
+	basic_ship_hull_more_light = 1
+	improved_ship_hull_more_light = 1
+	#Destroyers
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	improved_ship_hull_light = 1
+	#Submarines
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	#Cruisers
+	early_ship_hull_cruiser = 1
+	#Battleship
+	early_ship_hull_heavy = 1
+	#Carriers
+	early_ship_hull_carrier = 1
+	#Others
+	basic_depth_charges = 1
+	sonar = 1
+	basic_battery = 1
+	basic_secondary_battery = 1
+	basic_torpedo = 1
+	mtg_transport = 1
+	basic_naval_mines = 1
+	improved_naval_mines = 1
+	submarine_mine_laying = 1
+	basic_fire_control_system = 1
+
+	##HELICOPTERS##
+	very_early_helicopter = 1
+	early_helicopter = 1
+
+	##LIGHT AIR##
+	early_fighter = 1
+	fighter_1945 = 1
+	cv_1945_fighter = 1
+	interceptor_1945 = 1
+	fighter_1950 = 1
+	cv_1950_fighter = 1
+	interceptor_1950 = 1
+	CAS_1945 = 1
+	cv_1945_CAS = 1
+	CAS_1950 = 1
+	cv_1950_CAS = 1
+
+
+	##HEAVY AIR##
+	transport_air1 = 1
+	transport_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	centimetric_radar = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	improved_computing_machine = 1
+	improved_encryption = 1
+	improved_decryption = 1
+	advanced_computing_machine = 1
+	advanced_encryption = 1
+	advanced_decryption = 1
+	helicopter_engines = 1
+	jet_engines = 1
+
+	#Industry#
+	ww2_line_production = 1
+	building_construction_1 = 1
+
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	military_construction_1 = 1
+
+	excavation0 = 1
+	resource_extraction_methods = 1
+}
+
+# NSB tech #
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		IFV_1945 = 1
+		APC_1945 = 1
+		MBT_1945 = 1
+		APC_1950 = 1
+		IFV_1950 = 1
+		MBT_1950 = 1
+		AC_1945 = 1
+		AC_1950 = 1
+
+		Heavy_1945 = 1
+
+		artillery_1945 = 1
+		artillery_1950 = 1
+		antiair_1945 = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		NSB_APC_1945 = 1
+		NSB_APC_1950 = 1
+		#
+
+		NSB_IFV_1945 = 1
+		NSB_IFV_1945_modules_1 = 1
+		NSB_IFV_1945_modules_2 = 1
+		NSB_IFV_1950 = 1
+
+		NSB_MBT_1945 = 1
+		NSB_MBT_1945_modules_1 = 1
+		NSB_MBT_1945_modules_2 = 1
+		NSB_MBT_1950 = 1
+
+		NSB_AC_1945 = 1
+		NSB_AC_1950 = 1
+
+		NSB_heavy_1945 = 1
+
+		NSB_Armour_1 = 1
+		NSB_Engine_1 = 1
+
+		NSB_artillery_1945 = 1
+		NSB_artillery_1950 = 1
+
+		NSB_antiair_1945 = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Clase Liniers"
+	type = ship_hull_light_3
+	name_group = IBR_DD_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Audaz"
+	type = ship_hull_light_2
+	name_group = IBR_DD_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Atrevida"
+	type = ship_hull_very_light_3
+	name_group = IBR_CR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Descubierta"
+	type = ship_hull_very_light_2
+	name_group = IBR_CR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Vicente Yáñez Pinzón"
+	type = ship_hull_more_light_3
+	name_group = IBR_FR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Pizarro"
+	type = ship_hull_more_light_2
+	name_group = IBR_FR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase D"
+	type = ship_hull_submarine_2
+	name_group = IBR_SS_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = sub_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		rear_1_custom_slot = ship_torpedo_sub_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase S"
+	type = ship_hull_submarine_1
+	name_group = IBR_SS_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = sub_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		rear_1_custom_slot = ship_torpedo_sub_1
+	}
+}
+
+add_opinion_modifier = { target = BSQ modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = SPS modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = SPA modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = SPR modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = CNT modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = CTL modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = TBA modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = FSR modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = FSR modifier = IBR_NRF_NuffSaid }
+add_opinion_modifier = { target = POR modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = RPP modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = PPR modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = GAL modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = GNS modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = MOR modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = IBR modifier = IBR_Iberian_Wars_Contender }
+
+add_opinion_modifier = { target = BSQ modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = SPS modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = SPA modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = SPR modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = CNT modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = CTL modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = TBA modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = FSR modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = POR modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = RPP modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = PPR modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = GAL modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = GNS modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = MOR modifier = IBR_Iberian_Wars_Contender_2 }
+add_opinion_modifier = { target = IBR modifier = IBR_Iberian_Wars_Contender_2 }
+
+TNO_startup_nation = yes

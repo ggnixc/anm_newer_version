@@ -3,7 +3,7 @@ state = {
 	name = "STATE_195"
 
 	history = {
-		owner = SOV
+		owner = MCW
 		victory_points = {
 			3151 20
 		}
@@ -11,14 +11,19 @@ state = {
 			infrastructure = 5
 			dockyard = 3
 			air_base = 5
-			radar_station = 2
-			industrial_complex = 1
- 			3151 = {
+			radar_station = 4
+			offices = 1
+			schools = 3
+			prisons = 2
+			hospitals = 2
+			thermoelectric_plant = 3
+			3151 = {
 				naval_base = 3
 				coastal_bunker = 1
 			}
 		}
-		add_core_of = SOV
+		set_state_flag = GDP_category_large_city
+		add_core_of = MCW
 		set_state_flag = universal_renamings
 	}
 
@@ -27,6 +32,6 @@ state = {
 	}
 	manpower = 640421
 	buildings_max_level_factor = 1.000
-	state_category = large_city
+	state_category = city
 	local_supplies = 0.000
 }

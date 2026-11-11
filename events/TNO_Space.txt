@@ -1,0 +1,2533 @@
+﻿ #######################################
+ ####### EVENTS PORTED TO YIPPIE #######     
+ #######################################   
+
+add_namespace = DBG_Space
+add_namespace = USA_Space
+add_namespace = JPN_Space
+add_namespace = GER_Space
+
+# Debug for Super Event Firing
+country_event = { # 
+	id = DBG_Space.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event DBG_Space.1" }
+	title = DBG_Space.1.t
+	desc = DBG_Space.1.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = DBG_Space.1.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_LANDING }
+			TNO_fire_super_event = yes
+		}
+	}
+}
+
+## USA Space
+# Space Race (1962 - 1963)
+country_event = { # Shot Across The Exosphere
+	id = USA_Space.001
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.001" }
+	title = USA_Space.001.t
+	desc = USA_Space.001.desc
+	picture = GFX_report_event_Shot_Exosphere
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.001.a
+	}
+}
+country_event = { # German Bombs From Outer Space
+	id = USA_Space.002
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.002" }
+	title = USA_Space.002.t
+	desc = USA_Space.002.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.002.a
+	}
+}
+news_event = { # Catch-Up
+	id = USA_Space.1000
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1000" }
+	title = USA_Space.1000.t
+	desc = USA_Space.1000.desc
+	picture = GFX_news_event_friendship_7
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1000.a
+		trigger = { original_tag = USA }
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.003
+				days = 4
+			}
+		}
+	}
+	option = { # 
+		name = USA_Space.1000.b
+		trigger = { original_tag = GER }
+	}
+	option = { # 
+		name = USA_Space.1000.c
+		trigger = { original_tag = JAP }
+	}
+	option = { # 
+		name = USA_Space.1000.d
+		trigger = { 
+			NOT = {
+				original_tag = USA
+				original_tag = GER
+				original_tag = JAP
+			} 
+		}
+	}
+}
+country_event = { # Space Race
+	id = USA_Space.003
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.003" }
+	title = USA_Space.003.t
+	desc = USA_Space.003.desc
+	picture = GFX_report_event_Space_Race
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.003.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.004
+				days = 4
+			}
+		}
+	}
+}
+country_event = { # Nixon At Rice University
+	id = USA_Space.004
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.004" }
+	title = USA_Space.004.t
+	desc = USA_Space.004.desc
+	picture = GFX_report_event_Nixon_Rice
+
+	is_triggered_only = yes
+
+	option = { # Space travel by our awesome economy!
+		name = USA_Space.004.a
+		custom_effect_tooltip = USA_NASA_Gemini_tt
+		366 = { 
+			set_temp_variable = { party_faction = token:yaller_dem }
+			set_temp_variable = { influence = 0.03 }
+			USA_adjust_party_influence = yes
+		}
+	}
+	option = { # Our scientists and our officers! 
+		name = USA_Space.004.b
+		custom_effect_tooltip = USA_USAF_Gemini_tt
+		366 = { 
+			set_temp_variable = { party_shift = token:USA_REP }
+			set_temp_variable = { increment = 0.01 }
+			USA_Infrastructure_Modif = yes
+		}
+	}
+	option = { # This must be an economical project, of course.
+		name = USA_Space.004.c
+		set_temp_variable = { issue_temp = 1 } 
+		set_temp_variable = { value_temp = 5 }
+		USA_Nixon_SC_Modify_Position = yes
+		366 = { 
+			set_temp_variable = { party_shift = token:USA_REP }
+			set_temp_variable = { culture_shift = token:USA_EP }
+			set_temp_variable = { influence_var = -0.15 }
+			USA_adjust_state_party_issue = yes
+		}
+	}
+}
+country_event = { # Mercury Poisoning
+	id = USA_Space.005
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.005" }
+	title = USA_Space.005.t
+	desc = USA_Space.005.desc
+	picture = GFX_report_event_Glenn_Mercury
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.005.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.006
+				days = 4
+			}
+		}
+	}
+}
+country_event = { # Final Flight of Faith
+	id = USA_Space.006
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.006" }
+	title = USA_Space.006.t
+	desc = USA_Space.006.desc
+	picture = GFX_report_event_Gemini
+
+	is_triggered_only = yes
+
+	option = { # The Air Force can launch its experiments aboard civilian flights. 
+		name = USA_Space.006.a
+		custom_effect_tooltip = USA_Project_Gemini_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_Gemini_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Project_Gemini } 
+	}
+	option = { # It's only natural that the Air Force have its own flights. 
+		name = USA_Space.006.b
+		custom_effect_tooltip = USA_Project_Gemini_Unlocked_tt
+		custom_effect_tooltip = USA_USAF_Gemini_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Project_Gemini }
+	}
+}
+country_event = { # Shoot-and-Hope
+	id = USA_Space.007
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.007" }
+	title = USA_Space.007.t
+	desc = USA_Space.007.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # Clean house, and try again.
+		name = USA_Space.007.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.008
+				days = 7
+			}
+		}
+	}
+	option = { # Submit NASA to increased Congressional oversight. 
+		name = USA_Space.007.b
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.009
+				days = 7
+			}
+		}
+	}
+	option = { # Slash probes, focus on manned flight.
+		name = USA_Space.007.c
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.010
+				days = 7
+			}
+		}
+	}
+}
+country_event = { # Robot Ranger's Lucky Day
+	id = USA_Space.008
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.008" }
+	title = USA_Space.008.t
+	desc = USA_Space.008.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.008.a
+		set_temp_variable = { megaproject = token:TNO_USA_MPJ_Project_Gemini }
+		set_temp_variable = { days = 200 }
+		USA_megaprojects_edit_days = yes
+	}
+}
+country_event = { # Congress Submits NASA to Oversight
+	id = USA_Space.009
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.009" }
+	title = USA_Space.009.t
+	desc = USA_Space.009.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.009.a
+		set_temp_variable = { megaproject = token:TNO_USA_MPJ_Project_Gemini }
+		set_temp_variable = { days = 65 }
+		USA_megaprojects_edit_days = yes
+	}
+}
+country_event = { # Congress Kills Failed NASA Moonbot
+	id = USA_Space.010
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.010" }
+	title = USA_Space.001.t
+	desc = USA_Space.010.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # Return the funds to Congress
+		name = USA_Space.010.a
+		set_temp_variable = { megaproject = token:TNO_USA_MPJ_Project_Gemini }
+		set_temp_variable = { days = 65 }
+		USA_megaprojects_edit_days = yes
+	}
+	option = { # Redirect the funds for manned flight!.
+		name = USA_Space.010.b
+		set_temp_variable = { megaproject = token:TNO_USA_MPJ_Project_Gemini }
+		set_temp_variable = { days = 65 }
+		USA_megaprojects_edit_days = yes
+	}
+}
+
+# Project Gemini (1964 - 1966)
+country_event = { # Project Gemini
+	id = USA_Space.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.101" }
+	title = USA_Space.101.t
+	desc = USA_Space.101.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.101.a
+	}
+}
+country_event = { # Castor and Pollux
+	id = USA_Space.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.102" }
+	title = USA_Space.102.t
+	desc = USA_Space.102.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.102.a
+	}
+}
+country_event = { # Flight of Gemini 3
+	id = USA_Space.103
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.103" }
+	title = USA_Space.103.t
+	desc = USA_Space.103.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.103.a
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1001
+				hours = 6
+			}
+		}
+	}
+}
+news_event = { # US Astronaut Does First Spacewalk
+	id = USA_Space.1001
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1001" }
+	title = USA_Space.1001.t
+	desc = USA_Space.1001.desc
+	picture = GFX_news_event_space_walk
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1001.a
+		trigger = { original_tag = USA }
+	}
+	option = { # 
+		name = USA_Space.1001.b
+		trigger = { 
+			OR = {
+				original_tag = GER
+				original_tag = JAP
+			}
+		}
+	}
+	option = { # 
+		name = USA_Space.1001.c
+		trigger = { 
+			NOT = {
+				original_tag = USA 
+				original_tag = JAP 
+				original_tag = GER 
+			}
+		}
+	}
+}
+country_event = { # Gemini 12 Returns to Earth
+	id = USA_Space.104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.104" }
+	title = USA_Space.104.t
+	desc = USA_Space.104.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.104.a
+	}
+}
+country_event = { # Partial Loss of Gemini 9
+	id = USA_Space.105
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.105" }
+	title = USA_Space.105.t
+	desc = USA_Space.105.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # Ground Gemini until we can figure this out
+		name = USA_Space.105.a
+		set_country_flag = USA_MP_Failed_Gemini_9
+		set_temp_variable = { megaproject = token:TNO_USA_MPJ_Project_Gemini }
+		set_temp_variable = { days = 240 }
+		USA_megaprojects_edit_days = yes
+
+		custom_effect_tooltip = USA_NASA_doover_tt
+
+		set_country_flag = USA_Late_Gemini
+		remove_from_array = {
+			array = USA_megaproject_benchmarks@token:TNO_USA_MPJ_Project_Gemini
+			index = 2
+		}
+		add_to_array = { USA_megaproject_benchmarks@token:TNO_USA_MPJ_Project_Gemini = 164 }
+		add_to_array = { USA_megaproject_benchmarks@token:TNO_USA_MPJ_Project_Gemini = 235 }
+	}
+	option = { # Hand over Gemini to the Air Force completely
+		name = USA_Space.105.b
+		set_country_flag = USA_MP_Failed_Gemini_9
+		set_temp_variable = { megaproject = token:TNO_USA_MPJ_Project_Gemini }
+		set_temp_variable = { days = 240 }
+		USA_megaprojects_edit_days = yes
+
+		custom_effect_tooltip = USA_USAF_NASA_takeover_tt
+
+		set_country_flag = USA_Air_Force_Astronauts
+		remove_from_array = {
+			array = USA_megaproject_benchmarks@token:TNO_USA_MPJ_Project_Gemini
+			index = 2
+		}
+		add_to_array = { USA_megaproject_benchmarks@token:TNO_USA_MPJ_Project_Gemini = 164 }
+		add_to_array = { USA_megaproject_benchmarks@token:TNO_USA_MPJ_Project_Gemini = 235 }
+	}
+}
+
+country_event = { # Late Finish of Project Gemini
+	id = USA_Space.106
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.106" }
+	title = USA_Space.106.t
+	desc = USA_Space.106.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.106.a
+		hidden_effect = {
+			set_temp_variable = { megaproject = token:TNO_USA_MPJ_Apollo_Spacecraft }
+			set_temp_variable = { days = 100 }
+			USA_megaprojects_edit_days = yes
+		}
+		custom_effect_tooltip = USA_Project_Apollo_Unlocked_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Apollo_Spacecraft }
+	}
+}
+country_event = { # Air Force Astronauts
+	id = USA_Space.107
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.107" }
+	title = USA_Space.107.t
+	desc = USA_Space.107.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.107.a
+		custom_effect_tooltip = USA_Project_Apollo_Unlocked_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Apollo_Spacecraft }
+	}
+}
+# Advanced Gemini
+country_event = { # Blue Gemini
+	id = USA_Space.201
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.201" }
+	title = USA_Space.201.t
+	desc = USA_Space.201.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.201.a
+	}
+}
+country_event = { # Manned Orbiting Laboratory
+	id = USA_Space.202
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.202" }
+	title = USA_Space.202.t
+	desc = USA_Space.202.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.202.a
+	}
+}
+country_event = { # Spies for the Empire of Space
+	id = USA_Space.203
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.203" }
+	title = USA_Space.203.t
+	desc = USA_Space.203.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.203.a
+	}
+}
+country_event = { # The Return of Castor and Pollux
+	id = USA_Space.204
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.204" }
+	title = USA_Space.204.t
+	desc = USA_Space.204.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.204.a
+	}
+}
+country_event = { # Gemini II and Space Station, Too
+	id = USA_Space.205
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.205" }
+	title = USA_Space.205.t
+	desc = USA_Space.205.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.205.a
+		# Unlocks SCC Modules for Spacelab
+	}
+}
+# Project Apollo
+country_event = { # Moonshot (I) A
+	id = USA_Space.301
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.301" }
+	title = USA_Space.301.t
+	desc = USA_Space.301.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	option = { # Ask Congress
+		name = USA_Space.301.a
+	}
+	option = { # Ask the ASAF  
+		name = USA_Space.301.b
+	}
+	option = { # Get By As Best As They Can
+		name = USA_Space.301.c
+	}
+}
+country_event = { # Moonshot (I) B
+	id = USA_Space.302
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.302" }
+	title = USA_Space.302.t
+	desc = USA_Space.302.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # Ask Congress
+		name = USA_Space.302.a
+	}
+	option = { # Increase SCC Involvement 
+		name = USA_Space.302.b
+	}
+	option = { # Get By As Best As They Can
+		name = USA_Space.302.c
+	}
+}
+country_event = { # Apollo's Chariot
+	id = USA_Space.303
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.303" }
+	title = USA_Space.303.t
+	desc = USA_Space.303.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.303.a
+	}
+}
+country_event = { # The Wheels Fall Off Apollo's Chariot
+	id = USA_Space.304
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.304" }
+	title = USA_Space.304.t
+	desc = USA_Space.304.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.304.a
+	}
+}
+country_event = { # Apollo 2 A
+	id = USA_Space.305
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.305" }
+	title = USA_Space.305.t
+	desc = USA_Space.305.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.305.a
+	}
+}
+country_event = { # Apollo 2 B
+	id = USA_Space.306
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.306" }
+	title = USA_Space.306.t
+	desc = USA_Space.306.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.306.a
+	}
+}
+country_event = { # Between the Moon and the Earth A
+	id = USA_Space.307
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.307" }
+	title = USA_Space.307.t
+	desc = USA_Space.307.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.307.a
+	}
+}
+country_event = { # Between the Moon and the Earth B (Safer Apollo)
+	id = USA_Space.308
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.308" }
+	title = USA_Space.308.t
+	desc = USA_Space.308.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.308.a
+	}
+}
+country_event = { # What is a Lunar Lander
+	id = USA_Space.309
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.309" }
+	title = USA_Space.309.t
+	desc = USA_Space.309.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # Allocate additional funds to LEM development
+		name = USA_Space.309.a
+	}
+	option = { # Perhaps Janus is worth looking into more?
+		name = USA_Space.309.b
+	}
+	option = { # Let fate take its course.
+		name = USA_Space.309.c
+	}
+}
+country_event = { # Moon Force
+	id = USA_Space.310
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.310" }
+	title = USA_Space.310.t
+	desc = USA_Space.310.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # NASA remains independent
+		name = USA_Space.310.a		
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Apollo_Lunar_Module }
+		custom_effect_tooltip = USA_Project_Apollo_Lunar_Unlocked_tt
+	}
+	option = { # SSC's help is appreciated
+		name = USA_Space.310.b
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Apollo_Lunar_Module }
+		custom_effect_tooltip = USA_Project_Apollo_Lunar_Unlocked_tt
+	}
+	option = { # Cut Apollo to fit the SSC's needs
+		name = USA_Space.310.c
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Apollo_Lunar_Module }
+		custom_effect_tooltip = USA_Project_Apollo_Lunar_Unlocked_tt
+	}
+}
+# Apollo Lunar Program
+country_event = { # Moonshot (II)
+	id = USA_Space.401
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.401" }
+	title = USA_Space.401.t
+	desc = USA_Space.401.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.401.a
+	}
+}
+country_event = { # Gold-Plated Lunar Lawnchair
+	id = USA_Space.402
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.402" }
+	title = USA_Space.402.t
+	desc = USA_Space.402.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.402.a
+	}
+}
+country_event = { # Genesis's Cradle
+	id = USA_Space.403
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.403" }
+	title = USA_Space.403.t
+	desc = USA_Space.403.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.403.a
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1002
+				hours = 6
+			}
+		}
+	}
+}
+news_event = { # American Astronauts Circle Moon
+	id = USA_Space.1002
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1002" }
+	title = USA_Space.1002.t
+	desc = USA_Space.1002.desc
+	picture = GFX_news_event_circle_moon
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1002.a
+		trigger = { original_tag = USA }
+	}
+	option = { # 
+		name = USA_Space.1002.b
+		trigger = { 
+			OR = {
+				original_tag = GER
+				original_tag = JAP
+			}
+		}
+	}
+	option = { # 
+		name = USA_Space.1002.c
+		trigger = { 
+			NOT = {
+				original_tag = USA 
+				original_tag = JAP 
+				original_tag = GER 
+			}
+		}
+	}
+}
+country_event = { # Land of Nod
+	id = USA_Space.404
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.404" }
+	title = USA_Space.404.t
+	desc = USA_Space.404.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.404.a
+	}
+}
+country_event = { # Apollo Returns to Form
+	id = USA_Space.405
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.405" }
+	title = USA_Space.405.t
+	desc = USA_Space.405.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.405.a
+	}
+}
+country_event = { # GERMANY LEADS IN MOONSHOT
+	id = USA_Space.406
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.406" }
+	title = USA_Space.406.t
+	desc = USA_Space.406.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.406.a
+	}
+}
+country_event = { # AMERICA LEADS IN MOONSHOT
+	id = USA_Space.407
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.407" }
+	title = USA_Space.407.t
+	desc = USA_Space.407.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.407.a
+	}
+}
+country_event = { # JAPAN LEADS IN MOONSHOT
+	id = USA_Space.408
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.408" }
+	title = USA_Space.408.t
+	desc = USA_Space.408.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.408.a
+	}
+}
+country_event = { # Moonshot (III)
+	id = USA_Space.409
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.409" }
+	title = USA_Space.409.t
+	desc = USA_Space.409.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.409.a
+	}
+}
+
+# Apollo-Janus Lunar Program
+country_event = { # Moonshot (II)
+	id = USA_Space.501
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.501" }
+	title = USA_Space.501.t
+	desc = USA_Space.501.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.501.a
+	}
+}
+country_event = { # Apollo's Super Ship
+	id = USA_Space.502
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.502" }
+	title = USA_Space.502.t
+	desc = USA_Space.502.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.502.a
+	}
+}
+country_event = { # Lunar Slingshot
+	id = USA_Space.503
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.503" }
+	title = USA_Space.503.t
+	desc = USA_Space.503.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.503.a
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1003
+				hours = 6
+			}
+		}
+	}
+}
+news_event = { # American Astronauts Circle Moon
+	id = USA_Space.1003
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1003" }
+	title = USA_Space.1003.t
+	desc = USA_Space.1003.desc
+	picture = GFX_news_event_circle_moon
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1003.a
+		trigger = { original_tag = USA }
+	}
+	option = { # 
+		name = USA_Space.1003.b
+		trigger = { 
+			OR = {
+				original_tag = GER
+				original_tag = JAP
+			}
+		}
+	}
+	option = { # 
+		name = USA_Space.1003.c
+		trigger = { 
+			NOT = {
+				original_tag = USA 
+				original_tag = JAP 
+				original_tag = GER 
+			}
+		}
+	}
+}
+country_event = { # A Thousand New Stars
+	id = USA_Space.504
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.504" }
+	title = USA_Space.504.t
+	desc = USA_Space.504.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.504.a
+	}
+}
+country_event = { # Apollo Returns to Form
+	id = USA_Space.505
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.505" }
+	title = USA_Space.505.t
+	desc = USA_Space.505.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.505.a
+	}
+}
+country_event = { # GERMANY LEADS IN MOONSHOT
+	id = USA_Space.506
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.506" }
+	title = USA_Space.506.t
+	desc = USA_Space.506.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.506.a
+	}
+}
+country_event = { # AMERICA LEADS IN MOONSHOT
+	id = USA_Space.507
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.507" }
+	title = USA_Space.507.t
+	desc = USA_Space.507.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.507.a
+	}
+}
+country_event = { # JAPAN LEADS IN MOONSHOT
+	id = USA_Space.508
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.508" }
+	title = USA_Space.508.t
+	desc = USA_Space.508.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.508.a
+	}
+}
+country_event = { # Moonshot (III)
+	id = USA_Space.509
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.509" }
+	title = USA_Space.509.t
+	desc = USA_Space.509.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.509.a
+	}
+}
+# Lunar Landing
+country_event = { # Apollo 11
+	id = USA_Space.601
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.601" }
+	title = USA_Space.601.t
+	desc = USA_Space.601.desc
+	picture = GFX_report_event_Apollo_11
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.601.a
+		hidden_effect = {
+			if = {
+				limit = {
+					# Success condition
+				}
+				country_event = {
+					id = USA_Space.602
+					days = 3
+				}
+			}
+			else = {
+				country_event = {
+					id = USA_Space.604
+					days = 3
+				}
+			}
+		}
+	}
+}
+country_event = { # Laurels of Luna
+	id = USA_Space.602
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.602" }
+	title = USA_Space.602.t
+	desc = USA_Space.602.desc
+	picture = GFX_report_event_Laurels_of_Luna
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.602.a
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { 
+					id = USA_Space.1004
+					hours = 6
+				}
+			}
+		}
+	}
+}
+news_event = { # MAN WALKS ON MOON
+	id = USA_Space.1004
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1004" }
+	title = USA_Space.1004.t
+	desc = USA_Space.1004.desc
+	picture = GFX_news_event_moon_landing
+
+	is_triggered_only = yes
+	
+	option = { # 
+		name = USA_Space.1004.a
+		trigger = { original_tag = USA }
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_LANDING }
+			TNO_fire_super_event = yes
+		}
+	}
+	option = { # 
+		name = USA_Space.1004.b
+		trigger = { 
+			OR = {
+				original_tag = GER
+				original_tag = JAP
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_LANDING }
+			TNO_fire_super_event = yes
+		}
+	}
+	option = { # 
+		name = USA_Space.1004.c
+		trigger = { 
+			NOT = {
+				original_tag = USA 
+				original_tag = JAP 
+				original_tag = GER 
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_LANDING }
+			TNO_fire_super_event = yes
+		}
+	}
+}
+country_event = { # Laurels of Luna (Alt)
+	id = USA_Space.603
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.603" }
+	title = USA_Space.603.t
+	desc = USA_Space.603.desc
+	picture = GFX_report_event_Laurels_of_Luna
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.603.a
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1005
+				hours = 6
+			}
+		}
+	}
+}
+news_event = { # American Astronaut Walks on Moon
+	id = USA_Space.1005
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1004" }
+	title = USA_Space.1004.t
+	desc = USA_Space.1004.desc
+	picture = GFX_news_event_moon_landing
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1004.a
+	}
+}
+country_event = { # Shipwrecked in the Sea of Tranquility
+	id = USA_Space.604
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.604" }
+	title = USA_Space.604.t
+	desc = USA_Space.604.desc
+	picture = GFX_report_event_Shipwrecked_Sea_of_Tranquility
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.604.a
+		set_country_flag = USA_SPACE_failed_moonlanding
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { 
+					id = USA_Space.1006
+					hours = 6
+				}
+			}
+		}
+	}
+}
+news_event = { # FIRST MEN STRANDED ON MOON
+	id = USA_Space.1006
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1006" }
+	title = USA_Space.1006.t
+	desc = USA_Space.1006.desc
+	picture = GFX_news_event_moon_failure
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1006.a
+		trigger = { original_tag = USA }
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_FAILURE }
+			TNO_fire_super_event = yes
+		}
+	}
+	option = { # 
+		name = USA_Space.1006.b
+		trigger = { NOT = { original_tag = USA } }
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_FAILURE }
+			TNO_fire_super_event = yes
+		}
+	}
+}
+country_event = { # Shipwrecked in the Sea of Tranquility (Alt)
+	id = USA_Space.605
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.605" }
+	title = USA_Space.605.t
+	desc = USA_Space.605.desc
+	picture = GFX_report_event_Shipwrecked_Sea_of_Tranquility
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.605.a
+		add_to_array = { USA_megaproject_benchmarks@token:TNO_USA_MPJ_Apollo_Lunar_Module = 225 }
+		custom_effect_tooltip = USA_Project_Apollo_Second_Chance_tt
+		add_to_variable =  { USA_SPACE_failed_landing = 1 }
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { 
+					id = USA_Space.1007
+					hours = 6
+				}
+			}			
+			country_event = {
+				id = USA_Space.606
+				days = 3
+			}
+		}
+	}
+}
+news_event = { # America Astronauts Stranded on Moon
+	id = USA_Space.1007
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1007" }
+	title = USA_Space.1007.t
+	desc = USA_Space.1007.desc
+	picture = GFX_news_event_moon_failure
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1007.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_FAILURE }
+			TNO_fire_super_event = yes
+		}
+	}
+}
+country_event = { # Reloaded Moonshot
+	id = USA_Space.606
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.606" }
+	title = USA_Space.606.t
+	desc = USA_Space.606.desc
+	picture = GFX_report_event_Reloaded_Moonshot
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.606.a
+		hidden_effect = {
+			if = {
+				limit = {
+					# Success condition
+				}
+				country_event = {
+					id = USA_Space.607
+					days = 23
+				}
+			}
+			else = {
+				country_event = {
+					id = USA_Space.611
+					days = 20
+				}
+			}
+		}
+	}
+}
+country_event = { # Dreams of a Pockmarked Planet
+	id = USA_Space.607
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.607" }
+	title = USA_Space.607.t
+	desc = USA_Space.607.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.607.a
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1008
+				hours = 6
+			}
+		}
+	}
+}
+news_event = { # MAN WALKS ON MOON
+	id = USA_Space.1008
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1008" }
+	title = USA_Space.1008.t
+	desc = USA_Space.1008.desc
+	picture = GFX_news_event_moon_landing
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1008.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_LANDING }
+			TNO_fire_super_event = yes
+		}
+	}
+}
+country_event = { # Dreams of a Pockmarked Planet (Alt)
+	id = USA_Space.608
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.608" }
+	title = USA_Space.608.t
+	desc = USA_Space.608.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.608.a
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1009
+				hours = 6
+			}
+		}
+	}
+}
+news_event = { # America Astronauts Walk on Moon
+	id = USA_Space.1009
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1009" }
+	title = USA_Space.1009.t
+	desc = USA_Space.1009.desc
+	picture = GFX_news_event_moon_landing
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1009.a
+	}
+}
+country_event = { # Lunar Laboratories
+	id = USA_Space.609
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.609" }
+	title = USA_Space.609.t
+	desc = USA_Space.609.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.609.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.610
+				days = 23
+			}
+		}
+	}
+}
+country_event = { # Apollo Flies High
+	id = USA_Space.610
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.610" }
+	title = USA_Space.610.t
+	desc = USA_Space.610.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.610.a
+	}
+}
+country_event = { # Critical Failure of Apollo 12
+	id = USA_Space.611
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.611" }
+	title = USA_Space.611.t
+	desc = USA_Space.611.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.611.a
+		set_country_flag = USA_SPACE_second_failed_moonlanding
+		add_to_array = { USA_megaproject_benchmarks@token:TNO_USA_MPJ_Apollo_Lunar_Module = 230 }
+		custom_effect_tooltip = USA_Project_Apollo_Final_Chance_tt
+
+		remove_from_temp_array = { USA_megaproject_benchmarks@token:TNO_USA_MPJ_Apollo_Lunar_Module = 175 }
+	}
+}
+country_event = { # Another Reloaded Moonshot
+	id = USA_Space.612
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.612" }
+	title = USA_Space.612.t
+	desc = USA_Space.612.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.612.a
+		hidden_effect = {
+			if = {
+				limit = {
+					# Success condition
+				}
+				country_event = {
+					id = USA_Space.613
+					days = 23
+				}
+			}
+			else = {
+				country_event = {
+					id = USA_Space.616
+					days = 20
+				}
+			}
+		}
+	}
+}
+country_event = { # Lunar Avenger
+	id = USA_Space.613
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.613" }
+	title = USA_Space.613.t
+	desc = USA_Space.613.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.613.a
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1010
+				hours = 6
+			}
+		}
+	}
+}
+news_event = { # MAN WALKS ON MOON
+	id = USA_Space.1010
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1010" }
+	title = USA_Space.1010.t
+	desc = USA_Space.1010.desc
+	picture = GFX_news_event_moon_landing
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1010.a
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_temp_variable = { TNO_temp_super_event = token:SE_USA_MOON_LANDING }
+			TNO_fire_super_event = yes
+		}
+	}
+}
+country_event = { # Lunar Avenger (Alt)
+	id = USA_Space.614
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.614" }
+	title = USA_Space.614.t
+	desc = USA_Space.614.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.614.a
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1011
+				hours = 6
+			}
+		}
+	}
+}
+news_event = { # America Astronauts Walk on Moon
+	id = USA_Space.1011
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1011" }
+	title = USA_Space.1011.t
+	desc = USA_Space.1011.desc
+	picture = GFX_news_event_moon_landing
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1011.a
+	}
+}
+country_event = { # Clipping Apollo's Wings
+	id = USA_Space.615
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.615" }
+	title = USA_Space.615.t
+	desc = USA_Space.615.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.615.a
+	}
+}
+country_event = { # Lithobrake
+	id = USA_Space.616
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.616" }
+	title = USA_Space.616.t
+	desc = USA_Space.616.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.616.a
+		custom_effect_tooltip = USA_Project_Apollo_No_Chance_tt
+		set_country_flag = USA_SPACE_no_lunar_landing
+
+		set_temp_variable = { completed_project = token:TNO_USA_MPJ_Apollo_Lunar_Module }
+		USA_megaproject_completion = yes
+
+		hidden_effect = { 
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { 
+					id = USA_Space.1017
+					hours = 6
+				}
+			}
+			country_event = { 
+				id = USA_Space.617
+				days = 14
+			}
+		}
+	}
+}
+news_event = { # Astronaut Killed During Moonlanding
+	id = USA_Space.1017
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1017" }
+	title = USA_Space.1017.t
+	desc = USA_Space.1017.desc
+	picture = GFX_news_event_killed_in_moonlanding
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1017.a
+	}
+}
+country_event = { # End of the Apollo Program
+	id = USA_Space.617
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.617" }
+	title = USA_Space.617.t
+	desc = USA_Space.617.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.617.a
+		hidden_effect = {
+			country_event = { 
+				id = USA_Space.618
+				days = 90
+			}
+		}
+	}
+}
+country_event = { # Congress Releases Apollo Report
+	id = USA_Space.618
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.618" }
+	title = USA_Space.618.t
+	desc = USA_Space.618.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.618.a
+		hidden_effect = {
+			country_event = { 
+				id = USA_Space.619
+				days = 21
+			}
+		}
+	}
+}
+country_event = { # NASA Manned Flights Drastically Reduced
+	id = USA_Space.619
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.619" }
+	title = USA_Space.619.t
+	desc = USA_Space.619.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.619.a
+	}
+}
+# Space Program Continues, Perfect Run/Supportive Congress
+country_event = { # Apollo 20
+	id = USA_Space.620
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.620" }
+	title = USA_Space.620.t
+	desc = USA_Space.620.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.620.a
+	}
+}
+country_event = { # Apollo 17
+	id = USA_Space.621
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.621" }
+	title = USA_Space.621.t
+	desc = USA_Space.621.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.621.a
+	}
+}
+country_event = { # NASA's Path White
+	id = USA_Space.622
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.622" }
+	title = USA_Space.622.t
+	desc = USA_Space.622.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.622.a
+		hidden_effect = {
+			country_event = { 
+				id = USA_Space.623
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = { # Apollo Applications (A)
+	id = USA_Space.623
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.623" }
+	title = USA_Space.623.t
+	desc = USA_Space.623.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.623.a
+		# Skylab		
+		custom_effect_tooltip = USA_Skylab_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_Skylab_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Skylab } 
+	}
+}
+
+country_event = { # NASA's Path Blue
+	id = USA_Space.624
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.624" }
+	title = USA_Space.624.t
+	desc = USA_Space.624.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.624.a
+		hidden_effect = {
+			country_event = { 
+				id = USA_Space.623
+				days = 14
+			}
+		}
+	}
+}
+
+country_event = { # Apollo Applications (B)
+	id = USA_Space.625
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.625" }
+	title = USA_Space.625.t
+	desc = USA_Space.625.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.625.a
+		# Venus
+		custom_effect_tooltip = USA_Venus_Flyby_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_Venus_Flyby_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:USA_megaprojects_Venus_Flyby } 
+	}
+	option = { # 
+		name = USA_Space.625.b
+		# Skylab
+		custom_effect_tooltip = USA_Skylab_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_Skylab_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_Skylab } 
+	}
+}
+
+country_event = { # Lady Venus
+	id = USA_Space.626
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.626" }
+	title = USA_Space.626.t
+	desc = USA_Space.626.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.626.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.628
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { # Competition For The Hand of Lady Venus
+	id = USA_Space.627
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.627" }
+	title = USA_Space.627.t
+	desc = USA_Space.627.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.627.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.628
+				days = 30
+			}
+		}
+	}
+}
+
+country_event = { # How To Go To Venus
+	id = USA_Space.628
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.628" }
+	title = USA_Space.628.t
+	desc = USA_Space.628.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.628.a
+	}
+}
+
+country_event = { # Deep Space Syndrome
+	id = USA_Space.629
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.629" }
+	title = USA_Space.629.t
+	desc = USA_Space.629.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.629.a
+		# Continue
+	}
+	option = { # 
+		name = USA_Space.629.b
+		# Pivot to STS
+		custom_effect_tooltip = USA_STS_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_STS_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_STS } 
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.630
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = { # Venus Flyby Program Cancelled
+	id = USA_Space.630
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.630" }
+	title = USA_Space.630.t
+	desc = USA_Space.630.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.630.a
+	}
+}
+
+country_event = { # Apollo-Venus
+	id = USA_Space.631
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.631" }
+	title = USA_Space.631.t
+	desc = USA_Space.631.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.631.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.632
+				days = 75
+			}
+		}
+	}
+}
+
+country_event = { # Venus
+	id = USA_Space.632
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.632" }
+	title = USA_Space.632.t
+	desc = USA_Space.632.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.632.a
+	}
+}
+
+country_event = { # Disappearance in Deep Space
+	id = USA_Space.633
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.633" }
+	title = USA_Space.633.t
+	desc = USA_Space.633.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	immediate = {		
+		hidden_effect = { 
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { 
+					id = USA_Space.1015
+					hours = 6
+				}
+			}
+		}	
+	}
+
+	option = { # 
+		name = USA_Space.633.a
+		# STS Pivot
+		custom_effect_tooltip = USA_STS_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_STS_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_STS } 
+	}
+}
+
+news_event = { # Astronaut Disappears In Space
+	id = USA_Space.1015
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1015" }
+	title = USA_Space.1015.t
+	desc = USA_Space.1015.desc
+	picture = GFX_news_event_missing_astronaut_venus
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1015.a
+	}
+}
+
+country_event = { # Return From Deep Space
+	id = USA_Space.634
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.634" }
+	title = USA_Space.634.t
+	desc = USA_Space.634.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	immediate = {		
+		hidden_effect = { 
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { 
+					id = USA_Space.1016
+					hours = 6
+				}
+			}
+		}	
+	}
+
+	option = { # 
+		name = USA_Space.634.a
+		# STS 
+		custom_effect_tooltip = USA_STS_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_STS_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_STS } 
+		
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.635
+				days = 100
+			}
+		}
+	}
+}
+
+news_event = { # United States Venus Flyby
+	id = USA_Space.1016
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1016" }
+	title = USA_Space.1016.t
+	desc = USA_Space.1016.desc
+	picture = GFX_news_event_venus_flyby
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1016.a
+	}
+}
+
+country_event = { # NASA Astronaut Goes Missing
+	id = USA_Space.635
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.635" }
+	title = USA_Space.635.t
+	desc = USA_Space.635.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.635.a
+		# STS 
+		custom_effect_tooltip = USA_STS_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_STS_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_STS } 
+	}
+}
+
+# Skylab
+country_event = { # Launch of Skylab
+	id = USA_Space.700
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.700" }
+	title = USA_Space.700.t
+	desc = USA_Space.700.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.700.a
+	}
+}
+
+country_event = { # All-American Space Station
+	id = USA_Space.701
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.701" }
+	title = USA_Space.701.t
+	desc = USA_Space.701.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.701.a
+	}
+}
+
+country_event = { # (PB) Skylab Disaster!
+	id = USA_Space.702
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.702" }
+	title = USA_Space.702.t
+	desc = USA_Space.702.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.702.a
+	}
+}
+
+country_event = { # (PW) Skylab Disaster!
+	id = USA_Space.703
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.703" }
+	title = USA_Space.703.t
+	desc = USA_Space.703.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.703.a
+	}
+}
+
+country_event = { # (PB) End of Skylab (A)
+	id = USA_Space.704
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.704" }
+	title = USA_Space.704.t
+	desc = USA_Space.704.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.704.a
+		custom_effect_tooltip = USA_STS_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_STS_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_STS } 
+	}
+}
+
+country_event = { # (Pw) Next Steps for Skylab
+	id = USA_Space.705
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.705" }
+	title = USA_Space.705.t
+	desc = USA_Space.705.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.705.a
+		custom_effect_tooltip = USA_Project_Artemis_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_Project_Artemis_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:USA_megaprojects_Project_Artemis } 
+
+		hidden_effects = {
+			if = {
+				limit = {
+					# If Invested in SSC MOLs
+				}
+				country_event = {
+					id = USA_Space.707
+					days = 45
+				}
+			}
+			else_if = {
+				limit = {
+					# OFN has more than 15 members
+				}
+				country_event = {
+					id = USA_Space.709
+					days = 45
+				}
+			}
+			else = {
+				country_event = {
+					id = USA_Space.708
+					days = 45
+				}
+			}
+		}
+	}
+}
+
+country_event = { # (PB) End of Skylab (B)
+	id = USA_Space.706
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.706" }
+	title = USA_Space.706.t
+	desc = USA_Space.706.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.706.a
+		custom_effect_tooltip = USA_STS_Unlocked_tt
+		custom_effect_tooltip = USA_NASA_STS_tt
+		add_to_array = { USA.USA_visible_megaprojects = token:TNO_USA_MPJ_STS } 
+	}
+}
+
+country_event = { # Space Station Liberty (A)
+	id = USA_Space.707
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.707" }
+	title = USA_Space.707.t
+	desc = USA_Space.707.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.707.a
+	}
+}
+
+country_event = { # Space Station Liberty (B)
+	id = USA_Space.708
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.708" }
+	title = USA_Space.708.t
+	desc = USA_Space.708.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.708.a
+	}
+}
+
+country_event = { # Space Station Liberty (C)
+	id = USA_Space.709
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.709" }
+	title = USA_Space.709.t
+	desc = USA_Space.709.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.709.a
+	}
+}
+
+# STS
+country_event = { # A Space Transport System
+	id = USA_Space.800
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.800" }
+	title = USA_Space.800.t
+	desc = USA_Space.800.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.800.a
+	}
+}
+
+country_event = { # The Space Shuttle
+	id = USA_Space.801
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.801" }
+	title = USA_Space.801.t
+	desc = USA_Space.801.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.801.a
+	}
+}
+country_event = { # Lesser of Two Weevils
+	id = USA_Space.802
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.802" }
+	title = USA_Space.802.t
+	desc = USA_Space.802.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.802.a
+	}
+}
+
+country_event = { # The Voyages of Space Shuttle Enterprise
+	id = USA_Space.803
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.803" }
+	title = USA_Space.803.t
+	desc = USA_Space.803.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.803.a
+	}
+}
+
+country_event = { # The Wreck of the Enterprise
+	id = USA_Space.804
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.804" }
+	title = USA_Space.804.t
+	desc = USA_Space.804.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.804.a
+	}
+}
+
+# Artemis
+country_event = { # Project Artemis
+	id = USA_Space.900
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.900" }
+	title = USA_Space.900.t
+	desc = USA_Space.900.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.900.a
+	}
+}
+
+country_event = { # Apollo 21 and Apollo 22
+	id = USA_Space.901
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.901" }
+	title = USA_Space.901.t
+	desc = USA_Space.901.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.901.a
+	}
+}
+
+country_event = { # The World's Moon
+	id = USA_Space.902
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.902" }
+	title = USA_Space.902.t
+	desc = USA_Space.902.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.902.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.905
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = { # Manifest Destiny on the Final Frontier
+	id = USA_Space.903
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.903" }
+	title = USA_Space.903.t
+	desc = USA_Space.903.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.903.a
+		hidden_effect = {
+			country_event = {
+				id = USA_Space.906
+				days = 60
+			}
+		}
+	}
+}
+
+country_event = { # Lunar Cyclers & Space Station Independence
+	id = USA_Space.904
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.904" }
+	title = USA_Space.904.t
+	desc = USA_Space.904.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.904.a
+	}
+}
+
+country_event = { # Lunar Treaty System
+	id = USA_Space.905
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.905" }
+	title = USA_Space.905.t
+	desc = USA_Space.905.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.905.a
+	}
+}
+
+country_event = { # Creation of SSC Special Operations
+	id = USA_Space.906
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.906" }
+	title = USA_Space.906.t
+	desc = USA_Space.906.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.906.a
+	}
+}
+
+country_event = { # United Nations Adopts Lunar Treaty
+	id = USA_Space.907
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.907" }
+	title = USA_Space.907.t
+	desc = USA_Space.907.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	immediate = {		
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1012
+				hours = 6
+			}
+		}
+	}
+
+	option = { # 
+		name = USA_Space.907.a
+	}
+}
+
+news_event = { # United Nations Adopts Lunar Treaty System
+	id = USA_Space.1012
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1012" }
+	title = USA_Space.1012.t
+	desc = USA_Space.1012.desc
+	picture = GFX_news_event_UN_lunar_treaties
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1012.a
+	}
+}
+
+country_event = { # Establishment of Moonbase Philadelphia
+	id = USA_Space.908
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.908" }
+	title = USA_Space.908.t
+	desc = USA_Space.908.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	immediate = {		
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1013
+				hours = 6
+			}
+		}
+	}
+
+	option = { # 
+		name = USA_Space.908.a
+	}
+}
+
+news_event = { # United States Builds Moonbase
+	id = USA_Space.1013
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1013" }
+	title = USA_Space.1013.t
+	desc = USA_Space.1013.desc
+	picture = GFX_news_event_US_Moonbase
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1013.a
+	}
+}
+
+country_event = { # Creation of the Lunar Territories
+	id = USA_Space.909
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.909" }
+	title = USA_Space.909.t
+	desc = USA_Space.909.desc
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+	immediate = {		
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { 
+				id = USA_Space.1014
+				hours = 6
+			}
+		}
+	}
+
+	option = { # 
+		name = USA_Space.909.a
+	}
+}
+
+news_event = { # United States Annexes Territory On The Moon
+	id = USA_Space.1014
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1014" }
+	title = USA_Space.1014.t
+	desc = USA_Space.1014.desc
+	picture = GFX_news_event_US_Moon_Annex
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1014.a
+	}
+}
+
+# Bicentennial
+country_event = { # (PW) Bicentennial Aboard Space Station Liberty
+	id = USA_Space.1100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1100" }
+	title = USA_Space.1100.t
+	desc = USA_Space.1100.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1100.a
+	}
+}
+
+country_event = { # (PW) Bicentennial On The Moon
+	id = USA_Space.1101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1101" }
+	title = USA_Space.1101.t
+	desc = USA_Space.1101.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1101.a
+	}
+}
+
+country_event = { # (PW) American Moon On The Bicentennial
+	id = USA_Space.1102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1102" }
+	title = USA_Space.1102.t
+	desc = USA_Space.1102.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1102.a
+	}
+}
+
+country_event = { # (PB) Bicentennial Visions of A Space Future
+	id = USA_Space.1103
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1103" }
+	title = USA_Space.1103.t
+	desc = USA_Space.1103.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1103.a
+	}
+}
+
+country_event = { # (PB) Bicentennial Visions of A Space Future
+	id = USA_Space.1104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1104" }
+	title = USA_Space.1104.t
+	desc = USA_Space.1104.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1104.a
+	}
+}
+
+country_event = { # (USAF) God Bless Our Space Troops
+	id = USA_Space.1105
+	immediate = { log = "[GetDateText]: [Root.GetName]: event USA_Space.1105" }
+	title = USA_Space.1105.t
+	desc = USA_Space.1105.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { # 
+		name = USA_Space.1105.a
+	}
+}
+
+#
+country_event = { # The Plot Against Gravity
+	id = GER_Space.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Space.1" }
+	title = GER_Space.1.t
+	desc = GER_Space.1.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_Space.1.a
+	}
+}
+#country_event = { # First successful manned orbit around the globe, conducted by Germany of course.
+# GER_PreKampfzeit.25

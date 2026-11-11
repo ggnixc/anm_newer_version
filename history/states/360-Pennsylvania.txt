@@ -8,11 +8,17 @@ state = {
 	history = {
 		owner = USA
 		buildings = {
-			arms_factory = 1
-			industrial_complex = 2
-			infrastructure = 5
+			schools = 2
+			hospitals = 1
+			prisons = 1
+			barracks = 1
+			offices = 2
+			infrastructure = 6
 			air_base = 2
 			dockyard = 2
+			nuclear_reactor = 1
+			hydroelectric_plant = 2
+			thermoelectric_plant = 4
 			6845 = {
 				naval_base = 8
 			}
@@ -54,6 +60,13 @@ state = {
 		victory_points = { # State College
 			6872 1
 		}
+		victory_points = { # Williamsport
+			11817 1
+		}
+		victory_points = { # Johnstown
+			3850 3
+		}
+		set_state_flag = GDP_category_metropolis
 	}
 
 	provinces = {
@@ -61,6 +74,6 @@ state = {
 	}
 	manpower = 11517800
 	buildings_max_level_factor = 1.000
-	state_category = megalopolis
+	state_category = large_city
 	local_supplies = 0.000
 }

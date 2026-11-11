@@ -1,6 +1,9 @@
 technologies = {
 	very_early_helicopter = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+			TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+		}
 		enable_equipments = {
 			helicopter_equipment_0
 		}
@@ -10,7 +13,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 4
+		research_cost = 5.2
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1945
 		folder = {
 			name = helicopter_techs_folder
@@ -31,7 +38,10 @@ technologies = {
 		}
 	}
 	early_helicopter = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+			TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+		}
 		enable_equipments = {
 			helicopter_equipment_1
 		}
@@ -53,7 +63,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 4
+		research_cost = 5.2
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1950
 		folder = {
 			name = helicopter_techs_folder
@@ -74,7 +88,10 @@ technologies = {
 		}
 	}
 	scout_helicopter_1960 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+			TNO_KD_Can_Research_Developed_Manufactoring = yes
+		}
 		enable_equipments = {
 			scout_helicopter_equipment_1
 		}
@@ -84,7 +101,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = helicopter_techs_folder
@@ -96,7 +117,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
 			modifier = {
 				factor = 5
@@ -106,7 +127,10 @@ technologies = {
 	}
 
 	scout_helicopter_1970 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+			TNO_KD_Can_Research_Modern_Manufactoring = yes
+		}
 		enable_equipments = {
 			scout_helicopter_equipment_2
 		}
@@ -116,7 +140,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 		folder = {
 			name = helicopter_techs_folder
@@ -128,17 +156,16 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 		}
 	}
 
 	scout_helicopter_1980 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Modern_Manufactoring = yes
+		}
 		enable_equipments = {
 			scout_helicopter_equipment_3
 		}
@@ -148,7 +175,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 		folder = {
 			name = helicopter_techs_folder
@@ -160,22 +191,24 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			factor = 0
 		}
 	}
 
 	scout_helicopter_1990 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Advanced_Manufactoring = yes
+		}
 		enable_equipments = {
 			scout_helicopter_equipment_4
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 		folder = {
 			name = helicopter_techs_folder
@@ -187,17 +220,16 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
-			modifier = {
-				factor = 5
-				tag = USA
-			}
 		}
 	}
 
 	asw_helicopter_1960 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+			TNO_KD_Can_Research_Modern_Manufactoring = yes
+		}
 		enable_equipments = {
 			asw_helicopter_equipment_1
 		}
@@ -207,7 +239,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = helicopter_techs_folder
@@ -219,17 +255,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			factor = 0
 		}
 	}
 
 	asw_helicopter_1970 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+			TNO_KD_Can_Research_Modern_Manufactoring = yes
+		}
 		enable_equipments = {
 			asw_helicopter_equipment_2
 		}
@@ -239,7 +273,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 		folder = {
 			name = helicopter_techs_folder
@@ -251,17 +289,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			factor = 0
 		}
 	}
 
 	asw_helicopter_1980 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Advanced_Manufactoring = yes
+		}
 		enable_equipments = {
 			asw_helicopter_equipment_3
 		}
@@ -271,7 +307,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 		folder = {
 			name = helicopter_techs_folder
@@ -283,22 +323,24 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			factor = 0
 		}
 	}
 
 	asw_helicopter_1990 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Advanced_Manufactoring = yes
+		}
 		enable_equipments = {
 			asw_helicopter_equipment_4
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 		folder = {
 			name = helicopter_techs_folder
@@ -310,16 +352,14 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 5
-				tag = USA
-			}
+			factor = 0
 		}
 	}
 	attack_helicopter_1960 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+			TNO_KD_Can_Research_Modern_Manufactoring = yes
+		}
 		enable_equipments = {
 			attack_helicopter_equipment_1
 		}
@@ -329,7 +369,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = helicopter_techs_folder
@@ -348,10 +392,17 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 70
 			}
 		}
 		on_research_complete = {
@@ -360,7 +411,10 @@ technologies = {
 	}
 
 	attack_helicopter_1970 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+			TNO_KD_Can_Research_Modern_Manufactoring = yes
+		}
 		enable_equipments = {
 			attack_helicopter_equipment_2
 		}
@@ -370,7 +424,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 		folder = {
 			name = helicopter_techs_folder
@@ -383,16 +441,26 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 70
 			}
 		}
 	}
 
 	attack_helicopter_1980 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Advanced_Manufactoring = yes
+		}
 		enable_equipments = {
 			attack_helicopter_equipment_3
 		}
@@ -402,7 +470,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 		folder = {
 			name = helicopter_techs_folder
@@ -415,21 +487,35 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 70
 			}
 		}
 	}
 
 	attack_helicopter_1990 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Advanced_Manufactoring = yes
+		}
 		enable_equipments = {
 			attack_helicopter_equipment_4
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 		folder = {
 			name = helicopter_techs_folder
@@ -442,15 +528,25 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 70
 			}
 		}
 	}
 	transport_helicopter_1960 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+			TNO_KD_Can_Research_Developed_Manufactoring = yes
+		}
 		enable_equipments = {
 			transport_helicopter_equipment_1
 		}
@@ -462,7 +558,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = helicopter_techs_folder
@@ -472,19 +572,28 @@ technologies = {
 		categories = {
 			helicopter
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 20
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 20
+				num_of_military_factories > 70
 			}
 		}
 	}
 
 	transport_helicopter_1970 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+			TNO_KD_Can_Research_Developed_Manufactoring = yes
+		}
 		enable_equipments = {
 			transport_helicopter_equipment_2
 		}
@@ -496,7 +605,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 		folder = {
 			name = helicopter_techs_folder
@@ -509,16 +622,26 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 35
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 35
+				num_of_military_factories > 70
 			}
 		}
 	}
 
 	transport_helicopter_1980 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Modern_Manufactoring = yes
+		}
 		enable_equipments = {
 			transport_helicopter_equipment_3
 		}
@@ -530,7 +653,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 		folder = {
 			name = helicopter_techs_folder
@@ -543,23 +670,37 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 35
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 35
+				num_of_military_factories > 70
 			}
 		}
 	}
 
 	transport_helicopter_1990 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Advanced_Manufactoring = yes
+		}
 		enable_equipments = {
 			transport_helicopter_equipment_4
 		}
 
 		supply_node_range = 0.04
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = air
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 		folder = {
 			name = helicopter_techs_folder
@@ -572,10 +713,17 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
-				factor = 5
-				tag = USA
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 35
+				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 35
+				num_of_military_factories > 70
 			}
 		}
 	}

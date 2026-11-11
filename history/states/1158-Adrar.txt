@@ -2,21 +2,26 @@ state={
 	id=1158
 	name="STATE_1158"
 	resources={
+		uranium=6
 	}
 	history = {
-		owner = MAR
+		owner = AOF
         add_core_of = MAR
+		add_core_of = AOF
 		victory_points = { 14317 2 }
 		victory_points = { 14296 1 }
 		buildings = {
 			infrastructure = 1
 		}
+		set_state_flag = state_renamings
+		# set_state_flag = GDP_regions_mauritania - commented during merge conflict 1.19.26
+		set_state_flag = GDP_regions_western_sahara
 	}
 	provinces={
 		1897 8035 10779 10814 13219 14253 14275 14282 14287 14289 14290 14296 14310 14317 14318 14320 14329 14335 14343 14352 14361 14365 14376 18007 18034 
 	}
 	manpower=52358
 	buildings_max_level_factor=1.000
-	state_category=pastoral
+	state_category= wasteland
 	local_supplies=0.000
 }

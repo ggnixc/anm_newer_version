@@ -1,82 +1,105 @@
-﻿recruit_character = ISR_Avraham_Poraz
-recruit_character = ISR_Yitzhak_Rabin
-capital = 454
+capital = 1306
 
-set_oob = "ISR_2000"
+# Vacant
+recruit_character = ISR_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+
+recruit_character = ISR_David_Ben_Gurion
+recruit_character = ISR_Shimon_Peres
+recruit_character = ISR_Golda_Meir
+recruit_character = ISR_Menachem_Begin
+recruit_character = ISR_Avraham_Stern
+recruit_character = ISR_Yisrael_Galili
+recruit_character = ISR_Moshe_Dayan
+
+set_grand_doctrine = defensive_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 225
+}
+
+set_stability = 0.35
+
+set_politics = {
+	ruling_party = socialist
+	last_election = "1958.1.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 0
+	ultranationalism = 0
+	socialist = 37
+	progressivism = 11
+	liberalism = 19
+
+	conservatism = 12
+	paternalism = 21
+	despotism = 0
+	fascism = 0
+	national_socialism = 0
+	
+}
+
+promote_character = ISR_David_Ben_Gurion
 
 add_ideas = {
 	
-	##MINISTERS
-    ##FACTION STATUS##
-	##POLITICAL LAWS##
+	#political#
 	tno_political_parties_multiparty_system
 	tno_religious_rights_pluralism
 	tno_trade_unions_all_allowed
-    tno_immigration_quota_immigration
-	tno_slavery_outlawed
+	tno_immigration_encouraged_immigration
+	tno_slavery_penal_labor
 	tno_public_meetings_allowed
 	tno_press_rights_free_press
 	tno_vote_franchise_universal
-	tno_refugees_skilled
-	##MILITARY LAWS###
-	tno_conscription_two_year_draft
-	tno_women_banned
-	tno_military_supervision_military_policing
-	tno_military_spending_large_spending 
-	tno_training_combat_schooling
-	tno_racial_integration_integrated_military
-	tno_draft_exemptions_none
-	##SOCIAL LAWS##
-	tno_safety_minimal_regulations
-	tno_health_care_public_health_care
-	tno_pollution_few_pollution_controls
+
+	#military#
+	tno_conscription_limited_conscription
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_educational_deferment
+
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_low_pensions
+	tno_unemployment_no_subsidies
+
+	#social#
+	tno_health_care_low_income_protections
 	tno_education_public_education
 	tno_penal_system_incarceration
-	tno_lgbt_rights_lgbt_decriminalized
-	tno_gender_rights_gender_equality
-	tno_minorities_equal_rights
-	tno_security_police
-	##ECONOMIC LAWS##
-	tno_trade_laws_free_trade
-	tno_economic_focus_civilian_economy
-	tno_tax_rate_medium_taxation
-	tno_income_taxation_elite_tax_exemptions
-	tno_minimum_wage_trinket_minimum_wage
-	tno_max_workhours_12_hour_work_day
+	tno_gender_rights_women_in_the_workplace
+	tno_security_maintenance_of_order
+	tno_regulations_token_regulations
+
+	#misc#
+	tno_refugees_open
+	tno_women_banned
+	tno_racial_integration_segregated_regiments
 	tno_child_labor_illegal
-	tno_pensions_low_pensions
-	tno_unemployment_trinket_subsidies
-	##SOCIETAL DEVELOPMENT##
-	tno_nuclear_stockpile_none
-	tno_poverty_rate_25
-	tno_army_professionalism_professional
-	tno_industrial_expertise_experienced
-	tno_industrial_equipment_modern
-	tno_agriculture_basic_mechanized
-	tno_research_facilities_modern
+	tno_safety_limited_regulations
+	tno_pollution_no_controls
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_segregation
+
+	#societal development#
 	tno_academic_base_secondary_schooling
-}
-
-set_politics = {	
-	ruling_party = paternalism
-	last_election = "1933.3.5"
-	election_frequency = 48
-	elections_allowed = yes
-
+	tno_research_facilities_modern
+	tno_agriculture_mass_mechanized
+	tno_healthcare_nascent
+	tno_industrial_equipment_factory_complexes
+	tno_industrial_expertise_nascent
+	tno_army_professionalism_disgruntled_veterans
+	tno_admin_efficiency_deficient_administrative_systems
 }
 
 TNO_startup_nation = yes
-
-set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 8
-    progressivism = 13
-    liberalism = 17
-    liberal_conservatism = 0
-    conservatism = 11
-    paternalism = 32
-    despotism = 0
-    fascism = 19
-    national_socialism = 0    
-}

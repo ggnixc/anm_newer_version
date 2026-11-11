@@ -3,6 +3,7 @@ state = {
 	name = "STATE_2440"
 	resources = {
 		tungsten = 16.000
+		power = 1.000
 	}
 
 	history = {
@@ -15,12 +16,15 @@ state = {
 			1110 1
 		}
 		victory_points = {
-			9984 4
+			9984 5
 		}
 		victory_points = {
-			19570 1
+			19460 2
 		}
-  	}
+		set_state_flag = GDP_regions_jiangxi_ganjiang
+		set_variable = { china_state_ref = 25 }
+		set_variable = { china_region_ref = 3 }
+	}
 
 	provinces = {
 		1110 9984 19460 19570

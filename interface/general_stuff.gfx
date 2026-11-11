@@ -170,15 +170,16 @@ spriteTypes = {
 		name = "GFX_header_bg"
 		texturefile = "gfx/interface/header_bg.dds"
 	}
+
 	spriteType = {
-		name = "GFX_countrypoliticsview_header_bg"
-		texturefile = "gfx/interface/countrypoliticsview_header_bg.dds"
+		name = "GFX_construction_header_bg"
+		texturefile = "gfx/interface/construction_header_bg.dds"
 	}
 
 	spriteType = {
 		name = "GFX_resources_strip"
 		texturefile = "gfx/interface/resources_strip.dds"
-		noOfFrames = 6
+		noOfFrames = 9
 	}
 
 	spriteType = {
@@ -190,7 +191,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_missing_resources_strip"
 		texturefile = "gfx/interface/missing_resources_strip.dds"
-		noOfFrames = 6
+		noOfFrames = 9
 	}
 	
 	spriteType = {
@@ -216,19 +217,14 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_closebutton_small"
-		texturefile = "gfx//interface//closebutton_small.dds"
-		noOfFrames = 3
+		texturefile = "gfx//interface//closebutton_small.tga"
+		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.shader"
 	}
+	
 	spriteType = {
 		name = "GFX_closebutton_small_2"
 		texturefile = "gfx/interface/closebutton_small_2.dds"
-		noOfFrames = 3
-		effectFile = "gfx/FX/buttonstate.shader"
-	}
-	spriteType = {
-		name = "GFX_exclamationbutton_small"
-		texturefile = "gfx//interface//exclamationbutton_small.dds"
 		noOfFrames = 3
 		effectFile = "gfx/FX/buttonstate.shader"
 	}
@@ -384,12 +380,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/scroll_drager.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
-
-	spriteType = {
-		name = "GFX_scroll_drager_horisontal"
-		texturefile = "gfx/interface/scroll_drager_horisontal.dds"
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
 	
 	spriteType = {
 		name = "GFX_scroll_drager_blue"
@@ -398,9 +388,9 @@ spriteTypes = {
 
 	corneredTileSpriteType = {
 		name = "GFX_scroll_track"
-		size= {x =15 y = 15 }
+		size= {x =12 y = 12 }
 		texturefile = "gfx/interface/scroll_track.dds"
-		borderSize = { x=5 y=5 }
+		borderSize = { x=4 y=4 }
 	}
 	
 	corneredTileSpriteType = {

@@ -1,25 +1,41 @@
-state = { #Population Done
-	id = 786
-	name = "STATE_786"
-
-	state_category = city
-
+state={
+	id=786
+	name="STATE_786"
+	resources = {
+		steel = 140
+	}
 	history = {
-		owner = FRA
+		owner = FRS
 		victory_points = { 9523 50 }
+		victory_points = { 11518 9 }
+		victory_points = { 9507 8 }
+		victory_points = { 9534 6 }
+		victory_points = { 11506 6 }
+		victory_points = { 6585 3 }
+		victory_points = { 3476 7 }
+		victory_points = { 9561 2 }
+		victory_points = { 11491 2 }
+		victory_points = { 3506 2 }
+		victory_points = { 6547 3 }
 		buildings = {
-			infrastructure = 5
+			infrastructure = 7
+			thermoelectric_plant = 3
 			anti_air_building = 1
 			air_base = 2
- 			industrial_complex = 1
+			schools = 2
+			offices = 2
+			hospitals = 1
+			barracks = 2
+			prisons = 1
 		}
-		set_state_flag = universal_renamings
-		add_core_of = FRA
-  	}
-
-	provinces = {
-		9523
+		add_core_of = FRS
+		set_state_flag = GDP_category_large_town
 	}
-	manpower = 2418543
-	buildings_max_level_factor = 1.000
+	provinces={
+		454 2353 2608 3476 3506 6547 6585 6949 9507 9523 9534 9561 9725 11420 11491 11506 11518 11549 15231 15365 
+	}
+	manpower=9643841
+	buildings_max_level_factor=1
+	state_category=megalopolis
+	local_supplies=0
 }

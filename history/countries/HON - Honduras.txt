@@ -1,40 +1,188 @@
-﻿capital = 312
+capital = 312
 
-set_oob = "HON_1962"
+# Vacant
+recruit_character = HON_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
-set_politics = {	
-	ruling_party = conservatism
-	last_election = "1991.11.26"
-	election_frequency = 48
+recruit_character = HON_Ramon_Villeda_Morales
+recruit_character = HON_Ramon_Ernesto_Cruz_Uccles
+recruit_character = HON_Modesto_Rodas_Alvarado
+recruit_character = HON_Oswaldo_Lopez_Arellano
+recruit_character = HON_Juan_Alberto_Melgar_Castro
+recruit_character = HON_Roberto_Suazo_Cordova
+recruit_character = HON_Andres_Alvarado_Puerto
+recruit_character = HON_Lorenzo_Zelaya
+
+HON_Ramon_Villeda_Morales = {
+	promote_character = liberal_conservatism_oligarchic_liberalism_subtype
+}
+HON_Roberto_Suazo_Cordova = {
+	promote_character = liberalism_national_liberal_subtype
+}
+HON_Modesto_Rodas_Alvarado = {
+	promote_character = progressivism_left_wing_populism_subtype
+	promote_character = socialist_left_wing_nationalism_subtype
+}
+promote_character = HON_Ramon_Ernesto_Cruz_Uccles
+promote_character = HON_Andres_Alvarado_Puerto
+promote_character = HON_Oswaldo_Lopez_Arellano
+
+
+set_politics = {
+	ruling_party = liberal_conservatism
+	last_election = "1960.10.10"
+	election_frequency = 72
 	elections_allowed = yes
 
 }
-
-add_ideas = {
-	#Nat. Spirits
-	OFN_Partners
-	#STARTING
-	#MINISTERS
-	HON_Salvador_Narsralla_hog
-	HON_Ramon_Sabillon_for
-	HON_Rixi_Moncada_eco
-	HON_Jose_Manuel_Zelaya_Rosales_sec
-	}
-	
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 5
-    progressivism = 10
-    liberalism = 35
-    liberal_conservatism = 10
-    conservatism = 40
-    paternalism = 0
-    despotism = 0
-    fascism = 0
-     
+	liberal_conservatism = 40
+	liberalism = 10
+	progressivism = 10
+	paternalism = 15
+	conservatism = 25
 }
 
-recruit_character = HON_Rafael_Callejas
+set_convoys = 50
+oob = "HON_1962"
+
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 100
+}
+
+add_ideas = {
+	### CABINET ###
+
+	### NATIONAL ###
+	HON_USS_Honduras
+	HON_Banana_Kings
+	HON_Creeping_Colonels
+	HON_Border_Tensions
+
+	### POLITICAL LAWS ###
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_nonsocialist_allowed
+	tno_immigration_open_immigration
+	tno_slavery_penal_labor
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_registered_voting
+
+	### MILITARY LAWS ###
+	tno_conscription_broadened_conscription
+	tno_military_supervision_no_supervision
+	tno_training_basic_training
+	tno_draft_exemptions_elite_exemptions
+
+	### SOCIAL LAWS ###
+	tno_health_care_support_for_emergencies
+	tno_education_public_higher_education
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_traditional_roles
+	tno_security_crime_prevention
+	tno_regulations_token_regulations
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_free_trade
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_not_applicable
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### MISC LAWS ###
+	tno_pollution_few_regulations
+	tno_safety_minimal_regulations
+	tno_child_labor_illegal
+	tno_refugees_vetted_entry
+	tno_racial_integration_segregated_regiments
+	tno_women_banned
+	tno_minorities_segregation
+	tno_lgbt_rights_lgbt_outlawed
+
+	### SOCIETAL DEVELOPMENT ###
+	
+	tno_army_professionalism_disgruntled_veterans
+	tno_industrial_expertise_incompetent
+	tno_industrial_equipment_power_tools
+	tno_agriculture_basic_mechanized
+	tno_healthcare_rudimentary
+	tno_research_facilities_basic
+	tno_academic_base_basic_literacy
+	tno_admin_efficiency_deficient_administrative_systems
+}
+
+add_opinion_modifier = {
+	target = ELS
+	modifier = HON_territorial_disputes
+}
+
+add_opinion_modifier = {
+	target = ELS
+	modifier = HON_salvadoran_squatters
+}
+
+add_opinion_modifier = {
+	target = NIC
+	modifier = HON_territorial_disputes
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = HON_uss_honduras
+}
+
+set_research_slots = 2
+inherit_technology = USA
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_2
+	amount = 1000
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 500
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_2
+	amount = 200
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 200
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_3
+	amount = 1000
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = transport_helicopter_equipment_1
+	amount = 25
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = attack_helicopter_equipment_1
+	amount = 25
+	producer = USA
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }

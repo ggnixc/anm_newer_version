@@ -8,7 +8,7 @@ state = { #Population Done
 	}
 
 	manpower = 2680011
-	state_category = city
+	state_category = large_city
 
 	history = {
 		owner = GER
@@ -24,13 +24,17 @@ state = { #Population Done
 		victory_points = { 9334 4 }
 
 		buildings = {
- 			industrial_complex = 1
-			arms_factory = 1
+			schools = 1
+			offices = 1
+			barracks = 1
 			radar_station = 2
+			prisons = 2
 			infrastructure = 5
- 			11372 = { naval_base = 2 }
+			thermoelectric_plant = 3
+			11372 = { naval_base = 2 }
 			6282 = { naval_base = 4 }
 		}
+		set_state_flag = GDP_category_city
 	}
 
 	provinces = {

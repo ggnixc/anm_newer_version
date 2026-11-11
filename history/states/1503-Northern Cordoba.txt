@@ -9,13 +9,12 @@ state = {
 		owner = ARG
 		buildings = {
 			infrastructure = 3
+			schools = 1
+			prisons = 1
 		}
 		add_core_of = ARG
 		victory_points = {
-			14956 4
-		}
-		victory_points = {
-			10985 3
+			14956 3
 		}
 		victory_points = {
 			12942 2
@@ -23,7 +22,9 @@ state = {
 		victory_points = {
 			14968 1
 		}
- 	}
+		set_state_flag = GDP_category_rural
+		set_state_flag = GDP_regions_cordoba
+	}
 
 	provinces = {
 		10975 10985 12942 14956 14961 14968 14973 15011 17547

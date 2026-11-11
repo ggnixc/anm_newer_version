@@ -6,16 +6,24 @@ state = {
 	}
 
 	history = {
-		owner = MEN
+		owner = PRC
+		add_claim_by = MEN
 		buildings = {
 			infrastructure = 3
+			barracks = 1
+			offices = 1
+			thermoelectric_plant = 1
 		}
 		victory_points = {
-			10627 12
+			10627 5
 		}
-		add_core_of = MEN
- 		set_state_flag = state_renamings
-  	}
+		add_core_of = PRC
+		set_state_flag = GDP_regions_outer_mongolia
+		set_state_flag = state_renamings
+		set_variable = { china_state_ref = 57 }
+		set_variable = { china_region_ref = 7 }
+		set_state_flag = GDP_category_town
+	}
 
 	provinces = {
 		1676 1877 4680 7703 7731 7804 7819 10597 10627 10646 12610 12625 19579 19639 19680 19706

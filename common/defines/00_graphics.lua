@@ -11,10 +11,10 @@ NMapMode = {
 	FABRICATE_CLAIM_NON_TARGET_COUNTRY_SECONDARY_COLOR = { 0, 0, 0, 0 },
 	FABRICATE_CLAIM_ALREADY_CLAIM_SECONDARY_COLOR = { 0.5, 0, 0, 1 },
 	FABRICATE_CLAIM_ALREADY_CORE_SECONDARY_COLOR = { 0.5, 0, 0, 1 },
-	CONSTRUCTION_MAP_MODE_BUILDING_DEFAULT_COLOR = { 0.43, 0.22, 0.22, 0.25 }, 			-- Color of states/provinces that can't be built on
-	CONSTRUCTION_MAP_MODE_BUILDING_MAX_LEVEL_COLOR = { 0.05, 0.1, 0.7, 0.4 }, 			-- Color of states/provinces where current building level is maxed out (max is current max level, not final max level) of a building type
-	CONSTRUCTION_MAP_MODE_BUILDING_LEVEL_LOW_COLOR = { 0.05, 0.22, 0.0, 0.4 },
-	CONSTRUCTION_MAP_MODE_BUILDING_LEVEL_HI_COLOR = { 0.4, 0.9, 0.0, 0.5 },
+	CONSTRUCTION_MAP_MODE_BUILDING_DEFAULT_COLOR = { 0.43, 0.22, 0.22, 0.5 }, 			-- Color of states/provinces that can't be built on
+	CONSTRUCTION_MAP_MODE_BUILDING_MAX_LEVEL_COLOR = { 0.05, 0.1, 0.7, 0.8 }, 			-- Color of states/provinces where current building level is maxed out (max is current max level, not final max level) of a building type
+	CONSTRUCTION_MAP_MODE_BUILDING_LEVEL_LOW_COLOR = { 0.2, 0.7, 0.0, 0.5 },
+	CONSTRUCTION_MAP_MODE_BUILDING_LEVEL_HI_COLOR = { 0.45, 0.98, 0.0, 0.9 },
 	CONSTRUCTION_MAP_MODE_BUILDING_MAX_AMOUNT_QUEUED_COLOR = { 0.0, 0.0, 1.0  }, 	-- Color of states/provinces when building queue is maxed of a building type
 	CONSTRUCTION_MAP_MODE_BUILDING_QUEUED_COLOR = { 1.0, 0.85, 0.0  },				-- Color of states/provinces when building queue contains one or more of a building type.
 	MAP_MODE_MANPOWER_RANGE_MAX = 20000000,											-- When a state has that much manpower, it will be colored with the color MAP_MODE_MANPOWER_RANGE_COLOR_TO. Everything below that will have an interpolated color.
@@ -71,6 +71,15 @@ NMapMode = {
 	RAILWAY_GUN_RANGE_INDICATOR_DEFAULT_COLOR = { 1.0, 1.0, 1.0, 1.0 },				-- On map circle indicating the railway gun bombardment range.
 	RAILWAY_GUN_RANGE_INDICATOR_ROTATION_SPEED = 0.001,								-- How fast the indicator is rotating.
 	RAILWAY_GUN_RANGE_STRIPES_COLOR = { 1.0, 0.5, 0.0, 0.2 },						-- Color of the railway gun range stripes (when hovered)
+	DEPLOYED_GENERAL_UNIT_LINE_COLOR = { 1.0, 1.0, 1.0, 0.3 },						-- Colour of the line drawn between a deployed General and their divisions when no commander ability is active.
+	DEPLOYED_GENERAL_UNIT_LINE_COLOR_ABILITY_ACTIVE = { 1.0, 0.55, 0.1, 1.0 },		-- Colour of the line drawn between a deployed General and their divisions when at least one commander ability is active on the General.
+	SHOW_DEPLOYED_GENERAL_COMMUNICATION_LINES = true,                                                        -- If true, show lines between deployed generals and their divisions when in range
+	SHOW_DEPLOYED_GENERAL_NO_COMMUNICATION_LINES = true,                                                     -- If true, show lines between deployed generals and their divisions when outside range
+	SHOW_DEPLOYED_GENERAL_FRONT_LINES = true,										-- If true, show the always-on line from each deployed General to the nearest point of their frontline.
+	DEPLOYED_GENERAL_FRONT_LINE_MAX_CAMERA_HEIGHT = 350.0,							-- Camera height above which the always-on General->frontline lines are culled (hidden).
+	SHOW_DEPLOYED_GENERAL_BASE_PLATES = true,										-- If true, draw a flat circular decal under each deployed General as a visual anchor for the comms lines.
+	DEPLOYED_GENERAL_BASE_PLATE_RADIUS = 2.5,										-- Radius of the deployed General base plate in map units. Passed as the vRange to CRangeIndicator (which doubles it to get diameter).
+	DEPLOYED_GENERAL_BASE_PLATE_COLOR = { 1.0, 1.0, 1.0, 0.9 },						-- Multiplicative tint applied to the white base-plate texture. Alpha here scales the whole decal's opacity (the texture itself already has a soft radial alpha).
 
 	PREPARING_RAID_ARROW_COLOR = { 0.7, 0.7, 0.7, 1.0 },							    -- Color of the arrow drawn in the raid map mode for raids that are still preparing.
 	READY_RAID_ARROW_COLOR = { 0.7, 0.7, 0, 0.9},							        -- Color of the arrow drawn in the raid map mode for raids that can be launched.
@@ -826,8 +835,8 @@ NGraphics = {
 		0.0, 0.4, 0.8, 1.0,   -- 10: construction: valid secondary build target
 		0.8, 0.3, 0.0, 1.0,   -- 11: construction: invalid secondary build target
 		0.7, 0.7, 0.0, 1.0,   -- 12: construction: foreign secondary build target
-		0.0, 0.61, 0.75, 1.0, -- 13: FACTION_THEATER_COLOR_INDEX
-		0.0, 0.61, 0.75, 1.0, -- 14: FACTION_THEATER_HIGHLIGHT_COLOR_INDEX
+		0.2, 0.61, 0.75, 1.0, -- 13: FACTION_THEATER_COLOR_INDEX
+		0.2, 0.61, 0.75, 1.0, -- 14: FACTION_THEATER_HIGHLIGHT_COLOR_INDEX
 	},
 
 
@@ -1315,14 +1324,16 @@ NGraphics = {
 	RAID_MAP_ICON_MAX_DRAW_DISTANCE_IN_RAID_MAP_MODE = 1600.0,   -- Above this distance, raid map icons are hidden in raid map mode
 
 	RAID_TARGET_ZOOM_HEIGHT = 200.0,				-- The height for the map carmera to zoom in to a raid target
+	RAID_UNIT_ZOOM_HEIGHT = 150.0,					-- The height for the map camera to zoom in to a raid unit
 
 	NAVAL_DOMINANCE_ICON_MAX_DRAW_DISTANCE = 1000.0,-- The camera distance at which naval dominance map icons are hidden
 	
-	FACTION_PING_MAP_NONE_SELECT_COLOR = { 0.1, 0.1, 0.3, 0.3 },				-- Color when you have non selected
-	FACTION_PING_MAP_COLOR = { 0.5, 0.5, 0.9, 0.8 },				-- Selected region color
-	FACTION_PING_MAP_AVAILABLE_COLOR = { 0.15, 0.8, 0.3, 0.45 },		-- Available region color
-	FACTION_PING_MAP_UNAVAILABLE_COLOR = { 0.1, 0.1, 0.1, 0.6 },	-- Unavailable region color
-	FACTION_PING_MAP_ALREADY_ASSIGNED_COLOR = { 0.5, 0.5, 0.9, 0.15 },	-- Unavailable region color
+	FACTION_PING_MAP_NONE_SELECT_COLOR = { 0.1, 0.1, 0.3, 0.98 },				-- Color when you have non selected
+	FACTION_PING_MAP_AVAILABLE_COLOR = {0.3, 0.3, 0.3, 0.5 },		-- Available region color
+	FACTION_PING_MAP_UNAVAILABLE_COLOR = { 0.1, 0.1, 0.3, 1.0 },	-- Unavailable region color
+	FACTION_PING_MAP_COLOR = { 0.99, 0.99, 0.99, 0.05 },				-- Selected region color
+	FACTION_PING_MAP_ALREADY_ASSIGNED_COLOR = { 0.5, 0.5, 0.75, 0.15 },	-- Already assigned to another theater color
+	
 	FACTION_PING_MAP_GRADIENT = 150,								-- Selected region distance gradient
 },
 
@@ -1515,6 +1526,8 @@ NFrontend = {
 
 	SOCIALVIEW_CONTEXT_MENU_BUTTON_OFFSET = 10,
 	SOCIALVIEW_CONTEXT_MENU_MARGIN = 2,
+	TIME_TO_SWAP_BACKGROUNDS = 20, -- Amount of seconds before swapping to another background
+	NEW_BACKGROUND_DURATION = 4 --How often you get to see the new background first before it is inside of the regular rotation, 1 means it will be automatically selcted, 0 means not selected at all, anything higher is the amount of start ups it will be prioritized
 },
 
 NSound = {

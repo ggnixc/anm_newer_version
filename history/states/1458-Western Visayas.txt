@@ -2,26 +2,29 @@ state = {
 	id = 1458
 	name = "STATE_1458"
 	provinces = {
-		1261 1368 7423 10186 10302 14721 14722
+		1261 10186
 	}
-	state_category = rural
+	state_category = small_island
 	history = {
-		owner = PHI
+		owner = VIS
+		add_extra_state_shared_building_slots = 1
 		buildings = {
 			infrastructure = 2
 			radar_station = 1
 			air_base = 3
+			barracks = 1
 			14722 = {
 				naval_base = 5
 			}
 		}
 		victory_points = { 1261 10 }
-		victory_points = { 14722 10 }
-		add_core_of = PHI
-		add_core_of = PHI
-		add_core_of = PHI
+		
+		add_core_of = VIS
+		add_core_of = HUK
+		add_core_of = FPF
+		set_state_flag = GDP_category_town
 		set_state_flag = state_renamings
 	}
-	manpower = 3463680
+	manpower = 1628656
 	buildings_max_level_factor = 1.000
 }

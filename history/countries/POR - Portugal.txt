@@ -1,83 +1,297 @@
-﻿capital = 112
+capital = 1674
+
+# Vacant
+recruit_character = POR_Generic_Vacant
+
+recruit_character = POR_Antonio_Salazar
+
+recruit_character = POR_Pedro_Pereira
+recruit_character = POR_Manuel_Gomes_de_Araujo
+recruit_character = POR_Marcello_Mathias
+recruit_character = POR_Ulisses_Cortes
+
+recruit_character = POR_Francisco_Sousa_Tavares
+recruit_character = POR_Jaime_Melo
+recruit_character = POR_Joao_Costa_Leite
+recruit_character = POR_Jose_Ulrich
+recruit_character = POR_Fernando_Santos_Costa
+
+recruit_character = POR_Avelino_Cardoso
+recruit_character = POR_Fernando_Pais
+recruit_character = POR_Aires_Martins
+recruit_character = POR_Luis_Maria_Pina
+recruit_character = POR_Jose_Vitoriano
+recruit_character = POR_Henrique_Tenreiro
+recruit_character = POR_Kaulza_de_Arriaga
+recruit_character = POR_Decentralized
+recruit_character = POR_Unorganized
+
+POR_Decentralized = {
+	promote_character = liberalism_1_subtype
+	promote_character = conservatism_subtype
+	promote_character = fascism_subtype
+}
+POR_Unorganized = {
+	promote_character = communist_subtype
+	promote_character = communist_1_subtype
+	promote_character = communist_2_subtype
+	promote_character = socialist_subtype
+	promote_character = liberal_conservatism_subtype
+}
+
+add_ideas = {
+	#political#
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
+	tno_trade_unions_nonsocialist_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_work_programs
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	#military#
+	tno_conscription_broadened_conscription
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_generous_exemptions
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	#social#
+	tno_health_care_universal_health_care
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_political_control
+	tno_regulations_moderate_regulations
+	#misc#
+	tno_refugees_skilled
+	tno_women_banned
+	tno_racial_integration_segregated_regiments
+	tno_child_labor_restricted
+	tno_safety_limited_regulations
+	tno_pollution_few_regulations
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_oppression
+	#ministers#
+	POR_Pedro_Pereira_hog
+	POR_Manuel_Gomes_de_Araujo_sec
+	POR_Marcello_Mathias_for
+	POR_Ulisses_Cortes_eco
+	#socdev
+	tno_academic_base_primary_schooling
+	tno_research_facilities_outdated
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_industrial_expertise_nascent
+	tno_army_professionalism_political_interference
+	tno_admin_efficiency_deficient_administrative_systems
+}
 
 set_war_support = 0.8
 set_stability = 0.5
 
-set_oob = "POR_1962"
+###Playable
+set_country_flag = tno_playable_country
 
-set_politics = {	
+oob = "POR_1962"
+
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+add_mastery = {
+	amount = 450
+}
+
+load_focus_tree = POR_default
+
+set_politics = {
 	ruling_party = despotism
 	last_election = "1933.2.16"
 	election_frequency = 36
 	elections_allowed = no
 }
 
+set_popularities = {
+	progressivism = 9
+	liberalism = 7
+	liberal_conservatism = 14
+	conservatism = 11
+	paternalism = 17
+	despotism = 26
+	fascism = 16
+}
+
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_political_parties_effectiveness = 75 }
+set_variable = { tno_religious_rights_effectiveness = 52 }
+set_variable = { tno_trade_unions_effectiveness = 60 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 63 }
+set_variable = { tno_public_meetings_effectiveness = 75 }
+set_variable = { tno_press_rights_effectiveness = 37 }
+set_variable = { tno_vote_franchise_effectiveness = 100 }
+
+set_variable = { tno_conscription_effectiveness = 59 }
+set_variable = { tno_military_supervision_effectiveness = 51 }
+set_variable = { tno_training_effectiveness = 57 }
+set_variable = { tno_draft_exemptions_effectiveness = 43 }
+
+set_variable = { tno_trade_laws_effectiveness = 57 }
+set_variable = { tno_income_taxation_effectiveness = 62 }
+set_variable = { tno_minimum_wage_effectiveness = 46 }
+set_variable = { tno_max_workhours_effectiveness = 61 }
+set_variable = { tno_pensions_effectiveness = 56 }
+set_variable = { tno_unemployment_effectiveness = 46 }
+set_variable = { tno_regulations_effectiveness = 64 }
+
+set_variable = { tno_health_care_effectiveness = 48 }
+set_variable = { tno_education_effectiveness = 53 }
+set_variable = { tno_penal_system_effectiveness = 57 }
+set_variable = { tno_gender_rights_effectiveness = 60 }
+set_variable = { tno_security_effectiveness = 67 }
+
+
+inherit_technology = IBR
+
+create_equipment_variant = {
+	name = "Clase Liniers"
+	type = ship_hull_light_3
+	name_group = IBR_DD_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Audaz"
+	type = ship_hull_light_2
+	name_group = IBR_DD_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Atrevida"
+	type = ship_hull_very_light_3
+	name_group = IBR_CR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Descubierta"
+	type = ship_hull_very_light_2
+	name_group = IBR_CR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Vicente Yáñez Pinzón"
+	type = ship_hull_more_light_3
+	name_group = IBR_FR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Pizarro"
+	type = ship_hull_more_light_2
+	name_group = IBR_FR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase D"
+	type = ship_hull_submarine_2
+	name_group = IBR_SS_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = sub_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		rear_1_custom_slot = ship_torpedo_sub_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase S"
+	type = ship_hull_submarine_1
+	name_group = IBR_SS_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = sub_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		rear_1_custom_slot = ship_torpedo_sub_1
+	}
+}
+
+add_opinion_modifier = { target = RPP modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = PPR modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = GNS modifier = IBR_Iberian_Wars_Contender }
+
 TNO_startup_nation = yes
 
-set_popularities = {
-    communist = 7
-    ultranationalism = 0
-    socialist = 5
-    progressivism = 4
-    liberalism = 3
-    liberal_conservatism = 0
-    conservatism = 8
-    paternalism = 16
-    despotism = 48
-    fascism = 9
-     
-}
-
-add_ideas = {
-	#political#
-	tno_political_parties_one_party_state
-	tno_religious_rights_state_religion
-	tno_trade_unions_state_controlled
-	tno_immigration_quota_immigration
-	tno_slavery_outlawed
-	tno_public_meetings_outlawed
-	tno_press_rights_state_press_only
-	tno_vote_franchise_no_voting
-	tno_refugees_skilled
-	#military#
-	tno_conscription_two_year_draft
-	tno_women_banned
-	tno_military_supervision_military_policing
-	tno_military_spending_medium_spending
-	tno_training_basic_training
-	tno_racial_integration_segregated_regiments
-	tno_draft_exemptions_none
-	#economic#
-	tno_trade_laws_export_focus
-	tno_economic_focus_partial_mobilization
-	tno_tax_rate_low_taxation
-	tno_income_taxation_tax_havens
-	tno_minimum_wage_low_minimum_wage
-	tno_max_workhours_12_hour_work_day
-	tno_child_labor_restricted
-	tno_pensions_trinket_pensions
-	tno_unemployment_low_subsidies
-	#social#
-	tno_safety_limited_regulations
-	tno_health_care_public_health_care
-	tno_pollution_few_regulations
-	tno_education_public_education
-	tno_penal_system_penal_labor
-	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
-	tno_minorities_oppression
-	tno_security_police
-	#ministers#
-
-	#socdev
-	tno_nuclear_stockpile_none
-	tno_poverty_rate_15
-	tno_army_professionalism_political_interference
-	tno_industrial_expertise_experienced
-	tno_industrial_equipment_factory_complexes
-	tno_agriculture_mass_mechanized
-	tno_research_facilities_outdated
-	tno_academic_base_primary_schooling
-}
-   	
-                 

@@ -7938,26 +7938,22 @@ GDP_distribute_regionally = {
 		}
 		set_variable = { koreaGDP = 10.943 }
 		set_variable = { formosaGDP = 3.889 }
-		set_variable = { new_guineaGDP = 0.204 }
 		set_variable = { kantoshuGDP = 3.689 }
 		set_variable = { uraljoGDP = 0.447 }
 		
 		multiply_variable = { korea_totalstateGDP = neededGDP }
 		multiply_variable = { formosa_totalstateGDP = neededGDP }
-		multiply_variable = { new_guinea_totalstateGDP = neededGDP }
 		multiply_variable = { kantoshu_totalstateGDP = neededGDP }
 		multiply_variable = { uraljo_totalstateGDP = neededGDP }
 		divide_variable = { korea_totalstateGDP = 1000 }
 		divide_variable = { formosa_totalstateGDP = 1000 }
 		divide_variable = { hainan_totalstateGDP = 1000 }
-		divide_variable = { new_guinea_totalstateGDP = 1000 }
 		divide_variable = { kantoshu_totalstateGDP = 1000 }
 		divide_variable = { uraljo_totalstateGDP = 1000 }
 		
 		set_temp_variable = { totalgdp_else_temp = GDP }
 		subtract_from_temp_variable = { totalgdp_else_temp = korea_totalstateGDP }
 		subtract_from_temp_variable = { totalgdp_else_temp = formosa_totalstateGDP }
-		subtract_from_temp_variable = { totalgdp_else_temp = new_guinea_totalstateGDP }
 		subtract_from_temp_variable = { totalgdp_else_temp = kantoshu_totalstateGDP }
 		subtract_from_temp_variable = { totalgdp_else_temp = uraljo_totalstateGDP }
 		
@@ -7965,7 +7961,6 @@ GDP_distribute_regionally = {
 		
 		divide_variable = { koreaGDP = korea_totalstateGDP }
 		divide_variable = { formosaGDP = formosa_totalstateGDP }
-		divide_variable = { new_guineaGDP = new_guinea_totalstateGDP }
 		divide_variable = { kantoshuGDP = kantoshu_totalstateGDP }
 		divide_variable = { uraljoGDP = uraljo_totalstateGDP }
 		divide_variable = { home_islands_gdp = totalgdp_else_temp }
@@ -7982,12 +7977,6 @@ GDP_distribute_regionally = {
 					has_state_flag = GDP_regions_formosa
 				}
 				multiply_variable = { state_value = PREV.formosaGDP }
-			}
-			else_if = {
-				limit = {
-					has_state_flag = GDP_regions_new_guinea
-				}
-				multiply_variable = { state_value = PREV.new_guineaGDP }
 			}
 			else_if = {
 				limit = {
@@ -11172,7 +11161,7 @@ GDP_distribute_regionally = {
 		set_variable = { baliGDP = 0.387 }
 		set_variable = { nusa_tenggaraGDP = 0.449 }
 		set_variable = { malukuGDP = 0.180 }
-		set_variable = { west_papuaGDP = 0.101 }
+		set_variable = { west_papuaGDP = 0.031 }
 		
 		multiply_variable = { djakarta_totalstateGDP = neededGDP }
 		multiply_variable = { east_west_java_totalstateGDP = neededGDP }
@@ -13315,7 +13304,7 @@ econ_calculations_ON_MONTHLY_AI = {
 						check_variable = { debt_to_GDP_ratio < 0.8 }
 						OR = {
 							#has_government = conservatism
-							has_country_leader_ideology = liberal_conservatism_market_liberalism_subtype
+							has_country_leader_ideology = liberalism_classical_liberalism_subtype
 							has_country_leader_ideology = paternalism_corporate_paternalism_subtype
 							has_country_leader_ideology = despotism_corporatocracy_subtype
 							has_country_leader_ideology = paternalism_paternalistic_developmentalism_subtype
@@ -13380,7 +13369,7 @@ econ_calculations_ON_MONTHLY_AI = {
 						check_variable = { debt_to_GDP_ratio < 1 }
 						OR = {
 							#has_government = conservatism
-							has_country_leader_ideology = liberal_conservatism_market_liberalism_subtype
+							has_country_leader_ideology = liberalism_classical_liberalism_subtype
 							has_country_leader_ideology = paternalism_corporate_paternalism_subtype
 							has_country_leader_ideology = despotism_corporatocracy_subtype
 							has_country_leader_ideology = paternalism_paternalistic_developmentalism_subtype

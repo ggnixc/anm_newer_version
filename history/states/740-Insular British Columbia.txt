@@ -3,16 +3,19 @@ state = {
 	name = "STATE_740"
 	manpower = 299402
 
-	state_category = town
+	state_category = small_island
 
 	history = {
 		owner = CAN
+		add_extra_state_shared_building_slots = 2
 		buildings = {
 			air_base = 3
-			industrial_complex = 2
+			offices = 2
 			infrastructure = 5
-			radar_station = 3
+			radar_station = 4
 			dockyard = 1
+			barracks = 1
+			thermoelectric_plant = 1
 			1869 = {
 				naval_base = 1
 			}
@@ -33,7 +36,9 @@ state = {
 			1869 1
 		}
 		add_core_of = CAN
- 	}
+		set_state_flag = GDP_regions_british_columbia
+		set_state_flag = GDP_category_large_town
+	}
 
 	provinces = {
 		1869 7259 1214 12259 12272 1420

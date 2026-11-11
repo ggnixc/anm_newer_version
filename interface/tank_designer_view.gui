@@ -26,7 +26,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "experience"
 			position = { x = 460 y = 50 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 70
 			maxHeight = 20
 			format = left
@@ -190,7 +190,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "name"
 					position = { x = 91 y = 2 }
-					font = "aldrich_16_outline"
+					font = "aldrich_18_outline"
 					maxWidth = 90
 					maxHeight = 20
 					format = center
@@ -200,7 +200,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "level"
 					position = { x = 122 y = 18 }
-					font = "aldrich_16_outline"
+					font = "aldrich_18_outline"
 					maxWidth = 28
 					maxHeight = 30
 					format = center
@@ -232,7 +232,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "name"
 					position = { x = 37 y = 2 }
-					font = "aldrich_16_outline"
+					font = "aldrich_18_outline"
 					maxWidth = 90
 					maxHeight = 20
 					format = center
@@ -242,7 +242,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "level"
 					position = { x = 68 y = 18 }
-					font = "aldrich_16_outline"
+					font = "aldrich_18_outline"
 					maxWidth = 29
 					maxHeight = 30
 					format = center
@@ -268,11 +268,43 @@ guiTypes = {
 			pdx_tooltip = "DESIGNER_SELECT_NICHE"
 			pdx_tooltip_delayed = "DESIGNER_SELECT_NICHE_DELAYED"
 		}
+		
+		ButtonType = {
+			name = "save_to_file_button"
+			position = { x=19 y=411 }
+			quadTextureSprite ="GFX_preset_button_save"
+			buttonFont = "hoi_18mbs"
+			clicksound = "ui_ship_designer_save"
+			pdx_tooltip = "SAVE_AS_PRESET_TOOLTIP"
+		}
+
+		ButtonType = {
+			name = "historical_design_button"
+			position = { x=50 y=411 }
+			quadTextureSprite ="GFX_preset_button_open"
+			buttonFont = "hoi_18mbs"
+			#clicksound = "ui_tank_designer_save"
+			pdx_tooltip = "OPEN_PRESETS_TOOLTIP"
+		}
 
 		iconType = {
 			name = "design_company_icon"
 			spriteType = "GFX_idea_porsche"
 			position = { x = 461 y = 382 }
+		}
+
+		buttonType = {
+			name = "upgrade_assigned_industrial_org"
+			position = { x = 425 y = 9397 }
+			scale = 1.4
+			spriteType = "GFX_prod_line_target_strip"
+			frame = 2
+		}
+
+		buttonType = {
+			name = "design_team_button"
+			spriteType = "GFX_idea_slot_tank_manufacturer"
+			position = { x = 461 y = 9382 }
 		}
 
 		# right hand side, stats and terrain adjusters
@@ -284,7 +316,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "base_stats_label"
 				position = { x = 12 y = 28 }
-				font = "aldrich_28_outline"
+				font = "aldrich_30_outline"
 				text = "DESIGNER_BASE_STATS_LABEL"
 				maxWidth = 165
 				maxHeight = 20
@@ -318,7 +350,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "combat_stats_label"
 				position = { x = 183 y = 28 }
-				font = "aldrich_28_outline"
+				font = "aldrich_30_outline"
 				text = "DESIGNER_COMBAT_STATS_LABEL"
 				maxWidth = 200
 				maxHeight = 20
@@ -352,7 +384,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "misc_stats_label"
 				position = { x = 362 y = 28 }
-				font = "aldrich_28_outline"
+				font = "aldrich_30_outline"
 				text = "FE_MISC_STATS"
 				maxWidth = 165
 				maxHeight = 20
@@ -408,8 +440,8 @@ guiTypes = {
 			name = "select3d_button"
 			position = { x = 898 y = 270 }
 			size = { x = 504 y = 22 }
-			font = "aldrich_18_outline"				
-			buttontext = "SELECT_3D_MODEL"
+			font = "aldrich_20_outline"				
+			buttonText = "SELECT_3D_MODEL"
 			quadTextureSprite = "GFX_division_designer_button"
 			clicksound = "ui_tank_designer_select_3d_model"
 		}	
@@ -448,8 +480,8 @@ guiTypes = {
 				name = "back_button"
 				position = { x = 360 y = 410 }
 				size = { x = 504 y = 22 }
-				font = "aldrich_18_outline"				
-				buttontext = "BACK"
+				font = "aldrich_20_outline"				
+				buttonText = "BACK"
 				quadTextureSprite = "GFX_division_designer_button"
 				clicksound = click_close
 			}		
@@ -494,8 +526,8 @@ guiTypes = {
 				name = "back_button"
 				position = { x = 360 y = 400 }
 				size = { x = 504 y = 22 }
-				font = "aldrich_18_outline"				
-				buttontext = "BACK"
+				font = "aldrich_20_outline"				
+				buttonText = "BACK"
 				quadTextureSprite = "GFX_division_designer_button"
 				clicksound = click_close
 			}
@@ -533,6 +565,119 @@ guiTypes = {
 					slotsize = { width = 430 height = 144 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
+				}
+			}
+		}
+		
+		containerWindowType = {
+			name = "historical_select_design"
+			position = { x=539 y=38 }
+			size = { width=568 height=462 }
+			
+			
+			background = {
+				name = "Background"		
+				spriteType ="GFX_tiled_bg"
+				position = { x=-16 y=0 }
+			}
+			
+			ButtonType = {
+				name = "import_preset_button"
+				position = { x=37 y=407 }
+				quadTextureSprite ="GFX_preset_button_import"
+				buttonFont = "hoi_18mbs"
+				clicksound = "ui_ship_designer_save"
+				pdx_tooltip = "IMPORT_PRESET_TOOLTIP"
+			}
+			
+			ButtonType = {
+				name = "export_preset_folder_button"
+				position = { x=5 y=407 }
+				quadTextureSprite ="GFX_preset_button_export"
+				buttonFont = "hoi_18mbs"
+				clicksound = "ui_ship_designer_save"
+				pdx_tooltip = "EXPORT_PRESET_FOLDER_TOOLTIP"
+			}
+
+			buttonType = {
+				name = "back_button"
+				position = { x=372 y=406 }
+				size = { x=504 y=22 }
+				font = "aldrich_20_outline"				
+				buttontext = "BACK"
+				quadTextureSprite = "GFX_division_designer_button"
+				clicksound = click_close
+			}		
+
+			containerWindowType = {
+				name = "border_container"
+				position = { x=145 y=20 }
+				size = { width = 390 height = 380 }
+				
+				background = {
+					name ="bg_tech_button"
+					spriteType = "GFX_division_3d_bg"	
+					position = { x=0 y=0 }
+					size = { x=100%% y=100%%}
+				}
+			}
+			
+			containerWindowType = {
+				name = "grid_container"
+				position = { x=150 y=27}	
+				size = { width=383 height=366 }
+				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 80
+				smooth_scrolling = yes
+				
+				background = {
+					name = "Background"
+					spriteType ="GFX_tiled_window_transparent"
+				}
+				
+				
+				gridBoxType = {
+					name = "buttons_grid"
+					position = { x = 0 y = 0 }
+					size = { width = 390 height = 100%% }
+					slotsize = { width = 360 height = 120 }
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+					
+				}
+			}
+			
+			containerWindowType = {
+				name = "folder_container"
+				position = {x=3 y=20}
+				size = {width=138 height=380}
+				verticalScrollbar = "left_vertical_slider"
+				scroll_wheel_factor = 80
+				smooth_scrolling = yes
+				margin = {top=5 left=0 bottom=5 right=0}
+
+				background = {
+					name = "Background" 
+					spriteType ="GFX_division_3d_bg"
+				}
+				
+				ButtonType = {
+					name = "show_all_button"
+					position = { x=9 y=6 }
+					quadTextureSprite ="GFX_diplo_filter_entry"
+					buttonFont = "aldrich_18_outline"
+					pdx_tooltip = "SHOW_ALL_CUSTOM_DESIGNS_TOOLTIP"
+					text = "BUTTON_SHOW_ALL_DESIGNS"
+					frame = 2
+				}
+				
+				gridBoxType = {
+					name = "list"
+					position = {x=9 y=42}
+					size = {width=40 height=170}
+					slotsize = {width=40 height=36}
+					max_slots_horizontal = 1
+					format = "UPPER_RIGHT"
 				}
 			}
 		}
@@ -611,6 +756,22 @@ guiTypes = {
 			frame = 1
 		}
 
+		# iconType = {
+		# 	name = "nubbin"
+		# 	quadTextureSprite ="GFX_tank_designer_nubbin"
+		# 	position = { x=300 y =74 }
+		# 	scale = 1.0
+		# }
+		
+		buttonType = {
+			name = "dynamic_version_checkbox_button"
+			position = { x=310 y = 103 }
+			quadTextureSprite ="GFX_generic_checkbox3"
+			pdx_tooltip = "EQUIPMENT_DESIGNER_DYNAMIC_VERSION_CHECKBOX_BUTTON_DESC"
+			clicksound = click_checkbox
+			frame = 1
+		}
+
 		ButtonType = {
 			name = "save_button"
 			position = { x = 400 y = 498 }
@@ -641,7 +802,7 @@ guiTypes = {
 			editBoxType = {
 				name = "name"
 				position = { x = 35 y = 5 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				size = { x = 230 y = 20 }
 			}
 
@@ -691,12 +852,24 @@ guiTypes = {
 				}
 			}
 		}
+		
+		instantTextboxType = {
+			name = "position_version"
+			position = { x = 202 y = 65 }
+			font = "aldrich_18_outline"
+			text_color_code = g
+			maxWidth = 71
+			maxHeight = 18
+			alwaystransparent = yes
+			multiline = no
+			format = right
+		}
 
 		# chassi name
 		instantTextboxType = {
 			name = "blueprint_type_name"
 			position = { x = 20 y = 206 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 500
 			maxHeight = 16
 			format = center
@@ -729,7 +902,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "role_text"
 				position = { x = 48 y = 10 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				maxWidth = 210
 				maxHeight = 18
 				alwaystransparent = yes
@@ -777,7 +950,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "toggle_comparison_button"
-			position = {x=-97 y=4}
+			position = {x=-97 y=9004}
 			spriteType = "GFX_equip_overview_button"
 			orientation = "UPPER_RIGHT"
 			clicksound = click_default
@@ -805,7 +978,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "production_resources"
 			position = { x = 548 y = 510 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 90
 			maxHeight = 25
 			pdx_tooltip = "EQUIPMENT_DESIGNER_PRODUCTION_RESOURCE_DESC"
@@ -867,7 +1040,7 @@ guiTypes = {
 				position = { x = 98 y = 24 }
 				maxWidth = 350
 				maxHeight = 22
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = "SHIP_DESIGNER_MODULE_SELECTION"
 			}
 			
@@ -876,7 +1049,7 @@ guiTypes = {
 				position = { x = 355 y = 15 }
 				spriteType = "GFX_division_designer_button"
 				buttonText = "REGIMENTS_SELECTION_CANCEL"
-				buttonFont = "aldrich_18_outline"
+				buttonFont = "aldrich_20_outline"
 				clicksound = click_close
 			}
 
@@ -1045,7 +1218,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "referenced_info"
-			position = { x=535 y=291}
+			position = { x=535 y=291 }
 			size = { width=536 height=202 }
 			
 			clipping = no
@@ -1072,7 +1245,7 @@ guiTypes = {
 				name = "referenced_variant_name"
 				position = { x = 18 y = -34 }
 				textureFile = ""
-				font = "aldrich_30_outline"
+				font = "hoi_30header"
 				borderSize = {x = 0 y = 0}
 				text = "EQUIPMENT_DESIGNER_TITLE"
 				maxWidth = 460
@@ -1218,7 +1391,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 44 y = 6 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 38
 			fixedsize = yes
@@ -1231,6 +1404,108 @@ guiTypes = {
 			spriteType = "GFX_role_forbidden"
 			position = { x = 247 y = 17 }
 			alwaystransparent = yes
+		}
+	}
+
+	# entry for all historical designs
+	containerWindowType = {
+		name = "historical_design_entry"
+		size = { width=360 height=120 }
+		
+		background = {
+			name = "Background"
+			spriteType ="GFX_tiled_paper_bg2"
+		}
+
+		#background_margin = {
+		#	top = 5
+		#	bottom = 5
+		#}
+
+		iconType = {
+			name ="role"
+			spriteType = "GFX_land_equipment_role_icons"
+			position = { x = 320 y = 5 }
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name ="icon"
+			spriteType = "GFX_technology_medium"
+			position = { x=152 y=24 }
+			alwaystransparent = yes
+			scale = 0.8
+		}
+		
+		instantTextboxType = {
+			name = "name"
+			position = { x = 10 y = -4 }
+			font = "aldrich_18_outline"
+			maxWidth = 300
+			maxHeight = 38
+			fixedsize = yes
+			vertical_alignment = center
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="forbidden"
+			spriteType = "GFX_role_forbidden"
+			position = { x = 336 y = 6 }
+			alwaystransparent = yes
+		}
+		
+		ButtonType = {
+			name = "export_to_clipboard_button"
+			position = { x=6 y=84 }
+			quadTextureSprite ="GFX_preset_button_export"
+			buttonFont = "hoi_18mbs"
+			clicksound = "ui_ship_designer_save"
+			pdx_tooltip = "EXPORT_PRESET_TOOLTIP"
+		}
+		
+		ButtonType = {
+			name = "designer_note_button"
+			position = { x=37 y=84 }
+			quadTextureSprite ="GFX_edit_designer_notes_button"
+			buttonFont = "hoi_18mbs"
+			clicksound = "ui_ship_designer_save"
+			pdx_tooltip = "DESIGNER_NOTE_TOOLTIP"
+		}
+		
+		ButtonType = {
+			name = "bin_button"
+			position = { x=323 y=87 }
+			quadTextureSprite ="GFX_NV_btn_delete"
+			buttonFont = "hoi_18mbs"
+			clicksound = "ui_ship_designer_save"
+			pdx_tooltip = "DELETE_PRESET_TOOLTIP"
+		}
+	}
+	
+	# entry for all user design folders
+	containerWindowType = {
+		name = "design_folder"
+		size = { width=123 height=34 }
+		
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_diplo_filter_entry"
+			clicksound = click_scroll
+			frame = 1
+		}
+		
+		instantTextboxType = {
+			name = "name"
+			position = { x = 20 y = -2}
+			font = "aldrich_18_outline"
+			maxWidth = 83
+			maxHeight = 34
+			fixedsize = yes
+			vertical_alignment = center
+			format = centre
+			alwaystransparent = yes
+			multiline = no
 		}
 	}
 }

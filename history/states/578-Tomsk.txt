@@ -4,20 +4,23 @@ state = {
 	resources = {
 		steel = 24.000
 		oil = 20.000
-		 
 	}
 
 	history = {
-		owner = SOV
+		owner = TOM
 		buildings = {
 			air_base = 1
 			infrastructure = 4
-			industrial_complex = 1
- 		}
+			schools = 2
+			hospitals = 1
+			offices = 1
+			thermoelectric_plant = 2
+		}
 		victory_points = {
 			7789 15
 		}
-		add_core_of = SOV
+		set_state_flag = GDP_category_city #Rest is desolate
+		add_core_of = TOM
 	}
 
 	provinces = {
@@ -25,5 +28,5 @@ state = {
 	}
 	manpower = 856000
 	buildings_max_level_factor = 1.000
-	state_category = city
+	state_category = large_town
 }

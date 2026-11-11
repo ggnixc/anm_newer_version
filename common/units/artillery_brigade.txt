@@ -12,7 +12,7 @@ sub_units = {
 			artillery
 		}
 
-		group = infantry
+		group = combat_support
 
 		categories = {
 			category_army
@@ -29,37 +29,47 @@ sub_units = {
 
 		max_strength = 0.6
 		max_organisation = 0
-		default_morale = 0.1
+		default_morale = 0.05
 		training_time = 120
 		weight = 0.5
-		supply_consumption = 0.2
+		entrenchment = 2
+		equipment_capture_factor = -0.04
+		supply_consumption = 0.16
 
 		forest = {
-			attack = -0.2
+			attack = -0.25
+			defence = -0.1
 			movement = -0.2
 		}
 
 		desert_hills = {
-			movement = -0.05
+			movement = -0.1
+			defence = 0.07
 		}
 		hills = {
-			movement = -0.05
+			attack = 0.05
+			defence = 0.1
+			movement = -0.2
 		}
 		valleys = {
-			movement = -0.1
+			attack = 0.05
+			movement = -0.2
 		}
 		mountain = {
-			movement = -0.2
+			attack = -0.05
+			defence = 0.1
+			movement = -0.5
 		}
 
 		jungle = {
 			attack = -0.25
-			movement = -0.2
+			movement = -0.3
 		}
 
 		marsh = {
 			attack = -0.2
-			movement = -0.3
+			defence = -0.1
+			movement = -0.5
 		}
 
 		fort = {
@@ -72,7 +82,8 @@ sub_units = {
 		}
 
 		amphibious = {
-			attack = -0.4
+			attack = -0.5
+			movement = -0.2
 		}
 	}
 
@@ -88,7 +99,7 @@ sub_units = {
 			artillery
 		}
 
-		group = mobile
+		group = mobile_combat_support
 
 		categories = {
 			category_army
@@ -111,7 +122,8 @@ sub_units = {
 		training_time = 120
 		weight = 0.5
 		supply_consumption = 0.3
-
+		entrenchment = 2
+		equipment_capture_factor = -0.05
 		forest = {
 			attack = -0.2
 			movement = -0.5

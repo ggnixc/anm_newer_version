@@ -1,0 +1,123 @@
+capital = 825
+
+ENG = {
+	set_autonomy = {
+		target = NGA
+		autonomy_state = autonomy_colony
+	}
+}
+
+#GDP Regional distribution
+set_country_flag = GDP_regions
+
+set_cosmetic_tag = CNG_ENG
+
+recruit_character = NGA_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+
+recruit_character = NGA_William_John_Peel
+recruit_character = NGA_Festus_Okotie_Eboh
+recruit_character = NGA_Ahmadu_Bello
+recruit_character = NGA_Augustus_Akinloye
+recruit_character = NGA_Abubakar_Tafawa_Balewa
+recruit_character = NGA_Waziri_Ibrahim
+recruit_character = NGA_Ibrahim_Dasuki
+recruit_character = NGA_Benjamin_Adekunle
+recruit_character = NGA_Murtala_Muhammad
+recruit_character = NGA_Muhammadu_Buhari
+recruit_character = NGA_Ibrahim_Babangida
+recruit_character = NGA_Solomon_Akenzua
+recruit_character = NGA_Tunji_Otegbeye
+
+set_major = yes
+
+add_ideas = {
+	Pakt_Europaische_Kolonien
+    CNG_fading_colonialism
+    CNG_cultural_incohesion
+    CNG_pan_european_corporatism
+	### POLITICAL LAWS ###
+	tno_political_parties_nonpartisan_system
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_quota_immigration
+	tno_slavery_corvee
+	tno_public_meetings_outlawed
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+
+	### MILITARY LAWS ###
+	tno_conscription_volunteer_only
+	tno_military_supervision_no_supervision
+	tno_training_combat_schooling
+	tno_draft_exemptions_elite_exemptions
+
+	### SOCIAL LAWS ###
+	tno_trade_laws_free_trade
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+
+	### ECONOMIC LAWS ###
+	tno_health_care_support_for_emergencies
+	tno_education_restricted_education
+	tno_penal_system_harsh_penal_code
+	tno_regulations_token_regulations
+	tno_gender_rights_women_in_the_workplace
+	tno_security_maintenance_of_order
+
+	### MISC LAWS ###
+	tno_pollution_few_regulations
+	tno_safety_minimal_regulations
+	tno_child_labor_illegal
+	tno_refugees_vetted_entry
+	tno_racial_integration_segregated_regiments
+	tno_women_banned
+	tno_minorities_segregation
+	tno_lgbt_rights_lgbt_outlawed
+
+	### SOCIETAL DEVELOPMENT ###
+	tno_army_professionalism_disgruntled_veterans
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_healthcare_rudimentary
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+	tno_admin_efficiency_deficient_administrative_systems
+}
+
+oob = "CNG_1962"
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = no
+}
+
+set_party_name = {
+    ideology = despotism
+    name = CNG_despotism_party
+    long_name = CNG_despotism_party_long
+}
+
+set_popularities = {
+	communist = 0
+	ultranationalism = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+
+	conservatism = 0
+	paternalism = 0
+	despotism = 100
+	fascism = 0
+	
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }

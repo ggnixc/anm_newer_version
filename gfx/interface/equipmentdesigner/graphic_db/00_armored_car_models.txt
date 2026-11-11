@@ -1,0 +1,559 @@
+# Armored car designer 3D models (same graphic_db pattern as APC).
+# Entity names are LaR style: TAG_armored_car_0_entity / TAG_armored_car_1_entity
+# (meshes/entities ship with dlc028_la_resistance; TNO only had icons, no models=).
+#
+# LaR only has two visual tiers (_0 early MG car, _1 later gun car).
+# Chassis 0–2 → _0, chassis 3–5 → _1.
+
+default = {
+	armored_car_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				armored_car_0_entity
+				armored_car_1_entity
+			}
+		}
+	}
+	armored_car_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { armored_car_1_entity }
+		}
+	}
+}
+
+USA = {
+	armored_car_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				USA_armored_car_0_entity
+				USA_armored_car_1_entity
+			}
+		}
+	}
+	armored_car_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { USA_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { USA_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { USA_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { USA_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { USA_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { USA_armored_car_1_entity }
+		}
+	}
+}
+
+GER = {
+	armored_car_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				GER_armored_car_0_entity
+				GER_armored_car_1_entity
+			}
+		}
+	}
+	armored_car_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { GER_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { GER_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { GER_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { GER_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { GER_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { GER_armored_car_1_entity }
+		}
+	}
+}
+
+JAP = {
+	armored_car_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				JAP_armored_car_0_entity
+				JAP_armored_car_1_entity
+			}
+		}
+	}
+	armored_car_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { JAP_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { JAP_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { JAP_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { JAP_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { JAP_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { JAP_armored_car_1_entity }
+		}
+	}
+}
+
+# TNO has no SOV — Russian warlords share vanilla SOV LaR armored car entities
+WRS = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+KOM = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+VYT = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+PRM = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+SAM = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+ONG = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+SVR = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+TYM = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+OMS = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+ZLT = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+TOM = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+NOV = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+KEM = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+SBA = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+PRC = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+IRK = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+BRY = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+CHT = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+AMR = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+MAG = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+OMO = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+GOR = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+MGN = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+KMC = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+ORE = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+URL = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+VOR = {
+	armored_car_chassis = { pool = { weight = 10 models = { SOV_armored_car_0_entity SOV_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { SOV_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { SOV_armored_car_1_entity } } }
+}
+
+ENG = {
+	armored_car_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				ENG_armored_car_0_entity
+				ENG_armored_car_1_entity
+			}
+		}
+	}
+	armored_car_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { ENG_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { ENG_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { ENG_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { ENG_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { ENG_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { ENG_armored_car_1_entity }
+		}
+	}
+}
+
+ITA = {
+	armored_car_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				ITA_armored_car_0_entity
+				ITA_armored_car_1_entity
+			}
+		}
+	}
+	armored_car_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { ITA_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { ITA_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { ITA_armored_car_0_entity }
+		}
+	}
+	armored_car_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { ITA_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { ITA_armored_car_1_entity }
+		}
+	}
+	armored_car_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { ITA_armored_car_1_entity }
+		}
+	}
+}
+
+# TNO has no FRA — French State (FRS) and Free France / De Gaulle (FFR) share FRA LaR cars
+FRS = {
+	armored_car_chassis = { pool = { weight = 10 models = { FRA_armored_car_0_entity FRA_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { FRA_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { FRA_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { FRA_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { FRA_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { FRA_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { FRA_armored_car_1_entity } } }
+}
+FFR = {
+	armored_car_chassis = { pool = { weight = 10 models = { FRA_armored_car_0_entity FRA_armored_car_1_entity } } }
+	armored_car_chassis_0 = { pool = { weight = 10 models = { FRA_armored_car_0_entity } } }
+	armored_car_chassis_1 = { pool = { weight = 10 models = { FRA_armored_car_0_entity } } }
+	armored_car_chassis_2 = { pool = { weight = 10 models = { FRA_armored_car_0_entity } } }
+	armored_car_chassis_3 = { pool = { weight = 10 models = { FRA_armored_car_1_entity } } }
+	armored_car_chassis_4 = { pool = { weight = 10 models = { FRA_armored_car_1_entity } } }
+	armored_car_chassis_5 = { pool = { weight = 10 models = { FRA_armored_car_1_entity } } }
+}

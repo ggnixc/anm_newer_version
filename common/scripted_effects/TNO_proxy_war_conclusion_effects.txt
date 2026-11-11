@@ -1,0 +1,22 @@
+USA_proxy_conclusion_effect = {
+	# Since the election code has changed, this effect has been simplified to simply being a compilation of existing USA election effects.
+	# Set a number of weeks as the temp variable "conclusion_weeks".
+	# To add instant party popularity, set a bonus value for popularity change as the temp variable "conclusion_bonus" (At the most go with 0.05).
+	# The bonuses add to popularity, the weeks are counters on foreign policy opinion
+	# Set flag "conclusion_victory", otherwise it will apply negative effects.
+	# For reference, the highest week duration you should give is around 26 (about 6 months), adjust as you feel necessary depending on the situation.
+	# You should fire this effect within the USA scope.
+	# This can also be used for diplo conflicts, though they should probably get smaller effects than proxies.
+	# Other effects such as vanilla ones (stability, war support, political power), or effects from ingame mechanics (such as Homefront mechanic Optics, Trust in Government, etc) should be given outside this effect.
+
+
+	if = { # Victory
+		limit = { has_country_flag = conclusion_victory }
+		# update w new party effects
+	}
+
+	else = { # Defeat
+		 # update w new party effects
+	}
+	clr_country_flag = conclusion_victory
+}

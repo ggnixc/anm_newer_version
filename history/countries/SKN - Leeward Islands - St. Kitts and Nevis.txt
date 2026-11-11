@@ -1,0 +1,91 @@
+capital = 308
+
+# Vacant
+recruit_character = SKN_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+recruit_character = SKN_William_Herbert
+recruit_character = SKN_Robert_Llewellyn_Bradshaw
+recruit_character = SKN_Frederick_Albert_Phillips
+recruit_character = SKN_Kenneth_Blackburne
+
+promote_character = SKN_Kenneth_Blackburne
+
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1961.5.16"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	progressivism = 15
+	liberal_conservatism = 35
+	despotism = 50
+}
+
+set_cosmetic_tag = SKN_colonial
+set_party_name = {
+	ideology = despotism
+	name = GUY_gov
+	long_name = GUY_gov
+}
+
+set_research_slots = 2
+set_convoys = 50
+inherit_technology = CAN
+set_country_flag = TNO_eliminate_military_spending
+
+add_ideas = {
+	#national#
+	SKN_Patchwork_Colony
+	SKN_Underdevelopment
+	WFI_Political_Purgatory
+	#FACTION STATUS
+	OFN_Security_Council_Member
+	#political#
+	tno_political_parties_nonpartisan_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_crime_prevention
+
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Free_Market }
+
+

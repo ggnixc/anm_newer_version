@@ -83,7 +83,38 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_deploy_upgrades_entry"
-		textureFile = "gfx/interface/deploy_upgrades_entry.dds"
+		textureFile = "gfx/interface/deploy_reinforcements_entry.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	SpriteType = {
+		name = "GFX_deploy_supply_entry"
+		textureFile = "gfx/interface/deploy_reinforcements_entry.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	SpriteType = {
+		name = "GFX_deploy_supply_icon"
+		textureFile = "gfx//interface//supply_deploy_icon.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+
+	SpriteType = {
+		name = "GFX_deploy_operations_entry"
+		textureFile = "gfx/interface/deploy_reinforcements_entry.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	SpriteType = {
+		name = "GFX_operations_deploy_icon"
+		textureFile = "gfx//interface//operations_deploy_icon.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	SpriteType = {
+		name = "GFX_deploy_garrisons_entry"
+		textureFile = "gfx/interface/deploy_reinforcements_entry.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
@@ -92,7 +123,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/template_header_bg.dds"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_small_button_71x26"
 		textureFile = "gfx/interface/small_button_71x26.dds"
 	}
@@ -145,12 +176,11 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_military_deployment_add_line_btn"
 		texturefile = "gfx/interface/military_deployment_add_line_btn.dds"
 		noOfFrames = 2
 		effectFile = "gfx/FX/buttonstate.lua"
-
 	}
 
 	spriteType = {
@@ -200,7 +230,7 @@ spriteTypes = {
 		noOfFrames = 3
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_conveyor_location_btn"
 		texturefile = "gfx/interface/conveyor_location_btn.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -212,15 +242,25 @@ spriteTypes = {
 		textureFile = "gfx/interface/collapse_or_close_buttons.dds"
 		noOfFrames = 3
 	}
+	spriteType = {
+		name = "GFX_collapse_or_close_large"
+		textureFile = "gfx/interface/collapse_or_close_buttons_large.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_collapse_or_close_large_horizontal"
+		textureFile = "gfx/interface/collapse_or_close_buttons_large_horizontal.dds"
+		noOfFrames = 3
+	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_conveyor_collapse_btn"
 		texturefile = "gfx/interface/collapse_conveyor_btn.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		noOfFrames = 2
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_change_conveyor_order_btn"
 		texturefile = "gfx/interface/change_conveyor_order_btn.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -254,8 +294,8 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx/interface/deployment_entry_progressbar.dds"
 		textureFile2 = "gfx/interface/deployment_entry_progressbar_bg.dds"
-		size = { x = 68 y = 12 }
-		effectFile = "gfx/FX/progress_startend.lua"
+		size = { x = 68 y = 13 }
+		effectFile = "gfx/FX/progress.lua"
 	}
 
 	progressbartype = {
@@ -264,8 +304,8 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx/interface/deployment_entry_stalled_progressbar.dds"
 		textureFile2 = "gfx/interface/deployment_entry_progressbar_bg.dds"
-		size = { x = 68 y = 12 }
-		effectFile = "gfx/FX/progress_startend.lua"
+		size = { x = 68 y = 13 }
+		effectFile = "gfx/FX/progress.lua"
 	}
 
 	progressbartype = {
@@ -274,8 +314,8 @@ spriteTypes = {
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx/interface/deployment_progressbar.dds"
 		textureFile2 = "gfx/interface/deployment_progressbar_bg.dds"
-		size = { x = 93 y = 12 }
-		effectFile = "gfx/FX/progress_startend.lua"
+		size = { x = 98 y = 17 }
+		effectFile = "gfx/FX/progress.lua"
 	}
 
 	corneredTileSpriteType = {
@@ -329,10 +369,25 @@ spriteTypes = {
 		name = "GFX_header_crt_bg"
 		textureFile = "gfx/interface/header_crt_bg.dds"
 	}
+
+	spriteType = {
+		name = "GFX_header_crt_bg_market"
+		textureFile = "gfx/interface/header_crt_bg_market.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_obsolete_template_warning"
+		textureFile = "gfx/interface/obsolete_template_warning.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obsolete_template_overlay"
+		textureFile = "gfx/interface/obsolete_template_overlay.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_deployment_named_division_obsolete_bg"
 		textureFile = "gfx/interface/deployment_named_division_obsolete_bg.dds"
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
-
 }

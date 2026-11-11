@@ -43,21 +43,51 @@ guiTypes = {
 			position = { x=-19 y = -17 }
 		}
 	}
+	
+	containerWindowType = {
+		name = "intel_ledger_plane_count_detail"
+		size = { width=60 height=35 }
+		clipping = no
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_overview_filter_entry"
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_air_overview_plane_strip"
+			position = {x=-2 y=16} 
+			Orientation = "Upper_Right"
+			centerposition = yes
+			scale = 0.9
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "count"
+			position = {x=6 y=2}
+			font = "hoi_18mbs"
+			maxWidth = 40
+			maxHeight = 40
+			format = left
+		}
+	}
 
 	containerWindowType = {
 		name = "ledger_resource_entry"
 		position = { x=0 y=0 }
-		size = { width=108 height= 27 }
+		size = { width=85 height= 27 }
 
 		iconType = {
 			name = "resource"
 			position = { x=53 y=0 }
-			spriteType = "GFX_resources_strip_crt"
+			spriteType = "GFX_resources_strip"
 		}
 
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 82 y = 10 }
+			position = { x = 80 y = 15 }
 			font = "aldrich_18_outline"
 			maxWidth = 60
 			maxHeight = 18
@@ -95,7 +125,6 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			spriteType = "GFX_idea_unknown"
 		}
-		
 		iconType = {
 			name = "trait"
 			#position = { x = 34 y = 36 }
@@ -114,7 +143,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "button"
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = -15 }
 			quadTextureSprite = "GFX_industry_folder_tab"
 			frame = 1
 		}
@@ -139,7 +168,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = 67 y = 5 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "123 - 512"
 			format = left
 			maxWidth = 300
@@ -155,7 +184,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "count"
 			position = { x = 370 y = 14 }
-			font = "aldrich_18_outline"
+			font = "aldrich_24_outline"
 			text = "123 - 512"
 			format = center
 			maxWidth = 105
@@ -187,7 +216,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "name"
 			position = { x = -6000 y = 4 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "123 - 512"
 			format = left
 			maxWidth = 200
@@ -203,7 +232,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "count"
 			position = { x = 370 y = 14 }
-			font = "aldrich_18_outline"
+			font = "aldrich_24_outline"
 			text = "123 - 512"
 			format = center
 			maxWidth = 105
@@ -234,7 +263,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_count"
 			position = {x=9 y=3}
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 50
 			maxHeight = 40
 			format = left
@@ -267,7 +296,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_name"
 			position = {x=86 y=8}
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 300
 			maxHeight = 40
 			format = left
@@ -276,7 +305,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_count"
 			position = {x=362 y=8}
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 100
 			maxHeight = 40
 			format = right
@@ -306,7 +335,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_name"
 			position = {x=-6000 y=26}
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 300
 			maxHeight = 40
 			format = left
@@ -315,7 +344,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ship_count"
 			position = {x=362 y=28}
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 100
 			maxHeight = 40
 			format = right
@@ -369,7 +398,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "airwing_name"
 			position = {x=16 y=8}
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 300
 			maxHeight = 40
 			format = left
@@ -378,7 +407,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "airwing_count"
 			position = {x=362 y=8}
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 100
 			maxHeight = 40
 			format = right
@@ -409,7 +438,7 @@ guiTypes = {
 			name = "airwing_name"
 			#position = {x=120 y=17}
 			position = {x=-6000 y=45}
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 300
 			maxHeight = 40
 			format = left
@@ -418,7 +447,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "airwing_count"
 			position = {x=362 y=45}
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 100
 			maxHeight = 40
 			format = right
@@ -456,8 +485,14 @@ guiTypes = {
 				position = { x = 0 y = 70 }
 				size = { width = 100%% height = 100%% }
 				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 40
+				smooth_scrolling = yes
 
-		
+				background = {
+					name = "background"
+					spriteType ="GFX_tiled_window_thin_border2"
+				}
+
 				containerWindowType = {
 					name = "resource_container"
 					position = { x = 20 y = 15 }
@@ -470,17 +505,17 @@ guiTypes = {
 					}
 					gridBoxType = {
 						name = "resource_entries"
-						position = { x = -47 y = 5 }
-						size = { width = 300 height = 60 }
+						position = { x = -63 y = 5 }
+						size = { width = 200 height = 60 }
 						format = "UPPER_LEFT"
-						slotsize = { width = 85 height = 30 }
+						slotsize = { width = 60 height = 30 }
 						max_slots_vertical = 6
 					}
 				}
 
 				containerWindowType = {
 					name = "first_container"
-					position = { x = 20 y = 75 }
+					position = { x = 20 y = 85 }
 					size = { width = 500 height = 75 }
 					clipping = no
 
@@ -510,12 +545,12 @@ guiTypes = {
 
 						instantTextBoxType = {
 							name ="industrial_capacity"
-							position = { x= -9 y = 28 }
-							font = "aldrich_16_outline"
+							position = { x= -12 y = 28 }
+							font = "aldrich_18_outline"
 							text = "999"
 							format = center
 							vertical_alignment = center
-							maxWidth = 60
+							maxWidth = 70
 							maxHeight = 34
 							alwaystransparent = yes
 						}
@@ -523,7 +558,7 @@ guiTypes = {
 
 					containerWindowType = {
 						name = "prod_manpower"
-						position = { x = 60 y = 5 }
+						position = { x = 80 y = 5 }
 						size = { width = 100 height = 60 }
 						clipping = no
 
@@ -543,45 +578,12 @@ guiTypes = {
 
 						instantTextBoxType = {
 							name ="manpower"
-							position = { x= -9 y = 28 }
-							font = "aldrich_16_outline"
+							position = { x= -12 y = 28 }
+							font = "aldrich_18_outline"
 							text = "999"
 							format = center
 							vertical_alignment = center
-							maxWidth = 60
-							maxHeight = 34
-							alwaystransparent = yes
-						}
-					}
-
-					containerWindowType = {
-						name = "prod_convoy"
-						position = { x = 160 y = 5 }
-						size = { width = 100 height = 60 }
-						clipping = no
-
-						iconType = {
-							name ="convoys_bg"
-							spriteType = "GFX_tiled_window_transparent"
-							position = { x= 0 y = 1 }
-						}
-
-						iconType ={
-							name ="convoys_icon"
-							spriteType = "GFX_topbar_convoys"
-							position = { x = 7 y = 12 }
-							Orientation = "UPPER_LEFT"
-							alwaystransparent = yes
-						}
-
-						instantTextBoxType = {
-							name ="convoys_count"
-							position = { x= -24 y = 28 }
-							font = "aldrich_16_outline"
-							text = "999"
-							format = center
-							vertical_alignment = center
-							maxWidth = 90
+							maxWidth = 70
 							maxHeight = 34
 							alwaystransparent = yes
 						}
@@ -589,7 +591,7 @@ guiTypes = {
 
 					containerWindowType = {
 						name = "prod_fuel"
-						position = { x = 110 y = 5 }
+						position = { x = 150 y = 5 }
 						size = { width = 100 height = 60 }
 						clipping = no
 
@@ -609,19 +611,53 @@ guiTypes = {
 
 						instantTextBoxType = {
 							name ="fuel_value"
-							position = { x= -9 y = 28 }
-							font = "aldrich_16_outline"
+							position = { x= -12 y = 28 }
+							font = "aldrich_18_outline"
 							text = "999"
 							format = center
 							vertical_alignment = center
-							maxWidth = 60
+							maxWidth = 70
 							maxHeight = 34
 							alwaystransparent = yes
 						}
 					}
+
+					containerWindowType = {
+						name = "prod_convoy"
+						position = { x = 220 y = 5 }
+						size = { width = 100 height = 60 }
+						clipping = no
+
+						iconType = {
+							name ="convoys_bg"
+							spriteType = "GFX_tiled_window_transparent"
+							position = { x= 0 y = 1 }
+						}
+
+						iconType ={
+							name ="convoys_icon"
+							spriteType = "GFX_topbar_convoys"
+							position = { x = 7 y = 12 }
+							Orientation = "UPPER_LEFT"
+							alwaystransparent = yes
+						}
+
+						instantTextBoxType = {
+							name ="convoys_count"
+							position = { x= -12 y = 28 }
+							font = "aldrich_18_outline"
+							text = "999"
+							format = center
+							vertical_alignment = center
+							maxWidth = 70
+							maxHeight = 34
+							alwaystransparent = yes
+						}
+					}
+					
 					containerWindowType = {
 						name = "prod_trucks"
-						position = { x = -1210 y = 5 }
+						position = { x = 290 y = 5 }
 						size = { width = 100 height = 60 }
 						clipping = no
 						
@@ -641,12 +677,12 @@ guiTypes = {
 						
 						instantTextBoxType = {
 							name ="trucks_count"
-							position = { x= -1 y = 28 }
-							font = "aldrich_16_outline"
+							position = { x= -12 y = 28 }
+							font = "aldrich_18_outline"
 							text = "999"
 							format = center
 							vertical_alignment = center
-							maxWidth = 44
+							maxWidth = 70
 							maxHeight = 34
 							alwaystransparent = yes
 						}
@@ -654,7 +690,7 @@ guiTypes = {
 
 					containerWindowType = {
 						name = "prod_trains"
-						position = { x = -1210 y = 5 }
+						position = { x = 360 y = 5 }
 						size = { width = 100 height = 60 }
 						clipping = no
 						
@@ -674,12 +710,12 @@ guiTypes = {
 						
 						instantTextBoxType = {
 							name ="trains_count"
-							position = { x= -1 y = 28 }
-							font = "aldrich_16_outline"
+							position = { x= -12 y = 28 }
+							font = "aldrich_18_outline"
 							text = "999"
 							format = center
 							vertical_alignment = center
-							maxWidth = 44
+							maxWidth = 70
 							maxHeight = 34
 							alwaystransparent = yes
 						}
@@ -687,7 +723,7 @@ guiTypes = {
 
 					containerWindowType = {
 						name = "prod_supply"
-						position = { x = -1210 y = 5 }
+						position = { x = 430 y = 5 }
 						size = { width = 100 height = 60 }
 						clipping = no
 						
@@ -707,22 +743,21 @@ guiTypes = {
 						
 						instantTextBoxType = {
 							name ="supply_count"
-							position = { x= -1 y = 28 }
-							font = "aldrich_16_outline"
+							position = { x= -12 y = 28 }
+							font = "aldrich_18_outline"
 							text = "999"
 							format = center
 							vertical_alignment = center
-							maxWidth = 44
+							maxWidth = 70
 							maxHeight = 34
 							alwaystransparent = yes
 						}
 					}
-					#end prod_manpower_convoy					#end prod_manpower_convoy
 				}
 
 				containerWindowType = {
 					name = "industry_container"
-					position = { x = 20  y = 150 }
+					position = { x = 20  y = 175 }
 					size = { width = 500 height = 181 }
 
 					background = {
@@ -749,7 +784,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "estimated_civil_industry_size"
 							position = { x = 35 y = 15 }
-							font = "aldrich_22_outline"
+							font = "aldrich_30_outline"
 							text = "45-120"
 							maxWidth = 100
 							maxHeight = 20
@@ -774,7 +809,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "civil_industry_damaged_rate"
 							position = { x = 139 y = 20 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "35%"
 							maxWidth = 50
 							maxHeight = 20
@@ -797,7 +832,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "estimated_military_industry_size"
 							position = { x = 35 y = 75 }
-							font = "aldrich_22_outline"
+							font = "aldrich_30_outline"
 							text = "45-120"
 							maxWidth = 100
 							maxHeight = 20
@@ -822,7 +857,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "mil_industry_damaged_rate"
 							position = { x = 139 y = 80 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "35%"
 							maxWidth = 50
 							maxHeight = 20
@@ -845,7 +880,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "estimated_naval_industry_size"
 							position = { x = 35 y = 135 }
-							font = "aldrich_22_outline"
+							font = "aldrich_30_outline"
 							text = "45-120"
 							maxWidth = 100
 							maxHeight = 20
@@ -870,7 +905,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "naval_industry_damaged_rate"
 							position = { x = 139 y = 140 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "35%"
 							maxWidth = 50
 							maxHeight = 20
@@ -894,7 +929,7 @@ guiTypes = {
 					instantTextboxType = {
 						name = "factory_trade_text"
 						position = { x = 390 y = 19 }
-						font = "aldrich_22_outline"
+						font = "aldrich_30_outline"
 						text = "45-120"
 						maxWidth = 100
 						maxHeight = 20
@@ -920,7 +955,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "eq_text"
 							position = { x = 40 y = 5 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "42-120"
 							maxWidth = 75
 							maxHeight = 20
@@ -943,7 +978,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "armor_text"
 							position = { x = 135 y = 5 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "42-120"
 							maxWidth = 75
 							maxHeight = 20
@@ -966,7 +1001,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "air_text"
 							position = { x = 230 y = 5 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "42-120"
 							maxWidth = 75
 							maxHeight = 20
@@ -989,7 +1024,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "capital_text"
 							position = { x = 40 y = 65 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "42-120"
 							maxWidth = 75
 							maxHeight = 20
@@ -1012,7 +1047,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "screen_text"
 							position = { x = 133 y = 65 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "42-120"
 							maxWidth = 75
 							maxHeight = 20
@@ -1035,7 +1070,7 @@ guiTypes = {
 						instantTextboxType = {
 							name = "other_ship_text"
 							position = { x = 230 y = 65 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "42-120"
 							maxWidth = 75
 							maxHeight = 20
@@ -1047,7 +1082,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "civilian_production_container"
-					position = { x=20 y=323}
+					position = { x=20 y=375}
 					show_position = { x=539 y =78 }
 					size = { width = 500 height = 240 }
 
@@ -1058,7 +1093,7 @@ guiTypes = {
 
 					containerWindowType = {
 						name = "linechart_filter_button_container"
-						position = {x=14 y=38}
+						position = {x=14 y=8}
 						size = { width=120 height=200 }
 
 						buttonType = {
@@ -1068,15 +1103,15 @@ guiTypes = {
 							clicksound = click_default
 							tooltip = "LEDGER_CIV_GRAPH_SHOW_INDUSTRY"
 						}
-
+				
 						iconType = {
-							name = "icon_prod"
-							position = {x=10 y=4}
-							spriteType = "GFX_intel_ledger_civ_graph_types"
+							name = "icon_industry"
+							position = {x=6 y=4}	
+							spriteType = "GFX_industrial_capacity_icon"
 							frame = 1
 							alwaystransparent = yes
 						}
-
+				
 						buttonType = {
 							name = "chart_type_convoy"
 							position = {x=0 y=35}
@@ -1084,15 +1119,15 @@ guiTypes = {
 							clicksound = air_mission_select
 							tooltip = "LEDGER_CIV_GRAPH_SHOW_CONVOYS"
 						}
-
+				
 						iconType = {
-							name = "icon_air"
-							position = {x=10 y=39}
-							spriteType = "GFX_intel_ledger_civ_graph_types"
-							frame = 2
+							name = "icon_convoy"
+							position = {x=10 y=45}	
+							spriteType = "GFX_topbar_convoys"
+							frame = 1
 							alwaystransparent = yes
 						}
-
+				
 						buttonType = {
 							name = "chart_type_bomber"
 							position = {x=0 y=70}
@@ -1100,14 +1135,15 @@ guiTypes = {
 							clicksound = click_default
 							tooltip = "LEDGER_CIV_GRAPH_SHOW_BOMBERS"
 						}
-
+				
 						iconType = {
-							name = "icon_navy"
-							position = {x=10 y=74}
-							spriteType = "GFX_intel_ledger_civ_graph_types"
-							frame = 3
+							name = "icon_bomber"
+							position = {x=7 y=76}	
+							spriteType = "GFX_wing_types_own"
+							frame = 2
 							alwaystransparent = yes
 						}
+
 						buttonType = {
 							name = "chart_type_truck"
 							position = {x=0 y=105}
@@ -1151,7 +1187,7 @@ guiTypes = {
 							quadTextureSprite ="GFX_chart_history_level_button"
 							buttonText = "LEDGER_CIV_LINECHART_DETAILS_3_YEARS"
 							tooltip = "LEDGER_CIV_LINECHART_DETAILS_3_YEARS_TOOLTIP"
-							buttonFont = "aldrich_14_outline"
+							buttonFont = "aldrich_18_outline"
 							clicksound = click_default
 						}
 
@@ -1161,7 +1197,7 @@ guiTypes = {
 							quadTextureSprite ="GFX_chart_history_level_button"
 							buttonText = "LEDGER_CIV_LINECHART_DETAILS_1_YEAR"
 							tooltip = "LEDGER_CIV_LINECHART_DETAILS_1_YEAR_TOOLTIP"
-							buttonFont = "aldrich_14_outline"
+							buttonFont = "aldrich_18_outline"
 							clicksound = click_default
 						}
 
@@ -1171,7 +1207,7 @@ guiTypes = {
 							quadTextureSprite ="GFX_chart_history_level_button"
 							buttonText = "LEDGER_CIV_LINECHART_DETAILS_3_MONTHS"
 							tooltip = "LEDGER_CIV_LINECHART_DETAILS_3_MONTHS_TOOLTIP"
-							buttonFont = "aldrich_14_outline"
+							buttonFont = "aldrich_18_outline"
 							clicksound = click_default
 						}
 					}
@@ -1267,7 +1303,7 @@ guiTypes = {
 							instantTextboxType = {
 								name = "no_info_container_text"
 								position = { x = 0 y = 0 }
-								font = "aldrich_22_outline"
+								font = "aldrich_24_outline"
 								text = "NO_INTEL"
 								maxWidth = 260
 								maxHeight = 20
@@ -1279,17 +1315,17 @@ guiTypes = {
 
 				positionType = {
 					name = "min_footer_pos"
-					position = { x = 0 y = 530 }
+					position = { x = 0 y = 620 }
 				}
 
 				containerWindowType = {
 					name = "footer"
 					position = { x = 0 y = 450 }
-					size = { width = 520 height = 80 }
+					size = { width = 520 height = 100 }
 
 					containerWindowType = {
 						name = "ideas"
-						position = { x = 20 y = -64 }
+						position = { x = 20 y = -44 }
 						size = { width = 500 height = 136 }
 						horizontalScrollbar = "intel_bottom_horizontal_slider"
 						background_margin = { bottom = 15 }
@@ -1314,7 +1350,7 @@ guiTypes = {
 							instantTextboxType = {
 								name = "no_info_container_text"
 								position = { x = 0 y = 0 }
-								font = "aldrich_22_outline"
+								font = "aldrich_24_outline"
 								text = "NO_INTEL"
 								maxWidth = 260
 								maxHeight = 20
@@ -1322,17 +1358,17 @@ guiTypes = {
 							}
 						}
 					}
-
+					
 					iconType = {
 						name = "tech_icon_deco"
-						position = { x = 24 y = 55 }
+						position = { x = 24 y = 80 }
 						spriteType = "GFX_intel_ledger_tech"
 						alwaystransparent = yes
 					}
 
 					gridBoxType = {
 						name = "technology_entries"
-						position = { x = 68 y = 62 }
+						position = { x = 68 y = 102 }
 						size = { width = 300 height = 60 }
 						format = "UPPER_LEFT"
 						slotsize = { width = 82 height = 60 }
@@ -1350,6 +1386,8 @@ guiTypes = {
 				position = { x = 0 y = 70 }
 				size = { width = 100%% height = 100%% }
 				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 40
+				smooth_scrolling = yes
 
 				background = {
 					name = "background"
@@ -1360,43 +1398,44 @@ guiTypes = {
 					name = "army_count_panel"
 					position = { x = 20 y = 25 }
 					size = { width = 500 height = 55 }
-
+					
 					background = {
 						name = "Background"
 						spriteType ="GFX_tiled_header_1"
 					}
-
+					
 					containerWindowType = {
 						name = "army_count_container"
 						position = { x = 10 y = 0 }
-
+						
+						
 						#iconType = {
 						#	name = "bg"
 						#	quadTextureSprite ="GFX_generic_text_bg_108"
 						#	position = { x = 20 y = 12 }
 						#}
-
+						
 						iconType = {
 							name = "army_icon"
 							quadTextureSprite = "GFX_endgame_army_button"
 							position = { x = 0 y = 2 }
 							pdx_tooltip = ESTIMATED_MILITARY_FORCES
 						}
-
+						
 						instantTextboxType = {
 							name = "army_count"
 							position = { x = 50 y = 13 }
-							font = "aldrich_28_outline"
+							font = "aldrich_30_outline"
 							text = "123 - 512"
 							format = center
-							maxWidth = 120
+							maxWidth = 130
 						}
 					}
-
+					
 					containerWindowType = {
 						name = "special_forces_container"
 						position = { x = 180 y = 13 }
-
+						
 						iconType = {
 							name = "bg"
 							quadTextureSprite ="GFX_generic_text_bg_88"
@@ -1408,21 +1447,22 @@ guiTypes = {
 							position = { x = 3 y = 3 }
 							frame = 3
 						}
-
+						
 						instantTextboxType = {
 							name = "special_forces_count"
 							position = { x = 25 y = 5 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "12-32"
 							format = center
 							maxWidth = 60
 						}
 					}
-
+				
+				
 					containerWindowType = {
 						name = "manpower_in_field_container"
 						position = { x = 280 y = 13 }
-
+						
 						iconType = {
 							name = "bg"
 							quadTextureSprite ="GFX_generic_text_bg_108"
@@ -1433,21 +1473,21 @@ guiTypes = {
 							spriteType = "GFX_manpower_icon"
 							position = { x = 3 y = 0 }
 						}
-
+						
 						instantTextboxType = {
 							name = "manpower_in_field"
-							position = { x = 25 y = 5 }
-							font = "aldrich_16_outline"
+							position = { x = 20 y = 5 }
+							font = "aldrich_18_outline"
 							text = "123K"
 							format = center
-							maxWidth = 80
+							maxWidth = 90
 						}
 					}
-
+				
 					containerWindowType = {
 						name = "equipment_fulfilled_container"
 						position = { x = 400 y = 13 }
-
+						
 						iconType = {
 							name = "bg"
 							quadTextureSprite ="GFX_generic_text_bg_88"
@@ -1458,23 +1498,25 @@ guiTypes = {
 							spriteType = "GFX_equipment_icon"
 							position = { x = 3 y = 4 }
 						}
-
+						
 						instantTextboxType = {
 							name = "equipment_fulfilled"
-							position = { x = 25 y = 5 }
-							font = "aldrich_16_outline"
+							position = { x = 25 y = 4 }
+							font = "aldrich_18_outline"
 							text = "123K"
 							format = center
 							maxWidth = 60
 						}
 					}
 				}
-
+			
 				containerWindowType = {
 					name = "templates"
 					position = { x = 20 y = 130 }
 					size = { width = 528 height = 232 }
 					verticalScrollbar = "right_vertical_slider"
+					scroll_wheel_factor = 50
+					smooth_scrolling = yes
 					background_margin = { right = 28 top = -5 bottom = -5 }
 
 					background = {
@@ -1486,12 +1528,12 @@ guiTypes = {
 						name = "no_info_container"
 						position = { x = 5 y = 0 }
 						size = { width=482 height=94}
-
+						
 						#background = {
 						#	name = "Background"
 						#	spriteType ="GFX_mini_bg"
 						#}
-
+						
 						iconType = {
 							name = "no_intel_bg"
 							position = { x = 0 y = 0 }
@@ -1501,14 +1543,14 @@ guiTypes = {
 						instantTextboxType = {
 							name = "no_info_container_text"
 							position = { x = 114 y = 40 }
-							font = "aldrich_22_outline"
+							font = "aldrich_24_outline"
 							text = "NO_INTEL"
 							maxWidth = 260
 							maxHeight = 20
 							format = center
 						}
 					}
-
+					
 					gridBoxType = {
 						name = "templates_grid"
 						position = { x = 0 y = 5 }
@@ -1518,24 +1560,26 @@ guiTypes = {
 						max_slots_horizontal = 1
 					}
 				}
-
+				
 				containerWindowType = {
 					name = "stockpiles"
 					position = { x = 20 y = 130 }
 					size = { width = 528 height = 232 }
 					verticalScrollbar = "right_vertical_slider"
 					background_margin = { right = 28 top = -5 bottom = -5 }
+					scroll_wheel_factor = 50
+					smooth_scrolling = yes
 
 					background = {
 						name = "Background"
 						spriteType ="GFX_tiled_header_1"
 					}
-
+					
 					containerWindowType = {
 						name = "no_info_container"
 						position = { x = 5 y = 0 }
 						size = { width=482 height=94}
-
+						
 						iconType = {
 							name = "no_intel_bg"
 							position = { x = 0 y = 0 }
@@ -1545,14 +1589,14 @@ guiTypes = {
 						instantTextboxType = {
 							name = "no_info_container_text"
 							position = { x = 114 y = 40 }
-							font = "aldrich_22_outline"
+							font = "aldrich_24_outline"
 							text = "NO_INTEL"
 							maxWidth = 260
 							maxHeight = 20
 							format = center
 						}
 					}
-
+					
 					gridBoxType = {
 						name = "stockpiles_grid"
 						position = { x = 0 y = 5 }
@@ -1562,13 +1606,13 @@ guiTypes = {
 						max_slots_horizontal = 1
 					}
 				}
-
+	
 				buttonType = {
 					name = "armies_tab_button"
 					quadTextureSprite = "GFX_tab_intel_ledger_2"
 					position = { x = 15 y = 81 }
 					buttonText = "ARMY_LEDGER_ARMIES"
-					font = "aldrich_22_outline"
+					font = "aldrich_24_outline"
 				}
 
 				buttonType = {
@@ -1576,26 +1620,44 @@ guiTypes = {
 					quadTextureSprite = "GFX_tab_intel_ledger_2"
 					position = { x = 265 y = 81 }
 					buttonText = "ARMY_LEDGER_EQUIPMENT"
-					font = "aldrich_22_outline"
+					font = "aldrich_24_outline"
 				}
-
+				
 				positionType = {
 					name = "min_footer_pos"
 					position = { x = 0 y = 450 }
 				}
-
+				
 				containerWindowType = {
 					name = "footer"
 					position = { x = 0 y = 440 }
-					size = { width = 520 height = 85 }
+					size = { width = 520 height = 155 }
+
+					iconType = {
+						name = "military_research_header"
+						position = { x = 12 y = 5 }
+						quadTextureSprite = "GFX_trade_header"
+					}
+
+					instantTextboxType = {
+						name = "military_research_title"
+						position = { x = 0 y = 13 }
+						textureFile = ""
+						font = "aldrich_24_outline"
+						borderSize = {x = 0 y = 0}
+						text = "ARMY_LEDGER_THRESHOLD_STAFF_AND_RESEARCH"
+						maxWidth = 500
+						maxHeight = 20
+						format = center
+					}
 
 					containerWindowType = {
 						name = "ideas"
-						position = { x = 20 y = 5 }
-						size = { width = 500 height = 74 }
+						position = { x = 20 y = 45 }
+						size = { width = 380 height = 88 }
 						horizontalScrollbar = "bottom_horizontal_slider"
 						background_margin = { bottom = 15 }
-
+						
 						background = {
 							name = "Background"
 							spriteType ="GFX_tiled_header_1"
@@ -1607,15 +1669,16 @@ guiTypes = {
 							size = { width = 255 height = 106 }
 							slotsize = { width = 60 height = 50 }
 							format = "UPPER_LEFT"
+							max_slots_horizontal = 6
 						}
-
+						
 						containerWindowType = {
 							name = "no_info_container"
 							position = { x = 20 y = 25 }
 							instantTextboxType = {
 								name = "no_info_container_text"
 								position = { x = 0 y = 0 }
-								font = "aldrich_22_outline"
+								font = "aldrich_24_outline"
 								text = "NO_INTEL"
 								maxWidth = 260
 								maxHeight = 20
@@ -1623,18 +1686,36 @@ guiTypes = {
 							}
 						}
 					}
+
+					containerWindowType = {
+						name = "doctrine"
+						position = { x = 400 y = 45 }
+						size = { width = 120 height = 73 }
+						
+						background = {
+							name = "Background"
+							spriteType ="GFX_tiled_header_1"
+						}
+						
+						gridBoxType = {
+							name = "doctrine_tech"
+							position = { x = 15 y = 25 }
+							format = "UPPER_LEFT"
+						}
+					}
+
 					iconType = {
 						name = "tech_icon_deco"
-						position = { x = 24 y = 60 }
+						position = { x = 24 y = 130 }
 						spriteType = "GFX_intel_ledger_tech"
 					}
 
 					gridBoxType = {
 						name = "technology_entries"
-						position = { x = 68 y = 67 }
+						position = { x = 70 y = 152 }
 						size = { width = 300 height = 60 }
 						format = "UPPER_LEFT"
-						slotsize = { width = 82 height = 60 }
+						slotsize = { width = 80 height = 60 }
 						max_slots_horizontal = 6
 					}
 				}
@@ -1649,6 +1730,8 @@ guiTypes = {
 				position = { x = 0 y = 70 }
 				size = { width = 100%% height = 100%% }
 				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 40
+				smooth_scrolling = yes
 
 				background = {
 					name = "background"
@@ -1659,41 +1742,43 @@ guiTypes = {
 					name = "navy_count_panel"
 					position = { x = 20 y = 25 }
 					size = { width = 500 height = 65 }
-
+					
 					background = {
 						name = "Background"
 						spriteType ="GFX_tiled_header_1"
 					}
-
+					
 					iconType = {
 						name = "navy_icon"
 						quadTextureSprite = "GFX_endgame_navy_button"
-						position = { x = 10 y = 7 }
+						position = { x = 10 y = 8 }
 						pdx_tooltip = ESTIMATED_MILITARY_FORCES
 					}
-
+					
+				
 					instantTextboxType = {
 						name = "fleet_count"
-						position = { x = 65 y = 12 }
-						font = "aldrich_22_outline"
+						position = { x = 70 y = 12 }
+						font = "aldrich_24_outline"
 						text = "Fleet Count: 42-64"
 						format = left
 						maxWidth = 200
 					}
-
+					
 					instantTextboxType = {
 						name = "task_force_count"
-						position = { x = 65 y = 30 }
-						font = "aldrich_20_outline"
+						position = { x = 70 y = 32 }
+						font = "aldrich_22_outline"
 						text = "Taskforce Count: 42-64"
 						format = left
 						maxWidth = 210
 					}
-
+					
+				
 					containerWindowType = {
 						name = "manpower_in_field_container"
-						position = { x = 260 y = 18 }
-
+						position = { x = 275 y = 18 }
+						
 						iconType = {
 							name = "bg"
 							quadTextureSprite ="GFX_generic_text_bg_108"
@@ -1704,21 +1789,21 @@ guiTypes = {
 							spriteType = "GFX_manpower_icon"
 							position = { x = 3 y = 0 }
 						}
-
+						
 						instantTextboxType = {
 							name = "manpower_in_field"
 							position = { x = 25 y = 5 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "123K"
 							format = center
 							maxWidth = 80
 						}
 					}
-
+				
 					containerWindowType = {
 						name = "ship_count_container"
-						position = { x = 380 y = 18 }
-
+						position = { x = 395 y = 18 }
+						
 						iconType = {
 							name = "bg"
 							quadTextureSprite ="GFX_generic_text_bg_88"
@@ -1729,23 +1814,23 @@ guiTypes = {
 							spriteType = "GFX_repair_ships_icon"
 							position = { x = 2 y = 5 }
 						}
-
+						
 						instantTextboxType = {
 							name = "ship_count"
 							position = { x = 25 y = 5 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "123K"
 							format = center
 							maxWidth = 60
 						}
 					}
 				}
-
+			
 				containerWindowType = {
 					name = "ship_type_container"
 					position = { x = 20 y = 94 }
 					size = { width = 500 height = 70 }
-
+					
 					background = {
 						name = "Background"
 						spriteType ="GFX_tiled_header_1"
@@ -1760,21 +1845,22 @@ guiTypes = {
 						max_slots_horizontal = 5
 						max_slots_vertical = 2
 					}
-
+					
 					containerWindowType = {
 						name = "ship_type_no_info"
 						position = { x = 0 y = 0 }
-
+						
 						iconType = {
 							name = "no_intel_bg"
 							position = { x = 0 y = 0 }
 							spriteType = "GFX_no_intel"
 						}
 
+						
 						instantTextboxType = {
 							name = "no_info_container_text"
 							position = { x = 116 y = 20 }
-							font = "aldrich_22_outline"
+							font = "aldrich_24_outline"
 							text = "NO_INTEL"
 							maxWidth = 260
 							maxHeight = 20
@@ -1782,29 +1868,31 @@ guiTypes = {
 						}
 					}
 				}
-
+				
 				containerWindowType = {
 					name = "ships_container"
 					position = { x = 20 y = 172 }
 					size = { width = 528 height = 270 }
 					verticalScrollbar = "right_vertical_slider"
+					scroll_wheel_factor = 40
+					smooth_scrolling = yes
 					background_margin = { right = 28 top = -4 bottom = -6 }
-
+					
 					background = {
 						name = "Background"
 						spriteType ="GFX_tiled_header_1"
 					}
-
+					
 					containerWindowType = {
 						name = "no_info_container"
 						position = { x = 5 y = 0 }
 						size = { width=482 height=94}
-
+						
 						#background = {
 						#	name = "Background"
 						#	spriteType ="GFX_mini_bg"
 						#}
-
+						
 						iconType = {
 							name = "no_intel_bg"
 							position = { x = 0 y = 0 }
@@ -1814,14 +1902,14 @@ guiTypes = {
 						instantTextboxType = {
 							name = "no_info_container_text"
 							position = { x = 114 y = 40 }
-							font = "aldrich_22_outline"
+							font = "aldrich_24_outline"
 							text = "NO_INTEL"
 							maxWidth = 260
 							maxHeight = 20
 							format = center
 						}
 					}
-
+					
 					gridBoxType = {
 						name = "ships"
 						position = { x = 5 y = 5 }
@@ -1831,24 +1919,42 @@ guiTypes = {
 						format = "UPPER_LEFT"
 					}
 				}
-
+				
 				positionType = {
 					name = "min_footer_pos"
 					position = { x = 0 y = 450 }
 				}
-
+				
 				containerWindowType = {
 					name = "footer"
 					position = { x = 0 y = 440 }
-					size = { width = 520 height = 85 }
+					size = { width = 520 height = 155 }
+
+					iconType = {
+						name = "military_research_header"
+						position = { x = 12 y = 5 }
+						quadTextureSprite = "GFX_trade_header"
+					}
+
+					instantTextboxType = {
+						name = "military_research_title"
+						position = { x = 0 y = 13 }
+						textureFile = ""
+						font = "aldrich_24_outline"
+						borderSize = {x = 0 y = 0}
+						text = "ARMY_LEDGER_THRESHOLD_STAFF_AND_RESEARCH"
+						maxWidth = 500
+						maxHeight = 20
+						format = center
+					}
 
 					containerWindowType = {
 						name = "ideas"
-						position = { x = 20 y = 5 }
-						size = { width = 500 height = 74 }
+						position = { x = 20 y = 45 }
+						size = { width = 380 height = 88 }
 						horizontalScrollbar = "bottom_horizontal_slider"
 						background_margin = { bottom = 15 }
-
+						
 						background = {
 							name = "Background"
 							spriteType ="GFX_tiled_header_1"
@@ -1858,17 +1964,18 @@ guiTypes = {
 							name = "ideas_grid"
 							position = { x = 5 y = 5 }
 							size = { width = 255 height = 106 }
-							slotsize = { width = 60 height = 60 }
+							slotsize = { width = 60 height = 50 }
 							format = "UPPER_LEFT"
+							max_slots_horizontal = 6
 						}
-
+						
 						containerWindowType = {
 							name = "no_info_container"
 							position = { x = 20 y = 25 }
 							instantTextboxType = {
 								name = "no_info_container_text"
 								position = { x = 0 y = 0 }
-								font = "aldrich_22_outline"
+								font = "aldrich_24_outline"
 								text = "NO_INTEL"
 								maxWidth = 260
 								maxHeight = 20
@@ -1876,18 +1983,36 @@ guiTypes = {
 							}
 						}
 					}
+
+					containerWindowType = {
+						name = "doctrine"
+						position = { x = 400 y = 45 }
+						size = { width = 120 height = 73 }
+						
+						background = {
+							name = "Background"
+							spriteType ="GFX_tiled_header_1"
+						}
+						
+						gridBoxType = {
+							name = "doctrine_tech"
+							position = { x = 15 y = 25 }
+							format = "UPPER_LEFT"
+						}
+					}
+
 					iconType = {
 						name = "tech_icon_deco"
-						position = { x = 24 y = 60 }
+						position = { x = 24 y = 130 }
 						spriteType = "GFX_intel_ledger_tech"
 					}
 
 					gridBoxType = {
 						name = "technology_entries"
-						position = { x = 68 y = 67 }
+						position = { x = 70 y = 152 }
 						size = { width = 300 height = 60 }
 						format = "UPPER_LEFT"
-						slotsize = { width = 82 height = 60 }
+						slotsize = { width = 80 height = 60 }
 						max_slots_horizontal = 6
 					}
 				}
@@ -1902,6 +2027,8 @@ guiTypes = {
 				position = { x = 0 y = 70 }
 				size = { width = 100%% height = 100%% }
 				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 40
+				smooth_scrolling = yes
 
 				background = {
 					name = "background"
@@ -1912,32 +2039,34 @@ guiTypes = {
 					name = "air_count_panel"
 					position = { x = 20 y = 25 }
 					size = { width = 500 height = 65 }
-
+					
 					background = {
 						name = "Background"
 						spriteType ="GFX_tiled_header_1"
 					}
-
+					
 					iconType = {
 						name = "airwing_icon"
 						quadTextureSprite = "GFX_endgame_air_button"
-						position = { x = 10 y = 7 }
+						position = { x = 10 y = 8 }
 						pdx_tooltip = ESTIMATED_MILITARY_FORCES
 					}
-
+					
+				
 					instantTextboxType = {
 						name = "airwing_count"
-						position = { x = 65 y = 10 }
-						font = "aldrich_22_outline"
+						position = { x = 70 y = 22 }
+						font = "aldrich_24_outline"
 						text = "Fleet Count: 42-64"
 						format = left
 						maxWidth = 290
 					}
-
+					
+				
 					containerWindowType = {
 						name = "manpower_in_field_container"
 						position = { x = 360 y = 18 }
-
+						
 						iconType = {
 							name = "bg"
 							quadTextureSprite ="GFX_generic_text_bg_108"
@@ -1948,166 +2077,65 @@ guiTypes = {
 							spriteType = "GFX_manpower_icon"
 							position = { x = 3 y = 0 }
 						}
-
+						
 						instantTextboxType = {
 							name = "manpower_in_field"
 							position = { x = 25 y = 5 }
-							font = "aldrich_16_outline"
+							font = "aldrich_18_outline"
 							text = "123K"
 							format = center
 							maxWidth = 80
 						}
 					}
 				}
-
+			
 				containerWindowType = {
 					name = "airwing_type_container"
 					position = { x = 7 y = 94 }
 					size = { width = 490 height = 70 }
-
-					iconType = {
-						name = "wing_type_bg"
-						spriteType = "GFX_wing_type_bg"
-						position = { x=5 y=0 }
-						orientation = "UPPER_LEFT"
+					
+					background = {
+							name = "Background"
+							quadTextureSprite ="GFX_mini_bg"
 					}
 
-					iconType = {
-						name = "wing_type_left_0"
-						spriteType = "GFX_air_overview_plane_strip"
-						position = { x=22 y=35 }
-						orientation = "UPPER_LEFT"
-						frame = 1
-					}
-					instantTextboxType = {
-						name = "wing_type_left_text_0"
-						position = { x=21 y=15 }
-						font = "aldrich_16_outline"
-						maxWidth = 60
-						maxHeight = 23
-						format = center
-					}
-
-					iconType = {
-						name = "wing_type_left_1"
-						spriteType = "GFX_air_overview_plane_strip"
-						position = { x=94 y=35 }
-						orientation = "UPPER_LEFT"
-						frame = 2
-					}
-					instantTextboxType = {
-						name = "wing_type_left_text_1"
-						position = { x=93 y=15 }
-						font = "aldrich_16_outline"
-						maxWidth = 60
-						maxHeight = 23
-						format = center
-					}
-
-					iconType = {
-						name = "wing_type_left_2"
-						spriteType = "GFX_air_overview_plane_strip"
-						position = { x=164 y=35 }
-						orientation = "UPPER_LEFT"
-						frame = 3
-					}
-					instantTextboxType = {
-						name = "wing_type_left_text_2"
-						position = { x=163 y=15 }
-						font = "aldrich_16_outline"
-						maxWidth = 60
-						maxHeight = 23
-						format = center
-					}
-
-					iconType = {
-						name = "wing_type_left_3"
-						spriteType = "GFX_air_overview_plane_strip"
-						position = { x=234 y=35 }
-						orientation = "UPPER_LEFT"
-						frame = 4
-					}
-					instantTextboxType = {
-						name = "wing_type_left_text_3"
-						position = { x=233 y=15 }
-						font = "aldrich_16_outline"
-						maxWidth = 60
-						maxHeight = 23
-						format = center
-					}
-
-					iconType = {
-						name = "wing_type_left_4"
-						spriteType = "GFX_air_overview_plane_strip"
-						position = { x=304 y=35 }
-						orientation = "UPPER_LEFT"
-						frame = 5
-					}
-					instantTextboxType = {
-						name = "wing_type_left_text_4"
-						position = { x=303 y=15 }
-						font = "aldrich_16_outline"
-						text = "123"
-						maxWidth = 60
-						maxHeight = 23
-						format = center
-					}
-
-					iconType = {
-						name = "wing_type_left_5"
-						spriteType = "GFX_air_overview_plane_strip"
-						position = { x=374 y=35 }
-						orientation = "UPPER_LEFT"
-						frame = 6
-					}
-					instantTextboxType = {
-						name = "wing_type_left_text_5"
-						position = { x=373 y=15 }
-						font = "aldrich_16_outline"
-						maxWidth = 60
-						maxHeight = 23
-						format = center
-					}
-
-					iconType = {
-						name = "wing_type_left_6"
-						spriteType = "GFX_air_overview_plane_strip"
-						position = { x=444 y=35 }
-						orientation = "UPPER_LEFT"
-						frame = 7
-					}
-					instantTextboxType = {
-						name = "wing_type_left_text_6"
-						position = { x=443 y=15 }
-						font = "aldrich_16_outline"
-						maxWidth = 60
-						maxHeight = 23
-						format = center
+					gridBoxType = {
+						name = "planes_counts_container"
+						position = { x = 10 y = 8 }
+						size = { width = 155 height = 206 }
+						slotsize = { width = 95 height = 28 }
+						
+						Orientation = upper_left
+						format = "UPPER_LEFT"
+						max_slots_horizontal = 5
+						max_slots_vertical = 2
 					}
 				}
-
+				
 				containerWindowType = {
 					name = "airwings_container"
 					position = { x = 20 y = 172 }
 					size = { width = 528 height = 270 }
 					verticalScrollbar = "right_vertical_slider"
+					scroll_wheel_factor = 40
+					smooth_scrolling = yes
 					background_margin = { right = 28 top = -4 bottom = -6 }
-
+					
 					background = {
 						name = "Background"
 						spriteType ="GFX_tiled_header_1"
 					}
-
+					
 					containerWindowType = {
 						name = "no_info_container"
 						position = { x = 5 y = 0 }
 						size = { width=482 height=94}
-
+						
 						#background = {
 						#	name = "Background"
 						#	spriteType ="GFX_mini_bg"
 						#}
-
+						
 						iconType = {
 							name = "no_intel_bg"
 							position = { x = 0 y = 0 }
@@ -2117,14 +2145,14 @@ guiTypes = {
 						instantTextboxType = {
 							name = "no_info_container_text"
 							position = { x = 114 y = 40 }
-							font = "aldrich_22_outline"
+							font = "aldrich_24_outline"
 							text = "NO_INTEL"
 							maxWidth = 260
 							maxHeight = 20
 							format = center
 						}
 					}
-
+					
 					gridBoxType = {
 						name = "airwings"
 						position = { x = 5 y = 5 }
@@ -2134,24 +2162,42 @@ guiTypes = {
 						format = "UPPER_LEFT"
 					}
 				}
-
+				
 				positionType = {
 					name = "min_footer_pos"
 					position = { x = 0 y = 450 }
 				}
-
+				
 				containerWindowType = {
 					name = "footer"
-					position = { x = 0 y = 460 }
-					size = { width = 520 height = 85 }
+					position = { x = 0 y = 440 }
+					size = { width = 520 height = 155 }
+
+					iconType = {
+						name = "military_research_header"
+						position = { x = 12 y = 5 }
+						quadTextureSprite = "GFX_trade_header"
+					}
+
+					instantTextboxType = {
+						name = "military_research_title"
+						position = { x = 0 y = 13 }
+						textureFile = ""
+						font = "aldrich_24_outline"
+						borderSize = {x = 0 y = 0}
+						text = "ARMY_LEDGER_THRESHOLD_STAFF_AND_RESEARCH"
+						maxWidth = 500
+						maxHeight = 20
+						format = center
+					}
 
 					containerWindowType = {
 						name = "ideas"
-						position = { x = 20 y = 5 }
-						size = { width = 500 height = 74 }
+						position = { x = 20 y = 45 }
+						size = { width = 380 height = 88 }
 						horizontalScrollbar = "bottom_horizontal_slider"
 						background_margin = { bottom = 15 }
-
+						
 						background = {
 							name = "Background"
 							spriteType ="GFX_tiled_header_1"
@@ -2161,17 +2207,18 @@ guiTypes = {
 							name = "ideas_grid"
 							position = { x = 5 y = 5 }
 							size = { width = 255 height = 106 }
-							slotsize = { width = 60 height = 60 }
+							slotsize = { width = 60 height = 50 }
 							format = "UPPER_LEFT"
+							max_slots_horizontal = 6
 						}
-
+						
 						containerWindowType = {
 							name = "no_info_container"
 							position = { x = 20 y = 25 }
 							instantTextboxType = {
 								name = "no_info_container_text"
 								position = { x = 0 y = 0 }
-								font = "aldrich_22_outline"
+								font = "aldrich_24_outline"
 								text = "NO_INTEL"
 								maxWidth = 260
 								maxHeight = 20
@@ -2179,18 +2226,36 @@ guiTypes = {
 							}
 						}
 					}
+
+					containerWindowType = {
+						name = "doctrine"
+						position = { x = 400 y = 45 }
+						size = { width = 120 height = 73 }
+						
+						background = {
+							name = "Background"
+							spriteType ="GFX_tiled_header_1"
+						}
+						
+						gridBoxType = {
+							name = "doctrine_tech"
+							position = { x = 15 y = 25 }
+							format = "UPPER_LEFT"
+						}
+					}
+
 					iconType = {
 						name = "tech_icon_deco"
-						position = { x = 24 y = 60 }
+						position = { x = 24 y = 130 }
 						spriteType = "GFX_intel_ledger_tech"
 					}
 
 					gridBoxType = {
 						name = "technology_entries"
-						position = { x = 68 y = 67 }
+						position = { x = 70 y = 152 }
 						size = { width = 300 height = 60 }
 						format = "UPPER_LEFT"
-						slotsize = { width = 82 height = 60 }
+						slotsize = { width = 80 height = 60 }
 						max_slots_horizontal = 6
 					}
 				}
@@ -2223,7 +2288,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "intel"
 					position = { x = 20 y = 35 }
-					font = "aldrich_white_20_outline"
+					font = "Bomb_16"
 					text = "Germanian"
 					maxWidth = 88
 					fixedsize = yes
@@ -2254,7 +2319,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "intel"
 					position = { x = 20 y = 35 }
-					font = "aldrich_white_20_outline"
+					font = "Bomb_16"
 					text = "Germanian"
 					maxWidth = 88
 					fixedsize = yes
@@ -2285,7 +2350,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "intel"
 					position = { x = 20 y = 35 }
-					font = "aldrich_white_20_outline"
+					font = "Bomb_16"
 					text = "Germanian"
 					maxWidth = 88
 					fixedsize = yes
@@ -2316,7 +2381,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "intel"
 					position = { x = 20 y = 35 }
-					font = "aldrich_white_20_outline"
+					font = "Bomb_16"
 					text = "Germanian"
 					maxWidth = 88
 					fixedsize = yes

@@ -2,7 +2,6 @@ state = {
 	id = 1348
 	name = "STATE_1348"
 	resources = {
-		
 		oil = 6.000
 		rubber = 18.000
 		steel = 13.000
@@ -28,9 +27,19 @@ state = {
 		owner = AZH
 		buildings = {
 			infrastructure = 4
+			hydroelectric_plant = 1
+			thermoelectric_plant = 2
+			offices = 2
+			schools = 1
+			hospitals = 1
+			barracks = 2
+			prisons = 1
 		}
 		add_core_of = AZH
-  	}
+		add_claim_by = IND
+		set_state_flag = GDP_regions_bengal
+		set_state_flag = state_renamings
+	}
 
 	provinces = {
 		9993 10416 11929 12423 16142 18846

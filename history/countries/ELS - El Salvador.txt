@@ -1,32 +1,198 @@
-﻿capital = 314
+capital = 314
 
-set_cosmetic_tag = ELS_OFN_Mandate
-set_oob = "ELS_1962"
+# Vacant
+recruit_character = ELS_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
-set_politics = {	
-	ruling_party = despotism
-	last_election = "1961.1.20"
-	election_frequency = 48
-	elections_allowed = no
+recruit_character = ELS_Rodolfo_Cordon_Cea
+recruit_character = ELS_Julio_Adalberto_Rivera
+recruit_character = ELS_Collective_Leadership
+recruit_character = ELS_Ruben_Alonso_Rosales
+recruit_character = ELS_Ricardo_Falla_Caceres
+recruit_character = ELS_Jose_Alberto_Medrano
+recruit_character = ELS_Fidel_Sanchez_Hernandez
+recruit_character = ELS_Fidel_Torres
 
+recruit_character = ELS_Julio_Faustino_Sosa
+recruit_character = ELS_Arturo_Armando_Molina
+recruit_character = ELS_Jose_Napoleon_Duarte
+recruit_character = ELS_Antonio_Rodriguez_Porth
+
+recruit_character = ELS_Salvador_Cayetano_Carpio
+recruit_character = ELS_Fabio_Castillo_Figueroa
+#Placeholder
+recruit_character = ELS_Feliciano_Avelar
+recruit_character = ELS_Carlos_Humberto_Romero
+
+promote_character = ELS_Rodolfo_Cordon_Cea
+promote_character = ELS_Feliciano_Avelar
+promote_character = { character = ELS_Fabio_Castillo_Figueroa ideology = socialist_revolutionary_gaitanismo_subtype }
+ELS_Jose_Napoleon_Duarte = {
+	promote_character = { ideology = liberal_conservatism_christian_democracy_subtype }
+	promote_character = { ideology = liberalism_christian_liberalism_subtype }
+	promote_character = { ideology = progressivism_1_subtype }
 }
-recruit_character = ELS_Albert_Schaufelberger
 
-TNO_startup_nation = yes
+set_politics = {
+	ruling_party = despotism
+	last_election = "1956.3.4"
+	election_frequency = 72
+	elections_allowed = no
+}
 
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 0
-    progressivism = 10
-    liberalism = 20
-    liberal_conservatism = 0
-    conservatism = 20
-    paternalism = 0
-    despotism = 40
-    fascism = 10
-     
+	despotism = 65
+	paternalism = 15
+	liberal_conservatism = 10
+	socialist = 10
 }
+
+set_party_name = {
+	ideology = despotism
+	long_name = ELS_dcm_party_long
+	name = ELS_dcm_party
+}
+set_party_name = {
+	ideology = paternalism
+	long_name = ELS_dcm_party_long
+	name = ELS_dcm_party
+}
+
+set_convoys = 50
+oob = "ELS_1962"
+set_air_oob = "ELS_1962_air"
+
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 100
+}
+
 add_ideas = {
-	OFN_Offices_Military_Government
+	### CABINET ###
+
+	### IDEAS ###
+	ELS_Memories_Epoca_Oro
+	ELS_House_Divided
+	ELS_King_Coffee
+	ELS_Salvadoran_Spillover
+	### POLITICAL LAWS ###
+	tno_political_parties_dominant_party_system
+	tno_religious_rights_secularism
+	tno_trade_unions_nonsocialist_allowed
+	tno_immigration_open_immigration
+	tno_slavery_penal_labor
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_registered_voting
+
+	### MILITARY LAWS ###
+	tno_conscription_broadened_conscription
+	tno_military_supervision_no_supervision
+	tno_training_combat_schooling
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_health_care_support_for_emergencies
+	tno_education_public_higher_education
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_women_in_the_workplace
+	tno_security_maintenance_of_order
+	tno_regulations_token_regulations
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_export_focus
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### MISC LAWS ###
+	tno_pollution_few_regulations
+	tno_safety_minimal_regulations
+	tno_child_labor_illegal
+	tno_refugees_vetted_entry
+	tno_racial_integration_segregated_regiments
+	tno_women_banned
+	tno_minorities_segregation
+	tno_lgbt_rights_lgbt_outlawed
+
+	### SOCIETAL DEVELOPMENT ###
+	
+	tno_army_professionalism_disgruntled_veterans
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_factory_complexes
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_research_facilities_basic
+	tno_academic_base_basic_literacy
+	tno_admin_efficiency_deficient_administrative_systems
 }
+
+set_research_slots = 2
+inherit_technology = USA
+
+add_opinion_modifier = {
+	target = HON
+	modifier = HON_territorial_disputes
+}
+
+add_opinion_modifier = {
+	target = HON
+	modifier = ELS_mistreats_salvadorans
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = USA_ca_republic
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_2
+	amount = 1000
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 500
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_2
+	amount = 200
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 200
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_3
+	amount = 1000
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = transport_helicopter_equipment_1
+	amount = 25
+	producer = USA
+}
+
+add_equipment_to_stockpile = {
+	type = attack_helicopter_equipment_1
+	amount = 25
+	producer = USA
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }

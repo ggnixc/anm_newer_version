@@ -1,0 +1,210 @@
+﻿division_template = {
+	name = "Infantry Battalion"
+	division_names_group = SAF_Infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Reserves Division"
+	division_names_group = SAF_Militia
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Motorized Division"
+	division_names_group = SAF_Motorized
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Special Service Battalion"
+	division_names_group = SAF_Armor
+	regiments = {
+		APC = { x = 0 y = 0 }
+		APC = { x = 0 y = 1 }
+		APC = { x = 0 y = 2 }
+		APC = { x = 0 y = 3 }
+		MBT = { x = 1 y = 0 }
+		IFV = { x = 1 y = 1 }
+		IFV = { x = 1 y = 2 }
+		IFV = { x = 1 y = 3 }
+	}
+	support = {
+		IFV_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 } 
+		logistics_company = { x = 0 y = 3 }
+	}
+}
+
+
+units = {
+
+	# SSB
+	division = {
+		name = "1 Special Service Battalion"
+		location = "13523" #Bloemfontein, OFS Province
+		division_template = "Special Service Battalion"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+
+	# SAI
+	division = {
+		name = "1 South African Infantry Battalion"
+		location = "13490" #Oudtshoorn, Cape Province
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2 South African Infantry Battalion"
+		location = "2207" #Walvis Bay, SWA Province
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "4 South African Infantry Battalion"
+		location = "10400" #Middelburg, Transvaal Province
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "5 South African Infantry Battalion"
+		location = "13535" #Ladysmith, Natal Province
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "6 South African Infantry Battalion"
+		location = "15360" #Grahamstown, Cape Province
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "7 South African Infantry Battalion"
+		location = "13682" #Grahamstown, Bechuanaland Territory
+		division_template = "Infantry Battalion"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+}
+
+### Starting Production ###
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SAF"
+		}
+		requested_factories = 3
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SAF"
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_3
+			creator = "SAF"
+		}
+		requested_factories = 1
+		progress = 0.6
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_0
+			creator = "SAF"
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "SAF"
+		}
+		requested_factories = 1
+		progress = 0.6
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = jet_fighter_equipment_1
+			creator = "SAF"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = jet_CAS_equipment_1
+			creator = "SAF"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = jet_strat_bomber_equipment_1
+			creator = "SAF"
+		}
+		requested_factories = 1
+		progress = 0.5
+		efficiency = 50
+	}
+}

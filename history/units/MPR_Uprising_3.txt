@@ -1,0 +1,95 @@
+﻿division_template = {
+	name = "MNR Respublikanskaya Gvardeyskaya Diviziya"
+	division_names_group = WRS_Infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		MBT = { x = 3 y = 0 }
+		MBT = { x = 3 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Brigada Territorialnoy Oborony"
+	division_names_group = WRS_ANB
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 0 y = 2 }
+		light_infantry = { x = 1 y = 1 }
+		light_infantry = { x = 1 y = 2 }
+		light_infantry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Morskoy Pehoty Brigada"
+	division_names_group = WRS_Infantry
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 1 y = 3 }
+	}
+	support = {
+		IFV_recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Otdelnaya Pehotnaya Brigada 'Zashhitniki Arktiki'"
+		location = "3124"
+		division_template = "Brigada Territorialnoy Oborony"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "Otdelnaya Pehotnaya Brigada 'Zashhitniki Arktiki'"
+		location = "6157"
+		division_template = "MNR Respublikanskaya Gvardeyskaya Diviziya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "Brigada Territorialnoy Oborony 'Murmansk'"
+		location = "11183"
+		division_template = "Brigada Territorialnoy Oborony"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "Brigada Territorialnoy Oborony 'Murmansk'"
+		location = "11031"
+		division_template = "Morskoy Pehoty Brigada"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "Brigada Territorialnoy Oborony 'Murmansk'"
+		location = "6181"
+		division_template = "Morskoy Pehoty Brigada"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+}

@@ -1,10 +1,13 @@
-NDefines.NGame.START_DATE = "1996.1.1.1"
-NDefines.NGame.END_DATE = "2010.12.31.1"
+NDefines.NGame.START_DATE = "1962.1.1.1"
+NDefines.NGame.END_DATE = "1976.12.31.1"
 NDefines.NGame.SAVE_VERSION = 7
 NDefines.NGame.MAX_SCRIPTED_LOC_RECURSION = 60
 NDefines.NGame.MAX_EFFECT_ITERATION = 15000
 NDefines.NGame.HANDS_OFF_START_TAG = "ZZZ"
 NDefines.NGame.MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 7
+
+NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP = "tno_career_profile"
+NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "TNO_CAREER_PROFILE"
 
 --NDefines.NDiplomacy.BASE_IMPROVE_RELATION_COST = 10000
 --NDefines.NDiplomacy.BASE_GENERATE_WARGOAL_DAILY_PP = 2000
@@ -61,14 +64,14 @@ NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 142
 NDefines.NCountry.BASE_SURRENDER_LIMIT = 0.75
 
 NDefines.NMilitary.STARTING_COMMAND_POWER = 0.0					-- starting command power for every country
-NDefines.NMilitary.BASE_MAX_COMMAND_POWER = 200.0					-- base value for maximum command power
+NDefines.NMilitary.BASE_MAX_COMMAND_POWER = 175.0					-- base value for maximum command power
 
 NDefines.NMilitary.LAND_COMBAT_COLLATERAL_FACTOR = 0.001
 NDefines.NMilitary.BASE_LEADER_TRAIT_GAIN_XP = 1
 NDefines.NMilitary.MAX_NUM_TRAITS = 6
 --NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.5
 --NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.5
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.1
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.037
 --NDefines.NMilitary.AIR_SUPPORT_BASE = 0.3
 NDefines.NMilitary.PLANNING_MAX = 0.5
 NDefines.NMilitary.PLAN_PROVINCE_LOW_VP_IMPORTANCE_AREA = 15.0
@@ -78,17 +81,18 @@ NDefines.NMilitary.PLAN_PORVINCE_PORT_BASE_IMPORTANCE = 9.0
 NDefines.NMilitary.PLAN_PORVINCE_PORT_LEVEL_FACTOR = 0.5
 NDefines.NMilitary.PLAN_AREA_DEFENSE_COASTAL_FORT_IMPORTANCE = 5.0
 NDefines.NMilitary.PLAN_AREA_DEFENSE_COAST_NO_FORT_IMPORTANCE = 2.0
-NDefines.NMilitary.OUT_OF_SUPPLY_ATTRITION = 0.2					-- max attrition when out of supply
+NDefines.NMilitary.OUT_OF_SUPPLY_ATTRITION = 0.4					-- max attrition when out of supply
 NDefines.NMilitary.OUT_OF_SUPPLY_SPEED = -0.5						-- max speed reduction from supply
 NDefines.NMilitary.NON_CORE_SUPPLY_SPEED = -0.2						-- we are not running on our own VP supply so need to steal stuff along the way
 NDefines.NMilitary.NON_CORE_SUPPLY_AIR_SPEED = -0.05				-- we are not running on our own VP supply so need to steal stuff along the way, a bit less due to air supply
 NDefines.NMilitary.OUT_OF_SUPPLY_MORALE = -0.15						-- max org regain reduction from supply
 NDefines.NMilitary.MAX_OUT_OF_SUPPLY_DAYS = 60						-- how many days of shitty supply until max penalty achieved
-NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 24				-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 24					-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
-NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 5						-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 12				-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 12					-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 3						-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.NUKE_DELAY_HOURS = 0								-- nukes fire off immediately
-NDefines.NMilitary.UNIT_DIGIN_CAP = 6								-- how "deep" you can dig you can dig in until hitting max bonus
+NDefines.NMilitary.UNIT_DIGIN_CAP = 5								-- how "deep" you can dig you can dig in until hitting max bonus
+NDefines.NMilitary.DIG_IN_FACTOR = 0.01
 NDefines.NMilitary.UNIT_DIGIN_SPEED = 0.5							-- how "deep" you can dig a day.
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0.001
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0001
@@ -96,7 +100,55 @@ NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 3
 NDefines.NMilitary.UNIT_EXP_LEVELS = { 0.03, 0.07, 0.1, 0.17, 0.24, 0.3, 0.4, 0.6, 0.72, 0.8, 0.88, 0.96 }
 NDefines.NMilitary.TRAINING_MAX_LEVEL = 6
 NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 3
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.1
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.037
+NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0002
+NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 0.9
+NDefines.NMilitary.FIELD_EXPERIENCE_MAX_PER_DAY = 10
+NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 250
+NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 250
+NDefines.NMilitary.MAX_AIR_EXPERIENCE = 250
+NDefines.NMilitary.PLANNING_DECAY = 0.02
+NDefines.NMilitary.PLAYER_ORDER_PLANNING_DECAY = 0.05
+NDefines.NMilitary.TACTIC_SWAP_FREQUENCEY = 8 -- Please don't be lagging the game too much, please
+
+
+NDefines.NAir.FIELD_EXPERIENCE_SCALE = 0.0007
+NDefines.NAir.FIELD_EXPERIENCE_MAX_PER_DAY = 10
+NDefines.NAir.ACCIDENT_CHANCE_BASE = 0.2
+NDefines.NAir.ACE_EARN_CHANCE_BASE = 0.025
+NDefines.NAir.ACE_EARN_CHANCE_PLANES_MULT = 0.008
+NDefines.NAir.ACE_WING_SIZE = 25
+NDefines.NAir.AIR_WING_XP_TRAINING_MISSION_GAIN_DAILY = 10
+NDefines.NAir.BIGGEST_AGILITY_FACTOR_DIFF = 20
+NDefines.NAir.BIGGEST_SPEED_FACTOR_DIFF = 10
+NDefines.NAir.COMBAT_BETTER_AGILITY_DAMAGE_REDUCTION = 0.85
+NDefines.NAir.TOP_SPEED_DAMAGE_BONUS_FACTOR = 0.04
+NDefines.NAir.AIR_WING_MAX_STATS_ATTACK = 200
+NDefines.NAir.AIR_WING_MAX_STATS_DEFENCE = 200
+NDefines.NAir.AIR_WING_MAX_STATS_AGILITY = 200
+NDefines.NAir.AIR_WING_MAX_STATS_SPEED = 2000
+NDefines.NAir.CAPACITY_PENALTY = 3
+NDefines.NAir.AIR_WING_XP_AIR_VS_AIR_COMBAT_GAIN = 1
+NDefines.NAir.AIR_WING_XP_GROUND_MISSION_COMPLETED_GAIN = 0.4
+
+NDefines.NDoctrines.TRAINING_MASTERY_GAIN_FACTOR = 0.1
+NDefines.NDoctrines.MAX_MONTHLY_MASTERY_GAIN = 100
+NDefines.NDoctrines.MIN_MASTERY_GAIN_PER_DAY = 0.1
+NDefines.NDoctrines.MASTERY_BANK_CONVERSION_RATE = 0.75
+NDefines.NDoctrines.MASTERY_BANK_MAX = 300
+
+NDefines.NDoctrines.NAVAL_MISSION_MASTERY_GAIN_FACTORS = {  -- Mastery gain from naval missions is reduced, just like training
+	0.0, -- HOLD
+	0.2, -- PATROL
+	0.0, -- STRIKE FORCE
+	0.2, -- CONVOY RAIDING
+	0.2, -- CONVOY ESCORT
+	0.2, -- MINES PLANTING
+	0.2, -- MINES SWEEPING
+	0.0, -- TRAIN # NOT USED - handled by TRAINING_MASTERY_GAIN_FACTOR
+	0.0, -- RESERVE_FLEET
+	0.0, -- NAVAL_INVASION_SUPPORT
+}
 
 --NDefines.NAI.MIN_ANTAGONIZE_FOR_WARGOAL_JUSTIFICATION = 200
 --NDefines.NAI.WARGOAL_GENERATION_STRENGTH_FACTOR = 100
@@ -125,8 +177,8 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 
 NDefines.NGame.ENERGY_RESOURCE = "power"
 NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 10000.0		-- How much energy per coal produces
-NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.001 -- Scales energy cost based on the total number of factories
-NDefines.NProduction.BASE_ENERGY_COST = 0.001						-- How much energy per factory consumes
+NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.00 -- Scales energy cost based on the total number of factories
+NDefines.NProduction.BASE_ENERGY_COST = 0.00						-- How much energy per factory consumes
 
 NDefines.NResistance.INITIAL_HISTORY_RESISTANCE = 0.0
 NDefines.NResistance.INITIAL_HISTORY_COMPLIANCE = 85.0
@@ -181,6 +233,30 @@ NDefines.NSupply.VP_TO_SUPPLY_BONUS_CONVERSION = 0.07
 -- AVAILABLE_MANPOWER_STATE_SUPPLY = 0.18,	--Factor for state supply from max manpower (population)
 NDefines.NSupply.AVAILABLE_MANPOWER_STATE_SUPPLY = 0.3
 
-NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 10				-- This much progress can be saved while not having a focus selected
+NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 20				-- This much progress can be saved while not having a focus selected
 
 NDefines.NGame.MAP_SCALE_PIXEL_TO_KM = 6.8977
+
+
+NDefines.NNavy.DOMINANCE_CONTROLLED_THRESHOLD_RATIO = 0.51
+NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 0.25
+NDefines.NNavy.DOMINANCE_DAILY_LOSS_FACTOR = 0.1
+NDefines.NNavy.MISSION_DOMINANCE_RATIOS = { -- dominance multipliers for different mission types
+	0, -- HOLD
+	10, -- PATROL
+	7, -- STRIKE FORCE
+	7, -- CONVOY RAIDING
+	10, -- CONVOY ESCORT
+	4, -- MINES PLANTING
+	4, -- MINES SWEEPING
+	0.0, -- TRAIN
+	0.0, -- RESERVE_FLEET
+	5.0, -- NAVAL_INVASION_SUPPORT
+}
+
+NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 14							-- base days needed to prepare a naval invasion
+NDefines.NNavy.NAVAL_INVASION_PLAN_CAP = 4								-- base cap of naval invasions can be planned at the same time
+NDefines.NNavy.BASE_NAVAL_INVASION_DIVISION_CAP = 8						-- base cap of divisions that can be assigned in a naval invasion
+
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_CARRIER_SIZE = 1						-- bonus to dominance based on the carrier size - e.g. regular carrier hangar has carrier_size of 2, so it would be a bonus of 2 * DOMINANCE_PER_SHIP_PER_CARRIER_SIZE, min value is 0
+NDefines.NNavy.DOMINANCE_PER_SHIP_PER_HEAVY_GUN_ATTACK = 0.3					-- bonus to dominance based on the heavy attack, min value is 0

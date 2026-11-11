@@ -3,7 +3,8 @@ state = {
 	name = "STATE_428"
 
 	history = {
-		owner = AZH
+		owner = IND
+		add_extra_state_shared_building_slots = 3
 		victory_points = {
 			9975 30
 		}
@@ -18,15 +19,24 @@ state = {
 		}
 		buildings = {
 			infrastructure = 3
+			hydroelectric_plant = 1
+			thermoelectric_plant = 1
+			barracks = 1
+			offices = 2
+			schools = 1
+			prisons = 1
 		}
- 		add_core_of = AZH
- 	}
+		add_claim_by = AZH
+		add_core_of = IND
+		set_state_flag = GDP_regions_gujarat
+		set_state_flag = state_renamings
+	}
 
 	provinces = {
 		7165 9975 11952 12092 16068 16069 16070 18990
 	}
 	manpower = 7772041
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = pastoral
 	local_supplies = 0.000
 }

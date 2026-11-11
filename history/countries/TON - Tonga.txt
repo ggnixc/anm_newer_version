@@ -1,6 +1,9 @@
 capital = 2496
 
 # Vacant
+recruit_character = TON_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+recruit_character = TON_Salote_Tupou_III
 recruit_character = TON_Taufaahau_Tupou_IV
 
 NZL = {
@@ -66,15 +69,16 @@ add_ideas = {
 set_research_slots = 3
 
 set_politics = {
-	ruling_party = paternalism
-	last_election = "1993.8.7"
+	ruling_party = despotism
+	last_election = "1960.8.7"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 set_popularities = {
-	despotism = 27
-	paternalism = 73
+	despotism_2 = 21
+	despotism = 73
+	paternalism = 6
 }
 
 # Starting tech
@@ -313,6 +317,8 @@ set_sub_doctrine = regular_infantry_primacy
 set_sub_doctrine = towed_artillery_firepower
 set_sub_doctrine = armored_car_support
 set_sub_doctrine = defense_operational_doctrine
+
+set_country_flag = TNO_eliminate_military_spending
 
 #econtype
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Subsistence_Economy }

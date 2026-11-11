@@ -46,7 +46,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "state_name"
 				position = { x = 42 y = 14 }
-				font = "aldrich_20_outline"
+				font = "aldrich_24_outline"
 				text = "STATE_NAME_TEST"
 				maxWidth = 320
 				maxHeight = 30
@@ -67,9 +67,32 @@ guiTypes = {
 			instantTextboxType = {
 				name = "shared_slot_count"
 				position = { x = 180 y = 144 }
-				font = "aldrich_18_outline"
+				font = "Bomb_20"
 				text = "SLOTS"
 				maxWidth = 225
+				maxHeight = 30
+				format = center
+			}
+			
+			iconType ={
+				name ="energy_consumption_bg"
+				spriteType = "GFX_victorypoint_stateview_bg"
+				position = { x = 403 y = 9129 }
+			}
+			
+			iconType = {
+				name = "energy_icon"
+				spriteType = "GFX_tt_power"
+				position = { x = 418 y = 9126 }
+			}
+			
+			instantTextboxType = {
+				name = "energy_text"
+				position = { x = 398 y = 9134 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				text = ""
+				maxWidth = 30
 				maxHeight = 30
 				format = center
 			}
@@ -92,7 +115,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "victory_points"
 				position = { x = -14 y = 17 }
-				font = "Bomb_24"
+				font = "aldrich_18_outline"
 				text = ""
 				maxWidth = 70
 				maxHeight = 30
@@ -103,7 +126,7 @@ guiTypes = {
 				name = "claims"
 				position = { x = 15 y = 93 }
 				textureFile = ""
-				font = "aldrich_white_14_outline"
+				font = "aldrich_16_outline"
 				text = ""
 				maxWidth = 100
 				maxHeight = 30
@@ -123,7 +146,7 @@ guiTypes = {
 				name = "owner"
 				position = { x = 15 y = 46 }
 				textureFile = ""
-				font = "aldrich_white_14_outline"
+				font = "aldrich_16_outline"
 				text = ""
 				maxWidth = 100
 				maxHeight = 30
@@ -195,7 +218,7 @@ guiTypes = {
 				name = "manpower"
 				position = { x = 45 y = 169 }
 				textureFile = ""
-				font = "aldrich_white_18_outline"
+				font = "aldrich_24_outline"
 				maxWidth = 100
 				maxHeight = 30
 				format = center
@@ -257,7 +280,7 @@ guiTypes = {
 					instantTextBoxType = {
 						name ="template_need_text"
 						position = { x = 97 y = 76 }
-						font = "aldrich_14_outline"
+						font = "aldrich_16_outline"
 						text = "42"
 						maxWidth = 57
 						maxHeight = 24
@@ -297,7 +320,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "province"
 				position = { x = 12 y = -32 }
-				font = "aldrich_14_outline"
+				font = "Bomb_18"
 				maxWidth = 300
 				maxHeight = 30
 				format = left
@@ -361,9 +384,9 @@ guiTypes = {
 			instantTextboxType = {
 				name = "state_modifiers"
 				text = "STATE_MODIFIERS"
-				position = { x = 7 y= -102 }
+				position = { x = 15 y= -93 }
 				font = "aldrich_16_outline"
-				maxWidth = 150
+				maxWidth = 70
 				maxHeight = 30
 				format = left
 			}
@@ -558,7 +581,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "level"
 			position = { x = -10 y = 6 }
-			font = "Bomb_20"
+			font = "aldrich_24_outline"
 			maxWidth = 66
 			maxHeight = 24
 			format = center
@@ -707,7 +730,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "amount"
 			position = { x = 72 y = 10 }
-			font = "Bomb_24"
+			font = "aldrich_16_outline"
 			maxWidth = 50
 			maxHeight = 18
 			format = left
@@ -735,7 +758,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name ="progress_text"
 			position = { x = 4 y = 16 }
-			font = "Bomb_18"
+			font = "aldrich_18_outline"
 			text = "100%"
 			maxWidth = 80
 			format = center

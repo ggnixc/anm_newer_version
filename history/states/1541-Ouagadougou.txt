@@ -2,8 +2,9 @@ state={
 	id=1541
 	name="STATE_1541"
 	history = {
-		owner = GHA
-		add_core_of = GHA
+		owner = AOF
+        add_core_of = IVO
+		add_core_of = AOF
 		victory_points = {
 			15909 15
 		}
@@ -13,11 +14,13 @@ state={
 		victory_points = {
 			15292 2
 		}
+		add_dynamic_modifier = { modifier = FRS_trans_saharan_railroad }
 		buildings = {
 			infrastructure = 4
 			air_base = 2
-			arms_factory = 1
+			barracks = 1
 		}
+		set_state_flag = GDP_regions_haute_volta
 	}
 	provinces={
 		5678 8778 10836 15292 15909 

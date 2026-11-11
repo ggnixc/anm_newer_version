@@ -6,13 +6,18 @@ state = { # Weird space in name is to prevent conflict with vanilla state file b
 		owner = ROM
 		buildings = {
 			infrastructure = 4
+			barracks = 1
+			thermoelectric_plant = 1
 			air_base = 2
- 		}
+			schools = 1
+		}
 		victory_points = {
 			18213 10
 		}
 		add_core_of = ROM
- 	}
+		set_state_flag = GDP_category_town
+		set_state_flag = GDP_regions_south_transylvania
+	}
 
 	provinces = {
 		696 6682 6697 9640 18199 18213

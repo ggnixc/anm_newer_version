@@ -3,16 +3,23 @@ state = {
 	name = "STATE_1856"
 	manpower = 115796
 
-	state_category = small_island
+	state_category = tiny_island
 
 	history = {
 		owner = JAP
 		add_core_of = JAP
+		set_state_flag = state_renamings
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
+			air_base = 3
+			barracks = 1
+			radar_station = 4
 		}
 		victory_points = { 15897 1 }
-   	}
+		set_variable = { china_state_ref = 37 }
+		set_variable = { china_region_ref = 4 }
+		set_state_flag = GDP_regions_formosa
+	}
 
 	provinces = {
 		15897

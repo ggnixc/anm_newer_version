@@ -1,21 +1,98 @@
-﻿capital = 1092
+capital = 1092
 
-set_oob = "BFR_1962"
+ENG = {
+	set_autonomy = {
+		target = KEN
+		autonomy_state = autonomy_colony
+	}
+}
+
+# Vacant
+recruit_character = KEN_Ferdinand_Cavendish_Bentinck
+recruit_character = KEN_Humphrey_Slade
+recruit_character = KEN_Harold_Rawdon_Briggs
+recruit_character = KEN_Evelyn_Baring
+recruit_character = KEN_Tom_Mboya
+recruit_character = KEN_Dedan_Kimathi
+recruit_character = KEN_Jaramogi_Oginga_Odinga
+recruit_character = KEN_Stanley_Mathenge
+recruit_character = KEN_Bildad_Kaggia
+recruit_character = KEN_Rodney_Moore
+recruit_character = KEN_Daniel_arap_Moi
+recruit_character = KEN_George_Erskine
+recruit_character = KEN_Terence_Gavaghan
+recruit_character = KEN_David_Waruhiu
+
+
+oob = "KEN_1962"
+
+set_cosmetic_tag = KEN_ENG
+
+add_ideas = {
+    Pakt_Europaische_Kolonien
+    KEN_Humphrey_Slade_hog
+    KEN_Evelyn_Baring_eco
+    KEN_Harold_Rawdon_Briggs_sec
+
+    KEN_the_empires_true_face
+    KEN_ithaka_na_wiyathi
+    KEN_white_mans_country
+    KEN_emergency_economics
+	#political#
+	tno_political_parties_nonpartisan_system
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_quota_immigration
+	tno_slavery_corvee
+	tno_public_meetings_outlawed
+	tno_press_rights_censored_press
+	tno_vote_franchise_inequal_voting
+	#military#
+	tno_conscription_volunteer_only
+	tno_military_supervision_no_supervision
+	tno_training_combat_schooling
+	tno_draft_exemptions_elite_exemptions
+	#economic#
+	tno_trade_laws_free_trade
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+	#social#
+	tno_health_care_support_for_emergencies
+	tno_education_restricted_education
+	tno_penal_system_overt_oppression
+	tno_regulations_token_regulations
+	tno_gender_rights_women_in_the_workplace
+	tno_security_maintenance_of_order
+	#misc#
+	tno_pollution_some_regulations
+	tno_safety_acceptable_regulations
+	tno_child_labor_illegal
+	tno_refugees_skilled
+	tno_racial_integration_integrated_military
+	tno_women_military_assistance
+	tno_minorities_equal_rights
+	tno_lgbt_rights_lgbt_outlawed
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
 
 set_politics = {
-	ruling_party = paternalism
-	last_election = "1991.6.1"
+	ruling_party = despotism
+	last_election = "1931.1.1"
 	election_frequency = 96
 	elections_allowed = no
 }
-
-recruit_character = KEN_Ronald_Gideon_Ngala
-
-TNO_startup_nation = yes
-
-#econtype
-set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
-set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }
 
 set_popularities = {
 	communist = 0
@@ -23,13 +100,285 @@ set_popularities = {
 	socialist = 0
 	progressivism = 0
 	liberalism = 0
-	liberal_conservatism = 0
 	conservatism = 0
-	paternalism = 34
-	despotism = 66
+	paternalism = 0
+	despotism = 80 #Kenya Executive Council
+    despotism_1 = 20 #KLFA
 	fascism = 0
-	 
 }
 
-add_ideas = {
+set_technology = {
+	##INFANTRY##
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+	
+	infantry_kit_1 = 1
+	infantry_weapons_2 = 1
+	night_vision_2 = 1
+	infantry_kit_2 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_kit_3 = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	infantry_weapons_improvements_grenade_1 = 1
+	#
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons_hmg_1 = 1
+	combat_support_equipment_1 = 1
+
+	infantry_at = 1
+	infantry_at_upgrade_1 = 1
+	infantry_aa1 = 1
+	
+	
+	
+	#
+	
+	motorized_infantry = 1
+	motorized_rocket_unit = 1
+	motorized_infantry_1 = 1
+	marines = 1
+	#
+	tech_special_forces = 1
+	tech_mountaineers = 1
+	#
+	tech_mountaineers2 = 1
+
+	basic_train = 1
+
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	assault_weapons_1 = 1
+	tech_engineers2 = 1
+	assault_weapons_2 = 1
+	assault_weapons_3 = 1
+	tech_recon = 1
+	tech_recon2 = 1
+	tech_military_police = 1
+	tech_military_police2 = 1
+	tech_maintenance_company = 1
+	tech_maintenance_company2 = 1
+	tech_field_hospital = 1
+	tech_field_hospital2 = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+	tech_signal_company2 = 1
+
+	command_and_control1 = 1
+	military_infrastructure1 = 1
+	##ARMOR##
+	
+	# See NSB section #
+
+	##ARTY##
+	
+	# See NSB section #
+
+	##NAVAL##
+	early_ship_hull_submarine = 1
+	early_ship_hull_very_light = 1
+	basic_ship_hull_very_light = 1
+	early_ship_hull_more_light = 1
+	basic_ship_hull_more_light = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	basic_depth_charges = 1
+	sonar = 1
+	basic_battery = 1
+	basic_secondary_battery = 1
+	basic_torpedo = 1
+	mtg_transport = 1
+	basic_naval_mines = 1
+	improved_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_carrier = 1
+	early_ship_hull_heavy = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	improved_ship_hull_cruiser = 1
+	centimetric_radar = 1
+	basic_fire_control_system = 1
+	damage_control_1 = 1
+	fire_control_methods_1 = 1
+	smoke_generator = 1
+
+	##NAVAL DOCTRINE##
+
+	##HELICOPTERS##
+	very_early_helicopter = 1
+	early_helicopter = 1
+
+	##LIGHT AIR##
+	early_fighter = 1
+	interceptor_1945 = 1
+	interceptor_1950 = 1
+	fighter_1945 = 1
+	fighter_1950 = 1
+	CAS_1945 = 1
+	CAS_1950 = 1
+	cv_1945_fighter = 1
+	cv_1950_fighter = 1
+	cv_1945_CAS = 1
+	cv_1950_CAS = 1
+
+	##HEAVY AIR##
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	tac_air_1950 = 1
+	tac_air_1960 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	heavy_air_1950 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	centimetric_radar = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	improved_computing_machine = 1
+	improved_encryption = 1
+	improved_decryption = 1
+	advanced_computing_machine = 1
+	advanced_encryption = 1
+	computing_machine_1950 = 1
+	basic_fire_control_system = 1
+	computing_machine_1960 = 1
+	
+	helicopter_engines = 1
+	jet_engines = 1
+	
+	
+	##INDUSTRY##
+	ww2_line_production = 1
+	mass_production_1 = 1
+	mass_production_2 = 1
+	building_construction_1 = 1
+	production_unit_gain_1 = 1
+	production_unit_gain_2 = 1
+	consumer_goods_reduction_1 = 1
+	consumer_goods_reduction_2 = 1
+	
+	oil_processing = 1
+	rubber_processing = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	administration_construction_1 = 1
+	excavation1 = 1
+	excavation2 = 1
+	military_construction_1 = 1
+
+	nuclear_weapons = 1
+
 }
+# NSB tech #
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		IFV_1945 = 1
+		MBT_1945 = 1
+		APC_1945 = 1
+
+		APC_1950 = 1
+		APC_1950_basic_turret = 1
+		APC_1950_basic_armor = 1
+		APC_1960 = 1
+
+		IFV_1950 = 1
+		IFV_1950_basic_turret = 1
+		IFV_1950_basic_armor = 1
+		IFV_1960 = 1
+		
+		MBT_1950 = 1
+		MBT_1950_basic_turret = 1
+		MBT_1950_basic_armor = 1
+
+		AC_1945 = 1
+		AC_1950 = 1
+		AC_1960 = 1
+
+		Heavy_1945 = 1
+		Heavy_1950 = 1
+		Superheavy_1945 = 1
+		
+		antiair_1945 = 1
+		antiair_1950 = 1
+		light_SPAA_1950 = 1
+		SPAA_1950 = 1
+		artillery_1945 = 1
+		artillery_1950 = 1
+		artillery_1950_soft_attack = 1
+		light_SPART_1950 = 1
+		SPART_1950 = 1
+		SPART_1950_soft_attack = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		NSB_APC_1945 = 1
+		NSB_APC_1950 = 1
+		#
+		#
+		NSB_APC_1960 = 1
+		NSB_IFV_1945 = 1
+		NSB_IFV_1945_modules_1 = 1
+		NSB_IFV_1945_modules_2 = 1
+		NSB_IFV_1950 = 1
+		NSB_IFV_1950_modules_1 = 1
+		NSB_IFV_1950_modules_2 = 1
+		NSB_IFV_1960 = 1
+		NSB_MBT_1945 = 1
+		NSB_MBT_1945_modules_1 = 1
+		NSB_MBT_1945_modules_2 = 1
+		NSB_MBT_1950 = 1
+		NSB_MBT_1950_modules_2 = 1
+		NSB_AC_1945 = 1
+		NSB_AC_1950 = 1
+		NSB_AC_1960 = 1
+		NSB_Armour_1 = 1
+		NSB_Armour_2 = 1
+		NSB_Engine_1 = 1
+		NSB_Engine_2 = 1
+
+		NSB_heavy_1945 = 1
+		NSB_heavy_1950 = 1
+		NSB_superheavy_1945 = 1
+
+		NSB_artillery_1945 = 1
+		NSB_artillery_1950 = 1
+		NSB_artillery_1950_SA = 1
+
+		NSB_antiair_1945 = 1
+		NSB_antiair_1950 = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	set_technology = {
+		scout_plane_1945 = 1
+	}
+}
+
+country_event = { id = kenya_feb_offensive.1 days =  2229 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }
+

@@ -1,0 +1,80 @@
+on_actions = {
+	#EVENTS
+
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	#STARTUP DEFINITIONS
+	on_startup = {
+		effect = {
+			# Date counter variables
+			set_variable = { GER.month_counter = 1 }
+			set_variable = { GER.year_counter = 62 }
+
+			# Resource rights
+			CAU = {
+				give_resource_rights = { receiver = GER state = 229 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 231 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 232 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 234 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 235 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 1552 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 1554 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 1556 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 1558 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 1559 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 1560 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 1561 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 1564 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+			}
+
+			PER = {
+				give_resource_rights = { receiver = GER state = 411 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+				give_resource_rights = { receiver = GER state = 412 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+			}
+
+			SWE = {
+				give_resource_rights = { receiver = GER state = 38 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+			}
+			FIN = {
+				give_resource_rights = { receiver = GER state = 1359 resources = { chromium } }
+			}
+		}
+	}
+
+	on_declare_war = { # WW3 stuff
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							OR = {
+								ROOT = { tag = JAP }
+								ROOT = { tag = USA }
+							}
+							FROM = { tag = GER }
+						}
+						AND = {
+							OR = {
+								FROM = { tag = JAP }
+								FROM = { tag = USA }
+							}
+							ROOT = { tag = GER }
+						}
+					}
+				}
+				# Loading the WW3 tree
+				GER = { country_event = { id = GER_Foreign.120 days = 1 } }
+				every_country = { # WW3 super event
+					limit = { is_ai = no }
+					set_temp_variable = { TNO_temp_super_event = token:SE_WW3 }
+					TNO_fire_super_event = yes
+				}
+				set_global_flag = TNO_world_tension_WW3
+			}
+		}
+	}
+}

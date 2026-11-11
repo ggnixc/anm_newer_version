@@ -2,7 +2,6 @@ state = {
 	id = 1019
 	name = "STATE_1019"
 	resources = {
-		 
 		steel = 4
 		tungsten = 32
 	}
@@ -12,28 +11,33 @@ state = {
 		add_core_of = CHI
 		buildings = {
 			air_base = 2
-			industrial_complex = 1
+			prisons = 1
+			offices = 1
+			thermoelectric_plant = 1
 			infrastructure = 3
 		}
 		victory_points = {
-			7653 1
+			10501 3
 		}
 		victory_points = {
-			10501 2
+			12495 4
 		}
 		victory_points = {
-			12495 3
-		}
-		victory_points = {
-			19462 3
+			19462 4
 		}
 		victory_points = {
 			19470 5
 		}
 		victory_points = {
-			19480 24
+			19480 3
 		}
-  	}
+		victory_points = {
+			3992 24
+		}
+		set_state_flag = GDP_regions_jiangxi_ganjiang
+		set_variable = { china_state_ref = 24 }
+		set_variable = { china_region_ref = 3 }
+	}
 
 	provinces = {
 		3992 7653 10501 11988 12495 19462 19470 19480

@@ -3362,14 +3362,11 @@ stockpile_consumer_goods_change = {
 econ_join_sphere_USA = {
 	set_temp_variable = { target = USA }
 	econ_join_sphere_target = yes
-	set_variable = { America_Checkbox_var = 2 }
-	set_variable = { Pacific_Checkbox_var = 2 }
 }
 
 econ_join_sphere_GER = {
 	set_temp_variable = { target = GER }
 	econ_join_sphere_target = yes
-	set_variable = { Europe_Checkbox_var = 2 }
 	if = {
 		limit = {
 			BRA = {
@@ -3385,7 +3382,6 @@ econ_join_sphere_GER = {
 econ_join_sphere_JAP = {
 	set_temp_variable = { target = JAP }
 	econ_join_sphere_target = yes
-	set_variable = { Asia_Checkbox_var = 2 }
 }
 
 econ_join_sphere_ITA = {

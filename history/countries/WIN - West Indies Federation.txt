@@ -1,51 +1,61 @@
-﻿capital = 901
-set_oob = "WIN_1962"
+capital = 901
 
-recruit_character = WIN_PJ_Patterson
+# Vacant
+recruit_character = WIN_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+recruit_character = WIN_Grantley_Herbert_Adams
+recruit_character = WIN_Hugh_Shearer
+recruit_character = WIN_ANR_Robinson
+recruit_character = WIN_Michael_Manley
+recruit_character = WIN_Tom_Adams
 
-set_research_slots = 2
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Free_Market }
+
+#oob = "WIN_1962"
+#set_air_oob = "WIN_1962_air"
+
+set_research_slots = 3
 set_convoys = 120
 
-set_politics = {	
-	ruling_party = progressivism
+set_politics = {
+	ruling_party = paternalism
 	last_election = "1961.5.16"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 3
-    socialist = 6
-    progressivism = 42
-    liberalism = 35
-    liberal_conservatism = 0
-    conservatism = 8
-    paternalism = 6
-    despotism = 0
-    fascism = 0
-    national_socialism = 0
-    ultranationalism = 0
-     
+	paternalism = 33
+	conservatism = 8
+	liberal_conservatism = 24
+	liberalism = 18
+	liberalism_1 = 6
+	progressivism = 4
+	progressivism_1 = 7
 }
 
-set_stability = 0.25
-set_war_support = 0.2
+set_stability = 0.75
+set_war_support = 0.55
 
 add_ideas = {
+	#National
+	WIN_Palm_Maple_Oak
+	WIN_Caribbean_Shield
+	WIN_Lost_at_Sea
+	WIN_Shadow_Federation
+	WIN_Pan_Caribbean_Dream
+
 	#faction status
 	OFN_Security_Council_Member
-	tno_safety_limited_regulations
-	tno_health_care_private_health_care
-	tno_pollution_some_regulations
+	tno_health_care_support_for_emergencies
 	tno_education_public_education
 	tno_penal_system_rehabilitation
-	tno_lgbt_rights_lgbt_outlawed
 	tno_gender_rights_gender_equality
-	tno_minorities_equal_rights
-	tno_security_police
+	tno_security_maintenance_of_order
+	tno_regulations_moderate_regulations
 
 	tno_political_parties_multiparty_system
 	tno_religious_rights_secularism
@@ -55,25 +65,36 @@ add_ideas = {
 	tno_public_meetings_allowed
 	tno_press_rights_free_press
 	tno_vote_franchise_registered_voting
-	tno_refugees_skilled
 
 	tno_trade_laws_free_trade
-	tno_economic_focus_demilitarized_economy
-	tno_tax_rate_low_taxation
-	tno_income_taxation_elite_tax_exemptions
+	tno_income_taxation_no_income_taxation
 	tno_minimum_wage_low_minimum_wage
 	tno_max_workhours_12_hour_work_day
-	tno_child_labor_restricted
 	tno_pensions_trinket_pensions
 	tno_unemployment_no_subsidies
 
 	tno_conscription_volunteer_only
-	tno_women_noncombat_only
-	tno_military_supervision_military_policing
-	tno_military_spending_low_spending
+	tno_military_supervision_rules_of_engagement
 	tno_training_basic_training
-	tno_racial_integration_integrated_military
 	tno_draft_exemptions_civil_service_deferment
 
+	tno_safety_limited_regulations
+	tno_pollution_some_regulations
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_equal_rights
+	tno_refugees_skilled
+	tno_child_labor_restricted
+	tno_women_noncombat_only
+	tno_racial_integration_integrated_military
+
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_rudimentary
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
 }
 
+TNO_startup_nation = yes

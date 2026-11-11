@@ -1,49 +1,94 @@
-﻿capital = 101
+capital = 101
+set_cosmetic_tag = GRN_Civil_Authoirty
 
-recruit_character = GRN_Lars_Emil_Johansen
-recruit_character = GRN_Josef_Motzfeldt
-recruit_character = GRN_Per_Berthelsen
-recruit_character = GRN_Daniel_Skifte
-recruit_character = GRN_John_McCain
+# Vacant
+recruit_character = GRN_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+recruit_character = GRN_Hamilton_Howze
+recruit_character = GRN_Jonathan_Motzfeldt
+recruit_character = GRN_Lars_Chemnitz
+
+USA = {
+	country_event = {
+		id = US_Greenland.1
+		days = 160
+	}
+	set_autonomy = {
+		target = GRN
+		autonomy_state = autonomy_military_government
+	}
+}
 
 add_ideas = {
-    ##FACTION STATUS##
-	OFN_Supreme_Allied_Commander_in_Europe
-	##POLITICAL LAWS##
-	
-	##MILITARY LAWS###
-	
-	##SOCIAL LAWS##
-	
-	##ECONOMIC LAWS##
-	
-	##SOCIETAL DEVELOPMENT##
-	
-	##MINISTERS##
+	OFN_Offices_Trust_Government
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_crime_prevention
+	#misc#
+	tno_pollution_some_regulations
+	tno_safety_acceptable_regulations
+	tno_child_labor_illegal
+	tno_refugees_skilled
+	tno_racial_integration_integrated_military
+	tno_women_military_assistance
+	tno_minorities_equal_rights
+	tno_lgbt_rights_lgbt_outlawed
+	#social development
 
+	tno_army_professionalism_professional
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_basic
+	tno_academic_base_basic_literacy
 }
 
-set_research_slots = 3
+set_research_slots = 2
 
-set_politics = {	
-	ruling_party = progressivism
-	last_election = "1996.1.1"
-	election_frequency = 48
-	elections_allowed = yes
+set_politics = {
+	ruling_party = despotism
+	last_election = "1934.3.26"
+	election_frequency = 60
+	elections_allowed = no
 }
-
-TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 22
-    progressivism = 45
-    liberalism = 5
-    liberal_conservatism = 20
-    conservatism = 8
-    paternalism = 0
-    despotism = 0
-    fascism = 0
-     
+	socialist = 8
+	progressivism = 12
+	conservatism = 10
+	despotism = 70	
 }
+
+inherit_technology = DEN
+
+set_country_flag = TNO_eliminate_military_spending
+
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }

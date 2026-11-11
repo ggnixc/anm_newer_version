@@ -6,7 +6,8 @@ state = {
 		victory_points = { 6880 3 }
 		victory_points = { 3790 2 }
 		buildings = {
-			arms_factory = 1
+			barracks = 1
+			offices = 1
 			infrastructure = 4
 			3790 = {
 				naval_base = 2
@@ -17,7 +18,10 @@ state = {
 		}
 
 		add_core_of = IBR
- 	}
+		set_state_flag = GDP_regions_portugal
+		set_state_flag = GDP_category_large_town
+		set_state_flag = state_renamings
+	}
 	provinces = {
 		3790 6880
 	}

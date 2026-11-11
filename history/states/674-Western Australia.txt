@@ -6,18 +6,22 @@ state = {
 		owner = AST
 		buildings = {
 			infrastructure = 2
-			radar_station = 3
+			radar_station = 5
 			air_base = 2
 			2201 = {
 				coastal_bunker = 5
 			}
 		}
-		victory_points = {
+		victory_points = { # Exmouth
 			10971 1
 		}
-		victory_points = {
+		victory_points = { # Port Hedland
 			8152 1
 		}
+		victory_points = { # Kalgoorlie
+			8200 2
+		}
+		set_state_flag = GDP_category_rural
 		add_core_of = AST
 	}
 
@@ -26,6 +30,6 @@ state = {
 	}
 	manpower = 80777
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = wasteland
 	local_supplies = 0.000
 }

@@ -29,33 +29,33 @@ guiTypes = { #Settings Menu#
 
 		buttonType = {
 			name = "settings_tab_1"
-			position = { x = 0 y = 54 }
+			position = { x = 0 y = 76 }
 			quadTextureSprite ="GFX_settings_tab"
 		}
 
 		buttonType = {
 			name = "settings_tab_2"
-			position = { x = 55 y = 54 }
+			position = { x = 55 y = 76 }
 			quadTextureSprite ="GFX_settings_tab"
 		}
 
 		buttonType = {
 			name = "settings_tab_3"
-			position = { x = 110 y = 54 }
+			position = { x = 110 y = 76 }
 			quadTextureSprite ="GFX_settings_tab"
 		}
 
 		buttonType = {
 			name = "settings_tab_4"
-			position = { x = 165	 y = 54 }
+			position = { x = 165 y = 76 }
 			quadTextureSprite ="GFX_settings_tab"
 		}
 
 		instantTextBoxType={
-			position = {x = 0 y = 56 }
+			position = { x = 0 y = 78 }
 			name = "gamesettings_label"
 			font = "Main_14"
-			borderSize = {x = 0 y = 0}
+			borderSize = { x = 0 y = 0 }
 			maxWidth = 64
 			maxHeight = 18
 			text = "SM_GAME"
@@ -64,19 +64,19 @@ guiTypes = { #Settings Menu#
 		}
 
 		instantTextBoxType={
-			position = {x = 56 y = 56 }
+			position = {x = 56 y = 78 }
 			name = "videosettings_label"
 			font = "Main_14"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 64
 			maxHeight = 18
-			text =	 "SM_VIDEO"
+			text = "SM_VIDEO"
 			orientation = "UPPER_LEFT"
 			format = centre
 		}
 
 		instantTextBoxType={
-			position = {x = 112 y = 56 }
+			position = {x = 112 y = 78 }
 			name = "audiosettings_label"
 			font = "Main_14"
 			borderSize = {x = 0 y = 0}
@@ -88,7 +88,7 @@ guiTypes = { #Settings Menu#
 		}
 
 		instantTextBoxType={
-			position = {x = 165 y = 56 }
+			position = {x = 165 y = 78 }
 			name = "controlssettings_label"
 			font = "Main_14"
 			borderSize = {x = 0 y = 0}
@@ -124,7 +124,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 30 y =30}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -179,7 +179,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 30 y =70}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -234,7 +234,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 30 y =110}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -288,7 +288,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 30 y =150}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -323,6 +323,29 @@ guiTypes = { #Settings Menu#
 					quadTextureSprite = "yearslider_rightbutton"
 					position = { x=0 y =120}
 				}
+			}
+				
+			checkboxType = {
+				name = "event_sounds_checkbox"
+				position = { x = 21 y = 225 }
+				quadTextureSprite ="GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+
+			instantTextBoxType = {
+				name = "event_sounds_label"
+				position = { x = 65 y = 229 }
+				textureFile = ""
+				font = "aldrich_24_outline"
+				borderSize = {x = 0 y =0}
+				text = "SM_EVENT_SOUNDS"
+				maxWidth = 160
+				maxHeight = 20
+				fixedsize = yes
+				format = left
+				vertical_alignment = center
+				pdx_tooltip = SM_EVENT_SOUNDS_DESC
 			}
 
 			instantTextBoxType={
@@ -503,7 +526,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_visual_alerts_label"
 				position = { x = 65 y = 120 }
 				textureFile = ""
-				font = "aldrich_white_24_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_VISUAL_ALERTS"
 				maxWidth = 258
@@ -525,7 +548,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_large_fonts_label"
 				position = { x = 65 y = 160 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_CHAT_LARGE_FONTS"
 				maxWidth = 258
@@ -547,7 +570,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_tts_label"
 				position = { x = 65 y = 200 }
 				textureFile = ""
-				font = "aldrich_white_24_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_TTS"
 				maxWidth = 258
@@ -569,7 +592,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_stt_label"
 				position = { x = 65 y = 240 }
 				textureFile = ""
-				font = "aldrich_white_24_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_STT"
 				maxWidth = 258
@@ -591,7 +614,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_stt_shortcut_label"
 				position = { x = 65 y = 280 }
 				textureFile = ""
-				font = "aldrich_white_24_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_USE_STT_SHORTCUT"
 				maxWidth = 258
@@ -611,12 +634,12 @@ guiTypes = { #Settings Menu#
 
 			instantTextBoxType = {
 				name = "accessibility_stt_shortcut_editbox_label"
-				position = { x = 65 y = 320 }
+				position = { x = 22 y = 311 }
 				textureFile = ""
-				font = "aldrich_white_24_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_USE_STT_SHORTCUT"
-				maxWidth = 258
+				maxWidth = 330
 				maxHeight = 20
 				fixedsize = yes
 				format = left
@@ -625,18 +648,18 @@ guiTypes = { #Settings Menu#
 
 			iconType = {
 				name = "stt_shortcut_editbox_bg"
-				quadTextureSprite ="GFX_generic_box_96"
-				position = { x = 315 y = 320 }
+				quadTextureSprite ="GFX_sort_button_100x29"
+				position = { x = 348 y = 305 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}				
 
 			editBoxType = {
-				position = { x = 355 y = 322 }
+				position = { x = 356 y = 308 }
 				name = "stt_shortcut_editbox"
-				font = "aldrich_white_24_outline"
+				font = "aldrich_24_outline"
 				textureFile = ""
-				size = { x=48 y=38 }
+				size = { x=98 y=38 }
 				text = ""
 				orientation = "UPPER_LEFT"
 			}
@@ -662,7 +685,6 @@ guiTypes = { #Settings Menu#
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
 			}
-
 		}
 
 		#Subwindow Video Settings#
@@ -685,7 +707,7 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 30 y = 23 }
+				position = {x = 30 y = 19 }
 				name = "resolution_value"
 				font = "Main_16"
 				borderSize = {x = 0 y = 0}
@@ -721,7 +743,7 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 30 y = 64 }
+				position = {x = 30 y = 59 }
 				name = "refreshrate_value"
 				font = "Main_16"
 				borderSize = {x = 0 y = 0}
@@ -757,7 +779,7 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 30 y = 104 } 
+				position = {x = 30 y = 99 }
 				name = "multisample_value"
 				font = "Main_16"
 				borderSize = {x = 0 y = 0}
@@ -782,7 +804,7 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 30 y = 117 }
+				position = {x = 30 y = 120 }
 				name = "gamma_label"
 				font = "Main_14"
 				borderSize = {x = 0 y = 0}
@@ -800,7 +822,7 @@ guiTypes = { #Settings Menu#
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
 				size = {x =172 y =16 }
-				position = { x = 30 y = 126 }
+				position = {x= 30 y =130}
 				priority = 100
 				borderSize = {x =16 y = 16}
 				maxValue = 100
@@ -943,7 +965,7 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 30 y = 71 }
+				position = {x = 30 y = 69 }
 				name = "autosave_value"
 				font = "Main_16"
 				borderSize = {x = 0 y = 0}
@@ -1048,15 +1070,15 @@ guiTypes = { #Settings Menu#
 		}
 
 		instantTextBoxType={
-			position = {x = 55 y = 18 }
+			position = {x = 116 y = 21 }
 			name = "settings_label"
-			font = "aldrich_white_20_outline"
+			font = "Bomb_36"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 250
 			maxHeight = 18
 			text = "SM_OPTIONS"
 			orientation = "UPPER_LEFT"
-			format = left
+			format = centre
 		}
 
 		iconType = {
@@ -1069,10 +1091,10 @@ guiTypes = { #Settings Menu#
 
 		buttonType = {
 			name = "settings_tab_1"
-			position = { x = 22 y = 58 }
+			position = { x = 22 y = 80 }
 			quadTextureSprite ="GFX_sort_button_100x29"
 			frame = 1
-			font = "aldrich_16_outline"
+			font = "aldrich_24_outline"
 			text = "SM_GAME"
 			clicksound = click_checkbox
 			oversound = ui_menu_over
@@ -1080,10 +1102,10 @@ guiTypes = { #Settings Menu#
 
 		buttonType = {
 			name = "settings_tab_2"
-			position = { x = 132 y = 58 }
+			position = { x = 132 y = 80 }
 			quadTextureSprite ="GFX_sort_button_100x29"
 			frame = 1
-			font = "aldrich_16_outline"
+			font = "aldrich_24_outline"
 			text = "SM_VIDEO"
 			clicksound = click_checkbox
 			oversound = ui_menu_over
@@ -1091,10 +1113,10 @@ guiTypes = { #Settings Menu#
 
 		buttonType = {
 			name = "settings_tab_3"
-			position = { x = 242 y = 58 }
+			position = { x = 242 y = 80 }
 			quadTextureSprite ="GFX_sort_button_100x29"
 			frame = 1
-			font = "aldrich_16_outline"
+			font = "aldrich_24_outline"
 			text = "SM_AUDIO"
 			clicksound = click_checkbox
 			oversound = ui_menu_over
@@ -1102,10 +1124,10 @@ guiTypes = { #Settings Menu#
 
 		buttonType = {
 			name = "settings_tab_4"
-			position = { x = 352 y = 58 }
+			position = { x = 352 y = 80 }
 			quadTextureSprite ="GFX_sort_button_100x29"
 			frame = 1
-			font = "aldrich_16_outline"
+			font = "aldrich_24_outline"
 			text = "SM_CONTROLS"
 			clicksound = click_checkbox
 			oversound = ui_menu_over
@@ -1129,7 +1151,7 @@ guiTypes = { #Settings Menu#
 			instantTextBoxType={
 				position = { x = 40 y = 48 }
 				name = "mastervolume_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1145,7 +1167,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 260 y = 53}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -1195,7 +1217,7 @@ guiTypes = { #Settings Menu#
 			instantTextBoxType={
 				position = {x = 40 y = 88 }
 				name = "effectvolume_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1212,7 +1234,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 260 y =93}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -1262,7 +1284,7 @@ guiTypes = { #Settings Menu#
 			instantTextBoxType={
 				position = {x = 40 y = 128 }
 				name = "musicvolume_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1278,7 +1300,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 260 y =133}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -1325,7 +1347,7 @@ guiTypes = { #Settings Menu#
 			instantTextBoxType={
 				position = {x = 40 y = 168 }
 				name = "ambient_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1341,7 +1363,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 260 y =173}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -1388,7 +1410,7 @@ guiTypes = { #Settings Menu#
 			instantTextBoxType={
 				position = {x = 40 y = 208 }
 				name = "voicevolume_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1404,7 +1426,7 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
+				size = {x =172 y =16 }
 				position = {x= 260 y = 213}
 				priority = 100
 				borderSize = {x =16 y = 16}
@@ -1439,12 +1461,36 @@ guiTypes = { #Settings Menu#
 					clicksound = click_scroll
 				}
 			}
+			
+			checkboxType = {
+				name = "event_sounds_checkbox"
+				position = { x = 20 y = 250 }
+				quadTextureSprite ="GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+
+			instantTextBoxType = {
+				name = "event_sounds_label"
+				position = { x = 56 y = 252 }
+				textureFile = ""
+				font = "aldrich_24_outline"
+				borderSize = { x = 0 y = 0 }
+				text = "SM_EVENT_SOUNDS"
+				maxWidth = 258
+				maxHeight = 20
+				fixedsize = yes
+				orientation = "UPPER_LEFT"
+				format = left
+				pdx_tooltip = SM_EVENT_SOUNDS_DESC
+			}
+				
 			buttonType = {
 				name = "RadioButton"
 				position = { x = 154 y = 378 }
 				quadTextureSprite ="GFX_sort_button_140x29"
 				buttonText = "MUSICPLAYER_OPEN_PLAYER"
-				buttonFont = "aldrich_16_outline"
+				buttonFont = "aldrich_18_outline"
 				clicksound = click_default
 			}
 		}
@@ -1459,15 +1505,15 @@ guiTypes = { #Settings Menu#
 			iconType = {
 				name = "scrollspeed_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = 46 }
+				position = { x = 21 y = 16 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 
 			instantTextBoxType={
-				position = {x = 40 y = 48 }
+				position = {x = 40 y = 18 }
 				name = "scrollspeed_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 172
 				maxHeight = 18
@@ -1482,8 +1528,8 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
-				position = {x= 260 y =53}
+				size = {x =172 y =16 }
+				position = {x= 260 y =23}
 				priority = 100
 				borderSize = {x =16 y = 16}
 				maxValue = 100
@@ -1539,19 +1585,19 @@ guiTypes = { #Settings Menu#
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
 			}
-			
+
 			iconType = {
 				name = "zoomspeed_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = 86 }
+				position = { x = 21 y = 83 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 
 			instantTextBoxType={
-				position = {x = 40 y = 88 }
+				position = {x = 40 y = 85 }
 				name = "zoomspeed_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 172
 				maxHeight = 18
@@ -1566,8 +1612,8 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x =151 y =16 }
-				position = {x= 260 y =93}
+				size = {x =172 y =16 }
+				position = {x= 260 y =90}
 				priority = 100
 				borderSize = {x =16 y = 16}
 				maxValue = 100
@@ -1606,7 +1652,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_visual_alerts_label"
 				position = { x = 65 y = 122 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_VISUAL_ALERTS"
 				maxWidth = 400
@@ -1628,7 +1674,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_large_fonts_label"
 				position = { x = 65 y = 162 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_CHAT_LARGE_FONTS"
 				maxWidth = 400
@@ -1650,7 +1696,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_tts_label"
 				position = { x = 65 y = 202 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_TTS"
 				maxWidth = 400
@@ -1672,7 +1718,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_stt_label"
 				position = { x = 65 y = 242 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_STT"
 				maxWidth = 400
@@ -1694,7 +1740,7 @@ guiTypes = { #Settings Menu#
 				name = "accessibility_stt_shortcut_label"
 				position = { x = 65 y = 282 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_USE_STT_SHORTCUT"
 				maxWidth = 400
@@ -1713,12 +1759,13 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType = {
-				position = { x = 22 y = 322 }
+				name = "accessibility_stt_shortcut_editbox_label"
+				position = { x = 22 y = 311 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "SETTINGS_ACCESSIBILITY_USE_STT_SHORTCUT"
-				maxWidth = 400
+				maxWidth = 330
 				maxHeight = 20
 				fixedsize = yes
 				format = left
@@ -1727,20 +1774,42 @@ guiTypes = { #Settings Menu#
 
 			iconType = {
 				name = "stt_shortcut_editbox_bg"
-				quadTextureSprite ="GFX_generic_box_96"
-				position = { x = 352 y = 315 }
+				quadTextureSprite ="GFX_sort_button_100x29"
+				position = { x = 348 y = 305 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}				
 
 			editBoxType = {
-				position = { x = 392 y = 320 }
+				position = { x = 356 y = 308 }
 				name = "stt_shortcut_editbox"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				textureFile = ""
-				size = { x=48 y=38 }
+				size = { x=98 y=38 }
 				text = ""
 				orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "accessibility_ingameclock_label"
+				position = { x = 65 y = 340 }
+				textureFile = ""
+				font = "aldrich_24_outline"
+				borderSize = {x = 0 y =0}
+				text = "SETTINGS_ACCESSIBILITY_IN_GAME_CLOCK"
+				maxWidth = 258
+				maxHeight = 20
+				fixedsize = yes
+				format = left
+				vertical_alignment = center
+			}
+
+			checkboxType = {
+				name = "accessibility_ingameclock"
+				position = { x = 21 y = 336}
+				quadTextureSprite ="GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
 			}
 		}
 
@@ -1754,15 +1823,15 @@ guiTypes = { #Settings Menu#
 			iconType = {
 				name = "mode_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = -7 }
+				position = { x = 21 y = 16 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 
 			instantTextBoxType={
-				position = {x = 40 y = -5 }
+				position = {x = 40 y = 18 }
 				name = "mode_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1773,9 +1842,9 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 278 y = -3 }
+				position = {x = 278 y = 18 }
 				name = "mode_value"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 120
 				maxHeight = 18
@@ -1787,14 +1856,14 @@ guiTypes = { #Settings Menu#
 
 			buttonType = {
 				name = "decrease_mode_button"
-				position = { x = 260 y = -1 }
+				position = { x = 260 y = 22 }
 				quadTextureSprite ="GFX_scroll_left"
 				clicksound = click_checkbox
 			}
 
 			buttonType = {
 				name = "increase_mode_button"
-				position = { x = 395 y = -1 }
+				position = { x = 395 y = 22 }
 				quadTextureSprite ="GFX_scroll_right"
 				clicksound = click_checkbox
 			}
@@ -1802,15 +1871,15 @@ guiTypes = { #Settings Menu#
 			iconType = {
 				name = "resolution_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = 27 }
+				position = { x = 21 y = 50 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 
 			instantTextBoxType={
-				position = {x = 40 y = 27 }
+				position = {x = 40 y = 50 }
 				name = "resolution_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1821,9 +1890,9 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 278 y = 31 }
+				position = {x = 278 y = 50 }
 				name = "resolution_value"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 120
 				maxHeight = 18
@@ -1834,14 +1903,14 @@ guiTypes = { #Settings Menu#
 
 			buttonType = {
 				name = "decrease_resolution_button"
-				position = { x = 260 y = 33 }
+				position = { x = 260 y = 56 }
 				quadTextureSprite ="GFX_scroll_left"
 				clicksound = click_checkbox
 			}
 
 			buttonType = {
 				name = "increase_resolution_button"
-				position = { x = 395 y = 33 }
+				position = { x = 395 y = 56 }
 				quadTextureSprite ="GFX_scroll_right"
 				clicksound = click_checkbox
 			}
@@ -1849,15 +1918,15 @@ guiTypes = { #Settings Menu#
 			iconType = {
 				name = "refreshrate_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = 59 }
+				position = { x = 21 y = 82 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 
 			instantTextBoxType={
-				position = {x = 40 y = 59 }
+				position = {x = 40 y = 84 }
 				name = "refreshrate_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1868,9 +1937,9 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 278 y = 64 }
+				position = {x = 278 y = 84 }
 				name = "refreshrate_value"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 120
 				maxHeight = 18
@@ -1881,14 +1950,14 @@ guiTypes = { #Settings Menu#
 
 			buttonType = {
 				name = "decrease_refreshrate_button"
-				position = { x = 260 y = 65 }
+				position = { x = 260 y = 88 }
 				quadTextureSprite ="GFX_scroll_left"
 				clicksound = click_checkbox
 			}
 
 			buttonType = {
 				name = "increase_refreshrate_button"
-				position = { x = 395 y = 65 }
+				position = { x = 395 y = 88 }
 				quadTextureSprite ="GFX_scroll_right"
 				clicksound = click_checkbox
 			}
@@ -1897,14 +1966,14 @@ guiTypes = { #Settings Menu#
 			iconType = {
 				name = "multisample_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = 93 }
+				position = { x = 21 y = 116 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 			instantTextBoxType={
-				position = {x = 40 y = 93 }
+				position = {x = 40 y = 118 }
 				name = "multisample_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1914,9 +1983,9 @@ guiTypes = { #Settings Menu#
 				format = left
 			}
 			instantTextBoxType={
-				position = {x = 276 y = 97 }
+				position = {x = 278 y = 118 }
 				name = "multisample_value"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 120
 				maxHeight = 18
@@ -1926,13 +1995,13 @@ guiTypes = { #Settings Menu#
 			}
 			buttonType = {
 				name = "decrease_multisample_button"
-				position = { x = 260 y = 99 }
+				position = { x = 260 y = 122 }
 				quadTextureSprite ="GFX_scroll_left"
 				clicksound = click_checkbox
 			}
 			buttonType = {
 				name = "increase_multisample_button"
-				position = { x = 395 y = 99 }
+				position = { x = 395 y = 122 }
 				quadTextureSprite ="GFX_scroll_right"
 				clicksound = click_checkbox
 			}
@@ -1941,14 +2010,14 @@ guiTypes = { #Settings Menu#
 			iconType = {
 				name = "gamma_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = 127 }
+				position = { x = 21 y = 150 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 			instantTextBoxType={
-				position = {x = 40 y = 129 }
+				position = {x = 40 y = 152 }
 				name = "gamma_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -1964,8 +2033,8 @@ guiTypes = { #Settings Menu#
 				track= "landslider_TrackButton"
 				leftbutton = "landslider_upButton"
 				rightbutton = "landslider_downButton"
-				size = {x = 151 y = 16 }
-				position = { x = 260 y = 133 }
+				size = {x = 158 y = 16 }
+				position = { x = 260 y = 156 }
 				priority = 100
 				borderSize = { x = 16 y = 16 }
 				maxValue = 100
@@ -1977,12 +2046,12 @@ guiTypes = { #Settings Menu#
 				guiButtonType = {
 					name = "landslider_SliderButton"
 					quadTextureSprite = "yearslider_slider2"
-					position = { x=0 y = -20 }
+					position = { x=0 y =3}
 				}
 				guiButtonType = {
 					name = "landslider_TrackButton"
 					quadTextureSprite = "yearslider_background"
-					position = { x=0 y = -3}
+					position = { x=0 y =20}
 				}
 				guiButtonType = {
 				#parent = "landslider_SliderButton"
@@ -2004,14 +2073,14 @@ guiTypes = { #Settings Menu#
 			iconType = {
 				name = "tex_quality_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = 161 }
+				position = { x = 21 y = 184 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 			instantTextBoxType={
-				position = {x = 40 y = 163 }
+				position = {x = 40 y = 186 }
 				name = "tex_quality_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -2021,9 +2090,9 @@ guiTypes = { #Settings Menu#
 				format = left
 			}
 			instantTextBoxType={
-				position = {x = 278 y = 165 }
+				position = {x = 278 y = 186 }
 				name = "tex_quality_value"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 120
 				maxHeight = 18
@@ -2033,13 +2102,13 @@ guiTypes = { #Settings Menu#
 			}
 			buttonType = {
 				name = "decrease_tex_quality_button"
-				position = { x = 260 y = 167 }
+				position = { x = 260 y = 190 }
 				quadTextureSprite ="GFX_scroll_left"
 				clicksound = click_checkbox
 			}
 			buttonType = {
 				name = "increase_tex_quality_button"
-				position = { x = 395 y = 167 }
+				position = { x = 395 y = 190 }
 				quadTextureSprite ="GFX_scroll_right"
 				clicksound = click_checkbox
 			}
@@ -2049,14 +2118,14 @@ guiTypes = { #Settings Menu#
 			iconType = {
 				name = "ui_scaling_bg"
 				quadTextureSprite ="GFX_generic_bg_417"
-				position = { x = 21 y = 195 }
+				position = { x = 21 y = 218 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 			}
 			instantTextBoxType={
-				position = {x = 40 y = 199 }
+				position = {x = 40 y = 222 }
 				name = "ui_scaling_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_20_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -2066,9 +2135,9 @@ guiTypes = { #Settings Menu#
 				format = left
 			}
 			instantTextBoxType={
-				position = {x = 278 y = 199 }
+				position = {x = 278 y = 220 }
 				name = "ui_scaling_value"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 120
 				maxHeight = 18
@@ -2078,13 +2147,13 @@ guiTypes = { #Settings Menu#
 			}
 			buttonType = {
 				name = "decrease_ui_scaling_button"
-				position = { x = 260 y = 201 }
+				position = { x = 260 y = 224 }
 				quadTextureSprite ="GFX_scroll_left"
 				clicksound = click_checkbox
 			}
 			buttonType = {
 				name = "increase_ui_scaling_button"
-				position = { x = 395 y = 201 }
+				position = { x = 395 y = 224 }
 				quadTextureSprite ="GFX_scroll_right"
 				clicksound = click_checkbox
 			}
@@ -2092,16 +2161,16 @@ guiTypes = { #Settings Menu#
 			#SHADOWS
 			checkboxType = {
 				name = "shadows_checkbox"
-				position = { x = 300 y = 245 }
+				position = { x = 300 y = 250 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 334 y = 247 }
+				position = {x = 334 y = 252 }
 				name = "shadows_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 100
 				maxHeight = 18
@@ -2113,16 +2182,16 @@ guiTypes = { #Settings Menu#
 			#TREES
 			checkboxType = {
 				name = "trees_checkbox"
-				position = { x = 160 y = 245 }
+				position = { x = 160 y = 250 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 196 y = 247 }
+				position = {x = 196 y = 252 }
 				name = "trees_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 100
 				maxHeight = 18
@@ -2134,16 +2203,16 @@ guiTypes = { #Settings Menu#
 			#VSYNC
 			checkboxType = {
 				name = "vsync_checkbox"
-				position = { x = 20 y = 245 }
+				position = { x = 20 y = 250 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 56 y = 247 }
+				position = {x = 56 y = 252 }
 				name = "vsync_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 130
 				maxHeight = 18
@@ -2155,16 +2224,16 @@ guiTypes = { #Settings Menu#
 			#WEATHER FX
 			checkboxType = {
 				name = "weather_checkbox"
-				position = { x = 160 y = 274 }
+				position = { x = 160 y = 278 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 196 y = 277 }
+				position = {x = 196 y = 281 }
 				name = "weather_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 130
 				maxHeight = 18
@@ -2176,16 +2245,16 @@ guiTypes = { #Settings Menu#
 			#WATER REFLECTIONS
 			checkboxType = {
 				name = "water_refl_checkbox"
-				position = { x = 160 y = 303 }
+				position = { x = 160 y = 308 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 196 y = 307 }
+				position = {x = 196 y = 312 }
 				name = "water_refl_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 130
 				maxHeight = 18
@@ -2197,16 +2266,16 @@ guiTypes = { #Settings Menu#
 			#CITY BUILDINGS
 			checkboxType = {
 				name = "cities_checkbox"
-				position = { x = 20 y = 303 }
+				position = { x = 20 y = 308 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 56 y = 307 }
+				position = {x = 56 y = 312 }
 				name = "cities_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 130
 				maxHeight = 18
@@ -2218,16 +2287,16 @@ guiTypes = { #Settings Menu#
 			#3D UNITS
 			checkboxType = {
 				name = "units_checkbox"
-				position = { x = 300 y = 305 }
+				position = { x = 300 y = 310 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 334 y = 307 }
+				position = {x = 334 y = 312 }
 				name = "units_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 130
 				maxHeight = 18
@@ -2239,16 +2308,16 @@ guiTypes = { #Settings Menu#
 			#3D BUILDINGS
 			checkboxType = {
 				name = "buildings_checkbox"
-				position = { x = 300 y = 274 }
+				position = { x = 300 y = 278 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 334 y = 277 }
+				position = {x = 334 y = 281 }
 				name = "buildings_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 130
 				maxHeight = 18
@@ -2260,16 +2329,16 @@ guiTypes = { #Settings Menu#
 			#RIVERS
 			checkboxType = {
 				name = "rivers_checkbox"
-				position = { x = 20 y = 274 }
+				position = { x = 20 y = 278 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				buttonText = ""
 				buttonFont = "Main_14_black"
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 56 y = 277 }
+				position = {x = 56 y = 281 }
 				name = "rivers_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 130
 				maxHeight = 18
@@ -2288,9 +2357,9 @@ guiTypes = { #Settings Menu#
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 57 y = 336 }
+				position = {x = 57 y = 341 }
 				name = "hq_shaders_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 175
 				maxHeight = 18
@@ -2310,9 +2379,9 @@ guiTypes = { #Settings Menu#
 				clicksound = click_checkbox
 			}
 			instantTextBoxType={
-				position = {x = 270 y = 336 }
+				position = {x = 270 y = 341 }
 				name = "full_map_res_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 175
 				maxHeight = 18
@@ -2341,7 +2410,7 @@ guiTypes = { #Settings Menu#
 			instantTextBoxType={
 				position = {x = 40 y = 18 }
 				name = "autosave_label"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 210
 				maxHeight = 18
@@ -2352,9 +2421,9 @@ guiTypes = { #Settings Menu#
 			}
 
 			instantTextBoxType={
-				position = {x = 278 y = 20 }
+				position = {x = 278 y = 18 }
 				name = "autosave_value"
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 120
 				maxHeight = 18
@@ -2381,7 +2450,7 @@ guiTypes = { #Settings Menu#
 				name = "autosave_tocloud_title"
 				position = { x = 74 y = 68 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "AUTOSAVE_TOCLOUD"
 				maxWidth = 300
@@ -2403,7 +2472,7 @@ guiTypes = { #Settings Menu#
 				name = "allow_hotjoin_title"
 				position = { x = 74 y = 290 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "FE_HOTJOIN_LABEL"
 				maxWidth = 300
@@ -2425,7 +2494,7 @@ guiTypes = { #Settings Menu#
 				name = "allow_coop_title"
 				position = { x = 74 y = 104 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "FE_COOP_LABEL"
 				maxWidth = 300
@@ -2447,7 +2516,7 @@ guiTypes = { #Settings Menu#
 				name = "nato_counters_title"
 				position = { x = 74 y = 141 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "NATO_COUNTERS"
 				maxWidth = 300
@@ -2468,7 +2537,7 @@ guiTypes = { #Settings Menu#
 				name = "pause_on_popup_title"
 				position = { x = 74 y = 179 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "PAUSE_ON_POPUPS"
 				maxWidth = 300
@@ -2512,7 +2581,7 @@ guiTypes = { #Settings Menu#
 				name = "external_browser_title"
 				position = { x = 74 y = 216 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "EXTERNAL_BROWSER"
 				maxWidth = 300
@@ -2533,7 +2602,7 @@ guiTypes = { #Settings Menu#
 				name = "home_wiki_title"
 				position = { x = 74 y = 254 }
 				textureFile = ""
-				font = "aldrich_16_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y =0}
 				text = "HOME_WIKI"
 				maxWidth = 300
@@ -2553,19 +2622,19 @@ guiTypes = { #Settings Menu#
 
 		buttonType = {
 			name = "ApplyButton"
-			position = { x = 357 y = 485 }
-			quadTextureSprite = "GFX_sort_button_100x29"
+			position = { x = 324 y = 478 }
+			quadTextureSprite ="GFX_sort_button_100x29"
 			buttonText = "SM_APPLY"
-			buttonFont = "aldrich_18_outline"
+			buttonFont = "aldrich_24_outline"
 			clicksound = click_default
 		}
 
 		buttonType = {
 			name = "BackButton"
-			position = { x = 244 y = 485 }
-			quadTextureSprite = "GFX_sort_button_100x29"
+			position = { x = 34 y = 478 }
+			quadTextureSprite ="GFX_sort_button_100x29"
 			buttonText = "BACK"
-			buttonFont = "aldrich_18_outline"
+			buttonFont = "aldrich_24_outline"
 			clicksound = click_close
 			shortcut = "ESCAPE"
 		}

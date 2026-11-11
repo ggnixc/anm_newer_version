@@ -35,7 +35,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "selected_division_count"
 				position = {x=51 y=14}
-				font = "aldrich_18_outline"
+				font = "aldrich_20_outline"
 				maxWidth = 150
 				maxHeight = 23
 				format = left
@@ -56,7 +56,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "transport_weight"
 				position = {x=225 y=16}
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				maxWidth = 62
 				maxHeight = 23
 				format = center
@@ -148,7 +148,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "divisions_count"
 					position = {x=18 y=-5}
-					font = "hoi_16mbs"
+					font = "aldrich_18_outline"
 					maxWidth = 370
 					maxHeight = 13
 					format = center
@@ -167,38 +167,44 @@ guiTypes = {
 
 		buttonType = {
 			name = "btn_bg"
-			position = {x=2 y=0}
+			position = {x=12 y=0}
 			spriteType = "GFX_UV_unit_entry_bg"
 			clicksound = click_default
 		}
 
 		instantTextboxType = {
 			name = "unit_name"
-			position = {x=150 y=2}
-			font = "hoi_18"
-			maxWidth = 175
+			position = {x=122 y=6}
+			font = "aldrich_20_outline"
+			maxWidth = 225
 			maxHeight = 23
 			format = left
 			fixedsize = yes
 		}
 
+		iconType = {
+			name ="unit_icon_bg"
+			spriteType = "GFX_unitlist_unitinfo_button"
+			position = { x = 22 y = 1 }
+		}
+
 		buttonType = {
 			name = "unit_icon"
 			spriteType = "GFX_unit_railway_gun_icon_medium" # <- Replaced in code
-			position = { x=14 y=-6 }
+			position = { x = 23 y = -6 }
 			clicksound = click_default
 		}
 
 		iconType = {
 			name = "no_orders"
 			spriteType = "GFX_mapicon_unit_no_orders"
-			position = { x=23 y=4 }
+			position = { x=33 y=5 }
 		}
 
 		iconType = {
 			name = "bar_str"
 			spriteType = "GFX_navieslist_bar_str"
-			position = { x=11 y=24 }
+			position = { x = 21 y = 24 }
 			rotation = 1.5708
 		}
 
@@ -207,14 +213,14 @@ guiTypes = {
 			pdx_tooltip = "RAILWAY_GUN_ASSIGNED"
 			pdx_tooltip_delayed = "RAILWAY_GUN_ASSIGNED_DELAYED"
 			spriteType = "GFX_theatre_army_shield"
-			position = { x = 110 y = 4 }
+			position = { x = 342 y = 4 }
 			scale = 0.8
 		}
 
 		instantTextBoxType = {
 			name = "armies_count_box"
-			position = { x = 109 y = 7 }
-			font = "hoi_16mbs"
+			position = { x = 342 y = 9 }
+			font = "aldrich_16_outline"
 			maxWidth = 28
 			maxHeight = 23
 			fixedsize = yes
@@ -227,7 +233,7 @@ guiTypes = {
 		iconType = {
 			name = "unitlist_movement_icon"
 			spriteType = "GFX_unitlist_movement_icon"
-			position = { x=90 y=4 }
+			position = { x=100 y=4 }
 			frame = 1
 		}
 
@@ -239,8 +245,8 @@ guiTypes = {
 
 		buttonType = {
 			name = "btn_deselect"
-			position = {x=357 y=1}
-			spriteType = "GFX_NV_btn_close"
+			position = { x = 369 y = 2 }
+			spriteType = "GFX_cancel_conveyor_button"
 			pdx_tooltip = "DESELECT_UNIT"
 			clicksound = click_close
 		}
@@ -253,9 +259,8 @@ guiTypes = {
 
 		iconType = {
 			name = "low_supply"
-			spriteType = "GFX_unitcounter_supply_status_strip"
-			position = { x=30 y=16 }
-			scale = 0.75
+			spriteType = "GFX_mapicon_low_supply"
+			position = { x = 30 y = 16 }
 		}
 
 		gridboxtype = {
@@ -291,33 +296,33 @@ containerWindowType = {
 
 		Background = {
 			name = "railway_gun_stats_bg"
-			quadTextureSprite = "GFX_naval_unit_stats_bg"
+			quadTextureSprite = "GFX_unit_stats_bg"
 		}
 
 		instantTextboxType = {
 			name = "railway_gun_title"
-			position = { x = 35 y = 0 }
+			position = { x = 297 y = 0 }
 			textureFile = ""
-			font = "hoi_36header"
-			borderSize = {x = 0 y = 0}
+			font = "Bomb_28"
 			text = "RAILWAY_GUN_UNIT_STATS"
 			maxWidth = 500
 			maxHeight = 20
+			fixedsize = yes
 			format = left
 		}
 
 		iconType = {
 			name = "type_icon"
 			spriteType = "GFX_unit_railway_gun_icon_medium" # <- Replaced in code
-			position = { x=24 y=29 }
+			position = { x=8 y=27 }
 		}
 
 		editBoxType = {
 			name = "railway_gun_name"
-			position = { x = 113 y = 42 }
-			size = {x=264 y=20}
+			position = { x = 78 y = 40 }
+			size = {x=470 y=20}
 			#textureFile = ""
-			font = "hoi_20b"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			#maxWidth = 300
@@ -326,38 +331,147 @@ containerWindowType = {
 		}
 
 		iconType = {
+			name ="current_manpower_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = 730 y = 3 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
 			name = "manpower_icon"
 			spriteType = "GFX_manpower_icon"
-			position = { x=20 y=364 }
+			position = { x = 735 y = 2 }
 		}
 
 		instantTextboxType = {
 			name = "current_manpower"
-			position = { x = 50 y = 369 }
-			font = "hoi_18mbs"
+			position = { x = 768 y = 7 }
+			font = "aldrich_20_outline"
 			text = "Stuff"
-			maxWidth = 60
+			maxWidth = 100
 			maxHeight = 20
-			format = center
+			multiline = no
+			format = left
+		}
+
+		containerWindowType = {
+			name = "info"
+			position = { x=3 y=47}
+			size = { width=100% height=100%% }
+			verticalScrollbar = "right_vertical_slider"
+
+			containerWindowType = {
+				name = "base_stats"
+				position = { x=10 y=16 }
+				size = { width=165 height=200 }
+				clipping = no
+
+				instantTextboxType = {
+					name = "base_stats_label"
+					position = { x = 5 y = 15 }
+					font = "aldrich_20_outline"
+					text = "DESIGNER_BASE_STATS_LABEL"
+					maxWidth = 170
+					maxHeight = 20
+					format = left
+				}
+
+				gridboxtype = {
+					name = "stats_grid"
+					position = { x = 5 y = 36 }
+					size = { width = 155 height = 100%% }
+					slotsize = { width = 155 height = 20 }
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+			}
+
+			containerWindowType = {
+				name = "combat_stats"
+				position = { x=179 y=16 }
+				size = { width=165 height=200 }
+				clipping = no
+
+				instantTextboxType = {
+					name = "combat_stats_label"
+					position = { x = 10 y = 15 }
+					font = "aldrich_20_outline"
+					text = "DESIGNER_COMBAT_STATS_LABEL"
+					maxWidth = 170
+					maxHeight = 20
+					format = left
+				}
+
+				gridboxtype = {
+					name = "stats_grid"
+					position = { x = 10 y = 36 }
+					size = { width = 155 height = 100%% }
+					slotsize = { width = 155 height = 20 }
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+			}
+
+			containerWindowType = {
+				name = "misc_stats"
+				position = { x=354 y=16 }
+				size = { width=165 height=200 }
+				Orientation = UPPER_LEFT
+				clipping = no
+
+				instantTextboxType = {
+					name = "misc_stats_label"
+					position = { x = 10 y = 15 }
+					font = "aldrich_20_outline"
+					text = "FE_MISC_STATS"
+					maxWidth = 150
+					maxHeight = 20
+					format = left
+				}
+
+				gridboxtype = {
+					name = "stats_grid"
+					position = { x = 10 y = 36 }
+					size = { width = 155 height = 100%% }
+					slotsize = { width = 155 height = 20 }
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "adjuster_container"
+			position = { x = 10 y = 336 }
+			
+			instantTextboxType = {
+				name = "adjuster_label"
+				position = { x = 10 y = -2 }
+				font = "Bomb_18"
+				text = "PRODUCTION_ADJUSTERS_LABEL"
+				maxWidth = 150
+				maxHeight = 20
+				format = left
+			}
 		}
 
 		containerWindowType = {
 			name = "forts_modifier"
 			size = { width = 50 height = 70 }
-			position = { x = 448 y = 324 }
+			position = { x = 10 y = 353 }
 			clipping = no
 
 			iconType = {
-				name = "terrain_mod_bg"
+				name = "terrain_mod_frame"
 				spriteType = "GFX_adjuster_fort_bg"
-				position = { x=18 y=11 }
-				alwaystransparent = yes
+				position = { x=0 y=0 }
 			}
 
 			iconType = {
-				name = "terrain_mod_frame"
-				spriteType = "GFX_terrain_mod_frame"
+				name = "terrain_mod_bg"
+				#spriteType = "GFX_terrain_mod_frame"
 				position = { x=7 y=5 }
+				alwaystransparent = yes
 			}
 
 			iconType = {
@@ -386,95 +500,12 @@ containerWindowType = {
 		}
 
 		containerWindowType = {
-			name = "info"
-			position = { x=3 y=47}
-			size = { width=100% height=100%% }
-			verticalScrollbar = "right_vertical_slider"
-
-			containerWindowType = {
-				name = "base_stats"
-				position = { x=10 y=15 }
-				size = { width=165 height=200 }
-				clipping = no
-
-				instantTextboxType = {
-					name = "base_stats_label"
-					position = { x = 5 y = 14 }
-					font = "hoi4_typewriter22"
-					text = "DESIGNER_BASE_STATS_LABEL"
-					maxWidth = 170
-					maxHeight = 20
-					format = left
-				}
-
-				gridboxtype = {
-					name = "stats_grid"
-					position = { x = 5 y = 36 }
-					size = { width = 155 height = 100%% }
-					slotsize = { width = 155 height = 20 }
-					max_slots_horizontal = 1
-					format = "UPPER_LEFT"
-				}
-			}
-
-			containerWindowType = {
-				name = "combat_stats"
-				position = { x=179 y=15 }
-				size = { width=165 height=200 }
-				clipping = no
-
-				instantTextboxType = {
-					name = "combat_stats_label"
-					position = { x = 10 y = 14 }
-					font = "hoi4_typewriter22"
-					text = "DESIGNER_COMBAT_STATS_LABEL"
-					maxWidth = 170
-					maxHeight = 20
-					format = left
-				}
-
-				gridboxtype = {
-					name = "stats_grid"
-					position = { x = 8 y = 36 }
-					size = { width = 155 height = 100%% }
-					slotsize = { width = 155 height = 20 }
-					max_slots_horizontal = 1
-					format = "UPPER_LEFT"
-				}
-			}
-
-			containerWindowType = {
-				name = "misc_stats"
-				position = { x=354 y=15 }
-				size = { width=165 height=200 }
-				Orientation = UPPER_LEFT
-				clipping = no
-
-				instantTextboxType = {
-					name = "misc_stats_label"
-					position = { x = 10 y = 14 }
-					font = "hoi4_typewriter22"
-					text = "FE_MISC_STATS"
-					maxWidth = 150
-					maxHeight = 20
-					format = left
-				}
-
-				gridboxtype = {
-					name = "stats_grid"
-					position = { x = 7 y = 36 }
-					size = { width = 155 height = 100%% }
-					slotsize = { width = 155 height = 20 }
-					max_slots_horizontal = 1
-					format = "UPPER_LEFT"
-				}
-			}
-		}
-
-		containerWindowType = {
 			name = "equipment"
-			position = { x=10 y=290 }
-			size = { width=250 height=200 }
+			position = { x=420 y=58 }
+			size = { width=296 height=359 }
+			verticalScrollbar = "right_vertical_slider"
+			scroll_wheel_factor = 40
+			smooth_scrolling = yes
 			clipping = no
 
 			gridboxtype = {
@@ -482,7 +513,7 @@ containerWindowType = {
 				position = { x = 155 y = 10 }
 				size = { width = 250 height = 100%% }
 				slotsize = { width = 60 height = 60 }
-				#max_slots_horizontal = 3
+				max_slots_horizontal = 1
 				#max_slots_vertical = 3
 				format = "UPPER_LEFT"
 			}
@@ -498,14 +529,13 @@ containerWindowType = {
 
 		buttonType = {
 			name = "btn_close"
-			position = { x = 265 y = 3 }
+			position = { x = 826 y = 3 }
 			quadTextureSprite ="GFX_NV_btn_close"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
 			clicksound = click_close
 			pdx_tooltip = "CLOSE"
-			Orientation = "UPPER_RIGHT"
+			scale = 0.9
 		}
 	}
-
 }

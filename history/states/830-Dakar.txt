@@ -2,19 +2,25 @@ state={
 	id=830
 	name="STATE_830"
 	history = {
-		owner = SEN
+		add_core_of = AOF
+		owner = AOF
         add_core_of = SEN
 		victory_points = {
 			4948 20
 		}
+		add_dynamic_modifier = { modifier = FRS_trans_saharan_railroad }
 		buildings = {
 			infrastructure = 5
 			4948 = {
 				naval_base = 6
 			}
 			air_base = 6
-			arms_factory = 1
+			offices = 2
+			prisons = 1
+			thermoelectric_plant = 1
+			barracks = 1
 		}
+		set_state_flag = GDP_regions_senegal
 	}
 	provinces={
 		4948 

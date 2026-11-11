@@ -16,11 +16,6 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_event_news_everything_overlay"
-		texturefile = "gfx/interface/event_news_everything_overlay.dds"
-	}
-
-	spriteType = {
 		name = "GFX_event_news_bg"
 		texturefile = "gfx/interface/event_news_bg.dds"
 	}
@@ -58,7 +53,17 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_event_button_minimize"
 		texturefile = "gfx/interface/event_button_minimize.dds"
-		noOfFrames = 3
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_event_operative_background"
+		texturefile = "gfx/interface/event_operative_bg.dds"
+		noOfFrames = 24
+		animation_rate_fps = 80 #95
+		looping = no
+		play_on_show = no
+		pause_on_loop = 0.0
+		#effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
 
 	##########################################
@@ -110,7 +115,7 @@ spriteTypes = {
 	#	alwaystransparent = yes
 	#}
 	#
-	#textSpriteType = {
+	#spriteType = {
 	#	name = "GFX_event_button_547"
 	#	texturefile = "gfx/interface/event_button_547.dds"
 	#	noOfFrames = 1
@@ -122,7 +127,7 @@ spriteTypes = {
 	#spriteType =
 	#{
 	#	name = "GFX_event_event_test"
-	#	texturefile = "gfx/event_pictures/event_test.dds"
+	#	texturefile = "gfx/event_pictures/event_test.png"
 	#	alwaystransparent = yes
 	#}
 }

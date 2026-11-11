@@ -73,19 +73,19 @@ scripted_map_modes = {
 						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_ExileCommonwealth } }
 						FROM = { has_idea = RegionalOrganization_ExileCommonwealth }
 					}
-					set_temp_variable = { red = 0.619 }
-					set_temp_variable = { green = 0.270 }
-					set_temp_variable = { blue = 0.298 }
+					set_temp_variable = { red = 0.686 }
+					set_temp_variable = { green = 0.235 }
+					set_temp_variable = { blue = 0.235 }
 				}
-				else_if = {
-				 	limit = { # Comecon
-				 		ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_USSR } }
-				 		FROM = { has_idea = RegionalOrganization_USSR }
-				 	}
-				 	set_temp_variable = { red = 0.568 }
-				 	set_temp_variable = { green = 0.168 }
-				 	set_temp_variable = { blue = 0.250 }
-				}
+				# else_if = {
+				# 	limit = { # Union of Soviet Socialist Republics
+				# 		ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_USSR } }
+				# 		FROM = { has_idea = RegionalOrganization_USSR }
+				# 	}
+				# 	set_temp_variable = { red = 0.568 }
+				# 	set_temp_variable = { green = 0.168 }
+				# 	set_temp_variable = { blue = 0.250 }
+				# }
 				else_if = {
 					limit = { # Helsinki Treaty
 						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_HelsinkiTreaty } }
@@ -127,18 +127,18 @@ scripted_map_modes = {
 						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_SanLorenzoPact } }
 						FROM = { has_idea = RegionalOrganization_SanLorenzoPact }
 					}
-					set_temp_variable = { red = 0.470 }
-					set_temp_variable = { green = 0.615 }
-					set_temp_variable = { blue = 0.627 }
+					set_temp_variable = { red = 0.255 }
+					set_temp_variable = { green = 0.605 }
+					set_temp_variable = { blue = 0.666 }
 				}
 				else_if = {
 					limit = { # Union of Sovereign Nations
-						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_UNS } }
-						FROM = { has_idea = RegionalOrganization_UNS }
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_HispanicEconomicCommunity } }
+						FROM = { has_idea = RegionalOrganization_HispanicEconomicCommunity }
 					}
-					set_temp_variable = { red = 0.168 }
-					set_temp_variable = { green = 0.301 }
-					set_temp_variable = { blue = 0.588 }
+					set_temp_variable = { red = 0.658 }
+					set_temp_variable = { green = 0.401 }
+					set_temp_variable = { blue = 0.188 }
 				}
 				else_if = {
 					limit = { # Roboré Accords
@@ -160,8 +160,8 @@ scripted_map_modes = {
 				}
 				else_if = {
 					limit = { # Spanish Empire
-						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_SpanishEmpire } }
-						FROM = { has_idea = RegionalOrganization_SpanishEmpire }
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_IberianEmpire } }
+						FROM = { has_idea = RegionalOrganization_IberianEmpire }
 					}
 					set_temp_variable = { red = 1.000 }
 					set_temp_variable = { green = 0.756 }
@@ -169,8 +169,8 @@ scripted_map_modes = {
 				}
 				else_if = {
 					limit = { # Portuguese Empire
-						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_PortugueseEmpire } }
-						FROM = { has_idea = RegionalOrganization_PortugueseEmpire }
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_LusophoneCommunity } }
+						FROM = { has_idea = RegionalOrganization_LusophoneCommunity }
 					}
 					set_temp_variable = { red = 0.349 }
 					set_temp_variable = { green = 0.517 }
@@ -231,6 +231,15 @@ scripted_map_modes = {
 					set_temp_variable = { blue = 0.561 }
 				}
 				else_if = {
+					limit = { # Greater East Asia Resource Council
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_GEARC } }
+						FROM = { has_idea = RegionalOrganization_GEARC }
+					}
+					set_temp_variable = { red = 0.712 }
+					set_temp_variable = { green = 0.325 }
+					set_temp_variable = { blue = 0.498 }
+				}
+				else_if = {
 					limit = { # Organization of African Unity
 						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_OAU } }
 						FROM = { has_idea = RegionalOrganization_OAU }
@@ -244,18 +253,36 @@ scripted_map_modes = {
 						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_NCC } }
 						FROM = { has_idea = RegionalOrganization_NCC }
 					}
-					set_temp_variable = { red = 0.839 }
-					set_temp_variable = { green = 0.437 }
-					set_temp_variable = { blue = 0.428 }
+					set_temp_variable = { red = 0.619 }
+					set_temp_variable = { green = 0.270 }
+					set_temp_variable = { blue = 0.298 }
 				}
 				else_if = {
-					limit = { # Gulf Cooperation Council
-						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_GCC } }
-						FROM = { has_idea = RegionalOrganization_GCC }
+					limit = { # Pan-African Freedom Community
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_PanAfricanFreedomCommunity } }
+						FROM = { has_idea = RegionalOrganization_PanAfricanFreedomCommunity }
 					}
-					set_temp_variable = { red = 0.1 }
-					set_temp_variable = { green = 0.5 }
-					set_temp_variable = { blue = 0.1 }
+					set_temp_variable = { red = 0.325 }
+					set_temp_variable = { green = 0.537 }
+					set_temp_variable = { blue = 0.416 }
+				}
+				else_if = {
+					limit = { # Senegambia
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_Senegambia } }
+						FROM = { has_idea = RegionalOrganization_Senegambia }
+					}
+					set_temp_variable = { red = 0.208 }
+					set_temp_variable = { green = 0.463 }
+					set_temp_variable = { blue = 0.580 }
+				}
+				else_if = {
+					limit = { # AOF
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_AOF } }
+						FROM = { has_idea = RegionalOrganization_AOF }
+					}
+					set_temp_variable = { red = 0.353 }
+					set_temp_variable = { green = 0.431  }
+					set_temp_variable = { blue = 0.549 }
 				}
 				else = { # Default
 					set_temp_variable = { red = 0.5 }

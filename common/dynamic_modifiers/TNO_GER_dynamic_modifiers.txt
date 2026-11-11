@@ -1,0 +1,106 @@
+# ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗#
+#██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║╚██╗ ██╔╝#
+#██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║ ╚████╔╝ #
+#██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ╚██╔╝  #
+#╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   #
+# ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   #
+#Dynamic Modifiers
+
+#Index; Search for these names using ctrl+f and you'll find the section they entitle.
+#	Generic Dynamic Stuff
+#	Bormann Dynamic Stuff
+#	Speer Dynamic Stuff
+#	Göring Dynamic Stuff
+#	Himmler Dynamic Stuff
+#	Heydrich Dynamic Stuff
+
+#################################################
+#             Generic Dynamic Stuff             #
+#################################################
+## WW3 dyanmic modifier ##
+GER_WW3_dynamic_modifier = {
+	icon = "GFX_idea_GER_endsieg_old"
+	enable = { always = yes }
+	max_dig_in = GER_WW3_max_dig_in
+	conscription_factor = GER_WW3_conscription_factor
+	training_time_army_factor = GER_WW3_training_time_army_factor
+	industrial_capacity_factory = GER_WW3_industrial_capacity_factory
+	industrial_capacity_dockyard = GER_WW3_industrial_capacity_dockyard
+	amphibious_invasion = GER_WW3_amphibious_invasion
+	invasion_preparation = GER_WW3_invasion_preparation
+	air_strategic_bomber_bombing_factor = GER_WW3_air_strategic_bomber_bombing_factor
+	air_range_factor = GER_WW3_air_range_factor
+	army_speed_factor = GER_WW3_army_speed_factor
+	recon_factor = GER_WW3_recon_factor
+}
+
+GER_Endsieg_dynamic_modifier = {
+	# icon = "GFX_idea_MGN_mad_scientist"
+	enable = { always = yes }
+
+	# European unity effects
+	political_power_gain		   = GER_EndsiegEffects^0
+	max_command_power		   	   = GER_EndsiegEffects^1
+	annual_gdp_growth_factor	   = GER_EndsiegEffects^2
+	army_defence_factor			   = GER_EndsiegEffects^3
+
+	# Occupation effects
+	political_power_cost		   = GER_EndsiegEffects^4
+	military_expenditures_factor   = GER_EndsiegEffects^5
+	consumer_goods_use_modifier	   = GER_EndsiegEffects^6
+	trade_opinion_factor		   = GER_EndsiegEffects^7
+}
+
+GER_Econ_Effects_dynamic_modifier = {
+	# icon = "GFX_idea_MGN_mad_scientist"
+	enable = { always = yes }
+	political_power_gain					   = GER_EconEffects^0
+	stability_factor						   = GER_EconEffects^1
+	consumer_goods_use_modifier				   = GER_EconEffects^2
+	industrial_capacity_factory				   = GER_EconEffects^3
+	production_factory_max_efficiency_factor   = GER_EconEffects^4
+	production_factory_start_efficiency_factor = GER_EconEffects^5
+	production_factory_efficiency_gain_factor  = GER_EconEffects^6
+	production_speed_buildings_factor		   = GER_EconEffects^7
+	fuel_gain_factor						   = GER_EconEffects^8
+	research_speed_factor					   = GER_EconEffects^9
+	annual_gdp_growth_factor				   = GER_EconEffects^10
+	misc_income_modifier					   = GER_EconEffects^11
+	local_resources_factor					   = GER_EconEffects^12
+	production_units_to_GDP_ratio_modifier	   = GER_EconEffects^13
+	misc_costs_modifier						   = GER_EconEffects^14
+	consumer_goods_production_factor		   = GER_EconEffects^15
+	military_industry_cost_modifier			   = GER_EconEffects^16
+	civilian_expenditures_factor			   = GER_EconEffects^17
+	social_program_cost_factor				   = GER_EconEffects^18
+
+	# Level-fixed effects
+	political_power_factor					   = GER_EconBaseEffects^0
+	trade_opinion_factor					   = GER_EconBaseEffects^1
+	gdp_growth_modifier						   = GER_EconBaseEffects^2
+	inflation_rate_modifier					   = GER_EconBaseEffects^3
+	poverty_monthly_rate					   = GER_EconBaseEffects^4
+}
+
+GER_EconSphere_EE_dynamic_modifier = {
+	# icon = "GFX_idea_GER_reichswirtschaft"
+	enable = { always = yes }
+	political_power_gain					   = modifiers@RegionalOrganization_Ostministerium^0
+	stability_factor						   = modifiers@RegionalOrganization_Ostministerium^1
+	consumer_goods_use_modifier				   = modifiers@RegionalOrganization_Ostministerium^2
+	industrial_capacity_factory				   = modifiers@RegionalOrganization_Ostministerium^3
+	production_factory_max_efficiency_factor   = modifiers@RegionalOrganization_Ostministerium^4
+	production_factory_start_efficiency_factor = modifiers@RegionalOrganization_Ostministerium^5
+	production_factory_efficiency_gain_factor  = modifiers@RegionalOrganization_Ostministerium^6
+	production_speed_buildings_factor		   = modifiers@RegionalOrganization_Ostministerium^7
+	fuel_gain_factor						   = modifiers@RegionalOrganization_Ostministerium^8
+	research_speed_factor					   = modifiers@RegionalOrganization_Ostministerium^9
+	annual_gdp_growth_factor				   = modifiers@RegionalOrganization_Ostministerium^10
+	misc_income_modifier					   = modifiers@RegionalOrganization_Ostministerium^11
+	local_resources_factor					   = modifiers@RegionalOrganization_Ostministerium^12
+	GDP_to_sphere_leader_modifier		   	   = modifiers@RegionalOrganization_Ostministerium^13
+	production_units_to_GDP_ratio_modifier	   = modifiers@RegionalOrganization_Ostministerium^14
+	consumer_goods_production_factor		   = modifiers@RegionalOrganization_Ostministerium^15
+	monthly_population					   	   = modifiers@RegionalOrganization_Ostministerium^16
+}
+

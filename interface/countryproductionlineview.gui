@@ -4324,7 +4324,7 @@ guiTypes = {
 
 		iconType = {
 			name = "carrier_fighter_icon"
-			position = { x = 260 y = 57 }
+			position = { x = 215 y = 96 }
 			spriteType = "GFX_airwing_carrier_icon"
 			alwaystransparent = yes
 		}
@@ -4516,6 +4516,23 @@ guiTypes = {
 				max_slots = { x = 8 y = 2 }
 				format = "UPPER_LEFT"
 			}
+		}
+		
+		iconType = {
+			name ="dominance_icon"
+			spriteType = "GFX_naval_dominance_support_strip"
+			position = { x= 335 y = 10 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "dominance_value"
+			position = { x = 365 y = 10 }
+			textureFile = ""
+			font = "aldrich_18_outline"
+			maxWidth = 25
+			maxHeight = 20
+			format = left
 		}
 
 		gridBoxType = {

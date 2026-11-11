@@ -34,7 +34,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title"
 			position = { x = 0 y = 15 }
-			font = "aldrich_32_outline"
+			font = "aldrich_36_outline"
 			maxWidth = 670
 			maxHeight = 35
 			fixedsize = yes
@@ -87,7 +87,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "period_desc"
 			position = { x = 29 y = 0 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 280
 			maxHeight = 25
 			format = center
@@ -142,7 +142,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "min_log_months"
 			position = { x = 47 y = 24 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "1"
 			maxWidth = 35
 			maxHeight = 18
@@ -152,7 +152,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "max_log_months"
 			position = { x = 262 y = 24 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "12"
 			maxWidth = 35
 			maxHeight = 18
@@ -169,7 +169,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title_losses_in_manpower"
 			position = { x = 55 y = 49 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 280
 			maxHeight = 25
 			format = left
@@ -178,7 +178,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "num_combats_won_factor"
 			position = { x = 340 y = 49 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 280
 			maxHeight = 25
 			format = center
@@ -189,21 +189,21 @@ guiTypes = {
 			quadTextureSprite = "GFX_battle_log_tab"
 			position = { x=5 y=80 }
 			buttonText = "COMBAT_LOG_TAB_COMBAT"
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 		}
 		buttonType = {
 			name = "equipment_tab_button"
 			quadTextureSprite = "GFX_battle_log_tab"
 			position = { x=215 y=80 }
 			buttonText = "COMBAT_LOG_TAB_EQUIPMENT"
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 		}
 		buttonType = {
 			name = "template_tab_button"
 			quadTextureSprite = "GFX_battle_log_tab"
 			position = { x=425 y=80 }
 			buttonText = "COMBAT_LOG_TAB_TEMPLATE"
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 		}
 
 	}
@@ -230,7 +230,7 @@ guiTypes = {
 			name = "combats_list"
 			position = { x = 8 y = 6 }
 			size = { width = 610 height = 100%% }
-			slotsize = { width = 610 height = 105 }
+			slotsize = { width = 610 height = 103 }
 			max_slots_horizontal = 1
 			max_slots_vertical = 6 # Overwritten in code, so it's as many as can fit on the screen.
 			format = "UPPER_LEFT"
@@ -272,7 +272,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "empty_msg"
 			position = { x = 30 y = 97 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 590
 			maxHeight = 25
 			format = center
@@ -308,7 +308,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title_equipment_lost"
 			position = { x = 30 y = 12 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 280
 			maxHeight = 25
 			format = center
@@ -316,43 +316,52 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "title_lost_in_combat"
-			position = { x = 339 y = 12 }
-			font = "aldrich_22_outline"
+			position = { x = 339 y = 6 }
+			font = "aldrich_20_outline"
 			maxWidth = 140
 			maxHeight = 25
 			format = center
 			text = "COMBAT_LOG_LOSS_REASON_COMBAT"
 		}
 		instantTextBoxType = {
-			name = "title_lost_by_attrition"
-			position = { x = 469 y = 12 }
-			font = "aldrich_22_outline"
+			name = "title_recovered"
+			position = { x = 404 y = 23 }
+			font = "aldrich_20_outline"
 			maxWidth = 140
-			maxHeight = 25
+			maxHeight = 50
+			format = center
+			text = "COMBAT_LOG_RECOVERED"
+		}
+		instantTextBoxType = {
+			name = "title_lost_by_attrition"
+			position = { x = 469 y = 6 }
+			font = "aldrich_20_outline"
+			maxWidth = 140
+			maxHeight = 50
 			format = center
 			text = "COMBAT_LOG_LOSS_REASON_ATTRITION"
 		}
 		instantTextBoxType = {
 			name = "num_equipment_lost_in_combat"
-			position = { x = 339 y = 42 }
-			font = "aldrich_22_outline"
-			maxWidth = 140
+			position = { x = 374 y = 42 }
+			font = "aldrich_24_outline"
+			maxWidth = 70
 			maxHeight = 25
 			format = center
 		}
 		instantTextBoxType = {
 			name = "num_equipment_recovered_in_combat"
-			position = { x = 400 y = 45 }
-			font = "aldrich_22_outline"
-			maxWidth = 130
+			position = { x = 436 y = 42 }
+			font = "aldrich_24_outline"
+			maxWidth = 70
 			maxHeight = 25
 			format = center
 		}
 		instantTextBoxType = {
 			name = "num_equipment_lost_by_attrition"
-			position = { x = 469 y = 42 }
-			font = "aldrich_22_outline"
-			maxWidth = 140
+			position = { x = 504 y = 42 }
+			font = "aldrich_24_outline"
+			maxWidth = 70
 			maxHeight = 25
 			format = center
 		}
@@ -360,7 +369,7 @@ guiTypes = {
 		buttonType = {
 			name = "filter_button"
 			position = {x= 65 y = 41 }
-			buttonFont = "aldrich_22_outline"
+			buttonFont = "aldrich_24_outline"
 			quadTextureSprite = "GFX_sort_button_202x29"
 			orientation = "UPPER_LEFT"
 			clicksound = click_default
@@ -400,7 +409,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "empty_msg"
 					position = { x = 5 y = 97 }
-					font = "aldrich_22_outline"
+					font = "aldrich_24_outline"
 					maxWidth = 590
 					maxHeight = 25
 					format = center
@@ -416,7 +425,7 @@ guiTypes = {
 
 				background = {
 					name = "Background"
-					quadTextureSprite ="GFX_tiled_window_transparent"
+					quadTextureSprite ="GFX_combat_log_info_bg_overlay"
 					position = { x=0 y= 28 }
 				}
 
@@ -429,7 +438,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "title_enemy_equipment_lost"
 					position = { x = 5 y = 4 }
-					font = "aldrich_22_outline"
+					font = "aldrich_24_outline"
 					maxWidth = 395
 					maxHeight = 25
 					format = center
@@ -438,7 +447,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "num_enemy_equipment_lost"
 					position = { x = 400 y = 4 }
-					font = "aldrich_22_outline"
+					font = "aldrich_24_outline"
 					maxWidth = 130
 					maxHeight = 25
 					format = center
@@ -457,7 +466,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "empty_msg"
 					position = { x = 5 y = 97 }
-					font = "aldrich_22_outline"
+					font = "aldrich_24_outline"
 					maxWidth = 590
 					maxHeight = 25
 					format = center
@@ -500,7 +509,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title_templates"
 			position = { x = 32 y = 12 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 210
 			maxHeight = 25
 			format = center
@@ -509,7 +518,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title_combats_won"
 			position = { x = 329 y = 12 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 140
 			maxHeight = 25
 			format = center
@@ -518,7 +527,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title_combats_total"
 			position = { x = 464 y = 12 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 140
 			maxHeight = 25
 			format = center
@@ -538,7 +547,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "empty_msg"
 			position = { x = 30 y = 97 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 590
 			maxHeight = 25
 			format = center
@@ -562,8 +571,8 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "eq_name"
 			position = { x = 240 y = 50 }
-			font = "aldrich_16_outline"
-			maxWidth = 110
+			font = "aldrich_18_outline"
+			maxWidth = 115
 			maxHeight = 25
 			format = left
 			vertical_alignment = center
@@ -571,7 +580,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "num_loss_in_combat"
 			position = { x = 400 y = 50 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 130
 			maxHeight = 25
 			format = center
@@ -600,30 +609,38 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "eq_name"
 			position = { x = 240 y = 50 }
-			font = "aldrich_16_outline"
-			maxWidth = 110
+			font = "aldrich_18_outline"
+			maxWidth = 115
 			maxHeight = 25
 			format = left
 			vertical_alignment = center
 		}
 		instantTextBoxType = {
 			name = "num_loss_in_combat"
-			position = { x = 330 y = 50 }
-			font = "aldrich_22_outline"
-			maxWidth = 100
+			position = { x = 345 y = 50 }
+			font = "aldrich_24_outline"
+			maxWidth = 70
+			maxHeight = 25
+			format = center
+		}
+		instantTextBoxType = {
+			name = "num_loss_recovered"
+			position = { x = 410 y = 50 }
+			font = "aldrich_24_outline"
+			maxWidth = 70
 			maxHeight = 25
 			format = center
 		}
 		instantTextBoxType = {
 			name = "num_loss_by_attrition"
-			position = { x = 460 y = 50 }
-			font = "aldrich_22_outline"
-			maxWidth = 100
+			position = { x = 475 y = 50 }
+			font = "aldrich_24_outline"
+			maxWidth = 70
 			maxHeight = 25
 			format = center
 		}
 		iconType = {
-			name ="equipment_icon"
+			name = "equipment_icon"
 			spriteType = "GFX_technology_medium"
 			position = { x = 2 y = 2 }
 			alwaystransparent = yes
@@ -645,7 +662,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "template_name"
 			position = { x = 50 y = 22 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 270
 			maxHeight = 25
 			format = left
@@ -654,7 +671,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "num_won"
 			position = { x = 305 y = 22 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			maxWidth = 140
 			maxHeight = 25
 			format = center
@@ -662,7 +679,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "num_fought_in"
 			position = { x = 438 y = 22 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			maxWidth = 140
 			maxHeight = 25
 			format = center
@@ -690,13 +707,23 @@ guiTypes = {
 		}
 
 		iconType = {
-			name ="icon_attack"
+			name = "icon_attack"
 			spriteType = "GFX_combatlog_atk_def"
 			position = { x = 98 y = 3 }
 		}
 		iconType = {
-			name ="icon_defence"
+			name = "icon_attack_overrun"
+			spriteType = "GFX_overrun_icon"
+			position = { x = 98 y = 3 }
+		}
+		iconType = {
+			name = "icon_defence"
 			spriteType = "GFX_combatlog_atk_def"
+			position = { x = 470 y = 3 }
+		}
+		iconType = {
+			name = "icon_defence_overrun"
+			spriteType = "GFX_overrun_icon"
 			position = { x = 470 y = 3 }
 		}
 		buttonType = {
@@ -704,7 +731,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_battle_log_battle_button"
 			position = { x=139 y=5 }
 			buttonText = ""
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			format = left
 			borderSize = { x=10 y=0 }
 		}
@@ -737,7 +764,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "date"
 			position = { x = 300 y = 8 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 160
 			maxHeight = 25
 			format = right
@@ -745,7 +772,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "atk_lost_manpower"
 			position = { x = 105 y = 31 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 25
 			format = left
@@ -754,7 +781,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "def_lost_manpower"
 			position = { x = 305 y = 31 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 25
 			format = right
@@ -763,7 +790,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "atk_lost_armor_eq"
 			position = { x = 105 y = 49 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 25
 			format = left
@@ -772,7 +799,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "def_lost_armor_eq"
 			position = { x = 305 y = 49 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 25
 			format = right
@@ -781,7 +808,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "atk_lost_air_eq"
 			position = { x = 105 y = 67 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 25
 			format = left
@@ -790,7 +817,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "def_lost_air_eq"
 			position = { x = 305 y = 67 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 25
 			format = right
@@ -799,7 +826,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "atk_lost_other_eq"
 			position = { x = 105 y = 85 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 25
 			format = left
@@ -808,7 +835,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "def_lost_other_eq"
 			position = { x = 305 y = 85 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 200
 			maxHeight = 25
 			format = right

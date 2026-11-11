@@ -12,12 +12,13 @@ sub_units = {
 			anti_tank
 		}
 
-		group = infantry
+		group = combat_support
 
 		categories = {
 			category_front_line
 			category_army
-			category_line_artillery
+			category_antitank
+			category_artillery
 		}
 
 		combat_width = 1
@@ -33,14 +34,66 @@ sub_units = {
 		}
 		manpower = 1000
 		max_organisation = 0
-		default_morale = 0
+		default_morale = 0.05
 		max_strength = 0.6
 		training_time = 120
 		weight = 0.5
+		entrenchment = 5
+		equipment_capture_factor = -0.02
+		hard_attack = 1.2
+		entrenchment = 2
+		supply_consumption = 0.12
 
-		hard_attack = -0.1
+		forest = {
+			attack = -0.25
+			defence = -0.1
+			movement = -0.2
+		}
 
-		supply_consumption = 0.1
+		desert_hills = {
+			movement = -0.1
+			defence = 0.07
+		}
+		hills = {
+			attack = 0.05
+			defence = 0.1
+			movement = -0.2
+		}
+		valleys = {
+			attack = 0.05
+			movement = -0.2
+		}
+		mountain = {
+			attack = -0.05
+			defence = 0.1
+			movement = -0.5
+		}
+
+		jungle = {
+			attack = -0.25
+			movement = -0.3
+		}
+
+		marsh = {
+			attack = -0.25
+			defence = -0.1
+			movement = -0.5
+		}
+
+		fort = {
+			attack = 0.1
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+
+		amphibious = {
+			attack = -0.5
+			movement = -0.2
+		}
+
 	}
 	mot_anti_tank_brigade = {
 		sprite = motorized
@@ -54,12 +107,13 @@ sub_units = {
 			anti_tank
 		}
 
-		group = mobile
+		group = mobile_combat_support
 
 		categories = {
 			category_front_line
 			category_army
-			category_line_artillery
+			category_antitank
+			category_artillery
 		}
 
 		combat_width = 1

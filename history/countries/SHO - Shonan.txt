@@ -1,0 +1,229 @@
+capital = 751
+
+# Vacant
+recruit_character = SHO_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+add_manpower = 100000
+
+
+# Leaders
+recruit_character = SHO_Tan_Chor_Lam
+recruit_character = SHO_Zhang_Guotao
+recruit_character = SHO_Li_Vei_Chen
+recruit_character = SHO_Lee_Hau_Shik
+recruit_character = SHO_Ong_Pang_Boon
+recruit_character = SHO_Kwek_Hong_Png
+recruit_character = SHO_Tan_Chin_Tuan
+recruit_character = SHO_Lien_Ying_Chow
+recruit_character = SHO_Tan_Lark_Sye
+recruit_character = SHO_Wee_Cho_Yaw
+recruit_character = SHO_Wu_Juetian
+recruit_character = SHO_Tan_Eng_Joo
+recruit_character = SHO_Soon_Peng_Yam
+recruit_character = SHO_Tan_Keong_Choon
+recruit_character = SHO_Tan_Siek_Kew
+recruit_character = SHO_Lim_Kim_San
+recruit_character = SHO_Lee_Seng_Gee
+recruit_character = SHO_Othman_Wok
+recruit_character = SHO_Wee_Kim_Wee
+recruit_character = SHO_Ong_Eng_Guan
+recruit_character = SHO_Lee_Kuan_Yew
+
+## OLD
+#recruit_character = SHO_Yamamoto_Moichiro
+#recruit_character = SHO_Sugita_Ichiji
+#recruit_character = SHO_Takashina_Takehiko
+#recruit_character = SHO_Kinugasa_Hayao
+#recruit_character = SHO_Yoshie_Seiichi
+#recruit_character = SHO_Muta_Hirokuni
+#recruit_character = SHO_Syed_Jaafar_Albar
+#recruit_character = SHO_Kurosawa_Takeo
+#recruit_character = SHO_Burnahuddin_Al_Helmy
+#recruit_character = SHO_Dato_Onn_Jaafar
+
+# Ministers
+#recruit_character = SHO_Omar_Ali_Saifuddien_III
+#recruit_character = SHO_Tun_Dr_Ismailn
+#recruit_character = SHO_Khir_Johari
+#recruit_character = SHO_Tun_Abdul_Razak
+
+
+set_convoys = 50
+
+set_stability = 0.6
+set_war_support = 0.6
+country_lock_all_division_template = yes
+
+oob = "SHO_1962"
+
+set_grand_doctrine = defensive_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = armored_car_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 300
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1960.11.11"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 0
+	socialist = 0
+	progressivism = 5
+	liberalism = 8
+	conservatism = 24
+	paternalism = 20
+	paternalism_2 = 12
+	despotism = 31
+	fascism = 0
+	national_socialism = 0
+	ultranationalism = 0
+}
+
+inherit_technology = JAP
+
+add_ideas = {
+	#Country#
+	Sphere_Economic_Dependent
+	SHO_borrowed_place_borrowed_time
+	SHO_the_iron_abacus
+	SHO_the_grand_wayang
+	SHO_falling_leaves_distant_roots
+	SHO_the_revolving_lantern
+	SHO_a_roof_by_the_month
+
+	#Ministers#
+
+	#Political
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_corvee
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_elite_voting
+	
+	#Military#
+	tno_conscription_not_applicable
+	tno_military_supervision_not_applicable
+	tno_training_not_applicable
+	tno_draft_exemptions_not_applicable
+	
+	#Economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+	
+	#Social#
+	tno_health_care_service_for_care
+	tno_education_stratified_education
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_traditional_roles
+	tno_security_political_control
+	tno_regulations_token_regulations
+
+	#Misc#
+	tno_refugees_vetted_entry
+	tno_women_not_applicable
+	tno_racial_integration_not_applicable
+	tno_child_labor_legal
+	tno_safety_minimal_regulations
+	tno_pollution_no_controls
+	tno_lgbt_rights_partially_deciminalized
+	tno_minorities_segregation
+
+	##SOCIETAL DEVELOPMENT##
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_research_facilities_outdated
+	tno_academic_base_primary_schooling
+	tno_admin_efficiency_deficient_administrative_systems
+}
+
+set_research_slots = 2
+
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { SHO_Japan_Opinion = 50 }
+set_variable = { SHO_Nanjing_Authority = 75 }
+set_variable = { SHO_Constitutional_Depth = 30 }
+set_variable = { SHO_Market_Confidence = 50 }
+set_variable = { SHO_Entrepot_Flow = 75 }
+
+# ECONOMIC LAWS
+set_variable = { tno_trade_laws_effectiveness = 86 }
+set_variable = { tno_income_taxation_effectiveness = 44 }
+set_variable = { tno_minimum_wage_effectiveness = 78 }
+set_variable = { tno_max_workhours_effectiveness = 84 }
+set_variable = { tno_pensions_effectiveness = 63 }
+set_variable = { tno_unemployment_effectiveness = 81 }
+set_variable = { tno_regulations_effectiveness = 54 }
+
+# SOCIAL LAWS
+set_variable = { tno_health_care_effectiveness = 37 }
+set_variable = { tno_education_effectiveness = 42 }
+set_variable = { tno_penal_system_effectiveness = 67 }
+set_variable = { tno_gender_rights_effectiveness = 64 }
+set_variable = { tno_security_effectiveness = 79 }
+
+# POLITICAL LAWS
+set_variable = { tno_political_parties_effectiveness = 77 }
+set_variable = { tno_religious_rights_effectiveness = 73 }
+set_variable = { tno_trade_unions_effectiveness = 59 }
+set_variable = { tno_immigration_effectiveness = 56 }
+set_variable = { tno_slavery_effectiveness = 50 }
+set_variable = { tno_public_meetings_effectiveness = 66 }
+set_variable = { tno_press_rights_effectiveness = 74 }
+set_variable = { tno_vote_franchise_effectiveness = 85 }
+
+# MILITARY LAWS
+set_variable = { tno_conscription_effectiveness = 50 }
+set_variable = { tno_military_supervision_effectiveness = 50 }
+set_variable = { tno_training_effectiveness = 50 }
+set_variable = { tno_draft_exemptions_effectiveness = 50 }
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_2
+	amount = 2000
+	producer = JAP
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 300
+	producer = JAP
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_2
+	amount = 30
+	producer = JAP
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 110
+	producer = JAP
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_3
+	amount = 80
+	producer = JAP
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }

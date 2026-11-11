@@ -1,34 +1,38 @@
-state = {
-	id = 23
-	name = "STATE_23"
-	resources = {
-		steel = 48.000
+state={
+	id=23
+	name="STATE_23"
+	resources={
+		steel=48
 	}
-
+	
 	history = {
-		owner = FRA
+		owner = FRS
 		victory_points = {
-			15254 3
+			11596 6
 		}
 		victory_points = {
-			15252 10
+			15252 5
 		}
 		victory_points = {
-			15253 1
+			655 2
 		}
 		victory_points = {
-			11582 1
+			595 4
 		}
 		victory_points = {
-			629 10
+			15253 3
 		}
 		victory_points = {
-			9597 1
+			9597 2
+		}
+		victory_points = {
+			15251 1
 		}
 		buildings = {
 			infrastructure = 5
 			dockyard = 1
- 			15252 = {
+			thermoelectric_plant = 3
+			15252 = {
 				naval_base = 3
 				coastal_bunker = 2
 			}
@@ -38,17 +42,25 @@ state = {
 			15251 = {
 				coastal_bunker = 2
 			}
-			arms_factory = 1
-			industrial_complex = 1
+			655 = {
+				coastal_bunker = 2
+			}
+			11600 = {
+				coastal_bunker = 2
+			}
+			prisons = 1
+			barracks = 1
+			offices = 1
 		}
-		add_core_of = FRA
- 	}
-
-	provinces = {
-		595 629 3598 3659 9597 11582 11596 11869 13365 13366 15251 15252 15253 15254 15255 17985 17986
+		add_core_of = FRS
+		set_state_flag = GDP_category_large_town
 	}
-	manpower = 1430000
-	buildings_max_level_factor = 1.000
-	state_category = large_town
-	local_supplies = 0.000
+	
+	provinces={
+		595 629 3598 3659 9597 11582 11596 11869 13365 13366 15251 15252 15253 15254 17985 17986 655 6657 9631 11600
+	}
+	manpower=1860220
+	buildings_max_level_factor=1
+	state_category=city
+	local_supplies=0
 }

@@ -2,7 +2,8 @@ state={
 	id=883
 	name="STATE_883"
 	history = {
-		owner = TOG
+		owner = AOF
+        add_core_of = AOF
 		add_core_of = TOG
 		victory_points = { 13413 10 }
 		victory_points = { 1951 2 }
@@ -12,8 +13,10 @@ state={
 			13413 = {
 				naval_base = 2
 			}
-			arms_factory = 1
+			barracks = 1
+			offices = 1
 		}
+		set_state_flag = GDP_regions_togo
 	}
 	provinces={
 		1951 13413 15424 

@@ -1,13 +1,17 @@
 equipments = {
 	transport_plane_equipment = {
 
-		
+		can_be_produced = {
+			NOT = {
+				has_idea = ENG_Across_The_Channel
+			}
+		}
 
 		year = 1933
 
 		allow_mission_type = {
-			paradrop
 			air_supply
+			naval_mines_planting
 		}
 
 		is_archetype = yes
@@ -31,7 +35,7 @@ equipments = {
 		naval_strike_attack = 0.0
 		naval_strike_targetting = 0.0
 
-		build_cost_ic = 65
+		build_cost_ic = 25
 		resources = {
 			aluminium = 3
 			rubber = 2
@@ -45,13 +49,15 @@ equipments = {
 		year = 1936
 
 		archetype = transport_plane_equipment
-		priority = 70
+		priority = 110
+		visual_level = 0
 
 		air_range = 1000
 		maximum_speed = 300
 		air_agility = 10
-		air_defence = 24
-		fuel_consumption = 0.58
+		air_defence = 20
+		fuel_consumption = 0.35
+		build_cost_ic = 25
 	}
 
 	transport_plane_equipment_2 = {
@@ -59,13 +65,15 @@ equipments = {
 
 		archetype = transport_plane_equipment
 		parent = transport_plane_equipment_1
-		priority = 80
+		priority = 110
+		visual_level = 1
 
 		air_range = 1300
 		maximum_speed = 500
-		air_agility = 12
-		air_defence = 28
-		fuel_consumption = 0.58
+		air_agility = 15
+		air_defence = 25
+		fuel_consumption = 0.4
+		build_cost_ic = 40
 	}
 
 	transport_plane_equipment_3 = {
@@ -73,13 +81,15 @@ equipments = {
 
 		archetype = transport_plane_equipment
 		parent = transport_plane_equipment_2
-		priority = 90
+		priority = 110
+		visual_level = 2
 
 		air_range = 1600
 		maximum_speed = 700
-		air_agility = 14
-		air_defence = 32
-		fuel_consumption = 0.58
+		air_agility = 25
+		air_defence = 35
+		fuel_consumption = 0.50
+		build_cost_ic = 40
 	}
 
 	transport_plane_equipment_4 = {
@@ -87,13 +97,15 @@ equipments = {
 
 		archetype = transport_plane_equipment
 		parent = transport_plane_equipment_3
-		priority = 100
+		priority = 110
+		visual_level = 3
 
 		air_range = 1900
 		maximum_speed = 900
-		air_agility = 16
-		air_defence = 36
-		fuel_consumption = 0.58
+		air_agility = 25
+		air_defence = 40
+		fuel_consumption = 0.55
+		build_cost_ic = 40
 	}
 
 	transport_plane_equipment_5 = {
@@ -102,12 +114,14 @@ equipments = {
 		archetype = transport_plane_equipment
 		parent = transport_plane_equipment_4
 		priority = 110
+		visual_level = 4
 
 		air_range = 2200
 		maximum_speed = 1100
-		air_agility = 18
-		air_defence = 40
-		fuel_consumption = 0.58
+		air_agility = 30
+		air_defence = 45
+		fuel_consumption = 0.6
+		build_cost_ic = 40
 	}
 
 	transport_plane_equipment_6 = {
@@ -115,13 +129,15 @@ equipments = {
 
 		archetype = transport_plane_equipment
 		parent = transport_plane_equipment_5
-		priority = 120
+		priority = 110
+		visual_level = 5
 
 		air_range = 2500
 		maximum_speed = 1300
-		air_agility = 20
-		air_defence = 44
-		fuel_consumption = 0.58
+		air_agility = 30
+		air_defence = 50
+		fuel_consumption = 0.7
+		build_cost_ic = 40
 	}
 
 	transport_plane_equipment_7 = {
@@ -129,12 +145,14 @@ equipments = {
 
 		archetype = transport_plane_equipment
 		parent = transport_plane_equipment_6
-		priority = 130
+		priority = 110
+		visual_level = 6
 
 		air_range = 2800
 		maximum_speed = 1500
-		air_agility = 22
-		air_defence = 48
-		fuel_consumption = 0.58
+		air_agility = 40
+		air_defence = 60
+		fuel_consumption = 0.8
+		build_cost_ic = 40
 	}
 }

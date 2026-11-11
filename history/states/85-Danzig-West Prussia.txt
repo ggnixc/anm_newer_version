@@ -21,14 +21,18 @@ state = {
 			9263 10
 		}
 		buildings = {
-			industrial_complex = 1
-			arms_factory = 1
+			offices = 1
+			barracks = 1
+			prisons = 1
 			infrastructure = 5
 			dockyard = 1
 			air_base = 3
- 			362 = { naval_base = 5 }
+			thermoelectric_plant = 3
+			hydroelectric_plant = 2
+			362 = { naval_base = 5 }
 		}
- 	}
+		set_state_flag = GDP_category_city
+	}
 
 	provinces = {
 		279 334 362 389 3295 3324 9263 3380 3230 15828 6347
@@ -36,5 +40,5 @@ state = {
 
 	manpower = 2599689
 	buildings_max_level_factor = 1.000
-	state_category = city
+	state_category = large_city
 }

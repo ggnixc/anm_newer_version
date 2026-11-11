@@ -1,92 +1,259 @@
 spriteTypes = {
-	#spriteType = {
-	#	name = "GFX_TNO_custom_alerts"
-	#	texturefile = "gfx/interface/alerts/DEPRECATED_TNO_custom_alert.dds"
-	#	noOfFrames = 12
-	#}
 	spriteType = {
 		name = "GFX_TNO_custom_alert_missing"
 		texturefile = "gfx/interface/alerts/custom_alert_missing.dds"
 	}
-	
+
+	#|=====[ GENERAL ]=====|#
 	spriteType = {
-		name = "GFX_TNO_custom_alert_fiscal_crisis"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_fiscal_crisis.dds"
-	}
-	spriteType = {
-		name = "GFX_TNO_custom_alert_high_tension"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_high_tension.dds"
-	}
-	spriteType = {
-		name = "GFX_TNO_custom_alert_consumer_goods_empty"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_consumer_goods_empty.dds"
-	}
-	spriteType = {
-		name = "GFX_TNO_custom_alert_unallocated_pu"
+		name = "GFX_TNO_Alert_UnallocatedPU"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_unallocated_pu.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_custom_alert_lost_pu"
+		name = "GFX_TNO_Alert_LostPU"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_lost_pu.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_BRA_custom_alert_senado_voting"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_BRA_senado_voting.dds"
+		name = "GFX_TNO_Alert_FiscalCrisis"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_fiscal_crisis.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_BRA_custom_alert_pres_voting"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_BRA_pres_voting.dds"
+		name = "GFX_TNO_Alert_HighTension"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_high_tension.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_BRA_custom_alert_pl_voting_begun"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_BRA_pl_voting_begun.dds"
+		name = "GFX_TNO_Alert_CGEmpty"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_consumer_goods_empty.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_BRA_custom_alert_development"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_BRA_development.dds"
-	}
-	spriteType = {
-		name = "GFX_TNO_custom_alert_credit_rating_improved"
+		name = "GFX_TNO_Alert_CreditRating_Improved"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_credit_rating_improved.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_custom_alert_credit_rating_degraded"
+		name = "GFX_TNO_Alert_CreditRating_Degraded"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_credit_rating_degraded.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_GER_BOR_custom_alert_kartenhaus_action_available"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_GER_BOR_kartenhaus_action_available.dds"
+		name = "GFX_TNO_Alert_Proxy_War_Active"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_proxy_war_active.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_SCO_armed_forces_paranoia"
+		name = "GFX_TNO_Alert_Lacking_Power"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_lacking_power.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_Balanced_Power"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_balanced_power.dds"
+	}
+
+	#|=====[ REICH ]=====|#
+	# Germany alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_KartenhausAction"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_Kartenhaus_action_available.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_KartenhausLowControl"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_kartenhaus_low_control.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GER_EconCycleEnd"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_econ_cycle_near_end.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GER_InitiativeMilestone"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_initiative_milestone.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GER_InitiativeComplete"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_initiative_complete.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GER_Overheating"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_overheating.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GER_Underheating"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_underheating.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GER_EconomicCrisis"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_economic_crisis.dds"
+	}
+
+	# Bormann alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_GER_PartificationThreshold"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_BOR_partification_threshold.dds"
+	}
+
+	# Speer alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_GER_PropagandaCampaignOver"
+		texturefile = "gfx/interface/alerts/reich/alert_GER_SGR_propaganda_campaign_over.dds"
+	}
+
+	# Britain alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_SCO_ArmedForces_Paranoia"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_SCO_armed_forces_paranoia.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_custom_alert_great_game"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_great_game.dds"
+		name = "GFX_TNO_Alert_ENG_Election"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_BRA_pl_voting_begun.dds"
+	}
+
+	# Ukraine alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_UKR_BreadBasket_GovControl"
+		texturefile = "gfx/interface/alerts/UKR/alert_UKR_BreadBasket_GovControl.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_custom_alert_us_elections"
+		name = "GFX_TNO_Alert_UKR_BreadBasket_ConsCycle"
+		texturefile = "gfx/interface/alerts/UKR/alert_UKR_BreadBasket_ConsCycle.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_UKR_BreadBasket_ActionAvailable"
+		texturefile = "gfx/interface/alerts/UKR/alert_UKR_BreadBasket_ActionAvailable.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_UKR_BreadBasket_DecisiveRegionWarning"
+		texturefile = "gfx/interface/alerts/UKR/alert_UKR_BreadBasket_DecisiveRegionWarning.dds"
+	}
+
+	#|=====[ OFN ]=====|#
+	# US alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_US_Election"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_us_elections.dds"
 	}
+
+	#|=====[ LATIN AMERICA ]=====|#
+	# LATAM alerts
 	spriteType = {
-		name = "GFX_TNO_custom_alert_aas_resources"
+		name = "GFX_TNO_Alert_LATAM_AndeanTreaty"
+		texturefile = "gfx/interface/alerts/LATAM/alert_andean_treaty.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_LATAM_Mining_Wars"
+		texturefile = "gfx/interface/alerts/LATAM/alert_mining_wars.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_LATAM_Cayenne_Referendum"
+		texturefile = "gfx/interface/alerts/LATAM/alert_cayenne_referendum.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_LATAM_Bush_War"
+		texturefile = "gfx/interface/alerts/LATAM/alert_bush_war.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_LATAM_SACW_Tensions_Cooling" 
+		texturefile = "gfx/interface/alerts/LATAM/alert_sacw_tensions_cooling.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_LATAM_SACW_Tensions_Heating"
+		texturefile = "gfx/interface/alerts/LATAM/alert_sacw_tensions_heating.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_LATAM_SACW_Victory_Level_Change" 
+		texturefile = "gfx/interface/alerts/LATAM/alert_sacw_victory_change.dds"
+	}
+	# Brazil alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_BRA_SenadoVoting"
+		texturefile = "gfx/interface/alerts/LATAM/alert_BRA_senado_voting.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_BRA_PresVoting"
+		texturefile = "gfx/interface/alerts/LATAM/alert_BRA_pres_voting.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_BRA_PLVoting"
+		texturefile = "gfx/interface/alerts/LATAM/alert_BRA_pl_voting_begun.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_BRA_Development"
+		texturefile = "gfx/interface/alerts/LATAM/alert_BRA_development.dds"
+	}
+	# Mexico alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_MEX_Project"
+		texturefile = "gfx/interface/alerts/MEX/alert_MEX_project.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_MEX_Debt"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_fiscal_crisis.dds"
+	}
+
+	#|=====[ MEDITERRANEAN ]=====|#
+	# Italy alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_GreatGame"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_great_game.dds"
+	}
+
+	# Iberia alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_AAS_Resources"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_aas_resources.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_custom_alert_eng_election"
-		texturefile = "gfx/interface/alerts/toolbox_theory/alert_BRA_pl_voting_begun.dds"
+		name = "GFX_TNO_Alert_IBR_Wars_request_accepted"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_consumer_goods_empty.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_custom_alert_RUS_smuta_chaos"
+		name = "GFX_TNO_Alert_IBR_Wars_request_rejected"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_consumer_goods_empty.dds"
+	}
+
+	#|=====[ MIDDLE EAST ]=====|#
+
+
+	#|=====[ AFRICA ]=====|#
+
+
+	#|=====[ RUSSIA ]=====|#
+	# Smuta alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_RUS_Smuta_Chaos"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_RUS_smuta_chaos.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_custom_alert_RUS_smuta_supplies"
+		name = "GFX_TNO_Alert_RUS_Smuta_Supplies"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_RUS_smuta_supplies.dds"
 	}
 	spriteType = {
-		name = "GFX_TNO_custom_alert_RUS_smuta_war"
+		name = "GFX_TNO_Alert_RUS_Smuta_War"
 		texturefile = "gfx/interface/alerts/toolbox_theory/alert_RUS_smuta_war.dds"
+	}
+
+	#|=====[ ASIA ]=====|#
+	# Guangdong alerts
+	spriteType = {
+		name = "GFX_TNO_Alert_GNG_LegCo_Bill"
+		texturefile = "gfx/interface/alerts/GNG/TNO_GNG_LegCo_Alert.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GNG_Product_Cycle"
+		texturefile = "gfx/interface/alerts/GNG/TNO_GNG_Product_Cycle_Alert.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GNG_Economy_Check_Soon"
+		texturefile = "gfx/interface/alerts/GNG/TNO_GNG_Economy_Alert.dds"
+	}
+	spriteType = {
+		name = "GFX_TNO_Alert_GNG_PTRG"
+		texturefile = "gfx/interface/alerts/GNG/TNO_GNG_PTRG_Alert.dds"
+	}
+
+	#|=====[ ANTARCTICA ]=====|#
+	spriteType = {
+		name = "GFX_TNO_Alert_ODF_Task_Forces"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_Antarctica_Task_Force_Available.dds"
+	}
+
+	spriteType = {
+		name = "GFX_TNO_Alert_ODF_Low_Stat"
+		texturefile = "gfx/interface/alerts/toolbox_theory/alert_Antarctica_Low_Stat.dds"
 	}
 }

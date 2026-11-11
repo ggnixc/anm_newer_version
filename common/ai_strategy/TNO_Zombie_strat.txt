@@ -1,0 +1,23 @@
+Zombie_Strat = {
+	allowed = {
+		tag = ZOM
+	}
+
+	abort = {
+		always = no
+	}
+	enable = {
+		always = yes 
+	}
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 1000
+	}
+}

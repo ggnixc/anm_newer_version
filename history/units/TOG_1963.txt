@@ -1,0 +1,61 @@
+division_template = {
+	name = "Brigade d'Infanterie"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Gendarmerie Nationale"
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+        light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Brigade d'Infanterie"
+		division_template = "Brigade d'Infanterie"
+		location = "13413"
+		start_experience_factor = 0.6
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "2. Brigade d'Infanterie"
+		division_template = "Brigade d'Infanterie"
+		location = "1951"
+		start_experience_factor = 0.6
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "3. Brigade d'Infanterie"
+		division_template = "Brigade d'Infanterie"
+		location = "12785"
+		start_experience_factor = 0.6
+		start_manpower_factor = 1
+	}
+	
+	division = {
+		name = "1. Gendarmerie Nationale"
+		division_template = "Gendarmerie Nationale"
+		location = "1951"
+		start_experience_factor = 0.6
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "2. Gendarmerie Nationale"
+		division_template = "Gendarmerie Nationale"
+		location = "12785"
+		start_experience_factor = 0.6
+		start_manpower_factor = 1
+	}	
+}

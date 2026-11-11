@@ -3,17 +3,21 @@ state = {
 	name = "STATE_784"
 
 	history = {
-		owner = ALG
+		owner = FLA
 		victory_points = { 3959 25 }
 		victory_points = { 1145 10 }
+		add_dynamic_modifier = { modifier = FRS_trans_saharan_railroad }
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 1
+			thermoelectric_plant = 1
 			radar_station = 2
 			air_base = 3
 			3959 = {
 				naval_base = 6
 			}
+			hospitals = 1
+			offices = 1
+			prisons = 1
 		}
 		add_core_of = ALG
 		set_state_flag = state_renamings

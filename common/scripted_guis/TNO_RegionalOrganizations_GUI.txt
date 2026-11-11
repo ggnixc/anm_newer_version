@@ -29,6 +29,14 @@ scripted_gui = {
 			}
 		}
 
+		effects = {
+			RegionalOrganization_Icon_click = {
+				# Select displayed organization via the diplo interface
+				set_variable = { ROOT.Selected_RegionalOrg = reg_org }
+				force_update_map_mode = { mapmode = tno_regional_organizations_map_mode }
+			}
+		}
+
 		properties = {
 			RegionalOrganization_Icon = {
 				image = "GFX_[?reg_org.GetTokenKey]"

@@ -1,0 +1,145 @@
+# ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗#
+#██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║╚██╗ ██╔╝#
+#██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║ ╚████╔╝ #
+#██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ╚██╔╝  #
+#╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   #
+# ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   #
+#Decision Categories
+
+#Index; Search for these names using ctrl+f and you'll find the section they entitle.
+#	Generic Categories
+#	Bormann Categories
+#	Speer Categories
+#	Göring Categories
+#	Himmler Categories
+#	Heydrich Categories
+
+################################################
+#              Generic Categories              #
+################################################
+
+# Debug Category
+GER_debug_category = {
+	icon = GFX_decision_category_debug
+	picture = GFX_decision_image_ENG_debug
+
+	allowed = { original_tag = GER }
+	visible = {
+		is_debug = yes
+		is_ai = no
+	}
+
+	visible_when_empty = yes
+	priority = 500
+}
+
+# Dummy category for PKT tag
+PKT_dummy_category = {
+	allowed = { original_tag = PKT }
+	visible = { always = yes }
+
+	visible_when_empty = yes
+}
+
+# Situations
+GER_Situations_category = {
+	icon = GFX_decision_category_generic_document
+	scripted_gui = TNO_Germany_Situations_DecisionGui
+
+	allowed = { original_tag = GER }
+	visible = { has_country_flag = GER_Situations_Active }
+
+	# on_map_area = { # disabled until V&J
+	# 	target_array = GER_SituationsStates
+	# 	name = Germany_Situations_category_name
+	# 	zoom = 250
+	# }
+
+	visible_when_empty = yes
+	priority = 275
+}
+
+################################################
+#              Bormann Categories              #
+################################################
+
+
+
+################################################
+#               Speer Categories               #
+################################################
+
+
+
+################################################
+#               Göring Categories              #
+################################################
+
+
+
+################################################
+#              Himmler Categories              #
+################################################
+
+
+
+################################################
+#             Heydrich Categories              #
+################################################
+
+# SS Bunkers
+HGR_Bunkers_Demand_Category = {
+	icon = GFX_decision_category_BRG_generic
+	visible_when_empty = yes
+	picture = GFX_decision_image_GER_ss_bunkers
+
+	allowed = { original_tag = GER }
+	visible = {
+		has_country_flag = HGR_Demanded_Bunkers
+		NOT = { has_country_flag = HGR_Bunkers_Complete }
+	}
+}
+
+# Nuclear Arsenal
+HGR_Nukes_Demand_Category = {
+	icon = GFX_decision_category_BRG_generic
+	picture = GFX_decision_image_GER_ss_nukes
+
+	allowed = { original_tag = GER }
+	visible = {
+		has_country_flag = HGR_Demanded_Nukes
+		NOT = { has_country_flag = HGR_Nukes_Complete }
+	}
+
+	visible_when_empty = yes
+}
+
+# The Balance of Trust
+HGR_Coalition_Category = {
+	icon = GFX_decision_category_generic_propaganda
+	picture = GFX_decision_image_GER_adler
+
+	allowed = { original_tag = GER }
+	visible = {
+		has_country_leader = { character = GER_reinhard_heydrich ruling_only = yes }
+		has_completed_focus = HGR_careful_balance_of_trust
+		has_global_flag = HGR_it_has_begun
+	}
+
+	visible_when_empty = yes
+}
+
+# Unifying the Vaterland
+HGR_German_Warlord_Influence_Category = {
+	icon = GFX_decision_category_generic_formable_nations
+	picture = GFX_decision_image_GER_political_situation
+
+	allowed = { original_tag = GER }
+	visible = {
+		has_country_leader = { character = GER_reinhard_heydrich ruling_only = yes }
+		has_completed_focus = HGR_all_eyes_on_heydrich
+		has_global_flag = HGR_it_has_begun
+	}
+
+	visible_when_empty = yes
+}

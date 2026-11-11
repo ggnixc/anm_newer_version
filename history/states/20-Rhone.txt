@@ -1,35 +1,53 @@
-state = {
-	id = 20
-	name = "STATE_20"
-	resources = {
-		steel = 34.000
-		aluminium = 21.000
- 	}
-
+state={
+	id=20
+	name="STATE_20"
+	resources={
+		steel=34
+		aluminium=21
+		uranium=6
+	}
+	
 	history = {
-		owner = FRA
+		owner = FRS
 		victory_points = {
-			6613 20
+			6613 30
 		}
 		victory_points = {
-			3770 10
+			59 15
 		}
 		victory_points = {
-			11593 1
+			780 5
+		}
+		victory_points = {
+			13369 5
+		}
+		victory_points = {
+			1486 3
+		}
+		victory_points = {
+			11794 2
+		}
+		victory_points = {
+			11716 1
 		}
 		buildings = {
- 			industrial_complex = 1
+			schools = 1
+			offices = 1
+			hospitals = 1
+			barracks = 1
 			infrastructure = 5
- 			air_base = 4
+			hydroelectric_plant = 3
+			air_base = 4
 		}
-		add_core_of = FRA
- 	}
-
-	provinces = {
-		3770 6613 11593 11794 13369 13370 17989 17998
+		add_core_of = FRS
+		set_state_flag = GDP_category_city
 	}
-	manpower = 1813012
-	buildings_max_level_factor = 1.000
-	state_category = large_city
-	local_supplies = 0.000
+	
+	provinces={
+		59 762 780 3770 6613 6786 9728 11593 11716 11794 13369 13370 17988 17989 1486 6639 9590 
+	}
+	manpower=2692901
+	buildings_max_level_factor=1
+	state_category=large_city
+	local_supplies=0
 }

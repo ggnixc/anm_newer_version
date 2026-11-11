@@ -1,0 +1,232 @@
+﻿l_english:
+# ██████╗ ███████╗ ██████╗ ██╗ ██████╗ ███╗   ██╗ █████╗ ██╗          ██████╗ ██████╗  ██████╗  █████╗ ███╗   ██╗██╗███████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗ #
+# ██╔══██╗██╔════╝██╔════╝ ██║██╔═══██╗████╗  ██║██╔══██╗██║         ██╔═══██╗██╔══██╗██╔════╝ ██╔══██╗████╗  ██║██║╚══███╔╝██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝ #
+# ██████╔╝█████╗  ██║  ███╗██║██║   ██║██╔██╗ ██║███████║██║         ██║   ██║██████╔╝██║  ███╗███████║██╔██╗ ██║██║  ███╔╝ ███████║   ██║   ██║██║   ██║██╔██╗ ██║███████╗ #
+# ██╔══██╗██╔══╝  ██║   ██║██║██║   ██║██║╚██╗██║██╔══██║██║         ██║   ██║██╔══██╗██║   ██║██╔══██║██║╚██╗██║██║ ███╔╝  ██╔══██║   ██║   ██║██║   ██║██║╚██╗██║╚════██║ #
+# ██║  ██║███████╗╚██████╔╝██║╚██████╔╝██║ ╚████║██║  ██║███████╗    ╚██████╔╝██║  ██║╚██████╔╝██║  ██║██║ ╚████║██║███████╗██║  ██║   ██║   ██║╚██████╔╝██║ ╚████║███████║ #
+# ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝     ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝ #
+# Regional Organizations Mechanic Localization
+
+#|=====[ OVERVIEW ]=====|#
+ RegionalOrganization_Icon_tt: "§F[THIS.GetName] is a member of the [TNO_RegionalOrganization_GetNameColored].\n--------------\n- Leader: §Y[TNO_RegionalOrganization_GetLeader]§!\n- Alignment: [TNO_RegionalOrganization_GetAlignment]\n- Type: §g[TNO_RegionalOrganization_GetType]§!\n- Num. of Members: [?global.RegionalOrganization_Members@var:reg_org^num|0L][TNO_RegionalOrganization_GetGDP][TNO_RegionalOrganization_GetModifiers]§!"
+ RegionalOrganization_Icon_tt_delayed: "§L[TNO_RegionalOrganization_GetDesc]§!"
+ RegionalOrganization_Icon_tt_GDP: "\n- Combined GDP: §G[?global.RegionalOrganization_TotalGDP@var:reg_org]B§!"
+ RegionalOrganization_Icon_tt_modifiers: "\n--------------\n§YEffects:§!§F[TNO_RegionalOrganization_GetModifiersEntry]§!"
+
+ RegionalOrganization_SelectionButton_text: "[TNO_RegionalOrganization_GetNameColored]"
+ RegionalOrganization_SelectionButton_tt: "§F§GClick§! to display this §WRegional Organization's§! members on the map.§!"
+
+ RegionalOrganization_Alignment_ProGermany: "§sPro-German§!"
+ RegionalOrganization_Alignment_ProJapan: "§RPro-Japan§!"
+ RegionalOrganization_Alignment_ProAmerica: "§MPro-American§!"
+ RegionalOrganization_Alignment_Unaligned: "§WNon-Aligned§!"
+
+#|=====[ ORGS ]=====|#
+ # Europäischer Staatenbund/European Confederation
+ RegionalOrganization_EU: "Europäischer Staatenbund"
+ RegionalOrganization_EU_colored: "§Q$RegionalOrganization_EU$§!"
+ RegionalOrganization_EU_desc_0: "The £eec_texticon §QEuropean Confederation§!, a new political union of German-aligned European states, is the political evolution of the Europäische Wirtschaftsgemeinschaft. Joining together the states of the European regions of the Einheitspakt in bonds of iron, the EC structure and bodies will work to further European integration. The final goal: a pact of brotherly nations—or, more accurately, the willing and perpetual submission of the nations of Europe to their eldest and most noble kinsman, the German Reich, rightful hegemon of the European continent."
+
+ RegionalOrganization_EU_modifier_0: "\n$MODIFIER_POLITICAL_POWER_GAIN$: [?modifiers@RegionalOrganization_EU^0|+=][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_1: "\n$MODIFIER_STABILITY_FACTOR$: [?modifiers@RegionalOrganization_EU^12|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_2: "\n$consumer_goods_use_modifier$: [?modifiers@RegionalOrganization_EU^1|=%0-][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_3: "\n$consumer_goods_production_factor$: [?modifiers@RegionalOrganization_EU^15|Y=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_4: "\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?modifiers@RegionalOrganization_EU^2|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_5: "\n$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$: [?modifiers@RegionalOrganization_EU^3|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_6: "\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: [?modifiers@RegionalOrganization_EU^4|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_7: "\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: [?modifiers@RegionalOrganization_EU^5|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_8: "\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?modifiers@RegionalOrganization_EU^6|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_9: "\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?modifiers@RegionalOrganization_EU^7|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_10: "\n$MODIFIER_FUEL_GAIN_FACTOR$: [?modifiers@RegionalOrganization_EU^8|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_11: "\n$annual_gdp_growth_factor$: [?modifiers@RegionalOrganization_EU^9|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_12: "\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?modifiers@RegionalOrganization_EU^11|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_13: "\n$production_units_to_GDP_ratio_modifier$: [?modifiers@RegionalOrganization_EU^14|+=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_14: "\nMiscellaneous Income: §Y[?modifiers@RegionalOrganization_EU^10|=2]B USD§![TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_EU_modifier_15: "\n$GDP_to_sphere_leader_modifier$: [?modifiers@RegionalOrganization_EU^13|Y=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+
+ # Ostministerium
+ RegionalOrganization_Ostministerium: "Ostministerium"
+ RegionalOrganization_Ostministerium_colored: "§b$RegionalOrganization_Ostministerium$§!"
+ RegionalOrganization_Ostministerium_desc_0: "The Ostministerium, or "Ministry for the Occupied Eastern Territories", is the administrative authority overseeing the vast eastern territories conquered from the Soviet Union following the 1941 campaign.\n\nIt exercises control over all civilian administration in these regions and enacts legislation within its jurisdiction. In order to replace the Soviet administrations, the German East has been divided into four Reichskommissariats: Ostland, Ukraine, Moskowien, and Kaukasien, each tasked with administering their part of the newly established Lebensraum. These entities fall under the authority of both the Ostministerium and the Führer, and are governed by a Reichskommissar appointed directly by the Führer. The Reichskommissars are responsible for the administration of their respective territories. They exercise legislative authority delegated by the Ostministerium and implement the Reich's policies in the East.\n\nTheir role is crucial, as they oversee the extraction of vital resources destined for the Reich's vast industrial powerbase, manage relations with the native populations as well as between natives and German settlers, and use their Reichskommissariats as as a strategic eastern bulwark intended to prevent any resurgence of Russia capable of threatening the Reich in the future."
+
+ RegionalOrganization_Ostministerium_modifier_0: "\n$MODIFIER_POLITICAL_POWER_GAIN$: [?modifiers@RegionalOrganization_Ostministerium^0|=+][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_1: "\n$MODIFIER_STABILITY_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^12|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_2: "\n$annual_gdp_growth_factor$: [?modifiers@RegionalOrganization_Ostministerium^9|+=2%][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_3: "\nMiscellaneous Income: §Y[?modifiers@RegionalOrganization_Ostministerium^10|2]B USD§![TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_4: "\n$consumer_goods_use_modifier$: [?modifiers@RegionalOrganization_Ostministerium^1|=%-0][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_5: "\n$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^2|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_6: "\n$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^3|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_7: "\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^4|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_8: "\n$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^5|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_9: "\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^6|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_10: "\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^7|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_11: "\n$MODIFIER_LOCAL_RESOURCES_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^11|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_12: "\n$MODIFIER_FUEL_GAIN_FACTOR$: [?modifiers@RegionalOrganization_Ostministerium^8|=%+2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_13: "\n$GDP_to_sphere_leader_modifier$: [?modifiers@RegionalOrganization_Ostministerium^13|Y=%2][TNO_RegionalOrganization_GetModifiersEntry]"
+ RegionalOrganization_Ostministerium_modifier_14: "\n$MODIFIER_GLOBAL_MONTHLY_POPULATION$: [?modifiers@RegionalOrganization_Ostministerium^14|+=%1][TNO_RegionalOrganization_GetModifiersEntry]"
+
+ # Organization of American States
+ RegionalOrganization_OAS: "Organization of American States"
+ RegionalOrganization_OAS_colored: "§a$RegionalOrganization_OAS$§!"
+ RegionalOrganization_OAS_desc_0: "The Organization of American States claims an illustrious heritage for its Pan-American vision, cloaking itself in Simón Bolívar's mantle. To its independent member states, the OAS offers a regional forum where all speak and vote with an equal voice, where the liberal values of non-intervention, individual rights, and representative democracy are promoted, and where disputes are resolved by the arbiter's pen instead of the warrior's sword.\n\nHeadquartered in Washington D.C., the OAS is also an instrument of U.S. power and diplomacy in Latin America. Its charter may hold the hemisphere's states equal, but one nation's military might and economic heft speaks louder than any document's words. So long as joint defense and collaborative development remain OAS priorities, only uncommon displays of Latin unity or moral force will divert the Organization from Washington's preferred course."
+
+ # Veracruz Pact
+ RegionalOrganization_VeracruzPact: "Pacto de Veracruz"
+ RegionalOrganization_VeracruzPact_colored: "§K$RegionalOrganization_VeracruzPact$§!"
+ RegionalOrganization_VeracruzPact_desc_0: "The Veracruz Pact is not an organization. It has no offices, it has no staff. Its sole physical manifestation is a rigorously compiled dossier in the Secretariat of External Relations, documenting extensive back-and-forth between President López Mateos, Secretary Tello Baurraud, and the Cuban and Venezuelan governments on how to deepen their nations' ad-hoc partnerships.\n\nThe files detail a meeting soon to be held in the Caribbean port of Veracruz, Mexico between Mateos, Castro and Larrazábal. They argue for the establishment of a forum, one to represent the disparate revolutionary states and movements of Latin America. Between their lines, one can read of a coalition to stand tall and proud against the imperialist forces of the world. One can read of a dream."
+
+ # Andean Pact
+ RegionalOrganization_AndeanPact: "Andean Pact"
+ RegionalOrganization_AndeanPact_colored: "§U$RegionalOrganization_AndeanPact$§!"
+ RegionalOrganization_AndeanPact_desc_0: "regional org description goes here"
+
+ # The Commonwealth (London)
+ RegionalOrganization_CollabCommonwealth: "British Commonwealth"
+ RegionalOrganization_CollabCommonwealth_colored: "§Z$RegionalOrganization_CollabCommonwealth$§!"
+ RegionalOrganization_CollabCommonwealth_desc_0: "The Commonwealth was envisioned as a free association of nations united by the Crown, and indeed functioned as such—until that Crown was torn down and that free association collapsed. Today, the Commonwealth is a hegemonic organisation centered solely around Britain, operating mainly as a cultural and propaganda front for the British Empire.\n\nThe Empire exiled in Ottawa contents itself with an almost imaginary bond to its increasingly vestigial possessions. The modern British Commonwealth, on the other hand, is confined to three clades: Britain itself, Britain's African possessions, and German-aligned states with historical ties to Britain. What legitimacy and power the Commonwealth enjoys is inextricably tied to the Empire; it will accordingly live or die based on the success or failure of British forces in Africa."
+
+ # Central African Federation
+ RegionalOrganization_CentralAfricanFed: "Central African Federation"
+ RegionalOrganization_CentralAfricanFed_colored: "§Z$RegionalOrganization_CentralAfricanFed$§!"
+ RegionalOrganization_CentralAfricanFed_desc_0: "The Central African Federation is a child of Britain's post-war Empire, built to ensure that the colonies of Southern Rhodesia, Northern Rhodesia, and Nyasaland remain inter-linked and inter-dependent - all building their economies into one bloc under London's direction, to serve the interests of the settler population and the Colonial Office. However, the federation's boundaries are not strictly limited to the three Central African colonies, and several other candidates have been seriously proposed for it, including ones that are not de jure part of Britain's Empire.\n\nHowever, the purpose behind these proposals is not to integrate them into a true federation, but to facilitate economic partnerships. This is because the CAF is meant not to build a single state but to make the separation between the region's colonies economically feasible. The white supremacist regime of the British People's Party has naturally found a partner in the settler-colonists of Southern Rhodesia in their efforts at sustaining the Empire, and they serve within the CAF as the on-the-ground enforcers of Whitehall's policy, reaping economic rewards in exchange. The symphony may be composed in London, but the orchestra plays in Salisbury."
+
+ # French Colonial Empire
+ RegionalOrganization_FrenchEmpire: "French Empire"
+ RegionalOrganization_FrenchEmpire_colored: "§Q$RegionalOrganization_FrenchEmpire$§!"
+ RegionalOrganization_FrenchEmpire_desc_0: "Through all trials and tribulations, the French Empire has survived into the New Order, even if the assimilationist experiments of the late Republic have not. Paris now manages colonial affairs on the basis of explicit white supremacy and separate racialised societies via a "direct rule" system where the Métropole's orders are passed obediently along the line from the Governors-General down to appointed village chiefs. The National Revolution's technocratic streak has also made its mark on the colonies - major developmentalist projects and concerns run roughshod over local communities and have priority access to a wide pool of forced labor.\n\nAlthough the intricate and byzantine systems of imperial administration - with its so-called "imperial citizenship", civil servant schools, and the Council of the Empire - may be occluded from the everyday affairs of the French mainland, the average Frenchman is very proud of the Empire, and this is no accident; the state has always sought to instil a sense of prideful imperial consciousness in the people, be they in the Fatherland or the colonies. After all, the history of the last few decades has certainly shown that the fortunes of France are dearly bound to those of its Empire, one way or another."
+
+ # The Commonwealth (Ottawa)
+ RegionalOrganization_ExileCommonwealth: "Commonwealth of Nations"
+ RegionalOrganization_ExileCommonwealth_colored: "§V$RegionalOrganization_ExileCommonwealth$§!"
+ RegionalOrganization_ExileCommonwealth_desc_0: "A ghost of the pre-war world, the Commonwealth of Nations was once intended to be a 'free association of nations united by the British Crown' - it is now a free association of nations united by nothing. Like a decapitated body, the central economic, political, and military organs which bound the Commonwealth nations together have been long-since violently severed, and while Canada has de facto taken up the mantle of primus inter pares, they've struggled to establish real leadership.\n\nRather than the cruelty and brutality of the British Empire, the Canadians have trended toward a softer touch, preferring diplomatic means to manage relations between a massively disparate group of states including the 'White Dominions', the islands of the West Indies, and radical Pan-African republics, with limited success. The Commonwealth being such an eclectic ideological muddle even affects the organization's own geopolitics, with a pro-OFN attitude predominant but not universal amongst member states, and inter-Commonwealth disputes still a regular occurrence. United only by a nominal acknowledgement of the 'Queen over the Water', the Commonwealth is a vestigial organization that struggles to retain its identity and relevance in the New Order."
+
+ # Union of Soviet Socialist Republics
+ RegionalOrganization_USSR: "Union of Soviet Socialist Republics"
+ RegionalOrganization_USSR_colored: "§x$RegionalOrganization_USSR$§!"
+ RegionalOrganization_USSR_desc_0: "regional org description goes here"
+
+ # Helsinki Treaty
+ RegionalOrganization_HelsinkiTreaty: "Helsinki Treaty"
+ RegionalOrganization_HelsinkiTreaty_colored: "§D$RegionalOrganization_HelsinkiTreaty$§!"
+ RegionalOrganization_HelsinkiTreaty_desc_0: "The Helsinki Treaty came about through a diplomatic and political domino effect set off by the Åland Convention of 1921. The convention, intended to solve a territorial dispute between the two nations, was pushed further by Rickard Sandler, the Fennophilic foreign minister of Sweden, in 1939. By mutual agreement, the Åland Convention was dissolved and replaced with the Stockholm Plan wherein Finland and Sweden both acted as guarantors of the island's security while still keeping it demilitarised.\n\nSweden's final commitment to the agreement was what led to its entrance into the Winter War, laying the grounds for the Helsinki Treaty. During the late-Forties Fagerholm ministry, Helsinki sought to reorient itself back towards Sweden. This mutated the Stockholm Plan into the Helsinki Treaty, remilitarizing Åland completely and making Sweden and Finland defensive allies. The two nations have used this alliance to keep Germany at arms' length by increasing dependence on one another instead."
+ 
+ # Adana Treaty Organization
+ RegionalOrganization_ATO: "Adana Treaty Organization"
+ RegionalOrganization_ATO_colored: "§e$RegionalOrganization_ATO$§!"
+ RegionalOrganization_ATO_desc_0: "The Adana Treaty Organization; or Adana Pact, as it is more commonly known, was founded in 1949 as an organization for political and economic cooperation in the Middle East. Officially, ATO is a partnership of equals that tracks the needs of the member states with a cadre to devise development plans and acts as a diplomatic forum in the region, acting as a beacon of neutrality with a certain distance.\n\nWhile these aims are noble and well intended on paper, the following years quickly proved what the pact actually was; a shield for Turkey to protect itself from external influences, and a tool to preserve the existing system through counter-insurgency planning to keep Turkish aligned and allied regimes in power. And yet, despite not even anyone believing in the formal character of the pact, the leaders maintain an optimism to realize the ideals set at the beginning."
+
+ # Pact of San Lorenzo
+ RegionalOrganization_SanLorenzoPact: "Pact of San Lorenzo"
+ RegionalOrganization_SanLorenzoPact_colored: "§B$RegionalOrganization_SanLorenzoPact$§!"
+ RegionalOrganization_SanLorenzoPact_desc_0: "regional org description goes here"
+
+ # Hispanic Economic Community
+ RegionalOrganization_HispanicEconomicCommunity: "Hispanic Economic Community"
+ RegionalOrganization_HispanicEconomicCommunity_colored: "§<$RegionalOrganization_HispanicEconomicCommunity$§!"
+ RegionalOrganization_HispanicEconomicCommunity_desc_0: "regional org description goes here"
+
+ # Roboré Accords
+ RegionalOrganization_RoboreAccords: "Roboré Accords"
+ RegionalOrganization_RoboreAccords_colored: "§n$RegionalOrganization_RoboreAccords$§!"
+ RegionalOrganization_RoboreAccords_desc_0: "regional org description goes here"
+
+ # Iberian Empire
+ RegionalOrganization_IberianEmpire: "Iberian Empire"
+ RegionalOrganization_IberianEmpire_colored: "§f$RegionalOrganization_IberianEmpire$§!"
+ RegionalOrganization_IberianEmpire_desc_0: "For centuries, Spain and Portugal have planted their flags on the African continent. However, the idiosyncrasies of each government caused them to have vastly different colonial systems, which, after the formation of the Iberian Union, caused severe headaches for the Caudillos. The colonies were thus put under a policy of non-interference between the two nations. Spain would not interfere in Angola, Mozambique, and other Portuguese colonies, and Portugal was not to interfere with Morocco or Guinea, but they would all be under the banner of the Iberian Colonial Empire. Even then, it cannot be considered a unified empire, but a sum of several different parts. As time progresses, the colonies have each developed its own system of governance; all under the watchful eye of the metropole."
+
+ # Ibero-American Conference
+ RegionalOrganization_IberoAmericanConference: "Ibero-American Conference"
+ RegionalOrganization_IberoAmericanConference_colored: "§u$RegionalOrganization_IberoAmericanConference$§!"
+ RegionalOrganization_IberoAmericanConference_desc_0: "Formed in the 1950s to improve relations between the Dominican Republic, Colombia, and the Iberian Union, the Ibero-American Conference has been used for a simple reason: managing the many friendship and cooperation treaties signed between Iberia and its American allies. The Union does not necessarily use it to further relations between member states, but there is nothing stopping those nations from using it for that purpose. At the organization's rare meetings, economic cooperation, cultural ties, and other subjects are all discussed - but further integration is off the table."
+
+ # Lusophone Community
+ RegionalOrganization_LusophoneCommunity: "Lusophone Community"
+ RegionalOrganization_LusophoneCommunity_colored: "§&$RegionalOrganization_LusophoneCommunity$§!"
+ RegionalOrganization_LusophoneCommunity_desc_0: "Created as a joint venture of Brazil and Portugal, the Lusophone Community was made to further cooperation within the Portuguese-speaking world. To outsiders, the Community is a simple economic organization, but its main members have very different goals for it. Portugal, even if under the banner of the Iberian Union, does not enjoy Spain's deterioration of relations with the OFN and encroachment into its politics. Thus, it has chosen to use the Community, and specially Brazil, as a way to defend its interests to the Americans. Brazil, on the other hand, uses the Community as a means to further its own international standing and champion the decolonization of Africa, much to the chagrin of Iberia."
+
+ # African Labour Board
+ RegionalOrganization_AfricanLabourBoard: "African Labour Board"
+ RegionalOrganization_AfricanLabourBoard_colored: "§r$RegionalOrganization_AfricanLabourBoard$§!"
+ RegionalOrganization_AfricanLabourBoard_desc_0: "The African Labour Board is an international treaty and organization made up of a wide array of colonial empires, settler states, and independent majority-rule nations in Africa, bilaterally managing areas of shared concern - migration control, workforce, and remittances.\n\nWith migrant labor a staple of the African economy continent-wide, the Board exists to formalize and regulate the migration of this labor force and the remittances they send back, so that migration quotas are met, and remittances can be extracted and taxed by the Board itself and the relevant signatory state. There are two types of signatories to the Board - the 'producers' of a labor force and the 'consumers.' South Africa is purely a consumer, the independent African nations are producers, and the colonial empires are both.\n\nFor the countless Africans who leave their homes to sell their labor abroad, the Board is a layer of bureaucracy they legally must interface with to provide for their families, but it is also a means to surveil and screen their political loyalties and affiliations. While European settlers face zero restrictions or regulations on their work or travel from the Board, the lives of the vast majority of migrant laborers are just input on a ledger, expected to suffer any abuse, exploitation, or indignity so long as there is still work to be done.\n\nAnd there is always work."
+
+ # Italian Empire
+ RegionalOrganization_ItalianEmpire: "Italian Empire"
+ RegionalOrganization_ItalianEmpire_colored: "§K$RegionalOrganization_ItalianEmpire$§!"
+ RegionalOrganization_ItalianEmpire_desc_0: "Only a few short decades ago, the world knew Italy as the 'last and the least' of the Great Powers. Mussolini inherited a stillborn empire when he took Italy's destiny into his own hands, but it emerged from the Second World War an empire straddling three continents, from the Aegean to the Indian Ocean.\n\nToday Italy is as much a product of its empire as the empire is a product of Italy. Life is shaped in uncountable ways by the nation's grand dominion: home pantries hold the harvest of far-off plantations; school textbooks proclaim the glory of this neo-Rome. Italy's colonial sudditi are also taught of this glory, but all that means to them is racial segregation, forced labor, degradation, and deprivation. The Vatican's state-sanctioned emissaries assure them that they are as much children of God as their European counterparts, but there is scant evidence to be found. Those living within protectorate states may fare better, but they too are ultimately subordinate to Italian interests.\n\nOwing to long-standing demographic concerns, Italy has prioritized settlement in the colonies, its hard-won spazio vitale. Promises of blooming deserts and frontier adventure have resulted in a new Italian diaspora: hundreds of thousands inhabiting segregated cities of neoclassical design while their sons are sent to guard against the unending threat of native resistance."
+
+ # Southern African Customs Union
+ RegionalOrganization_SACU: "Southern African Customs Union"
+ RegionalOrganization_SACU_colored: "§J$RegionalOrganization_SACU$§!"
+ RegionalOrganization_SACU_desc_0: "Conceived in the aftermath of the Second Anglo-Boer War, the Southern African Customs Union is the world's oldest Customs Union still functioning. Invented to strengthen trade links between the Southern African colonies and thus secure revenue and resources, the SACU has been repurposed following the fall of the Home Islands at the hands of the Germans and the seizure of the High Commission Territories by the Smuts government.\n\nFor all intents and purposes, the cause of colonial extraction of wealth and minerals continues, but with Pretoria reaping the benefits, the SACU acting as an extension of its economic dominance over its neighbors. While its reach has been limited, proposals have been made to expand upon the concept by establishing a "Commonwealth of Southern Africa" between the Republic and its regional partners."
+
+ # Monrovia Conference
+ RegionalOrganization_MonroviaConference: "Monrovia Conference"
+ RegionalOrganization_MonroviaConference_colored: "§B$RegionalOrganization_MonroviaConference$§!"
+ RegionalOrganization_MonroviaConference_desc_0: "A product of the OFN's wider African strategy of the 1950s, the Monrovia Conference is an organization founded and based in the capital city of the Republic of Liberia. As host nation and de facto leader, Liberia uses the organization as a means of managing its interests across the continent, particularly their West African neighborhood. Although the organization claims to be guided by liberal principles of self-determination and anti-colonialism, this is often merely a smokescreen for the virulently anti-communist and settler-colonialist project of the Liberian dictatorship.\n\nMonrovia's critics decry the naked hypocrisy at the core of the organization, which they further charge as being a front for American aid to be funnelled to Liberia's ruling class. Indeed, Liberian policy rarely strays far from American policy, as Washington habitually ignores Liberia's anti-democratic regime so it can use Monrovia to expand their own influence in Africa; this has only become more true as relations between the OFN and the revolutionary government in Ghana have grown colder. The primacy of Liberia is also cause for tension with the Congo, whose role in the organization is overshadowed by a nation far less populous and productive. This mess of contradictions leaves the Monrovia Conference's pretensions toward African unity increasingly suspect, and the organization itself solely propped up by American money and arms."
+
+ # United States of Latin Africa
+ RegionalOrganization_UnitedStatesOfLatinAfrica: "United States of Latin Africa"
+ RegionalOrganization_UnitedStatesOfLatinAfrica_colored: "§g$RegionalOrganization_UnitedStatesOfLatinAfrica$§!"
+ RegionalOrganization_UnitedStatesOfLatinAfrica_desc_0: "TODO - USLA, a failing political union"
+
+ # Central Africa Development and Assistance Treaty
+ RegionalOrganization_CADAT: "Central Africa Development and Assistance Treaty"
+ RegionalOrganization_CADAT_colored: "§l$RegionalOrganization_CADAT$§!"
+ RegionalOrganization_CADAT_desc_0: "As American officials put it, the Traité d'assistance et de développement pour l'Afrique centrale, or CADAT, is a 'great visionary program' which employs the US and the Congo as equal guarantors of prosperity; bulwarks of security within a region deeply threatened by Nazi imperialism and political instability. Among the African member countries, TADAC bears a more complicated image.\n\nBuilt upon a framework laid out by some of the last treaties to mention the United Nations, the organization's name belies what is, at its core, a security agreement. One that, much like the wartime treaty it sprung from, centers the Congo as the dominant member of a chain of American-aligned countries with Central Africa.\n\nMuch effort goes into keeping up appearances: bridges are built, rivers are threshed, roads repaired. But, no matter where the works are, the same guns guard them, the same badge adorns the engineers working them, the same flag proudly flies ahead of all but the star-spangled banner- golden stars, and a deep, oceanic, blue."
+
+ # Greater East Asia Resource Council
+ RegionalOrganization_GEARC: "Greater East Asia Resource Council"
+ RegionalOrganization_GEARC_colored: "§X$RegionalOrganization_GEARC$§!"
+ RegionalOrganization_GEARC_desc_0: "regional org description goes here"
+
+ # Organization of African Unity
+ RegionalOrganization_OAU: "Organization of African Unity"
+ RegionalOrganization_OAU_colored: "§S$RegionalOrganization_OAU$§!"
+ RegionalOrganization_OAU_desc_0: "regional org description goes here"
+
+ # New Canadian Confederation
+ RegionalOrganization_NCC: "New Canadian Confederation"
+ RegionalOrganization_NCC_colored: "§R$RegionalOrganization_NCC$§!"
+ RegionalOrganization_NCC_desc_0: "regional org description goes here"
+
+ # Pan-African Freedom Community
+ RegionalOrganization_PanAfricanFreedomCommunity: "Pan-African Freedom Community"
+ RegionalOrganization_PanAfricanFreedomCommunity_colored: "§n$RegionalOrganization_PanAfricanFreedomCommunity$§!"
+ RegionalOrganization_PanAfricanFreedomCommunity_desc_0: "regional org description goes here"
+
+ # Senegambia
+ RegionalOrganization_Senegambia: "Senegambia Federation"
+ RegionalOrganization_Senegambia_colored: "§G$RegionalOrganization_Senegambia$§!"
+ RegionalOrganization_Senegambia_desc_0: "regional org description goes here"
+
+ # AOF
+ RegionalOrganization_AOF: "French West Africa"
+ RegionalOrganization_AOF_colored: "§Q$RegionalOrganization_AOF$§!"
+ RegionalOrganization_AOF_desc_0: "regional org description goes here"
+
+#|=====[ TYPES ]=====|#
+ RegionalOrganization_Type_0: "International Organization"
+ RegionalOrganization_Type_1: "International Association"
+ RegionalOrganization_Type_2: "International Forum"
+ RegionalOrganization_Type_3: "Political Union"
+ RegionalOrganization_Type_4: "Federation"
+ RegionalOrganization_Type_5: "Confederation"
+ RegionalOrganization_Type_6: "Economic Association"
+ RegionalOrganization_Type_7: "Defensive Treaty"
+ RegionalOrganization_Type_8: "Occupational Authority"
+ RegionalOrganization_Type_9: "Colonial Empire"
+ RegionalOrganization_Type_10: "Informal System"
+ RegionalOrganization_Type_11: "Bilateral Treaty"
+
+#|=====[ EFFECTS ]=====|#
+ TNO_RegionalOrganizations_Initialize_tt: "§FA new §WRegional Organization§!, the [TNO_RegionalOrganization_GetNameColored] will be founded.§!\n"
+ TNO_RegionalOrganizations_Disband_tt: "§FThe [TNO_RegionalOrganization_GetNameColored] will be §Rdisbanded§!.§!\n"
+ TNO_RegionalOrganizations_Add_tt: "§FWe will join the [TNO_RegionalOrganization_GetNameColored].§!\n"
+ TNO_RegionalOrganizations_Remove_tt: "§FWe will leave the [TNO_RegionalOrganization_GetNameColored].§!\n"
+ TNO_RegionalOrganizations_ChangeAlignment_tt: "§FThe [TNO_RegionalOrganization_GetNameColored] will now take a [TNO_RegionalOrganization_GetAlignmentEffect] §Yalignment§!.§!\n"
+ TNO_RegionalOrganizations_ChangeLeader_tt: "§FThe §Y[?org_leader.GetNameWithFlag]§! will become the new leader of the [TNO_RegionalOrganization_GetNameColored].§!\n"
+ TNO_RegionalOrganizations_ChangeType_tt: "§FThe [TNO_RegionalOrganization_GetNameColored] will become a §g[TNO_RegionalOrganization_GetTypeEffect]§!.§!\n"
+ 
+#|=====[ TRIGGERS ]=====|#
+TNO_RegionalOrganizations_IsPartOfOrg_tt: "§F§Y[THIS.GetName]§! is part of [TNO_RegionalOrganization_GetNameColored]§!\n"

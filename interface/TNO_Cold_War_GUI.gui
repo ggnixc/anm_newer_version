@@ -20,6 +20,8 @@ guiTypes = {
 			iconType = {
 				name = "TNO_Cold_War_GUI_DEFCON_Meter"
 				position = { x = 13 y = 13 }
+				pdx_tooltip = DEFCON_tt
+				pdx_tooltip_delayed = DEFCON_tt_delayed
 			}
 
 			iconType = {
@@ -45,7 +47,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "TNO_Cold_War_GUI_Map_Container"
 			position = { x = 0 y = 70 }
-			size = { width = 550 height = 213 }
+			size = { width = 550 height = 283 }
 			orientation = upper_left
 
 			background = {
@@ -55,7 +57,7 @@ guiTypes = {
 			iconType = {
 				name = "TNO_Cold_War_GUI_Map"
 				spriteType = "GFX_Cold_War_GUI_Map"
-				position = { x = 10 y = 8 }
+				position = { x = 8 y = 8 }
 			}
 
 			iconType = {
@@ -72,102 +74,88 @@ guiTypes = {
 				position = { x = 0 y = 0 }
 			}
 
-			iconType = {
-				name = "Cold_War_GUI_Sea_Zone_East_Pacific"
-				position = { x = 9 y = 18 }
-				spriteType = "GFX_Cold_War_GUI_Sea_Zone_East_Pacific"
-				frame = 1
-				alwaystransparent = yes
-			}
-			iconType = {
-				name = "Cold_War_GUI_Sea_Zone_North_Atlantic"
-				position = { x = 130 y = 8 }
-				spriteType = "GFX_Cold_War_GUI_Sea_Zone_North_Atlantic"
-				frame = 1
-				alwaystransparent = yes
-			}
-			iconType = {
-				name = "Cold_War_GUI_Sea_Zone_North_Sea"
-				position = { x = 260 y = 8 }
-				spriteType = "GFX_Cold_War_GUI_Sea_Zone_North_Sea"
-				frame = 1
-				alwaystransparent = yes
-			}
-			iconType = {
-				name = "Cold_War_GUI_Sea_Zone_West_Pacific"
-				position = { x = 420 y = 32 }
-				spriteType = "GFX_Cold_War_GUI_Sea_Zone_West_Pacific"
-				frame = 1
-				alwaystransparent = yes
-			}
-			iconType = {
-				name = "Cold_War_GUI_Sea_Zone_Med"
-				position = { x = 293 y = 80 }
-				spriteType = "GFX_Cold_War_GUI_Sea_Zone_Med"
-				frame = 1
-				alwaystransparent = yes
-			}
-			iconType = {
-				name = "Cold_War_GUI_Sea_Zone_South_Atlantic"
-				position = { x = 165 y = 108 }
-				spriteType = "GFX_Cold_War_GUI_Sea_Zone_South_Atlantic"
-				frame = 1
-				alwaystransparent = yes
-			}
-			iconType = {
-				name = "Cold_War_GUI_Sea_Zone_Indian_Ocean"
-				position = { x = 314 y = 104 }
-				spriteType = "GFX_Cold_War_GUI_Sea_Zone_Indian_Ocean"
-				frame = 1
-				alwaystransparent = yes
-			}
+			#iconType = {
+			#	name = "Cold_War_GUI_Sea_Zone_East_Pacific"
+			#	position = { x = 9 y = 18 }
+			#	spriteType = "GFX_Cold_War_GUI_Sea_Zone_East_Pacific"
+			#	frame = 1
+			#	alwaystransparent = yes
+			#}
+			#iconType = {
+			#	name = "Cold_War_GUI_Sea_Zone_North_Atlantic"
+			#	position = { x = 129 y = 8 }
+			#	spriteType = "GFX_Cold_War_GUI_Sea_Zone_North_Atlantic"
+			#	frame = 1
+			#	alwaystransparent = yes
+			#}
+			#iconType = {
+			#	name = "Cold_War_GUI_Sea_Zone_North_Sea"
+			#	position = { x = 259 y = 8 }
+			#	spriteType = "GFX_Cold_War_GUI_Sea_Zone_North_Sea"
+			#	frame = 1
+			#	alwaystransparent = yes
+			#}
+			#iconType = {
+			#	name = "Cold_War_GUI_Sea_Zone_West_Pacific"
+			#	position = { x = 420 y = 32 }
+			#	spriteType = "GFX_Cold_War_GUI_Sea_Zone_West_Pacific"
+			#	frame = 1
+			#	alwaystransparent = yes
+			#}
+			#iconType = {
+			#	name = "Cold_War_GUI_Sea_Zone_Med"
+			#	position = { x = 255 y = 72 }
+			#	spriteType = "GFX_Cold_War_GUI_Sea_Zone_Med"
+			#	frame = 1
+			#	alwaystransparent = yes
+			#}
+			#iconType = {
+			#	name = "Cold_War_GUI_Sea_Zone_South_Atlantic"
+			#	position = { x = 164 y = 108 }
+			#	spriteType = "GFX_Cold_War_GUI_Sea_Zone_South_Atlantic"
+			#	frame = 1
+			#	alwaystransparent = yes
+			#}
+			#iconType = {
+			#	name = "Cold_War_GUI_Sea_Zone_Indian_Ocean"
+			#	position = { x = 314 y = 104 }
+			#	spriteType = "GFX_Cold_War_GUI_Sea_Zone_Indian_Ocean"
+			#	frame = 1
+			#	alwaystransparent = yes
+			#}
 		}
 
 		containerWindowType = {
 			name = "TNO_Cold_War_GUI_Buttons_Container"
-			position = { x = 12 y = 285 }
+			position = { x = 12 y = 355 }
 			size = { width = 550 height = 40 }
 			orientation = upper_left
-		
+
 			buttonType = {
 				name = "Cold_War_GUI_Rankings_Button"
 				quadTextureSprite = "GFX_button_123x34"
-				buttonFont = "aldrich_20_outlinedark"
+				buttonFont = "Bomb_16"
 				position = { x = 0 y = 0 }
 				text = Cold_War_GUI_Rankings_Button_tt
 			}
-			# buttonType = {
-			# 	name = "Cold_War_GUI_Conferences_Button"
-			# 	quadTextureSprite = "GFX_button_123x34"
-			# 	buttonFont = "aldrich_20_outlinedark"
-			# 	position = { x = 1027 y = 553 }
-			# 	text = "Conferences"
-			# }
 			buttonType = {
 				name = "Cold_War_GUI_Tension_Button"
 				quadTextureSprite = "GFX_button_123x34"
-				buttonFont = "aldrich_20_outlinedark"
+				buttonFont = "Bomb_16"
 				position = { x = 135 y = 0 }
 				text = Cold_War_GUI_Tension_Button_tt
 			}
-			# buttonType = {
-			# 	name = "Cold_War_GUI_Influence_Button"
-			# 	quadTextureSprite = "GFX_button_123x34"
-			# 	buttonFont = "aldrich_20_outlinedark"
-			# 	position = { x = 1027 y = 641 }
-			# 	text = "Influence"
-			# }
 			buttonType = {
 				name = "Cold_War_GUI_Spheres_Button"
 				quadTextureSprite = "GFX_button_123x34"
-				buttonFont = "aldrich_20_outlinedark"
+				buttonFont = "Bomb_16"
 				position = { x = 270 y = 0 }
 				text = Cold_War_GUI_Spheres_Button_tt
 			}
 			buttonType = {
 				name = "Cold_War_GUI_Nukes_Button"
 				quadTextureSprite = "GFX_button_123x34"
-				buttonFont = "aldrich_20_outlinedark"
+				buttonFont = "Bomb_16"
 				position = { x = 405 y = 0 }
 				text = Cold_War_GUI_Nukes_Button_tt
 			}
@@ -175,7 +163,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "TNO_Cold_War_GUI_Tabs_Container"
-			position = { x = 0 y = 320 }
+			position = { x = 0 y = 390 }
 			size = { width = 550 height = 100%% }
 			orientation = upper_left
 
@@ -199,159 +187,9 @@ guiTypes = {
 		}
 	}
 
-	# containerWindowType = {
-	# 	name = "TNO_Cold_War_GUI_Conferences_Tab"
-	# 	position = { x = 7 y = 464 }
-	# 	size = { width = 1015 height = 331 }
-	# 	iconType = {
-	# 		name = "TNO_Cold_War_GUI_Conferences_Tab_Background"
-	# 		position = { x = 0 y = 0 }
-	# 		spriteType = "GFX_Cold_War_GUI_Simple_Background"
-	# 	}
-
-	# 	instantTextboxType = {
-	# 		name = "TNO_Cold_War_GUI_Conferences_Tab_Title"
-	# 		position = { x = 240 y = 3 }
-	# 		font = "aldrich_30_outline"
-	# 		text = "THE X CONFERENCE"
-	# 		maxWidth = 532
-	# 		format = center
-	# 		alwaystransparent = yes
-	# 	}
-
-	# 	gridboxtype = {
-	# 		name = "Cold_War_GUI_Conferences"
-	# 		position = { x = 10 y = 40 }
-	# 		size = { width = 680 height = 43 }
-	# 		slotsize = { width = 680 height = 49 }
-	# 		max_slots_horizontal = 2
-	# 		max_slots_vertical = 1
-	# 		add_horizontal = yes
-	# 	}
-
-	# 	instantTextboxType = {
-	# 		name = "CW_Conference_Balance_text"
-	# 		position = { x = 340 y = 40 }
-	# 		font = "aldrich_20_outline"
-	# 		text = "CONFERENCE BALANCE"
-	# 		maxWidth = 330
-	# 		format = center
-	# 	}
-	# 	iconType = {
-	# 		name = "CW_Conference_USA_GER_ProgBar"
-	# 		quadTextureSprite = "GFX_Conference_USA_GER"
-	# 		position = { x = 340 y = 60 }
-	# 	}
-	# 	iconType = {
-	# 		name = "CW_Conference_GER_JAP_ProgBar"
-	# 		quadTextureSprite = "GFX_Conference_GER_JAP"
-	# 		position = { x = 340 y = 60 }
-	# 	}
-	# 	iconType = {
-	# 		name = "CW_Conference_JAP_USA_ProgBar"
-	# 		quadTextureSprite = "GFX_Conference_JAP_USA"
-	# 		position = { x = 340 y = 60 }
-	# 	}
-	# 	instantTextboxType = {
-	# 		name = "CW_Conference_Timer_text"
-	# 		position = { x = 340 y = 100 }
-	# 		font = "aldrich_20_outline"
-	# 		text = "CONFERENCE TIMER"
-	# 		maxWidth = 330
-	# 		format = center
-	# 	}
-	# 	iconType = {
-	# 		name = "CW_Conference_Timer_ProgBar"
-	# 		quadTextureSprite = "GFX_Conference_Timer"
-	# 		position = { x = 340 y = 120 }
-	# 	}
-	# 	instantTextboxType = {
-	# 		name = "CW_Conference_Decisions_text"
-	# 		position = { x = 340 y = 160 }
-	# 		font = "aldrich_20_outline"
-	# 		text = "DECISIONS"
-	# 		maxWidth = 330
-	# 		format = center
-	# 	}
-	# 	instantTextboxType = {
-	# 		name = "CW_Conference_Proposals_text"
-	# 		position = { x = 340 y = 160 }
-	# 		font = "aldrich_20_outline"
-	# 		text = "PROPOSALS"
-	# 		maxWidth = 330
-	# 		format = center
-	# 	}
-	# 	containerWindowType = {
-	# 		name = "Conference_Container"
-	# 		position = { x = 335 y = 175 }
-	# 		size = { width = 340 height = 160 }
-	# 		verticalScrollbar = "right_vertical_slider_superpower_rankings"
-	# 		background = {
-	# 			name = "CW_Decisions_Background"
-	# 			quadTextureSprite = "GFX_tiled_idea_entry"
-	# 		}
-	# 		gridboxtype = {
-	# 			name = "CW_Conference_Decisions"
-	# 			position = { x = 40 y = 10 }
-	# 			size = { width = 400 height = 53 }
-	# 			slotsize = { width = 400 height = 49 }
-	# 			max_slots_horizontal = 1
-	# 			add_horizontal = no
-	# 		}
-	# 	}
-	# }
-
-	containerWindowType = {
-		name = "TNO_Decisions_Entry"
-		buttonType = {
-			name = "CW_Proposals"
-			quadTextureSprite = "GFX_category_header_shorter"
-			buttonFont = "aldrich_20_outline"
-			text = "[CW_Conference_GetProposalsLoc]"
-			pdx_tooltip = "CW_Proposals_tooltip"
-			position = { x = 0 y = 0 }
-		}
-		buttonType = {
-			name = "CW_Decisions"
-			quadTextureSprite = "GFX_category_header_shorter"
-			buttonFont = "aldrich_20_outline"
-			text = "[CW_Conference_GetDecisionLoc]"
-			pdx_tooltip = "CW_Decisions_tooltip"
-			position = { x = 0 y = 0 }
-		}
-	}
-
-	containerWindowType = {
-		name = "TNO_Conference_Entry"
-		position = { x = 0 y = 0 }
-		iconType = {
-			name = "CW_Conference_Flag"
-			quadTextureSprite = "GFX_flag_medium_plain"
-			position = { x = 146 y = 30 }
-		}
-		iconType = {
-			name = "CW_Conference_Flag_Frame"
-			position = { x = 97 y = -5 }
-			spriteType = "GFX_flag_frame_warscreen"
-			alwaystransparent = yes
-			scale = 2.0
-		}
-		instantTextboxType = {
-			name = "CW_Conference_Effects"
-			position = { x = 0 y = 70 }
-			font = "aldrich_18_outline"
-			text = "TNO_Conference_text"
-			maxWidth = 290
-			maxHeight = 210
-			scrollbarType = standardtext_slider
-			format = left
-		}
-		
-	}
-
 	containerWindowType = {
 		name = "TNO_Cold_War_GUI_Rankings_Tab"
-		position = { x = 0 y = 325 }
+		position = { x = 0 y = 395 }
 		size = { width = 540 height = -5 }
 
 		verticalScrollbar = "left_vertical_slider"
@@ -369,12 +207,12 @@ guiTypes = {
 			verticalScrollbar = "right_vertical_slider"
 			margin = { top = 0 left = 0 bottom = 0 right = 0 }
 			clipping = no
-			
+
 			background = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Entries_Background"
 				quadTextureSprite = "GFX_tiled_window_transparent"
 			}
-			
+
 			gridboxtype = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entries_List"
 				position = { x = 0 y = 0 }
@@ -390,21 +228,20 @@ guiTypes = {
 			position = { x = 7 y = 194 }
 			spriteType = "GFX_Cold_War_GUI_Title_Separator"
 		}
-	
+
 		containerWindowType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entries"
 			size = { width = 535 height = 400 }
 			position = { x = 20 y = 200 }
 
-			
 			containerWindowType = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Military"
-				position = { x = 0 y = 0 }
+				position = { x = -15 y = 0 }
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Military_Title"
-					position = { x = 0 y = 20 }
-					font = "aldrich_22_outline"
+					position = { x = 0 y = 5 }
+					font = "aldrich_24_outline"
 					text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Military_Title_tt
 					maxWidth = 166
 					format = center
@@ -412,8 +249,8 @@ guiTypes = {
 				}
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Military_Total"
-					position = { x = 0 y = 45 }
-					font = "aldrich_16_outline"
+					position = { x = 0 y = 30 }
+					font = "aldrich_18_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Total_Score_Military"
 					maxWidth = 166
 					fixedsize = yes
@@ -423,8 +260,8 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Military_Name"
-					position = { x = 179 y = 0 }
-					font = "aldrich_14_outline"
+					position = { x = 167 y = 0 }
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Military_Categories"
 					maxWidth = 250
 					maxHeight = 365
@@ -435,8 +272,31 @@ guiTypes = {
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Military_Points"
 					position = { x = 242 y = 0 }
-					font = "aldrich_14_outline"
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Military_Points"
+					maxWidth = 100
+					maxHeight = 365
+					fixedsize = yes
+					format = right
+					alwaystransparent = yes
+				}
+
+				instantTextboxType = {
+					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Military_Name2"
+					position = { x = 350 y = 0 }
+					font = "aldrich_16_outline"
+					text = "TNO_Cold_War_GUI_Rankings_Military_Categories2"
+					maxWidth = 250
+					maxHeight = 365
+					fixedsize = yes
+					format = left
+					alwaystransparent = yes
+				}
+				instantTextboxType = {
+					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Military_Points2"
+					position = { x = 430 y = 0 }
+					font = "aldrich_16_outline"
+					text = "TNO_Cold_War_GUI_Rankings_Military_Points2"
 					maxWidth = 100
 					maxHeight = 365
 					fixedsize = yes
@@ -447,18 +307,18 @@ guiTypes = {
 
 			iconType = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Separator2"
-				position = { x = -13 y = 86 }
+				position = { x = -13 y = 56 }
 				spriteType = "GFX_Cold_War_GUI_Title_Separator"
 			}
 
 			containerWindowType = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Economy"
-				position = { x = 0 y = 92 }
+				position = { x = -15 y = 62 }
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Economy_Title"
-					position = { x = 0 y = 20 }
-					font = "aldrich_22_outline"
+					position = { x = 0 y = 5 }
+					font = "aldrich_24_outline"
 					text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Economy_Title_tt
 					maxWidth = 166
 					format = center
@@ -466,8 +326,8 @@ guiTypes = {
 				}
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Economy_Total"
-					position = { x = 0 y = 45 }
-					font = "aldrich_16_outline"
+					position = { x = 0 y = 30 }
+					font = "aldrich_18_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Total_Score_Economy"
 					maxWidth = 166
 					fixedsize = yes
@@ -477,8 +337,8 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Economy_Name"
-					position = { x = 179 y = 0 }
-					font = "aldrich_14_outline"
+					position = { x = 167 y = 0 }
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Economy_Categories"
 					maxWidth = 250
 					maxHeight = 365
@@ -489,7 +349,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Economy_Points"
 					position = { x = 242 y = 0 }
-					font = "aldrich_14_outline"
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Economy_Points"
 					maxWidth = 100
 					maxHeight = 365
@@ -500,8 +360,8 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Economy_Name2"
-					position = { x = 353 y = 0 }
-					font = "aldrich_14_outline"
+					position = { x = 350 y = 0 }
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Economy_Categories2"
 					maxWidth = 250
 					maxHeight = 365
@@ -511,8 +371,8 @@ guiTypes = {
 				}
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Economy_Points2"
-					position = { x = 418 y = 0 }
-					font = "aldrich_14_outline"
+					position = { x = 430 y = 0 }
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Economy_Points2"
 					maxWidth = 100
 					maxHeight = 365
@@ -524,18 +384,18 @@ guiTypes = {
 
 			iconType = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Separator3"
-				position = { x = -13 y = 178 }
+				position = { x = -13 y = 118 }
 				spriteType = "GFX_Cold_War_GUI_Title_Separator"
 			}
-			
+
 			containerWindowType = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Diplomacy"
-				position = { x = 0 y = 184 }
+				position = { x = -15 y = 124 }
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Diplomacy_Title"
-					position = { x = 0 y = 20 }
-					font = "aldrich_22_outline"
+					position = { x = 0 y = 5 }
+					font = "aldrich_24_outline"
 					text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Diplomacy_Title_tt
 					maxWidth = 166
 					format = center
@@ -543,8 +403,8 @@ guiTypes = {
 				}
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Diplomacy_Total"
-					position = { x = 0 y = 45 }
-					font = "aldrich_16_outline"
+					position = { x = 0 y = 30 }
+					font = "aldrich_18_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Total_Score_Diplomacy"
 					maxWidth = 166
 					fixedsize = yes
@@ -554,8 +414,8 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Diplomacy_Name"
-					position = { x = 179 y = 0 }
-					font = "aldrich_14_outline"
+					position = { x = 167 y = 0 }
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Diplomacy_Categories"
 					maxWidth = 250
 					maxHeight = 365
@@ -566,7 +426,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Diplomacy_Points"
 					position = { x = 242 y = 0 }
-					font = "aldrich_14_outline"
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Diplomacy_Points"
 					maxWidth = 100
 					maxHeight = 365
@@ -577,8 +437,8 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Diplomacy_Name2"
-					position = { x = 353 y = 0 }
-					font = "aldrich_14_outline"
+					position = { x = 350 y = 0 }
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Diplomacy_Categories2"
 					maxWidth = 250
 					maxHeight = 365
@@ -588,8 +448,8 @@ guiTypes = {
 				}
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Diplomacy_Points2"
-					position = { x = 418 y = 0 }
-					font = "aldrich_14_outline"
+					position = { x = 430 y = 0 }
+					font = "aldrich_16_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Diplomacy_Points2"
 					maxWidth = 100
 					maxHeight = 365
@@ -601,18 +461,18 @@ guiTypes = {
 
 			iconType = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Separator4"
-				position = { x = -13 y = 270 }
+				position = { x = -13 y = 180 }
 				spriteType = "GFX_Cold_War_GUI_Title_Separator"
 			}
 
 			containerWindowType = {
 				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Victory"
-				position = { x = 0 y = 276 }
+				position = { x = -15 y = 186 }
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Victory_Title"
-					position = { x = 0 y = 20 }
-					font = "aldrich_22_outline"
+					position = { x = 0 y = 5 }
+					font = "aldrich_24_outline"
 					text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Victory_Title_tt
 					maxWidth = 166
 					maxHeight = 24
@@ -621,41 +481,67 @@ guiTypes = {
 				}
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Victory_Total"
-					position = { x = 0 y = 45 }
-					font = "aldrich_16_outline"
+					position = { x = 0 y = 30 }
+					font = "aldrich_18_outline"
 					text = "TNO_Cold_War_GUI_Rankings_Total_Score_Victories"
 					maxWidth = 166
 					maxHeight = 18
 					format = center
 					alwaystransparent = yes
 				}
-
-				
 			}
 		}
 
 		containerWindowType = { # Has to be out of the above container for the UI scaling to work
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Victory_List"
-			position = { x = 197 y = 483 }
-			size = { width = 365 height = 60 }
+			position = { x = 197 y = 393 }
+			size = { width = 365 height = -5 }
+
+			instantTextboxType = {
+				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Victory_Events_Name"
+				position = { x = -25 y = -5 }
+				font = "aldrich_16_outline"
+				text = "TNO_Cold_War_GUI_Rankings_Victory_Events"
+				maxWidth = 350
+				maxHeight = 365
+				fixedsize = yes
+				format = left
+				alwaystransparent = yes
+			}
+			instantTextboxType = {
+				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Victory_Events_Points"
+				position = { x = 223 y = -5 }
+				font = "aldrich_16_outline"
+				text = "TNO_Cold_War_GUI_Rankings_Victory_Events_Points"
+				maxWidth = 115
+				maxHeight = 365
+				fixedsize = yes
+				format = right
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Info_Entry_Victory_Events_Separator"
+				quadTextureSprite = "GFX_Cold_War_GUI_Title_Separator2"
+				position = { x = -24 y = 15 }
+			}
 
 			# Debug buttons
 			buttonType = {
 				name = "Cold_War_GUI_Rankings_Tab_Vic_add_remove"
-				position = { x = -100 y = 70 }
+				position = { x = -125 y = 70 }
 				spriteType = "GFX_add_one"
 				pdx_tooltip = "TNO_Cold_War_GUI_Victories_Gridbox_DBG_tt"
 			}
 			buttonType = {
 				name = "Cold_War_GUI_Rankings_Tab_Vic_sample_logs"
-				position = { x = -50 y = 70 }
+				position = { x = -75 y = 70 }
 				spriteType = "GFX_add_one"
 				pdx_tooltip = "TNO_Cold_War_GUI_Victories_Sample_DBG_tt"
 			}
 			containerWindowType = { # Has to be out of the above container for the UI scaling to work
 				name = "TNO_CW_GUI_Rankings_Tab_Victory_List"
-				position = { x = -20 y = -10 }
-				size = { width = 360 height = 140 }
+				position = { x = -32 y = 22 }
+				size = { width = 379 height = 100%% }
 				verticalScrollbar = "left_vertical_slider"
 				margin = { top = 0 left = 20 bottom = 0 right = 0 }
 
@@ -663,12 +549,12 @@ guiTypes = {
 					name = "Background"
 					quadTextureSprite = "GFX_tiled_window_transparent"
 				}
-				
+
 				gridboxtype = {
 					name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Victory_List_Gridbox"
 					position = { x = 0 y = 0 }
-					size = { width = 150 height = 48 }
-					slotsize = { width = 150 height = 48 }
+					size = { width = 341 height = 48 }
+					slotsize = { width = 341 height = 48 }
 					max_slots_horizontal = 1
 				}
 			}
@@ -678,44 +564,45 @@ guiTypes = {
 	containerWindowType = {
 		name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry"
 		position = { x = 0 y = 0 }
-		size = { width = 150 height = 48 }
+		size = { width = 341 height = 64 }
 
 		iconType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entry_Slot"
 			quadTextureSprite = "GFX_Cold_War_GUI_Victories_Ranking_Slot"
 			position = { x = 8 y = 2 }
 		}
-	
+
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entries_Name"
-			position = { x = 12 y = 16 }
-			font = "aldrich_14_outline"
+			position = { x = 12 y = 6 }
+			font = "aldrich_16_outline"
 			text = "TNO_Cold_War_GUI_Rankings_Victory_Entry_Name"
 			maxWidth = 220
 			maxHeight = 38
 			fixedsize = yes
 			format = center
+			vertical_alignment = center
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Info_Entries_Status"
-			position = { x = 236 y = 10 }
-			font = "aldrich_14_outline"
+			position = { x = 235 y = 10 }
+			font = "aldrich_16_outline"
 			text = "TNO_Cold_War_GUI_Rankings_Victory_Entry_Status"
-			maxWidth = 100
+			maxWidth = 110
 			maxHeight = 44
 			fixedsize = yes
 			format = center
 			alwaystransparent = yes
 		}
 	}
-	
+
 	containerWindowType = {
 		name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry"
 		position = { x = 0 y = 0 }
 		size = { width = 513 height = 62 }
-	
+
 		buttonType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Background"
 			position = { x = 0 y = 0 }
@@ -723,7 +610,7 @@ guiTypes = {
 			pdx_tooltip = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Background_tt"
 			pdx_tooltip_delayed = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Background_tt_delayed"
 		}
-		
+
 		iconType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Flag"
 			quadTextureSprite = "GFX_flag_medium_plain"
@@ -735,12 +622,12 @@ guiTypes = {
 			spriteType = "GFX_flag_overlay_stateview_large"
 			alwaystransparent = yes
 		}
-		
+
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Country_Name"
 			position = { x = 96 y = 5 }
-			font = "aldrich_18_outline"
-			text = "[THIS.GetName]"
+			font = "aldrich_20_outline"
+			text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Country_Name_tt
 			maxWidth = 392
 			maxHeight = 20
 			fixedsize = no
@@ -750,7 +637,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Score"
 			position = { x = 218 y = 30 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Score_tt
 			maxWidth = 150
 			fixedsize = yes
@@ -761,7 +648,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Mil_Score"
 			position = { x = 100 y = 25 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Mil_Score_tt
 			maxWidth = 125
 			format = left
@@ -770,7 +657,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Econ_Score"
 			position = { x = 100 y = 40 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Econ_Score_tt
 			maxWidth = 125
 			format = left
@@ -779,7 +666,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Vic_Score"
 			position = { x = 350 y = 25 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Vic_Score_tt
 			maxWidth = 125
 			format = right
@@ -788,7 +675,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Diplo_Score"
 			position = { x = 350 y = 40 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = TNO_Cold_War_GUI_Rankings_Tab_Superpower_Large_Entry_Diplo_Score_tt
 			maxWidth = 125
 			format = right
@@ -798,7 +685,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "TNO_Cold_War_GUI_Nukes_Tab"
-		position = { x = 0 y = 332 }
+		position = { x = 0 y = 402 }
 		size = { width = 545 height = -10 }
 
 		verticalScrollbar = "left_vertical_slider"
@@ -812,7 +699,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "Cold_War_GUI_NuclearPowers_Title"
 			position = { x = 120 y = -3 }
-			font = "aldrich_30_outline"
+			font = "aldrich_32_outline"
 			text = Cold_War_GUI_NuclearPowers_Title_tt
 			maxWidth = 300
 			format = center
@@ -832,7 +719,7 @@ guiTypes = {
 			clipping = yes
 			horizontalScrollbar = "bottom_horizontal_slider"
 			margin = { top = 0 left = 0 bottom = 0 right = 7 }
-			   
+
 			background = {
 				name = "Cold_War_GUI_Nukes_Tab_NuclearPowers_Container_Background"
 				quadTextureSprite = "GFX_tiled_window_transparent"
@@ -863,7 +750,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "Cold_War_GUI_StockpileTitle"
 			position = { x = 128 y = 190 }
-			font = "aldrich_28_outline"
+			font = "aldrich_30_outline"
 			text = Cold_War_GUI_StockpileTitle_tt
 			maxWidth = 300
 			format = center
@@ -880,36 +767,36 @@ guiTypes = {
 			name = "Cold_War_GUI_Nukes_Tab_Stockpile"
 			position = { x = 15 y = 234 }
 			size = { width = 338 height = 331 }
-	
+
 			## Nuclear info
 			# Nuclear Stockpile
-			instantTextboxType = { 
+			instantTextboxType = {
 				name = "Cold_War_GUI_Stockpile"
 				position = { x = 0 y = 0 }
-				font = "aldrich_18_outline"
+				font = "aldrich_20_outline"
 				text = TNO_Nuke_GUI_Display_Stockpile_tt
 				maxWidth = 250
 				maxHeight = 48
 				format = center
 			}
-	
+
 			# Monthly Change
-			instantTextboxType = { 
+			instantTextboxType = {
 				name = "Cold_War_GUI_StockpileChange"
 				position = { x = 0 y = 50 }
-				font = "aldrich_18_outline"
+				font = "aldrich_20_outline"
 				text = TNO_Nuke_GUI_Display_StockpileChange_tt
 				pdx_tooltip = TNO_Nuke_GUI_Display_StockpileChange_pdx_tt
 				maxWidth = 250
 				maxHeight = 48
 				format = center
 			}
-			
+
 			# Strike Capability
-			instantTextboxType = { 
+			instantTextboxType = {
 				name = "Cold_War_GUI_StrikeCapability"
 				position = { x = 0 y = 100 }
-				font = "aldrich_18_outline"
+				font = "aldrich_20_outline"
 				text = TNO_Nuke_GUI_Display_StrikeCapability_tt
 				pdx_tooltip = TNO_Nuke_GUI_Display_StrikeCapability_pdx_tt_delayed
 				maxWidth = 250
@@ -918,10 +805,10 @@ guiTypes = {
 			}
 
 			# Global Coverage
-			instantTextboxType = { 
+			instantTextboxType = {
 				name = "Cold_War_GUI_GlobalCoverage"
 				position = { x = 0 y = 120 }
-				font = "aldrich_18_outline"
+				font = "aldrich_20_outline"
 				text = TNO_Nuke_GUI_Display_GlobalCoverage_tt
 				pdx_tooltip = TNO_Nuke_GUI_Display_GlobalCoverage_pdx_tt
 				maxWidth = 250
@@ -940,15 +827,15 @@ guiTypes = {
 			instantTextboxType = {
 				name = "Cold_War_GUI_DecommissionDisplay_DismantleQtd_Title"
 				position = { x = 0 y = 0 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = Cold_War_GUI_DecommissionDisplay_DismantleQtd_Title_tt
 				maxWidth = 300
 				format = center
 			}
-			instantTextboxType = { 
+			instantTextboxType = {
 				name = "Cold_War_GUI_DecommissionDisplay_DismantleQtd"
 				position = { x = 0 y = 24 }
-				font = "aldrich_18_outline"
+				font = "aldrich_20_outline"
 				text = "[?nuclear_stockpile_montly_decomm]"
 				maxWidth = 300
 				format = center
@@ -967,18 +854,18 @@ guiTypes = {
 			}
 
 			# Stockpile Min. Cap
-			instantTextboxType = { 
+			instantTextboxType = {
 				name = "Cold_War_GUI_DecommissionDisplay_CapQtd_Title"
 				position = { x = 37 y = 49 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 				text = Cold_War_GUI_DecommissionDisplay_CapQtd_Title_tt
 				maxWidth = 240
 				format = center
 			}
-			instantTextboxType = { 
+			instantTextboxType = {
 				name = "Cold_War_GUI_DecommissionDisplay_CapQtd"
 				position = { x = 0 y = 91 }
-				font = "aldrich_18_outline"
+				font = "aldrich_20_outline"
 				text = "[?nuclear_stockpile_min_cap]"
 				pdx_tooltip = TNO_Nuke_GUI_DecommissionDisplay_CapQtd_tt_super
 				maxWidth = 300
@@ -997,13 +884,13 @@ guiTypes = {
 				quadTextureSprite = "GFX_NOV_Silovik_GUI_megacorp_minus"
 				pdx_tooltip = TNO_Nuke_GUI_DecommissionDisplay_CapMinusButton_tt
 			}
-		
+
 			# Activation/Deactivation buttons
 			buttonType = {
 				name = "Cold_War_GUI_DecommissionDisplay_Activate"
 				position = { x = 75 y = 117 }
 				quadTextureSprite = "GFX_Nuke_GUI_box"
-				buttonFont = "aldrich_16_outline"
+				buttonFont = "aldrich_18_outline"
 				buttonText = "TNO_Nuke_GUI_DecommissionDisplay_Activate_tt"
 				pdx_tooltip = TNO_Nuke_GUI_DecommissionDisplay_Activate_pdx_tt
 				clicksound = click_close
@@ -1013,7 +900,7 @@ guiTypes = {
 				name = "Cold_War_GUI_DecommissionDisplay_Deactivate"
 				position = { x = 75 y = 117 }
 				quadTextureSprite = "GFX_Nuke_GUI_box"
-				buttonFont = "aldrich_16_outline"
+				buttonFont = "aldrich_18_outline"
 				buttonText = "TNO_Nuke_GUI_DecommissionDisplay_Deactivate_tt"
 				pdx_tooltip = TNO_Nuke_GUI_DecommissionDisplay_Deactivate_pdx_tt
 				clicksound = click_close
@@ -1030,7 +917,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "Cold_War_GUI_Triad_Title"
 			position = { x = 128 y = 390 }
-			font = "aldrich_28_outline"
+			font = "aldrich_30_outline"
 			text = Cold_War_GUI_Triad_Title_tt
 			maxWidth = 300
 			format = center
@@ -1047,7 +934,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "Cold_War_GUI_Triad_Info"
 			position = { x = 12 y = 432 }
-			font = "aldrich_18_outline"
+			font = "aldrich_20_outline"
 			text = "TNO_Nuke_GUI_Display_StrikeCapability_pdx_tt"
 			maxWidth = 220
 			format = center
@@ -1058,8 +945,8 @@ guiTypes = {
 		containerWindowType = {
 			name = "Cold_War_GUI_Nukes_Tab_RedButton"
 			position = { x = 220 y = 436 }
-			size = { width = 338 height = 160 }
-			
+			size = { width = 338 height = 180 }
+
 			buttonType = {
 				name = "Cold_War_GUI_Display_SwitchLeft"
 				position = { x = 17 y = 0 }
@@ -1087,7 +974,7 @@ guiTypes = {
 		name = "Cold_War_GUI_NuclearPowers_Entry"
 		size = { width = 150 height = 144 }
 		position = { x = 0 y = 0 }
-		
+
 		iconType = {
 			name = "Cold_War_GUI_NuclearPowers_Flag"
 			quadTextureSprite ="GFX_flag_medium_plain"
@@ -1100,16 +987,16 @@ guiTypes = {
 			position = { x = 32 y = -4 }
 			alwaystransparent = yes
 		}
-		
+
 		instantTextboxType = {
 			name = "Cold_War_GUI_NuclearPowers_Name"
 			position = { x = 0 y = 56 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "Cold_War_GUI_NuclearPowers_Name_tt"
 			maxWidth = 150
 			maxHeight = 72
 			fixedsize = yes
-			format = center 
+			format = center
 		}
 	}
 
@@ -1128,7 +1015,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "Cold_War_GUI_Nuke_Confirmation_Tooltip_Title"
 			position = { x = 10 y = 40 }
-			font = "aldrich_30_outline"
+			font = "aldrich_32_outline"
 			text = Cold_War_GUI_Nuke_Confirmation_Tooltip_Title_tt
 			maxWidth = 380
 			format = center
@@ -1141,7 +1028,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_speerdometer_conservative_button"
 			clicksound = click_close
 			buttonText = Cold_War_GUI_Nuke_Confirmation_Tooltip_NoButton_tt
-			buttonFont = "aldrich_18_outline"
+			buttonFont = "aldrich_20_outline"
 		}
 		buttonType = {
 			name = "Cold_War_GUI_Nuke_Confirmation_Tooltip_YesButton"
@@ -1149,15 +1036,16 @@ guiTypes = {
 			quadTextureSprite = "GFX_speerdometer_reformist_button"
 			clicksound = click_close
 			buttonText = Cold_War_GUI_Nuke_Confirmation_Tooltip_YesButton_tt
-			buttonFont = "aldrich_18_outline"
+			buttonFont = "aldrich_20_outline"
 			orientation = UPPER_RIGHT
 		}
 	}
 
 	containerWindowType = {
 		name = "TNO_Cold_War_GUI_Tension_Tab"
-		position = { x = 0 y = 328 }
-		size = { width = 540 height = -5 }
+		position = { x = 0 y = 402 }
+		size = { width = 540 height = -10 }
+		clipping = no
 
 		verticalScrollbar = "left_vertical_slider"
 		margin = { top = 0 left = 0 bottom = 0 right = 0 }
@@ -1167,31 +1055,10 @@ guiTypes = {
 			quadTextureSprite = "GFX_tiled_window_transparent"
 		}
 
-		buttonType = {
-			name = "Cold_War_GUI_Tension_Tab_add_remove"
-			position = { x = 25 y = 0 }
-			spriteType = "GFX_add_one"
-			pdx_tooltip = "TNO_Cold_War_GUI_Tension_Gridbox_DBG_tt"
-		}
-		buttonType = {
-			name = "Cold_War_GUI_Tension_Tab_sample_logs"
-			position = { x = 50 y = 0 }
-			spriteType = "GFX_add_one"
-			pdx_tooltip = "TNO_Cold_War_GUI_Tension_Sample_DBG_tt"
-		}
-		
-		iconType = {
-			name = "Info"
-			spriteType = "GFX_Cold_War_GUI_Tension_GUI_Info_Button"
-			position = { x = -42 y = 0 }
-			pdx_tooltip = CWGUI_Tension_Info_Text
-			orientation = UPPER_RIGHT
-		}
-	
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Tension_Tab_Title"
-			position = { x = 70 y = 0 }
-			font = "aldrich_30_outline"
+			position = { x = 70 y = -3 }
+			font = "aldrich_32_outline"
 			text = TNO_Cold_War_GUI_Tension_Tab_Title_tt
 			maxWidth = 400
 			format = center
@@ -1207,7 +1074,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "Cold_War_GUI_Tension_Tab_Superpower_Tension_List"
 			size = { width = 530 height = 230 }
-			position = { x = 14 y = 36 }
+			position = { x = 14 y = 41 }
 
 			containerWindowType = {
 				name = "Cold_War_GUI_Tension_Tab_Superpower_Tension_List_Entry_A"
@@ -1216,22 +1083,60 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Tension_Entry_A_Text"
-					position = { x = 113 y = 12 }
-					font = "aldrich_22_outline"
+					position = { x = 113 y = 18 }
+					font = "aldrich_24_outline"
 					text = "USA_GER_Tension"
 					maxWidth = 300
-					maxHeight = 24
+					maxHeight = 48
 					format = center
 					alwaystransparent = yes
 				}
 
-				iconType = {
+				containerWindowType = {
 					name = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar"
-					quadTextureSprite = "GFX_Cold_War_GUI_Tension_Progressbar"
-					position = { x = 113 y = 38 }
-					pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_tooltip"
+					position = { x = 12 y = 73 }
+
+					# Relations value
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_Background"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Background"
+						position = { x = 0 y = 0 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_Positive"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Positive"
+						position = { x = 251 y = -1 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_Negative"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Negative"
+						position = { x = 0 y = -1 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_tt"
+					}
+
+					# Trend value
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_TrendBackground"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Background"
+						position = { x = 85 y = 29 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_Trend_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_TrendPositive"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Positive"
+						position = { x = 251 y = 28 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_Trend_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_TrendNegative"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Negative"
+						position = { x = 85 y = 28 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_A_Progressbar_Trend_tt"
+					}
 				}
-		
+
 				iconType = {
 					name = "GFX_Cold_War_GUI_Tension_Frame"
 					quadTextureSprite = "GFX_Cold_War_GUI_Tension_Frame"
@@ -1248,7 +1153,7 @@ guiTypes = {
 					name = "TNO_Cold_War_GUI_Tension_Tab_Entry_A_Superpower_1_Flag_Cover"
 					position = { x = 12 y = 13 }
 					spriteType = "GFX_flag_overlay_stateview_large"
-					pdx_tooltip = "TNO_Cold_War_GUI_Tension_USA_NameDef"
+					pdx_tooltip = "TNO_Cold_War_GUI_Tension_GER_NameDef"
 				}
 
 				iconType = {
@@ -1261,34 +1166,72 @@ guiTypes = {
 					name = "TNO_Cold_War_GUI_Tension_Tab_Entry_A_Superpower_2_Flag_Cover"
 					position = { x = -98 y = 13 }
 					spriteType = "GFX_flag_overlay_stateview_large"
-					pdx_tooltip = "TNO_Cold_War_GUI_Tension_GER_NameDef"
+					pdx_tooltip = "TNO_Cold_War_GUI_Tension_USA_NameDef"
 					orientation = UPPER_RIGHT
 				}
 			}
-			
+
 			containerWindowType = {
 				name = "Cold_War_GUI_Tension_Tab_Superpower_Tension_List_Entry_B"
 				size = { width = 527 height = 70 }
-				position = { x = 0 y = 80 }
+				position = { x = 0 y = 125 }
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Tension_Entry_B_Text"
-					position = { x = 113 y = 12 }
-					font = "aldrich_22_outline"
+					position = { x = 113 y = 18 }
+					font = "aldrich_24_outline"
 					text = "GER_JAP_Tension"
 					maxWidth = 300
-					maxHeight = 24
+					maxHeight = 48
 					format = center
 					alwaystransparent = yes
 				}
-		
-				iconType = {
+
+				containerWindowType = {
 					name = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar"
-					quadTextureSprite = "GFX_Cold_War_GUI_Tension_Progressbar"
-					position = { x = 113 y = 38 }
-					pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_tooltip"
+					position = { x = 12 y = 73 }
+
+					# Relations value
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_Background"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Background"
+						position = { x = 0 y = 0 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_Positive"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Positive"
+						position = { x = 251 y = -1 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_Negative"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Negative"
+						position = { x = 0 y = -1 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_tt"
+					}
+
+					# Trend value
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_TrendBackground"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Background"
+						position = { x = 85 y = 29 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_Trend_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_TrendPositive"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Positive"
+						position = { x = 251 y = 28 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_Trend_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_TrendNegative"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Negative"
+						position = { x = 85 y = 28 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_B_Progressbar_Trend_tt"
+					}
 				}
-		
+
 				iconType = {
 					name = "GFX_Cold_War_GUI_Tension_Frame"
 					quadTextureSprite = "GFX_Cold_War_GUI_Tension_Frame"
@@ -1326,26 +1269,64 @@ guiTypes = {
 			containerWindowType = {
 				name = "Cold_War_GUI_Tension_Tab_Superpower_Tension_List_Entry_C"
 				size = { width = 527 height = 70 }
-				position = { x = 0 y = 160 }
+				position = { x = 0 y = 240 }
 
 				instantTextboxType = {
 					name = "TNO_Cold_War_GUI_Tension_Entry_C_Text"
-					position = { x = 113 y = 12 }
-					font = "aldrich_22_outline"
+					position = { x = 113 y = 18 }
+					font = "aldrich_24_outline"
 					text = "JAP_USA_Tension"
 					maxWidth = 300
-					maxHeight = 24
+					maxHeight = 48
 					format = center
 					alwaystransparent = yes
 				}
-		
-				iconType = {
+
+				containerWindowType = {
 					name = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar"
-					quadTextureSprite = "GFX_Cold_War_GUI_Tension_Progressbar"
-					position = { x = 113 y = 38 }
-					pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_tooltip"
+					position = { x = 12 y = 73 }
+
+					# Relations value
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_Background"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Background"
+						position = { x = 0 y = 0 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_Positive"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Positive"
+						position = { x = 251 y = -1 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_Negative"
+						quadTextureSprite = "GFX_Cold_War_GUI_Relations_ProgBar_Negative"
+						position = { x = 0 y = -1 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_tt"
+					}
+
+					# Trend value
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_TrendBackground"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Background"
+						position = { x = 85 y = 29 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_Trend_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_TrendPositive"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Positive"
+						position = { x = 251 y = 28 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_Trend_tt"
+					}
+					iconType = {
+						name = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_TrendNegative"
+						quadTextureSprite = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Negative"
+						position = { x = 85 y = 28 }
+						pdx_tooltip = "TNO_Cold_War_GUI_Tension_Entry_C_Progressbar_Trend_tt"
+					}
 				}
-		
+
 				iconType = {
 					name = "GFX_Cold_War_GUI_Tension_Frame"
 					quadTextureSprite = "GFX_Cold_War_GUI_Tension_Frame"
@@ -1380,96 +1361,13 @@ guiTypes = {
 				}
 			}
 		}
-
-		iconType = {
-			name = "TNO_Cold_War_GUI_Tension_Tab_Separator2"
-			position = { x = 7 y = 278 }
-			spriteType = "GFX_Cold_War_GUI_Title_Separator"
-		}
-
-		instantTextboxType = {
-			name = "TNO_Cold_War_GUI_Tension_Tab_Past_Incidents_Title"
-			position = { x = 120 y = 290 }
-			font = "aldrich_30_outline"
-			text = TNO_Cold_War_GUI_Tension_Tab_Past_Incidents_Title_tt
-			maxWidth = 300
-			format = center
-			alwaystransparent = yes
-		}
-
-		iconType = {
-			name = "TNO_Cold_War_GUI_Tension_Tab_Separator3"
-			position = { x = 7 y = 328 }
-			spriteType = "GFX_Cold_War_GUI_Title_Separator"
-		}
-
-		containerWindowType = {
-			name = "Cold_War_GUI_Tension_Tab_Past_Incidents"
-			size = { width = 530 height = 280 }
-			position = { x = 20 y = 336 }
-
-			containerWindowType = { #
-				name = "TNO_CW_GUI_Tension_Tab_GridScroll"
-				position = { x = 0 y = 10 }
-				size = { width = 520 height = -1 }
-				verticalScrollbar = "right_vertical_slider"
-				margin = { top = 0 left = 0 bottom = 0 right = 0 }
-
-				background = {
-					name = "Background"
-					quadTextureSprite = "GFX_tiled_window_transparent"
-				}	
-	
-				gridboxtype = {
-					name = "Cold_War_GUI_Tension_Tab_Incidents"
-					position = { x = 4 y = 0 }
-					size = { width = 498 height = 63 }
-					slotsize = { width = 498 height = 68 }
-					max_slots_horizontal = 1
-					add_horizontal = no
-				}
-			}
-		}
-	}
-
-	containerWindowType = {
-		name = "Cold_War_GUI_Tension_Tab_Incidents_Entry"
-		size = { width = 498 height = 63 }
-		position = { x = 0 y = 0 }
-
-		iconType = {
-			name = "TNO_Cold_War_GUI_Tension_Tab_Incident_Entry"
-			quadTextureSprite = "GFX_Cold_War_GUI_Tension_Outline"
-			position = { x = 0 y = 0 }
-		}
-
-		instantTextboxType = {
-			name = "Cold_War_GUI_Tension_Tab_Incidents_Entry_Text"
-			position = { x = 1 y = 12 }
-			font = "aldrich_18_outline"
-			text = CWGUI_Incidents_Text
-			maxWidth = 390
-			maxHeight = 55
-			format = center
-			alwaystransparent = yes
-		}
-
-		instantTextboxType = {
-			name = "Cold_War_GUI_Tension_Tab_Incidents_Entry_TensionChange_Text"
-			position = { x = 391 y = 14 }
-			font = "aldrich_32_outline"
-			text = CWGUIIncidents_TensionChange
-			maxWidth = 100
-			maxHeight = 61
-			format = center
-			alwaystransparent = yes
-		}
 	}
 
 	containerWindowType = {
 		name = "TNO_Cold_War_GUI_Spheres_Tab"
-		position = { x = 0 y = 332 }
+		position = { x = 0 y = 402 }
 		size = { width = 540 height = -10 }
+		clipping = no
 
 		margin = { top = 0 left = 0 bottom = 0 right = 0 }
 		background = {
@@ -1480,11 +1378,24 @@ guiTypes = {
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Spheres_Tab_Title"
 			position = { x = 120 y = -3 }
-			font = "aldrich_30_outline"
+			font = "aldrich_32_outline"
 			text = TNO_Cold_War_GUI_Spheres_Tab_Title_tt
 			maxWidth = 300
 			format = center
 			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "TNO_Cold_War_GUI_Spheres_Tab_SideButton1"
+			position = { x = 15 y = -2 }
+			quadTextureSprite = "GFX_production_line_arrow_left"
+			pdx_tooltip = TNO_Cold_War_GUI_Spheres_Tab_SideButton_tt
+		}
+		buttonType = {
+			name = "TNO_Cold_War_GUI_Spheres_Tab_SideButton2"
+			position = { x = 500 y = -2 }
+			quadTextureSprite = "GFX_production_line_arrow_right"
+			pdx_tooltip = TNO_Cold_War_GUI_Spheres_Tab_SideButton_tt
 		}
 
 		iconType = {
@@ -1519,14 +1430,14 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry"
-		size = { width = 167 height = 540 }
+		size = { width = 167 height = 50%% }
 		position = { x = 10 y = 8 }
 
 		background = {
 			name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Background"
 			quadTextureSprite = "GFX_Cold_War_GUI_Tiled_Window"
 		}
-		
+
 		iconType = {
 			name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flag"
 			quadTextureSprite ="GFX_flag_medium_plain"
@@ -1542,10 +1453,10 @@ guiTypes = {
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Spheres_Tab_Title"
 			position = { x = 10 y = 70 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			text = "TNO_Cold_War_GUI_Spheres_Tab_Sphere_Name_tt"
 			maxWidth = 150
-			maxHeight = 60
+			maxHeight = 80
 			format = center
 			fixedsize = yes
 			alwaystransparent = yes
@@ -1554,13 +1465,13 @@ guiTypes = {
 		iconType = {
 			name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Separator"
 			quadTextureSprite = "GFX_Cold_War_GUI_Spheres_Separator"
-			position = { x = 0 y = 125 }
+			position = { x = 0 y = 143 }
 		}
 
 		instantTextboxType = {
 			name = "TNO_Cold_War_GUI_Spheres_Tab_Info"
-			position = { x = 0 y = 130 }
-			font = "aldrich_16_outline"
+			position = { x = 0 y = 148 }
+			font = "aldrich_18_outline"
 			text = "TNO_Cold_War_GUI_Spheres_Tab_Info_tt"
 			maxWidth = 167
 			format = center
@@ -1570,11 +1481,11 @@ guiTypes = {
 		containerWindowType = {
 			name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flags_Container"
 			size = { width = 161 height = 100%% }
-			position = { x = 7 y = 250 }
+			position = { x = 7 y = 268 }
 			clipping = yes
 			verticalScrollbar = "right_vertical_slider"
 			margin = { top = 0 left = 0 bottom = 5 right = 0 }
-			
+
 			background = {
 				name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flags_Background"
 				quadTextureSprite = "GFX_tiled_window_transparent"
@@ -1595,11 +1506,11 @@ guiTypes = {
 		name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flags_Entry"
 		size = { width = 50 height = 40 }
 		position = { x = 0 y = 0 }
-		
+
 		iconType = {
 			name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flags_Entry_Flag"
 			quadTextureSprite ="GFX_flag_small2_plain"
-			position = { x = 27 y = 23 }
+			position = { x = 28 y = 23 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType = {
@@ -1614,192 +1525,171 @@ guiTypes = {
 		instantTextboxType = {
 			name = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flags_Entry_Info"
 			position = { x = 60 y = 14 }
-			font = "aldrich_18_outline"
+			font = "aldrich_20_outline"
 			text = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flags_Entry_Info_tt"
 			maxWidth = 80
 			format = left
 			alwaystransparent = yes
 		}
 	}
+	
+	containerWindowType = {
+		name = "TNO_Cold_War_GUI_Orgs_Tab"
+		position = { x = 0 y = 402 }
+		size = { width = 540 height = -10 }
+		clipping = no
 
-	# containerWindowType = {
-	# 	name = "TNO_Cold_War_GUI_Influence_Tab"
-	# 	position = { x = 7 y = 464 }
+		margin = { top = 0 left = 0 bottom = 0 right = 0 }
+		background = {
+			name = "Cold_War_GUI_Tension_Tab_Entry_Background"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
 
-	# 	iconType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Background"
-	# 		position = { x = 0 y = 0 }
-	# 		spriteType = "GFX_Cold_War_GUI_Simple_Background"
-	# 	}
+		instantTextboxType = {
+			name = "TNO_Cold_War_GUI_Orgs_Tab_Title"
+			position = { x = 70 y = -3 }
+			font = "aldrich_32_outline"
+			text = TNO_Cold_War_GUI_Orgs_Tab_Title_tt
+			maxWidth = 400
+			format = center
+			alwaystransparent = yes
+		}
 
-	# 	instantTextboxType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Title"
-	# 		position = { x = 240 y = 3 }
-	# 		font = "aldrich_30_outline"
-	# 		text = "INFLUENCE BATTLES"
-	# 		maxWidth = 532
-	# 		format = center
-	# 		alwaystransparent = yes
-	# 	}
+		buttonType = {
+			name = "TNO_Cold_War_GUI_Orgs_Tab_SideButton1"
+			position = { x = 15 y = -2 }
+			quadTextureSprite = "GFX_production_line_arrow_left"
+			pdx_tooltip = TNO_Cold_War_GUI_Orgs_Tab_SideButton_tt
+		}
+		buttonType = {
+			name = "TNO_Cold_War_GUI_Orgs_Tab_SideButton2"
+			position = { x = 500 y = -2 }
+			quadTextureSprite = "GFX_production_line_arrow_right"
+			pdx_tooltip = TNO_Cold_War_GUI_Orgs_Tab_SideButton_tt
+		}
 
-	# 	containerWindowType = {
-	# 		name = "Cold_War_GUI_Influence_Tab_Battles_Container"
-	# 		size = { width = 1015 height = 288 }
-	# 		position = { x = 0 y = 44 }
-	# 		clipping = yes
-	# 		verticalScrollbar = "right_vertical_slider"
-	# 		margin = { top = 0 left = 0 bottom = 0 right = 0 }
-			   
-	# 		background = {
-	# 			name = "Cold_War_GUI_Influence_Tab_Battles_Background"
-	# 			quadTextureSprite = "GFX_tiled_window_transparent"
-	# 		}
+		iconType = {
+			name = "TNO_Cold_War_GUI_Spheres_Tab_Separator"
+			position = { x = 7 y = 36 }
+			spriteType = "GFX_Cold_War_GUI_Title_Separator"
+		}
 
-	# 		gridboxtype = {
-	# 			name = "Cold_War_GUI_Influence_Tab_Battles"
-	# 			position = { x = 0 y = 0 }
-	# 			size = { width = 791 height = 43 }
-	# 			slotsize = { width = 791 height = 49 }
-	# 			max_slots_horizontal = 1
-	# 			add_horizontal = no
-	# 		}
-	# 	}
-	# }
+		containerWindowType = {
+			name = "Cold_War_GUI_Spheres_Tab_Orgs_Container"
+			size = { width = 530 height = 100%% }
+			position = { x = 10 y = 50 }
+			clipping = yes
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 0 left = 0 bottom = 0 right = 0 }
 
-	# containerWindowType = {
-	# 	name = "Cold_War_GUI_Influence_Tab_Battles_Entry"
-	# 	size = { width = 791 height = 43 }
-	# 	position = { x = 6 y = 0 }
-		
-	# 	iconType = {
-	# 		name = "Cold_War_GUI_Influence_Tab_Battles_Background"
-	# 		spriteType = "GFX_Cold_War_GUI_Influence_Frame"
-	# 		position = { x = 0 y = 0 }
-	# 	}
-		
-	# 	iconType = {
-	# 		name = "Cold_War_GUI_Influence_Tab_Battles_Flag"
-	# 		quadTextureSprite ="GFX_flag_small2_plain"
-	# 		position = { x = 28 y = 21 }
-	# 	}
-	# 	iconType = {
-	# 		name = "Cold_War_GUI_Influence_Tab_Battles_Overlay"
-	# 		quadTextureSprite = "GFX_flag_frame_warscreen"
-	# 		position = { x = 4 y = 4 }
-	# 		alwaystransparent = yes
-	# 	}
+			background = {
+				name = "Cold_War_GUI_Spheres_Tab_Orgs_Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
 
-	# 	instantTextboxType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Title"
-	# 		position = { x = 57 y = 11 }
-	# 		font = "aldrich_20_outline"
-	# 		text = "TNO_Cold_War_GUI_Influence_Tab_Title_tt"
-	# 		maxWidth = 500
-	# 		maxHeight = 18
-	# 		format = left
-	# 		alwaystransparent = yes
-	# 	}
+			gridboxtype = {
+				name = "Cold_War_GUI_Orgs_Tab_Orgs"
+				position = { x = 5 y = 0 }
+				size = { width = 495 height = 125 }
+				slotsize = { width = 495 height = 135 }
+				max_slots_horizontal = 1
+			}
+		}
+	}
+	
+	containerWindowType = {
+		name = "Cold_War_GUI_Orgs_Tab_Org_Entry"
+		size = { width = 495 height = 125 }
 
-	# 	containerWindowType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Progbars_Container"
-	# 		position = { x = 400 y = 5 }
-	# 		size = { width = 230 height = 29 }
+		background = {
+			name = "Cold_War_GUI_Orgs_Tab_Org_Entry_Background"
+			quadTextureSprite = "GFX_Cold_War_GUI_Tiled_Window"
+		}
 
-	# 		iconType = {
-	# 			name = "TNO_Cold_War_GUI_Influence_Tab_Frame"
-	# 			spriteType = "GFX_diplo_IntAlign_Bar_Frame"
-	# 			position = { x = 0 y = 0 }
-	# 		}
+		iconType = {
+			name = "Cold_War_GUI_Orgs_Tab_Org_Entry_Icon"
+			quadTextureSprite = "GFX_RegionalOrganization_EU"
+			position = { x = 7 y = 7 }
+			pdx_tooltip = TNO_Cold_War_GUI_Orgs_Tab_Org_Icon_tt
+			pdx_tooltip_delayed = TNO_Cold_War_GUI_Orgs_Tab_Org_Icon_tt_delayed
+		}
 
-	# 		gridboxtype = {
-	# 			name = "TNO_Cold_War_GUI_Influence_Tab_Progbars"
-	# 			position = { x = 2 y = 1 }
-	# 			size = { width = 230 height = 29 }
-	# 			slotsize = { width = 100%% height = 0 }
-	# 			max_slots_horizontal = 1
-	# 			format = "UPPER_LEFT"
-	# 		}
-	# 	}
+		instantTextboxType = {
+			name = "TNO_Cold_War_GUI_Orgs_Tab_Title"
+			position = { x = 74 y = 7 }
+			font = "aldrich_20_outline"
+			text = "TNO_Cold_War_GUI_Orgs_Tab_Org_Name_tt"
+			maxWidth = 350
+			maxHeight = 20
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "TNO_Cold_War_GUI_Orgs_Tab_AlignmentLeader"
+			position = { x = 74 y = 28 }
+			font = "aldrich_18_outline"
+			text = "TNO_Cold_War_GUI_Orgs_Tab_Org_AlignmentLeader_tt"
+			maxWidth = 350
+			maxHeight = 40
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+		# instantTextboxType = {
+		# 	name = "TNO_Cold_War_GUI_Orgs_Tab_Info"
+		# 	position = { x = 335 y = 25 }
+		# 	font = "aldrich_18_outline"
+		# 	text = "TNO_Cold_War_GUI_Orgs_Tab_Org_Info_tt"
+		# 	maxWidth = 200
+		# 	maxHeight = 40
+		# 	format = left
+		# 	fixedsize = yes
+		# 	alwaystransparent = yes
+		# }
 
-	# 	containerWindowType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Progbar_Tooltips_Container"
-	# 		position = { x = 402 y = 7 }
-	# 		size = { width = 230 height = 29 }
-	# 		clipping = yes
+		containerWindowType = {
+			name = "Cold_War_GUI_Orgs_Tab_Org_Entry_Flags_Container"
+			size = { width = 480 height = 66 }
+			position = { x = 7 y = 60 }
+			clipping = yes
+			horizontalScrollbar = "bottom_horizontal_slider"
+			margin = { top = 0 left = 0 bottom = 5 right = 0 }
 
-	# 		# Since progress bars don't do tooltips for us, we add some tooltip "hitbox" sprites
-	# 		gridboxtype = {
-	# 			name = "TNO_Cold_War_GUI_Influence_Tab_Progbar_Tooltips"
-	# 			position = { x = 0 y = 0 }
-	# 			size = { width = 230 height = 29 }
-	# 			slotsize = { width = 100%% height = 0 }
-	# 			max_slots_horizontal = 1
-	# 			format = "UPPER_LEFT"
-	# 		}
-	# 	}
+			background = {
+				name = "Cold_War_GUI_Orgs_Tab_Org_Entry_Flags_Background"
+				quadTextureSprite = "GFX_tiled_window_transparent"
+			}
 
-	# 	gridboxtype = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Countries"
-	# 		position = { x = 645 y = 3 }
-	# 		size = { width = 41 height = 28 }
-	# 		slotsize = { width = 50 height = 28 }
-	# 		max_slots_horizontal = 6
-	# 		max_slots_vertical = 1
-	# 		format = "UPPER_LEFT"
-	# 	}
-	# }
+			gridboxtype = {
+				name = "Cold_War_GUI_Orgs_Tab_Org_Entry_Flags"
+				position = { x = 0 y = 0 }
+				size = { width = 40 height = 36 }
+				slotsize = { width = 47 height = 36 }
+				max_slots_vertical = 1
+				add_horizontal = yes
+			}
+		}
+	}
 
-	# containerWindowType = {
-	# 	name = "TNO_Cold_War_GUI_Influence_Tab_Progbars_Entry"
-	# 	size = { width = 200 height = 35 }
-	# 	clipping = no
+	containerWindowType = {
+		name = "Cold_War_GUI_Orgs_Tab_Org_Entry_Flags_Entry"
+		size = { width = 40 height = 36 }
+		position = { x = 0 y = 0 }
 
-	# 	iconType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Progbars_Entry_Bar"
-	# 		spriteType = "GFX_diplo_IntAlign_GER_ProgressBar"
-	# 		position = { x = 0 y = 0 }
-	# 	}
-	# }
-
-	# # A transparent sprite which is moved to create a tooltip "hitbox" for each progress bar segment
-	# containerWindowType = {
-	# 	name = "TNO_Cold_War_GUI_Influence_Tab_Tooltip_Container"
-	# 	size = { width = 200 height = 35 }
-	# 	clipping = no
-
-	# 	iconType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Tooltip_Hitbox"
-	# 		spriteType = "GFX_diplo_IntAlign_Bar_Tooltip"
-	# 		position = { x = 0 y = 0 }
-	# 		pdx_tooltip = "TNO_SG_IntAlignment_Tooltip"
-	# 	}
-	# }
-
-	# containerWindowType = {
-	# 	name = "TNO_Cold_War_GUI_Influence_Tab_Countries_Entry"
-	# 	size = { width = 41 height = 28 }
-	# 	clipping = no
-
-	# 	iconType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Countries_Flag"
-	# 		quadTextureSprite = "GFX_flag_small2_plain"
-	# 		position = { x = 24 y = 17 }
-	# 	}
-		
-	# 	iconType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Countries_Cover"
-	# 		position = { x = 0 y = 0 }
-	# 		spriteType = "GFX_flag_frame_warscreen"
-	# 		alwaystransparent = yes
-	# 	}
-
-	# 	buttonType = {
-	# 		name = "TNO_Cold_War_GUI_Influence_Tab_Countries_DebugButton"
-	# 		spriteType = "GFX_add_one"
-	# 		position = { x = 11 y = 5 }
-	# 		pdx_tooltip = "TNO_SG_IntAlignment_Grid_DebugButton_tt"
-	# 	}
-	# }
+		iconType = {
+			name = "Cold_War_GUI_Orgs_Tab_Org_Entry_Flags_Entry_Flag"
+			quadTextureSprite = "GFX_flag_small2_plain"
+			position = { x = 25 y = 23 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "Cold_War_GUI_Orgs_Tab_Org_Entry_Flags_Entry_Overlay"
+			quadTextureSprite = "GFX_flag_frame_warscreen"
+			position = { x = 0 y = 6 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flags_Entry_Overlay_tt"
+			pdx_tooltip_delayed = "Cold_War_GUI_Spheres_Tab_Spheres_Entry_Flags_Entry_Overlay_tt_delayed"
+		}
+	}
 }
-
-

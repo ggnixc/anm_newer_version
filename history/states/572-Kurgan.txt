@@ -6,14 +6,18 @@ state = { #Population Done
 	}
 
 	history = {
-		owner = SOV
+		owner = TYM
 		buildings = {
 			infrastructure = 2
+			thermoelectric_plant = 1
+			prisons = 1
+			barracks = 1
 		}
 
 		victory_points = { 1292 10 }
 		victory_points = { 12106 3 }
-		add_core_of = SOV
+		set_state_flag = GDP_category_town
+		add_core_of = TYM
 	}
 
 	provinces = {
@@ -21,5 +25,5 @@ state = { #Population Done
 	}
 	manpower = 514000
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = rural
 }

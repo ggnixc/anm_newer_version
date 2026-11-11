@@ -5,19 +5,23 @@ state = { #Population Done
 
 	resources = {
 		oil = 6
- 	}
+		uranium = 4
+	}
 
-	state_category = rural
+	state_category = town #Due to Resource Exploitation
 
 	history = {
 		owner = ARG
 		buildings = {
- 			infrastructure = 2
+			infrastructure = 2
+			barracks = 1
 			radar_station = 2
 		}
 		add_core_of = ARG
-		victory_points = { 14896 3 }
- 	}
+		victory_points = { 15025 3 }
+		victory_points = { 15029 1 }
+		set_state_flag = GDP_regions_chubut
+	}
 
 	provinces = {
 		2169 14894 14896 15001 15018 15019 15023 15024 15025 15027 15028 15029

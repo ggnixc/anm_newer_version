@@ -9,7 +9,7 @@ guiTypes = {
 		fade_time = 200
 		fade_type = linear
 		show_sound = peace_summary_message
-		hide_sound = menu_close_window
+		#hide_sound = menu_close_window
 		click_to_front = yes
 
 		background = {
@@ -35,7 +35,7 @@ guiTypes = {
 			name = "title"
 			position = { x = 100 y = 25 }
 			textureFile = ""
-			font = "aldrich_30_outline"
+			font = "aldrich_32_outline"
 			borderSize = {x = 0 y = 0}
 			text = "TNO_PEACE_POPUP_TITLE"
 			maxWidth = 360
@@ -46,26 +46,49 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "description"
-			position = { x = 50 y = 95 }
-			textureFile = ""
-			font = "aldrich_16_outline"
+			position = { x = 50 y = 86 }
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = "TNO_PEACE_POPUP_DESCRIPTION"
 			maxWidth = 460
-			maxHeight = 100
+			maxHeight = 72
 			format = centre
+			vertical_alignment = centre
 		}
 
 		instantTextBoxType = {
 			name = "flavor"
-			position = { x = 50 y = 195 }
-			textureFile = ""
-			font = "aldrich_16_outline"
-			borderSize = {x = 0 y = -8}
+			position = { x = 50 y = 168 }
+			font = "aldrich_18_outline"
 			text = "TNO_PEACE_POPUP_FLAVOR"
 			maxWidth = 460
-			maxHeight = 100
+			maxHeight = 72
 			format = centre
+			vertical_alignment = centre
+		}
+		
+		iconType = {
+			name = "flag_1"
+			position = { x = 20 y = 17 }
+			quadTextureSprite = "GFX_player_flag"
+		}
+		iconType = {
+			name = "flag_1_overlay"
+			position = { x = 18 y = 16 }
+			spriteType = "GFX_flag_overlay_stateview_large"
+			pdx_tooltip = TNO_PEACE_POPUP_FLAG1_TT
+		}
+		
+		iconType = {
+			name = "flag_2"
+			position = { x = 463 y = 17 }
+			quadTextureSprite = "GFX_player_flag"
+		}
+		iconType = {
+			name = "flag_2_overlay"
+			position = { x = 461 y = 16 }
+			spriteType = "GFX_flag_overlay_stateview_large"
+			pdx_tooltip = TNO_PEACE_POPUP_FLAG2_TT
 		}
 
 		#iconType = {
@@ -79,9 +102,10 @@ guiTypes = {
 			position = { x=213 y =240}
 			quadTextureSprite ="GFX_sort_button_140x29"
 			buttonText = "TNO_PEACE_POPUP_CLOSE"
-			buttonFont = "aldrich_16_outline"
+			buttonFont = "aldrich_18_outline"
 			shortcut = "RETURN"
-			clicksound = click_ok
+			#clicksound = click_ok
+			clicksound = click_default
 		}
 	}
 }

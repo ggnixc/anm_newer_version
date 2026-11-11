@@ -46,6 +46,15 @@ guiTypes = {
 				pdx_tooltip = "SELECT_3D_MODEL"
 			}
 		}
+
+		buttonType = {
+			name = "toggle_model_selector_button"
+			position = { x=27 y=82 }
+			size = { x = 111 y = 58 }
+			quadTextureSprite ="GFX_division_3d_bg"	
+			pdx_tooltip = "TOGGLE_MODEL_SELECTOR"
+			clicksound = click_default
+		}
 		
 		containerWindowType = {
 			name = "icon_selection_container"
@@ -413,7 +422,7 @@ guiTypes = {
 
 			background = {
 				name = "Background"
-				spriteType ="GFX_tiled_window"
+				spriteType ="GFX_tiled_window_thin_border2"
 				position = { x=-16 y=0 }
 			}
 
@@ -421,10 +430,10 @@ guiTypes = {
 				name = "border_container"
 				position = { x=5 y=13 }
 				size = { width = 524 height = 222 }
-				
+
 				background = {
 					name ="bg_tech_button"
-					spriteType = "GFX_division_3d_bg"	
+					spriteType = "GFX_division_3d_bg"
 					position = { x=0 y=0 }
 					size = { x=100%% y=100%%}
 				}
@@ -438,12 +447,12 @@ guiTypes = {
 
 			buttonType = {
 				name = "back_button"
-				position = { x=395 y=412 }
-				size = { x=504 y=22 }
-				font = "Bomb_16"
+				position = { x = 360 y = 410 }
+				size = { x = 504 y = 22 }
+				font = "aldrich_20_outline"
 				buttonText = "BACK"
-				quadTextureSprite = "GFX_button_123x34"
-				clicksound = click_default
+				quadTextureSprite = "GFX_division_designer_button"
+				clicksound = click_close
 			}
 
 			containerWindowType = {
@@ -451,6 +460,8 @@ guiTypes = {
 				position = { x=5 y=235}
 				size = { width=533 height=176 }
 				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 42
+				smooth_scrolling = yes
 
 				background = {
 					name = "Background"
@@ -464,7 +475,6 @@ guiTypes = {
 					slotsize = { width = 490 height = 42 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
-
 				}
 			}
 		}
@@ -493,10 +503,10 @@ guiTypes = {
 				name = "border_container"
 				position = { x=20 y=20 }
 				size = { width = 495 height = 380 }
-				
+
 				background = {
 					name ="bg_tech_button"
-					spriteType = "GFX_division_3d_bg"	
+					spriteType = "GFX_division_3d_bg"
 					position = { x=0 y=0 }
 					size = { x=100%% y=100%%}
 				}
@@ -520,7 +530,7 @@ guiTypes = {
 					slotsize = { width = 430 height = 86 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
-					
+
 				}
 			}
 		}
@@ -885,8 +895,8 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "position_version"
-			position = { x = 175 y = 56 }
-			font = "aldrich_18_outline"
+			position = { x = 173 y = 53 }
+			font = "aldrich_22_outline"
 			text_color_code = g
 			maxWidth = 71
 			maxHeight = 18
@@ -1185,7 +1195,7 @@ guiTypes = {
 				name = "referenced_variant_name"
 				position = { x = 18 y = -34 }
 				textureFile = ""
-				font = "aldrich_30_outline"
+				font = "hoi_30header"
 				borderSize = {x = 0 y = 0}
 				text = "EQUIPMENT_DESIGNER_TITLE"
 				maxWidth = 460

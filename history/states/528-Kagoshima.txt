@@ -2,23 +2,25 @@ state = {
 	id = 528
 	name = "STATE_528" # Kyushu
 	manpower = 1860210
-	state_category = rural
+	state_category = town
 	resources = {
-		 
 		#tungsten = 10
 	}
 
 	history = {
 		owner = JAP
 		add_core_of = JAP
+		set_state_flag = has_offshore_island
 		buildings = {
 			infrastructure = 4
+			hydroelectric_plant = 3
 			air_base = 2
 			4102 = {
 				naval_base = 3
 			}
 			radar_station = 1
- 		}
+			schools = 1
+		}
 		victory_points = { 4102 10 }
 		victory_points = { 7115 5 }
 	}

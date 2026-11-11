@@ -1,0 +1,8 @@
+on_actions = {
+	#don't mind me just logging wars
+	on_declare_war = {
+		effect = {
+			log="[GetDateText]: [Root.GetName] declared war on [From.GetName]"
+		}
+	}
+}

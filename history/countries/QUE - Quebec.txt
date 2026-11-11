@@ -1,88 +1,84 @@
-﻿capital = 468
+capital = 466
 
-#set_oob = "QUE_1962"
+# Vacant
+recruit_character = QUE_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+recruit_character = QUE_Rene_Levesque
+recruit_character = QUE_Jean_Guy_Cardinal
 
-recruit_character = QUE_Jacques_Parizeau
-
-#below is copied from canada
+#oob = "QUE_1962"
 
 add_ideas = {
-    #FACTION STATUS
-OFN_Security_Council_Member
-    #POLITICAL
-tno_political_parties_multiparty_system
-tno_religious_rights_secularism
-tno_trade_unions_all_allowed
-tno_immigration_quota_immigration
-tno_slavery_outlawed
-tno_public_meetings_allowed
-tno_press_rights_free_press
-tno_vote_franchise_universal
-tno_refugees_open
-    #IDEAS
-    #MINISTERS
-    #MILITARY
-tno_conscription_volunteer_only
-tno_women_military_assistance
-tno_military_supervision_military_policing
-tno_military_spending_large_spending
-tno_training_basic_training
-tno_racial_integration_integrated_military
-tno_draft_exemptions_educational_deferment
-    #SOCIAL
-tno_safety_acceptable_regulations
-tno_health_care_private_health_care
-tno_pollution_few_regulations
-tno_education_public_education
-tno_penal_system_capital_punishment
-tno_lgbt_rights_lgbt_outlawed
-tno_gender_rights_women_in_the_workplace
-tno_minorities_segregation
-tno_security_police
-    #ECONOMIC
-tno_trade_laws_export_focus
-tno_economic_focus_civilian_economy
-tno_tax_rate_medium_taxation
-tno_income_taxation_tax_havens
-tno_minimum_wage_low_minimum_wage
-tno_max_workhours_8_hour_work_day
-tno_child_labor_illegal
-tno_pensions_trinket_pensions
-tno_unemployment_trinket_subsidies
+	# Faction Status #
+	OFN_Security_Council_Member
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_crime_prevention
+	#misc#
+	tno_pollution_some_regulations
+	tno_safety_acceptable_regulations
+	tno_child_labor_illegal
+	tno_refugees_skilled
+	tno_racial_integration_integrated_military
+	tno_women_military_assistance
+	tno_minorities_equal_rights
+	tno_lgbt_rights_lgbt_outlawed
+	#social development
+	
+	tno_army_professionalism_professional
+	tno_industrial_expertise_experienced
+	tno_industrial_equipment_modern
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_developed
+	tno_agriculture_mass_mechanized
+	tno_research_facilities_modern
+	tno_academic_base_primary_schooling
+}
 
-    #SOCIETAL DEVELOPMENT
-tno_poverty_rate_25
-tno_army_professionalism_professional
-tno_industrial_expertise_experienced
-tno_industrial_equipment_modern
-tno_agriculture_mass_mechanized
-tno_research_facilities_modern
-tno_academic_base_primary_schooling
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1960.8.31"
+	election_frequency = 48
+	elections_allowed = no
+}
 
- }
+set_popularities = {
+	communist = 0
+	progressivism = 2
+	liberalism = 56
 
-set_politics = {	
-ruling_party = progressivism
-last_election = "1993.10.25"
-election_frequency = 48
-elections_allowed = yes
+	conservatism = 42
+	socialist = 0
+	paternalism = 0
+	despotism = 0
+	fascism = 0
+	national_socialism = 0
+	ultranationalism = 0
 }
 
 TNO_startup_nation = yes
-
-set_popularities = {
-communist = 0
-socialist = 0
-progressivism = 57
-liberalism = 6
-liberalism_1 = 2
-liberal_conservatism = 8
-conservatism = 3
-conservatism_1 = 24
-socialist = 0
-despotism = 0
-fascism = 0
-national_socialism = 0
-ultranationalism = 0
-}
-

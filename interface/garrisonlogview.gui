@@ -33,7 +33,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title"
 			position = { x = 0 y = 13 }
-			font = "aldrich_32_outline"
+			font = "aldrich_36_outline"
 			maxWidth = 670
 			maxHeight = 35
 			fixedsize = yes
@@ -53,7 +53,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "period_desc"
 			position = { x = 30 y = 52 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			maxWidth = 280
 			maxHeight = 25
 			format = center
@@ -102,7 +102,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "min_log_months"
 			position = { x = 38 y = 74 }
-			font = "aldrich_18_outline"
+			font = "aldrich_20_outline"
 			text = "1"
 			maxWidth = 35
 			maxHeight = 18
@@ -112,7 +112,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "max_log_months"
 			position = { x = 267 y = 74 }
-			font = "aldrich_18_outline"
+			font = "aldrich_20_outline"
 			text = "12"
 			maxWidth = 35
 			maxHeight = 18
@@ -128,7 +128,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title_losses_in_manpower"
 			position = { x = 57 y = 102 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 		}
 
 		iconType = {
@@ -140,7 +140,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "title_losses_in_equipment"
 			position = { x = 367 y = 105 }
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 		}
 
 		buttonType = {
@@ -148,14 +148,14 @@ guiTypes = {
 			quadTextureSprite = "GFX_battle_log_tab"
 			position = { x = 5 y = 129 }
 			buttonText = "GARRISON_LOG_RESISTANCE_ACTIVITY"
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 		}
 		buttonType = {
 			name = "equipment_tab_button"
 			quadTextureSprite = "GFX_battle_log_tab"
 			position = { x = 215 y = 129 }
 			buttonText = "COMBAT_LOG_TAB_EQUIPMENT"
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 		}
 
 		containerWindowType = {
@@ -189,7 +189,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "empty_msg"
 				position = { x = 30 y = 100 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				maxWidth = 590
 				maxHeight = 25
 				format = center
@@ -218,7 +218,7 @@ guiTypes = {
 			buttonType = {
 				name = "filter_button"
 				position = {x = 65 y = 10 }
-				buttonFont = "aldrich_22_outline"
+				buttonFont = "aldrich_24_outline"
 				quadTextureSprite = "GFX_sort_button_202x29"
 				clicksound = click_default
 				text = "COMBAT_LOG_FILTER_BTN"
@@ -233,7 +233,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "title_equipment_lost"
 				position = { x = 30 y = 42 }
-				font = "aldrich_20_outline"
+				font = "aldrich_22_outline"
 				maxWidth = 280
 				format = center
 				text = "COMBAT_LOG_EQ_LOST"
@@ -241,7 +241,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "total_equipment_lost"
 				position = { x = 425 y = 42 }
-				font = "aldrich_20_outline"
+				font = "aldrich_22_outline"
 				maxWidth = 130
 				format = center
 			}
@@ -268,7 +268,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "empty_msg"
 					position = { x = 5 y = 100 }
-					font = "aldrich_22_outline"
+					font = "aldrich_24_outline"
 					maxWidth = 590
 					format = center
 				}
@@ -311,7 +311,7 @@ guiTypes = {
 			name = "location"
 			quadTextureSprite = "GFX_battle_log_battle_button"
 			position = { x = 15 y = 5 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			format = left
 			borderSize = { x = 10 y = 0 }
 		}
@@ -319,7 +319,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "date"
 			position = { x = 125 y = 7 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			format = right
 			alwaystransparent = yes
 		}
@@ -327,7 +327,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "attack_blocked"
 			position = { x = 20 y = 34 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 500
 		}
 
@@ -344,7 +344,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "lost_manpower"
 				position = { x = 30 y = 4 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 			}
 
 			iconType ={
@@ -356,21 +356,22 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "lost_equipment"
 				position = { x = 226 y = 4 }
-				font = "aldrich_16_outline"
+				font = "aldrich_18_outline"
 			}
 		}
 
 		buttonType = {
 			name = "flag"
 			quadTextureSprite ="GFX_flag_small2"
-			position = { x = 551 y = 5 }
+			position = { x = 552 y = 5 }
 		}
 
 		iconType = {
 			name ="flag_frame"
-			quadTextureSprite = "GFX_small_flag_frame_thin2"
-			position = { x = 547 y = 2 }
+			quadTextureSprite = "GFX_flag_overlay_stateview"
+			position = { x = 552 y = 6 }
 			alwaystransparent = yes
+			scale = 1.04
 		}
 	}
 }

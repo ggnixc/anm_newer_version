@@ -1,8 +1,6 @@
 state = {
 	id = 116
 	name = "STATE_116"
-	resources = {
-	}
 
 	history = {
 		owner = ITA
@@ -16,21 +14,25 @@ state = {
 			628 8
 		}
 		buildings = {
+			hospitals = 1
 			infrastructure = 4
 			air_base = 3
- 			14648 = {
-				bunker = 5
+			hydroelectric_plant = 1
+			14648 = {
+				bunker = 4
 			}
 			3657 = {
-				bunker = 5
+				bunker = 4
 			}
 			9613 = {
-				bunker = 5
+				bunker = 4
 			}
 		}
 		add_core_of = ITA
 		set_state_flag = state_renamings
- 	}
+		set_state_flag = GDP_regions_veneto
+		set_state_flag = GDP_category_large_city
+	}
 
 	provinces = {
 		628 656 3657 9613 14647 14648

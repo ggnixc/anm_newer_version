@@ -1,21 +1,20 @@
 spriteTypes = {
 
-	###################################################
-	# UI Elements
-	###################################################
+###################################################
+# UI Elements
+###################################################
 
 	spriteType = {
 		name = "GFX_ship_view_bg"
 		textureFile = "gfx/interface/equipmentdesigner/naval/ship_view_bg.dds"
 	}
 
-
 	spriteType = {
 		name = "GFX_ship_category_icon_small"
 		textureFile = "gfx/interface/equipmentdesigner/ship_category_icon_small.dds"
 		noOfFrames = 3
 	}
-
+	
 	spriteType = {
 		name = "GFX_equipment_module_bg"
 		textureFile = "gfx/interface/equipmentdesigner/equipment_module_bg.dds"
@@ -25,7 +24,7 @@ spriteTypes = {
 		name = "GFX_equipment_role_bg"
 		textureFile = "gfx/interface/equipmentdesigner/equipment_role_bg.dds"
 	}
-
+	
 	spriteType = {
 		name = "GFX_eqipment_sprite_bg"
 		textureFile = "gfx/interface/eqipment_designer_sprite_bg.dds"
@@ -44,10 +43,23 @@ spriteTypes = {
 		borderSize = { x=16 y=16 }
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+		
+	spriteType = {
+		name = "GFX_tank_design_icon"
+		textureFile = "gfx/interface/tank_design_icon.dds"
+	}
 
-	###################################################
-	# Ship hulls
-	###################################################
+	corneredTileSpriteType = {
+		name = "GFX_equipment_designer_equipment_icon_bg"
+		size = { x=76 y=47 }
+		textureFile = "gfx/interface/equipmentdesigner/equipment_designer_equipment_icon_bg.dds"
+		borderSize = { x=5 y=6 }
+		tilingCenter = no
+	}
+
+###################################################
+# Ship hulls
+###################################################
 
 	spriteType = {
 		name = "GFX_SD_tv_cruiser"
@@ -78,9 +90,9 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/naval/topviews/topview_destroyer.dds"
 	}
 
-	#######################
-	# Extras
-	#######################
+#######################
+# Extras
+#######################
 
 	spriteType = {
 		name = "GFX_design_not_valid"
@@ -88,13 +100,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_naval_designer_close_button"
-		textureFile = "gfx/interface/TNO_close_button.dds"
-	}
-
-	spriteType = {
 		name = "GFX_blueprint"
 		textureFile = "gfx/interface/equipmentdesigner/blue_print_icon.dds"
 	}
-
 }

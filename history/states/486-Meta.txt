@@ -3,16 +3,18 @@ state = {
 	name = "STATE_486"
 	resources = {
 		oil = 22.000
-		
 	}
 
 	history = {
-		owner = COL
+		owner = CLL
 		add_core_of = COL
-  		buildings = {
+		add_core_of = CLC
+		add_core_of = CLL
+		buildings = {
 			infrastructure = 2
 			air_base = 1
 		}
+		set_state_flag = GDP_category_rural
 		victory_points = {
 			15312 10
 		}
@@ -23,6 +25,6 @@ state = {
 	}
 	manpower = 158979
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = pastoral
 	local_supplies = 0.000
 }

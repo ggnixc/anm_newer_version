@@ -1,0 +1,110 @@
+#  ██████╗ ██████╗ ██╗     ██████╗     ██╗    ██╗ █████╗ ██████╗      ██████╗ ██╗   ██╗██╗ #
+# ██╔════╝██╔═══██╗██║     ██╔══██╗    ██║    ██║██╔══██╗██╔══██╗    ██╔════╝ ██║   ██║██║ #
+# ██║     ██║   ██║██║     ██║  ██║    ██║ █╗ ██║███████║██████╔╝    ██║  ███╗██║   ██║██║ #
+# ██║     ██║   ██║██║     ██║  ██║    ██║███╗██║██╔══██║██╔══██╗    ██║   ██║██║   ██║██║ #
+# ╚██████╗╚██████╔╝███████╗██████╔╝    ╚███╔███╔╝██║  ██║██║  ██║    ╚██████╔╝╚██████╔╝██║ #
+#  ╚═════╝ ╚═════╝ ╚══════╝╚═════╝      ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝ #
+# Scripted Triggers
+
+#################################################
+##=|      Cold War GUI Scripted Triggers     |=##
+##=====================| |=====================##
+#################################################
+
+#Index; Search for these names using ctrl+f and you'll find the section they entitle.
+#	General Scripted Triggers
+#		Cold_War_GUI_GER_USA_Relations_Max
+#		Cold_War_GUI_GER_USA_Relations_Min
+#		Cold_War_GUI_GER_USA_Relations_NotMax
+#		Cold_War_GUI_GER_USA_Relations_AtLeast
+#		Cold_War_GUI_GER_JAP_Relations_Max
+#		Cold_War_GUI_GER_JAP_Relations_Min
+#		Cold_War_GUI_GER_JAP_Relations_NotMax
+#		Cold_War_GUI_GER_JAP_Relations_AtLeast
+#		Cold_War_GUI_JAP_USA_Relations_Max
+#		Cold_War_GUI_JAP_USA_Relations_Min
+#		Cold_War_GUI_JAP_USA_Relations_NotMax
+#		Cold_War_GUI_JAP_USA_Relations_AtLeast
+
+#################################################
+##=|        General Scripted Triggers        |=##
+##=====================| |=====================##
+#################################################
+
+## Germany-America
+Cold_War_GUI_GER_USA_Relations_Max = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_GER_USA_relations_at_max_tt
+		check_variable = { global.ColdWarRelations_GER_USA = 10 }
+	}
+}
+Cold_War_GUI_GER_USA_Relations_Min = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_GER_USA_relations_at_min_tt
+		check_variable = { global.ColdWarRelations_GER_USA = -10 }
+	}
+}
+Cold_War_GUI_GER_USA_Relations_NotMax = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_GER_USA_relations_not_already_at_max_tt
+		NOT = { check_variable = { global.ColdWarRelations_GER_USA = 10 } }
+	}
+}
+Cold_War_GUI_GER_USA_Relations_AtLeast = { # Uses N temp variable
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_GER_USA_relations_val_tt
+		NOT = { check_variable = { global.ColdWarRelations_GER_USA < N } }
+	}
+}
+
+## Germany-Japan
+Cold_War_GUI_GER_JAP_Relations_Max = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_GER_JAP_relations_at_max_tt
+		check_variable = { global.ColdWarRelations_GER_JAP = 10 }
+	}
+}
+Cold_War_GUI_GER_JAP_Relations_Min = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_GER_JAP_relations_at_min_tt
+		check_variable = { global.ColdWarRelations_GER_JAP = -10 }
+	}
+}
+Cold_War_GUI_GER_JAP_Relations_NotMax = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_GER_JAP_relations_not_already_at_max_tt
+		NOT = { check_variable = { global.ColdWarRelations_GER_JAP = 10 } }
+	}
+}
+Cold_War_GUI_GER_JAP_Relations_AtLeast = { # Uses N temp variable
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_GER_JAP_relations_val_tt
+		NOT = { check_variable = { global.ColdWarRelations_GER_JAP < N } }
+	}
+}
+
+## Japan-America
+Cold_War_GUI_JAP_USA_Relations_Min = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_JAP_USA_relations_at_min_tt
+		check_variable = { global.ColdWarRelations_JAP_USA = -10 }
+	}
+}
+Cold_War_GUI_JAP_USA_Relations_Max = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_JAP_USA_relations_at_max_tt
+		check_variable = { global.ColdWarRelations_JAP_USA = 10 }
+	}
+}
+Cold_War_GUI_JAP_USA_Relations_NotMax = {
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_JAP_USA_relations_not_already_at_max_tt
+		NOT = { check_variable = { global.ColdWarRelations_JAP_USA = 10 } }
+	}
+}
+Cold_War_GUI_JAP_USA_Relations_AtLeast = { # Uses N temp variable
+	custom_trigger_tooltip = {
+		tooltip = TNO_Cold_War_GUI_JAP_USA_relations_val_tt
+		NOT = { check_variable = { global.ColdWarRelations_JAP_USA < N } }
+	}
+}

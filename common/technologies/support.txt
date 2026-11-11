@@ -1,7 +1,9 @@
 technologies = {
 
 	military_infrastructure1 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		supply_consumption_factor = -0.02
 		military_expenditures_factor = -0.01
 
@@ -10,7 +12,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -28,7 +34,9 @@ technologies = {
 	}
 
 	military_infrastructure2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+		}
 		supply_consumption_factor = -0.03
 		military_expenditures_factor = -0.02
 		barracks_coverage_modifier = 0.05
@@ -38,7 +46,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1955
 		folder = {
 			name = support_folder
@@ -56,7 +68,9 @@ technologies = {
 	}
 
 	military_infrastructure3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+		}
 		supply_consumption_factor = -0.03
 		military_expenditures_factor = -0.02
 		barracks_coverage_modifier = 0.05
@@ -66,7 +80,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1965
 		folder = {
 			name = support_folder
@@ -84,7 +102,9 @@ technologies = {
 	}
 
 	military_infrastructure4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_Tech = yes
+		}
 		supply_consumption_factor = -0.03
 		military_expenditures_factor = -0.02
 		barracks_coverage_modifier = 0.05
@@ -94,7 +114,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1975
 		folder = {
 			name = support_folder
@@ -112,12 +136,18 @@ technologies = {
 	}
 
 	military_infrastructure5 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+		}
 		supply_consumption_factor = -0.03
 		military_expenditures_factor = -0.02
 		barracks_coverage_modifier = 0.05
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1985
 		folder = {
 			name = support_folder
@@ -135,7 +165,10 @@ technologies = {
 	}
 
 	command_and_control1 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		army_org_regain = 0.02
 
 		path = {
@@ -143,7 +176,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -155,13 +192,16 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 20
 
 		}
 	}
 
 	command_and_control2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Tech = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		experience_gain_army_factor = 0.05
 		experience_gain_navy_factor = 0.05
 		experience_gain_air_factor = 0.05
@@ -176,7 +216,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1955
 		folder = {
 			name = support_folder
@@ -188,9 +232,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 			modifier = {
-				factor = 2
+				factor = 50
 				OR = {
 					tag = USA
 					tag = GER
@@ -202,7 +246,10 @@ technologies = {
 	}
 
 	command_and_control3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Outdated_Tech = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		experience_gain_army_factor = 0.05
 		experience_gain_navy_factor = 0.05
 		experience_gain_air_factor = 0.05
@@ -217,7 +264,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1965
 		folder = {
 			name = support_folder
@@ -229,9 +280,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 			modifier = {
-				factor = 2
+				factor = 50
 				OR = {
 					tag = USA
 					tag = GER
@@ -243,7 +294,10 @@ technologies = {
 	}
 
 	command_and_control4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		experience_gain_army_factor = 0.05
 		experience_gain_navy_factor = 0.05
 		experience_gain_air_factor = 0.05
@@ -258,7 +312,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1975
 		folder = {
 			name = support_folder
@@ -270,9 +328,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 			modifier = {
-				factor = 2
+				factor = 50
 				OR = {
 					tag = USA
 					tag = GER
@@ -284,7 +342,10 @@ technologies = {
 	}
 
 	command_and_control5 = {
-
+		allow = {
+			TNO_KD_Can_Research_Advanced_Tech = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		experience_gain_army_factor = 0.05
 		experience_gain_navy_factor = 0.05
 		experience_gain_air_factor = 0.05
@@ -294,7 +355,11 @@ technologies = {
 		army_org_factor = 0.05
 		navy_org_factor = 0.05
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1985
 		folder = {
 			name = support_folder
@@ -306,9 +371,9 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 			modifier = {
-				factor = 2
+				factor = 50
 				OR = {
 					tag = USA
 					tag = GER
@@ -368,7 +433,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.0
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1918
 		folder = {
 			name = support_folder
@@ -385,6 +454,9 @@ technologies = {
 	}
 
 	tech_scout_helicopter_company = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		dependencies = {
 			helicopter_engines = 1
 			scout_helicopter_1960 = 1
@@ -397,7 +469,11 @@ technologies = {
 		#	leads_to_tech = tech_scout_helicopter_company2
 		#	research_cost_coeff = 1
 		#}
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -411,7 +487,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
 			modifier = {
 				factor = 2
@@ -444,7 +520,7 @@ technologies = {
 	#	}
 	#
 	#	ai_will_do = {
-	#		factor = 1
+	#		factor = 0
 	#
 	#	}
 	#}
@@ -472,7 +548,7 @@ technologies = {
 	#	}
 	#
 	#	ai_will_do = {
-	#		factor = 1
+	#		factor = 0
 	#
 	#	}
 	#}
@@ -496,12 +572,15 @@ technologies = {
 	#	}
 	#
 	#	ai_will_do = {
-	#		factor = 1
+	#		factor = 0
 	#
 	#	}
 	#}
 
 	tech_transport_helicopter_company = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		dependencies = {
 			helicopter_engines = 1
 			transport_helicopter_1960 = 1
@@ -514,7 +593,11 @@ technologies = {
 		#	leads_to_tech = tech_transport_helicopter_company2
 		#	research_cost_coeff = 1
 		#}
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -529,7 +612,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
 			modifier = {
 				factor = 2
@@ -562,7 +645,7 @@ technologies = {
 	#	}
 	#
 	#	ai_will_do = {
-	#		factor = 1
+	#		factor = 0
 	#	}
 	#}
 	#tech_transport_helicopter_company3 = {
@@ -590,7 +673,7 @@ technologies = {
 	#	}
 	#
 	#	ai_will_do = {
-	#		factor = 1
+	#		factor = 0
 	#
 	#	}
 	#}
@@ -615,12 +698,15 @@ technologies = {
 	#	}
 	#
 	#	ai_will_do = {
-	#		factor = 1
+	#		factor = 0
 	#
 	#	}
 	#}
 
 	tech_attack_helicopter_company = {
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		dependencies = {
 			helicopter_engines = 1
 			attack_helicopter_1960 = 1
@@ -632,7 +718,12 @@ technologies = {
 			leads_to_tech = tech_attack_helicopter_company2
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -645,12 +736,26 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 30
+			}
+			modifier = {
+				factor = 150
+				num_of_military_factories > 50
+			}
 		}
 	}
 
 	tech_attack_helicopter_company2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		attack_helicopter_company = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -659,7 +764,12 @@ technologies = {
 			leads_to_tech = tech_attack_helicopter_company3
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 		folder = {
 			name = support_folder
@@ -672,11 +782,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 30
+			}
+			modifier = {
+				factor = 150
+				num_of_military_factories > 50
+			}
 		}
 	}
 	tech_attack_helicopter_company3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		attack_helicopter_company = {
 			breakthrough = 0.05
 			soft_attack = 0.05
@@ -687,7 +811,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 		folder = {
 			name = support_folder
@@ -700,11 +828,25 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 30
+			}
+			modifier = {
+				factor = 150
+				num_of_military_factories > 50
+			}
 		}
 	}
 	tech_attack_helicopter_company4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		attack_helicopter_company = {
 			breakthrough = 0.05
 			ap_attack = 0.05
@@ -712,7 +854,11 @@ technologies = {
 			hard_attack = 0.05
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 		folder = {
 			name = support_folder
@@ -725,12 +871,27 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
+			modifier = {
+				factor = -100
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 50
+				num_of_military_factories > 30
+			}
+			modifier = {
+				factor = 150
+				num_of_military_factories > 50
+			}
 		}
 	}
 
 	tech_engineers = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		enable_subunits = {
 			engineer
 		}
@@ -740,7 +901,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -753,17 +918,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-
+			factor = 20
 		}
 	}
 	tech_engineers2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_1 = 1 }
 		enable_subunits = {
 			mbt_engineer
 		}
@@ -783,7 +946,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1950
 		folder = {
 			name = support_folder
@@ -796,13 +963,16 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 20
 		}
 	}
 
 	tech_engineers3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_2 = 1 }
 		engineer = {
 			entrenchment = 2
 			river = {
@@ -840,7 +1010,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -853,15 +1027,19 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 20
 		}
 	}
 
 	tech_engineers4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_3 = 1 }
 		engineer = {
 			entrenchment = 2
+			equipment_capture_factor = 0.01
 			river = {
 				attack = 0.05
 				defence = 0.05
@@ -896,7 +1074,12 @@ technologies = {
 			leads_to_tech = tech_engineers5
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 		folder = {
 			name = support_folder
@@ -909,12 +1092,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 20
 		}
 	}
 	tech_engineers5 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_4 = 1 }
 		engineer = {
 			entrenchment = 2
 			river = {
@@ -951,7 +1137,12 @@ technologies = {
 			leads_to_tech = tech_engineers6
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 		folder = {
 			name = support_folder
@@ -964,11 +1155,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 	}
 	tech_engineers6 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_4 = 1 }
 		engineer = {
 			entrenchment = 2
 			river = {
@@ -1000,8 +1195,12 @@ technologies = {
 				attack = 0.075
 			}
 		}
-
-		research_cost = 1.5
+				
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1990
 		folder = {
 			name = support_folder
@@ -1014,11 +1213,10 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 	}
 	tech_recon = {
-
 		enable_subunits = {
 			recon
 			mot_recon
@@ -1026,13 +1224,20 @@ technologies = {
 			IFV_recon
 			MBT_recon
 		}
-
+		dependencies = {
+			night_vision_1 = 1
+			infantry_kit_2 = 1
+		}
 		path = {
 			leads_to_tech = tech_recon2
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -1045,10 +1250,10 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 15
 
 			modifier = {
-				factor = 2
+				factor = 50
 				is_major = yes
 			}
 
@@ -1056,7 +1261,14 @@ technologies = {
 	}
 
 	tech_recon2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		dependencies = {
+			radio = 1
+			night_vision_2 = 1
+			infantry_kit_3 = 1
+		}
 		recon = { ###note: cut down on buff difference if it proves to be tech creep/unbalanced
 			recon = 2
 		}
@@ -1077,8 +1289,12 @@ technologies = {
 			leads_to_tech = tech_recon3
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1950
 		folder = {
 			name = support_folder
@@ -1091,15 +1307,23 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 
 		}
 	}
 
 	tech_recon3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		dependencies = {
+			radio = 1
+			night_vision_3 = 1
+			infantry_kit_4 = 1
+		}
 		recon = {
 			recon = 2
+			initiative = 0.01
 		}
 		mot_recon = {
 			recon = 2.5
@@ -1117,8 +1341,12 @@ technologies = {
 			leads_to_tech = tech_recon4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -1131,35 +1359,57 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 
 		}
 	}
 	tech_recon4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			night_vision_4 = 1
+			infantry_kit_6 = 1
+		}
 		recon = {
 			recon = 2
+			equipment_capture_factor = 0.01
+			initiative = 0.01
 		}
 		mot_recon = {
 			recon = 2.5
+			equipment_capture_factor = 0.01
+			initiative = 0.02
 		}
 		AC_recon = {
 			recon = 3
+			equipment_capture_factor = 0.01
+			initiative = 0.02
 		}
 		IFV_recon = {
 			recon = 2.5
+			equipment_capture_factor = 0.01
+			initiative = 0.02
 		}
 		MBT_recon = {
 			recon = 2
+			equipment_capture_factor = 0.02
+			initiative = 0.01
 		}
 		scout_helicopter_company = {
 			recon = 4
+			initiative = 0.05
 		}
 		path = {
 			leads_to_tech = tech_recon5
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+				
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1970
 		folder = {
 			name = support_folder
@@ -1172,12 +1422,18 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 
 		}
 	}
 	tech_recon5 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			night_vision_5 = 1
+			infantry_kit_7 = 1
+		}
 		recon = {
 			recon = 2
 		}
@@ -1200,8 +1456,12 @@ technologies = {
 			leads_to_tech = tech_recon6
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1980
 		folder = {
 			name = support_folder
@@ -1214,12 +1474,18 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 
 		}
 	}
 	tech_recon6 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = {
+			night_vision_5 = 1
+			infantry_kit_9 = 1
+		}
 		recon = {
 			recon = 2
 		}
@@ -1238,8 +1504,12 @@ technologies = {
 		scout_helicopter_company = {
 			recon = 4
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1990
 		folder = {
 			name = support_folder
@@ -1252,13 +1522,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 
 		}
 	}
 
 	tech_military_police = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		enable_subunits = {
 			military_police
 		}
@@ -1267,8 +1539,12 @@ technologies = {
 			leads_to_tech = tech_military_police2
 			research_cost_coeff = 1
 		}
-
-		research_cost = 2
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -1281,44 +1557,18 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 5
-				tag = GER
-			}
-
-			modifier = {
-				factor = 5
-				tag = JAP
-			}
-
-			modifier = {
-				factor = 2
-				tag = ITA
-			}
-
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 15
 		}
 	}
 
 	tech_military_police2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		military_police = {
 			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
 		}
 
 
@@ -1326,8 +1576,12 @@ technologies = {
 			leads_to_tech = tech_military_police3
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1950
 		folder = {
 			name = support_folder
@@ -1340,26 +1594,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 9
 		}
 	}
 
 	tech_military_police3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		military_police = {
 			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
 		}
 		path = {
 			leads_to_tech = tech_military_police4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -1372,24 +1629,28 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 9
 		}
 	}
 	tech_military_police4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		military_police = {
 			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
 		}
 		path = {
 			leads_to_tech = tech_military_police5
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1970
 		folder = {
 			name = support_folder
@@ -1402,25 +1663,28 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 9
 		}
 	}
 	tech_military_police5 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		military_police = {
 			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
 		}
 		path = {
 			leads_to_tech = tech_military_police6
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1980
 		folder = {
 			name = support_folder
@@ -1433,21 +1697,24 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 9
 		}
 	}
 	tech_military_police6 = {
-
+		allow = {
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
 		military_police = {
 			suppression_factor = 0.1
+			experience_loss_factor = -0.05
+			default_morale = 0.1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1990
 		folder = {
 			name = support_folder
@@ -1460,17 +1727,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
+			factor = 9
 		}
 	}
 
 	tech_maintenance_company = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		enable_subunits = {
 			maintenance_company
 		}
@@ -1479,8 +1744,12 @@ technologies = {
 			leads_to_tech = tech_maintenance_company2
 			research_cost_coeff = 1
 		}
-
-		research_cost = 2
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -1493,7 +1762,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		
 		enable_equipment_modules = {
@@ -1502,10 +1771,14 @@ technologies = {
 	}
 
 	tech_maintenance_company2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_1 = 1 }
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.1
 		}
 
 
@@ -1513,8 +1786,12 @@ technologies = {
 			leads_to_tech = tech_maintenance_company3
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1950
 		folder = {
 			name = support_folder
@@ -1527,23 +1804,30 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 0
 		}
 	}
 
 	tech_maintenance_company3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_2 = 1 }
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.1
 		}
 		path = {
 			leads_to_tech = tech_maintenance_company4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -1556,21 +1840,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 0
 		}
 	}
 	tech_maintenance_company4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_3 = 1 }
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.1
 		}
 		path = {
 			leads_to_tech = tech_maintenance_company5
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1970
 		folder = {
 			name = support_folder
@@ -1583,22 +1875,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 0
 		}
 	}
 	tech_maintenance_company5 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_4 = 1 }
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.1
 		}
 		path = {
 			leads_to_tech = tech_maintenance_company6
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1980
 		folder = {
 			name = support_folder
@@ -1611,22 +1910,30 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 0
 		}
 	}
 	tech_maintenance_company6 = {
 
+		allow = {
+			TNO_KD_Can_Research_Basic_Manufactoring = yes
+			TNO_KD_Can_Research_Modern_SPECOPS = yes
+		}
+		dependencies = { combat_support_equipment_4 = 1 }
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.1
 		}
 		path = {
 			leads_to_tech = tech_maintenance_company4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1990
 		folder = {
 			name = support_folder
@@ -1639,8 +1946,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 0
 		}
 	}
 
@@ -1658,8 +1964,12 @@ technologies = {
 		dependencies = {
 			motorized_infantry = 1
 		}
-
-		research_cost = 2
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -1673,13 +1983,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 10
 		}
 	}
 
 	tech_field_hospital2 = {
-
+		dependencies = { combat_support_equipment_1 = 1 }
 		field_hospital = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
@@ -1689,8 +1998,12 @@ technologies = {
 			leads_to_tech = tech_field_hospital3
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1950
 		folder = {
 			name = support_folder
@@ -1704,13 +2017,12 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 7
 		}
 	}
 
 	tech_field_hospital3 = {
-
+		dependencies = { combat_support_equipment_1 = 1 }
 		field_hospital = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
@@ -1719,8 +2031,12 @@ technologies = {
 			leads_to_tech = tech_field_hospital4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -1734,12 +2050,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 7
 		}
 	}
 	tech_field_hospital4 = {
-
+		dependencies = { combat_support_equipment_2 = 1 }
 		field_hospital = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
@@ -1752,7 +2067,12 @@ technologies = {
 			leads_to_tech = tech_field_hospital5
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1970
 		folder = {
 			name = support_folder
@@ -1766,12 +2086,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 7
 		}
 	}
 	tech_field_hospital5 = {
-
+		dependencies = { combat_support_equipment_4 = 1 }
 		field_hospital = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
@@ -1784,8 +2103,12 @@ technologies = {
 			leads_to_tech = tech_field_hospital6
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1980
 		folder = {
 			name = support_folder
@@ -1799,12 +2122,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 7
 		}
 	}
 	tech_field_hospital6 = {
-
+		dependencies = { combat_support_equipment_4 = 1 }
 		field_hospital = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
@@ -1814,8 +2136,12 @@ technologies = {
 			casualty_trickleback = 0.15
 			experience_loss_factor = -0.15
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1990
 		folder = {
 			name = support_folder
@@ -1829,13 +2155,14 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 7
 		}
 	}
 
 	tech_logistics_company = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		enable_subunits = {
 			logistics_company
 		}
@@ -1848,8 +2175,12 @@ technologies = {
 		dependencies = {
 			motorized_infantry = 1
 		}
-
-		research_cost = 2
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -1863,16 +2194,19 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			factor = 15
 		}
 	}
 
 	tech_logistics_company2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		logistics_company = {
-			supply_consumption_factor = -0.1
+			supply_consumption_factor = -0.05
 			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
 		}
 		no_supply_grace = 8
 
@@ -1881,8 +2215,12 @@ technologies = {
 			leads_to_tech = tech_logistics_company3
 			research_cost_coeff = 1
 		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
-		research_cost = 1.5
 		start_year = 1950
 		folder = {
 			name = support_folder
@@ -1896,24 +2234,32 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 9
 
 		}
 	}
 
 	tech_logistics_company3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		logistics_company = {
-			supply_consumption_factor = -0.1
+			supply_consumption_factor = -0.05
 			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
 		}
 		no_supply_grace = 8
 		path = {
 			leads_to_tech = tech_logistics_company4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -1927,27 +2273,38 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 9
 
 		}
 	}
 
 	tech_logistics_company4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		logistics_company = {
-			supply_consumption_factor = -0.1
+			supply_consumption_factor = -0.05
 			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
 		}
 		no_supply_grace = 8
 		transport_helicopter_supply_company = {
 			supply_consumption_factor = -0.15
 			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.1
+			default_morale = 0.5
 		}
 		path = {
 			leads_to_tech = tech_logistics_company5
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+				
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1970
 		folder = {
 			name = support_folder
@@ -1961,27 +2318,37 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 9
 
 		}
 	}
 	tech_logistics_company5 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		logistics_company = {
-			supply_consumption_factor = -0.1
+			supply_consumption_factor = -0.05
 			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
 		}
 		no_supply_grace = 8
 		transport_helicopter_supply_company = {
 			supply_consumption_factor = -0.15
 			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.1
+			default_morale = 0.5
 		}
 		path = {
 			leads_to_tech = tech_logistics_company6
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1980
 		folder = {
 			name = support_folder
@@ -1995,24 +2362,33 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 9
 
 		}
 	}
 	tech_logistics_company6 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		logistics_company = {
-			supply_consumption_factor = -0.1
+			supply_consumption_factor = -0.05
 			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.05
+			default_morale = 0.2
 		}
 		no_supply_grace = 8
 		transport_helicopter_supply_company = {
 			supply_consumption_factor = -0.15
 			fuel_consumption_factor = -0.05
+			equipment_capture_factor = 0.1
+			default_morale = 0.5
 		}
-
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1990
 		folder = {
 			name = support_folder
@@ -2026,13 +2402,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 9
 
 		}
 	}
 
 	tech_signal_company = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		enable_subunits = {
 			signal_company
 		}
@@ -2046,8 +2424,12 @@ technologies = {
 			radio = 1
 			motorized_infantry = 1
 		}
-
-		research_cost = 2
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1945
 		folder = {
 			name = support_folder
@@ -2061,14 +2443,17 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 	}
 
 	tech_signal_company2 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		signal_company = {
-			initiative = 0.12
+			initiative = 0.05
+			equipment_capture_factor = 0.01
 		}
 
 
@@ -2076,8 +2461,12 @@ technologies = {
 			leads_to_tech = tech_signal_company3
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1950
 		folder = {
 			name = support_folder
@@ -2091,22 +2480,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 
 		}
 	}
 
 	tech_signal_company3 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		signal_company = {
-			initiative = 0.12
+			initiative = 0.05
+			equipment_capture_factor = 0.01
 		}
 		path = {
 			leads_to_tech = tech_signal_company4
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1960
 		folder = {
 			name = support_folder
@@ -2120,20 +2516,28 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 
 		}
 	}
 	tech_signal_company4 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		signal_company = {
-			initiative = 0.12
+			initiative = 0.05
+			equipment_capture_factor = 0.01
 		}
 		path = {
 			leads_to_tech = tech_signal_company5
 			research_cost_coeff = 1
 		}
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1970
 		folder = {
 			name = support_folder
@@ -2147,21 +2551,28 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 
 		}
 	}
 	tech_signal_company5 = {
-
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
+		}
 		signal_company = {
-			initiative = 0.12
+			initiative = 0.05
+			equipment_capture_factor = 0.01
 		}
 		path = {
 			leads_to_tech = tech_signal_company6
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1980
 		folder = {
 			name = support_folder
@@ -2175,17 +2586,24 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 
 		}
 	}
 	tech_signal_company6 = {
-
-		signal_company = {
-			initiative = 0.12
+		allow = {
+			TNO_KD_Can_Research_Basic_SPECOPS = yes
 		}
-
-		research_cost = 1.5
+		signal_company = {
+			initiative = 0.05
+			equipment_capture_factor = 0.01
+		}
+		
+		research_cost = 1.95
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
 		start_year = 1990
 		folder = {
 			name = support_folder
@@ -2199,7 +2617,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 	}
 }

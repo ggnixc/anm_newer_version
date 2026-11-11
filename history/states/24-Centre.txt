@@ -1,29 +1,34 @@
-state = { #Population Done
-	id = 24
-	name = "STATE_24"
-	resources = {
-		steel = 3
+state={
+	id=24
+	name="STATE_24"
+	resources={
+		steel=24
 	}
+	
 	history = {
-		owner = FRA
-		victory_points = { 9492 5 }
-		victory_points = { 6533 1 }
-		victory_points = { 9629 1 }
-		victory_points = { 3655 1 }
-		victory_points = { 6547 1 }
-		victory_points = { 512 15 }
-		victory_points = { 6688 1 }
+		owner = FRS
+		victory_points = { 3655 6 }
+		victory_points = { 18002 4 }
+		victory_points = { 9625 3 }
+		victory_points = { 9609 2 }
+		victory_points = { 9607 3 }
 		buildings = {
 			infrastructure = 5
- 			industrial_complex = 2
- 		}
-		add_core_of = FRA
- 	}
-
-	provinces = {
-		3671 6533 6547 9492 11631 512 3493 6518 6688 11611 651 669 6651 3655 9629 15231
+			prisons = 2
+			schools = 2
+			offices = 2
+			hospitals = 2
+			thermoelectric_plant = 3
+		}
+		add_core_of = FRS
+		set_state_flag = GDP_category_town
 	}
-	manpower = 1850995
-	buildings_max_level_factor = 1.000
-	state_category = city
+	
+	provinces={
+		651 667 2723 3594 3655 6644 6651 6688 9607 9609 9625 9629 11611 18002 
+	}
+	manpower=1171088
+	buildings_max_level_factor=1
+	state_category=large_town
+	local_supplies=0
 }

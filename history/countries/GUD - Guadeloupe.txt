@@ -1,32 +1,78 @@
 ﻿capital = 694
 
-set_cosmetic_tag = GUD_ANT
+# Vacant
+recruit_character = GUD_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+recruit_character = GUD_Gerty_Archimede
+recruit_character = GUD_Medard_Albrand
+recruit_character = GUD_Paul_Valentino
+recruit_character = GUD_Raymond_Guilliod
+recruit_character = GUD_Lucette_Michau_Chevry
 
-recruit_character = GUD_Louis_Constant_Fleming
+recruit_character = GUD_Furcie_Tirolien
 
-set_oob = "GUD_1962"
+promote_character = GUD_Medard_Albrand
 
-set_politics = {	
-	ruling_party = conservatism
-	last_election = "1994.5.11"
-	election_frequency = 60
+set_politics = {
+	ruling_party = liberal_conservatism
+	last_election = "1961.5.16"
+	election_frequency = 48
 	elections_allowed = yes
-
 }
-
-TNO_startup_nation = yes
 
 set_popularities = {
-    liberal_conservatism = 16
-	conservatism = 31
-	liberalism = 15
-	progressivism = 29
-    socialist = 9
+	socialist = 15
+	liberal_conservatism = 50
+	conservatism = 35
 }
-
 
 add_ideas = {
-    OFN_Security_Council_Member
+	OFN_Partners
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_crime_prevention
+
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_basic
+	tno_academic_base_basic_literacy
 }
 
-# econtype
+set_country_flag = TNO_eliminate_military_spending
+
+set_research_slots = 3
+set_convoys = 50
+inherit_technology = FWI
+
+TNO_startup_nation = yes

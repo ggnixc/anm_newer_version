@@ -7,12 +7,18 @@ state = {
 	}
 
 	history = {
-		owner = CHI
-		add_core_of = CHI
-  		set_state_flag = state_renamings
+		owner = GNG
+		add_core_of = GNG
+		set_variable = { china_state_ref = 35 }
+		set_variable = { china_region_ref = 4 }
+		set_state_flag = state_renamings
 		buildings = {
-			industrial_complex = 1
- 			infrastructure = 5
+			offices = 1
+			prisons = 1
+			barracks = 2
+			thermoelectric_plant = 2
+			hydroelectric_plant = 1
+			infrastructure = 5
 			air_base = 1
 			9938 = {
 				naval_base = 1
@@ -49,7 +55,7 @@ state = {
 	provinces = {
 		4050 4165 4207 7067 7108 7141 7182 9938 9978 15742 19574
 	}
-	manpower = 13183940
+	manpower = 14134693
 	buildings_max_level_factor = 1.750
 	state_category = town
 	local_supplies = 0.000

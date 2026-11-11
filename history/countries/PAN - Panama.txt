@@ -1,90 +1,211 @@
-﻿capital = 304
+capital = 304
 
-set_oob = "PAN_1962"
+# Vacant
+recruit_character = PAN_Generic_Vacant
 
-set_politics = {	
+recruit_character = PAN_Jose_Remon_Cantera
+#Dem Path
+recruit_character = PAN_Roberto_Chiari_Ramon
+recruit_character = PAN_Aquilino_Boyd
+recruit_character = PAN_Marco_Aurelio_Robles
+recruit_character = PAN_David_Samudio_Avila
+recruit_character = PAN_Max_Devalle
+#Army Path
+recruit_character = PAN_Arnulfo_Arias
+recruit_character = PAN_Boris_Martinez
+recruit_character = PAN_Omar_Torrijos
+#Socialists
+recruit_character = PAN_Floyd_Britton
+recruit_character = PAN_Thelma_King_Harrison
+
+recruit_character = PAN_OAS_OFN
+recruit_character = PAN_Jose_de_la_Rosa_Castillo
+recruit_character = PAN_Ruben_Batista
+recruit_character = PAN_Juan_Galindo
+
+recruit_character = PAN_Jose_Humberto_Ramos
+recruit_character = PAN_Ruben_Dario_Paredes
+recruit_character = PAN_Jose_Bazan
+recruit_character = PAN_Ricardo_Espinosa
+recruit_character = PAN_Eric_Devalle
+recruit_character = PAN_Bolivar_Vallarino
+recruit_character = PAN_Raul_Arango
+recruit_character = PAN_Gilberto_Guardia
+recruit_character = PAN_Abraham_Stevenson
+recruit_character = PAN_Demetrio_Bahas
+recruit_character = PAN_Ricardo_Espriella
+recruit_character = PAN_Jose_Fabrega
+recruit_character = PAN_Manuel_Noriega
+
+
+set_politics = {
 	ruling_party = despotism
-	last_election = "1932.6.5"
+	last_election = "1960.5.10"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 }
-
-TNO_startup_nation = yes
 
 set_popularities = {
-    communist = 26
-    ultranationalism = 0
-    socialist = 0
-    progressivism = 0
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
-    despotism = 42
-    fascism = 32
-     
+	socialist = 13
+	liberal_conservatism = 13
+	conservatism = 8
+	paternalism = 11
+	despotism = 36
+	despotism_1 = 8
+	despotism_2 = 6
+	fascism = 5
 }
 
-recruit_character = PAN_Bolivar_Urrutia_Parrilla
+set_variable = { PAN_Protests = 0 }
+set_convoys = 50
+set_stability = 0.34
+set_war_support = 0.48
+
+oob = "PAN_1962"
+inherit_technology = USA
+
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 200
+}
 
 add_ideas = {
-	#FACTION STATUS
-	OFN_Security_Council_Member
-	#SPIRITS
-	
-	#SOCIETAL DEVELOPMENT
-	tno_nuclear_stockpile_none
-	tno_poverty_rate_50
-	tno_army_professionalism_political_interference
-	tno_industrial_expertise_nascent
-	tno_industrial_equipment_factory_complexes
-	tno_agriculture_mass_mechanized
-	tno_research_facilities_outdated
-	tno_academic_base_primary_schooling
+	#MINISTERS
+	PAN_Jose_Bazan_hog
+	PAN_Bolivar_Vallarino_sec
+	PAN_Ricardo_Espinosa_for
+	PAN_Eric_Devalle_eco
 
- 	
-	#Political#
-	tno_political_parties_multiparty_system
+	#SPIRITS
+	PAN_Divided_at_the_Isthmus
+	PAN_policemen_of_nations
+	PAN_Half_measures_and_handshakes
+	PAN_Two_Flags_One_Nation
+	PAN_Coroneles_and_Criollos
+
+	#POLITICAL
+	tno_political_parties_dominant_party_system
 	tno_religious_rights_secularism
 	tno_trade_unions_all_allowed
-	tno_immigration_open_immigration
-	tno_slavery_outlawed
+	tno_immigration_quota_immigration
+	tno_slavery_penal_labor
 	tno_public_meetings_allowed
 	tno_press_rights_free_press
 	tno_vote_franchise_universal
-	tno_refugees_vetted_entry
-	
-	#Military#
-	tno_conscription_one_year_draft
-	tno_women_noncombat_only
-	tno_military_supervision_military_policing
-	tno_military_spending_medium_spending
-	tno_training_basic_training
-	tno_racial_integration_integrated_military
-	tno_draft_exemptions_religious_deferment
-	
-	#Economic#
-	tno_trade_laws_export_focus
-	tno_economic_focus_civilian_economy
-	tno_tax_rate_medium_taxation
-	tno_income_taxation_flat_taxes
-	tno_minimum_wage_low_minimum_wage
-	tno_max_workhours_8_hour_work_day
-	tno_child_labor_illegal
-	tno_pensions_low_pensions
-	tno_unemployment_trinket_subsidies
-	
-	#Social#
-	tno_safety_limited_regulations
-	tno_health_care_public_health_care
-	tno_pollution_few_regulations
+
+	#MILITARY
+	tno_conscription_volunteer_only
+	tno_military_supervision_rules_of_engagement
+	tno_training_combat_schooling
+	tno_draft_exemptions_educational_deferment
+
+	#SOCIAL
+	tno_health_care_support_for_emergencies
 	tno_education_public_education
-	tno_penal_system_incarceration
-	tno_lgbt_rights_lgbt_outlawed
+	tno_penal_system_harsh_penal_code
 	tno_gender_rights_women_in_the_workplace
+	tno_security_crime_prevention
+	tno_regulations_token_regulations
+
+	#ECONOMIC
+	tno_trade_laws_free_trade
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_pensions_trinket_pensions
+	tno_unemployment_no_subsidies
+
+	#MISC
+	tno_refugees_vetted_entry
+	tno_women_military_assistance
+	tno_racial_integration_integrated_military
+	tno_safety_minimal_regulations
+	tno_pollution_few_regulations
+	tno_lgbt_rights_lgbt_outlawed
 	tno_minorities_equal_rights
-	tno_drugs_weedbanned
-	tno_security_police
+	tno_child_labor_illegal
 	
-	#Ministers
+	#SOCIETAL DEVELOPMENT
+	tno_army_professionalism_cronyism
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_healthcare_nascent
+	tno_agriculture_centralized
+	tno_research_facilities_basic
+	tno_academic_base_primary_schooling
+	tno_admin_efficiency_deficient_administrative_systems
 }
+
+set_research_slots = 3
+
+add_opinion_modifier = {
+	target = USA
+	modifier = USA_ca_republic
+}
+add_opinion_modifier = {
+	target = USA
+	modifier = PAN_canal_question
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_2
+	amount = 600
+	producer = PAN
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 300
+	producer = PAN
+}
+
+add_equipment_to_stockpile = {
+	type = jet_fighter_equipment_1
+	amount = 100
+	producer = PAN
+}
+
+add_equipment_to_stockpile = {
+	type = convoy_1
+	amount = 20
+	producer = PAN
+}
+
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	add_equipment_to_stockpile = {
+		type = APC_equipment_1
+		amount = 150
+		producer = USA
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	add_equipment_to_stockpile = {
+		type = APC_chassis_1
+		amount = 150
+		producer = USA
+	}
+}
+
+every_country = {
+	limit = { is_in_faction_with = GER }
+	set_embargo_PREV = yes
+}
+
+set_country_flag = TNO_eliminate_military_spending
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }

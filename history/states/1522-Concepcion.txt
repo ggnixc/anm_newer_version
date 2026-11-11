@@ -8,15 +8,19 @@ state = {
 	history = {
 		owner = CHL
 		buildings = {
-			arms_factory = 2
-			industrial_complex = 3
+			barracks = 2
+			schools = 2
+			hospitals = 1
+			prisons = 1
+			offices = 1
 			infrastructure = 4
 			air_base = 2
 			14821 = {
 				naval_base = 1
 			}
 			dockyard = 1
- 		}
+			thermoelectric_plant = 2
+		}
 		add_core_of = CHL
 		victory_points = {
 			14821 10
@@ -25,13 +29,15 @@ state = {
 			17493 3
 		}
 		add_extra_state_shared_building_slots = 1
- 	}
+		set_state_flag = GDP_regions_bio
+		set_state_flag = GDP_category_town
+	}
 
 	provinces = {
 		14821 17493 17558
 	}
 	manpower = 823141
 	buildings_max_level_factor = 1.000
-	state_category = large_town
+	state_category = city
 	local_supplies = 0.000
 }

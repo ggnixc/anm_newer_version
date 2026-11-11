@@ -102,7 +102,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "bonus_container"
-					position = { x = -187 y = 42 }
+					position = { x = -207 y = 51 }
 					orientation = upper_right
 
 					iconType = {
@@ -127,7 +127,7 @@ guiTypes = {
 
 				iconType = {
 					name = "grand_doctrine_icon"
-					position = { x = -30 y = 20 }
+					position = { x = -31 y = 19 }
 					quadTextureSprite = "GFX_combined_blitz_medium"
 					alwaystransparent = "yes"
 					orientation = center_up
@@ -248,7 +248,7 @@ guiTypes = {
 
 		iconType = {
 			name = "doctrine_icon"
-			position = { x = 10 y = 4 }
+			position = { x = 2 y = 1 }
 			quadTextureSprite = "GFX_combined_blitz_medium"
 			alwaystransparent = "yes"
 		}
@@ -334,12 +334,12 @@ guiTypes = {
 
 		positionType = {
 			name = mastery_text_right
-			position = { x = 14 y = 68 }
+			position = { x = 14 y = 69 }
 		}
 
 		positionType = {
 			name = mastery_text_left
-			position = { x = 14 y = 68 }
+			position = { x = 14 y = 69 }
 		}
 
 		positionType = {
@@ -411,7 +411,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "mastery_text" # Dynamic - based on mastery_text_left/right
-			position = { x = -40 y = 48 }
+			position = { x = -40 y = 50 }
 			maxWidth = 40
 			maxHeight = 50
 			font = "aldrich_18_outline"
@@ -496,7 +496,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "bonus_container"
-					position = { x = -195 y = -2 }
+					position = { x = -212 y = -4 }
 					orientation = upper_right
 
 					iconType = {
@@ -516,7 +516,7 @@ guiTypes = {
 
 				iconType = {
 					name = "sub_doctrine_icon"
-					position = { x = -31 y = -33 }
+					position = { x = -37 y = -34 }
 					quadTextureSprite = "GFX_combined_blitz_medium"
 					alwaystransparent = "yes"
 					orientation = center_up
@@ -546,7 +546,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "bonus_text"
-					position = { x = -196 y = -2 }
+					position = { x = -213 y = -4 }
 					orientation = upper_right
 					textureFile = ""
 					font = "aldrich_18_outline"
@@ -557,11 +557,18 @@ guiTypes = {
 					format = center
 				}
 			}
+			
+			iconType = {
+				name = "lock_icon"
+				spriteType = "GFX_locked"
+				position = { x = -84 y = 97 }
+				orientation = upper_right
+			}
 
 
 			containerWindowType = {
 				name = "mastery_text_container"
-				position = { x = 232 y = 96 }
+				position = { x = 230 y = 103 }
 
 				iconType = {
 					name = "mastery_text_bg"
@@ -573,7 +580,7 @@ guiTypes = {
 
 				instantTextboxType = {
 					name = "mastery_text"
-					position = { x = -5 y = 7 }
+					position = { x = -5 y = 8 }
 					maxWidth = 80
 					maxHeight = 50
 					font = "aldrich_18_outline"

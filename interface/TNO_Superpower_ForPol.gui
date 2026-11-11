@@ -1,0 +1,263 @@
+guiTypes = {
+	#### Foreign Policy GUI ####
+	containerWindowType = {
+		name = "TNO_Super_ForPol_GUI"
+		size = { width = 1004 height = 524 }
+		position = { x = 36 y = 86 }
+
+		### Top Bar ###
+		containerWindowType = {
+			name = "TNO_Super_ForPol_GUI_TopBar"
+			position = { x = 52 y = -90 }
+			
+			# Title
+			instantTextBoxType = {
+				name = "Super_ForPol_Title"
+				position = { x = 0 y = 0 }
+				font = "vt323_72_WT_outline"
+				text = Super_ForPol_Title_tt
+				maxWidth = 857
+				maxHeight = 58
+				format = center
+				fixedsize = yes
+			}
+
+			# Info Button
+			# iconType = {
+			# 	name = "Super_ForPol_InfoBtn"
+			# 	spriteType = "GFX_ParliamentMechanic_InfoButton"
+			# 	position = { x = 879 y = 28 }
+			# }
+		}
+
+		### Image ###
+		containerWindowType = {
+			name = "TNO_Super_ForPol_GUI_Image"
+			size = { width = 482 height = 116 }
+			position = { x = 0 y = 0 }
+
+			# Image
+			iconType = {
+				name = "Super_ForPol_Image"
+				spriteType = "GFX_Super_ForPol_Image_GER"
+				position = { x = 6 y = 6 }
+			}
+			iconType = {
+				name = "Super_ForPol_ImageOverlay"
+				spriteType = "GFX_Super_ForPol_Overlay"
+				position = { x = 0 y = 0 }
+			}
+		}
+		
+		# Background
+		iconType = {
+			name = "TNO_Super_ForPol_BackgroundSeal"
+			position = { x = 91 y = 108 }
+			spriteType = "GFX_fopo_reichsadler_seal"
+		}
+
+		# Description
+		instantTextboxType = {
+			name = "TNO_Super_ForPol_GUI_Desc"
+			position = { x = 30 y = 130 }
+			font = "aldrich_18_outline"
+			format = left
+			maxWidth = 421
+			maxHeight = 270
+			fixedsize = yes
+			text = Super_ForPol_Desc_tt
+		}
+
+		### Progressbars ###
+		containerWindowType = {
+			name = "TNO_Super_ForPol_GUI_Progbars"
+			size = { width = 423 height = 142 }
+			position = { x = 30 y = 401 }
+
+			# Separator
+			iconType = {
+				name = "TNO_Super_ForPol_GUI_Separator"
+				spriteType = "GFX_Super_ForPol_Separtor"
+				position = { x = 0 y = 0 }
+			}
+
+			## Germany/Pakt Progbar
+			containerWindowType = {
+				name = "TNO_Super_ForPol_GUI_Progbar_GER"
+				size = { width = 423 height = 56 }
+				position = { x = 0 y = 17 }
+
+				# Header
+				instantTextboxType = {
+					name = "TNO_Super_ForPol_GER_Header"
+					position = { x = 0 y = 0 }
+					font = "aldrich_20_outline"
+					format = left
+					maxWidth = 423
+					maxHeight = 25
+					fixedsize = yes
+					text = Super_ForPol_GER_Header_tt
+				}
+
+				# Progbar
+				iconType = {
+					name = "TNO_Super_ForPol_GER_Progbar"
+					spriteType = "GFX_Super_ForPol_ProgBar_GER"
+					position = { x = 0 y = 25 } 
+					# pdx_tooltip = ""
+				}
+			}
+
+			## Japan/Sphere Progbar
+			containerWindowType = {
+				name = "TNO_Super_ForPol_GUI_Progbar_JAP"
+				size = { width = 423 height = 56 }
+				position = { x = 0 y = 17 }
+
+				# Header
+				instantTextboxType = {
+					name = "TNO_Super_ForPol_JAP_Header"
+					position = { x = 0 y = 0 }
+					font = "aldrich_20_outline"
+					format = left
+					maxWidth = 423
+					maxHeight = 25
+					fixedsize = yes
+					text = Super_ForPol_JAP_Header_tt
+				}
+
+				# Progbar
+				iconType = {
+					name = "TNO_Super_ForPol_JAP_Progbar"
+					spriteType = "GFX_Super_ForPol_ProgBar_JAP"
+					position = { x = 0 y = 25 } 
+					# pdx_tooltip = ""
+				}
+			}
+
+			## USA/OFN Progbar
+			containerWindowType = {
+				name = "TNO_Super_ForPol_GUI_Progbar_USA"
+				size = { width = 423 height = 56 }
+				position = { x = 0 y = 87 }
+
+				# Header
+				instantTextboxType = {
+					name = "TNO_Super_ForPol_USA_Header"
+					position = { x = 0 y = 0 }
+					font = "aldrich_20_outline"
+					format = left
+					maxWidth = 423
+					maxHeight = 25
+					fixedsize = yes
+					text = Super_ForPol_USA_Header_tt
+				}
+
+				# Progbar
+				iconType = {
+					name = "TNO_Super_ForPol_USA_Progbar"
+					spriteType = "GFX_Super_ForPol_ProgBar_USA"
+					position = { x = 0 y = 25 } 
+					# pdx_tooltip = ""
+				}
+			}
+		}
+
+		# Vertical Divider
+		iconType = {
+			name = "TNO_Super_ForPol_GUI_VerticalDivider"
+			position = { x = 502 y = 0 }
+			spriteType = "GFX_BoP_Base_Vertical_Divider_Full"
+		}
+
+		### Selection ###
+		containerWindowType = {
+			name = "TNO_Super_ForPol_GUI_Selection"
+			size = { width = 486 height = 89 }
+			position = { x = 518 y = 0 }
+
+			# ForPol posturing
+			instantTextboxType = {
+				name = "TNO_Super_ForPol_GUI_Posturing"
+				position = { x = 2 y = 15 }
+				font = "aldrich_30_outline"
+				text = Super_ForPol_Posturing_tt
+				format = center
+				maxWidth = 483
+				maxHeight = 30
+			}
+
+			# Separator
+			iconType = {
+				name = "TNO_Super_ForPol_Decision_Separator"
+				spriteType = "GFX_BoP_Decision_Divider"
+				position = { x = 0 y = 87 }
+			}
+
+			# Buttons
+			buttonType = {
+				name = "TNO_Super_ForPol_WorldBtn"
+				spriteType = "GFX_Super_ForPol_SelectionButton"
+				position = { x = 2 y = 58 }
+			}
+			instantTextboxType = {
+				name = "TNO_Super_ForPol_WorldBtn_Text"
+				position = { x = 2 y = 62 }
+				font = "aldrich_18_outline"
+				text = Super_ForPol_SelectionWorld_tt
+				format = center
+				maxWidth = 151
+				maxHeight = 25
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TNO_Super_ForPol_GermanyBtn"
+				spriteType = "GFX_Super_ForPol_SelectionButton"
+				position = { x = 168 y = 58 }
+			}
+			instantTextboxType = {
+				name = "TNO_Super_ForPol_GermanyBtn_Text"
+				position = { x = 168 y = 62 }
+				font = "aldrich_18_outline"
+				text = Super_ForPol_SelectionGermany_tt
+				format = center
+				maxWidth = 151
+				maxHeight = 25
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TNO_Super_ForPol_JapanBtn"
+				spriteType = "GFX_Super_ForPol_SelectionButton"
+				position = { x = 168 y = 58 }
+			}
+			instantTextboxType = {
+				name = "TNO_Super_ForPol_JapanBtn_Text"
+				position = { x = 168 y = 62 }
+				font = "aldrich_18_outline"
+				text = Super_ForPol_SelectionJapan_tt
+				format = center
+				maxWidth = 151
+				maxHeight = 25
+				alwaystransparent = yes
+			}
+
+			buttonType = {
+				name = "TNO_Super_ForPol_AmericaBtn"
+				spriteType = "GFX_Super_ForPol_SelectionButton"
+				position = { x = 333 y = 58 }
+			}
+			instantTextboxType = {
+				name = "TNO_Super_ForPol_AmericaBtn_Text"
+				position = { x = 333 y = 62 }
+				font = "aldrich_18_outline"
+				text = Super_ForPol_SelectionAmerica_tt
+				format = center
+				maxWidth = 151
+				maxHeight = 25
+				alwaystransparent = yes
+			}
+		}
+	}
+}

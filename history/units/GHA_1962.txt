@@ -1,0 +1,72 @@
+###Templates###
+division_template = {
+	name = "Infantry Brigade"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+}
+
+###Units###
+units = {
+    #Southern Command
+	division = {
+        name = "1st Infantry Brigade Group"
+        location = "5535"
+        division_template = "Infantry Brigade"
+		start_experience_factor = 0.6		
+    }
+	division = {
+		name = "2nd Infantry Brigade Group"
+		location = "12742"
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.6
+	}
+	division = {
+		name = "5th Infantry Brigade Group"
+		location = "10862"
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.6
+	}
+	
+	#Central Command
+	division = {
+		name = "3rd Infantry Brigade Group"
+		location = "14025"
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.6
+	}
+	division = {
+		name = "4th Infantry Brigade Group"
+		location = "15421"
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.6
+	}
+	division = {
+		name = "7th Infantry Brigade Group"
+		location = "13414"
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.6
+	}		
+	
+	#Northern Command
+	division = {
+		name = "6th Infantry Brigade Group"
+		location = "15284"
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.6
+	}
+	division = {
+		name = "8th Infantry Brigade Group"
+		location = "14357"
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.6
+	}		
+}

@@ -57,13 +57,13 @@ guiTypes = {
 			}
 
 			# for debug purpose
-			iconType = {
-				name = "icn_dirty_indicator"
-				position = { x=0 y=100 }
-				spriteType = "GFX_dog"
-				scale = 0.5
-				rotation = 0.3
-			}
+			# iconType = {
+			# 	name = "icn_dirty_indicator"
+			# 	position = { x=0 y=100 }
+			# 	spriteType = "GFX_dog"
+			# 	scale = 0.5
+			# 	rotation = 0.3
+			# }
 		}
 	}
 
@@ -93,13 +93,13 @@ guiTypes = {
 			name = "portrait_frame"
 			position = { x = 0 y = 40 }
 			spriteType = "GFX_leader_group_frame_unselected"
-			alwaystransparent = no
+			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "total_operative_text"
-			position = { x=9 y=130 }
-			font = "aldrich_12_outline"
+			position = { x=9 y=134 }
+			font = "aldrich_16_outline"
 			maxWidth = 60
 			maxHeight = 20
 			format = center
@@ -213,7 +213,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "operative_skill_level"
 			position = { x=6 y=132 }
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 70
 			maxHeight = 23
 			format = center
@@ -530,7 +530,7 @@ guiTypes = {
 			name = "operative_code_name"
 			position = {x=66 y=7}
 			size = {x=135 y=23}
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			text = "IHaveACoolName"
 		}
 
@@ -553,7 +553,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "operative_skill_level"
 			position = {x=196 y=46}
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -563,7 +563,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "operative_name"
 			position = {x=66 y=35}
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			maxWidth = 135
 			maxHeight = 23
 			format = left
@@ -573,7 +573,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "operative_title"
 			position = {x=66 y=53}
-			font = "aldrich_20_outline"
+			font = "aldrich_22_outline"
 			maxWidth = 135
 			maxHeight = 23
 			format = left
@@ -613,7 +613,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "operative_nationality_entry"
-		position = {x=2 y=-2}
+		position = {x=-15 y=0}
 		Orientation = upper_left
 		size = {width=34 height=34}
 
@@ -677,7 +677,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "status_text"
 			position = {x=5 y=2}
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 355 # leave some space for ETA # Hell no Paradox I just moved ETA up a bit - CPR
 			maxHeight = 23
 			format = left
@@ -686,7 +686,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "eta_text"
-			font = "aldrich_16_outline"
+			font = "aldrich_18_outline"
 			position = {x=282 y=-14}
 			maxWidth = 80
 			maxHeight = 23

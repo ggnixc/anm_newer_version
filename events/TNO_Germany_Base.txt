@@ -1,0 +1,4371 @@
+# ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗#
+#██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║╚██╗ ██╔╝#
+#██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║ ╚████╔╝ #
+#██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ╚██╔╝  #
+#╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   #
+# ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   #
+#Events
+
+#Index; Search for these names using ctrl+f and you'll find the section they entitle.
+#	Pre-Kampfzeit Events
+#		Kampfzeit Startup
+#
+#	Kampfzeit Events
+#
+#	Flavour Events
+#		Students & Music
+#		General Flavour
+#
+#	Mechanical Events
+#		Kartenhaus Events
+#
+#	Foreign Events
+#		General Foreign Events
+#		Oil Crisis Events
+#		Iberia Events
+#		WW3 Events
+#
+#	Space Events
+#	Debug Events
+
+add_namespace = GER_PreKampfzeit
+add_namespace = GER_Kampfzeit
+add_namespace = GER_Flavor
+add_namespace = GER_Mechanics
+add_namespace = GER_Projects
+add_namespace = GER_Foreign
+add_namespace = GER_Debug
+add_namespace = GER_Space
+
+######  ######  #######       ##   ##  #####  ###    ### ######  ####### ####### ####### ## ########     ####### ##    ## ####### ###    ## ######## ####### 
+##   ## ##   ## ##            ##  ##  ##   ## ####  #### ##   ## ##         ###  ##      ##    ##        ##      ##    ## ##      ####   ##    ##    ##
+######  ######  #####   ##### #####   ####### ## #### ## ######  #####     ###   #####   ##    ##        #####   ##    ## #####   ## ##  ##    ##    ####### 
+##      ##   ## ##            ##  ##  ##   ## ##  ##  ## ##      ##       ###    ##      ##    ##        ##       ##  ##  ##      ##  ## ##    ##         ## 
+##      ##   ## #######       ##   ## ##   ## ##      ## ##      ##      ####### ####### ##    ##        #######   ####   ####### ##   ####    ##    ####### 
+# Pre-Kampfzeit Events
+
+#################################################
+##=|                Intro Tree               |=##
+##=====================| |=====================##
+#################################################
+# Reserved event slots: 10-39 (GER_PreKampfzeit)
+
+country_event = { # Eintausend Jahre, Hitler intro 07/01/62
+	id = GER_PreKampfzeit.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.10" }
+	title = GER_PreKampfzeit.10.t
+	desc = GER_PreKampfzeit.10.desc
+	picture = GFX_report_event_GER_open_top_car_hitler
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.11 days = 3 } # Goebbels Couple
+			country_event = { id = GER_PreKampfzeit.20 days = 8 } # Magda and Hitler
+			country_event = { id = GER_PreKampfzeit.22 days = 14 } # Nachtigall Intro
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.10.a
+	}
+}
+
+country_event = { # Goebbels Couple intro 10/01/62
+	id = GER_PreKampfzeit.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.11" }
+	title = GER_PreKampfzeit.11.t
+	desc = GER_PreKampfzeit.11.desc
+	picture = GFX_report_event_GER_magda_and_joseph
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+		country_event = { id = GER_PreKampfzeit.12 days = 9 } 
+		country_event = { id = GER_Space.10 days = 3 } 
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.11.a
+	}
+}
+
+country_event = { # Göring Intro 19/01/62
+	id = GER_PreKampfzeit.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.12" }
+	title = GER_PreKampfzeit.12.t
+	desc = GER_PreKampfzeit.12.desc
+	picture = GFX_report_event_GER_hermann_goering_intro
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { country_event = { id = GER_PreKampfzeit.13 days = 7 } }
+	}
+	
+	option = {
+		name = GER_PreKampfzeit.12.a
+	}
+}
+
+country_event = { # Bormann Intro 26/01/62
+	id = GER_PreKampfzeit.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.13" }
+	title = GER_PreKampfzeit.13.t
+	desc = GER_PreKampfzeit.13.desc
+	picture = GFX_report_event_GER_martin_bormann_intro
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = {
+			country_event = { id = GER_PreKampfzeit.14 days = 7 }
+			country_event = { id = GER_PreKampfzeit.21 days = 40 }
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.13.a
+	}
+}
+
+country_event = { # Himmler Intro 02/02/62
+	id = GER_PreKampfzeit.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.14" }
+	title = GER_PreKampfzeit.14.t
+	desc = GER_PreKampfzeit.14.desc
+	picture = GFX_report_event_GER_heinrich_himmler_intro
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { country_event = { id = GER_PreKampfzeit.15 days = 7 } }
+	}
+
+	option = {
+		name = GER_PreKampfzeit.14.a
+	}
+}
+
+country_event = { # Speer Intro 09/02/62
+	id = GER_PreKampfzeit.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.15" }
+	title = GER_PreKampfzeit.15.t
+	desc = GER_PreKampfzeit.15.desc
+	picture = GFX_report_event_GER_albert_speer_intro
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { country_event = { id = GER_PreKampfzeit.30 days = 55 } }
+	}
+
+	option = {
+		name = GER_PreKampfzeit.15.a
+	}
+}
+
+country_event = { # Fuhrer's Address
+	id = GER_PreKampfzeit.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.16" }
+	title = GER_PreKampfzeit.16.t
+	desc = GER_PreKampfzeit.16.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.16.a
+	}
+}
+
+country_event = { # Issues of the Day
+	id = GER_PreKampfzeit.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.17" }
+	title = GER_PreKampfzeit.17.t
+	desc = GER_PreKampfzeit.17.desc
+	picture = GFX_report_event_GER_reichstag_interior
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { country_event = { id = GER_PreKampfzeit.18 days = 5 } }
+	}
+
+	option = {
+		name = GER_PreKampfzeit.17.a
+	}
+}
+
+country_event = { # Issues of the Day pt.2
+	id = GER_PreKampfzeit.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.18" }
+	title = GER_PreKampfzeit.18.t
+	desc = GER_PreKampfzeit.18.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.18.a
+	}
+}
+
+country_event = { # Inner Circle
+	id = GER_PreKampfzeit.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.19" }
+	title = GER_PreKampfzeit.19.t
+	desc = GER_PreKampfzeit.19.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.19.a
+	}
+}
+
+country_event = { # Magda and Hitler
+	id = GER_PreKampfzeit.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.20" }
+	title = GER_PreKampfzeit.20.t
+	desc = GER_PreKampfzeit.20.desc
+	picture = GFX_report_event_GER_hitler_and_magda
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.20.a
+	}
+}
+
+country_event = { # The Hangman (Heydrich Intro)
+	id = GER_PreKampfzeit.21
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.21" }
+	title = GER_PreKampfzeit.21.t
+	desc = GER_PreKampfzeit.21.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.21.a
+	}
+}
+
+country_event = { # Nachtigall intro 21/01/62
+	id = GER_PreKampfzeit.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.22" }
+	title = GER_PreKampfzeit.22.t
+	desc = GER_PreKampfzeit.22.desc
+	picture = GFX_report_event_GER_meinkampf_map_of_the_east
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { country_event = { id = GER_PreKampfzeit.23 days = 8 } }
+	}
+
+	option = {
+		name = GER_PreKampfzeit.22.a
+	}
+}
+
+country_event = { # Report of the Reichssicherheitshauptamt to the Reich government. Details situation with the RKs and how prep for Nachtigall is going 29/01/62.
+	id = GER_PreKampfzeit.23
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.23" }
+	title = GER_PreKampfzeit.23.t
+	desc = GER_PreKampfzeit.23.desc
+	picture = GFX_report_event_GER_muscovite_frontier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { country_event = { id = GER_PreKampfzeit.24 days = 15 } }
+	}
+
+	option = {
+		name = GER_PreKampfzeit.23.a
+	}
+}
+
+country_event = { # Abwher report on the situation in traitorous former collabs and Gorky east of the current frontier 13/02/62
+	id = GER_PreKampfzeit.24
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.24" }
+	title = GER_PreKampfzeit.24.t
+	desc = GER_PreKampfzeit.24.desc
+	picture = GFX_report_event_GER_ROA
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.24.a
+	}
+}
+
+country_event = { # First successful manned orbit around the globe, conducted by Germany. Hitler is excited to the point of delirium, suffers a heart attack.
+	id = GER_PreKampfzeit.25
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.25" }
+	title = GER_PreKampfzeit.25.t
+	desc = GER_PreKampfzeit.25.desc
+	picture = GFX_report_event_GER_berghof
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.26 days = 7 } 
+			set_country_flag = GER_IntroTree_hitler_heart_attack
+			reload_GER_intro_tree = yes
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.25.a
+		custom_effect_tooltip = GER_new_options_will_focus_tree
+		
+		every_country = {
+			limit = { is_ai = no }
+			news_event = {
+				id = WORLD_REICH.1
+				hours = 5
+			}
+		}
+		every_country = {
+			limit = { is_ai = no }
+			news_event = {
+				id = WORLD_REICH.9
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = { # Nachitgall is cancelled after Hitler heart attack. Hitler returns and demands nuclear test to deter Russian action
+	id = GER_PreKampfzeit.26
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.26" }
+	title = GER_PreKampfzeit.26.t
+	desc = GER_PreKampfzeit.26.desc
+	picture = GFX_report_event_GER_hitler_and_göring
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = {
+			country_event = { id = GER_PreKampfzeit.27 days = 7 }
+			set_autonomy = { # making MCW free so they are the one that manages the border war because overlords manage a puppet's border war as of 1.17
+				target = MCW
+				autonomy_state = autonomy_free
+			}
+			MCW = {
+				country_event = { id = GER_PreKampfzeit.289 days = 3 } 
+			}
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.26.a
+		hidden_effect = { 
+			create_entity = { 
+				entity = nuke_entity
+				id = 0401452
+				province = 16821
+				min_zoom = -1
+			}
+			set_entity_animation = {
+				id = 0401452
+				animation = "attack"
+			}
+		}
+	}
+}
+
+country_event = { # Wehrmacht Report: that failed, Gorky, attacked us. 
+	id = GER_PreKampfzeit.27
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.27" }
+	title = GER_PreKampfzeit.27.t
+	desc = GER_PreKampfzeit.27.desc
+	picture = GFX_report_event_GER_destroyed_leopard
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.28 days = 7 } 
+		}
+	}
+	
+	option = {
+		name = GER_PreKampfzeit.27.a
+		263 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+	}
+}
+
+country_event = { # Hitler's reaction to international community viewing the Reich's instability. Moves to use nukes to compensate 
+	id = GER_PreKampfzeit.28
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.28" }
+	title = GER_PreKampfzeit.28.t
+	desc = GER_PreKampfzeit.28.desc
+	picture = GFX_report_event_GER_gorky_göring
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.29 days = 7 } 
+			set_autonomy = { 
+				target = MCW 
+				autonomy_state = autonomy_reichskommissariat 
+			}
+			MCW = {
+				set_politics = {
+					ruling_party = national_socialism
+					last_election = "1941.4.17"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					national_socialism = 55
+					national_socialism_1 = 16
+					ultranationalism = 12
+					communist = 9
+					despotism = 8
+				}
+			}
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.28.a
+	}
+}
+
+country_event = { # Nuking of Gorky, collapse of the warlord
+	id = GER_PreKampfzeit.29
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.29" }
+	title = GER_PreKampfzeit.29.t
+	desc = GER_PreKampfzeit.29.desc
+	picture = GFX_report_event_GER_gorky_nuke
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			launch_nuke = {
+				province = 11375
+			}
+			launch_nuke = {
+				province = 9389
+			}			
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = WORLD_REICH.8
+					hours = 5
+				}
+			}
+			AMR = { #flavor
+				country_event = {
+					id = amur.103
+					days = 3
+				}
+			}
+		}
+	}
+	option = { #
+		name = GER_PreKampfzeit.29.a
+		custom_effect_tooltip = GER_start_politics_tainted_with_madness_tt
+		hidden_effect = {
+			country_event = {
+				id = GER_PreKampfzeit.290
+				hours = 8
+			}
+		}
+	}
+}
+
+country_event = { # AMT (foreign office) intro
+	id = GER_PreKampfzeit.30
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.30" }
+	title = GER_PreKampfzeit.30.t
+	desc = GER_PreKampfzeit.30.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.30.a
+	}
+}
+
+country_event = { # Trigger border war in muscovy
+    id = GER_PreKampfzeit.289
+    title = GER_PreKampfzeit.291.t
+    desc = GER_PreKampfzeit.291.d
+    picture = GFX_report_event_generic_war
+
+    is_triggered_only = yes
+
+    option = {
+        name = GER_PreKampfzeit.291.a
+        start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 252
+				num_provinces = 4
+				modifier = 4
+				dig_in_factor = 2
+				terrain_factor = 0
+			}	
+			defender = {
+				state = 263
+				num_provinces = 3
+			}
+		}
+    }
+}
+
+country_event = { # Activate cosmetic stuff for Gorky
+	id = GER_PreKampfzeit.290
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.290" }
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+        SAM = {
+            country_event = { 
+				id = GER_PreKampfzeit.291
+				days = 3
+			}
+        }
+    }
+
+	option = { #
+		name = GER_PreKampfzeit.290.a
+		GOR = {
+			set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+			set_variable = { TNO_economy_subtype = token:Econ_Subtype_Anarchic }
+			remove_from_array = { global.russian_warlords = GOR }
+			set_variable = { loot_amount = 0 }
+			delete_unit = {} 
+			set_country_flag = cannot_raid
+			set_country_flag = RUS_cancel_all_ideas
+			set_cosmetic_tag = GOR_NUKED
+			252 = {
+				add_manpower = -792493
+				add_dynamic_modifier = { modifier = GOR_Aftermath }
+			}
+			set_politics = {
+				ruling_party = socialist
+				elections_allowed = no
+			}
+			remove_ideas = {
+				RUS_gorky_tank_factory
+				GOR_state_of_perpetual_warfare
+				GOR_growing_malaise
+			}
+			add_ideas = {
+				ZZZ_anarchy
+			}
+			promote_character = GOR_No_Authority
+			add_state_core = 1597 # this state allows us to avoid a capital showing up for the anarchy tag in Gorky
+			transfer_state = 1597
+			set_capital = {
+				state = 1597
+				remember_old_capital = no
+			}
+			set_temp_variable = { target_region = 252.id }
+			set_temp_variable = { improvement_id = token:RUS_econ_GUI_im_w_gorky_tanks }
+			RUS_econ_GUI_remove_improvement = yes
+		}
+		set_global_flag = RUS_Gorky_Nuked
+	}
+}
+
+country_event = { # Samara Event, invasion of Gorky
+    id = GER_PreKampfzeit.291
+    title = GER_PreKampfzeit.291.t
+    desc = GER_PreKampfzeit.291.d
+    picture = GFX_report_event_generic_war
+
+    is_triggered_only = yes
+
+    option = {
+        name = GER_PreKampfzeit.291.a
+        SAM = {
+            declare_war_on = {
+                target = GOR
+                type = annex_everything
+            }
+        }
+    }
+}
+
+country_event = { # Contenders scrambling after Hitler's heart attack (triggered by question of a new arbitrator)
+	id = GER_PreKampfzeit.31
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.31" }
+	title = GER_PreKampfzeit.31.t
+	desc = GER_PreKampfzeit.31.desc
+	picture = GFX_report_event_GER_hitler_office
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.31.a
+	}
+}
+
+country_event = { # Speer event after focus
+	id = GER_PreKampfzeit.32
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.32" }
+	title = GER_PreKampfzeit.32.t
+	desc = GER_PreKampfzeit.32.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.32.a
+		hidden_effect = {
+			country_event = {
+				id = GER_PreKampfzeit.36
+				days = 21
+			}
+		}
+	}
+}
+
+country_event = { # Bormann event after focus
+	id = GER_PreKampfzeit.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.33" }
+	title = GER_PreKampfzeit.33.t
+	desc = GER_PreKampfzeit.33.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.33.a
+		hidden_effect = {
+			country_event = {
+				id = GER_PreKampfzeit.37
+				days = 21
+			}
+		}
+	}
+}
+
+country_event = { # Göring event after focus
+	id = GER_PreKampfzeit.34
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.34" }
+	title = GER_PreKampfzeit.34.t
+	desc = GER_PreKampfzeit.34.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.34.a
+		hidden_effect = {
+			country_event = {
+				id = GER_PreKampfzeit.38
+				days = 21
+			}
+		}
+	}
+}
+
+country_event = { # Himmler event after focus
+	id = GER_PreKampfzeit.35
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.35" }
+	title = GER_PreKampfzeit.35.t
+	desc = GER_PreKampfzeit.35.desc
+	picture = GFX_report_event_GER_himmler_and_hitler
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.35.a
+		custom_effect_tooltip = GER_PreKampfzeit.35.tt
+		hidden_effect = {
+			country_event = {
+				id = GER_PreKampfzeit.39
+				days = 21
+			}
+		}
+	}
+}
+
+country_event = { # Person suffering because of Speer
+	id = GER_PreKampfzeit.36
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.36" }
+	title = GER_PreKampfzeit.36.t
+	desc = GER_PreKampfzeit.36.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.36.a
+	}
+}
+
+country_event = { # Person suffering because of Bormann
+	id = GER_PreKampfzeit.37
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.37" }
+	title = GER_PreKampfzeit.37.t
+	desc = GER_PreKampfzeit.37.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.37.a
+	}
+}
+
+country_event = { # Person suffering because of Göring
+	id = GER_PreKampfzeit.38
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.38" }
+	title = GER_PreKampfzeit.38.t
+	desc = GER_PreKampfzeit.38.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.38.a
+	}
+}
+
+country_event = { # Person suffering because of Himmler
+	id = GER_PreKampfzeit.39
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.39" }
+	title = GER_PreKampfzeit.39.t
+	desc = GER_PreKampfzeit.39.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.39.a
+	}
+}
+
+#################################################
+##=|            Post Heart Attack            |=##
+##=====================| |=====================##
+#################################################
+# Reserved event slots: 40-  (GER_PreKampfzeit)
+
+country_event = { # Koch comatose, replace his senate position
+	id = GER_PreKampfzeit.40
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.40" }
+	title = GER_PreKampfzeit.40.t
+	desc = GER_PreKampfzeit.40.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Ferdinand Großherr
+		name = GER_PreKampfzeit.40.a
+		set_temp_variable = { GER_SIG_AC_v = 2.5 } GER_SIG_AC_Reac = yes
+		set_temp_variable = { GER_Clade_i = token:GER_Clade_SocialRevolutionaries }
+		set_temp_variable = { GER_Clade_v = 2.5 }
+	}
+	option = { # Adolf Mauer
+		name = GER_PreKampfzeit.40.b
+		set_temp_variable = { GER_SIG_AC_v = 2.5 } GER_SIG_AC_Orth = yes
+		set_temp_variable = { GER_Clade_i = token:GER_Clade_ControlFaction }
+		set_temp_variable = { GER_Clade_v = 2.5 }
+	}
+}
+
+
+country_event = { # Neighbours Friends, and Foes - pt.1, US hatred
+	id = GER_PreKampfzeit.41
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.41" }
+	title = GER_PreKampfzeit.41.t
+	desc = GER_PreKampfzeit.41.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.42 days = 14 } 
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.41.a
+
+	}
+}
+
+country_event = { # Neighbours Friends, and Foes - pt.2, JPN dislike
+	id = GER_PreKampfzeit.42
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.42" }
+	title = GER_PreKampfzeit.42.t
+	desc = GER_PreKampfzeit.42.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.43 days = 14 } 
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.42.a
+
+	}
+}
+
+country_event = { # Neighbours Friends, and Foes - pt.3, Italy breakup
+	id = GER_PreKampfzeit.43
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.43" }
+	title = GER_PreKampfzeit.43.t
+	desc = GER_PreKampfzeit.43.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.44 days = 14 } 
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.43.a
+
+	}
+}
+
+country_event = { # Neighbours Friends, and Foes - pt.4, European Unity
+	id = GER_PreKampfzeit.44
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.44" }
+	title = GER_PreKampfzeit.44.t
+	desc = GER_PreKampfzeit.44.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.44.a
+
+	}
+}
+
+country_event = { # Speer holds EEC Conference
+	id = GER_PreKampfzeit.45
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.45" }
+	title = GER_PreKampfzeit.45.t
+	desc = GER_PreKampfzeit.45.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.45.a
+	}
+}
+
+country_event = { # Preparations for Pakt Wargames
+	id = GER_PreKampfzeit.46
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.46" }
+	title = GER_PreKampfzeit.46.t
+	desc = GER_PreKampfzeit.46.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.47 days = 7 } 
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.46.a
+	}
+}
+
+country_event = { # Wargames successful, we looked cool
+	id = GER_PreKampfzeit.47
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.47" }
+	title = GER_PreKampfzeit.47.t
+	desc = GER_PreKampfzeit.47.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.45.a
+		set_temp_variable = { GER_SIG_AP_v = 5 } GER_SIG_AP_Wehrmacht = yes
+	}
+}
+
+country_event = { # denounce dollar plutocracies
+	id = GER_PreKampfzeit.48
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.48" }
+	title = GER_PreKampfzeit.48.t
+	desc = GER_PreKampfzeit.48.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.48.a
+		USA = { country_event = { id = GER_PreKampfzeit.49 days = 1 } }
+	}
+}
+
+country_event = { # USA: Germany denounced dollar plutocracies
+	id = GER_PreKampfzeit.49
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.49" }
+	title = GER_PreKampfzeit.49.t
+	desc = GER_PreKampfzeit.49.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.49.a
+		effect_tooltip = { set_temp_variable = { RelationsChange = -1 } Cold_War_GUI_ChangeRelations_GER_USA = yes }
+	}
+}
+
+country_event = { # GER: Olive Branch Question, Italy
+	id = GER_PreKampfzeit.50
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.50" }
+	title = GER_PreKampfzeit.50.t
+	desc = GER_PreKampfzeit.50.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Raise Tariffs
+		name = GER_PreKampfzeit.50.a
+		set_temp_variable = { gdp_growth_temp = -0.15 } econ_gdp_growth_change = yes
+		ITA = { country_event = { id = GER_PreKampfzeit.51 days = 1 } }
+	}
+	option = { # Lower Tariffs
+		name = GER_PreKampfzeit.50.b
+		set_temp_variable = { gdp_growth_temp = 0.15 } econ_gdp_growth_change = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.05 } econ_spend_money_once_effect_raw_money = yes
+		ITA = { country_event = { id = GER_PreKampfzeit.53 days = 1 } }
+	}
+}
+
+country_event = { # ITA: Olive Branch Question, Germany Raises Tariffs
+	id = GER_PreKampfzeit.51
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.51" }
+	title = GER_PreKampfzeit.51.t
+	desc = GER_PreKampfzeit.51.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Retaliate
+		name = GER_PreKampfzeit.51.a
+		set_temp_variable = { gdp_growth_temp = -0.25 } econ_gdp_growth_change = yes
+		GER = { country_event = { id = GER_PreKampfzeit.52 days = 4 } }
+	}
+	option = { # Deal with it.
+		name = GER_PreKampfzeit.51.b
+		set_temp_variable = { gdp_growth_temp = -0.15 } econ_gdp_growth_change = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.10 } econ_spend_money_once_effect_raw_money = yes
+	}
+}
+
+country_event = { # GER: Olive Branch Question, Italy retaliates
+	id = GER_PreKampfzeit.52
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.52" }
+	title = GER_PreKampfzeit.52.t
+	desc = GER_PreKampfzeit.52.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Alright
+		name = GER_PreKampfzeit.52.a
+		set_temp_variable = { gdp_growth_temp = -0.10 } econ_gdp_growth_change = yes
+	}
+}
+
+country_event = { # ITA: Olive Branch Question, Germany lowers tariffs
+	id = GER_PreKampfzeit.53
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.53" }
+	title = GER_PreKampfzeit.53.t
+	desc = GER_PreKampfzeit.53.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Thanks i guess
+		name = GER_PreKampfzeit.53.a
+		set_temp_variable = { gdp_growth_temp = 0.10 } econ_gdp_growth_change = yes
+	}
+}
+
+country_event = { # GER: Olive Branch Question, Backing Iberia
+	id = GER_PreKampfzeit.54
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.54" }
+	title = GER_PreKampfzeit.54.t
+	desc = GER_PreKampfzeit.54.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Send equipment
+		name = GER_PreKampfzeit.54.a
+		send_equipment = {
+			target = IBR
+			equipment = infantry_equipment
+			amount = 1000
+			old_prioritised = yes
+		}
+		IBR = {
+			country_event = { id = GER_PreKampfzeit.55 days = 1 }
+			add_to_variable = { IBR_PKT_Alignment = 1 }
+			custom_effect_tooltip = IBR_PKT_proxy_alignment_gain
+		}
+	}
+}
+
+country_event = { # IBR: Olive Branch Question, Germany sends support
+	id = GER_PreKampfzeit.55
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.55" }
+	title = GER_PreKampfzeit.55.t
+	desc = GER_PreKampfzeit.55.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Thanks!
+		name = GER_PreKampfzeit.55.a
+		effect_tooltip = {
+			GER = {
+				send_equipment = {
+					target = IBR
+					equipment = infantry_equipment
+					amount = 1000
+					old_prioritised = yes
+				}
+			}
+		}
+		custom_effect_tooltip = IBR_PKT_proxy_alignment_gain
+	}
+}
+
+country_event = { # Looking at the Sun
+	id = GER_PreKampfzeit.56
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.56" }
+	title = GER_PreKampfzeit.56.t
+	desc = GER_PreKampfzeit.56.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Send Hewel to Tokyo
+		name = GER_PreKampfzeit.56.a
+		country_event = { id = GER_PreKampfzeit.57 days = 5 }
+		set_temp_variable = { GER_SIG_AL_v = 5 } GER_SIG_AL_ForeignOffice_Orth = yes
+	}
+	option = { # Send Kiesinger to Tokyo
+		name = GER_PreKampfzeit.56.b
+		country_event = { id = GER_PreKampfzeit.58 days = 5 }
+		set_temp_variable = { GER_SIG_AL_v = 5 } GER_SIG_AL_ForeignOffice_Ref = yes
+	}
+	option = { # Send Hewel to Nanjing
+		name = GER_PreKampfzeit.56.c
+		country_event = { id = GER_PreKampfzeit.59 days = 5 }
+		set_temp_variable = { GER_SIG_AL_v = 5 } GER_SIG_AL_ForeignOffice_Orth = yes
+	}
+	option = { # Send Kiesinger to Nanjing
+		name = GER_PreKampfzeit.56.d
+		country_event = { id = GER_PreKampfzeit.60 days = 5 }
+		set_temp_variable = { GER_SIG_AL_v = 5 } GER_SIG_AL_ForeignOffice_Ref = yes
+	}
+}
+
+country_event = { # Looking at the Sun: Hewel in Tokyo
+	id = GER_PreKampfzeit.57
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.57" }
+	title = GER_PreKampfzeit.57.t
+	desc = GER_PreKampfzeit.57.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.57.a
+		Cold_War_GUI_ChangeRelations_GER_JAP = yes
+	}
+}
+
+country_event = { # Looking at the Sun: Kiesinger in Tokyo
+	id = GER_PreKampfzeit.58
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.58" }
+	title = GER_PreKampfzeit.58.t
+	desc = GER_PreKampfzeit.58.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.58.a
+		Cold_War_GUI_ChangeRelations_GER_JAP = yes
+	}
+}
+
+country_event = { # Looking at the Sun: Hewel in Nanjing
+	id = GER_PreKampfzeit.59
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.59" }
+	title = GER_PreKampfzeit.59.t
+	desc = GER_PreKampfzeit.59.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.59.a
+		set_temp_variable = { RelationsChange = -1 } Cold_War_GUI_ChangeRelations_GER_JAP = yes
+		JAP = { country_event = { id = GER_PreKampfzeit.61 days = 5 } }
+	}
+}
+
+country_event = { # Looking at the Sun: Kiesinger in Nanjing
+	id = GER_PreKampfzeit.60
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.60" }
+	title = GER_PreKampfzeit.60.t
+	desc = GER_PreKampfzeit.60.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.60.a
+		set_temp_variable = { RelationsChange = -1 } Cold_War_GUI_ChangeRelations_GER_JAP = yes
+		JAP = { country_event = { id = GER_PreKampfzeit.61 days = 5 } }
+	}
+}
+
+country_event = { # JAP: reacting to German state visit to Nanjing
+	id = GER_PreKampfzeit.61
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.61" }
+	title = GER_PreKampfzeit.61.t
+	desc = GER_PreKampfzeit.61.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.61.a
+		effect_tooltip = { set_temp_variable = { RelationsChange = -1 } Cold_War_GUI_ChangeRelations_GER_JAP = yes }
+	}
+}
+
+country_event = { # Vae Victis No More
+	id = GER_PreKampfzeit.62
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.62" }
+	title = GER_PreKampfzeit.62.t
+	desc = GER_PreKampfzeit.62.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.62.a
+		ENG = { country_event = { id = GER_PreKampfzeit.63 days = 5 } }
+		FRA = { country_event = { id = GER_PreKampfzeit.64 days = 5 } }
+	}
+}
+
+country_event = { # ENG: Vae Victis No More
+	id = GER_PreKampfzeit.63
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.63" }
+	title = GER_PreKampfzeit.63.t
+	desc = GER_PreKampfzeit.63.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.63.a
+		set_temp_variable = { gdp_growth_temp = 0.25 } econ_gdp_growth_change = yes
+		set_temp_variable = { money_reserves_temp = 25 } econ_money_reserves_change_raw_money = yes
+	}
+}
+
+country_event = { # FRA: Vae Victis No More
+	id = GER_PreKampfzeit.64
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.64" }
+	title = GER_PreKampfzeit.64.t
+	desc = GER_PreKampfzeit.64.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.64.a
+		set_temp_variable = { gdp_growth_temp = 0.25 } econ_gdp_growth_change = yes
+		set_temp_variable = { money_reserves_temp = 25 } econ_money_reserves_change_raw_money = yes
+	}
+}
+
+country_event = { # GER: Funding an agency (Nachtrichtendienst)
+	id = GER_PreKampfzeit.65
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.65" }
+	title = GER_PreKampfzeit.65.t
+	desc = GER_PreKampfzeit.65.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Fund Abwehr
+		name = GER_PreKampfzeit.65.a
+		set_temp_variable = { temp_econ_spending_amount = 0.05 } econ_spend_money_once_effect_raw_money = yes
+		set_temp_variable = { GER_SIG_AP_v = 7 } GER_SIG_AP_Wehrmacht = yes
+		set_temp_variable = { GER_SIG_AL_v = 5 } GER_SIG_AL_Wehrmacht_Ruling = yes
+	}
+	option = { # Fund RSHA
+		name = GER_PreKampfzeit.65.b
+		set_temp_variable = { temp_econ_spending_amount = 0.05 } econ_spend_money_once_effect_raw_money = yes
+		set_temp_variable = { GER_SIG_AP_v = 7 } GER_SIG_AP_Security = yes
+		set_temp_variable = { GER_SIG_AL_v = 5 } GER_SIG_AL_Security_Ruling = yes
+	}
+}
+
+country_event = { # Malaise, What's Next?
+	id = GER_PreKampfzeit.66
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.66" }
+	title = GER_PreKampfzeit.66.t
+	desc = GER_PreKampfzeit.66.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Alright
+		name = GER_PreKampfzeit.66.a
+		trigger = { NOT = { has_country_flag = GER_Kampfzeit_Perspective_Speer } }
+	}
+	option = { # Let's Evaluate this further (Speer)
+		name = GER_PreKampfzeit.66.b
+		trigger = { has_country_flag = GER_Kampfzeit_Perspective_Speer }
+	}
+}
+
+country_event = { # Speer: Econ Aligment
+	id = GER_PreKampfzeit.67
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.67" }
+	title = GER_PreKampfzeit.67.t
+	desc = GER_PreKampfzeit.67.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Stick to the plan
+		name = GER_PreKampfzeit.67.a
+		set_temp_variable = { GER_Clade_i = token:GER_Clade_CoreSpeerites }
+		set_temp_variable = { GER_Clade_v = 2.5 }
+		GER_Clade_ChangeControl = yes
+	}
+	option = { # Maybe the Technocrats have got a point.
+		name = GER_PreKampfzeit.67.b
+		set_temp_variable = { GER_Clade_i = token:GER_Clade_ReformistTechnocrats }
+		set_temp_variable = { GER_Clade_v = 5 }
+		GER_Clade_ChangeControl = yes
+		
+		set_temp_variable = { GER_SIG_AP_v = 3 } GER_SIG_AP_EconFinanceMinistries = yes
+		hidden_effect = {
+			set_country_flag = GER_Kampfzeit_Speer_Aligned_Technocrats
+		}
+	}
+}
+
+country_event = { # Schörner vs Speidel
+	id = GER_PreKampfzeit.68
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.68" }
+	title = GER_PreKampfzeit.68.t
+	desc = GER_PreKampfzeit.68.desc
+	picture = GFX_report_event_GER_goring_dining
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Schörner
+		name = GER_PreKampfzeit.68.a
+		set_temp_variable = { GER_SIG_AC_v = 0.5 } GER_SIG_AC_Reac = yes
+		set_temp_variable = { GER_SIG_AL_v = 2.5 } GER_SIG_AL_Wehrmacht_Reac = yes
+		
+		set_temp_variable = { GER_Clade_i = token:GER_Clade_NewGuard }
+		set_temp_variable = { GER_Clade_v = 5 }
+		GER_Clade_ChangeControl = yes
+	}
+	option = { # Speidel
+		name = GER_PreKampfzeit.68.b
+		set_temp_variable = { GER_SIG_AC_v = 0.5 } GER_SIG_AC_Ref = yes
+		set_temp_variable = { GER_SIG_AL_v = 2.5 } GER_SIG_AL_Wehrmacht_Ref = yes
+		
+		set_temp_variable = { GER_Clade_i = token:GER_Clade_OldGuard }
+		set_temp_variable = { GER_Clade_v = 5 }
+		GER_Clade_ChangeControl = yes
+	}
+}
+
+country_event = { # The SS is happy you supported them
+	id = GER_PreKampfzeit.69
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.69" }
+	title = GER_PreKampfzeit.69.t
+	desc = GER_PreKampfzeit.69.desc
+	picture = GFX_report_event_GER_himmler_and_bormann
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Yay!
+		name = GER_PreKampfzeit.69.a
+		set_temp_variable = { GER_SIG_AL_v = 2.5 } GER_SIG_AL_Security_Ruling = yes
+		hidden_effect = {
+			country_event = { id = GER_PreKampfzeit.70 days = 7 }
+		}
+	}
+}
+
+country_event = { # Wehrmacht is less happy
+	id = GER_PreKampfzeit.70
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.70" }
+	title = GER_PreKampfzeit.70.t
+	desc = GER_PreKampfzeit.70.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Yay!
+		name = GER_PreKampfzeit.70.a
+		set_temp_variable = { GER_SIG_AL_v = -5 } GER_SIG_AL_Wehrmacht_Ruling = yes
+		add_political_power = -25
+	}
+}
+
+country_event = { # General Plan Ost Phase IV Begins
+	id = GER_PreKampfzeit.71
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.71" }
+	title = GER_PreKampfzeit.71.t
+	desc = GER_PreKampfzeit.71.desc
+	picture = GFX_report_event_GER_eastern_europe_germans
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.71.a
+		UKR = { country_event = { id = GER_PreKampfzeit.72 days = 1 } } # Only Ukraine has content
+	}
+}
+
+country_event = { # Germany initiates phase 4
+	id = GER_PreKampfzeit.72
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.72" }
+	title = GER_PreKampfzeit.72.t
+	desc = GER_PreKampfzeit.72.desc
+	picture = GFX_report_event_GER_eastern_europe_germans
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Wow!
+		name = GER_PreKampfzeit.72.a
+	}
+}
+
+country_event = { # New Lands, New Problems: Situation Report
+	id = GER_PreKampfzeit.73
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.73" }
+	title = GER_PreKampfzeit.73.t
+	desc = GER_PreKampfzeit.73.desc
+	picture = GFX_report_event_GER_meinkampf_map_of_the_east
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # 
+		name = GER_PreKampfzeit.73.a
+	}
+}
+
+country_event = { # Come and See: Report on The East
+	id = GER_PreKampfzeit.74
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.74" }
+	title = GER_PreKampfzeit.74.t
+	desc = GER_PreKampfzeit.74.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Fuck, completed Cool the Powder Keg
+		name = GER_PreKampfzeit.74.a
+		trigger = { has_completed_focus = GER_cool_the_powder_keg }
+		set_temp_variable = { gdp_growth_temp = 0.25 } econ_gdp_growth_change = yes
+		set_temp_variable = { money_reserves_temp = 0.05 } econ_money_reserves_change_raw_money = yes
+		
+		GER_worsen_occupation = yes
+	}
+	
+	option = { # Fuck, completed Demand Payment in Full
+		name = GER_PreKampfzeit.74.b
+		trigger = { has_completed_focus = GER_demand_payment_in_full }
+		set_temp_variable = { gdp_growth_temp = 0.25 } econ_gdp_growth_change = yes
+		set_temp_variable = { temp_econ_spending_amount = 0.05 } econ_spend_money_once_effect_raw_money = yes
+		
+		GER_worsen_occupation = yes
+	}
+}
+
+country_event = { # 1962 Reichstag Elections
+	id = GER_PreKampfzeit.75
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.75" }
+	title = GER_PreKampfzeit.75.t
+	desc = GER_PreKampfzeit.75.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.75.a
+		set_temp_variable = { SituationID = token:GER_Situations_ReichstagElections } # Reichstag Elections
+		GER_Situations_StartSituation = yes
+	}
+}
+
+country_event = { # Stormflood, Hitler visiting Hamburg with Karl Kaufmann to assess the current reconstruction progress.
+	id = GER_PreKampfzeit.76
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.76" }
+	title = GER_PreKampfzeit.76.t
+	desc = GER_PreKampfzeit.76.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.76.a
+		set_temp_variable = { GER_Clade_i = token:GER_Clade_SocialRevolutionaries } # Social Revolutionaries
+		set_temp_variable = { GER_Clade_v = 2.5 }
+		GER_Clade_ChangeControl = yes
+	}
+}
+
+country_event = { # Back to the Land, Herbert Backe event.
+	id = GER_PreKampfzeit.77
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.77" }
+	title = GER_PreKampfzeit.77.t
+	desc = GER_PreKampfzeit.77.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.77.a
+		TNO_improve_agriculture_low = yes
+		add_stability = 0.025
+	}
+}
+
+country_event = { # Housing Minister Eigruber
+	id = GER_PreKampfzeit.78
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.78" }
+	title = GER_PreKampfzeit.78.t
+	desc = GER_PreKampfzeit.78.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.78.a
+		add_stability = 0.025
+	}
+}
+
+country_event = { # Great Works Not So Great: Speer reviews the Germania project and other projects too
+	id = GER_PreKampfzeit.79
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.79" }
+	title = GER_PreKampfzeit.79.t
+	desc = GER_PreKampfzeit.79.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.79.a
+		add_political_power = 50
+	}
+}
+
+country_event = { # Great Works Not So Great: Speer reviews the Germania project and other projects too
+	id = GER_PreKampfzeit.80
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.80" }
+	title = GER_PreKampfzeit.80.t
+	desc = GER_PreKampfzeit.80.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.80.a
+		set_temp_variable = { GER_SIG_AC_v = 2.5 } GER_SIG_AC_Reac = yes
+	}
+}
+
+country_event = { # Central Committee Meeting
+	id = GER_PreKampfzeit.81
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.81" }
+	title = GER_PreKampfzeit.81.t
+	desc = GER_PreKampfzeit.81.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.81.a
+		set_temp_variable = { GER_SIG_AC_v = 2.5 } GER_SIG_AC_Ref = yes
+	}
+}
+
+country_event = { # Fix It - Speer's Economic Rationalization
+	id = GER_PreKampfzeit.82
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.82" }
+	title = GER_PreKampfzeit.82.t
+	desc = GER_PreKampfzeit.82.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.82.a
+		set_temp_variable = { GER_SIG_AC_v = 2.5 } GER_SIG_AC_Ref = yes
+		set_temp_variable = { GER_SIG_AL_v = 2.5 } GER_SIG_AL_EconFinanceMinistries_Ref = yes
+	}
+}
+
+country_event = { # Seize It - Bormann increasing the power of the PO over the economy
+	id = GER_PreKampfzeit.83
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.83" }
+	title = GER_PreKampfzeit.83.t
+	desc = GER_PreKampfzeit.83.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.83.a
+		set_temp_variable = { GER_SIG_AC_v = 2.5 } GER_SIG_AC_Orth = yes
+		set_temp_variable = { GER_SIG_AL_v = -2.5 } GER_SIG_AL_EconFinanceMinistries_Orth = yes
+		set_temp_variable = { GER_SIG_AL_v = -2.5 } GER_SIG_AL_State_Orth = yes
+		set_temp_variable = { GER_SIG_AL_v = 2.5 } GER_SIG_AL_Party_Orth = yes
+		set_temp_variable = { GER_SIG_AL_v = 2.5 } GER_SIG_AL_Reichsgaus_Orth = yes
+	}
+}
+
+country_event = { # Rein It In - Göring
+	id = GER_PreKampfzeit.84
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.84" }
+	title = GER_PreKampfzeit.84.t
+	desc = GER_PreKampfzeit.84.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.84.a
+		
+	}
+}
+
+country_event = { # Rein It In - Himmler
+	id = GER_PreKampfzeit.85
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.85" }
+	title = GER_PreKampfzeit.85.t
+	desc = GER_PreKampfzeit.85.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.85.a
+		
+	}
+}
+
+country_event = { # Hitler directs cartels to buy up failing businesses
+	id = GER_PreKampfzeit.86
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.86" }
+	title = GER_PreKampfzeit.86.t
+	desc = GER_PreKampfzeit.86.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.86.a
+		
+	}
+}
+
+country_event = { # Hitler issues stimulus to mittelstand businesses
+	id = GER_PreKampfzeit.87
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.87" }
+	title = GER_PreKampfzeit.87.t
+	desc = GER_PreKampfzeit.87.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.87.a
+		
+	}
+}
+
+country_event = { # Late 1963 CPC Review
+	id = GER_PreKampfzeit.88
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.88" }
+	title = GER_PreKampfzeit.88.t
+	desc = GER_PreKampfzeit.88.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.88.a
+		
+	}
+}
+
+country_event = { # Der Hitlerkult - The Gospel of National Socialism
+	id = GER_PreKampfzeit.89
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.89" }
+	title = GER_PreKampfzeit.89.t
+	desc = GER_PreKampfzeit.89.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.89.a
+		TNO_improve_political_parties_policy_effectiveness_med = yes
+	}
+}
+
+country_event = { # Leading the Largest Parliament
+	id = GER_PreKampfzeit.90
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.90" }
+	title = GER_PreKampfzeit.90.t
+	desc = GER_PreKampfzeit.90.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.90.a
+		TNO_improve_political_parties_policy_effectiveness_low = yes
+	}
+}
+
+country_event = { # Opening membership rolls
+	id = GER_PreKampfzeit.91
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.91" }
+	title = GER_PreKampfzeit.91.t
+	desc = GER_PreKampfzeit.91.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.91.a
+		TNO_worsen_political_parties_policy_effectiveness_low = yes
+	}
+}
+
+country_event = { # Party membership purge
+	id = GER_PreKampfzeit.92
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.92" }
+	title = GER_PreKampfzeit.92.t
+	desc = GER_PreKampfzeit.92.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.92.a
+		TNO_worsen_unemployment_policy_effectiveness_low = yes
+	}
+}
+
+country_event = { # Miracle Man - Göring rubber stamps
+	id = GER_PreKampfzeit.93
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.93" }
+	title = GER_PreKampfzeit.93.t
+	desc = GER_PreKampfzeit.93.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.93.a
+		set_temp_variable = { GER_SIG_AC_v = 2.5 } GER_SIG_AC_Gor = yes
+		set_temp_variable = { GER_SIG_AC_v = 2.5 } GER_SIG_AC_Ref = yes
+	}
+}
+
+country_event = { # Working Like a Horse
+	id = GER_PreKampfzeit.94
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.94" }
+	title = GER_PreKampfzeit.94.t
+	desc = GER_PreKampfzeit.94.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.94.a
+	}
+}
+
+country_event = { # No Way Around It
+	id = GER_PreKampfzeit.95
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.95" }
+	title = GER_PreKampfzeit.95.t
+	desc = GER_PreKampfzeit.95.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Epic Fail
+		name = GER_PreKampfzeit.95.a
+		set_temp_variable = { money_reserves_temp = 0.05 } econ_money_reserves_change_raw_money = yes
+		TNO_worsen_political_parties_policy_effectiveness_low = yes
+		TNO_worsen_admin_efficiency_low = yes
+	}
+}
+
+country_event = { # Meldungen aus dem Reich
+	id = GER_PreKampfzeit.96
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.96" }
+	title = GER_PreKampfzeit.96.t
+	desc = GER_PreKampfzeit.96.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # It looks bad
+		name = GER_PreKampfzeit.96.a
+	}
+}
+
+country_event = { # Stand Beneath the Banners - Rally
+	id = GER_PreKampfzeit.97
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.97" }
+	title = GER_PreKampfzeit.97.t
+	desc = GER_PreKampfzeit.97.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.97.a
+	}
+}
+
+country_event = { # Himmler, Heydrich and Göring Security Crackdown
+	id = GER_PreKampfzeit.98
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.98" }
+	title = GER_PreKampfzeit.98.t
+	desc = GER_PreKampfzeit.98.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.98.a
+	}
+}
+
+country_event = { # Religious Overview
+	id = GER_PreKampfzeit.99
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.98" }
+	title = GER_PreKampfzeit.98.t
+	desc = GER_PreKampfzeit.98.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.98.a
+	}
+}
+
+country_event = { # Staatschutzkorps
+	id = GER_PreKampfzeit.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.100" }
+	title = GER_PreKampfzeit.100.t
+	desc = GER_PreKampfzeit.100.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.100.a
+	}
+}
+
+country_event = { # Offentliche Ordnung
+	id = GER_PreKampfzeit.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.101" }
+	title = GER_PreKampfzeit.101.t
+	desc = GER_PreKampfzeit.101.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.101.a
+		set_temp_variable = { InteractionChange = 1 } GER_Kartenhaus_AddInteraction = yes
+	}
+}
+
+country_event = { # Offentliche Ordnung
+	id = GER_PreKampfzeit.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.102" }
+	title = GER_PreKampfzeit.102.t
+	desc = GER_PreKampfzeit.102.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.102.a
+		set_temp_variable = { InteractionChange = 1 } GER_Kartenhaus_AddInteraction = yes
+	}
+}
+
+country_event = { # Himmler Wewelsburg meeting
+	id = GER_PreKampfzeit.103
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.103" }
+	title = GER_PreKampfzeit.103.t
+	desc = GER_PreKampfzeit.103.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.103.a
+		set_temp_variable = { GER_SIG_AC_v = 5 } GER_SIG_AC_Reac = yes
+	}
+}
+
+country_event = { # Society Review
+	id = GER_PreKampfzeit.104
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.104" }
+	title = GER_PreKampfzeit.104.t
+	desc = GER_PreKampfzeit.104.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Bad lol, but at least we tried
+		name = GER_PreKampfzeit.104.a
+		set_temp_variable = { GER_SIG_AP_v = -2 } GER_SIG_AP_Security	= yes
+		set_temp_variable = { GER_SIG_AP_v = 2 } GER_SIG_AP_PropagandaMinistry = yes
+		set_temp_variable = { GER_SIG_AC_v = 5 } GER_SIG_AC_Ruling = yes
+		set_temp_variable = { DominanceChange = 0.05 } GER_Kartenhaus_AddPartyDominance = yes
+	}
+}
+
+country_event = { # North Sea Flood
+	id = GER_PreKampfzeit.105
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.105" }
+	title = GER_PreKampfzeit.105.t
+	desc = GER_PreKampfzeit.105.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.105.a
+		56 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+			add_province_modifier = {
+				static_modifiers = { flooded }
+				days = 7
+				province = 309
+			}
+		}
+		58 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+		188 = {
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+		775 = {
+			damage_building = {
+				type = infrastructure
+				damage = 4
+			}
+			remove_building = {
+				type = infrastructure
+				level = 2
+			}
+			add_province_modifier = {
+				static_modifiers = { flooded }
+				days = 7
+				province = 9347
+			}
+		}
+		add_manpower = -347
+	}
+}
+
+#################################################
+##=|            Kampfzeit Startup            |=##
+##=====================| |=====================##
+#################################################
+# TEMP: Cleaned up triggers for different collapses in Europe
+country_event = { # Security situation collapses in Europe
+	id = GER_PreKampfzeit.999
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.999" }
+	title = GER_PreKampfzeit.999.t
+	desc = GER_PreKampfzeit.999.desc
+	picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	immediate = {
+			GRO = { country_event = { id = GRO.7 days = 1 } } # REMOVE FOR DV
+			COG = { country_event = { id = COG_focus.18 days = 1 } } # REMOVE FOR DV
+			ROM = { country_event = { id = ROM_skeleton.3 days = 44 } } # New Romania skeleton moves this out of here, remove when merging into VaJ branch
+
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = BRITAIN_CONTENT_STATUS
+							option = BRITAIN_OLD
+						}
+					}
+				}
+				ENG = {
+					hidden_effect = {
+						country_event = { id = ENG_DOM.0 }
+						country_event = { id = britain_lesbians.5 days = 2 }
+					}
+				}
+			}
+
+			## Madagascar, change for DV?
+			country_event = { id = MAD_GER.8 days = 2 }
+			USA = { country_event = { id = MAD_USA.4 days = 490 } }
+			GER = { country_event = { id = MAD_GER.10 days = 490 } }
+			if = {
+				limit = { MAD = { is_subject_of = FRS } }
+				set_autonomy = {
+					target = MAD
+					autonomy_state = autonomy_free
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+		#Assasination of Dmitrije Ljotic
+		SER = { country_event = { id = serbia.0 days = 1 } }
+		
+		## These events were previously triggered by the GCW/Kampfzeit, they have been moved here with 11 days added to their trigger. ##
+		
+		#milch event
+		country_event = { id = MAD_GER.9 days = 71 }
+
+		#African Recolonisation
+		ZZZ = { country_event = { id = W_AFRICA.0 days = 21 } }
+
+		#Denmark Picks A Path
+		DEN = { country_event = { id = den.2 days = 25 } }
+
+		#Ukraine Crumbles
+		UKR = { country_event = { id = UKR_UCW_startup.1 days = 22 } }
+
+		#Ireland Braces for Impact
+		IRE = { country_event = { id = IRE_intro.11 days = 11 hours = 3 } }
+
+		#Tiso fucking dies
+		SLO = { country_event = { id = SLO_skeleton.1 days = 76 } }
+
+		#ECW
+		ENG = { country_event = { id = ENG_HMMLRECW.1 days = 20 } }
+
+		#Mexico Flavour Event
+		MEX = { country_event = { id = MEX_Flavor.50 days = 12 } }
+
+		IBR = { country_event = { id = IBR_germany.3 days = 26 } }
+
+		#Winter olympics success
+		CAN = { news_event = { id = WORLD.18218 days = 111 } }
+	}
+
+	option = {
+		name = GER_PreKampfzeit.999.a
+	}
+}
+
+# Reserved event slots: 0-9 (GER_PreKampfzeit)
+
+country_event = { # Hitler dies
+	id = GER_PreKampfzeit.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.1" }
+	title = GER_PreKampfzeit.1.t
+	desc = GER_PreKampfzeit.1.desc
+	picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 3
+
+	option = {
+		name = GER_PreKampfzeit.1.a
+		# custom_effect_tooltip = 
+		kill_country_leader = yes
+		promote_character = GER_karl_kaufmann
+		swap_ideas = {
+			remove_idea = GER_lost_decade
+			add_idea = GER_end_of_the_hitlerzeit
+		}
+
+		hidden_effect = {
+			remove_ideas = {
+				GER_econ_idea_5
+				GER_endsieg
+			}
+			add_ideas = { # Proper ordering :)
+				GER_econ_idea_5
+				GER_endsieg
+			}
+
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD_REICH.2 days = 1 }
+			}
+
+			country_event = { id = GER_PreKampfzeit.2 days = 3 } # Senate vote stalls
+			country_event = { id = GER_Kampfzeit.6 days = 65 } # Kampfzeit Escalation
+			
+			country_event = { id = pol.1 days = 4 } # Beginning of Poles going crazy
+			country_event = { id = GER_Kampfzeit.521 days = 6 } # Shortage Crisis
+			country_event = { id = GER_Kampfzeit.522 days = 40 } # Second General Uprising
+			country_event = { id = GER_Kampfzeit.600 days = 100 } # Walloon Riots
+			country_event = { id = GER_Kampfzeit.500 days = 7 } # Sparkassen Collapse event chain start
+			country_event = { id = GER_Kampfzeit.520 days = 48 } # Ukrainian Emergency Response
+			
+			USA = { country_event = USA.10 } # US flavour event
+			AAO = { country_event = antarctica_aao_leaders.160 } # AAO flavour
+		
+			# Debug
+			if = {
+				limit = { has_country_flag = GER_Kampfzeit_Debug }
+				country_event = GER_PreKampfzeit.3
+				country_event = GER_PreKampfzeit.999
+			}
+		}
+	}
+}
+
+country_event = { # Senate stalls
+	id = GER_PreKampfzeit.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.2" }
+	title = GER_PreKampfzeit.2.t
+	desc = GER_PreKampfzeit.2.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 3
+
+	option = {
+		name = GER_PreKampfzeit.2.a
+		country_event = { id = GER_PreKampfzeit.3 days = 1 } # Kampfzeit start
+	}
+}
+
+country_event = { # The Kampfzeit starts
+	id = GER_PreKampfzeit.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.3" }
+	title = GER_PreKampfzeit.3.t
+	desc = GER_PreKampfzeit.3.desc
+	picture = GFX_report_event_generic_building_rubble
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 2
+	
+	immediate = { 
+		hidden_effect = { 
+			country_event = { id = GER_PreKampfzeit.4 days = 5 }
+			if = {
+				limit = {
+					is_ai = no
+				}
+				set_global_flag = tno_speed_warning
+			}
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.3.a
+		trigger = { NOT = { has_country_flag = GER_Kampfzeit_Debug } } # Fired from debug
+		GER_Kampfzeit_Start = yes
+	}
+
+	# TEMPORARY (maybe) DEBUG OPTIONS
+	option = {
+		name = "Debug - Göring's perspective"
+		trigger = { has_country_flag = GER_Kampfzeit_Debug } # Fired from debug
+		GER_Kampfzeit_ContenderSelection_Goring = yes
+		GER_Kampfzeit_Start = yes
+	}
+	option = {
+		name = "Debug - Bormann's perspective"
+		trigger = { has_country_flag = GER_Kampfzeit_Debug } # Fired from debug
+		GER_Kampfzeit_ContenderSelection_Bormann = yes
+		GER_Kampfzeit_Start = yes
+	}
+	option = {
+		name = "Debug - Speer's perspective"
+		trigger = { has_country_flag = GER_Kampfzeit_Debug } # Fired from debug
+		GER_Kampfzeit_ContenderSelection_Speer = yes
+		GER_Kampfzeit_Start = yes
+	}
+	option = {
+		name = "Debug - Himmler's perspective"
+		trigger = { has_country_flag = GER_Kampfzeit_Debug } # Fired from debug
+		GER_Kampfzeit_ContenderSelection_Himmler = yes
+		GER_Kampfzeit_Start = yes
+	}
+}
+
+country_event = { # Hitler's private funeral
+	id = GER_PreKampfzeit.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.4" }
+	title = GER_PreKampfzeit.4.t
+	desc = GER_PreKampfzeit.4.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_PreKampfzeit.4.a
+	}
+}
+
+country_event = { # Hitler overworked himself
+	id = GER_PreKampfzeit.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_PreKampfzeit.5" }
+	title = GER_PreKampfzeit.5.t
+	desc = GER_PreKampfzeit.5.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		check_variable = {
+			var = GER_Hitler_Overworked_Counter
+			value = 7
+			compare = greater_than_or_equals
+		}
+	}
+
+	option = {
+		name = GER_PreKampfzeit.5.a
+		custom_effect_tooltip = GER_PreKampfzeit_Hitler_Overworked_tt
+		custom_effect_tooltip = GER_new_options_will_focus_tree
+		hidden_effect = {
+			set_country_flag = GER_IntroTree_hitler_dood_wat_nou
+			reload_GER_intro_tree = yes
+		}
+	}
+}
+
+##   ##  #####  ###    ### ######  ####### ####### ####### ## ########     ####### ##    ## ####### ###    ## ######## ####### 
+##  ##  ##   ## ####  #### ##   ## ##         ###  ##      ##    ##        ##      ##    ## ##      ####   ##    ##    ##
+#####   ####### ## #### ## ######  #####     ###   #####   ##    ##        #####   ##    ## #####   ## ##  ##    ##    ####### 
+##  ##  ##   ## ##  ##  ## ##      ##       ###    ##      ##    ##        ##       ##  ##  ##      ##  ## ##    ##         ## 
+##   ## ##   ## ##      ## ##      ##      ####### ####### ##    ##        #######   ####   ####### ##   ####    ##    ####### 
+# Kampfzeit Events
+
+# Reserved event slots: 0-9 (GER_Kampfzeit)
+
+country_event = { # You won the kampfzeit
+	id = GER_Kampfzeit.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.1" }
+	title = GER_Kampfzeit.1.t
+	desc = GER_Kampfzeit.1.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.1.a
+		reload_GER_kampfzeit_tree = yes
+		
+		hidden_effect = {
+			set_country_flag = GER_Kampfzeit_Won
+		}
+	}
+}
+
+country_event = { # Bormann fucking wins and is awesome
+	id = GER_Kampfzeit.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.2" }
+	title = GER_Kampfzeit.2.t
+	desc = GER_Kampfzeit.2.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.2.a
+		GER_Kampfzeit_End = yes
+		GER_ContentSetup_Bormann = yes
+
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD_REICH.5 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = { # Speer fucking wins and its cringe
+	id = GER_Kampfzeit.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.3" }
+	title = GER_Kampfzeit.3.t
+	desc = GER_Kampfzeit.3.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.3.a
+		GER_Kampfzeit_End = yes
+		GER_ContentSetup_Speer = yes
+
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD_REICH.4 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = { # Himmler fucking wins and its weird
+	id = GER_Kampfzeit.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.4" }
+	title = GER_Kampfzeit.4.t
+	desc = GER_Kampfzeit.4.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.4.a
+		GER_Kampfzeit_End = yes
+		GER_ContentSetup_Himmler = yes
+
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD_REICH.7 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = { # Göring fucking wins and its cool
+	id = GER_Kampfzeit.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.5" }
+	title = GER_Kampfzeit.5.t
+	desc = GER_Kampfzeit.5.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.5.a
+		GER_Kampfzeit_End = yes
+		GER_ContentSetup_Goring = yes
+
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = WORLD_REICH.6 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = { # Kampfzeit escalates, sucking ass at the crises and kartenhaus will kick you in the ass now
+	id = GER_Kampfzeit.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.6" }
+	title = GER_Kampfzeit.6.t
+	desc = GER_Kampfzeit.6.desc
+	picture = GFX_report_event_GER_reich_funeral
+	
+	immediate = {
+		set_country_flag = GER_SecondKampfzeit_Escalation_Active
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+
+	option = {
+		name = GER_Kampfzeit.6.a
+		custom_effect_tooltip = GER_SecondKampfzeit_Escalation_tt
+		
+		hidden_effect = { set_country_flag = GER_SecondKampfzeit_Escalation_Active }
+	}
+}
+
+# Reserved event slots: 100-199 (GER_Kampfzeit)
+#Bormannn events
+country_event = { # 
+	id = GER_Kampfzeit.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.100" }
+	title = GER_Kampfzeit.100.t
+	desc = GER_Kampfzeit.100.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = GER_Kampfzeit.100.a
+	}
+}
+
+country_event = { # 
+	id = GER_Kampfzeit.101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.101" }
+	title = GER_Kampfzeit.101.t
+	desc = GER_Kampfzeit.101.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = GER_Kampfzeit.101.a
+	}
+}
+
+country_event = { # 
+	id = GER_Kampfzeit.102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.102" }
+	title = GER_Kampfzeit.102.t
+	desc = GER_Kampfzeit.102.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+	}
+
+	option = {
+		name = GER_Kampfzeit.102.a
+	}
+}
+
+# Reserved event slots: 500-∞ (GER_Kampfzeit)
+# All the other kampfzeit goodies
+
+country_event = { # Sparkassen starts to go tits up
+	id = GER_Kampfzeit.500
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.500" }
+	title = GER_Kampfzeit.500.t
+	desc = GER_Kampfzeit.500.desc
+	picture = GFX_report_event_GER_reich_funeral
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.500.a
+		
+		hidden_effect = { 
+			country_event = { id = GER_Kampfzeit.501 days = 7 }
+		}
+	}
+}
+
+country_event = { # Sparkassen starts to go tits up part 2
+	id = GER_Kampfzeit.501
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.501" }
+	title = GER_Kampfzeit.501.t
+	desc = GER_Kampfzeit.501.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Göring
+		name = GER_Kampfzeit.501.a
+		
+		hidden_effect = { 
+			country_event = { id = GER_Kampfzeit.502 days = 7 }
+		}
+	}
+	option = { # Bormann
+		name = GER_Kampfzeit.501.b
+		
+		hidden_effect = { 
+			country_event = { id = GER_Kampfzeit.503 days = 7 }
+		}
+	}
+
+	option = { # Speer
+		name = GER_Kampfzeit.501.c
+		
+		hidden_effect = { 
+			country_event = { id = GER_Kampfzeit.504 days = 7 }
+		}
+	}
+}
+
+country_event = { # Sparkassen - Göring takes the reigns
+	id = GER_Kampfzeit.502
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.502" }
+	title = GER_Kampfzeit.502.t
+	desc = GER_Kampfzeit.502.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.502.a
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.SparkassenCollapse } GER_Situations_SecondKampfzeit_AddCrisis = yes
+		activate_mission = GER_Situations_SecondKampfzeit_SparkassenCountdown
+		
+		hidden_effect = { 
+			set_country_flag = GER_SecondKampfzeit_GoringSparkassen
+			if = {
+				limit = {
+					has_country_flag = GER_Kampfzeit_SpeerAlliance
+				}
+				country_event = { id = GER_Kampfzeit.505 days = 2 }
+			}
+			else = {
+				country_event = { id = GER_Kampfzeit.506 days = 2 }
+			}
+			set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.SparkassenCollapse = 85 }
+		}
+	}
+}
+
+country_event = { # Sparkassen - Bormann takes the reigns
+	id = GER_Kampfzeit.503
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.503" }
+	title = GER_Kampfzeit.503.t
+	desc = GER_Kampfzeit.503.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.503.a
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.SparkassenCollapse } GER_Situations_SecondKampfzeit_AddCrisis = yes
+		activate_mission = GER_Situations_SecondKampfzeit_SparkassenCountdown
+		
+		hidden_effect = { 
+			set_country_flag = GER_SecondKampfzeit_BormannSparkassen
+			random_list = {
+				50 = {
+					country_event = { id = GER_Kampfzeit.510 days = 2 }
+				}
+				50 = {
+					country_event = { id = GER_Kampfzeit.511 days = 2 }
+				}
+			}
+			set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.SparkassenCollapse = 85 }
+		}
+	}
+}
+
+country_event = { # Sparkassen - Speer takes the reigns
+	id = GER_Kampfzeit.504
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.504" }
+	title = GER_Kampfzeit.504.t
+	desc = GER_Kampfzeit.504.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.504.a
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.SparkassenCollapse } GER_Situations_SecondKampfzeit_AddCrisis = yes
+		activate_mission = GER_Situations_SecondKampfzeit_SparkassenCountdown
+		
+		hidden_effect = { 
+			set_country_flag = GER_SecondKampfzeit_SpeerSparkassen
+			if = {
+				limit = {
+					has_country_flag = GER_Kampfzeit_GoringAlliance
+				}
+				country_event = { id = GER_Kampfzeit.516 days = 9 }
+			}
+			else = {
+				country_event = { id = GER_Kampfzeit.515 days = 9 }
+			}
+			set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.SparkassenCollapse = 85 }
+		}
+	}
+}
+
+# Göring Events
+
+country_event = { # Sparkassen - Göring criticized by Bormann (alliance with Speer)
+	id = GER_Kampfzeit.505
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.505" }
+	title = GER_Kampfzeit.505.t
+	desc = GER_Kampfzeit.505.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.505.a
+		set_country_flag = GER_Situations_SecondKampfzeit_Sparkassen_BormannOpponent
+	}
+}
+
+country_event = { # Sparkassen - Göring criticized by Speer (no alliance with Speer)
+	id = GER_Kampfzeit.506
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.506" }
+	title = GER_Kampfzeit.506.t
+	desc = GER_Kampfzeit.506.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.506.a
+		set_country_flag = GER_Situations_SecondKampfzeit_Sparkassen_SpeerOpponent
+	}
+}
+
+country_event = { # Guarantee Every Sparbuch
+	id = GER_Kampfzeit.507
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.507" }
+	title = GER_Kampfzeit.507.t
+	desc = GER_Kampfzeit.507.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.507.a
+	}
+}
+
+country_event = { # Back the Municipal Guarantors
+	id = GER_Kampfzeit.508
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.508" }
+	title = GER_Kampfzeit.508.t
+	desc = GER_Kampfzeit.508.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.508.a
+	}
+}
+
+country_event = { # Declare a Bank Holiday
+	id = GER_Kampfzeit.509
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.509" }
+	title = GER_Kampfzeit.509.t
+	desc = GER_Kampfzeit.509.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.509.a
+	}
+}
+
+# Bormann Events
+
+country_event = { # Sparkassen - Bormann criticized by Speer
+	id = GER_Kampfzeit.510
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.510" }
+	title = GER_Kampfzeit.510.t
+	desc = GER_Kampfzeit.510.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.510.a
+		set_country_flag = GER_Situations_SecondKampfzeit_Sparkassen_SpeerOpponent
+	}
+}
+
+country_event = { # Sparkassen - Bormann criticized by Göring
+	id = GER_Kampfzeit.511
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.511" }
+	title = GER_Kampfzeit.511.t
+	desc = GER_Kampfzeit.511.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.511.a
+		set_country_flag = GER_Situations_SecondKampfzeit_Sparkassen_GoringOpponent
+	}
+}
+
+country_event = { # Sparkassen Partification
+	id = GER_Kampfzeit.512
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.512" }
+	title = GER_Kampfzeit.512.t
+	desc = GER_Kampfzeit.512.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.512.a
+	}
+}
+
+country_event = { # Empower the Regional Sparkassen
+	id = GER_Kampfzeit.513
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.513" }
+	title = GER_Kampfzeit.513.t
+	desc = GER_Kampfzeit.513.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.513.a
+	}
+}
+
+country_event = { # Political Redirection of Credit
+	id = GER_Kampfzeit.514
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.514" }
+	title = GER_Kampfzeit.514.t
+	desc = GER_Kampfzeit.514.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.514.a
+	}
+}
+
+# Speer Events
+
+country_event = { # Sparkassen - Speer criticized by Göring (no alliance with Göring)
+	id = GER_Kampfzeit.515
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.515" }
+	title = GER_Kampfzeit.515.t
+	desc = GER_Kampfzeit.515.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.515.a
+		set_country_flag = GER_Situations_SecondKampfzeit_Sparkassen_GoringOpponent
+	}
+}
+
+country_event = { # Sparkassen - Speer criticized by Bormann (Alliance with Göring)
+	id = GER_Kampfzeit.516
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.516" }
+	title = GER_Kampfzeit.516.t
+	desc = GER_Kampfzeit.516.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.516.a
+		set_country_flag = GER_Situations_SecondKampfzeit_Sparkassen_BormannOpponent
+	}
+}
+
+country_event = { # Sparkassen Standardization
+	id = GER_Kampfzeit.517
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.517" }
+	title = GER_Kampfzeit.517.t
+	desc = GER_Kampfzeit.517.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.517.a
+	}
+}
+
+country_event = { # Rebuild the Regional Clearing System
+	id = GER_Kampfzeit.518
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.518" }
+	title = GER_Kampfzeit.518.t
+	desc = GER_Kampfzeit.518.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.518.a
+	}
+}
+
+country_event = { # Reform the Savings Account System
+	id = GER_Kampfzeit.519
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.519" }
+	title = GER_Kampfzeit.519.t
+	desc = GER_Kampfzeit.519.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.519.a
+	}
+}
+
+## Ukrainian Emergency ##
+
+country_event = { # Ukraine Collapsed, who will manage the crisis?
+	id = GER_Kampfzeit.520
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.520" }
+	title = GER_Kampfzeit.520.t
+	desc = GER_Kampfzeit.520.desc
+	picture = GFX_report_event_GER_reich_funeral
+	
+	immediate = {
+		set_variable = { GER_SecondKampfzeit_Ukraine_VolunteerDecisionUses = 0 }
+	}
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Bormann's Eastern Ministry will wrangle the Reichskommissariat
+		name = GER_Kampfzeit.520.a
+		trigger = {
+			has_country_flag = GER_Kampfzeit_Perspective_Bormann
+		}
+		custom_effect_tooltip = GER_Situations_SecondKampfzeit_UkrainianUprising_Bormann_tt
+
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.UkrainianUprising }
+		GER_Situations_SecondKampfzeit_AddCrisis = yes
+		activate_mission = GER_Situations_SecondKampfzeit_UkraineCountdown 
+		
+		set_temp_variable = { GER_SK_Crisis_v = 4 }
+		set_temp_variable = { SeverityChange = 50 }
+		GER_Situations_SecondKampfzeit_AddSeverity = yes
+
+		set_temp_variable = { target = UKR }
+		set_temp_variable = { number = 1 }
+		TNO_set_num_volunteers = yes
+		custom_effect_tooltip = GER_Situations_SecondKampfzeit_UkrainianUprising_Deploy_Volunteer_tt
+
+		hidden_effect = {
+			set_country_flag = GER_SecondKampfzeit_BormannUkraine
+			set_country_flag = GER_SecondKampfzeit_Ukraine_SpeerOpponent
+			set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.UkrainianUprising = 70 }
+		}
+	}
+
+	option = { # Speer will coordinate with his Rosenbergite friend Leibbrandt and, via the Gang, Bräutigam
+		name = GER_Kampfzeit.520.b
+		trigger = {
+			has_country_flag = GER_Kampfzeit_Perspective_Speer
+		}
+		custom_effect_tooltip = GER_Situations_SecondKampfzeit_UkrainianUprising_Speer_tt
+
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.UkrainianUprising }
+		GER_Situations_SecondKampfzeit_AddCrisis = yes
+		activate_mission = GER_Situations_SecondKampfzeit_UkraineCountdown 
+		
+		set_temp_variable = { GER_SK_Crisis_v = 4 }
+		set_temp_variable = { SeverityChange = 50 }
+		GER_Situations_SecondKampfzeit_AddSeverity = yes
+
+		set_temp_variable = { target = UKR }
+		set_temp_variable = { number = 1 }
+		TNO_set_num_volunteers = yes
+		custom_effect_tooltip = GER_Situations_SecondKampfzeit_UkrainianUprising_Deploy_Volunteer_tt
+
+		hidden_effect = {
+			set_country_flag = GER_SecondKampfzeit_SpeerUkraine
+			set_country_flag = GER_SecondKampfzeit_Ukraine_BormannOpponent
+			set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.UkrainianUprising = 70 }
+		}
+	}
+
+	option = { # Himmler seizes the initiative to cement an alliance with Rosenbergites
+		name = GER_Kampfzeit.520.c
+		trigger = {
+			has_country_flag = GER_Kampfzeit_Perspective_Himmler
+		}
+		custom_effect_tooltip = GER_Situations_SecondKampfzeit_UkrainianUprising_Himmler_tt
+
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.UkrainianUprising }
+		GER_Situations_SecondKampfzeit_AddCrisis = yes
+		activate_mission = GER_Situations_SecondKampfzeit_UkraineCountdown
+		
+		set_temp_variable = { GER_SK_Crisis_v = 4 }
+		set_temp_variable = { SeverityChange = 50 }
+		GER_Situations_SecondKampfzeit_AddSeverity = yes
+
+		set_temp_variable = { target = UKR }
+		set_temp_variable = { number = 1 }
+		TNO_set_num_volunteers = yes
+		custom_effect_tooltip = GER_Situations_SecondKampfzeit_UkrainianUprising_Deploy_Volunteer_tt
+
+		hidden_effect = {
+			set_country_flag = GER_SecondKampfzeit_HimmlerUkraine
+			set_country_flag = GER_SecondKampfzeit_Ukraine_GoringOpponent
+			set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.UkrainianUprising = 70 }
+		}
+	}
+
+	option = { # Göring and the Wehrmacht take responsibility
+		name = GER_Kampfzeit.520.d
+		trigger = {
+			has_country_flag = GER_Kampfzeit_Perspective_Goring
+		}
+		custom_effect_tooltip = GER_Situations_SecondKampfzeit_UkrainianUprising_Goring_tt
+
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.UkrainianUprising }
+		GER_Situations_SecondKampfzeit_AddCrisis = yes
+		activate_mission = GER_Situations_SecondKampfzeit_UkraineCountdown
+		
+		set_temp_variable = { GER_SK_Crisis_v = 4 }
+		set_temp_variable = { SeverityChange = 50 }
+		GER_Situations_SecondKampfzeit_AddSeverity = yes
+
+		set_temp_variable = { target = UKR }
+		set_temp_variable = { number = 1 }
+		TNO_set_num_volunteers = yes
+		custom_effect_tooltip = GER_Situations_SecondKampfzeit_UkrainianUprising_Deploy_Volunteer_tt
+
+		hidden_effect = {
+			set_country_flag = GER_SecondKampfzeit_GoringUkraine
+			set_country_flag = GER_SecondKampfzeit_Ukraine_BormannOpponent
+			set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.UkrainianUprising = 70 }
+		}
+	}
+}
+
+## Shortage Crisis (this also includes the reaction event to britain and serbia eating shit) ##
+
+country_event = { # Serbia's collapse lead to shortage crisis uncertainty, speer thinks something might go bad
+	id = GER_Kampfzeit.521
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.521" }
+	title = GER_Kampfzeit.521.t
+	desc = GER_Kampfzeit.521.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.521.a
+		trigger = {
+			NOT = {
+				has_completed_focus = GER_saving_the_peasants
+			}
+		}
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.ShortageCrisis } GER_Situations_SecondKampfzeit_AddCrisis = yes
+		hidden_effect = { set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.ShortageCrisis = 10 } }
+		GER_Situations_SecondKampfzeit_Shortage_Crisis_StartRound = yes
+		
+		set_country_flag = GER_SecondKampfzeit_Speer_Shortage_Crisis
+	}
+	option = {
+		name = GER_Kampfzeit.521.b
+		trigger = {
+			has_completed_focus = GER_saving_the_peasants
+		}
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.ShortageCrisis } GER_Situations_SecondKampfzeit_AddCrisis = yes
+		hidden_effect = { set_variable = { GER_SK_Crisis_Severity^constant:Kampfzeit.Crises.ShortageCrisis = 0 } }
+		
+		GER_Situations_SecondKampfzeit_Shortage_Crisis_StartRound = yes
+		
+		set_country_flag = GER_SecondKampfzeit_Himmler_Shortage_Crisis
+	}
+}
+
+country_event = { # Second General Uprising - this starts its own crisis, but thats managed by the proxy menu. gives some shortage crisis issue because of course :3
+	id = GER_Kampfzeit.522
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.522" }
+	title = GER_Kampfzeit.522.t
+	desc = GER_Kampfzeit.522.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Kampfzeit.522.a
+		set_temp_variable = { GER_SK_Crisis_v = constant:Kampfzeit.Crises.SecondGeneralUprising } GER_Situations_SecondKampfzeit_AddCrisis = yes
+		
+		set_temp_variable = { GER_SK_Crisis_v = 4 }
+		set_temp_variable = { SeverityChange = 10 }
+		GER_Situations_SecondKampfzeit_AddSeverity = yes
+	}
+}
+
+# Riots
+
+country_event = { # Walloon Riots
+	id = GER_Kampfzeit.600
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.600" }
+	title = GER_Kampfzeit.600.t
+	desc = GER_Kampfzeit.600.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = { 
+			country_event = { id = GER_Kampfzeit.601 days = 40 }
+			1734 = { set_demilitarized_zone = yes }
+		}
+	}
+
+	option = {
+		name = GER_Kampfzeit.600.a
+	}
+}
+
+country_event = { # Walloon Riots End
+	id = GER_Kampfzeit.601
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Kampfzeit.601" }
+	title = GER_Kampfzeit.601.t
+	desc = GER_Kampfzeit.601.desc
+	picture = GFX_report_event_GER_reich_funeral
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = { 
+			1734 = { set_demilitarized_zone = no }
+		}
+	}
+
+	option = {
+		name = GER_Kampfzeit.601.a
+	}
+}
+
+####### ##       #####  ##    ##  ######  ##    ## ######      ####### ##    ## ####### ###    ## ######## #######
+##      ##      ##   ## ##    ## ##    ## ##    ## ##   ##     ##      ##    ## ##      ####   ##    ##    ##
+#####   ##      ####### ##    ## ##    ## ##    ## ######      #####   ##    ## #####   ## ##  ##    ##    #######
+##      ##      ##   ##  ##  ##  ##    ## ##    ## ##   ##     ##       ##  ##  ##      ##  ## ##    ##         ##
+##      ####### ##   ##   ####    ######   ######  ##   ##     #######   ####   ####### ##   ####    ##    #######
+# Flavour Events
+
+# Reserved event slots: 0-∞ (GER_Flavor)
+
+#################################################
+##=|             Students & Music            |=##
+##=====================| |=====================##
+#################################################
+
+country_event = { # Kameradschaften oder Studentenverbindung?
+	id = GER_Flavor.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.1" }
+	title = GER_Flavor.1.t
+	desc = GER_Flavor.1.desc
+	picture = GFX_report_event_SGR_journal_press
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.1.a
+	}
+}
+
+country_event = { # "Die Antibürokraten"
+	id = GER_Flavor.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.2" }
+	title = GER_Flavor.2.t
+	desc = GER_Flavor.2.desc
+	picture = GFX_report_event_GER_nazi_newspaper
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.2.a
+	}
+}
+
+country_event = { # The Arrest of Friedrich-Wilhelms-Universität
+	id = GER_Flavor.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.3" }
+	title = GER_Flavor.3.t
+	desc = GER_Flavor.3.desc
+	picture = GFX_report_event_ITA_student_arrest
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.3.a
+		GER_Resistance_Students_Dec_Small = yes
+		set_temp_variable = { GER_SIG_AL_v = 2 } GER_SIG_AL_Academia_Ruling = yes
+		set_temp_variable = { GER_SIG_AL_v = 2 } GER_SIG_AL_Academia_Diss = yes
+	}
+}
+
+country_event = { # Kommune 1
+	id = GER_Flavor.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.4" }
+	title = GER_Flavor.4.t
+	desc = GER_Flavor.4.desc
+	picture = GFX_report_event_SGR_park_day
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.4.a
+		set_temp_variable = { DominanceChange = -0.01 } GER_Kartenhaus_AddPartyDominance = yes
+	}
+}
+
+country_event = { # Lange Marsch durch die Institutionen
+	id = GER_Flavor.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.5" }
+	title = GER_Flavor.5.t
+	desc = GER_Flavor.5.desc
+	picture = GFX_report_event_GER_rudi_dutschke_4
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.5.a
+		set_temp_variable = { DominanceChange = -0.01 } GER_Kartenhaus_AddPartyDominance = yes
+		set_temp_variable = { GER_SIG_AC_v = 0.3 } GER_SIG_AC_Diss = yes
+	}
+}
+
+country_event = { # RSHA Internal Security Brief No. FI-445
+	id = GER_Flavor.6
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.6" }
+	title = GER_Flavor.6.t
+	desc = GER_Flavor.6.desc
+	picture = GFX_report_event_SGR_dissent_pamphlet
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.6.a
+		set_temp_variable = { DominanceChange = 0.007 } GER_Kartenhaus_AddPartyDominance = yes
+	}
+}
+
+country_event = { # The Great Schweizer Platz Protest
+	id = GER_Flavor.7
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.7" }
+	title = GER_Flavor.7.t
+	desc = GER_Flavor.7.desc
+	picture = GFX_report_event_SGR_protest_students
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.7.a
+		add_stability = -0.03
+		GER_Resistance_Antifa_Inc_Small = yes
+		GER_Resistance_Students_Inc_Small = yes
+		set_temp_variable = { DominanceChange = -0.025 } GER_Kartenhaus_AddPartyDominance = yes
+		set_temp_variable = { GER_SIG_AC_v = 0.4 } GER_SIG_AC_Diss = yes
+	}
+}
+
+country_event = { # A Most Perplexing Crime
+	id = GER_Flavor.8
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.8" }
+	title = GER_Flavor.8.t
+	desc = GER_Flavor.8.desc
+	picture = GFX_report_event_GER_terrorism_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.8.a
+		GER_Resistance_RZ_Inc_Small = yes
+		set_temp_variable = { DominanceChange = -0.01 } GER_Kartenhaus_AddPartyDominance = yes
+	}
+}
+
+country_event = { # Radical Student Shot in Copenhagen
+	id = GER_Flavor.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.9" }
+	title = GER_Flavor.9.t
+	desc = GER_Flavor.9.desc
+	picture = GFX_report_event_GER_rudi_dutschke_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.9.a
+		add_stability = -0.02
+		GER_Resistance_Antifa_Inc_Small = yes
+		GER_Resistance_Students_Inc_Small = yes
+		set_temp_variable = { GER_SIG_AC_v = 0.1 } GER_SIG_AC_Diss = yes
+	}
+}
+
+country_event = { # Cacophonic Jazz Music
+	id = GER_Flavor.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.10" }
+	title = GER_Flavor.10.t
+	desc = GER_Flavor.10.desc
+	picture = GFX_report_event_GER_jazz
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.10.a
+	}
+}
+
+country_event = { # The Lords
+	id = GER_Flavor.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.11" }
+	title = GER_Flavor.11.t
+	desc = GER_Flavor.11.desc
+	picture = GFX_report_event_GER_the_lords
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.11.a
+	}
+}
+
+country_event = { # Radio Mishap
+	id = GER_Flavor.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.12" }
+	title = GER_Flavor.12.t
+	desc = GER_Flavor.12.desc
+	picture = GFX_report_event_generic_radio1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.12.a
+	}
+}
+
+country_event = { # Bad Records, Bad Records
+	id = GER_Flavor.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.13" }
+	title = GER_Flavor.13.t
+	desc = GER_Flavor.13.desc
+	picture = GFX_report_event_generic_record_player
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Flavor.13.a
+	}
+}
+
+#################################################
+##=|             General Flavour             |=##
+##=====================| |=====================##
+#################################################
+
+country_event = { # Kaufmann dies, Linder becomes Chairperson
+	id = GER_Flavor.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.14" }
+	title = GER_Flavor.14.t
+	desc = GER_Flavor.14.desc
+	picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Flavor.14.a
+	}
+}
+
+country_event = { # Haarmann Kampfzeit flavor (1)
+	id = GER_Flavor.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.15" }
+	title = GER_Flavor.15.t
+	desc = GER_Flavor.15.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Flavor.15.a
+		hidden_effect = { country_event = { id = GER_Flavor.16 days = 10 } }
+	}
+}
+
+country_event = { # Haarmann Kampfzeit flavor (2)
+	id = GER_Flavor.16
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.16" }
+	title = GER_Flavor.16.t
+	desc = GER_Flavor.16.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Flavor.16.a
+		hidden_effect = { country_event = { id = GER_Flavor.17 days = 200 } }
+	}
+}
+
+country_event = { # Haarmann Kampfzeit flavor (3)
+	id = GER_Flavor.17
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.17" }
+	title = GER_Flavor.17.t
+	desc = GER_Flavor.17.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Flavor.17.a
+	}
+}
+
+country_event = { # Hitler not having children flavor event
+	id = GER_Flavor.18
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.18" }
+	title = GER_Flavor.18.t
+	desc = GER_Flavor.18.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Flavor.18.a
+	}
+}
+
+country_event = { # Eduard Chain (hidden jews) (1)
+	id = GER_Flavor.19
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.19" }
+	title = GER_Flavor.19.t
+	desc = GER_Flavor.19.desc
+	picture = GFX_report_event_candle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Flavor.19.a
+		hidden_effect = { country_event = { id = GER_Flavor.20 days = 10 } }
+	}
+}
+
+country_event = { # Eduard Chain (hidden jews) (2)
+	id = GER_Flavor.20
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Flavor.20" }
+	title = GER_Flavor.20.t
+	desc = GER_Flavor.20.desc
+	picture = GFX_report_event_SGR_park_day
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Flavor.20.a
+	}
+}
+
+###    ### #######  ###### ##   ##  #####  ###    ## ##  ######  #####  ##          ####### ##    ## ####### ###    ## ######## #######
+####  #### ##      ##      ##   ## ##   ## ####   ## ## ##      ##   ## ##          ##      ##    ## ##      ####   ##    ##    ## 
+## #### ## #####   ##      ####### ####### ## ##  ## ## ##      ####### ##          #####   ##    ## #####   ## ##  ##    ##    ####### 
+##  ##  ## ##      ##      ##   ## ##   ## ##  ## ## ## ##      ##   ## ##          ##       ##  ##  ##      ##  ## ##    ##         ##
+##      ## #######  ###### ##   ## ##   ## ##   #### ##  ###### ##   ## #######     #######   ####   ####### ##   ####    ##    #######
+# Mechanical Events
+
+# Reserved event slots: 0-∞ (GER_Mechanics)
+
+#################################################
+##=|            Kartenhaus Events            |=##
+##=====================| |=====================##
+#################################################
+# Reserved event slots: 0-99 (GER_Mechanics)
+
+#|=|========[ Faction AI Events ]========|=|#
+# Reserved event slots: 0-9 (GER_Mechanics)
+
+country_event = { # Kartenhaus Faction #0 AI Pulse
+	id = GER_Mechanics.0
+	title = "Kartenhaus Faction #0 AI Pulse"
+	desc = "You shouldn't be seeing this"
+	picture = GFX_report_event_GER_nazi_street
+
+	trigger = {
+		set_temp_variable = { Faction_i = GER_Factions^0 }
+		GER_Kartenhaus_AI_PulseCheck = yes
+	}
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_temp_variable = { GER_SIG_AI_fi = GER_Factions^0 } # Can't reuse the var in the trigger bloc, need to make a new one
+		GER_Kartenhaus_AI_Run = yes
+		country_event = { id = GER_Mechanics.0 days = var:GER_AI_Frequency@var:GER_SIG_AI_fi random_days = 14 }
+	}
+
+	option = { name = ":)" }
+}
+
+country_event = { # Kartenhaus Faction #1 AI Pulse
+	id = GER_Mechanics.1
+	title = "Kartenhaus Faction #1 AI Pulse"
+	desc = "You shouldn't be seeing this"
+	picture = GFX_report_event_GER_nazi_street
+
+	trigger = {
+		set_temp_variable = { Faction_i = GER_Factions^1 }
+		GER_Kartenhaus_AI_PulseCheck = yes
+	}
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_temp_variable = { GER_SIG_AI_fi = GER_Factions^1 } # Can't reuse the var in the trigger bloc, need to make a new one
+		GER_Kartenhaus_AI_Run = yes
+		country_event = { id = GER_Mechanics.1 days = var:GER_AI_Frequency@var:GER_SIG_AI_fi random_days = 14 }
+	}
+
+	option = { name = ":)" }
+}
+
+country_event = { # Kartenhaus Faction #2 AI Pulse
+	id = GER_Mechanics.2
+	title = "Kartenhaus Faction #2 AI Pulse"
+	desc = "You shouldn't be seeing this"
+	picture = GFX_report_event_GER_nazi_street
+
+	trigger = {
+		set_temp_variable = { Faction_i = GER_Factions^2 }
+		GER_Kartenhaus_AI_PulseCheck = yes
+	}
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_temp_variable = { GER_SIG_AI_fi = GER_Factions^2 } # Can't reuse the var in the trigger bloc, need to make a new one
+		GER_Kartenhaus_AI_Run = yes
+		country_event = { id = GER_Mechanics.2 days = var:GER_AI_Frequency@var:GER_SIG_AI_fi random_days = 14 }
+	}
+
+	option = { name = ":)" }
+}
+
+country_event = { # Kartenhaus Faction #3 AI Pulse
+	id = GER_Mechanics.3
+	title = "Kartenhaus Faction #3 AI Pulse"
+	desc = "You shouldn't be seeing this"
+	picture = GFX_report_event_GER_nazi_street
+
+	trigger = {
+		set_temp_variable = { Faction_i = GER_Factions^3 }
+		GER_Kartenhaus_AI_PulseCheck = yes
+	}
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_temp_variable = { GER_SIG_AI_fi = GER_Factions^3 } # Can't reuse the var in the trigger bloc, need to make a new one
+		GER_Kartenhaus_AI_Run = yes
+		country_event = { id = GER_Mechanics.3 days = var:GER_AI_Frequency@var:GER_SIG_AI_fi random_days = 14 }
+	}
+
+	option = { name = ":)" }
+}
+
+country_event = { # Kartenhaus Faction #4 AI Pulse
+	id = GER_Mechanics.4
+	title = "Kartenhaus Faction #4 AI Pulse"
+	desc = "You shouldn't be seeing this"
+	picture = GFX_report_event_GER_nazi_street
+
+	trigger = {
+		set_temp_variable = { Faction_i = GER_Factions^4 }
+		GER_Kartenhaus_AI_PulseCheck = yes
+	}
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_temp_variable = { GER_SIG_AI_fi = GER_Factions^4 } # Can't reuse the var in the trigger bloc, need to make a new one
+		GER_Kartenhaus_AI_Run = yes
+		country_event = { id = GER_Mechanics.4 days = var:GER_AI_Frequency@var:GER_SIG_AI_fi random_days = 14 }
+	}
+
+	option = { name = ":)" }
+}
+
+country_event = { # Kartenhaus Faction #5 AI Pulse (DUMMY)
+	id = GER_Mechanics.5
+	title = "Kartenhaus Faction #5 AI Pulse (DUMMY)"
+	desc = "This doesn't actually do anything, it's just here so prevent the game from throwing an error"
+	picture = GFX_report_event_GER_nazi_street
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = { name = ":)" }
+}
+
+#|=|========[ Bormann Clade Events ]========|=|#
+# Reserved event slots: 50-59 (GER_Mechanics)
+
+
+#######  ######  ######  ####### ##  ######  ###    ##     ####### ##    ## ####### ###    ## ######## #######
+##      ##    ## ##   ## ##      ## ##       ####   ##     ##      ##    ## ##      ####   ##    ##    ##
+#####   ##    ## ######  #####   ## ##   ### ## ##  ##     #####   ##    ## #####   ## ##  ##    ##    #######
+##      ##    ## ##   ## ##      ## ##    ## ##  ## ##     ##       ##  ##  ##      ##  ## ##    ##         ##
+##       ######  ##   ## ####### ##  ######  ##   ####     #######   ####   ####### ##   ####    ##    #######
+# Foreign Events
+
+#################################################
+##=|         General Foreign Events          |=##
+##=====================| |=====================##
+#################################################
+# Reserved event slots: 0-74 (GER_Foreign)
+
+country_event = { #Poland takeover flavor
+	id = GER_Foreign.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.1" }
+	title = GER_Foreign.1.t
+	desc = GER_Foreign.1.desc
+	picture = GFX_report_event_GER_army_1
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GER_Foreign.1.a
+		add_manpower = -1
+	}
+}
+
+country_event = { # 
+	id = GER_Foreign.2
+	title = GER_Foreign.2.t
+	desc = GER_Foreign.2.d
+	# picture = 
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.2" }
+
+	option = {
+		name = GER_Foreign.2.a
+	}
+}
+
+country_event = { # Loads in the content for the correct leader in Iran
+	id = GER_Foreign.3
+	title = GER_Foreign.3.t
+	desc = GER_Foreign.3.desc
+	picture = GFX_report_event_SAF_war_crime_2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.3" }
+
+	option = {
+		name = GER_Foreign.3.a
+		set_country_flag = GER_iran_intervention
+		TNO_fopo_add_iran_civil_war_tab = yes
+		custom_effect_tooltip = GER_more_decisions_tt
+	}
+}
+
+country_event = { # Iran victory
+	id = GER_Foreign.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.4" }
+	title = GER_Foreign.4.t
+	desc = GER_Foreign.4.desc
+	picture = GFX_report_event_GER_army_2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = { PER = { has_war = no } }
+
+	option = {
+		name = GER_Foreign.4.a
+		TNO_fopo_remove_iran_civil_war_tab = yes
+		add_political_power = 100
+		add_stability = 0.03
+		add_war_support = 0.03
+		add_to_faction = PER
+		clr_country_flag = GER_iran_intervention
+		set_temp_variable = { GER_SIG_AP_v = 10 } GER_SIG_AP_Party = yes
+		set_temp_variable = { GER_SIG_AC_v = 0.5 } GER_SIG_AC_Ruling = yes
+		set_temp_variable = { target = PER }
+		TNO_clear_num_volunteers = yes
+		PER = {
+			econ_join_sphere_GER = yes
+			give_resource_rights = { receiver = GER state = 411 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+			give_resource_rights = { receiver = GER state = 412 resources = { oil aluminium rubber tungsten steel chromium uranium } }
+			TNO_improve_army_professionalism_low = yes
+			hidden_effect = {
+				remove_faction_status = yes
+				add_ideas = Pakt_Signatory
+				remove_ideas = {
+					PER_german_military_advisers
+					PER_german_industrial_aid
+				}
+			}
+		}
+	}
+}
+
+country_event = { ### Iran defeat
+	id = GER_Foreign.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.5" }
+	title = GER_Foreign.5.t
+	desc = GER_Foreign.5.desc
+	picture = GFX_report_event_GER_anarchy
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = GER_Foreign.5.a
+		TNO_fopo_remove_iran_civil_war_tab = yes
+		add_political_power = -100
+		add_stability = -0.03
+		add_war_support = -0.03
+		clr_country_flag = GER_iran_intervention
+		set_temp_variable = { GER_SIG_AP_v = -10 } GER_SIG_AP_Party = yes
+		set_temp_variable = { GER_SIG_AC_v = -0.5 } GER_SIG_AC_Ruling = yes
+		set_temp_variable = { target = PER }
+		TNO_clear_num_volunteers = yes
+	}
+}
+
+#################################################
+##=|            Oil Crisis Events            |=##
+##=====================| |=====================##
+#################################################
+# Reserved event slots: 75-99 (GER_Foreign)
+
+country_event = { # Bormann attends an emergency meeting of leading diplomatic and military personel where he is briefed of the geopolitical situation in the Middle East, with him and the leading officials arriving to the conclusion that supporting the Ba'ath cause is the best option for Germany.
+	id = GER_Foreign.75
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.75" }
+	title = GER_Foreign.75.t
+	desc = GER_Foreign.75.desc
+	picture = GFX_report_event_GER_court
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Foreign.75.a
+	}
+}
+
+country_event = { # At a breifing for offciers in the OKW, the German strategy for the Oil Crisis is presented
+	id = GER_Foreign.76
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.76" }
+	title = GER_Foreign.76.t
+	desc = GER_Foreign.76.desc
+	picture = GFX_report_event_GER_training
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Foreign.76.a
+	}
+}
+
+country_event = { # Notification event for Saudis, Germany is bombing us
+	id = GER_Foreign.77
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.77" }
+	title = GER_Foreign.77.t
+	desc = GER_Foreign.77.desc
+	picture = GFX_report_event_GER_german_bombing
+
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_Foreign.77.a
+		add_ideas = GER_OC_bombing_runs
+	}
+}
+
+country_event = { # Notification event for Saudis, the RSHA is causing some trouble
+	id = GER_Foreign.78
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.78" }
+	title = GER_Foreign.78.t
+	desc = GER_Foreign.78.desc
+	picture = GFX_report_event_GER_city_burning
+
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_Foreign.78.a
+		add_timed_idea = { idea = GER_OC_rsha_sabotage days = 365 }
+	}
+}
+
+country_event = { # Notification event for Ba'aths, Germany has sent military instructors
+	id = GER_Foreign.79
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.79" }
+	title = GER_Foreign.79.t
+	desc = GER_Foreign.79.desc
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_Foreign.79.a
+		add_timed_idea = { idea = GER_OC_wehrmacht_advisors days = 730 }
+	}
+}
+
+country_event = { # Notification event for Ba'aths, Germany has sent technicians and industrial support
+	id = GER_Foreign.80
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.80" }
+	title = GER_Foreign.80.t
+	desc = GER_Foreign.80.desc
+	picture = GFX_report_event_generic_lend_lease
+
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_Foreign.80.a
+		add_timed_idea = { idea = GER_OC_german_technicians days = 365 }
+	}
+}
+
+country_event = { # Notification event for Ba'aths, Germany has sent economic investments
+	id = GER_Foreign.81
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.81" }
+	title = GER_Foreign.81.t
+	desc = GER_Foreign.81.desc
+	picture = GFX_report_event_generic_research_lab
+
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_Foreign.81.a
+		custom_effect_tooltip = econ_increase_GDP_small
+	}
+}
+
+country_event = { # UAR bounty time
+	id = GER_Foreign.82
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.82" }
+	title = GER_Foreign.82.t
+	desc = GER_Foreign.82.desc
+	picture = GFX_report_event_generic_arab_soldiers1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { country_exists = UAR }
+
+	option = { #
+		name = GER_Foreign.82.a
+		set_temp_variable = { BOR_OC_pp_bonus = BOR_OC_participation }
+		set_temp_variable = { BOR_OC_war_support_bonus = BOR_OC_participation }
+		multiply_temp_variable = { BOR_OC_pp_bonus = 3 }
+		multiply_temp_variable = { BOR_OC_war_support_bonus = 0.001 }
+		add_political_power = BOR_OC_pp_bonus
+		add_war_support = BOR_OC_war_support_bonus
+		if = {
+			limit = { check_variable = { BOR_OC_participation > 30 } }
+			set_temp_variable = { BOR_OC_liquid_reserves_bonus = BOR_OC_participation }
+			set_temp_variable = { BOR_OC_gdp_growth_bonus = BOR_OC_participation }
+			divide_temp_variable = { BOR_OC_liquid_reserves_bonus = 50 }
+			divide_temp_variable = { BOR_OC_gdp_growth_bonus = 100 }
+
+			# Economic bonuses are proportional to the UAR's size
+			if = {
+				limit = { UAR = { owns_state = 446 } } # Egypt
+				multiply_temp_variable = { BOR_OC_liquid_reserves_bonus = 1.1 }
+				multiply_temp_variable = { BOR_OC_gdp_growth_bonus = 1.05 }
+			}
+			if = {
+				limit = { UAR = { owns_state = 294 } } # Oman
+				multiply_temp_variable = { BOR_OC_liquid_reserves_bonus = 1.1 }
+				multiply_temp_variable = { BOR_OC_gdp_growth_bonus = 1.05 }
+			}
+			if = {
+				limit = { UAR = { owns_state = 293 } } # Yemen
+				multiply_temp_variable = { BOR_OC_liquid_reserves_bonus = 1.1 }
+				multiply_temp_variable = { BOR_OC_gdp_growth_bonus = 1.05 }
+			}
+			if = {
+				limit = { UAR = { owns_state = 291 } } # Iraq
+				multiply_temp_variable = { BOR_OC_liquid_reserves_bonus = 1.1 }
+				multiply_temp_variable = { BOR_OC_gdp_growth_bonus = 1.05 }
+			}
+			if = {
+				limit = { UAR = { owns_state = 656 } } # The Gulf
+				multiply_temp_variable = { BOR_OC_liquid_reserves_bonus = 1.1 }
+				multiply_temp_variable = { BOR_OC_gdp_growth_bonus = 1.05 }
+			}
+			if = {
+				limit = { UAR = { owns_state = 1306 } } # The Levant
+				multiply_temp_variable = { BOR_OC_liquid_reserves_bonus = 1.1 }
+				multiply_temp_variable = { BOR_OC_gdp_growth_bonus = 1.05 }
+			}
+			set_temp_variable = { money_reserves_temp = BOR_OC_liquid_reserves_bonus }
+			econ_money_reserves_change_raw_money = yes
+			set_temp_variable = { gdp_growth_temp = BOR_OC_gdp_growth_bonus }
+			econ_gdp_growth_change = yes
+		}
+		if = {
+			limit = { check_variable = { BOR_OC_participation > 60 } }
+			UAR = { add_ideas = GER_OC_UAR_trade }
+		}
+		if = {
+			limit = { check_variable = { BOR_OC_participation > 80 } }
+			UAR = { give_resource_rights = { receiver = GER state = 291 } }
+		}
+		clear_variable = BOR_OC_participation
+	}
+}
+
+#################################################
+##=|              Iberia Events              |=##
+##=====================| |=====================##
+#################################################
+# Reserved event slots: 100-119 (GER_Foreign)
+
+country_event = { #Frente Azul requests Pakt membership
+	id = GER_Foreign.100
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.100" }
+	title = GER_Foreign.100.t
+	desc = GER_Foreign.100.desc
+	picture = GFX_report_event_IBR_frente_azul_flag
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = GER_Foreign.100.a
+		add_to_faction = FZL
+		add_to_faction = GNS
+		set_temp_variable = { SeaZone_ID = 5 } # 5; Med
+		Cold_War_GUI_PowerProjection_AddSeaZone = yes
+		hidden_effect = {
+			FZL = {
+				add_ideas = Pakt_Signatory
+				if = {
+					limit = { GER_Speer_Path_Active = yes }
+					join_zollverein = yes
+				}
+			}
+			GNS = {
+				add_ideas = Pakt_Signatory
+				if = {
+					limit = { GER_Speer_Path_Active = yes }
+					join_zollverein = yes
+				}
+			}
+		}
+	}
+	option = { # Nah
+		name = GER_Foreign.100.b
+		ai_chance = { factor = 0 }
+		add_political_power = -20
+	}
+}
+
+country_event = { # IBW Introduction
+	id = GER_Foreign.101
+	title = GER_Foreign.101.t
+	desc = GER_Foreign.101.d
+	picture = GFX_report_event_IBR_falange_standard_bearers
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.101" }
+
+	option = {
+		name = GER_Foreign.101.a
+		TNO_fopo_add_IBW_tab = yes
+	}
+}
+
+country_event = { # IBW Ending
+	id = GER_Foreign.102
+	title = GER_Foreign.102.t
+	desc = GER_Foreign.102.d
+	picture = GFX_report_event_IBR_falange_standard_bearers
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.102" }
+
+	option = {
+		name = GER_Foreign.102.a
+		TNO_fopo_remove_IBW_tab = yes
+		set_temp_variable = { target = SPS }
+		TNO_clear_num_volunteers = yes
+		set_temp_variable = { target = FZL }
+		TNO_clear_num_volunteers = yes
+		if = {
+			limit = { SPS = { exists = yes } }
+			SPS = {
+				econ_join_sphere_GER = yes
+				add_ideas = Pakt_Bundnispartner
+			}
+		}
+		else_if = {
+			limit = { FZL = { exists = yes } }
+			FZL = {
+				econ_join_sphere_GER = yes
+				add_ideas = Pakt_Bundnispartner
+			}
+		}
+	}
+}
+
+#################################################
+##=|                WW3 Events               |=##
+##=====================| |=====================##
+#################################################
+# Reserved event slots: 120-129 (GER_Foreign)
+
+country_event = { # WW3 tree loader
+	id = GER_Foreign.120
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.120" }
+	title = GER_Foreign.120.t
+	desc = GER_Foreign.120.desc
+	picture = GFX_report_event_generic_battle
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = GER_Foreign.120.a
+		custom_effect_tooltip = GER_new_options_focus_tree
+		hidden_effect = { load_focus_tree = { tree = GER_WW3 keep_completed = no } }
+	}
+}
+
+country_event = { # German ultimatum event
+	id = GER_Foreign.121
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.121" }
+	title = GER_Foreign.121.t
+	desc = GER_Foreign.121.desc
+	picture = GFX_report_event_GER_court
+
+	is_triggered_only = yes
+
+	option = { # We accept
+		name = GER_Foreign.121.a
+		ai_chance = {
+			factor = 20
+			modifier = {
+				tag = SWI
+				factor = 0
+			}
+		}
+		GER = { country_event = { id = GER_Foreign.122 days = 1 } }
+	}
+	option = { # We refuse
+		name = GER_Foreign.121.b
+		ai_chance = { factor = 80 }
+		GER = { country_event = { id = GER_Foreign.123 days = 1 } }
+	}
+}
+
+country_event = { # Ultimatum accepted
+	id = GER_Foreign.122
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.122" }
+	title = GER_Foreign.122.t
+	desc = GER_Foreign.122.desc
+	picture = GFX_report_event_GER_training
+
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_Foreign.122.a
+		add_political_power = 50
+		FROM = {
+			save_party_popularities = yes
+			get_current_government_type = yes
+		}
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_collaborator_puppet_state
+		}
+		FROM = {
+			apply_party_popularities = yes
+			restore_previous_government_type = yes
+			hidden_effect = {
+				every_other_country = {
+					limit = { has_war_with = GER }
+					declare_war_on = { target = PREV type = annex_everything }
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Ultimatum refused
+	id = GER_Foreign.123
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Foreign.123" }
+	title = GER_Foreign.123.t
+	desc = GER_Foreign.123.desc
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = { #
+		name = GER_Foreign.123.a
+		add_political_power = -50
+	}
+	option = { #
+		name = GER_Foreign.123.b
+		add_political_power = -25
+		declare_war_on = { target = FROM type = annex_everything }
+	}
+}
+
+####### ######   #####   ###### #######
+##      ##   ## ##   ## ##      ##
+####### ######  ####### ##      #####
+     ## ##      ##   ## ##      ##
+####### ##      ##   ##  ###### #######
+# Space Events
+
+# Reserved event slots: 0-∞ (GER_Space)
+
+country_event = { #Space Intro - Goebbels and Von Braun 13/01/62
+	id = GER_Space.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Space.10" }
+	title = GER_Space.10.t
+	desc = GER_Space.10.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Space.10.a
+		hidden_effect = { country_event = { id = GER_Space.11 days = 3 } }
+	}
+}
+
+country_event = { # 
+	id = GER_Space.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Space.11" }
+	title = GER_Space.11.t
+	desc = GER_Space.11.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Space.11.a
+	}
+}
+
+country_event = { # Manned Orbit
+	id = GER_Space.12
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Space.12" }
+	title = GER_Space.12.t
+	desc = GER_Space.12.desc
+	picture = GFX_report_event_GER_raumfahrer_rwra
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = { 
+			country_event = { id = GER_Space.13 days = 40 } 
+			country_event = { id = GER_PreKampfzeit.25 hours = 2 }
+		}
+	}
+
+	option = {
+		name = GER_Space.12.a
+	}
+}
+
+country_event = { # Sub ROSA 28/03/62 (if space race focus is taken in proper timing)
+	id = GER_Space.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Space.13" }
+	title = GER_Space.13.t
+	desc = GER_Space.13.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = { 
+			country_event = { id = GER_Space.13 days = 40 } 
+		}
+	}
+
+	option = {
+		name = GER_Space.13.a
+	}
+}
+
+country_event = { # Lunch between Sänger and Göring 07/05/62
+	id = GER_Space.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Space.14" }
+	title = GER_Space.14.t
+	desc = GER_Space.14.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		hidden_effect = { 
+			country_event = { id = GER_Space.15 days = 25 } 
+		}
+	}
+
+	option = {
+		name = GER_Space.14.a
+	}
+}
+
+country_event = { # Space Race beginning 01/06/62
+	id = GER_Space.15
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Space.14" }
+	title = GER_Space.15.t
+	desc = GER_Space.15.desc
+	#picture = GFX_report_event_GER_bormann_wins
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = GER_Space.15.a
+	}
+}
+
+######  ####### ######  ##    ##  ######      ####### ##    ## ####### ###    ## ######## ####### 
+##   ## ##      ##   ## ##    ## ##           ##      ##    ## ##      ####   ##    ##    ##      
+##   ## #####   ######  ##    ## ##   ###     #####   ##    ## #####   ## ##  ##    ##    ####### 
+##   ## ##      ##   ## ##    ## ##    ##     ##       ##  ##  ##      ##  ## ##    ##         ## 
+######  ####### ######   ######   ######      #######   ####   ####### ##   ####    ##    ####### 
+# Debug Events
+
+# Intro Tree(s) Debug
+country_event = {
+	id = GER_Debug.1
+	title = "Intro & Pre-Kampfzeit Debug Trees Loading"
+	desc = "hahahaHAHAHAHAHAHAHAHAAAA"
+	picture = GFX_report_event_generic_the_joker
+	is_triggered_only = yes
+
+	option = {
+		name = "Intro Tree (Start)"
+		set_country_flag = GER_IntroTree
+		clr_country_flag = GER_IntroTree_hitler_heart_attack
+		clr_country_flag = GER_IntroTree_load_contender_focuses
+		clr_country_flag = GER_IntroTree_calm_before_the_storm
+		clr_country_flag = GER_IntroTree_hitler_dood_wat_nou
+		reload_GER_intro_tree = yes
+	}
+
+	option = {
+		name = "Intro Tree (Full)"
+		set_country_flag = GER_IntroTree
+		set_country_flag = GER_IntroTree_hitler_heart_attack
+		set_country_flag = GER_IntroTree_load_contender_focuses
+		clr_country_flag = GER_IntroTree_calm_before_the_storm
+		clr_country_flag = GER_IntroTree_hitler_dood_wat_nou
+		reload_GER_intro_tree = yes
+	}
+
+	option = {
+		name = "Pre-Kampfzeit/Power Struggle Tree (Start)"
+		country_event = GER_Debug.2
+		set_country_flag = GER_IntroTree
+		set_country_flag = GER_IntroTree_hitler_heart_attack
+		set_country_flag = GER_IntroTree_load_contender_focuses
+		set_country_flag = GER_IntroTree_calm_before_the_storm
+		clr_country_flag = GER_IntroTree_hitler_dood_wat_nou
+		reload_GER_intro_tree = yes
+	}
+
+	option = {
+		name = "Pre-Kampfzeit/Power Struggle Tree (Full)"
+		country_event = GER_Debug.2
+		set_country_flag = GER_IntroTree
+		set_country_flag = GER_IntroTree_hitler_heart_attack
+		set_country_flag = GER_IntroTree_load_contender_focuses
+		set_country_flag = GER_IntroTree_calm_before_the_storm
+		set_country_flag = GER_IntroTree_hitler_dood_wat_nou
+		reload_GER_intro_tree = yes
+	}
+}
+
+country_event = {
+	id = GER_Debug.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Debug.2" }
+	title = "Contender Selection Debug"
+	desc = "hahahaHAHAHAHAHAHAHAHAAAA"
+	picture = GFX_report_event_generic_the_joker
+	is_triggered_only = yes
+
+	immediate = {
+		# Mechanical startup
+		set_country_flag = GER_Kartenhaus_Initialize_GameStart
+		GER_Kartenhaus_Disable = yes
+		GER_Kartenhaus_Initialize = yes
+		GER_Situations_Activate = yes
+		set_temp_variable = { SituationID = token:GER_Situations_PreKampfzeit } # Pre-Kampfzeit
+		GER_Situations_StartSituation = yes
+	}
+
+	option = {
+		name = "Bormann"
+		GER_Kampfzeit_ContenderSelection_Bormann = yes
+	}
+	option = {
+		name = "Goring"
+		GER_Kampfzeit_ContenderSelection_Goring = yes
+	}
+	option = {
+		name = "Speer"
+		GER_Kampfzeit_ContenderSelection_Speer = yes
+	}
+	option = {
+		name = "Himmler"
+		GER_Kampfzeit_ContenderSelection_Himmler = yes
+	}
+}
+
+# Post-72 econ unfucker
+country_event = {
+	id = GER_Debug.9999
+	immediate = { log = "[GetDateText]: [Root.GetName]: event GER_Debug.9999" }
+	title = "Post-72 econ unfucker"
+	desc = "description"
+	picture = GFX_report_event_GER_speech
+
+	is_triggered_only = yes
+	trigger = { is_ai = yes }
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		name = "holla holla get dolla"
+		# Cut debt
+		multiply_variable = { national_debt = 0.1 }
+
+		# Set growth & inflation
+		add_to_variable = { gdp_growth = 2.5 }
+		set_variable = { base_inflation_rate = 0 }
+
+		# Add income
+		add_ideas = GER_econ_unfucker
+
+		update_economy_tab = yes
+	}
+}

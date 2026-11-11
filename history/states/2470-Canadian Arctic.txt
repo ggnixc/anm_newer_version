@@ -2,18 +2,21 @@ state = {
 	id = 2470
 	name = "STATE_2470"
 
-	resources = {
-		#
-	}
-
 	history = {
 		owner = CAN
-		buildings = {
-			radar_station = 4
-			air_base = 1
-		}
 		add_core_of = CAN
- 	}
+		set_state_flag = GDP_regions_northwest_territories
+		set_state_flag = GDP_category_town
+		victory_points = { # Cambridge Bay
+			16853 1
+		}
+		victory_points = { # Grise Fiord
+			16865 1
+		}
+		victory_points = { # Arctic Bay
+			16862 1
+		}
+	}
 
 	impassable = yes
 

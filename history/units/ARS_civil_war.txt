@@ -1,0 +1,126 @@
+division_template = {
+	name = "División de Policía Militar"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 0 y = 2 }
+		elite_infantry = { x = 1 y = 2 }
+		elite_infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 2 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		scout_helicopter_company = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "División de Caballería Blindada"
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 1 y = 0 }
+		IFV = { x = 2 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 1 }
+		IFV = { x = 2 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 2 }
+		mot_artillery_brigade = { x = 0 y = 3 }
+		mot_artillery_brigade = { x = 1 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "División de Infantería"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 0 y = 2 }
+		elite_infantry = { x = 1 y = 2 }
+		elite_infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 0 y = 3 }
+		artillery_brigade = { x = 1 y = 3 }
+		artillery_brigade = { x = 2 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		scout_helicopter_company = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Regimiento de Policía Militar"
+		location = "1598"
+		division_template = "División de Policía Militar"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "2. Regimiento de Policía Militar"
+		location = "7638"
+		division_template = "División de Policía Militar"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "3. Regimiento de Policía Militar"
+		location = "1585"
+		division_template = "División de Policía Militar"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "1. Regimiento de Infantería"
+		location = "10447"
+		division_template = "División de Infantería"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "2. Regimiento de Infantería"
+		location = "5110"
+		division_template = "División de Infantería"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3. Regimiento de Infantería"
+		location = "1542"
+		division_template = "División de Infantería"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "1. División de Caballería Blindada"
+		location = "10447"
+		division_template = "División de Caballería Blindada"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.67
+	}
+	division = {
+		name = "2. División de Caballería Blindada"
+		location = "12396"
+		division_template = "División de Caballería Blindada"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.67
+	}
+}

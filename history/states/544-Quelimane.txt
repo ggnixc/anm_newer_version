@@ -5,17 +5,18 @@ state = {
 	history = {
 		owner = MZB
 		buildings = {
-			arms_factory = 3
+			offices = 2
+			prisons = 2
+			barracks = 2
 			infrastructure = 3
 			anti_air_building = 1
 			radar_station = 2
 			air_base = 3
-			industrial_complex = 1
+			thermoelectric_plant = 1
 			13729 = {
 				naval_base = 4
 			}
 		}
-		set_state_flag = universal_renamings
 		add_core_of = MZB
 		victory_points = {
 			13729 10
@@ -24,15 +25,19 @@ state = {
 			2180 1
 		}
 		victory_points = {
-			12971 1
+			12971 2
 		}
+		victory_points = {
+			13754 1
+		}
+		set_state_flag = GDP_category_rural
 	}
 
 	provinces = {
 		2180 5164 12971 13729 13741 13754
 	}
-	manpower = 821239
+	manpower = 1510693
 	buildings_max_level_factor = 1.000
-	state_category = large_town
+	state_category = town
 	local_supplies = 0.000
 }

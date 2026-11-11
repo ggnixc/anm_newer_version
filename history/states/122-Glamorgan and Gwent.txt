@@ -3,10 +3,11 @@ state = {
 	name = "STATE_122"
 	manpower = 1600555
 
-	state_category = large_town
+	state_category = city
 
 	resources = {
 		steel = 10
+		power = 3
 	}
 
 	history = {
@@ -15,8 +16,12 @@ state = {
 		victory_points = { 407 10 }
 		victory_points = { 16337 10 }
 		buildings = {
-			arms_factory = 1
-			industrial_complex = 1
+			thermoelectric_plant = 3
+			barracks = 1
+			offices = 2
+			schools = 2
+			hospitals = 1
+			prisons = 1
 			infrastructure = 5
 			radar_station = 1
 			air_base = 3
@@ -25,7 +30,9 @@ state = {
 			}
 		}
 		add_core_of = ENG
- 	}
+		set_state_flag = GDP_regions_wales
+		set_state_flag = GDP_category_large_town
+	}
 
 	provinces = {
 		407 377 16337

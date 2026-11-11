@@ -4,11 +4,12 @@ state = {
 	resources = {
 		steel = 6.000
 		aluminium = 4.000
- 	}
+		uranium = 2.000
+	}
 
 	history = {
-		owner = CHI
-		add_core_of = CHI
+		owner = SHX
+		add_core_of = SHX
 		victory_points = {
 			10367 2
 		}
@@ -18,13 +19,16 @@ state = {
 		buildings = {
 			infrastructure = 2
 		}
-  	}
+		set_state_flag = GDP_regions_shanxi
+		set_variable = { china_state_ref = 14 }
+		set_variable = { china_region_ref = 1 }
+	}
 
 	provinces = {
 		4074 6447 10367 12300 13248 19596 19635 19743
 	}
 	manpower = 1859595
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = pastoral
 	local_supplies = 0.000
 }

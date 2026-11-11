@@ -1,0 +1,135 @@
+scripted_gui = {
+	#################################################
+	#                  ForPol GUI                   #
+	#################################################
+	#|=|========[ Decision GUI ]========|=|#
+	TNO_Superpower_ForeignPolicy_Gui = {
+		window_name = "TNO_Super_ForPol_GUI"
+		context_type = player_context
+		parent_window_name = powerbalanceview
+		dirty = Super_ForPol_Dirty
+
+		visible = {
+			OR = {
+				check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_AuswartigesAmt }
+				check_variable = { TNO_BoP_SelectedTab = token:BoP_Tab_StateDepartment }
+			}
+		}
+
+		triggers = {
+			## Relation bars
+			TNO_Super_ForPol_GER_Header_visible = {
+				NOT = { tag = GER }
+				if = {
+					limit = { tag = USA }
+					set_temp_variable = { GER_Header_Y = 70 }
+				}
+				else = { set_temp_variable = { GER_Header_Y = 0 } }
+			}
+			TNO_Super_ForPol_GER_Progbar_visible = {
+				NOT = { tag = GER }
+				if = {
+					limit = { tag = USA }
+					set_temp_variable = { GER_Progbar_Y = 95 }
+				}
+				else = { set_temp_variable = { GER_Progbar_Y = 25 } }
+			}
+			
+			TNO_Super_ForPol_JAP_Header_visible  = { NOT = { tag = JAP } }
+			TNO_Super_ForPol_JAP_Progbar_visible = { NOT = { tag = JAP } }
+
+			TNO_Super_ForPol_USA_Header_visible  = { NOT = { tag = USA } }
+			TNO_Super_ForPol_USA_Progbar_visible = { NOT = { tag = USA } }
+
+			## Decision selection
+			TNO_Super_ForPol_GermanyBtn_visible = {
+				NOT = { tag = GER }
+				if = {
+					limit = { tag = USA }
+					set_temp_variable = { GER_Button_X = 333 }
+				}
+				else = { set_temp_variable = { GER_Button_X = 168 } }
+			}
+			TNO_Super_ForPol_GermanyBtn_Text_visible = { NOT = { tag = GER } }
+
+			TNO_Super_ForPol_JapanBtn_visible = { NOT = { tag = JAP } }
+			TNO_Super_ForPol_JapanBtn_Text_visible = { NOT = { tag = JAP } }
+
+			TNO_Super_ForPol_AmericaBtn_visible = { NOT = { tag = USA } }
+			TNO_Super_ForPol_AmericaBtn_Text_visible = { NOT = { tag = USA } }
+		}
+
+		effects = {
+			TNO_Super_ForPol_WorldBtn_click = {
+				set_variable = { Super_ForPol_DecisionSelect^0 = 2 }
+				set_variable = { Super_ForPol_DecisionSelect^1 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^2 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^3 = 0 }
+				add_to_variable = { Super_ForPol_Dirty = 1 }
+			}
+			TNO_Super_ForPol_GermanyBtn_click = {
+				set_variable = { Super_ForPol_DecisionSelect^0 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^1 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^2 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^3 = 2 }
+				add_to_variable = { Super_ForPol_Dirty = 1 }
+			}
+			TNO_Super_ForPol_JapanBtn_click = {
+				set_variable = { Super_ForPol_DecisionSelect^0 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^1 = 2 }
+				set_variable = { Super_ForPol_DecisionSelect^2 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^3 = 0 }
+				add_to_variable = { Super_ForPol_Dirty = 1 }
+			}
+			TNO_Super_ForPol_AmericaBtn_click = {
+				set_variable = { Super_ForPol_DecisionSelect^0 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^1 = 0 }
+				set_variable = { Super_ForPol_DecisionSelect^2 = 2 }
+				set_variable = { Super_ForPol_DecisionSelect^3 = 0 }
+				add_to_variable = { Super_ForPol_Dirty = 1 }
+			}
+		}
+
+		properties = {
+			Super_ForPol_Image = {
+				image = "[Super_ForPol_GetCategoryPicture]"
+			}
+			TNO_Super_ForPol_BackgroundSeal = {
+				image = "[Super_ForPol_GetCategorySeal]"
+			}
+			TNO_Super_ForPol_GermanyBtn_Text = {
+				x = GER_Button_X
+			}
+			TNO_Super_ForPol_GER_Header = {
+				y = GER_Header_Y
+			}
+
+			# Progressbars
+			TNO_Super_ForPol_GER_Progbar = {
+				frame = Super_ForPol_Germany_Opinion
+				y = GER_Progbar_Y
+			}
+			TNO_Super_ForPol_JAP_Progbar = {
+				frame = Super_ForPol_Japan_Opinion
+			}
+			TNO_Super_ForPol_USA_Progbar = {
+				frame = Super_ForPol_America_Opinion
+			}
+
+			# Selection Buttons
+			TNO_Super_ForPol_WorldBtn = {
+				frame = Super_ForPol_DecisionSelect^0
+			}
+			TNO_Super_ForPol_GermanyBtn = {
+				frame = Super_ForPol_DecisionSelect^3
+				x = GER_Button_X
+			}
+			TNO_Super_ForPol_JapanBtn = {
+				frame = Super_ForPol_DecisionSelect^1
+			}
+			TNO_Super_ForPol_AmericaBtn = {
+				frame = Super_ForPol_DecisionSelect^2
+			}
+		}
+	}
+}

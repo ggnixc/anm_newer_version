@@ -3,9 +3,7 @@ guiTypes = {
 	# Target bar
 	containerWindowType = {
 		name = "target_bar_window"
-		position = {x=-300 y=0}
-		show_position = {x=-300 y=-230}
-		size = { width=435 height=60 }
+		show_position = {x=-397 y=-383}
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -16,13 +14,17 @@ guiTypes = {
 			name = "Background"
 			spriteType = "GFX_tiled_window_transparent"
 		}
-
-		iconType = {
+		containerWindowType = {
 			name = "navy_box_background"
-			spriteType = "GFX_theatre_naval_control_panel"
-			position = { x = 75 y = 104 }
-			frame = 1
+			size={width=586 height=76}
+			position = { x = 78 y = 67 }
+		
+			background = {
+				name = "Background"
+				spriteType = "GFX_tiled_window_thin_border2"
+			}
 		}
+
 		buttonType = {
 			name = "btn_target_submarine"
 			position = {x=86 y=75}
@@ -139,7 +141,7 @@ guiTypes = {
 		name = "action_bar_window"
 		position = {x=-300 y=0}
 		show_position = {x=-300 y=-245}
-		size = { width=532 height=100 }
+		size = { width=550 height=100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -165,13 +167,13 @@ guiTypes = {
 		iconType = {
 			name = "navy_box_background"
 			quadTextureSprite = "GFX_theatre_naval_control_panel"
-			position = { x = 115 y = 71 }
+			position = { x = 115 y = 95 }
 			frame = 1
 		}
 
 		OverlappingElementsBoxType = {
 			name = "navy_box"
-			position = { x = 120 y = 77 }
+			position = { x = 120 y = 100 }
 			size = { x = 296 y = 23 }
 			first_on_top = yes
 			format = left
@@ -179,7 +181,7 @@ guiTypes = {
 		}
 
 		@nv_mission_btn_training_x=10
-		@nv_mission_btn_y=26
+		@nv_mission_btn_y=48
 		@nv_dominance_ico_y=30
 
 		buttonType = {
@@ -193,7 +195,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "btn_target"
-			position = {x=-27 y=2}
+			position = {x=445 y=52}
 			spriteType = "GFX_air_target_icon"
 			clicksound = click_default
 		}
@@ -201,7 +203,7 @@ guiTypes = {
 		iconType = {
 			name = "training_will_stop_at_max_icon"
 			spriteType = "GFX_exercise_stop_at_max"
-			position = {x=15 y=48 }
+			position = {x=45 y=51 }
 			alwaystransparent = yes
 		}
 
@@ -225,7 +227,7 @@ guiTypes = {
 		iconType = {
 			name = "naval_dominance_texticon1"
 			spriteType = "GFX_naval_dominance_increase_texticon"
-			position = { x= 20 y =@nv_dominance_ico_y}
+			position = { x= 70 y =@nv_dominance_ico_y}
 		}
 
 		buttonType = {
@@ -254,7 +256,7 @@ guiTypes = {
 		iconType = {
 			name = "naval_dominance_texticon2"
 			spriteType = "GFX_naval_dominance_multiplication_texticon"
-			position = { x= 70 y =@nv_dominance_ico_y}
+			position = { x= 120 y =@nv_dominance_ico_y}
 		}
 
 		buttonType = {
@@ -283,7 +285,7 @@ guiTypes = {
 		iconType = {
 			name = "naval_dominance_texticon3"
 			spriteType = "GFX_naval_dominance_reduction_texticon"
-			position = { x= 120 y = @nv_dominance_ico_y}
+			position = { x= 170 y = @nv_dominance_ico_y}
 		}
 
 		buttonType = {
@@ -403,14 +405,14 @@ guiTypes = {
 
 		buttonType = {
 			name = "btn_mission0"
-			position = {x=477 y=33}
+			position = {x=477 y=54}
 			spriteType = "GFX_NV_btn_hold"
 			clicksound = click_default
 		}
 
 		buttonType = {
 			name = "btn_remove_regions"
-			position = {x=507 y=33}
+			position = {x=507 y=54}
 			spriteType = "GFX_NV_btn_remove_regions"
 			clicksound = click_default
 			shortcut = "DEL"
@@ -599,7 +601,7 @@ guiTypes = {
 					animation_time = 150
 					size = { width=224 height=180 }
 					verticalScrollbar = "right_vertical_slider"
-					margin = { top = 15 bottom = 0 left = 0 }
+					margin = { top = 12 bottom = 0 left = 0 }
 
 					background = {
 						name = "Background"
@@ -642,11 +644,11 @@ guiTypes = {
 					animation_time = 150
 					size = { width=272 height=150 }
 					verticalScrollbar = "right_vertical_slider"
-					margin = { top = 15 bottom = 0 left = 0 }
+					margin = { top = 12 bottom = 0 left = 0 }
 
 					background = {
 						name = "Background"
-						quadTextureSprite ="GFX_tiled_window_1b_border"
+						quadTextureSprite ="GFX_tiled_bg_uniform"
 						position = { x = 0 y = 0 }
 					}						
 
@@ -684,13 +686,13 @@ guiTypes = {
 					animation_time = 150
 					size = { width=272 height=172 }
 					verticalScrollbar = "right_vertical_slider"
-					margin = { top = 15 bottom = 0 left = 0 }
+					margin = { top = 12 bottom = 0 left = 0 }
 
 					background = {
 						name = "Background"
-						quadTextureSprite ="GFX_tiled_window_1b_border"
+						quadTextureSprite ="GFX_tiled_bg_uniform"
 						position = { x = 0 y = 0 }
-					}					
+					}						
 
 					gridBoxType = {
 						name = "button_grid"
@@ -704,7 +706,7 @@ guiTypes = {
 			}
 
 			buttonType = {
-				position = { x=360 y=@nv_tb_btn_y }
+				position = { x=364 y=@nv_tb_btn_y }
 				name = "btn_base_reinforce"
 				spriteType = "GFX_NV_btn_base_partial_toggle"
 				clicksound = click_default
@@ -712,13 +714,13 @@ guiTypes = {
 
 			iconType = {
 				name = "btn_reinforce"
-				position = {x=360 y=@nv_tb_btn_y}
+				position = {x=364 y=@nv_tb_btn_y}
 				spriteType = "GFX_NV_btn_reinforce"
 				alwaystransparent = yes
 			}
 
 			buttonType = {
-				position = { x=390 y=@nv_tb_btn_y }
+				position = { x=394 y=@nv_tb_btn_y }
 				name = "btn_base_toggle_split_for_repair"
 				spriteType = "GFX_NV_btn_base_partial_toggle"
 				clicksound = click_default
@@ -726,7 +728,7 @@ guiTypes = {
 
 			iconType = {
 				name = "btn_toggle_split_for_repair"
-				position = {x=390 y=@nv_tb_btn_y}
+				position = {x=394 y=@nv_tb_btn_y}
 				spriteType = "GFX_NV_btn_toggle_split_for_repair"
 				alwaystransparent = yes
 			}
@@ -741,7 +743,7 @@ guiTypes = {
 
 			iconType = {
 				name = "btn_aggressiveness"
-				position = {x=450 y=@nv_tb_btn_y}
+				position = {x=454 y=@nv_tb_btn_y}
 				spriteType = "GFX_NV_btn_aggressiveness_small"
 				alwaystransparent = yes
 			}
@@ -807,16 +809,17 @@ guiTypes = {
 		iconType = {
 			name = "icon"
 			spriteType = "GFX_defensive_stance_strip"
-			position = { x=2 y=0 }
+			position = { x=0 y=0 }
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "name"
-			position = {x=30 y=5}
-			font = "aldrich_18_outline"
-			maxWidth = 160
+			position = {x=36 y=7}
+			font = "aldrich_16_outline"
+			maxWidth = 200
 			maxHeight = 30
+			fixedsize = yes
 			format = left
 		}
 	}
@@ -830,7 +833,7 @@ guiTypes = {
 
 		background = {
 			name = "background"
-			spriteType = "GFX_mini_tooltip"
+			spriteType = "GFX_tiled_header_1"
 			position = {x=0 y=0}
 		}
 
@@ -843,8 +846,11 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "name"
-			position = {x=30 y=5}
-			font = "hoi_18mbs"
+			position = {x=36 y=7}
+			font = "aldrich_16_outline"
+			maxWidth = 200
+			maxHeight = 30
+			fixedsize = yes
 			format = left
 		}
 	}
@@ -858,21 +864,21 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_mini_tooltip"
+			spriteType = "GFX_tiled_header_1"
 			position = { x = 0 y = 0 }
 		}
 
 		iconType = {
 			name = "icon"
 			spriteType = "GFX_NV_btn_aggressiveness_small"
-			position = { x=5 y=0 }
+			position = { x=0 y=0 }
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "name"
-			position = {x=35 y=5}
-			font = "hoi_18mbs"
+			position = {x=36 y=7}
+			font = "aldrich_16_outline"
 			maxWidth = 200
 			maxHeight = 30
 			fixedsize = yes
@@ -1116,14 +1122,14 @@ guiTypes = {
 			name = "skill_icon"
 			spriteType = "GFX_land_battle_leader_skill_bg"
 			centerposition = yes
-			position = { x=211 y=65 }
+			position = { x = 211 y = 55 }
 			scale = 0.7
 		}
 
 		instantTextboxType = {
 			name = "skill_text"
-			position = {x=196 y=51}
-			font = "hoi_18mbs"
+			position = { x = 195 y = 44 }
+			font = "aldrich_18_outline"
 			maxWidth = 30
 			maxHeight = 23
 			format = center
@@ -1639,6 +1645,13 @@ guiTypes = {
 			name = "ship_level"
 			spriteType = "GFX_unit_level"
 			position = { x=117 y=8 }
+		}
+		
+		buttonType = {
+			name = "available_medals"
+			spriteType = "GFX_assign_medal_indicator"
+			position = { x=129 y=11 }
+			scale = 0.9
 		}
 
 		iconType = {
@@ -2170,7 +2183,7 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			spriteType = "GFX_task_force_comp_small_bg"
+			spriteType = "GFX_task_force_comp_unit_bg"
 		}
 
 		iconType = {
@@ -2235,10 +2248,11 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "ship_type"
-			position = {x=127 y=21}
+			position = {x=127 y=24}
 			font = "aldrich_18_outline"
-			maxWidth = 300
+			maxWidth = 360
 			maxHeight = 23
+			fixedsize = yes
 			format = left
 			text = "USS Enterprise"
 		}
@@ -2650,7 +2664,7 @@ guiTypes = {
 			verticalScrollbar = "right_vertical_slider"
 			vertical_scroll_step = 50
 			smooth_scrolling = yes
-			margin = { top = 14 bottom = 14}
+			margin = { top = 0 bottom = 14}
 
 			background = {
 				name = "Background"
@@ -2659,7 +2673,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "equipments_grid"
-				position = { x = 2 y = 0 }
+				position = { x = 2 y = 16 }
 				size = { width = 120%% height = 100%% }
 				slotsize = { width = 335 height = 100 }
 				format = "UPPER_LEFT"
@@ -2670,7 +2684,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "outdated_equipment_checkbox"
-			position = { x = -355 y = 14 }
+			position = { x = -391 y = 14 }
 			quadTextureSprite ="GFX_generic_checkbox"
 			Orientation = "UPPER_RIGHT"
 			clicksound = click_checkbox
@@ -2687,12 +2701,12 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "outdated_equipment_label"
-			position = { x = -317 y = 14 }
+			position = { x = -351 y = 19 }
 			textureFile = ""
-			font = "aldrich_24_outline"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = "OUTDATED_EQ"
-			maxWidth = 200
+			maxWidth = 250
 			maxHeight = 20
 			format = left
 			fixedsize = yes

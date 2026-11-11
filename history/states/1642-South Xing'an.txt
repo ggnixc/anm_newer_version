@@ -13,21 +13,24 @@ state = {
 		victory_points = {
 			14632 1
 		}
-  		set_state_flag = state_renamings
+		set_variable = { china_state_ref = 56 }
+		set_variable = { china_region_ref = 7 }
+		set_state_flag = state_renamings
 		buildings = {
-			arms_factory = 1
+			barracks = 1
+			prisons = 1
 			infrastructure = 3
- 		}
+			thermoelectric_plant = 2
+		}
 		add_core_of = MAN
-		set_state_flag = state_category_pastoral
 	}
 
 	provinces = {
 		1502 1558 1638 4514 6893 7812 9831 11836 11903 12337 12469 14626 14629 14632 19542 19588 19825
 	}
-	manpower = 2870499
+	manpower = 1852688
 
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = pastoral
 	local_supplies = 0.000
 }

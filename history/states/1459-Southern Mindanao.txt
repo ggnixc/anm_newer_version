@@ -6,24 +6,29 @@ state = {
 		owner = PHI
 		buildings = {
 			infrastructure = 4
+			thermoelectric_plant = 1
+			barracks = 1
 			air_base = 1
+			schools = 1
+			prisons = 1
 			4241 = {
 				naval_base = 4
 			}
 		}
 		victory_points = { 7445 3 }
 		victory_points = { 4241 20 }
+		victory_points = { 12158 5 }
+		add_core_of = FPF
 		add_core_of = PHI
-		add_core_of = PHI
-		add_core_of = PHI
+		add_core_of = HUK
 		set_state_flag = state_renamings
 	}
 
 	provinces = {
-		1407 4241 7445 10328 14734 14735 19380
+		1407 4241 7445 10328 12158 14734 14735 19380
 	}
-	manpower = 1004821
+	manpower = 1025946
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = large_town
 	local_supplies = 0.000
 }

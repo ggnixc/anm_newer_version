@@ -1,42 +1,317 @@
-﻿capital = 879
+capital = 2017
+set_cosmetic_tag = MLW_NYS
 
-recruit_character = MLW_John_Tembo
-
-EAF = {
-    if = {
-        limit = { 
-            OR = { 
-                has_dlc = "Together for Victory" 
-                has_dlc = "Man the Guns" 
-            }
-        }
-        set_autonomy = { target = MLW autonomy_state = autonomy_italy_reliant }
-        else = {
-            puppet = MLW
-        }
+ENG = {
+    set_autonomy = {
+        target = MLW
+        autonomy_state = autonomy_colony
     }
 }
 
+recruit_character = MLW_Percivale_Liesching
+recruit_character = MLW_Hastings_Banda
+recruit_character = MLW_Kanyama_Chiume
+recruit_character = MLW_Eric_Griffith_Jones
 
-set_politics = {	
+MLW_Hastings_Banda = {
+	promote_character = paternalism_social_nationalism_subtype
+}
+
+add_ideas = {
+    Pakt_Europaische_Kolonien
+    MLW_planter_economy
+    MLW_congress_underground
+    MLW_imperial_feudalism
+	#political#
+	tno_political_parties_nonpartisan_system
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_quota_immigration
+	tno_slavery_corvee
+	tno_public_meetings_outlawed
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	#military#
+	tno_conscription_volunteer_only
+	tno_military_supervision_no_supervision
+	tno_training_combat_schooling
+	tno_draft_exemptions_elite_exemptions
+	#economic#
+	tno_trade_laws_free_trade
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+	#social#
+	tno_health_care_support_for_emergencies
+	tno_education_restricted_education
+	tno_penal_system_harsh_penal_code
+	tno_regulations_token_regulations
+	tno_gender_rights_women_in_the_workplace
+	tno_security_maintenance_of_order
+	#misc#
+	tno_pollution_some_regulations
+	tno_safety_acceptable_regulations
+	tno_child_labor_illegal
+	tno_refugees_skilled
+	tno_racial_integration_integrated_military
+	tno_women_military_assistance
+	tno_minorities_equal_rights
+	tno_lgbt_rights_lgbt_outlawed
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_rudimentary
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+set_politics = {
 	ruling_party = despotism
-	last_election = "1931.1.1"
-	election_frequency = 96
+	last_election = "1933.3.5"
+	election_frequency = 48
 	elections_allowed = no
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 17
-    progressivism = 0
-    liberalism = 17
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 0
-    despotism = 66
-    fascism = 0
-     
+	despotism = 65
+	paternalism = 35
 }
+
+set_technology = {
+	basic_train = 1
+
+	tech_support = 1
+	electronic_mechanical_engineering = 1
+	
+	transport = 1
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+	
+	infantry_kit_1 = 1
+	infantry_weapons_2 = 1
+	night_vision_2 = 1
+	infantry_kit_2 = 1
+	motorized_infantry = 1
+	support_weapons = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	#
+	tech_special_forces = 1
+	marines = 1
+	marines2 = 1
+	#
+	early_fighter = 1
+	fighter_1945 = 1
+	CAS_1945 = 1
+	interceptor_1945 = 1
+	fighter_1950 = 1
+	CAS_1950 = 1
+	basic_infantry_equipment = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	building_construction_1 = 1
+	administration_construction_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	improved_computing_machine = 1
+	advanced_computing_machine = 1
+	basic_encryption = 1
+	improved_encryption = 1
+	basic_decryption = 1
+	improved_decryption = 1
+	radio_detection = 1
+	tac_bomber1 = 1
+	strategic_bomber1 = 1
+	tac_air_1945 = 1
+	heavy_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_kit_3 = 1
+	infantry_at = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	ww2_line_production = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	batch_production_1 = 1
+	strategic_theorem = 1
+	assault_weapons_1 = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	excavation1 = 1
+	infantry_at_upgrade_1 = 1
+	cv_1945_fighter = 1
+	cv_1945_CAS = 1
+	cv_1950_fighter = 1
+	cv_1950_CAS = 1
+	computing_machine_1950 = 1
+	jet_engines = 1
+	jet_engines_bombers = 1
+	helicopter_engines = 1
+	very_early_helicopter = 1
+	early_helicopter = 1
+}
+
+# NSB tech #
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		advanced_light_tank = 1
+		advanced_medium_tank = 1
+		mechanised_infantry3 = 1
+
+		APC_1950 = 1
+		APC_1950_basic_turret = 1
+		APC_1950_basic_armor = 1
+		APC_1960 = 1
+
+		IFV_1950 = 1
+		IFV_1950_basic_turret = 1
+		IFV_1950_basic_armor = 1
+		IFV_1960 = 1
+		
+		MBT_1950 = 1
+		MBT_1950_basic_turret = 1
+		MBT_1950_basic_armor = 1
+
+		AC_1945 = 1
+		AC_1950 = 1
+		AC_1960 = 1
+
+		Heavy_1945 = 1
+		Heavy_1950 = 1
+		Superheavy_1945 = 1
+		
+		antiair5 = 1
+		antiair_1950 = 1
+		SPAA_1950 = 1
+		artillery4 = 1
+		artillery_1950 = 1
+		artillery_1950_soft_attack = 1
+		SPART_1950 = 1
+		SPART_1950_soft_attack = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		NSB_APC_1945 = 1
+		NSB_APC_1950 = 1
+		#
+		#
+		NSB_APC_1960 = 1
+		NSB_IFV_1945 = 1
+		NSB_IFV_1945_modules_1 = 1
+		NSB_IFV_1945_modules_2 = 1
+		NSB_IFV_1950 = 1
+		NSB_IFV_1950_modules_1 = 1
+		NSB_IFV_1950_modules_2 = 1
+		NSB_IFV_1960 = 1
+		NSB_MBT_1945 = 1
+		NSB_MBT_1945_modules_1 = 1
+		NSB_MBT_1945_modules_2 = 1
+		NSB_MBT_1950 = 1
+		NSB_MBT_1950_modules_2 = 1
+		NSB_AC_1945 = 1
+		NSB_AC_1950 = 1
+		NSB_AC_1960 = 1
+		NSB_Armour_1 = 1
+		NSB_Armour_2 = 1
+		NSB_Engine_1 = 1
+		NSB_Engine_2 = 1
+
+		NSB_Heavy_1945 = 1
+		NSB_Heavy_1950 = 1
+		NSB_Superheavy_1945 = 1
+
+		NSB_artillery_1945 = 1
+		NSB_artillery_1950 = 1
+		NSB_artillery_1950_SA = 1
+
+		NSB_antiair_1945 = 1
+		NSB_antiair_1950 = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+
+	set_technology = {
+		early_ship_hull_submarine = 1
+		early_ship_hull_very_light = 1
+		basic_ship_hull_very_light = 1
+		early_ship_hull_more_light = 1
+		basic_ship_hull_more_light = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		basic_depth_charges = 1
+		sonar = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+		basic_naval_mines = 1
+		improved_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_carrier = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		improved_ship_hull_cruiser = 1
+		centimetric_radar = 1
+		basic_fire_control_system = 1
+		damage_control_1 = 1
+		fire_control_methods_1 = 1
+		smoke_generator = 1
+	}
+}
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_technology = {
+		ww2_frigate = 1
+		basic_frigate = 1
+		ww2_destroyer = 1
+		basic_destroyer = 1
+		ww2_cruiser = 1
+		ww2_battleship = 1
+		ww2_submarine = 1
+		ww2_carrier = 1
+		basic_cruiser = 1
+		basic_destroyer = 1
+		improved_cruiser = 1
+	}
+}
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	set_technology = {
+		scout_plane_1945 = 1
+	}
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }

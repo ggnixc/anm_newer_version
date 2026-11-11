@@ -1,0 +1,77 @@
+spriteTypes = {
+	#################################################
+	#              Foreign Policy GUI               #
+	#################################################
+	## General assets
+	spriteType = {
+		name = "GFX_Super_ForPol_Image_GER"
+		texturefile = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_Image_GER.dds"
+	}
+	spriteType = {
+		name = "GFX_Super_ForPol_Overlay"
+		texturefile = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_Overlay.dds"
+	}
+	spriteType = {
+		name = "GFX_Super_ForPol_SelectionButton"
+		texturefile = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_SelectionButton.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_Super_ForPol_Separtor"
+		texturefile = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_Separtor.dds"
+	}
+
+	## Progressbars
+	progressbartype = {
+		name = "GFX_Super_ForPol_ProgBar_GER"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_ProgBar_GER.dds"
+		textureFile2 = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_ProgBar_Empty.dds"
+		size = { x = 423 y = 31 }
+		steps = 10
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_Super_ForPol_ProgBar_JAP"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_ProgBar_JAP.dds"
+		textureFile2 = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_ProgBar_Empty.dds"
+		size = { x = 423 y = 31 }
+		steps = 10
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_Super_ForPol_ProgBar_USA"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_ProgBar_USA.dds"
+		textureFile2 = "gfx/interface/super_diplo_gui/GFX_Super_ForPol_ProgBar_Empty.dds"
+		size = { x = 423 y = 31 }
+		steps = 10
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	## Texticons
+	spriteType = {
+		name = "GFX_super_forpol_world_texticon"
+		texturefile = "gfx/texticons/super_forpol/super_forpol_world.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_super_forpol_germany_texticon"
+		texturefile = "gfx/texticons/super_forpol/super_forpol_germany.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_super_forpol_japan_texticon"
+		texturefile = "gfx/texticons/super_forpol/super_forpol_japan.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_super_forpol_usa_texticon"
+		texturefile = "gfx/texticons/super_forpol/super_forpol_usa.dds"
+		legacy_lazy_load = no
+	}
+}

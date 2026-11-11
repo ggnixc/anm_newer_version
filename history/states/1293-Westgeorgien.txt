@@ -6,11 +6,14 @@ state = {
 		owner = CAU
 		buildings = {
 			infrastructure = 5
- 			772 = {
+			thermoelectric_plant = 2
+			772 = {
 				naval_base = 4
 			}
-			industrial_complex = 1
- 			synthetic_refinery = 1
+			offices = 1
+			schools = 1
+			barracks = 1
+			synthetic_refinery = 1
 		}
 		victory_points = {
 			3658 10
@@ -28,13 +31,13 @@ state = {
 			18338 2
 		}
 		victory_points = {
-			6926 2
-		}
-		victory_points = {
 			9626 2
 		}
 		add_core_of = CAU
- 		set_state_flag = universal_renamings
+		add_core_of = GEO
+		set_state_flag = GDP_category_large_town
+		set_state_flag = GDP_regions_georgia
+		set_state_flag = universal_renamings
 	}
 
 	provinces = {
@@ -42,6 +45,6 @@ state = {
 	}
 	manpower = 1259994
 	buildings_max_level_factor = 1.000
-	state_category = large_town
+	state_category = town
 	local_supplies = 0.000
 }

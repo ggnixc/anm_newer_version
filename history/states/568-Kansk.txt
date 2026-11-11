@@ -7,19 +7,21 @@ state = { #Population Done
 		oil = 8
 	}
 	history = {
-		owner = SOV
+		owner = SBA
 		buildings = {
 			infrastructure = 2
- 			industrial_complex = 1
+			thermoelectric_plant = 1
+			schools = 1
+			offices = 1
 		}
 		victory_points = { 12621 10 }
-
-		add_core_of = SOV
+		set_state_flag = GDP_category_town
+		add_core_of = SBA
 	}
 	provinces = {
-		4690 4818 4853 7744 12563 12621 12628 12691
+		4690 4818 4853 12563 12621 12628 12691 7744
 	}
 	manpower = 292000
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = rural
 }

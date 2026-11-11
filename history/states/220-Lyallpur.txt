@@ -3,13 +3,17 @@ state = {
 	name = "STATE_220"
 
 	history = {
-		owner = PAK
+		owner = IND
 		add_claim_by = AZH
- 		add_core_of = PAK
+		add_core_of = IND
 		buildings = {
 			infrastructure = 3
 			radar_station = 1
+			offices = 1
+			barracks = 1
+			prisons = 1
 		}
+		add_extra_state_shared_building_slots = 1
 		victory_points = {
 			16027 20
 		}
@@ -22,13 +26,15 @@ state = {
 		victory_points = {
 			9084 3
 		}
- 	}
+		set_state_flag = universal_renamings
+		set_state_flag = GDP_regions_punjab
+	}
 
 	provinces = {
 		9084 16027 18887 18910 18946 18998
 	}
 	manpower = 3150822
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = pastoral
 	local_supplies = 0.000
 }

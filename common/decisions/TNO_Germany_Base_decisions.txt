@@ -1,0 +1,1319 @@
+#  ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗
+# ██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║╚██╗ ██╔╝
+# ██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║ ╚████╔╝
+# ██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ╚██╔╝
+# ╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║
+#  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝
+#Decisions
+
+ANM_ger_debug_category = {
+    
+    show_hide_german_debug_decisions = {
+		icon = {
+			key = GFX_decision_generic_visibility
+			trigger = {
+				has_country_flag = hide_german_debug_decisions
+			}
+		}
+		icon = {
+			key = GFX_decision_generic_visibility_closed
+			trigger = {
+				NOT = { has_country_flag = hide_german_debug_decisions }
+			}
+		}
+		days_re_enable = 0
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision show_hide_german_debug_decisions"
+			if = {
+				limit = { has_country_flag = hide_german_debug_decisions }
+				clr_country_flag = hide_german_debug_decisions
+			}
+			else = {
+				set_country_flag = hide_german_debug_decisions
+			}
+		}
+	}
+	
+	debug_trigger_ger_load_phase_2_complete = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_phase_2_finale"
+			ANM_GER_Focus_Phase_2_3WRW = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_trigger_ger_load_phase_3 = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_load_phase_3"
+			ANM_GER_Focus_Phase_3_End_Demo = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_trigger_ger_homel_gouvernement_russland = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_homel_gouvernement_russland"
+			country_event = { id = GER_debug_event.10 } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_trigger_ger_gouvernement_russland_victory_war = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_gouvernement_russland_victory_war"
+			country_event = { id = GER_debug_event.9 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_trigger_ger_gouvernement_russland_defeat_war = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_gouvernement_russland_defeat_war"
+			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_trigger_ger_finland_victory_3wrw = {
+		icon = GFX_decision_generic_visibility
+
+		available = {
+			is_ai = no
+		}
+		visible = {
+			NOT = { has_country_flag = hide_german_debug_decisions }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision debug_trigger_ger_finland_victory_3wrw"
+			ANM_SOV_to_FIN = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+ANM_ger_nsdap_category = {
+	
+	ANM_ger_decentralize_the_party = {
+		visible = { }
+		available = { tag = GER }
+
+		cost = 150
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_centralize_the_party"
+			custom_effect_tooltip = GER_nsdap_bottom_moreinfl_tt
+			add_to_variable = { GER_ANM_lower_party_influence = 20 }
+			add_to_variable = { GER_ANM_middle_party_influence = 20 }
+			add_to_variable = { GER_ANM_upper_party_influence = 20 }
+			add_to_variable = { GER_ANM_party_leadership_influnce = -40 }
+		}
+
+		ai_will_do = { factor = 150	}
+	}
+	
+	ANM_ger_centralize_the_party = {
+		visible = { }
+		available = { tag = GER }
+
+		cost = 150
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_centralize_the_party"
+			custom_effect_tooltip = GER_nsdap_top_moreinfl_tt
+			add_to_variable = { GER_ANM_lower_party_influence = -20 }
+			add_to_variable = { GER_ANM_middle_party_influence = -20 }
+			add_to_variable = { GER_ANM_upper_party_influence = -20 }
+			add_to_variable = { GER_ANM_party_leadership_influnce = 40 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_strengthen_leadership_grip = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_peak }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_leadparty_moreinfl_tt
+			add_to_variable = { GER_ANM_party_leadership_influnce = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_utilize_schroeders_clique = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_peak }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_leadparty_shiftreform_tt
+			add_to_variable = { GER_ANM_party_leadership_leaning = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_utilize_deckerts_clique = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_peak }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_leadparty_shiftcon_tt 
+			add_to_variable = { GER_ANM_party_leadership_leaning = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_reeinforce_coreparty_authority = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_top }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_coreparty_moreinfl_tt
+			add_to_variable = { GER_ANM_upper_party_influence = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_empower_conservative_governors = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_top }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_coreparty_shiftcon_tt
+			add_to_variable = { GER_ANM_upper_party_leaning = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_sideline_party_suborganisations = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_top }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_coreparty_lessinfl_tt
+			add_to_variable = { GER_ANM_upper_party_influence = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_expand_administrative_system = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_middle }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_innerparty_moreinfl_tt
+			add_to_variable = { GER_ANM_middle_party_influence = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_old_bureaucrats_retire = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_middle }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_innerparty_shiftreform_tt
+			add_to_variable = { GER_ANM_middle_party_leaning = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_paranoia_among_inner_party = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_middle
+		}
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+	
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_innerparty_shiftcon_tt
+			add_to_variable = { GER_ANM_middle_party_leaning = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_more_party_recruitment = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_bottom }
+		available = { tag = GER	}
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_more_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_lowerparty_moreinfl_tt
+			add_to_variable = { GER_ANM_lower_party_influence = 20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_decrease_party_recruitment = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_bottom }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_lowerparty_lessinfl_tt
+			add_to_variable = { GER_ANM_lower_party_influence = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+	
+	ANM_ger_spark_desires_for_reform = {
+		visible = { has_country_flag = GER_anm_nsdap_guifired_bottom }
+		available = { tag = GER }
+
+		cost = 75
+
+		fire_only_once = no
+		days_remove = 14
+		days_re_enable = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ANM_ger_decrease_party_recruitment"
+			custom_effect_tooltip = GER_nsdap_lowerparty_shiftreform_tt
+			add_to_variable = { GER_ANM_lower_party_leaning = -20 }
+		}
+
+		ai_will_do = { factor = 150 }
+	}
+}	
+
+ANM_GER_Europakt_category = { 
+
+	EW_Decisions_GUI_Europe_1_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_3 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_4 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_5 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_6 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_7 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_8 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_9 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_1_10 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 1 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_3_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 3 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_3 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_3_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 3 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_3 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_3_3 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 3 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_3 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_4_1 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 4 } 
+				SWE = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_4 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_4_2 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 4 } 
+				SWE = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_4 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_5_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 5 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_5 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_5_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 5 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_5 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_5_3 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 5 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_5 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_5_4 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 5 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_5 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_6_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 6 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_6 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_6_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 6 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_6 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_6_3 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 6 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_6 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_7_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 7 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_7 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_7_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 7 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_7 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_8_1 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 8 } 
+				IRE = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_8 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_8_2 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 8 } 
+				IRE = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_8 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_8_3 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 8 } 
+				IRE = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_8 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_9_1 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 9 } 
+				ULS = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_9 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_9_2 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 9 } 
+				ULS = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_9 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_12_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 12 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_12 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_12_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 12 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_12 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_12_3 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 12 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_12 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_12_4 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 12 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_12 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_13_1 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 13 } 
+				IBR = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_13 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_13_2 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 13 } 
+				IBR = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_13 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_13_3 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 13 } 
+				IBR = { has_idea = Pakt_Observer }
+			}
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_13 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_28_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 28 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_28 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_29_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 29 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_29 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_29_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 29 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_29 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_31_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 31 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_31 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_32_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 32 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_32 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_32_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 32 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_32 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_33_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 33 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_33 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_34_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 34 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_34 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_34_2 = {
+		visible = { 
+			AND = { 
+				has_country_flag = { flag = GER_EW_Country value = 34 } 
+				MOS = { controls_state = 1442 }
+			} 
+		} 
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_34 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_35_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 35 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_35 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_35_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 35 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_35 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_35_3 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 35 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_35 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_36_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 36 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_36 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_36_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 36 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_36 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_36_3 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 36 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_36 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_37_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 37 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_37 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_38_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 38 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_38 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_38_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 38 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_38 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_39_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 39 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_39 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_39_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 39 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_39 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_40_1 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 40 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_40 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_Europe_40_2 = {
+		visible = { has_country_flag = { flag = GER_EW_Country value = 40 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_40 = 0.25 }
+		}
+	}
+
+	EW_Decisions_GUI_World_2_1 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 2 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.05 }
+		}
+	}
+	EW_Decisions_GUI_World_2_10 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 2 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_1 = 0.05 }
+		}
+	}
+	EW_Decisions_GUI_World_4_1 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 4 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_63 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_4_2 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 4 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_63 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_4_3 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 4 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_63 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_4_10 = {
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 4 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_64 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_4_20 = {
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 4 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_65 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_4_30 = {
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 4 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_66 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_7_1 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 7 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_62 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_7_2 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 7 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_62 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_7_3 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 7 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_62 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_7_4 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 7 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_62 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_7_5 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 7 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_62 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_8_1 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 8 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_60 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_8_2 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 8 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_60 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_8_3 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 8 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_60 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_8_4 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 8 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_60 = 0.25 }
+		}
+	}
+	EW_Decisions_GUI_World_10_1 = { 
+		visible = { has_country_flag = { flag = GER_EW_Continent value = 10 } }
+		available = { tag = GER }
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = { factor = 150 }
+		
+		complete_effect = { 
+			add_to_variable = { GER_EW_Economy_Rate_61 = 0.25 }
+		}
+	}
+
+}

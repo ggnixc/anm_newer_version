@@ -1,0 +1,32 @@
+division_template = {
+	name = "King's African Rifles"
+	division_names_group = ZIM_infantry
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+        light_infantry = { x = 0 y = 1 }
+        light_infantry = { x = 1 y = 0 }
+        light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+
+units = {
+    division = {
+        name = "6th (Tanganyika Protectorate) Battalion, KAR"
+        division_template = "King's African Rifles" 
+        location = "2196" # Dar-es-Salaam
+        start_experience_factor = 0.10
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+
+    division = {
+        name = "26th (Tanganyika Protectorate) Battalion, KAR"
+        division_template = "King's African Rifles" 
+        location = "13880" # Tabora
+        start_experience_factor = 0.10
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+}    

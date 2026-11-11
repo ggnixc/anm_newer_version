@@ -1,26 +1,93 @@
-﻿capital = 708
+capital = 708
+set_cosmetic_tag = CMR_FRS
 
-set_oob = "CMR_1962"
+recruit_character = CMR_Generic_Vacant
 
-set_politics = {	
-	ruling_party = paternalism
-	last_election = "1933.5.17"
-	election_frequency = 60
-	elections_allowed = no
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+
+#oob = "CMR_1962"
+
+recruit_character = CMR_Maurice_Delauney
+
+add_ideas = {
+	Pakt_Europaische_Kolonien
+	CMR_in_the_big_islands_shadow
+	CMR_roused_consciousness
+	CMR_cash_crop_roulette
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_maintenance_of_order
+	#misc#
+	tno_pollution_some_regulations
+	tno_safety_acceptable_regulations
+	tno_child_labor_illegal
+	tno_refugees_skilled
+	tno_racial_integration_integrated_military
+	tno_women_military_assistance
+	tno_minorities_equal_rights
+	tno_lgbt_rights_lgbt_outlawed
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_pre_industrial
+	tno_industrial_equipment_hand_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_makeshift
+	tno_academic_base_mass_illiteracy
 }
 
-TNO_startup_nation = yes
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.5.17"
+	elections_allowed = yes
+	election_frequency = 48
+}
 
 set_popularities = {
-    communist = 5
-    ultranationalism = 0
-    socialist = 0
-    progressivism = 0
-    liberalism = 10
-    liberal_conservatism = 0
-    conservatism = 40
-    paternalism = 45
-    despotism = 0
-    fascism = 0
-     
+	communist = 0
+	socialist = 2
+	progressivism = 0
+	liberalism = 0
+	liberal_conservatism = 0
+	conservatism = 0
+	paternalism = 4
+    paternalism_1 = 15
+	despotism = 41
+    despotism_1 = 22
+    despotism_2 = 16
+	fascism = 0
+	national_socialism = 0
+	ultranationalism = 0
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Corporatism }
+

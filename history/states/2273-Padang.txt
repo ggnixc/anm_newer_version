@@ -1,9 +1,6 @@
 state = {
 	id = 2273
 	name = "STATE_2273"
-	resources = {
-		 
-	}
 
 	history = {
 		owner = INS
@@ -15,17 +12,20 @@ state = {
 			infrastructure = 4
 			air_base = 1
 			dockyard = 1
- 			19355 = {
+			schools = 1
+			19355 = {
 				naval_base = 3
 			}
 		}
- 	}
+		set_state_flag = GDP_regions_sumatra
+		set_state_flag = GDP_category_town
+	}
 
 	provinces = {
 		19355 19302 10194
 	}
 	manpower = 604204
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = town
 	local_supplies = 0.000
 }

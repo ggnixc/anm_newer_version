@@ -1,0 +1,121 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			FROM.FROM = {
+				if = {
+					limit = {
+						OR = {
+							###also fires when the endonym button is clicked
+							has_state_flag = universal_renamings
+							### non-universal renamings - separate effects in other file as well for code efficiency
+							has_state_flag = state_renamings
+							###does not fire when the button is clicked, only with on actions, meant mostly for non-renaming purposes
+							has_state_flag = state_control_change_effects
+						}
+					}
+					meta_effect = {
+						text = {
+							state_control_effect_[STATEID] = yes
+						}
+						STATEID = "[?This.GetID]"
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							###when effects need to be differentiated
+							OR = {
+								has_state_flag = universal_renamings
+								has_state_flag = state_renamings
+							}
+							has_state_flag = state_control_change_effects
+						}
+					}
+					meta_effect = {
+						text = {
+							non_endo_state_control_effect_[STATEID] = yes
+						}
+						STATEID = "[?This.GetID]"
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					FROM.FROM = {
+						has_variable = AdminTitle
+						is_in_array = { global.has_title_interaction = AdminTitle }
+					}
+				}
+				FROM = { save_event_target_as = old_owner }
+				ROOT = { save_event_target_as = new_owner }
+				FROM.FROM = {
+					set_temp_variable = { current_title = AdminTitle }
+					meta_effect = {
+						text = {
+							TNO_admin_title_state_control_effect_[CURRENT_TITLE] = yes
+						}
+						CURRENT_TITLE = "[?current_title.GetTokenKey]"
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM.FROM = {
+						has_variable = AssocRegion
+						is_in_array = { global.has_title_interaction = AssocRegion } 
+					}
+				}
+				FROM = { save_event_target_as = old_owner }
+				ROOT = { save_event_target_as = new_owner }
+				FROM.FROM = {
+					set_temp_variable = { current_title = AssocRegion }
+					meta_effect = {
+						text = {
+							TNO_admin_title_state_control_effect_[CURRENT_TITLE] = yes
+						}
+						CURRENT_TITLE = "[?current_title.GetTokenKey]"
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM.FROM = {
+						has_variable = AssocRegion2
+						is_in_array = { global.has_title_interaction = AssocRegion2 }
+					}
+				}
+				FROM = { save_event_target_as = old_owner }
+				ROOT = { save_event_target_as = new_owner }
+				FROM.FROM = {
+					set_temp_variable = { current_title = AssocRegion2 }
+					meta_effect = {
+						text = {
+							TNO_admin_title_state_control_effect_[CURRENT_TITLE] = yes
+						}
+						CURRENT_TITLE = "[?current_title.GetTokenKey]"
+					}
+				}	
+			}
+			if = {
+				limit = {
+					FROM.FROM = {
+						has_variable = SubAdminTitle
+						is_in_array = { global.has_title_interaction = SubAdminTitle } 
+					}
+				}
+				FROM = { save_event_target_as = old_owner }
+				ROOT = { save_event_target_as = new_owner }
+				FROM.FROM = {
+					set_temp_variable = { current_title = SubAdminTitle }
+					meta_effect = {
+						text = {
+							TNO_admin_title_state_control_effect_Sub_[CURRENT_TITLE] = yes
+						}
+						CURRENT_TITLE = "[?current_title.GetTokenKey]"
+					}
+				}
+			}
+		}
+	}
+}

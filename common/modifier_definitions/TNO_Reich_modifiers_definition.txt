@@ -1,0 +1,301 @@
+# ██████╗ ███████╗██╗ ██████╗██╗  ██╗ #
+# ██╔══██╗██╔════╝██║██╔════╝██║  ██║ #
+# ██████╔╝█████╗  ██║██║     ███████║ #
+# ██╔══██╗██╔══╝  ██║██║     ██╔══██║ #
+# ██║  ██║███████╗██║╚██████╗██║  ██║ #
+# ╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝╚═╝  ╚═╝ #
+# Reich Modifier Definitions
+
+# |===============| #
+# |=/=/ INDEX /=/=| #
+# |===============| #
+
+#---| [1] UKRAINE MODIFIERS
+	# weekly_supply_consumption
+	# partisan_power
+	# partisan_power_addition
+	# weekly_trust_gain
+	# trust_gain_multiplier
+
+#---| [2] KARTENHAUS MODIFIERS
+	#---| [2.1] MAIN
+		# kartenhaus_monthly_interactions
+		# kartenhaus_interaction_loyalty_effect
+		# kartenhaus_interaction_support_effect
+		# kartenhaus_interaction_pp_cost
+		# NSDAP_dominance_max
+		# NSDAP_dominance_min
+		# NSDAP_dominance_growth_factor
+		# resistance_effects_multiplier
+		# control_effects_multiplier
+		# dissident_effect_on_resistance
+
+	#---| [2.2] FACTION MODIFIERS
+		# NSDAP_support_max
+		# NSDAP_support_min
+		# NSDAP_reformist_support_max
+		# NSDAP_reformist_support_min
+		# NSDAP_reformist_growth
+		# NSDAP_orthodox_support_max
+		# NSDAP_orthodox_support_min
+		# NSDAP_orthodox_growth
+		# NSDAP_reactionary_support_max
+		# NSDAP_reactionary_support_min
+		# NSDAP_reactionary_growth
+		# NSDAP_dissident_support_max
+		# NSDAP_dissident_support_min
+		# NSDAP_dissident_growth
+		# NSDAP_goring_support_max
+		# NSDAP_goring_support_min
+		# NSDAP_goring_growth
+
+# |==============| #
+# |=/=/ CODE /=/=| #
+# |==============| #
+
+# [===================================] #
+# [==/==| [1] UKRAINE MODIFIERS |==/==] #
+# [===================================] #
+
+# modifying weekly supply consumption
+weekly_supply_consumption = {
+	color_type = bad
+	value_type = number
+	precision = 2
+	category = country
+}
+
+# modifying partisan desolation growth and exploitation reduction
+partisan_power = {
+	color_type = bad
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# adds to partisan control growth every 21 days
+# MUST BE DIVISIBLE BY 3, NO EXCEPTIONS
+partisan_power_addition = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+
+# Weekly Trust Gain
+weekly_trust_gain = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 3
+	category = country
+}
+
+# Trust Gain Modifier (modifies ALL trust change effects)
+trust_gain_multiplier = {
+	color_type = good
+	value_type = percentage
+	precision = 0
+	category = country
+}
+
+# [======================================] #
+# [==/==| [2] KARTENHAUS MODIFIERS |==/==] #
+# [======================================] #
+
+# [==-==| [2.1] MAIN |==-==] #
+
+# Monthly Interactions
+kartenhaus_monthly_interactions = {
+	color_type = neutral
+	value_type = number
+	precision = 0
+	category = country
+}
+
+# Loyalty Effect per Interaction
+kartenhaus_interaction_loyalty_effect = {
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 1
+	category = country
+}
+
+# Support Effect per Interaction
+kartenhaus_interaction_support_effect = {
+	color_type = bad
+	value_type = percentage_in_hundred
+	precision = 1
+	category = country
+}
+
+# Interaction PP Cost
+kartenhaus_interaction_pp_cost = {
+	color_type = neutral
+	value_type = number
+	precision = 0
+	category = country
+}
+
+# NSDAP Dominance Max
+NSDAP_dominance_max = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# NSDAP Dominance Min
+NSDAP_dominance_min = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# NSDAP Dominance Growth Factor
+NSDAP_dominance_growth_factor = {
+	color_type = good
+	value_type = percentage
+	precision = 3
+	category = country
+}
+
+# Resistance Effects Multiplier
+resistance_effects_multiplier = {
+	color_type = bad
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# Control Effects Multiplier
+control_effects_multiplier = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# Dissident Effect on Resistance Growth
+dissident_effect_on_resistance = {
+	color_type = bad
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# [==-==| [2.2] FACTION MODIFIERS |==-==] #
+
+# All
+NSDAP_support_max = { # Max Support (all)
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_support_min = { # Min Support (all)
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+
+# Reformist
+NSDAP_reformist_support_max = { # Max Reformist Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_reformist_support_min = { # Min Reformist Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_reformist_growth = { # Reformist Loyalty Growth
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# Orthodox
+NSDAP_orthodox_support_max = { # Max Orthodox Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_orthodox_support_min = { # Min Orthodox Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_orthodox_growth = { # Orthodox Loyalty Growth
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# Reactionary
+NSDAP_reactionary_support_max = { # Max Reactionary Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_reactionary_support_min = { # Min Reactionary Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_reactionary_growth = { # Reactionary Loyalty Growth
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# Dissident
+NSDAP_dissident_support_max = { # Max Dissident Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_dissident_support_min = { # Min Dissident Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_dissident_growth = { # Dissident Loyalty Growth
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
+# Göring
+NSDAP_goring_support_max = { # Max Göring Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_goring_support_min = { # Min Göring Support
+	color_type = good
+	value_type = percentage_in_hundred
+	precision = 2
+	category = country
+}
+NSDAP_goring_growth = { # Göring Loyalty Growth
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}

@@ -6,8 +6,9 @@ state = {
 		owner = CHI
 		add_core_of = CHI
 		buildings = {
-			industrial_complex = 1
+			offices = 1
 			infrastructure = 3
+			thermoelectric_plant = 2
 		}
 		victory_points = {
 			4099 2
@@ -16,12 +17,26 @@ state = {
 			4169 28
 		}
 		victory_points = {
-			10069 2
+			4196 5
+		}
+		victory_points = {
+			1094 2
+		}
+		victory_points = {
+			10069 3
 		}
 		victory_points = {
 			19687 2
 		}
-   	}
+		victory_points = {
+			19773 2
+		}
+		add_extra_state_shared_building_slots = 1
+		set_state_flag = GDP_regions_fujian
+		set_variable = { china_state_ref = 33 }
+		set_variable = { china_region_ref = 4 }
+		#set_state_flag = GDP_category_city
+	}
 
 	provinces = {
 		1094 4099 4169 4196 10069 19633 19669 19687 19773

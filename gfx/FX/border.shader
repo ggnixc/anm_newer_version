@@ -125,6 +125,10 @@ PixelShader =
 		float4 main( VS_OUTPUT_BORDER Input ) : PDX_COLOR
 		{
 			float4 vColor = tex2D( BorderDiffuse, float2( Input.uv.y * BORDER_TILE, Input.uv.x ) );
+			if(Input.pos.x > 4035 && Input.pos.x < 4215 && Input.pos.z > 1600 && Input.pos.z < 1900)
+			{
+				vColor.a = (getZoom() * vColor.a);
+			}
 						
 			//float4 vMudSnow = GetMudSnowColor( Input.pos, SnowMudData );	
 			//float vIsSnow = saturate( GetSnow( vMudSnow ) * 5.0 );

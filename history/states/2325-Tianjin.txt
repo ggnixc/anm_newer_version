@@ -6,19 +6,27 @@ state = {
 		owner = CHI
 		add_core_of = CHI
 		buildings = {
-			industrial_complex = 1
- 			infrastructure = 5
+			prisons = 1
+			offices = 1
+			schools = 1
+			barracks = 1
+			hospitals = 1
+			thermoelectric_plant = 2
+			infrastructure = 5
 		}
 		victory_points = {
-			16916 41
+			16908 41
 		}
-  	}
+		set_variable = { china_state_ref = 8 }
+		set_variable = { china_region_ref = 1 }
+		set_variable = { china_city_ref = 1 }
+	}
 
 	provinces = {
 		16908 16916
 	}
 	manpower = 3283765
 	buildings_max_level_factor = 1.000
-	state_category = large_city
+	state_category = city
 	local_supplies = 0.000
 }

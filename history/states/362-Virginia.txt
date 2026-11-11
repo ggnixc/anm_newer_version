@@ -5,10 +5,14 @@ state = {
 	history = {
 		owner = USA
 		buildings = {
-			industrial_complex = 3
-			arms_factory = 1
+			schools = 1
+			hospitals = 2
+			offices = 3
+			barracks = 1
 			radar_station = 1
-			infrastructure = 5
+			infrastructure = 6
+			thermoelectric_plant = 3
+			hydroelectric_plant = 1
 			dockyard = 4
 			air_base = 10
 			788 = {
@@ -37,6 +41,19 @@ state = {
 		victory_points = { # Charlottesville
 			3823 1
 		}
+		victory_points = { # Fredericksburg
+			6846 1
+		}
+		victory_points = { # Harrisonburg
+			11873 1
+		}
+		victory_points = { # Bristol
+			7558 1
+		}
+		victory_points = { # Chincoteague/Wallops Flight Facility
+			3917 1
+		}
+		set_state_flag = GDP_category_large_city
 	}
 
 	provinces = {
@@ -44,5 +61,5 @@ state = {
 	}
 	manpower = 4046200
 	buildings_max_level_factor = 1.000
-	state_category = large_city
+	state_category = city
 }

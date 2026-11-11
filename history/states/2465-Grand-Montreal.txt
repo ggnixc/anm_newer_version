@@ -3,14 +3,18 @@ state = {
 	name = "STATE_2465"
 
 	history = {
-		owner = QUE
+		owner = CAN
 		buildings = {
-			arms_factory = 1
-			industrial_complex = 2
-			infrastructure = 5
+			schools = 2
+			hospitals = 1
+			barracks = 1
+			offices = 2
+			infrastructure = 8
 			air_base = 2
+			hydroelectric_plant = 2
+			thermoelectric_plant = 1
 		}
-		add_core_of = QUE
+		add_core_of = CAN
 		victory_points = { # Montreal
 			4345 30
 		}
@@ -20,16 +24,18 @@ state = {
 		victory_points = { # Laval
 			5834 7
 		}
-		victory_points = { # 
-			17250 7
+		victory_points = { # Sallaberry
+			17250 2
 		}
- 	}
+		set_state_flag = GDP_regions_quebec
+		set_state_flag = GDP_category_city
+	}
 
 	provinces = {
 		4345 5834 7345 17250 17268
 	}
 	manpower = 2450611
 	buildings_max_level_factor = 1.000
-	state_category = large_city
+	state_category = metropolis
 	local_supplies = 0.000
 }

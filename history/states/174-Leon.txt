@@ -21,15 +21,23 @@ state = {
 		}
 		buildings = {
 			infrastructure = 5
+			schools = 1
+			offices = 1
+			prisons = 1
+			hospitals = 1
+			hydroelectric_plant = 2
+			thermoelectric_plant = 1
 		}
+		set_state_flag = state_renamings
 		add_core_of = IBR
- 	}
+		set_state_flag = GDP_category_large_town
+	}
 
 	provinces = {
 		726 918 920 3725 3727 3918 3920 6746 6907 9699 11843 15521
 	}
 	manpower = 905217
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = town
 	local_supplies = 0.000
 }

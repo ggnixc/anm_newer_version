@@ -1,0 +1,107 @@
+# ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗#
+#██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║╚██╗ ██╔╝#
+#██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║ ╚████╔╝ #
+#██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ╚██╔╝  #
+#╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   #
+# ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   #
+#Shared Focuses
+
+#Index; Search for these names using ctrl+f and you'll find the section they entitle.
+#	INTRO
+#		Game Start Tree
+#	POWER STRUGGLE
+#	KAMPFZEIT
+#		Bormann Kampfzeit Tree
+#		Speer Kampfzeit Tree
+#		Göring Kampfzeit Tree
+#		Himmler Kampfzeit Tree
+#	Shared
+#		WW3 Tree
+
+## ###    ## ######## ######   ######  
+## ####   ##    ##    ##   ## ##    ## 
+## ## ##  ##    ##    ######  ##    ## 
+## ##  ## ##    ##    ##   ## ##    ## 
+## ##   ####    ##    ##   ##  ######  
+#INTRO
+
+######### Domestic Trees ########
+#        Game Start Tree        #
+#################################
+
+#Kate was here, I love yuri
+
+shared_focus = { # Twenty years after Germany's victory in the war, Hitler stands as the unquestioned ruler of a scarred continent. The nazi New Order stands firm. Or so it seems like. General intro, Craddle to Grave-like strong opening.
+	id = GER_eintausend_jahre
+	icon = GFX_focus_GER_eintausend_jahre
+	cost = 1
+	allow_branch = { has_country_flag = GER_IntroTree }
+	cancelable = no
+	x = 7
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus GER_eintausend_jahre"
+		custom_effect_tooltip = GER_start_welcome_back_tt
+		country_event = { id = GER_PreKampfzeit.10 }
+		hidden_effect = { country_event = { id = GER_PreKampfzeit.40 days = 164 } } # Koch Coma
+	}
+}
+
+### GFX Loading Defines ###
+#!gfx:interface\goals2.gfx
+#!gfx:interface\Germany\TNO_GER_goals.gfx
+#!gfx:interface\Germany\TNO_GER_Bormann.gfx
+#!gfx:interface\Germany\TNO_GER_Heydrich.gfx
+#!gfx:interface\Germany\TNO_GER_Speer.gfx
+#!gfx:interface\Africa\TNO_OFN_Africa_goals.gfx
+#!gfx:interface\Africa\TNO_Ostafrika_goals.gfx
+#!gfx:interface\Africa\TNO_South_Africa_goals.gfx
+#!gfx:interface\Africa\TNO_Sudwestafrika_goals.gfx
+#!gfx:interface\Africa\TNO_Zentralafrika_goals.gfx
+#!gfx:interface\Brazil\TNO_Brazil_goals.gfx
+#!gfx:interface\Britain\TNO_Britain_goals.gfx
+#!gfx:interface\Britain_OLD\TNO_England_OLD_goals.gfx
+#!gfx:interface\Britain_OLD\TNO_Scotland_goals.gfx
+#!gfx:interface\Britain_OLD\TNO_Wales_goals.gfx
+#!gfx:interface\Burgundy\TNO_Burgundy_goals.gfx
+#!gfx:interface\Guangdong\TNO_GNG_goals.gfx
+#!gfx:interface\Iberia\TNO_Iberia_goals.gfx
+#!gfx:interface\Ireland\TNO_Ireland_goals.gfx
+#!gfx:interface\Italy\TNO_Italy_OLD_goals.gfx
+#!gfx:interface\Japan\TNO_Japan_goals.gfx
+#!gfx:interface\Manchuria\TNO_Manchukuo_goals.gfx
+#!gfx:interface\Moskowien\TNO_Moskowien_goals.gfx
+#!gfx:interface\Russia\Omolon_2022\TNO_Omolon_2022_goals.gfx
+#!gfx:interface\Russia\TNO_Amur_goals.gfx
+#!gfx:interface\Russia\TNO_Aryan_Brotherhood_goals.gfx
+#!gfx:interface\Russia\TNO_Buryatia_goals.gfx
+#!gfx:interface\Russia\TNO_Chita_goals.gfx
+#!gfx:interface\Russia\TNO_Dirlewanger_goals.gfx
+#!gfx:interface\Russia\TNO_Irkutsk_goals.gfx
+#!gfx:interface\Russia\TNO_Kemerovo_goals.gfx
+#!gfx:interface\Russia\TNO_Komi_goals.gfx
+#!gfx:interface\Russia\TNO_Magadan_goals.gfx
+#!gfx:interface\Russia\TNO_Magnitogorsk_goals.gfx
+#!gfx:interface\Russia\TNO_Novosibirsk_goals.gfx
+#!gfx:interface\Russia\TNO_Omsk_goals.gfx
+#!gfx:interface\Russia\TNO_Onega_goals.gfx
+#!gfx:interface\Russia\TNO_Orenburg_goals.gfx
+#!gfx:interface\Russia\TNO_Russia_goals.gfx
+#!gfx:interface\Russia\TNO_Samara_goals.gfx
+#!gfx:interface\Russia\TNO_SBA_goals.gfx
+#!gfx:interface\Russia\TNO_Sverdlovsk_goals.gfx
+#!gfx:interface\Russia\TNO_Tomsk_goals.gfx
+#!gfx:interface\Russia\TNO_Tyumen_goals.gfx
+#!gfx:interface\Russia\TNO_Ural_League_goals.gfx
+#!gfx:interface\Russia\TNO_Vyatka_goals.gfx
+#!gfx:interface\Russia\TNO_WRRF_goals.gfx
+#!gfx:interface\Russia\TNO_Zlatoust_goals.gfx
+#!gfx:interface\TNO_Australia_goals.gfx
+#!gfx:interface\TNO_Canada_goals.gfx
+#!gfx:interface\TNO_China_goals.gfx
+#!gfx:interface\TNO_Norway_goals.gfx
+#!gfx:interface\TNO_Ostland_goals.gfx
+#!gfx:interface\TNO_Poland_goals.gfx
+#!gfx:interface\TNO_Yunnan_goals.gfx
+#!gfx:interface\Ukraine\TNO_Ukraine_goals.gfx
+#!gfx:interface\USA\TNO_USA_goals.gfx

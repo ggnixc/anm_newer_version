@@ -1,23 +1,30 @@
-state = { #Population Done
-	id = 791
-	name = "STATE_791"
-	state_category = large_town
-	provinces = {
-		503 527 3495 3523 9478 9867 11613 13371 13364 11463 3509
-	}
+state={
+	id=791
+	name="STATE_791"
 	history = {
-		owner = FRA
+		owner = FRS
 		buildings = {
 			infrastructure = 5
+			thermoelectric_plant = 1
 			air_base = 2
 			radar_station = 1
- 			industrial_complex = 1
+			schools = 1
+			offices = 1
 		}
-		add_core_of = FRA
- 		victory_points = { 9478 5 }
-		victory_points = { 3509 5 }
-		victory_points = { 527 1 }
+		add_core_of = FRS
+		victory_points = { 9478 8 }
+		victory_points = { 3509 8 }
+		victory_points = { 3671 8 }
+		victory_points = { 527 3 }
+		victory_points = { 6533 3 }
+		victory_points = { 512 6 }
+		set_state_flag = GDP_category_large_town
 	}
-	manpower = 1249321
-	buildings_max_level_factor = 1.000
+	provinces={
+		512 527 669 2503 3493 3495 3509 3523 3671 6518 6533 9478 9492 9867 11463 11613 11631 13364 13371 
+	}
+	manpower=2285126
+	buildings_max_level_factor=1
+	state_category=large_city
+	local_supplies=0
 }

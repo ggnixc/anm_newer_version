@@ -1,0 +1,1997 @@
+﻿#############
+##TEMPLATES##
+#############
+
+division_template = {
+	name = "Infanterie-Division"
+	division_names_group = GER_infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		MBT = { x = 3 y = 0 }
+		MBT = { x = 3 y = 1 }
+		artillery_brigade = { x = 4 y = 0 }
+		anti_tank_brigade = { x = 4 y = 1 }
+		anti_air_brigade = { x = 4 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		MBT_recon = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }  
+		logistics_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Panzergrenadier-Division (Mot.)"
+	division_names_group = GER_panzergrenadier
+	regiments = {
+		APC = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+		MBT = { x = 2 y = 0 }
+		MBT = { x = 2 y = 1 }
+		sp_artillery_brigade = { x = 2 y = 2 }
+		sp_artillery_brigade = { x = 2 y = 3 }
+		mot_anti_tank_brigade = { x = 3 y = 0 }
+		mot_anti_air_brigade = { x = 3 y = 1 }
+		APC = { x = 3 y = 2 }
+		
+	}
+	support = {  
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		IFV_recon = { x = 0 y = 2 }  
+		artillery = { x = 0 y = 3 }
+		signal_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "Panzergrenadier-Division (Mech.)"
+	division_names_group = GER_panzergrenadier
+	regiments = {
+		APC = { x = 0 y = 0 }
+		APC = { x = 0 y = 1 }
+		APC = { x = 0 y = 2 }
+		APC = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+		MBT = { x = 2 y = 0 }
+		MBT = { x = 2 y = 1 }
+		sp_artillery_brigade = { x = 2 y = 2 }
+		sp_artillery_brigade = { x = 2 y = 3 }
+		mot_anti_tank_brigade = { x = 3 y = 0 }
+		mot_anti_air_brigade = { x = 3 y = 1 }
+		APC = { x = 3 y = 2 }
+		
+	}
+	support = {  
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		IFV_recon = { x = 0 y = 2 }  
+		artillery = { x = 0 y = 3 }
+		signal_company = { x = 0 y = 4 }
+		maintenance_company = { x = 0 y = 5 }
+	}
+}
+
+division_template = {
+	name = "Panzer-Division"
+	division_names_group = GER_panzer
+	regiments = {
+		MBT = { x = 0 y = 0 }
+		MBT = { x = 0 y = 1 }
+		MBT = { x = 0 y = 2 }
+		MBT = { x = 0 y = 3 }
+		MBT = { x = 1 y = 0 }
+		MBT = { x = 1 y = 1 }
+		MBT = { x = 1 y = 2 }
+		MBT = { x = 1 y = 3 }
+		APC = { x = 2 y = 0 }
+		APC = { x = 2 y = 1 }
+		APC = { x = 2 y = 2 }
+		APC = { x = 2 y = 3 }
+		APC = { x = 3 y = 0 }
+		APC = { x = 3 y = 1 }
+		APC = { x = 3 y = 2 }
+		APC = { x = 3 y = 3 }
+		sp_artillery_brigade = { x = 4 y = 0 }
+		sp_artillery_brigade = { x = 4 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		IFV_recon = { x = 0 y = 2 }  
+		artillery = { x = 0 y = 3 }
+		signal_company = { x = 0 y = 4 }
+		maintenance_company = { x = 0 y = 5 }
+	}
+}
+
+division_template = {
+	name = "Marine-Infanterie-Division"
+	division_names_group = GER_marines
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+		marine = { x = 1 y = 3 }
+		marine = { x = 2 y = 0 }
+		marine = { x = 2 y = 1 }
+		marine = { x = 2 y = 2 }
+		marine = { x = 2 y = 3 }
+		marine = { x = 3 y = 0 }
+		marine = { x = 3 y = 1 }
+		marine = { x = 3 y = 2 }
+		marine = { x = 3 y = 3 }
+		artillery_brigade = { x = 4 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		anti_tank = { x = 0 y = 1 }
+		signal_company = { x = 0 y = 2 }  
+		logistics_company = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Gebirgsjäger"
+	division_names_group = GER_mountaineers
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+		mountaineers = { x = 2 y = 3 }
+		artillery_brigade = { x = 3 y = 0 }
+		anti_tank_brigade = { x = 3 y = 1 }
+		mountaineers = { x = 3 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }
+		logistics_company = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Fallschirmjäger"
+	division_names_group = GER_paratroopers
+	regiments = {
+		elite_infantry = { x = 0 y = 0 }
+		elite_infantry = { x = 0 y = 1 }
+		elite_infantry = { x = 0 y = 2 }
+		elite_infantry = { x = 0 y = 3 }
+		elite_infantry = { x = 1 y = 0 }
+		elite_infantry = { x = 1 y = 1 }
+		elite_infantry = { x = 1 y = 2 }
+		elite_infantry = { x = 1 y = 3 }
+		elite_infantry = { x = 2 y = 0 }
+		elite_infantry = { x = 2 y = 1 }
+		elite_infantry = { x = 2 y = 2 }
+		elite_infantry = { x = 2 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		anti_tank = { x = 0 y = 2 }
+		signal_company = { x = 0 y = 3 }
+		field_hospital = { x = 0 y = 4 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "PGD Operationsgruppe"
+	division_names_group = GER_special
+	regiments = {
+		elite_infantry = { x = 0 y = 0 }
+		elite_infantry = { x = 0 y = 1 }
+		elite_infantry = { x = 0 y = 2 }
+		elite_infantry = { x = 1 y = 0 }
+		elite_infantry = { x = 1 y = 1 }
+		elite_infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+		anti_tank = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Polizei-Regiment"
+	is_locked = yes
+	division_names_group = GER_polizei
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		IFV = { x = 1 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		signal_company = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+		military_police = { x = 0 y = 3 }  
+	}
+}
+
+division_template = {
+	name = "SS Panzergrenadier-Division"
+	is_locked = yes
+	division_names_group = GER_Waffen_SS
+	template_counter = 33
+	regiments = {
+		APC = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		IFV = { x = 2 y = 0 }
+		IFV = { x = 2 y = 1 }
+		IFV = { x = 2 y = 2 }
+		MBT = { x = 2 y = 3 }
+		MBT = { x = 3 y = 0 }
+		MBT = { x = 3 y = 1 }
+		sp_artillery_brigade = { x = 3 y = 2 }
+		sp_artillery_brigade = { x = 3 y = 3 }
+		mot_anti_tank_brigade = { x = 4 y = 0 }
+		mot_anti_air_brigade = { x = 4 y = 1 }
+		APC = { x = 4 y = 2 }
+		
+	}
+	support = {  
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		IFV_recon = { x = 0 y = 2 }  
+		artillery = { x = 0 y = 3 }
+		signal_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "SS Panzergrenadier-Brigade"
+	is_locked = yes
+	division_names_group = GER_Waffen_SS
+	template_counter = 33
+	regiments = {
+		MBT = { x = 0 y = 0 }
+		MBT = { x = 0 y = 1 }
+		light_sp_artillery_brigade = { x = 0 y = 2 }
+		APC = { x = 1 y = 0 }
+		APC = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		APC = { x = 2 y = 0 }
+		APC = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {  
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		IFV_recon = { x = 0 y = 2 }  
+		# anti_air = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "SS Panzer-Division"
+	is_locked = yes
+	division_names_group = GER_Waffen_SS
+	template_counter = 32
+	regiments = {
+		MBT = { x = 0 y = 0 }
+		MBT = { x = 0 y = 1 }
+		MBT = { x = 0 y = 2 }
+		MBT = { x = 0 y = 3 }
+		APC = { x = 1 y = 0 }
+		APC = { x = 1 y = 1 }
+		APC = { x = 1 y = 2 }
+		APC = { x = 1 y = 3 }
+		APC = { x = 2 y = 0 }
+		APC = { x = 2 y = 1 }
+		APC = { x = 2 y = 2 }
+		APC = { x = 2 y = 3 }
+		mot_anti_tank_brigade = { x = 3 y = 0 }
+		mot_anti_air_brigade = { x = 3 y = 1 }
+		APC = { x = 3 y = 2 }
+		MBT = { x = 4 y = 0 }
+		sp_artillery_brigade = { x = 4 y = 0 }
+		sp_artillery_brigade = { x = 4 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		IFV_recon = { x = 0 y = 2 }  
+		artillery = { x = 0 y = 3 }
+		signal_company = { x = 0 y = 4 }
+	}
+}
+
+division_template = {
+	name = "SS Panzer-Brigade"
+	is_locked = yes
+	division_names_group = GER_Waffen_SS
+	template_counter = 32
+	regiments = {
+		MBT = { x = 0 y = 0 }
+		MBT = { x = 0 y = 1 }
+		light_sp_artillery_brigade  = { x = 0 y = 2 }
+		APC = { x = 1 y = 0 }
+		APC = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		APC = { x = 2 y = 0 }
+		APC = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		MBT_recon = { x = 0 y = 2 }  
+		anti_air = { x = 0 y = 3 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "SS Gebirgsjäger"
+	is_locked = yes
+	division_names_group = GER_Waffen_SS
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+		anti_tank_brigade = { x = 2 y = 3 }
+		mot_anti_air_brigade = { x = 2 y = 4 }
+		sp_artillery_brigade = { x = 3 y = 0 }
+		MBT = { x = 3 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		logistics_company = { x = 0 y = 1 }
+		IFV_recon = { x = 0 y = 2 }
+		artillery = { x = 0 y = 3 }
+		military_police = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+#############
+##DIVISIONS##
+#############
+
+###Hiii Kateryna here, if you see any units with their locations marked with "- Kate" that means I took creative liberties (99% of the time it's because BT didn't put a placement in)
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "15844" #Weimar
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = "9496" #Frankfurt (Oder)
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = "3679" #Konstanz
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = "9509" #Bielefeld
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = "692" #Munich
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = "6512" #Neiße
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = "3524" #Gießen
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = "3299" #Regensburg
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = "6375" #Allenstein
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = "9294" #Schwerin
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = "3535" #Leipzig
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = "564" #Kassel
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = "15853" #Münster
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = "11544" #Nuremberg
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = "552" #Liegnitz
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = "399" #Oksbøl, Esbjerg in-game (Denmark)
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = "9347" #Hamburg
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = "425" #Mohrungen (between Erfurt and Halle)
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = "18138" #Oldenburg 
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = "3499" #Potsdam
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = "15843" #Chemnitz
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = "11502" #BT put it as Ludwigsburg,a  town north of Stuttgart. I have moved it to Metz because it fought there late in the war and Alsace-Lorraine was looking quite empty - Kate
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = "587" #Cologne
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = "708" #Augsburg
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = "9570" #Breslau
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = "6524" #Erfurt
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = "11331" #Lübeck
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = "9375" #Braunschweig
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+		location = "9361" #Köslin
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = "6568" #Heidelberg
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 35
+		}
+		location = "3530" #Karlsruhe
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = "11547" #Kaiserslautern
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 44
+		}
+		location = "11666" #Vienna
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 45
+		}
+		location = "18121" #Linz
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 46
+		}
+		location = "3585" #Karlsbad
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 50
+		}
+		location = "537" #Küstrin (between Frankfurt (Oder) and Stargard)
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	
+	#Heer Wave 2
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 56
+		}
+		location = "538" #Naumburg (same province as Merseburg in-game)
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 57
+		}
+		location = "707" #Bad Reichenhall (west of Salzburg)
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 58
+		}
+		location = "3231" #Rendsburg (west of Flensburg)
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 61
+		}
+		location = "6332" #Königsberg
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 62
+		}
+		location = "3485" #Glatz (south of Breslau)
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 63
+		}
+		location = "3211" #The Hague
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 68
+		}
+		location = "3572" #Guben
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 69
+		}
+		location = "6558" #Posen - Kate
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 71
+		}
+		location = "526" #Hildesheim
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 72
+		}
+		location = "9575" #Trier
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 73
+		}
+		location = "9557" #Würzburg
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 75
+		}
+		location = "3258" #Neustrelitz
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 76
+		}
+		location = "6521" #Germania
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 78
+		}
+		location = "11486" #Tübingen (south of Stuttgart)
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 79
+		}
+		location = "11494" #Koblenz
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 86
+		}
+		location = "6501" #Altenburg, same province as Jena - Kate
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 87
+		}
+		location = "6504" #BT wanted it in Altenburg, I have placed it in Sankt Kwinten instead (this unit was the first to enter Paris in OTL) - Kate
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	
+	#Heer Other
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 93
+		}
+		location = "6521" #Germania 
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 95
+		}
+		location = "11301" #Weißburg/Weissburg - Kate
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 96
+		}
+		location = "491" #Breschan - Kate
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 98
+		}
+		location = "705" #Sevastopol - Kate (destroyed in Crimea OTL)
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 99
+		}
+		location = "6521" #Germania
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 100
+		}
+		location = "9398" #Rastenburg (north east of Allenstein)
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 101
+		}
+		location = "6521" #Germania
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 102
+		}
+		location = "3458" #Radom - Kate
+		division_template = "Panzergrenadier-Division (Mech.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 181
+		}
+		location = "21" #Nordstern
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 196
+		}
+		location = "21" #Nordstern
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 219
+		}
+		location = "391" #Utrecht
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 249
+		}
+		location = "9498" #Rotterdam
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 333
+		}
+		location = "3497" #Kielce/Kieltz
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 335
+		}
+		location = "15812" #Reichshof
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 703
+		}
+		location = "15172" #Amsterdam
+		division_template = "Panzergrenadier-Division (Mot.)"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	
+	## PGD forces
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "6521" #Germania
+		division_template = "PGD Operationsgruppe"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = "6332" #Königsberg
+		division_template = "PGD Operationsgruppe"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	
+	## Panzer Divisions
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "15844" #Weimar
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = "11666" #Vienna
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = "6521" #Germania
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = "9557" #Würzburg
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = "9511" #Oppeln
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = "6469" #Wuppertal
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = "9471" #Gera, same province as Zwickau ingame 
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = "11415" #Cottbus
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = "11666" #Vienna
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = "9517" #Stuttgart
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = "9535" #Görlitz
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = "6282" #Stettin
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = "3522" #Magdeburg
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = "6559" #Dresden
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = "11547" #Kaiserslautern
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = "15853" #Münster
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = "3559" #Lublin
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = "6521" #Germania
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = "362" #Danzig
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = "6521" #Germania
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = "3230" #Thorn
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+
+	## Marine
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "6282" #Stetting
+		division_template = "Marine-Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+
+	## Mountaineers/Gebirgsdivision
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "11620" #Garmisch-Partenkirchen (North West of Innsbruck)
+		division_template = "Gebirgsjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = "673" #Innsbruck
+		division_template = "Gebirgsjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = "9648" #Graz
+		division_template = "Gebirgsjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = "6559" #Dresden
+		division_template = "Gebirgsjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = "688" #Salzburg
+		division_template = "Gebirgsjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = "3673" #Klagenfurt
+		division_template = "Gebirgsjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	
+	## Paratroopers/Fallschirmjäger
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "6521" #Germania
+		division_template = "Fallschirmjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = "678" #Mülhausen (was deployed first to Avignon in OTL) - Kate
+		division_template = "Fallschirmjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = "18117" #Calais, this unit was first supposed to be deployed to Reims, then it got transferred to Monts d’ Arree near Brest. I have it get transferred to Calais at some point after 45. - Kate
+		division_template = "Fallschirmjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.8
+	}
+	
+	###Waffen-SS
+	
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "6521" #Germania
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = "11542" #Prag
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = "9642" #Bisanz - Kate
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = "9642" #Ede (Amersfoort in-game)
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = "9545" #Ellwangen (Aalen in-game)
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = "688" #Salzburg
+		division_template = "SS Gebirgsjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = "15815" #Tarnau - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = "9388" #Stralsund
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = "3569" #Brünn
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = "9388" #Arnhem (Apeldoorn in-game)
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = "9596" #Krainburg (formed in Ljubliana OTL) - Kate
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = "11483" #Ryssel - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = "6496" #Eindhoven
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = "6598" #Antwerpen - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = "3516" #Namen - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = "11642" #Nanzig - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = "19181" #Warschau/Warsaw - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = "9570" #Breslau
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = "671" #Lienz - Kate
+		division_template = "SS Gebirgsjäger"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = "9472" #Maasburg - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+		location = "9496" #Lieberose (Frankfurt (Oder) in-game)
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = "18143" #North of Duisburg - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = "6418" #Pilsen - Kate
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 35
+		}
+		location = "9508" #Litzmannstadt - Kate
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = "9347" #Hamburg
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 37
+		}
+		location = "3395" #Hanover
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 39
+		}
+		location = "9388" #Arnhem, Apeldoorn in-game (Commander of the SS Standard killed a British POW here) - Kate 
+		division_template = "SS Panzergrenadier-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 50 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 41
+		}
+		location = "9281" #Nordhorn - Kate
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 42
+		}
+		location = "9347" #Hamburg
+		division_template = "SS Panzer-Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+		force_equipment_variants = { MBT_chassis_2 = { owner = "GER" version_name = "Leopard" amount = 200 } }
+	}
+	
+	###Polizei
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = "3211" #The Hague 
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = "11479" #Lemberg 
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = "9309" #Assen (Emmen in-game)
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = "19181" #Warschau/Warsaw
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = "15816" #Krakau
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = "3458" #Radom
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = "3559" #Lublin
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = "516" #Brüssel/Brussels
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = "11642" #Nanzig
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = "11519" #Lüttich
+		division_template = "Polizei-Regiment"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+	}
+}
+
+##############
+##PRODUCTION##
+##############
+
+instant_effect = {
+		## Infantry
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_2
+			creator = "GER"
+		}
+		requested_factories = 12
+		progress = 0.3
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 8
+		progress = 0.3
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_3
+			creator = "GER"
+		}
+		requested_factories = 6
+		progress = 0.6
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_0
+			creator = "GER"
+		}
+		requested_factories = 4
+		progress = 0.2
+		efficiency = 50
+	}
+		#
+
+		## Motorized, Mechanized & Tanks
+
+
+	add_equipment_production = {
+		equipment = {
+			type = MBT_chassis_2
+			creator = "GER"
+			version_name = "Leopard"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 50
+	}
+
+		#
+
+		## Aircraft
+	add_equipment_production = {
+		equipment = {
+			type = jet_fighter_equipment_2
+			creator = "GER"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = jet_interceptor_equipment_2
+			creator = "GER"
+		}
+		requested_factories = 3
+		progress = 0.1
+		efficiency = 50
+	}
+	add_equipment_production = {
+		equipment = {
+			type = attack_helicopter_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 50
+	}
+		#
+	#
+}
+
+#########
+##FOCUS##
+#########
+
+focus = {
+	current = "GER_eintausend_jahre"
+	progress = 0
+}

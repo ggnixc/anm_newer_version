@@ -1,0 +1,1820 @@
+TNO_admin_title_europe = {
+	#Sorted by country alphabetically and Admin Titles are set in this order:
+	##Admin Titles
+	##Assoc Regions
+	##Sub-Admin Titles
+	##Subdivisions
+
+	#Albania
+	ALB = {
+		every_owned_state = {
+			set_variable = { SubAdminTitle = token:Admin_Title_Province }
+		}
+	}
+
+	#Bulgaria
+	BUL = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 48
+					state = 1714
+					state = 1719
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Province }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 48
+					state = 1714
+					state = 1719
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_District }
+		}
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 48
+					state = 1714
+					state = 1719
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 48
+					state = 1714
+					state = 1719
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Municipality }
+		}
+	}
+
+	#Croatia
+	CRO = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 104
+					state = 233
+					state = 969
+					state = 1276
+					state = 1277
+					state = 1279
+					state = 1553
+					state = 1562
+					state = 1726
+					state = 1976
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_County }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 104
+					state = 233
+					state = 969
+					state = 1276
+					state = 1277
+					state = 1279
+					state = 1553
+					state = 1562
+					state = 1726
+					state = 1976
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 104
+					state = 233
+					state = 969
+					state = 1276
+					state = 1277
+					state = 1279
+					state = 1553
+					state = 1562
+					state = 1726
+					state = 1976
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_County }
+		}
+	}
+
+	#Finland
+	FIN = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 111
+					state = 213
+					state = 215
+					state = 216
+					state = 1887
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Province }
+		}
+	}
+	set_variable = { 111.AdminTitle = token:Admin_Title_City }
+	every_state = {
+		limit = {
+			OR = {
+				state = 213
+				state = 215
+				state = 216
+				state = 1887
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_White_Karelia_Province }
+	}
+	FIN = {
+		every_owned_state = {
+			limit = {
+				NOT = { state = 111 }
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Municipality }
+		}
+	}
+
+	#France
+	FRS = {
+		every_owned_state = {
+			set_variable = { AdminTitle = token:Admin_Title_Department }
+		}
+	}
+
+	#Germany
+	GER = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 94
+					state = 1994
+					state = 2099
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Military_Territory }
+		}
+	}
+	GER = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 10
+					state = 88
+					state = 90
+					state = 92
+					state = 1380
+					state = 1382
+					state = 1391
+					state = 2261
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Urban_District }
+		}
+	}
+	GER = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 1385
+					state = 1388
+					state = 1392
+					state = 1393
+					state = 1394
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_District }
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 7
+				state = 35
+				state = 36
+				state = 74
+				state = 1886
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_RG_Netherlands }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 29
+				state = 34
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_RG_Wallonia }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 17
+				state = 18
+				state = 1733
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_RG_Burgundy }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 10
+				state = 1380
+				state = 1381
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_RG_Warsaw }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 90
+				state = 1382
+				state = 1383
+				state = 2261
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_RG_Radom }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 92
+				state = 1384
+				state = 1389
+				state = 1390
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_RG_Lublin }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 88
+				state = 1385
+				state = 1386
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_RG_Krakow }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 89
+				state = 91
+				state = 1387
+				state = 1388
+				state = 1391
+				state = 1392
+				state = 1393
+				state = 1394
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_RG_Galicia }
+	}
+	GER = { #Have to put this here because of the way the check works
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 94
+					state = 1994
+					state = 2099
+					check_variable = { AdminTitle = token:Admin_Title_Urban_District }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Netherlands }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Wallonia }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Burgundy }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Warsaw }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Radom }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Lublin }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Krakow }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Galicia }
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Reichsgau }
+		}
+	}
+	GER = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AdminTitle = token:Admin_Title_Reichsgau }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Netherlands }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Wallonia }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Burgundy }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Warsaw }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Radom }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Lublin }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Krakow }
+					check_variable = { AssocRegion = token:Assoc_Region_RG_Galicia }
+				}
+				NOT = {
+					check_variable = { AdminTitle = token:Admin_Title_Urban_District }
+					check_variable = { AdminTitle = token:Admin_Title_District }
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+	}
+
+	#Greece
+	GRE = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 183
+					state = 1328
+					state = 2322
+					state = 2323
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Department }
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 183
+				state = 1328
+				state = 2322
+				state = 2323
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Cyprus_Dept }
+	}
+	GRE = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AdminTitle = token:Admin_Title_Department }
+					AND = {
+						check_variable = { AssocRegion = token:Assoc_Region_Cyprus_Dept }
+						NOT = {
+							state = 2322
+							state = 2323
+						}
+					}
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Prefecture }
+		}
+	}
+
+	#Hungary
+	set_variable = { 73.AdminTitle = token:Admin_Title_Governorate }
+	every_state = {
+		limit = {
+			OR = {
+				state = 76
+				state = 1288
+				state = 1289
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Translyvania }
+	}
+	HUN = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 73
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_County }
+		}
+	}
+	set_variable = { 73.SubAdminTitle = token:Admin_Title_Admin_Delegations }
+
+	#Iberia
+	IBR = {
+		every_owned_state = {
+			limit = {
+				is_spanish_state = yes
+			}
+			if = {
+				limit = {
+					NOT = { 
+						state = 118
+						state = 166
+						state = 167
+						state = 169
+						state = 171
+						state = 173
+						state = 174
+						state = 178
+						state = 982
+						state = 986
+						state = 988
+						state = 993
+						state = 995
+						state = 996
+						state = 1013
+						state = 1545
+						state = 1546
+						state = 1547
+					}
+				}
+				set_variable = { AdminTitle = token:Admin_Title_Province }
+			}
+			else_if = {
+				limit = {
+					OR = { 
+						state = 1013
+						state = 1545
+						state = 1546
+						state = 1547
+					}	
+				}
+				set_variable = { AdminTitle = token:Admin_Title_Municipality }
+			}
+			else_if = {
+				limit = {
+					state = 118
+				}
+				set_variable = { AdminTitle = token:Admin_Title_County }
+			}
+		}	
+	}
+	set_variable = { 1674.AdminTitle = token:Admin_Title_Municipality }
+	set_variable = { 697.AdminTitle = token:Admin_Title_District }
+	##Spain
+	every_state = {
+		limit = {
+			OR = {
+				state = 171
+				state = 982
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Galicia_Iberia }
+	}
+	set_variable = { 983.AssocRegion = token:Assoc_Region_Asturias }
+	set_variable = { 174.AssocRegion = token:Assoc_Region_Leon }
+	set_variable = { 996.AssocRegion = token:Assoc_Region_Leon }
+	set_variable = { 996.AssocRegion2 = token:Assoc_Region_Old_Castile }
+	every_state = {
+		limit = {
+			OR = {
+				state = 172
+				state = 176
+				state = 994
+				state = 995
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Old_Castile }
+	}
+	set_variable = { 993.AssocRegion = token:Assoc_Region_Basque_Country }
+	set_variable = { 984.AssocRegion = token:Assoc_Region_Navarre }
+	every_state = {
+		limit = {
+			OR = {
+				state = 166
+				state = 985
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Aragon }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 165
+				state = 986
+				state = 1012
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Catalonia }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 167
+				state = 987
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Valencia }
+	}
+	set_variable = { 177.AssocRegion = token:Assoc_Region_Balearic_Islands }
+	every_state = {
+		limit = {
+			OR = {
+				state = 168
+				state = 1701
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Murcia }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 41
+				state = 175
+				state = 999
+				state = 1002
+				state = 1013
+				state = 1702
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_New_Castile }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 118
+				state = 169
+				state = 173
+				state = 988
+				state = 1003
+				state = 1547
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Andalusia }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 170
+				state = 1001
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Extremadura }
+	}
+	##Portugal
+	every_state = {
+		limit = {
+			OR = {
+				state = 180
+				state = 997
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_North }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 181
+				state = 998
+				state = 1672
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Center }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 112
+				state = 1673
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_West_Tagus_Valley }
+	}
+	every_state = {
+		limit = {
+			state = 1674
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Greater_Lisbon }
+	}
+	every_state = {
+		limit = {
+			state = 112
+		}
+		set_variable = { AssocRegion2 = token:Assoc_Region_Greater_Lisbon }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 179
+				state = 1000
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Alentejo }
+	}
+	every_state = {
+		limit = {
+			state = 1004
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Algarve }
+	}
+
+	IBR = {
+		every_owned_state = {
+			limit = {
+				is_spanish_state = yes
+				NOT = {
+					check_variable = { AdminTitle = token:Admin_Title_Province }
+					check_variable = { AdminTitle = token:Admin_Title_Municipality }
+					check_variable = { AdminTitle = token:Admin_Title_County }
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Province }
+		}
+		every_owned_state = {
+			limit = {
+				is_spanish_state = yes
+				check_variable = { AdminTitle = token:Admin_Title_Province }
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Municipality }
+		}
+		every_owned_state = {
+			limit = {
+				is_portuguese_state = yes
+				NOT = {
+					state = 697
+					state = 1674
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+	}
+	IBR = {
+		every_owned_state = {
+			limit = {
+				is_spanish_state = yes
+				check_variable = { SubAdminTitle = token:Admin_Title_Province }	
+			}
+			if = {
+				limit = {
+					OR = {
+						state = 166
+						state = 167
+						state = 171
+						state = 173
+						state = 174
+						state = 178
+						state = 982
+						state = 986
+						state = 988
+						state = 996
+					}
+				}
+				set_variable = { SubDivisions = 2 }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						state = 169
+						state = 993
+					}
+				}
+				set_variable = { SubDivisions = 3 }
+			}
+			else_if = {
+				limit = {
+					state = 995
+				}
+				set_variable = { SubDivisions = 4 }
+			}
+		}
+	}
+
+	#Ireland + Ulster
+	IRE = {
+		every_owned_state = {
+			set_variable = { AdminTitle = token:Admin_Title_County }
+		}
+	}
+	
+	ULS = {
+		every_owned_state = {
+			set_variable = { AdminTitle = token:Admin_Title_County }
+		}
+	}
+
+	#Italy
+	ITA = {
+		every_owned_state = {
+			limit = {
+				OR = { 
+					state = 102
+					state = 164
+					state = 1264
+					state = 1327
+					state = 2111
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Province }
+		}
+		every_owned_state = {
+			limit = {
+				OR = { 
+					state = 448
+					state = 450
+					state = 1326
+					state = 2110
+					state = 2471
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Municipality }
+		}
+		every_owned_state = {
+			limit = {
+				OR = { 
+					state = 273
+					state = 449
+					state = 451
+					state = 661
+					state = 663
+					state = 709
+					state = 1137
+					state = 1140
+					state = 1141
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Governorate }
+		}
+	}
+	set_variable = { 1705.AdminTitle = token:Admin_Title_Treaty_Port }
+	set_variable = { 965.AdminTitle = token:Admin_Title_Canal_Zone }
+
+	every_state = {
+		limit = {
+			OR = {
+				state = 39
+				state = 116
+				state = 158
+				state = 159
+				state = 160
+				state = 161
+				state = 735
+				state = 736
+				state = 1323
+				state = 1376
+				state = 1377
+				state = 2111
+				state = 2471
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_North_Italy }
+	}
+
+	every_state = {
+		limit = {
+			OR = {
+				state = 1
+				state = 2
+				state = 157
+				state = 162
+				state = 743
+				state = 1324
+				state = 1379
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Central_Italy }
+	}
+
+	every_state = {
+		limit = {
+			OR = {
+				state = 114
+				state = 115
+				state = 117
+				state = 156
+				state = 1325
+				state = 1327
+				state = 1445
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_South_Italy }
+	}
+
+	ITA = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 102
+					state = 1137
+					state = 1140
+					state = 1141
+					state = 1264
+					state = 1326
+					state = 1327
+					state = 164
+					state = 1705
+					state = 2110
+					state = 2111
+					state = 2471
+					state = 273
+					state = 448
+					state = 449
+					state = 450
+					state = 451
+					state = 661
+					state = 663
+					state = 709
+					state = 965
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Province }
+		}
+		every_owned_state = {
+			limit = {
+				OR = { 
+					state = 102
+					state = 164
+					state = 1264
+					state = 1327
+					state = 2111
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Municipality }
+		}
+	}
+
+	#Kaukasus
+	set_variable = { 1552.AdminTitle = token:Admin_Title_District_Area }
+	every_state = {
+		limit = {
+			OR = {
+				state = 229
+				state = 244
+				state = 1552
+				state = 1554
+				state = 1730
+				state = 2131
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Azerbaijan }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 232
+				state = 1559
+				state = 1560
+				state = 1561
+				state = 1564
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Caucasus_Mountain }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 231
+				state = 1293
+				state = 1556
+				state = 1558
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Georgia }
+	}
+	set_variable = { 237.AssocRegion = token:Assoc_Region_Kalmykia }
+	set_variable = { 234.AssocRegion = token:Assoc_Region_Kuban }
+	set_variable = { 235.AssocRegion = token:Assoc_Region_Stavropol }
+	CAU = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AssocRegion = token:Assoc_Region_Azerbaijan }
+					check_variable = { AssocRegion = token:Assoc_Region_Caucasus_Mountain }
+					check_variable = { AssocRegion = token:Assoc_Region_Georgia }
+					check_variable = { AssocRegion = token:Assoc_Region_Kalmykia }
+					check_variable = { AssocRegion = token:Assoc_Region_Kuban }
+					check_variable = { AssocRegion = token:Assoc_Region_Stavropol }
+				}
+				NOT = { state = 1552 }
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District_Area }
+		}
+	}
+
+	#Monaco
+	set_variable = { 1377.AdminTitle = token:Admin_Title_Municipality }
+
+	#Montenegro
+	MNT = {
+		every_owned_state = {
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+	}
+
+	#Moscowien
+	MCW = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 195
+					state = 243
+					state = 260
+					state = 1442
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_District_Area }
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 242
+				state = 401
+				state = 1443
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Tula }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 263
+				state = 1436
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Penza }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 222
+				state = 1435
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Kursk }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 219
+				state = 1442
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Moscow }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 217
+				state = 224
+				state = 2632
+				state = 243
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Volgograd }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 239
+				state = 245
+				state = 260
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Saratov }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 195
+				state = 247
+				state = 264
+				state = 1434
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Saint_Petersburg }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 210
+				state = 1441
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Voronezh }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 238
+				state = 246
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Yaroslavl }
+	}
+	MCW = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AssocRegion = token:Assoc_Region_Tula }
+					check_variable = { AssocRegion = token:Assoc_Region_Penza }
+					check_variable = { AssocRegion = token:Assoc_Region_Kursk }
+					check_variable = { AssocRegion = token:Assoc_Region_Moscow }
+					check_variable = { AssocRegion = token:Assoc_Region_Volgograd }
+					check_variable = { AssocRegion = token:Assoc_Region_Saratov }
+					check_variable = { AssocRegion = token:Assoc_Region_Saint_Petersburg }
+					check_variable = { AssocRegion = token:Assoc_Region_Voronezh }
+					check_variable = { AssocRegion = token:Assoc_Region_Yaroslavl }
+				}
+				NOT = {
+					check_variable = { AdminTitle = token:Admin_Title_District_Area }
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District_Area }
+		}
+	}
+
+	#Ostland
+	OST = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 11
+					state = 13
+					state = 79
+					state = 1397
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_District_Area }
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 13
+				state = 191
+				state = 209
+				state = 1395
+				state = 1396
+				state = 1421
+				state = 1440
+				state = 2450
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Estonia }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 12
+				state = 190
+				state = 257
+				state = 943
+				state = 1397
+				state = 1398
+				state = 1399
+				state = 1402
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Latvia }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 11
+				state = 79
+				state = 96
+				state = 189
+				state = 1400
+				state = 1401
+				state = 2451
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Lithuania }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 95
+				state = 194
+				state = 204
+				state = 206
+				state = 207
+				state = 241
+				state = 1403
+				state = 1404
+				state = 1405
+				state = 1406
+				state = 1407
+				state = 2452
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Belarus }
+	}
+	OST = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AssocRegion = token:Assoc_Region_Estonia }
+					check_variable = { AssocRegion = token:Assoc_Region_Latvia }
+					check_variable = { AssocRegion = token:Assoc_Region_Lithuania }
+					check_variable = { AssocRegion = token:Assoc_Region_Belarus }
+				}
+				NOT = {
+					state = 11
+					state = 13
+					state = 79
+					state = 1397
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District_Area }
+		}
+	}
+
+	#Romania and Transnistria
+	##Romania
+	set_variable = { 1281.AdminTitle = token:Admin_Title_Municipality }
+	every_state = {
+		limit = {
+			OR = {
+				state = 46
+				state = 81
+				state = 1281
+				state = 1283
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Muntenia_Province }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 78
+				state = 80
+				state = 1284
+				state = 1285
+				state = 1286
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Moldavia_Province }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 82
+				state = 83
+				state = 84
+				state = 1287
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Translyvania_Province }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 82
+				state = 83
+				state = 84
+				state = 1287
+			}
+		}
+		set_variable = { AssocRegion2 = token:Assoc_Region_Translyvania }
+	}
+	ROM = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 1281
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Commune }
+		}
+	}
+
+	TNS = {
+		set_variable = { 192.AdminTitle = token:Admin_Title_County }
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 192
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_County }
+		}
+	}
+
+	#Russia 
+	##Some admin titles are initialized in another effect since they are not present at game start
+	every_state = {
+		limit = { is_west_russian_state = yes }
+		set_variable = { AssocRegion = token:Assoc_Region_West_Russia }
+	}
+	every_state = {
+		limit = { is_west_siberia_state = yes }
+		set_variable = { AssocRegion = token:Assoc_Region_West_Siberia }
+	}
+	every_state = {
+		limit = { is_central_siberia_state = yes }
+		set_variable = { AssocRegion = token:Assoc_Region_Central_Siberia }
+	}
+	every_state = {
+		limit = { is_far_east_state = yes }
+		set_variable = { AssocRegion = token:Assoc_Region_Far_East }
+	}
+
+	#San Marino
+	set_variable = { 1376.SubAdminTitle = token:Admin_Title_Castles }
+
+	#Serbia
+	SER = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 107
+					state = 1272
+					state = 1273
+					state = 1275
+					state = 1731
+					state = 968
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_District }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 107
+					state = 1272
+					state = 1273
+					state = 1275
+					state = 1731
+					state = 968
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Municipality }
+		}
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 107
+					state = 1272
+					state = 1273
+					state = 1275
+					state = 1731
+					state = 968
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District }
+		}
+	}
+
+	#Sweden
+	SWE = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 141
+					state = 1792
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_County }
+		}	
+	}
+	set_variable = { 141.AdminTitle = token:Admin_Title_City }
+	SWE = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 124
+					state = 141
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_Municipality }
+		}
+	}
+
+	#Ukraine
+	set_variable = { 1428.AdminTitle = token:Admin_Title_District_Area }
+	every_state = {
+		limit = {
+			OR = {
+				state = 202
+				state = 259
+				state = 1428
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Kyiv }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 197
+				state = 200
+				state = 226
+				state = 1426
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Yekaterinoslav }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 1427
+				state = 225
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Chernihiv }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 201
+				state = 773
+				state = 1429
+				state = 1430
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Zhytomyr }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 93
+				state = 199
+				state = 1431
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Volyn }
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 218
+				state = 221
+				state = 227
+				state = 228
+			}
+		}
+		set_variable = { AssocRegion = token:Assoc_Region_Yuzivka }
+	}
+	UKR = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					check_variable = { AssocRegion = token:Assoc_Region_Kyiv }
+					check_variable = { AssocRegion = token:Assoc_Region_Yekaterinoslav }
+					check_variable = { AssocRegion = token:Assoc_Region_Chernihiv }
+					check_variable = { AssocRegion = token:Assoc_Region_Zhytomyr }
+					check_variable = { AssocRegion = token:Assoc_Region_Volyn }
+					check_variable = { AssocRegion = token:Assoc_Region_Yuzivka }
+				}
+				NOT = {
+					state = 1428
+				}
+			}
+			set_variable = { SubAdminTitle = token:Admin_Title_District_Area }
+		}
+	}
+
+	#United Kingdom
+	ENG = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					state = 1300
+					state = 1566
+					state = 1995
+					state = 2000
+					state = 2001
+					state = 2002
+				}
+				is_core_of = ENG
+			}
+			set_variable = { AdminTitle = token:Admin_Title_County }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 1300
+					state = 1995
+					state = 2000
+					state = 2001
+					state = 2002
+				}
+			}
+			set_variable = { AdminTitle = token:Admin_Title_Shrieval_County }
+		}
+	}
+	set_variable = { 1566.AdminTitle = token:Admin_Title_Crown_Dependency }
+}
+
+TNO_admin_title_russia_initialize = {
+	#West Russia
+	if = {
+		limit = {
+			ROOT = { is_central_russian_nation = yes }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 213
+					state = 214
+					state = 215
+					state = 216
+					state = 262
+					state = 858
+					state = 859
+					state = 860
+					state = 861
+					state = 862
+					state = 869
+					state = 870
+					state = 1359
+					state = 1887
+					state = 2619
+					state = 2620
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Northwestern_Krai }
+			TNO_adjust_assoc_region = yes
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 214
+					state = 262
+					state = 858
+					state = 858
+					state = 859
+					state = 860
+					state = 861
+					state = 862
+					state = 869
+					state = 870
+				}
+			}
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Russia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 847
+					state = 848
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Ural_Krai }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Russia }
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { is_west_siberian_nation = yes }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 573
+					state = 582
+					state = 754
+					state = 871
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Ural_Krai }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Siberia }
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { is_central_siberian_nation = yes }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 568
+					state = 757
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Krasnoyarsk_Krai }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Central_Siberia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 40
+					state = 570
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Altai_Krai }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Central_Siberia }
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { is_far_eastern_nation = yes }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 562
+					state = 637
+					state = 657
+					state = 889
+					state = 891
+					state = 1364
+					state = 1646
+					state = 2621
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Northeastern_Krai }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Far_East }
+		}
+	}
+
+	if = {
+		limit = {
+			ROOT = { RUS_consider_communist_regime = yes }
+		}
+		if = {
+			limit = {
+				has_country_leader = {
+					character = KOM_Mikhail_Suslov
+					ruling_only = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 351
+						state = 398
+						state = 866
+						state = 867
+					}
+				}
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Komi_ASSR }
+				TNO_adjust_assoc_region = yes
+				set_variable = { AssocRegion2 = token:Assoc_Region_West_Russia }
+			}
+		}
+		if = {
+			limit = { owns_state = 329 }
+			329 = {
+				set_variable = { AssocRegion = token:Assoc_Region_Tuva_ASSR }
+			}
+		}
+		if = {
+			limit = {
+				original_tag = BRY
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 564
+						state = 565
+						state = 759
+					}
+				}
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Buryat_ASSR }
+				TNO_adjust_assoc_region = yes
+				set_variable = { AssocRegion2 = token:Assoc_Region_Far_East }
+			}
+		}
+		if = {
+			limit = { owns_state = 637 }
+			637 = {
+				set_temp_variable = { assoc_region_temp = token:Assoc_Region_Kamchatka_ASSR }
+				TNO_adjust_assoc_region = yes
+				set_variable = { AssocRegion2 = token:Assoc_Region_Far_East }
+			}
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 574
+					state = 664
+					state = 760
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Yakut_ASSR }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Far_East }
+		}
+	}
+	
+	if = {
+		limit = {
+			ROOT = { RUS_consider_monarchist_regime = yes }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 398
+					state = 399
+					state = 400
+					state = 752
+					state = 865
+					state = 866
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Vyatka_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Russia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 351
+					state = 397
+					state = 867
+					state = 868
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Komi_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Russia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 213
+					state = 214
+					state = 215
+					state = 216
+					state = 262
+					state = 858
+					state = 859
+					state = 860
+					state = 861
+					state = 862
+					state = 869
+					state = 870
+					state = 1359
+					state = 1887
+					state = 2619
+					state = 2620
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Northwestern_Governorate }
+			TNO_adjust_assoc_region = yes
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 214
+					state = 262
+					state = 858
+					state = 858
+					state = 859
+					state = 860
+					state = 861
+					state = 862
+					state = 869
+					state = 870
+				}
+			}
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Russia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 753
+					state = 864
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Perm_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Russia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 582
+					state = 847
+					state = 848
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Ural_Krai }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Russia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 573
+					state = 754
+					state = 871
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Ural_Krai }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Siberia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 403
+					state = 572
+					state = 580
+					state = 653
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_West_Siberian_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_West_Siberia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 568
+					state = 757
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Krasnoyarsk_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Central_Siberia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 40
+					state = 570
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Altai_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Central_Siberia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 516
+					state = 575
+					state = 576
+					state = 758
+					state = 761
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Norilsk_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Central_Siberia }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 562
+					state = 637
+					state = 657
+					state = 889
+					state = 891
+					state = 1364
+					state = 1646
+					state = 2621
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Northeastern_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Far_East }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 564
+					state = 565
+					state = 759
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Buryat_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Far_East }
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 566
+					state = 567
+				}
+			}
+			set_temp_variable = { assoc_region_temp = token:Assoc_Region_Irkutsk_Governorate }
+			TNO_adjust_assoc_region = yes
+			set_variable = { AssocRegion2 = token:Assoc_Region_Far_East }
+		}
+	}
+	every_owned_state = {
+		limit = {
+			NOT = {
+				has_variable = AssocRegion2
+				state = 2620
+				state = 2621
+			}
+		}
+		set_variable = { AdminTitle = token:Admin_Title_Region }
+	}
+	every_owned_state = {
+		limit = { 
+			NOT = { 
+				state = 2620
+				state = 2621
+			} 
+		}
+		set_variable = { SubAdminTitle = token:Admin_Title_District }
+	}
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 2620
+				state = 2621
+			}
+		}
+		set_variable = { AdminTitle = token:Admin_Title_City }
+	}
+}

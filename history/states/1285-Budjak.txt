@@ -3,13 +3,14 @@ state = {
 	name = "STATE_1285"
 	manpower = 611742
 
-	state_category = town
+	state_category = rural #Exception due to being more developed than other Moldavian regions
 
 	history = {
 		owner = ROM
 		add_core_of = ROM
 		buildings = {
 			infrastructure = 3
+			barracks = 1
 			6727 = {
 				naval_base = 1
 			}
@@ -18,6 +19,7 @@ state = {
 		victory_points = { 3701 2 }
 		victory_points = { 6727 2 }
 		set_state_flag = universal_renamings
+		set_state_flag = GDP_regions_moldova
 	}
 	provinces = { 3701 3704 6727 6743 9683 }
 }

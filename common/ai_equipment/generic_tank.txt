@@ -86,8 +86,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 			}
 			upgrades = { 	#This block defines the value of the upgrades that can be added on to the build
-				tank_nsb_engine_upgrade = 1 #Remember to make sure the template has enough speed to be valid. It needs, at the minimum, 5km per hour.
-				tank_nsb_armor_upgrade = 2
+				tank_nsb_engine_upgrade = 4 #Remember to make sure the template has enough speed to be valid. It needs, at the minimum, 5km per hour.
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = { #In this block, you list all modules the AI can use to fill the empty slots. Any modules not on this list will not be used. The AI will always prioritize the modules at the top of the list.
@@ -101,20 +101,24 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
-			#Misc Modules for Third Slot
+			#Misc Modules
 			anti_tank_guided_missiles
-			
-			#
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -124,14 +128,14 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			modifier = { 
 				OR = {
 					has_tech = NSB_IFV_1960
-					has_tech = NSB_MBT_1960
+					#has_tech = NSB_MBT_1960
 				}
 				factor = 0 #let's not waste XP here
 			}
 		}
 
 		target_variant = {
-			match_value = 1250
+			match_value = 1500
 			type = IFV_chassis_1
 			modules = {
 				main_armament_slot = {
@@ -146,7 +150,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -154,19 +159,25 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -174,8 +185,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 0
-				tank_nsb_armor_upgrade = 1
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -189,18 +200,24 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -210,7 +227,7 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			modifier = { 
 				OR = {
 					has_tech = NSB_IFV_1970
-					has_tech = NSB_MBT_1970
+					#has_tech = NSB_MBT_1970
 				}
 				factor = 0 #let's not waste XP here
 			}
@@ -232,7 +249,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -240,19 +258,25 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -260,8 +284,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 2
-				tank_nsb_armor_upgrade = 5
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -275,18 +299,24 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -297,7 +327,7 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			modifier = { 
 				OR = {
 					has_tech = NSB_IFV_1980
-					has_tech = NSB_MBT_1980
+					#has_tech = NSB_MBT_1980
 				}
 				factor = 0 #let's not waste XP here
 			}
@@ -319,7 +349,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -327,19 +358,25 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -347,8 +384,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 2
-				tank_nsb_armor_upgrade = 5
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -362,18 +399,24 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -383,7 +426,7 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			modifier = { 
 				OR = {
 					has_tech = NSB_IFV_1990
-					has_tech = NSB_MBT_1990
+					#has_tech = NSB_MBT_1990
 				}
 				factor = 0 #let's not waste XP here
 			}
@@ -405,7 +448,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -413,19 +457,25 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -433,8 +483,8 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 				}
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 2
-				tank_nsb_armor_upgrade = 5
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -448,18 +498,24 @@ generic_IFV = { #First we name the set of "templates" we are about to design
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 }
@@ -498,7 +554,7 @@ generic_MBT = {
 		}
 
 		target_variant = {
-			match_value = 1650
+			match_value = 1500
 			type = MBT_chassis_1
 			modules = {
 				main_armament_slot = {
@@ -513,7 +569,8 @@ generic_MBT = {
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -521,19 +578,25 @@ generic_MBT = {
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -541,8 +604,8 @@ generic_MBT = {
 				}
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 2
-				tank_nsb_armor_upgrade = 5
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -556,18 +619,24 @@ generic_MBT = {
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -581,7 +650,7 @@ generic_MBT = {
 		}
 
 		target_variant = {
-			match_value = 1850
+			match_value = 1500
 			type = MBT_chassis_2
 			modules = {
 				main_armament_slot = {
@@ -596,7 +665,8 @@ generic_MBT = {
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -604,19 +674,25 @@ generic_MBT = {
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -624,8 +700,8 @@ generic_MBT = {
 				}
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 3
-				tank_nsb_armor_upgrade = 7
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -639,18 +715,24 @@ generic_MBT = {
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -665,7 +747,7 @@ generic_MBT = {
 		}
 
 		target_variant = {
-			match_value = 2150
+			match_value = 1500
 			type = MBT_chassis_3
 			modules = {
 				main_armament_slot = {
@@ -680,7 +762,8 @@ generic_MBT = {
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -688,19 +771,25 @@ generic_MBT = {
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -709,7 +798,7 @@ generic_MBT = {
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 4
-				tank_nsb_armor_upgrade = 8
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -723,18 +812,24 @@ generic_MBT = {
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -748,7 +843,7 @@ generic_MBT = {
 		}
 
 		target_variant = {
-			match_value = 2350
+			match_value = 1500
 			type = MBT_chassis_4
 			modules = {
 				main_armament_slot = {
@@ -763,7 +858,8 @@ generic_MBT = {
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -771,19 +867,25 @@ generic_MBT = {
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -792,7 +894,7 @@ generic_MBT = {
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 4
-				tank_nsb_armor_upgrade = 9
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -806,18 +908,24 @@ generic_MBT = {
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 }
@@ -836,91 +944,12 @@ generic_heavy = {
 	priority = {
 		factor = 100
 		modifier = {
-			factor = 10
+			factor = 100
 			has_template_containing_unit = heavy_tank
 		}
 		modifier = {
 			factor = 0
 			NOT = { has_template_containing_unit = heavy_tank }
-		}
-	}
-
-	early_heavy_default = {
-		priority = {
-			factor = 35
-		}
-
-		target_variant = {
-			match_value = 1750
-			type = heavy_tank_chassis_0
-			modules = {
-				main_armament_slot = {
-					module = heavy_main_armament
-					upgrade > current
-
-				}
-				turret_type_slot = Heavy_three_man_tank_turret
-				suspension_type_slot = tank_interleaved_suspension
-				armor_type_slot = tank_welded_armor
-				engine_type_slot = tank_diesel_engine
-
-				special_type_slot_1 = {
-					any_of = {
-						tank_radio_2
-						tank_radio_1
-						command_optics
-					}
-					upgrade > current
-				}
-				special_type_slot_2 = {
-					any_of = {
-						smoke_emitter
-						smoke_launchers
-						additional_armour
-					}
-					upgrade > current
-				}
-				special_type_slot_3 = {
-					module = tank_special_module
-					upgrade > current
-				}
-				special_type_slot_4 = {
-					any_of = {
-						fire_control_system
-						stabilizer
-						additional_machine_guns
-					}
-					upgrade > current
-				}
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 2
-				tank_nsb_armor_upgrade = 5
-			}
-		}
-		allowed_modules = {
-			heavy_cannon_4
-			heavy_cannon_3
-			heavy_cannon_2
-			heavy_cannon
-			#Armor
-			Heavy_three_man_tank_turret
-			tank_welded_armor
-			tank_interleaved_suspension
-			tank_diesel_engine
-			#Radio
-			tank_radio_1
-			tank_radio_2
-			#Smoke
-			smoke_launchers
-			smoke_emitter
-			#Misc Modules
-			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
-			stabilizer
-			additional_machine_guns
-			command_optics
 		}
 	}
 
@@ -930,7 +959,7 @@ generic_heavy = {
 		}
 
 		target_variant = {
-			match_value = 1950
+			match_value = 1500
 			type = heavy_tank_chassis_1
 			modules = {
 				main_armament_slot = {
@@ -945,7 +974,8 @@ generic_heavy = {
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -953,18 +983,25 @@ generic_heavy = {
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -972,8 +1009,8 @@ generic_heavy = {
 				}
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 3
-				tank_nsb_armor_upgrade = 7
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -987,18 +1024,24 @@ generic_heavy = {
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -1009,7 +1052,7 @@ generic_heavy = {
 		}
 
 		target_variant = {
-			match_value = 2250
+			match_value = 1500
 			type = heavy_tank_chassis_2
 			modules = {
 				main_armament_slot = {
@@ -1024,7 +1067,8 @@ generic_heavy = {
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -1032,19 +1076,25 @@ generic_heavy = {
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -1053,7 +1103,7 @@ generic_heavy = {
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 4
-				tank_nsb_armor_upgrade = 8
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -1067,18 +1117,24 @@ generic_heavy = {
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
 			anti_tank_guided_missiles
-			fire_control_system
-			additional_armour
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 
@@ -1088,8 +1144,8 @@ generic_heavy = {
 		}
 
 		target_variant = {
-			match_value = 2250
-			type = heavy_tank_chassis_2
+			match_value = 1500
+			type = heavy_tank_chassis_3
 			modules = {
 				main_armament_slot = {
 					module = heavy_main_armament
@@ -1103,7 +1159,8 @@ generic_heavy = {
 
 				special_type_slot_1 = {
 					any_of = {
-						tank_radio_2
+						fire_control_system
+						auto_loader
 						tank_radio_1
 						command_optics
 					}
@@ -1111,19 +1168,25 @@ generic_heavy = {
 				}
 				special_type_slot_2 = {
 					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
 						smoke_emitter
 						smoke_launchers
-						additional_armour
 					}
 					upgrade > current
 				}
 				special_type_slot_3 = {
-					module = tank_special_module
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
 					upgrade > current
 				}
 				special_type_slot_4 = {
 					any_of = {
-						fire_control_system
+						anti_tank_guided_missiles
 						stabilizer
 						additional_machine_guns
 					}
@@ -1132,7 +1195,7 @@ generic_heavy = {
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 4
-				tank_nsb_armor_upgrade = 8
+				tank_nsb_armor_upgrade = 15
 			}
 		}
 		allowed_modules = {
@@ -1146,9 +1209,126 @@ generic_heavy = {
 			tank_interleaved_suspension
 			tank_diesel_engine
 			#Radio
+			fire_control_system
+			auto_loader
 			tank_radio_1
 			tank_radio_2
 			#Smoke
+			spall_liner
+			nuclear_protection
+			additional_armour
+			smoke_launchers
+			smoke_emitter
+			#Misc Modules
+			anti_tank_guided_missiles
+			stabilizer
+			additional_machine_guns
+			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
+		}
+	}
+}
+
+generic_APC = {
+	category = land
+
+	available_for = {}
+
+	roles = {
+		armor
+		land_medium_tank
+	}
+
+	priority = {
+		factor = 100
+		modifier = {
+			factor = 10
+			has_template_containing_unit = APC
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_template_containing_unit = APC }
+		}
+	}
+
+	basic_APC_default = {
+		priority = {
+			factor = 35
+			modifier = { 
+				has_tech = NSB_MBT_1960
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1500
+			type = APC_chassis
+			modules = {
+				APC_designation_slot = APC_infantry
+				APC_armament_slot = apc_armament
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+
+				special_type_slot_1 = {
+					any_of = {
+						fire_protection_equipment
+						expanded_toolbox
+						expanded_fuel_capacity
+					}
+					upgrade > current
+				}
+				special_type_slot_2 = {
+					any_of = {
+						spall_liner
+						nuclear_protection
+						additional_armour
+						smoke_emitter
+						smoke_launchers
+					}
+					upgrade > current
+				}
+				special_type_slot_3 = {
+					any_of = {
+						secondary_turret_small_cannon
+						autocannon_turret
+						secondary_turret_hmg
+					}
+					upgrade > current
+				}
+				special_type_slot_4 = {
+					any_of = {
+						anti_tank_guided_missiles
+						stabilizer
+						additional_machine_guns
+					}
+					upgrade > current
+				}
+			}
+			upgrades = {
+				ac_nsb_engine_upgrade = 4
+				ac_nsb_armor_upgrade = 15
+			}
+		}
+		allowed_modules = {
+			APC_infantry
+			APC_infantry_weapon
+			APC_infantry_weapon_2
+			APC_infantry_weapon_3
+			APC_infantry_weapon_4
+			#Armor
+			tank_welded_armor
+			tank_interleaved_suspension
+			tank_diesel_engine
+			#Radio
+			fire_protection_equipment
+			expanded_toolbox
+			expanded_fuel_capacity
+			#Smoke
+			spall_liner
+			nuclear_protection
 			smoke_launchers
 			smoke_emitter
 			#Misc Modules
@@ -1158,6 +1338,9 @@ generic_heavy = {
 			stabilizer
 			additional_machine_guns
 			command_optics
+			secondary_turret_small_cannon
+			autocannon_turret
+			secondary_turret_hmg
 		}
 	}
 }

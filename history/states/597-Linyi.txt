@@ -9,6 +9,7 @@ state = {
 	history = {
 		owner = CHI
 		add_core_of = CHI
+		add_extra_state_shared_building_slots = 1
 		buildings = {
 			infrastructure = 2
 		}
@@ -27,14 +28,16 @@ state = {
 		victory_points = {
 			19797 5
 		}
-
-  	}
+		set_state_flag = GDP_regions_shandong_taiyue
+		set_variable = { china_state_ref = 13 }
+		set_variable = { china_region_ref = 1 }
+	}
 
 	provinces = {
 		1124 1154 4157 4181 7055 9971 19797 19886 19903
 	}
 	manpower = 7964999
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = pastoral
 	local_supplies = 0.000
 }

@@ -1,0 +1,169 @@
+capital = 986
+
+# Vacant
+recruit_character = CNT_Generic_Vacant
+
+
+
+set_country_flag = is_iberian_nation
+
+set_war_support = 0.99
+set_stability = 0.5
+
+oob = "CNT_1962"
+set_grand_doctrine = unconventional_warfare
+set_sub_doctrine = light_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = armored_car_support
+add_mastery = {
+	amount = 400
+}
+
+###Playable
+set_country_flag = tno_playable_country
+
+set_politics = {
+	ruling_party = socialist
+	last_election = "1962.1.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+set_popularities = {
+	communist = 32
+	socialist = 11
+	socialist_1 = 19
+	socialist_2 = 14
+	liberal_conservatism = 16
+
+	fascism = 5
+	fascism_3 = 3
+	
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Worker_Directed }
+
+recruit_character = CNT_Catalonian_Council
+recruit_character = CNT_Collective_Leadership
+recruit_character = CNT_Unorganized
+recruit_character = CNT_Decentralized
+
+recruit_character = CNT_Gregorio_Lopez
+recruit_character = CNT_Salvador_Casanova
+recruit_character = CNT_Germinal_Esgleas
+recruit_character = CNT_Josep_Asens
+
+recruit_character = CNT_Marcelino_Massana
+recruit_character = CNT_Francesc_Sabate
+recruit_character = CNT_Jaume_Martinez
+recruit_character = CNT_Miguel_Nunez
+recruit_character = CNT_Joaquin_Puig
+
+promote_character = CNT_Gregorio_Lopez
+promote_character = CNT_Catalonian_Council
+CNT_Collective_Leadership = {
+	promote_character = socialist_1_subtype
+	promote_character = socialist_2_subtype
+}
+CNT_Unorganized = {
+	promote_character = fascism_subtype
+	promote_character = fascism_2_subtype
+}
+CNT_Decentralized = {
+	promote_character = liberal_conservatism_subtype
+}
+add_ideas = {
+	
+	#cabinet
+	CNT_Gregorio_Lopez_hog
+	CNT_Salvador_Casanova_for
+	CNT_Germinal_Esgleas_eco
+	CNT_Josep_Asens_sec
+	#political#
+	tno_political_parties_one_party_state
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_pow_only
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+	#military#
+	tno_conscription_volunteer_only
+	tno_military_supervision_rules_of_engagement
+	tno_training_minimal_training
+	tno_draft_exemptions_not_applicable
+	#economic#
+	tno_trade_laws_limited_exports
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_8_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	#social#
+	tno_health_care_universal_health_care
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_political_control
+	tno_regulations_moderate_regulations
+	#misc#
+	tno_refugees_skilled
+	tno_women_military_assistance
+	tno_racial_integration_integrated_military
+	tno_child_labor_illegal
+	tno_safety_acceptable_regulations
+	tno_pollution_some_regulations
+	tno_lgbt_rights_lgbt_allowed
+	tno_minorities_equal_rights
+	#socdev
+	tno_academic_base_primary_schooling
+	tno_research_facilities_outdated
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_industrial_equipment_manufacturing_lines
+	tno_industrial_expertise_nascent
+	tno_army_professionalism_political_interference
+	tno_admin_efficiency_deficient_administrative_systems
+}
+
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_political_parties_effectiveness = 37 }
+set_variable = { tno_religious_rights_effectiveness = 58 }
+set_variable = { tno_trade_unions_effectiveness = 55 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 47 }
+set_variable = { tno_public_meetings_effectiveness = 69 }
+set_variable = { tno_press_rights_effectiveness = 48 }
+set_variable = { tno_vote_franchise_effectiveness = 100 }
+
+
+set_variable = { tno_conscription_effectiveness = 59 }
+set_variable = { tno_military_supervision_effectiveness = 47 }
+set_variable = { tno_training_effectiveness = 44 }
+set_variable = { tno_draft_exemptions_effectiveness = 100 }
+
+set_variable = { tno_health_care_effectiveness = 51 }
+set_variable = { tno_education_effectiveness = 50 }
+set_variable = { tno_penal_system_effectiveness = 59 }
+set_variable = { tno_gender_rights_effectiveness = 72 }
+set_variable = { tno_security_effectiveness = 47 }
+
+set_variable = { tno_trade_laws_effectiveness = 59 }
+set_variable = { tno_income_taxation_effectiveness = 78 }
+set_variable = { tno_minimum_wage_effectiveness = 53 }
+set_variable = { tno_max_workhours_effectiveness = 70 }
+set_variable = { tno_pensions_effectiveness = 53 }
+set_variable = { tno_unemployment_effectiveness = 48 }
+set_variable = { tno_regulations_effectiveness = 43 }
+
+add_opinion_modifier = { target = SPS modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = CTL modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = FZL modifier = IBR_Iberian_Wars_Contender }
+add_opinion_modifier = { target = FSR modifier = IBR_NRF_NuffSaid }
+
+TNO_startup_nation = yes
+

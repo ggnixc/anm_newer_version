@@ -1,0 +1,271 @@
+on_actions = {
+	#### PEACE/WAR VICTORY ON_CAPITULATION BLOCK ####
+	#### PUT YOUR SHIT HERE
+	# At the end of each global block, set the skip_default_capitulation GLOBAL flag
+	# Otherwise shit will just get annexed
+	# Really
+	# It will.
+
+	# FROM = winner
+	# ROOT = country being capitulated/loser
+
+	# Anytime y'all are triggering the popup manually, please add 1 to the dirty variable, `global.peace_popup_dirty`
+
+	#See TNO_economy_scripted_effects regarding how transfer_GDP works
+	on_capitulation = {
+		effect = {
+			log = "[GetDateText]: FROM: [From.GetName] ROOT: [Root.GetName] on_capitulation"
+
+			set_global_flag = show_peace_popup_alert
+			FROM = {
+				save_global_event_target_as = winning_country
+			}
+			ROOT = {
+				save_global_event_target_as = losing_country
+			}
+
+			log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
+
+			if = {
+				limit = {
+					event_target:losing_country = {
+						any_allied_country = {
+							has_war_together_with = event_target:losing_country
+						}
+					}
+				}
+				set_global_flag = losing_country_multiple
+			}
+
+			if = {
+				limit = {
+					event_target:winning_country = {
+						any_allied_country = {
+							has_war_together_with = event_target:winning_country
+						}
+					}
+				}
+				set_global_flag = winning_country_multiple
+			}
+			add_to_variable = { global.peace_popup_dirty = 1 }
+
+			FROM = { # winner simply gets GDP recalculated :)
+				recalculate_GDP_and_PUs_on_demand = yes
+			}
+
+
+			#KD's Consequences of War
+			#Loser's States controlled by the enemy get -15% GDP, which given how warfare in the 60s and 70s would play out on a large scale, could very well be a generous estimate
+			#It's a simple yet effective solution
+			ROOT = {
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_war_with = INS #To unscrew the Indonesian Civil War
+								has_war_with = FRI
+								tag = MDM
+								AND = {
+									has_war_with = SAF
+									OR = {
+										tag = COG
+										tag = ANG
+										tag = GRO
+									}
+								}
+							}
+						}
+					}
+					TNO_KD_Consequences_of_Capitulation = yes
+				}
+			}
+
+			#Annexation block
+			#This if block will only fire if FROM (capitulator) and ROOT (country being capitulated)
+			#That is to say, if one side has completely lost (nobody left to fight on)
+
+			if = {
+				limit = {
+					OR = {
+						ROOT = { is_in_faction = no }
+						ROOT = {
+							all_allied_country = {
+								if = {
+									limit = {
+										has_war_with = FROM
+										is_major = yes
+									}
+									has_capitulated = yes
+								}
+							}
+						}
+					}
+				}
+				log = "war_won"
+				set_global_flag = war_won
+
+				if = {
+					limit = {
+						FROM = {
+							is_russian_nation = yes
+							NOT = {
+								tag = ONG
+								is_in_faction_with = ONG
+							}
+						}
+						ROOT = {
+							is_russian_nation = yes
+						}
+					}
+					#### Consequences of Annexation
+					TNO_KD_Consequences_of_Annexation = yes
+					RUS_capitulation_effect = yes
+
+					#ADD THE WAR END PEACE DEALS HERE 
+
+				#################################################
+				##=|           Germany Peace Deals           |=##
+				##======================| |====================##
+				#################################################
+
+				#Germany defeats Communist Serbia (Just an)
+#				else_if = {
+#					limit = {
+#						FROM = {
+#							OR = {
+#								original_tag = GER
+#								is_in_faction_with = GER
+#							}
+#						}
+#						ROOT = { original_tag = SER }
+#					}
+#					FROM = {
+#						white_peace = ROOT
+#						GER = {
+#							set_autonomy = {
+#								target = SER
+#								autonomy_state = autonomy_collaborator_puppet_state
+#							}
+#						}
+#					}
+#					SER = {
+#						set_politics = {
+#							ruling_party = fascism
+#						}
+#						set_popularities = {
+#							communist = 21
+#							socialist = 9
+#							paternalism = 13
+#							despotism = 14
+#							fascism = 29
+#							national_socialism = 14
+#						}
+#						set_party_name = {
+#							ideology = fascism
+#							long_name = SER_fascism_party_jonic_long
+#							name = SER_fascism_party_jonic
+#						}
+#						promote_character = {
+#							character = SER_Borivoje_Jonic
+#							ideology = fascism_eccliastical_nationalism_subtype
+#						}
+#						set_cosmetic_tag = SER_GER
+#						remove_ideas = {
+#							SER_A_Divided_Front
+#							SER_Death_To_Fascism_Freedom_To_The_People
+#							SER_Milos_against_Murad
+#							SER_Rebirth_of_a_Nation
+#						}
+#						add_ideas = {
+#							SER_Zealots_Conservatives_and_Conformists
+#							SER_majka_srbija
+#							Pakt_SupervisedSignatory
+#						}
+#						set_temp_variable = { TNO_economy_subtype_temp = token:Econ_Subtype_Gelenkte_Wirtschaft }
+#						econ_subtype_change = yes
+#						if = {
+#							limit = { has_global_flag = german_civil_war_speervic }
+#							join_zollverein = yes
+#						}
+#						econ_join_sphere_GER = yes
+#					}
+#					GER = {
+#						country_event = { id = serbia.104 days = 3 }
+#					}
+#					set_global_flag = skip_default_capitulation
+#				}
+
+				if = { # Fixing all wars vs puppets
+					limit = {
+						ROOT = {
+							is_puppet = yes
+							if = {
+								limit = { is_puppet = yes }
+								OVERLORD = { has_capitulated = no }
+							}
+						}
+					}
+					log = "endded puppet"
+					ROOT = { OVERLORD = { end_puppet = PREV } }
+				}
+
+				if = { # Nukes
+					limit = {
+						NOT = { has_global_flag = nukes_disabled }
+						FROM = {
+							has_nuclear_arsenal = yes
+						}
+						ROOT = {
+							has_nuclear_arsenal = yes
+							NOT = { has_country_flag = TNO_nuke_disabled }
+						}
+					}
+					ROOT = { country_event = { id = nuclearwar.6 days = 7 } }
+					FROM = { country_event = { id = nuclearwar.6 days = 7 } }
+				}
+
+				# https://www.youtube.com/watch?v=P8xZe7W62WI -> battle cry of freedom is better, cope
+				if = {
+					limit = {
+						FROM = {
+							OR = {
+								original_tag = USA
+								is_in_faction_with = USA
+							}
+						}
+						ROOT = {
+							OR = {
+								original_tag = GER
+								original_tag = JAP
+							}
+						}
+					}
+					USA = {
+						if = {
+							limit = { has_global_flag = nukes_disabled }
+							add_to_variable = { america_saves_the_world_counter = 1 }
+							if = {
+								limit = { check_variable = { america_saves_the_world_counter = 2 } }
+								country_event = { id = USA.1776 days = 2 }
+								clear_variable = america_saves_the_world_counter
+							}
+						}
+						else = {
+							country_event = { id = nuclearwar.6 days = 5 }
+						}
+					}
+				}
+
+				#Capitulation block
+				set_global_flag = war_continuing
+			}
+			clr_global_flag = skip_default_capitulation
+		}
+	}
+	#don't mind me just logging wars
+	on_declare_war = {
+		effect = {
+			log="[GetDateText]: [Root.GetName] declared war on [From.GetName]"
+		}
+	}
+}

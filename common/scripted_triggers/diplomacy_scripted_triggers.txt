@@ -170,7 +170,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 	if = {
 		limit = {
 			ROOT = {
-				has_country_flag = may_send_volunteers
+				has_country_flag = may_send_volunteers_to_@FROM
 			}
 			custom_trigger_tooltip = {
 				tooltip = has_proxy_war
@@ -187,11 +187,95 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
-	always = yes
+	if = {
+		limit = {
+			ROOT = {
+				tag = CHI
+				OR = {
+					has_global_flag = CHI_Western_Insurrection_Crisis
+					has_global_flag = CHI_Yunnan_War
+				}
+				NOT = { has_global_flag = JAP_Western_Insurrection_Intervention }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = DIPLO_WESTERN_INSURRECTION_CALL
+			always = no
+		}
+	}
+    else_if = {
+		limit = {
+			has_global_flag = CAO_FRC_WAR
+			ROOT = {
+				original_tag = FRC
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = DIPLO_CAO_FRC_WAR_CALL
+			always = no
+		}
+	}
+    else_if = {
+		limit = {
+			has_global_flag = franco_burgundian_war
+			ROOT = {
+				original_tag = FRS
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = DIPLO_FRS_BRG_WAR_CALL
+			always = no
+		}
+	}
+	else = {
+		always = yes
+	}
 }
 
 DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
-	always = yes
+	if = {
+		limit = {
+			FROM = {
+				tag = CHI
+				OR = {
+					has_global_flag = CHI_Western_Insurrection_Crisis
+					has_global_flag = CHI_Yunnan_War
+				}
+				NOT = { has_global_flag = JAP_Western_Insurrection_Intervention }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = DIPLO_WESTERN_INSURRECTION_JOIN
+			always = no
+		}
+	}
+    else_if = {
+		limit = {
+			has_global_flag = CAO_FRC_WAR
+			ROOT = {
+				is_in_faction_with = FRC
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = DIPLO_CAO_FRC_WAR_JOIN
+			always = no
+		}
+	}
+    else_if = {
+		limit = {
+			has_global_flag = franco_burgundian_war
+			ROOT = {
+				is_puppet_of = FRS
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = DIPLO_FRS_BRG_WAR_JOIN
+			always = no
+		}
+	}
+	else = {
+		always = yes
+	}
 }
 
 DIPLOMACY_NONAGGRESSIONPACT_ENABLE_TRIGGER = {
@@ -237,6 +321,23 @@ DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = {
 }
 
 DIPLOMACY_REQUEST_INTERNATIONAL_MARKET_ACCESS_RIGHTS_ENABLE_TRIGGER = {
+	custom_trigger_tooltip = {
+		tooltip = feature_disabled
+		always = no
+	}
+}
+
+DIPLOMACY_REQUEST_EXP_FORCE_ENABLE_TRIGGER = {
+	if = {
+		limit = { tag = CHI }
+		custom_trigger_tooltip = {
+			tooltip = feature_disabled
+			always = no
+		}
+	}
+}
+
+DIPLOMACY_NAVAL_BLOCKADE_ENABLE_TRIGGER = {
 	custom_trigger_tooltip = {
 		tooltip = feature_disabled
 		always = no

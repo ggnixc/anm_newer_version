@@ -1,16 +1,12 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_Cold_War_GUI_CRT_bg"
-		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_CRT_bg.dds"
-	}
-	spriteType = {
-		name = "GFX_Cold_War_GUI_Metal_bg"
-		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_Metal_bg.dds"
+		name = "GFX_Cold_War_GUI_info_button"
+		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_info_button.dds"
 	}
 
 	spriteType = {
-		name = "GFX_Cold_War_GUI_info_button"
-		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_info_button.dds"
+		name = "GFX_Cold_War_GUI_ButtonsBackground"
+		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_ButtonsBackground.dds"
 	}
 
 	spriteType = {
@@ -28,6 +24,10 @@ spriteTypes = {
 		name = "GFX_Cold_War_GUI_Title_Separator"
 		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_Title_Separator.dds"
 	}
+	spriteType = {
+		name = "GFX_Cold_War_GUI_Title_Separator2"
+		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_Title_Separator2.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_Cold_War_GUI_Nuke_Small_Icon_Outline"
@@ -44,6 +44,14 @@ spriteTypes = {
 		noOfFrames = 3
 	}
 
+	corneredTileSpriteType = {
+		name = "GFX_Cold_War_GUI_Tiled_Window"
+		size= { x = 192 y = 192 }
+		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_Tiled_Window.dds"
+		borderSize = { x = 64 y = 64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 	spriteType = {
 		name = "GFX_Cold_War_GUI_Spheres_Separator"
 		textureFile = "gfx/interface/cold_war_gui/Cold_War_GUI_Spheres_Separator.dds"
@@ -139,14 +147,20 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_Cold_War_GUI_Germany"
 		texturefile = "gfx/interface/cold_war_gui/Cold_War_GUI_Germany.dds"
+		transparencecheck = yes
+		noOfFrames = 2
 	}
 	SpriteType = {
 		name = "GFX_Cold_War_GUI_Japan"
 		texturefile = "gfx/interface/cold_war_gui/Cold_War_GUI_Japan.dds"
+		transparencecheck = yes
+		noOfFrames = 2
 	}
 	SpriteType = {
 		name = "GFX_Cold_War_GUI_USA"
 		texturefile = "gfx/interface/cold_war_gui/Cold_War_GUI_USA.dds"
+		transparencecheck = yes
+		noOfFrames = 2
 	}
 	SpriteType = {
 		name = "GFX_Cold_War_GUI_Italy"
@@ -178,33 +192,53 @@ spriteTypes = {
 		texturefile = "gfx/interface/cold_war_gui/tension_mechanic_frame.dds"
 	}
 
-	SpriteType = {
-		name = "GFX_Cold_War_GUI_Simple_Background"
-		texturefile = "gfx/interface/cold_war_gui/Cold_War_GUI_Simple_BG.dds"
+	spriteType = {
+		name = "GFX_Cold_War_GUI_Relations_ProgBar_Background"
+		texturefile = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_Relations_ProgBar_Background.dds"
 	}
-
-	SpriteType = {
-		name = "GFX_Cold_War_GUI_Influence_Frame"
-		texturefile = "gfx/interface/cold_war_gui/influence_slot.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_Cold_War_GUI_Tension_GUI_Info_Button"
-		texturefile = "gfx/interface/cold_war_gui/Tension_GUI_Info_Button.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_Cold_War_GUI_Tension_Outline"
-		texturefile = "gfx/interface/cold_war_gui/Cold_War_GUI_Tension_Outline.dds"
-	}
-
 	progressbartype = {
-		name = "GFX_Cold_War_GUI_Tension_Progressbar"
+		name = "GFX_Cold_War_GUI_Relations_ProgBar_Positive"
 		color = { 0.0 0.0 0.0 }
 		colortwo = { 0.0 0.0 0.0 }
-		textureFile1 = "gfx/interface/cold_war_gui/tension_mechanic_progressbar_full.dds"
-		textureFile2 = "gfx/interface/cold_war_gui/tension_mechanic_progressbar_empty.dds"
-		size = { x = 300 y = 30 }
-		effectFile = "gfx/FX/progress_centered.lua"
+		textureFile1 = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_Relations_ProgBar_Positive.dds"
+		textureFile2 = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_Relations_ProgBar_Empty.dds"
+		size = { x = 252 y = 31 }
+		steps = 10
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_Cold_War_GUI_Relations_ProgBar_Negative"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_Relations_ProgBar_Negative.dds"
+		textureFile2 = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_Relations_ProgBar_Empty.dds"
+		size = { x = 252 y = 31 }
+		steps = 10
+		effectFile = "gfx/FX/progress_reverse.lua"
+	}
+
+	spriteType = {
+		name = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Background"
+		texturefile = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_RelationsTrend_ProgBar_Background.dds"
+	}
+	progressbartype = {
+		name = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Positive"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_RelationsTrend_ProgBar_Positive.dds"
+		textureFile2 = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_RelationsTrend_ProgBar_Empty.dds"
+		size = { x = 167 y = 12 }
+		steps = 240
+		effectFile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {
+		name = "GFX_Cold_War_GUI_RelationsTrend_ProgBar_Negative"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_RelationsTrend_ProgBar_Negative.dds"
+		textureFile2 = "gfx/interface/cold_war_gui/GFX_Cold_War_GUI_RelationsTrend_ProgBar_Empty.dds"
+		size = { x = 167 y = 12 }
+		steps = 240
+		effectFile = "gfx/FX/progress_reverse.lua"
 	}
 }

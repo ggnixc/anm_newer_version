@@ -55,8 +55,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/operatives/upgrade_button_available.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus_ongoing_mask2.dds"
-			animationtexturefile = "gfx/interface/focus_ongoing_texture.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/focusview/titlebar/focus_ongoing_mask2.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_ongoing_texture.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 20.0				# in seconds
@@ -73,8 +73,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/operatives/upgrade_button_completed.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/focus_completed_mask.dds"
-			animationtexturefile = "gfx/interface/focus_completed_texture.dds" 	# <- the animated file
+			animationmaskfile = "gfx/interface/focusview/titlebar/focus_completed_mask.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" 	# <- the animated file
 			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = yes			# yes or no ;)
 			animationtime = 26.0				# in seconds
@@ -224,7 +224,7 @@ spriteTypes = {
 		alwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
 	}
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_spymaster_button"
 		texturefile = "gfx/interface/operatives/spymaster_button.dds"
 		noOfFrames = 1
@@ -292,11 +292,11 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_brt"
-		texturefile = "gfx/interface/operatives/agencies/agency_logo_brt.dds"
+		name = "GFX_intelligence_agency_logo_bra"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_bra.dds"
 		noOfFrames = 2
 	}
-	
+
 	spriteType = {
 		name = "GFX_intelligence_agency_logo_hol"
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_hol.dds"
@@ -364,11 +364,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_kha"
-		texturefile = "gfx/interface/operatives/agencies/agency_logo_kha.dds"
+		name = "GFX_intelligence_agency_logo_sba"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_sba.dds"
 		noOfFrames = 2
 	}
-	
+
 	spriteType = {
 		name = "GFX_intelligence_agency_logo_sov"
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_sov.dds"
@@ -406,14 +406,14 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_brg"
-		texturefile = "gfx/interface/operatives/agencies/agency_logo_brg.dds"
+		name = "GFX_intelligence_agency_logo_sd"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_sd.dds"
 		noOfFrames = 2
 	}
 
 	spriteType = {
-		name = "GFX_intelligence_agency_logo_kir"
-		texturefile = "gfx/interface/operatives/agencies/agency_logo_kir.dds"
+		name = "GFX_intelligence_agency_logo_vyt"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_vyt.dds"
 		noOfFrames = 2
 	}
 
@@ -426,6 +426,30 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_intelligence_agency_logo_oms"
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_oms.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_mag_werbell"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_mag_werbell.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_chi"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_chi.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_mex"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_mex.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_tur"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_tur.dds"
 		noOfFrames = 2
 	}
 
@@ -729,9 +753,9 @@ spriteTypes = {
 		play_on_show = yes
 		pause_on_loop = 0.0
 	}
-	
+
 	spriteType = {
 		name = "GFX_agency_popup_bg"
 		textureFile = "gfx/interface/operatives/intelligence_agency_popup_bg.dds"
-	}	
+	}
 }

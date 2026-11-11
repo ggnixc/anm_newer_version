@@ -1,118 +1,957 @@
-﻿capital = 1013
-set_cosmetic_tag = IBR_CONGRESS
+capital = 1013
 
-recruit_character = IBR_jose_utrera_molina
-recruit_character = IBR_manuel_monteiro
-recruit_character = IBR_alfonso_armada
-recruit_character = IBR_jose_miguel_judice
-recruit_character = IBR_antonio_hernandez_mancha
+# Vacant
+recruit_character = IBR_Generic_Vacant
+
+#GDP Regional distribution
+set_country_flag = GDP_regions
+
+set_country_flag = is_iberian_nation
 
 set_war_support = 0.8
-set_stability = 0.4
-add_manpower = 10000 
+set_stability = 0.65
 
-set_research_slots = 3
+###Playable
+set_country_flag = tno_playable_country
+
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 150
+}
+
+#CHARACTERS
+#Leaders
+recruit_character = IBR_Francisco_Franco
+recruit_character = IBR_Antonio_Salazar
+recruit_character = IBR_Iberian_Council
+recruit_character = IBR_Decentralized
+recruit_character = IBR_Manuel_Fraga
+recruit_character = IBR_Joao_Miller_Guerra
+recruit_character = IBR_Marcelo_Caetano
+recruit_character = IBR_Power_Vacuum
+recruit_character = IBR_Fernando_Alvarez_Miranda
+recruit_character = IBR_Jose_Maria_Gil_Robles
+recruit_character = IBR_Pio_Cabanillas
+recruit_character = IBR_Joaquin_Garrigues_Walker
+recruit_character = IBR_Francisco_Pinto_Balsemao
+recruit_character = IBR_Joaquin_Ruiz_Gimenez
+recruit_character = IBR_Francisco_Fernandez_Ordonez
+recruit_character = IBR_Armando_Adao_Silva
+recruit_character = IBR_Rodolfo_Llopis
+recruit_character = IBR_Mario_Soares
+recruit_character = IBR_Santiago_Carrillo
+recruit_character = IBR_Alvaro_Cunhal
+recruit_character = IBR_Enrique_Tierno_Galvan
+recruit_character = IBR_Rodolfo_Martin_Villa
+recruit_character = IBR_Various_Leaders
+#Ministers
+recruit_character = IBR_Fernando_Maria_Castiella
+recruit_character = IBR_Jose_Ferreira_Dias
+recruit_character = IBR_Luis_Teixeira
+recruit_character = IBR_Jose_Correia_Oliveira
+recruit_character = IBR_Antonio_Barroso_Sanchez
+recruit_character = IBR_Pablo_Martin_Alonso
+recruit_character = IBR_Camilo_Menendez_Tolosa
+recruit_character = IBR_Antonio_Castro_Fernandes
+recruit_character = IBR_Mariano_Navarro_Rubio
+recruit_character = IBR_Juan_Castanon_Mena
+recruit_character = IBR_Jose_Maria_Areilza
+recruit_character = IBR_Enrique_Fuentes_Quintana
+recruit_character = IBR_Fernando_de_Santiago
+recruit_character = IBR_Torcuato_Fernandez_Miranda
+recruit_character = IBR_Joao_Freitas_Cruz
+recruit_character = IBR_Manuel_Gutierrez_Mellado
+recruit_character = IBR_Joao_Pereira_Campos
+recruit_character = IBR_Andre_Goncalves_Pereira
+recruit_character = IBR_Laureano_Lopez_Rodo
+recruit_character = IBR_Fernando_Herrero_Tejedor
+#High Command
+recruit_character = IBR_Luis_Camara_Pina
+recruit_character = IBR_Alberto_Andrade_Silva
+recruit_character = IBR_Francisco_Costa_Gomes
+recruit_character = IBR_Felipe_Jose_Abarzuza
+recruit_character = IBR_Adolfo_Baturone_Colombo
+recruit_character = IBR_Carlos_Buhigas_Garcia
+recruit_character = IBR_Bernardo_Mira_Delgado
+recruit_character = IBR_Joao_Corte_Real
+recruit_character = IBR_Luis_Navarro_Garnica
+recruit_character = IBR_Ignacio_Alfaro_Arregui
+recruit_character = IBR_Fernando_Quintanilha
+recruit_character = IBR_Juan_Romero_Manso
+recruit_character = IBR_Jose_Rodriguez_Lecea
+recruit_character = IBR_Jose_Daniel_Lacalle
+recruit_character = IBR_Julio_Salvador_Diaz
+recruit_character = IBR_Manuel_Diogo_Neto
+recruit_character = IBR_Angel_Gonzalez_Mendoza
+recruit_character = IBR_Indalencio_Nunez_Iglesias
+recruit_character = IBR_Manuel_Diez_Alegria
+#Generals and admirals
+recruit_character = IBR_Agustin_Munoz_Grandes
+recruit_character = IBR_Carlos_Asensio_Cabanillas
+recruit_character = IBR_Francisco_Coloma_Gallegos
+recruit_character = IBR_Mohammed_Mezziane
+recruit_character = IBR_Alfonso_Armada
+recruit_character = IBR_Antonio_Spinola
+recruit_character = IBR_Camilo_Alonso_Vega
+recruit_character = IBR_Santiago_Amado_Loriga
+recruit_character = IBR_Luis_Carrero_Blanco
+recruit_character = IBR_Angel_Liberal_Lucini
+recruit_character = IBR_Gabriel_Pita_Veiga
+recruit_character = IBR_Americo_Tomas
+recruit_character = IBR_Henrique_Tenreiro
+recruit_character = IBR_Pedro_Nieto_Antunez
+recruit_character = IBR_Rafael_Garcia_Valino
+recruit_character = IBR_Afonso_Almeida_Fernandes
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.2.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+	communist = 6
+	socialist = 4
+	liberal_conservatism = 2
+	paternalism = 13
+	despotism = 0
+	despotism_3 = 28
+	despotism_2 = 20
+	fascism = 16
+	fascism_2 = 11
+}
+
+set_variable = { despotism_2_var = token:IBR_despotism_2_auth }
+set_variable = { despotism_3_var = token:IBR_despotism_3_auth }
+set_variable = { fascism_2_var = token:IBR_fascism_2_auth }
+set_variable = { fascism_0_var = token:IBR_fascism_auth }
+set_variable = { paternalism_0_var = token:IBR_paternalism_auth }
+set_variable = { communist_0_var = token:IBR_communist_auth }
+set_variable = { socialist_0_var = token:IBR_socialist_auth }
+set_variable = { liberal_conservatism_0_var = token:IBR_liberal_conservatism_auth }
+
+set_research_slots = 4
 
 set_convoys = 200
 
-set_politics = {
-	ruling_party = paternalism
-	last_election = "1936.2.16"
-	election_frequency = 36
-	elections_allowed = yes
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "IBR_1962"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "IBR_1962_nsb"
 }
 
-TNO_startup_nation = yes
+set_air_oob = "IBR_1962_air"
+set_naval_oob = "IBR_1962_naval"
+load_focus_tree = IBR_Colonial_Budget
 
-set_popularities = {
-    communist = 4
-    ultranationalism = 0
-    socialist = 4
-    progressivism = 16
-    liberalism = 2
-    liberal_conservatism = 7
-    conservatism = 2
-    paternalism = 65
-    despotism = 0
-    fascism = 0
-}
+add_dynamic_modifier = { modifier = IBR_iberian_economy_nightmare_dyn_mod }
+set_variable = { IBR_gdp_growth_nightmare_variable = -3.25 }
+set_variable = { IBR_inflation_nightmare_variable = 1.0 }
+set_variable = { IBR_misc_income_nightmare_variable = 0 }
+set_variable = { IBR_efficiency_gain_nightmare_variable = -0.15 }
+set_variable = { IBR_capacity_factory_nightmare_variable = -0.20 }
+set_variable = { IBR_building_speed_nightmare_variable = -0.25 }
+set_variable = { IBR_Economy_State_Var = 5 }
 
-# RESISTANCE / COMPLIANCE
-#BASQUE
-984 = { 
-	start_resistance = yes
-	set_compliance = 70
-	set_resistance = 30
-	set_garrison_strength = 1.0
-}
-993 = { 
-	start_resistance = yes
-	set_compliance = 70
-	set_resistance = 30
-	set_garrison_strength = 1.0
-}
+add_dynamic_modifier = { modifier = IBR_agri_subsidies_dyn_mod }
+set_variable = { IBR_agri_subsidies_misc_costs_var = 0.30 }
+
+###Evil and Intimidating Colonial Costs Code
+add_dynamic_modifier = { modifier = IBR_colonial_checks_balances_dyn_mod }
+#Component Calculation
+set_variable = { IBR_colonial_angola_costs = 0 } #N/A
+set_variable = { IBR_colonial_mozambique_costs = 0 } #N/A
+set_variable = { IBR_colonial_morocco_costs = 0.2 } #Garrison
+set_variable = { IBR_colonial_guinea_bissau_costs = 0.125 } #Garrison & Admin
+set_variable = { IBR_colonial_sao_tome_costs = 0.01 } #Garrison & Admin
+set_variable = { IBR_colonial_cabo_verde_costs = 0.090 } #Garrison & Admin
+set_variable = { IBR_colonial_equatorial_guinea_costs = 0.100 } #Garrison & Admin
+set_variable = { IBR_colonial_algeria_costs = 0.65 } #Garrison & Admin
+set_variable = { IBR_colonial_western_sahara_costs = 0.04 } #Garrison & Admin
+#Starting Amount of 1.207 Billion, aka 5% of GDP
+set_variable = { IBR_colonial_subsidies_misc_costs_var = 1.207 }
+
+###Equally Evil and Intimidating Colonial Revenue Code
+#Component Calculation
+set_variable = { IBR_colonial_angola_revenue = 0 } #N/A
+set_variable = { IBR_colonial_mozambique_revenue = 0 } #N/A
+set_variable = { IBR_colonial_morocco_revenue = 0.325 } #Indirect Revenue
+set_variable = { IBR_colonial_guinea_bissau_revenue = 0.045 } #Resource Exploitation
+set_variable = { IBR_colonial_sao_tome_revenue = 0.001 } #Resource Exploitation
+set_variable = { IBR_colonial_cabo_verde_revenue = 0.034 } #Resource Exploitation
+set_variable = { IBR_colonial_equatorial_guinea_revenue = 0.02 } #Resource Exploitation
+set_variable = { IBR_colonial_algeria_revenue = 0.32 } #Resource Exploitation & Cheap Labor
+set_variable = { IBR_colonial_western_sahara_revenue = 0.001 } #Nothing, G, There is Nothing
+#Starting Amount of 0.746 Billion
+set_variable = { IBR_colonial_revenue_misc_income_var = 0.746 }
+#KD's Notes - It may look surprisingly close but keep in mind Morocco is giving a lot more than it costs and Iberia only controls 1/3 of Algeria
+
+set_variable = { IBR_colonial_political_var = 0.23 }
+set_variable = { IBR_colonial_consumer_goods_var = 0.24 }
+set_variable = { IBR_colonial_garrison_var = -0.12 }
+set_variable = { IBR_colonial_deficit_var = -3.688 }
+
+add_dynamic_modifier = { modifier = IBR_foreign_investment_dyn_mod }
+set_variable = { IBR_foreign_investment_misc_costs_var = 0.115 }
+
+set_variable = { IBR_OFN_Alignment = 12 } #Out of 25
+set_variable = { IBR_PKT_Alignment = 6 } #Out of 25
 
 add_ideas = {
-	#cabinet# 
-	IBR_Manuel_Monteiro_hog
-	IBR_Alfonso_Armada_sec
-	IBR_Jose_Miguel_Judice_for
-	IBR_Antonio_Hernandez_Mancha_eco
-	#country ideas
-	IBR_Tourist_Hotspot
-	IBR_Between_Two_Worlds
-	IBR_The_Basque_Conflict	
-	#political#
+	TRI_Founder_IB
+	IBR_Crippled_Sovereignty
+	IBR_Betray_Old_Guard
+	IBR_Disorderly_Federal_Army
+	IBR_State_MedStrong
+	IBR_Iberian_Economic_Nightmare
+	IBR_Colonial_Effects
+	#cabinet#
+	IBR_Antonio_Salazar_hog
+	IBR_Antonio_Barroso_Sanchez_sec
+	IBR_Fernando_Maria_Castiella_for
+	IBR_Jose_Ferreira_Dias_eco
+	#High Command#
+	IBR_Luis_Camara_Pina_army_chief
+	IBR_Felipe_Jose_Abarzuza_navy_chief
+	IBR_Bernardo_Mira_Delgado_air_chief
+	IBR_Antonio_Barroso_Sanchez_high_command
+	IBR_Fernando_Quintanilha_high_command
+	IBR_Jose_Rodriguez_Lecea_high_command
+	IBR_Angel_Gonzalez_Mendoza_theorist
+
+	## Policies ##
+	# Political #
 	tno_political_parties_one_party_state
 	tno_religious_rights_state_religion
 	tno_trade_unions_state_controlled
 	tno_immigration_quota_immigration
-	tno_slavery_outlawed
-	tno_public_meetings_outlawed
-	tno_press_rights_state_press_only
-	tno_vote_franchise_no_voting
-	tno_refugees_skilled
-	#military#
-	tno_conscription_two_year_draft
-	tno_women_banned
-	tno_military_supervision_no_supervision
-	tno_military_spending_medium_spending
-	tno_training_minimal_training
-	tno_racial_integration_segregated_regiments
-	tno_draft_exemptions_none
-	#economic#
-	tno_trade_laws_export_focus
-	tno_economic_focus_partial_mobilization
-	tno_tax_rate_low_taxation
-	tno_income_taxation_tax_havens
+	tno_slavery_penal_labor
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_inequal_voting
+
+	# Military #
+	tno_conscription_broadened_conscription
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_civil_service_deferment
+
+	# Economic #
+	tno_trade_laws_limited_exports
+	tno_income_taxation_no_income_taxation
 	tno_minimum_wage_low_minimum_wage
-	tno_max_workhours_12_hour_work_day
-	tno_child_labor_restricted
-	tno_pensions_trinket_pensions
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_low_pensions
 	tno_unemployment_low_subsidies
-	#social#
-	tno_safety_limited_regulations
-	tno_health_care_public_health_care
-	tno_pollution_few_regulations
+
+	# Social #
+	tno_health_care_universal_health_care
 	tno_education_public_education
-	tno_penal_system_penal_labor
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_women_in_the_workplace
+	tno_security_political_control
+	tno_regulations_moderate_regulations
+
+	# Misc #
+	tno_refugees_skilled
+	tno_women_military_assistance
+	tno_racial_integration_integrated_military
+	tno_safety_acceptable_regulations
+	tno_pollution_some_regulations
 	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_traditional_roles
-	tno_minorities_oppression
-	tno_security_police 
-	#societal development
-	tno_nuclear_stockpile_none
-	tno_poverty_rate_25
-	tno_army_professionalism_professional
-	tno_industrial_expertise_experienced
-	tno_industrial_equipment_factory_complexes
-	tno_agriculture_mass_mechanized
-	tno_research_facilities_outdated
+	tno_minorities_equal_rights
+	tno_child_labor_illegal
+
+	# SocDevs
 	tno_academic_base_primary_schooling
+	tno_research_facilities_outdated
+	tno_agriculture_basic_mechanized
+	tno_healthcare_nascent
+	tno_industrial_equipment_factory_complexes
+	tno_industrial_expertise_nascent
+	tno_army_professionalism_political_interference
+	tno_admin_efficiency_deficient_administrative_systems
+}
 
- }
+set_country_flag = tno_defined_startup_effectiveness
 
-set_oob = "IBR_2000"
-set_naval_oob = "IBR_navy_2000"
-set_air_oob = "IBR_2000_air"
+set_variable = { tno_political_parties_effectiveness = 67 }
+set_variable = { tno_religious_rights_effectiveness = 39 }
+set_variable = { tno_trade_unions_effectiveness = 73 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 62 }
+set_variable = { tno_public_meetings_effectiveness = 80 }
+set_variable = { tno_press_rights_effectiveness = 72 }
+set_variable = { tno_vote_franchise_effectiveness = 72 }
 
+set_variable = { tno_conscription_effectiveness = 59 }
+set_variable = { tno_military_supervision_effectiveness = 68 }
+set_variable = { tno_training_effectiveness = 80 }
+set_variable = { tno_draft_exemptions_effectiveness = 61 }
+
+set_variable = { tno_trade_laws_effectiveness = 37 }
+set_variable = { tno_income_taxation_effectiveness = 53 }
+set_variable = { tno_minimum_wage_effectiveness = 70 }
+set_variable = { tno_max_workhours_effectiveness = 70 }
+set_variable = { tno_pensions_effectiveness = 76 }
+set_variable = { tno_unemployment_effectiveness = 65 }
+
+set_variable = { tno_health_care_effectiveness = 49 }
+set_variable = { tno_education_effectiveness = 68 }
+set_variable = { tno_penal_system_effectiveness = 75 }
+set_variable = { tno_gender_rights_effectiveness = 20 }
+set_variable = { tno_security_effectiveness = 68 }
+set_variable = { tno_regulations_effectiveness = 60 }
+
+set_autonomy = {
+    target = ANG
+    autonomy_state = autonomy_colony
+}
+set_autonomy = {
+    target = MZB
+    autonomy_state = autonomy_colony
+}
+set_autonomy = {
+    target = GNB
+    autonomy_state = autonomy_colony
+}
+set_autonomy = {
+    target = CAB
+    autonomy_state = autonomy_colony
+}
+set_autonomy = {
+    target = CPV
+    autonomy_state = autonomy_colony
+}
+set_autonomy = {
+    target = SAO
+    autonomy_state = autonomy_colony
+}
+set_autonomy = {
+    target = AES
+    autonomy_state = autonomy_colony
+}
+set_autonomy = {
+    target = EQG
+    autonomy_state = autonomy_colony
+}
+set_autonomy = {
+    target = MOR
+    autonomy_state = autonomy_puppet
+}
+MOR = {
+    add_ideas = TRI_Member_Client
+}
+AES = {
+    set_politics = {
+        ruling_party = despotism
+    }
+}
+EQG = {
+    set_politics = {
+        ruling_party = despotism
+    }
+}
+
+ANG = {
+    set_politics = {
+	    ruling_party = despotism
+	    last_election = "1933.3.5"
+	    election_frequency = 48
+	    elections_allowed = no
+    }
+
+    set_popularities = {
+	    despotism = 100
+    }
+}
+
+MZB = {
+    add_ideas = TRI_Member_Colony
+    set_cosmetic_tag = MZB_POR
+    set_politics = {
+	    ruling_party = despotism
+	    last_election = "1933.3.5"
+	    election_frequency = 48
+	    elections_allowed = no
+    }
+
+    set_popularities = {
+	    despotism = 100
+    }
+}
+
+GNB = {
+    add_ideas = TRI_Member_Colony
+    set_cosmetic_tag = GNB_POR
+    set_politics = {
+	    ruling_party = despotism
+	    last_election = "1933.3.5"
+	    election_frequency = 48
+	    elections_allowed = no
+    }
+
+    set_popularities = {
+	    despotism = 100
+    }
+}
+
+CPV = {
+    add_ideas = TRI_Member_Colony
+    set_cosmetic_tag = CPV_POR
+    set_politics = {
+	    ruling_party = despotism
+	    last_election = "1933.3.5"
+	    election_frequency = 48
+	    elections_allowed = no
+    }
+
+    set_popularities = {
+	    despotism = 100
+    }
+}
+
+SAO = {
+    add_ideas = TRI_Member_Colony
+    set_cosmetic_tag = SAO_POR
+    set_politics = {
+	    ruling_party = despotism
+	    last_election = "1933.3.5"
+	    election_frequency = 48
+	    elections_allowed = no
+    }
+
+    set_popularities = {
+	    despotism = 100
+    }
+}
+
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }
+
+set_technology = {
+	basic_train = 1
+
+	##INFANTRY##
+	# infantry_equipment_0 = 1
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+	
+	infantry_kit_1 = 1
+	infantry_weapons_2 = 1
+	night_vision_2 = 1
+	infantry_kit_2 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_kit_3 = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	infantry_weapons_improvements_grenade_1 = 1
+	#
+	infantry_weapons_3 = 1
+	night_vision_3 = 1
+	infantry_kit_4 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons_hmg_1 = 1
+	combat_support_equipment_1 = 1
+	
+	support_weapons_arty_1 = 1
+	infantry_at = 1
+	infantry_at_upgrade_1 = 1
+	#
+	motorized_infantry = 1
+	motorized_infantry_1 = 1
+	tech_special_forces = 1
+	marines = 1
+	marines2 = 1
+	tech_mountaineers = 1
+	tech_mountaineers2 = 1
+	
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_recon2 = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_maintenance_company2 = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+	command_and_control1 = 1
+	military_infrastructure1 = 1
+
+	##NAVAL##
+	early_ship_hull_very_light = 1
+	basic_ship_hull_very_light = 1
+	improved_ship_hull_very_light = 1
+	early_ship_hull_more_light = 1
+	basic_ship_hull_more_light = 1
+	improved_ship_hull_more_light = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	improved_ship_hull_light = 1
+	smoke_generator = 1
+	basic_depth_charges = 1
+	improved_depth_charges = 1
+	sonar = 1
+	improved_sonar = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	improved_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_ship_hull_carrier = 1
+	improved_ship_hull_carrier = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	improved_ship_hull_submarine = 1
+	basic_torpedo = 1
+	improved_ship_torpedo_launcher = 1
+	magnetic_detonator = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_medium_battery = 1
+	basic_heavy_battery = 1
+	basic_secondary_battery = 1
+	improved_secondary_battery = 1
+	damage_control_1 = 1
+	fire_control_methods_1 = 1
+	mtg_transport = 1
+	mtg_landing_craft = 1
+	basic_naval_mines = 1
+	improved_naval_mines = 1
+	submarine_mine_laying = 1
+	improved_submarine_mine_laying = 1
+	continue_battleship_development = 1
+	
+	##HELICOPTERS##
+	very_early_helicopter = 1
+	early_helicopter = 1
+	
+	##LIGHT AIR##
+	early_fighter = 1
+	fighter_1945 = 1
+	cv_1945_fighter = 1
+	interceptor_1945 = 1
+	fighter_1950 = 1
+	cv_1950_fighter = 1
+	fighter_1960 = 1
+	cv_1960_fighter = 1
+	interceptor_1950 = 1
+	CAS_1945 = 1
+	cv_1945_CAS = 1
+	CAS_1950 = 1
+	cv_1950_CAS = 1
+	CAS_1960 = 1
+	cv_1960_CAS = 1
+	
+	
+	##HEAVY AIR##
+	transport_air1 = 1
+	transport_air_1945 = 1
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	centimetric_radar = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	improved_computing_machine = 1
+	improved_encryption = 1
+	improved_decryption = 1
+	advanced_computing_machine = 1
+	advanced_encryption = 1
+	advanced_decryption = 1
+	helicopter_engines = 1
+	jet_engines = 1
+	
+	ww2_line_production = 1
+	mass_production_1 = 1
+	building_construction_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	excavation1 = 1
+	rubber_processing = 1
+	energy_technology_1 = 1
+	administration_construction_1 = 1
+	military_construction_1 = 1
+	production_unit_gain_1 = 1
+	consumer_goods_reduction_1 = 1
+}
+
+# NSB tech #
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		IFV_1945 = 1
+		APC_1945 = 1
+		MBT_1945 = 1
+		APC_1950 = 1
+		IFV_1950 = 1
+		MBT_1950 = 1
+		AC_1945 = 1
+		AC_1950 = 1
+
+		Heavy_1945 = 1
+
+		artillery_1945 = 1
+		artillery_1950 = 1
+		antiair_1945 = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		NSB_APC_1945 = 1
+		NSB_APC_1950 = 1
+		#
+
+		NSB_IFV_1945 = 1
+		NSB_IFV_1945_modules_1 = 1
+		NSB_IFV_1945_modules_2 = 1
+		NSB_IFV_1950 = 1
+
+		NSB_MBT_1945 = 1
+		NSB_MBT_1945_modules_1 = 1
+		NSB_MBT_1945_modules_2 = 1
+		NSB_MBT_1950 = 1
+
+		NSB_AC_1945 = 1
+		NSB_AC_1950 = 1
+		NSB_AC_1960 = 1
+
+		NSB_Heavy_1945 = 1
+
+		NSB_Armour_1 = 1
+		NSB_Engine_1 = 1
+
+		NSB_artillery_1945 = 1
+		NSB_artillery_1950 = 1
+
+		NSB_antiair_1945 = 1
+	}
+}
+
+#Starting Equipment
+add_equipment_to_stockpile = {
+	type = infantry_equipment_2
+	amount = 8000
+	producer = IBR
+}
+
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 2000
+	producer = IBR
+}
+
+add_equipment_to_stockpile = {
+	type = motorized_equipment_2
+	amount = 700
+	producer = IBR
+}
+
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 500
+	producer = IBR
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_3
+	amount = 450
+	producer = IBR
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_3
+	amount = 450
+	producer = IBR
+}
+
+create_equipment_variant = {
+	name = "Clase Liniers"
+	type = ship_hull_light_3
+	name_group = IBR_DD_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Audaz"
+	type = ship_hull_light_2
+	name_group = IBR_DD_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Atrevida"
+	type = ship_hull_very_light_3
+	name_group = IBR_CR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Descubierta"
+	type = ship_hull_very_light_2
+	name_group = IBR_CR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Vicente Yáñez Pinzón"
+	type = ship_hull_more_light_3
+	name_group = IBR_FR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase Pizarro"
+	type = ship_hull_more_light_2
+	name_group = IBR_FR_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase D"
+	type = ship_hull_submarine_2
+	name_group = IBR_SS_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = sub_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_sub_2
+		rear_1_custom_slot = ship_torpedo_sub_2
+	}
+}
+create_equipment_variant = {
+	name = "Clase S"
+	type = ship_hull_submarine_1
+	name_group = IBR_SS_LIST
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = sub_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		rear_1_custom_slot = ship_torpedo_sub_1
+	}
+}
+
+# NSB #
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Monastrell"
+		type = MBT_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = MBT_cannon_2
+			turret_type_slot = MBT_two_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = command_optics
+			special_type_slot_2 = spall_liner
+		}
+		icon = GFX_IBR_MBT_1950_medium
+		upgrades = {
+			tank_nsb_engine_upgrade = 8
+			tank_nsb_armor_upgrade = 7
+		}
+	}
+
+	create_equipment_variant = {
+		name = "ENASA-M"
+		type = IFV_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = IFV_cannon_2
+			turret_type_slot = IFV_two_man_tank_turret
+			suspension_type_slot = tank_wheeled_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = command_optics
+		}
+		
+		icon = GFX_IBR_IFV_1950_medium
+		upgrades = {
+			tank_nsb_engine_upgrade = 5
+			tank_nsb_armor_upgrade = 3
+		}
+	}
+
+	create_equipment_variant = {
+		name = "ENASA-TM"
+		type = APC_chassis_1
+		parent_version = 0
+		modules = {
+			APC_designation_slot = APC_infantry
+			APC_armament_slot = APC_infantry_weapon
+			suspension_type_slot = tank_wheeled_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = expanded_fuel_capacity
+		}
+		
+		icon = GFX_IBR_APC_1950_medium
+		upgrades = {
+			ac_nsb_engine_upgrade = 6
+			ac_nsb_armor_upgrade = 0
+		}
+	}
+	create_equipment_variant = {
+		name = "AML 60/90"
+		type = armored_car_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = AC_cannon_2
+			turret_type_slot = AC_two_man_tank_turret
+			suspension_type_slot = tank_wheeled_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = additional_machine_guns
+			special_type_slot_2 = command_optics
+		}
+		
+		icon = GFX_FRS_AC_1960_medium
+		upgrades = {
+			ac_nsb_engine_upgrade = 0
+			ac_nsb_armor_upgrade = 0
+		}
+	}
+	add_equipment_to_stockpile = {
+		type = MBT_chassis_1
+		amount = 100
+		producer = IBR
+	}
+	add_equipment_to_stockpile = {
+		type = IFV_chassis_1
+		amount = 100
+		producer = IBR
+	}
+	add_equipment_to_stockpile = {
+		type = APC_chassis_1
+		amount = 200
+		producer = IBR
+	}
+	add_equipment_to_stockpile = {
+		type = armored_car_chassis_1
+		amount = 200
+		producer = IBR
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	add_equipment_to_stockpile = {
+		type = MBT_equipment_1
+		amount = 100
+		producer = IBR
+	}
+	add_equipment_to_stockpile = {
+		type = APC_equipment_1
+		amount = 200
+		producer = IBR
+	}
+	add_equipment_to_stockpile = {
+		type = armored_car_equipment_2
+		amount = 200
+		producer = IBR
+	}
+	add_equipment_to_stockpile = {
+		type = IFV_equipment_1
+		amount = 100
+		producer = IBR
+	}
+}

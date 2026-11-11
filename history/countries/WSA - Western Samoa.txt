@@ -1,12 +1,14 @@
 capital = 2496
 
 # Vacant
+recruit_character = WSA_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 recruit_character = WSA_Fiame_Mataafa_Faumuina_Mulinuu_II
 
 NZL = {
 	set_autonomy = {
 		target = WSA
-		autonomy_state = autonomy_associated
+		autonomy_state = autonomy_client_state
 	}
 }
 
@@ -313,6 +315,8 @@ set_sub_doctrine = regular_infantry_primacy
 set_sub_doctrine = towed_artillery_firepower
 set_sub_doctrine = armored_car_support
 set_sub_doctrine = defense_operational_doctrine
+
+set_country_flag = TNO_eliminate_military_spending
 
 #econtype
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Subsistence_Economy }

@@ -6,8 +6,8 @@ state = {
 	}
 
 	history = {
-		owner = CHI
-		add_core_of = CHI
+		owner = GUX
+		add_core_of = GUX
 		buildings = {
 			infrastructure = 2
 		}
@@ -17,13 +17,16 @@ state = {
 		victory_points = {
 			19506 3
 		}
-   	}
+		set_variable = { china_state_ref = 19 }
+		set_variable = { china_region_ref = 2 }
+		#set_state_flag = GDP_category_pastoral
+	}
 
 	provinces = {
 		1625 19568 10459 4077 4628 4085 12436 19506 10431 19532
 	}
 	manpower = 3231081
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = pastoral
 	local_supplies = 0.000
 }

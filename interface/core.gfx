@@ -51,17 +51,14 @@ spriteTypes = {
 		pause_on_loop = 0.0
 		alwaystransparent = yes
 	}
-
 	spriteType = {
 		name = "GFX_crt_closebutton"
 		texturefile = "gfx/interface/crt_closebutton.dds"
 	}
-
 	spriteType = {
 		name = "GFX_default_fallback_texture"
 		texturefile = "gfx/interface/thisisdog.dds"
 	}
-	
 
 	spriteType = {
 		name = "GFX_pdx_logo_credits"
@@ -114,22 +111,22 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_sort_up_down_button_83x29"
 		texturefile = "gfx/interface/sort_up_down_button_83x29.dds"
 		noOfFrames = 3
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_sort_button_83x29"
 		texturefile = "gfx/interface/sort_button_83x29.tga"
 		noOfFrames = 2
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_sort_button_100x29"
 		texturefile = "gfx/interface/sort_button_100x29.tga"
-		noOfFrames = 3
+		noOfFrames = 2
 	}
 
 	spriteType = {
@@ -138,27 +135,33 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_sort_button_140x29"
 		texturefile = "gfx/interface/sort_button_140x29.dds"
-		noOfFrames = 3
+		noOfFrames = 2
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_sort_button_195x29"
 		texturefile = "gfx/interface/sort_button_195x29.dds"
-		noOfFrames = 3
+		noOfFrames = 2
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_sort_button_171x35"
 		texturefile = "gfx/interface/sort_button_171x35.tga"
 		noOfFrames = 2
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_government_button"
 		texturefile = "gfx/interface/government_button.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_government_button_crt"
+		texturefile = "gfx/interface/government_button_crt.dds"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
@@ -169,7 +172,7 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_sort_button_428x29"
 		texturefile = "gfx/interface/sort_button_428x29.tga"
 		noOfFrames = 2
@@ -181,7 +184,7 @@ spriteTypes = {
 		noOfFrames = 3
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_sort_button_202x29"
 		texturefile = "gfx/interface/sort_button_202x29.tga"
 		noOfFrames = 2
@@ -196,7 +199,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_tno_button_123x34"
 		texturefile = "gfx/interface/tno_button_123x34.dds"
-		noOfFrames = 3
+		noOfFrames = 2
+	}
+
+	spriteType = { # Used for equipment designer stuff
+		name = "GFX_tno_button_123x34_reverse"
+		texturefile = "gfx/interface/tno_button_123x34_reverse.dds"
+		noOfFrames = 2
 	}
 
 	corneredTileSpriteType = {
@@ -254,23 +263,16 @@ spriteTypes = {
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
+
 	corneredTileSpriteType = {
-		name = "GFX_tiled_window_thin_border3"
+		name = "GFX_tiled_window_thin_border2_hollow"
 		size= { x=192 y=192 }
-		textureFile = "gfx/interface/tiles/tiled_window_thin_border3.dds"
+		textureFile = "gfx/interface/tiles/tiled_window_thin_border2_hollow.dds"
 		borderSize = { x=64 y=64 }
 		tilingCenter = yes
 		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
 	}
 
-	corneredTileSpriteType = {
-		name = "GFX_tiled_window_thin_border_blue"
-		size= { x=192 y=192 }
-		textureFile = "gfx/interface/tiles/tiled_window_thin_border_blue.dds"
-		borderSize = { x=64 y=64 }
-		tilingCenter = yes
-		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
-	}
 	corneredTileSpriteType = {
 		name = "GFX_tiled_techtree_bg"
 		size= { x=192 y=192 }
@@ -388,6 +390,15 @@ spriteTypes = {
 	#	borderSize = { x=16 y=16 }
 	#	tilingCenter = yes
 	#}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiled_window_plain_grey"
+		size= { x=192 y=192 }
+		textureFile = "gfx/interface/tiles/tiled_window_plain_grey.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
 
 	frameAnimatedSpriteType = {
 		name = "GFX_execute_battle_plan_glow"
@@ -590,7 +601,6 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-
 	textSpriteType = {
 		name = "button_type_6"
 		texturefile = "gfx/interface/button_type_6.dds"
@@ -612,7 +622,7 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_button_148x34"
 		texturefile = "gfx/interface/button_148x34.dds"
 		noOfFrames = 1
@@ -620,27 +630,33 @@ spriteTypes = {
 	}
 
 	textSpriteType = {
+		name = "GFX_button_148x34_light"
+		texturefile = "gfx/interface/button_148x34_light.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	spriteType = {
 		name = "GFX_button_221x34"
 		texturefile = "gfx/interface/button_221x34.dds"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_button_211x20"
 		texturefile = "gfx/interface/button_211x20.dds"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_button_359x34"
 		texturefile = "gfx/interface/button_359x34.dds"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_button_261x34"
 		texturefile = "gfx/interface/button_261x34.dds"
 		noOfFrames = 1
@@ -654,48 +670,48 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_button_123x34"
 		texturefile = "gfx/interface/button_123x34.tga"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_button_94x31"
 		texturefile = "gfx/interface/button_94x31.tga"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_leader_selection_button"
 		texturefile = "gfx/interface/leader_selection_button.dds"
 		noOfFrames = 2
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "GFX_button_reset_123x34"
 		texturefile = "gfx/interface/button_reset_123x34.tga"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-	textSpriteType = {
+	spriteType = {
 		name = "button_type_9"
 		texturefile = "gfx/interface/button_type_9.tga"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "button_type_2"
 		texturefile = "gfx/interface/button_type_2.tga"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	textSpriteType = {
+	spriteType = {
 		name = "button_type_4"
 		texturefile = "gfx/interface/button_type_4.tga"
 		noOfFrames = 1
@@ -703,72 +719,45 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_liquid_save_button"
-		texturefile = "gfx/interface/liquid_save.dds"
+		name = "button_type_4_bg"
+		texturefile = "gfx/interface/button_type_4_bg.tga"
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-
+## DO ONES BELOW
 	spriteType = {
-		name = "GFX_liquid_spend_button"
-		texturefile = "gfx/interface/liquid_spend.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
+		name = "GFX_icon_button_45x32"
+		texturefile = "gfx/interface/buttons/icon_button_45x32.dds"
+		noOfFrames = 2
 	}
 
 	spriteType = {
-		name = "GFX_civilian_spend_button"
-		texturefile = "gfx/interface/civilian_spend.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
+		name = "GFX_icon_button_46x46"
+		texturefile = "gfx/interface/buttons/icon_button_46x46.dds"
+		noOfFrames = 2
 	}
 	
+	spriteType = {
+		name = "GFX_add_all_button_32x32"
+		texturefile = "gfx/interface/buttons/add_all_button_32x32.dds"
+		noOfFrames = 2
+	}	
+	
+	spriteType = {
+		name = "GFX_icon_button_32x32"
+		texturefile = "gfx/interface/buttons/icon_button_32x32.dds"
+		noOfFrames = 2
+	}	
+
 	spriteType = {
 		name = "GFX_edit_shortcuts_button"
 		texturefile = "gfx/interface/buttons/edit_shortcuts_button.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_civilian_save_button"
-		texturefile = "gfx/interface/civilian_save.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
+	}	
 
 	spriteType = {
-		name = "GFX_military_spend_button"
-		texturefile = "gfx/interface/military_spend.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
+		name = "GFX_quick_add_button"
+		texturefile = "gfx/interface/buttons/quick_add_button.dds"
 	}
-
-	spriteType = {
-		name = "GFX_military_save_button"
-		texturefile = "gfx/interface/military_save.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-
-	spriteType = {
-		name = "GFX_construction_spend_button"
-		texturefile = "gfx/interface/construction_spend.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-
-	spriteType = {
-		name = "GFX_construction_save_button"
-		texturefile = "gfx/interface/construction_save.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-
-	#spriteType = {
-	#	name = "GFX_stars_small"
-	#	texturefile = "gfx/interface/stars_small.tga"
-	#	noOfFrames = 7
-	#}
-
 }
 
 objectTypes = {
@@ -846,16 +835,17 @@ bitmapfonts = {
 	# Global text colors used in the entire game, for use in loc files ex: "§G Text Text§!"
 	textcolors = {
 		M = { 35 206 255 }
-		L = { 0 0 0 }
+		L = { 195 176 145 }
 		W = { 255 255 255 }
 		B = { 0 0 255 }
 		G = { 0 159 3 }
 		R = { 255 50 50 }
 		b = { 0 0 0 }
 		g = { 176 176 176 }
-		Y = { 0 0 0 }
+		Y = { 255 189 0 }
 		H = { 255 189 0 }
 		T = { 255 255 255 }
+		8 = { 204 163 51 }
 	}
 
 
@@ -1209,8 +1199,10 @@ bitmapfonts = {
 			G = { 86 172 91 }
 			R = { 222 86 70 }
 			Y = { 238 201 35 }
+			O = { 238 123 35 }
 			H = { 238 201 35 }
 			T = { 255 255 255 }
+			g = { 175 175 175 }
 		}
 	}
 
@@ -1455,10 +1447,40 @@ bitmapfonts = {
 	}
 
 	bitmapfont = {
-		name = "aldrich_30_outline"
-	#	path = "gfx/fonts/aldrich_30_outline"
+		name = "nsb_hoi_24header"
+#		path = "gfx/fonts/hoi_24header"
 		fontfiles = {
-			"gfx/fonts/aldrich_30_outline"
+			"gfx/fonts/hoi_24header"
+#			"gfx/fonts/hoi_20bs"
+#			"gfx/fonts/hoi_20bs_cryllic"
+		}
+		cursor_offset = { 0 4 }
+		color = 0xffffffff
+
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+
+	bitmapfont_override = {
+		name = "nsb_hoi_24header"
+		fontfiles = {
+			"gfx/fonts/hoi_20bs"
+			"gfx/fonts/hoi_20bs_cryllic"
+		}
+		languages = { "l_russian" "l_polish" }
+	}
+
+	bitmapfont = {
+		name = "hoi_30header"
+	#	path = "gfx/fonts/hoi_30header"
+		fontfiles = {
+			"gfx/fonts/hoi_30header"
 		#	"gfx/fonts/hoi_20bs"
 		#	"gfx/fonts/hoi_20bs_cryllic"
 		}
@@ -1474,7 +1496,7 @@ bitmapfonts = {
 	}
 
 	bitmapfont_override = {
-		name = "aldrich_30_outline"
+		name = "hoi_30header"
 		fontfiles = {
 			"gfx/fonts/hoi_20bs"
 			"gfx/fonts/hoi_20bs_cryllic"
@@ -1484,7 +1506,33 @@ bitmapfonts = {
 
 	bitmapfont = {
 		name = "hoi_36header"
-	#	path = "gfx/fonts/aldrich_30_outline"
+	#	path = "gfx/fonts/hoi_30header"
+		fontfiles = {
+			"gfx/fonts/hoi_36header"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+
+	bitmapfont_override = {
+		name = "hoi_36header"
+		fontfiles = {
+			"gfx/fonts/hoi_26mbs"
+			"gfx/fonts/hoi_26mbs_cryllic"
+		}
+		languages = { "l_russian" "l_polish" }
+	}
+
+	bitmapfont = {
+		name = "nsb_hoi_36header"
+#		path = "gfx/fonts/hoi_30header"
 		fontfiles = {
 			"gfx/fonts/hoi_36header"
 		}
@@ -1523,6 +1571,15 @@ bitmapfonts = {
 			H = { 238 201 35 }
 			T = { 255 255 255 }
 		}
+	}
+
+	bitmapfont = {
+		name = "hoi_22chat"
+		fontfiles = {
+			"gfx/fonts/hoi_22tech"
+
+		}
+		color = 0x4ffffffff
 	}
 
 	bitmapfont = {
@@ -1571,6 +1628,18 @@ bitmapfonts = {
 			T = { 255 255 255 }
 		}
 	}
+	
+	bitmapfont = {
+		name = "hoi_20"
+		path = "gfx/fonts/hoi_20"
+		color = 0xffffffff
+	}
+
+	bitmapfont = {
+		name = "hoi_30"
+		path = "gfx/fonts/hoi_30"
+		color = 0xffffffff
+	}
 
 	bitmapfont = {
 		name = "Arial12"
@@ -1602,19 +1671,19 @@ bitmapfonts = {
 
 	bitmapfont = {
 		name = "cg_16b"			####### GENERAL TOOLTIP FONT ########
-		path = "gfx/fonts/aldrich_bold_16_outline"
+		path = "gfx/fonts/aldrich_18_outline"
 		color = 0xff2f8a87
 		textcolors = {
 			M = { 35 206 255 }
-			L = { 0 0 0 }
+			L = { 195 176 145 }
 			W = { 47 138 135 }
 			B = { 47 138 135 }
 			G = { 76 168 84 }
 			R = { 125 66 66 }
 			b = { 0 0 0 }
 			g = { 176 176 176 }
-			Y = { 255 255 0 }
-			H = { 255 255 0 }
+			Y = { 220 218 80 }
+			H = { 220 218 80 }
 			T = { 47 138 135 }
 		}
 	}
@@ -1629,19 +1698,19 @@ bitmapfonts = {
 
 	bitmapfont = {
 		name = "cg_18b"
-		path = "gfx/fonts/aldrich_bold_18_outline"
+		path = "gfx/fonts/aldrich_20_outline"
 		color = 0xff2f8a87
 		textcolors = {
 			M = { 35 206 255 }
-			L = { 0 0 0 }
+			L = { 195 176 145 }
 			W = { 47 138 135 }
 			B = { 47 138 135 }
 			G = { 76 168 84 }
 			R = { 125 66 66 }
 			b = { 0 0 0 }
 			g = { 176 176 176 }
-			Y = { 255 255 0 }
-			H = { 255 255 0 }
+			Y = { 220 218 80 }
+			H = { 220 218 80 }
 			T = { 47 138 135 }
 		}
 	}
@@ -1666,15 +1735,63 @@ bitmapfonts = {
 		textureFile ="gfx/interface/tiles/tiled_selection_bold.dds"
 		borderSize = { x=1 y=1 }
 	}
-	
-	spriteType = {
-	   name = "GFX_in_game_menu_dark_overlay"
-	   textureFile = "gfx/interface/in_game_menu_dark_overlay.dds"
+
+	SpriteType = {
+		name = "GFX_subview_header_bg_300x101"
+		textureFile = "gfx//interface//subview_header_bg_300x101.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_subview_header_bg_375x101"
+		textureFile = "gfx//interface//subview_header_bg_375x101.dds"
+	}
+
+	spriteType = {
+		name = "GFX_in_game_menu_dark_overlay"
+		textureFile = "gfx/interface/in_game_menu_dark_overlay.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_red_cross_small"
+		textureFile = "gfx//interface//red_cross_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_scorched_earth"
+		texturefile = "gfx/game_rules/scorched_earth.dds"
+	}
+	
 	textSpriteType = {
-		name = "GFX_button_148x34_light"
-		texturefile = "gfx/interface/button_148x34_light.dds"
+		name = "GFX_preset_button_open"
+		texturefile = "gfx//interface//equipmentdesigner//preset_button.dds"
+		noOfFrames = 4
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	textSpriteType = {
+		name = "GFX_preset_button_import"
+		texturefile = "gfx//interface//equipmentdesigner//preset_import_button.dds"
+		noOfFrames = 4
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	textSpriteType = {
+		name = "GFX_preset_button_export"
+		texturefile = "gfx//interface//equipmentdesigner//preset_export_button.dds"
+		noOfFrames = 4
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	textSpriteType = {
+		name = "GFX_preset_button_save"
+		texturefile = "gfx//interface//equipmentdesigner//save_preset_button.dds"
+		noOfFrames = 4
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	
+	textSpriteType = {
+		name = "GFX_edit_designer_notes_button"
+		texturefile = "gfx//interface//equipmentdesigner//edit_notes_button.dds"
+		noOfFrames = 4
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 }

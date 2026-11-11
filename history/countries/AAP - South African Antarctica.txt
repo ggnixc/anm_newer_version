@@ -1,0 +1,104 @@
+capital = 2087
+
+# Vacant
+recruit_character = AAR_Generic_Vacant
+
+oob = "Antarctic_Garrison"
+
+SAF = {
+	set_autonomy = {
+		target = AAP
+		autonomy_state = autonomy_antarctic_territory
+	}
+}
+
+
+add_ideas = AAP_Antarctic_Aspirant
+add_ideas = AAP_Tristan_da_Cunha
+add_ideas = AAP_PEIs
+
+set_research_slots = 0
+
+recruit_character = AAP_Hannes_la_Grange
+
+set_politics = {
+	ruling_party = paternalism
+	last_election = "1959.11.11"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+country_lock_all_division_template = yes
+
+add_equipment_to_stockpile = {
+	type = convoy
+	amount = 10
+}
+
+set_popularities = {
+	communist = 0
+	ultranationalism = 0
+	socialist = 0
+	progressivism = 0
+	liberalism = 0
+	conservatism = 0
+	despotism = 0
+	paternalism = 100
+	fascism = 0
+	national_socialism = 0
+}
+
+set_country_flag = tno_defined_startup_effectiveness
+set_country_flag = TNO_eliminate_building_demand
+
+add_ideas = {
+	# Political
+	tno_political_parties_not_applicable
+	tno_religious_rights_not_applicable
+	tno_trade_unions_not_applicable
+	tno_immigration_not_applicable
+	tno_slavery_not_applicable
+	tno_public_meetings_not_applicable
+	tno_press_rights_not_applicable
+	tno_vote_franchise_not_applicable
+	tno_refugees_not_applicable
+	# Military
+	tno_conscription_not_applicable
+	tno_women_not_applicable
+	tno_military_supervision_not_applicable
+	tno_training_not_applicable
+	tno_racial_integration_not_applicable
+	tno_draft_exemptions_not_applicable
+	# Social
+	tno_racial_integration_not_applicable
+	tno_health_care_not_applicable
+	tno_pollution_not_applicable
+	tno_education_not_applicable
+	tno_penal_system_not_applicable
+	tno_lgbt_rights_not_applicable
+	tno_gender_rights_not_applicable
+	tno_minorities_not_applicable
+	tno_security_not_applicable
+	tno_safety_not_applicable
+	# Economic
+	tno_trade_laws_not_applicable
+	tno_income_taxation_not_applicable
+	tno_minimum_wage_not_applicable
+	tno_max_workhours_not_applicable
+	tno_child_labor_not_applicable
+	tno_pensions_not_applicable
+	tno_regulations_not_applicable
+	tno_unemployment_not_applicable
+
+	## Societal Development
+	tno_army_professionalism_spartan_discipline
+	tno_industrial_expertise_innovative
+	tno_industrial_equipment_cutting_edge
+	tno_agriculture_modern
+	tno_research_facilities_makeshift
+	tno_academic_base_golden_age
+	tno_admin_efficiency_functional_administrative_systems
+}
+Antarctica_Clear_Effectiveness = yes
+TNO_startup_nation = yes
+

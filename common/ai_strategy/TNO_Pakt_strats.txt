@@ -1,0 +1,278 @@
+GER_SRT_strat = {
+	allowed = {
+		tag = GER
+	}
+
+	enable = {
+		country_exists = SRT
+		MCW = {
+			is_subject = no
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = MCW
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = MCW
+		value = 150
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = MCW
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = MCW
+		value = 1000
+	}
+}
+
+GER_defend_the_north_atlantic = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		is_in_faction_with = NOR
+		has_war = no
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.02
+		#area = europe
+		states = {
+			94 142
+		}
+		subtract_invasions_from_need = yes
+	}
+}
+
+#UCW FACTIONS KILL KILL KILL EACH OTHER KILL MURDER
+#seriously avoid stalemates please
+UKR_UCW_attack_attack_attack = {
+	allowed = {
+		OR = {
+			tag = UKR
+			tag = FUK
+			tag = BOV
+			tag = UKS
+		}
+	}
+	enable = {
+		OR = {
+			tag = UKR
+			tag = FUK
+			tag = BOV
+			tag = UKS
+		}
+		has_global_flag = UKR_UCW_ongoing
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = UKR
+		tag = FUK
+		tag = UKS
+		tag = BOV
+		execution_type = rush
+		execute_order = yes
+		manual_attack = no
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = UKR
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = FUK
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = UKS
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = BOV
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = -250
+	}
+}
+
+# Please no stalemates in Serbia
+SER_SCW_attack_attack_attack = {
+	allowed = {
+		OR = {
+			tag = SER
+			tag = GMS
+		}
+	}
+	enable = {
+		OR = {
+			tag = SER
+			tag = GMS
+		}
+		has_global_flag = SER_CW_ongoing
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = SER
+		tag = GMS
+		execution_type = rush
+		execute_order = yes
+		manual_attack = no
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = SER
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = GMS
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		id = SER
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = GMS
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = -250
+	}
+}
+
+GER_sealion2 = {
+	allowed = {
+		tag = GER
+	}
+
+	enable = {
+		OR = {
+			has_global_flag = channel_crisis_ongoing_confrontation
+			has_global_flag = GER_sealion_ii
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = ENG
+		value = 1000
+	}
+
+	ai_strategy = { #English Channel
+		type = strike_force_home_base
+		id = 18
+		value = 200
+	}
+
+	ai_strategy = { #North Sea
+		type = strike_force_home_base
+		id = 16
+		value = 200
+	}
+
+	ai_strategy = { #Eastern North Sea
+		type = strike_force_home_base
+		id = 173
+		value = 200
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = ENG
+		priority = 200
+		execution_type = rush
+		execute_order = yes
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = ENG
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = ENG
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = invade
+		id = ENG
+		value = 1000
+	}
+}
+
+FIN_DO_NOT_NAVAL_INVADE = {
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		has_war = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	#stop naval invading cape town you incompetent facist fucks
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = WRS
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = WRS
+		value = 100
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		id = WSB
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = WSB
+		value = 100
+	}
+}

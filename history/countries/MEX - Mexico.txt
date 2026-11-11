@@ -1,99 +1,974 @@
 ﻿capital = 277
 
-set_oob = "MEX_1962"
-recruit_character = MEX_Luis_Donaldo_Colosio
-recruit_character = MEX_Cuauhtemoc_Cardenas_Solorzano
-recruit_character = MEX_Enrique_Cervantes_Aguirre
-recruit_character = MEX_Carlos_Rojas_Gutierrez
-recruit_character = MEX_Javier_Trevino_Cantu
-recruit_character = MEX_Francisco_Labastida
-recruit_character = MEX_Humberto_Roque_Villanueva
-recruit_character = MEX_Vicente_Fox
+# Vacant
+recruit_character = MEX_Generic_Vacant
+recruit_character = MEX_His_Excellency
+
+#GDP Regional distribution
+set_country_flag = GDP_regions
+
+# Leaders
+recruit_character = MEX_Disorganized_Leadership
+recruit_character = MEX_Adolfo_Mateos
+recruit_character = MEX_Gustavo_Ordaz
+recruit_character = MEX_Manuel_Baurraud
+recruit_character = MEX_Raul_Lozano
+recruit_character = MEX_Agustin_Olachea
+recruit_character = MEX_Luis_Echeverria
+recruit_character = MEX_Carlos_Madrazo
+recruit_character = MEX_Del_Rosal
+recruit_character = MEX_Lazaro_Cardenas
+recruit_character = MEX_Octavio_Paz
+
+recruit_character = MEX_Salvador_Abascal
+recruit_character = MEX_Lucio_Cabanas
+recruit_character = MEX_Gonzalez_Gollaz
+
+recruit_character = MEX_Luis_Alvarez
+recruit_character = MEX_Adolfo_Christlieb
+recruit_character = MEX_Jose_Angel_Conchello
+recruit_character = MEX_Efrain_Gonzalez_Morfin
+recruit_character = MEX_Antonio_Flores
+recruit_character = MEX_Javier_Sierra
+recruit_character = MEX_Alfonoso_Robles
+recruit_character = MEX_Santiago_Garcia
+recruit_character = MEX_Octaviano_Salas
+recruit_character = MEX_Antonio_Mena
+recruit_character = MEX_Jose_Torres
+recruit_character = MEX_Gutierrez_Barrios
+recruit_character = MEX_Disorganized_Guerrillas
+recruit_character = MEX_Fierro_Villalobos
+recruit_character = MEX_Antonio_Vazquez_del_Mercado
+recruit_character = MEX_Hugo_B_Margain
+
+# Unit Leaders
+recruit_character = MEX_Marcelino_Barragan
+recruit_character = MEX_Jose_Gomez_Huerta
+recruit_character = MEX_Hermenegildo_Cuenca_Diaz
+recruit_character = MEX_Luis_Gutierrez_Oropeza
+recruit_character = MEX_Abelardo_Munoz
+recruit_character = MEX_Rigoberto_Briseno
+recruit_character = MEX_Manuel_Araico
+recruit_character = MEX_Miguel_Gomez_Ortega
 
 # econtype
 set_variable = { TNO_economy_subtype = token:Econ_Subtype_Stabilizing_Development }
 set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
 
+load_focus_tree = MEX_mateos_initial_tree
+
+###Playable
+set_country_flag = tno_playable_country
+
+### Starting tech ###
+set_technology = {
+	basic_train = 1
+
+	##Infantry##
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_kit_1 = 1
+	infantry_kit_2 = 1
+	night_vision_1 = 1
+	night_vision_2 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	infantry_at = 1
+	motorized_infantry = 1
+	motorized_infantry_1 = 1
+	tech_mountaineers = 1
+
+	##Support Companies##
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+
+	command_and_control1 = 1
+	military_infrastructure1 = 1
+
+	##Naval
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+
+	early_ship_hull_very_light = 1
+
+	early_ship_hull_more_light = 1
+
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+
+	early_ship_hull_submarine = 1
+
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+
+	early_ship_hull_heavy = 1
+
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_secondary_battery = 1
+	improved_secondary_battery = 1
+	dp_secondary_battery = 1
+
+	basic_torpedo = 1
+
+	basic_depth_charges = 1
+	improved_depth_charges = 1
+
+	basic_secondary_battery = 1
+	mtg_transport = 1
+
+	antiair_1950 = 1
+
+	basic_fire_control_system = 1
+
+	sonar = 1
+
+	##Helicopters##
+	very_early_helicopter = 1
+	early_helicopter = 1
+
+	##Light Aircraft##
+	early_fighter = 1
+	fighter_1945 = 1
+	fighter_1950 = 1
+	interceptor_1945 = 1
+	CAS_1945 = 1
+	CAS_1950 = 1
+
+	##Heavy Aircraft##
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+
+	##Engineering##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	centimetric_radar = 1
+	radar_1950 = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	improved_computing_machine = 1
+	advanced_computing_machine = 1
+	computing_machine_1950 = 1
+	basic_encryption = 1
+	improved_encryption = 1
+	advanced_encryption = 1
+	encryption_1950 = 1
+	basic_decryption = 1
+	improved_decryption = 1
+	advanced_decryption = 1
+	decryption_1950 = 1
+
+	helicopter_engines = 1
+	jet_engines = 1
+	
+	improved_jet_engines_1 = 1
+	improved_jet_engines_bombers_1 = 1
+
+	##Industry##
+	ww2_line_production = 1
+	mass_production_1 = 1
+	building_construction_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	excavation1 = 1
+	rubber_processing = 1
+	energy_technology_1 = 1
+}
+
+# NSB #
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		IFV_1945 = 1
+		IFV_1950 = 1
+		AC_1945 = 1
+		APC_1945 = 1
+		MBT_1945 = 1
+		Heavy_1945 = 1
+		Superheavy_1945 = 1
+		antiair_1945 = 1
+		artillery_1945 = 1
+		artillery_1950 = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		NSB_IFV_1945 = 1
+		NSB_IFV_1950 = 1
+		NSB_AC_1945 = 1
+		NSB_APC_1945 = 1
+		NSB_MBT_1945 = 1
+		NSB_Heavy_1945 = 1
+		NSB_Superheavy_1945 = 1
+		NSB_antiair_1945 = 1
+		NSB_artillery_1945 = 1
+		NSB_artillery_1950 = 1
+	}
+	create_equipment_variant = {
+		name = "M4A3E8 Sherman"
+		type = MBT_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = MBT_cannon
+			turret_type_slot = MBT_three_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+		}
+		icon = GFX_MEX_MBT_1945_medium
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 6
+		}
+	}
+	create_equipment_variant = {
+		name = "M41 Grierson"
+		type = IFV_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = IFV_cannon_2
+			turret_type_slot = IFV_three_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = command_optics
+			special_type_slot_3 = additional_machine_guns
+		}
+		icon = GFX_MEX_IFV_1950_medium
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 6
+		}
+	}
+	create_equipment_variant = {
+		name = "M3 Half-Track"
+		type = APC_chassis_0
+		parent_version = 0
+		modules = {
+			APC_designation_slot = APC_infantry
+			APC_armament_slot = APC_no_weapon
+			suspension_type_slot = tank_half_track_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = additional_machine_guns
+		}
+
+		icon = GFX_MEX_APC_1945_medium
+		upgrades = {
+			ac_nsb_engine_upgrade = 3
+			ac_nsb_armor_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "M8 Greyhound"
+		type = armored_car_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = AC_cannon
+			turret_type_slot = AC_two_man_tank_turret
+			suspension_type_slot = tank_wheeled_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = additional_machine_guns
+		}
+
+		icon = GFX_MEX_AC_1945_medium
+		upgrades = {
+			ac_nsb_engine_upgrade = 1
+			ac_nsb_armor_upgrade = 0
+		}
+	}
+}
+
+# LAR
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_intelligence_agency = yes
+	set_technology = {
+		scout_plane_1945 = 1
+	}
+}
+
+create_equipment_variant = {
+	name = "Clase Durango"
+	type = ship_hull_light_1
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_radar_slot = empty
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_1
+	}
+}
+
+create_equipment_variant = {
+	name = "Clase Guanajuato"
+	type = ship_hull_light_1
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_radar_slot = empty
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_light_battery_1
+	}
+}
+
+create_equipment_variant = {
+	name = "Tipo G 20"
+	type = ship_hull_very_light_1
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = empty
+		fixed_ship_torpedo_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_1
+		mid_1_custom_slot = ship_depth_charge_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+
+create_equipment_variant = {
+	name = "Tipo G 30"
+	type = ship_hull_very_light_1
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_sonar_1
+		fixed_ship_torpedo_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		mid_1_custom_slot = ship_depth_charge_2
+		rear_1_custom_slot = ship_depth_charge_2
+	}
+}
+
+create_equipment_variant = {
+	name = "Clase California"
+	type = ship_hull_more_light_1
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = dp_light_battery
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_sonar_1
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = empty
+		mid_1_custom_slot = ship_depth_charge_1
+		rear_1_custom_slot = ship_anti_air_1
+	}
+}
+
+oob = "MEX_1962"
+set_naval_oob = "MEX_1962_naval"
+
+set_grand_doctrine = strategic_warfare
+set_sub_doctrine = regular_infantry_primacy
+set_sub_doctrine = towed_artillery_firepower
+set_sub_doctrine = light_armor_support
+set_sub_doctrine = coin_operational_doctrine
+add_mastery = {
+	amount = 100
+}
+
 set_politics = {
 	ruling_party = despotism
-	last_election = "1994.7.2"
+	last_election = "1958.7.6"
 	election_frequency = 72
 	elections_allowed = yes
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    fascism = 5
-	socialist = 5
-	conservatism = 6
-	liberal_conservatism = 16
-	despotism = 44
+	fascism = 4
+	despotism = 45
 	despotism_1 = 17
-	despotism_2 = 7
+	despotism_2 = 9
+	conservatism = 7
+	conservatism_1 = 4
+	liberalism = 4
+	socialist = 5
+	communist = 3
+	communist_1 = 2
 }
 
-country_event = { id = MEX.flavour.1 days = 1644 } # 2000 elections
+set_stability = 1.2
 
-set_stability = 0.8
+set_country_flag = mateos_initial_tree_flag
+set_country_flag = MEX_DW_MLN_pre66
+set_country_flag = MEX_PRI_show_successors
+set_country_flag = gui_alert_visible
+set_country_flag = gui_alert_visible_2
+set_country_flag = country_has_gui
+
+country_lock_all_division_template = yes
 
 add_ideas = {
+	MEX_the_imperfect_dictatorship_initial
+	MEX_mexican_miracle_dummy
+	MEX_rural_depression
+	MEX_the_leviathan_4
 
-	## General
+	### Ministers ###
+	MEX_Gustavo_Ordaz_hog
+	MEX_Manuel_Baurraud_for
+	MEX_Raul_Lozano_eco
+	MEX_Agustin_Olachea_sec
+	#Military Command
+	MEX_Agustin_Olachea_army_chief
+	MEX_Manuel_Araico_navy_chief
+	MEX_Fierro_Villalobos_air_chief
 
-	MEX_The_New_Popular_Revolution
-	MEX_Those_In_The_Shadows
-	MEX_The_Gilded_Rot
-	MEX_The_Rusting_Sword
+	### LAWS ###
+	# POLITICAL
+	tno_political_parties_dominant_party_system
+	tno_religious_rights_state_atheism
+	tno_trade_unions_state_controlled
+	tno_immigration_skilled_labor_only
+	tno_slavery_penal_labor
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_registered_voting
 
-	## Faction
+	# MILITARY
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_minimal_training
+	tno_draft_exemptions_educational_deferment
 
-	### Ministers
+	# ECONOMIC
+	tno_trade_laws_limited_exports
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_unemployment_trinket_subsidies
+	tno_pensions_low_pensions
 
-	MEX_Cuauhtemoc_Cardenas_Solorzano_hog
-	MEX_Carlos_Rojas_Gutierrez_eco
-	MEX_Enrique_Cervantes_Aguirre_sec
-	MEX_Javier_Trevino_Cantu_for
+	# SOCIAL
+	tno_health_care_universal_health_care
+	tno_pollution_few_regulations
+	tno_education_public_higher_education
+	tno_penal_system_politicized_penal_system
+	tno_gender_rights_gender_equality
+	tno_security_political_control
+	tno_regulations_strict_regulations
 
-	### Laws
-
-	#POLITICAL
-		tno_political_parties_controlled_opposition
-		tno_religious_rights_secularism
-		tno_trade_unions_all_allowed
-		tno_immigration_naturalization
-		tno_slavery_outlawed
-		tno_public_meetings_regulated
-		tno_press_rights_censored_press
-		tno_vote_franchise_registered_voting
-		tno_refugees_open
-
-	#MILITARY
-		tno_conscription_one_year_draft
-		tno_women_military_assistance
-		tno_military_supervision_military_policing
-		tno_military_spending_large_spending
-		tno_training_combat_schooling
-		tno_racial_integration_not_applicable
-		tno_draft_exemptions_educational_deferment
-	#SOCIAL
-		tno_safety_acceptable_regulations
-		tno_health_care_private_health_care
-		tno_pollution_few_regulations
-		tno_education_public_education
-		tno_penal_system_capital_punishment
-		tno_lgbt_rights_lgbt_outlawed
-		tno_gender_rights_traditional_roles
-		  
-		tno_security_security_service
-	#ECONOMIC
-		tno_trade_laws_limited_exports
-		tno_economic_focus_civilian_economy
-		tno_tax_rate_low_taxation
-		tno_income_taxation_tax_havens
-		tno_minimum_wage_low_minimum_wage
-		tno_max_workhours_8_hour_work_day
-		tno_child_labor_illegal
-		tno_pensions_trinket_pensions
-		tno_unemployment_trinket_subsidies
+	# SOCIETAL DEVELOPMENT
+	tno_army_professionalism_cronyism
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_factory_complexes
+	tno_admin_efficiency_deficient_administrative_systems
+	tno_agriculture_centralized
+	tno_healthcare_nascent
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
 }
+
+set_research_slots = 4
+
+# Policy effectivness
+set_country_flag = tno_defined_startup_effectiveness
+
+set_variable = { tno_political_parties_effectiveness = 80 }
+set_variable = { tno_religious_rights_effectiveness = 10 }
+set_variable = { tno_trade_unions_effectiveness = 93 }
+set_variable = { tno_immigration_effectiveness = 50 }
+set_variable = { tno_slavery_effectiveness = 100 }
+set_variable = { tno_public_meetings_effectiveness = 65 }
+set_variable = { tno_press_rights_effectiveness = 74 }
+set_variable = { tno_vote_franchise_effectiveness = 11 }
+
+set_variable = { tno_conscription_effectiveness = 25 }
+set_variable = { tno_military_supervision_effectiveness = 10 }
+set_variable = { tno_training_effectiveness = 90 }
+set_variable = { tno_draft_exemptions_effectiveness = 90 }
+
+set_variable = { tno_trade_laws_effectiveness = 20 }
+set_variable = { tno_income_taxation_effectiveness = 80 }
+set_variable = { tno_minimum_wage_effectiveness = 48 }
+set_variable = { tno_max_workhours_effectiveness = 68 }
+set_variable = { tno_pensions_effectiveness = 85 }
+set_variable = { tno_unemployment_effectiveness = 80 }
+set_variable = { tno_regulations_effectiveness = 10 }
+
+set_variable = { tno_health_care_effectiveness = 45 }
+set_variable = { tno_education_effectiveness = 30 }
+set_variable = { tno_penal_system_effectiveness = 80 }
+set_variable = { tno_gender_rights_effectiveness = 25 }
+set_variable = { tno_security_effectiveness = 92 }
+
+add_dynamic_modifier = { modifier = MEX_mexican_miracle }
+add_dynamic_modifier = { modifier = MEX_the_leviathan_effects }
+add_dynamic_modifier = { modifier = MEX_econ_region_national_dynamic_modifier }
+add_dynamic_modifier = { modifier = MEX_misc_project_rewards }
+
+### Variables and Arrays
+set_variable = { MEX_Madrazo_real_pop = 30 }
+set_variable = { MEX_Ordaz_real_pop = 38 }
+set_variable = { MEX_Lozano_real_pop = 32 }
+set_variable = { MEX_SBBFM_Mexico_real_influence = 80 }
+set_variable = { MEX_SBBFM_Japan_real_influence = 50 }
+set_variable = { MEX_SBBFM_USA_real_influence = 70 }
+set_variable = { MEX_cabinet_unity = 75 }
+set_variable = { MEX_SB_STRESS_sl = 25 }
+set_variable = { MEX_madrazo_succession_var = 1 }
+set_variable = { MEX_Lozano_gbp = 0 }
+set_variable = { MEX_Ordaz_gbp = 0 }
+set_variable = { MEX_Madrazo_gbp = 0 }
+
+MEX_reset_PRI = yes
+
+set_variable = { MEX_USA_business_opinion = 10 }
+set_variable = { MEX_JAP_business_opinion = 2 }
+MEX_calc_miracle_values = yes
+
+### Opinion Modifiers ###
+
+every_country = {
+	limit = { is_in_faction_with = GER }
+	set_embargo_PREV_mutual = yes
+}
+
+every_country = {
+	limit = { is_in_faction_with = ITA }
+	set_embargo_PREV = yes
+}
+
+add_opinion_modifier = { target = IBR modifier = TNO_illegitimate_govt }
+IBR = {
+	add_opinion_modifier = { target = MEX modifier = TNO_refused_to_recognize_us }
+}
+
+add_opinion_modifier = { target = BRA modifier = MEX_approached_brazil_Opinion }
+reverse_add_opinion_modifier = { target = BRA modifier = MEX_approached_brazil_Opinion }
+
+add_opinion_modifier = { target = CAN modifier = MEX_approached_canada_Opinion }
+reverse_add_opinion_modifier = { target = CAN modifier = MEX_approached_canada_Opinion }
+CAN = { add_opinion_modifier = { target = MEX modifier = CAN_bothersome_rhetoric } }
+
+DOM = { set_embargo_PREV_mutual = yes }
+
+PAR = { set_embargo_PREV_mutual = yes }
+
+STC = { set_embargo_PREV_mutual = yes }
+
+add_opinion_modifier = {
+	target = ENG
+	modifier = TNO_illegitimate_govt
+}
+ENG = {
+	add_opinion_modifier = {
+		target = MEX
+		modifier = TNO_refused_to_recognize_us
+	}
+}
+
+add_opinion_modifier = {
+	target = FRA
+	modifier = TNO_illegitimate_govt
+}
+FRA = {
+	add_opinion_modifier = {
+		target = MEX
+		modifier = TNO_refused_to_recognize_us
+	}
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = MEX_close_relationship
+}
+USA = {
+	add_opinion_modifier = {
+		target = MEX
+		modifier = MEX_close_relationship
+	}
+}
+
+add_opinion_modifier = {
+	target = JAP
+	modifier = MEX_close_relationship
+}
+JAP = {
+	add_opinion_modifier = {
+		target = MEX
+		modifier = MEX_close_relationship
+	}
+}
+
+add_opinion_modifier = {
+	target = CAN
+	modifier = MEX_jailer_of_nations
+}
+add_opinion_modifier = {
+	target = CUB
+	modifier = MEX_close_relationship
+}
+CUB = {
+	add_opinion_modifier = {
+		target = MEX
+		modifier = MEX_close_relationship
+	}
+}
+
+add_opinion_modifier = {
+	target = VEN
+	modifier = MEX_united_in_liberty
+}
+VEN = {
+	add_opinion_modifier = {
+		target = MEX
+		modifier = MEX_united_in_liberty
+	}
+}
+
+add_opinion_modifier = {
+	target = IRK
+	modifier = TNO_legitimate_govt
+}
+IRK = {
+	add_opinion_modifier = {
+		target = MEX
+		modifier = TNO_they_recognize_us
+	}
+}
+
+add_opinion_modifier = {
+	target = CLC
+	modifier = MEX_fascist_scum
+}
+CLC = {
+	add_opinion_modifier = {
+		target = MEX
+		modifier = MEX_anti_fascist_state
+	}
+}
+
+add_opinion_modifier = {
+	target = CRO
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = MAD
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = AAG
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = AAF
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = MNT
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = IEA
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = UTL
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = JOR
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = LEB
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = ARM
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = TUN
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = OMA
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = YEM
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = GUL
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = SER
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = MOC
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = SNM
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = ALB
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = TUN
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = SLO
+	modifier = TNO_illegitimate_govt
+}
+
+add_opinion_modifier = {
+	target = GRE
+	modifier = MEX_fascist_puppet
+}
+
+add_opinion_modifier = {
+	target = SNS
+	modifier = MEX_colonial_puppet
+}
+
+add_opinion_modifier = {
+	target = BKU
+	modifier = MEX_colonial_puppet
+}
+
+add_opinion_modifier = {
+	target = IME
+	modifier = MEX_imperial_colony
+}
+
+add_opinion_modifier = {
+	target = MAD
+	modifier = MEX_imperial_colony
+}
+
+add_opinion_modifier = {
+	target = ALG
+	modifier = MEX_imperial_colony
+}
+
+add_opinion_modifier = {
+	target = GUL
+	modifier = MEX_imperial_colony
+}
+set_variable = { trade_opinion_embargo@GUL = 1 }
+
+add_opinion_modifier = {
+	target = IEA
+	modifier = MEX_imperial_colony
+}
+
+add_opinion_modifier = {
+	target = SAU
+	modifier = MEX_imperial_influences
+}
+
+add_opinion_modifier = {
+	target = YEM
+	modifier = MEX_imperial_influences
+}
+
+add_opinion_modifier = {
+	target = OMA
+	modifier = MEX_imperial_influences
+}
+
+add_opinion_modifier = { target = PER modifier = MEX_german_influence }
+
+add_opinion_modifier = {
+	target = IRQ
+	modifier = MEX_imperial_influences
+}
+
+add_opinion_modifier = {
+	target = EGY
+	modifier = MEX_imperial_influences
+}
+
+BLZ = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+GUY = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+BAH = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+JAM = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+SKN = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+SVI = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+BRB = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+SUR = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+
+add_opinion_modifier = {
+	target = GUA
+	modifier = MEX_tense_border
+}
+add_opinion_modifier = {
+	target = GUA
+	modifier = MEX_revolutionary_ties
+}
+
+### Starting Equipment ###
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 2000
+	producer = USA
+}
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 500
+	producer = USA
+}
+add_equipment_to_stockpile = {
+	type = motorized_equipment_2
+	amount = 500
+	producer = USA
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 500
+	producer = MEX
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment_3
+	amount = 200
+	producer = USA
+}
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	add_equipment_to_stockpile = {
+		type = armored_car_equipment_1
+		amount = 500
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = IFV_equipment_1
+		amount = 300
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = MBT_equipment_1
+		amount = 100
+		producer = USA
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	add_equipment_to_stockpile = {
+		type = armored_car_chassis_1
+		amount = 500
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = IFV_chassis_1
+		amount = 300
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = MBT_chassis_1
+		amount = 100
+		producer = USA
+	}
+}
+add_equipment_to_stockpile = {
+	type = convoy
+	amount = 50
+	producer = MEX
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 80
+	producer = MEX
+}
+
+485 = { add_dynamic_modifier = { modifier = MEX_guerrero_state_modifier } }
+1550 = { add_dynamic_modifier = { modifier = MEX_baja_california_sur_state_modifier } }
+2152 = { add_dynamic_modifier = { modifier = MEX_quintana_roo_state_modifier } }
+set_temp_variable = { temp_region = 8 }
+MEX_econ_region_stimulation_decay_increase_med = yes

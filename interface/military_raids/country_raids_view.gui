@@ -108,8 +108,8 @@ guiTypes = {
 		clipping = no
 
 		background = {
-		    name = "background"
-		    spriteType = "GFX_raid_type_background_round"
+			name = "background"
+			spriteType = "GFX_raid_type_background_round"
 		}
 
 		buttonType = {
@@ -128,7 +128,7 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-		    spriteType = "GFX_raid_type_background_round"
+			spriteType = "GFX_raid_type_background_round"
 		}
 
 		buttonType = {
@@ -332,22 +332,22 @@ guiTypes = {
 		}
 
 		buttontype = {
-		    name = "risk_taking_switch_low"
-		    spriteType = "GFX_raids_toggle_switch"
-		    position = { x = 65 y = 425 }
-		    frame = 1
+			name = "risk_taking_switch_low"
+			spriteType = "GFX_raids_toggle_switch"
+			position = { x = 65 y = 425 }
+			frame = 1
 		}
 		buttontype = {
-		    name = "risk_taking_switch_medium"
-		    spriteType = "GFX_raids_toggle_switch"
-		    position = { x = 140 y = 425 }
-		    frame = 1
+			name = "risk_taking_switch_medium"
+			spriteType = "GFX_raids_toggle_switch"
+			position = { x = 140 y = 425 }
+			frame = 1
 		}
 		buttontype = {
-		    name = "risk_taking_switch_high"
-		    spriteType = "GFX_raids_toggle_switch"
-		    position = { x = 215 y = 425 }
-		    frame = 1
+			name = "risk_taking_switch_high"
+			spriteType = "GFX_raids_toggle_switch"
+			position = { x = 215 y = 425 }
+			frame = 1
 		}
 		instantTextboxType = {
 			name = "risk_taking_high_text"
@@ -493,8 +493,8 @@ guiTypes = {
 		}
 
 		instantTextboxType = {
-		    name = "equipment_type_header"
-		    text = "equipment_list_type_header"
+			name = "equipment_type_header"
+			text = "equipment_list_type_header"
 			position = { x = 330 y = 247 }
 			maxWidth = 130
 			maxHeight = 16
@@ -504,7 +504,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "equipment_current_amount_header"
-		    text = "equipment_list_current_amount_header"
+			text = "equipment_list_current_amount_header"
 			position = { x = 460 y = 247 }
 			maxWidth = 80
 			maxHeight = 20
@@ -514,7 +514,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "equipment_required_amount_header"
-		    text = "equipment_list_required_amount_header"
+			text = "equipment_list_required_amount_header"
 			position = { x = 542 y = 247 }
 			maxWidth = 76
 			maxHeight = 20
@@ -600,8 +600,8 @@ guiTypes = {
 		}
 
 		iconType = {
-		    name = "disaster_icon"
-		    spriteType = "GFX_raid_disaster_icon"
+			name = "disaster_icon"
+			spriteType = "GFX_raid_disaster_icon"
 			position = { x = 245 y = 338 }
 			scale = 0.4
 		}
@@ -771,90 +771,90 @@ guiTypes = {
 			position = { x = -220 y = 160 }
 			maxWidth = 380
 			maxHeight = 50
-            fixedsize = yes
+			fixedsize = yes
 			orientation = center_up
 			format = center
 			font = "aldrich_24_outline"
 		}
 
 		containerWindowType = {
-		    name = "raid_actor_window"
-            position = { x = 30 y = 220 }
-            orientation = upper_left
-		    size = { width = 320 height = 340 }
+			name = "raid_actor_window"
+			position = { x = 30 y = 220 }
+			orientation = upper_left
+			size = { width = 320 height = 340 }
 
 			containerWindowType = {
-		        name = "raid_actor_title_window"
-                position = { x = 10 y = 5 }
-		        size = { width = 300 height = 40 }
+				name = "raid_actor_title_window"
+				position = { x = 10 y = 5 }
+				size = { width = 300 height = 40 }
 
-                instantTextboxType = {
-                    name = "unit_text"
-                    position = { x = -12 y = 3 }
-                    maxWidth = 280
-                    maxHeight = 30
-                    orientation = upper_left
-                    format = centre
-                    font = "aldrich_18_outline"
-                    fixedsize = yes
-                }
+				instantTextboxType = {
+					name = "unit_text"
+					position = { x = -12 y = 3 }
+					maxWidth = 280
+					maxHeight = 30
+					orientation = upper_left
+					format = centre
+					font = "aldrich_18_outline"
+					fixedsize = yes
+				}
 			}
 
 			containerWindowType = {
-		        name = "raid_actor_text_window"
-                position = { x = 0 y = 50 }
-		        size = { width = 320 height = 190 }
+				name = "raid_actor_text_window"
+				position = { x = 0 y = 50 }
+				size = { width = 320 height = 190 }
 
-                instantTextboxType = {
-                    name = "actor_effects_text"
-                    position = { x = 11 y = 11 }
-                    maxWidth = 252
-                    maxHeight = 170
-                    orientation = upper_left
-                    font = "aldrich_18_outline"
-                    scrollbarType = standardtext_slider
-                }
+				instantTextboxType = {
+					name = "actor_effects_text"
+					position = { x = 11 y = 11 }
+					maxWidth = 252
+					maxHeight = 170
+					orientation = upper_left
+					font = "aldrich_18_outline"
+					scrollbarType = standardtext_slider
+				}
 			}
 		}
 
 		containerWindowType = {
-		    name = "raid_victim_window"
-            position = { x = -350 y = 220 }
-            orientation = upper_right
-		    size = { width = 320 height = 240 }
+			name = "raid_victim_window"
+			position = { x = -350 y = 220 }
+			orientation = upper_right
+			size = { width = 320 height = 240 }
 
 			containerWindowType = {
-		        name = "raid_victim_title_window"
-                position = { x = 10 y = 5 }
-		        size = { width = 300 height = 40 }
+				name = "raid_victim_title_window"
+				position = { x = 10 y = 5 }
+				size = { width = 300 height = 40 }
 
-                instantTextboxType = {
-                    name = "target_text"
-                    position = { x = -30 y = 3 }
-                    maxWidth = 280
-                    maxHeight = 30
-                    orientation = upper_left
-                    format = centre
-                    font = "aldrich_18_outline"
-                    fixedsize = yes
-                }
+				instantTextboxType = {
+					name = "target_text"
+					position = { x = -30 y = 3 }
+					maxWidth = 280
+					maxHeight = 30
+					orientation = upper_left
+					format = centre
+					font = "aldrich_18_outline"
+					fixedsize = yes
+				}
 			}
 
 			containerWindowType = {
-		        name = "raid_victim_text_window"
-                position = { x = 0 y = 50 }
-		        size = { width = 320 height = 190 }
+				name = "raid_victim_text_window"
+				position = { x = 0 y = 50 }
+				size = { width = 320 height = 190 }
 
-                instantTextboxType = {
-                    name = "victim_effects_text"
-                    position = { x = -3 y = 11 }
-                    maxWidth = 252
-                    maxHeight = 170
-                    orientation = upper_left
-                    font = "aldrich_18_outline"
-                    scrollbarType = standardtext_slider
-                }
-            }
+				instantTextboxType = {
+					name = "victim_effects_text"
+					position = { x = -3 y = 11 }
+					maxWidth = 252
+					maxHeight = 170
+					orientation = upper_left
+					font = "aldrich_18_outline"
+					scrollbarType = standardtext_slider
+				}
+			}
 		}
 	}
 
@@ -988,9 +988,9 @@ guiTypes = {
 			maxWidth = 200
 		}
 		iconType = {
-		    name = "raid_outcome_success"
-            position = { x = 230 y = 6 }
-		    spriteType = "GFX_raid_outcome_success"
+			name = "raid_outcome_success"
+			position = { x = 230 y = 6 }
+			spriteType = "GFX_raid_outcome_success"
 			scale = 0.5
 		}
 		instantTextBoxType = {
@@ -1008,9 +1008,9 @@ guiTypes = {
 		clipping = no
 
 		iconType = {
-		    name = "icon_background"
-            position = { x = 0 y = 9000 }
-		    spriteType = "GFX_raid_type_background_round"
+			name = "icon_background"
+			position = { x = 0 y = 9000 }
+			spriteType = "GFX_raid_type_background_round"
 		}
 
 		buttonType = {
@@ -1021,12 +1021,12 @@ guiTypes = {
 		}
 
 		iconType = {
-		    name = "toggle_icon"
-            position = { x = 16 y = 24 }
-            spriteType = "GFX_deploy_priority"
-            alwaystransparent = yes
-            scale = 0.65
-            frame = 4
+			name = "toggle_icon"
+			position = { x = 16 y = 24 }
+			spriteType = "GFX_deploy_priority"
+			alwaystransparent = yes
+			scale = 0.65
+			frame = 4
 		}
 	}
 
@@ -1043,35 +1043,35 @@ guiTypes = {
 		clipping = no
 		orientation = upper_right
 
-        background = {
-            name = "Background"
-            quadTextureSprite = "GFX_tiled_decisions_bg_crt_small"
-            position = { x = 0 y = 0 }
-        }
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_decisions_bg_crt_small"
+			position = { x = 0 y = 0 }
+		}
 
 		iconType = {
-		    name = "filter_top_bg"
-		    position = { x = -9000 y = -38 }
-		    frame = 1
-		    spriteType = "GFX_raids_filter_header_button"
+			name = "filter_top_bg"
+			position = { x = -9000 y = -38 }
+			frame = 1
+			spriteType = "GFX_raids_filter_header_button"
 		}
 
 		buttonType = {
-		    name = "raids_icon"
-		    position = { x = 23 y = 54 }
-		    spriteType = "GFX_closebutton_small"
-		    # spriteType = "GFX_raid_target_icon_generic"
+			name = "raids_icon"
+			position = { x = 23 y = 54 }
+			spriteType = "GFX_closebutton_small"
+			# spriteType = "GFX_raid_target_icon_generic"
 		}
 
-        gridboxtype = {
-            # contains raid_category_filter_entry
+		gridboxtype = {
+			# contains raid_category_filter_entry
 
-            name = "raid_categories_grid"
-            position = { x = 5 y = 10 }
-            slotsize = { width = 34 height = 36 }
+			name = "raid_categories_grid"
+			position = { x = 5 y = 10 }
+			slotsize = { width = 34 height = 36 }
 			max_slots_horizontal = 2
-            orientation = upper_left
-            format = "UPPER_LEFT"
-        }
+			orientation = upper_left
+			format = "UPPER_LEFT"
+		}
 	}
 }

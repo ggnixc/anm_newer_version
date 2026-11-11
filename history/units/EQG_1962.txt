@@ -1,0 +1,32 @@
+division_template = {
+	name = "Guardia Colonial" #Colonial Guard
+	division_names_group = IBRPOR_CAC_01
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Guardia de Bata"
+		location = 15117
+		division_template = "Guardia Colonial"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Guardia de Santa Isabel"
+		location = 1903
+		division_template = "Guardia Colonial"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	
+}

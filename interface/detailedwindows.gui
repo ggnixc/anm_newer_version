@@ -50,7 +50,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "total_ships"
 			position = { x=80 y=65 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "Stuff"
 			maxWidth = 120
 			maxHeight = 20
@@ -66,7 +66,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "current_manpower"
 			position = { x=211 y=65 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "Stuff"
 			maxWidth = 120
 			maxHeight = 20
@@ -75,9 +75,9 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "template_title"
-			position = { x = 8 y = 8 }
+			position = { x = 8 y = 16 }
 			textureFile = ""
-			font = "aldrich_32_outline"
+			font = "aldrich_36_outline"
 			borderSize = {x = 0 y = 0}
 			text = "EQUIPMENT_IN_USE_HEADER"
 			maxWidth = 300
@@ -100,8 +100,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "archetype_name"
-			position = { x = 10 y = 5 }
-			font = "aldrich_16_outline"
+			position = { x = 10 y = 8 }
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 170
@@ -112,8 +112,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "archetype_amount"
-			position = { x = 190 y = 5 }
-			font = "aldrich_16_outline"
+			position = { x = 190 y = 8 }
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 70
@@ -124,41 +124,43 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "equipment_ship_entry"
-		size = { width=270 height=69 }
+		position = { x = 10 y = 0 }
+		size = { width = 280 height = 107 }
 
 		Background = {
 			name = "unit_stats_list_entry_bg"
-			quadTextureSprite = "GFX_mini_tooltip"
-			position = { x = 15 y = 0 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
 		}
 
 		iconType = {
 			name ="equipment_icon"
-			spriteType = "GFX_equipment_naval_item"
-			position = { x=160 y=42 }
-			scale = 0.7
-			centerposition = yes
+			spriteType = "GFX_equipment_item"
+			position = { x = 8 y = 43 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.8
+			#centerposition = yes
 		}
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 25 y = 5 }
-			font = "hoi_18mbs"
-			text = "USS Enterprise"
-			maxWidth = 220
+			position = { x = 10 y = 3 }
+			font = "aldrich_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 264
 			maxHeight = 20
 			fixedsize = yes
-			format = left
 		}
 
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 233 y = 5 }
-			font = "hoi_18mbs"
-			text = "10"
-			maxWidth = 35
+			position = { x = 10 y = 23 }
+			font = "aldrich_18_outline"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 264
 			maxHeight = 20
-			format = right
+			format = left
 		}
 	}
 
@@ -214,7 +216,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "total_planes"
 			position = { x = 70 y = 65 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "Stuff"
 			maxWidth = 60
 			maxHeight = 20
@@ -230,7 +232,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "current_manpower"
 			position = { x = 155 y = 65 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "Stuff"
 			maxWidth = 50
 			maxHeight = 20
@@ -246,7 +248,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "equipment_ratio"
 			position = { x = 241 y = 65 }
-			font = "aldrich_22_outline"
+			font = "aldrich_24_outline"
 			text = "Stuff"
 			maxWidth = 60
 			maxHeight = 20
@@ -255,9 +257,9 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "template_title"
-			position = { x = 8 y = 8 }
+			position = { x = 8 y = 16 }
 			textureFile = ""
-			font = "aldrich_32_outline"
+			font = "aldrich_36_outline"
 			borderSize = {x = 0 y = 0}
 			text = "EQUIPMENT_IN_USE_HEADER"
 			maxWidth = 300
@@ -280,8 +282,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "archetype_name"
-			position = { x = 10 y = 5 }
-			font = "aldrich_16_outline"
+			position = { x = 10 y = 8 }
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 170
@@ -299,8 +301,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "archetype_amount"
-			position = { x = 190 y = 5 }
-			font = "aldrich_16_outline"
+			position = { x = 190 y = 8 }
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 70
@@ -311,41 +313,43 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "equipment_plane_entry"
-		size = { width=270 height=69 }
+		position = { x = 15 y = 0 }
+		size = { width = 270 height = 165 }
 
 		Background = {
 			name = "unit_stats_list_entry_bg"
-			quadTextureSprite = "GFX_mini_tooltip"
-			position = { x = 15 y = 0 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
 		}
 
 		iconType = {
 			name ="equipment_icon"
-			spriteType = "GFX_equipment_naval_item"
-			position = { x=140 y=42 }
-			scale = 0.8
-			centerposition = yes
+			spriteType = "GFX_equipment_item"
+			position = { x = 0 y = 40 }
+			Orientation = "UPPER_LEFT"
+			scale = 1
+			#centerposition = yes
 		}
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 25 y = 5 }
-			font = "hoi_18mbs"
-			text = "USS Enterprise"
-			maxWidth = 220
+			position = { x = 0 y = 3 }
+			font = "aldrich_20_outline"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 270
 			maxHeight = 20
 			fixedsize = yes
-			format = left
 		}
 
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 233 y = 5 }
-			font = "hoi_18mbs"
-			text = "10"
-			maxWidth = 35
+			position = { x = 0 y = 23 }
+			font = "aldrich_18_outline"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 270
 			maxHeight = 20
-			format = right
+			format = left
 		}
 	}
 }

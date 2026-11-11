@@ -11,7 +11,7 @@ state = {
 		buildings = {
 			infrastructure = 3
 			synthetic_refinery = 1
-			industrial_complex = 1
+			offices = 1
 			7463 = {
 				naval_base = 1
 			}
@@ -23,13 +23,15 @@ state = {
 			19289 1
 		}
 		add_core_of = INS
- 	}
+		set_state_flag = GDP_category_rural
+		set_state_flag = GDP_regions_riau
+	}
 
 	provinces = {
 		1277 7327 7463 19221 19239 19247 19289
 	}
 	manpower = 378771
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = pastoral
 	local_supplies = 0.000
 }

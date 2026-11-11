@@ -10,11 +10,15 @@ state = {
 	history = {
 		owner = BRA
 		add_core_of = BRA
-		add_extra_state_shared_building_slots = 1
 		buildings = {
 			dockyard = 1
 			infrastructure = 5
-			industrial_complex = 1
+			thermoelectric_plant = 3
+			hydroelectric_plant = 2
+			schools = 1
+			prisons = 2
+			hospitals = 1
+			offices = 2
 			5112 = {
 				naval_base = 4
 			}
@@ -70,6 +74,7 @@ state = {
 		victory_points = {
 			17417 5
 		}
+		set_state_flag = GDP_category_large_city
 	}
 
 	provinces = {
@@ -77,6 +82,6 @@ state = {
 	}
 	manpower = 13868699
 	buildings_max_level_factor = 1.000
-	state_category = large_city
+	state_category = city
 	local_supplies = 0.000
 }

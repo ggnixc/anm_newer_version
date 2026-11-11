@@ -122,6 +122,24 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		iconType = {
+			name = "special_forces_icon"
+			spriteType = "GFX_special_forces_icon"
+			position = { x = 24 y = 63 }
+			frame = 3
+		}
+		
+		instantTextboxType = {
+			name = "special_forces_cap"
+			position = { x = 54 y = 63 }
+			font = "aldrich_18_outline"
+			borderSize = {x = 0 y = 0}
+			maxWidth = 80
+			maxHeight = 20
+			format = left
+			text = "THINGS"
+		}
+
 		containerWindowType = {
 			name = "templates"
 			position = { x=2 y=138 }
@@ -167,7 +185,7 @@ guiTypes = {
 				name = "text"
 				position = { x = 59 y = 13 }
 				textureFile = ""
-				font = "aldrich_16_outlinedark"
+				font = "aldrich_18_outline"
 				borderSize = {x = 0 y = 0 }
 				text = "SHOW_DECOMMISSIONED_TEMPLATES"
 				maxWidth = 288
@@ -180,9 +198,9 @@ guiTypes = {
 
 		buttonType = {
 			name = "open_designer_button"
-			position = { x = 105 y = 56 }
+			position = { x = 190 y = 56 }
 			quadTextureSprite ="GFX_division_designer_button"
-			buttonFont = "aldrich_16_outlinedark"
+			buttonFont = "aldrich_20_outline"
 			buttonText = "DEPLOYMENT_DESIGNER"
 			clicksound = click_default
 		}
@@ -198,7 +216,7 @@ guiTypes = {
 				#position = { x = -82 y = 13 }
 				position = { x = -8000 y = 13 }
 				quadTextureSprite ="GFX_foreign_templates_dropdown_button"
-				buttonFont = "aldrich_20_outlinedark"
+				buttonFont = "aldrich_22_outline"
 				Orientation = "UPPER_RIGHT"
 				clicksound = click_default
 			}
@@ -206,7 +224,7 @@ guiTypes = {
 			expandedWindow = {
 				name = "expanded_window"
 				position = { x=-40 y= 63 }
-				show_position = { x = 330` y = 63 }
+				show_position = { x = 330 y = 63 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
 				animation_time = 300
@@ -255,8 +273,8 @@ guiTypes = {
 				name = "back"
 				position = { x=90 y=6 }
 				size = { x=248 y=41 }
-				font = "aldrich_20_outlinedark"
-				buttontext = "BACK"
+				font = "aldrich_22_outline"
+				buttonText = "BACK"
 				quadTextureSprite = "GFX_sort_button_202x29"
 				clicksound = click_default
 			}
@@ -265,8 +283,8 @@ guiTypes = {
 				name = "default"
 				position = { x=90 y=47 }
 				size = { x=248 y=41 }
-				font = "aldrich_20_outlinedark"
-				buttontext = "DEFAULT_DIV_TEMPL_SYMBOL"
+				font = "aldrich_22_outline"
+				buttonText = "DEFAULT_DIV_TEMPL_SYMBOL"
 				quadTextureSprite = "GFX_sort_button_202x29"
 				clicksound = click_default
 			}
@@ -304,7 +322,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 65 y = 25 }
 			textureFile = ""
-			font = "aldrich_18_outlinedark"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
 			maxWidth = 175
@@ -336,7 +354,7 @@ guiTypes = {
 		background = {
 			name = "Background"
 			quadTextureSprite ="GFX_deployment_named_division_bg"
-			position = { x=999 y=0 }
+			position = { x=5 y=0 }
 		}
 
 		background = {
@@ -347,7 +365,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "counter"
-			position = { x=12 y=16 }
+			position = { x=12 y=13 }
 			spriteType = "GFX_technology_medium"
 			clicksound = click_default
 		}
@@ -355,31 +373,28 @@ guiTypes = {
 		iconType = {
 			name = "obsolete_template_warning"
 			quadTextureSprite ="GFX_obsolete_template_warning"
-			position = { x= 19 y = 15 }
+			position = { x= 17 y = 9 }
 		}
 
 		iconType = {
 			name = "special_forces_icon"
 			spriteType = "GFX_special_forces_icon"
-			position = { x = 14 y = 46 }
+			position = { x = 12 y = 43 }
 			frame = 3
 			alwaystransparent = yes
 		}
 
-		instantTextboxType = {
-			name = "special_forces_cap"
-			position = { x = 54 y = 63 }
-			font = "aldrich_16_outline"
-			borderSize = {x = 0 y = 0}
-			maxWidth = 80
-			maxHeight = 20
-			format = left
+		iconType = {
+			name = "allow_as_hq_icon"
+			spriteType = "GFX_allow_as_hq_icon"
+			position = { x = 7 y = 10 }
+			frame = 3
 		}
 
 		iconType = {
 			name = "can_paradrop_icon"
 			spriteType = "GFX_can_paradrop_icon_small"
-			position = { x = 14 y = 42 }
+			position = { x = 14 y = 39 }
 			frame = 2
 			alwaystransparent = yes
 		}
@@ -396,10 +411,11 @@ guiTypes = {
 			name = "name"
 			position = { x = 112 y = 20 }
 			textureFile = ""
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 198
 			maxHeight = 20
+			fixedsize = yes
 			format = center
 			vertical_alignment = center
 			alwaystransparent = yes
@@ -423,12 +439,12 @@ guiTypes = {
 			format = center
 			vertical_alignment = center
 		}
-		
+
 		buttonType = {
 			name = "add_template_button"
 			position = { x = 168 y = 47 }
 			quadTextureSprite ="GFX_small_button_71x26"
-			buttonFont = "aldrich_18_outlinedark"
+			buttonFont = "aldrich_20_outline"
 			buttonText = "DEPLOYMENT_ADD_TEMPLATE"
 			clicksound = click_default
 		}
@@ -444,7 +460,7 @@ guiTypes = {
 		buttonType = {
 			name = "edit_button"
 			position = { x = 238 y = 47 }
-			buttonFont = "aldrich_18_outlinedark"
+			buttonFont = "aldrich_20_outline"
 			buttonText = "EDIT"
 			quadTextureSprite = "GFX_small_button_71x26"
 			clicksound = click_default
@@ -507,7 +523,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 110 y = 15 }
 			textureFile = ""
-			font = "aldrich_white_14_outline"
+			font = "aldrich_22_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
 			maxWidth = 159
@@ -601,7 +617,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 110 y = 15 }
 			textureFile = ""
-			font = "aldrich_white_14_outline"
+			font = "aldrich_22_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
 			maxWidth = 159
@@ -688,7 +704,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "lines_count"
 			position = { x = 330 y = 7 }
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_22_outline"
 			borderSize = {x = 0 y = 0}
 			text = "1"
 			maxWidth = 120
@@ -757,7 +773,7 @@ guiTypes = {
 			editBoxType = {
 				name = "editbox"
 				position = { x = 3 y = 6 }
-				font = "aldrich_20_outlinedark"
+				font = "aldrich_22_outline"
 				size = { x=175 y=19 }
 			}
 
@@ -800,7 +816,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "empty"
 					position = { x = 10 y = 130 }
-					font = "aldrich_22_outlinedark"
+					font = "aldrich_24_outline"
 					borderSize = {x = 0 y = 0}
 					maxWidth = 210
 					maxHeight = 60
@@ -838,7 +854,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "series_number"
 			position = { x = 398 y = 11 }
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_22_outline"
 			borderSize = {x = 0 y = 0}
 			text = "1"
 			maxWidth = 65
@@ -882,7 +898,7 @@ guiTypes = {
 			name = "name"
 			position = { x = 9 y = 8 }
 			textureFile = ""
-			font = "aldrich_18_outlinedark"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			maxWidth = 210
 			maxHeight = 30
@@ -948,7 +964,7 @@ guiTypes = {
 		editBoxType = {
 			name = "generic_name_edit"
 			position = { x = 100 y = 18 }
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_22_outline"
 			size = { x=200 y=25 }
 			pdx_tooltip = "CONVEYOR_GENERIC_NAME_EDIT_DESC"
 		}
@@ -957,7 +973,7 @@ guiTypes = {
 			name = "deploy_location_button"
 			position = { x=90 y=47 }
 			quadTextureSprite = "GFX_conveyor_location_btn"
-			buttonFont = "aldrich_20_outlinedark"
+			buttonFont = "aldrich_22_outline"
 			clicksound = click_default
 		}
 
@@ -980,14 +996,14 @@ guiTypes = {
 			position = { x = 315 y = 12 }
 			quadTextureSprite = "GFX_naval_decrease_amount"
 			pdx_tooltip = "CONVEYOR_SERIES_DECREASE_DESC"
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_22_outline"
 			clicksound = click_default
 		}
 
 		instantTextboxType = {
 			name = "amount"
 			position = { x = 349 y = 19 }
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_22_outline"
 			text = "INFINITY"
 			maxWidth = 33
 			maxHeight = 33
@@ -1006,7 +1022,7 @@ guiTypes = {
 		buttonType = {
 			name = "low_prio"
 			position = { x = 420 y = 17 }
-			buttonFont = "aldrich_20_outlinedark"
+			buttonFont = "aldrich_22_outline"
 			quadTextureSprite = "GFX_deploy_priority"
 			pdx_tooltip = "DEPLOYMENT_LOW_PRIORITY_DESC"
 			frame = 1
@@ -1016,7 +1032,7 @@ guiTypes = {
 		buttonType = {
 			name = "medium_prio"
 			position = { x = 440 y = 17 }
-			buttonFont = "aldrich_20_outlinedark"
+			buttonFont = "aldrich_22_outline"
 			quadTextureSprite = "GFX_deploy_priority"
 			pdx_tooltip = "DEPLOYMENT_MEDIUM_PRIORITY_DESC"
 			frame = 3
@@ -1026,7 +1042,7 @@ guiTypes = {
 		buttonType = {
 			name = "high_prio"
 			position = { x = 460 y = 17 }
-			buttonFont = "aldrich_20_outlinedark"
+			buttonFont = "aldrich_22_outline"
 			quadTextureSprite = "GFX_deploy_priority"
 			pdx_tooltip = "DEPLOYMENT_HIGH_PRIORITY_DESC"
 			frame = 1
@@ -1038,7 +1054,7 @@ guiTypes = {
 			position = { x = 315 y = 51 }
 			quadTextureSprite ="GFX_military_deployment_add_line_btn"
 			buttonText = "ADD_CONVEYOR_LINE_BUTTON_LABEL"
-			buttonFont = "aldrich_20_outlinedark"
+			buttonFont = "aldrich_22_outline"
 			clicksound = click_default
 		}
 
@@ -1051,7 +1067,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "add_limit"
 			position = { x = 297 y = 53 }
-			font = "aldrich_20_outlinedark"
+			font = "aldrich_22_outline"
 			text = "4"
 			maxWidth = 30
 			maxHeight = 33
@@ -1081,4 +1097,48 @@ guiTypes = {
 			clicksound = click_close
 		}
 	}
+
+	containerWindowType = {
+		name = "Antarctica_Deploy_Panel"
+		size = { width = 555 height = 100% }
+		position = { x = 0 y = 0 }
+		iconType = {
+			name = "Antarctica"
+			spriteType = GFX_Antarctica
+			position = { x = 36 y = 340 }
+			scale = 0.95
+		}
+		iconType = {
+			name = "Background"
+			spriteType = GFX_frozen_deploy_screen
+			position = { x = 0 y = -24 }
+			scale = 1.03
+			pdx_tooltip = ANTARCTICA_DEPLOY_PANEL_TT
+		}
+	}
+
+	containerWindowType = {
+			name = "Army_HelpButton"
+			position = { x = 400 y = 0 }
+
+			buttonType = {
+				name = "army_help_toggle"
+				position = { x = 3 y = 8 }
+				spriteType = "GFX_econ_help_open_button"
+				clicksound = click_close
+				oversound = ui_menu_over
+				pdx_tooltip = "help_open_tt"
+			}
+
+			instantTextBoxType = {
+				name = "econ_help_text"
+				orientation = upper_left
+				position = { x = -56 y = 11 }
+
+				format = center
+				font = "aldrich_30_outline"
+				text = econ_help_text_tt
+				alwaysTransparent = yes
+			}
+		}
 }

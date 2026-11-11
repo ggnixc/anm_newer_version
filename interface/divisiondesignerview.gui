@@ -1,7 +1,5 @@
 guiTypes = {
-
-	containerWindowType = 
-	{
+	containerWindowType = {
 		name = "niche_selection_widget"
 		iconType = {
 			name = "niche_icon_bg"
@@ -54,7 +52,12 @@ guiTypes = {
 	containerWindowType = {
 		name = "div_template_3d_model_entry"
 		position = { x=0 y=0 }
-		size = { width=250 height=42 }
+		size = { width=510 height=44 }
+
+		background = {
+			name = "3d_view_entry_bg"
+			spriteType ="GFX_division_3d_entry"
+		}
 
 		buttonType = {
 			name = "button"
@@ -77,18 +80,18 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 173 y = 23 }
-			font = "hoi_16mbs"
-			maxWidth = 150
-			maxHeight = 42
-			format = left
+			position = { x = 17 y = 11 }
+			textureFile = ""
+			font = "aldrich_22_outline"
+			borderSize = {x = 0 y = 0}
+			text = "Maus"
+			maxWidth = 475
+			maxHeight = 20
 			alwaystransparent = yes
-			fixedsize = yes
-		}		
+		}
 	}
 	
-	containerWindowType =
-	{
+	containerWindowType = {
 		name = "division_equipment_archetype_entry"
 		position = { x = 0 y = 0 }
 		size = { width = 460 height = 30 }
@@ -102,9 +105,9 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "archetype_name"
 			position = { x = 10 y = 6 }
-			font = "hoi_18mbs"
+			font = "aldrich_24_outline"
 			borderSize = {x = 0 y = 0}
-			text = ""	
+			text = ""
 			maxWidth = 180
 			maxHeight = 20
 			format = left
@@ -112,8 +115,7 @@ guiTypes = {
 		}
 	}
 
-	containerWindowType =
-	{
+	containerWindowType = {
 		name = "division_equipment_type_entry"
 		position = { x = 19 y = 0 }
 		size = { width = 441 height = 33 }
@@ -141,7 +143,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "type_name"
 			position = { x = 50 y = 5 }
-			font = "hoi_18mbs"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = ""	
 			maxWidth = 300
@@ -153,7 +155,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "equipment_counter"
 			position = { x = 380 y = 8 }
-			font = "hoi_18mbs"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = "0/0"	
 			maxWidth = 50
@@ -165,11 +167,11 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "division_equipment_entry"
-		size = { width=250 height=50 }
+		size = { width=250 height=80 }
 
 		buttonType = {
 			name = "is_allowed_button"
-			position = { x=24 y =5 }
+			position = { x=29 y = 25 }
 			quadTextureSprite ="GFX_generic_checkbox3_orange"
 			clicksound = click_checkbox
 			frame = 1
@@ -187,17 +189,17 @@ guiTypes = {
 		iconType = {
 			name ="equipment_icon"
 			spriteType = "GFX_equipment_naval_item"
-			position = { x=115 y=15 }
+			position = { x=135 y=40 }
 			scale = 0.6
 			centerposition = yes
 		}
 		
 		instantTextboxType = {
 			name = "name"
-			position = { x = 150 y = 5 }
-			font = "hoi_18mbs"
+			position = { x = 215 y = 5 }
+			font = "aldrich_20_outline"
 			text = "USS Enterprise"
-			maxWidth = 200
+			maxWidth = 250
 			maxHeight = 20
 			format = left
 		}
@@ -209,15 +211,15 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "countrydivisiondesignerview"
-		position = { x=0 y=0}	
-		size = { width = 1200 height = 720 }
+		position = { x=0 y=0}
+		size = { width = 1092 height = 603 }
 		moveable = yes
 		fade_time = 500
 		fade_type = linear
 		orientation = CENTER
 		origo = center
 		show_sound = pop_up
-		
+
 
 		background = {
 			name = "Background"
@@ -346,14 +348,28 @@ guiTypes = {
 
 		iconType = {
 			name = "select_model"
-			position = { x=938 y=366 }	
+			position = { x=35 y=107 }
 			quadTextureSprite = "GFX_3d_view_placeholder"
-		}		
-		
+			scale = 0.33
+		}
+
+		containerWindowType = {
+			name = "border_container"
+			position = { x=29 y=101 }
+			size = { width = 96 height = 90 }
+
+			background = {
+				name ="bg_tech_button"
+				spriteType = "GFX_division_3d_bg"
+				position = { x=0 y=0 }
+				size = { x=100%% y=100%%}
+			}
+		}
+
 		buttonType = {
 			name = "toggle_model_selector_button"
-			position = { x=936 y=363 }
-			size = { x = 249 y = 249 }
+			position = { x=29 y=101 }
+			size = { x = 96 y = 90 }
 			quadTextureSprite ="GFX_division_3d_bg"	
 			pdx_tooltip = "TOGGLE_MODEL_SELECTOR"
 			clicksound = click_default
@@ -363,7 +379,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "hardness_stat"
 			size = { width = 100 height = 24 }
-			position = { x=86 y=192 }
+			position = { x=286 y=155 }
 
 			background = {
 				name = "hardness_stat_bg"
@@ -378,10 +394,10 @@ guiTypes = {
 			}
 			
 			instantTextboxType = {
-				position = { x = 45 y = 2 }
+				position = { x = 45 y = 4 }
 				name = "stat_text"
 				text = "87%"
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 				maxWidth = 60
 				alwaystransparent = yes
 			}
@@ -390,7 +406,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "org_stat"
 			size = { width = 80 height = 24 }
-			position = { x=216 y=192 }
+			position = { x=421 y=155 }
 
 			background = {
 				name = "org_stat_bg"
@@ -405,10 +421,10 @@ guiTypes = {
 			}
 			
 			instantTextboxType = {
-				position = { x = 35 y = 2 }
+				position = { x = 35 y = 4 }
 				name = "stat_text"
 				text = "87%"
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 				maxWidth = 70
 				alwaystransparent = yes
 			}
@@ -416,8 +432,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "strength_stat"
-			size = { width = 80 height = 24 }
-			position = { x=326 y=192 }
+			size = { width = 90 height = 24 }
+			position = { x=286 y=190 }
 
 			background = {
 				name = "strength_stat_bg"
@@ -432,11 +448,11 @@ guiTypes = {
 			}
 
 			instantTextboxType = {
-				position = { x = 35 y = 2 }
+				position = { x = 35 y = 4 }
 				name = "stat_text"
 				text = "100"
-				font = "hoi_18mbs"
-				maxWidth = 40
+				font = "aldrich_18_outline"
+				maxWidth = 50
 				alwaystransparent = yes
 			}
 		}
@@ -444,7 +460,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "speed_stat"
 			size = { width = 115 height = 24 }
-			position = { x=436 y=192 }
+			position = { x=386 y=190 }
 
 			background = {
 				name = "speed_stat_bg"
@@ -459,10 +475,10 @@ guiTypes = {
 			}
 
 			instantTextboxType = {
-				position = { x = 40 y = 2 }
+				position = { x = 40 y = 4 }
 				name = "stat_text"
 				text = "87%"
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 				maxWidth = 70
 				alwaystransparent = yes
 			}
@@ -470,13 +486,13 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "combat_width_view"
-			position = { x = 290 y = 230 }
+			position = { x = 200 y = 149 }
 
 			instantTextboxType = {
 				position = { x = 0 y = 10 }
 				name = "combat_width_text"
 				text = "15"
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 				maxWidth = 40
 				maxHeight = 20
 				format = center
@@ -485,18 +501,18 @@ guiTypes = {
 				
 		instantTextboxType = {
 			name = "division_composition_label"
-			position = { x = 60 y = 160 }
-			font = "hoi_18mbs"
+			position = { x = 60 y = 200 }
+			font = "aldrich_18_outline"
 			text = "DESIGNER_DIVISIONAL_COMPOSITION"
 			maxWidth = 200
 			maxHeight = 20
 		}
-		
+
 		instantTextboxType = {
 			name = "division_title"
-			position = { x = 400 y = 4 }
+			position = { x = 335 y = 6 }
 			textureFile = ""
-			font = "hoi_36header"
+			font = "Bomb_36"
 			borderSize = {x = 0 y = 0}
 			text = "DIVISION_DIVISION"
 			maxWidth = 400
@@ -510,7 +526,7 @@ guiTypes = {
 			iconType = {
 				name = "division_template_icon"
 				spriteType = "GFX_division_template_icon"
-				position = { x = 135 y = 57 }
+				position = { x = 175 y = 62 }
 			}
 
 			iconType = {
@@ -528,8 +544,8 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "support_header_label"
-				position = { x = 530 y = 128 }
-				font = "hoi_16mbs"
+				position = { x = 0 y = 3267 }
+				font = "aldrich_18_outline"
 				text = "SUPPORT_HEADER"
 				maxWidth = 110
 				maxHeight = 20
@@ -539,36 +555,36 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "regimental_support_header_label"
-				position = { x = 165 y = 400 }
-				font = "hoi_16mbs"
+				position = { x = 20 y = 330 }
+				font = "aldrich_18_outline"
 				text = "REGIMENTAL_SUPPORT_HEADER"
-				maxWidth = 250
-				maxHeight = 20
+				maxWidth = 100
+				maxHeight = 40
 				format = center
 				pdx_tooltip = "DESIGNER_REGIMENTAL_SUPPORT_COLUMN_TITLE"
 			}
 
 			gridboxtype = {
 				name = "support_grid"
-				position = { x = 552 y = 130 }
+				position = { x = 23 y = 57 }
 				size = { width = 85 height = 100%% }
-				slotsize = { width = 82 height = 35 }
+				slotsize = { width = 82 height = 51 }
 				format = "UPPER_LEFT"
 			}
 
 			gridboxtype = {
 				name = "regiments_grid"
-				position = { x = 50 y = 109 }
+				position = { x = 115 y = 57 }
 				size = { width = 445 height = 100%% }
-				slotsize = { width = 102 height = 46 }
+				slotsize = { width = 82 height = 51 }
 				format = "UPPER_LEFT"
 			}
 
 			gridboxtype = {
 				name = "regiment_support_grid"
-				position = { x = 54 y = 342 }
+				position = { x = 122 y = 311 }
 				size = { width = 445 height = 100%% }
-				slotsize = { width = 102 height = 36 }
+				slotsize = { width = 82 height = 36 }
 				format = "UPPER_LEFT"
 			}
 		}
@@ -613,7 +629,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "info"
-			position = { x=660 y=13}	
+			position = { x=539 y=13}
 			size = { width=100% height=100%% }
 			
 			containerWindowType = {
@@ -641,8 +657,8 @@ guiTypes = {
 			
 			instantTextboxType = {
 					name = "base_stats_label"
-					position = { x = 14 y = 32 }
-					font = "hoi4_typewriter22"
+					position = { x = 14 y = 34 }
+					font = "aldrich_22_outline"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 165
 					maxHeight = 20
@@ -674,23 +690,21 @@ guiTypes = {
 			}
 			
 			instantTextboxType = {
-					name = "combat_stats_label"
-					position = { x = 187 y = 32 }
-					font = "hoi4_typewriter22"
-					text = "DESIGNER_COMBAT_STATS_LABEL"
-					maxWidth = 165
-					maxHeight = 20
-					format = left
-					fixedsize = yes
-				}
+				name = "combat_stats_label"
+				position = { x = 187 y = 34 }
+				font = "aldrich_22_outline"
+				text = "DESIGNER_COMBAT_STATS_LABEL"
+				maxWidth = 165
+				maxHeight = 20
+				format = left
+				fixedsize = yes
+			}
 			
 			containerWindowType = {
 				name = "equipment_stats"
 				position = { x = 353 y = 55 }
-				size = { width = 198 height = 244 }
+				size = { width = 199 height = 244 }
 				clipping = yes
-				scroll_wheel_factor = 20
-				smooth_scrolling = yes
 				
 				background = {
 					name = "Background"
@@ -702,29 +716,38 @@ guiTypes = {
 				gridboxtype = {
 					name = "stats_grid"
 					position = { x = 5 y = 0 }
-					size = { width = 155 height = 240 }
+					size = { width = 155 height = 100%% }
 					slotsize = { width = 155 height = 20 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
-					padding = { bottom = 4 }
 				}
 			}
 			
 			instantTextboxType = {
 				name = "equipment_stats_label"
-				position = { x = 362 y = 32 }
-				font = "hoi4_typewriter22"
+				position = { x = 362 y = 34 }
+				font = "aldrich_22_outline"
 				text = "DESIGNER_EQUIPMENT_STATS_LABEL"
 				maxWidth = 165
 				maxHeight = 20
 				format = left
 				fixedsize = yes
 			}
+
+			instantTextboxType = {
+				name = "combat_adjuster_header_label"
+				position = { x = 30 y = 313 }
+				font = "Bomb_20"
+				text = "PRODUCTION_ADJUSTERS_LABEL"
+				maxWidth = 140
+				maxHeight = 20
+				format = left
+			}
 			
 			containerWindowType = {
 				name = "adjuster_stats"
-				position = { x = 9 y = 357 }
-				size = { width = 262 height = 236 }
+				position = { x = 12 y = 340 }
+				size = { width = 520 height = 182 }
 				scroll_wheel_factor = 62
 				smooth_scrolling = yes
 				
@@ -737,74 +760,70 @@ guiTypes = {
 				
 				gridboxtype = {
 					name = "stats_grid"
+					position = { x = 0 y = 0 }
 					size = { width = 100%% height = 100%% }
-					slotsize = { width = 77 height = 72 }
-					max_slots_horizontal = 3
+					slotsize = { width = 103 height = 62 }
+					max_slots_horizontal = 5
 					format = "UPPER_LEFT"
 				}
-			}		
+			}
 		}
 		
 		containerWindowType = {
 			name = "cost"
 			size = { width = 70 height = 29 }
-			position = { x=285 y=-96 }
-			orientation = lower_left
+			position = { x=285 y=555 }
 			
 			background = {
 				name = "cost_bg"
-				quadTextureSprite = "GFX_generic_background"
-				position = { x = 15 y = 0 }
+				quadTextureSprite = "GFX_generic_box_small"
+				position = { x = 4 y = 2 }
 				alwaystransparent = yes
 			}
 		}
 
 		instantTextboxType = {
 			name = "experience"
-			position = { x = 297 y = -92 }
-			font = "hoi_18mbs"
+			position = { x = 297 y = 561 }
+			font = "aldrich_18_outline"
 			maxWidth = 70
 			maxHeight = 20
 			format = centre
 			text = "DESIGNER_EXPERIENCE"
 			pdx_tooltip = "CURRENT_EXPERIENCE"
-			orientation = "LOWER_LEFT"
 		}
 		
 		ButtonType = {
 			name = "duplicate_button"
-			position = { x=150 y=-100 }
+			position = { x=150 y=552 }
 			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "DESIGNER_DUPLICATE"
-			buttonFont = "hoi_18mbs"
+			buttonFont = "Bomb_18"
 			clicksound = click_default
-			orientation = "LOWER_LEFT"
 		}
 
 		ButtonType = {
 			name = "reset_button"
-			position = { x=20 y=-100 }
-			quadTextureSprite ="GFX_button_reset_123x34"
+			position = { x=20 y=552 }
+			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "DESIGNER_RESET"
 			pdx_tooltip = "DESIGNER_RESET_DESC"
-			buttonFont = "hoi_18mbs"
+			buttonFont = "Bomb_18"
 			clicksound = click_default
-			orientation = "LOWER_LEFT"
 		}
 
 		ButtonType = {
 			name = "save_button"
-			position = { x=487 y=-53 }
-			quadTextureSprite ="GFX_button_221x34"
+			position = { x=392 y=552 }
+			quadTextureSprite ="GFX_button_123x34"
 			buttonText = "DESIGNER_ARMY_SAVE"
-			buttonFont = "hoi_18mbs"
+			buttonFont = "Bomb_18"
 			clicksound = click_default
-			orientation = "LOWER_LEFT"
 		}
 
 		ButtonType = {
 			name = "save_and_deploy_button"
-			position = { x=722 y=-53 }
+			position = { x=722 y=-5003 }
 			quadTextureSprite ="GFX_button_221x34"
 			buttonText = "DESIGNER_HQ_SAVE_AND_DEPLOY"
 			buttonFont = "hoi_18mbs"
@@ -815,12 +834,12 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "niche_icon_selector"
-			position = { x=69 y=160 }
+			position = { x=179 y=142 }
 			size = { width=390 height=55 }
 			
 			background = {
 				name = "Background"
-				spriteType ="GFX_equipment_role_selector_tiled_window"
+				spriteType ="GFX_tiled_decisions_bg_crt_small"
 				position = { x=0 y=0 }
 			}
 			
@@ -837,6 +856,7 @@ guiTypes = {
 				
 				gridBoxType = {
 					name = "buttons_grid"
+					position = { x = 0 y = 0 }
 					size = { width = 100%% height = 100%% }
 					slotsize = { width = 37 height = 37 }
 					max_slots_vertical = 1
@@ -860,14 +880,13 @@ guiTypes = {
 
 		dropDownBoxType = {
 			name = "division_names"
-			position = { x = 150 y = 114 }
+			position = { x = 155 y = 100 }
 			size = { width = 220 height = 30 }
-
+			
 
 			containerWindowType = {
 				name = "division_name_bg"
 				size = { width = 220 height = 30 }
-
 
 				background = {
 					name = "name_bg"
@@ -881,15 +900,16 @@ guiTypes = {
 			iconType = {
 				name = "division_nametag_icon"
 				spriteType = "GFX_division_nametag_icon"
-				position = { x = -15 y = 2 }
+				position = { x = 20 y = 2 }
+	#			position = { x = 174 y = 135 }
 			}
 
 			instantTextboxType = {
 				name = "name"
-				position = { x = 25 y = 5 }
-				font = "hoi_18mbs"
+				position = { x = 45 y = 5 }
+				font = "Bomb_18"
 				text = "COMBAT_HEADER"
-				maxWidth = 185
+				maxWidth = 164
 				maxHeight = 20
 				fixedsize = yes
 				format = left
@@ -903,10 +923,10 @@ guiTypes = {
 				Orientation = "UPPER_RIGHT"
 				clicksound = click_default
 			}
-
+			
 			expandedWindow = {
 				name = "expanded_window"
-				position = { x=10 y= -160 }
+				position = { x=10 y= -160 }	
 				show_position = { x = 10 y = 25 }
 				show_animation_type = decelerated
 				hide_animation_type = accelerated
@@ -917,80 +937,18 @@ guiTypes = {
 				smooth_scrolling = yes
 				margin = { top = 7 bottom = 7 right = 6 }
 				#clipping = no
-
+				
 				background = {
 					name = "Background"
-					quadTextureSprite ="GFX_tiled_window_1b_thin_border"
+					quadTextureSprite ="GFX_tiled_window_thin_border2"
+					position = { x = 0 y = 0 }
 				}
-
+				
 				gridBoxType = {
 					name = "names_grid"
 					position = { x = 8 y = 0 }
-					size = { width = 179 height = 100%% }
-					slotsize = { width = 166 height = 30 }
-					max_slots_horizontal = 1
-					format = "UPPER_LEFT"
-				}
-			}
-		}
-
-		dropDownBoxType = {
-			name = "divisions"
-			position = { x = 150 y = 57 }
-			size = { width = 220 height = 30 }
-
-			containerWindowType = {
-				name = "division_name_bg"
-				size = { width = 220 height = 30 }
-
-				background = {
-					name = "name_bg"
-					quadTextureSprite = "GFX_generic_background"
-					position = { x = 15 y = 0 }
-					alwaystransparent = yes
-				}
-			}
-
-			editBoxType = {
-				name = "name"
-				position = { x = 25 y = 5 }
-				font = "hoi_18mbs"
-				size = { x = 185 y = 20 }
-			}
-
-			expandButton = {
-				name = "expand_button"
-				position = { x = -9 y = 4 }
-				quadTextureSprite = "GFX_expand_button"
-				buttonFont = "Main_14_black"
-				Orientation = "UPPER_RIGHT"
-				clicksound = click_default
-			}
-
-			expandedWindow = {
-				name = "expanded_window"
-				position = { x = 10 y = -300 }
-				show_position = { x = 10 y = 27 }
-				show_animation_type = decelerated
-				hide_animation_type = accelerated
-				animation_time = 300
-				size = { width = 230 height = 325 }
-				verticalScrollbar = "right_vertical_slider"
-				scroll_wheel_factor = 50
-				smooth_scrolling = yes
-				margin = { top = 7 bottom = 7 right = 6 }
-
-				background = {
-					name = "Background"
-					quadTextureSprite = "GFX_tiled_window_1b_thin_border"
-					position = { x = 0 y = 0 }
-				}
-
-				gridBoxType = {
-					name = "divisions_grid"
-					position = { x = 8 y = 0 }
-					size = { width = 179 height = 100%% }
-					slotsize = { width = 200 height = 50 }
+					size = { width = 199 height = 100%% }
+					slotsize = { width = 186 height = 30 }
 					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
 				}
@@ -999,44 +957,44 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "designerregimentswindow"
-			position = { x=0 y=40}	
-			size = { width=660 height=580 }
+			position = { x=0 y=40}
+			size = { width=549 height=459 }
 			margin = { top = 14 bottom = 11 }
 			verticalScrollbar = "right_vertical_slider"
 			scroll_wheel_factor = 40
 			smooth_scrolling = yes
 			
 			background = {
-				name = "Background"		
-				quadTextureSprite ="GFX_tiled_window_1b_border"
-				position = { x=0 y=0}				
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_bg"
+				position = { x=0 y=0}
 			}
 		
 			instantTextboxType = {
 				name = "regiment_desc_title"
-				position = { x = 30 y = 13 }
-				font = "hoi_18mbs"
+				position = { x = 17 y = 10 }
+				font = "aldrich_20_outline"
 				text = "REGIMENT_WINDOW_DESC"
-				maxWidth = 300
+				maxWidth = 400
 				maxHeight = 20
 				format = left
 			}
 			
 			ButtonType = {
 				name = "cancel_button"
-				position = { x=506 y=2 }
+				position = { x=400 y=2 }
 				quadTextureSprite ="GFX_button_123x34"
 				buttonText = "REGIMENTS_SELECTION_CANCEL"
-				buttonFont = "hoi_18mbs"
+				buttonFont = "Bomb_18"
 				clicksound = click_default
 				shortcut = "RETURN"
 			}
 			
 			gridBoxType = {
 				name = "designer_regiments_grid"
-				position = { x = 72 y = 40 }
+				position = { x = 20 y = 40 }
 				size = { width = 520 height = 453 }
-				slotsize = { width = 256 height = 69 }
+				slotsize = { width = 253 height = 69 }
 				max_slots_horizontal = 2
 				format = "UPPER_LEFT"
 			}
@@ -1045,7 +1003,7 @@ guiTypes = {
 		buttonType = {
 			name = "close_button"
 			position = { x = -44 y = 6 }
-			quadTextureSprite ="GFX_closebutton"
+			quadTextureSprite ="GFX_tno_close_button"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"
@@ -1055,62 +1013,60 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "production_resources"
-			position = { x= 548 y= -92 }
+			position = { x= 548 y= 560 }
 			font = "hoi_18mbs"
 			maxWidth = 350
 			maxHeight = 25
 			pdx_tooltip = "DIVISION_PRODUCTION_RESOURCE_DESC"
 			format = left
-			orientation = lower_left
 		}
 
 		instantTextboxType = {
 			name = "production_value"
-			position = { x= 700 y=-92 }
-			font = "hoi_18mbs"
-			maxWidth = 350
+			position = { x= 650 y=560 }
+			font = "Bomb_20"
+			maxWidth = 400
 			maxHeight = 25
 			pdx_tooltip = "DIVISION_PRODUCTION_COST_DESC"
 			format = right
-			orientation = lower_left
 		}
 		
 		containerWindowType = {
 			name = "division_equipment_view"
-			position = { x=10 y=40 }
-			size = { width=642 height=566 }
+			position = { x=13 y=46 }
+			size = { width=512 height=447 }
 			moveable = no
 			fade_time = 500
 			fade_type = linear
 			show_sound = pop_up
 
 			background = {
-				name = "Background"		
+				name = "Background"
 				spriteType ="GFX_tiled_plain_bg"
 			}
 
 			iconType = {
 				name = "equip_header"
-				spriteType = "GFX_equipment_header"
-				position = { x=2 y=12 }
+				spriteType = ""
+				position = { x=-2 y=11 }
 			}
-			
+
 			instantTextboxType = {
 				name = "division_title"
-				position = { x = 25 y = 16 }
+				position = { x = 76 y = 16 }
 				textureFile = ""
-				font = "hoi_24header"
+				font = "aldrich_28_outline"
 				borderSize = {x = 0 y = 0}
 				text = "DIVISION_EQUIPMENT"
 				maxWidth = 352
 				maxHeight = 20
-				format = left
+				format = center
 			}
-			
+
 			buttonType = {
 				name = "close_button"
-				position = {x=-40 y=13}	
-				spriteType = "GFX_closebutton"
+				position = {x=-45 y=18}	
+				spriteType = "GFX_closebutton_small"
 				orientation = "UPPER_RIGHT"
 				shortcut = "ESCAPE"
 				clicksound = click_close
@@ -1118,7 +1074,7 @@ guiTypes = {
 			
 			buttonType = {
 				name = "is_allowed_button"
-				position = { x=25 y =65 }
+				position = { x=15 y =65 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				clicksound = click_checkbox
 				frame = 1
@@ -1126,18 +1082,17 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "new_equipment_allowed_text"
-				position = { x = 80 y = 70 }
-				font = "hoi_18mbs"
+				position = { x = 54 y = 70 }
+				font = "aldrich_20_outline"
 				text = "NEW_EQUIPMENT_ALLOWED"
 				maxWidth = 300
 				maxHeight = 20
 				format = left
 			}
 
-
 			buttonType = {
 				name = "foreign_equipment_allowed_button"
-				position = { x=265 y =65 }
+				position = { x=245 y =65 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				clicksound = click_checkbox
 				frame = 1
@@ -1145,8 +1100,8 @@ guiTypes = {
 
 			instantTextboxType = {
 				name = "foreign_equipment_allowed_text"
-				position = { x = 310 y = 70 }
-				font = "hoi_18mbs"
+				position = { x = 282 y = 70 }
+				font = "aldrich_20_outline"
 				text = "ALLOW_FOREIGN_EQUIPMENT"
 				maxWidth = 300
 				maxHeight = 20
@@ -1155,8 +1110,8 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "equipment_variants"
-				position = {x=0 y=104}
-				size = {width=642 height=466 }
+				position = {x=2 y=104}
+				size = {width=510 height=341 }
 				margin = {top=15 left=0 bottom=15 right=0}				
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 40
@@ -1165,11 +1120,11 @@ guiTypes = {
 				background = {
 					name = "Background"
 					spriteType ="GFX_tiled_window2_1b_border"
-				} 
+				}
 				
 				gridBoxType = {
 					name = "grid"
-					position = {x=70 y=0}
+					position = {x=20 y=0}
 					size = { width=100%% height=100%% }
 					slotsize = { width = 1 height = 1 }
 					max_slots_horizontal = 1
@@ -1181,7 +1136,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "div_templ_custom_icon_view"
 			position = { x=13 y=47 }
-			size = { width=639 height=555 }
+			size = { width=532 height=447 }
 			moveable = no
 			fade_time = 500
 			fade_type = linear
@@ -1191,58 +1146,56 @@ guiTypes = {
 			smooth_scrolling = yes
 
 			background = {
-				name = "Background"		
-				spriteType ="GFX_tiled_plain_bg"
+				name = "Background"
+				position = { x=0 y=-2 }
+				spriteType ="GFX_tiled_window_thin_border2"
 			}
 
 			buttonType = {
 				name = "default"
-				position = { x=150 y=4 }
+				position = { x=150 y=8 }
 				size = { x=504 y=23 }
-				font = "hoi_16mbs"				
-				buttontext = "DEFAULT_DIV_TEMPL_SYMBOL"
+				font = "Bomb_18"
+				buttonText = "DEFAULT_DIV_TEMPL_SYMBOL"
 				quadTextureSprite = "GFX_button_221x34"
 				clicksound = click_default
 			}
 			
 			buttonType = {
 				name = "back"
-				position = { x=20 y=4 }
+				position = { x=20 y=8 }
 				size = { x=504 y=23 }
-				font = "hoi_16mbs"				
-				buttontext = "BACK"
+				font = "Bomb_18"
+				buttonText = "BACK"
 				quadTextureSprite = "GFX_button_123x34"
 				clicksound = click_default
-			}			
+			}
 
 			gridBoxType = {
 				name = "symbols_grid"
-				position = { x=14 y=44 }
-				size = { width=504 height=400 }
+				position = { x=8 y=44 }
+				size = { width=504 height=40 }
 				slotsize = { width=84 height=50 }
-				max_slots_horizontal = 7
+				max_slots_horizontal = 6
 				format = "UPPER_LEFT"
 			}
 		}
-	
-
 
 		containerWindowType = {
 			name = "div_template_select_model"
-			position = { x=670 y=40 }
-			size = { width=538 height=581 }
-			
+			position = { x=538 y=40 }
+			size = { width=567 height=460 }
 			
 			background = {
-				name = "Background"		
-				spriteType ="GFX_tiled_window"
+				name = "Background"
+				spriteType ="GFX_tiled_window_thin_border2"
 				position = { x=-16 y=0 }
 			}
 
 			containerWindowType = {
 				name = "border_container"
-				position = { x=0 y=15 }
-				size = { width = 510 height = 316 }
+				position = { x=5 y=13 }
+				size = { width = 524 height = 222 }
 
 				background = {
 					name ="bg_tech_button"
@@ -1255,13 +1208,13 @@ guiTypes = {
 			iconType = {
 				name ="3d_view"
 				quadTextureSprite = "GFX_3d_view_placeholder"
-				position = { x= 4 y = 18 }
+				position = { x= 12 y = 20 }
 			}
 
 			containerWindowType = {
 				name = "grid_container"
-				position = { x=0 y=335}	
-				size = { width=513 height=220 }
+				position = { x=5 y=235}
+				size = { width=533 height=176 }
 				verticalScrollbar = "right_vertical_slider"
 				scroll_wheel_factor = 42
 				smooth_scrolling = yes
@@ -1270,16 +1223,14 @@ guiTypes = {
 					name = "Background"
 					spriteType ="GFX_tiled_window_transparent"
 				}
-				
-				
+
 				gridBoxType = {
 					name = "buttons_grid"
-					position = { x = -2 y = 0 }
-					size = { width = 510 height = 100%% }
-					slotsize = { width = 255 height = 42 }
-					max_slots_horizontal = 2
+					position = { x = 0 y = 0 }
+					size = { width = 490 height = 100%% }
+					slotsize = { width = 490 height = 42 }
+					max_slots_horizontal = 1
 					format = "UPPER_LEFT"
-					
 				}
 			}
 
@@ -1389,11 +1340,12 @@ guiTypes = {
 
 			buttonType = {
 				name = "back_button"
-				position = { x=380 y=25 }
-				font = "hoi_16mbs"
-				buttontext = "CLOSE"
-				quadTextureSprite = "GFX_button_123x34"
-				clicksound = click_default
+				position = { x = 360 y = 410 }
+				size = { x = 504 y = 22 }
+				font = "aldrich_20_outline"
+				buttonText = "BACK"
+				quadTextureSprite = "GFX_division_designer_button"
+				clicksound = click_close
 			}
 		}
 
@@ -1405,15 +1357,15 @@ guiTypes = {
 			iconType = {
 				name = "composition_icon"
 				spriteType = "GFX_army_composition_icon"
-				position = { x = 30 y = 159 }
+				position = { x = 30 y = 199 }
 			}
 
 			buttonType = {
 				name = "division_equipment_btn"
-				position = { x = 511 y = 52 }
-				quadTextureSprite = "GFX_button_123x34_alt"
+				position = { x = 396 y = 59 }
+				quadTextureSprite = "GFX_button_123x34"
 				buttonText = "DIVISION_EQUIPMENT"
-				buttonFont = "hoi_16mbs"
+				buttonFont = "Bomb_18"
 				clicksound = click_close
 			}
 
@@ -1431,7 +1383,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "div_templ_symbol_button"
-				spriteType = "GFX_unit_super_heavy_armor_icon_medium"
+				spriteType = "GFX_unit_infantry_icon_medium"
 				position = { x = 39 y = 51 }
 				clicksound = click_default
 			}
@@ -1444,28 +1396,28 @@ guiTypes = {
 			}
 
 			iconType = {
-				name = "division_priority_bg"
-				spriteType = "GFX_division_priority_bg"
+				name ="division_priority_bg"
+				spriteType = ""
 				position = { x = 508 y = 107 }
 			}
 
 			buttonType = {
 				name = "priority_button_1"
-				position = { x = 517 y = 110 }
+				position = { x = 402 y = 96 }
 				quadTextureSprite = "GFX_div_priority_strip"
 				clicksound = click_default
 			}
 
 			buttonType = {
 				name = "priority_button_2"
-				position = { x = 553 y = 110 }
+				position = { x = 438 y = 96 }
 				quadTextureSprite = "GFX_div_priority_strip"
 				clicksound = click_default
 			}
 
 			buttonType = {
 				name = "priority_button_3"
-				position = { x = 589 y = 109 }
+				position = { x = 474 y = 96 }
 				quadTextureSprite = "GFX_div_priority_strip"
 				clicksound = click_default
 			}
@@ -1473,13 +1425,13 @@ guiTypes = {
 			iconType = {
 				name = "niche_icon_bg"
 				spriteType = "GFX_role_icon_bg"
-				position = { x = 51 y = 103 }
+				position = { x = 129 y = 142 }
 				alwaystransparent = yes
 			}
 
 			buttonType = {
 				name = "niche_button"
-				position = { x = 60 y = 107 }
+				position = { x=138 y=149 }
 				spriteType = "GFX_niche_icon_strip"
 				pdx_tooltip = "DESIGNER_SELECT_NICHE"
 				pdx_tooltip_delayed = "DESIGNER_SELECT_NICHE_DELAYED"
@@ -1490,25 +1442,25 @@ guiTypes = {
 			iconType = {
 				name = "niche_icon_disabled"
 				spriteType = "GFX_red_cross_small"
-				position = { x = 59 y = 128 }
+				position = { x = 157 y = 170 }
 				alwaystransparent = yes
 			}
 
 			iconType = {
 				name = "can_paradrop_icon"
 				spriteType = "GFX_can_paradrop_icon_small"
-				position = { x = 427 y = 60 }
+				position = { x = 134 y = 66 }
 			}
 
 			iconType = {
 				name = "special_forces_icon"
 				spriteType = "GFX_special_forces_icon"
-				position = { x = 452 y = 60 }
+				position = { x = 134 y = 104 }
 			}
 
 			dropDownBoxType = {
 				name = "divisions"
-				position = { x = 150 y = 57 }
+				position = { x = 155 y = 62 }
 				size = { width = 220 height = 30 }
 
 				containerWindowType = {
@@ -1525,8 +1477,8 @@ guiTypes = {
 
 				editBoxType = {
 					name = "name"
-					position = { x = 25 y = 5 }
-					font = "hoi_18mbs"
+					position = { x = 45 y = 5 }
+					font = "Bomb_18"
 					size = { x=185 y=20 }
 				}
 
@@ -1577,17 +1529,17 @@ guiTypes = {
 
 			buttonType = {
 				name = "div_templ_symbol_button"
-				spriteType = "GFX_unit_super_heavy_armor_icon_medium"
+				spriteType = "GFX_unit_infantry_icon_medium"
 				position = { x = 38 y = 80 }
 				clicksound = click_default
 			}
 
 			buttonType = {
 				name = "division_equipment_btn"
-				position = { x = 492 y = 60 }
-				quadTextureSprite = "GFX_button_123x34_alt"
+				position = { x = 396 y = 59 }
+				quadTextureSprite = "GFX_button_123x34"
 				buttonText = "DIVISION_EQUIPMENT"
-				buttonFont = "hoi_16mbs"
+				buttonFont = "Bomb_18"
 				clicksound = click_close
 			}
 
@@ -1773,19 +1725,18 @@ guiTypes = {
 			maxHeight = 20
 			format = centre
 		}
-
 	}
 
 	# Is override in code to index all possible symbols from subuniticons.gfx.
 	containerWindowType = {
 		name = "div_templ_custom_icon_button"
-		position = { x=0 y=0}	
+		position = { x=0 y=0}
 		size = { width=84 height=50 }
 		clipping = no
 
 		background = {
-			name = "Background"		
-			spriteType = "GFX_mini_bg"
+			name = "Background"
+			spriteType = "GFX_tiled_decisions_bg_small"
 		}
 
 		buttonType = {
@@ -1796,17 +1747,16 @@ guiTypes = {
 			clicksound = click_default
 		}
 	}
-	
+
 	containerWindowType = {
 		name = "designer_division_regiment_slot_entry"
-		position = { x=0 y=0}	
+		position = { x=0 y=0}
 		size = { width=76 height=53 }
 		clipping = no
 
 		background = {
 			name = "Background"
-			position = { x = -12 y = 11 }
-			spriteType ="GFX_div_unit_item_bg_wide"
+			spriteType ="GFX_div_unit_item_bg"
 		}
 		
 		iconType = {
@@ -1827,7 +1777,7 @@ guiTypes = {
 			maxWidth = 65
 			maxHeight = 20
 			format = centre
-		}			
+		}
 
 		buttonType = {
 			name = "unit_icon"
@@ -1856,15 +1806,13 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "designer_division_support_slot_entry"
-		position = { x=0 y=0}	
+		position = { x=0 y=0}
 		size = { width=64 height=53 }
 		clipping = no
-		
+
 		background = {
 			name = "Background"
-			position = { x = 0 y = 21 }
 			spriteType ="GFX_div_subunit_item_bg"
-			alwaystransparent = yes	
 		}
 		
 		iconType = {
@@ -1872,6 +1820,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_bop_glow_effect"
 			position = {x=-4 y=16}
 			Orientation = CENTER_LOWER
+			scale = 1.0
 			hide = yes
 		}
 		
@@ -1881,6 +1830,7 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_18mbs"
 			borderSize = {x = 0 y = 0}
+			text = "Maus"
 			maxWidth = 65
 			maxHeight = 20
 			format = centre
@@ -1904,46 +1854,47 @@ guiTypes = {
 			clicksound = click_default
 		}
 	}
-	
+
 	containerWindowType = {
 		name = "designer_subunit_category_entry"
-		size = { width = 250 height = 66  }
+		size = { width = 250 height = 66 }
 		clipping = no
 
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_mini_tooltip"
+			quadTextureSprite ="GFX_tiled_paper_bg2"
 			clicksound = click_default
 		}
 
 		iconType = {
 			name ="subunit_icon"
 			spriteType = "GFX_technology_medium"
-			position = { x=9 y=17 }
+			position = { x=7 y=11 }
 			alwaystransparent = yes
 		}
-	
+
 		instantTextboxType = {
 			name = "name"
-			position = { x = 85 y = 5 }
+			position = { x = 75 y = 14 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
-			maxWidth = 160
+			maxWidth = 178
 			maxHeight = 20
 			format = left
 			alwaystransparent = yes
+			vertical_alignment = center
 		}
-		
+
 		instantTextboxType = {
 			name = "cost"
-			position = { x = 85 y = 41 }
+			position = { x = 75 y = 41 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
-			maxWidth = 160
+			maxWidth = 200
 			maxHeight = 20
 			format = left
 			alwaystransparent = yes
@@ -1952,43 +1903,44 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "designer_subunit_entry"
-		size = { width = 250 height = 66  }
+		size = { width = 250 height = 66 }
 		clipping = no
 
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_mini_tooltip"
+			quadTextureSprite ="GFX_tiled_paper_bg2"
 			clicksound = click_default
 		}
 
 		iconType = {
 			name ="subunit_icon"
 			spriteType = "GFX_technology_medium"
-			position = { x=9 y=17 }
+			position = { x=4 y=11 }
 			alwaystransparent = yes
 		}
-	
+
 		instantTextboxType = {
 			name = "name"
-			position = { x = 85 y = 5 }
+			position = { x = 75 y = 14 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_20_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
-			maxWidth = 160
+			maxWidth = 178
 			maxHeight = 20
 			format = left
 			alwaystransparent = yes
+			vertical_alignment = center
 		}
-		
+
 		instantTextboxType = {
 			name = "cost"
-			position = { x = 85 y = 41 }
+			position = { x = 75 y = 41 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
-			maxWidth = 160
+			maxWidth = 200
 			maxHeight = 20
 			format = left
 			alwaystransparent = yes
@@ -1997,13 +1949,13 @@ guiTypes = {
 		iconType = {
 			name = "special_forces_icon"
 			spriteType = "GFX_special_forces_icon"
-			position = { x = 216 y = 10 }
+			position = { x = 221 y = 5 }
 		}
 
 		iconType = {
 			name = "can_paradrop_icon"
 			spriteType = "GFX_can_paradrop_icon_small"
-			position = { x = 216 y = 35 }
+			position = { x = 200 y = 5 }
 			frame = 2
 		}
 	}
@@ -2012,6 +1964,12 @@ guiTypes = {
 		name = "designer_division_entry"
 		size = { width = 198 height = 50 }
 		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_decisions_bg_small"
+			clicksound = click_default
+		}
 
 		buttonType = {
 			name = "Button"
@@ -2029,38 +1987,38 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 58 y = 5 }
+			position = { x = 60 y = 5 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = "DESIGNER_CREATE_NEW_DIVISION"
-			maxWidth = 138
+			maxWidth = 135
 			maxHeight = 40
 			fixedsize = yes
 			format = left
-			alwaystransparent = yes
+			vertical_alignment = center
 		}
 	}
 	
 	containerWindowType = {
 		name = "designer_div_name_group_entry"
-		size = { width = 196 height = 30 }
+		size = { width = 196 height = 32 }
 		clipping = no
 		
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_mini_tooltip"
+			quadTextureSprite = "GFX_tiled_decisions_bg_small"
 			clicksound = click_default
 		}
 
 		instantTextboxType = {
 			name = "name"
-			position = { x = 5 y = 5 }
+			position = { x = 5 y = 8 }
 			textureFile = ""
-			font = "hoi_18mbs"
+			font = "aldrich_18_outline"
 			borderSize = {x = 0 y = 0}
 			text = "Maus"
-			maxWidth = 170
+			maxWidth = 180
 			maxHeight = 30
 			fixedsize = yes
 			format = left
@@ -2072,12 +2030,12 @@ guiTypes = {
 		name = "designer_stat_entry"
 		size = { width = 155 height = 20 }
 		clipping = no
-	
+
 		instantTextboxType = {
 			name = "count"
 			position = { x = 78 y = 5 }
 			textureFile = ""
-			font = "hoi4_typewriter16_inverted"
+			font = "aldrich_16_outline"
 			borderSize = { x = 0 y = 0 }
 			text = "count"
 			maxWidth = 86
@@ -2087,9 +2045,9 @@ guiTypes = {
 		}
 		instantTextboxType = {
 			name = "label"
-			position = { x = 0 y = 5 }
+			position = { x = 0 y = 8 }
 			textureFile = ""
-			font = "hoi4_typewriter16_inverted"
+			font = "aldrich_16_outline"
 			borderSize = { x = 0 y = 0 }
 			text = "Name"
 			maxWidth = 130
@@ -2115,7 +2073,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "text"
-			font = "hoi_16mbs"
+			font = "aldrich_18_outline"
 			maxWidth = 226
 			maxHeight = 60
 			format = left
@@ -2125,79 +2083,86 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "designer_adjuster_entry"
-		size = { width = 50 height = 70 }
+		size = { width = 100 height = 80 }
 		clipping = no
 
 		iconType = {
 			name ="background"
 			spriteType = "GFX_adjuster_unknown_bg"
-			position = { x=18 y=11 }
+			position = { x=0 y=4 }
 		}
 
 		iconType = {
 			name ="frame"
 			spriteType = "GFX_terrain_mod_frame"
-			position = { x=7 y=5 }
+			position = { x=-999 y=-999 }
 		}
 
 		iconType = {
 			name ="movement"
 			spriteType = "GFX_terrain_mod_movement_strip"
-			position = { x=11 y=42 }
+			position = { x=10 y=45 }
 			frame = 1
 		}
 
 		iconType = {
 			name ="attack"
 			spriteType = "GFX_terrain_mod_attack_strip"
-			position = { x=34 y=42 }
+			position = { x=33 y=45 }
 			frame = 1
 		}
 
 		iconType = {
 			name ="defense"
 			spriteType = "GFX_terrain_mod_defense_strip"
-			position = { x=56 y=42 }
+			position = { x=55 y=45 }
 			frame = 1
 		}
+
 	}
 
 	containerWindowType = {
 		name = "designer_adjuster_entry_with_modifier"
-		size = { width = 84 height = 75 }
+		size = { width = 50 height = 50 }
 		clipping = no
+
+		#background = {
+		#	name = "bg"
+		#	spriteType = "GFX_mini_tooltip"
+		#}
 
 		iconType = {
 			name ="background"
 			spriteType = "GFX_adjuster_unknown_bg"
-			position = { x=18 y=11 }
+			position = { x=0 y=4 }
 		}
 
 		iconType = {
 			name ="frame"
-			spriteType = "GFX_terrain_mod_frame"
-			position = { x=7 y=5 }
-		}
-
-		iconType = {
-			name ="movement"
-			spriteType = "GFX_terrain_mod_movement_strip"
-			position = { x=11 y=42 }
-			frame = 1
+			#spriteType = "GFX_terrain_mod_frame"
+			position = { x=0 y=4 }
 		}
 
 		iconType = {
 			name ="attack_defense"
 			spriteType = "GFX_terrain_mod_attack_defense_strip"
-			position = { x=34 y=42 }
+			position = { x=33 y=45 }
+			frame = 1
+		}
+
+		iconType = {
+			name ="movement"
+			spriteType = "GFX_terrain_mod_movement_strip"
+			position = { x=10 y=45 }
 			frame = 1
 		}
 
 		iconType = {
 			name ="other"
 			spriteType = "GFX_terrain_mod_other_strip"
-			position = { x=56 y=42 }
+			position = { x=55 y=45 }
 			frame = 1
 		}
+
 	}
 }

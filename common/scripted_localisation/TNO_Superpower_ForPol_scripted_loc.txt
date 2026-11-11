@@ -1,0 +1,142 @@
+# ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗#
+#██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║╚██╗ ██╔╝#
+#██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║ ╚████╔╝ #
+#██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ╚██╔╝  #
+#╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   #
+# ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   #
+#Scripted Localization
+
+#Index; Search for these names using ctrl+f and you'll find the section they entitle.
+#	General Stuff
+#		Super_ForPol_GetCategoryTitle
+#		Super_ForPol_GetCategoryDesc
+#		Super_ForPol_GetCategoryPicture
+#		Super_ForPol_GetCategorySeal
+#		Super_ForPol_GetPosturing
+#		Super_ForPol_GetPosturing_GER
+#		Super_ForPol_GetPosturing_USA
+#		Super_ForPol_GetPosturing_JAP
+
+#################################################
+#                 General Stuff                 #
+#################################################
+
+# Returns the category title
+defined_text = { 
+	name = Super_ForPol_GetCategoryTitle
+	text = {
+		trigger = { tag = GER }
+		localization_key = "GER_ForPol_Title"
+	}
+	text = {
+		trigger = { tag = USA }
+		localization_key = "USA_ForPol_Title"
+	}
+	text = {
+		trigger = { tag = JAP }
+		localization_key = "JAP_ForPol_Title"
+	}
+}
+
+# Returns the category desc
+defined_text = { 
+	name = Super_ForPol_GetCategoryDesc
+	text = {
+		trigger = { tag = GER }
+		localization_key = "GER_ForPol_Desc_tt"
+	}
+	text = {
+		trigger = { tag = USA }
+		localization_key = "USA_ForPol_Desc_tt"
+	}
+	text = {
+		trigger = { tag = JAP }
+		localization_key = "JAP_ForPol_Desc_tt"
+	}
+}
+
+# Returns the category picture
+defined_text = { 
+	name = Super_ForPol_GetCategoryPicture
+	text = {
+		trigger = { tag = GER }
+		localization_key = "GFX_Super_ForPol_Image_GER"
+	}
+	text = {
+		trigger = { tag = USA }
+		localization_key = ""
+	}
+	text = {
+		trigger = { tag = JAP }
+		localization_key = ""
+	}
+}
+
+# Returns the category background seal
+defined_text = { 
+	name = Super_ForPol_GetCategorySeal
+	text = {
+		trigger = { tag = GER }
+		localization_key = "GFX_fopo_reichsadler_seal"
+	}
+	text = {
+		trigger = { tag = USA }
+		localization_key = "GFX_fopo_dept_of_state_seal"
+	}
+	text = {
+		trigger = { tag = JAP }
+		localization_key = "GFX_fopo_gaimusho_seal"
+	}
+}
+
+# Returns the diplomatic policy strategy
+defined_text = { 
+	name = Super_ForPol_GetPosturing
+	text = {
+		trigger = { tag = GER }
+		localization_key = "[Super_ForPol_GetPosturing_GER]"
+	}
+	text = {
+		trigger = { tag = USA }
+		localization_key = "[Super_ForPol_GetPosturing_USA]"
+	}
+	text = {
+		trigger = { tag = JAP }
+		localization_key = "[Super_ForPol_GetPosturing_JAP]"
+	}
+}
+
+# Returns the diplomatic policy strategy (for Germany)
+defined_text = { 
+	name = Super_ForPol_GetPosturing_GER
+	text = {
+		trigger = { check_variable = { GER_ForPol_Posturing = 0 } }
+		localization_key = "GER_ForPol_Posturing_Nothing_tt"
+	}
+	text = {
+		trigger = { check_variable = { GER_ForPol_Posturing = 1 } }
+		localization_key = "GER_ForPol_Posturing_Ref_tt"
+	}
+	text = {
+		trigger = { check_variable = { GER_ForPol_Posturing = 2 } }
+		localization_key = "GER_ForPol_Posturing_Reac_tt"
+	}
+}
+
+# Returns the diplomatic policy strategy (for America)
+defined_text = { 
+	name = Super_ForPol_GetPosturing_USA
+	text = {
+		trigger = { check_variable = { USA_ForPol_Posturing = 0 } }
+		localization_key = "please set me up"
+	}
+}
+
+# Returns the diplomatic policy strategy (for Japan)
+defined_text = { 
+	name = Super_ForPol_GetPosturing_JAP
+	text = {
+		trigger = { check_variable = { JAP_ForPol_Posturing = 0 } }
+		localization_key = "please set me up"
+	}
+}

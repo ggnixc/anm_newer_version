@@ -1,44 +1,52 @@
-state = {
-	id = 21
-	name = "STATE_21"
-	resources = {
-		aluminium = 120.000
+state={
+	id=21
+	name="STATE_21"
+	resources={
+		aluminium=120
 	}
-
+	
 	history = {
-		owner = FRA
-		add_core_of = FRA
- 		victory_points = {
+		owner = FRS
+		add_core_of = FRS
+		victory_points = {
 			11834 30
 		}
 		victory_points = {
 			15194 10
 		}
 		victory_points = {
-			15234 5
+			15197 10
 		}
 		victory_points = {
-			13580 10
+			15234 7
+		}
+		
+		victory_points = {
+			13580 5
 		}
 		victory_points = {
-			3762 1
+			9736 2
 		}
 		victory_points = {
-			11875 1
+			13584 1
 		}
 		buildings = {
 			infrastructure = 5
 			air_base = 1
 			dockyard = 2
- 			industrial_complex = 1
-			arms_factory = 1
- 			9736 = {
+			schools = 1
+			offices = 1
+			hospitals = 1
+			barracks = 1
+			hydroelectric_plant = 3
+			thermoelectric_plant = 2
+			3764 = {
 				bunker = 2
 			}
-			3961 = {
+			17995 = {
 				bunker = 2
 			}
-			13581 = {
+			6975 = {
 				bunker = 2
 			}
 			11834 = {
@@ -48,13 +56,14 @@ state = {
 				naval_base = 10
 			}
 		}
+		set_state_flag = GDP_category_large_town
 	}
-
-	provinces = {
-		958 3762 3764 3961 6975 9736 11834 11875 13580 13581 13582 13584 15189 15193 15194 15195 15197 15234 15235 15236 17995
+	
+	provinces={
+		958 3762 3764 3961 6975 9736 11711 11713 11834 11875 11877 13580 13581 13582 13584 15189 15193 15194 15195 15197 15198 15234 15235 15236 17995 
 	}
-	manpower = 2822743
-	buildings_max_level_factor = 1.000
-	state_category = large_city
-	local_supplies = 0.000
+	manpower=2636034
+	buildings_max_level_factor=1
+	state_category=large_city
+	local_supplies=0
 }

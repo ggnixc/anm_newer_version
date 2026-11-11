@@ -30,11 +30,16 @@ guiTypes = {
 				quadTextureSprite ="GFX_tiled_window_1b_no_border"
 				alwaystransparent = yes
 			}
+			
+			iconType = {
+				name = "Title_background_nuke"
+				spriteType = "GFX_nuke_super_title"
+			}
 
 			instantTextBoxType = {
 				name = "Title"
 				position = { x = 0 y = 18 }
-				font = "aldrich_22_outline"
+				font = "aldrich_24_outline"
 				borderSize = {x = 0 y = 0}
 				text = "[TNOGetSuperEventTitle]"
 				maxWidth = 580
@@ -58,6 +63,11 @@ guiTypes = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_bigevent_border"
 				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "Nuke_background"
+				spriteType = "GFX_nuke_super_frame"
 			}
 
 			buttonType = {

@@ -24,12 +24,37 @@ guiTypes = {
 				quadTextureSprite = "GFX_career_profile_bg_default"
 			}
 
+			containerWindowType = {
+				name = "most_played_badge"
+				position = { x = 540 y = 0 }
+				Orientation = center_left
+				Origo = center_left
+				size = { width = 200 height = 40 }
+
+				iconType = {
+					name = "bg_most_played"
+					position = { x = 0 y = -5 }
+					spriteType = "GFX_bg_most_played"
+				}
+
+				instantTextboxType = {
+					name = "most_played_text"
+					position = { x = -117 y = -14 }
+					Orientation = center
+					maxWidth = 180
+					font = "aldrich_18_outline"
+					text = "CAREER_PROFILE_MOST_PLAYED"
+					format = center
+					multiline = no
+				}
+			}
+
 			buttonType = {
 				name = "subscribe_button"
 				position = { x = -240 y = 19 }
 				quadTextureSprite = "GFX_btn_blue"
 				buttonText = "CAREER_PROFILE_SUBSCRIBE"
-				buttonFont = "hoi_16mbs"
+				buttonFont = "aldrich_16_outline"
 				Orientation = "UPPER_RIGHT"
 				clicksound = click_default
 			}
@@ -55,6 +80,7 @@ guiTypes = {
 				fixedsize = yes
 			}
 
+
 			### Country Dropdown Button ###
 
 			buttonType = {
@@ -68,7 +94,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "country_filter_text"
 				position = { x = 0 y = 13 }
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 				borderSize = { x = 0 y = 0 }
 				text = "COUNTRIES"
 				maxWidth = 244
@@ -83,7 +109,7 @@ guiTypes = {
 				name = "country_filter_button"
 				position = { x = 208 y = 24 }
 				quadTextureSprite = "GFX_btn_expand_isolated"
-				buttonFont = "hoi_18mbs"
+				buttonFont = "aldrich_18_outline"
 				clicksound = click_default
 				alwaystransparent = yes
 				frame = 2
@@ -102,7 +128,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "data_set_filter_text"
 				position = { x = 254 y = 13 }
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 				borderSize = { x = 0 y = 0 }
 				text = "BASE_GAME_TITLE"
 				maxWidth = 244
@@ -117,7 +143,7 @@ guiTypes = {
 				name = "data_set_filter_button"
 				position = { x = 462 y = 24 }
 				quadTextureSprite = "GFX_btn_expand_isolated"
-				buttonFont = "hoi_18mbs"
+				buttonFont = "aldrich_18_outline"				
 				clicksound = click_default
 				alwaystransparent = yes
 				frame = 2
@@ -136,7 +162,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "game_mode_filter_text"
 				position = { x = 508 y = 13 }
-				font = "hoi_18mbs"
+				font = "aldrich_18_outline"
 				borderSize = { x = 0 y = 0 }
 				maxWidth = 244
 				maxHeight = 44
@@ -150,7 +176,7 @@ guiTypes = {
 				name = "game_mode_filter_button"
 				position = { x = 716 y = 24 }
 				quadTextureSprite = "GFX_btn_expand_isolated"
-				buttonFont = "hoi_18mbs"
+				buttonFont = "aldrich_18_outline"
 				clicksound = click_default
 				alwaystransparent = yes
 				frame = 2
@@ -275,7 +301,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "name"
 				position = { x = 180 y = 74 }
-				font = "aldrich_30_outline"
+				font = "aldrich_28_outline"
 				borderSize = { x = 0 y = 0 }
 				text = "COUNTRY"
 				maxWidth = 920
@@ -287,7 +313,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "starting_date"
 				position = { x = 180 y = 118 }
-				font = "hoi_20b"
+				font = "aldrich_20_outline"
 				borderSize = { x = 0 y = 0 }
 				text = "This could be the starting year."
 				maxWidth = 365
@@ -306,9 +332,9 @@ guiTypes = {
 					maxWidth = 350
 					maxHeight = 80
 					text = "CAREER_PROFILE_HEADER_DISCLAIMER"
-					font = "hoi_18"
+					font = "aldrich_18_outline"
 					format = left
-					text_color_code = L
+					text_color_code = m
 				}
 			}
 		}
@@ -319,6 +345,38 @@ guiTypes = {
 			size = { width = 1154 height = 484 }
 			orientation = center_up
 			origo = center_up
+
+			#containerWindowType = {
+			#	name = "multiplayer_overlay"
+			#	position = { x = 0 y = 0 }
+			#	size = { width = 100% height = 100% }
+			#	clipping = yes
+			#	moveable = no
+#
+			#	background = {
+			#		name = "background"
+			#		spriteType = "GFX_tiled_bg_container"
+			#	}
+#
+			#	containerWindowType = {
+			#		name = "info"
+			#		position = { x = 0 y = 0 }
+			#		size = { width = 560 height = 300 }
+			#		orientation = center
+			#		origo = center
+#
+			#		instantTextBoxType = {
+			#			name = "text"
+			#			position = { x = 0 y = 0 }
+			#			maxWidth = 560
+			#			maxHeight = 300
+			#			text = "CAREER_PROFILE_PLAYTHROUGH_NOT_AVAILABLE_IN_MULTIPLAYER"
+			#			font = "aldrich_36_outline"
+			#			format = center
+			#			vertical_alignment = center
+			#		}
+			#	}
+			#}
 		}
 	}
 

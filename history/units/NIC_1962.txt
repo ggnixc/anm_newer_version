@@ -1,0 +1,81 @@
+﻿division_template = {
+	name = "Fusileros"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Patrullas de Autodefensa Civil"
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Caballería Blindada"
+	regiments = {
+		IFV = { x = 0 y = 0 }
+		IFV = { x = 0 y = 1 }
+		Motorized = { x = 1 y = 0 }
+		Motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		signal_company = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "12738"
+		division_template = "Fusileros"
+		start_experience_factor = 0.5
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "12738"
+		division_template = "Fusileros"
+		start_experience_factor = 0.5
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "12738"
+		division_template = "Fusileros"
+		start_experience_factor = 0.5
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = "12738"
+		division_template = "Caballería Blindada"
+		start_experience_factor = 0.5
+	}
+}

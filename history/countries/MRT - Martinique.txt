@@ -1,19 +1,85 @@
 ﻿capital = 1329
 
+# Vacant
+recruit_character = MRT_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+recruit_character = MRT_Victor_Sable
 recruit_character = MRT_Aime_Cesaire
+recruit_character = MRT_Pierre_Petit
+recruit_character = MRT_Claude_Lise
+recruit_character = MRT_Conseil_General
+recruit_character = MRT_Tertulien_Robinel
+recruit_character = MRT_Edmond_Valcin
+recruit_character = MRT_Alfred_Marie_Jeanne
+
+MRT_Aime_Cesaire = {
+	promote_character = socialist_african_socialism_subtype
+	promote_character = socialist_1_subtype
+}
+promote_character = MRT_Tertulien_Robinel
+promote_character = MRT_Victor_Sable
 
 set_politics = {
-	ruling_party = socialist
-	last_election = "1992.4.1"
-	election_frequency = 96
+	ruling_party = liberalism
+	last_election = "1961.5.16"
+	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	socialist = 46
-    paternalism = 5
-    progressivism = 12
-    conservatism = 15
-    liberalism = 10
-    liberal_conservatism = 12
+	socialist = 25
+	progressivism = 20
+	liberalism = 40
+	conservatism = 15
 }
+
+add_ideas = {
+	OFN_Partners
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_crime_prevention
+
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_basic
+	tno_academic_base_basic_literacy
+}
+
+set_country_flag = TNO_eliminate_military_spending
+
+set_research_slots = 3
+set_convoys = 50
+inherit_technology = MRT
+
+TNO_startup_nation = yes

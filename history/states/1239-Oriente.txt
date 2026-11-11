@@ -1,31 +1,45 @@
-state = {
-	id = 1239
-	name = "STATE_1239"
-
-	resources = {
-		chromium = 30
+state={
+	id=1239
+	name="STATE_1239"
+	resources={
+		chromium=30
 	}
 	history = {
 		owner = CUB
+		add_core_of = CUB
 		buildings = {
 			infrastructure = 3
-			air_base = 1
- 		}
-		add_core_of = CUB
-		victory_points = { # Guantanamo
-			7590 5
+			1550 = {
+				naval_base = 2
+			}
+			air_base = 3
+			thermoelectric_plant = 1
 		}
-		victory_points = { # Santiago de Cuba
-			1550 10
+		victory_points = { 
+			1550 15
 		}
-		victory_points = { # Holguin
-			12347 5
+		victory_points = { 
+			12347 10
 		}
+		victory_points = { 
+			1716 10
+		}
+		victory_points = { 
+			17024 7
+		}
+		victory_points = { 
+			17144 7
+		}
+		victory_points = { 
+			20013 5
+		}
+		set_state_flag = GDP_category_pastoral
 	}
-	provinces = {
-		1550 7590 12347
+	provinces={
+		1550 1716 7590 12347 17024 17144 20013 
 	}
-	manpower = 2489721
-	buildings_max_level_factor = 1.000
-	state_category = town
+	manpower=2613951
+	buildings_max_level_factor=1
+	state_category=rural
+	local_supplies=0
 }

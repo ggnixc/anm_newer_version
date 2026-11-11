@@ -5,12 +5,13 @@ state = { #Population Done
 	state_category = tiny_island
 
 	history = {
-		owner = CAN
-		add_claim_by = ENG
+		owner = ENG
+		add_core_of = ENG
 		buildings = {
 			infrastructure = 1
-			radar_station = 2
-			air_base = 1
+			air_base = 4
+			barracks = 1
+			radar_station = 5
 			13016 = {
 				naval_base = 1
 			}
@@ -18,7 +19,8 @@ state = { #Population Done
 		victory_points = { # Jamestown
 			13016 1
 		}
- 	}
+		set_state_flag = GDP_regions_south_atlantic
+	}
 
 	provinces = {
 		13016

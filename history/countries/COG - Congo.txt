@@ -1,43 +1,517 @@
-﻿recruit_character = COG_Albert_Ndele_Mbamu
-
 capital = 295
 
-set_oob = "COG_2000"
+#  a88888b. dP                                             dP                              
+# d8'   `88 88                                             88                              
+# 88        88d888b. .d8888b. 88d888b. .d8888b. .d8888b. d8888P .d8888b. 88d888b. .d8888b. 
+# 88        88'  `88 88'  `88 88'  `88 88'  `88 88'  `""   88   88ooood8 88'  `88 Y8ooooo. 
+# Y8.   .88 88    88 88.  .88 88       88.  .88 88.  ...   88   88.  ... 88             88 
+#  Y88888P' dP    dP `88888P8 dP       `88888P8 `88888P'   dP   `88888P' dP       `88888P' 
+#
+#Vacant
+recruit_character = COG_Generic_Vacant
 
-set_politics = {	
-	ruling_party = despotism
-	last_election = "1992.7.17"
-	election_frequency = 60
+# Party Leaders
+recruit_character = COG_Moise_Tshombe			# CONAKAT	- Despotism
+recruit_character = COG_Jean_Bolikango			# Reforme	- Paternalism
+recruit_character = COG_Joseph_Kasa_Vubu		# ABAKO		- Conservatism
+recruit_character = COG_Justin_Marie_Bomboko	# Ind.		- Despotism
+recruit_character = COG_Cyrille_Adoula			# MNC-K		- Paternalism
+recruit_character = COG_Albert_Kalonji			# MNC-K etc - Liberalism
+recruit_character = COG_Patrice_Lumumba			# MNC-L		- Progressivism
+recruit_character = COG_Jason_Sendwe			# MNC		- Paternalism
+recruit_character = COG_Joseph_Ileo				# MNC		- Paternalism
+recruit_character = COG_Joseph_Desire_Mobutu	# ANC		- Despotism
+recruit_character = COG_Antoine_Gizenga		    # PSA		- Socialism
+recruit_character = COG_Pierre_Mulele			# PSA		- Communism
+recruit_character = COG_Christophe_Gbenye		# PRP		- Communism
+
+# Ministers
+recruit_character = COG_Paul_Henri_Spaak    	# HoG
+recruit_character = COG_Thomas_Kanza			# For
+recruit_character = COG_Maurice_van_Hemelrijck 	# Eco
+recruit_character = COG_Emile_Janssens			# Sec
+
+recruit_character = COG_Vacant                  # HoG
+recruit_character = COG_Michel_Struelens        # For
+recruit_character = COG_Jean_Cassart            # Eco
+
+recruit_character = COG_Albert_Ndele            # Eco
+recruit_character = COG_Victor_Lundula          # Sec
+
+recruit_character = COG_Charles_Kisolokele		# Bas-Congo
+recruit_character = COG_Laurent_Eketebi			# Equateur
+
+add_ideas = {
+	COG_Paul_Henri_Spaak_hog
+	COG_Justin_Marie_Bomboko_for
+	COG_Maurice_van_Hemelrijck_eco
+	COG_Emile_Janssens_sec
+}
+
+# Generals
+#recruit_character = COG_Emile_Janssens
+
+oob = "COG_1962"
+# set_naval_oob = "COG_1962_naval"
+# set_air_oob = "COG_1962_air"
+country_lock_all_division_template = yes
+
+# set_country_flag = gui_alert_visible
+# set_country_flag = gui_alert_visible_2
+# set_country_flag = country_has_gui
+
+#Cosmetic
+set_cosmetic_tag = COG_IND
+
+add_ideas = {
+	COG_the_model_republic
+	COG_annees_sanglantes
+	COG_engine_of_the_congo
+	COG_the_free_french
+	#FACTION
+    OFN_Supreme_Allied_Commander_Africa
+	#POLITICS
+	tno_political_parties_one_party_state
+	tno_religious_rights_secularism
+	tno_trade_unions_illegal
+	tno_immigration_closed_borders
+	tno_slavery_institutionalized
+	tno_public_meetings_outlawed
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+	#MILITARY
+	tno_conscription_broadened_conscription
+	tno_training_combat_schooling
+	tno_military_supervision_rules_of_engagement
+	tno_draft_exemptions_none
+	#SOCIAL
+	tno_health_care_support_for_emergencies
+	tno_education_restricted_education
+	tno_penal_system_overt_oppression
+	tno_gender_rights_traditional_roles
+	tno_security_oppressive_police
+	tno_regulations_utterly_unregulated
+	#ECONOMIC
+	tno_trade_laws_export_focus
+	tno_income_taxation_flat_taxes
+	tno_minimum_wage_no_minimum_wage
+	tno_max_workhours_unlimited_work_day
+	tno_pensions_no_pensions
+	tno_unemployment_no_subsidies
+	#MISC
+	tno_refugees_banned
+	tno_women_banned
+	tno_racial_integration_segregated_regiments
+	tno_safety_no_regulations
+	tno_pollution_few_regulations
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_oppression
+	tno_child_labor_legal
+	#SOCIETAL DEVELOPMENT
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_factory_complexes
+	tno_agriculture_centralized
+	tno_healthcare_makeshift
+	tno_research_facilities_basic
+	tno_academic_base_mass_illiteracy
+	tno_admin_efficiency_illegitimate_administration
+}
+
+set_country_flag = tno_defined_startup_effectiveness
+
+### Political
+set_variable = { tno_political_parties_effectiveness = 30 }
+set_variable = { tno_religious_rights_effectiveness = 40 }
+set_variable = { tno_trade_unions_effectiveness = 15 }
+set_variable = { tno_immigration_effectiveness = 25 }
+set_variable = { tno_slavery_effectiveness = 85 }
+set_variable = { tno_public_meetings_effectiveness = 10 }
+set_variable = { tno_press_rights_effectiveness = 20 }
+set_variable = { tno_vote_franchise_effectiveness = 20 }
+
+### Economic
+set_variable = { tno_trade_laws_effectiveness = 75 }
+set_variable = { tno_income_taxation_effectiveness = 65 }
+set_variable = { tno_minimum_wage_effectiveness = 40 }
+set_variable = { tno_max_workhours_effectiveness = 25 }
+set_variable = { tno_pensions_effectiveness = 35 }
+set_variable = { tno_unemployment_effectiveness = 35 }
+set_variable = { tno_regulations_effectiveness = 80 }
+
+### Social
+set_variable = { tno_health_care_effectiveness = 30 }
+set_variable = { tno_education_effectiveness = 65 }
+set_variable = { tno_penal_system_effectiveness = 60 }
+set_variable = { tno_gender_rights_effectiveness = 35 }
+set_variable = { tno_security_effectiveness = 50 }
+
+### Military
+set_variable = { tno_conscription_effectiveness = 30 }
+set_variable = { tno_military_supervision_effectiveness = 15 }
+set_variable = { tno_training_effectiveness = 55 }
+set_variable = { tno_draft_exemptions_effectiveness = 30 }
+
+set_research_slots = 4
+set_convoys = 200
+add_stability = 0.3
+add_war_support = 0.3
+
+set_technology = {
+	basic_train = 1
+
+	##INFANTRY##
+	# infantry_equipment_0 = 1
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+	
+	infantry_kit_1 = 1
+	infantry_weapons_2 = 1
+	night_vision_2 = 1
+	infantry_kit_2 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_kit_3 = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	infantry_weapons_improvements_grenade_1 = 1
+	#
+	infantry_weapons_3 = 1
+	night_vision_3 = 1
+	infantry_kit_4 = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons_hmg_1 = 1
+	combat_support_equipment_1 = 1
+	
+	support_weapons_arty_1 = 1
+	infantry_at = 1
+	infantry_at_upgrade_1 = 1
+	#
+
+	motorized_infantry = 1
+	motorized_rocket_unit = 1
+	motorized_infantry_1 = 1
+	marines = 1
+	#
+	tech_special_forces = 1
+	tech_mountaineers = 1
+	#
+	paratroopers = 1
+
+	##SUPPORT##
+	tech_support = 1
+	tech_engineers = 1
+	assault_weapons_1 = 1
+	tech_engineers2 = 1
+	assault_weapons_2 = 1
+	tech_engineers3 = 1
+	tech_recon = 1
+	tech_recon2 = 1
+	tech_military_police = 1
+	tech_military_police2 = 1
+	tech_military_police3 = 1
+	tech_maintenance_company = 1
+	tech_maintenance_company2 = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+
+	##ARMOR##
+	
+	##ARTY##
+
+	##NAVAL##
+	early_ship_hull_very_light = 1
+	basic_ship_hull_very_light = 1
+	early_ship_hull_more_light = 1
+	basic_ship_hull_more_light = 1
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	smoke_generator = 1
+	basic_depth_charges = 1
+	sonar = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_ship_hull_carrier = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+	basic_torpedo = 1
+	magnetic_detonator = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_medium_battery = 1
+	basic_heavy_battery = 1
+	basic_secondary_battery = 1
+	damage_control_1 = 1
+	fire_control_methods_1 = 1
+	mtg_transport = 1
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+
+	##NAVAL DOCTRINE##
+
+	##HELICOPTERS##
+	very_early_helicopter = 1
+	early_helicopter = 1
+	asw_helicopter_1960 = 1
+	transport_helicopter_1960 = 1
+	attack_helicopter_1960 = 1
+	scout_helicopter_1960 = 1
+	##LIGHT AIR##
+	early_fighter = 1
+	interceptor_1945 = 1
+	interceptor_1950 = 1
+	fighter_1945 = 1
+	fighter_1950 = 1
+	CAS_1945 = 1
+	CAS_1950 = 1
+
+	##HEAVY AIR##
+	tac_bomber1 = 1
+	tac_air_1945 = 1
+	tac_air_1950 = 1
+	strategic_bomber1 = 1
+	heavy_air_1945 = 1
+	heavy_air_1950 = 1
+	transport_air1 = 1
+	transport_air_1945 = 1
+	transport_air_1950 = 1
+
+	##ENGINEERING##
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	centimetric_radar = 1
+	mechanical_computing = 1
+	computing_machine = 1
+	basic_encryption = 1
+	basic_decryption = 1
+	improved_computing_machine = 1
+	improved_encryption = 1
+	improved_decryption = 1
+	advanced_computing_machine = 1
+	advanced_encryption = 1
+	computing_machine_1950 = 1
+	helicopter_engines = 1
+	jet_engines = 1
+	
+	improved_jet_engines_bombers_1 = 1
+
+	##INDUSTRY##
+	ww2_line_production = 1
+	mass_production_1 = 1
+	mass_production_2 = 1
+	building_construction_1 = 1
+	production_unit_gain_1 = 1
+	production_unit_gain_2 = 1
+
+	oil_processing = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	resource_extraction_methods = 1
+	excavation0 = 1
+	administration_construction_1 = 1
+	excavation1 = 1
+	education_construction_1 = 1
+	excavation2 = 1
+	military_construction_1 = 1
+	prison_construction_1 = 1
+	#batch_production_1 = 1
+	#batch_production_2 = 1
+}
+
+set_grand_doctrine = strategic_theorem
+
+# NSB tech #
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		advanced_light_tank = 1
+		advanced_medium_tank = 1
+		mechanised_infantry3 = 1
+
+		APC_1950 = 1
+		APC_1950_basic_turret = 1
+		#APC_1950_basic_engine = 1
+		IFV_1950 = 1
+		IFV_1950_basic_turret = 1
+		MBT_1950 = 1
+		MBT_1950_basic_turret = 1
+		#MBT_1950_basic_engine = 1
+		AC_1945 = 1
+		AC_1950 = 1
+
+		Heavy_1945 = 1
+		Heavy_1950 = 1
+		
+		antiair5 = 1
+		antiair_1950 = 1
+		SPAA_1950 = 1
+		artillery4 = 1
+		artillery_1950 = 1
+		artillery_1950_soft_attack = 1
+		SPART_1950 = 1
+		SPART_1950_soft_attack = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		NSB_APC_1945 = 1
+		NSB_APC_1950 = 1
+		#
+
+		NSB_IFV_1945 = 1
+		NSB_IFV_1945_modules_1 = 1
+		NSB_IFV_1945_modules_2 = 1
+		NSB_IFV_1950 = 1
+		NSB_IFV_1950_modules_2 = 1
+
+		NSB_MBT_1945 = 1
+		NSB_MBT_1945_modules_1 = 1
+		NSB_MBT_1945_modules_2 = 1
+		NSB_MBT_1950 = 1
+		NSB_MBT_1950_modules_2 = 1
+
+		NSB_AC_1945 = 1
+		NSB_AC_1950 = 1
+
+		NSB_Heavy_1945 = 1
+		NSB_Heavy_1950 = 1
+
+		NSB_Armour_1 = 1
+		NSB_Armour_2 = 1
+		NSB_Engine_1 = 1
+		NSB_Engine_2 = 1
+
+		NSB_artillery_1945 = 1
+		NSB_artillery_1950 = 1
+		NSB_artillery_1950_SA = 1
+
+		NSB_antiair_1945 = 1
+		NSB_antiair_1950 = 1
+	}
+}
+
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	set_technology = {
+		scout_plane_1945 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = paternalism
+	last_election = "1933.3.5"
+	election_frequency = 48
 	elections_allowed = no
+
 }
 
 set_popularities = {
-	despotism = 42
-	despotism_1 = 9
-	conservatism = 13
-    progressivism = 11
-    paternalism = 25
+	communist = 7.4			# PSA
+	socialist_1 = 4.1		# CEREA
+	socialist = 8.4			# PSA
+	progressivism = 23.4	# MNC- L
+	liberalism_1 = 5.1		# PUNA
+	liberalism = 7.6		# MNC-K
+	liberalism_2 = 6.9		# PNP
+	conservatism = 14.4		# ABAKO
+	paternalism_1 = 3.6		# BALUBAKAT
+	paternalism = 13.2		# KdR
+	paternalism_2 = 5.9		# CONAKAT
+	#fascism
+	#national_socialism
+	#ultranationalism
 }
 
-add_ideas = {
-	OFN_Supreme_Allied_Commander_Africa
-	#Standard Ideas#
-	#ministers
-	#polticial laws#
-	
-	tno_political_parties_controlled_opposition
-	tno_religious_rights_secularism
-	tno_trade_unions_state_controlled
-	tno_immigration_open_immigration
-	tno_slavery_outlawed
-	tno_press_rights_censored_press
-	tno_vote_franchise_no_voting
-	tno_public_meetings_regulated
-	tno_refugees_open
-	
-	#military laws#
-	
+#EconType - TODO Check up on this
+set_variable = { TNO_economy_type = token:Econ_Type_Corporatism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }
+
+create_equipment_variant = {
+	name = "M-Class"
+	type = ship_hull_cruiser_1
+	name_group = COG_CL_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_battery_slot = ship_medium_battery_1
+		fixed_ship_secondaries_slot = ship_secondaries_2
+		rear_1_custom_slot = ship_medium_battery_1
+		mid_1_custom_slot = ship_medium_battery_1
+		front_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Zerstörer 1944"
+	type = ship_hull_light_1
+	name_group = COG_DD_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = ship_radar_1
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+create_equipment_variant = {
+	name = "Straßburg-class"
+	type = ship_hull_more_light_2
+	name_group = COG_FF_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = empty
+		fixed_ship_radar_slot = ship_sonar_1
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_mine_layer_1
+		rear_1_custom_slot = ship_mine_layer_1
+	}
+}
+create_equipment_variant = {
+	name = "Pelikan-class"
+	type = ship_hull_very_light_2
+	name_group = COG_COR_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_2
+		fixed_ship_fire_control_system_slot = empty
+		fixed_ship_radar_slot = ship_sonar_1
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_depth_charge_1
+		rear_1_custom_slot = ship_anti_air_2
+	}
 }
 
-TNO_startup_nation = yes
-
+# NSB #
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+}

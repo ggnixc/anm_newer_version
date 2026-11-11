@@ -53,13 +53,12 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
-		iconType = {
-			name = "active_ability"
-			spriteType = "GFX_onmap_unit_counter_active_ability"
-			position = { x=32 y=-11 }
-			alwaystransparent = no
-			orientation = center
-			scale = 0.8
+		gridBoxType = {
+			name = "active_abilities"
+			position = { x=55 y=-9 }
+			slotsize = { width=25 height=25 }
+			max_slots_vertical = 1
+			format = "UPPER_LEFT"
 		}
 
 		iconType ={
@@ -72,12 +71,11 @@ guiTypes = {
 		instantTextboxType = {
 			name = "count_txt"
 			position = { x=36 y=5 }
-			font = "aldrich_12_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 20
 			maxHeight = 14
 			format = center
 			alwaystransparent = yes
-			text_color_code = W
 		}
 		iconType = {
 			name = "bar_org"
@@ -157,6 +155,44 @@ guiTypes = {
 			spriteType = "GFX_onmap_action_icon"
 			position = { x=54 y=7 }
 		}
+						
+		iconType ={
+			name ="general_portrait"
+			spriteType = "GFX_portrait_GER_oswald_lutz"
+			position = { x=36 y=3 }
+			alwaystransparent = yes
+			scale = 0.10
+		}
+
+		# used to offset left aligned icons if hq_badge is shown
+		positionType = {
+			name = "unit_counter_hq_x_offset"
+			position = { x = -20 y = 0 }
+		}
+
+		iconType = {
+			name ="hq_badge"
+			spriteType = "GFX_hq_badge_bg"
+			position = { x=-20 y=0 }
+		}
+
+		iconType = {
+			name = "leader_enroute"
+			spriteType = "GFX_leader_en_route"
+			position = { x=-20 y=0 }
+		}
+	}
+
+	containerWindowType = {
+		name = "active_ability_item"
+		size = { width = 20 height = 20 }
+
+		iconType = {
+			name = "active_ability"
+			spriteType = "GFX_onmap_unit_counter_active_ability"
+			orientation = center
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -217,25 +253,23 @@ guiTypes = {
 		instantTextboxType = {
 			name = "capital_count_txt"
 			position = { x=31 y=2 }
-			font = "aldrich_12_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 34
 			maxHeight = 14
 			format = center
 			alwaystransparent = yes
 			text = "99-99"
-			text_color_code = W
 		}
 
 		instantTextboxType = {
 			name = "count_txt"
 			position = { x=31 y=17 }
-			font = "aldrich_12_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 34
 			maxHeight = 14
 			format = center
 			alwaystransparent = yes
 			text = "99-99"
-			text_color_code = W
 		}
 
 		iconType = {
@@ -402,12 +436,11 @@ guiTypes = {
 		instantTextboxType = {
 			name = "count_txt"
 			position = { x=36 y=5 }
-			font = "aldrich_12_outline"
+			font = "aldrich_18_outline"
 			maxWidth = 20
 			maxHeight = 14
 			format = center
 			alwaystransparent = yes
-			text_color_code = W
 		}
 		iconType = {
 			name = "bar_str"
@@ -604,7 +637,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "text"
 			position = { x=19 y=2 }
-			font = "aldrich_white_16_outline"
+			font = "aldrich_22_outline"
 			text = ""
 			maxWidth = 500
 			maxHeight = 30
@@ -632,7 +665,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "text"
 			position = { x=22 y=2 }
-			font = "aldrich_white_16_outline"
+			font = "aldrich_22_outline"
 			text = ""
 			maxWidth = 500
 			maxHeight = 30
@@ -652,7 +685,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "desc"
 			position = { x = 0 y = 0 }
-			font = "hoi_16mbs"
+			font = "aldrich_18_outline"
 			text = ""
 			maxWidth = 100
 			maxHeight = 20
@@ -765,6 +798,15 @@ guiTypes = {
 				maxHeight = 20
 				alwaystransparent = yes
 				format = left
+			}
+
+			iconType = {
+				name = "dam_icon"
+				quadTextureSprite = "GFX_dam_icon_small"
+				position = { x=64 y=21 }
+				frame = 1
+				scale = 0.8
+				Orientation = "UPPER_LEFT"
 			}
 		}
 
@@ -2018,7 +2060,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "rating_txt"
 			position = { x = -1 y = 11 }
-			font = "aldrich_white_14_outline"
+			font = "aldrich_22_outline"
 			text = "999"
 			maxWidth = @intel_map_mode_map_icon_width
 			maxHeight = 20

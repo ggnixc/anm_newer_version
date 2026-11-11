@@ -1,30 +1,94 @@
 ﻿capital = 689
 
-JAM = {
- 	set_cosmetic_tag = JAM_FIXED
-}
+# Vacant
+recruit_character = JAM_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+recruit_character = JAM_Alexander_Bustamante
+recruit_character = JAM_Norman_Manley
+recruit_character = JAM_Michael_Manley
+recruit_character = JAM_Donald_Sangster
+recruit_character = JAM_Hugh_Shearer
+recruit_character = JAM_Edward_Seaga
+recruit_character = JAM_William_Strachan
+recruit_character = JAM_Richard_Hart
 
-set_politics = {	
-	ruling_party = liberalism
+set_politics = {
+	ruling_party = paternalism
 	last_election = "1961.5.16"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 0
-    socialist = 5
-    progressivism = 41
-    liberalism = 39
-    liberal_conservatism = 0
-    conservatism = 9
-    paternalism = 6
-    despotism = 0
-    fascism = 0
-    national_socialism = 0
-    ultranationalism = 0
-     
+	paternalism = 37
+	paternalism_3 = 17
+	progressivism = 22
+	socialist_1 = 8
+	socialist = 12
+	communist = 4
 }
+
+set_research_slots = 3
+set_convoys = 50
+
+inherit_technology = CAN
+set_cosmetic_tag = JAM_colonial
+set_party_name = {
+	ideology = despotism
+	name = GUY_gov
+	long_name = GUY_gov
+}
+set_country_flag = TNO_eliminate_military_spending
+
+add_ideas = {
+	#national#
+	JAM_Busta_Backbone
+	JAM_Reform_Failures
+	WFI_Political_Purgatory
+	#FACTION STATUS
+	OFN_Security_Council_Member
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_secularism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_registered_voting
+	#social
+	tno_health_care_support_for_emergencies
+	tno_education_public_education
+	tno_penal_system_rehabilitation
+	tno_gender_rights_gender_equality
+	tno_security_crime_prevention
+	tno_regulations_moderate_regulations
+	#econ
+	tno_trade_laws_free_trade
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_low_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_pensions_trinket_pensions
+	tno_unemployment_no_subsidies
+	#army
+	tno_conscription_volunteer_only
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_civil_service_deferment
+
+	
+	### SOCIETAL DEVELOPMENT ###
+	tno_army_professionalism_disgruntled_veterans
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_basic
+	tno_academic_base_basic_literacy
+	tno_admin_efficiency_deficient_administrative_systems
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Free_Market }
+

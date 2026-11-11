@@ -1,25 +1,178 @@
-﻿
-capital = 1163
+capital = 1165
 
+recruit_character = MCG_Jacques_Opangault
+recruit_character = MCG_Fulbert_Youlou
+recruit_character = MCG_Alphonse_Massamba_Debat
+recruit_character = MCG_Alfred_Raoul
+recruit_character = MCG_Ange_Diawara
+recruit_character = MCG_Marien_Ngouabi
+recruit_character = MCG_Felix_Mouzabakani
+recruit_character = MCG_Bernard_kolelas
 recruit_character = MCG_Pascal_Lissouba
 
-set_oob = ""
+set_cosmetic_tag = MCG_USLA
+
+oob = "MCG_1962"
+
 add_ideas = {
-	OFN_Partners
+	MCG_jacques_opangaults_last_stand
+	MCG_splintering_congolese_left
+	MCG_the_abbots_shadow
+	MCG_from_the_earth_to_the_market
+	#ministers
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_regulated_police
+	#misc#
+	tno_pollution_some_regulations
+	tno_safety_acceptable_regulations
+	tno_child_labor_illegal
+	tno_refugees_skilled
+	tno_racial_integration_integrated_military
+	tno_women_military_assistance
+	tno_minorities_equal_rights
+	tno_lgbt_rights_lgbt_outlawed
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
 }
 
-set_politics = {	
+set_politics = {
 	ruling_party = paternalism
-	last_election = "1992.7.17"
-	election_frequency = 60
-	elections_allowed = yes
+	last_election = "1933.5.17"
+	elections_allowed = no
 }
 
-TNO_startup_nation = yes
+set_party_name = {
+	ideology = paternalism
+	name = MCG_PPC_MSA_coalition
+	long_name = MCG_PPC_MSA_coalition_long
+}
 
 set_popularities = {
-    progressivism = 10
-    liberalism = 12
-    communist = 18
-    paternalism = 60
+	communist = 4
+	paternalism_3 = 6
+	paternalism = 70
+	paternalism_2 = 20
 }
+
+set_technology = {
+	basic_train = 1
+
+	# Infantry
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+	
+	infantry_kit_1 = 1
+	infantry_weapons_2 = 1
+	night_vision_2 = 1
+	infantry_kit_2 = 1
+	infantry_weapons_improvements_mine_1 = 1
+	infantry_kit_3 = 1
+	infantry_weapons_improvements_ammo_1 = 1
+	infantry_weapons_improvements_grenade_1 = 1
+	#
+	infantry_weapons_3 = 1
+	night_vision_3 = 1
+	infantry_kit_4 = 1
+	tech_mountaineers = 1
+	#
+	tech_special_forces = 1
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	support_weapons_hmg_1 = 1
+	combat_support_equipment_1 = 1
+	
+	infantry_at = 1
+	motorized_infantry = 1
+#	motorized_infantry_1 = 1
+	
+	# Support
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_scout_helicopter_company = 1
+	tech_transport_helicopter_company = 1
+	
+	# Armor
+	APC_1945 = 1
+	IFV_1945 = 1
+	MBT_1945 = 1
+	APC_1950 = 1
+	IFV_1950 = 1
+	MBT_1950 = 1
+	AC_1945 = 1
+	AC_1950 = 1
+	
+	# Artillery
+	artillery_1945 = 1
+	antiair_1945 = 1
+	
+	# Naval
+	basic_naval_mines = 1
+	submarine_mine_laying = 1
+	early_ship_hull_very_light = 1
+	early_ship_hull_more_light = 1
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	basic_secondary_battery = 1
+	mtg_transport = 1
+	basic_fire_control_system = 1
+
+	# Electronics
+	electronic_mechanical_engineering = 1
+	radio = 1
+	helicopter_engines = 1
+	jet_engines = 1
+	
+	
+	# Industry
+	ww2_line_production = 1
+	building_construction_1 = 1
+	energy_technology_1 = 1
+	social_construction_1 = 1
+	administration_construction_1 = 1
+	military_construction_1 = 1
+	resource_extraction_methods = 1
+}
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Dirigisme }

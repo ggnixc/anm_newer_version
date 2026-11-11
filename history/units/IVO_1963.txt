@@ -1,0 +1,34 @@
+division_template = {
+	name = "Military District"
+    is_locked = yes
+	division_names_group = FRS_Military_District
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+        light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		anti_air = { x = 0 y = 1 }
+        military_police = { x = 0 y = 2 }
+	}
+}
+
+units = {
+    division = {
+		name = "Région Militaire de la Côte d'Ivoire"
+		location = 13397
+		division_template = "Military District"
+		start_experience_factor = 0.15
+        officer = {
+            name = "Paul Vanuxem"
+            portraits = {
+                army = {
+                    large = "gfx/leaders/IVO/POrtrait_Paul_Vanuxem.dds"
+                    small = "gfx/interface/ideas/ministers/IVO/Minister_IVO_Paul_Vanuxem.dds"
+                }
+            }
+        }
+	}
+}

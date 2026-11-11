@@ -4,11 +4,13 @@ state = {
 
 	history = {
 		owner = BRA
-		add_extra_state_shared_building_slots = 1
 		buildings = {
 			infrastructure = 4
+			radar_station = 4
 			air_base = 2
- 			arms_factory = 1
+			thermoelectric_plant = 2
+			hydroelectric_plant = 1
+			barracks = 1
 		}
 		add_core_of = BRA
 		victory_points = {
@@ -24,11 +26,15 @@ state = {
 			17415 10
 		}
 		victory_points = {
+			2109 10
+		}
+		victory_points = {
 			8239 9
 		}
 		victory_points = {
 			14601 5
 		}
+		set_state_flag = GDP_category_town
 	}
 
 	provinces = {
@@ -36,6 +42,6 @@ state = {
 	}
 	manpower = 4296375
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = large_town
 	local_supplies = 0.000
 }

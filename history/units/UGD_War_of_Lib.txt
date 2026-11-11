@@ -1,0 +1,101 @@
+division_template = {
+	name = "Uganda Rifles"
+	division_names_group = ZIM_infantry
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+		light_infantry = { x = 0 y = 1 }
+		light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Uganda Rifles 2"
+	division_names_group = ZIM_infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Mechanized Battalion"
+	division_names_group = ZIM_armour
+	regiments = {
+		IFV = { x = 0 y = 0 }
+		IFV = { x = 0 y = 1 }
+		IFV = { x = 1 y = 0 }
+		IFV = { x = 1 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Battalion, UR"
+		division_template = "Uganda Rifles 2" 
+		location = "12989" # Kampala
+		start_experience_factor = 0.30
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+        name = "2nd Battalion, UR"
+        division_template = "Uganda Rifles 2" 
+        location = "13935" #Mbabara
+        start_experience_factor = 0.30
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+	division = {
+        name = "3rd Battalion, UR"
+        division_template = "Uganda Rifles" 
+        location = "13947" # Jinja
+        start_experience_factor = 0.10
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+	division = {
+		name = "4th Battalion, UR"
+		division_template = "Uganda Rifles" 
+		location = "12929" # Soroti
+		start_experience_factor = 0.10
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "5th Battalion, UR"
+		division_template = "Uganda Rifles" 
+		location = "5853" # Kitgum
+		start_experience_factor = 0.10
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+
+	division = {
+		name = "1st Mechanized Battalion"
+		division_template = "Mechanized Battalion" 
+		location = "13385" # Masaka
+		start_experience_factor = 0.20
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		name = "2nd Mechanized Battalion"
+		division_template = "Mechanized Battalion" 
+		location = "13947" # Jinja
+		start_experience_factor = 0.20
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+}	

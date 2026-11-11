@@ -7,14 +7,18 @@ state = {
 		add_core_of = KOR
 		add_core_of = JAP
 		buildings = {
-			infrastructure = 5
+			infrastructure = 6
+			thermoelectric_plant = 2
 			air_base = 2
 			12060 = {
 				naval_base = 5
 			}
 			dockyard = 1
 			anti_air_building = 2
- 			industrial_complex = 1
+			schools = 2
+			offices = 2
+			prisons = 1
+			barracks = 1
 		}
 		victory_points = {
 			12060 25
@@ -26,13 +30,15 @@ state = {
 			15856 5
 		}
 		set_state_flag = state_renamings
- 	}
+		set_state_flag = GDP_regions_korea
+		set_state_flag = GDP_category_rural
+	}
 
 	provinces = {
 		1054 10085 12060 15856 19512 16839
 	}
 	manpower = 3276180
 	buildings_max_level_factor = 1.000
-	state_category = town
+	state_category = large_town
 	local_supplies = 0.000
 }

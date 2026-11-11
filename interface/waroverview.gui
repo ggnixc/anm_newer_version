@@ -7,6 +7,8 @@ guiTypes = {
 		Orientation = center
 		moveable = yes
 		clipping = no
+		fade_type = linear
+		fade_time = 300
 
 		Background = {
 			name = "waroverview_bg"
@@ -16,7 +18,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "header_desc"
 			position = { x = 285 y = 33 }
-			font = "aldrich_28_outline"
+			font = "aldrich_30_outline"
 			text = "We forgot what this was about"
 			format = center
 			maxWidth = 596
@@ -48,7 +50,7 @@ guiTypes = {
 
 		gridboxtype = {
 			name = "waroverview_wars_box"
-			size = { width = 100 height = 51}
+			size = { width = 100 height = 51 }
 			slotsize = { width = 47 height = 51 }
 			position = { x=-150 y=-32 }
 			Orientation = center_up
@@ -58,7 +60,7 @@ guiTypes = {
 			name = "filter_minors"
 			position = { x = 374 y = 110 }
 			quadTextureSprite ="GFX_sort_button_140x29"
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			buttonText = "WAR_OVERVIEW_FILTER_MINORS"
 			pdx_tooltip = "WAR_OVERVIEW_FILTER_MINORS_DESC"
 		}
@@ -67,7 +69,7 @@ guiTypes = {
 			name = "filter_capitulated"
 			position = { x = 520 y = 110 }
 			quadTextureSprite ="GFX_sort_button_140x29"
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			buttonText = "WAR_OVERVIEW_FILTER_CAPITULATED"
 			pdx_tooltip = "WAR_OVERVIEW_FILTER_CAPITULATED_DESC"
 		}
@@ -76,7 +78,7 @@ guiTypes = {
 			name = "filter_callable"
 			position = { x = 665 y = 110 }
 			quadTextureSprite ="GFX_sort_button_140x29"
-			font = "aldrich_22_outlinedark"
+			font = "aldrich_24_outline"
 			buttonText = "WAR_OVERVIEW_FILTER_CALLABLE"
 			pdx_tooltip = "WAR_OVERVIEW_FILTER_CALLABLE_DESC"
 		}
@@ -87,6 +89,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_participants_icon"
 			pdx_tooltip = "PARTICIPANTS"
 		}
+		
 		buttonType ={
 			name ="attacker_wargoal"
 			quadTextureSprite = "GFX_warview_wargoal_icon"
@@ -135,11 +138,14 @@ guiTypes = {
 			quadTextureSprite ="GFX_participants_icon"
 			pdx_tooltip = "PARTICIPANTS"
 		}
-		iconType ={
+		
+		buttonType ={
 			name ="defender_wargoal"
 			quadTextureSprite = "GFX_warview_wargoal_icon"
-			position = { x= 835 y = 165 }
+			position = { x= 815 y = 159 }
+			pdx_tooltip = "WARGOAL"
 		}
+
 		buttonType ={
 			name ="defender_capitulation"
 			quadTextureSprite = "GFX_surrender_icon"
@@ -178,7 +184,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "attacker_fielded_man"
 			position = { x = 20 y = 96 }
-			font = "aldrich_20_outlinedark"
+			font = "Bomb_16"
 			maxWidth = 250
 			maxHeight = 30
 			format = center
@@ -186,7 +192,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "attacker_losses"
 			position = { x = 20 y = 116 }
-			font = "aldrich_20_outlinedark"
+			font = "Bomb_16"
 			maxWidth = 250
 			maxHeight = 30
 			format = center
@@ -194,7 +200,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "defender_fielded_man"
 			position = { x = 900 y = 96 }
-			font = "aldrich_20_outlinedark"
+			font = "Bomb_16"
 			maxWidth = 250
 			maxHeight = 30
 			format = center
@@ -202,7 +208,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "defender_losses"
 			position = { x = 900 y = 116 }
-			font = "aldrich_20_outlinedark"
+			font = "Bomb_16"
 			maxWidth = 250
 			maxHeight = 30
 			format = center
@@ -282,14 +288,14 @@ guiTypes = {
 		iconType = {
 			name = "expanded_icon"
 			position = { x=6 y=10 }
-			spriteType = "GFX_collapse_faction_btn"
+			spriteType = "GFX_strategicair_expand"
 			alwaystransparent = yes
 		}
 
 		instantTextboxType = {
 			name = "faction_name"
 			position = { x = 56 y = 12 }
-			font = "aldrich_18_outlinedark"
+			font = "aldrich_20_outline"
 			maxWidth = 163
 			maxHeight = 30
 			fixedsize = yes
@@ -300,14 +306,14 @@ guiTypes = {
 			position = { x= 237 y = 7 }
 			quadTextureSprite = "GFX_call_faction_button_warscreen"
 			frame = 2
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			buttonText = "CALL_ALL"
 		}
 
 		instantTextboxType = {
 			name = "divisions"
 			position = { x = 313 y = 13 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			maxWidth = 80
 			maxHeight = 30
 			format = center
@@ -316,7 +322,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ic"
 			position = { x = 385 y = 13 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			maxWidth = 80
 			maxHeight = 30
 			format = center
@@ -325,7 +331,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "casualties"
 			position = { x = 460 y = 13 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			text = "-"
 			maxWidth = 60
 			maxHeight = 30
@@ -351,9 +357,10 @@ guiTypes = {
 
 		iconType = {
 			name = "country_flag_frame"
-			position = {x= 6 y = 3}
+			position = {x= 5 y = 3}
 			spriteType = "GFX_flag_frame_warscreen"
 			alwaystransparent = yes
+			scale = 1.02
 		}
 
 		iconType = {
@@ -373,7 +380,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "country_name"
 			position = { x = 56 y = 4 }
-			font = "aldrich_18_outlinedark"
+			font = "aldrich_20_outline"
 			maxWidth = 165
 			maxHeight = 30
 			fixedsize = yes
@@ -397,7 +404,7 @@ guiTypes = {
 			position = { x= 220 y = 6 }
 			quadTextureSprite = "GFX_call_button_warscreen"
 			frame = 1
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			buttonText = "CALL"
 		}
 
@@ -410,7 +417,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "warscore"
 			position = { x = 264 y = 12 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			text = "-"
 			maxWidth = 50
 			maxHeight = 30
@@ -420,7 +427,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "divisions"
 			position = { x = 312 y = 12 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			maxWidth = 80
 			maxHeight = 30
 			format = center
@@ -429,7 +436,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "ic"
 			position = { x = 388 y = 12 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			maxWidth = 80
 			maxHeight = 30
 			format = center
@@ -438,7 +445,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "casualties"
 			position = { x = 461 y = 12 }
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			text = "-"
 			maxWidth = 60
 			maxHeight = 30
@@ -486,7 +493,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "country_name"
 			position = { x = 56 y = 10 }
-			font = "aldrich_18_outlinedark"
+			font = "aldrich_20_outline"
 			maxWidth = 150
 			maxHeight = 30
 			fixedsize = yes
@@ -509,7 +516,7 @@ guiTypes = {
 			name = "call"
 			position = { x= 400 y = 3 }
 			quadTextureSprite = "GFX_tno_button_123x34"
-			font = "aldrich_16_outlinedark"
+			font = "aldrich_18_outline"
 			buttonText = "CALL"
 		}
 	}

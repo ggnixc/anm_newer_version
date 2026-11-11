@@ -15,16 +15,18 @@ sub_units = {
 		group = support
 
 		categories = {
+			category_front_line
 			category_support_battalions
 			category_army
+			category_light_infantry
 		}
 
 		combat_width = 0
 
 		#Size Definitions
 		max_strength = 1
-		max_organisation = 0
-		default_morale = 0.3
+		max_organisation = 60
+		default_morale = 0.6
 		manpower = 500
 		training_time = 180
 
@@ -34,6 +36,7 @@ sub_units = {
 
 		# Important Ability
 		suppression_factor = 0.20
+		experience_loss_factor = -0.10
 
 		essential = {
 			infantry_equipment

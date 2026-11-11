@@ -1,32 +1,117 @@
-﻿capital = 298
+capital = 298
 
+recruit_character = LIB_William_Tubman
+recruit_character = LIB_William_Tolbert
 recruit_character = LIB_Joseph_Rudolph_Grimes
+recruit_character = LIB_charles_dunbar_sherman
+recruit_character = LIB_william_tubman_jr
+recruit_character = LIB_george_arthur_padmore
+recruit_character = LIB_Antoinette_Tubman
+recruit_character = LIB_Richard_Henries
+recruit_character = LIB_Togba_Nah_Tipoteh
 
-set_oob = "LIB_1962"
+# Vacant
+recruit_character = LIB_Generic_Vacant
+
+oob = "LIB_1962"
+
+give_military_access = USA
 
 add_ideas = {
-	OFN_Security_Council_Member
+	OFN_Partners
+	LIB_tubmans_true_whig_democracy
+    LIB_two_liberias
+    LIB_fading_pan_africanism
+    LIB_concessions_corruption_and_corporations
+
+	# these were crashing the game for some reason - lam
+	# LIB_William_Tolbert_hog
+	# LIB_Joseph_Rudolph_Grimes_for
+	# LIB_charles_dunbar_sherman_eco
+	# LIB_george_arthur_padmore_sec
+	
+	#political#
+	tno_political_parties_multiparty_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_regulated_police
+	#misc#
+	tno_pollution_some_regulations
+	tno_safety_acceptable_regulations
+	tno_child_labor_illegal
+	tno_refugees_skilled
+	tno_racial_integration_integrated_military
+	tno_women_military_assistance
+	tno_minorities_equal_rights
+	tno_lgbt_rights_lgbt_outlawed
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
 }
 
-set_politics = {	
+set_research_slots = 2
+
+set_technology = {
+	basic_train = 1
+
+	infantry_weapons_1 = 1
+	night_vision_1 = 1
+	
+	infantry_kit_1 = 1
+	motorized_infantry = 1
+	support_weapons = 1
+	tech_support = 1
+	artillery4 = 1
+	radio = 1
+	building_construction_1 = 1
+	administration_construction_1 = 1
+}
+
+set_politics = {
 	ruling_party = despotism
-	last_election = "1992.8.1"
-	election_frequency = 96
+	last_election = "1959.5.7"
+	election_frequency = 48
 	elections_allowed = yes
 }
 
-TNO_startup_nation = yes
-
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 0
-    progressivism = 21
-    liberalism = 0
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 18
-	paternalism_1 = 13
-    despotism = 48
-    fascism = 0
+	socialist = 8
+	progressivism = 5
+	liberal_conservatism = 23
+	despotism = 64
 }
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Corporate_Oligopoly }
+

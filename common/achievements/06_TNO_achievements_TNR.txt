@@ -1,0 +1,134 @@
+# possible - filters out achivements on game start so we dont have to check everything all the
+#time
+## happened - checks if achivement happened
+
+##### FALSE DAWN #####
+unique_id = TNR_achievements
+
+RUS_Braving_Hellish_Tides = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AMR
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = AMR_revolution
+			tooltip = RUS_Braving_Hellish_Tides_trigger
+		}
+	}
+}
+
+RUS_Your_Loss = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AMR
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = AMR_reaction
+			tooltip = RUS_Your_Loss_trigger
+		}
+	}
+}
+
+RUS_All_Russian_Saviour = {
+	possible = {
+		has_start_date < 1962.01.02
+		tag = AMR
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			AND = {
+				has_idea = AMR_Altar_Of_Fascism
+				check_variable = { AMR_JAP_support > 70 }
+				check_variable = { var = AMR_fascist_acceptance value = 90 compare = greater_than_or_equals }
+				check_variable = { var = AMR_local_disaffection value = 50 compare = less_than_or_equals }
+				has_country_flag = AMR_BolotovChain
+			}
+			tooltip = RUS_All_Russian_Saviour_trigger
+		}
+	}
+}
+
+RUS_Hearts_Tight_And_Beating = {
+	possible = {
+		has_start_date < 1962.01.02
+		is_russian_nation = yes
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			AND = {
+				check_variable = { var = HOTS_adherence value = 85 compare = greater_than_or_equals }
+				check_variable = { var = HOTS_strength value = 85 compare = greater_than_or_equals }
+				check_variable = { var = HOTS_control value = 85 compare = greater_than_or_equals }
+				check_variable = { var = HOTS_integration value = 85 compare = greater_than_or_equals }
+			}
+			tooltip = RUS_Hearts_Tight_And_Beating_trigger
+		}
+	}
+}
+
+RUS_Good_Old_Days = {
+	possible = {
+		has_start_date < 1962.01.02
+		is_russian_unifier = yes
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			has_country_flag = KZR_WaitingForAnnexation
+			tooltip = RUS_Good_Old_Days_trigger
+		}
+	}
+}
+
+RUS_The_Steppe_Yearns = {
+	possible = {
+		has_start_date < 1962.01.02
+		is_russian_unifier = yes
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			KAZ = { has_idea = KAZ_Death_And_Rebirth }
+			tooltip = RUS_The_Steppe_Yearns_trigger
+		}
+	}
+}
+
+RUS_Tis_The_Life_Of_A_Warlord = {
+	possible = {
+		has_start_date < 1962.01.02
+		is_russian_unifier = yes
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			AND = {
+				has_country_flag = RUS_regional_stage
+				check_variable = { var = LifeOfAWarlord_Hope value = 200 compare = greater_than_or_equals }
+				check_variable = { var = LifeOfAWarlord_MilitaryRole value = 75 compare = less_than_or_equals }
+				check_variable = { var = LifeOfAWarlord_BattleReadiness value = 200 compare = greater_than_or_equals }
+			}
+			tooltip = RUS_Tis_The_Life_Of_A_Warlord_trigger
+		}
+	}
+}
+
+RUS_A_New_Player = {
+	possible = {
+		has_start_date < 1962.01.02
+		is_russian_unifier = yes
+	}
+
+	happened = {
+		custom_trigger_tooltip = {
+			check_variable = { var = RUS.MMR_Score value = 250 compare = greater_than_or_equals }
+			tooltip = RUS_Tis_The_Life_Of_A_Warlord_trigger
+		}
+	}
+}

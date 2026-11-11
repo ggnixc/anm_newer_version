@@ -1,0 +1,228 @@
+﻿capital = 694
+
+recruit_character = FWI_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
+
+recruit_character = FWI_Lyman_Lemnitzer
+#recruit_character = FWI_Antilles_Governance_Council
+
+#Confederation
+recruit_character = FWI_Paul_Valentino
+recruit_character = FWI_Medard_Albrand
+recruit_character = FWI_Lucette_Michau_Chevry
+recruit_character = FWI_Gerty_Archimede
+recruit_character = FWI_Raymond_Guilliod
+
+#Deprecated
+recruit_character = FWI_Emmanuel_Very_Hermence
+recruit_character = FWI_Gaston_Feuillard
+recruit_character = FWI_Victor_Sable
+recruit_character = FWI_Pierre_Petit
+recruit_character = FWI_Furcie_Tirolien
+recruit_character = FWI_Aime_Cesaire
+
+USA = { set_autonomy = { target = FWI autonomy_state = autonomy_military_government } }
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1961.5.16"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	despotism = 17
+	conservatism = 20
+	liberal_conservatism = 11
+	liberalism = 5
+	progressivism = 24
+	socialist = 9
+	socialist_1 = 6
+	socialist_2 = 8
+}
+
+set_cosmetic_tag = FWI_commission
+
+#load_oob = FWI_1962
+#load_oob = FWI_1962_Naval
+
+set_research_slots = 3
+set_convoys = 50
+inherit_technology = USA
+
+add_ideas = {
+	#national#
+	FWI_Spirit_Third_Republic
+	FWI_An_Ugly_American
+	FWI_Stagnating_Plantation_Economy
+	FWI_Corporate_Cartels_Labor_Unions
+	#FACTION STATUS
+	OFN_Offices_Military_Government
+	#political#
+	tno_political_parties_nonpartisan_system
+	tno_religious_rights_pluralism
+	tno_trade_unions_all_allowed
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_allowed
+	tno_press_rights_free_press
+	tno_vote_franchise_universal
+	#military#
+	tno_conscription_service_by_requirement
+	tno_military_supervision_rules_of_engagement
+	tno_training_basic_training
+	tno_draft_exemptions_none
+	#economic#
+	tno_trade_laws_export_focus
+	tno_income_taxation_high_income_weighted
+	tno_minimum_wage_acceptable_minimum
+	tno_max_workhours_10_hour_work_day
+	tno_pensions_acceptable_pensions
+	tno_unemployment_moderate_subsidies
+	tno_regulations_moderate_regulations
+	#social#
+	tno_health_care_low_income_protections
+	tno_education_public_education
+	tno_penal_system_incarceration
+	tno_gender_rights_women_in_the_workplace
+	tno_security_crime_prevention
+
+	#social development
+	
+	tno_army_professionalism_political_interference
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_admin_efficiency_functional_administrative_systems
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+}
+
+create_equipment_variant = {
+	name = "Gallieni"
+	type = ship_hull_light_2
+	name_group = GER_DD_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_battery_slot = dp_light_battery
+		rear_1_custom_slot = ship_anti_air_2
+	}
+}
+
+create_equipment_variant = {
+	name = "Béarn"
+	type = ship_hull_carrier_1
+	#name_group = FRA_CV_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_deck_slot_1 = ship_deck_space
+		fixed_ship_deck_slot_2 = ship_deck_space
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_engine_slot = carrier_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		front_1_custom_slot = ship_armor_carrier_deck
+	}
+}
+create_equipment_variant = {
+	name = "Emile Bertin"
+	type = ship_hull_cruiser_1
+	name_group = GER_CL_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_secondaries_slot = dp_ship_secondaries
+		rear_1_custom_slot = ship_light_medium_battery_1
+		mid_1_custom_slot = ship_torpedo_1
+	}
+}
+create_equipment_variant = {
+	name = "Jeanne d'Arc"
+	type = ship_hull_cruiser_1
+	name_group = GER_CL_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = cruiser_ship_engine_2
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_battery_slot = ship_light_medium_battery_1
+		fixed_ship_secondaries_slot = dp_ship_secondaries
+		rear_1_custom_slot = ship_airplane_launcher_1
+		mid_1_custom_slot = ship_torpedo_1
+	}
+}
+create_equipment_variant = {
+	name = "Barfleur"
+	type = ship_hull_light_1
+	name_group = GER_DD_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_battery_slot = ship_light_battery_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_light_battery_1
+	}
+}
+create_equipment_variant = {
+	name = "Bougainville"
+	type = ship_hull_light_1
+	name_group = GER_DD_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_battery_slot = ship_light_battery_1
+		mid_1_custom_slot = ship_light_battery_1
+		rear_1_custom_slot = ship_light_battery_1
+	}
+}
+create_equipment_variant = {
+	name = "Bougainville-Class"
+	type = ship_hull_more_light_1
+	#name_group = FRA_FRIGATE_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = light_ship_engine_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_battery_slot = ship_light_battery_1
+		mid_1_custom_slot = ship_depth_charge_1
+		rear_1_custom_slot = ship_torpedo_1
+	}
+}
+create_equipment_variant = {
+	name = "M6-Type 1 500 tonnes-Class"
+	type = ship_hull_submarine_1
+	#name_group = FRA_SS_HISTORICAL
+	parent_version = 0
+	show_position = no
+	modules = {
+		fixed_ship_engine_slot = sub_ship_engine_1
+		fixed_ship_torpedo_slot = ship_torpedo_sub_1
+		rear_1_custom_slot = ship_torpedo_sub_1
+	}
+}
+
+FWI = {
+	add_opinion_modifier = { target = MEX modifier = MEX_meddlesome_rhetoric }
+	reverse_add_opinion_modifier = { target = MEX modifier = MEX_colony_in_americas }
+}
+
+set_country_flag = TNO_eliminate_military_spending
+
+#econtype
+set_variable = { TNO_economy_type = token:Econ_Type_Capitalism }
+set_variable = { TNO_economy_subtype = token:Econ_Subtype_Colonial_Economy_Free_Market }
+
+

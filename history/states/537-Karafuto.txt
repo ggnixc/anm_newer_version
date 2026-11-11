@@ -10,8 +10,11 @@ state = {
 		add_core_of = JAP
 		buildings = {
 			infrastructure = 4
-			radar_station = 1
-			air_base = 2
+			radar_station = 3
+			barracks = 1
+			offices = 1
+			thermoelectric_plant = 1
+			air_base = 3
 			12446 = {
 				naval_base = 1
 			}
@@ -32,13 +35,15 @@ state = {
 			1322 1
 		}
 		set_state_flag = universal_renamings
-  	}
+		set_variable = { china_state_ref = 53 }
+		set_variable = { china_region_ref = 6 }
+	}
 
 	provinces = {
 		855 1322 1742 1755 1820 12446 19475 19580
 	}
 	manpower = 506051
 	buildings_max_level_factor = 1.000
-	state_category = rural
+	state_category = small_island
 	local_supplies = 0.000
 }

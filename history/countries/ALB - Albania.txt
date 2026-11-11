@@ -1,78 +1,143 @@
-﻿capital = 1295
+capital = 1295
 
-recruit_character = ALB_Ekrem_Spahiu
+#GDP Regional distribution
+set_country_flag = GDP_regions
 
-add_ideas = {
-	##POLITICAL LAWS##
-	tno_political_parties_one_party_state
-	tno_religious_rights_state_atheism
-	tno_trade_unions_illegal
-	tno_immigration_closed_borders
-	tno_slavery_outlawed
-	tno_public_meetings_outlawed
-	tno_press_rights_state_press_only
-	tno_vote_franchise_no_voting
-	tno_refugees_banned
-	##MILITARY LAWS###
-	tno_conscription_four_year_draft
-	tno_women_total_equality #partisan army
-	tno_military_supervision_no_supervision
-	tno_military_spending_total_war_economy
-	tno_training_minimal_training
-	tno_racial_integration_not_applicable
-	tno_draft_exemptions_none
-	##SOCIAL LAWS##
-	tno_safety_minimal_regulations
-	tno_health_care_free_universal_care #probably awful tho lol
-	tno_pollution_no_controls
-	tno_education_public_education
-	tno_penal_system_penal_slavery
-	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_promoted_equality 
-	tno_minorities_equal_rights
-	tno_security_wire_tapping
-	##ECONOMIC LAWS##
-	tno_trade_laws_closed_economy
-	tno_economic_focus_total_mobilization
-	tno_tax_rate_high_taxes
-	tno_income_taxation_not_applicable
-	tno_minimum_wage_trinket_minimum_wage
-	tno_max_workhours_14_hour_work_day
-	tno_child_labor_illegal
-	tno_pensions_trinket_pensions
-	tno_unemployment_trinket_subsidies
-	##SOCIETAL DEVELOPMENT##
-	tno_academic_base_mass_illiteracy
-	tno_poverty_rate_80
-	tno_research_facilities_makeshift
-	tno_agriculture_basic_mechanized
-	tno_industrial_equipment_power_tools
-	tno_industrial_expertise_nascent
-	tno_army_professionalism_reluctant_conscripts
-	##MINISTERS##
-	
-}
+# Vacant
+recruit_character = ALB_Generic_Vacant
+recruit_character = ALB_Koci_Xoxe
+recruit_character = ALB_Tefik_Mborja
+recruit_character = ALB_Amedeo_De_Cia
+recruit_character = ALB_Dhimiter_Beratti
+recruit_character = ALB_Prenk_Pervizi
+recruit_character = ALB_Xhemil_Dino
+recruit_character = ALB_Zenone_Benini
+recruit_character = ALB_Zef_Pali
+recruit_character = ALB_Musine_Kokalari
+recruit_character = ALB_Esat_Bajraktari
+recruit_character = ALB_Sabri_Godo
+recruit_character = ALB_Abas_Ermenji
+recruit_character = ALB_Hasan_Dosti
+recruit_character = ALB_Xhafer_Deva
+recruit_character = ALB_Gjergj_Kokoshi
+recruit_character = ALB_Skender_Luarasi
+recruit_character = ALB_Mihal_Zallar
+recruit_character = ALB_Ernest_Koliqi
+recruit_character = ALB_Niko_Xoxi
+recruit_character = ALB_Zeqi_Agolli
+recruit_character = ALB_Andrea_Zisi
+recruit_character = ALB_Sejfullah_Maleshova
+recruit_character = ALB_Myslim_Peza
+recruit_character = ALB_Mihal_Zallari
+recruit_character = ALB_Mehmet_Shehu
+recruit_character = ALB_Hysni_Kapo
+recruit_character = ALB_Maliq_Bushati
+
 
 set_research_slots = 2
+set_convoys = 50
+oob = "ALB_1962"
+add_manpower = 10000
 
-set_politics = {	
-	ruling_party = paternalism
-	last_election = "1994.8.1"
-	election_frequency = 40
+add_ideas = {
+	### Faction Status ###
+	TRI_Member_Client
+
+	### NatSpirits ###
+	ALB_the_albanian_diarchy
+	ALB_lnc_kck
+	ALB_the_economic_divide
+	ITA_idea_colonial_government
+
+	### Ministers ###
+	ALB_Amedeo_de_Cia_hog
+	ALB_Xhemil_Dino_for
+	ALB_Dhimiter_Beratti_eco
+	ALB_Zenone_Benini_sec
+	#ALB_Francesco_Jacamoni_high_command
+	ALB_Prenk_Pervizi_army_chief
+	
+	### Political Laws ###
+	tno_political_parties_controlled_opposition
+	tno_religious_rights_pluralism
+	tno_trade_unions_state_controlled
+	tno_immigration_quota_immigration
+	tno_slavery_outlawed
+	tno_public_meetings_regulated
+	tno_press_rights_state_press_only
+	tno_vote_franchise_no_voting
+
+	### Military Laws ###
+	tno_conscription_broadened_conscription
+	tno_military_supervision_no_supervision
+	tno_training_basic_training
+	tno_draft_exemptions_civil_service_deferment
+
+	### Economy Laws ###
+	tno_trade_laws_export_focus
+	tno_income_taxation_low_income_weighted
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_pensions_low_pensions
+	tno_unemployment_no_subsidies
+
+	### Social Laws ###
+	tno_health_care_low_income_protections
+	tno_education_stratified_education
+	tno_penal_system_overt_oppression
+	tno_gender_rights_traditional_roles
+	tno_security_political_control
+	tno_regulations_token_regulations
+
+	### Misc Laws ###
+	tno_refugees_skilled
+	tno_women_banned
+	tno_racial_integration_segregated_regiments
+	tno_child_labor_illegal
+	tno_safety_limited_regulations
+	tno_pollution_no_controls
+	tno_lgbt_rights_lgbt_outlawed
+	tno_minorities_segregation
+
+	### Societal Development ###
+	tno_academic_base_basic_literacy
+	tno_research_facilities_basic
+	tno_agriculture_centralized
+	tno_healthcare_nascent
+	tno_admin_efficiency_deficient_administrative_systems
+	tno_industrial_equipment_factory_complexes
+	tno_industrial_expertise_nascent
+	tno_army_professionalism_cronyism
+}
+
+
+every_owned_state = {
+	ALB = { give_resource_rights = { receiver = ITA state = PREV resources = { aluminium rubber tungsten steel chromium } } }
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1962.1.1"
+	election_frequency = 48
 	elections_allowed = no
 }
 
-TNO_startup_nation = yes
+set_cosmetic_tag = ALB_ITA
 
 set_popularities = {
-    communist = 0
-    ultranationalism = 0
-    socialist = 23
-    progressivism = 0
-    liberalism = 20
-    liberal_conservatism = 0
-    conservatism = 0
-    paternalism = 57
-    despotism = 0
-    fascism = 0     
+	communist = 0
+	progressivism = 0
+	liberalism = 0
+	conservatism = 20
+	paternalism = 30
+	despotism = 15
+	ultranationalism = 0
+	fascism = 35
+	national_socialism = 0
+}
+
+### Embargoes ###
+every_country = {
+	limit = { is_in_faction_with = GER }
+	set_embargo_PREV_mutual = yes
 }

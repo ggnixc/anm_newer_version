@@ -1,0 +1,607 @@
+# APC designer 3D models — same pattern as vanillabalance mech graphic_db.
+# TNO APC_chassis has designer icons but no models= pools, so the 3D view is empty
+# while map units (sprite = mechanized / APC entities) already work.
+#
+# models = { entity_name } must match entities from units_vehicles.asset.
+
+default = {
+	APC_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				SOV_mechanized_vehicle_entity
+			}
+		}
+	}
+	APC_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+	APC_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+	APC_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+	APC_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+	APC_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+	APC_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+
+	# Designer role variants (same hull)
+	APC_aa_chassis = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+	APC_artillery_chassis = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+	APC_destroyer_chassis = {
+		pool = {
+			weight = 10
+			models = { SOV_mechanized_vehicle_entity }
+		}
+	}
+}
+
+USA = {
+	APC_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				USA_APC_0_entity
+				USA_APC_2_entity
+				USA_APC_3_entity
+			}
+		}
+	}
+	APC_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { USA_APC_0_entity }
+		}
+	}
+	APC_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { USA_APC_1_entity }
+		}
+	}
+	APC_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { USA_APC_2_entity }
+		}
+	}
+	APC_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { USA_APC_3_entity }
+		}
+	}
+	APC_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { USA_APC_4_entity }
+		}
+	}
+	APC_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { USA_APC_5_entity }
+		}
+	}
+	APC_aa_chassis = {
+		pool = {
+			weight = 10
+			models = { USA_APC_2_entity }
+		}
+	}
+	APC_artillery_chassis = {
+		pool = {
+			weight = 10
+			models = { USA_APC_2_entity }
+		}
+	}
+	APC_destroyer_chassis = {
+		pool = {
+			weight = 10
+			models = { USA_APC_2_entity }
+		}
+	}
+}
+
+GER = {
+	APC_chassis = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_aa_chassis = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_artillery_chassis = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+	APC_destroyer_chassis = {
+		pool = {
+			weight = 10
+			models = { GER_APC_0_entity }
+		}
+	}
+}
+
+JAP = {
+	APC_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				JAP_APC_0_entity
+				JAP_APC_1_entity
+			}
+		}
+	}
+	APC_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_0_entity }
+		}
+	}
+	APC_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_1_entity }
+		}
+	}
+	APC_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_entity }
+		}
+	}
+	APC_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_entity }
+		}
+	}
+	APC_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_entity }
+		}
+	}
+	APC_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_entity }
+		}
+	}
+	APC_aa_chassis = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_entity }
+		}
+	}
+	APC_artillery_chassis = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_entity }
+		}
+	}
+	APC_destroyer_chassis = {
+		pool = {
+			weight = 10
+			models = { JAP_APC_entity }
+		}
+	}
+}
+
+ENG = {
+	APC_chassis = {
+		pool = {
+			weight = 10
+			models = {
+				ENG_APC_0_entity
+				ENG_APC_1_entity
+			}
+		}
+	}
+	APC_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { ENG_APC_0_entity }
+		}
+	}
+	APC_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { ENG_APC_1_entity }
+		}
+	}
+	APC_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { ENG_APC_1_entity }
+		}
+	}
+	APC_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { ENG_APC_1_entity }
+		}
+	}
+	APC_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { ENG_APC_1_entity }
+		}
+	}
+	APC_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { ENG_APC_1_entity }
+		}
+	}
+}
+
+# TNO has no SOV — Russian warlords share vanilla SOV APC entities
+# (same set that gets T-34/T-54 clones in TNO_units_tanks.asset)
+WRS = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+KOM = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+VYT = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+PRM = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+SAM = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+ONG = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+SVR = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+TYM = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+OMS = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+ZLT = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+TOM = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+NOV = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+KEM = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+SBA = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+PRC = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+IRK = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+BRY = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+CHT = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+AMR = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+MAG = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+OMO = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+GOR = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+MGN = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+KMC = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+ORE = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+URL = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+VOR = {
+	APC_chassis = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity SOV_APC_entity } } }
+	APC_chassis_0 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_1 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_2 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_3 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_4 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+	APC_chassis_5 = { pool = { weight = 10 models = { SOV_mechanized_vehicle_entity } } }
+}
+
+ITA = {
+	APC_chassis = {
+		pool = {
+			weight = 10
+			models = { ITA_APC_entity ITA_APC_1_entity }
+		}
+	}
+	APC_chassis_0 = {
+		pool = {
+			weight = 10
+			models = { ITA_APC_entity }
+		}
+	}
+	APC_chassis_1 = {
+		pool = {
+			weight = 10
+			models = { ITA_APC_1_entity }
+		}
+	}
+	APC_chassis_2 = {
+		pool = {
+			weight = 10
+			models = { ITA_APC_1_entity }
+		}
+	}
+	APC_chassis_3 = {
+		pool = {
+			weight = 10
+			models = { ITA_APC_1_entity }
+		}
+	}
+	APC_chassis_4 = {
+		pool = {
+			weight = 10
+			models = { ITA_APC_1_entity }
+		}
+	}
+	APC_chassis_5 = {
+		pool = {
+			weight = 10
+			models = { ITA_APC_1_entity }
+		}
+	}
+}

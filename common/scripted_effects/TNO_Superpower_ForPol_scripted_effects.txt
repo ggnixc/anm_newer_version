@@ -1,0 +1,62 @@
+# ██████╗ ███████╗██████╗ ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗#
+#██╔════╝ ██╔════╝██╔══██╗████╗ ████║██╔══██╗████╗  ██║╚██╗ ██╔╝#
+#██║  ███╗█████╗  ██████╔╝██╔████╔██║███████║██╔██╗ ██║ ╚████╔╝ #
+#██║   ██║██╔══╝  ██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║  ╚██╔╝  #
+#╚██████╔╝███████╗██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   #
+# ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   #
+# Scripted Effects
+
+#################################################
+##=|     ForPol Mechanic Scripted Effects    |=##
+##=====================| |=====================##
+#################################################
+
+#Index; Search for these names using ctrl+f and you'll find the section they entitle.
+#	Base Effects
+#		Super_ForPol_Activate
+#		Super_ForPol_Disable
+
+#################################################
+#                 Base Effects                  #
+#################################################
+
+# Activate situations mechanic
+Super_ForPol_Activate = {
+	log = "[GetDateText]: [Root.GetName]: Super_ForPol_Activate; Executing."
+
+	if = {
+		limit = { has_country_flag = Super_ForPol_Mech_Active }
+		log = "(ERROR): [GetDateText]: [THIS.GetName]: Super_ForPol_Activate; Mechanic already enabled. Breaking."
+	}
+	else = {
+		log = "[GetDateText]: [THIS.GetName]: Super_ForPol_Activate; Activating."
+		set_country_flag = Super_ForPol_Mech_Active
+		if = {
+			limit = { tag = GER }
+			set_temp_variable = { TabName = token:BoP_Tab_AuswartigesAmt }
+		}
+		else_if = {
+			limit = { tag = USA }
+			set_temp_variable = { TabName = token:BoP_Tab_StateDepartment }
+		}
+		TNO_BoP_AddTab = yes
+
+		# Setup arrays & variables
+		clear_array = Super_ForPol_DecisionSelect
+		add_to_array = { Super_ForPol_DecisionSelect = 0 }
+		resize_array = { Super_ForPol_DecisionSelect = 4 }
+		set_variable = { Super_ForPol_DecisionSelect^0 = 2 }
+	}
+
+	log = "[GetDateText]: [Root.GetName]: Super_ForPol_Activate; Completed execution."
+}
+
+# Disable the mechanic once it is done
+Super_ForPol_Disable = {
+	log = "[GetDateText]: [Root.GetName]: Super_ForPol_Disable; Executing."
+
+	clr_country_flag = Super_ForPol_Mech_Active
+	clear_array = Super_ForPol_DecisionSelect
+
+	log = "[GetDateText]: [Root.GetName]: Super_ForPol_Disable; Completed execution."
+}

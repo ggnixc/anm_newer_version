@@ -3,37 +3,48 @@ state = {
 	name = "STATE_1433"
 
 	resources = {
- 	}
+		uranium = 2.000 #in Northern
+	}
 
 	history = {
 		owner = CAN
 		add_core_of = CAN
 		buildings = {
+			thermoelectric_plant = 3
+			hydroelectric_plant = 1
 			air_base = 1
+			prisons = 1
 			infrastructure = 4
 			radar_station = 2
 		}
-		victory_points = {
+		victory_points = { # Saskatoon
 			4739 10
 		}
-		victory_points = {
+		victory_points = { # Regina
 			12603 10
 		}
-		victory_points = {
+		victory_points = { # Moose Jaw
 			10611 3
 		}
-		victory_points = {
+		victory_points = { # Yorkton
 			12593 1
 		}
-		victory_points = {
+		victory_points = { # Swift Current
 			3769 1
 		}
-		victory_points = {
+		victory_points = { # Battleford
+			3498 1
+		}
+		victory_points = { # Prince Albert
 			736 3
 		}
-		victory_points = {
+		victory_points = { # La Ronge
 			1671 1
 		}
+		victory_points = { # Uranium City
+			4695 1
+		}
+		set_state_flag = GDP_category_large_town #Eye GDP distribution elsewise
 	}
 
 	provinces = {

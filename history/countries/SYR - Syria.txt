@@ -1,113 +1,102 @@
-﻿capital = 554
+capital = 554
 
-set_oob = "SYR_1962"
+# Vacant
+recruit_character = SYR_Generic_Vacant
+fill_empty_minister_nochecks = yes # Please remove if you're adding ministers.
 
-set_cosmetic_tag = SYR_TUR
+set_country_flag = ME_Nation
 
-recruit_character = SYR_Muhammad_al_Imadi
-recruit_character = SYR_Muhammad_al_Atrash
-recruit_character = SYR_Abdurrahman_Mustafa
-recruit_character = SYR_Abdullah_Dardari
-recruit_character = SYR_Khalid_Khoja
-recruit_character = SYR_Abdul_Karim_Al_Nahlawi
-recruit_character = SYR_Haitham_Al_Maleh
-recruit_character = SYR_Ali_Sadreddine_Al_Bayanouni
-recruit_character = SYR_Nasim_Al_Safarjalani
+oob = "SYR_1962"
+
+add_ideas = {
+### POLITICAL LAWS ###
+	tno_political_parties_one_party_state
+	tno_religious_rights_state_religion
+	tno_trade_unions_illegal
+	tno_immigration_open_immigration
+	tno_slavery_penal_labor
+	tno_public_meetings_regulated
+	tno_press_rights_censored_press
+	tno_vote_franchise_no_voting
+
+	### MILITARY LAWS ###
+	tno_conscription_broadened_conscription
+	tno_military_supervision_no_supervision
+	tno_training_basic_training
+	tno_draft_exemptions_none
+
+	### SOCIAL LAWS ###
+	tno_health_care_support_for_emergencies
+	tno_education_stratified_education
+	tno_penal_system_harsh_penal_code
+	tno_gender_rights_traditional_roles
+	tno_security_maintenance_of_order
+	tno_regulations_token_regulations
+
+	### ECONOMIC LAWS ###
+	tno_trade_laws_limited_exports
+	tno_income_taxation_no_income_taxation
+	tno_minimum_wage_trinket_minimum_wage
+	tno_max_workhours_12_hour_work_day
+	tno_pensions_trinket_pensions
+	tno_unemployment_trinket_subsidies
+
+	### MISC LAWS ###
+	tno_pollution_few_regulations
+	tno_safety_minimal_regulations
+	tno_child_labor_illegal
+	tno_refugees_vetted_entry
+	tno_racial_integration_segregated_regiments
+	tno_women_banned
+	tno_minorities_segregation
+	tno_lgbt_rights_lgbt_outlawed
+
+	### SOCIETAL DEVELOPMENT ###
+	tno_army_professionalism_disgruntled_veterans
+	tno_industrial_expertise_nascent
+	tno_industrial_equipment_power_tools
+	tno_healthcare_nascent
+	tno_agriculture_basic_mechanized
+	tno_research_facilities_outdated
+	tno_academic_base_basic_literacy
+	tno_admin_efficiency_deficient_administrative_systems
+}
 
 set_stability = 0.65
 set_war_support = 0.25
 set_research_slots = 3
 
-set_politics = {	
-	ruling_party = paternalism
+inherit_technology = TUR
+
+set_politics = {
+	ruling_party = despotism
 	last_election = "1958.1.8"
 	election_frequency = 48
 	elections_allowed = no
-
 }
-
-TNO_startup_nation = yes
 
 set_popularities = {
-	ultranationalism = 5
-	despotism = 8
-	paternalism_1 = 5
-	paternalism_2 = 1
-	paternalism = 17
-	paternalism_3 = 3
-	paternalism_4 = 15
-	conservatism_1 = 13
-	conservatism = 10
-	conservatism_2 = 5
-	liberalism = 4
-	socialist = 5
-	communist_2 = 1
-	communist = 5
-	communist_3 = 3
-}
-
-add_ideas = {
-    #Actual ideas#
-	SYR_a_mosaic_of_sects
-	SYR_but_the_cheikh_said
-	SYR_a_return_to_1842
-	SYR_the_traitors_miracle
-	SYR_the_kindness_of_the_shadow
-	SYR_second_turkish_occupation
-
-	##Ministers 
-	SYR_Muhammad_al-Atrash_hog
-	SYR_Abdurrahman_Mustafa_for
-	SYR_Abdullah_Dardari_eco
-	SYR_Khalid_Khoja_sec
-
-	#political#
-	tno_political_parties_one_party_state
-	tno_religious_rights_secularism
-	tno_trade_unions_state_controlled
-	tno_immigration_closed_borders
-	tno_slavery_outlawed
-	tno_public_meetings_outlawed
-	tno_press_rights_state_press_only
-	tno_vote_franchise_no_voting
-	tno_refugees_skilled
+	communist = 25
+	socialist = 25
+	progressivism = 0
+	liberalism = 0
+	conservatism = 0
+	paternalism = 25
+	despotism = 25
+	fascism = 0
+	national_socialism = 0
+	ultranationalism = 0
 	
-	#military#
-	tno_conscription_four_year_draft
-	tno_women_banned
-	tno_military_supervision_rules_of_engagement
-	tno_military_spending_militarycentric_budget
-	tno_training_minimal_training
-	tno_racial_integration_none
-	tno_draft_exemptions_none
-	
-	#economic#
-	tno_trade_laws_limited_exports
-	tno_economic_focus_civilian_economy
-	tno_tax_rate_low_taxation
-	tno_income_taxation_tax_havens
-	tno_minimum_wage_trinket_minimum_wage
-	tno_max_workhours_14_hour_work_day
-	tno_child_labor_restricted
-	tno_pensions_low_pensions
-	tno_unemployment_no_subsidies
-	
-	#social#
-	tno_safety_minimal_regulations
-	tno_health_care_public_health_care
-	tno_pollution_no_controls
-	tno_education_public_education
-	tno_penal_system_capital_punishment
-	tno_lgbt_rights_lgbt_outlawed
-	tno_gender_rights_women_in_the_workplace
-	tno_minorities_oppression
-	tno_security_totalitarian
 }
 
-1996.3.1 = {
-	country_event = { id = SYR_flavour_event.1}
-}
+#Country Leaders
+recruit_character = SYR_Adib_al_Shishakli
+recruit_character = SYR_Hafez_al_Assad
+recruit_character = SYR_Salah_Jadid
+recruit_character = SYR_Michel_Aflaq
+recruit_character = SYR_Ziad_al_Hariri
+recruit_character = SYR_Italo_Balbo_Ruler_Of_Arabia
 
-1996.11.1 = {
-	country_event = { id = SYR_flavour_event.3}
-}
+set_variable = { TNO_economy_type = token:Econ_Type_Planned }
+
+TNO_startup_nation = yes

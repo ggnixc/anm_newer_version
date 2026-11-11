@@ -6,4 +6,75 @@ on_actions = {
 			}
 		}
 	}
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							tag = JAP
+							tag = GER
+						}
+					}
+					FROM = { tag = USA }
+				}
+				USA = {
+					set_country_flag = USA_WW3_Is_On
+					add_to_variable = { USA_crisis_counter = 1 }
+					# USA_reload_presidential_tree = yes
+					country_event = { id = USA.WW3.1 }
+					set_global_flag = TNO_world_tension_WW3
+				}
+			}
+
+			if = {
+				limit = {
+					ROOT = { tag = USA }
+					FROM = {
+						OR = {
+							tag = JAP
+							tag = GER
+						}
+					}
+				}
+				USA = {
+					set_country_flag = USA_WW3_Is_On
+					add_to_variable = { USA_crisis_counter = 1 }
+					# USA_reload_presidential_tree = yes
+					country_event = { id = USA.WW3.1 }
+					set_global_flag = TNO_world_tension_WW3
+				}
+			}
+
+			if = { # WW3 Super event
+				limit = {
+					OR = {
+						AND = {
+							OR = {
+								ROOT = { tag = JAP }
+								ROOT = { tag = GER }
+							}
+							FROM = { tag = USA }
+						}
+						AND = {
+							OR = {
+								FROM = { tag = JAP }
+								FROM = { tag = GER }
+							}
+							ROOT = { tag = USA }
+						}
+					}
+				}
+				set_global_flag = TNO_world_tension_WW3
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					set_temp_variable = { TNO_temp_super_event = token:SE_WW3 }
+					TNO_fire_super_event = yes
+				}
+			}
+		}
+	}
 }

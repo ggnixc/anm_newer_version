@@ -1,99 +1,5 @@
 ##SORTED BY STARTING TAG, AND THEN STATE ID NUMBER
-#ANG
-state_control_effect_778 = {
-	if = {
-		limit = {
-			OR = {
-				controller = { has_country_flag = german_names }
-				AND = {
-					is_controlled_by = ANG
-					Angola_is_rk = yes
-				}
-			}
-		}
-		set_state_name = STATE_778_ger
-		set_province_name = { id = 4879 name = VICTORY_POINTS_4879_ger }
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 4879
-	}
-}
-state_control_effect_1037 = {
-	if = {
-		limit = {
-			OR = {
-				controller = { has_country_flag = german_names }
-				AND = {
-					is_controlled_by = ANG
-					Angola_is_rk = yes
-				}
-			}
-		}
-		set_state_name = STATE_1037_ger
-		set_province_name = { id = 13803 name = VICTORY_POINTS_13803_ger }
-	}
-	else_if = {
-		limit = {
-			OR = {
-				is_controlled_by = SAF
-				AND = {
-					is_controlled_by = ANG
-					Angola_is_mandate = yes
-				}
-				AND = {
-					is_controlled_by = USC
-					CAR_is_mandate = yes
-				}
-			}
-		}
-		set_state_name = STATE_1037_colonial
-		set_province_name = { id = 13803 name = VICTORY_POINTS_13803_colonial }
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 13803
-	}
-}
-state_control_effect_1735 = {
-	if = {
-		limit = {
-			OR = {
-				controller = { has_country_flag = german_names }
-				AND = {
-					is_controlled_by = ANG
-					Angola_is_rk = yes
-				}
-			}
-		}
-		set_province_name = { id = 14414 name = VICTORY_POINTS_14414_ger }
-	}
-	else_if = {
-		limit = {
-			OR = {
-				is_controlled_by = SAF
-				AND = {
-					is_controlled_by = ANG
-					Angola_is_mandate = yes
-				}
-				AND = {
-					is_controlled_by = USC
-					CAR_is_mandate = yes
-				}
-			}
-		}
-		set_province_name = { id = 14414 name = VICTORY_POINTS_14414_colonial }
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 14414
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_state_name = STATE_1735_ang
-			set_province_name = { id = 14414 name = VICTORY_POINTS_14414_ang }
-		}
-	}
-}
+
 #BKF
 state_control_effect_1217 = {
 	if = {
@@ -200,7 +106,7 @@ state_control_effect_1196 = {
 }
 state_control_effect_1200 = {
 	if = {
-		limit = { is_controlled_by = KNM }
+		limit = { is_controlled_by = CHD }
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
 			set_state_name = STATE_1200_knm
@@ -210,7 +116,7 @@ state_control_effect_1200 = {
 }
 state_control_effect_1204 = {
 	if = {
-		limit = { is_controlled_by = KNM }
+		limit = { is_controlled_by = CHD }
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
 			set_state_name = STATE_1204_knm
@@ -220,7 +126,7 @@ state_control_effect_1204 = {
 }
 state_control_effect_1205 = {
 	if = {
-		limit = { is_controlled_by = KNM }
+		limit = { is_controlled_by = CHD }
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
 			set_state_name = STATE_1205_knm
@@ -234,7 +140,7 @@ state_control_effect_1206 = {
 		set_province_name = { id = 2081 name = VICTORY_POINTS_2081_chd }
 	}
 	else_if = {
-		limit = { is_controlled_by = KNM }
+		limit = { is_controlled_by = CHD }
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
 			set_province_name = { id = 2081 name = VICTORY_POINTS_2081_knm }
@@ -257,7 +163,7 @@ state_control_effect_1206 = {
 }
 state_control_effect_1207 = {
 	if = {
-		limit = { is_controlled_by = KNM }
+		limit = { is_controlled_by = CHD }
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
 			set_state_name = STATE_1207_knm
@@ -270,7 +176,7 @@ state_control_effect_295 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -290,7 +196,7 @@ state_control_effect_295 = {
 	}
 	else_if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			controller = { has_country_leader = { character = GRO_Hans_Huttig ruling_only = yes } }
 		}
 		set_state_name = STATE_295_huttig
@@ -333,7 +239,7 @@ state_control_effect_297 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -367,7 +273,7 @@ state_control_effect_539 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -387,7 +293,7 @@ state_control_effect_718 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -429,7 +335,7 @@ state_control_effect_1057 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -483,7 +389,7 @@ state_control_effect_1162 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -548,7 +454,7 @@ state_control_effect_1163 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -562,7 +468,7 @@ state_control_effect_1163 = {
 	else_if = {
 		limit = {
 			NOT = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -592,7 +498,7 @@ state_control_effect_1165 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -640,7 +546,7 @@ state_control_effect_1166 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -665,7 +571,7 @@ state_control_effect_1168 = {
 	if = {
 		limit = { 
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -684,7 +590,7 @@ state_control_effect_1169 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -726,13 +632,13 @@ state_control_effect_1171 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
 				}
 			}
-		 }
+		}
 		set_state_name =  STATE_1171_ger
 		set_province_name = { id = 13963 name = VICTORY_POINTS_13963_ger }
 	}
@@ -745,7 +651,7 @@ state_control_effect_1172 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -766,7 +672,7 @@ state_control_effect_1172 = {
 					is_controlled_by = USC
 					CAR_is_mandate = yes
 				}
-				is_controlled_by = KTG  
+				is_controlled_by = KTG
 			}
 		}
 		set_province_name = { id = 13376 name = VICTORY_POINTS_13376_colonial }
@@ -777,7 +683,7 @@ state_control_effect_1173 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -830,7 +736,7 @@ state_control_effect_1173 = {
 state_control_effect_1174 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			AND = {
 				is_controlled_by = COG
 				Congo_is_rk = yes
@@ -878,7 +784,7 @@ state_control_effect_1174 = {
 state_control_effect_1175 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			AND = {
 				is_controlled_by = COG
 				Congo_is_rk = yes
@@ -891,7 +797,7 @@ state_control_effect_1175 = {
 state_control_effect_1176 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			AND = {
 				is_controlled_by = COG
 				Congo_is_rk = yes
@@ -943,7 +849,7 @@ state_control_effect_1176 = {
 state_control_effect_1177 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			AND = {
 				is_controlled_by = COG
 				Congo_is_rk = yes
@@ -994,7 +900,7 @@ state_control_effect_1177 = {
 state_control_effect_1178 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			AND = {
 				is_controlled_by = COG
 				Congo_is_rk = yes
@@ -1045,7 +951,7 @@ state_control_effect_1178 = {
 state_control_effect_1180 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			AND = {
 				is_controlled_by = COG
 				Congo_is_rk = yes
@@ -1093,7 +999,7 @@ state_control_effect_1180 = {
 state_control_effect_1181 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			AND = {
 				is_controlled_by = COG
 				Congo_is_rk = yes
@@ -1162,7 +1068,7 @@ state_control_effect_1181 = {
 state_control_effect_1182 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			AND = {
 				is_controlled_by = COG
 				Congo_is_rk = yes
@@ -1205,7 +1111,7 @@ state_control_effect_1183 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -1226,7 +1132,7 @@ state_control_effect_1183 = {
 		if = {
 			limit = {
 				NOT = {
-					controller = { has_country_flag = german_names }
+					controller = { is_in_array = { global.german_names = THIS } }
 					AND = {
 						is_controlled_by = COG
 						Congo_is_rk = yes
@@ -1265,7 +1171,7 @@ state_control_effect_1185 = {
 	if = {
 		limit = {
 			OR = {
-				controller = { has_country_flag = german_names }
+				controller = { is_in_array = { global.german_names = THIS } }
 				AND = {
 					is_controlled_by = COG
 					Congo_is_rk = yes
@@ -1286,7 +1192,7 @@ state_control_effect_1185 = {
 		if = {
 			limit = {
 				NOT = {
-					controller = { has_country_flag = german_names }
+					controller = { is_in_array = { global.german_names = THIS } }
 					AND = {
 						is_controlled_by = COG
 						Congo_is_rk = yes
@@ -1324,7 +1230,7 @@ state_control_effect_1185 = {
 state_control_effect_1186 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 			has_global_flag = TNO_endonym_mode
 		}
 		set_state_name = STATE_1186_ger
@@ -1335,12 +1241,15 @@ state_control_effect_1186 = {
 		reset_province_name = 8244
 	}
 }
-#EWE/CPP
+state_control_effect_539 = {
+	# was throwing an error so I made this empty effect
+}
+#GHA/CPP
 state_control_effect_274 = {
 	if = {
 		limit = {
 			OR = {
-				is_controlled_by = EWE
+				is_controlled_by = GHA
 				is_controlled_by = CPP
 			}
 		}
@@ -1371,7 +1280,7 @@ state_control_effect_827 = {
 	if = {
 		limit = {
 			OR = {
-				is_controlled_by = EWE
+				is_controlled_by = GHA
 				is_controlled_by = CPP
 			}
 		}
@@ -1400,12 +1309,27 @@ state_control_effect_827 = {
 		reset_province_name = 12742
 	}
 }
-#GBE
+state_control_effect_833 = {
+	if = {
+		limit = {
+			OR = {
+				is_controlled_by = GHA
+				is_controlled_by = CPP
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_833_ewe_cpp
+		}
+	}
+	else = { reset_state_name = yes }
+}
+#DAH
 state_control_effect_882 = {
 	if = {
 		limit = { 
-			is_controlled_by = GBE
-			GBE = {  NOT = { is_puppet_of = FFR } }
+			is_controlled_by = DAH
+			DAH = {  NOT = { is_puppet_of = FFR } }
 		}
 		set_state_name = STATE_882_gbe
 		if = {
@@ -1421,8 +1345,8 @@ state_control_effect_882 = {
 state_control_effect_883 = {
 	if = {
 		limit = { 
-			is_controlled_by = GBE
-			GBE = {  NOT = { is_puppet_of = FFR } }
+			is_controlled_by = DAH
+			DAH = {  NOT = { is_puppet_of = FFR } }
 		}
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
@@ -1435,201 +1359,11 @@ state_control_effect_883 = {
 	}
 }	
 #GRO/MZB/Mozambique
-state_control_effect_544 = { #Bouhlerstadt
-	if = {
-		limit = {
-			controller = { has_country_flag = german_names }
-		}
-		set_state_name = STATE_544_ger
-		set_province_name = { id = 13729 name = VICTORY_POINTS_13729_ger }
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 13729
-	}
-}
-state_control_effect_546 = { 
-	if = {
-		limit = {
-			OR = {
-				controller = { has_country_flag = german_names }
-				is_controlled_by = SAF
-				AND = {
-					is_controlled_by = MZB
-					Mozambique_is_mandate = yes
-				}
-				AND = {
-					is_controlled_by = USC
-					CAR_is_mandate = yes
-				}
-			}
-		}
-		set_state_name = STATE_546_colonial
-	}
-	else = { reset_state_name = yes }
-}
-state_control_effect_548 = {
-	if = {
-		limit = {
-			controller = { has_country_flag = german_names }
-		}
-		set_state_name = STATE_548_ger
-		set_province_name = { id = 12989 name = VICTORY_POINTS_12989_ger }
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 12989
-	}
-}
-state_control_effect_1054 = {
-	if = {
-		limit = {
-			controller = { has_country_flag = german_names }
-			has_global_flag = TNO_endonym_mode
-		}
-		set_state_name = STATE_1054_ger
-	}
-	else = { 
-		reset_state_name = yes
-		if = {
-			limit = {
-				OR = {
-					is_controlled_by = ZAM
-					is_controlled_by = ZBO
-				}
-			}
-			set_province_name = { id = 13735 name = VICTORY_POINTS_13735_zam_zbo }
-		}
-	}
-}
-state_control_effect_1059 = {
-	if = {
-		limit = { controller = { has_country_flag = german_names } }
-		set_state_name = STATE_1059_ger
-		set_province_name = { id = 17855 name = VICTORY_POINTS_17855_ger }
-	}
-	else_if = {
-		limit = {
-			OR = {
-				is_controlled_by = SAF
-				AND = {
-					is_controlled_by = MZB
-					Mozambique_is_mandate = yes
-				}
-				AND = {
-					is_controlled_by = USC
-					CAR_is_mandate = yes
-				}
-			}	
-		}
-		reset_state_name = yes
-		set_province_name = { id = 17855 name = VICTORY_POINTS_17855_colonial }
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 17855
-	}
-}
-state_control_effect_1061 = {
-	if = {
-		limit = {
-			OR = {
-				controller = { has_country_flag = german_names }
-				is_controlled_by = SAF
-				AND = {
-					is_controlled_by = MZB
-					Mozambique_is_mandate = yes
-				}
-				AND = {
-					is_controlled_by = USC
-					CAR_is_mandate = yes
-				}
-			}
-		}
-		set_province_name = { id = 13730 name = VICTORY_POINTS_13730_colonial }
-	}
-	else = { reset_province_name = 13730 }
-}
-state_control_effect_1068 = {
-	if = {
-		limit = {
-			controller = { has_country_flag = german_names }
-			has_global_flag = TNO_endonym_mode
-		}
-		set_state_name = STATE_1068_ger
-	}
-	else = { reset_state_name = yes }
-}
-state_control_effect_1073 = {
-	if = {
-		limit = { controller = { has_country_flag = german_names } }
-		set_state_name = STATE_1073_ger
-		set_province_name = { id = 13792 name = VICTORY_POINTS_13792_ger }
-		set_province_name = { id = 2159 name = VICTORY_POINTS_2159_ger }
-	}
-	else_if = {
-		limit = {
-			OR = {
-				is_controlled_by = SAF
-				AND = {
-					is_controlled_by = MZB
-					Mozambique_is_mandate = yes
-				}
-				AND = {
-					is_controlled_by = USC
-					CAR_is_mandate = yes
-				}
-			}
-		}
-		reset_state_name = yes
-		set_province_name = { id = 13792 name = VICTORY_POINTS_13792_colonial }
-		reset_province_name = 2159
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 13792
-		reset_province_name = 2159
-	}
-}
-state_control_effect_1078 = {
-		if = {
-			limit = { controller = { has_country_flag = german_names } }
-			set_state_name = STATE_1078_ger
-			set_province_name = { id = 2196 name = VICTORY_POINTS_2196_ger }
-		}
-		else = {
-			reset_province_name = 2196
-			reset_state_name = yes
-		}
-	}
-state_control_effect_1082 = {
-	if = {
-		limit = { controller = { has_country_flag = german_names } }
-		set_province_name = { id = 12911 name = VICTORY_POINTS_12911_ger }
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_state_name = STATE_1082_ger
-		}
-	}
-	else = { 
-		reset_state_name = yes
-		reset_province_name = 12911
-	}
-}
-state_control_effect_1088 = {
-	if = {
-		limit = { controller = { has_country_flag = german_names } }
-		set_state_name = STATE_1088_ger
-		set_province_name = { id = 13383 name = VICTORY_POINTS_13383_ger }
-	}
-	else = {
-		reset_state_name = yes
-		reset_province_name = 13383
-	}
-}
+
+
 state_control_effect_1118 = {
 	if = {
-		limit = { controller = { has_country_flag = german_names } }
+		limit = { controller = { is_in_array = { global.german_names = THIS } } }
 		set_state_name = STATE_1118_ger
 		set_province_name = { id = 13879 name = VICTORY_POINTS_13879_ger }
 	}
@@ -1746,7 +1480,7 @@ state_controL_effect_1542 = {
 		limit = {
 			OR = {
 				is_controlled_by = NGR
-				is_controlled_by = SWB
+				is_controlled_by = NGS
 			}
 		}
 		set_state_name = STATE_1542_ngr_swb
@@ -1760,66 +1494,11 @@ state_controL_effect_1542 = {
 		reset_province_name = 14146
 	}
 }
-#JOL
-state_control_effect_701 = {
-	if = {
-		limit = {
-			is_controlled_by = JOL
-		}
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_state_name = STATE_701_jol
-		}
-		set_province_name = { id = 4989 name = VICTORY_POINTS_4989_jol_1973 }
-		if = {
-			limit = { 
-				has_global_flag = TNO_exonym_mode
-				date < 1973.1.1
-			}
-			reset_province_name = 4989
-		}
-	}
-	else_if = {
-		limit = {
-			OR = {
-				is_controlled_by = FFR
-				controller = { is_puppet_of = FFR }
-			}
-		}
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_state_name = STATE_701_fra
-		}
-		reset_province_name = 4989
-	}
-	else = {
-		reset_state_name = yes
-		if = {
-			limit = { date < 1973.1.1 }
-			reset_province_name = 4989
-		}
-		else = {
-			set_province_name = { id = 4989 name = VICTORY_POINTS_4989_jol_1973 }
-		}
-	}
-}
-state_control_effect_829 = {
-	if = {
-		limit = {
-			is_controlled_by = JOL
-		}
-		if = {
-			limit = { has_global_flag = TNO_endonym_mode }
-			set_state_name = STATE_829_jol
-			set_province_name = { id = 12834 name = VICTORY_POINTS_12834_jol }
-		}
-	}
-}
-#KNM
+#CHD
 state_control_effect_660 = {
 	if = {
 		limit = {
-			is_controlled_by = KNM
+			is_controlled_by = CHD
 			has_global_flag = TNO_endonym_mode
 		}
 		set_state_name = STATE_660_knm
@@ -1830,7 +1509,7 @@ state_control_effect_660 = {
 }
 state_control_effect_1195 = {
 	if = {
-		limit = { is_controlled_by = KNM }
+		limit = { is_controlled_by = CHD }
 		set_state_name = STATE_1195_knm
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
@@ -1844,7 +1523,7 @@ state_control_effect_1195 = {
 }
 state_control_effect_1544 = {
 	if = {
-		limit = { is_controlled_by = KNM }
+		limit = { is_controlled_by = CHD }
 		set_state_name = STATE_1544_knm
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
@@ -2583,7 +2262,7 @@ state_control_effect_1872 = {
 		}		
 	}
 	else_if = {
-		limit = { 
+		limit = {
 			OR = {  
 				is_controlled_by = MDG
 				AND = {
@@ -2884,7 +2563,7 @@ state_control_effect_1971 = {
 	}
 	else_if = {
 		limit = { 
-			OR = {  
+			OR = {
 				is_controlled_by = MDG
 				AND = {
 					is_controlled_by = MAD
@@ -2966,10 +2645,10 @@ state_control_effect_1973 = {
 		reset_state_name = yes
 	}
 }
-#MDI
+#SIE
 state_control_effect_700 = {
 	if = {
-		limit = { is_controlled_by = MDI }
+		limit = { is_controlled_by = SIE }
 		set_state_name = STATE_700_mdi
 		set_province_name = { id = 2038 name = VICTORY_POINTS_2038_mdi }
 	}
@@ -3049,8 +2728,8 @@ state_control_effect_1604 = {
 	else_if = {
 		limit = {
 			OR = {
-				is_controlled_by = WOL
-				is_controlled_by = SUS
+				is_controlled_by = SEN
+				is_controlled_by = GUI
 			}
 			has_global_flag = TNO_endonym_mode
 		}
@@ -3089,7 +2768,7 @@ state_control_effect_275 = {
 state_control_effect_545 = {
 	if = {
 		limit = {
-			controller = { has_country_flag = german_names }
+			controller = { is_in_array = { global.german_names = THIS } }
 		}
 		set_state_name = STATE_545_ger
 		set_province_name = { id = 13666 name = VICTORY_POINTS_13666_ger }
@@ -3247,6 +2926,27 @@ state_control_effect_937 = {
 		reset_state_name = yes
 	}
 }
+state_control_effect_940 = {
+	if = {
+		limit = {
+			controller = { AFR_consider_german_regime = yes }
+			has_global_flag = TNO_endonym_mode
+		}
+		set_state_name = STATE_937_ger
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = BOR
+				is_controlled_by = AWB
+			}
+		}
+		set_state_name = STATE_937_bor
+	}
+	else = {
+		reset_state_name = yes
+	}
+}
 state_control_effect_1312 = {
 	if = {
 		limit = { is_controlled_by = AWB }
@@ -3256,10 +2956,10 @@ state_control_effect_1312 = {
 		reset_province_name = 13497
 	}
 }
-#SUS
+#GUI
 state_control_effect_828 = {
 	if = {
-		limit = { is_controlled_by = SUS }
+		limit = { is_controlled_by = GUI }
 		set_state_name = STATE_828_sus
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
@@ -3289,7 +2989,7 @@ state_control_effect_838 = {
 state_control_effect_1224 = {
 	if = {
 		limit = { 
-			is_controlled_by = SUS
+			is_controlled_by = GUI
 			has_global_flag = TNO_endonym_mode
 		}
 		set_state_name = STATE_1224_sus
@@ -3310,10 +3010,10 @@ state_control_effect_1224 = {
 		reset_province_name = 1909
 	}
 }
-#WOL
+#SEN
 state_control_effect_272 = {
 	if = {
-		limit = { is_controlled_by = WOL }
+		limit = { is_controlled_by = SEN }
 		set_state_name = STATE_272_wol
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }
@@ -3325,9 +3025,63 @@ state_control_effect_272 = {
 		reset_province_name = 12710
 	}
 }
+state_control_effect_701 = {
+	if = {
+		limit = {
+			is_controlled_by = SEN
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_701_sen
+		}
+		if = {
+			limit = {
+				has_global_flag = TNO_exonym_mode
+				date < 1973.1.1
+			}
+			set_province_name = { id = 4989 name = VICTORY_POINTS_4989_1962 }
+		}
+		else = { reset_province_name = 4989 }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_controlled_by = FFR
+				controller = { is_puppet_of = FFR }
+			}
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_701_fra
+		}
+		set_province_name = { id = 4989 name = VICTORY_POINTS_4989_1962 }
+	}
+	else = {
+		reset_state_name = yes
+		if = {
+			limit = {
+				date < 1973.1.1
+			}
+			set_province_name = { id = 4989 name = VICTORY_POINTS_4989_1962 }
+		}
+		else = { reset_province_name = 4989 }
+	}
+}
+state_control_effect_829 = {
+	if = {
+		limit = {
+			is_controlled_by = SEN
+		}
+		if = {
+			limit = { has_global_flag = TNO_endonym_mode }
+			set_state_name = STATE_829_sen
+			set_province_name = { id = 12834 name = VICTORY_POINTS_12834_sen }
+		}
+	}
+}
 state_control_effect_830 = {
 	if = {
-		limit = { is_controlled_by = WOL }
+		limit = { is_controlled_by = SEN }
 		set_state_name = STATE_830_wol
 		if = {
 			limit = { has_global_flag = TNO_endonym_mode }

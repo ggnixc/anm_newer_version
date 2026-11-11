@@ -29,7 +29,7 @@ sp_naval_generic_reward_scientist_xp_1 = {
 			var:scientist = {
 				has_scientist_level = {
 					level > 4
-					specialization = specialization_naval
+					specialization = specialization_materiel
 				}
 			}
 		}
@@ -46,7 +46,7 @@ sp_naval_generic_reward_scientist_xp_1 = {
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.low
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 				FROM = { set_project_flag = sp_naval_generic_reward_scientist_xp_flag }
@@ -81,7 +81,7 @@ sp_naval_generic_reward_scientist_xp_2 = {
 			var:scientist = {
 				has_scientist_level = {
 					level > 4
-					specialization = specialization_naval
+					specialization = specialization_materiel
 				}
 			}
 		}
@@ -96,12 +96,12 @@ sp_naval_generic_reward_scientist_xp_2 = {
 					limit = {
 						has_scientist_level = {
 							level < 5
-							specialization = specialization_naval
+							specialization = specialization_materiel
 						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.medium
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 				FROM = { set_project_flag = sp_naval_generic_reward_scientist_xp_flag }
@@ -136,7 +136,7 @@ sp_naval_generic_reward_scientist_xp_3 = {
 			var:scientist = {
 				has_scientist_level = {
 					level > 4
-					specialization = specialization_naval
+					specialization = specialization_materiel
 				}
 			}
 		}
@@ -151,12 +151,12 @@ sp_naval_generic_reward_scientist_xp_3 = {
 					limit = {
 						has_scientist_level = {
 							level < 5
-							specialization = specialization_naval
+							specialization = specialization_materiel
 						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.high
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 				FROM = { set_project_flag = sp_naval_generic_reward_scientist_xp_flag }
@@ -164,7 +164,7 @@ sp_naval_generic_reward_scientist_xp_3 = {
 
 			country_effects = {
 				add_breakthrough_progress = {
-					specialization = specialization_naval
+					specialization = specialization_materiel
 					value = sp_breakthrough_progress.medium
 				}
 			}
@@ -270,7 +270,7 @@ sp_naval_generic_reward_navy_xp_3 = {
 				navy_experience = constant:sp_military_xp_gain.high
 				
 				add_breakthrough_progress = {
-					specialization = specialization_naval
+					specialization = specialization_materiel
 					value = sp_breakthrough_progress.medium
 				}
 
@@ -319,12 +319,12 @@ sp_naval_generic_reward_major_progress_1 = {
 					limit = {
 						has_scientist_level = {
 							level < 5
-							specialization = specialization_naval
+							specialization = specialization_materiel
 						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.low
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 			}
@@ -371,12 +371,12 @@ sp_naval_generic_reward_major_progress_2 = {
 					limit = {
 						has_scientist_level = {
 							level < 5
-							specialization = specialization_naval
+							specialization = specialization_materiel
 						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.low
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 			}
@@ -418,7 +418,7 @@ sp_naval_generic_reward_major_progress_3 = {
 				}
 
 				add_breakthrough_progress = {
-					specialization = specialization_naval
+					specialization = specialization_materiel
 					value = sp_breakthrough_progress.medium
 				}
 			}
@@ -428,12 +428,12 @@ sp_naval_generic_reward_major_progress_3 = {
 					limit = {
 						has_scientist_level = {
 							level < 5
-							specialization = specialization_naval
+							specialization = specialization_materiel
 						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.low
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 			}
@@ -480,12 +480,12 @@ sp_naval_generic_reward_test_failure_1 = {
 					limit = {
 						has_scientist_level = {
 							level < 5
-							specialization = specialization_naval
+							specialization = specialization_materiel
 						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.low
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 			}
@@ -532,12 +532,12 @@ sp_naval_generic_reward_test_failure_2 = {
 					limit = {
 						has_scientist_level = {
 							level < 5
-							specialization = specialization_naval
+							specialization = specialization_materiel
 						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.low
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 			}
@@ -579,7 +579,7 @@ sp_naval_generic_reward_test_failure_3 = {
 				}
 
 				add_breakthrough_progress = {
-					specialization = specialization_naval
+					specialization = specialization_materiel
 					value = sp_breakthrough_progress.medium
 				}
 			}
@@ -589,12 +589,12 @@ sp_naval_generic_reward_test_failure_3 = {
 					limit = {
 						has_scientist_level = {
 							level < 5
-							specialization = specialization_naval
+							specialization = specialization_materiel
 						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.low
-						specialization = specialization_naval
+						specialization = specialization_materiel
 					}
 				}
 			}
@@ -717,7 +717,7 @@ sp_naval_generic_reward_armor_tech_3 = {
 				# }
 
 				add_breakthrough_progress = {
-					specialization = specialization_naval
+					specialization = specialization_materiel
 					value = sp_breakthrough_progress.medium
 				}
 
@@ -842,7 +842,7 @@ sp_naval_generic_reward_artillery_tech_3 = {
 				# }
 
 				add_breakthrough_progress = {
-					specialization = specialization_naval
+					specialization = specialization_materiel
 					value = sp_breakthrough_progress.medium
 				}
 

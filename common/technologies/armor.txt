@@ -6,6 +6,12 @@ technologies = {
 ########
 
 	AC_1945 = {
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Basic_Manufactoring = yes
+				TNO_KD_Can_Research_Basic_Tech = yes
+			}
+		}
 		enable_equipments = {
 			armored_car_equipment_0
 		}
@@ -15,7 +21,12 @@ technologies = {
 			leads_to_tech = AC_1950
 			research_cost_coeff = 1
 		}
-		research_cost = 2.5
+
+		research_cost = 3.25
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1945
 		folder = {
 			name = armour_folder
@@ -37,6 +48,12 @@ technologies = {
 	}
 
 	AC_1950 = {
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Basic_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			armored_car_equipment_1
 		}
@@ -44,7 +61,12 @@ technologies = {
 			leads_to_tech = AC_1960
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1950
 		folder = {
 			name = armour_folder
@@ -62,6 +84,12 @@ technologies = {
 	}
 
 	AC_1960 = {
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			armored_car_equipment_2
 		}
@@ -69,7 +97,12 @@ technologies = {
 			leads_to_tech = AC_1970
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 		folder = {
 			name = armour_folder
@@ -87,6 +120,12 @@ technologies = {
 	}
 
 	AC_1970 = {
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Basic_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			armored_car_equipment_3
 		}
@@ -94,7 +133,12 @@ technologies = {
 			leads_to_tech = AC_1980
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 		folder = {
 			name = armour_folder
@@ -112,6 +156,12 @@ technologies = {
 	}
 
 	AC_1980 = {
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			armored_car_equipment_4
 		}
@@ -119,7 +169,12 @@ technologies = {
 			leads_to_tech = AC_1990
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+				
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 		folder = {
 			name = armour_folder
@@ -137,10 +192,21 @@ technologies = {
 	}
 
 	AC_1990 = {
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			armored_car_equipment_5
 		}
-		research_cost = 2
+				
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 		folder = {
 			name = armour_folder
@@ -162,7 +228,12 @@ technologies = {
 #########
 
 	APC_1945 = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Basic_Tech = yes
+				TNO_KD_Can_Research_Basic_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			APC_equipment_0
 		}
@@ -170,7 +241,12 @@ technologies = {
 			leads_to_tech = APC_1950
 			research_cost_coeff = 1
 		}
-		research_cost = 2.5
+				
+		research_cost = 3.25
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1945
 		folder = {
 			name = armour_folder
@@ -189,7 +265,12 @@ technologies = {
 	}
 
 	APC_1950 = { #Panzer I
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		enable_equipments = {
 			APC_equipment_1
 		}
@@ -214,7 +295,11 @@ technologies = {
 		#	research_cost_coeff = 1
 		#}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1950
 
 		folder = {
@@ -234,7 +319,12 @@ technologies = {
 	}
 
 	APC_1950_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		APC = {
 			armor_value = 0.05
 			breakthrough = 0.1
@@ -244,8 +334,11 @@ technologies = {
 			leads_to_tech = APC_1950_improved_armor
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1
+	
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1953
 
@@ -267,7 +360,12 @@ technologies = {
 	}
 
 	APC_1950_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		APC = {
 			armor_value = 0.1
 			breakthrough = 0.15
@@ -278,7 +376,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1956
 
@@ -299,13 +400,21 @@ technologies = {
 	}
 
 	APC_1950_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		APC = {
 			armor_value = 0.15
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1959
 
@@ -326,7 +435,12 @@ technologies = {
 	}
 
 	APC_1950_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -338,7 +452,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1953
 
@@ -359,7 +476,12 @@ technologies = {
 	}
 
 	APC_1950_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Outdated_Tech = yes
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -371,7 +493,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1956
 
@@ -393,14 +518,22 @@ technologies = {
 	}
 
 	APC_1950_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1959
 
@@ -422,7 +555,12 @@ technologies = {
 	}
 
 	APC_1960 = { #Panzer II / APC 1960
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		enable_equipments = {
 			APC_equipment_2
 		}
@@ -445,7 +583,12 @@ technologies = {
 		#	leads_to_tech = APC_1960_basic_engine
 		#	research_cost_coeff = 1
 		#}
-		research_cost = 2
+		
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 
 		folder = {
@@ -466,7 +609,12 @@ technologies = {
 	}
 
 	APC_1960_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.05
 			breakthrough = 0.1
@@ -477,7 +625,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1963
 
@@ -499,7 +650,12 @@ technologies = {
 	}
 
 	APC_1960_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.1
 			breakthrough = 0.15
@@ -510,7 +666,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1966
 
@@ -532,13 +691,21 @@ technologies = {
 	}
 
 	APC_1960_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.15
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1969
 
@@ -560,7 +727,12 @@ technologies = {
 	}
 
 	APC_1960_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -572,7 +744,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1963
 
@@ -594,7 +769,12 @@ technologies = {
 	}
 
 	APC_1960_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -606,7 +786,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1966
 
@@ -628,14 +811,22 @@ technologies = {
 	}
 
 	APC_1960_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1969
 
@@ -657,7 +848,12 @@ technologies = {
 	}
 
 	APC_1970 = { #Leopard
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			APC_equipment_3
 		}
@@ -679,7 +875,11 @@ technologies = {
 		#	research_cost_coeff = 1
 		#}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 
 		folder = {
@@ -699,7 +899,12 @@ technologies = {
 		}
 	}
 	APC_1970_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.05
 			breakthrough = 0.1
@@ -710,7 +915,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1973
 
@@ -732,7 +940,12 @@ technologies = {
 	}
 
 	APC_1970_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.1
 			breakthrough = 0.15
@@ -743,7 +956,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1976
 
@@ -765,13 +981,21 @@ technologies = {
 	}
 
 	APC_1970_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.15
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1979
 
@@ -793,7 +1017,12 @@ technologies = {
 	}
 
 	APC_1970_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -805,7 +1034,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1973
 
@@ -827,7 +1059,12 @@ technologies = {
 	}
 
 	APC_1970_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -839,7 +1076,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1976
 
@@ -861,14 +1101,22 @@ technologies = {
 	}
 
 	APC_1970_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1979
 
@@ -890,7 +1138,12 @@ technologies = {
 	}
 
 	APC_1980 = { #Leopard
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			APC_equipment_4
 		}
@@ -908,7 +1161,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 
 		folder = {
@@ -928,7 +1185,12 @@ technologies = {
 		}
 	}
 	APC_1980_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.05
 			breakthrough = 0.1
@@ -939,7 +1201,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1983
 
@@ -961,7 +1226,12 @@ technologies = {
 	}
 
 	APC_1980_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.1
 			breakthrough = 0.15
@@ -972,7 +1242,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1986
 
@@ -994,13 +1267,21 @@ technologies = {
 	}
 
 	APC_1980_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		APC = {
 			armor_value = 0.15
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1989
 
@@ -1022,7 +1303,12 @@ technologies = {
 	}
 
 	APC_1980_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -1034,7 +1320,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1983
 
@@ -1056,7 +1345,12 @@ technologies = {
 	}
 
 	APC_1980_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -1068,7 +1362,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1986
 
@@ -1090,14 +1387,22 @@ technologies = {
 	}
 
 	APC_1980_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		APC = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1989
 
@@ -1119,12 +1424,21 @@ technologies = {
 	}
 
 	APC_1990 = { #Leopard
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			APC_equipment_5
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 
 		folder = {
@@ -1149,7 +1463,12 @@ technologies = {
 #########
 
 	IFV_1945 = { #Panther
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Basic_Tech = yes
+			}
+		}
 		enable_equipments = {
 			IFV_equipment_0
 		}
@@ -1158,7 +1477,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1945
 
 		folder = {
@@ -1178,7 +1501,12 @@ technologies = {
 	}
 
 	IFV_1950 = { #Panzer III
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		enable_equipments = {
 			IFV_equipment_1
 		}
@@ -1203,7 +1531,11 @@ technologies = {
 		#	research_cost_coeff = 1
 		#}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1950
 
 		folder = {
@@ -1224,7 +1556,12 @@ technologies = {
 	}
 
 	IFV_1950_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.05
 			breakthrough = 0.1
@@ -1235,7 +1572,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1953
 
@@ -1257,7 +1597,12 @@ technologies = {
 	}
 
 	IFV_1950_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.1
 			breakthrough = 0.15
@@ -1268,7 +1613,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1956
 
@@ -1290,13 +1638,21 @@ technologies = {
 	}
 
 	IFV_1950_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.15
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1959
 
@@ -1318,7 +1674,12 @@ technologies = {
 	}
 
 	IFV_1950_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -1330,7 +1691,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1953
 
@@ -1352,7 +1716,12 @@ technologies = {
 	}
 
 	IFV_1950_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -1364,7 +1733,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1956
 
@@ -1386,14 +1758,22 @@ technologies = {
 	}
 
 	IFV_1950_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1959
 
@@ -1415,7 +1795,12 @@ technologies = {
 	}
 
 	IFV_1960 = { #Panzer IV
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		enable_equipments = {
 			IFV_equipment_2
 		}
@@ -1438,7 +1823,12 @@ technologies = {
 		#	leads_to_tech = IFV_1960_basic_engine
 		#	research_cost_coeff = 1
 		#}
-		research_cost = 2
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 
 		folder = {
@@ -1459,7 +1849,12 @@ technologies = {
 	}
 
 	IFV_1960_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.05
 			breakthrough = 0.1
@@ -1470,7 +1865,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1963
 
@@ -1492,7 +1890,12 @@ technologies = {
 	}
 
 	IFV_1960_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.1
 			breakthrough = 0.15
@@ -1503,7 +1906,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1966
 
@@ -1525,13 +1931,21 @@ technologies = {
 	}
 
 	IFV_1960_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.15
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1969
 
@@ -1553,7 +1967,12 @@ technologies = {
 	}
 
 	IFV_1960_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -1565,7 +1984,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1963
 
@@ -1587,7 +2009,12 @@ technologies = {
 	}
 
 	IFV_1960_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -1599,7 +2026,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1966
 
@@ -1621,14 +2051,22 @@ technologies = {
 	}
 
 	IFV_1960_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1969
 
@@ -1650,7 +2088,12 @@ technologies = {
 	}
 
 	IFV_1970 = { #Panther
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			IFV_equipment_3
 		}
@@ -1673,7 +2116,12 @@ technologies = {
 		#	leads_to_tech = IFV_1970_basic_engine
 		#	research_cost_coeff = 1
 		#}
-		research_cost = 2
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 
 		folder = {
@@ -1694,7 +2142,12 @@ technologies = {
 	}
 
 	IFV_1970_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.05
 			breakthrough = 0.1
@@ -1705,7 +2158,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1973
 
@@ -1727,7 +2183,12 @@ technologies = {
 	}
 
 	IFV_1970_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.1
 			breakthrough = 0.15
@@ -1738,7 +2199,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1976
 
@@ -1760,13 +2224,21 @@ technologies = {
 	}
 
 	IFV_1970_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.15
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1979
 
@@ -1788,7 +2260,12 @@ technologies = {
 	}
 
 	IFV_1970_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -1800,7 +2277,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1973
 
@@ -1822,7 +2302,12 @@ technologies = {
 	}
 
 	IFV_1970_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -1834,7 +2319,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1976
 
@@ -1856,14 +2344,22 @@ technologies = {
 	}
 
 	IFV_1970_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1979
 
@@ -1885,7 +2381,12 @@ technologies = {
 	}
 
 	IFV_1980 = { #E-50
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			IFV_equipment_4
 		}
@@ -1905,7 +2406,12 @@ technologies = {
 		#	leads_to_tech = IFV_1980_basic_engine
 		#	research_cost_coeff = 1
 		#}
-		research_cost = 2.5
+
+		research_cost = 3.25
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 
 		folder = {
@@ -1926,7 +2432,12 @@ technologies = {
 	}
 
 	IFV_1980_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.05
 			breakthrough = 0.1
@@ -1937,7 +2448,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1983
 
@@ -1959,7 +2473,12 @@ technologies = {
 	}
 
 	IFV_1980_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.1
 			breakthrough = 0.15
@@ -1970,7 +2489,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1986
 
@@ -1992,13 +2514,21 @@ technologies = {
 	}
 
 	IFV_1980_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			armor_value = 0.15
 			breakthrough = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1989
 
@@ -2020,7 +2550,12 @@ technologies = {
 	}
 
 	IFV_1980_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -2032,7 +2567,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1983
 
@@ -2054,7 +2592,12 @@ technologies = {
 	}
 
 	IFV_1980_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -2066,7 +2609,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1986
 
@@ -2088,14 +2634,22 @@ technologies = {
 	}
 
 	IFV_1980_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		IFV = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1989
 
@@ -2117,11 +2671,21 @@ technologies = {
 	}
 
 	IFV_1990 = { #T-90
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			IFV_equipment_5
 		}
-		research_cost = 2.5
+		
+		research_cost = 3.25
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 
 		folder = {
@@ -2147,7 +2711,12 @@ technologies = {
 #########
 
 	MBT_1945 = { #Panther
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Basic_Tech = yes
+			}
+		}
 		enable_equipments = {
 			MBT_equipment_0
 		}
@@ -2156,7 +2725,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1945
 
 		folder = {
@@ -2176,7 +2749,12 @@ technologies = {
 	}
 
 	MBT_1950 = { # T-55
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		enable_equipments = {
 			MBT_equipment_1
 		}
@@ -2201,7 +2779,11 @@ technologies = {
 		#	research_cost_coeff = 1
 		#}
 
-		research_cost = 2
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1950
 
 		folder = {
@@ -2221,7 +2803,12 @@ technologies = {
 	}
 
 	MBT_1950_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.05
 			breakthrough = 0.05
@@ -2232,7 +2819,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1953
 
@@ -2254,7 +2844,12 @@ technologies = {
 	}
 
 	MBT_1950_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.1
 			breakthrough = 0.1
@@ -2265,7 +2860,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1956
 
@@ -2287,13 +2885,21 @@ technologies = {
 	}
 
 	MBT_1950_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.15
 			breakthrough = 0.15
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1959
 
@@ -2315,7 +2921,12 @@ technologies = {
 	}
 
 	MBT_1950_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -2327,7 +2938,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1953
 
@@ -2349,7 +2963,12 @@ technologies = {
 	}
 
 	MBT_1950_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -2361,7 +2980,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1956
 
@@ -2383,14 +3005,22 @@ technologies = {
 	}
 
 	MBT_1950_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1959
 
@@ -2412,7 +3042,12 @@ technologies = {
 	}
 
 	MBT_1960 = { # T-64
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			MBT_equipment_2
 		}
@@ -2436,7 +3071,11 @@ technologies = {
 		#	research_cost_coeff = 1
 		#}
 
-		research_cost = 2.5
+		research_cost = 3.25
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1960
 
 		folder = {
@@ -2456,7 +3095,12 @@ technologies = {
 	}
 
 	MBT_1960_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.05
 			breakthrough = 0.05
@@ -2467,7 +3111,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1963
 
@@ -2489,7 +3136,12 @@ technologies = {
 	}
 
 	MBT_1960_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.1
 			breakthrough = 0.1
@@ -2500,7 +3152,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1966
 
@@ -2522,13 +3177,21 @@ technologies = {
 	}
 
 	MBT_1960_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.15
 			breakthrough = 0.15
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1969
 
@@ -2550,7 +3213,12 @@ technologies = {
 	}
 
 	MBT_1960_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -2562,7 +3230,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1963
 
@@ -2584,7 +3255,12 @@ technologies = {
 	}
 
 	MBT_1960_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -2596,7 +3272,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1966
 
@@ -2618,14 +3297,22 @@ technologies = {
 	}
 
 	MBT_1960_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1969
 
@@ -2647,7 +3334,12 @@ technologies = {
 	}
 
 	MBT_1970 = { #King Tiger
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		path = {
 			leads_to_tech = MBT_1980
 			research_cost_coeff = 1
@@ -2671,7 +3363,11 @@ technologies = {
 			MBT_equipment_3
 		}
 
-		research_cost = 2.5
+		research_cost = 3.25
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1970
 
 		folder = {
@@ -2692,7 +3388,12 @@ technologies = {
 	}
 
 	MBT_1970_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.05
 			breakthrough = 0.05
@@ -2703,7 +3404,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1973
 
@@ -2725,7 +3429,12 @@ technologies = {
 	}
 
 	MBT_1970_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.1
 			breakthrough = 0.1
@@ -2736,7 +3445,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1976
 
@@ -2758,13 +3470,21 @@ technologies = {
 	}
 
 	MBT_1970_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.15
 			breakthrough = 0.15
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1979
 
@@ -2786,7 +3506,12 @@ technologies = {
 	}
 
 	MBT_1970_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -2798,7 +3523,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1973
 
@@ -2820,7 +3548,12 @@ technologies = {
 	}
 
 	MBT_1970_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -2832,7 +3565,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1976
 
@@ -2854,14 +3590,22 @@ technologies = {
 	}
 
 	MBT_1970_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1979
 
@@ -2883,7 +3627,12 @@ technologies = {
 	}
 
 	MBT_1980 = { #Maus
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		path = {
 			leads_to_tech = MBT_1990
 			research_cost_coeff = 1
@@ -2905,7 +3654,11 @@ technologies = {
 			MBT_equipment_4
 		}
 
-		research_cost = 2.5
+		research_cost = 3.25
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1980
 		folder = {
 			name = armour_folder
@@ -2924,7 +3677,12 @@ technologies = {
 	}
 
 	MBT_1980_basic_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.05
 			breakthrough = 0.05
@@ -2935,7 +3693,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1983
 
@@ -2957,7 +3718,12 @@ technologies = {
 	}
 
 	MBT_1980_improved_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.1
 			breakthrough = 0.1
@@ -2968,7 +3734,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1986
 
@@ -2990,13 +3759,21 @@ technologies = {
 	}
 
 	MBT_1980_advanced_armor = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			armor_value = 0.15
 			breakthrough = 0.15
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1989
 
@@ -3018,7 +3795,12 @@ technologies = {
 	}
 
 	MBT_1980_basic_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -3030,7 +3812,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1983
 
@@ -3052,7 +3837,12 @@ technologies = {
 	}
 
 	MBT_1980_improved_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.1
 			hard_attack = 0.1
@@ -3064,7 +3854,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1986
 
@@ -3086,14 +3879,22 @@ technologies = {
 	}
 
 	MBT_1980_advanced_turret = {
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		MBT = {
 			soft_attack = 0.15
 			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
-		research_cost = 1
+		research_cost = 1.3
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
 
 		start_year = 1989
 
@@ -3115,16 +3916,291 @@ technologies = {
 	}
 
 	MBT_1990 = { #T-90
-
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
 		enable_equipments = {
 			MBT_equipment_5
 		}
 
-		research_cost = 2.5
+		research_cost = 3.25
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
 		start_year = 1990
 		folder = {
 			name = armour_folder
 			position = { x = 0 y = 36 }
+		}
+
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			armor
+			MBT
+		}
+	}
+
+#########
+# HEAVY #
+#########
+
+	Heavy_1945 = { #Panther
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Rudimentary_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
+		enable_equipments = {
+			heavy_tank_equipment_0
+		}
+		path = {
+			leads_to_tech = Heavy_1950
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1945
+
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 0 }
+		}
+
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			armor
+			MBT
+		}
+	}
+
+	Heavy_1950 = { #Panther
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
+		enable_equipments = {
+			heavy_tank_equipment_1
+		}
+		path = {
+			leads_to_tech = Heavy_1960
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1950
+
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 4 }
+		}
+
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			armor
+			MBT
+		}
+	}
+
+	Heavy_1960 = { #Panther
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
+		enable_equipments = {
+			heavy_tank_equipment_2
+		}
+		path = {
+			leads_to_tech = Heavy_1970
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1960
+
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 12 }
+		}
+
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			armor
+			MBT
+		}
+	}
+
+	Heavy_1970 = { #Panther
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
+		enable_equipments = {
+			heavy_tank_equipment_3
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1970
+
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 20 }
+		}
+
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			armor
+			MBT
+		}
+	}
+
+##############
+# SUPERHEAVY #
+##############
+
+	Superheavy_1945 = { #Panther
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
+		enable_equipments = {
+			superheavy_tank_equipment_0
+		}
+		path = {
+			leads_to_tech = Superheavy_1950
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1945
+
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 0 }
+		}
+
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			armor
+			MBT
+		}
+	}
+
+	Superheavy_1950 = { #Panther
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Developed_Manufactoring = yes
+				TNO_KD_Can_Research_Outdated_Tech = yes
+			}
+		}
+		enable_equipments = {
+			superheavy_tank_equipment_1
+		}
+		path = {
+			leads_to_tech = Superheavy_1960
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+
+		start_year = 1950
+
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 4 }
+		}
+
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		categories = {
+			armor
+			MBT
+		}
+	}
+
+	Superheavy_1960 = { #Panther
+		allow = {
+			AND = {
+				TNO_KD_Can_Research_Modern_Manufactoring = yes
+				TNO_KD_Can_Research_Modern_Tech = yes
+			}
+		}
+		enable_equipments = {
+			superheavy_tank_equipment_2
+		}
+
+		research_cost = 2.6
+		xp_research_type = army
+		xp_boost_cost = 50
+		xp_research_bonus = 0.35
+		
+		start_year = 1960
+
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 12 }
 		}
 
 

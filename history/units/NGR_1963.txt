@@ -1,0 +1,32 @@
+division_template = {
+	name = "Régiment de Tirailleurs"
+    is_locked = yes
+	division_names_group = NGR_infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+        infantry = { x = 0 y = 1 }
+	}
+	support = {
+	}
+}
+
+units = {
+    division = {
+        name = "Régiment de Tirailleurs Sénégalais du Niger"
+        division_template = "Régiment de Tirailleurs"
+        location = "8925"
+        start_experience_factor = 0.15
+    }
+    division = {
+        name = "1ère Régiment de Tirailleurs Nigériens"
+        division_template = "Régiment de Tirailleurs"
+        location = "14184"
+        start_experience_factor = 0.05
+    }
+    division = {
+        name = "2e Régiment de Tirailleurs Nigériens"
+        division_template = "Régiment de Tirailleurs"
+        location = "8877"
+        start_experience_factor = 0.05
+    }
+}

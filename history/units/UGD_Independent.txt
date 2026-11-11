@@ -1,0 +1,60 @@
+division_template = {
+	name = "Uganda Rifles"
+	division_names_group = ZIM_infantry
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+        light_infantry = { x = 0 y = 1 }
+        light_infantry = { x = 1 y = 0 }
+        light_infantry = { x = 1 y = 1 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "Mechanized Battalion"
+	division_names_group = ZIM_armour
+	regiments = {
+		IFV = { x = 0 y = 0 }
+        IFV = { x = 0 y = 1 }
+        IFV = { x = 1 y = 0 }
+        IFV = { x = 1 y = 1 }
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+    division = {
+        name = "1st Battalion, UR"
+        division_template = "Uganda Rifles" 
+        location = "13947" # Jinja
+        start_experience_factor = 0.10
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+	division = {
+        name = "2nd Battalion, UR"
+        division_template = "Uganda Rifles" 
+        location = "13935" #Mbabara
+        start_experience_factor = 0.10
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+	division = {
+        name = "3rd Battalion, UR"
+        division_template = "Uganda Rifles" 
+        location = "12989" # Kampala
+        start_experience_factor = 0.10
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+    division = {
+        name = "1st Mechanized Battalion"
+        division_template = "Mechanized Battalion" 
+        location = "13952" # Masindi
+        start_experience_factor = 0.10
+        start_equipment_factor = 1
+        start_manpower_factor = 1
+    }
+}		

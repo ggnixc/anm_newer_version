@@ -1,0 +1,178 @@
+division_template = {
+	name = "King's African Rifles"
+	division_names_group = ZIM_infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Royal Rhodesia Regiment"
+	division_names_group = ZIM_infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Rhodesian African Rifles"
+	division_names_group = ZIM_infantry
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Light Infantry Battalion"
+	division_names_group = ZIM_light_infantry
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		mot_recon = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "British South Africa Police"
+    is_locked = yes
+    priority = 0
+	division_names_group = ZIM_police
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+	}
+	support = {
+        military_police = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Armoured Battalion"
+	division_names_group = ZIM_armour
+	regiments = {
+		IFV = { x = 0 y = 0 }
+        IFV = { x = 0 y = 1 }
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "SAS Squadron"
+	division_names_group = ZIM_SAS
+    priority = 2
+	regiments = {
+		elite_infantry = { x = 0 y = 0 }
+	}
+	support = {
+        air_assault = { x = 0 y = 0 }
+	}
+}
+
+units = {
+    division = {
+        name = "1st Battalion, Rhodesian Light Infantry"
+        division_template = "Light Infantry Battalion"
+        location = "13700"
+        start_experience_factor = 0.15
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.40
+    }
+    division = {
+        name = "Rhodesian Armoured Car Regiment (Selous Scouts)"
+        division_template = "Armoured Battalion"
+        location = "13730"
+        start_experience_factor = 0.10
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.8
+    }
+    division = {
+        name = "SAS 'C' Squadron (Rhodesian)"
+        division_template = "SAS Squadron"
+        location = "13730"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+        start_manpower_factor = 0.75
+    }
+    division = {
+        name = "1st Battalion, Rhodesian African Rifles"
+        division_template = "Rhodesian African Rifles"
+        location = "13730"
+        start_experience_factor = 0.05
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+    division = {
+        name = "2nd Battalion, Rhodesian African Rifles"
+        division_template = "Rhodesian African Rifles"
+        location = "13730"
+        start_experience_factor = 0.05
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+    division = {
+        name = "3rd Battalion, Rhodesian African Rifles"
+        division_template = "Rhodesian African Rifles"
+        location = "13730"
+        start_experience_factor = 0.05
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+    division = {
+        name = "1st Battalion, Royal Rhodesia Regiment"
+        division_template = "Royal Rhodesia Regiment"
+        location = "13730"
+        start_experience_factor = 0.10
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+    division = {
+        name = "2nd Battalion, Royal Rhodesia Regiment"
+        division_template = "Royal Rhodesia Regiment"
+        location = "13700"
+        start_experience_factor = 0.10
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+    division = {
+        name = "3rd (Northern Rhodesia) Battalion, Royal Rhodesia Regiment"
+        division_template = "Royal Rhodesia Regiment"
+        location = "13751"
+        start_experience_factor = 0.10
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+    division = {
+        name = "4th (Nyasaland) Battalion, Royal Rhodesia Regiment"
+        division_template = "Royal Rhodesia Regiment"
+        location = "12986"
+        start_experience_factor = 0.10
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+    division = {
+        name = "1st Battalion, KAR (Malawi Rifles)"
+        division_template = "King's African Rifles"
+        location = "12986"
+        start_experience_factor = 0.10
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+    division = {
+        name = "2nd Battalion, KAR (Northern Rhodesia Regiment)"
+        division_template = "King's African Rifles"
+        location = "13751"
+        start_experience_factor = 0.10
+        start_equipment_factor = 0.40
+        start_manpower_factor = 0.60
+    }
+}
