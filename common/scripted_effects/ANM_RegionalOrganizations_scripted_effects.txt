@@ -476,7 +476,6 @@ RegionalOrganizations_Startup = {
 	LAT = { RegionalOrganizations_Add = yes }
 	EST = { RegionalOrganizations_Add = yes }
 	BLR = { RegionalOrganizations_Add = yes }
-	UKR = { RegionalOrganizations_Add = yes }
 	CAU = { RegionalOrganizations_Add = yes }
 	MOS = { RegionalOrganizations_Add = yes }
 
@@ -628,6 +627,18 @@ RegionalOrganizations_Startup = {
 	ZAM = { RegionalOrganizations_Add = yes }
 	MLW = { RegionalOrganizations_Add = yes }
 	MZB = { RegionalOrganizations_Add = yes }
+	
+	## Greater East Asia Resource Council
+	set_temp_variable = { reg_org = token:RegionalOrganization_GEARC }
+	JAP = {
+		set_temp_variable = { org_alignment = JAP }
+		set_temp_variable = { org_leader = JAP }
+		set_temp_variable = { org_type = 6 } # Economic Association
+		RegionalOrganizations_Initialize = yes
+	}
+	CHI = { RegionalOrganizations_Add = yes }
+	MAN = { RegionalOrganizations_Add = yes }
+	MEN = { RegionalOrganizations_Add = yes }
 
 	log = "[GetDateText]: [THIS.GetName]: RegionalOrganizations_Startup; Completed execution."
 }

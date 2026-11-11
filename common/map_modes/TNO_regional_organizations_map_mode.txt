@@ -266,6 +266,15 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.537 }
 					set_temp_variable = { blue = 0.416 }
 				}
+				else_if = {
+					limit = { # Greater East Asia Resource Council
+						ROOT = { check_variable = { Selected_RegionalOrg = token:RegionalOrganization_GEARC } }
+						FROM = { has_idea = RegionalOrganization_GEARC }
+					}
+					set_temp_variable = { red = 0.712 }
+					set_temp_variable = { green = 0.325 }
+					set_temp_variable = { blue = 0.498 }
+				}
 				else = { # Default
 					set_temp_variable = { red = 0.5 }
 					set_temp_variable = { green = 0.5 }
